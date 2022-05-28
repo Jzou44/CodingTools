@@ -1,0 +1,165 @@
+{%extends "HexToDecimal/de/base_layout_de.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Prozentsatz</span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+        <i class="fas fa-percentage" style="font-size:38px;padding-left: 20px;"></i>
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Leer</button>
+    <a href="/de/decimal-to-percent" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> Ort austauschen</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Konvertierung</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Ergebnis kopieren</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Dezimal <sub>10</sub></span>
+    </div>
+    <input name="queryStr" id="DecimalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Über{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Prozent (Prozent):</h2><div class="h2-highlight"></div></header>
+    <p> Der Prozentsatz stellt einen Teil des Ganzen dar (100). Das Prozentsystem ist im Finanzwesen weit verbreitet. Die Prozentsatzfunktion ist der Bewertung sehr ähnlich, der Prozentsatz ist jedoch einfacher zu vergleichen. </p>
+    <header><h2>Dezimalzahl:</h2><div class="h2-highlight"></div></header>
+    <p> Das Dezimalsystem (auch bekannt als Arabisch) besteht aus 10 Zeichen, darunter <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> , welches das am häufigsten verwendete digitale System in unserem täglichen Leben ist. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-percent-to-decimal.png" alt="comic percent to decimal">
+    </div>
+    <header><h2>Wie konvertiere ich von Prozent zu Dezimal?</h2><div class="h2-highlight"></div></header>
+    <p> Wie bei der Umwandlung von Bruch zu Dezimal wird der Zähler durch den Nenner geteilt (der Prozentsatz wird durch 100 geteilt). </p>
+    <header><h2>Ergebnis in Prozentsatz der Umwandlungstabelle:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> Prozentsatz </th>
+            <th> Dezimalzahl </th>
+            <th> Prozentsatz </th>
+            <th> Dezimalzahl </th>
+        </tr>
+        <tr>
+            <td>1%</td>
+            <td>0.01</td>
+            <td>20%</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>2%</td>
+            <td>0.02</td>
+            <td>30%</td>
+            <td>0.3</td>
+        </tr>
+        <tr>
+            <td>3%</td>
+            <td>0.03</td>
+            <td>40%</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>4%</td>
+            <td>0.04</td>
+            <td>50%</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>5%</td>
+            <td>0.05</td>
+            <td>60%</td>
+            <td>0.6</td>
+        </tr>
+        <tr>
+            <td>6%</td>
+            <td>0.06</td>
+            <td>70%</td>
+            <td>0.7</td>
+        </tr>
+        <tr>
+            <td>7%</td>
+            <td>0.07</td>
+            <td>80%</td>
+            <td>0.8</td>
+        </tr>
+        <tr>
+            <td>8%</td>
+            <td>0.08</td>
+            <td>90%</td>
+            <td>0.9</td>
+        </tr>
+        <tr>
+            <td>9%</td>
+            <td>0.09</td>
+            <td>100%</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>10%</td>
+            <td>0.1</td>
+            <td>150%</td>
+            <td>1.5</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>Link:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia (Prozentsatz): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Percentage" target="_blank">https://en.wikipedia.org/wiki/Percentage</a></p>
+    <p> Wikipedia (dezimal): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>Prozentsatz der Dezimalkonvertierung in Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def percent_to_decimal(percent_number):
+    return percent_number / 100
+
+
+percent_input = 72
+decimal_output = percent_to_decimal(percent_input)
+print('decimal result is:{0}'.format(decimal_output))
+
+-------------------
+decimal result is:0.72</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var DecimalOutput = document.getElementById("DecimalOutput");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        DecimalOutput.value = "";
+        var percent_str = QueryStr.value.replace(new RegExp(" ", 'g'), "").replace("%", "");
+        if (percent_str != "") {
+            var input_value = new BigNumber(percent_str, 10);
+            var output_decimal = input_value.dividedBy(new BigNumber(100)).toString(10);
+            DecimalOutput.value = output_decimal;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        DecimalOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        DecimalOutput.focus();
+        DecimalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

@@ -1,0 +1,129 @@
+{%extends "MyIpAddress/pt/base_layout_pt.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Nome de domínio ou endereço IP</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Método de rastreamento</span>
+        </div>
+        <select class="form-control custom-select" name="querytype" id="querytype">
+            <option value="-I" selected>Use pacotes ICMP ECHO</option>
+            <option value="-T">Usando pacotes TCP SYN</option>
+            <option value="-U">Usando pacotes UDP</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Se deseja resolver o IP do roteador para o nome do domínio</span>
+        </div>
+        <select class="form-control custom-select" name="resolveDomain" id="resolveDomain">
+            <option value="Do" selected>Análise</option>
+            <option value="Dont">Não resolvido</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Tempos de rastreamento por roteador</span>
+        </div>
+        <select class="form-control custom-select" name="probesnumber" id="probesnumber">
+            <option value="1" selected>1 hora</option>
+            <option value="2">2 vezes</option>
+            <option value="3">3 vezes</option>
+            <option value="4">4 vezes</option>
+            <option value="5">5 vezes</option>
+            <option value="6">6 vezes</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Vazio</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Rastreamento de roteador</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copiar resultado</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Resultados de rastreamento do roteador."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Sobre{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-traceroute.png" alt="comic traceroute">
+    </div>
+    <header><h2>Por que preciso usar o rastreamento de roteador?</h2><div class="h2-highlight"></div></header>
+    <p> Você já reparou que alguns sites são mais rápidos e outros são mais lentos? Isso ocorre porque alguns servidores da Web estão mais próximos de você (menos roteadores para seu servidor da Web). Por exemplo, se você visitar um site localizado na China dos EUA, haverá mais de 10 roteadores usados para transmitir tráfego, o que significa O pacote de dados foi copiado e colado mais de <code>10</code> vezes. </p>
+    <p> O Router Tracking é uma ferramenta que mede o número de roteadores entre dois endereços IP e acrescenta latência a cada roteador Além disso, você pode rastrear o caminho de transmissão do tráfego, incluindo quantos IPSs (Provedores de Serviços de Internet) estão envolvidos e quantos já passaram. País e o endereço IP atribuído a cada roteador. </p>
+    <header><h2>Como usar o rastreamento de roteador em áreas profissionais?</h2><div class="h2-highlight"></div></header>
+    <p> No gerenciamento de rede, você pode usar a ferramenta de rastreamento de roteador para visualizar a estrutura em árvore da rede, como qual roteador está diretamente conectado a cada roteador.Em transações de alta freqüência, a velocidade é tudo.Você pode usar a ferramenta de rastreamento roteador para selecionar o software de negociação de alta freqüência. Posição para obter a velocidade máxima. </p>
+    <header><h2>Mais links para rastreamento de roteador:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia (Traceroute): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Traceroute" target="_blank">https://en.wikipedia.org/wiki/Traceroute</a></p>
+    <p> RFC 1393 (traceroute): <a rel="nofollow" href="https://tools.ietf.org/html/rfc1393" target="_blank">https://tools.ietf.org/html/rfc1393</a></p>
+    <p> Rastreamento de roteador no Linux (Ubuntu): <a rel="nofollow" href="https://linux.die.net/man/8/traceroute" target="_blank">https://linux.die.net/man/8/traceroute</a></p>
+    <p> Rastreio de roteador no sistema Windows (tracert): <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert" target="_blank">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert</a>
+    </p>
+    <header><h2>Rastreamento de roteador em sistemas Linux:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       traceroute - print the route packets trace to network host
+
+SYNOPSIS
+       traceroute [-46dFITUnreAV] [-f first_ttl] [-g gate,...]
+               [-i device] [-m max_ttl] [-p port] [-s src_addr]
+               [-q nqueries] [-N squeries] [-t tos]
+               [-l flow_label] [-w waittimes] [-z sendwait] [-UL] [-D]
+               [-P proto] [--sport=port] [-M method] [-O mod_options]
+               [--mtu] [--back]
+               host [packet_len]
+       traceroute6  [options]
+       tcptraceroute  [options]
+       lft  [options]</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# traceroute -I -q 3 facebook.com
+traceroute to facebook.com (31.13.67.35), 30 hops max, 60 byte packets
+ 1  216.239.43.151 (216.239.43.151)  13.006 ms  13.016 ms  13.017 ms
+ 2  108.170.253.11 (108.170.253.11)  13.670 ms  13.725 ms  13.724 ms
+ 3  ae2.pr06.mia1.tfbnw.net (157.240.67.134)  21.087 ms  21.065 ms  21.073 ms
+ 4  po106.psw02.mia3.tfbnw.net (157.240.43.251)  14.775 ms  14.701 ms  14.773 ms
+ 5  173.252.67.93 (173.252.67.93)  14.626 ms  14.762 ms  14.762 ms
+ 6  edge-star-mini-shv-01-mia3.facebook.com (31.13.67.35)  14.979 ms  13.725 ms  13.780 ms
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

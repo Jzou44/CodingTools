@@ -1,0 +1,118 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{ model.cdnjs_version_bootstrap }}/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+<script>
+    function clear_marks() {
+        if (typeof (editor1) != 'undefined' && editor1 != null) {
+            let ranges = editor1.getAllMarks();
+            for (let i = 0; i < ranges.length; i++) ranges[i].clear();
+        }
+        if (typeof (editor2) != 'undefined' && editor2 != null) {
+            let ranges = editor2.getAllMarks();
+            for (let i = 0; i < ranges.length; i++) ranges[i].clear();
+        }
+    }
+
+    function quick_search() {
+        try {
+            clear_marks();
+            var search_keyword = $("#quicksearchtext").val();
+            $('#quicksearchmodal').modal('hide');
+            if (search_keyword == "") {
+                return;
+            }
+            if(document.getElementById("quicksearchCaseSwitch").checked){
+                var query_regex = new RegExp(search_keyword, "gi");
+            }else{
+                var query_regex = new RegExp(search_keyword, "g");
+            }
+            var cursor = editor2.getSearchCursor(query_regex);
+            while (cursor.findNext()) {
+                editor2.markText(cursor.from(), cursor.to(), {className: "styled-background"});
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    function quick_replace() {
+        try {
+            clear_marks();
+            var replace_from_keyword = $("#quickreplacefromtext").val();
+            if (replace_from_keyword == "") {
+                return;
+            }
+            var replace_to_keyword = $("#quickreplacetotext").val();
+            $('#quickreplacemodal').modal('hide');
+            if(document.getElementById("quickreplaceCaseSwitch").checked){
+                var query_regex = new RegExp(replace_from_keyword, "gi");
+            }else{
+                var query_regex = new RegExp(replace_from_keyword, "g");
+            }
+            editor2.setValue(editor2.getValue().replace(query_regex, replace_to_keyword));
+            var cursor = editor2.getSearchCursor(replace_to_keyword);
+            while (cursor.findNext()) {
+                editor2.markText(cursor.from(), cursor.to(), {className: "styled-background"});
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    function Pos(analyse_str_lines, index, i, j, analyse_str_current_index_number) {
+        for (; i < analyse_str_lines.length; i++) {
+            let line = analyse_str_lines[i] + '\n';
+            for (; j < line.length; j++) {
+                if (analyse_str_current_index_number >= index) {
+                    let result_pos = {line: i, ch: j};
+                    return [result_pos, i, j, analyse_str_current_index_number];
+                }
+                analyse_str_current_index_number += 1;
+            }
+            j = 0;
+        }
+    }
+
+    function get_regex_pos_list(regex_keyword, regex_flag, analyse_str) {
+        if (!regex_flag.includes("g")) {
+            regex_flag += "g";
+        }
+        let regex_parser = new RegExp(regex_keyword, regex_flag);
+        let regex_result = [];
+        let analyse_str_lines = analyse_str.split("\n");
+        let i = 0;
+        let j = 0;
+        let analyse_str_current_index_number = 0;
+
+        while ((match = regex_parser.exec(analyse_str)) != null) {
+            [from_pos, i, j, analyse_str_current_index_number] = Pos(analyse_str_lines, match.index, i, j, analyse_str_current_index_number);
+            [to_pos, i, j, analyse_str_current_index_number] = Pos(analyse_str_lines, regex_parser.lastIndex, i, j, analyse_str_current_index_number);
+            regex_result.push({
+                from: from_pos,
+                to: to_pos
+            });
+        }
+        return regex_result;
+    }
+
+    function clear_txt() {
+        document.getElementById('options').reset();
+        if (typeof (editor1) != 'undefined' && editor1 != null) {
+            editor1.setValue("");
+        }
+        if (typeof (editor2) != 'undefined' && editor2 != null) {
+            editor2.setValue("");
+        }
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        editor2.focus();
+        editor2.execCommand("selectAll");
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{% include "Common/seg_unit_bottom_js.html" %}

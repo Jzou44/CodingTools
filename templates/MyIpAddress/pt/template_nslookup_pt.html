@@ -1,0 +1,221 @@
+{%extends "MyIpAddress/pt/base_layout_pt.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Nome de domínio ou endereço IP</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Tipo de consulta</span>
+        </div>
+        <select class="form-control custom-select" name="querytype" id="querytype">
+            <option value="A" selected>A (o endereço IPv4 correspondente ao nome de domínio especificado)</option>
+            <option value="AAAA">AAAA (endereço IPv6 correspondente ao nome de domínio especificado)</option>
+            <option value="CNAME">CNAME (registro de alias)</option>
+            <option value="MX">MX (registro de troca de correspondência)</option>
+            <option value="NS">NS (especifique qual servidor DNS o nome do domínio deve ser resolvido)</option>
+            <option value="TXT">TXT (Descrição do nome do host ou nome do domínio)</option>
+            <option value="SOA">SOA (autoridade inicial)</option>
+            <option value="PTR">PTR (pesquisa inversa de IP)</option>
+            <option value="ANY">QUALQUER (todos os tipos de registro DNS)</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Servidor público de consulta DNS</span>
+        </div>
+        <select class="form-control custom-select" name="dnsserver" id="dnsserver">
+            <option value="8.8.8.8" selected>Servidor DNS público do Google (8.8.8.8)</option>
+            <option value="209.244.0.3">Servidor DNS público de nível 3 (209.244.0.3)</option>
+            <option value="9.9.9.9">Servidor DNS público Quad9 (9.9.9.9)</option>
+            <option value="208.67.222.222">Servidor DNS público do OpenDNS Home (208.67.222.222)</option>
+            <option value="64.6.64.6">Servidor DNS público da Verisign (64.6.64.6)</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Vazio</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Consulta DNS</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copiar resultado</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Resultados da consulta de DNS."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Sobre{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}} 支持DNS类型：</p>
+    <table class="descriptionTable">
+        <tr>
+            <th> Tipo de DNS </th>
+            <th> Introdução </th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>Specifies a computer's IPv4 address</td>
+        </tr>
+        <tr>
+            <td>AAAA</td>
+            <td>Specifies a computer's IPv6 address</td>
+        </tr>
+        <tr>
+            <td>CNAME</td>
+            <td>Specifies a canonical name for an alias</td>
+        </tr>
+        <tr>
+            <td>MX</td>
+            <td>Specifies the mail exchanger</td>
+        </tr>
+        <tr>
+            <td>NS</td>
+            <td>Specifies a DNS name server for the named zone</td>
+        </tr>
+        <tr>
+            <td>TXT</td>
+            <td>Specifies the text information</td>
+        </tr>
+        <tr>
+            <td>SOA</td>
+            <td>Specifies the start-of-authority for a DNS zone</td>
+        </tr>
+        <tr>
+            <td>PTR</td>
+            <td>Specifies a computer name if the query is an IP address</td>
+        </tr>
+        <tr>
+            <td>ANY</td>
+            <td>Specifies a computer's all DNS Type record</td>
+        </tr>
+    </table>
+    <br/>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-nslookup.png" alt="comic nslookup">
+    </div>
+    <header><h2>Consulta DNS não precisa adicionar o prefixo www.</h2><div class="h2-highlight"></div></header>
+    <p> Na maioria dos casos, as consultas DNS com ou sem o prefixo <code>www</code> podem retornar resultados normalmente, mas as consultas DNS sem prefixo <code>www</code> normalmente retornam mais informações sobre o nome do domínio, porque o nome do domínio com o prefixo <code>www</code> é secundário. Nome do domínio. </p>
+    <header><h2>Por que preciso usar uma consulta DNS?</h2><div class="h2-highlight"></div></header>
+    <p> Quando você quiser ver o facebook online, você pode não ser capaz de lembrar o endereço IP do site do Facebook <code>"31.13.67.35"</code> , mas digite <code>"facebook.com"</code> no navegador. O nome de domínio é mais fácil para as pessoas lembrarem, mas para a máquina Em outras <code>"31.13.67.35"</code> , a máquina prefere se comunicar com outras máquinas via endereço <code>"31.13.67.35"</code> você clica no Facebook em seu navegador, o seu navegador realizará automaticamente uma consulta DNS e obterá o endereço IP <code>"31.13.67.35"</code> . </p>
+    <p> A consulta DNS converte o nome do domínio em um endereço IP compreensível pela máquina.No entanto, a função de consulta DNS não está limitada a isso, mas NsLookup pode localizar o nome de domínio do servidor de email, o endereço IPv6 do nome de domínio e assim por diante. </p>
+    <p> Consultas DNS também são usadas em áreas profissionais.No processo de provar a propriedade de nomes de domínio, adicionar um registro DNS tipo TEXT pode provar a propriedade do seu domínio (se você comprar um nome de domínio da Godaddy, você pode definir registros DNS no servidor DNS do Godaddy). </p>
+    <header><h2>Ocultar os registros DNS reais do seu site com o Cloudflare:</h2><div class="h2-highlight"></div></header>
+    <p> A Cloudflare pode encaminhar o tráfego para o seu site através de seu CDN (Rede Global de Distribuição de Conteúdo), substituindo o endereço IP real do seu servidor da Web pelo IP da Cloudflare nos resultados da consulta DNS.Você pode apontar o servidor DNS do seu domínio para o servidor DNS da Cloudflare. </p>
+    <header><h2>Qual servidor DNS você deve usar?</h2><div class="h2-highlight"></div></header>
+    <p> As permissões do servidor DNS são cruciais para a segurança da Internet, mas os resultados errados do DNS podem causar a entrada no site errado.Há <code>13</code> servidores raiz no mundo.Enquanto isso, grandes empresas como o Google oferecem serviços de DNS públicos gratuitos (8,8 .8.8) para uso diário. </p>
+    <p> Por padrão, se você não definir um servidor DNS padrão em seu computador, seu ISP (provedor de serviços de Internet) atribuirá a você um servidor DNS, embora possa não ser tão confiável quanto o serviço DNS público do Google (8.8.8.8). É fácil de configurar, você deve alterar o servidor DNS padrão do seu computador para um dos servidores DNS públicos. </p>
+    <header><h2>Mais links para consultas DNS:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia (DNS): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank">https://en.wikipedia.org/wiki/Domain_Name_System</a></p>
+    <p> RFC 1035 (DNS): <a rel="nofollow" href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank">https://www.ietf.org/rfc/rfc1035.txt</a></p>
+    <p> Consulta DNS no sistema Linux: <a rel="nofollow" href="https://linux.die.net/man/1/nslookup" target="_blank">https://linux.die.net/man/1/nslookup</a></p>
+    <p> Consulta DNS no sistema Windows: <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup" target="_blank">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup</a></p>
+    <header><h2>Comando de consulta DNS (nslookup) no sistema Linux:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       nslookup - query Internet name servers interactively
+
+SYNOPSIS
+       nslookup [-option] [name | -] [server]</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-2:/var/log/apache2# nslookup -type=any facebook.com 8.8.8.8
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+facebook.com	nameserver = a.ns.facebook.com.
+facebook.com	nameserver = b.ns.facebook.com.
+facebook.com	text = "v=spf1 redirect=_spf.facebook.com"
+facebook.com	mail exchanger = 10 msgin.vvv.facebook.com.
+facebook.com
+	origin = a.ns.facebook.com
+	mail addr = dns.facebook.com
+	serial = 1530053366
+	refresh = 14400
+	retry = 1800
+	expire = 604800
+	minimum = 300
+Name:	facebook.com
+Address: 2a03:2880:f12c:183:face:b00c:0:25de
+Name:	facebook.com
+Address: 157.240.14.35
+
+Authoritative answers can be found from:
+    </pre>
+    <header><h2>Consulta DNS com Python (com pacote dnspython):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+# pip install dnspython
+import dns.resolver
+
+
+def nslookup(domain, record_type):
+    dns_resolver = dns.resolver.Resolver()
+    answers = dns_resolver.query(domain, record_type)
+    for answer in answers:
+        print('Domain:{0} Record Type:{1} Answer:{2}'.format(domain, record_type, answer))
+
+
+if __name__ == "__main__":
+    # dns lookup domain
+    nslookup('coding.tools', 'A')
+
+-------------------
+Domain:coding.tools Record Type:A Answer:104.27.176.94
+Domain:coding.tools Record Type:A Answer:104.27.177.94
+    </pre>
+    <header><h2>Consulta DNS em Java (com pacote java.net.InetAddress):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.io.IOException;
+import java.net.InetAddress;
+
+public class DNS {
+    public static void nslookup(String domain) throws IOException {
+        InetAddress[] remote_hosts = InetAddress.getAllByName(domain);
+        for (InetAddress remote_host : remote_hosts) {
+            System.out.println("Domain:" + domain + " IP Address:" + remote_host.getHostAddress());
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        // dns lookup domain
+        nslookup("coding.tools");
+    }
+}
+
+-------------------
+Domain:coding.tools IP Address:104.27.176.94
+Domain:coding.tools IP Address:104.27.177.94
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

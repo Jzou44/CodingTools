@@ -1,0 +1,95 @@
+{%extends "PasswordsGenerator/kr/base_layout_kr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="여기에 텍스트 파일을 입력하거나 드래그하십시오."></textarea>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">UpperCase</span>
+        </div>
+        <select class="form-control custom-select" name="UpperCase" id="UpperCase" oninput="post_ajax()">
+            <option value="u" selected>Hash Result in UpperCase</option>
+            <option value="l">Hash Result in LowerCase</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="cleartxt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <button type="button" id="submit_button" class="btn btn-primary">MD5 암호화</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="결과가 여기에 표시됩니다."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-md5.png" alt="comic md5">
+    </div>
+    <header><h2>왜 MD5가 필요한가요?</h2><div class="h2-highlight"></div></header>
+    <p> MD5와 같은 해시 알고리즘은 단방향 알고리즘이므로 되돌릴 수 없습니다.이 문자는 파일에 "지문"을 만드는 데 매우 유용합니다. 파일의 MD5 값은 파일이 수정되지 않았 음을 증명할 수 있습니다. 암호 보호에 사용 웹 사이트 데이터베이스에 저장된 "소금"과 원래 암호의 최종 값은 돌이킬 수 없으므로 데이터베이스가 손상 되더라도 해커가 암호를 복구 할 수 없습니다. </p>
+    <header><h2>MD5를 안전하게 사용해야합니까?</h2><div class="h2-highlight"></div></header>
+    <p> 첫 번째 유형의 공격은 <code>(rainbow tables)</code> 이라고하며, MD5 값이있는 짧은 문자열을 포함하여 매우 큰 데이터베이스입니다. 예를 들어 무지개 테이블 <code>"FC5E038D38A57032085441E7FE7010B0"</code> 을 보면 원본 문자열은 "helloworld"입니다. 원래 문자열이 짧으면 무지개 표가 MD5를 성공적으로 해독 할 수 있습니다. </p>
+    <p> 두 번째 공격은 MD5의 기본 알고리즘을 기반으로하고 있으며, 최근에는 SHA256 또는 SHA512로 전환 한 웹 사이트가 점점 많아지고 있지만 아직 많은 웹 사이트에서 MD5를 사용하고 있기 때문에 인터넷 보안에 엄청난 숨겨진 위험이 있습니다. </p>
+    <header><h2>MD5에 대한 추가 링크:</h2><div class="h2-highlight"></div></header>
+    <p> RFC 1321: <a rel="nofollow" href="https://www.ietf.org/rfc/rfc1321.txt" alt="MD5" target="_blank">https://www.ietf.org/rfc/rfc1321.txt</a></p>
+    <p> Python의 MD5 (hashlib): <a rel="nofollow" href="https://docs.python.org/3/library/hashlib.html" alt="MD5" target="_blank">https://docs.python.org/3/library/hashlib.html</a></p>
+    <p> Java의 MD5: <a rel="nofollow" href="https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html" alt="MD5"
+                                      target="_blank">https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html</a></p>
+    <p> PHP의 MD5: <a rel="nofollow" href="http://php.net/manual/en/function.md5.php" alt="MD5" target="_blank">http://php.net/manual/en/function.md5.php</a></p>
+    <header><h2>Python에서 문자열의 MD5 해시 계산 (패키지 hashlib 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import hashlib
+
+def md5_generator(str):
+    m = hashlib.md5()
+    m.update(str.encode())
+    return m.hexdigest()
+    </pre>
+    <header><h2>Java에서 문자열의 MD5 해시 계산 (MessageDigest 패키지 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.math.BigInteger;
+import java.security.MessageDigest;
+
+public String generate(String str){
+    MessageDigest md = MessageDigest.getInstance("MD5");
+    md.update(str.getBytes());
+    byte[] digest = md.digest();
+    String result = new BigInteger(1, digest).toString(16).toUpperCase();
+    return result;
+}
+    </pre>
+    <header><h2>Linux에서 파일의 MD5 해시 계산 (OpenSSL 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# openssl dgst -md5 access.log
+MD5(access.log)= 742f23518e684f3562ffc9f983f190ba
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function work(input_str) {
+        return CryptoJS.MD5(input_str).toString();
+    }
+</script>
+{%endblock%}

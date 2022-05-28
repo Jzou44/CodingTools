@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/codemirror.min.css"/>
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/kr"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">관련 도구</a>
+            <a class="table-link" href="/kr/md5">MD5 온라인 암호화 도구</a>
+            <a class="table-link" href="/kr/sha1">SHA1 온라인 암호화 도구</a>
+            <a class="table-link" href="/kr/sha224">SHA224 온라인 암호화 도구</a>
+            <a class="table-link" href="/kr/sha256">SHA256 온라인 암호화 도구</a>
+            <a class="table-link" href="/kr/sha384">SHA384 온라인 암호화 도구</a>
+            <a class="table-link" href="/kr/sha512">SHA512 온라인 암호화 도구</a>
+            <a class="table-link" href="/kr/base64-encode">BASE64 온라인 코딩 도구</a>
+            <a class="table-link" href="/kr/base64-decode">BASE64 온라인 디코딩 도구</a>
+            <a class="table-link" href="/kr/password-generator">온라인 임의 암호 생성 도구</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list_kr.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/display/placeholder.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "PasswordsGenerator/seg_load_js.html"%}
+</body>
+</html>

@@ -1,0 +1,129 @@
+{%extends "MyIpAddress/id/base_layout_id.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Nama domain atau alamat IP</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Metode pelacakan</span>
+        </div>
+        <select class="form-control custom-select" name="querytype" id="querytype">
+            <option value="-I" selected>Gunakan paket ICMP ECHO</option>
+            <option value="-T">Menggunakan paket TCP SYN</option>
+            <option value="-U">Menggunakan paket UDP</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Apakah akan menyelesaikan IP router ke nama domain</span>
+        </div>
+        <select class="form-control custom-select" name="resolveDomain" id="resolveDomain">
+            <option value="Do" selected>Analisis</option>
+            <option value="Dont">Tidak terselesaikan</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Waktu pelacakan per router</span>
+        </div>
+        <select class="form-control custom-select" name="probesnumber" id="probesnumber">
+            <option value="1" selected>1 kali</option>
+            <option value="2">2 kali</option>
+            <option value="3">3 kali</option>
+            <option value="4">4 kali</option>
+            <option value="5">5 kali</option>
+            <option value="6">6 kali</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Kosong</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Pelacakan router</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Salin hasil</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Hasil pelacakan router."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Tentang{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-traceroute.png" alt="comic traceroute">
+    </div>
+    <header><h2>Mengapa saya harus menggunakan pelacakan router?</h2><div class="h2-highlight"></div></header>
+    <p> Pernahkah Anda memperhatikan bahwa beberapa situs web lebih cepat dan yang lain lebih lambat? Ini karena beberapa server web lebih dekat dengan Anda (lebih sedikit router ke server web Anda). Misalnya, jika Anda mengunjungi situs web yang berlokasi di China dari AS, ada lebih dari 10 router yang digunakan untuk mengirimkan lalu lintas, yang berarti bahwa Paket data disalin dan ditempelkan lebih dari <code>10</code> kali. </p>
+    <p> Router Tracking adalah alat yang mengukur jumlah router antara dua alamat IP dan menambah latensi untuk setiap router. Selain itu, Anda dapat melacak jalur transmisi lalu lintas, termasuk berapa banyak IPS (Penyedia Layanan Internet) yang terlibat, dan berapa banyak yang telah berlalu. Negara, dan alamat IP yang ditetapkan untuk setiap router. </p>
+    <header><h2>Bagaimana cara menggunakan pelacakan router di bidang profesional?</h2><div class="h2-highlight"></div></header>
+    <p> Dalam manajemen jaringan, Anda dapat menggunakan alat pelacak router untuk melihat struktur pohon jaringan, seperti router mana yang terhubung langsung ke setiap router. Dalam transaksi frekuensi tinggi, kecepatan adalah segalanya. Posisikan untuk mendapatkan kecepatan maksimum. </p>
+    <header><h2>Lebih banyak tautan ke pelacakan router:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia (Traceroute): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Traceroute" target="_blank">https://en.wikipedia.org/wiki/Traceroute</a></p>
+    <p> RFC 1393 (Traceroute): <a rel="nofollow" href="https://tools.ietf.org/html/rfc1393" target="_blank">https://tools.ietf.org/html/rfc1393</a></p>
+    <p> Pelacakan Router di Linux (Ubuntu): <a rel="nofollow" href="https://linux.die.net/man/8/traceroute" target="_blank">https://linux.die.net/man/8/traceroute</a></p>
+    <p> Jejak router di sistem Windows (tracert): <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert" target="_blank">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert</a>
+    </p>
+    <header><h2>Pelacakan router dalam sistem Linux:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       traceroute - print the route packets trace to network host
+
+SYNOPSIS
+       traceroute [-46dFITUnreAV] [-f first_ttl] [-g gate,...]
+               [-i device] [-m max_ttl] [-p port] [-s src_addr]
+               [-q nqueries] [-N squeries] [-t tos]
+               [-l flow_label] [-w waittimes] [-z sendwait] [-UL] [-D]
+               [-P proto] [--sport=port] [-M method] [-O mod_options]
+               [--mtu] [--back]
+               host [packet_len]
+       traceroute6  [options]
+       tcptraceroute  [options]
+       lft  [options]</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# traceroute -I -q 3 facebook.com
+traceroute to facebook.com (31.13.67.35), 30 hops max, 60 byte packets
+ 1  216.239.43.151 (216.239.43.151)  13.006 ms  13.016 ms  13.017 ms
+ 2  108.170.253.11 (108.170.253.11)  13.670 ms  13.725 ms  13.724 ms
+ 3  ae2.pr06.mia1.tfbnw.net (157.240.67.134)  21.087 ms  21.065 ms  21.073 ms
+ 4  po106.psw02.mia3.tfbnw.net (157.240.43.251)  14.775 ms  14.701 ms  14.773 ms
+ 5  173.252.67.93 (173.252.67.93)  14.626 ms  14.762 ms  14.762 ms
+ 6  edge-star-mini-shv-01-mia3.facebook.com (31.13.67.35)  14.979 ms  13.725 ms  13.780 ms
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

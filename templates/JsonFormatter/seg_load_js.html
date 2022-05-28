@@ -1,0 +1,40 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/{{model.cdnjs_version_js_beautify}}/beautify.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/{{model.cdnjs_version_js_beautify}}/beautify-css.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/{{model.cdnjs_version_js_beautify}}/beautify-html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html-minifier/{{model.cdnjs_version_html_minifier}}/htmlminifier.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jxon/{{model.cdnjs_version_jxon}}/index.min.js"></script>
+<script>
+    function post_ajax() {
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data);
+                finished_spin_hidden();
+            });
+    }
+
+    function load_example() {
+        clear_txt();
+        editor1.setValue(example_str);
+        query();
+    }
+
+    function clear_txt() {
+        editor1.setValue("");
+        editor2.setValue("");
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        editor2.focus();
+        editor2.execCommand("selectAll");
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%include "Common/seg_unit_bottom_js.html"%}

@@ -1,12 +1,139 @@
-from flask import Flask
+from flask import Flask, render_template
+from Blueprints import Blueprint_SideProject
+from Blueprints import Blueprint_PasswordsGenerator, Blueprint_MyIpAddress, Blueprint_JsonFormatter, Blueprint_DevTool, \
+    Blueprint_HexToDecimal
+from Blueprints import Blueprint_PasswordsGenerator_CN, Blueprint_MyIpAddress_CN, Blueprint_JsonFormatter_CN, \
+    Blueprint_DevTool_CN, Blueprint_HexToDecimal_CN
+from Blueprints import Blueprint_PasswordsGenerator_TW, Blueprint_MyIpAddress_TW, Blueprint_JsonFormatter_TW, \
+    Blueprint_DevTool_TW, Blueprint_HexToDecimal_TW
+from Blueprints import Blueprint_PasswordsGenerator_JP, Blueprint_MyIpAddress_JP, Blueprint_JsonFormatter_JP, \
+    Blueprint_DevTool_JP, Blueprint_HexToDecimal_JP
+from Blueprints import Blueprint_PasswordsGenerator_KR, Blueprint_MyIpAddress_KR, Blueprint_JsonFormatter_KR, \
+    Blueprint_DevTool_KR, Blueprint_HexToDecimal_KR
+from Blueprints import Blueprint_PasswordsGenerator_ES, Blueprint_MyIpAddress_ES, Blueprint_JsonFormatter_ES, \
+    Blueprint_DevTool_ES, Blueprint_HexToDecimal_ES
+from Blueprints import Blueprint_PasswordsGenerator_DE, Blueprint_MyIpAddress_DE, Blueprint_JsonFormatter_DE, \
+    Blueprint_DevTool_DE, Blueprint_HexToDecimal_DE
+from Blueprints import Blueprint_PasswordsGenerator_FR, Blueprint_MyIpAddress_FR, Blueprint_JsonFormatter_FR, \
+    Blueprint_DevTool_FR, Blueprint_HexToDecimal_FR
+from Blueprints import Blueprint_PasswordsGenerator_IT, Blueprint_MyIpAddress_IT, Blueprint_JsonFormatter_IT, \
+    Blueprint_DevTool_IT, Blueprint_HexToDecimal_IT
+from Blueprints import Blueprint_PasswordsGenerator_PT, Blueprint_MyIpAddress_PT, Blueprint_JsonFormatter_PT, \
+    Blueprint_DevTool_PT, Blueprint_HexToDecimal_PT
+from Blueprints import Blueprint_PasswordsGenerator_RU, Blueprint_MyIpAddress_RU, Blueprint_JsonFormatter_RU, \
+    Blueprint_DevTool_RU, Blueprint_HexToDecimal_RU
+from Blueprints import Blueprint_PasswordsGenerator_ID, Blueprint_MyIpAddress_ID, Blueprint_JsonFormatter_ID, \
+    Blueprint_DevTool_ID, Blueprint_HexToDecimal_ID
+from Blueprints import Blueprint_PasswordsGenerator_AR, Blueprint_MyIpAddress_AR, Blueprint_JsonFormatter_AR, \
+    Blueprint_DevTool_AR, Blueprint_HexToDecimal_AR
+from Blueprints import Blueprint_StringUtilities, Blueprint_StringUtilities_CN, Blueprint_StringUtilities_TW
+from Blueprints import Blueprint_ImageUtilities, Blueprint_ImageUtilities_CN, Blueprint_ImageUtilities_TW
+from Blueprints import BluePrint_Blog, BluePrint_Blog_CN
 
-app = Flask(__name__)
+from Logic import Logic_Config, Logic_UTIL
+from Logic.Logic_MyIpAddress import cache
+logger = Logic_UTIL.get_logger(__name__)
+
+app = Flask(__name__, static_url_path='')
+app.url_map.strict_slashes = False
+app.register_blueprint(Blueprint_SideProject.Web_SideProject_blueprint)
+app.register_blueprint(BluePrint_Blog.Web_Blog_blueprint)
+app.register_blueprint(BluePrint_Blog_CN.Web_Blog_blueprint)
+# en default
+app.register_blueprint(Blueprint_PasswordsGenerator.Web_PasswordsGenerator_blueprint)
+# app.config['SQLALCHEMY_DATABASE_URI'] = Logic_Config.IP2LOCATION_SQLITE_PATH
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# db_ip2location.init_app(app)
+cache.init_app(app)
+
+app.register_blueprint(Blueprint_MyIpAddress.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal.Web_HexToDecimal_blueprint)
+app.register_blueprint(Blueprint_StringUtilities.Web_StringUtilities_blueprint)
+app.register_blueprint(Blueprint_ImageUtilities.Web_ImageUtilities_blueprint)
+# cn
+app.register_blueprint(Blueprint_PasswordsGenerator_CN.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_CN.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_CN.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_CN.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_CN.Web_HexToDecimal_blueprint)
+app.register_blueprint(Blueprint_StringUtilities_CN.Web_StringUtilities_blueprint)
+app.register_blueprint(Blueprint_ImageUtilities_CN.Web_ImageUtilities_blueprint)
+# tw
+app.register_blueprint(Blueprint_PasswordsGenerator_TW.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_TW.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_TW.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_TW.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_TW.Web_HexToDecimal_blueprint)
+app.register_blueprint(Blueprint_StringUtilities_TW.Web_StringUtilities_blueprint)
+app.register_blueprint(Blueprint_ImageUtilities_TW.Web_ImageUtilities_blueprint)
+# jp
+app.register_blueprint(Blueprint_PasswordsGenerator_JP.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_JP.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_JP.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_JP.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_JP.Web_HexToDecimal_blueprint)
+# kr
+app.register_blueprint(Blueprint_PasswordsGenerator_KR.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_KR.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_KR.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_KR.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_KR.Web_HexToDecimal_blueprint)
+# es
+app.register_blueprint(Blueprint_PasswordsGenerator_ES.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_ES.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_ES.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_ES.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_ES.Web_HexToDecimal_blueprint)
+# de
+app.register_blueprint(Blueprint_PasswordsGenerator_DE.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_DE.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_DE.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_DE.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_DE.Web_HexToDecimal_blueprint)
+# fr
+app.register_blueprint(Blueprint_PasswordsGenerator_FR.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_FR.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_FR.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_FR.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_FR.Web_HexToDecimal_blueprint)
+# it
+app.register_blueprint(Blueprint_PasswordsGenerator_IT.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_IT.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_IT.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_IT.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_IT.Web_HexToDecimal_blueprint)
+# pt
+app.register_blueprint(Blueprint_PasswordsGenerator_PT.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_PT.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_PT.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_PT.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_PT.Web_HexToDecimal_blueprint)
+# ru
+app.register_blueprint(Blueprint_PasswordsGenerator_RU.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_RU.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_RU.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_RU.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_RU.Web_HexToDecimal_blueprint)
+# id
+app.register_blueprint(Blueprint_PasswordsGenerator_ID.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_ID.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_ID.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_ID.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_ID.Web_HexToDecimal_blueprint)
+# ar
+app.register_blueprint(Blueprint_PasswordsGenerator_AR.Web_PasswordsGenerator_blueprint)
+app.register_blueprint(Blueprint_MyIpAddress_AR.Web_MyIpAddress_blueprint)
+app.register_blueprint(Blueprint_JsonFormatter_AR.Web_JsonFormatter_blueprint)
+app.register_blueprint(Blueprint_DevTool_AR.Web_DevTool_blueprint)
+app.register_blueprint(Blueprint_HexToDecimal_AR.Web_HexToDecimal_blueprint)
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('Common/404.html'), 404
 
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)

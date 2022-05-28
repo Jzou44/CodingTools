@@ -1,0 +1,98 @@
+{%extends "MyIpAddress/de/base_layout_de.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Domänenname oder IP-Adresse</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Leer</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Whois-Abfrage</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Ergebnis kopieren</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Whois Abfrageergebnisse."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Über{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-whois.png" alt="comic whois">
+    </div>
+    <header><h2>Muss Whois das WWW-Präfix hinzufügen, um den Domänennamen abzufragen?</h2><div class="h2-highlight"></div></header>
+    <p> In den meisten Fällen gibt whois einen Second-Level-Domänennamen ab. Wenn Sie keine Ergebnisse finden, entfernen Sie das Präfix <code>www</code> und versuchen Sie es erneut. </p>
+    <header><h2>Warum muss ich Whois-Abfragen verwenden?</h2><div class="h2-highlight"></div></header>
+    <p> Sie haben eine sehr interessante Website gefunden und wollten mit dem Website-Inhaber Kontakt aufnehmen, konnten jedoch weder die Telefonnummer noch die E-Mail-Adresse des Website-Besitzers finden. </p>
+    <p> Das <code>1982</code> Whois Query Tool hilft Strafverfolgungsbehörden dabei, die Rechte von Domaininhabern zu ermitteln: Wenn Sie Godaddy eine zusätzliche Gebühr zahlen, kann Godaddy Ihnen dabei helfen, Ihre Kontaktinformationen zu verbergen, wenn sich andere auf Ihrer Domain befinden Bei einer Abfrage werden Ihre Telefonnummer und E-Mail-Adresse nicht angezeigt. </p>
+    <header><h2>Sollte ich meine Kontaktinformationen in den Whois-Suchergebnissen ausblenden? ?</h2><div class="h2-highlight"></div></header>
+    <p> Bei normalen Websites empfehle ich den Nutzern, ihre Kontaktinformationen nicht zu verbergen, da dies den Ruf Ihrer Website darstellt. Wenn Ihre Privatsphäre für Sie sehr wichtig ist oder wenn Sie sich von potenziellen Spam-Nachrichten fernhalten möchten, kann es sein, dass Whois-Datenschutz gilt Eine Wahl wert. </p>
+    <header><h2>Weitere Links zu Whois-Anfragen:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia: <a rel="nofollow" href="https://en.wikipedia.org/wiki/WHOIS" target="_blank">https://en.wikipedia.org/wiki/WHOIS</a></p>
+    <p> RFC 3912 (Whois): <a rel="nofollow" href="https://tools.ietf.org/html/rfc3912" target="_blank">https://tools.ietf.org/html/rfc3912</a></p>
+    <p> Whois-Abfrage (Ubuntu) im Linux-System: <a rel="nofollow" href="https://manpages.debian.org/jessie/whois/whois.1.en.html" target="_blank">https://manpages.debian.org/jessie/whois/whois.1.en.html</a></p>
+    <header><h2>Whois-Befehl im Linux-System:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       whois - client for the whois directory service
+
+SYNOPSIS
+       whois  [  {  -h | --host } HOST ] [ { -p | --port } PORT ] [ -abBcdGHKlLmMrRx ] [ -g SOURCE:FIRST-LAST ]
+       [ -i ATTR[,ATTR]... ] [ -s SOURCE[,SOURCE]... ] [ -T TYPE[,TYPE]... ] [ --verbose ]
+       OBJECT
+
+       whois -q KEYWORD
+
+       whois -t TYPE
+
+       whois -v TYPE
+
+       whois --help
+
+       whois --version</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# whois -H google.com
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2018-02-21T18:36:40Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2020-09-14T04:00:00Z
+   ......
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

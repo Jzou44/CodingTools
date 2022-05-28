@@ -1,0 +1,95 @@
+{%extends "JsonFormatter/id/base_layout_id.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Silakan masukkan atau seret file teks di sini."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Kosong</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">Contoh</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Kompres Javascript</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Salin hasil</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Hasil kompresi javascript akan ditampilkan di sini."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Tentang{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Bagaimana cara mengurangi waktu buka Javascript?</h2><div class="h2-highlight"></div></header>
+    <p> 1. Gunakan alat kompresi Javascript untuk mengurangi ukuran file JS hingga 30%. </p>
+    <p> 2. Gabungkan beberapa file Javascript ke dalam satu file untuk mengurangi jumlah permintaan HTTP yang perlu dibuat. </p>
+    <p> 3. Gunakan CDN untuk menghindari permintaan HTTP yang berlebihan untuk file Javascript yang sama (seperti jQuery perpustakaan JS populer) </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-javascript-minifier.png" alt="comic javascript minifier">
+    </div>
+    <header><h2>Lebih banyak tautan ke Javascript:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia (Javascript): <a rel="nofollow" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">https://en.wikipedia.org/wiki/JavaScript</a></p>
+    <p> Mozilla (Javascript): <a rel="nofollow" href="https://developer.mozilla.org/bm/docs/Web/JavaScript" target="_blank">https://developer.mozilla.org/bm/docs/Web/JavaScript</a></p>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/brace-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "function copy_to_clipboard() {\n" +
+        "    var copy_button = document.getElementById(\"copy\");\n" +
+        "    editor2.focus();\n" +
+        "    editor2.execCommand(\"selectAll\");\n" +
+        "    document.execCommand(\"copy\");\n" +
+        "    copy_button.innerText = \"Result Copied\";\n" +
+        "    setTimeout(function() {\n" +
+        "        copy_button.innerText = \"Copy Result\";\n" +
+        "    }, 1000);\n" +
+        "}";
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            source = editor1.getValue();
+            source = "<script>" + source +"<\/script>";
+            var minify = require('html-minifier').minify;
+            output = minify(source, {
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true,
+                removeComments: true,
+            });
+            output = output.replace("<script>","").replace("<\/script>","");
+            editor2.setValue(output);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

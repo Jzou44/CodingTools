@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/jp"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">関連ツール</a>
+            <a class="table-link" href="/jp/hex-to-decimal">16進数から10進数への変換</a>
+            <a class="table-link" href="/jp/decimal-to-hex">10進数から16進数への変換</a>
+            <a class="table-link" href="/jp/octal-to-decimal">8進数から10進数への変換</a>
+            <a class="table-link" href="/jp/decimal-to-octal">10進数から8進数への変換</a>
+            <a class="table-link" href="/jp/binary-to-decimal">2進数から10進数への変換</a>
+            <a class="table-link" href="/jp/decimal-to-binary">10進数から2進数への変換</a>
+            <a class="table-link" href="/jp/ascii-table">ASCIIルックアップテーブル</a>
+            <a class="table-link" href="/jp/hex-to-ascii">16進数からASCII文字列への変換</a>
+            <a class="table-link" href="/jp/ascii-to-hex">ASCIIストリングから16進数への変換</a>
+            <a class="table-link" href="/jp/fraction-to-decimal">小数から小数への変換</a>
+            <a class="table-link" href="/jp/decimal-to-fraction">分数から分数への変換</a>
+            <a class="table-link" href="/jp/percent-to-decimal">10進数変換に対するパーセント</a>
+            <a class="table-link" href="/jp/decimal-to-percent">小数からパーセントへの変換</a>
+            <a class="table-link" href="/jp/percent-to-fraction">分数変換に対する割合</a>
+            <a class="table-link" href="/jp/fraction-to-percent">パーセントコンバージョンへのスコア付け</a>
+            <a class="table-link" href="/jp/hex-to-rgb">16進カラーからRGBカラーへの変換</a>
+            <a class="table-link" href="/jp/rgb-to-hex">RGBカラーから16進カラーへの変換</a>
+            <a class="table-link" href="/jp/hex-to-rgba">16進カラーからRGBAカラーへの変換</a>
+            <a class="table-link" href="/jp/rgba-to-hex">RGBAカラーから16進カラーへの変換</a>
+            <a class="table-link" href="/jp/roman-numerals-chart">ローマ数字比較表1-1000</a>
+            <a class="table-link" href="/jp/roman-numerals-to-numbers">ローマ数字からアラビア数字への変換</a>
+            <a class="table-link" href="/jp/numbers-to-roman-numerals">アラビア数字からローマ数字への変換</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list_jp.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/{{model.cdnjs_version_bignumber}}/bignumber.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "HexToDecimal/seg_load_js.html"%}
+</body>
+</html>

@@ -1,0 +1,129 @@
+{%extends "MyIpAddress/ar/base_layout_ar.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">اسم المجال أو عنوان IP</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="example.com" spellcheck="false">
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">طريقة التتبع</span>
+        </div>
+        <select class="form-control custom-select" name="querytype" id="querytype">
+            <option value="-I" selected>استخدم حزم ICMP ECHO</option>
+            <option value="-T">باستخدام الحزم SYN TCP</option>
+            <option value="-U">باستخدام حزم UDP</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">ما إذا كان من الضروري حل IP للموجه إلى اسم المجال</span>
+        </div>
+        <select class="form-control custom-select" name="resolveDomain" id="resolveDomain">
+            <option value="Do" selected>حل</option>
+            <option value="Dont">لم تحل</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">أوقات التتبع لكل جهاز توجيه</span>
+        </div>
+        <select class="form-control custom-select" name="probesnumber" id="probesnumber">
+            <option value="1" selected>1 مرة</option>
+            <option value="2">مرتين</option>
+            <option value="3">3 مرات</option>
+            <option value="4">4 مرات</option>
+            <option value="5">5 مرات</option>
+            <option value="6">6 مرات</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> واضح</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">تتبع جهاز التوجيه</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> نسخ النتيجة</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="نتائج تتبع جهاز التوجيه."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>في{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-traceroute.png" alt="comic traceroute">
+    </div>
+    <header><h2>لماذا أحتاج إلى استخدام تتبع جهاز التوجيه؟</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> هل لاحظت أن بعض مواقع الويب أسرع والأخرى أبطأ؟ وذلك لأن بعض خوادم الويب تكون أقرب إليك (أقل أجهزة توجيه إلى خادم الويب الخاص بك). على سبيل المثال ، إذا قمت بزيارة موقع ويب موجود في الصين من الولايات المتحدة ، فهناك أكثر من 10 أجهزة توجيه تستخدم لنقل حركة المرور ، مما يعني تم نسخ حزمة البيانات ولصقها أكثر من <code>10</code> مرات. </p>
+    <p style=";text-align:right;direction:rtl"> جهاز تتبع التوجيه عبارة عن أداة تقيس عدد أجهزة التوجيه بين عنوانين IP وتضيف زمن انتقال إلى كل جهاز توجيه ، بالإضافة إلى ذلك ، يمكنك تتبع مسار الإرسال الخاص بالمرور ، بما في ذلك عدد نقاط IPS (مزودي خدمة الإنترنت) وعدد المرات. البلد ، وعنوان IP المعينة لكل جهاز التوجيه. </p>
+    <header><h2>كيفية استخدام تتبع جهاز التوجيه في المجالات المهنية؟</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> في إدارة الشبكة ، يمكنك استخدام أداة تتبع الموجّه لعرض بنية الشبكة للشبكة ، مثل أي جهاز توجيه متصل بشكل مباشر بكل جهاز توجيه.في المعاملات ذات التردد العالي ، السرعة هي كل شيء ، يمكنك استخدام أداة تتبع الموجّه لاختيار برنامج التداول عالي التردد. موقف للحصول على السرعة القصوى. </p>
+    <header><h2>المزيد من الروابط لتتبع جهاز التوجيه:</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> ويكيبيديا (Traceroute): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Traceroute" target="_blank">https://en.wikipedia.org/wiki/Traceroute</a></p>
+    <p style=";text-align:right;direction:rtl"> RFC 1393 (تتبع المسار): <a rel="nofollow" href="https://tools.ietf.org/html/rfc1393" target="_blank">https://tools.ietf.org/html/rfc1393</a></p>
+    <p style=";text-align:right;direction:rtl"> تتبع التوجيه في لينكس (أوبونتو): <a rel="nofollow" href="https://linux.die.net/man/8/traceroute" target="_blank">https://linux.die.net/man/8/traceroute</a></p>
+    <p style=";text-align:right;direction:rtl"> تتبع جهاز التوجيه في نظام ويندوز (ترسرت): <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert" target="_blank">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tracert</a>
+    </p>
+    <header><h2>تتبع التوجيه في أنظمة لينكس:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       traceroute - print the route packets trace to network host
+
+SYNOPSIS
+       traceroute [-46dFITUnreAV] [-f first_ttl] [-g gate,...]
+               [-i device] [-m max_ttl] [-p port] [-s src_addr]
+               [-q nqueries] [-N squeries] [-t tos]
+               [-l flow_label] [-w waittimes] [-z sendwait] [-UL] [-D]
+               [-P proto] [--sport=port] [-M method] [-O mod_options]
+               [--mtu] [--back]
+               host [packet_len]
+       traceroute6  [options]
+       tcptraceroute  [options]
+       lft  [options]</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# traceroute -I -q 3 facebook.com
+traceroute to facebook.com (31.13.67.35), 30 hops max, 60 byte packets
+ 1  216.239.43.151 (216.239.43.151)  13.006 ms  13.016 ms  13.017 ms
+ 2  108.170.253.11 (108.170.253.11)  13.670 ms  13.725 ms  13.724 ms
+ 3  ae2.pr06.mia1.tfbnw.net (157.240.67.134)  21.087 ms  21.065 ms  21.073 ms
+ 4  po106.psw02.mia3.tfbnw.net (157.240.43.251)  14.775 ms  14.701 ms  14.773 ms
+ 5  173.252.67.93 (173.252.67.93)  14.626 ms  14.762 ms  14.762 ms
+ 6  edge-star-mini-shv-01-mia3.facebook.com (31.13.67.35)  14.979 ms  13.725 ms  13.780 ms
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

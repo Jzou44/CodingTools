@@ -1,0 +1,96 @@
+{%extends "PasswordsGenerator/cn/base_layout_cn.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="请在这里输入或者拖入文本文件."></textarea>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">字母大小写</span>
+        </div>
+        <select class="form-control custom-select" name="UpperCase" id="UpperCase" oninput="post_ajax()">
+            <option value="u" selected>大写</option>
+            <option value="l">小写</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="cleartxt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <button type="button" id="submit_button" class="btn btn-primary">MD5加密</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 复制结果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="结果将会显示在这里."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>关于{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-md5.png" alt="comic md5">
+    </div>
+    <header><h2>为什么需要MD5?</h2><div class="h2-highlight"></div></header>
+    <p>诸如MD5之类的哈希算法是单向算法,这意味着它是不可逆的. 这个字符使MD5在文件上制作"指纹"非常有用,文件的MD5值可以证明文件没有被修改. 哈希算法也用于密码保护. 存储在网站数据库中的"盐"和您的原始密码最终值是不可逆的,意味着即使数据库泄露, 黑客也无法恢复您的密码.</p>
+    <header><h2>MD5是否安全,我应该继续使用它吗？</h2><div class="h2-highlight"></div></header>
+    <p>第一种攻击叫做<code>"彩虹表"(rainbow tables)</code>.  它是一个非常大的数据库,包括具有相应MD5值的简短字符串. 例如,当您查彩虹表
+        <code>"FC5E038D38A57032085441E7FE7010B0"</code>时, 你可以找到它的原始字符串是 "helloworld". 如果原始字符串很短,彩虹表可以成功解密MD5. </p>
+    <p>第二次攻击基于MD5的基础算法,近年来越来越多的网站切换到SHA256或SHA512. 但是许多网站仍在使用MD5,这给互联网安全留下了巨大的隐患.</p>
+    <header><h2>更多关于MD5的链接:</h2><div class="h2-highlight"></div></header>
+    <p>RFC 1321: <a rel="nofollow" href="https://www.ietf.org/rfc/rfc1321.txt" alt="MD5" target="_blank">https://www.ietf.org/rfc/rfc1321.txt</a></p>
+    <p>Python中的MD5 (hashlib): <a rel="nofollow" href="https://docs.python.org/3/library/hashlib.html" alt="MD5" target="_blank">https://docs.python.org/3/library/hashlib.html</a></p>
+    <p>Java中的MD5: <a rel="nofollow" href="https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html" alt="MD5"
+                                      target="_blank">https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html</a></p>
+    <p>PHP中的MD5: <a rel="nofollow" href="http://php.net/manual/en/function.md5.php" alt="MD5" target="_blank">http://php.net/manual/en/function.md5.php</a></p>
+    <header><h2>用Python计算字符串的MD5哈希值 (用 package hashlib):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import hashlib
+
+def md5_generator(str):
+    m = hashlib.md5()
+    m.update(str.encode())
+    return m.hexdigest()
+    </pre>
+    <header><h2>用Java计算字符串的MD5哈希值 (用 package MessageDigest):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.math.BigInteger;
+import java.security.MessageDigest;
+
+public String generate(String str){
+    MessageDigest md = MessageDigest.getInstance("MD5");
+    md.update(str.getBytes());
+    byte[] digest = md.digest();
+    String result = new BigInteger(1, digest).toString(16).toUpperCase();
+    return result;
+}
+    </pre>
+    <header><h2>在Linux中计算文件的MD5哈希值 (用 OpenSSL):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# openssl dgst -md5 access.log
+MD5(access.log)= 742f23518e684f3562ffc9f983f190ba
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function work(input_str) {
+        return CryptoJS.MD5(input_str).toString();
+    }
+</script>
+{%endblock%}

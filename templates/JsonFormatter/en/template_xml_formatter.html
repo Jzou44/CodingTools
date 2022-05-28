@@ -1,0 +1,144 @@
+{%extends "JsonFormatter/en/base_layout.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px"placeholder="Paste input or drag file in here."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Clear</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">Example</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Format XML</button>
+    <button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('result.xml')"><i class="fas fa-file-download"></i> Save Result</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copy Result</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="xml format result will show up here."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>About {{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <p>This tool can force to format invalid XML String, even if the input String doesn't comply the official XML syntax properly.</p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-xml-formatter.png" alt="comic xml formatter">
+    </div>
+    <header><h2>Basic idea of XML:</h2><div class="h2-highlight"></div></header>
+    <p>XML is a data format specification, a format specification that contains data and data descriptions.</p>
+    <p>For example: We want to send a piece of data to the other party, the data content is <code>"too young too simple sometimes naive"</code>, if you want to split this paragraph into three data according to the attribute, that is, <code>age</code>: too young; <code>experience</code>: too simple; <code>result</code>: sometimes naive.</p>
+    <p>For human the expression is "too young,too simple,sometimes naive", Information is split by comma, the first part is the <code>age</code>, the second part is the <code>experience</code>, and the third part is the <code>result</code>. This method can be used to hold data and can be parsed, but it is not intuitive, and the versatility is not good. If there is a string that exceeds the limit of the number of words, it can not be parsed, and the data itself may contain comma!!!</p>
+    <p>We all know that programs are not like people, we can understand the literal meaning, and automatically split the data, so we need to help the program to do the split, so there are a variety of data formats and split methods.</p>
+    <p>To address this problem, XML is invented, and the above data is expressed in XML can be like this</p>
+    <pre class="prettyprint linenums">&lt;person age=&quot;too young&quot; experience=&quot;too simple&quot; result=&quot;sometimes naive&quot; /&gt;</pre>
+    <p>or like this:</p>
+    <pre class="prettyprint linenums">&lt;person&gt;
+    &lt;age value=&quot;too young&quot; /&gt;
+    &lt;experience value=&quot;too simple&quot; /&gt;
+    &lt;result value=&quot;sometimes naive&quot; /&gt;
+&lt;/person&gt;</pre>
+    <p>even like this:</p>
+    <pre class="prettyprint linenums">&lt;person age=&quot;too young&quot; experience=&quot;too simple&quot;&gt;
+    &lt;result value=&quot;sometimes naive&quot; /&gt;
+&lt;/person&gt;</pre>
+    <p>ALl above XML intuitively describe the data, and they are common format specification for the program to parse.</p>
+    <header><h2>What is the XML namespace? Why is it important?</h2><div class="h2-highlight"></div></header>
+    <p>The XML namespace is similar to Java's package to avoid conflicts between tags with the same source name. The XML namespace is defined at the top of the XML document using the xmlns attribute with the syntax xmlns:prefix='URI'. Prefix is​used with the actual label in the XML document. The following example shows the use of an XML namespace.</p>
+    <pre class="prettyprint linenums">&lt;root xmlns:article=&quot;https://wordpress.org/post&quot;&gt;
+	&lt;post&gt;
+		&lt;article:title&gt;How to ensure the effectiveness of MOOC learning&lt;/article:title&gt;
+		&lt;article:date&gt;March 25, 2019&lt;/article:date&gt;
+	&lt;/post&gt;
+&lt;/root&gt;</pre>
+    <header><h2>The Advantages of XML over JSON:</h2><div class="h2-highlight"></div></header>
+    <p>XML is more extensible than JSON, XML can use tags and attributes to represent complex relationships within data.</p>
+    <p>XML is more widely used than JSON and has a longer history than JSON, HTML is also a kind of XML. It means XML data can be understand by more programmers.</p>
+    <header><h2>Does XML Formatter Online Tool log my data?</h2><div class="h2-highlight"></div></header>
+    <p>Absolutely <b>NOT</b>, this XML Formatter doing all the formatting work on the client side, all logic are implemented by Javascript. There are 2 major advantages: 1.Your data never transmitted in the Open Internet, so you know it's secure; 2.It's much faster than doing all the work in the server side, because there is no Internet Delay.</p>
+    <header><h2>More information about XML (Extensible Markup Language):</h2><div class="h2-highlight"></div></header>
+    <p>RFC 3470 (XML): <a rel="nofollow" href="https://tools.ietf.org/html/rfc3470" target="_blank">https://tools.ietf.org/html/rfc3470</a></p>
+    <p>Python Implementation of XML (BeautifulSoup): <a rel="nofollow" href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">https://www.crummy.com/software/BeautifulSoup/</a></p>
+    <p>Java Implementation of XML (dom4j): <a rel="nofollow" href="https://dom4j.github.io/" target="_blank">https://dom4j.github.io/</a></p>
+    <header><h2>XML Formatter with Python (with package xml.dom):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+from xml.dom import minidom
+
+
+def format_xml(input_str):
+    str = minidom.parseString(input_str)
+    output_str = str.toprettyxml(indent="    ")
+    return output_str
+    </pre>
+    <header><h2>XML Formatter with Java (with package dom4j):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
+
+public String Format(String xmlStr){
+    Document document=DocumentHelper.parseText(xmlStr);
+    OutputFormat format=OutputFormat.createPrettyPrint();
+    format.setIndentSize(4);
+    StringWriter stringWriter=new StringWriter();
+    XMLWriter writer=new XMLWriter(stringWriter,format);
+    writer.write(document);
+    String resultStr=stringWriter.toString();
+    return resultStr;
+}
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/xml-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><person><firstName>John</firstName><lastName>Smith</lastName><age>25</age><address><streetAddress>21 2nd Street</streetAddress><city>New York</city><state>NY</state><postalCode>10021</postalCode></address><phoneNumber><type>home</type><number>212 555-1234</number></phoneNumber><phoneNumber><type>fax</type><number>646 555-4567</number></phoneNumber><gender><type>male</type></gender></person>";
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            var XMLString = editor1.getValue();
+            var minify = require('html-minifier').minify;
+            XMLString = minify(XMLString, {
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true,
+                removeComments: true,
+            });
+            XMLString = vkbeautify.xml(XMLString);
+            editor2.setValue(XMLString);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+<script src="/js/vkbeautify.js"></script>
+{%endblock%}

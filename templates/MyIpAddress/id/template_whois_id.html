@@ -1,0 +1,98 @@
+{%extends "MyIpAddress/id/base_layout_id.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Nama domain atau alamat IP</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Kosong</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Permintaan whois</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Salin hasil</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Whois hasil pencarian."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Tentang{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-whois.png" alt="comic whois">
+    </div>
+    <header><h2>Apakah Whois perlu menambahkan awalan www untuk menanyakan nama domain?</h2><div class="h2-highlight"></div></header>
+    <p> Dalam kebanyakan kasus, whois menanyakan nama domain tingkat kedua tidak akan mengembalikan hasil apa pun. Jika Anda tidak dapat menemukan hasil, coba hapus awalan <code>www</code> dan coba lagi. </p>
+    <header><h2>Mengapa saya perlu menggunakan pertanyaan Whois?</h2><div class="h2-highlight"></div></header>
+    <p> Anda menemukan situs web yang sangat menarik dan ingin menghubungi pemilik situs web, tetapi tidak dapat menemukan nomor telepon atau alamat email pemilik situs web tersebut. Whois adalah alat untuk memeriksa informasi kontak pemilik situs web. </p>
+    <p> Whois Query Tool, yang dimulai pada tahun <code>1982</code> , membantu lembaga penegak hukum mengidentifikasi hak-hak pemilik domain. Hari ini, jika Anda membayar biaya tambahan kepada Godaddy, Godaddy dapat membantu Anda menyembunyikan informasi kontak Anda, jadi ketika orang lain ada di domain Anda Saat Anda bertanya, nomor telepon dan alamat email Anda tidak akan ditampilkan. </p>
+    <header><h2>Haruskah saya menyembunyikan informasi kontak saya di hasil pencarian Whois? ?</h2><div class="h2-highlight"></div></header>
+    <p> Untuk situs web biasa, saya menyarankan orang untuk tidak menyembunyikan informasi kontak mereka karena itu mewakili reputasi situs web Anda. Tetapi jika privasi Anda sangat penting bagi Anda, atau jika Anda ingin menjauh dari potensi spam, siapa pun yang melindungi privasi mungkin Pilihan yang layak. </p>
+    <header><h2>Lebih banyak tautan ke permintaan Whois:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia: <a rel="nofollow" href="https://en.wikipedia.org/wiki/WHOIS" target="_blank">https://en.wikipedia.org/wiki/WHOIS</a></p>
+    <p> RFC 3912 (Whois): <a rel="nofollow" href="https://tools.ietf.org/html/rfc3912" target="_blank">https://tools.ietf.org/html/rfc3912</a></p>
+    <p> Whois query (Ubuntu) dalam sistem Linux: <a rel="nofollow" href="https://manpages.debian.org/jessie/whois/whois.1.en.html" target="_blank">https://manpages.debian.org/jessie/whois/whois.1.en.html</a></p>
+    <header><h2>Perintah Whois dalam sistem Linux:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       whois - client for the whois directory service
+
+SYNOPSIS
+       whois  [  {  -h | --host } HOST ] [ { -p | --port } PORT ] [ -abBcdGHKlLmMrRx ] [ -g SOURCE:FIRST-LAST ]
+       [ -i ATTR[,ATTR]... ] [ -s SOURCE[,SOURCE]... ] [ -T TYPE[,TYPE]... ] [ --verbose ]
+       OBJECT
+
+       whois -q KEYWORD
+
+       whois -t TYPE
+
+       whois -v TYPE
+
+       whois --help
+
+       whois --version</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# whois -H google.com
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2018-02-21T18:36:40Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2020-09-14T04:00:00Z
+   ......
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

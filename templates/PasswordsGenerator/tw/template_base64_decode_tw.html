@@ -1,0 +1,87 @@
+{%extends "PasswordsGenerator/tw/base_layout_tw.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="請在這裡輸入或者拖入文本文件."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="cleartxt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <button type="button" class="btn btn-secondary" onclick="base64_decode_example()">示例</button>
+    <button type="button" id="submit_button" class="btn btn-primary">Base64解碼</button>
+    <button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('base64_decode_result.txt')"><i class="fas fa-file-download"></i> 保存結果</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 複製結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="結果將會顯示在這裡."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>關於{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-base64-decode.png" alt="comic base64 decode">
+    </div>
+    <header><h2>更多關於Base64的鏈接:</h2><div class="h2-highlight"></div></header>
+    <p> RFC 3548: <a rel="nofollow" href="https://tools.ietf.org/html/rfc3548.html" alt="Base64" target="_blank">https://tools.ietf.org/html/rfc3548.html</a></p>
+    <p> Python中的Base64: <a rel="nofollow" href="https://docs.python.org/2/library/base64.html" alt="Base64" target="_blank">https://docs.python.org/2/library/base64.html</a></p>
+    <p> Java中的Base64: <a rel="nofollow" href="https://docs.oracle.com/javase/8/docs/api/java/util/Base64.html" alt="Base64"
+                                         target="_blank">https://docs.oracle.com/javase/8/docs/api/java/util/Base64.html</a>
+    </p>
+    <header><h2>用Python解碼字符串的Base64 (用package base64):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import base64
+
+def base64_decoder(str):
+    return base64.b64decode(str.encode())
+    </pre>
+    <header><h2>用Java解碼字符串的Base64 (用package MessageDigest):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.util.Base64;
+
+public String decode(String str)  {
+    byte[] decodedBytes = Base64.getDecoder().decode(str.getBytes());
+    String text = new String(decodedBytes);
+    return text;
+}
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function base64_decode_example() {
+        cleartxt();
+        editor1.setValue("eyJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJTbWl0aCIsImFnZSI6MjUsImFkZHJlc3MiOnsic3RyZWV0QWRkcmVzcyI6IjIxIDJuZCBTdHJlZXQiLCJjaXR5IjoiTmV3IFlvcmsiLCJzdGF0ZSI6Ik5ZIiwicG9zdGFsQ29kZSI6IjEwMDIxIn0sInBob25lTnVtYmVyIjpbeyJ0eXBlIjoiaG9tZSIsIm51bWJlciI6IjIxMiA1NTUtMTIzNCJ9LHsidHlwZSI6ImZheCIsIm51bWJlciI6IjY0NiA1NTUtNDU2NyJ9XSwiZ2VuZGVyIjp7InR5cGUiOiJtYWxlIn19");
+        if ($('#LiveModeSwitch').val() == "OFF") {
+            $('#submit_button').trigger('click');
+        }
+    }
+
+    function work(input_str) {
+        try {
+            var words = CryptoJS.enc.Base64.parse(input_str);
+            var textString = CryptoJS.enc.Utf8.stringify(words);
+            return textString;
+        }catch(err) {
+            code2_error_alert();
+            return err.message;
+        }
+    }
+</script>
+{%endblock%}

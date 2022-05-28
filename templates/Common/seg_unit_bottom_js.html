@@ -1,0 +1,97 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/{{ model.cdnjs_version_file_saver }}/FileSaver.min.js"></script>
+<script>
+    {%if model.lang == 'en'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Copy Result";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Result Copied";
+    {%endif%}
+    {%if model.lang == 'zh-Hans'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> 复制结果";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> 成功复制结果";
+    {%endif%}
+    {%if model.lang == 'zh-Hant'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> 複製結果";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> 成功複製結果";
+    {%endif%}
+    {%if model.lang == 'ja'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> コピー結果";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> 正常にコピーされた結果";
+    {%endif%}
+    {%if model.lang == 'ko'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> 결과 복사";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> 결과 복사";
+    {%endif%}
+    {%if model.lang == 'es'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Copiar resultado";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Resultados exitosamente copiados";
+    {%endif%}
+    {%if model.lang == 'de'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Ergebnis kopieren";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Ergebnisse erfolgreich kopiert";
+    {%endif%}
+    {%if model.lang == 'fr'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Copier le résultat";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Résultats copiés avec succès";
+    {%endif%}
+    {%if model.lang == 'it'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Copia il risultato";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Risultati copiati correttamente";
+    {%endif%}
+    {%if model.lang == 'pt'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Copiar resultado";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Resultados copiados com sucesso";
+    {%endif%}
+    {%if model.lang == 'ru'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Скопировать результат";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Успешно скопированные результаты";
+    {%endif%}
+    {%if model.lang == 'id'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> Salin hasil";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> Berhasil menyalin hasil";
+    {%endif%}
+    {%if model.lang == 'ar'%}
+        var copy_button_text = "<i class=\"far fa-copy\"></i> نسخ النتيجة";
+        var copied_button_text = "<i class=\"far fa-copy\"></i> نجحت في نسخ النتائج";
+    {%endif%}
+    function finished_spin_hidden() {
+        setTimeout(function () {
+            $('#spinner').css('visibility', 'hidden');
+        }, 200);
+    }
+
+    function code2_error_alert() {
+        var alert_element = document.getElementsByClassName("codewrapper")[1];
+        alert_element.style.borderColor = '#d12f19';
+        alert_element.style.borderWidth = "3px";
+        setTimeout(function () {
+            alert_element.style.borderColor = '#e1e1e1';
+            alert_element.style.borderWidth = "1px";
+        }, 1000);
+    }
+
+    $(document).keypress(function (e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+            $("#submit_button").click();
+            //if ($("#google-search-input").is(':focus')) {
+            //    $("#google-search-button").click();
+            //} else {
+            //    $("#submit_button").click();
+            //}
+        }
+    });
+
+    function download_editor2_as_txt(filename) {
+        var blob = new Blob([editor2.getValue()], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, filename);
+    }
+
+    $('div.tool-list > a.table-link').each(function (i, item) {
+        let table_link_url_end = item.href.split("/").pop().toString();
+        let window_url_end = window.location.href.split("/").pop().toString();
+        if(table_link_url_end==window_url_end){
+            $(this).addClass("table-link-corrent");
+        }
+    });
+</script>
+
+{% include "Common/seg_cookie_consent.html" %}

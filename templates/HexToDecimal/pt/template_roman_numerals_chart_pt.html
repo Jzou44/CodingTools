@@ -1,0 +1,461 @@
+{%extends "HexToDecimal/pt/base_layout_pt.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<br>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Sobre{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Algarismos romanos:</h2><div class="h2-highlight"></div></header>
+    <p> Algarismos romanos usam letras latinas para representar números <code>("I" :"1", "V" :"5", "X" :"10", "L" :"50", "C" :"100", "D" :"500", "M" :"1000")</code> . O sistema numeral romano é freqüentemente usado na classificação de papéis e livros. </p>
+    <header><h2>Tabela de comparação de numeral romano (1-1000):</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> Algarismos arábicos (1-100) </th>
+            <th> Algarismos romanos </th>
+            <th> Algarismos arábicos (101-200) </th>
+            <th> Algarismos romanos </th>
+            <th> Algarismos arábicos (201-300) </th>
+            <th> Algarismos romanos </th>
+        </tr>
+<tr><td>1</td><td>I</td><td>101</td><td>CI</td><td>201</td><td>CCI</td></tr>
+<tr><td>2</td><td>II</td><td>102</td><td>CII</td><td>202</td><td>CCII</td></tr>
+<tr><td>3</td><td>III</td><td>103</td><td>CIII</td><td>203</td><td>CCIII</td></tr>
+<tr><td>4</td><td>IV</td><td>104</td><td>CIV</td><td>204</td><td>CCIV</td></tr>
+<tr><td>5</td><td>V</td><td>105</td><td>CV</td><td>205</td><td>CCV</td></tr>
+<tr><td>6</td><td>VI</td><td>106</td><td>CVI</td><td>206</td><td>CCVI</td></tr>
+<tr><td>7</td><td>VII</td><td>107</td><td>CVII</td><td>207</td><td>CCVII</td></tr>
+<tr><td>8</td><td>VIII</td><td>108</td><td>CVIII</td><td>208</td><td>CCVIII</td></tr>
+<tr><td>9</td><td>IX</td><td>109</td><td>CIX</td><td>209</td><td>CCIX</td></tr>
+<tr><td>10</td><td>X</td><td>110</td><td>CX</td><td>210</td><td>CCX</td></tr>
+<tr><td>11</td><td>XI</td><td>111</td><td>CXI</td><td>211</td><td>CCXI</td></tr>
+<tr><td>12</td><td>XII</td><td>112</td><td>CXII</td><td>212</td><td>CCXII</td></tr>
+<tr><td>13</td><td>XIII</td><td>113</td><td>CXIII</td><td>213</td><td>CCXIII</td></tr>
+<tr><td>14</td><td>XIV</td><td>114</td><td>CXIV</td><td>214</td><td>CCXIV</td></tr>
+<tr><td>15</td><td>XV</td><td>115</td><td>CXV</td><td>215</td><td>CCXV</td></tr>
+<tr><td>16</td><td>XVI</td><td>116</td><td>CXVI</td><td>216</td><td>CCXVI</td></tr>
+<tr><td>17</td><td>XVII</td><td>117</td><td>CXVII</td><td>217</td><td>CCXVII</td></tr>
+<tr><td>18</td><td>XVIII</td><td>118</td><td>CXVIII</td><td>218</td><td>CCXVIII</td></tr>
+<tr><td>19</td><td>XIX</td><td>119</td><td>CXIX</td><td>219</td><td>CCXIX</td></tr>
+<tr><td>20</td><td>XX</td><td>120</td><td>CXX</td><td>220</td><td>CCXX</td></tr>
+<tr><td>21</td><td>XXI</td><td>121</td><td>CXXI</td><td>221</td><td>CCXXI</td></tr>
+<tr><td>22</td><td>XXII</td><td>122</td><td>CXXII</td><td>222</td><td>CCXXII</td></tr>
+<tr><td>23</td><td>XXIII</td><td>123</td><td>CXXIII</td><td>223</td><td>CCXXIII</td></tr>
+<tr><td>24</td><td>XXIV</td><td>124</td><td>CXXIV</td><td>224</td><td>CCXXIV</td></tr>
+<tr><td>25</td><td>XXV</td><td>125</td><td>CXXV</td><td>225</td><td>CCXXV</td></tr>
+<tr><td>26</td><td>XXVI</td><td>126</td><td>CXXVI</td><td>226</td><td>CCXXVI</td></tr>
+<tr><td>27</td><td>XXVII</td><td>127</td><td>CXXVII</td><td>227</td><td>CCXXVII</td></tr>
+<tr><td>28</td><td>XXVIII</td><td>128</td><td>CXXVIII</td><td>228</td><td>CCXXVIII</td></tr>
+<tr><td>29</td><td>XXIX</td><td>129</td><td>CXXIX</td><td>229</td><td>CCXXIX</td></tr>
+<tr><td>30</td><td>XXX</td><td>130</td><td>CXXX</td><td>230</td><td>CCXXX</td></tr>
+<tr><td>31</td><td>XXXI</td><td>131</td><td>CXXXI</td><td>231</td><td>CCXXXI</td></tr>
+<tr><td>32</td><td>XXXII</td><td>132</td><td>CXXXII</td><td>232</td><td>CCXXXII</td></tr>
+<tr><td>33</td><td>XXXIII</td><td>133</td><td>CXXXIII</td><td>233</td><td>CCXXXIII</td></tr>
+<tr><td>34</td><td>XXXIV</td><td>134</td><td>CXXXIV</td><td>234</td><td>CCXXXIV</td></tr>
+<tr><td>35</td><td>XXXV</td><td>135</td><td>CXXXV</td><td>235</td><td>CCXXXV</td></tr>
+<tr><td>36</td><td>XXXVI</td><td>136</td><td>CXXXVI</td><td>236</td><td>CCXXXVI</td></tr>
+<tr><td>37</td><td>XXXVII</td><td>137</td><td>CXXXVII</td><td>237</td><td>CCXXXVII</td></tr>
+<tr><td>38</td><td>XXXVIII</td><td>138</td><td>CXXXVIII</td><td>238</td><td>CCXXXVIII</td></tr>
+<tr><td>39</td><td>XXXIX</td><td>139</td><td>CXXXIX</td><td>239</td><td>CCXXXIX</td></tr>
+<tr><td>40</td><td>XL</td><td>140</td><td>CXL</td><td>240</td><td>CCXL</td></tr>
+<tr><td>41</td><td>XLI</td><td>141</td><td>CXLI</td><td>241</td><td>CCXLI</td></tr>
+<tr><td>42</td><td>XLII</td><td>142</td><td>CXLII</td><td>242</td><td>CCXLII</td></tr>
+<tr><td>43</td><td>XLIII</td><td>143</td><td>CXLIII</td><td>243</td><td>CCXLIII</td></tr>
+<tr><td>44</td><td>XLIV</td><td>144</td><td>CXLIV</td><td>244</td><td>CCXLIV</td></tr>
+<tr><td>45</td><td>XLV</td><td>145</td><td>CXLV</td><td>245</td><td>CCXLV</td></tr>
+<tr><td>46</td><td>XLVI</td><td>146</td><td>CXLVI</td><td>246</td><td>CCXLVI</td></tr>
+<tr><td>47</td><td>XLVII</td><td>147</td><td>CXLVII</td><td>247</td><td>CCXLVII</td></tr>
+<tr><td>48</td><td>XLVIII</td><td>148</td><td>CXLVIII</td><td>248</td><td>CCXLVIII</td></tr>
+<tr><td>49</td><td>XLIX</td><td>149</td><td>CXLIX</td><td>249</td><td>CCXLIX</td></tr>
+<tr><td>50</td><td>L</td><td>150</td><td>CL</td><td>250</td><td>CCL</td></tr>
+<tr><td>51</td><td>LI</td><td>151</td><td>CLI</td><td>251</td><td>CCLI</td></tr>
+<tr><td>52</td><td>LII</td><td>152</td><td>CLII</td><td>252</td><td>CCLII</td></tr>
+<tr><td>53</td><td>LIII</td><td>153</td><td>CLIII</td><td>253</td><td>CCLIII</td></tr>
+<tr><td>54</td><td>LIV</td><td>154</td><td>CLIV</td><td>254</td><td>CCLIV</td></tr>
+<tr><td>55</td><td>LV</td><td>155</td><td>CLV</td><td>255</td><td>CCLV</td></tr>
+<tr><td>56</td><td>LVI</td><td>156</td><td>CLVI</td><td>256</td><td>CCLVI</td></tr>
+<tr><td>57</td><td>LVII</td><td>157</td><td>CLVII</td><td>257</td><td>CCLVII</td></tr>
+<tr><td>58</td><td>LVIII</td><td>158</td><td>CLVIII</td><td>258</td><td>CCLVIII</td></tr>
+<tr><td>59</td><td>LIX</td><td>159</td><td>CLIX</td><td>259</td><td>CCLIX</td></tr>
+<tr><td>60</td><td>LX</td><td>160</td><td>CLX</td><td>260</td><td>CCLX</td></tr>
+<tr><td>61</td><td>LXI</td><td>161</td><td>CLXI</td><td>261</td><td>CCLXI</td></tr>
+<tr><td>62</td><td>LXII</td><td>162</td><td>CLXII</td><td>262</td><td>CCLXII</td></tr>
+<tr><td>63</td><td>LXIII</td><td>163</td><td>CLXIII</td><td>263</td><td>CCLXIII</td></tr>
+<tr><td>64</td><td>LXIV</td><td>164</td><td>CLXIV</td><td>264</td><td>CCLXIV</td></tr>
+<tr><td>65</td><td>LXV</td><td>165</td><td>CLXV</td><td>265</td><td>CCLXV</td></tr>
+<tr><td>66</td><td>LXVI</td><td>166</td><td>CLXVI</td><td>266</td><td>CCLXVI</td></tr>
+<tr><td>67</td><td>LXVII</td><td>167</td><td>CLXVII</td><td>267</td><td>CCLXVII</td></tr>
+<tr><td>68</td><td>LXVIII</td><td>168</td><td>CLXVIII</td><td>268</td><td>CCLXVIII</td></tr>
+<tr><td>69</td><td>LXIX</td><td>169</td><td>CLXIX</td><td>269</td><td>CCLXIX</td></tr>
+<tr><td>70</td><td>LXX</td><td>170</td><td>CLXX</td><td>270</td><td>CCLXX</td></tr>
+<tr><td>71</td><td>LXXI</td><td>171</td><td>CLXXI</td><td>271</td><td>CCLXXI</td></tr>
+<tr><td>72</td><td>LXXII</td><td>172</td><td>CLXXII</td><td>272</td><td>CCLXXII</td></tr>
+<tr><td>73</td><td>LXXIII</td><td>173</td><td>CLXXIII</td><td>273</td><td>CCLXXIII</td></tr>
+<tr><td>74</td><td>LXXIV</td><td>174</td><td>CLXXIV</td><td>274</td><td>CCLXXIV</td></tr>
+<tr><td>75</td><td>LXXV</td><td>175</td><td>CLXXV</td><td>275</td><td>CCLXXV</td></tr>
+<tr><td>76</td><td>LXXVI</td><td>176</td><td>CLXXVI</td><td>276</td><td>CCLXXVI</td></tr>
+<tr><td>77</td><td>LXXVII</td><td>177</td><td>CLXXVII</td><td>277</td><td>CCLXXVII</td></tr>
+<tr><td>78</td><td>LXXVIII</td><td>178</td><td>CLXXVIII</td><td>278</td><td>CCLXXVIII</td></tr>
+<tr><td>79</td><td>LXXIX</td><td>179</td><td>CLXXIX</td><td>279</td><td>CCLXXIX</td></tr>
+<tr><td>80</td><td>LXXX</td><td>180</td><td>CLXXX</td><td>280</td><td>CCLXXX</td></tr>
+<tr><td>81</td><td>LXXXI</td><td>181</td><td>CLXXXI</td><td>281</td><td>CCLXXXI</td></tr>
+<tr><td>82</td><td>LXXXII</td><td>182</td><td>CLXXXII</td><td>282</td><td>CCLXXXII</td></tr>
+<tr><td>83</td><td>LXXXIII</td><td>183</td><td>CLXXXIII</td><td>283</td><td>CCLXXXIII</td></tr>
+<tr><td>84</td><td>LXXXIV</td><td>184</td><td>CLXXXIV</td><td>284</td><td>CCLXXXIV</td></tr>
+<tr><td>85</td><td>LXXXV</td><td>185</td><td>CLXXXV</td><td>285</td><td>CCLXXXV</td></tr>
+<tr><td>86</td><td>LXXXVI</td><td>186</td><td>CLXXXVI</td><td>286</td><td>CCLXXXVI</td></tr>
+<tr><td>87</td><td>LXXXVII</td><td>187</td><td>CLXXXVII</td><td>287</td><td>CCLXXXVII</td></tr>
+<tr><td>88</td><td>LXXXVIII</td><td>188</td><td>CLXXXVIII</td><td>288</td><td>CCLXXXVIII</td></tr>
+<tr><td>89</td><td>LXXXIX</td><td>189</td><td>CLXXXIX</td><td>289</td><td>CCLXXXIX</td></tr>
+<tr><td>90</td><td>XC</td><td>190</td><td>CXC</td><td>290</td><td>CCXC</td></tr>
+<tr><td>91</td><td>XCI</td><td>191</td><td>CXCI</td><td>291</td><td>CCXCI</td></tr>
+<tr><td>92</td><td>XCII</td><td>192</td><td>CXCII</td><td>292</td><td>CCXCII</td></tr>
+<tr><td>93</td><td>XCIII</td><td>193</td><td>CXCIII</td><td>293</td><td>CCXCIII</td></tr>
+<tr><td>94</td><td>XCIV</td><td>194</td><td>CXCIV</td><td>294</td><td>CCXCIV</td></tr>
+<tr><td>95</td><td>XCV</td><td>195</td><td>CXCV</td><td>295</td><td>CCXCV</td></tr>
+<tr><td>96</td><td>XCVI</td><td>196</td><td>CXCVI</td><td>296</td><td>CCXCVI</td></tr>
+<tr><td>97</td><td>XCVII</td><td>197</td><td>CXCVII</td><td>297</td><td>CCXCVII</td></tr>
+<tr><td>98</td><td>XCVIII</td><td>198</td><td>CXCVIII</td><td>298</td><td>CCXCVIII</td></tr>
+<tr><td>99</td><td>XCIX</td><td>199</td><td>CXCIX</td><td>299</td><td>CCXCIX</td></tr>
+<tr><td>100</td><td>C</td><td>200</td><td>CC</td><td>300</td><td>CCC</td></tr>
+    </table>
+    <br>
+    <table class="descriptionTable">
+        <tr>
+            <th> Algarismos arábicos (301-400) </th>
+            <th> Algarismos romanos </th>
+            <th> Algarismos arábicos (401-500) </th>
+            <th> Algarismos romanos </th>
+            <th> Algarismos arábicos (501-600) </th>
+            <th> Algarismos romanos </th>
+        </tr>
+<tr><td>301</td><td>CCCI</td><td>401</td><td>CDI</td><td>501</td><td>DI</td></tr>
+<tr><td>302</td><td>CCCII</td><td>402</td><td>CDII</td><td>502</td><td>DII</td></tr>
+<tr><td>303</td><td>CCCIII</td><td>403</td><td>CDIII</td><td>503</td><td>DIII</td></tr>
+<tr><td>304</td><td>CCCIV</td><td>404</td><td>CDIV</td><td>504</td><td>DIV</td></tr>
+<tr><td>305</td><td>CCCV</td><td>405</td><td>CDV</td><td>505</td><td>DV</td></tr>
+<tr><td>306</td><td>CCCVI</td><td>406</td><td>CDVI</td><td>506</td><td>DVI</td></tr>
+<tr><td>307</td><td>CCCVII</td><td>407</td><td>CDVII</td><td>507</td><td>DVII</td></tr>
+<tr><td>308</td><td>CCCVIII</td><td>408</td><td>CDVIII</td><td>508</td><td>DVIII</td></tr>
+<tr><td>309</td><td>CCCIX</td><td>409</td><td>CDIX</td><td>509</td><td>DIX</td></tr>
+<tr><td>310</td><td>CCCX</td><td>410</td><td>CDX</td><td>510</td><td>DX</td></tr>
+<tr><td>311</td><td>CCCXI</td><td>411</td><td>CDXI</td><td>511</td><td>DXI</td></tr>
+<tr><td>312</td><td>CCCXII</td><td>412</td><td>CDXII</td><td>512</td><td>DXII</td></tr>
+<tr><td>313</td><td>CCCXIII</td><td>413</td><td>CDXIII</td><td>513</td><td>DXIII</td></tr>
+<tr><td>314</td><td>CCCXIV</td><td>414</td><td>CDXIV</td><td>514</td><td>DXIV</td></tr>
+<tr><td>315</td><td>CCCXV</td><td>415</td><td>CDXV</td><td>515</td><td>DXV</td></tr>
+<tr><td>316</td><td>CCCXVI</td><td>416</td><td>CDXVI</td><td>516</td><td>DXVI</td></tr>
+<tr><td>317</td><td>CCCXVII</td><td>417</td><td>CDXVII</td><td>517</td><td>DXVII</td></tr>
+<tr><td>318</td><td>CCCXVIII</td><td>418</td><td>CDXVIII</td><td>518</td><td>DXVIII</td></tr>
+<tr><td>319</td><td>CCCXIX</td><td>419</td><td>CDXIX</td><td>519</td><td>DXIX</td></tr>
+<tr><td>320</td><td>CCCXX</td><td>420</td><td>CDXX</td><td>520</td><td>DXX</td></tr>
+<tr><td>321</td><td>CCCXXI</td><td>421</td><td>CDXXI</td><td>521</td><td>DXXI</td></tr>
+<tr><td>322</td><td>CCCXXII</td><td>422</td><td>CDXXII</td><td>522</td><td>DXXII</td></tr>
+<tr><td>323</td><td>CCCXXIII</td><td>423</td><td>CDXXIII</td><td>523</td><td>DXXIII</td></tr>
+<tr><td>324</td><td>CCCXXIV</td><td>424</td><td>CDXXIV</td><td>524</td><td>DXXIV</td></tr>
+<tr><td>325</td><td>CCCXXV</td><td>425</td><td>CDXXV</td><td>525</td><td>DXXV</td></tr>
+<tr><td>326</td><td>CCCXXVI</td><td>426</td><td>CDXXVI</td><td>526</td><td>DXXVI</td></tr>
+<tr><td>327</td><td>CCCXXVII</td><td>427</td><td>CDXXVII</td><td>527</td><td>DXXVII</td></tr>
+<tr><td>328</td><td>CCCXXVIII</td><td>428</td><td>CDXXVIII</td><td>528</td><td>DXXVIII</td></tr>
+<tr><td>329</td><td>CCCXXIX</td><td>429</td><td>CDXXIX</td><td>529</td><td>DXXIX</td></tr>
+<tr><td>330</td><td>CCCXXX</td><td>430</td><td>CDXXX</td><td>530</td><td>DXXX</td></tr>
+<tr><td>331</td><td>CCCXXXI</td><td>431</td><td>CDXXXI</td><td>531</td><td>DXXXI</td></tr>
+<tr><td>332</td><td>CCCXXXII</td><td>432</td><td>CDXXXII</td><td>532</td><td>DXXXII</td></tr>
+<tr><td>333</td><td>CCCXXXIII</td><td>433</td><td>CDXXXIII</td><td>533</td><td>DXXXIII</td></tr>
+<tr><td>334</td><td>CCCXXXIV</td><td>434</td><td>CDXXXIV</td><td>534</td><td>DXXXIV</td></tr>
+<tr><td>335</td><td>CCCXXXV</td><td>435</td><td>CDXXXV</td><td>535</td><td>DXXXV</td></tr>
+<tr><td>336</td><td>CCCXXXVI</td><td>436</td><td>CDXXXVI</td><td>536</td><td>DXXXVI</td></tr>
+<tr><td>337</td><td>CCCXXXVII</td><td>437</td><td>CDXXXVII</td><td>537</td><td>DXXXVII</td></tr>
+<tr><td>338</td><td>CCCXXXVIII</td><td>438</td><td>CDXXXVIII</td><td>538</td><td>DXXXVIII</td></tr>
+<tr><td>339</td><td>CCCXXXIX</td><td>439</td><td>CDXXXIX</td><td>539</td><td>DXXXIX</td></tr>
+<tr><td>340</td><td>CCCXL</td><td>440</td><td>CDXL</td><td>540</td><td>DXL</td></tr>
+<tr><td>341</td><td>CCCXLI</td><td>441</td><td>CDXLI</td><td>541</td><td>DXLI</td></tr>
+<tr><td>342</td><td>CCCXLII</td><td>442</td><td>CDXLII</td><td>542</td><td>DXLII</td></tr>
+<tr><td>343</td><td>CCCXLIII</td><td>443</td><td>CDXLIII</td><td>543</td><td>DXLIII</td></tr>
+<tr><td>344</td><td>CCCXLIV</td><td>444</td><td>CDXLIV</td><td>544</td><td>DXLIV</td></tr>
+<tr><td>345</td><td>CCCXLV</td><td>445</td><td>CDXLV</td><td>545</td><td>DXLV</td></tr>
+<tr><td>346</td><td>CCCXLVI</td><td>446</td><td>CDXLVI</td><td>546</td><td>DXLVI</td></tr>
+<tr><td>347</td><td>CCCXLVII</td><td>447</td><td>CDXLVII</td><td>547</td><td>DXLVII</td></tr>
+<tr><td>348</td><td>CCCXLVIII</td><td>448</td><td>CDXLVIII</td><td>548</td><td>DXLVIII</td></tr>
+<tr><td>349</td><td>CCCXLIX</td><td>449</td><td>CDXLIX</td><td>549</td><td>DXLIX</td></tr>
+<tr><td>350</td><td>CCCL</td><td>450</td><td>CDL</td><td>550</td><td>DL</td></tr>
+<tr><td>351</td><td>CCCLI</td><td>451</td><td>CDLI</td><td>551</td><td>DLI</td></tr>
+<tr><td>352</td><td>CCCLII</td><td>452</td><td>CDLII</td><td>552</td><td>DLII</td></tr>
+<tr><td>353</td><td>CCCLIII</td><td>453</td><td>CDLIII</td><td>553</td><td>DLIII</td></tr>
+<tr><td>354</td><td>CCCLIV</td><td>454</td><td>CDLIV</td><td>554</td><td>DLIV</td></tr>
+<tr><td>355</td><td>CCCLV</td><td>455</td><td>CDLV</td><td>555</td><td>DLV</td></tr>
+<tr><td>356</td><td>CCCLVI</td><td>456</td><td>CDLVI</td><td>556</td><td>DLVI</td></tr>
+<tr><td>357</td><td>CCCLVII</td><td>457</td><td>CDLVII</td><td>557</td><td>DLVII</td></tr>
+<tr><td>358</td><td>CCCLVIII</td><td>458</td><td>CDLVIII</td><td>558</td><td>DLVIII</td></tr>
+<tr><td>359</td><td>CCCLIX</td><td>459</td><td>CDLIX</td><td>559</td><td>DLIX</td></tr>
+<tr><td>360</td><td>CCCLX</td><td>460</td><td>CDLX</td><td>560</td><td>DLX</td></tr>
+<tr><td>361</td><td>CCCLXI</td><td>461</td><td>CDLXI</td><td>561</td><td>DLXI</td></tr>
+<tr><td>362</td><td>CCCLXII</td><td>462</td><td>CDLXII</td><td>562</td><td>DLXII</td></tr>
+<tr><td>363</td><td>CCCLXIII</td><td>463</td><td>CDLXIII</td><td>563</td><td>DLXIII</td></tr>
+<tr><td>364</td><td>CCCLXIV</td><td>464</td><td>CDLXIV</td><td>564</td><td>DLXIV</td></tr>
+<tr><td>365</td><td>CCCLXV</td><td>465</td><td>CDLXV</td><td>565</td><td>DLXV</td></tr>
+<tr><td>366</td><td>CCCLXVI</td><td>466</td><td>CDLXVI</td><td>566</td><td>DLXVI</td></tr>
+<tr><td>367</td><td>CCCLXVII</td><td>467</td><td>CDLXVII</td><td>567</td><td>DLXVII</td></tr>
+<tr><td>368</td><td>CCCLXVIII</td><td>468</td><td>CDLXVIII</td><td>568</td><td>DLXVIII</td></tr>
+<tr><td>369</td><td>CCCLXIX</td><td>469</td><td>CDLXIX</td><td>569</td><td>DLXIX</td></tr>
+<tr><td>370</td><td>CCCLXX</td><td>470</td><td>CDLXX</td><td>570</td><td>DLXX</td></tr>
+<tr><td>371</td><td>CCCLXXI</td><td>471</td><td>CDLXXI</td><td>571</td><td>DLXXI</td></tr>
+<tr><td>372</td><td>CCCLXXII</td><td>472</td><td>CDLXXII</td><td>572</td><td>DLXXII</td></tr>
+<tr><td>373</td><td>CCCLXXIII</td><td>473</td><td>CDLXXIII</td><td>573</td><td>DLXXIII</td></tr>
+<tr><td>374</td><td>CCCLXXIV</td><td>474</td><td>CDLXXIV</td><td>574</td><td>DLXXIV</td></tr>
+<tr><td>375</td><td>CCCLXXV</td><td>475</td><td>CDLXXV</td><td>575</td><td>DLXXV</td></tr>
+<tr><td>376</td><td>CCCLXXVI</td><td>476</td><td>CDLXXVI</td><td>576</td><td>DLXXVI</td></tr>
+<tr><td>377</td><td>CCCLXXVII</td><td>477</td><td>CDLXXVII</td><td>577</td><td>DLXXVII</td></tr>
+<tr><td>378</td><td>CCCLXXVIII</td><td>478</td><td>CDLXXVIII</td><td>578</td><td>DLXXVIII</td></tr>
+<tr><td>379</td><td>CCCLXXIX</td><td>479</td><td>CDLXXIX</td><td>579</td><td>DLXXIX</td></tr>
+<tr><td>380</td><td>CCCLXXX</td><td>480</td><td>CDLXXX</td><td>580</td><td>DLXXX</td></tr>
+<tr><td>381</td><td>CCCLXXXI</td><td>481</td><td>CDLXXXI</td><td>581</td><td>DLXXXI</td></tr>
+<tr><td>382</td><td>CCCLXXXII</td><td>482</td><td>CDLXXXII</td><td>582</td><td>DLXXXII</td></tr>
+<tr><td>383</td><td>CCCLXXXIII</td><td>483</td><td>CDLXXXIII</td><td>583</td><td>DLXXXIII</td></tr>
+<tr><td>384</td><td>CCCLXXXIV</td><td>484</td><td>CDLXXXIV</td><td>584</td><td>DLXXXIV</td></tr>
+<tr><td>385</td><td>CCCLXXXV</td><td>485</td><td>CDLXXXV</td><td>585</td><td>DLXXXV</td></tr>
+<tr><td>386</td><td>CCCLXXXVI</td><td>486</td><td>CDLXXXVI</td><td>586</td><td>DLXXXVI</td></tr>
+<tr><td>387</td><td>CCCLXXXVII</td><td>487</td><td>CDLXXXVII</td><td>587</td><td>DLXXXVII</td></tr>
+<tr><td>388</td><td>CCCLXXXVIII</td><td>488</td><td>CDLXXXVIII</td><td>588</td><td>DLXXXVIII</td></tr>
+<tr><td>389</td><td>CCCLXXXIX</td><td>489</td><td>CDLXXXIX</td><td>589</td><td>DLXXXIX</td></tr>
+<tr><td>390</td><td>CCCXC</td><td>490</td><td>CDXC</td><td>590</td><td>DXC</td></tr>
+<tr><td>391</td><td>CCCXCI</td><td>491</td><td>CDXCI</td><td>591</td><td>DXCI</td></tr>
+<tr><td>392</td><td>CCCXCII</td><td>492</td><td>CDXCII</td><td>592</td><td>DXCII</td></tr>
+<tr><td>393</td><td>CCCXCIII</td><td>493</td><td>CDXCIII</td><td>593</td><td>DXCIII</td></tr>
+<tr><td>394</td><td>CCCXCIV</td><td>494</td><td>CDXCIV</td><td>594</td><td>DXCIV</td></tr>
+<tr><td>395</td><td>CCCXCV</td><td>495</td><td>CDXCV</td><td>595</td><td>DXCV</td></tr>
+<tr><td>396</td><td>CCCXCVI</td><td>496</td><td>CDXCVI</td><td>596</td><td>DXCVI</td></tr>
+<tr><td>397</td><td>CCCXCVII</td><td>497</td><td>CDXCVII</td><td>597</td><td>DXCVII</td></tr>
+<tr><td>398</td><td>CCCXCVIII</td><td>498</td><td>CDXCVIII</td><td>598</td><td>DXCVIII</td></tr>
+<tr><td>399</td><td>CCCXCIX</td><td>499</td><td>CDXCIX</td><td>599</td><td>DXCIX</td></tr>
+<tr><td>400</td><td>CD</td><td>500</td><td>D</td><td>600</td><td>DC</td></tr>
+    </table>
+    <br>
+    <table class="descriptionTable">
+        <tr>
+            <th> Algarismos arábicos (601-700) </th>
+            <th> Algarismos romanos </th>
+            <th> Algarismos arábicos (701-800) </th>
+            <th> Algarismos romanos </th>
+        </tr>
+<tr><td>601</td><td>DCI</td><td>701</td><td>DCCI</td></tr>
+<tr><td>602</td><td>DCII</td><td>702</td><td>DCCII</td></tr>
+<tr><td>603</td><td>DCIII</td><td>703</td><td>DCCIII</td></tr>
+<tr><td>604</td><td>DCIV</td><td>704</td><td>DCCIV</td></tr>
+<tr><td>605</td><td>DCV</td><td>705</td><td>DCCV</td></tr>
+<tr><td>606</td><td>DCVI</td><td>706</td><td>DCCVI</td></tr>
+<tr><td>607</td><td>DCVII</td><td>707</td><td>DCCVII</td></tr>
+<tr><td>608</td><td>DCVIII</td><td>708</td><td>DCCVIII</td></tr>
+<tr><td>609</td><td>DCIX</td><td>709</td><td>DCCIX</td></tr>
+<tr><td>610</td><td>DCX</td><td>710</td><td>DCCX</td></tr>
+<tr><td>611</td><td>DCXI</td><td>711</td><td>DCCXI</td></tr>
+<tr><td>612</td><td>DCXII</td><td>712</td><td>DCCXII</td></tr>
+<tr><td>613</td><td>DCXIII</td><td>713</td><td>DCCXIII</td></tr>
+<tr><td>614</td><td>DCXIV</td><td>714</td><td>DCCXIV</td></tr>
+<tr><td>615</td><td>DCXV</td><td>715</td><td>DCCXV</td></tr>
+<tr><td>616</td><td>DCXVI</td><td>716</td><td>DCCXVI</td></tr>
+<tr><td>617</td><td>DCXVII</td><td>717</td><td>DCCXVII</td></tr>
+<tr><td>618</td><td>DCXVIII</td><td>718</td><td>DCCXVIII</td></tr>
+<tr><td>619</td><td>DCXIX</td><td>719</td><td>DCCXIX</td></tr>
+<tr><td>620</td><td>DCXX</td><td>720</td><td>DCCXX</td></tr>
+<tr><td>621</td><td>DCXXI</td><td>721</td><td>DCCXXI</td></tr>
+<tr><td>622</td><td>DCXXII</td><td>722</td><td>DCCXXII</td></tr>
+<tr><td>623</td><td>DCXXIII</td><td>723</td><td>DCCXXIII</td></tr>
+<tr><td>624</td><td>DCXXIV</td><td>724</td><td>DCCXXIV</td></tr>
+<tr><td>625</td><td>DCXXV</td><td>725</td><td>DCCXXV</td></tr>
+<tr><td>626</td><td>DCXXVI</td><td>726</td><td>DCCXXVI</td></tr>
+<tr><td>627</td><td>DCXXVII</td><td>727</td><td>DCCXXVII</td></tr>
+<tr><td>628</td><td>DCXXVIII</td><td>728</td><td>DCCXXVIII</td></tr>
+<tr><td>629</td><td>DCXXIX</td><td>729</td><td>DCCXXIX</td></tr>
+<tr><td>630</td><td>DCXXX</td><td>730</td><td>DCCXXX</td></tr>
+<tr><td>631</td><td>DCXXXI</td><td>731</td><td>DCCXXXI</td></tr>
+<tr><td>632</td><td>DCXXXII</td><td>732</td><td>DCCXXXII</td></tr>
+<tr><td>633</td><td>DCXXXIII</td><td>733</td><td>DCCXXXIII</td></tr>
+<tr><td>634</td><td>DCXXXIV</td><td>734</td><td>DCCXXXIV</td></tr>
+<tr><td>635</td><td>DCXXXV</td><td>735</td><td>DCCXXXV</td></tr>
+<tr><td>636</td><td>DCXXXVI</td><td>736</td><td>DCCXXXVI</td></tr>
+<tr><td>637</td><td>DCXXXVII</td><td>737</td><td>DCCXXXVII</td></tr>
+<tr><td>638</td><td>DCXXXVIII</td><td>738</td><td>DCCXXXVIII</td></tr>
+<tr><td>639</td><td>DCXXXIX</td><td>739</td><td>DCCXXXIX</td></tr>
+<tr><td>640</td><td>DCXL</td><td>740</td><td>DCCXL</td></tr>
+<tr><td>641</td><td>DCXLI</td><td>741</td><td>DCCXLI</td></tr>
+<tr><td>642</td><td>DCXLII</td><td>742</td><td>DCCXLII</td></tr>
+<tr><td>643</td><td>DCXLIII</td><td>743</td><td>DCCXLIII</td></tr>
+<tr><td>644</td><td>DCXLIV</td><td>744</td><td>DCCXLIV</td></tr>
+<tr><td>645</td><td>DCXLV</td><td>745</td><td>DCCXLV</td></tr>
+<tr><td>646</td><td>DCXLVI</td><td>746</td><td>DCCXLVI</td></tr>
+<tr><td>647</td><td>DCXLVII</td><td>747</td><td>DCCXLVII</td></tr>
+<tr><td>648</td><td>DCXLVIII</td><td>748</td><td>DCCXLVIII</td></tr>
+<tr><td>649</td><td>DCXLIX</td><td>749</td><td>DCCXLIX</td></tr>
+<tr><td>650</td><td>DCL</td><td>750</td><td>DCCL</td></tr>
+<tr><td>651</td><td>DCLI</td><td>751</td><td>DCCLI</td></tr>
+<tr><td>652</td><td>DCLII</td><td>752</td><td>DCCLII</td></tr>
+<tr><td>653</td><td>DCLIII</td><td>753</td><td>DCCLIII</td></tr>
+<tr><td>654</td><td>DCLIV</td><td>754</td><td>DCCLIV</td></tr>
+<tr><td>655</td><td>DCLV</td><td>755</td><td>DCCLV</td></tr>
+<tr><td>656</td><td>DCLVI</td><td>756</td><td>DCCLVI</td></tr>
+<tr><td>657</td><td>DCLVII</td><td>757</td><td>DCCLVII</td></tr>
+<tr><td>658</td><td>DCLVIII</td><td>758</td><td>DCCLVIII</td></tr>
+<tr><td>659</td><td>DCLIX</td><td>759</td><td>DCCLIX</td></tr>
+<tr><td>660</td><td>DCLX</td><td>760</td><td>DCCLX</td></tr>
+<tr><td>661</td><td>DCLXI</td><td>761</td><td>DCCLXI</td></tr>
+<tr><td>662</td><td>DCLXII</td><td>762</td><td>DCCLXII</td></tr>
+<tr><td>663</td><td>DCLXIII</td><td>763</td><td>DCCLXIII</td></tr>
+<tr><td>664</td><td>DCLXIV</td><td>764</td><td>DCCLXIV</td></tr>
+<tr><td>665</td><td>DCLXV</td><td>765</td><td>DCCLXV</td></tr>
+<tr><td>666</td><td>DCLXVI</td><td>766</td><td>DCCLXVI</td></tr>
+<tr><td>667</td><td>DCLXVII</td><td>767</td><td>DCCLXVII</td></tr>
+<tr><td>668</td><td>DCLXVIII</td><td>768</td><td>DCCLXVIII</td></tr>
+<tr><td>669</td><td>DCLXIX</td><td>769</td><td>DCCLXIX</td></tr>
+<tr><td>670</td><td>DCLXX</td><td>770</td><td>DCCLXX</td></tr>
+<tr><td>671</td><td>DCLXXI</td><td>771</td><td>DCCLXXI</td></tr>
+<tr><td>672</td><td>DCLXXII</td><td>772</td><td>DCCLXXII</td></tr>
+<tr><td>673</td><td>DCLXXIII</td><td>773</td><td>DCCLXXIII</td></tr>
+<tr><td>674</td><td>DCLXXIV</td><td>774</td><td>DCCLXXIV</td></tr>
+<tr><td>675</td><td>DCLXXV</td><td>775</td><td>DCCLXXV</td></tr>
+<tr><td>676</td><td>DCLXXVI</td><td>776</td><td>DCCLXXVI</td></tr>
+<tr><td>677</td><td>DCLXXVII</td><td>777</td><td>DCCLXXVII</td></tr>
+<tr><td>678</td><td>DCLXXVIII</td><td>778</td><td>DCCLXXVIII</td></tr>
+<tr><td>679</td><td>DCLXXIX</td><td>779</td><td>DCCLXXIX</td></tr>
+<tr><td>680</td><td>DCLXXX</td><td>780</td><td>DCCLXXX</td></tr>
+<tr><td>681</td><td>DCLXXXI</td><td>781</td><td>DCCLXXXI</td></tr>
+<tr><td>682</td><td>DCLXXXII</td><td>782</td><td>DCCLXXXII</td></tr>
+<tr><td>683</td><td>DCLXXXIII</td><td>783</td><td>DCCLXXXIII</td></tr>
+<tr><td>684</td><td>DCLXXXIV</td><td>784</td><td>DCCLXXXIV</td></tr>
+<tr><td>685</td><td>DCLXXXV</td><td>785</td><td>DCCLXXXV</td></tr>
+<tr><td>686</td><td>DCLXXXVI</td><td>786</td><td>DCCLXXXVI</td></tr>
+<tr><td>687</td><td>DCLXXXVII</td><td>787</td><td>DCCLXXXVII</td></tr>
+<tr><td>688</td><td>DCLXXXVIII</td><td>788</td><td>DCCLXXXVIII</td></tr>
+<tr><td>689</td><td>DCLXXXIX</td><td>789</td><td>DCCLXXXIX</td></tr>
+<tr><td>690</td><td>DCXC</td><td>790</td><td>DCCXC</td></tr>
+<tr><td>691</td><td>DCXCI</td><td>791</td><td>DCCXCI</td></tr>
+<tr><td>692</td><td>DCXCII</td><td>792</td><td>DCCXCII</td></tr>
+<tr><td>693</td><td>DCXCIII</td><td>793</td><td>DCCXCIII</td></tr>
+<tr><td>694</td><td>DCXCIV</td><td>794</td><td>DCCXCIV</td></tr>
+<tr><td>695</td><td>DCXCV</td><td>795</td><td>DCCXCV</td></tr>
+<tr><td>696</td><td>DCXCVI</td><td>796</td><td>DCCXCVI</td></tr>
+<tr><td>697</td><td>DCXCVII</td><td>797</td><td>DCCXCVII</td></tr>
+<tr><td>698</td><td>DCXCVIII</td><td>798</td><td>DCCXCVIII</td></tr>
+<tr><td>699</td><td>DCXCIX</td><td>799</td><td>DCCXCIX</td></tr>
+<tr><td>700</td><td>DCC</td><td>800</td><td>DCCC</td></tr>
+    </table>
+    <br>
+    <table class="descriptionTable">
+        <tr>
+            <th> Algarismos arábicos (801-900) </th>
+            <th> Algarismos romanos </th>
+            <th> Algarismos arábicos (901-1000) </th>
+            <th> Algarismos romanos </th>
+        </tr>
+<tr><td>801</td><td>DCCCI</td><td>901</td><td>CMI</td></tr>
+<tr><td>802</td><td>DCCCII</td><td>902</td><td>CMII</td></tr>
+<tr><td>803</td><td>DCCCIII</td><td>903</td><td>CMIII</td></tr>
+<tr><td>804</td><td>DCCCIV</td><td>904</td><td>CMIV</td></tr>
+<tr><td>805</td><td>DCCCV</td><td>905</td><td>CMV</td></tr>
+<tr><td>806</td><td>DCCCVI</td><td>906</td><td>CMVI</td></tr>
+<tr><td>807</td><td>DCCCVII</td><td>907</td><td>CMVII</td></tr>
+<tr><td>808</td><td>DCCCVIII</td><td>908</td><td>CMVIII</td></tr>
+<tr><td>809</td><td>DCCCIX</td><td>909</td><td>CMIX</td></tr>
+<tr><td>810</td><td>DCCCX</td><td>910</td><td>CMX</td></tr>
+<tr><td>811</td><td>DCCCXI</td><td>911</td><td>CMXI</td></tr>
+<tr><td>812</td><td>DCCCXII</td><td>912</td><td>CMXII</td></tr>
+<tr><td>813</td><td>DCCCXIII</td><td>913</td><td>CMXIII</td></tr>
+<tr><td>814</td><td>DCCCXIV</td><td>914</td><td>CMXIV</td></tr>
+<tr><td>815</td><td>DCCCXV</td><td>915</td><td>CMXV</td></tr>
+<tr><td>816</td><td>DCCCXVI</td><td>916</td><td>CMXVI</td></tr>
+<tr><td>817</td><td>DCCCXVII</td><td>917</td><td>CMXVII</td></tr>
+<tr><td>818</td><td>DCCCXVIII</td><td>918</td><td>CMXVIII</td></tr>
+<tr><td>819</td><td>DCCCXIX</td><td>919</td><td>CMXIX</td></tr>
+<tr><td>820</td><td>DCCCXX</td><td>920</td><td>CMXX</td></tr>
+<tr><td>821</td><td>DCCCXXI</td><td>921</td><td>CMXXI</td></tr>
+<tr><td>822</td><td>DCCCXXII</td><td>922</td><td>CMXXII</td></tr>
+<tr><td>823</td><td>DCCCXXIII</td><td>923</td><td>CMXXIII</td></tr>
+<tr><td>824</td><td>DCCCXXIV</td><td>924</td><td>CMXXIV</td></tr>
+<tr><td>825</td><td>DCCCXXV</td><td>925</td><td>CMXXV</td></tr>
+<tr><td>826</td><td>DCCCXXVI</td><td>926</td><td>CMXXVI</td></tr>
+<tr><td>827</td><td>DCCCXXVII</td><td>927</td><td>CMXXVII</td></tr>
+<tr><td>828</td><td>DCCCXXVIII</td><td>928</td><td>CMXXVIII</td></tr>
+<tr><td>829</td><td>DCCCXXIX</td><td>929</td><td>CMXXIX</td></tr>
+<tr><td>830</td><td>DCCCXXX</td><td>930</td><td>CMXXX</td></tr>
+<tr><td>831</td><td>DCCCXXXI</td><td>931</td><td>CMXXXI</td></tr>
+<tr><td>832</td><td>DCCCXXXII</td><td>932</td><td>CMXXXII</td></tr>
+<tr><td>833</td><td>DCCCXXXIII</td><td>933</td><td>CMXXXIII</td></tr>
+<tr><td>834</td><td>DCCCXXXIV</td><td>934</td><td>CMXXXIV</td></tr>
+<tr><td>835</td><td>DCCCXXXV</td><td>935</td><td>CMXXXV</td></tr>
+<tr><td>836</td><td>DCCCXXXVI</td><td>936</td><td>CMXXXVI</td></tr>
+<tr><td>837</td><td>DCCCXXXVII</td><td>937</td><td>CMXXXVII</td></tr>
+<tr><td>838</td><td>DCCCXXXVIII</td><td>938</td><td>CMXXXVIII</td></tr>
+<tr><td>839</td><td>DCCCXXXIX</td><td>939</td><td>CMXXXIX</td></tr>
+<tr><td>840</td><td>DCCCXL</td><td>940</td><td>CMXL</td></tr>
+<tr><td>841</td><td>DCCCXLI</td><td>941</td><td>CMXLI</td></tr>
+<tr><td>842</td><td>DCCCXLII</td><td>942</td><td>CMXLII</td></tr>
+<tr><td>843</td><td>DCCCXLIII</td><td>943</td><td>CMXLIII</td></tr>
+<tr><td>844</td><td>DCCCXLIV</td><td>944</td><td>CMXLIV</td></tr>
+<tr><td>845</td><td>DCCCXLV</td><td>945</td><td>CMXLV</td></tr>
+<tr><td>846</td><td>DCCCXLVI</td><td>946</td><td>CMXLVI</td></tr>
+<tr><td>847</td><td>DCCCXLVII</td><td>947</td><td>CMXLVII</td></tr>
+<tr><td>848</td><td>DCCCXLVIII</td><td>948</td><td>CMXLVIII</td></tr>
+<tr><td>849</td><td>DCCCXLIX</td><td>949</td><td>CMXLIX</td></tr>
+<tr><td>850</td><td>DCCCL</td><td>950</td><td>CML</td></tr>
+<tr><td>851</td><td>DCCCLI</td><td>951</td><td>CMLI</td></tr>
+<tr><td>852</td><td>DCCCLII</td><td>952</td><td>CMLII</td></tr>
+<tr><td>853</td><td>DCCCLIII</td><td>953</td><td>CMLIII</td></tr>
+<tr><td>854</td><td>DCCCLIV</td><td>954</td><td>CMLIV</td></tr>
+<tr><td>855</td><td>DCCCLV</td><td>955</td><td>CMLV</td></tr>
+<tr><td>856</td><td>DCCCLVI</td><td>956</td><td>CMLVI</td></tr>
+<tr><td>857</td><td>DCCCLVII</td><td>957</td><td>CMLVII</td></tr>
+<tr><td>858</td><td>DCCCLVIII</td><td>958</td><td>CMLVIII</td></tr>
+<tr><td>859</td><td>DCCCLIX</td><td>959</td><td>CMLIX</td></tr>
+<tr><td>860</td><td>DCCCLX</td><td>960</td><td>CMLX</td></tr>
+<tr><td>861</td><td>DCCCLXI</td><td>961</td><td>CMLXI</td></tr>
+<tr><td>862</td><td>DCCCLXII</td><td>962</td><td>CMLXII</td></tr>
+<tr><td>863</td><td>DCCCLXIII</td><td>963</td><td>CMLXIII</td></tr>
+<tr><td>864</td><td>DCCCLXIV</td><td>964</td><td>CMLXIV</td></tr>
+<tr><td>865</td><td>DCCCLXV</td><td>965</td><td>CMLXV</td></tr>
+<tr><td>866</td><td>DCCCLXVI</td><td>966</td><td>CMLXVI</td></tr>
+<tr><td>867</td><td>DCCCLXVII</td><td>967</td><td>CMLXVII</td></tr>
+<tr><td>868</td><td>DCCCLXVIII</td><td>968</td><td>CMLXVIII</td></tr>
+<tr><td>869</td><td>DCCCLXIX</td><td>969</td><td>CMLXIX</td></tr>
+<tr><td>870</td><td>DCCCLXX</td><td>970</td><td>CMLXX</td></tr>
+<tr><td>871</td><td>DCCCLXXI</td><td>971</td><td>CMLXXI</td></tr>
+<tr><td>872</td><td>DCCCLXXII</td><td>972</td><td>CMLXXII</td></tr>
+<tr><td>873</td><td>DCCCLXXIII</td><td>973</td><td>CMLXXIII</td></tr>
+<tr><td>874</td><td>DCCCLXXIV</td><td>974</td><td>CMLXXIV</td></tr>
+<tr><td>875</td><td>DCCCLXXV</td><td>975</td><td>CMLXXV</td></tr>
+<tr><td>876</td><td>DCCCLXXVI</td><td>976</td><td>CMLXXVI</td></tr>
+<tr><td>877</td><td>DCCCLXXVII</td><td>977</td><td>CMLXXVII</td></tr>
+<tr><td>878</td><td>DCCCLXXVIII</td><td>978</td><td>CMLXXVIII</td></tr>
+<tr><td>879</td><td>DCCCLXXIX</td><td>979</td><td>CMLXXIX</td></tr>
+<tr><td>880</td><td>DCCCLXXX</td><td>980</td><td>CMLXXX</td></tr>
+<tr><td>881</td><td>DCCCLXXXI</td><td>981</td><td>CMLXXXI</td></tr>
+<tr><td>882</td><td>DCCCLXXXII</td><td>982</td><td>CMLXXXII</td></tr>
+<tr><td>883</td><td>DCCCLXXXIII</td><td>983</td><td>CMLXXXIII</td></tr>
+<tr><td>884</td><td>DCCCLXXXIV</td><td>984</td><td>CMLXXXIV</td></tr>
+<tr><td>885</td><td>DCCCLXXXV</td><td>985</td><td>CMLXXXV</td></tr>
+<tr><td>886</td><td>DCCCLXXXVI</td><td>986</td><td>CMLXXXVI</td></tr>
+<tr><td>887</td><td>DCCCLXXXVII</td><td>987</td><td>CMLXXXVII</td></tr>
+<tr><td>888</td><td>DCCCLXXXVIII</td><td>988</td><td>CMLXXXVIII</td></tr>
+<tr><td>889</td><td>DCCCLXXXIX</td><td>989</td><td>CMLXXXIX</td></tr>
+<tr><td>890</td><td>DCCCXC</td><td>990</td><td>CMXC</td></tr>
+<tr><td>891</td><td>DCCCXCI</td><td>991</td><td>CMXCI</td></tr>
+<tr><td>892</td><td>DCCCXCII</td><td>992</td><td>CMXCII</td></tr>
+<tr><td>893</td><td>DCCCXCIII</td><td>993</td><td>CMXCIII</td></tr>
+<tr><td>894</td><td>DCCCXCIV</td><td>994</td><td>CMXCIV</td></tr>
+<tr><td>895</td><td>DCCCXCV</td><td>995</td><td>CMXCV</td></tr>
+<tr><td>896</td><td>DCCCXCVI</td><td>996</td><td>CMXCVI</td></tr>
+<tr><td>897</td><td>DCCCXCVII</td><td>997</td><td>CMXCVII</td></tr>
+<tr><td>898</td><td>DCCCXCVIII</td><td>998</td><td>CMXCVIII</td></tr>
+<tr><td>899</td><td>DCCCXCIX</td><td>999</td><td>CMXCIX</td></tr>
+<tr><td>900</td><td>CM</td><td>1000</td><td>M</td></tr>
+    </table>
+    <br>
+    <header><h2>Link:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipédia (Roman Digital System): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Roman_numerals" target="_blank">https://en.wikipedia.org/wiki/Roman_numerals</a></p>
+</div>
+{%endblock%}
+{%block customPageJS%}
+{%endblock%}

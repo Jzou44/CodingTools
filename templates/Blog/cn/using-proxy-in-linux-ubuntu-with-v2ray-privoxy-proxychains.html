@@ -1,0 +1,92 @@
+{%extends "Blog/cn/blog_layout.html" %}
+{%block head%}
+<title>在Ubuntu Linux中命令行工具使用代理v2ray privoxy proxychains学习笔记 - Coding.Tools</title>
+<meta name="description"
+      content="在Ubuntu Linux中各种命令行工具在GFW下无法工作,这是用v2ray privoxy proxychains等工具的学习心得.">
+<meta name="keywords" content="ubuntu v2ray; ubuntu privoxy; ubuntu proxychains">
+<meta name="author" content="邹俊逸"/>
+<link rel="canonical" href="https://coding.tools/cn/blog/using-proxy-in-linux-ubuntu-with-v2ray-privoxy-proxychains"/>
+<meta property="og:title" content="在Ubuntu Linux中命令行工具使用代理v2ray privoxy proxychains学习笔记 - Coding.Tools"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://coding.tools/cn/blog/using-proxy-in-linux-ubuntu-with-v2ray-privoxy-proxychains"/>
+<meta property="og:description"
+      content="在Ubuntu Linux中各种命令行工具在GFW下无法工作,这是用v2ray privoxy proxychains等工具的学习心得."/>
+{%endblock%}
+{%block content%}
+<div id="headline">
+    <br/>
+    <h1>在Ubuntu Linux中命令行工具使用代理v2ray privoxy proxychains学习笔记</h1>
+    <p class="blogAuthor">
+        <span class="post-author" itemprop="author" itemscope itemptype="http://schema.org/Person"><span class="post-author-name" itemprop="name">邹俊逸</span></span>
+        -
+        <time itemprop="dateModified" datetime="2020-02-14">Feb 14, 2020</time>
+    </p>
+    <hr/>
+</div>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>在Ubuntu Linux中命令行工具使用代理的必要性:</h2><div class="h2-highlight"></div></header>
+    <p>在Ubuntu Linux中很多命令行工具, 如apt-get pip git wget curl等, 需要访问外网服务器(主要是github). 但是由于github没有国内的服务器以及其他特殊的原因,
+    网络链接经常失败, 这时只能求助于代理.</p>
+    <header><h2>Step 1: 配置V2ray socks5</h2><div class="h2-highlight"></div></header>
+    <p>当前最好的方法是租v2ray的服务器, 并在ubuntu配置客户端.</p>
+    <p>首先下载脚本:</p>
+    <pre class="prettyprint linenums">wget https://install.direct/go.sh</pre>
+    <p>然后执行脚本安装 V2Ray:</p>
+    <pre class="prettyprint linenums">sudo bash go.sh</pre>
+    <p>go.sh 会下载<a rel="nofollow" href="https://github.com/v2ray/v2ray-core/releases" target="_blank">github上的v2ray-linux-64.zip文件</a>, 在国内经常出现网络连接失败的情况,
+    因此需要修改go.sh内容, 并把外网下载的v2ray-linux-64.zip复制到/tmp/v2ray/v2ray.zip .</p>
+    <p>复制配置文件config.json到/etc/v2ray. config.json可以直接从<a rel="nofollow" href="https://github.com/2dust/v2rayN/releases" target="_blank">windows的v2rayN客户端</a>夹中直接复制过来.</p>
+    <p>启动v2ray服务</p>
+    <pre class="prettyprint linenums">systemctl restart v2ray</pre>
+    <p>socks5代理已经启动, 默认端口是10808, (socks5://127.0.0.1:10808).</p>
+    <header><h2>Step 2: 配置http代理 privoxy</h2><div class="h2-highlight"></div></header>
+    <p>有些命令行工具只能使用http代理, 不能使用socks5代理, 因此需要用privoxy把socks5代理转换为http代理.</p>
+    <p>安装privoxy</p>
+    <pre class="prettyprint linenums">sudo apt install -y privoxy</pre>
+    <p>修改配置文件/etc/privoxy/config</p>
+    <pre class="prettyprint linenums">listen-address  :10809
+
+forward-socks5    /    127.0.0.1:10808  .
+</pre>
+    <p>启动privoxy服务</p>
+    <pre class="prettyprint linenums">systemctl restart privoxy</pre>
+    <p>http代理已经启动, 默认端口是10809, (http://127.0.0.1:10809).</p>
+    <header><h2>Step 3: 配置proxychains</h2><div class="h2-highlight"></div></header>
+    <p>有些linux命令行工具没有配置代理的方法, 可以用proxychains强制应用使用代理网络.</p>
+    <p>安装proxychains</p>
+    <pre class="prettyprint linenums">sudo apt install -y proxychains</pre>
+    <p>修改配置文件/etc/proxychains.conf最后一行</p>
+    <pre class="prettyprint linenums">socks5  127.0.0.1 10808</pre>
+    <p>使用proxychains方法, 在命令前加上proxychains, 如:</p>
+    <pre class="prettyprint linenums">proxychains apt update</pre>
+    <header><h2>python pip使用http代理加速</h2><div class="h2-highlight"></div></header>
+    <p>方法1:</p>
+    <pre class="prettyprint linenums">pip3 install -r requirement.txt --proxy http://127.0.0.1:10809</pre>
+    <p>方法2:</p>
+    <pre class="prettyprint linenums">proxychains pip3 install -r requirement.txt</pre>
+    <header><h2>git使用http代理加速</h2><div class="h2-highlight"></div></header>
+    <p>方法1:</p>
+<pre class="prettyprint linenums">git config --global http.proxy http://127.0.0.1:10809
+git config --global https.proxy http://127.0.0.1:10809</pre>
+    <p>取消设置</p>
+    <pre class="prettyprint linenums">git config --global --unset http.proxy</pre>
+    <p>方法2:</p>
+    <pre class="prettyprint linenums">proxychains git clone https://github.com/opencv/opencv.git</pre>
+    <header><h2>docker使用http代理加速</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums"># mkdir /etc/systemd/system/docker.service.d
+/etc/systemd/system/docker.service.d/http-proxy.conf
+------
+[Service]
+Environment="HTTP_PROXY=http://127.0.0.1:10809/"
+------
+# systemctl daemon-reload
+# systemctl restart docker</pre>
+    <hr>
+    <header><h2>More Blog:</h2><div class="h2-highlight"></div></header><br/>
+    <a href="/cn/blog">
+        <button type="button" class="btn btn-primary">返回学习笔记列表</button>
+    </a>
+    <hr>
+</div>
+{%endblock%}

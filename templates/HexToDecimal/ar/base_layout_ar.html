@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/ar"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">الأدوات ذات الصلة</a>
+            <a class="table-link" href="/ar/hex-to-decimal">سداسي عشري إلى تحويل عشري</a>
+            <a class="table-link" href="/ar/decimal-to-hex">عشري إلى تحويل سداسي عشري</a>
+            <a class="table-link" href="/ar/octal-to-decimal">ثماني لتحويل عشري</a>
+            <a class="table-link" href="/ar/decimal-to-octal">عشري إلى تحويل ثماني</a>
+            <a class="table-link" href="/ar/binary-to-decimal">ثنائي لتحويل عشري</a>
+            <a class="table-link" href="/ar/decimal-to-binary">عشري لتحويل ثنائي</a>
+            <a class="table-link" href="/ar/ascii-table">جدول بحث ASCII</a>
+            <a class="table-link" href="/ar/hex-to-ascii">ست عشري لتحويل سلسلة ASCII</a>
+            <a class="table-link" href="/ar/ascii-to-hex">سلسلة ASCII إلى تحويل سداسي عشري</a>
+            <a class="table-link" href="/ar/fraction-to-decimal">جزء إلى تحويل عشري</a>
+            <a class="table-link" href="/ar/decimal-to-fraction">كسر إلى تحويل كسور</a>
+            <a class="table-link" href="/ar/percent-to-decimal">النسبة المئوية للتحويل العشري</a>
+            <a class="table-link" href="/ar/decimal-to-percent">عشري إلى نسبة مئوية التحويل</a>
+            <a class="table-link" href="/ar/percent-to-fraction">النسبة المئوية للتحويل الجزئي</a>
+            <a class="table-link" href="/ar/fraction-to-percent">يسجل لتحويل النسبة المئوية</a>
+            <a class="table-link" href="/ar/hex-to-rgb">عرافة اللون لتحويل لون RGB</a>
+            <a class="table-link" href="/ar/rgb-to-hex">لون RGB لتحويل لون Hex</a>
+            <a class="table-link" href="/ar/hex-to-rgba">عرافة اللون لتحويل لون RGBA</a>
+            <a class="table-link" href="/ar/rgba-to-hex">لون RGBA لتحويل Hex اللون</a>
+            <a class="table-link" href="/ar/roman-numerals-chart">الرومانية مقارنة جدول الأرقام 1-1000</a>
+            <a class="table-link" href="/ar/roman-numerals-to-numbers">الأرقام الرومانية لتحويل الأرقام العربية</a>
+            <a class="table-link" href="/ar/numbers-to-roman-numerals">الأرقام العربية لتحويل الأرقام الرومانية</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list_ar.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/{{model.cdnjs_version_bignumber}}/bignumber.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "HexToDecimal/seg_load_js.html"%}
+</body>
+</html>

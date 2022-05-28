@@ -1,0 +1,165 @@
+{%extends "HexToDecimal/kr/base_layout_kr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">백분율</span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+        <i class="fas fa-percentage" style="font-size:38px;padding-left: 20px;"></i>
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <a href="/kr/decimal-to-percent" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 교환 위치</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">전환</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">십진수 <sub>10</sub></span>
+    </div>
+    <input name="queryStr" id="DecimalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>백분율 (퍼센트):</h2><div class="h2-highlight"></div></header>
+    <p> 백분율은 전체 (100)의 일부를 나타냅니다. 시스템은 금융에서 널리 사용됩니다. 함수 백분율은 점수와 매우 유사하지만 백분율을 비교하기 쉽습니다. </p>
+    <header><h2>십진수:</h2><div class="h2-highlight"></div></header>
+    <p> 십진법 (아랍어라고도 함)은 일상 생활에서 가장 많이 사용되는 디지털 시스템 인 <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> 포함하여 10 자입니다. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-percent-to-decimal.png" alt="comic percent to decimal">
+    </div>
+    <header><h2>백분율을 십진법으로 변환하는 방법은 무엇입니까?</h2><div class="h2-highlight"></div></header>
+    <p> 십진법에서 십진법으로의 변환과 마찬가지로 분자는 분모로 나눕니다 (백분율을 100으로 나눕니다). </p>
+    <header><h2>점수 대 백분율 변환 표:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> 백분율 </th>
+            <th> 십진수 </th>
+            <th> 백분율 </th>
+            <th> 십진수 </th>
+        </tr>
+        <tr>
+            <td>1%</td>
+            <td>0.01</td>
+            <td>20%</td>
+            <td>0.2</td>
+        </tr>
+        <tr>
+            <td>2%</td>
+            <td>0.02</td>
+            <td>30%</td>
+            <td>0.3</td>
+        </tr>
+        <tr>
+            <td>3%</td>
+            <td>0.03</td>
+            <td>40%</td>
+            <td>0.4</td>
+        </tr>
+        <tr>
+            <td>4%</td>
+            <td>0.04</td>
+            <td>50%</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>5%</td>
+            <td>0.05</td>
+            <td>60%</td>
+            <td>0.6</td>
+        </tr>
+        <tr>
+            <td>6%</td>
+            <td>0.06</td>
+            <td>70%</td>
+            <td>0.7</td>
+        </tr>
+        <tr>
+            <td>7%</td>
+            <td>0.07</td>
+            <td>80%</td>
+            <td>0.8</td>
+        </tr>
+        <tr>
+            <td>8%</td>
+            <td>0.08</td>
+            <td>90%</td>
+            <td>0.9</td>
+        </tr>
+        <tr>
+            <td>9%</td>
+            <td>0.09</td>
+            <td>100%</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>10%</td>
+            <td>0.1</td>
+            <td>150%</td>
+            <td>1.5</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>링크:</h2><div class="h2-highlight"></div></header>
+    <p> 위키 백과 (백분율): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Percentage" target="_blank">https://en.wikipedia.org/wiki/Percentage</a></p>
+    <p> 위키 백과 (10 진수): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>파이썬에서 십진수로 변환하는 백분율:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def percent_to_decimal(percent_number):
+    return percent_number / 100
+
+
+percent_input = 72
+decimal_output = percent_to_decimal(percent_input)
+print('decimal result is:{0}'.format(decimal_output))
+
+-------------------
+decimal result is:0.72</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var DecimalOutput = document.getElementById("DecimalOutput");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        DecimalOutput.value = "";
+        var percent_str = QueryStr.value.replace(new RegExp(" ", 'g'), "").replace("%", "");
+        if (percent_str != "") {
+            var input_value = new BigNumber(percent_str, 10);
+            var output_decimal = input_value.dividedBy(new BigNumber(100)).toString(10);
+            DecimalOutput.value = output_decimal;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        DecimalOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        DecimalOutput.focus();
+        DecimalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

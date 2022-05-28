@@ -1,0 +1,113 @@
+{%extends "DevTool/base_layout.html"%}
+{%block content%}
+    <div id="headline">
+        <br/>
+        <h1>{{model.bodyTitle}}</h1>
+        {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+    </div>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description" class="center">
+        <header><h2 class="toollisth2">Image Utilities</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/compress-jpeg">Compress JPEG</a>
+            <a class="table-link" href="/compress-png">Compress PNG</a>
+            <a class="table-link" href="/progressive-jpeg">Progressive JPEG Converter</a>
+            <a class="table-link" href="/image-to-base64">Image to Base64</a>
+            <a class="table-link" href="/exif-viewer">EXIF viewer</a>
+            <a class="table-link" href="/exif-remover">EXIF remover</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2 class="toollisth2">Formatter & Minifier Related Tools</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/json-formatter">JSON Formatter</a>
+            <a class="table-link" href="/json-minifier">JSON Minifier</a>
+            <a class="table-link" href="/xml-formatter">XML Formatter</a>
+            <a class="table-link" href="/xml-minifier">XML Minifier</a>
+            <a class="table-link" href="/json-to-xml">JSON to XML</a>
+            <a class="table-link" href="/xml-to-json">XML to JSON</a>
+            <a class="table-link" href="/html-beautifier">HTML Beautifier</a>
+            <a class="table-link" href="/html-minifier">HTML Minifier</a>
+            <a class="table-link" href="/javascript-beautifier">Javascript Beautifier</a>
+            <a class="table-link" href="/javascript-minifier">Javascript Minifier</a>
+            <a class="table-link" href="/css-beautifier">CSS Beautifier</a>
+            <a class="table-link" href="/css-minifier">CSS Minifier</a>
+            <a class="table-link" href="/sql-formatter">SQL Formatter</a>
+            <a class="table-link" href="/sql-minifier">SQL Minifier</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2 class="toollisth2">Internet Testing Related Tools</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/my-ip-address">My IP Address</a>
+            <a class="table-link" href="/ping">Ping</a>
+            <a class="table-link" href="/nslookup">Nslookup</a>
+            <a class="table-link" href="/traceroute">Traceroute</a>
+            <a class="table-link" href="/whois">Whois</a>
+            <a class="table-link" href="/port-checker">Open Port Checker</a>
+            <a class="table-link" href="/url-encode">URL Encode</a>
+            <a class="table-link" href="/url-decode">URL Decode</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2 class="toollisth2">Hash & Cryptography Related Tools</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/md5">MD5 Hash Generator</a>
+            <a class="table-link" href="/sha1">SHA1 Hash Generator</a>
+            <a class="table-link" href="/sha224">SHA224 Hash Generator</a>
+            <a class="table-link" href="/sha256">SHA256 Hash Generator</a>
+            <a class="table-link" href="/sha384">SHA384 Hash Generator</a>
+            <a class="table-link" href="/sha512">SHA512 Hash Generator</a>
+            <a class="table-link" href="/base64-encode">BASE64 Encode</a>
+            <a class="table-link" href="/base64-decode">BASE64 Decode</a>
+            <a class="table-link" href="/password-generator">Password Generator</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2 class="toollisth2">Number Conversion Related Tools</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/hex-to-decimal">Hex to Decimal</a>
+            <a class="table-link" href="/decimal-to-hex">Decimal to Hex</a>
+            <a class="table-link" href="/octal-to-decimal">Octal to Decimal</a>
+            <a class="table-link" href="/decimal-to-octal">Decimal to Octal</a>
+            <a class="table-link" href="/binary-to-decimal">Binary to Decimal</a>
+            <a class="table-link" href="/decimal-to-binary">Decimal to Binary</a>
+            <a class="table-link" href="/binary-to-hex">Binary to Hex</a>
+            <a class="table-link" href="/hex-to-binary">Hex to Binary</a>
+            <a class="table-link" href="/ascii-table">ASCII Table</a>
+            <a class="table-link" href="/hex-to-ascii">Hex to ASCII String</a>
+            <a class="table-link" href="/ascii-to-hex">ASCII String to Hex</a>
+            <a class="table-link" href="/binary-to-text">Binary to Text</a>
+            <a class="table-link" href="/text-to-binary">Text to Binary</a>
+            <a class="table-link" href="/fraction-to-decimal">Fraction to Decimal</a>
+            <a class="table-link" href="/decimal-to-fraction">Decimal to Fraction</a>
+            <a class="table-link" href="/percent-to-decimal">Percent to Decimal</a>
+            <a class="table-link" href="/decimal-to-percent">Decimal to Percent</a>
+            <a class="table-link" href="/percent-to-fraction">Percent to Fraction</a>
+            <a class="table-link" href="/fraction-to-percent">Fraction to Percent</a>
+            <a class="table-link" href="/hex-to-rgb">Hex to RGB</a>
+            <a class="table-link" href="/rgb-to-hex">RGB to Hex</a>
+            <a class="table-link" href="/hex-to-rgba">Hex to RGBA</a>
+            <a class="table-link" href="/rgba-to-hex">RGBA to Hex</a>
+            <a class="table-link" href="/roman-numerals-chart">Roman Numerals Chart 1-1000</a>
+            <a class="table-link" href="/roman-numerals-to-numbers">Roman Numerals to Numbers</a>
+            <a class="table-link" href="/numbers-to-roman-numerals">Numbers to Roman Numerals</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2 class="toollisth2">String & Text Utilities</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/text-editor">Text Editor Online</a>
+            <a class="table-link" href="/regex-tester">Regex Tester</a>
+            <a class="table-link" href="/regex-replace">Regex Replace</a>
+            <a class="table-link" href="/word-counter">Word Counter</a>
+            <a class="table-link" href="/character-count">Character Count</a>
+            <a class="table-link" href="/case-converter">Case Converter</a>
+            <a class="table-link" href="/reverse-text">Reverse Text</a>
+            <a class="table-link" href="/number-to-words">Number to Words</a>
+            <br style="clear:both;"/>
+        </div>
+        <br/>
+        <div class="mention">
+            <header><h2>About {{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+            <a class="table-link" href="/blog">My Blog</a>
+        </div>
+    </div>
+{%endblock%}

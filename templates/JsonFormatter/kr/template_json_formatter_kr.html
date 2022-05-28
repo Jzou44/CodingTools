@@ -1,0 +1,100 @@
+{%extends "JsonFormatter/kr/base_layout_kr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="여기에 텍스트 파일을 입력하거나 드래그하십시오."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">예제</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">JSON 형식</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="JSON 형식화 결과가 여기에 표시됩니다."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <p> 이 도구는 입력 문자열이 공식 JSON 구문을 따르지 않아도 잘못된 JSON 문자열의 서식을 강제 지정할 수 있습니다. </p>
+    <header><h2>JSON의 XML 장점:</h2><div class="h2-highlight"></div></header>
+    <p> JSON은 XML보다 읽기 쉽고 JSON은 더 깔끔한 구문을 사용하므로 공간이 덜 필요합니다. </p>
+    <p> JSON은 XML 파싱보다 훨씬 간단하며 JSON은 JavaScript와 완벽하게 호환되며 XML 파싱에는 복잡한 XPath 구문이 필요합니다. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-json-formatter.png" alt="comic json formatter">
+    </div>
+    <header><h2>JSON (JavaScript Object Notation)에 대한 추가 링크:</h2><div class="h2-highlight"></div></header>
+    <p> RFC 8259 (JSON): <a rel="nofollow" href="https://tools.ietf.org/html/rfc8259" target="_blank">https://tools.ietf.org/html/rfc8259</a></p>
+    <p> Python의 JSON: <a rel="nofollow" href="https://docs.python.org/3/library/json.html" target="_blank">https://docs.python.org/3/library/json.html</a></p>
+    <p> Java의 JSON (GSON): <a rel="nofollow" href="https://github.com/google/gson" target="_blank">https://github.com/google/gson</a></p>
+    <header><h2>Python에서 JSON 문자열 형식 지정 (자체 패키지 JSON 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import json
+
+def format_json(str):
+    resultStr = json.dumps(json.loads(str), indent=4, ensure_ascii=False)
+    return resultStr
+    </pre>
+    <header><h2>Java에서 JSON 문자열 형식 지정 (GSON 패키지 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
+public String Format(String jsonStr){
+    JsonParser parser=new JsonParser();
+    JsonElement je=parser.parse(jsonStr);
+    Gson gson=new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+    return gson.toJson(je);
+}
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/brace-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "{\"firstName\":\"John\",\"lastName\":\"Smith\",\"age\":25,\"address\":{\"streetAddress\":\"21 2nd Street\",\"city\":\"New York\",\"state\":\"NY\",\"postalCode\":\"10021\"},\"phoneNumber\":[{\"type\":\"home\",\"number\":\"212 555-1234\"},{\"type\":\"fax\",\"number\":\"646 555-4567\"}],\"gender\":{\"type\":\"male\"}}";
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            source = editor1.getValue();
+            output = js_beautify(source);
+            editor2.setValue(output);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

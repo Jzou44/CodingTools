@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/id"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">Alat terkait</a>
+            <a class="table-link" href="/id/hex-to-decimal">Konversi heksadesimal ke desimal</a>
+            <a class="table-link" href="/id/decimal-to-hex">Konversi desimal ke heksadesimal</a>
+            <a class="table-link" href="/id/octal-to-decimal">Oktal ke konversi desimal</a>
+            <a class="table-link" href="/id/decimal-to-octal">Konversi desimal ke oktal</a>
+            <a class="table-link" href="/id/binary-to-decimal">Konversi biner ke desimal</a>
+            <a class="table-link" href="/id/decimal-to-binary">Konversi desimal ke biner</a>
+            <a class="table-link" href="/id/ascii-table">Tabel pencarian ASCII</a>
+            <a class="table-link" href="/id/hex-to-ascii">Konversi string heksadesimal ke ASCII</a>
+            <a class="table-link" href="/id/ascii-to-hex">String ASCII ke konversi heksadesimal</a>
+            <a class="table-link" href="/id/fraction-to-decimal">Konversi pecahan ke desimal</a>
+            <a class="table-link" href="/id/decimal-to-fraction">Konversi fraksional ke fraksional</a>
+            <a class="table-link" href="/id/percent-to-decimal">Persentase ke konversi desimal</a>
+            <a class="table-link" href="/id/decimal-to-percent">Konversi desimal ke persentase</a>
+            <a class="table-link" href="/id/percent-to-fraction">Persentase konversi fraksi</a>
+            <a class="table-link" href="/id/fraction-to-percent">Skor ke persentase konversi</a>
+            <a class="table-link" href="/id/hex-to-rgb">Konversi warna hex ke warna RGB</a>
+            <a class="table-link" href="/id/rgb-to-hex">Konversi warna RGB ke Hex color</a>
+            <a class="table-link" href="/id/hex-to-rgba">Hex warna ke konversi warna RGBA</a>
+            <a class="table-link" href="/id/rgba-to-hex">Konversi warna RGBA ke Hex</a>
+            <a class="table-link" href="/id/roman-numerals-chart">Tabel perbandingan angka Romawi 1-1000</a>
+            <a class="table-link" href="/id/roman-numerals-to-numbers">Konversi angka Romawi ke angka Arab</a>
+            <a class="table-link" href="/id/numbers-to-roman-numerals">Konversi angka Arab ke angka Romawi</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list_id.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/{{model.cdnjs_version_bignumber}}/bignumber.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "HexToDecimal/seg_load_js.html"%}
+</body>
+</html>

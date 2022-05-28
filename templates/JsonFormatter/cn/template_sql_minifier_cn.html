@@ -1,0 +1,87 @@
+{%extends "JsonFormatter/cn/base_layout_cn.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="请在这里输入或者拖入文本文件."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">示例</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">压缩SQL</button>
+    <button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('result.json')"><i class="fas fa-file-download"></i> 保存结果</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 复制结果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="sql压缩结果将会显示在这里."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>关于{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/20190308/cartoon_sql_minifier.png" alt="comic sql minifier">
+    </div>
+    <header><h2>链接:</h2><div class="h2-highlight"></div></header>
+    <p>维基百科: <a rel="nofollow" href="https://en.wikipedia.org/wiki/SQL" target="_blank">https://en.wikipedia.org/wiki/SQL</a></p>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/sql/sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/brace-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/x-sql",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/x-sql",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "CREATE TABLE Persons(\n" +
+        "    PersonID int,\n" +
+        "    LastName varchar(255),\n" +
+        "    FirstName varchar(255),\n" +
+        "    Address varchar(255),\n" +
+        "    City varchar(255)\n" +
+        ");";
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            source = editor1.getValue();
+            var minify = require('html-minifier').minify;
+            output = minify(source, {
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true,
+                removeComments: true,
+            });
+            output = output.replace(new RegExp("\\( ", 'g'),"(").replace(new RegExp(" \\)", 'g'),")").replace(new RegExp("{ ", 'g'),"{").replace(new RegExp("} ", 'g'),"}").replace(new RegExp(": ", 'g'),":").replace(new RegExp(", ", 'g'),",").replace(new RegExp("\\[ ", 'g'),"[").replace(new RegExp("] ", 'g'),"]").replace(new RegExp("\" ", 'g'),"\"");
+            editor2.setValue(output);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

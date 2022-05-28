@@ -1,0 +1,95 @@
+{%extends "PasswordsGenerator/pt/base_layout_pt.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Por favor, insira ou arraste um arquivo de texto aqui."></textarea>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">UpperCase</span>
+        </div>
+        <select class="form-control custom-select" name="UpperCase" id="UpperCase" oninput="post_ajax()">
+            <option value="u" selected>Hash Result in UpperCase</option>
+            <option value="l">Hash Result in LowerCase</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="cleartxt()"><i class="far fa-trash-alt"></i> Vazio</button>
+    <button type="button" id="submit_button" class="btn btn-primary">Criptografia MD5</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copiar resultado</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="O resultado será mostrado aqui."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Sobre{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-md5.png" alt="comic md5">
+    </div>
+    <header><h2>Por que você precisa do MD5?</h2><div class="h2-highlight"></div></header>
+    <p> Um algoritmo de hash como o MD5 é um algoritmo unidirecional, o que significa que é irreversível.Este caractere torna o MD5 muito útil para fazer "impressões digitais" em um arquivo.O valor MD5 do arquivo pode provar que o arquivo não foi modificado.O algoritmo hash também Usado para proteção por senha.O "sal" armazenado no banco de dados do site e o valor final da sua senha original são irreversíveis, o que significa que mesmo que o banco de dados seja comprometido, o hacker não poderá recuperar sua senha. </p>
+    <header><h2>O MD5 é seguro, devo continuar a usá-lo?</h2><div class="h2-highlight"></div></header>
+    <p> O primeiro tipo de ataque é chamado de <code>(rainbow tables)</code> . É um banco de dados muito grande, incluindo uma string curta com o valor MD5 correspondente. Por exemplo, quando você olha para a tabela do arco-íris <code>"FC5E038D38A57032085441E7FE7010B0"</code> , você pode encontrar o original A string é "helloworld". Se a string original for curta, a tabela do arco-íris pode descriptografar com sucesso o MD5. </p>
+    <p> O segundo ataque é baseado no algoritmo básico do MD5 Nos últimos anos, cada vez mais sites mudaram para o SHA256 ou SHA512, mas muitos sites ainda usam o MD5, que deixou um enorme risco oculto à segurança da Internet. </p>
+    <header><h2>Mais links para MD5:</h2><div class="h2-highlight"></div></header>
+    <p> RFC 1321: <a rel="nofollow" href="https://www.ietf.org/rfc/rfc1321.txt" alt="MD5" target="_blank">https://www.ietf.org/rfc/rfc1321.txt</a></p>
+    <p> MD5 em Python (hashlib): <a rel="nofollow" href="https://docs.python.org/3/library/hashlib.html" alt="MD5" target="_blank">https://docs.python.org/3/library/hashlib.html</a></p>
+    <p> MD5 em Java: <a rel="nofollow" href="https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html" alt="MD5"
+                                      target="_blank">https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html</a></p>
+    <p> MD5 em PHP: <a rel="nofollow" href="http://php.net/manual/en/function.md5.php" alt="MD5" target="_blank">http://php.net/manual/en/function.md5.php</a></p>
+    <header><h2>Calcular o hash MD5 de uma string em Python (com hashlib de pacote):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import hashlib
+
+def md5_generator(str):
+    m = hashlib.md5()
+    m.update(str.encode())
+    return m.hexdigest()
+    </pre>
+    <header><h2>Calcular o hash MD5 de uma string em Java (com o pacote MessageDigest):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.math.BigInteger;
+import java.security.MessageDigest;
+
+public String generate(String str){
+    MessageDigest md = MessageDigest.getInstance("MD5");
+    md.update(str.getBytes());
+    byte[] digest = md.digest();
+    String result = new BigInteger(1, digest).toString(16).toUpperCase();
+    return result;
+}
+    </pre>
+    <header><h2>Calcular o hash MD5 de um arquivo no Linux (com OpenSSL):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# openssl dgst -md5 access.log
+MD5(access.log)= 742f23518e684f3562ffc9f983f190ba
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function work(input_str) {
+        return CryptoJS.MD5(input_str).toString();
+    }
+</script>
+{%endblock%}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/es"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">Herramientas relacionadas</a>
+            <a class="table-link" href="/es/hex-to-decimal">Conversión hexadecimal a decimal</a>
+            <a class="table-link" href="/es/decimal-to-hex">Conversión de decimal a hexadecimal</a>
+            <a class="table-link" href="/es/octal-to-decimal">Conversión octal a decimal</a>
+            <a class="table-link" href="/es/decimal-to-octal">Conversión de decimal a octal</a>
+            <a class="table-link" href="/es/binary-to-decimal">Conversión de binario a decimal</a>
+            <a class="table-link" href="/es/decimal-to-binary">Conversión de decimal a binario</a>
+            <a class="table-link" href="/es/ascii-table">Tabla de búsqueda ASCII</a>
+            <a class="table-link" href="/es/hex-to-ascii">Conversión de cadena hexadecimal a ASCII</a>
+            <a class="table-link" href="/es/ascii-to-hex">Cadena ASCII a conversión hexadecimal</a>
+            <a class="table-link" href="/es/fraction-to-decimal">Conversión de fracción a decimal</a>
+            <a class="table-link" href="/es/decimal-to-fraction">Conversión fraccional a fraccional</a>
+            <a class="table-link" href="/es/percent-to-decimal">Porcentaje a la conversión decimal</a>
+            <a class="table-link" href="/es/decimal-to-percent">Conversión de decimal a porcentaje</a>
+            <a class="table-link" href="/es/percent-to-fraction">Porcentaje a la conversión fraccional</a>
+            <a class="table-link" href="/es/fraction-to-percent">Puntuación a conversión porcentual</a>
+            <a class="table-link" href="/es/hex-to-rgb">Conversión de color hexadecimal a color RGB</a>
+            <a class="table-link" href="/es/rgb-to-hex">Conversión de color RGB a color hexadecimal</a>
+            <a class="table-link" href="/es/hex-to-rgba">Conversión de color hexadecimal a color RGBA</a>
+            <a class="table-link" href="/es/rgba-to-hex">Conversión de color RGBA a color hexadecimal</a>
+            <a class="table-link" href="/es/roman-numerals-chart">Tabla de comparación de números romanos 1-1000</a>
+            <a class="table-link" href="/es/roman-numerals-to-numbers">Conversión de números romanos a números arábigos</a>
+            <a class="table-link" href="/es/numbers-to-roman-numerals">Conversión de números arábigos a números romanos</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list_es.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/{{model.cdnjs_version_bignumber}}/bignumber.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "HexToDecimal/seg_load_js.html"%}
+</body>
+</html>

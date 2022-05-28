@@ -1,0 +1,117 @@
+{%extends "MyIpAddress/de/base_layout_de.html"%}
+{%block content%}
+<div id="headline">
+    <h1>Meine IP-Adresse: <span id="clientIP"></span></h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Standort der IP-Adresse abfragen</span>
+        </div>
+        <input name="queryIp" id="queryIp" type="text" class="form-control" placeholder="" value="" spellcheck="false">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="init_query()"><i class="far fa-trash-alt"></i> Zurücksetzen</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Abfrage</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard_ip()"><i class="far fa-copy"></i> Ergebnis kopieren</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="codewrapper size18codewrapper">
+            <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Ergebnis der IP-Adresszuordnungsabfrage"></textarea>
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+        <div name="map" id="map" class="col-xs-6" style="width: 100%;height: 300px;background-color: #f2f2f2"></div>
+    </div>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Über{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-my-ip-addresss.png" alt="comic my ip address">
+    </div>
+    <header><h2>Was ist eine IP-Adresse?</h2><div class="h2-highlight"></div></header>
+    <p> Die IP-Adresse (Internet Protocol-Adresse) ist genau wie die tatsächliche Postadresse, die Sie zum Empfangen von Amazon-Paketen verwenden, der Ort Ihres Tags im Internet, sodass andere Computer (Webserver) wissen, wo Daten gesendet werden. </p>
+    <p> Es gibt zwei IP - Adresse: Internet Protocol Version 4 (IPv4) und Internet Protocol Version 6 (IPv6) IPv6 - Nutzung. <code>128</code> Bits , die Adresse zu repräsentieren, obwohl IPv6 weit nicht in den letzten 10 Jahren verwendeten .IPv4 verwenden <code>32</code> Bits die Adresse darstellen ( 0.0.0.0 ~ 255.255.255.255). Dies bedeutet, dass IPv4 insgesamt <code>2^32 = 4,294,967,296</code> unabhängige Adressen hat (4 Milliarden sind keine große Zahl !!!). </p>
+    <p> Das von Ihnen verwendete Gerät verfügt nicht über eine eindeutige IPv4-Adresse, sondern verwendet eine private IPv4-Adresse. Netzwerkadressenübersetzung): NAT kann nicht nur den Verbrauch öffentlicher IPv4-Adressen reduzieren, sondern bietet Ihnen zusätzliche Sicherheit. </p>
+    <header><h2>Warum muss ich die IP-Adresse kennen?</h2><div class="h2-highlight"></div></header>
+    <p> Datenschutz: Ihre IP-Adresse zeigt möglicherweise Ihre tatsächlichen geografischen Informationen an (Land und Stadt). Personen, die Ihr Internet-Standort über VPN oder Proxy verbergen. Der Unterschied zwischen den beiden ist, welcher Behörde Sie vertrauen. Ihr IPS (Internet Service Provider) ist ein großes nationales Unternehmen, das mit der Regierung zusammenarbeitet. Andererseits bieten VPN-Anbieter Dienste an, die auf dem Schutz der Privatsphäre ihrer Kunden basieren, Sie sind sich jedoch nicht sicher, ob sie Ihren Browserverlauf erfassen. High-End-Benutzer empfehlen die Verwendung von Tor, einem VPN-Tunnel, um einem anderen VPN-Tunnel zu folgen, sodass niemand Ihre tatsächliche IP-Adresse kennen kann. </p>
+    <header><h2>Weitere Links zu IP-Adressen:</h2><div class="h2-highlight"></div></header>
+    <p> Wikipedia (Internetprotokoll): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Internet_Protocol" target="_blank">https://en.wikipedia.org/wiki/Internet_Protocol</a>
+    </p>
+    <p> RFC 791 (Internetprotokoll): <a rel="nofollow" href="https://tools.ietf.org/html/rfc791" target="_blank">https://tools.ietf.org/html/rfc791</a>
+    </p>
+    <p> Geolocation-Abfrage-API (IP-API): <a rel="nofollow" href="http://ip-api.com/docs/" target="_blank">http://ip-api.com/docs/</a></p>
+    <p> Geolocation-Abfrage-API (Google Maps-API): <a rel="nofollow" href="https://developers.google.com/maps/documentation/geolocation/intro"
+                                             target="_blank">https://developers.google.com/maps/documentation/geolocation/intro</a>
+    </p>
+    <header><h2>Abfrage der Geografie der IP-Adresse in Python (unter Verwendung der API Coding.tools):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import requests
+import json
+
+ip_json_str = requests.post('https://coding.tools/my-ip-address', data={'queryIp': '8.8.8.8'}).text
+ip_json = json.loads(ip_json_str)
+print(ip_json)
+
+print('IP address:', ip_json['ip'])
+print('Country:', ip_json['country_name'])
+print('Region:', ip_json['region_name'])
+print('City:', ip_json['city_name'])
+print('Latitude:', ip_json['latitude'])
+print('Longitude:', ip_json['longitude'])
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+
+    query();
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        var ip = document.getElementById("queryIp").value;
+        ip = ip.trim();
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                finished_spin_hidden();
+                render_result(JSON.parse(data));
+            });
+    }
+
+    function render_result(ip_info) {
+        if (document.getElementById("clientIP").innerText===""){
+            document.getElementById("clientIP").innerText = ip_info['ip'];
+        }
+        editor2.setValue('IP address: ' + ip_info['ip'] + '\nCountry: ' + ip_info['country_name'] + ' (' + ip_info['country_code'] + ')' + '\nRegion: ' + ip_info['region_name'] + '\nCity: ' + ip_info['city_name']
+                    + '\nLatitude: ' + ip_info['latitude'] + '\nLongitude: ' + ip_info['longitude'] + '\nZip Code: ' + ip_info['zip_code'] + '\nTimezone: ' + ip_info['time_zone']);
+        document.getElementById("queryIp").value = ip_info['ip'];
+                document.getElementById('map').innerHTML = "<iframe width=\"100%\" height=\"100%\" frameborder=\"0\" style=\"border:1px solid #e1e1e1\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDvTryAEw90t0gne_bqsnmJ9DYxrvcEg_Y&q="+ip_info['city_name']+","+ip_info['region_name']+","+ip_info['country_name']+"\"allowfullscreen></iframe>";
+    }
+
+    function copy_to_clipboard_ip() {
+        var copy_button = document.getElementById("copy");
+        document.getElementById("queryIp").focus();
+        document.getElementById("queryIp").select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

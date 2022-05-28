@@ -1,0 +1,134 @@
+{%extends "MyIpAddress/fr/base_layout_fr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Veuillez entrer ou faire glisser un fichier texte ici."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Vide</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Encodage d'URL</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copier le résultat</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Le résultat sera affiché ici."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>À propos de{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Table de conversion de codage d'URL:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> ! </th>
+            <th> # </th>
+            <th> $ </th>
+            <th>&</th>
+            <th> ' </th>
+            <th> ( </th>
+            <th> ) </th>
+            <th> * </th>
+            <th> + </th>
+            <th> , </th>
+            <th> / </th>
+            <th> : </th>
+            <th> ; </th>
+            <th> = </th>
+            <th> ? </th>
+            <th> @ </th>
+            <th> [ </th>
+            <th> ] </th>
+        </tr>
+        <tr>
+            <td>%21</td>
+            <td>%23</td>
+            <td>%24</td>
+            <td>%26</td>
+            <td>%27</td>
+            <td>%28</td>
+            <td>%29</td>
+            <td>%2A</td>
+            <td>%2B</td>
+            <td>%2C</td>
+            <td>%2F</td>
+            <td>%3A</td>
+            <td>%3B</td>
+            <td>%3D</td>
+            <td>%3F</td>
+            <td>%40</td>
+            <td>%5B</td>
+            <td>%5D</td>
+        </tr>
+    </table>
+    <br>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-url-encode.png" alt="comic url encode">
+    </div>
+    <header><h2>Calculer le codage d'URL d'une chaîne en Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import urllib.parse
+
+def url_encode(input_str):
+    output_msg = urllib.parse.quote(input_str).strip()
+    return output_msg
+    </pre>
+    <header><h2>Calculer le codage d'URL d'une chaîne en Java:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+public class URL {
+    public static String url_encode(String url) throws UnsupportedEncodingException {
+        return URLEncoder.encode(url, "UTF-8");
+    }
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        String result = url_encode("https://maps.google.com/maps?ll=37.413323,-122.081267&z=11&q=Mountain View California USA");
+        System.out.println(result);
+    }
+}
+
+-------------------
+https%3A%2F%2Fmaps.google.com%2Fmaps%3Fll%3D37.413323%2C-122.081267%26z%3D11%26q%3DMountain+View+California+USA
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        calacuate_url_encode();
+        finished_spin_hidden();
+    }
+
+    editor1.on('change', function () {
+        $('#spinner').css('visibility', 'visible');
+        calacuate_url_encode();
+        finished_spin_hidden();
+    });
+
+    function calacuate_url_encode() {
+        editor2.setValue("Invalid Input");
+        editor2.setValue(encodeURIComponent(editor1.getValue()));
+    }
+</script>
+{%endblock%}

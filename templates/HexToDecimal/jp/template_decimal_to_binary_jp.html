@@ -1,0 +1,311 @@
+{%extends "HexToDecimal/jp/base_layout_jp.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">10進数<sub>10</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 空です</button>
+    <a href="/jp/binary-to-decimal" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 交換場所</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">変換</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> コピー結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">バイナリ<sub>2</sub></span>
+    </div>
+    <input name="queryStr" id="BinaryOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">進数<sub>16</sub></span>
+    </div>
+    <input name="queryStr" id="HexOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">8進数<sub>8</sub></span>
+    </div>
+    <input name="queryStr" id="OctalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>について{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>10進数:</h2><div class="h2-highlight"></div></header>
+    <p> (アラビア語としても知られている)10進数システムは、 <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> )を含む10文字を持ちます. </p>
+    <header><h2>バイナリ:</h2><div class="h2-highlight"></div></header>
+    <p>バイナリは2文字<code>(0, 1)</code>のみで<code>(0, 1)</code> 4ビットのバイナリ文字は1桁の16進数を表し、3桁のバイナリ文字は1桁の8進数を表すことができます. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-decimal-to-binary.png" alt="comic decimal to binary">
+    </div>
+    <header><h2>10進数から2進数に変換する方法は？</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p>ステップ1：10進数を2で割り、整数の商と余りを求めます. </p></li>
+        <li><p>手順2：最初の手順の残りの部分をバイナリ文字に変換します. </p></li>
+        <li><p>ステップ3：最初のステップの整数商で除算を続け、0になるまでステップ1を繰り返します. </p></li>
+    </ol>
+    <p> <b>例1：10進数 "13"が2進数に変換されます(結果は "1101"です).</b> </p>
+    <table class="descriptionTable">
+        <tr>
+            <th>各10進数を2で割ります</th>
+            <th>整数商</th>
+            <th>剰余(10元) </th>
+            <th>剰余(2元) </th>
+            <th>場所</th>
+        </tr>
+        <tr>
+            <td>13/2</td>
+            <td>6</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>6/2</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3/2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1/2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>10進数から2進数への変換表:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> 10進数</th>
+            <th>バイナリ</th>
+            <th> 10進数</th>
+            <th>バイナリ</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>21</td>
+            <td>10101</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>10</td>
+            <td>22</td>
+            <td>10110</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>3</td>
+            <td>23</td>
+            <td>10111</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>100</td>
+            <td>24</td>
+            <td>11000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>101</td>
+            <td>25</td>
+            <td>11001</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>110</td>
+            <td>26</td>
+            <td>11010</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>111</td>
+            <td>27</td>
+            <td>11011</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1000</td>
+            <td>28</td>
+            <td>11100</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>1001</td>
+            <td>29</td>
+            <td>11101</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>1010</td>
+            <td>30</td>
+            <td>11110</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>1011</td>
+            <td>31</td>
+            <td>11111</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>1100</td>
+            <td>32</td>
+            <td>100000</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>1101</td>
+            <td>33</td>
+            <td>100001</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>1110</td>
+            <td>34</td>
+            <td>100010</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>1111</td>
+            <td>35</td>
+            <td>100011</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>10000</td>
+            <td>36</td>
+            <td>100100</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>10001</td>
+            <td>37</td>
+            <td>100101</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>10010</td>
+            <td>38</td>
+            <td>100110</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>10011</td>
+            <td>39</td>
+            <td>100111</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>10100</td>
+            <td>40</td>
+            <td>101000</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>リンク:</h2><div class="h2-highlight"></div></header>
+    <p>ウィキペディア(バイナリ): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">https://en.wikipedia.org/wiki/Binary_number</a></p>
+    <p>ウィキペディア(10進数): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>Pythonでの10進数から2進数への変換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def decimal_to_binary(decimal_str):
+    decimal_number = int(decimal_str, 10)
+    binary_number = bin(decimal_number)
+    return binary_number
+
+
+decimal_input = '2014'
+binary_output = decimal_to_binary(decimal_input)
+print('binary result is:{0}'.format(binary_output))
+
+-------------------
+binary result is:0b11111011110</pre>
+    <header><h2>Javaでの10進数から2進数への変換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static String decimal_to_binary(String decimal_str) {
+        return Integer.toBinaryString(Integer.parseInt(decimal_str));
+    }
+
+    public static void main(String[] args) {
+        String decimal_input = "2014";
+        String binary_output = decimal_to_binary(decimal_input);
+        System.out.println("binary result is:" + binary_output);
+    }
+}
+
+-------------------
+binary result is:11111011110
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var HexOutput = document.getElementById("HexOutput");
+    var OctalOutput = document.getElementById("OctalOutput");
+    var BinaryOutput = document.getElementById("BinaryOutput");
+
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+        var input_value = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (input_value != "") {
+            input_value = new BigNumber(input_value, 10);
+            var output_hex = input_value.toString(16);
+            var output_octal = input_value.toString(8);
+            var output_binary = input_value.toString(2);
+            HexOutput.value = output_hex;
+            OctalOutput.value = output_octal;
+            BinaryOutput.value = output_binary;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        BinaryOutput.focus();
+        BinaryOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

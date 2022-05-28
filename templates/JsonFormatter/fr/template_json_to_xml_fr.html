@@ -1,0 +1,89 @@
+{%extends "JsonFormatter/fr/base_layout_fr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Veuillez entrer ou faire glisser un fichier texte ici."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Vide</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">Exemple</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">JSON à XML</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copier le résultat</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Les résultats JSON to XML seront affichés ici."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>À propos de{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-json-to-xml.png" alt="comic json to xml">
+    </div>
+    <header><h2>Plus de liens vers JSON en XML:</h2><div class="h2-highlight"></div></header>
+    <p> Github: <a rel="nofollow" href="https://github.com/martinblech/xmltodict" target="_blank">https://github.com/martinblech/xmltodict</a></p>
+    <p> Xmltodict: <a rel="nofollow" href="http://docs.python-guide.org/en/latest/scenarios/xml/" target="_blank">http://docs.python-guide.org/en/latest/scenarios/xml/</a></p>
+    <header><h2>Conversion en XML avec JSON Python (avec le package xmltodict):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import xmltodict
+
+def convert_json_to_xml(input_str):
+    dict = json.loads(input_str)
+    return str(xmltodict.unparse({'root': dict}, pretty=True))
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/brace-fold.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/xml-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "{\"person\":{\"firstname\":\"John\",\"lastname\":\"Smith\",\"age\":25,\"address\":{\"streetaddress\":\"21 2nd Street\",\"city\":\"New York\",\"state\":\"NY\",\"postalcode\":10021 },\"phonenumber\":[{\"type\":\"home\",\"number\":\"212 555-1234\"},{\"type\":\"fax\",\"number\":\"646 555-4567\"}],\"gender\":{\"type\":\"male\"}}}";
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            var JSONString = editor1.getValue();
+            JSONString = '{"RootDirectory":' + JSONString + '}';
+            var JSONObject = JSON.parse(JSONString);
+            var XMLObject = JXON.jsToXml(JSONObject);
+            var XMLString = JXON.xmlToString(XMLObject);
+            XMLString = XMLString.replace("<RootDirectory>","").replace("</RootDirectory>","");
+            XMLString = vkbeautify.xml(XMLString);
+            editor2.setValue(XMLString);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+<script src="/js/vkbeautify.js"></script>
+{%endblock%}

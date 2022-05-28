@@ -1,0 +1,135 @@
+{%extends "MyIpAddress/it/base_layout_it.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Si prega di inserire o trascinare in un file di testo qui."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> chiaro</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Decodifica URL</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copia il risultato</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Il risultato verrà mostrato qui."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>su{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Tabella di conversione decodifica URL:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> 21% </th>
+            <th> 23% </th>
+            <th> 24% </th>
+            <th> 26% </th>
+            <th> 27% </th>
+            <th> 28% </th>
+            <th> 29% </th>
+            <th> % 2A </th>
+            <th> % 2B </th>
+            <th> % 2C </th>
+            <th> % 2F </th>
+            <th> 3A% </th>
+            <th> % 3B </th>
+            <th> % 3D </th>
+            <th> % 3F </th>
+            <th> 40% </th>
+            <th> % 5B </th>
+            <th> % 5D </th>
+        </tr>
+        <tr>
+            <td>!</td>
+            <td>#</td>
+            <td>$</td>
+            <td>&</td>
+            <td>'</td>
+            <td>(</td>
+            <td>)</td>
+            <td>*</td>
+            <td>+</td>
+            <td>,</td>
+            <td>/</td>
+            <td>:</td>
+            <td>;</td>
+            <td>=</td>
+            <td>?</td>
+            <td>@</td>
+            <td>[</td>
+            <td>]</td>
+        </tr>
+    </table>
+    <br>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-url-decode.png" alt="comic url decode">
+    </div>
+    <header><h2>Calcola la decodifica URL di una stringa in Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import urllib.parse
+
+
+def url_decode(input_str):
+    output_msg = urllib.parse.unquote(input_str).strip()
+    return output_msg
+    </pre>
+    <header><h2>Calcola la decodifica URLL di una stringa in Java:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
+public class URL {
+    public static String url_decode(String url) throws UnsupportedEncodingException {
+        return URLDecoder.decode(url, "UTF-8");
+    }
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        String result = url_decode("https%3A%2F%2Fmaps.google.com%2Fmaps%3Fll%3D37.413323%2C-122.081267%26z%3D11%26q%3DMountain+View+California+USA");
+        System.out.println(result);
+    }
+}
+
+-------------------
+https://maps.google.com/maps?ll=37.413323,-122.081267&z=11&q=Mountain View California USA
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        calacuate_url_decode();
+        finished_spin_hidden();
+    }
+
+    editor1.on('change', function () {
+        $('#spinner').css('visibility', 'visible');
+        calacuate_url_decode();
+        finished_spin_hidden();
+    });
+
+    function calacuate_url_decode() {
+        editor2.setValue("Invalid Input");
+        editor2.setValue(decodeURIComponent(editor1.getValue()));
+    }
+</script>
+{%endblock%}

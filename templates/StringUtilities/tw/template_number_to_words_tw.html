@@ -1,0 +1,84 @@
+{%extends "StringUtilities/tw/base_layout_tw.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">數字 (整數)</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" spellcheck="false" oninput="number_to_words()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt();clearResult()"><i class="far fa-trash-alt"></i> 清空</button>
+    <button type="button" class="btn btn-primary" onclick="number_to_words()">數字轉英文</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_numberword_to_clipboard()"><i class="far fa-copy"></i> 複製結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">英文</span>
+    </div>
+    <input name="WordResult" id="WordResult" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">英文序數</span>
+    </div>
+    <input name="OrdinalWordResult" id="OrdinalWordResult" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">數字序數</span>
+    </div>
+    <input name="OrdinalNumberResult" id="OrdinalNumberResult" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>關於{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/20190308/cartoon_number_to_words.png" alt="cartoon text editor">
+    </div>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/selection/mark-selection.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/search/searchcursor.min.js"></script>
+<script>
+    function clearResult() {
+        $("#WordResult").val("");
+        $("#OrdinalWordResult").val("");
+        $("#OrdinalNumberResult").val("");
+    }
+
+    function number_to_words() {
+        clearResult();
+        var input_int = parseInt($("#queryStr").val());
+        $("#WordResult").val(numberToWords.toWords(input_int));
+        $("#OrdinalWordResult").val(numberToWords.toWordsOrdinal(input_int));
+        $("#OrdinalNumberResult").val(numberToWords.toOrdinal(input_int));
+    }
+
+    function copy_numberword_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        var WordResult = document.getElementById("WordResult");
+        WordResult.focus();
+        WordResult.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+<script src="/js/numberToWords.min.js"></script>
+{%endblock%}

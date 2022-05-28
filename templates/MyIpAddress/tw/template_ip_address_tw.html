@@ -1,0 +1,117 @@
+{%extends "MyIpAddress/tw/base_layout_tw.html"%}
+{%block content%}
+<div id="headline">
+    <h1>我的IP地址: <span id="clientIP"></span></h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">查詢IP地址地理位置</span>
+        </div>
+        <input name="queryIp" id="queryIp" type="text" class="form-control" placeholder="" value="" spellcheck="false">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="init_query()"><i class="far fa-trash-alt"></i> 重置</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">查詢</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard_ip()"><i class="far fa-copy"></i> 複製結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="codewrapper size18codewrapper">
+            <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="IP地址歸屬地查詢結果"></textarea>
+        </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+        <div name="map" id="map" class="col-xs-6" style="width: 100%;height: 300px;background-color: #f2f2f2"></div>
+    </div>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>關於{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-my-ip-addresss.png" alt="comic my ip address">
+    </div>
+    <header><h2>什麼是IP地址?</h2><div class="h2-highlight"></div></header>
+    <p>就如同您用來接收亞馬遜包的真實郵寄地址,IP地址(Internet Protocol address)是標記您的標籤在互聯網上的位置,所以其他計算機(網站服務器)知道往哪裡發送數據. </p>
+    <p>有兩種IP地址: Internet協議版本4(IPv4)和Internet協議版本6(IPv6). IPv6使用<code>128</code> bits來表示地址,雖然IPv6不會在近10年被廣泛使用.IPv4使用<code>32</code> bits來表示地址( 0.0.0.0 ~ 255.255.255.255).這意味著IPv4一共有<code>2^32 = 4,294,967,296</code>個獨立的地址(40億不是一個很大的數字!!!). </p>
+    <p>您現在使用的設備沒有唯一的IPv4公共地址,但是使用了私有IPv4地址. 您的路由器有一個專用的公共IP地址,並作為一個中轉站將所有互聯網流量傳輸到外部世界. 該技術稱為NAT(網絡地址轉換). NAT不僅可以減少的公共IPv4地址的消耗,還為您提供額外的安全保障. </p>
+    <header><h2>為什麼我要了解IP地址?</h2><div class="h2-highlight"></div></header>
+    <p>隱私. 您的IP地址可能會洩露您的真實地理信息(哪個國家/地區和哪個城市). 通常使用VPN或代理隱藏您的互聯網位置的人. 這兩者之間的差別是你信任哪個權威機構,你的IPS(互聯網服務提供商)是與政府合作的國家大公司. 另一方面,VPN提供商在保護客戶的隱私基礎上提供業務,但您不確定他們是否收集您的瀏覽歷史記錄. 對於高端用戶建議使用Tor,一個VPN隧道跟隨另一個VPN隧道. 所以沒有人能夠知道你的真實IP地址. </p>
+    <header><h2>更多關於IP地址的鏈接:</h2><div class="h2-highlight"></div></header>
+    <p>維基百科(Internet Protocol): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Internet_Protocol" target="_blank">https://en.wikipedia.org/wiki/Internet_Protocol</a>
+    </p>
+    <p> RFC 791 (Internet Protocol): <a rel="nofollow" href="https://tools.ietf.org/html/rfc791" target="_blank">https://tools.ietf.org/html/rfc791</a>
+    </p>
+    <p>地理位置查詢API (ip-api): <a rel="nofollow" href="http://ip-api.com/docs/" target="_blank">http://ip-api.com/docs/</a></p>
+    <p>地理位置查詢API (Google Maps API): <a rel="nofollow" href="https://developers.google.com/maps/documentation/geolocation/intro"
+                                             target="_blank">https://developers.google.com/maps/documentation/geolocation/intro</a>
+    </p>
+    <header><h2>用Python查詢IP地址的地理(用Coding.tools提供的免費無限制API):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import requests
+import json
+
+ip_json_str = requests.post('https://coding.tools/my-ip-address', data={'queryIp': '8.8.8.8'}).text
+ip_json = json.loads(ip_json_str)
+print(ip_json)
+
+print('IP address:', ip_json['ip'])
+print('Country:', ip_json['country_name'])
+print('Region:', ip_json['region_name'])
+print('City:', ip_json['city_name'])
+print('Latitude:', ip_json['latitude'])
+print('Longitude:', ip_json['longitude'])
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+
+    query();
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        var ip = document.getElementById("queryIp").value;
+        ip = ip.trim();
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                finished_spin_hidden();
+                render_result(JSON.parse(data));
+            });
+    }
+
+    function render_result(ip_info) {
+        if (document.getElementById("clientIP").innerText===""){
+            document.getElementById("clientIP").innerText = ip_info['ip'];
+        }
+        editor2.setValue('IP address: ' + ip_info['ip'] + '\nCountry: ' + ip_info['country_name'] + ' (' + ip_info['country_code'] + ')' + '\nRegion: ' + ip_info['region_name'] + '\nCity: ' + ip_info['city_name']
+                    + '\nLatitude: ' + ip_info['latitude'] + '\nLongitude: ' + ip_info['longitude'] + '\nZip Code: ' + ip_info['zip_code'] + '\nTimezone: ' + ip_info['time_zone']);
+        document.getElementById("queryIp").value = ip_info['ip'];
+                document.getElementById('map').innerHTML = "<iframe width=\"100%\" height=\"100%\" frameborder=\"0\" style=\"border:1px solid #e1e1e1\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDvTryAEw90t0gne_bqsnmJ9DYxrvcEg_Y&q="+ip_info['city_name']+","+ip_info['region_name']+","+ip_info['country_name']+"\"allowfullscreen></iframe>";
+    }
+
+    function copy_to_clipboard_ip() {
+        var copy_button = document.getElementById("copy");
+        document.getElementById("queryIp").focus();
+        document.getElementById("queryIp").select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

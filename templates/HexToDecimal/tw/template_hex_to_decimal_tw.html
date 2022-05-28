@@ -1,0 +1,275 @@
+{%extends "HexToDecimal/tw/base_layout_tw.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">16進制<sub>16</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <a href="/tw/decimal-to-hex" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 交換位置</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">轉換</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 複製結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">10進制<sub>10</sub></span>
+    </div>
+    <input name="queryStr" id="DecimalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">8進制<sub>8</sub></span>
+    </div>
+    <input name="queryStr" id="OctalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">2進制<sub>2</sub></span>
+    </div>
+    <input name="queryStr" id="BinaryOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>關於{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>十六進制(Hex):</h2><div class="h2-highlight"></div></header>
+    <p>十六進制數字系統包含16種字符,包含<code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code>加上<code>(a, b, e, d, e, f)</code> 6個字符.由於十六進制數字系統可以以可讀的方式表示任何二進製字符串,因此它被廣泛用於計算機科學領域. SHA256哈希字符串通常顯示為十六進製樣式字符串,HTML中使用的顏色系統也可以表示為十六進制數字,從#000000(純黑色)到#FFFFFF(純白色). </p>
+    <header><h2>十進制(Decimal):</h2><div class="h2-highlight"></div></header>
+    <p>十進制數字系統(也稱為阿拉伯語)有10種字符,包括<code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> ,它是我們日常生活中使用最多的數字系統. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-hex-to-decimal.png" alt="comic hex to decimal">
+    </div>
+    <header><h2>如何進行16進製到10進制轉換?</h2><div class="h2-highlight"></div></header>
+    <p>對錶示為以下圖片的n位16進制數字: </p>
+    <div class="math">d<sub>n-1</sub>d<sub>n-2</sub>...d<sub>2</sub>d<sub>1</sub>d<sub>0</sub></div>
+    <p>對於數字的每一位,乘以16的對應位數次方</p>
+    <div class="math">Decimal Output = d<sub>n-1</sub> × 16<sup>n-1</sup> + ... + d<sub>1</sub> × 16<sup>1</sup> + d<sub>0</sub> × 16<sup>0</sup></div>
+    <p>例1: 16進制數字"F4" 轉換為10進制數字: </p>
+    <div class="math">Decimal Output = 15 × 16<sup>1</sup> + 4 × 16<sup>0</sup> = 244</div>
+    <p>例2: 16進制數字"B29E" 轉換為10進制數字: </p>
+    <div class="math">Decimal Output = 11 × 16<sup>3</sup> + 2 × 16<sup>2</sup> + 9 × 16<sup>1</sup> + 14 × 16<sup>0</sup> = 45726</div>
+    <p>例3: 16進制數字"3.14" 轉換為10進制數字: </p>
+    <div class="math">Decimal Output = 3 × 16<sup>0</sup> + 1 × 16<sup>-1</sup> + 4 × 16<sup>-2</sup> = 3.078125</div>
+    <header><h2>16進製到10進制轉換錶:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> 16進制</th>
+            <th> 10進制</th>
+            <th> 16進制</th>
+            <th> 10進制</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>20</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>30</td>
+            <td>48</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>40</td>
+            <td>64</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>50</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>60</td>
+            <td>96</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+            <td>70</td>
+            <td>112</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>80</td>
+            <td>128</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>8</td>
+            <td>90</td>
+            <td>144</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>9</td>
+            <td>A0</td>
+            <td>160</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>10</td>
+            <td>B0</td>
+            <td>176</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>11</td>
+            <td>C0</td>
+            <td>192</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>12</td>
+            <td>D0</td>
+            <td>208</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>13</td>
+            <td>E0</td>
+            <td>224</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>14</td>
+            <td>F0</td>
+            <td>240</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>15</td>
+            <td>100</td>
+            <td>256</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>16</td>
+            <td>200</td>
+            <td>512</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>17</td>
+            <td>300</td>
+            <td>768</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>18</td>
+            <td>1000</td>
+            <td>4096</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>19</td>
+            <td>2000</td>
+            <td>8192</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>20</td>
+            <td>3000</td>
+            <td>12288</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>鏈接:</h2><div class="h2-highlight"></div></header>
+    <p>維基百科(十六進制): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Hexadecimal" target="_blank">https://en.wikipedia.org/wiki/Hexadecimal</a></p>
+    <p>維基百科(十進制): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>用Python進行16進製到10進制轉換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def hex_to_decimal(hex_str):
+    decimal_number = int(hex_str, 16)
+    return decimal_number
+
+
+hex_input = 'ccccccccc'
+decimal_output = hex_to_decimal(hex_input)
+print('decimal result is:{0}'.format(decimal_output))
+
+-------------------
+decimal result is:54975581388</pre>
+    <header><h2>用Java進行16進製到10進制轉換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static int hex_to_decimal(String hex_str) {
+        return Integer.parseInt(hex_str, 16);
+    }
+
+    public static void main(String[] args) {
+        String hex_input = "f4";
+        int decimal_output = hex_to_decimal(hex_input);
+        System.out.println("decimal result is:" + decimal_output);
+    }
+}
+
+-------------------
+decimal result is:244</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var DecimalOutput = document.getElementById("DecimalOutput");
+    var OctalOutput = document.getElementById("OctalOutput");
+    var BinaryOutput = document.getElementById("BinaryOutput");
+
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        DecimalOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+        var input_value = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (input_value != "") {
+            input_value = new BigNumber(input_value, 16);
+            var output_decimal = input_value.toString(10);
+            var output_octal = input_value.toString(8);
+            var output_binary = input_value.toString(2);
+            DecimalOutput.value = output_decimal;
+            OctalOutput.value = output_octal;
+            BinaryOutput.value = output_binary;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        DecimalOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        DecimalOutput.focus();
+        DecimalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

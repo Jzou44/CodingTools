@@ -1,0 +1,175 @@
+{%extends "HexToDecimal/kr/base_layout_kr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">아라비아 숫자</span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <a href="/kr/roman-numerals-to-numbers" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 교환 위치</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">전환</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">로마 숫자</span>
+    </div>
+    <input name="RomanOutput" id="RomanOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>로마 숫자:</h2><div class="h2-highlight"></div></header>
+    <p> 로마 숫자는 라틴 문자를 사용하여 숫자를 나타냅니다 <code>("I" :"1", "V" :"5", "X" :"10", "L" :"50", "C" :"100", "D" :"500", "M" :"1000")</code> . <code>("I" :"1", "V" :"5", "X" :"10", "L" :"50", "C" :"100", "D" :"500", "M" :"1000")</code> 로마 숫자 체계는 종종 논문과 책의 분류에 사용됩니다. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-numbers-to-roman-numerals.png" alt="comic numbers to roman numerals">
+    </div>
+    <header><h2>아라비아 숫자를 로마 숫자로 변환하는 방법은 무엇입니까?</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p> <b>1 단계 :</b> 라틴 알파벳으로 표현 된 값을 순차적으로 <code>["M": 1000, "CM": 900, "D": 500, "CD": 400, "C": 100, "XC": 90, "L": 50, "XL": 40, "X": 10, "IX": 9, "V": 5, "IV": 4, "I": 1]</code> </p></li>
+        <li><p> <b>2 단계 :</b> 왼쪽에서 오른쪽으로 가장 큰 값을 빼고 나머지 값이 0이 될 때까지 반복하십시오. </p></li>
+    </ol>
+    <p> <b>예 1 : 아라비아 숫자 "424"는 로마 숫자로 변환됩니다.</b> </p>
+    <div class="math">424 = 400 + 10 + 10 + 4 = CD + X + X + IV = CDXXIV</div>
+    <p> <b>예 2 : 아라비아 숫자 "2019"는 로마 숫자로 변환됩니다.</b> </p>
+    <div class="math">2019 = 1000 + 1000 + 10 + 9 = M + M + X + IX = MMXIX</div>
+    <header><h2>아라비아 숫자 - 로마 숫자 변환 표:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> 아라비아 숫자 </th>
+            <th> 로마 숫자 </th>
+            <th> 아라비아 숫자 </th>
+            <th> 로마 숫자 </th>
+        </tr>
+<tr><td>1</td><td>I</td><td>21</td><td>XXI</td></tr>
+<tr><td>2</td><td>II</td><td>22</td><td>XXII</td></tr>
+<tr><td>3</td><td>III</td><td>23</td><td>XXIII</td></tr>
+<tr><td>4</td><td>IV</td><td>24</td><td>XXIV</td></tr>
+<tr><td>5</td><td>V</td><td>25</td><td>XXV</td></tr>
+<tr><td>6</td><td>VI</td><td>26</td><td>XXVI</td></tr>
+<tr><td>7</td><td>VII</td><td>27</td><td>XXVII</td></tr>
+<tr><td>8</td><td>VIII</td><td>28</td><td>XXVIII</td></tr>
+<tr><td>9</td><td>IX</td><td>29</td><td>XXIX</td></tr>
+<tr><td>10</td><td>X</td><td>30</td><td>XXX</td></tr>
+<tr><td>11</td><td>XI</td><td>31</td><td>XXXI</td></tr>
+<tr><td>12</td><td>XII</td><td>32</td><td>XXXII</td></tr>
+<tr><td>13</td><td>XIII</td><td>33</td><td>XXXIII</td></tr>
+<tr><td>14</td><td>XIV</td><td>34</td><td>XXXIV</td></tr>
+<tr><td>15</td><td>XV</td><td>35</td><td>XXXV</td></tr>
+<tr><td>16</td><td>XVI</td><td>36</td><td>XXXVI</td></tr>
+<tr><td>17</td><td>XVII</td><td>37</td><td>XXXVII</td></tr>
+<tr><td>18</td><td>XVIII</td><td>38</td><td>XXXVIII</td></tr>
+<tr><td>19</td><td>XIX</td><td>39</td><td>XXXIX</td></tr>
+<tr><td>20</td><td>XX</td><td>40</td><td>XL</td></tr>
+    </table>
+    <br>
+    <header><h2>링크:</h2><div class="h2-highlight"></div></header>
+    <p> 위키 백과 (로마 디지털 시스템): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Roman_numerals" target="_blank">https://en.wikipedia.org/wiki/Roman_numerals</a></p>
+    <header><h2>파이썬에서 아랍어에서 로마 숫자로 변환:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def transform_number_to_roman_numeral(number):
+    roman_value_list = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    roman_char_list = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    res = ''
+    for i in range(len(roman_value_list)):
+        while number >= roman_value_list[i]:
+            number -= roman_value_list[i]
+            res += roman_char_list[i]
+    return res
+
+
+number_input = 987
+roman_numeral_output = transform_number_to_roman_numeral(number_input)
+print('number {0} equal to:{1}'.format(number_input, roman_numeral_output))
+
+-------------------
+number 987 equal to:CMLXXXVII</pre>
+    <header><h2>자바에서 로마 숫자로 변환하는 아랍어:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static String transform_number_to_roman_numeral(int number) {
+        int[] roman_value_list = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] roman_char_list = new String[]{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < roman_value_list.length; i += 1) {
+            while (number >= roman_value_list[i]){
+                number -= roman_value_list[i];
+                res.append(roman_char_list[i]);
+            }
+        }
+        return res.toString();
+    }
+
+    public static void main(String[] args) {
+        int number_input = 987;
+        String roman_numeral_output = transform_number_to_roman_numeral(number_input);
+        System.out.println("number " + number_input + " equal to:" + roman_numeral_output);
+    }
+}
+
+-------------------
+number 987 equal to:CMLXXXVII
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var RomanOutput = document.getElementById("RomanOutput");
+
+    function convertToRoman(num) {
+        if(99999<num){
+            return "Number Too Large";
+        }
+        var roman = {"M": 1000, "CM": 900, "D": 500, "CD": 400, "C": 100, "XC": 90, "L": 50, "XL": 40, "X": 10, "IX": 9, "V": 5, "IV": 4, "I": 1};
+        var str = "";
+        for (var i of Object.keys(roman)) {
+            var q = Math.floor(num / roman[i]);
+            num -= q * roman[i];
+            str += i.repeat(q);
+        }
+        return str;
+    }
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        RomanOutput.value = "";
+        var number_str = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (number_str == "") {
+            RomanOutput.value = "";
+        } else {
+            RomanOutput.value = convertToRoman(parseInt(number_str));
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        RomanOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        RomanOutput.focus();
+        RomanOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

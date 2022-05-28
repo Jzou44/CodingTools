@@ -1,0 +1,47 @@
+{%extends "StringUtilities/cn/base_layout_cn.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quicksearchmodal">关键词搜索</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quickreplacemodal">关键词替换</button>
+    <button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('result.txt')"><i class="fas fa-file-download"></i> 保存结果</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 复制结果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper resizableWrapper">
+    <textarea autofocus id="code2" name="code" style="width: 100%;height: 300px"></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>关于{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/20190308/cartoon_text_editor.png" alt="cartoon text editor">
+    </div>
+</div>
+{% include "Common/seg_bootstrap_modal_search_replace_cn.html" %}
+{%endblock%}
+{%block customPageJS%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/markdown/markdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/selection/mark-selection.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/search/searchcursor.min.js"></script>
+<script>
+    $('#quicksearchmodal').appendTo('body');
+    $('#quickreplacemodal').appendTo('body');
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "markdown",
+        lineNumbers: true,
+        lineWrapping: true,
+        styleSelectedText: true,
+    });
+</script>
+{%endblock%}

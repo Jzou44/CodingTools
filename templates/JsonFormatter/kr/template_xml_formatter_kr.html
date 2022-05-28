@@ -1,0 +1,116 @@
+{%extends "JsonFormatter/kr/base_layout_kr.html"%}
+<header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px"placeholder="여기에 텍스트 파일을 입력하거나 드래그하십시오."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">예제</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">XML 형식 지정</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="xml 서식 지정 결과가 여기에 표시됩니다."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <p> 이 도구는 입력 문자열이 공식 XML 구문을 준수하지 않는 경우에도 잘못된 XML 문자열 형식을 강제 지정할 수 있습니다. </p>
+    <header><h2>JSON 용 XML의 장점:</h2><div class="h2-highlight"></div></header>
+    <p> XML은 JSON보다 확장 성이 뛰어나며 XML은 태그와 속성을 사용하여 데이터의 복잡한 관계를 나타낼 수 있습니다. </p>
+    <p> XML은 JSON보다 광범위하게 사용되며 역사가 JSON보다 길다. HTML도 일종의 XML이므로 XML 데이터를 더 많은 사람들이 이해할 수있다. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-xml-formatter.png" alt="comic xml formatter">
+    </div>
+    <header><h2>XML (Extensible Markup Language)에 대한 추가 링크:</h2><div class="h2-highlight"></div></header>
+    <p> RFC 3470 (XML): <a rel="nofollow" href="https://tools.ietf.org/html/rfc3470" target="_blank">https://tools.ietf.org/html/rfc3470</a></p>
+    <p> 파이썬의 XML (BeautifulSoup): <a rel="nofollow" href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">https://www.crummy.com/software/BeautifulSoup/</a></p>
+    <p> Java in XML (dom4j): <a rel="nofollow" href="https://dom4j.github.io/" target="_blank">https://dom4j.github.io/</a></p>
+    <header><h2>파이썬에서 XML 문자열 포맷하기 (패키지 xml.dom 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+from xml.dom import minidom
+
+
+def format_xml(input_str):
+    str = minidom.parseString(input_str)
+    output_str = str.toprettyxml(indent="    ")
+    return output_str
+    </pre>
+    <header><h2>Java에서 XML 문자열 서식 지정 (패키지 dom4j 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
+
+public String Format(String xmlStr){
+    Document document=DocumentHelper.parseText(xmlStr);
+    OutputFormat format=OutputFormat.createPrettyPrint();
+    format.setIndentSize(4);
+    StringWriter stringWriter=new StringWriter();
+    XMLWriter writer=new XMLWriter(stringWriter,format);
+    writer.write(document);
+    String resultStr=stringWriter.toString();
+    return resultStr;
+}
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/xml-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><person><firstName>John</firstName><lastName>Smith</lastName><age>25</age><address><streetAddress>21 2nd Street</streetAddress><city>New York</city><state>NY</state><postalCode>10021</postalCode></address><phoneNumber><type>home</type><number>212 555-1234</number></phoneNumber><phoneNumber><type>fax</type><number>646 555-4567</number></phoneNumber><gender><type>male</type></gender></person>";
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            var XMLString = editor1.getValue();
+            var minify = require('html-minifier').minify;
+            XMLString = minify(XMLString, {
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true,
+                removeComments: true,
+            });
+            XMLString = vkbeautify.xml(XMLString);
+            editor2.setValue(XMLString);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+<script src="/js/vkbeautify.js"></script>
+{%endblock%}

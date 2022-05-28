@@ -1,0 +1,98 @@
+{%extends "MyIpAddress/tw/base_layout_tw.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">域名或IP地址</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="example.com" spellcheck="false">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Whois查詢</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 複製結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Whois查詢結果."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>關於{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-whois.png" alt="comic whois">
+    </div>
+    <header><h2>Whois查詢域名需不需要加www.前綴?</h2><div class="h2-highlight"></div></header>
+    <p>在大多數情況下,whois查詢二級域名將不會返回任何結果.如果您查詢不到任何結果,請嘗試刪除<code>www</code>前綴並再試一次. </p>
+    <header><h2>為什麼需要使用Whois查詢?</h2><div class="h2-highlight"></div></header>
+    <p>您找到了一個很有意思的網站並想與網站所有者聯繫,但無法找到網站所有者的電話號碼或電子郵件地址. Whois是查詢網站所有者聯繫方式的工具. </p>
+    <p> Whois查詢工具始於<code>1982</code>年,它可以幫助執法機構識別域名所有者的權限.如今,如果您向Godaddy支付額外費用,Godaddy可以幫助您隱藏您的聯繫信息,因此當其他人在您的域上進行whois查詢時,您的電話號碼和電子郵件地址將不會顯示. </p>
+    <header><h2>我應該在Whois搜索結果中隱藏我的聯繫信息嗎？ ?</h2><div class="h2-highlight"></div></header>
+    <p>對於常規網站,我建議人們不要隱藏他們的聯繫信息,因為它代表了您網站的聲譽. 但如果您的隱私非常對您來說很重要,或者您希望遠離潛在的垃圾郵件,whois隱私保護可能是值得的選擇. </p>
+    <header><h2>更多關於Whois查詢的鏈接:</h2><div class="h2-highlight"></div></header>
+    <p>維基百科(Whois): <a rel="nofollow" href="https://en.wikipedia.org/wiki/WHOIS" target="_blank">https://en.wikipedia.org/wiki/WHOIS</a></p>
+    <p> RFC 3912 (Whois): <a rel="nofollow" href="https://tools.ietf.org/html/rfc3912" target="_blank">https://tools.ietf.org/html/rfc3912</a></p>
+    <p> Linux系統中的Whois查詢(Ubuntu): <a rel="nofollow" href="https://manpages.debian.org/jessie/whois/whois.1.en.html" target="_blank">https://manpages.debian.org/jessie/whois/whois.1.en.html</a></p>
+    <header><h2>Linux系統中的Whois命令:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       whois - client for the whois directory service
+
+SYNOPSIS
+       whois  [  {  -h | --host } HOST ] [ { -p | --port } PORT ] [ -abBcdGHKlLmMrRx ] [ -g SOURCE:FIRST-LAST ]
+       [ -i ATTR[,ATTR]... ] [ -s SOURCE[,SOURCE]... ] [ -T TYPE[,TYPE]... ] [ --verbose ]
+       OBJECT
+
+       whois -q KEYWORD
+
+       whois -t TYPE
+
+       whois -v TYPE
+
+       whois --help
+
+       whois --version</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# whois -H google.com
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2018-02-21T18:36:40Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2020-09-14T04:00:00Z
+   ......
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

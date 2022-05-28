@@ -1,0 +1,122 @@
+{%extends "StringUtilities/en/base_layout.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper resizableWrapper maxLengthWrapper">
+        <textarea autofocus id="code2" name="code2" style="width: 100%;height: 300px" placeholder="Paste input or drag file in here."></textarea>
+    </div>
+</form>
+<table class="descriptionTable">
+<tr>
+    <th>Categories</th>
+    <th>Count</th>
+</tr>
+<tr>
+    <td>Words</td>
+    <td id="count_result_words">0</td>
+</tr>
+<tr>
+    <td>Sentences</td>
+    <td id="count_result_sentences">0</td>
+</tr>
+<tr>
+    <td>Paragraphs</td>
+    <td id="count_result_paragraphs">0</td>
+</tr>
+<tr>
+    <td>Lines</td>
+    <td id="count_result_lines">0</td>
+</tr>
+<tr>
+    <td>Characters(with space)</td>
+    <td id="count_result_char_with_space">0</td>
+</tr>
+<tr>
+    <td>Characters(no space)</td>
+    <td id="count_result_char_without_space">0</td>
+</tr>
+<tr>
+    <td>Estimated Reading Time</td>
+    <td><b id="count_result_estimate_reading_minutes">0</b> Minutes <b id="count_result_estimate_reading_seconds">0</b> Seconds</td>
+</tr>
+<tr>
+    <td>Estimated Speaking Time</td>
+    <td><b id="count_result_estimate_speaking_minutes">0</b> Minutes <b id="count_result_estimate_speaking_seconds">0</b> Seconds</td>
+</tr>
+</table>
+<br/>
+<button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Clear</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quicksearchmodal">Quick Search</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quickreplacemodal">Quick Replace</button>
+<button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('result.txt')"><i class="fas fa-file-download"></i> Save Result</button>
+<button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copy Result</button>
+<i id="spinner" class="fa fa-sync fa-spin"></i>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>About {{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/20190308/cartoon_word_counter.png" alt="cartoon text editor">
+    </div>
+    <header><h2>Does Word Count Online Tool log my data?</h2><div class="h2-highlight"></div></header>
+    <p>Absolutely <b>NOT</b>, this Word Counter doing all the formatting work on the client side, all logic are implemented by Javascript. There are 2 major advantages: 1.Your data never transmitted in the Open Internet, so you know it's secure; 2.It's much faster than doing all the work in the server side, because there is no Internet Delay.</p>
+</div>
+{% include "Common/seg_bootstrap_modal_search_replace.html" %}
+{%endblock%}
+{%block customPageJS%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/markdown/markdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/selection/mark-selection.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/search/searchcursor.min.js"></script>
+<script>
+    $('#quicksearchmodal').appendTo('body');
+    $('#quickreplacemodal').appendTo('body');
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "markdown",
+        lineNumbers: true,
+        lineWrapping: true,
+        styleSelectedText: true,
+    });
+
+    editor2.on('change', function () {
+        word_count();
+    });
+
+    function word_count(){
+        var txt_original = editor2.getValue().replace(/[。！？]/g,'.').replace(/[‘]/g,'\'');
+        var words_list = txt_original.toLowerCase().replace(/'s/g,'').replace(/'\w*/g,'').match(/[a-zA-Z]+/g);
+        try{$("#count_result_words").html(words_list.length);} catch (err) {$("#count_result_words").html("0");}
+        try{$("#count_result_sentences").html(txt_original.match(/[\w][^.!?\r\n]+[.!?\r\n]/g).length);} catch (err) {$("#count_result_sentences").html("0");}
+        try{$("#count_result_paragraphs").html(txt_original.match(/[\w][^\r\n]+/g).length);} catch (err) {$("#count_result_paragraphs").html("0");}
+        try{$("#count_result_lines").html(txt_original.split('\n').length);} catch (err) {$("#count_result_lines").html("0");}
+        try{$("#count_result_char_with_space").html(txt_original.length);} catch (err) {$("#count_result_char_with_space").html("0");}
+        try{$("#count_result_char_without_space").html(txt_original.replace(/\s/g,'').length);} catch (err) {$("#count_result_char_without_space").html("0");}
+        try{
+            var count_result_estimate_reading_times = parseInt(words_list.length)/4.583333;
+            var count_result_estimate_reading_minutes = Math.floor(count_result_estimate_reading_times/60);
+            var count_result_estimate_reading_seconds = Math.floor(count_result_estimate_reading_times - 60*count_result_estimate_reading_minutes);
+            $("#count_result_estimate_reading_minutes").html(count_result_estimate_reading_minutes);
+            $("#count_result_estimate_reading_seconds").html(count_result_estimate_reading_seconds);
+        } catch (err) {
+            $("#count_result_estimate_reading_minutes").html("0");
+            $("#count_result_estimate_reading_seconds").html("0");
+        }
+        try{
+            var count_result_estimate_speaking_times = parseInt(words_list.length)/2.9166666;
+            var count_result_estimate_speaking_minutes = Math.floor(count_result_estimate_speaking_times/60);
+            var count_result_estimate_speaking_seconds = Math.floor(count_result_estimate_speaking_times - 60*count_result_estimate_speaking_minutes);
+            $("#count_result_estimate_speaking_minutes").html(count_result_estimate_speaking_minutes);
+            $("#count_result_estimate_speaking_seconds").html(count_result_estimate_speaking_seconds);
+        }
+        catch (err) {
+            $("#count_result_estimate_speaking_minutes").html("0");
+            $("#count_result_estimate_speaking_seconds").html("0");
+        }
+    }
+</script>
+{%endblock%}

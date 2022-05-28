@@ -1,0 +1,85 @@
+{%extends "DevTool/base_layout_it.html"%}
+{%block content%}
+    <div id="headline">
+        <br/>
+        <h1>{{model.bodyTitle}}</h1>
+        {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+    </div>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description" class="center">
+        <header><h2>Formatta e comprimi strumenti correlati:</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/it/json-formatter">Strumento di formattazione JSON online</a>
+            <a class="table-link" href="/it/json-minifier">Strumento di compressione online JSON</a>
+            <a class="table-link" href="/it/xml-formatter">Strumento online di formattazione XML</a>
+            <a class="table-link" href="/it/xml-minifier">Strumento online di compressione XML</a>
+            <a class="table-link" href="/it/json-to-xml">Strumento online da JSON a XML</a>
+            <a class="table-link" href="/it/xml-to-json">Strumento online da XML a JSON</a>
+            <a class="table-link" href="/it/html-beautifier">Strumento online di formattazione HTML</a>
+            <a class="table-link" href="/it/html-minifier">Strumento online di compressione HTML</a>
+            <a class="table-link" href="/it/javascript-beautifier">Strumento di formattazione Javascript online</a>
+            <a class="table-link" href="/it/javascript-minifier">Strumento online di compressione Javascript</a>
+            <a class="table-link" href="/it/css-beautifier">Strumento di formattazione CSS online</a>
+            <a class="table-link" href="/it/css-minifier">Strumento online di compressione CSS</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2>Strumenti relativi ai test di rete:</h2><div class="h2-highlight"></div></header>
+        <div class="table tool-list">
+            <a class="table-link" href="/it/my-ip-address">La mia query sull'indirizzo IP</a>
+            <a class="table-link" href="/it/ping">Rilevamento online di ping</a>
+            <a class="table-link" href="/it/nslookup">Query online DNS</a>
+            <a class="table-link" href="/it/traceroute">Tracciamento del router</a>
+            <a class="table-link" href="/it/whois">Richiesta online del dominio Whois</a>
+            <a class="table-link" href="/it/port-checker">Portare il rilevamento online</a>
+            <a class="table-link" href="/it/url-encode">Codifica URL online</a>
+            <a class="table-link" href="/it/url-decode">Decodifica URL online</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2>Calcolo hash e strumenti relativi alla password:</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/it/md5">Strumento di crittografia online MD5</a>
+            <a class="table-link" href="/it/sha1">SHA1 strumento di crittografia online</a>
+            <a class="table-link" href="/it/sha224">SHA224 strumento di crittografia online</a>
+            <a class="table-link" href="/it/sha256">Strumento di crittografia online SHA256</a>
+            <a class="table-link" href="/it/sha384">Strumento di crittografia online SHA384</a>
+            <a class="table-link" href="/it/sha512">SHA512 strumento di crittografia online</a>
+            <a class="table-link" href="/it/base64-encode">Strumento di codifica online BASE64</a>
+            <a class="table-link" href="/it/base64-decode">Strumento di decodifica online BASE64</a>
+            <a class="table-link" href="/it/password-generator">Strumento di generazione di password casuali online</a>
+            <br style="clear:both;"/>
+        </div>
+        <header><h2>Strumento di conversione delle cifre:</h2><div class="h2-highlight"></div></header>
+        <div class="tool-list">
+            <a class="table-link" href="/it/hex-to-decimal">Conversione da esadecimale a decimale</a>
+            <a class="table-link" href="/it/decimal-to-hex">Conversione da decimale a esadecimale</a>
+            <a class="table-link" href="/it/octal-to-decimal">Conversione da ottale a decimale</a>
+            <a class="table-link" href="/it/decimal-to-octal">Conversione da decimale a ottale</a>
+            <a class="table-link" href="/it/binary-to-decimal">Conversione da binario a decimale</a>
+            <a class="table-link" href="/it/decimal-to-binary">Conversione da decimale a binario</a>
+            <a class="table-link" href="/it/ascii-table">Tabella di ricerca ASCII</a>
+            <a class="table-link" href="/it/hex-to-ascii">Conversione di stringhe esadecimali in ASCII</a>
+            <a class="table-link" href="/it/ascii-to-hex">Conversione da stringa ASCII a esadecimale</a>
+            <a class="table-link" href="/it/fraction-to-decimal">Conversione da frazioni a decimali</a>
+            <a class="table-link" href="/it/decimal-to-fraction">Conversione frazionale-frazionaria</a>
+            <a class="table-link" href="/it/percent-to-decimal">Conversione da percentuale a decimale</a>
+            <a class="table-link" href="/it/decimal-to-percent">Conversione da decimale a percentuale</a>
+            <a class="table-link" href="/it/percent-to-fraction">Percentuale alla conversione frazionaria</a>
+            <a class="table-link" href="/it/fraction-to-percent">Punteggio alla conversione percentuale</a>
+            <a class="table-link" href="/it/hex-to-rgb">Conversione del colore esadecimale in RGB</a>
+            <a class="table-link" href="/it/rgb-to-hex">Conversione del colore RGB in esadecimale</a>
+            <a class="table-link" href="/it/hex-to-rgba">Conversione del colore esadecimale in RGBA</a>
+            <a class="table-link" href="/it/rgba-to-hex">Conversione del colore RGBA in colore esadecimale</a>
+            <a class="table-link" href="/it/roman-numerals-chart">Tabella di confronto numeri romani 1-1000</a>
+            <a class="table-link" href="/it/roman-numerals-to-numbers">Conversione di numeri romani in numeri arabi</a>
+            <a class="table-link" href="/it/numbers-to-roman-numerals">Conversione di numeri arabi in numeri romani</a>
+            <br style="clear:both;"/>
+        </div>
+        <br/>
+        <div class="mention">
+            <header><h2>su{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+            <a class="table-link" href="/blog">Il mio blog</a>
+        </div>
+    </div>
+{%endblock%}

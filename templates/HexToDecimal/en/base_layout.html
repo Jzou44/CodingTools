@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">Related Tools</a>
+            <a class="table-link" href="/hex-to-decimal">Hex to Decimal</a>
+            <a class="table-link" href="/decimal-to-hex">Decimal to Hex</a>
+            <a class="table-link" href="/octal-to-decimal">Octal to Decimal</a>
+            <a class="table-link" href="/decimal-to-octal">Decimal to Octal</a>
+            <a class="table-link" href="/binary-to-decimal">Binary to Decimal</a>
+            <a class="table-link" href="/decimal-to-binary">Decimal to Binary</a>
+            <a class="table-link" href="/binary-to-hex">Binary to Hex</a>
+            <a class="table-link" href="/hex-to-binary">Hex to Binary</a>
+            <a class="table-link" href="/ascii-table">ASCII Table</a>
+            <a class="table-link" href="/hex-to-ascii">Hex to ASCII String</a>
+            <a class="table-link" href="/ascii-to-hex">ASCII String to Hex</a>
+            <a class="table-link" href="/binary-to-text">Binary to Text</a>
+            <a class="table-link" href="/text-to-binary">Text to Binary</a>
+            <a class="table-link" href="/fraction-to-decimal">Fraction to Decimal</a>
+            <a class="table-link" href="/decimal-to-fraction">Decimal to Fraction</a>
+            <a class="table-link" href="/percent-to-decimal">Percent to Decimal</a>
+            <a class="table-link" href="/decimal-to-percent">Decimal to Percent</a>
+            <a class="table-link" href="/percent-to-fraction">Percent to Fraction</a>
+            <a class="table-link" href="/fraction-to-percent">Fraction to Percent</a>
+            <a class="table-link" href="/hex-to-rgb">Hex to RGB</a>
+            <a class="table-link" href="/rgb-to-hex">RGB to Hex</a>
+            <a class="table-link" href="/hex-to-rgba">Hex to RGBA</a>
+            <a class="table-link" href="/rgba-to-hex">RGBA to Hex</a>
+            <a class="table-link" href="/roman-numerals-chart">Roman Numerals Chart 1-1000</a>
+            <a class="table-link" href="/roman-numerals-to-numbers">Roman Numerals to Numbers</a>
+            <a class="table-link" href="/numbers-to-roman-numerals">Numbers to Roman Numerals</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/{{model.cdnjs_version_bignumber}}/bignumber.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "HexToDecimal/seg_load_js.html"%}
+</body>
+</html>

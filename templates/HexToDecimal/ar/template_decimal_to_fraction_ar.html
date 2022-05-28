@@ -1,0 +1,205 @@
+{%extends "HexToDecimal/ar/base_layout_ar.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">عشري <sub>10</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> واضح</button>
+    <a href="/ar/fraction-to-decimal" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> موقع الصرف</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">تغيير</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<table style="width: 100%" border="0">
+    <tr>
+        <td rowspan="3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">عدد صحيح</span>
+                </div>
+                <input name="queryStr" id="OutputInteger" type="text" class="form-control" spellcheck="false">
+            </div>
+        </td>
+        <td>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">جزيئي</span>
+                </div>
+                <input name="queryStr" id="OutputNumerator" type="text" class="form-control" spellcheck="false">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 20px;">
+            <div style="width: 100%; height: 5px; padding-left:100px; background-color: #444444"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">قاسم</span>
+                </div>
+                <input name="queryStr" id="OutputDenominator" type="text" class="form-control" spellcheck="false">
+            </div>
+        </td>
+    </tr>
+</table>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>في{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>عشري (عشري):</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> يحتوي نظام الأرقام العشري (المعروف أيضًا بالعربية) على 10 أحرف ، بما في ذلك <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> ، وهو النظام الرقمي الأكثر استخدامًا في حياتنا اليومية. </p>
+    <header><h2>جزء (جزء):</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> الرقم فوق الخط الأسود هو البسط ، والعدد تحت الخط الأسود هو المقام ، على الرغم من أن البسط والمقام كلاهما أرقام طبيعية ، فإن القيم التي يمثلونها لا يتم تمثيلها في بعض الأحيان كأرقام طبيعية. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-decimal-to-fraction.png" alt="comic decimal to fraction">
+    </div>
+    <header><h2>كيفية تحويل من عشري إلى كسر؟</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p style=";text-align:right;direction:rtl"> الخطوة 1: تحويل العلامة العشرية إلى كسر يستند إلى مضاعفات عدد صحيح من 10. </p></li>
+        <li><p style=";text-align:right;direction:rtl"> الخطوة 2: البحث عن القاسم المشترك الأكبر من البسط والمقام. </p></li>
+        <li><p style=";text-align:right;direction:rtl"> الخطوة 3: يتم تقسيم البسط والمقام في وقت واحد عن طريق القاسم المشترك الأكبر. </p></li>
+    </ol>
+    <header><h2>عشري لإحراز جدول تحويل:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> عشري </th>
+            <th> جزء </th>
+            <th> عشري </th>
+            <th> جزء </th>
+        </tr>
+        <tr>
+            <td>0.01</td>
+            <td>1/100</td>
+            <td>0.25</td>
+            <td>1/4</td>
+        </tr>
+        <tr>
+            <td>0.08333333</td>
+            <td>1/12</td>
+            <td>0.28571429</td>
+            <td>2/7</td>
+        </tr>
+        <tr>
+            <td>0.09090909</td>
+            <td>1/11</td>
+            <td>0.3</td>
+            <td>3/10</td>
+        </tr>
+        <tr>
+            <td>0.1</td>
+            <td>1/10</td>
+            <td>0.33333333</td>
+            <td>1/3</td>
+        </tr>
+        <tr>
+            <td>0.11111111</td>
+            <td>1/9</td>
+            <td>0.375</td>
+            <td>3/8</td>
+        </tr>
+        <tr>
+            <td>0.125</td>
+            <td>1/8</td>
+            <td>0.4</td>
+            <td>2/5</td>
+        </tr>
+        <tr>
+            <td>0.14285714</td>
+            <td>1/7</td>
+            <td>0.42857143</td>
+            <td>3/7</td>
+        </tr>
+        <tr>
+            <td>0.16666667</td>
+            <td>1/6</td>
+            <td>0.44444444</td>
+            <td>4/9</td>
+        </tr>
+        <tr>
+            <td>0.2</td>
+            <td>1/5</td>
+            <td>0.5</td>
+            <td>1/2</td>
+        </tr>
+        <tr>
+            <td>0.22222222</td>
+            <td>2/9</td>
+            <td>0.55555555</td>
+            <td>5/9</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>صلة:</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> ويكيبيديا (درجة): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Fraction_(mathematics)" target="_blank">https://en.wikipedia.org/wiki/Fraction_(mathematics)</a></p>
+    <p style=";text-align:right;direction:rtl"> ويكيبيديا (عشري): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>جزء من التحويل الجزئي في بايثون:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">import fractions
+
+
+def decimal_to_fraction(decimal_number):
+    fraction = fractions.Fraction(decimal_number)
+    return fraction
+
+
+decimal_input = -1.25
+fraction_output = decimal_to_fraction(decimal_input)
+print('fraction result is:{0}'.format(fraction_output))
+
+-------------------
+fraction result is:-5/4</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var OutputInteger = document.getElementById("OutputInteger");
+    var OutputNumerator = document.getElementById("OutputNumerator");
+    var OutputDenominator = document.getElementById("OutputDenominator");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        OutputInteger.value = "";
+        OutputNumerator.value = "";
+        OutputDenominator.value = "";
+        var decimal_input = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (decimal_input != "") {
+            if(decimal_input.includes('.')){
+                [integer_str, fraction_str] = decimal_input.split('.');
+            }else{
+                integer_str = decimal_input;
+                fraction_str = '0';
+            }
+            OutputInteger.value = integer_str.toString(10);
+            fraction_str = "0." + fraction_str;
+            fraction_str = new BigNumber(fraction_str, 10);
+            [Numerator, Denominator] = fraction_str.toFraction();
+            //var output_decimal = input_value.toFraction().toString(10);
+            OutputNumerator.value = Numerator.toString(10);
+            OutputDenominator.value = Denominator.toString(10);
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        OutputInteger.value = "";
+        OutputNumerator.value = "";
+        OutputDenominator.value = "";
+    }
+</script>
+{%endblock%}

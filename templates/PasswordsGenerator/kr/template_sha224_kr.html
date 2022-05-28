@@ -1,0 +1,92 @@
+{%extends "PasswordsGenerator/kr/base_layout_kr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="여기에 텍스트 파일을 입력하거나 드래그하십시오."></textarea>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">UpperCase</span>
+        </div>
+        <select class="form-control custom-select" name="UpperCase" id="UpperCase" oninput="post_ajax()">
+            <option value="u" selected>Hash Result in UpperCase</option>
+            <option value="l">Hash Result in LowerCase</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="cleartxt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <button type="button" id="submit_button" class="btn btn-primary">SHA224 암호화</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="결과가 여기에 표시됩니다."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-sha224.png" alt="comic sha224">
+    </div>
+    <header><h2>SHA224 소개:</h2><div class="h2-highlight"></div></header>
+    <p> SHA-224는 "메시지 다이제스트"라고도하며, NIST (National Institute of Standards and Technology)에서 설계 한 SHA-224는 SHA-256 기반 해시 알고리즘입니다. </p>
+    <header><h2>SHA224에 대한 추가 링크:</h2><div class="h2-highlight"></div></header>
+    <p> RFC 4634: <a rel="nofollow" href="https://tools.ietf.org/html/rfc4634" alt="SHA224" target="_blank">https://tools.ietf.org/html/rfc4634</a></p>
+    <p> 파이썬에서 SHA224 (hashlib): <a rel="nofollow" href="https://docs.python.org/3/library/hashlib.html" alt="SHA224" target="_blank">https://docs.python.org/3/library/hashlib.html</a></p>
+    <p> Java의 SHA224: <a rel="nofollow" href="https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html" alt="SHA224" target="_blank">https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html</a>
+    </p>
+    <header><h2>파이썬에서 문자열의 SHA224 해시 계산 (패키지 hashlib 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import hashlib
+
+def sha224_generator(str):
+    m = hashlib.sha224()
+    m.update(str.encode())
+    return m.hexdigest()
+    </pre>
+    <header><h2>Java에서 문자열의 SHA224 해시 계산 (MessageDigest 패키지 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.math.BigInteger;
+import java.security.MessageDigest;
+
+public String generate(String str){
+    MessageDigest md = MessageDigest.getInstance("SHA-224");
+    md.update(str.getBytes());
+    byte[] digest = md.digest();
+    String result = new BigInteger(1, digest).toString(16).toUpperCase();
+    return result;
+}
+    </pre>
+    <header><h2>Linux에서 파일의 SHA224 해시 계산 (OpenSSL 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">
+root@instance-4:/var/log/apache2# openssl dgst -sha224 access.log
+SHA224(access.log)= a3b5e07b5ce00e7caa0a2181029c05186ae098333196493a0202c96c
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+
+    function work(input_str) {
+        return CryptoJS.SHA224(input_str).toString();
+    }
+</script>
+{%endblock%}

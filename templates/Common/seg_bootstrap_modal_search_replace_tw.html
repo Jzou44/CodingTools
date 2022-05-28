@@ -1,0 +1,52 @@
+<div class="modal fade" id="quicksearchmodal" tabindex="-1" role="dialog" aria-labelledby="quicksearchmodal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quicksearchmodalLabel">關鍵詞搜索</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-check-inline">
+                    <label class="form-check-label"><input type="checkbox" id="quicksearchCaseSwitch" class="form-check-input" value="i">忽略大小寫</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="quicksearchtext" placeholder="搜索...">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                <button type="button" class="btn btn-primary" onclick="quick_search()">搜索全部並標記</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="quickreplacemodal" tabindex="-1" role="dialog" aria-labelledby="quickreplacemodal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quickreplacemodalLabel">關鍵詞替換</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-check-inline">
+                    <label class="form-check-label"><input type="checkbox" id="quickreplaceCaseSwitch" class="form-check-input" value="i">忽略大小寫</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="quickreplacefromtext" placeholder="替換...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="quickreplacetotext" placeholder="到...">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                <button type="button" class="btn btn-primary" onclick="quick_replace()">替換全部並標記</button>
+            </div>
+        </div>
+    </div>
+</div>

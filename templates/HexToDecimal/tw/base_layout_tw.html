@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{model.lang}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="{{model.lang}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%include "Common/seg_header_tag_with_hreflang.html"%}
+    {%include "Common/seg_unit_css.html"%}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{model.cdnjs_version_bootstrap}}/css/bootstrap.min.css">
+    {%include "Common/seg_unit_header_js.html"%}
+</head>
+<body>
+<div id="nav">
+    <nav class="navbar navbar-expand-xl navbar-dark customShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/tw"><i class="fas fa-bug"></i>  Coding.Tools</a>
+            {%include "Common/seg_nav_right.html"%}
+        </div>
+    </nav>{%include "Common/seg_unit_search_and_suggest.html"%}
+</div>
+<div id="content" class="container-fluid">{%include "Common/Ad_PlaceHolder/seg_ad_header_up.html" %}
+    <div class="content_along_sidebar">
+        {%block content%}{%endblock%}
+        {%include "Common/seg_facebook_comment.html" %}
+    </div>
+    <div class="sidebar">
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_up.html" %}
+        <div class="tool-list">
+            <a id="relatedtools" class="table-link-header" href="#relatedtools">相關工具</a>
+            <a class="table-link" href="/tw/hex-to-decimal">16進製到10進制轉換</a>
+            <a class="table-link" href="/tw/decimal-to-hex">10進製到16進制轉換</a>
+            <a class="table-link" href="/tw/octal-to-decimal">8進製到10進制轉換</a>
+            <a class="table-link" href="/tw/decimal-to-octal">10進製到8進制轉換</a>
+            <a class="table-link" href="/tw/binary-to-decimal">2進製到10進制轉換</a>
+            <a class="table-link" href="/tw/decimal-to-binary">10進製到2進制轉換</a>
+            <a class="table-link" href="/tw/binary-to-hex">2進製到16進制轉換</a>
+            <a class="table-link" href="/tw/hex-to-binary">16進製到2進制轉換</a>
+            <a class="table-link" href="/tw/ascii-table">ASCII查詢表</a>
+            <a class="table-link" href="/tw/hex-to-ascii">16進製到ASCII字符串轉換</a>
+            <a class="table-link" href="/tw/ascii-to-hex">ASCII字符串到16進制轉換</a>
+            <a class="table-link" href="/tw/binary-to-text">2進製到ASCII字符串轉換</a>
+            <a class="table-link" href="/tw/text-to-binary">ASCII字符串到2進制轉具</a>
+            <a class="table-link" href="/tw/fraction-to-decimal">分數到小數轉換</a>
+            <a class="table-link" href="/tw/decimal-to-fraction">小數到分數轉換</a>
+            <a class="table-link" href="/tw/percent-to-decimal">百分比到小數轉換</a>
+            <a class="table-link" href="/tw/decimal-to-percent">小數到百分比轉換</a>
+            <a class="table-link" href="/tw/percent-to-fraction">百分比到分數轉換</a>
+            <a class="table-link" href="/tw/fraction-to-percent">分數到百分比轉換</a>
+            <a class="table-link" href="/tw/hex-to-rgb">Hex顏色到RGB顏色轉換</a>
+            <a class="table-link" href="/tw/rgb-to-hex">RGB顏色到Hex顏色轉換</a>
+            <a class="table-link" href="/tw/hex-to-rgba">Hex顏色到RGBA顏色轉換</a>
+            <a class="table-link" href="/tw/rgba-to-hex">RGBA顏色轉Hex顏色轉換</a>
+            <a class="table-link" href="/tw/roman-numerals-chart">羅馬數字對照表1-1000</a>
+            <a class="table-link" href="/tw/roman-numerals-to-numbers">羅馬數字到阿拉伯數字轉換</a>
+            <a class="table-link" href="/tw/numbers-to-roman-numerals">阿拉伯數字到羅馬數字轉換</a>
+            <br style="clear:both;"/>
+        </div>
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_middle.html" %}
+        {%include "Common/seg_category_list_tw.html"%}
+        {%include "Common/Ad_PlaceHolder/seg_ad_sidebar_down.html" %}
+    </div>
+    <br style="clear:both;"/>
+</div>
+{%include "Common/seg_footer.html"%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{model.cdnjs_version_jquery}}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/{{model.cdnjs_version_bignumber}}/bignumber.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+{%block customPageJS%}{%endblock%}
+{%include "HexToDecimal/seg_load_js.html"%}
+</body>
+</html>

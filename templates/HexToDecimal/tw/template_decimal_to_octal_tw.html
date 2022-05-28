@@ -1,0 +1,317 @@
+{%extends "HexToDecimal/tw/base_layout_tw.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">10進制<sub>10</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 清空</button>
+    <a href="/tw/octal-to-decimal" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 交換位置</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">轉換</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 複製結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">8進制<sub>8</sub></span>
+    </div>
+    <input name="queryStr" id="OctalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">16進制<sub>16</sub></span>
+    </div>
+    <input name="queryStr" id="HexOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">2進制<sub>2</sub></span>
+    </div>
+    <input name="queryStr" id="BinaryOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>關於{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>十進制(Decimal):</h2><div class="h2-highlight"></div></header>
+    <p>十進制數字系統(也稱為阿拉伯語)有10種字符,包括<code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> ,它是我們日常生活中使用最多的數字系統. </p>
+    <header><h2>八進制(Octal):</h2><div class="h2-highlight"></div></header>
+    <p>八進制數字系統包含16種字符<code>(0, 1, 2, 3, 4, 5, 6, 7)</code> .每一位八進制數字可以表示3位二進制數字. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-decimal-to-octal.png" alt="comic decimal to octal">
+    </div>
+    <header><h2>如何進行10進製到8進制轉換?</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p>步驟1: 10進制數字除以8,獲得整數商和余數. </p></li>
+        <li><p>步驟2: 把第一步的餘數轉換成8進製字符. </p></li>
+        <li><p>步驟3: 用第一步的整數商繼續除以8並重複步驟1,直到為0. </p></li>
+    </ol>
+    <p> <b>例1: 10進制數字"4321"轉換為8進制數字(結果是"10341"):</b> </p>
+    <table class="descriptionTable">
+        <tr>
+            <th>每次10進制數字除以8 </th>
+            <th>整數商</th>
+            <th>餘數(10進制) </th>
+            <th>餘數(8進制) </th>
+            <th>位置</th>
+        </tr>
+        <tr>
+            <td>4321/8</td>
+            <td>540</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>540/8</td>
+            <td>67</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>67/8</td>
+            <td>8</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>8/8</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1/8</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>10進製到8進制轉換錶:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> 10進制</th>
+            <th> 8進制</th>
+            <th> 10進制</th>
+            <th> 8進制</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>30</td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>40</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>50</td>
+            <td>62</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>60</td>
+            <td>74</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>70</td>
+            <td>106</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+            <td>80</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>90</td>
+            <td>132</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>10</td>
+            <td>100</td>
+            <td>144</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>11</td>
+            <td>200</td>
+            <td>310</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>12</td>
+            <td>300</td>
+            <td>454</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>13</td>
+            <td>400</td>
+            <td>620</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>14</td>
+            <td>500</td>
+            <td>764</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>15</td>
+            <td>600</td>
+            <td>1130</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>16</td>
+            <td>700</td>
+            <td>1274</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>17</td>
+            <td>800</td>
+            <td>1440</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>20</td>
+            <td>900</td>
+            <td>1604</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>21</td>
+            <td>1000</td>
+            <td>1750</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>22</td>
+            <td>2000</td>
+            <td>3720</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>23</td>
+            <td>3000</td>
+            <td>5670</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>24</td>
+            <td>4000</td>
+            <td>7640</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>鏈接:</h2><div class="h2-highlight"></div></header>
+    <p>維基百科(八進制): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Octal" target="_blank">https://en.wikipedia.org/wiki/Octal</a></p>
+    <p>維基百科(十進制): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>用Python進行10進製到8進制轉換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def decimal_to_octal(decimal_str):
+    decimal_number = int(decimal_str, 10)
+    octal_number = oct(decimal_number)
+    return octal_number
+
+
+decimal_input = '4321'
+octal_output = decimal_to_octal(decimal_input)
+print('octal result is:{0}'.format(octal_output))
+
+-------------------
+octal result is:0o10341</pre>
+    <header><h2>用Java進行10進製到8進制轉換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static String decimal_to_octal(String decimal_str) {
+        return Integer.toOctalString(Integer.parseInt(decimal_str));
+    }
+
+    public static void main(String[] args) {
+        String decimal_input = "4321";
+        String octal_output = decimal_to_octal(decimal_input);
+        System.out.println("octal result is:" + octal_output);
+    }
+}
+
+-------------------
+octal result is:10341
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var HexOutput = document.getElementById("HexOutput");
+    var OctalOutput = document.getElementById("OctalOutput");
+    var BinaryOutput = document.getElementById("BinaryOutput");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+        var input_value = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (input_value != "") {
+            input_value = new BigNumber(input_value, 10);
+            var output_hex = input_value.toString(16);
+            var output_octal = input_value.toString(8);
+            var output_binary = input_value.toString(2);
+            HexOutput.value = output_hex;
+            OctalOutput.value = output_octal;
+            BinaryOutput.value = output_binary;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        OctalOutput.focus();
+        OctalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

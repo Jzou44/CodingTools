@@ -1,0 +1,95 @@
+{%extends "ImageUtilities/cn/base_layout_cn.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<br/>
+<div id="dropz" class="dropzone"></div>
+<br/>
+<div class="buttoncenter">
+    <button type="button" class="btn btn-secondary" onclick="clear_queue()" style="width: 100%"><i class="far fa-trash-alt"></i> 重置</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</div>
+    <div id="map"></div>
+    <br/>
+    <table class="descriptionTable" id="exifresult"></table>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>关于{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/20190308/cartoon_exif_viewer.png" alt="cartoon exif viewer">
+    </div>
+    <header><h2>什么是Exif?</h2><div class="h2-highlight"></div></header>
+    <p>在苹果IOS系统相册中, 所有图片按地理位置和拍摄时间自动整理, 苹果是如何获得照片的地理位置和拍摄时间信息? 这是因为照片文件不仅仅包含像素和颜色, 还包含GPS定位等信息.</p>
+    <header><h2>本站图片缓存:</h2><div class="h2-highlight"></div></header>
+    <p>所有上传的图片会在1小时后删除, 请尽快下载生成的结果文件. 请不要把本网站当作图片存储服务器.</p>
+    <header><h2>用python从照片中提取EXIF信息 (用 exifread):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">import exifread
+
+origin_file_path = './origin.jpg'
+
+with open(origin_file_path, "rb") as image_file:
+    tags = exifread.process_file(image_file)
+
+for key in tags.keys():
+    value = str(tags[key])
+    print('{0}:{1}'.format(key, value))</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/{{model.cdnjs_version_drop_zone}}/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/{{model.cdnjs_version_drop_zone}}/min/dropzone.min.css"/>
+<script>
+    var session_cookie = Math.random() * 10000000;
+    Dropzone.autoDiscover = false;
+    var dropzone = new Dropzone("div#dropz", { url: "/exif-viewer",
+        maxFiles: 1,
+        maxFilesize: 10,
+        dictDefaultMessage: '<i class="fas fa-upload"></i> 点击或拖拽文件上传.<br/><br/>图片最大10Mb',
+    });
+    dropzone.on("sending", function(file, xhr, formData) {
+      formData.append("session", session_cookie);
+      $('#spinner').css('visibility', 'visible');
+    });
+    dropzone.on("success", function (file, response) {
+    });
+    dropzone.on("queuecomplete", function (file) {
+        $.post( "/exif-viewer",
+            {
+                session: session_cookie,
+                finish: "finished"
+            },
+            function( response ) {
+                result_html = "<tr><th>分类</th><th>内容</th></tr>";
+                result_json = JSON.parse(response);
+
+                if(result_json["GPS GPSLatitude"] != undefined && result_json["GPS GPSLongitude"] != undefined){
+                    document.getElementById('map').innerHTML = "<iframe width=\"100%\" height=\"400px\" frameborder=\"0\" style=\"border:1px solid #e1e1e1;background-color: #f2f2f2\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDvTryAEw90t0gne_bqsnmJ9DYxrvcEg_Y&zoom=13&q="+result_json["GPS GPSLatitude"]+","+result_json["GPS GPSLongitude"]+"\"allowfullscreen></iframe>";
+                }
+
+                for (key in result_json) {
+                    result_html += "<tr><td  style=\"text-align: left\">"+key+"</td><td  style=\"text-align: left\">"+result_json[key]+"</td></tr>";
+                }
+                if(Object.keys( result_json ).length == 0){
+                    result_html += "<tr><td  style=\"text-align: left\">None</td><td  style=\"text-align: left\">None</td></tr>";
+                }
+
+                document.getElementById("exifresult").innerHTML = result_html;
+                finished_spin_hidden();
+            });
+    });
+
+    function clear_queue() {
+        dropzone.removeAllFiles();
+        session_cookie = Math.random() * 10000000;
+        document.getElementById('map').innerHTML = "";
+        document.getElementById("exifresult").innerHTML = "";
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

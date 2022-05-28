@@ -1,0 +1,221 @@
+{%extends "MyIpAddress/kr/base_layout_kr.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">도메인 이름 또는 IP 주소</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">쿼리 유형</span>
+        </div>
+        <select class="form-control custom-select" name="querytype" id="querytype">
+            <option value="A" selected>A (지정된 도메인 이름에 해당하는 IPv4 주소)</option>
+            <option value="AAAA">AAAA (지정된 도메인 이름에 해당하는 IPv6 주소)</option>
+            <option value="CNAME">CNAME (별칭 레코드)</option>
+            <option value="MX">MX (메일 교환 기록)</option>
+            <option value="NS">NS (해결할 도메인 이름을 지정할 DNS 서버 지정)</option>
+            <option value="TXT">TXT (호스트 이름 또는 도메인 이름 설명)</option>
+            <option value="SOA">SOA (초기 권한)</option>
+            <option value="PTR">PTR (역 IP 조회)</option>
+            <option value="ANY">ANY (모든 DNS 레코드 유형)</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">DNS 쿼리 공개 서버</span>
+        </div>
+        <select class="form-control custom-select" name="dnsserver" id="dnsserver">
+            <option value="8.8.8.8" selected>Google 공개 DNS 서버 (8.8.8.8)</option>
+            <option value="209.244.0.3">수준 3 공용 DNS 서버 (209.244.0.3)</option>
+            <option value="9.9.9.9">Quad9 공용 DNS 서버 (9.9.9.9)</option>
+            <option value="208.67.222.222">OpenDNS 홈 공개 DNS 서버 (208.67.222.222)</option>
+            <option value="64.6.64.6">Verisign 공용 DNS 서버 (64.6.64.6)</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 빈</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">DNS 쿼리</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> 결과 복사</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="DNS 쿼리 결과."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>정보{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}} 支持DNS类型：</p>
+    <table class="descriptionTable">
+        <tr>
+            <th> DNS 유형 </th>
+            <th> 소개 </th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>Specifies a computer's IPv4 address</td>
+        </tr>
+        <tr>
+            <td>AAAA</td>
+            <td>Specifies a computer's IPv6 address</td>
+        </tr>
+        <tr>
+            <td>CNAME</td>
+            <td>Specifies a canonical name for an alias</td>
+        </tr>
+        <tr>
+            <td>MX</td>
+            <td>Specifies the mail exchanger</td>
+        </tr>
+        <tr>
+            <td>NS</td>
+            <td>Specifies a DNS name server for the named zone</td>
+        </tr>
+        <tr>
+            <td>TXT</td>
+            <td>Specifies the text information</td>
+        </tr>
+        <tr>
+            <td>SOA</td>
+            <td>Specifies the start-of-authority for a DNS zone</td>
+        </tr>
+        <tr>
+            <td>PTR</td>
+            <td>Specifies a computer name if the query is an IP address</td>
+        </tr>
+        <tr>
+            <td>ANY</td>
+            <td>Specifies a computer's all DNS Type record</td>
+        </tr>
+    </table>
+    <br/>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-nslookup.png" alt="comic nslookup">
+    </div>
+    <header><h2>DNS 쿼리는 www. 접두사를 추가 할 필요가 없습니다.</h2><div class="h2-highlight"></div></header>
+    <p> 대부분의 경우 <code>www</code> 접두사가 있거나없는 DNS 쿼리는 정상적으로 결과를 반환 할 수 있지만 <code>www</code> 접두어가없는 DNS 쿼리는 일반적으로 <code>www</code> 접두사가있는 도메인 이름이 보조 <code>www</code> 도메인 이름에 대한 자세한 정보를 반환합니다. 도메인 이름. </p>
+    <header><h2>왜 DNS 쿼리를 사용해야합니까?</h2><div class="h2-highlight"></div></header>
+    <p> 페이스 북을 온라인으로 보길 원할 경우 페이스 북 웹 사이트 <code>"31.13.67.35"</code> 의 IP 주소를 기억하지 못할 수도 있지만 브라우저에 <code>"facebook.com"</code> 을 입력하면됩니다. 도메인 이름은 사람이 기억하기 쉽지만 컴퓨터는 기억하기 쉽습니다 다시 <code>"31.13.67.35"</code> , IP 주소를 통해 다른 컴퓨터와 통신하는 것을 선호하므로 브라우저에서 Facebook을 클릭하면 브라우저가 자동으로 DNS 쿼리를 수행하고 IP 주소 <code>"31.13.67.35"</code> 얻습니다. </p>
+    <p> DNS 쿼리는 도메인 이름을 컴퓨터가 이해할 수있는 IP 주소로 변환하지만 DNS 쿼리 기능은 이에 국한되지 않지만 NsLookup은 메일 서버의 도메인 이름, 도메인 이름의 IPv6 주소 등을 찾을 수 있습니다. </p>
+    <p> 도메인 이름 소유권을 증명하는 과정에서 TEXT 유형의 DNS 레코드를 추가하면 도메인 이름 소유권을 증명할 수 있습니다 (도메인 이름을 Godaddy에서 구입 한 경우 Godaddy DNS 서버에서 DNS 레코드를 설정할 수 있음). </p>
+    <header><h2>Cloudflare로 웹 사이트의 실제 DNS 기록 숨기기:</h2><div class="h2-highlight"></div></header>
+    <p> Cloudflare는 CDN (Global Content Distribution Network)을 통해 웹 서버의 실제 IP 주소를 DNS 쿼리 결과의 Cloudflare IP로 대체하여 트래픽을 웹 사이트로 전달할 수 있습니다. 도메인의 DNS 서버가 Cloudflare의 DNS 서버를 가리킬 수 있습니다. </p>
+    <header><h2>어떤 DNS 서버를 사용해야합니까?</h2><div class="h2-highlight"></div></header>
+    <p> DNS 서버의 권한은 인터넷 보안에 매우 중요합니다. 잘못된 DNS 결과로 인해 잘못된 웹 사이트를 입력 할 수 있습니다. 전세계에 <code>13</code> 루트 서버가 있습니다. 동시에 Google과 같은 대기업은 무료 공용 DNS 서비스를 제공합니다 (8.8 .8.8). </p>
+    <p> 기본적으로 컴퓨터에 기본 DNS 서버를 설정하지 않으면 ISP (인터넷 서비스 공급자)가 Google의 공용 DNS 서비스 (8.8.8.8)만큼 신뢰할 수는 없지만 DNS 서버를 할당합니다. 설정하기 쉽습니다. 컴퓨터의 기본 DNS 서버를 공용 DNS 서버 중 하나로 변경해야합니다. </p>
+    <header><h2>DNS 쿼리에 대한 추가 링크:</h2><div class="h2-highlight"></div></header>
+    <p> 위키피디아 (DNS): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank">https://en.wikipedia.org/wiki/Domain_Name_System</a></p>
+    <p> RFC 1035 (DNS): <a rel="nofollow" href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank">https://www.ietf.org/rfc/rfc1035.txt</a></p>
+    <p> Linux 시스템의 DNS 쿼리: <a rel="nofollow" href="https://linux.die.net/man/1/nslookup" target="_blank">https://linux.die.net/man/1/nslookup</a></p>
+    <p> Windows 시스템의 DNS 쿼리: <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup" target="_blank">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup</a></p>
+    <header><h2>Linux 시스템의 DNS 쿼리 명령 (nslookup):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       nslookup - query Internet name servers interactively
+
+SYNOPSIS
+       nslookup [-option] [name | -] [server]</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-2:/var/log/apache2# nslookup -type=any facebook.com 8.8.8.8
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+facebook.com	nameserver = a.ns.facebook.com.
+facebook.com	nameserver = b.ns.facebook.com.
+facebook.com	text = "v=spf1 redirect=_spf.facebook.com"
+facebook.com	mail exchanger = 10 msgin.vvv.facebook.com.
+facebook.com
+	origin = a.ns.facebook.com
+	mail addr = dns.facebook.com
+	serial = 1530053366
+	refresh = 14400
+	retry = 1800
+	expire = 604800
+	minimum = 300
+Name:	facebook.com
+Address: 2a03:2880:f12c:183:face:b00c:0:25de
+Name:	facebook.com
+Address: 157.240.14.35
+
+Authoritative answers can be found from:
+    </pre>
+    <header><h2>파이썬을 사용한 DNS 쿼리 (패키지 dnspython 사용):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+# pip install dnspython
+import dns.resolver
+
+
+def nslookup(domain, record_type):
+    dns_resolver = dns.resolver.Resolver()
+    answers = dns_resolver.query(domain, record_type)
+    for answer in answers:
+        print('Domain:{0} Record Type:{1} Answer:{2}'.format(domain, record_type, answer))
+
+
+if __name__ == "__main__":
+    # dns lookup domain
+    nslookup('coding.tools', 'A')
+
+-------------------
+Domain:coding.tools Record Type:A Answer:104.27.176.94
+Domain:coding.tools Record Type:A Answer:104.27.177.94
+    </pre>
+    <header><h2>Java의 DNS 쿼리 (패키지 java.net.InetAddress 포함):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.io.IOException;
+import java.net.InetAddress;
+
+public class DNS {
+    public static void nslookup(String domain) throws IOException {
+        InetAddress[] remote_hosts = InetAddress.getAllByName(domain);
+        for (InetAddress remote_host : remote_hosts) {
+            System.out.println("Domain:" + domain + " IP Address:" + remote_host.getHostAddress());
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        // dns lookup domain
+        nslookup("coding.tools");
+    }
+}
+
+-------------------
+Domain:coding.tools IP Address:104.27.176.94
+Domain:coding.tools IP Address:104.27.177.94
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

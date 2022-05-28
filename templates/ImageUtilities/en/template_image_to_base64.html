@@ -1,0 +1,94 @@
+{%extends "ImageUtilities/en/base_layout.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<br/>
+<div id="dropz" class="dropzone"></div>
+<br/>
+<div class="buttoncenter">
+    <button type="button" class="btn btn-secondary" onclick="clear_queue()"><i class="far fa-trash-alt"></i> Clear</button>
+    <button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('result.txt')"><i class="fas fa-file-download"></i> Save Result</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copy Result</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</div>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Base64 result will show up here."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>About {{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/20190308/cartoon_image_to_base64.png" alt="cartoon image to base64">
+    </div>
+    <header><h2>Use Base64 to embed Image in HTML:</h2><div class="h2-highlight"></div></header>
+    <p>Embed Image in HTML can reduce the http connection when a user load a webpage, because the information of the image is within the HTML code. It's good for icon and other small image, but not a good idea to use embed image when the image size is over 2Mb. The use case:</p>
+    <pre class="prettyprint linenums">&lt;img src=&quot;data:image/png;base64,ivborw0kggoaaaansuheugaaaama...&quot; width=&quot;300&quot; height=&quot;100&quot; alt=&quot;base64 image&quot;/&gt;</pre>
+    <header><h2>Use Base64 as background Image in CSS:</h2><div class="h2-highlight"></div></header>
+    <p>Another use case for Base64 Image is in CSS:</p>
+    <pre class="prettyprint linenums">.body {
+    background: url('data:image/png;base64,ivborw0kggoaaaansuheugaaaama...');
+}</pre>
+    <header><h2>Images Cache Policy:</h2><div class="h2-highlight"></div></header>
+    <p>All uploaded Images will be deleted after 1 hour, so please download the result as soon as possible. DO NOT use this server as your image hosting service.</p>
+    <header><h2>Convert Image to Base64 with Python (with package Base64):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">from PIL import Image  # pip3 install pillow
+import base64
+
+origin_file_path = './origin.jpeg'
+image_type = str(Image.open(origin_file_path).format).lower()
+
+with open(origin_file_path, "rb") as image_file:
+    encoded_string = base64.b64encode(image_file.read())
+
+base64_string = "data:image/" + image_type + ";base64," + encoded_string.decode()</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/{{model.cdnjs_version_drop_zone}}/min/dropzone.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/{{model.cdnjs_version_drop_zone}}/min/dropzone.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/display/placeholder.min.js"></script>
+<script>
+    var session_cookie = Math.random() * 10000000;
+    Dropzone.autoDiscover = false;
+    var dropzone = new Dropzone("div#dropz", { url: "/image-to-base64",
+        maxFiles: 1,
+        maxFilesize: 2,
+        dictDefaultMessage: '<i class="fas fa-upload"></i> Click or drag files here to upload.<br/><br/>Max Size: 2Mb',
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    dropzone.on("sending", function(file, xhr, formData) {
+      formData.append("session", session_cookie);
+      $('#spinner').css('visibility', 'visible');
+    });
+    dropzone.on("success", function (file, response) {
+    });
+    dropzone.on("queuecomplete", function (file) {
+        $.post( "/image-to-base64",
+            {
+                session: session_cookie,
+                finish: "finished"
+            },
+            function( response ) {
+                editor2.setValue(JSON.parse(response)['base64'].toLowerCase());
+                finished_spin_hidden();
+            });
+    });
+
+    function clear_queue() {
+        dropzone.removeAllFiles();
+        session_cookie = Math.random() * 10000000;
+        editor2.setValue("");
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

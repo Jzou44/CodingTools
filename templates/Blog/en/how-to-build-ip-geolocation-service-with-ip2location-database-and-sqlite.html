@@ -1,0 +1,138 @@
+{%extends "Blog/en/blog_layout.html" %}
+{%block head%}
+<title>How to build IP GeoLocation Service with IP2Location database and SQLite - Coding.Tools</title>
+<meta name="description"
+      content="Lite IP2Location free database provides information include latitude, longitude. By combine IP2Location Database with SQLite, you can build your own IP Geolocation Services.">
+<meta name="keywords" content="IP2Location database; SQLite; IP GeoLocation Service">
+<meta name="author" content="Junyi Zou"/>
+<link rel="canonical" href="https://coding.tools/blog/how-to-build-ip-geolocation-service-with-ip2location-database-and-sqlite"/>
+<meta property="og:title" content="How to build IP GeoLocation Service with IP2Location database and SQLite - Coding.Tools"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://coding.tools/blog/how-to-build-ip-geolocation-service-with-ip2location-database-and-sqlite"/>
+<meta property="og:image" content="https://coding.tools/image/how-to-build-ip-geolocation-service-with-ip2location-database-and-sqlite/Lite-IP2Location-database-csv.png"/>
+<meta property="og:description"
+      content="Lite IP2Location free database provides information include latitude, longitude. By combine IP2Location Database with SQLite, you can build your own IP Geolocation Services."/>
+{%endblock%}
+{%block content%}
+<div id="headline">
+    <br/>
+    <h1>How to build IP GeoLocation Service with IP2Location database and SQLite</h1>
+    <p class="blogAuthor">
+        <span class="post-author" itemprop="author" itemscope itemptype="http://schema.org/Person"><span class="post-author-name" itemprop="name">Junyi Zou</span></span>
+        -
+        <time itemprop="dateModified" datetime="2019-03-20">Mar 20, 2019</time>
+    </p>
+    <hr/>
+</div>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Overview of online IP Geolocation Services:</h2><div class="h2-highlight"></div></header>
+    <p>IP Geolocator can locate client's Geolocation using only it's IP address, it can provide information such as country, region, city, latitude and longitude. There are many online IP Geolocation API in the market,
+        such as ip-api.com, ipstack.com. but they have many issues:</p>
+    <p>ip-api.com is free, but it will automatically ban any IP address doing over <code>150</code> requests per minute; not allow for non-commercial use, and it doesn't support HTTPS !!! </p>
+    <p>ipstack.com is another alternative, but it needs you to apply for API code, and it is expensive (<code>$9.99</code> for <code>50,000</code> requests/month).</p>
+    <p>The best IP Geolocation Service I recommend is <a href="https://coding.tools/my-ip-address" target="_blank">coding.tools IP Geo API</a>, It's free to use, Unlimited, user friendly and fast.</p>
+    <p>Above all, build your own IP Geolocation Services is the most reliable choice (you need to depend on yourself, right?).</p>
+        {% include "Common/Ad_PlaceHolder/seg_ad_blog_middle.html" %}
+    <header><h2>Lite IP2Location free database:</h2><div class="h2-highlight"></div></header>
+    <p>Lite IP2Location database is a large CSV file that has attributes include country, region or state, city, latitude, longitude, ZIP code and time zone. You can do search query in the database to find the match
+        record for your IP Address.</p>
+    <p>Lite IP2Location database <code>(51.23 MB)</code> can be download from: <a rel="nofollow" href="https://lite.ip2location.com/database/ip-country-region-city-latitude-longitude-zipcode-timezone" target="_blank">Lite
+        IP2Location</a>.</p>
+    <p>It is accurate to class Type C IP Address (first 24 bits of IP Address), which is enough for small commercial use.</p>
+    <p>The CSV file looks like this:</p>
+    <img src="/image/how-to-build-ip-geolocation-service-with-ip2location-database-and-sqlite/Lite-IP2Location-database-csv.png" alt="Lite IP2Location database csv"
+         style="margin: auto;display: block;max-height: 400px;">
+    <header><h2>How to convert IP2Location CSV file to SQLite database?</h2><div class="h2-highlight"></div></header>
+    <p><b>Step 1: Create an SQLite Table.</b></p>
+        {% include "Common/Ad_PlaceHolder/seg_ad_blog_middle.html" %}
+    <pre class="prettyprint linenums">CREATE TABLE IpGeo IF NOT EXISTS
+(
+   ip_from      INT NOT NULL,
+   ip_to        INT NOT NULL,
+   country_code CHAR(50) NOT NULL,
+   country_name CHAR(50) NOT NULL,
+   region_name  CHAR(50) NOT NULL,
+   city_name    CHAR(50) NOT NULL,
+   latitude     CHAR(50) NOT NULL,
+   longitude    CHAR(50) NOT NULL,
+   zip_code     CHAR(50) NOT NULL,
+   time_zone    CHAR(50) NOT NULL
+);</pre>
+    <p>To achieve better performance, create INDEX on column <code>ip_from</code> and <code>ip_to</code></p>
+    <pre class="prettyprint linenums">CREATE INDEX ip_index on IpGeo (ip_from, ip_to);</pre>
+        {% include "Common/Ad_PlaceHolder/seg_ad_blog_middle.html" %}
+    <p><b>Step 2: Insert all CSV records into SQLite database (python).</b></p>
+    <pre class="prettyprint linenums">import sqlite3
+
+conn = sqlite3.connect('IP2Location.db')
+
+for line in open("IP2LOCATION-LITE-DB11.CSV", 'r').readlines():
+    line = line.replace('\r', '').replace('\n', '').lstrip('"').rstrip('"')
+    print(line)
+    # split by comma for each line in CSV
+    [ip_from, ip_to, country_code, country_name, region_name, city_name, latitude, longitude, zip_code, time_zone] = line.split('","')
+    # insert sql
+    sql = 'INSERT INTO IpGeo VALUES ("{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}","{9}");'.format(
+        ip_from, ip_to, country_code, country_name, region_name, city_name, latitude, longitude, zip_code, time_zone)
+    conn.execute(sql)
+
+conn.commit()
+conn.close()</pre>
+    <p><b>Step 3: Design the search SQL.</b></p>
+    <p>To find matched record, you need to understand the meaning of <code>ip_from</code> and <code>ip_to</code> columns.</p>
+    <p>IP Number = <code>16777216*a + 65536*b + 256*c + d</code></p>
+    <p>(where IP Address = <code>a.b.c.d</code>)</p>
+    <pre class="prettyprint linenums">import sqlite3
+
+ip_str = '206.174.179.210'
+ip_str = ip_str.replace(" ", "")
+[a, b, c, d] = ip_str.split('.')
+a = int(a)
+b = int(b)
+c = int(c)
+d = int(d)
+# check if IP Address is valid
+assert 0 <= a <= 255
+assert 0 <= b <= 255
+assert 0 <= c <= 255
+assert 0 <= d <= 255
+ip_number = 16777216 * a + 65536 * b + 256 * c + d
+
+conn = sqlite3.connect('/app/IP2Location/IP2Location.db')
+c = conn.cursor()
+sql = 'SELECT * FROM IpGeo where ip_to >= {0} and ip_from <= {0}'.format(ip_number)
+
+c.execute(sql)
+
+[ip_from, ip_to, country_code, country_name, region_name, city_name, latitude, longitude, zip_code, time_zone] = c.fetchone()
+print([ip_from, ip_to, country_code, country_name, region_name, city_name, latitude, longitude, zip_code, time_zone])
+
+conn.close()</pre>
+    <p><b>Step 4: Check the result.</b></p>
+    <p>In this specific example, IP Address <code>'206.174.179.210'</code> is converted to <code>3467555794</code>.</p>
+    <p>The search SQL is:</p>
+    <pre class="prettyprint linenums">SELECT * FROM IpGeo where ip_to >= 3467555794 and ip_from <= 3467555794</pre>
+    <p>The matched record is:</p>
+    <pre class="prettyprint linenums">[3467555584, 3467556095, 'CA', 'Canada', 'Ontario', 'Kitchener', '43.427848', '-80.513516', 'N2E 3K2', '-04:00']</pre>
+        {% include "Common/Ad_PlaceHolder/seg_ad_blog_middle.html" %}
+    <p>So GeoLocation for IP Address <code>'206.174.179.210'</code> is:</p>
+    <pre class="prettyprint linenums">IP address: 206.174.179.210
+Country: Canada
+Region: Ontario
+City: Kitchener
+Latitude: 43.427848
+Longitude: -80.513516
+Zip Code: N2E 3K2
+Timezone: -04:00</pre>
+    <hr>
+    <header><h2>More Blog:</h2><div class="h2-highlight"></div></header><br/>
+    <a href="/blog">
+        <button type="button" class="btn btn-primary">Return to Blog List</button>
+    </a>
+    <a href="/blog/credit-card-fraud-detection-using-oversample-and-denoising-autoencoder">
+        <button type="button" class="btn btn-secondary">Credit Card Fraud Detection Using Oversample and Denoising AutoEncoder</button>
+    </a>
+    <hr>
+</div>
+{%endblock%}

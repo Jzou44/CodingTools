@@ -1,0 +1,221 @@
+{%extends "MyIpAddress/jp/base_layout_jp.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">ドメイン名またはIPアドレス</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="Example.com" spellcheck="false">
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">照会タイプ</span>
+        </div>
+        <select class="form-control custom-select" name="querytype" id="querytype">
+            <option value="A" selected>A(指定したドメイン名に対応するIPv4アドレス)</option>
+            <option value="AAAA">AAAA(指定ドメイン名に対応するIPv6アドレス)</option>
+            <option value="CNAME">CNAME(エイリアスレコード)</option>
+            <option value="MX">MX(メール交換記録)</option>
+            <option value="NS">NS(どのDNSサーバーを解決するドメイン名にするかを指定します)</option>
+            <option value="TXT">TXT(ホスト名またはドメイン名の説明)</option>
+            <option value="SOA">SOA(初期権限)</option>
+            <option value="PTR">PTR(リバースIPルックアップ)</option>
+            <option value="ANY">ANY(すべてのDNSレコードタイプ)</option>
+        </select>
+    </div>
+    <br/>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">DNSクエリ公開サーバ</span>
+        </div>
+        <select class="form-control custom-select" name="dnsserver" id="dnsserver">
+            <option value="8.8.8.8" selected>GoogleパブリックDNSサーバー(8.8.8.8)</option>
+            <option value="209.244.0.3">レベル3パブリックDNSサーバー(209.244.0.3)</option>
+            <option value="9.9.9.9">Quad9パブリックDNSサーバー(9.9.9.9)</option>
+            <option value="208.67.222.222">OpenDNSホームパブリックDNSサーバー(208.67.222.222)</option>
+            <option value="64.6.64.6">VerisignパブリックDNSサーバー(64.6.64.6)</option>
+        </select>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 空です</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">DNSクエリ</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> コピー結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="DNSクエリ結果"></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>について{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}} 支持DNS类型：</p>
+    <table class="descriptionTable">
+        <tr>
+            <th> DNSの種類</th>
+            <th>はじめに</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>Specifies a computer's IPv4 address</td>
+        </tr>
+        <tr>
+            <td>AAAA</td>
+            <td>Specifies a computer's IPv6 address</td>
+        </tr>
+        <tr>
+            <td>CNAME</td>
+            <td>Specifies a canonical name for an alias</td>
+        </tr>
+        <tr>
+            <td>MX</td>
+            <td>Specifies the mail exchanger</td>
+        </tr>
+        <tr>
+            <td>NS</td>
+            <td>Specifies a DNS name server for the named zone</td>
+        </tr>
+        <tr>
+            <td>TXT</td>
+            <td>Specifies the text information</td>
+        </tr>
+        <tr>
+            <td>SOA</td>
+            <td>Specifies the start-of-authority for a DNS zone</td>
+        </tr>
+        <tr>
+            <td>PTR</td>
+            <td>Specifies a computer name if the query is an IP address</td>
+        </tr>
+        <tr>
+            <td>ANY</td>
+            <td>Specifies a computer's all DNS Type record</td>
+        </tr>
+    </table>
+    <br/>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-nslookup.png" alt="comic nslookup">
+    </div>
+    <header><h2>DNSクエリはwww.プレフィックスを追加する必要はありませんか.</h2><div class="h2-highlight"></div></header>
+    <p>有無にかかわらず、ほとんどの場合では、 <code>www</code> DNSクエリのプレフィックス、通常の結果を返しますが、何もありませんすることができます<code>www</code>があるのでそれは、通常、ドメイン名に関するより多くの情報を返すプレフィックスDNSクエリは<code>www</code>プレフィックスのドメイン名が第二でありますドメイン名</p>
+    <header><h2>DNSクエリを使用する必要があるのはなぜですか？</h2><div class="h2-highlight"></div></header>
+    <p>オンラインでfacebookを表示したい場合は、facebookのWebサイト<code>"31.13.67.35"</code>のIPアドレスを覚えていないかもしれませんが、ブラウザに<code>"facebook.com"</code>してください.ブラウザでFacebookをクリックすると、ブラウザは自動的にDNSクエリを実行し、IPアドレス<code>"31.13.67.35"</code>を取得します. </p>
+    <p> DNSクエリはドメイン名をマシンが理解できるIPアドレスに変換しますが、DNSクエリ機能はこれに限定されず、メールサーバーのドメイン名、ドメイン名のIPv6アドレスなどを見つけることができます. </p>
+    <p>ドメイン名の所有権を証明する過程で、TEXTタイプのDNSレコードを追加すると、自分のドメイン名の所有権を証明できます(Godaddyからドメイン名を購入した場合は、GodaddyのDNSサーバーにDNSレコードを設定できます). </p>
+    <header><h2>Cloudflareであなたのウェブサイトの本当のDNSレコードを隠す:</h2><div class="h2-highlight"></div></header>
+    <p> Cloudflareは、DNSクエリの結果で、Webサーバーの実際のIPアドレスをCloudflareのIPアドレスに置き換えて、CDN(Global Content Distribution Network)を通じてWebサイトにトラフィックを転送することができます. </p>
+    <header><h2>どのDNSサーバーを使うべきですか？</h2><div class="h2-highlight"></div></header>
+    <p> DNSサーバーの権限はインターネットのセキュリティにとって重要で、間違ったWebサイトにアクセスするにはDNSが間違っている可能性があります世界中に<code>13</code>ルートサーバーがあります. .8.8)日常使用のため. </p>
+    <p>デフォルトでは、コンピュータにデフォルトのDNSサーバーを設定しないと、ISP(インターネットサービスプロバイダ)からDNSサーバーが割り当てられますが、GoogleのパブリックDNSサービス(8.8.8.8)ほど信頼性は高くありません.設定は簡単です.コンピュータのデフォルトDNSサーバーをパブリックDNSサーバーの1つに変更する必要があります. </p>
+    <header><h2>DNSクエリへのさらなるリンク:</h2><div class="h2-highlight"></div></header>
+    <p>ウィキペディア(DNS): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank">https://en.wikipedia.org/wiki/Domain_Name_System</a></p>
+    <p> RFC 1035(DNS): <a rel="nofollow" href="https://www.ietf.org/rfc/rfc1035.txt" target="_blank">https://www.ietf.org/rfc/rfc1035.txt</a></p>
+    <p> LinuxシステムでのDNSクエリ: <a rel="nofollow" href="https://linux.die.net/man/1/nslookup" target="_blank">https://linux.die.net/man/1/nslookup</a></p>
+    <p> WindowsシステムでのDNSクエリ: <a rel="nofollow" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup" target="_blank">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/nslookup</a></p>
+    <header><h2>LinuxシステムのDNSクエリコマンド(nslookup):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       nslookup - query Internet name servers interactively
+
+SYNOPSIS
+       nslookup [-option] [name | -] [server]</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-2:/var/log/apache2# nslookup -type=any facebook.com 8.8.8.8
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+facebook.com	nameserver = a.ns.facebook.com.
+facebook.com	nameserver = b.ns.facebook.com.
+facebook.com	text = "v=spf1 redirect=_spf.facebook.com"
+facebook.com	mail exchanger = 10 msgin.vvv.facebook.com.
+facebook.com
+	origin = a.ns.facebook.com
+	mail addr = dns.facebook.com
+	serial = 1530053366
+	refresh = 14400
+	retry = 1800
+	expire = 604800
+	minimum = 300
+Name:	facebook.com
+Address: 2a03:2880:f12c:183:face:b00c:0:25de
+Name:	facebook.com
+Address: 157.240.14.35
+
+Authoritative answers can be found from:
+    </pre>
+    <header><h2>PythonによるDNSクエリ(パッケージdnspythonによる):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+# pip install dnspython
+import dns.resolver
+
+
+def nslookup(domain, record_type):
+    dns_resolver = dns.resolver.Resolver()
+    answers = dns_resolver.query(domain, record_type)
+    for answer in answers:
+        print('Domain:{0} Record Type:{1} Answer:{2}'.format(domain, record_type, answer))
+
+
+if __name__ == "__main__":
+    # dns lookup domain
+    nslookup('coding.tools', 'A')
+
+-------------------
+Domain:coding.tools Record Type:A Answer:104.27.176.94
+Domain:coding.tools Record Type:A Answer:104.27.177.94
+    </pre>
+    <header><h2>JavaでのDNSクエリ(パッケージjava.net.InetAddressを使用):</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+import java.io.IOException;
+import java.net.InetAddress;
+
+public class DNS {
+    public static void nslookup(String domain) throws IOException {
+        InetAddress[] remote_hosts = InetAddress.getAllByName(domain);
+        for (InetAddress remote_host : remote_hosts) {
+            System.out.println("Domain:" + domain + " IP Address:" + remote_host.getHostAddress());
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        // dns lookup domain
+        nslookup("coding.tools");
+    }
+}
+
+-------------------
+Domain:coding.tools IP Address:104.27.176.94
+Domain:coding.tools IP Address:104.27.177.94
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

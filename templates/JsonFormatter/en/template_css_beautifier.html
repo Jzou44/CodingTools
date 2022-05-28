@@ -1,0 +1,76 @@
+{%extends "JsonFormatter/en/base_layout.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size16codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Paste input or drag file in here."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Clear</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">Example</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Beautify CSS</button>
+    <button type="button" id="downloadastxt" class="btn btn-secondary" onclick="download_editor2_as_txt('result.css')"><i class="fas fa-file-download"></i> Save Result</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copy Result</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="css beautify result will show up here."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>About {{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-css-beautifier.png" alt="comic css beautifier">
+    </div>
+    <header><h2>Does CSS Beautifier Online Tool log my data?</h2><div class="h2-highlight"></div></header>
+    <p>Absolutely <b>NOT</b>, this CSS Beautifier doing all the formatting work on the client side, all logic are implemented by Javascript. There are 2 major advantages: 1.Your data never transmitted in the Open Internet, so you know it's secure; 2.It's much faster than doing all the work in the server side, because there is no Internet Delay.</p>
+    <header><h2>More information about CSS (Cascading Style Sheets):</h2><div class="h2-highlight"></div></header>
+    <p>Wikipedia (CSS): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">https://en.wikipedia.org/wiki/Cascading_Style_Sheets</a></p>
+    <p>Python Implementation of CSS Beautifier (jsbeautifier): <a rel="nofollow" href="https://github.com/beautify-web/js-beautify" target="_blank">https://github.com/beautify-web/js-beautify</a></p>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/brace-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/css",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/css",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = "body{background-image:url(/image/background.png);background-repeat:repeat}.footer{left:0;bottom:0;width:100%;background-color:#2b579a;color:#fff;text-align:center}#navbar.dropdown-menu a:hover{background-color:#fff;color:#563d7c}";
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            source = editor1.getValue();
+            output = css_beautify(source);
+            editor2.setValue(output);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

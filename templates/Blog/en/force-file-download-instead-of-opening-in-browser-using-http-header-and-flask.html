@@ -1,0 +1,74 @@
+{%extends "Blog/en/blog_layout.html" %}
+{%block head%}
+<title>Force file download instead of opening in browser Using HTTP Header and Flask - Coding.Tools</title>
+<meta name="description" content="By adding Content-Disposition: attachment HTTP header field to HTTP response in Flask, browser will download the file as an attachment and saved at your laptop's local disk.">
+<meta name="keywords" content="force file download; Content-Disposition HTTP header; Content-Disposition: attachment">
+<meta name="author" content="Junyi Zou"/>
+<link rel="canonical" href="https://coding.tools/blog/force-file-download-instead-of-opening-in-browser-using-http-header-and-flask"/>
+<meta property="og:title" content="Force file download instead of opening in browser Using HTTP Header and Flask - Coding.Tools"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://coding.tools/blog/force-file-download-instead-of-opening-in-browser-using-http-header-and-flask"/>
+<meta property="og:image" content="https://coding.tools/image/force-file-download-instead-of-opening-in-browser-using-http-header-and-flask/Content-Disposition-header.png"/>
+<meta property="og:description"
+      content="By adding Content-Disposition: attachment HTTP header field to HTTP response in Flask, browser will download the file as an attachment and saved at your laptop's local disk."/>
+{%endblock%}
+{%block content%}
+<div id="headline">
+    <br/>
+    <h1>Force file download instead of opening in browser Using HTTP Header and Flask</h1>
+    <p class="blogAuthor">
+        <span class="post-author" itemprop="author" itemscope itemptype="http://schema.org/Person"><span class="post-author-name" itemprop="name">Junyi Zou</span></span>
+        -
+        <time itemprop="dateModified" datetime="2018-04-21">Apr 21, 2019</time>
+    </p>
+    <hr/>
+</div>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>Brief introduction of HTTP Header:</h2><div class="h2-highlight"></div></header>
+    <p>HTTP header fields are used between browser and web server for communication. It specify configurations and cookies that lay a foundation for the modern Internet.</p>
+    <p>An example of Request Header field: <code>"user-agent"</code> (what Operation System and Browser Version the client is using).</p>
+        {% include "Common/Ad_PlaceHolder/seg_ad_blog_middle.html" %}
+    <pre class="prettyprint linenums">user-agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7</pre>
+    <p>An example of Response Header field: <code>"cache-control"</code> (The cache policy).</p>
+    <pre class="prettyprint linenums">cache-control: private, max-age=0
+cache-control: public, max-age=30672000</pre>
+    <header><h2>The story of Content-Disposition:</h2><div class="h2-highlight"></div></header>
+    <p>There are 2 main methods for modern browser such as Chrome and Firefox to handle HTTP Response, show the content inline in the browser (open in browser), or download it as an attachment and saved at your laptop's
+        local disk. In order to tell how browser showed deal with the data, web server needs to add "Content-Disposition" field in the HTTP response header.</p>
+    <img src="/image/force-file-download-instead-of-opening-in-browser-using-http-header-and-flask/Content-Disposition-header.png" alt="Content Disposition header"
+         style="margin: auto;display: block;max-height: 300px;">
+    <p>if <code>"Content-Disposition"</code> field is not specified, <code>"inline"</code> will be used as default (open in browser), which is equal to:</p>
+    <pre class="prettyprint linenums">Content-Disposition: inline</pre>
+    <p>To force file download, specify <code>"Content-Disposition"</code> HTTP Header field as below:</p>
+    <pre class="prettyprint linenums">Content-Disposition: attachment</pre>
+    <p>To rewrite the attachment's name, specify <code>filename</code> within "Content-Disposition"</code>. if <code>filename</code> is not specified, the original file name will be used.</p>
+    <pre class="prettyprint linenums">Content-Disposition: attachment; filename="test.txt"</pre>
+    <img src="/image/force-file-download-instead-of-opening-in-browser-using-http-header-and-flask/force-file-download.png" alt="force file download"
+         style="margin: auto;display: block;max-height: 400px;">
+    <header><h2>Add Content-Disposition HTTP Header in Flask</h2><div class="h2-highlight"></div></header>
+    <p>If you are using Flask as your website project's framework, It's easy to set up any HTTP Header field. You can set a rang of URL with <code>'/download/'</code> prefix. Then add <code>Content-Disposition</code>
+        HTTP header to all HTTP Responses!</p>
+    <pre class="prettyprint linenums">@app.after_request
+def after_request(response):
+    if str(request.path).startswith('/download/'):
+        response.headers['Content-Disposition'] = 'attachment'
+    return response</pre>
+    <hr>
+        {% include "Common/Ad_PlaceHolder/seg_ad_blog_middle.html" %}
+    <header><h2>HTML5 Attribute Alternative</h2><div class="h2-highlight"></div></header>
+    <p>There is a new attribute in HTML5 specification, by adding <code>download</code> tag to any link to achieve force download.</p>
+    <pre class="prettyprint linenums">&lt;a href="/download/force_file_download_test.txt" download&gt;source code&lt;/a&gt;</pre>
+    <hr>
+    <header><h2>More Blog:</h2><div class="h2-highlight"></div></header><br/>
+    <a href="/blog">
+        <button type="button" class="btn btn-primary">Return to Blog List</button>
+    </a>
+    <a href="/blog/how-to-build-ip-geolocation-service-with-ip2location-database-and-sqlite">
+        <button type="button" class="btn btn-secondary">How to build IP GeoLocation Service with IP2Location database and SQLite</button>
+    </a>
+    <hr>
+</div>
+{%endblock%}

@@ -1,0 +1,86 @@
+{%extends "JsonFormatter/it/base_layout_it.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size14codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Si prega di inserire o trascinare in un file di testo qui."></textarea>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> chiaro</button>
+    <button type="button" class="btn btn-secondary" onclick="load_example()">Esempi</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Comprimi HTML</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copia il risultato</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size14codewrapper resizableWrapper maxLengthWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="I risultati della compressione html verranno visualizzati qui."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>su{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Perché devo usare la compressione HTML?</h2><div class="h2-highlight"></div></header>
+    <p> Gli spazi possono occupare molto spazio e influire sulla velocità di caricamento della pagina. Secondo il sondaggio <code>"NPM html-minifier"</code> , la home page del sito Web del New York Times può essere ridotta da 223KB a 152KB (del 31,8%) e la home page di Twitter può essere ridotta da 143KB a 107KB (inferiore a 25,1). %). I siti web con traffico enorme come Google stanno attualmente utilizzando la compressione HTML per alleggerire il carico sul server. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-html-minifier.png" alt="comic html minifier">
+    </div>
+    <header><h2>Altri collegamenti a HTML (Hypertext Markup Language):</h2><div class="h2-highlight"></div></header>
+    <p> W3 HTML 5.2 standard: <a rel="nofollow" href="https://www.w3.org/TR/html5/" target="_blank">https://www.w3.org/TR/html5/</a></p>
+    <p> RFC 7992 (HTML): <a rel="nofollow" href="https://tools.ietf.org/html/rfc7992" target="_blank">https://tools.ietf.org/html/rfc7992</a></p>
+    <p> HTML in Python (BeautifulSoup): <a rel="nofollow" href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">https://www.crummy.com/software/BeautifulSoup/</a></p>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/fold/xml-fold.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "text/html",
+        lineNumbers: true,
+        lineWrapping: true,
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    });
+    var example_str = $('html').html();
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("");
+        try {
+            source = editor1.getValue();
+            var minify = require('html-minifier').minify;
+            output = minify(source, {
+                collapseWhitespace: true,
+                minifyJS: true,
+                minifyCSS: true,
+                removeComments: true,
+            });
+            editor2.setValue(output);
+        }catch(err) {
+            code2_error_alert();
+            editor2.setValue(err.message);
+        }
+        finished_spin_hidden();
+    }
+</script>
+{%endblock%}

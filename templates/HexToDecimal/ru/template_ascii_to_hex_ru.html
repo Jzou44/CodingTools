@@ -1,0 +1,158 @@
+{%extends "HexToDecimal/ru/base_layout_ru.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="codewrapper size18codewrapper">
+        <textarea autofocus id="code1" name="code1" style="width: 100%;height: 300px" placeholder="Пожалуйста, введите или перетащите текстовый файл здесь."></textarea>
+    </div>
+    <br>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Разделитель</span>
+        </div>
+        <select class="form-control custom-select" name="Delimiter" id="Delimiter" oninput="query()">
+            <option value="">Нет (нет пробела)</option>
+            <option value=" " selected>пустой</option>
+            <option value="0x">0x (с нижним регистром 'x')</option>
+            <option value="0X">0X (с верхним регистром 'X')</option>
+            <option value="\0x">\ 0x (с нижним регистром 'x')</option>
+            <option value="\0X">\ 0X (с UpperCase 'X')</option>
+            <option value="\x">\ x (с нижним регистром 'x')</option>
+            <option value="\X">\ X (с верхним регистром 'X')</option>
+        </select>
+    </div>
+    <br>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> ясно</button>
+    <a href="/ru/hex-to-ascii" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> Место обмена</button>
+    </a>
+    <button type="button" id="load_example" class="btn btn-secondary" onclick="loadexample()">примеров</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">изменение</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Скопировать результат</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size18codewrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="Шестнадцатеричный результат будет отображаться здесь."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>на{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <p> Поддерживаемые символы разбиения шестнадцатеричного массива включают в себя <code>("", " ", "0x", "0X", "\0x", "\0X", "\x", "\X")</code> . </p>
+    <header><h2>Стандарт кодирования ASCII:</h2><div class="h2-highlight"></div></header>
+    <p> ASCII (американский стандартный код для обмена информацией) является наиболее широко используемым стандартом кодирования символов. Стандартный ASCII имеет длину 7 битов, всего 128 различных символов. Расширенный ASCII имеет длину 8 битов, 256 различных символов. Символ авторского права <code>©</code> define В расширенной таблице ASCII. </p>
+    <header><h2>Hex (Hex):</h2><div class="h2-highlight"></div></header>
+    <p> Шестнадцатеричная система счисления состоит из 16 символов, включая <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> плюс <code>(a, b, e, d, e, f)</code> 6 Символ. Поскольку шестнадцатеричная система счисления может представлять любую двоичную строку в читаемом виде, она широко используется в информатике. Хеш-строки SHA256 обычно отображаются в виде шестнадцатеричных строк в стиле HTML. Система цветов также может быть представлена в виде шестнадцатеричных чисел, от # 000000 (чисто черный) до #FFFFFF (чисто белый). </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-ascii-to-hex.png" alt="comic ascii to hex">
+    </div>
+    <header><h2>ссылка:</h2><div class="h2-highlight"></div></header>
+    <p> Википедия (шестнадцатеричная): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Hexadecimal" target="_blank">https://en.wikipedia.org/wiki/Hexadecimal</a></p>
+    <p> Википедия (ASCII): <a rel="nofollow" href="https://en.wikipedia.org/wiki/ASCII" target="_blank">https://en.wikipedia.org/wiki/ASCII</a></p>
+    <header><h2>Преобразование строки ASCII в шестнадцатеричный код в Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">import binascii
+
+
+def ascii_to_hex(ascii_str):
+    hex_str = binascii.hexlify(ascii_str.encode())
+    return hex_str
+
+
+ascii_input = 'This is an example.'
+hex_output = ascii_to_hex(ascii_input)
+print('hex result is:{0}'.format(hex_output))
+
+-------------------
+hex result is:b'5468697320697320616e206578616d706c652e'</pre>
+    <header><h2>Преобразование строки ASCII в шестнадцатеричное в Java:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static String ascii_to_hex(String ascii_str) {
+        StringBuilder hex_str = new StringBuilder();
+        for (char ch : ascii_str.toCharArray()) {
+            hex_str.append(Integer.toHexString((int) ch));
+        }
+        return hex_str.toString();
+    }
+
+    public static void main(String[] args) {
+        String ascii_input = "This is an example.";
+        String hex_output = ascii_to_hex(ascii_input);
+        System.out.println("hex result is:" + hex_output);
+    }
+}
+
+-------------------
+hex result is:5468697320697320616e206578616d706c652e
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/codemirror.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/{{model.cdnjs_version_codemirror}}/addon/display/placeholder.min.js"></script>
+<script>
+    var editor1 = CodeMirror.fromTextArea(document.getElementById("code1"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        lineNumbers: true,
+        lineWrapping: true,
+    });
+    editor1.on('change', function () {
+        query();
+    });
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        editor2.setValue("Invalid Input");
+        editor2.setValue(ascii_to_hex(editor1.getValue(), document.getElementById("Delimiter").value));
+        finished_spin_hidden();
+    }
+
+    function ascii_to_hex(input_str, delimiter) {
+        var arr1 = [];
+        for (var n = 0, l = input_str.length; n < l; n++) {
+            var hex = Number(input_str.charCodeAt(n)).toString(16);
+            if (hex.length==1){
+                hex = '0' + hex;
+            }
+            arr1.push(hex);
+        }
+        result = arr1.join(delimiter);
+        if (delimiter != ' ') {
+            result = delimiter + result;
+        }
+        return result;
+    }
+
+    function loadexample() {
+        clear_txt();
+        editor1.setValue("This is an example.");
+        $('#submit_button').trigger('click');
+    }
+
+    function clear_txt() {
+        editor1.setValue("");
+        editor2.setValue("");
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        editor2.focus();
+        editor2.execCommand("selectAll");
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

@@ -1,0 +1,11 @@
+{%if model.is_production_env == true%}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135459957-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-135459957-2');
+</script>
+{#{% include "Common/Ad_Segment/adsense_autoads.html" %}#}
+{%endif%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/{{model.css_version_fontawesome}}/css/all.min.css">

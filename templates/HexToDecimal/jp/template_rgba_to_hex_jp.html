@@ -1,0 +1,180 @@
+{%extends "HexToDecimal/jp/base_layout_jp.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">RGBAカラー</span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" placeholder="Rgba(62,115,188,0.91)" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 空です</button>
+    <a href="/jp/hex-to-rgba" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 交換場所</button>
+    </a>
+    <button type="button" id="random" class="btn btn-secondary" onclick="random_color()">ランダムに色を選ぶ</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">変換</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> コピー結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">16進数<sub>＃</sub></span>
+    </div>
+    <input name="HexOutput" id="HexOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">透明度(不透明度) <sub>%</sub></span>
+    </div>
+    <input name="OpacityOutput" id="OpacityOutput" type="text" class="form-control" spellcheck="false">
+    <i class="fas fa-percentage" style="font-size:38px;padding-left: 20px;"></i>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>について{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>RGBA表色系:</h2><div class="h2-highlight"></div></header>
+    <p> RGBA表色系では、 "R"は赤チャンネル( "Red")、 "G"は緑チャンネル( "Green")、 "B"は青チャンネル( "Blue")、Aは透明度( <code>rgba(16,110,190,0.7)</code> )を表します. <code>rgba(16,110,190,0.7)</code> </p>
+    <header><h2>16進数カラーシステム:</h2><div class="h2-highlight"></div></header>
+    <p> HTML表色系は、 <code>#000000</code> (真っ黒)から<code>#FFFFFF</code> (真っ白)までの16進数で表すことができますたとえば、 <code>#123456</code>赤チャンネルが "12"( "00"と "FF"の間)である<code>#123456</code>ます.緑色のチャンネルは "34"、青色のチャンネルは "56"です. <code>#e1a</code> 16進数のカラーシステムでは<code>#e1a</code>と<code>#ee11aa</code>が同じように簡略表示もサポートされています. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-rgba-to-hex.png" alt="comic rgba to hex">
+    </div>
+    <header><h2>RGBAカラーを16進カラーに変換する方法</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p>手順1：RGBAカラーの赤チャンネル値、緑チャンネル値、青チャンネル10進値、透明度値をそれぞれ取得します. </p></li>
+        <li><p>ステップ2：カラーチャンネル値を10進数から16進数に変換します. </p></li>
+        <li><p>ステップ3：16進数カラーシステムの構文に従って3つのカラーチャンネル値を組み合わせます. </p></li>
+    </ol>
+    <p> <b>例1：RGBA色 "rgba(16,110,190,0.66)"は16進数の色に変換されます(結果は "＃106ebe"で、透明度の値は66%です).</b> </p>
+    <table class="descriptionTable">
+        <tr>
+            <td><b>Step 1:</b></td>
+            <td>RGBA Color "rgba(16,110,190,0.66)": Red(16), Green(110), Blue(190), Opacity(0.66)</td>
+        </tr>
+        <tr>
+            <td><b>Step 2:</b></td>
+            <td>Red: (16)->(0x10), Green: (110)->(0x6e), Blue: (190)->(0xbe), Opacity: (0.66)->(66%)</td>
+        </tr>
+        <tr>
+            <td><b>Step 3:</b></td>
+            <td>RGB Color "rgba(16,110,190,0.66)" -> "#106ebe" with opacity 66%</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>リンク:</h2><div class="h2-highlight"></div></header>
+    <p>ウィキペディア(Webカラーシステム): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Web_colors" target="_blank">https://en.wikipedia.org/wiki/Web_colors</a></p>
+    <p>ウィキペディア(RGBAカラーシステム): <a rel="nofollow" href="https://en.wikipedia.org/wiki/RGBA_color_space" target="_blank">https://en.wikipedia.org/wiki/RGBA_color_space</a></p>
+    <header><h2>PythonでのRGBAカラーから16進カラーへの変換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">import re
+
+
+def rgb_to_hex(rgb_color):
+    rgb_color = re.search('\(.*\)', rgb_color).group(0).replace(' ', '').lstrip('(').rstrip(')')
+    [r, g, b] = [int(x) for x in rgb_color.split(',')]
+    # check if in range 0~255
+    assert 0 <= r <= 255
+    assert 0 <= g <= 255
+    assert 0 <= b <= 255
+
+    r = hex(r).lstrip('0x')
+    g = hex(g).lstrip('0x')
+    b = hex(b).lstrip('0x')
+    # re-write '7' to '07'
+    r = (2 - len(r)) * '0' + r
+    g = (2 - len(g)) * '0' + g
+    b = (2 - len(b)) * '0' + b
+
+    hex_color = '#' + r + g + b
+    return hex_color
+
+
+rgb_input = 'rgb(7,110,190)'
+hex_output = rgb_to_hex(rgb_input)
+print('Hex color result is:{0}'.format(hex_output))
+
+-------------------
+Hex color result is:#076ebe</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var HexOutput = document.getElementById("HexOutput");
+    var OpacityOutput = document.getElementById("OpacityOutput");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        HexOutput.value = "";
+        OpacityOutput.value = "";
+        var input_value = QueryStr.value.replace("RGBA", '').replace("rgba", '').replace("(", '').replace(")", '').replace(new RegExp(" ", 'g'), "");
+        var r = '10';
+        var g = '6e';
+        var b = 'be';
+        var o = '1';
+
+        [r, g, b, o] = input_value.split(',');
+        r = parseInt(r, 10);
+        g = parseInt(g, 10);
+        b = parseInt(b, 10);
+        o = parseFloat(o) * 100;
+        o = o.toString(10) + "%";
+        if (r <= 255 && r >= 0 && g <= 255 && g >= 0 && b <= 255 && b >= 0) {
+            r = r.toString(16);
+            if (r.length == 1) r = '0' + r;
+            g = g.toString(16);
+            if (g.length == 1) g = '0' + g;
+            b = b.toString(16);
+            if (b.length == 1) b = '0' + b;
+            hex_color = "#" + r + g + b;
+            HexOutput.value = hex_color;
+            OpacityOutput.value = o;
+            $(':root').css("--main-color", QueryStr.value);
+        }
+        else {
+            $(':root').css("--main-color", "{{model.main_color}}");
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        HexOutput.value = "";
+        OpacityOutput.value = "";
+        $(':root').css("--main-color", "{{model.main_color}}");
+    }
+
+    function random_color() {
+        clear_txt();
+        var random_r = Math.floor(Math.random() * 256);
+        var random_g = Math.floor(Math.random() * 256);
+        var random_b = Math.floor(Math.random() * 256);
+        var random_o = Math.random();
+        random_o = Math.round(random_o * 100) / 100;
+
+        random_rgba = "rgba(" + random_r + "," + random_g + "," + random_b + "," + random_o + ")";
+        QueryStr.value = random_rgba;
+        query();
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        HexOutput.focus();
+        HexOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

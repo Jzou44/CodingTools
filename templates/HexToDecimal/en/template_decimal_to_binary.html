@@ -1,0 +1,313 @@
+{%extends "HexToDecimal/en/base_layout.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Decimal Number<sub>10</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> Clear</button>
+    <a href="/binary-to-decimal" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> Swap</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">Convert</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Copy Result</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Binary Number<sub>2</sub></span>
+    </div>
+    <input name="queryStr" id="BinaryOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Hex Number<sub>16</sub></span>
+    </div>
+    <input name="queryStr" id="HexOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Octal Number<sub>8</sub></span>
+    </div>
+    <input name="queryStr" id="OctalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>About {{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Decimal Numeral System:</h2><div class="h2-highlight"></div></header>
+    <p>Decimal numeral system (also called Hindu-Arabic, or Arabic) has 10 digits, include <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code>, it's the most used number system in our daily life. Decimal numeral system is also
+        one of the most ancient number system, it's inspired by 10 fingers of human. </p>
+    <header><h2>Binary Numeral System:</h2><div class="h2-highlight"></div></header>
+    <p>Binary numeral system has 2 digits, include <code>(0, 1)</code>. Four binary digits can be represented by 1 hexadecimal digits, and three binary digits can be represented by one octal digits. Binary is the numeral
+        system that most close to electronic circuit hardware.</p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-decimal-to-binary.png" alt="comic decimal to binary">
+    </div>
+    <header><h2>How to convert from decimal to binary?</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p>Step 1: Divide the decimal number by 2, get the integer quotient and the remainder. </p></li>
+        <li><p>Step 2: Convert the remainder to the binary digit in that position.</p></li>
+        <li><p>Step 3: Using the integer quotient to repeat the steps until the integer quotient equals to 0.</p></li>
+    </ol>
+    <p><b>Example: Convert decimal number "13" to binary (result is "1101"):</b></p>
+    <table class="descriptionTable">
+        <tr>
+            <th>Repeat Division</th>
+            <th>Integer Quotient</th>
+            <th>Remainder (decimal)</th>
+            <th>Remainder (binary)</th>
+            <th>Digit Position</th>
+        </tr>
+        <tr>
+            <td>13/2</td>
+            <td>6</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>6/2</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3/2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1/2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>Decimal to Binary conversion table:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th>Decimal</th>
+            <th>Binary</th>
+            <th>Decimal</th>
+            <th>Binary</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>21</td>
+            <td>10101</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>10</td>
+            <td>22</td>
+            <td>10110</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>3</td>
+            <td>23</td>
+            <td>10111</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>100</td>
+            <td>24</td>
+            <td>11000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>101</td>
+            <td>25</td>
+            <td>11001</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>110</td>
+            <td>26</td>
+            <td>11010</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>111</td>
+            <td>27</td>
+            <td>11011</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1000</td>
+            <td>28</td>
+            <td>11100</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>1001</td>
+            <td>29</td>
+            <td>11101</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>1010</td>
+            <td>30</td>
+            <td>11110</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>1011</td>
+            <td>31</td>
+            <td>11111</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>1100</td>
+            <td>32</td>
+            <td>100000</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>1101</td>
+            <td>33</td>
+            <td>100001</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>1110</td>
+            <td>34</td>
+            <td>100010</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>1111</td>
+            <td>35</td>
+            <td>100011</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>10000</td>
+            <td>36</td>
+            <td>100100</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>10001</td>
+            <td>37</td>
+            <td>100101</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>10010</td>
+            <td>38</td>
+            <td>100110</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>10011</td>
+            <td>39</td>
+            <td>100111</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>10100</td>
+            <td>40</td>
+            <td>101000</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>More information:</h2><div class="h2-highlight"></div></header>
+    <p>Wikipedia (Binary): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">https://en.wikipedia.org/wiki/Binary_number</a></p>
+    <p>Wikipedia (Decimal): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>Convert Decimal to Binary with Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def decimal_to_binary(decimal_str):
+    decimal_number = int(decimal_str, 10)
+    binary_number = bin(decimal_number)
+    return binary_number
+
+
+decimal_input = '2014'
+binary_output = decimal_to_binary(decimal_input)
+print('binary result is:{0}'.format(binary_output))
+
+-------------------
+binary result is:0b11111011110</pre>
+    <header><h2>Convert Decimal to Binary with Java:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static String decimal_to_binary(String decimal_str) {
+        return Integer.toBinaryString(Integer.parseInt(decimal_str));
+    }
+
+    public static void main(String[] args) {
+        String decimal_input = "2014";
+        String binary_output = decimal_to_binary(decimal_input);
+        System.out.println("binary result is:" + binary_output);
+    }
+}
+
+-------------------
+binary result is:11111011110
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var HexOutput = document.getElementById("HexOutput");
+    var OctalOutput = document.getElementById("OctalOutput");
+    var BinaryOutput = document.getElementById("BinaryOutput");
+
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+        var input_value = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (input_value != "") {
+            input_value = new BigNumber(input_value, 10);
+            var output_hex = input_value.toString(16);
+            var output_octal = input_value.toString(8);
+            var output_binary = input_value.toString(2);
+            HexOutput.value = output_hex;
+            OctalOutput.value = output_octal;
+            BinaryOutput.value = output_binary;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        BinaryOutput.focus();
+        BinaryOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

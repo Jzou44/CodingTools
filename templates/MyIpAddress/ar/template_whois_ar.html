@@ -1,0 +1,98 @@
+{%extends "MyIpAddress/ar/base_layout_ar.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">اسم المجال أو عنوان IP</span>
+        </div>
+        <input name="queryStr" id="queryStr" type="text" class="form-control" placeholder="example.com" spellcheck="false">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> واضح</button>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">استفسار Whois</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> نسخ النتيجة</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="codewrapper size16codewrapper resizableWrapper">
+    <textarea id="code2" name="code" style="width: 100%;height: 300px" placeholder="نتائج الاستعلام Whois."></textarea>
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>في{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/comic-whois.png" alt="comic whois">
+    </div>
+    <header><h2>هل تحتاج Whois إلى إضافة البادئة www لاستعلام اسم النطاق؟</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> في معظم الحالات ، لن يقوم whois بالاستعلام عن اسم نطاق المستوى الثاني ولن يعيد أي نتائج ، وإذا لم تتمكن من العثور على أي نتائج ، فحاول إزالة البادئة <code>www</code> ثم أعد المحاولة. </p>
+    <header><h2>لماذا أحتاج إلى استخدام استعلامات Whois؟</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> لقد عثرت على موقع ويب ممتع جدًا وأردت الاتصال بمالك موقع الويب ، ولكن لم أتمكن من العثور على رقم هاتف مالكه أو عنوان بريده الإلكتروني ، حيث إن Whois هي أداة للتحقق من معلومات الاتصال بمالك موقع الويب. </p>
+    <p style=";text-align:right;direction:rtl"> تساعد أداة استعلام Whois ، التي بدأت في <code>1982</code> ، وكالات إنفاذ القانون في تحديد حقوق مالكي النطاق ، واليوم ، إذا دفعت رسومًا إضافية إلى Godaddy ، يمكن أن يساعدك Godaddy في إخفاء معلومات الاتصال الخاصة بك ، لذلك عندما يكون الآخرون في نطاقك عند الاستعلام عن youis ، لن يتم عرض رقم هاتفك وعنوان بريدك الإلكتروني. </p>
+    <header><h2>هل يجب إخفاء معلومات الاتصال الخاصة بي في نتائج بحث Whois؟ ؟</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> بالنسبة إلى مواقع الويب العادية ، أنصح الأشخاص بعدم إخفاء معلومات الاتصال الخاصة بهم لأنها تمثل سمعة موقع الويب الخاص بك ، ولكن إذا كانت خصوصيتك مهمة جدًا بالنسبة لك ، أو إذا كنت ترغب في الابتعاد عن الرسائل غير المرغوب فيها المحتملة ، فقد تكون حماية خصوصية Whois اختيار يستحق. </p>
+    <header><h2>المزيد من الروابط إلى استعلامات Whois:</h2><div class="h2-highlight"></div></header>
+    <p style=";text-align:right;direction:rtl"> ويكيبيديا (إز): <a rel="nofollow" href="https://en.wikipedia.org/wiki/WHOIS" target="_blank">https://en.wikipedia.org/wiki/WHOIS</a></p>
+    <p style=";text-align:right;direction:rtl"> RFC 3912 (Whois): <a rel="nofollow" href="https://tools.ietf.org/html/rfc3912" target="_blank">https://tools.ietf.org/html/rfc3912</a></p>
+    <p style=";text-align:right;direction:rtl"> استعلام Whois (Ubuntu) في نظام Linux: <a rel="nofollow" href="https://manpages.debian.org/jessie/whois/whois.1.en.html" target="_blank">https://manpages.debian.org/jessie/whois/whois.1.en.html</a></p>
+    <header><h2>أمر Whois في نظام Linux:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint">NAME
+       whois - client for the whois directory service
+
+SYNOPSIS
+       whois  [  {  -h | --host } HOST ] [ { -p | --port } PORT ] [ -abBcdGHKlLmMrRx ] [ -g SOURCE:FIRST-LAST ]
+       [ -i ATTR[,ATTR]... ] [ -s SOURCE[,SOURCE]... ] [ -T TYPE[,TYPE]... ] [ --verbose ]
+       OBJECT
+
+       whois -q KEYWORD
+
+       whois -t TYPE
+
+       whois -v TYPE
+
+       whois --help
+
+       whois --version</pre>
+    <br>
+    <pre class="prettyprint">
+root@instance-1:/var/log/apache2# whois -H google.com
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2018-02-21T18:36:40Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2020-09-14T04:00:00Z
+   ......
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+        mode: "javascript",
+        lineNumbers: true,
+    });
+
+    function query() {
+        editor2.setValue("");
+        post_ajax()
+    }
+
+    function post_ajax() {
+        $('#spinner').css('visibility', 'visible');
+        $.post("",
+            $("#options").serialize(),
+            function (data) {
+                editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
+                finished_spin_hidden();
+            });
+    }
+</script>
+{%endblock%}

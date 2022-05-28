@@ -1,0 +1,273 @@
+{%extends "HexToDecimal/jp/base_layout_jp.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">バイナリ<sub>2</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> 空です</button>
+    <a href="/jp/decimal-to-binary" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> 交換場所</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">変換</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> コピー結果</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">10進数<sub>10</sub></span>
+    </div>
+    <input name="queryStr" id="DecimalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">進数<sub>16</sub></span>
+    </div>
+    <input name="queryStr" id="HexOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">8進数<sub>8</sub></span>
+    </div>
+    <input name="queryStr" id="OctalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>について{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>バイナリ:</h2><div class="h2-highlight"></div></header>
+    <p>バイナリは2文字<code>(0, 1)</code>のみで<code>(0, 1)</code> 4ビットのバイナリ文字は1桁の16進数を表し、3桁のバイナリ文字は1桁の8進数を表すことができます. </p>
+    <header><h2>10進数:</h2><div class="h2-highlight"></div></header>
+    <p> (アラビア語としても知られている)10進数システムは、 <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> )を含む10文字を持ちます. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-decimal-to-binary.png" alt="comic decimal to binary">
+    </div>
+    <header><h2>2進数から10進数に変換する方法は？</h2><div class="h2-highlight"></div></header>
+    <p>次の画像で表されるnビットの2進数の場合</p>
+    <div class="math">d<sub>n-1</sub>d<sub>n-2</sub>...d<sub>2</sub>d<sub>1</sub>d<sub>0</sub></div>
+    <p>数字の各桁について、対応する2のべき乗のべき乗を乗じます. </p>
+    <div class="math">Decimal Output = d<sub>n-1</sub> × 2<sup>n-1</sup> + ... + d<sub>1</sub> × 2<sup>1</sup> + d<sub>0</sub> × 2<sup>0</sup></div>
+    <p>例1：2進数 "1101"が10進数に変換されます. </p>
+    <div class="math">Decimal Output = 1 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup> = 13</div>
+    <p>例2：2進数 "0.101"が10進数に変換されます. </p>
+    <div class="math">Decimal Output = 0 × 2<sup>0</sup> + 1 × 2<sup>-1</sup> + 0 × 2<sup>-2</sup> + 1 × 2<sup>-3</sup> = 0.625</div>
+    <header><h2>2進数から10進数への変換表:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th>バイナリ</th>
+            <th> 10進数</th>
+            <th>バイナリ</th>
+            <th> 10進数</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>10101</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>2</td>
+            <td>10110</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>3</td>
+            <td>10111</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>4</td>
+            <td>11000</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>5</td>
+            <td>11001</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td>6</td>
+            <td>11010</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>7</td>
+            <td>11011</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>1000</td>
+            <td>8</td>
+            <td>11100</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>1001</td>
+            <td>9</td>
+            <td>11101</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>1010</td>
+            <td>10</td>
+            <td>11110</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>1011</td>
+            <td>11</td>
+            <td>11111</td>
+            <td>31</td>
+        </tr>
+        <tr>
+            <td>1100</td>
+            <td>12</td>
+            <td>100000</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>1101</td>
+            <td>13</td>
+            <td>100001</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>1110</td>
+            <td>14</td>
+            <td>100010</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td>15</td>
+            <td>100011</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>10000</td>
+            <td>16</td>
+            <td>100100</td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td>10001</td>
+            <td>17</td>
+            <td>100101</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>10010</td>
+            <td>18</td>
+            <td>100110</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td>10011</td>
+            <td>19</td>
+            <td>100111</td>
+            <td>39</td>
+        </tr>
+        <tr>
+            <td>10100</td>
+            <td>20</td>
+            <td>101000</td>
+            <td>40</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>リンク:</h2><div class="h2-highlight"></div></header>
+    <p>ウィキペディア(バイナリ): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">https://en.wikipedia.org/wiki/Binary_number</a></p>
+    <p>ウィキペディア(10進数) <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>Pythonでの2進数から10進数への変換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def binary_to_decimal(binary_str):
+    decimal_number = int(binary_str, 2)
+    return decimal_number
+
+
+binary_input = '1101'
+decimal_output = binary_to_decimal(binary_input)
+print('decimal result is:{0}'.format(decimal_output))
+
+-------------------
+decimal result is:13</pre>
+    <header><h2>Javaでの2進数から10進数への変換:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static int binary_to_decimal(String binary_str) {
+        return Integer.parseInt(binary_str, 2);
+    }
+
+    public static void main(String[] args) {
+        String binary_input  = "1101";
+        int decimal_output = binary_to_decimal(binary_input);
+        System.out.println("decimal result is:" + decimal_output);
+    }
+}
+
+-------------------
+decimal result is:13</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var DecimalOutput = document.getElementById("DecimalOutput");
+    var HexOutput = document.getElementById("HexOutput");
+    var OctalOutput = document.getElementById("OctalOutput");
+
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        DecimalOutput.value = "";
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        var input_value = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (input_value != "") {
+            input_value = new BigNumber(input_value, 2);
+            var output_decimal = input_value.toString(10);
+            var output_hex = input_value.toString(16);
+            var output_octal = input_value.toString(8);
+            DecimalOutput.value = output_decimal;
+            HexOutput.value = output_hex;
+            OctalOutput.value = output_octal;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        DecimalOutput.value = "";
+        HexOutput.value = "";
+        OctalOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        DecimalOutput.focus();
+        DecimalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

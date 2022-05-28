@@ -1,0 +1,217 @@
+{%extends "HexToDecimal/ru/base_layout_ru.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <table style="width: 100%" border="0">
+        <tr>
+            <td rowspan="3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">целое число</span>
+                    </div>
+                    <input name="queryStr" id="QueryInteger" type="text" class="form-control" spellcheck="false" oninput="query()">
+                </div>
+            </td>
+            <td>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">молекулярная</span>
+                    </div>
+                    <input name="queryStr" id="QueryNumerator" type="text" class="form-control" spellcheck="false" oninput="query()">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 20px;">
+                <div style="width: 100%; height: 5px; padding-left:100px; background-color: #444444"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">знаменатель</span>
+                    </div>
+                    <input name="queryStr" id="QueryDenominator" type="text" class="form-control" spellcheck="false" oninput="query()">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> ясно</button>
+    <a href="/ru/decimal-to-fraction" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> Место обмена</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">изменение</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Скопировать результат</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Десятичный <sub>10</sub></span>
+    </div>
+    <input name="queryStr" id="DecimalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>на{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Фракция (фракция):</h2><div class="h2-highlight"></div></header>
+    <p> Число над черной линией - это числитель, а число под черной линией - это знаменатель. Хотя и числитель, и знаменатель являются натуральными числами, значения, которые они представляют, иногда не представляются в виде натуральных чисел. </p>
+    <header><h2>Десятичный (Десятичный):</h2><div class="h2-highlight"></div></header>
+    <p> Система десятичных чисел (также известная как арабский) состоит из 10 символов, включая <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> , которая является наиболее используемой цифровой системой в нашей повседневной жизни. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-fraction-to-decimal.png" alt="comic fraction to decimal">
+    </div>
+    <header><h2>Как забить в десятичное преобразование?</h2><div class="h2-highlight"></div></header>
+    <p> Числитель делится на знаменатель. </p>
+    <header><h2>Таблица перевода баллов в десятичное:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> доля </th>
+            <th> десятичный </th>
+            <th> доля </th>
+            <th> десятичный </th>
+        </tr>
+        <tr>
+            <td>1/2</td>
+            <td>0.5</td>
+            <td>1/6</td>
+            <td>0.16666667</td>
+        </tr>
+        <tr>
+            <td>1/3</td>
+            <td>0.33333333</td>
+            <td>2/6</td>
+            <td>0.33333333</td>
+        </tr>
+        <tr>
+            <td>2/3</td>
+            <td>0.66666667</td>
+            <td>3/6</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>1/4</td>
+            <td>0.25</td>
+            <td>4/6</td>
+            <td>0.66666667</td>
+        </tr>
+        <tr>
+            <td>2/4</td>
+            <td>0.5</td>
+            <td>5/6</td>
+            <td>0.83333333</td>
+        </tr>
+        <tr>
+            <td>3/4</td>
+            <td>0.75</td>
+            <td>1/7</td>
+            <td>0.14285714</td>
+        </tr>
+        <tr>
+            <td>1/5</td>
+            <td>0.2</td>
+            <td>2/7</td>
+            <td>0.28571429</td>
+        </tr>
+        <tr>
+            <td>2/5</td>
+            <td>0.4</td>
+            <td>3/7</td>
+            <td>0.42857143</td>
+        </tr>
+        <tr>
+            <td>3/5</td>
+            <td>0.6</td>
+            <td>4/7</td>
+            <td>0.57142858</td>
+        </tr>
+        <tr>
+            <td>4/5</td>
+            <td>0.8</td>
+            <td>5/7</td>
+            <td>0.71428571</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>ссылка:</h2><div class="h2-highlight"></div></header>
+    <p> Википедия (оценка): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Fraction_(mathematics)" target="_blank">https://en.wikipedia.org/wiki/Fraction_(mathematics)</a></p>
+    <p> Википедия (десятичная): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>Дробное в десятичное преобразование в Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def fraction_to_decimal(numerator, denominator):
+    return numerator / denominator
+
+
+numerator_input = 12
+denominator_input = 72
+decimal_output = fraction_to_decimal(numerator_input, denominator_input)
+print('decimal result is:{0}'.format(decimal_output))
+
+-------------------
+decimal result is:0.16666666666666666</pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryInteger = document.getElementById("QueryInteger");
+    var QueryNumerator = document.getElementById("QueryNumerator");
+    var QueryDenominator = document.getElementById("QueryDenominator");
+    var DecimalOutput = document.getElementById("DecimalOutput");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        DecimalOutput.value = "";
+        var integer_q = QueryInteger.value.replace(new RegExp(" ", 'g'), "");
+        if (integer_q == "") {
+            integer_q = "0";
+        }
+        if (integer_q == "-") {
+            integer_q = "-0";
+        }
+        var is_minus = false;
+        if (integer_q.includes('-')) {
+            is_minus = true;
+        }
+        var numerator_q = QueryNumerator.value.replace(new RegExp(" ", 'g'), "");
+        var denominator_q = QueryDenominator.value.replace(new RegExp(" ", 'g'), "");
+        if (numerator_q != "" && denominator_q != "") {
+            integer_q = new BigNumber(integer_q);
+            numerator_q = new BigNumber(numerator_q);
+            denominator_q = new BigNumber(denominator_q);
+            if (is_minus) {
+                var output_decimal = numerator_q.dividedBy(denominator_q).minus(integer_q).multipliedBy(new BigNumber(-1)).toString(10);
+                DecimalOutput.value = output_decimal;
+            } else {
+                var output_decimal = numerator_q.dividedBy(denominator_q).plus(integer_q).toString(10);
+                DecimalOutput.value = output_decimal;
+            }
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryInteger.value = "";
+        QueryNumerator.value = "";
+        QueryDenominator.value = "";
+        DecimalOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        DecimalOutput.focus();
+        DecimalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}

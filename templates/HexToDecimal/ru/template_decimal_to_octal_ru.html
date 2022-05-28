@@ -1,0 +1,317 @@
+{%extends "HexToDecimal/ru/base_layout_ru.html"%}
+{%block content%}
+<div id="headline">
+    <h1>{{model.bodyTitle}}</h1>
+    {%include "Common/Ad_PlaceHolder/seg_ad_above_input.html" %}
+</div>
+<form id="options">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Десятичный <sub>10</sub></span>
+        </div>
+        <input name="queryStr" id="QueryStr" type="text" class="form-control" spellcheck="false" oninput="query()">
+    </div>
+    <br/>
+    <button type="button" class="btn btn-secondary" onclick="clear_txt()"><i class="far fa-trash-alt"></i> ясно</button>
+    <a href="/ru/octal-to-decimal" style="text-decoration:none">
+        <button type="button" id="swap" class="btn btn-secondary"><i class="fas fa-arrows-alt-v"></i> Место обмена</button>
+    </a>
+    <button type="button" id="submit_button" class="btn btn-primary" onclick="query()">изменение</button>
+    <button type="button" id="copy" class="btn btn-secondary" onclick="copy_to_clipboard()"><i class="far fa-copy"></i> Скопировать результат</button>
+    <i id="spinner" class="fa fa-sync fa-spin"></i>
+</form>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"><sub>8</sub> октября</span>
+    </div>
+    <input name="queryStr" id="OctalOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Hex <sub>16</sub></span>
+    </div>
+    <input name="queryStr" id="HexOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br>
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Двоичный <sub>2</sub></span>
+    </div>
+    <input name="queryStr" id="BinaryOutput" type="text" class="form-control" spellcheck="false">
+</div>
+<br/>
+{%include "Common/Ad_PlaceHolder/seg_ad_above_description.html" %}
+<div id="description">
+    <header><h2>на{{model.bodyTitle}}:</h2><div class="h2-highlight"></div></header>
+    <p>{{model.description}}</p>
+    {%include "Common/Ad_PlaceHolder/seg_ad_after_description.html" %}
+    <header><h2>Десятичный (Десятичный):</h2><div class="h2-highlight"></div></header>
+    <p> Система десятичных чисел (также известная как арабский) состоит из 10 символов, включая <code>(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code> , которая является наиболее используемой цифровой системой в нашей повседневной жизни. </p>
+    <header><h2>Октал (Octal):</h2><div class="h2-highlight"></div></header>
+    <p> Восьмеричная система счисления содержит 16 символов <code>(0, 1, 2, 3, 4, 5, 6, 7)</code> . Каждая восьмеричная цифра может представлять собой 3-значное двоичное число. </p>
+    <div class="cartoon">
+        {%include "Common/Ad_PlaceHolder/seg_ad_left_cartoon.html" %}
+        <img class="cartoon_image" src="/image/cartoon-decimal-to-octal.png" alt="comic decimal to octal">
+    </div>
+    <header><h2>Как конфертировать из десятичного в восьмеричное?</h2><div class="h2-highlight"></div></header>
+    <ol>
+        <li><p> Шаг 1: Разделите десятичное число на 8 и получите целое отношение и остаток. </p></li>
+        <li><p> Шаг 2: Преобразуйте оставшуюся часть первого шага в восьмеричный символ. </p></li>
+        <li><p> Шаг 3: Продолжите деление на целое частное первого шага и повторяйте шаг 1, пока он не станет 0. </p></li>
+    </ol>
+    <p> <b>Пример 1. Десятичное число «4321» преобразуется в восьмеричное число (результат - «10341»):</b> </p>
+    <table class="descriptionTable">
+        <tr>
+            <th> Разделите каждое десятичное число на 8 </th>
+            <th> Целое отношение </th>
+            <th> Остаток (10 ар) </th>
+            <th> Остаток (восьмеричное) </th>
+            <th> расположение </th>
+        </tr>
+        <tr>
+            <td>4321/8</td>
+            <td>540</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>540/8</td>
+            <td>67</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>67/8</td>
+            <td>8</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>8/8</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1/8</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>Таблица перевода из десятичных в восьмеричные:</h2><div class="h2-highlight"></div></header>
+    <table class="descriptionTable">
+        <tr>
+            <th> десятичный </th>
+            <th> восьмеричный </th>
+            <th> десятичный </th>
+            <th> восьмеричный </th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>30</td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>40</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>50</td>
+            <td>62</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>60</td>
+            <td>74</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>70</td>
+            <td>106</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>6</td>
+            <td>80</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>90</td>
+            <td>132</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>10</td>
+            <td>100</td>
+            <td>144</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>11</td>
+            <td>200</td>
+            <td>310</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>12</td>
+            <td>300</td>
+            <td>454</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>13</td>
+            <td>400</td>
+            <td>620</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>14</td>
+            <td>500</td>
+            <td>764</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>15</td>
+            <td>600</td>
+            <td>1130</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>16</td>
+            <td>700</td>
+            <td>1274</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>17</td>
+            <td>800</td>
+            <td>1440</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>20</td>
+            <td>900</td>
+            <td>1604</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>21</td>
+            <td>1000</td>
+            <td>1750</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>22</td>
+            <td>2000</td>
+            <td>3720</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>23</td>
+            <td>3000</td>
+            <td>5670</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>24</td>
+            <td>4000</td>
+            <td>7640</td>
+        </tr>
+    </table>
+    <br>
+    <header><h2>ссылка:</h2><div class="h2-highlight"></div></header>
+    <p> Википедия (восьмеричная): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Octal" target="_blank">https://en.wikipedia.org/wiki/Octal</a></p>
+    <p> Википедия (десятичная): <a rel="nofollow" href="https://en.wikipedia.org/wiki/Decimal" target="_blank">https://en.wikipedia.org/wiki/Decimal</a></p>
+    <header><h2>Десятичное в восьмеричное преобразование в Python:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">def decimal_to_octal(decimal_str):
+    decimal_number = int(decimal_str, 10)
+    octal_number = oct(decimal_number)
+    return octal_number
+
+
+decimal_input = '4321'
+octal_output = decimal_to_octal(decimal_input)
+print('octal result is:{0}'.format(octal_output))
+
+-------------------
+octal result is:0o10341</pre>
+    <header><h2>Преобразовать из десятичного в восьмеричное в Java:</h2><div class="h2-highlight"></div></header>
+    <pre class="prettyprint linenums">
+public class NumberConvertManager {
+    public static String decimal_to_octal(String decimal_str) {
+        return Integer.toOctalString(Integer.parseInt(decimal_str));
+    }
+
+    public static void main(String[] args) {
+        String decimal_input = "4321";
+        String octal_output = decimal_to_octal(decimal_input);
+        System.out.println("octal result is:" + octal_output);
+    }
+}
+
+-------------------
+octal result is:10341
+    </pre>
+</div>
+{%endblock%}
+{%block customPageJS%}
+<script>
+    var QueryStr = document.getElementById("QueryStr");
+    var HexOutput = document.getElementById("HexOutput");
+    var OctalOutput = document.getElementById("OctalOutput");
+    var BinaryOutput = document.getElementById("BinaryOutput");
+
+    function query() {
+        $('#spinner').css('visibility', 'visible');
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+        var input_value = QueryStr.value.replace(new RegExp(" ", 'g'), "");
+        if (input_value != "") {
+            input_value = new BigNumber(input_value, 10);
+            var output_hex = input_value.toString(16);
+            var output_octal = input_value.toString(8);
+            var output_binary = input_value.toString(2);
+            HexOutput.value = output_hex;
+            OctalOutput.value = output_octal;
+            BinaryOutput.value = output_binary;
+        }
+        finished_spin_hidden();
+    }
+
+    function clear_txt() {
+        QueryStr.value = "";
+        HexOutput.value = "";
+        OctalOutput.value = "";
+        BinaryOutput.value = "";
+    }
+
+    function copy_to_clipboard() {
+        var copy_button = document.getElementById("copy");
+        OctalOutput.focus();
+        OctalOutput.select();
+        document.execCommand("copy");
+        copy_button.innerHTML = copied_button_text;
+        setTimeout(function () {
+            copy_button.innerHTML = copy_button_text;
+        }, 1000);
+    }
+</script>
+{%endblock%}
