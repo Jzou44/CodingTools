@@ -35,4 +35,4 @@ IP2LOCATION_IPV4_CSV_PATH = '/app/IP2Location/IP2LOCATION-LITE-DB11.CSV'
 
 UPLOAD_TEMP_FOLDER_PATH = '/tmp/codingtool'
 UPLOAD_TEMP_FOLDER_CLEAR_CACHE_INTERVAL_IN_MINUTES = 30
-DOWNLOAD_URL_PREFIX = 'https://downloadv2.coding.tools/'
+DOWNLOAD_URL_PREFIX = 'https://download.coding.tools/'

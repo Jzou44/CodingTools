@@ -1,8 +1,9 @@
 #Website coding.tools
+35.239.243.94
 
 apt-get install -y nginx
 rm -rf /etc/nginx/sites-enabled/*
-cp Config/mysite.conf /etc/nginx/sites-enabled/mysite.conf
+cp Config/mysite.conf /etc/nginx/sites-enabled/codingtools.conf
 systemctl restart nginx
 service nginx restart 
 
@@ -28,6 +29,9 @@ docker run -d -v /mnt/c/app:/app -v /mnt/c/tmp:/tmp -p 8080:8080 codingtools:v20
 
 
 docker run -d --restart=always -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20220528
+
+
+docker run --rm -it -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20220528 bash
 
 ## 配置nginx
 zip

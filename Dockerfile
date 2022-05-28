@@ -8,13 +8,14 @@ RUN apt-get install -y iputils-ping
 RUN apt-get install -y dnsutils
 RUN apt-get install -y traceroute
 RUN apt-get install -y whois
+RUN apt-get install -y zip
 
 RUN mkdir /code
 RUN mkdir /app
 RUN mkdir /app/log
 
 COPY ./requirements.txt /code
-RUN pip3 install -r /code/requirements.txt --proxy http://192.168.1.3:7890
+RUN pip3 install -r /code/requirements.txt
 COPY ./Blueprints /code/Blueprints
 COPY ./Logic /code/Logic
 COPY ./static /code/static
