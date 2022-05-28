@@ -37,3 +37,9 @@ docker run --rm -it -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20220528
 zip
 
 ## 配置dns
+
+
+
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+
