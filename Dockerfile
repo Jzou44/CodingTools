@@ -21,7 +21,8 @@ COPY ./Logic /code/Logic
 COPY ./static /code/static
 COPY ./templates /code/templates
 COPY ./app.py /code
+COPY ./main.py /code
 
 EXPOSE 8080
 WORKDIR /code
-CMD ["python3", "app.py"]
+CMD ["python3", "main.py"]
