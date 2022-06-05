@@ -693,3 +693,9 @@ div#search_and_suggest a.table-link {
 div#nav_ad_seg {
     max-height: 90px;
 }
+
+@media (max-width: 748px) {
+    #promote {
+        display: none;
+    }
+}
