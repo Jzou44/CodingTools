@@ -6,7 +6,7 @@ YEAR = str(time.localtime().tm_year)
 LOG_FILE_PATH = '/app/log/daily.log'
 
 # Version
-CSS_VERSION_UNIT = '20220605.1'
+CSS_VERSION_UNIT = '20220615.1'
 CSS_VERSION_FONTAWESOME = '6.1.1'
 CDNJS_VERSION_JQUERY = '3.5.1'
 CDNJS_VERSION_BOOTSTRAP = '5.1.3'
