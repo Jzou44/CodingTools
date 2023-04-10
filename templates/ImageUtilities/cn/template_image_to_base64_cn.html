@@ -77,7 +77,9 @@ base64_string = "data:image/" + image_type + ";base64," + encoded_string.decode(
                 session: session_cookie,
                 finish: "finished"
             },
-            function( response ) {
+            function (response) {
+    const re_script = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g;
+    response = response.replace(re_script, "");
                 editor2.setValue(JSON.parse(response)['base64'].toLowerCase());
                 finished_spin_hidden();
             });

@@ -25,18 +25,18 @@ mkdir -p /app/IP2Location
 ```
 git clone https://github.com/Jzou44/CodingTools.git
 
-docker build -t codingtools:v20220618 .
+docker build -t codingtools:v20230410 .
 
-docker run --rm -it -v /mnt/c/app:/app -v /mnt/c/tmp:/tmp -p 8080:8080 codingtools:v20220618 bash
-
-
-docker run -d -v /mnt/c/app:/app -v /mnt/c/tmp:/tmp -p 8080:8080 codingtools:v20220618
+docker run --rm -it -v /mnt/c/app:/app -v /mnt/c/tmp:/tmp -p 8080:8080 codingtools:v20230410 bash
 
 
-docker run -d --restart=always -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20220618
+docker run -d -v /mnt/c/app:/app -v /mnt/c/tmp:/tmp -p 8080:8080 codingtools:v20230410
+
+for deployment:
+docker run -d --restart=always -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20230410
 
 
-docker run --rm -it -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20220618 bash
+docker run --rm -it -v /app:/app -v /tmp:/tmp -p 8080:8080 codingtools:v20230410 bash
 ```
 
 ### 配置dns

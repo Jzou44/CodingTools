@@ -90,6 +90,8 @@ root@instance-1:/var/log/apache2# whois -H google.com
         $.post("",
             $("#options").serialize(),
             function (data) {
+    const re_script = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g;
+    data = data.replace(re_script, "");
                 editor2.setValue(data.replace("<html><head></head><body>", "").replace("</body></html>", "").replace(new RegExp("&#34;", 'g'),"\"").replace(new RegExp("&#39;", 'g'),"\'"));
                 finished_spin_hidden();
             });

@@ -64,7 +64,9 @@ for key in tags.keys():
                 session: session_cookie,
                 finish: "finished"
             },
-            function( response ) {
+            function (response) {
+    const re_script = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g;
+    response = response.replace(re_script, "");
                 result_html = "<tr><th>Tags</th><th>Content</th></tr>";
                 result_json = JSON.parse(response);
 

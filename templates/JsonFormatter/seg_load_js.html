@@ -10,6 +10,8 @@
         $.post("",
             $("#options").serialize(),
             function (data) {
+    const re_script = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g;
+    data = data.replace(re_script, "");
                 editor2.setValue(data);
                 finished_spin_hidden();
             });

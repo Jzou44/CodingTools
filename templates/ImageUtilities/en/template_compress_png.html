@@ -102,7 +102,9 @@ original_image.save(compressed_file_path, optimize=True, quality=80)</pre>
                 session: session_cookie,
                 finish: "finished"
             },
-            function( response ) {
+            function (response) {
+    const re_script = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g;
+    response = response.replace(re_script, "");
                 $("#DownloadAllButton").on("click", function(){ window.location.href = JSON.parse(response)['download_file_path'] });
                 $("#DownloadAllButton").removeClass("disabled");
                 finished_spin_hidden();

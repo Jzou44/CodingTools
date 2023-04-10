@@ -225,8 +225,8 @@ header {
 }
 
 #description p {
-    font-family: 'Source Serif Pro', Microsoft YaHei, Arial, serif;
     font-size: 19px;
+    font-family: Cambria, "Cambria Math", stixgeneral, "Times New Roman", Times, serif;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.84) !important;
 }

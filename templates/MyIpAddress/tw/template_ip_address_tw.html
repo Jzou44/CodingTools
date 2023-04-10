@@ -88,6 +88,8 @@ print('Longitude:', ip_json['longitude'])
         $.post("",
             $("#options").serialize(),
             function (data) {
+    const re_script = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g;
+    data = data.replace(re_script, "");
                 finished_spin_hidden();
                 render_result(JSON.parse(data));
             });
