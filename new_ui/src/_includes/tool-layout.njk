@@ -1,0 +1,50 @@
+{% extends "base.njk" %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="separator">/</span>
+    <a href="/#{{ category }}">{{ categoryName }}</a>
+    <span class="separator">/</span>
+    <span class="current">{{ toolTitle }}</span>
+  </nav>
+
+  <!-- Tool Header -->
+  <header class="tool-header">
+    <h1>{{ toolTitle }}</h1>
+    <p>{{ toolDescription }}</p>
+  </header>
+
+  <!-- Two-Column Layout -->
+  <div class="tool-layout">
+
+    <!-- Left Column — Tool Interface -->
+    <div class="tool-main">
+      {% block tool_content %}{% endblock %}
+
+      <!-- Description Section -->
+      <section class="description-section">
+        {% block description %}{% endblock %}
+      </section>
+    </div>
+
+    <!-- Right Column — Sidebar -->
+    {% include "sidebar.njk" %}
+
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="/js/main.js"></script>
+  <script src="/js/tool-common.js"></script>
+  {% block tool_script %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  {% block head_extra %}{% endblock %}
+  {# Google Tag placeholder — uncomment and add your GA_MEASUREMENT_ID #}
+  {# <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> #}
+  {# <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');</script> #}
+</head>
+<body>
+
+  {% include "navbar.njk" %}
+
+  {% block content %}{% endblock %}
+
+  {% block footer %}
+    {% include "footer.njk" %}
+  {% endblock %}
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
