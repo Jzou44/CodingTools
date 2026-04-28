@@ -1,0 +1,464 @@
+/* ============================================================
+   Tool Page Styles
+   Shared across all tool pages. Extracted from inline <style>.
+   ============================================================ */
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.tool-layout { padding: 0; }
+
+.section-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* --- Editor --- */
+.editor-wrapper {
+  position: relative;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.editor-wrapper:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.1);
+}
+
+.editor-wrapper.readonly-wrapper {
+  background: #f7f3ea;
+  border-color: #d9cfc0;
+}
+
+.editor-area {
+  display: block;
+  width: 100%;
+  min-height: 240px;
+  padding: 16px;
+  padding-left: 56px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  resize: vertical;
+  outline: none;
+  tab-size: 2;
+}
+
+.editor-area::placeholder {
+  color: var(--text-muted);
+}
+
+.editor-area.readonly {
+  cursor: default;
+}
+
+.line-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 100%;
+  padding: 16px 8px 16px 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  text-align: right;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+  background: var(--code-bg);
+}
+
+.line-numbers.readonly-bg {
+  background: #f7f3ea;
+}
+
+/* --- Button overrides --- */
+.btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+
+.btn-ghost.copied {
+  color: var(--success);
+}
+
+/* --- Status Bar --- */
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  min-height: 24px;
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot.valid { background: var(--success); }
+.status-dot.invalid { background: var(--error); }
+.status-message.valid { color: var(--success); }
+.status-message.invalid { color: var(--error); }
+.status-message.idle { color: var(--text-muted); }
+
+.status-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 16px;
+}
+
+/* --- Sidebar Cards --- */
+.sidebar-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.sidebar-card-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.related-tools-list,
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+}
+
+.related-tools-list li a,
+.category-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all 0.15s;
+}
+
+.related-tools-list li a:hover,
+.category-list li a:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.related-tools-list li a.active {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.related-tools-list li a svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.related-tools-list li a:hover svg,
+.related-tools-list li a.active svg {
+  color: var(--accent);
+}
+
+.category-list li a {
+  justify-content: space-between;
+}
+
+.category-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-left svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.category-list li a:hover .category-left svg {
+  color: var(--accent);
+}
+
+.category-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* --- Steps List --- */
+.steps-list {
+  list-style: none;
+  counter-reset: steps;
+  padding: 0;
+}
+
+.steps-list li {
+  counter-increment: steps;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0;
+  color: var(--text-secondary);
+}
+
+.steps-list li::before {
+  content: counter(steps);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- Code Block --- */
+.code-block-wrapper {
+  position: relative;
+  margin: 16px 0;
+}
+
+.code-block {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.code-block-copy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.code-block-copy:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb .separator {
+  color: var(--border);
+  user-select: none;
+}
+
+.breadcrumb .current {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* --- Footer (tool page variant) --- */
+.footer-brand {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.footer-languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.footer-languages a {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.footer-languages a:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.footer-languages .divider {
+  color: var(--border);
+  user-select: none;
+}
+
+/* --- Password Options (password-generator specific) --- */
+.options-panel {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.option-row + .option-row {
+  border-top: 1px solid var(--border);
+}
+
+.option-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.option-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 32px;
+  text-align: right;
+}
+
+.slider-row {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 14px;
+}
+
+.length-slider {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.charset-hint {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .main-content { padding: 0 20px; }
+  .toolbar { flex-direction: column; align-items: flex-start; }
+  .toolbar-left, .toolbar-right { width: 100%; }
+  .toolbar-right { justify-content: flex-end; }
+  .status-bar { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
+
+@media (max-width: 480px) {
+  .editor-area { min-height: 180px; font-size: 13px; padding-left: 48px; }
+  .line-numbers { width: 36px; font-size: 13px; }
+}
