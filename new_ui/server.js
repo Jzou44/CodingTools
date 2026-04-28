@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const dir = path.resolve(__dirname);
+const dir = path.resolve(__dirname, 'dist');
 const mimes = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
