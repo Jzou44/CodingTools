@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base64 Encode — Coding.Tools</title>
-  <meta name="description" content="Encode and decode Base64 strings instantly. Free, fast, and runs entirely in your browser.">
+  <title>Base64 Encode and Decode — Coding.Tools</title>
+  <meta name="description" content="Encode text to Base64 or decode Base64 back to readable text directly in your browser. Fast, private, and free to use.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* Tool-page specific styles that extend the shared design system */
     .main-content { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    .tool-layout { padding: 0; }
     .section-label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 8px; }
-    .editor-wrapper { position: relative; }
-    .editor-area { width: 100%; min-height: 240px; padding: 16px; padding-left: 56px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; resize: vertical; outline: none; transition: border-color 0.2s, box-shadow 0.2s; tab-size: 2; }
+    .editor-wrapper { position: relative; background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s; }
+    .editor-wrapper:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(196,93,58,0.1); }
+    .editor-wrapper.readonly-wrapper { background: #f7f3ea; border-color: #d9cfc0; }
+    .editor-area { display: block; width: 100%; min-height: 240px; padding: 16px; padding-left: 56px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); background: transparent; border: 0; border-radius: 0; resize: vertical; outline: none; tab-size: 2; }
     .editor-area::placeholder { color: var(--text-muted); }
-    .editor-area:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(99,102,241,0.1); }
-    .editor-area.readonly { background: var(--bg); cursor: default; }
-    .line-numbers { position: absolute; top: 0; left: 0; width: 44px; height: 100%; padding: 16px 8px 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: right; user-select: none; pointer-events: none; overflow: hidden; border-right: 1px solid var(--border); border-radius: 12px 0 0 12px; background: var(--code-bg); }
-    .line-numbers.readonly-bg { background: var(--bg); }
+    .editor-area.readonly { cursor: default; }
+    .line-numbers { position: absolute; top: 0; left: 0; width: 44px; height: 100%; padding: 16px 8px 16px 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: right; user-select: none; pointer-events: none; overflow: hidden; border-right: 1px solid var(--border); background: var(--code-bg); }
+    .line-numbers.readonly-bg { background: #f7f3ea; }
     .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
     .btn-primary:active, .btn-secondary:active, .btn-ghost:active { transform: scale(0.97); }
     .btn-ghost.copied { color: var(--success); }
@@ -47,9 +49,9 @@
     .category-count { font-size: 12px; color: var(--text-muted); font-weight: 400; }
     .steps-list { list-style: none; counter-reset: steps; padding: 0; }
     .steps-list li { counter-increment: steps; display: flex; align-items: flex-start; gap: 14px; padding: 10px 0; color: var(--text-secondary); }
-    .steps-list li::before { content: counter(steps); display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex-shrink: 0; background: var(--accent-light); color: var(--accent); font-size: 13px; font-weight: 700; border-radius: 8px; }
+    .steps-list li::before { content: counter(steps); display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex-shrink: 0; background: var(--accent-light); color: var(--accent); font-size: 13px; font-weight: 700; border-radius: 8px; font-family: 'DM Sans', sans-serif; }
     .code-block-wrapper { position: relative; margin: 16px 0; }
-    .code-block { background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); overflow-x: auto; white-space: pre; }
+    .code-block { background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); overflow-x: auto; white-space: pre; }
     .code-block-copy { position: absolute; top: 12px; right: 12px; padding: 6px 10px; font-size: 12px; font-weight: 500; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s; cursor: pointer; }
     .code-block-copy:hover { color: var(--accent); border-color: var(--accent); }
     .breadcrumb { display: flex; align-items: center; gap: 6px; padding: 24px 0; font-size: 13px; color: var(--text-muted); }
@@ -82,17 +84,15 @@
        Navbar
        ==================================================== -->
   <nav class="navbar">
-    <a href="/" class="navbar-brand">
-      <!-- Code icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-      </svg>
-      Coding.Tools
-    </a>
-    <div class="navbar-links">
-      <a href="/">All Tools</a>
-      <a href="/blog">Blog</a>
+    <div class="inner">
+      <a href="/" class="navbar-brand">
+        <!-- Code icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        Coding.Tools
+      </a>
     </div>
   </nav>
 
@@ -113,7 +113,7 @@
     <!-- Tool Header -->
     <header class="tool-header">
       <h1>Base64 Encode</h1>
-      <p>Encode and decode Base64 strings instantly. Free, fast, and runs entirely in your browser.</p>
+      <p>Convert text to Base64, decode Base64 back to readable text, and copy or download the result without sending data anywhere.</p>
     </header>
 
     <!-- Two-Column Layout -->
@@ -190,7 +190,7 @@
         <!-- Output Section -->
         <div style="margin-top: 24px;">
           <label class="section-label" for="output-editor">Output</label>
-          <div class="editor-wrapper">
+          <div class="editor-wrapper readonly-wrapper">
             <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
             <textarea
               class="editor-area readonly"
@@ -218,40 +218,47 @@
              Description Section
              ============================== -->
         <section class="description-section">
-          <h2>About Base64 Encode</h2>
+          <h2>Base64 Encode and Decode</h2>
           <p>
-            Base64 Encode is a free online tool that lets you encode text to Base64 and decode Base64 back to
-            plain text. Whether you're working with API payloads, embedding images in HTML, or transmitting
-            binary data over text-based protocols, this tool handles it all instantly in your browser.
+            This Base64 tool converts plain text into Base64 and turns Base64 strings back into readable
+            text. It is useful when you need to prepare data for APIs, inspect encoded values from logs,
+            test request payloads, or move small snippets of data through text-only systems.
           </p>
           <p>
-            Everything runs locally — your data never leaves your device. There are no uploads, no server
-            processing, and no privacy concerns.
+            The conversion runs locally in your browser. The text you paste into the editor is not uploaded,
+            stored, or sent to a server, so you can use the tool for quick checks without changing your
+            workflow.
           </p>
 
           <h3>How to use</h3>
           <ol class="steps-list">
-            <li>Paste your text or Base64 string into the input editor on the left.</li>
-            <li>Click <strong>Encode</strong> to convert plain text into Base64, or <strong>Decode</strong> to convert Base64 back to plain text.</li>
-            <li>Review the output on the right. If the input is not valid Base64 when decoding, an error message will appear in the status bar.</li>
-            <li>Use the <strong>Copy</strong> button to copy the result to your clipboard, or <strong>Download</strong> to save it as a file.</li>
+            <li>Paste plain text or a Base64 value into the input editor.</li>
+            <li>Choose <strong>Encode</strong> to create a Base64 string, or <strong>Decode</strong> to read an existing Base64 string.</li>
+            <li>Check the output editor and status message. Invalid Base64 input is reported immediately when decoding fails.</li>
+            <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
           </ol>
 
           <h3>What is Base64?</h3>
           <p>
-            Base64 is a binary-to-text encoding scheme that represents binary data using a set of 64
-            printable ASCII characters. It is commonly used to encode data that needs to be stored or
-            transferred over media designed for text, such as embedding image data in HTML or CSS, sending
-            email attachments via MIME, or transmitting binary data in JSON payloads for APIs.
+            Base64 is a way to represent bytes as printable text. It uses letters, numbers, plus signs,
+            slashes, and padding characters so binary data can travel through systems that expect ordinary
+            text, such as JSON, HTML, email, configuration files, and command-line output.
           </p>
           <p>
-            The encoding works by mapping every 3 bytes of binary data to 4 ASCII characters, using the
-            characters A–Z, a–z, 0–9, +, and / (with = used for padding). While Base64-encoded data is
-            about 33% larger than the original, it is safe to use in any text-based context.
+            Base64 is an encoding format, not encryption. Anyone can decode it if they have the string.
+            It also increases the data size by roughly one third, so it is best for transport and embedding,
+            not for compression or secrecy.
+          </p>
+
+          <h3>Input notes</h3>
+          <p>
+            Encoding supports normal text, including Unicode characters. When decoding, make sure the input
+            is a complete Base64 string and does not include unrelated headers, labels, or extra text around
+            the encoded value.
           </p>
 
           <h3>Example</h3>
-          <p>Here is an example of encoding and decoding:</p>
+          <p>The same value can be encoded and decoded back to its original text:</p>
 
           <div class="code-block-wrapper">
             <button class="code-block-copy" id="example-copy" type="button">Copy</button>

@@ -7,19 +7,19 @@
   <meta name="description" content="Format, validate, and beautify your JSON data instantly. Free, fast, and runs entirely in your browser.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* Tool-page specific styles that extend the shared design system */
     .main-content { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
     .section-label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 8px; }
     .editor-wrapper { position: relative; }
-    .editor-area { width: 100%; min-height: 240px; padding: 16px; padding-left: 56px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; resize: vertical; outline: none; transition: border-color 0.2s, box-shadow 0.2s; tab-size: 2; }
+    .editor-area { width: 100%; min-height: 240px; padding: 16px; padding-left: 56px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; resize: vertical; outline: none; transition: border-color 0.2s, box-shadow 0.2s; tab-size: 2; }
     .editor-area::placeholder { color: var(--text-muted); }
-    .editor-area:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(99,102,241,0.1); }
-    .editor-area.readonly { background: var(--bg); cursor: default; }
-    .line-numbers { position: absolute; top: 0; left: 0; width: 44px; height: 100%; padding: 16px 8px 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: right; user-select: none; pointer-events: none; overflow: hidden; border-right: 1px solid var(--border); border-radius: 12px 0 0 12px; background: var(--code-bg); }
-    .line-numbers.readonly-bg { background: var(--bg); }
+    .editor-area:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(196,93,58,0.1); }
+    .editor-area.readonly { background: #f7f3ea; cursor: default; border-color: #d9cfc0; }
+    .line-numbers { position: absolute; top: 0; left: 0; width: 44px; height: 100%; padding: 16px 8px 16px 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-muted); text-align: right; user-select: none; pointer-events: none; overflow: hidden; border-right: 1px solid var(--border); border-radius: 12px 0 0 12px; background: var(--code-bg); }
+    .line-numbers.readonly-bg { background: #f7f3ea; }
     .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
     .btn-primary:active, .btn-secondary:active, .btn-ghost:active { transform: scale(0.97); }
     .btn-ghost.copied { color: var(--success); }
@@ -49,7 +49,7 @@
     .steps-list li { counter-increment: steps; display: flex; align-items: flex-start; gap: 14px; padding: 10px 0; color: var(--text-secondary); }
     .steps-list li::before { content: counter(steps); display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex-shrink: 0; background: var(--accent-light); color: var(--accent); font-size: 13px; font-weight: 700; border-radius: 8px; }
     .code-block-wrapper { position: relative; margin: 16px 0; }
-    .code-block { background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); overflow-x: auto; white-space: pre; }
+    .code-block { background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; line-height: 1.7; color: var(--text-primary); overflow-x: auto; white-space: pre; }
     .code-block-copy { position: absolute; top: 12px; right: 12px; padding: 6px 10px; font-size: 12px; font-weight: 500; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s; cursor: pointer; }
     .code-block-copy:hover { color: var(--accent); border-color: var(--accent); }
     .breadcrumb { display: flex; align-items: center; gap: 6px; padding: 24px 0; font-size: 13px; color: var(--text-muted); }
@@ -92,7 +92,6 @@
     </a>
     <div class="navbar-links">
       <a href="/">All Tools</a>
-      <a href="/blog">Blog</a>
     </div>
   </nav>
 
