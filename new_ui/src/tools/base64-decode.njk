@@ -1,0 +1,196 @@
+---
+title: "Base64 Decode — Coding.Tools"
+description: "Decode Base64 strings back to readable text directly in your browser. Fast, private, and free to use."
+toolTitle: "Base64 Decode"
+toolDescription: "Decode Base64 strings back to readable text, or encode text to Base64, and copy or download the result."
+category: "hash-cryptography"
+categoryName: "Hash & Cryptography"
+activeTool: "base64-decode"
+permalink: "/base64-decode.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Paste Base64 text to decode or enter plain text to encode..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-decode" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+        </svg>
+        Decode
+      </button>
+      <button class="btn btn-secondary" id="btn-encode" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        Encode
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Output Section -->
+  <div style="margin-top: 24px;">
+    <label class="section-label" for="output-editor">Output</label>
+    <div class="editor-wrapper readonly-wrapper">
+      <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
+      <textarea class="editor-area readonly" id="output-editor" spellcheck="false" readonly placeholder="Decoded or encoded result will appear here..."></textarea>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Base64 Decode</h2>
+  <p>This tool decodes Base64 encoded strings back into readable text. It is useful when you need to inspect encoded values from API responses, email headers, data URIs, authentication tokens, or any system that transmits data in Base64 format.</p>
+  <p>The decoding runs locally in your browser. The Base64 string you paste into the editor is not uploaded, stored, or sent to a server, so you can decode sensitive values safely without leaving your workflow.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Paste a Base64 encoded string into the input editor.</li>
+    <li>Click <strong>Decode</strong> to convert it back to readable text.</li>
+    <li>Check the output editor and status message. Invalid Base64 input is reported immediately when decoding fails.</li>
+    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
+  </ol>
+
+  <h3>What is Base64?</h3>
+  <p>Base64 is a way to represent bytes as printable text. It uses letters, numbers, plus signs, slashes, and padding characters so binary data can travel through systems that expect ordinary text, such as JSON, HTML, email, configuration files, and command-line output.</p>
+  <p>Base64 is an encoding format, not encryption. Anyone can decode it if they have the string. It also increases the data size by roughly one third, so it is best for transport and embedding, not for compression or secrecy.</p>
+
+  <h3>Input notes</h3>
+  <p>Make sure the input is a complete Base64 string and does not include unrelated headers, labels, or extra text around the encoded value. The decoder will report an error if the input contains invalid characters or is malformed.</p>
+
+  <h3>Example</h3>
+  <p>A Base64 encoded string can be decoded back to its original text:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Base64 Encoded Input ---
+SGVsbG8sIFdvcmxkIQ==
+
+--- Decoded Output ---
+Hello, World!</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor    = document.getElementById('input-editor');
+      var outputEditor   = document.getElementById('output-editor');
+      var btnDecode      = document.getElementById('btn-decode');
+      var btnEncode      = document.getElementById('btn-encode');
+      var btnClear       = document.getElementById('btn-clear');
+      var btnCopy        = document.getElementById('btn-copy');
+      var btnDownload    = document.getElementById('btn-download');
+      var statusMessage  = document.getElementById('status-message');
+      var statusDot      = document.getElementById('status-dot');
+      var statusText     = document.getElementById('status-text');
+      var charCount      = document.getElementById('char-count');
+      var lineCount      = document.getElementById('line-count');
+      var inputLineNums  = document.getElementById('input-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      btnDecode.onclick = function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        try {
+          outputEditor.value = decodeURIComponent(escape(atob(text)));
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Decoded successfully');
+          updateCounts();
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid Base64 string');
+        }
+      };
+
+      btnEncode.onclick = function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        try {
+          outputEditor.value = btoa(unescape(encodeURIComponent(text)));
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Encoded successfully');
+          updateCounts();
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Encoding failed: ' + e.message);
+        }
+      };
+
+      btnClear.addEventListener('click', function () {
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(outputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(outputEditor, 'base64-output.txt');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnDecode);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endblock %}
