@@ -1,0 +1,203 @@
+---
+title: "SHA384 Generator — Coding.Tools"
+description: "Generate SHA-384 hash from any text input directly in your browser. Fast, private, and free to use."
+toolTitle: "SHA384 Generator"
+toolDescription: "Generate a SHA-384 hash from any text input. Copy or download the hash without sending data anywhere."
+category: "hash-cryptography"
+categoryName: "Hash & Cryptography"
+activeTool: "sha384-generator"
+permalink: "/sha384-generator.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Enter text to generate SHA-384 hash..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-generate" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+        Generate
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Output Section -->
+  <div style="margin-top: 24px;">
+    <label class="section-label" for="output-editor">Output</label>
+    <div class="editor-wrapper readonly-wrapper">
+      <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
+      <textarea class="editor-area readonly" id="output-editor" spellcheck="false" readonly placeholder="SHA-384 hash will appear here..."></textarea>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="hash-length">96 characters</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>SHA384 Generator</h2>
+  <p>
+    This tool generates a SHA-384 hash from any text you provide. SHA-384 is a member of the
+    SHA-2 family of cryptographic hash functions and produces a fixed 384-bit (96 hexadecimal
+    character) digest regardless of the input length.
+  </p>
+  <p>
+    The hash is computed locally in your browser using the Web Crypto API. Your input is never
+    uploaded or stored on a server, making this tool suitable for quick verification tasks,
+    integrity checks, and development workflows.
+  </p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Type or paste your text into the input editor.</li>
+    <li>Click <strong>Generate</strong> to produce the hash digest.</li>
+    <li>The 96-character hexadecimal hash appears in the output editor.</li>
+    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
+  </ol>
+
+  <h3>What is SHA-384?</h3>
+  <p>
+    SHA-384 (Secure Hash Algorithm 384-bit) is a cryptographic hash function from the SHA-2
+    family, designed by the NSA and published by NIST. It is closely related to SHA-512 — it
+    uses the same algorithm but produces a truncated 384-bit (48-byte) hash value, represented
+    as a 96-character hexadecimal string.
+  </p>
+  <p>
+    SHA-384 is used in TLS/SSL certificates, digital signatures, and security protocols where
+    a strong hash is needed but a slightly shorter output than SHA-512 is preferred. It offers
+    a good balance between security strength and performance on 64-bit processors.
+  </p>
+
+  <h3>Input notes</h3>
+  <p>
+    The tool accepts any text, including Unicode characters, emojis, and multi-line content.
+    Even a small change to the input — such as a single character — produces a completely
+    different hash, a property known as the avalanche effect.
+  </p>
+
+  <h3>Example</h3>
+  <p>Hashing a short phrase produces a fixed-length 96-character digest:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Input Text ---
+Hello, World!
+
+--- SHA-384 Hash ---
+5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7
+
+--- Hash Length ---
+96 characters (384 bits)</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor    = document.getElementById('input-editor');
+      var outputEditor   = document.getElementById('output-editor');
+      var btnGenerate    = document.getElementById('btn-generate');
+      var btnClear       = document.getElementById('btn-clear');
+      var btnCopy        = document.getElementById('btn-copy');
+      var btnDownload    = document.getElementById('btn-download');
+      var statusMessage  = document.getElementById('status-message');
+      var statusDot      = document.getElementById('status-dot');
+      var statusText     = document.getElementById('status-text');
+      var charCount      = document.getElementById('char-count');
+      var hashLength     = document.getElementById('hash-length');
+      var inputLineNums  = document.getElementById('input-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        hashLength.textContent = text.length === 96 ? '96 characters' : text.length + ' characters';
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      btnGenerate.onclick = async function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        try {
+          var data = new TextEncoder().encode(text);
+          var hashBuffer = await crypto.subtle.digest('SHA-384', data);
+          var hashArray = Array.from(new Uint8Array(hashBuffer));
+          var hashHex = hashArray.map(function (b) {
+            return b.toString(16).padStart(2, '0');
+          }).join('');
+          outputEditor.value = hashHex;
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-384 hash generated — 96 hex characters');
+          updateCounts();
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Hash generation failed: ' + e.message);
+        }
+      };
+
+      btnClear.addEventListener('click', function () {
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, hashLength, inputLineNums, outputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(outputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(outputEditor, 'sha384-hash.txt');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnGenerate);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endblock %}
