@@ -73,29 +73,29 @@ permalink: "/fr/sha1-generator.html"
 {% block description %}
   <h2>{{ toolData.descTitle }}</h2>
   {% for para in toolData.descParas %}
-  <p>{{ para }}</p>
+  <p>{{ para | safe }}</p>
   {% endfor %}
 
   <h3>{{ toolData.howToUse }}</h3>
   <ol class="steps-list">
     {% for step in toolData.steps %}
-    <li>{{ step }}</li>
+    <li>{{ step | safe }}</li>
     {% endfor %}
   </ol>
 
   <h3>{{ toolData.whatIs }}</h3>
   {% for para in toolData.whatIsParas %}
-  <p>{{ para }}</p>
+  <p>{{ para | safe }}</p>
   {% endfor %}
 
   <h3>{{ toolData.inputNotes }}</h3>
-  <p>{{ toolData.inputNotesPara }}</p>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
 
   <h3>{{ toolData.example }}</h3>
-  <p>{{ toolData.examplePara }}</p>
+  <p>{{ toolData.examplePara | safe }}</p>
   <div class="code-block-wrapper">
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
-    <pre class="code-block" id="example-code">{{ toolData.exampleCode }}</pre>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
   </div>
 {% endblock %}
 

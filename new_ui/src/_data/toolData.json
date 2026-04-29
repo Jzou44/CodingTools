@@ -1,0 +1,2297 @@
+{
+  "en": {
+    "md5-generator": {
+      "title": "MD5 Generator — Coding.Tools",
+      "description": "Generate MD5 hash from any text input directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "MD5 Generator",
+      "toolDescription": "Generate an MD5 hash from any text input. Copy or download the hash without sending data anywhere.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Enter text to generate MD5 hash...",
+      "outputPlaceholder": "MD5 hash will appear here...",
+      "hashLength": 32,
+      "descTitle": "MD5 Generator",
+      "descParas": [
+        "This MD5 tool generates a 128-bit hash digest from any text input you provide. It is useful for verifying data integrity, creating checksums, generating unique identifiers, or comparing file contents without revealing the original data.",
+        "The hash generation runs locally in your browser. The text you paste into the input editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste or type your text into the input editor.",
+        "Click <strong>Generate MD5</strong> to create the hash digest.",
+        "Check the output editor for the 32-character hexadecimal MD5 hash.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is MD5?",
+      "whatIsParas": [
+        "MD5 (Message-Digest Algorithm 5) is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value. It is typically expressed as a 32-character hexadecimal number. MD5 was designed by Ronald Rivest in 1991 to replace an earlier hash function, MD4.",
+        "While MD5 is no longer considered secure for cryptographic purposes due to known vulnerabilities, it remains useful for checksums, file verification, and non-security applications where speed and simplicity are more important than collision resistance."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool supports any text input, including Unicode characters. The same input will always produce the same MD5 hash, making it deterministic. Even a small change in the input text will produce a completely different hash (avalanche effect).",
+      "example": "Example",
+      "examplePara": "The same value can be hashed to produce a consistent MD5 digest:",
+      "exampleCode": "--- Input Text ---\nHello, World!\n\n--- MD5 Hash ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Another Example ---\nCoding.Tools\n\n--- MD5 Hash ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "SHA1 Generator — Coding.Tools",
+      "description": "Generate SHA-1 hash from any text input directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "SHA1 Generator",
+      "toolDescription": "Generate a SHA-1 hash from any text input. Copy or download the hash without sending data anywhere.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Enter text to generate its SHA-1 hash...",
+      "outputPlaceholder": "SHA-1 hash will appear here...",
+      "hashLength": 40,
+      "descTitle": "SHA1 Generator",
+      "descParas": [
+        "This SHA-1 generator creates a 160-bit hash digest from any text you enter. Paste or type your input, press Generate, and the tool produces the 40-character hexadecimal SHA-1 hash instantly in your browser.",
+        "The hashing runs locally using the Web Crypto API built into every modern browser. Your input is never uploaded or stored on a server, so you can generate hashes privately and quickly without changing your workflow."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste text into the input editor.",
+        "Click <strong>Generate SHA1</strong> to compute the hash digest.",
+        "The 40-character hexadecimal hash appears in the output editor with a confirmation message.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is SHA-1?",
+      "whatIsParas": [
+        "SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function that produces a 160-bit (20-byte) hash value, typically rendered as a 40-character hexadecimal string. It was designed by the NSA and published by NIST in 1995.",
+        "SHA-1 is deterministic: the same input always produces the same hash. It is a one-way function, meaning you cannot reverse a hash to recover the original input. While SHA-1 is no longer considered secure for digital signatures or certificate verification, it remains widely used for checksums, content addressing, and non-security-critical fingerprinting."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool supports any text input, including Unicode characters and multi-line content. Even a small change to the input produces a completely different hash, a property known as the avalanche effect.",
+      "example": "Example",
+      "examplePara": "Here is how a short text message maps to its SHA-1 hash:",
+      "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "SHA-256 Generator — Coding.Tools",
+      "description": "Generate SHA-256 hash from any text input directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "SHA-256 Generator",
+      "toolDescription": "Generate a SHA-256 hash from any text input. Copy or download the hash without sending data anywhere.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Enter text to generate SHA-256 hash...",
+      "outputPlaceholder": "SHA-256 hash will appear here...",
+      "hashLength": 64,
+      "descTitle": "SHA-256 Generator",
+      "descParas": [
+        "This tool generates a SHA-256 hash from any text you provide. SHA-256 is a member of the SHA-2 family of cryptographic hash functions and produces a fixed 256-bit (64 hexadecimal character) digest regardless of the input length.",
+        "The hash is computed locally in your browser using the Web Crypto API. Your input is never uploaded or stored on a server, making this tool suitable for quick verification tasks, integrity checks, and development workflows."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste your text into the input editor.",
+        "Click <strong>Generate</strong> to produce the hash digest.",
+        "The 64-character hexadecimal hash appears in the output editor.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is SHA-256?",
+      "whatIsParas": [
+        "SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function from the SHA-2 family, designed by the NSA and published by NIST. It produces a fixed 256-bit (32-byte) hash value, represented as a 64-character hexadecimal string.",
+        "SHA-256 is widely used in blockchain technology (Bitcoin), digital signatures, TLS/SSL certificates, and data integrity verification. It is considered secure for most cryptographic applications and is one of the most trusted hash functions available."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool accepts any text, including Unicode characters, emojis, and multi-line content. Even a small change to the input — such as a single character — produces a completely different hash, a property known as the avalanche effect.",
+      "example": "Example",
+      "examplePara": "Hashing a short phrase produces a fixed-length 64-character digest:",
+      "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-256 Hash ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "SHA384 Generator — Coding.Tools",
+      "description": "Generate SHA-384 hash from any text input directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "SHA384 Generator",
+      "toolDescription": "Generate a SHA-384 hash from any text input. Copy or download the hash without sending data anywhere.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Enter text to generate SHA-384 hash...",
+      "outputPlaceholder": "SHA-384 hash will appear here...",
+      "hashLength": 96,
+      "descTitle": "SHA384 Generator",
+      "descParas": [
+        "This tool generates a SHA-384 hash from any text you provide. SHA-384 is a member of the SHA-2 family of cryptographic hash functions and produces a fixed 384-bit (96 hexadecimal character) digest regardless of the input length.",
+        "The hash is computed locally in your browser using the Web Crypto API. Your input is never uploaded or stored on a server, making this tool suitable for quick verification tasks, integrity checks, and development workflows."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste your text into the input editor.",
+        "Click <strong>Generate</strong> to produce the hash digest.",
+        "The 96-character hexadecimal hash appears in the output editor.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is SHA-384?",
+      "whatIsParas": [
+        "SHA-384 (Secure Hash Algorithm 384-bit) is a cryptographic hash function from the SHA-2 family, designed by the NSA and published by NIST. It is closely related to SHA-512 — it uses the same algorithm but produces a truncated 384-bit (48-byte) hash value, represented as a 96-character hexadecimal string.",
+        "SHA-384 is used in TLS/SSL certificates, digital signatures, and security protocols where a strong hash is needed but a slightly shorter output than SHA-512 is preferred. It offers a good balance between security strength and performance on 64-bit processors."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool accepts any text, including Unicode characters, emojis, and multi-line content. Even a small change to the input — such as a single character — produces a completely different hash, a property known as the avalanche effect.",
+      "example": "Example",
+      "examplePara": "Hashing a short phrase produces a fixed-length 96-character digest:",
+      "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "SHA-512 Generator — Coding.Tools",
+      "description": "Generate SHA-512 hash from any text input directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "SHA-512 Generator",
+      "toolDescription": "Generate a SHA-512 hash from any text input. Copy or download the hash without sending data anywhere.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Enter text to generate SHA-512 hash...",
+      "outputPlaceholder": "SHA-512 hash will appear here...",
+      "hashLength": 128,
+      "descTitle": "SHA-512 Generator",
+      "descParas": [
+        "This tool generates a SHA-512 hash from any text you provide. SHA-512 is a member of the SHA-2 family of cryptographic hash functions and produces a fixed 512-bit (128 hexadecimal character) digest regardless of the input length.",
+        "The hash is computed locally in your browser using the Web Crypto API. Your input is never uploaded or stored on a server, making this tool suitable for quick verification tasks, integrity checks, and development workflows."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste your text into the input editor.",
+        "Click <strong>Generate</strong> to produce the hash digest.",
+        "The 128-character hexadecimal hash appears in the output editor.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is SHA-512?",
+      "whatIsParas": [
+        "SHA-512 (Secure Hash Algorithm 512-bit) is a cryptographic hash function from the SHA-2 family, designed by the NSA and published by NIST. It produces a fixed 512-bit (64-byte) hash value, represented as a 128-character hexadecimal string.",
+        "SHA-512 is used in high-security applications including digital signatures, certificate authorities, password hashing, and blockchain systems. It is considered one of the strongest hash functions available and is resistant to all known practical attacks."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool accepts any text, including Unicode characters, emojis, and multi-line content. Even a small change to the input — such as a single character — produces a completely different hash, a property known as the avalanche effect.",
+      "example": "Example",
+      "examplePara": "Hashing a short phrase produces a fixed-length 128-character digest:",
+      "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Base64 Encode and Decode — Coding.Tools",
+      "description": "Encode text to Base64 or decode Base64 back to readable text directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "Base64 Encode",
+      "toolDescription": "Convert text to Base64, decode Base64 back to readable text, and copy or download the result without sending data anywhere.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Enter text to encode or paste Base64 to decode...",
+      "outputPlaceholder": "Encoded or decoded result will appear here...",
+      "descTitle": "Base64 Encode and Decode",
+      "descParas": [
+        "This Base64 tool converts plain text into Base64 and turns Base64 strings back into readable text. It is useful when you need to prepare data for APIs, inspect encoded values from logs, test request payloads, or move small snippets of data through text-only systems.",
+        "The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste plain text or a Base64 value into the input editor.",
+        "Choose <strong>Encode</strong> to create a Base64 string, or <strong>Decode</strong> to read an existing Base64 string.",
+        "Check the output editor and status message. Invalid Base64 input is reported immediately when decoding fails.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is Base64?",
+      "whatIsParas": [
+        "Base64 is a way to represent bytes as printable text. It uses letters, numbers, plus signs, slashes, and padding characters so binary data can travel through systems that expect ordinary text, such as JSON, HTML, email, configuration files, and command-line output.",
+        "Base64 is an encoding format, not encryption. Anyone can decode it if they have the string. It also increases the data size by roughly one third, so it is best for transport and embedding, not for compression or secrecy."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "Encoding supports normal text, including Unicode characters. When decoding, make sure the input is a complete Base64 string and does not include unrelated headers, labels, or extra text around the encoded value.",
+      "example": "Example",
+      "examplePara": "The same value can be encoded and decoded back to its original text:",
+      "exampleCode": "--- Plain Text ---\nHello, World!\n\n--- Base64 Encoded ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decoded Back ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Base64 Decode — Coding.Tools",
+      "description": "Decode Base64 strings back to readable text directly in your browser. Fast, private, and free to use.",
+      "toolTitle": "Base64 Decode",
+      "toolDescription": "Decode Base64 strings back to readable text, or encode text to Base64, and copy or download the result.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "Paste Base64 text to decode or enter plain text to encode...",
+      "outputPlaceholder": "Decoded or encoded result will appear here...",
+      "descTitle": "Base64 Decode",
+      "descParas": [
+        "This tool decodes Base64 encoded strings back into readable text. It is useful when you need to inspect encoded values from API responses, email headers, data URIs, authentication tokens, or any system that transmits data in Base64 format.",
+        "The decoding runs locally in your browser. The Base64 string you paste into the editor is not uploaded, stored, or sent to a server, so you can decode sensitive values safely without leaving your workflow."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste a Base64 encoded string into the input editor.",
+        "Click <strong>Decode</strong> to convert it back to readable text.",
+        "Check the output editor and status message. Invalid Base64 input is reported immediately when decoding fails.",
+        "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      ],
+      "whatIs": "What is Base64?",
+      "whatIsParas": [
+        "Base64 is a way to represent bytes as printable text. It uses letters, numbers, plus signs, slashes, and padding characters so binary data can travel through systems that expect ordinary text, such as JSON, HTML, email, configuration files, and command-line output.",
+        "Base64 is an encoding format, not encryption. Anyone can decode it if they have the string. It also increases the data size by roughly one third, so it is best for transport and embedding, not for compression or secrecy."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "Make sure the input is a complete Base64 string and does not include unrelated headers, labels, or extra text around the encoded value. The decoder will report an error if the input contains invalid characters or is malformed.",
+      "example": "Example",
+      "examplePara": "A Base64 encoded string can be decoded back to its original text:",
+      "exampleCode": "--- Base64 Encoded Input ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decoded Output ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "Password Generator — Coding.Tools",
+      "description": "Generate strong, random passwords with customizable length and character types. Secure password generation that runs entirely in your browser.",
+      "toolTitle": "Password Generator",
+      "toolDescription": "Create strong, random passwords with configurable length and character types. Everything runs locally in your browser — nothing is sent to a server.",
+      "categoryName": "Hash & Cryptography",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "Click Generate to create a password...",
+      "descTitle": "Password Generator",
+      "descParas": [
+        "This tool creates random passwords using a cryptographically secure random number generator built into your browser. You can control the password length and which character types are included, then copy or download the result.",
+        "The password is generated locally. It is never transmitted over the network or stored anywhere outside of this page."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Set the desired password length using the slider (4 to 128 characters).",
+        "Choose which character types to include: uppercase, lowercase, numbers, and symbols.",
+        "Click <strong>Generate</strong> to create a new random password.",
+        "Use <strong>Copy</strong> to save it to the clipboard, or <strong>Download</strong> to save it as a text file."
+      ],
+      "whatIs": "Why use a random password?",
+      "whatIsParas": [
+        "Predictable passwords are the most common way accounts get compromised. A truly random password with enough length and character variety is resistant to brute-force and dictionary attacks. Using a unique password for each service limits the damage if one account is breached.",
+        "The generator uses <code>crypto.getRandomValues()</code>, which is part of the Web Crypto API. This provides cryptographic-quality randomness directly from the browser, without relying on weaker <code>Math.random()</code> calls. For managing many passwords, consider pairing this generator with a dedicated password manager."
+      ],
+      "inputNotes": "Security notes",
+      "inputNotesPara": "The generator uses cryptographic-quality randomness from the browser's Web Crypto API. Passwords are never sent over the network. For best security, use all character types and a length of 16 or more characters.",
+      "example": "Example",
+      "examplePara": "A 16-character password with all character types enabled might look like this:",
+      "exampleCode": "--- Settings ---\nLength: 16\nUppercase: A-Z\nLowercase: a-z\nNumbers:   0-9\nSymbols:   !@#$%^&*\n\n--- Generated Password ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "cn": {
+    "md5-generator": {
+      "title": "MD5 生成器 — Coding.Tools",
+      "description": "在浏览器中直接生成任意文本的 MD5 哈希值。快速、私密、免费使用。",
+      "toolTitle": "MD5 生成器",
+      "toolDescription": "从任意文本输入生成 MD5 哈希值。复制或下载哈希值，无需发送数据。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "输入文本以生成 MD5 哈希...",
+      "outputPlaceholder": "MD5 哈希值将显示在此处...",
+      "hashLength": 32,
+      "descTitle": "MD5 生成器",
+      "descParas": [
+        "此 MD5 工具根据您提供的任意文本输入生成 128 位哈希摘要。它可用于验证数据完整性、创建校验和、生成唯一标识符或比较文件内容而不泄露原始数据。",
+        "哈希生成在您的浏览器中本地运行。您粘贴到输入编辑器中的文本不会被上传、存储或发送到服务器，因此您可以在不改变工作流程的情况下快速使用此工具。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将文本粘贴或输入到输入编辑器中。",
+        "点击<strong>生成 MD5</strong>以创建哈希摘要。",
+        "在输出编辑器中查看 32 个字符的十六进制 MD5 哈希值。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 MD5？",
+      "whatIsParas": [
+        "MD5（消息摘要算法第5版）是一种广泛使用的加密哈希函数，产生 128 位（16 字节）的哈希值。它通常表示为 32 个字符的十六进制数。MD5 由 Ronald Rivest 于 1991 年设计，用于替代早期的哈希函数 MD4。",
+        "虽然 MD5 由于已知漏洞不再被认为适用于加密目的，但它仍然适用于校验和、文件验证以及速度和简单性比抗碰撞性更重要的非安全应用。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具支持任何文本输入，包括 Unicode 字符。相同的输入始终会产生相同的 MD5 哈希值，因此它是确定性的。即使输入文本的微小变化也会产生完全不同的哈希值（雪崩效应）。",
+      "example": "示例",
+      "examplePara": "相同的值可以被哈希生成一致的 MD5 摘要：",
+      "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- MD5 哈希 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 另一个示例 ---\nCoding.Tools\n\n--- MD5 哈希 ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "SHA1 生成器 — Coding.Tools",
+      "description": "在浏览器中直接生成任意文本的 SHA-1 哈希值。快速、私密、免费使用。",
+      "toolTitle": "SHA1 生成器",
+      "toolDescription": "从任意文本输入生成 SHA-1 哈希值。复制或下载哈希值，无需发送数据。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "输入文本以生成 SHA-1 哈希...",
+      "outputPlaceholder": "SHA-1 哈希值将显示在此处...",
+      "hashLength": 40,
+      "descTitle": "SHA1 生成器",
+      "descParas": [
+        "此 SHA-1 生成器根据您输入的任意文本创建 160 位哈希摘要。粘贴或输入文本，按下生成，工具会在您的浏览器中即时生成 40 个字符的十六进制 SHA-1 哈希值。",
+        "哈希运算在本地使用每个现代浏览器内置的 Web Crypto API 运行。您的输入不会被上传或存储在服务器上，因此您可以私密、快速地生成哈希值。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中输入或粘贴文本。",
+        "点击<strong>生成 SHA1</strong>以计算哈希摘要。",
+        "40 个字符的十六进制哈希值将显示在输出编辑器中，并显示确认消息。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 SHA-1？",
+      "whatIsParas": [
+        "SHA-1（安全哈希算法 1）是一种加密哈希函数，产生 160 位（20 字节）的哈希值，通常呈现为 40 个字符的十六进制字符串。它由 NSA 设计，NIST 于 1995 年发布。",
+        "SHA-1 是确定性的：相同的输入始终产生相同的哈希值。它是一个单向函数，意味着您无法反转哈希来恢复原始输入。虽然 SHA-1 不再被认为适用于数字签名或证书验证，但它仍广泛用于校验和、内容寻址和非安全关键的指纹识别。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具支持任何文本输入，包括 Unicode 字符和多行内容。即使对输入的微小更改也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+      "example": "示例",
+      "examplePara": "以下是一个短文本消息如何映射到其 SHA-1 哈希值：",
+      "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-1 哈希 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "SHA-256 生成器 — Coding.Tools",
+      "description": "在浏览器中直接生成任意文本的 SHA-256 哈希值。快速、私密、免费使用。",
+      "toolTitle": "SHA-256 生成器",
+      "toolDescription": "从任意文本输入生成 SHA-256 哈希值。复制或下载哈希值，无需发送数据。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "输入文本以生成 SHA-256 哈希...",
+      "outputPlaceholder": "SHA-256 哈希值将显示在此处...",
+      "hashLength": 64,
+      "descTitle": "SHA-256 生成器",
+      "descParas": [
+        "此工具根据您提供的任意文本生成 SHA-256 哈希值。SHA-256 是 SHA-2 系列加密哈希函数的成员，无论输入长度如何，都会产生固定的 256 位（64 个十六进制字符）摘要。",
+        "哈希在您的浏览器中使用 Web Crypto API 本地计算。您的输入不会被上传或存储在服务器上，使此工具适用于快速验证任务、完整性检查和开发工作流程。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中输入或粘贴文本。",
+        "点击<strong>生成</strong>以产生哈希摘要。",
+        "64 个字符的十六进制哈希值将显示在输出编辑器中。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 SHA-256？",
+      "whatIsParas": [
+        "SHA-256（安全哈希算法 256 位）是 SHA-2 系列的加密哈希函数，由 NSA 设计，NIST 发布。它产生固定的 256 位（32 字节）哈希值，表示为 64 个字符的十六进制字符串。",
+        "SHA-256 广泛应用于区块链技术（比特币）、数字签名、TLS/SSL 证书和数据完整性验证。它被认为对大多数加密应用是安全的，是最受信任的哈希函数之一。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具接受任何文本，包括 Unicode 字符、表情符号和多行内容。即使对输入的微小更改（如单个字符）也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+      "example": "示例",
+      "examplePara": "对短语进行哈希会产生固定长度的 64 个字符摘要：",
+      "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-256 哈希 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "SHA384 生成器 — Coding.Tools",
+      "description": "在浏览器中直接生成任意文本的 SHA-384 哈希值。快速、私密、免费使用。",
+      "toolTitle": "SHA384 生成器",
+      "toolDescription": "从任意文本输入生成 SHA-384 哈希值。复制或下载哈希值，无需发送数据。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "输入文本以生成 SHA-384 哈希...",
+      "outputPlaceholder": "SHA-384 哈希值将显示在此处...",
+      "hashLength": 96,
+      "descTitle": "SHA384 生成器",
+      "descParas": [
+        "此工具根据您提供的任意文本生成 SHA-384 哈希值。SHA-384 是 SHA-2 系列加密哈希函数的成员，无论输入长度如何，都会产生固定的 384 位（96 个十六进制字符）摘要。",
+        "哈希在您的浏览器中使用 Web Crypto API 本地计算。您的输入不会被上传或存储在服务器上，使此工具适用于快速验证任务、完整性检查和开发工作流程。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中输入或粘贴文本。",
+        "点击<strong>生成</strong>以产生哈希摘要。",
+        "96 个字符的十六进制哈希值将显示在输出编辑器中。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 SHA-384？",
+      "whatIsParas": [
+        "SHA-384（安全哈希算法 384 位）是 SHA-2 系列的加密哈希函数，由 NSA 设计，NIST 发布。它与 SHA-512 密切相关——使用相同的算法，但产生截断的 384 位（48 字节）哈希值，表示为 96 个字符的十六进制字符串。",
+        "SHA-384 用于 TLS/SSL 证书、数字签名和安全协议，这些场景需要强哈希但偏好比 SHA-512 稍短的输出。它在安全强度和 64 位处理器性能之间提供了良好的平衡。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具接受任何文本，包括 Unicode 字符、表情符号和多行内容。即使对输入的微小更改（如单个字符）也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+      "example": "示例",
+      "examplePara": "对短语进行哈希会产生固定长度的 96 个字符摘要：",
+      "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-384 哈希 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "SHA-512 生成器 — Coding.Tools",
+      "description": "在浏览器中直接生成任意文本的 SHA-512 哈希值。快速、私密、免费使用。",
+      "toolTitle": "SHA-512 生成器",
+      "toolDescription": "从任意文本输入生成 SHA-512 哈希值。复制或下载哈希值，无需发送数据。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "输入文本以生成 SHA-512 哈希...",
+      "outputPlaceholder": "SHA-512 哈希值将显示在此处...",
+      "hashLength": 128,
+      "descTitle": "SHA-512 生成器",
+      "descParas": [
+        "此工具根据您提供的任意文本生成 SHA-512 哈希值。SHA-512 是 SHA-2 系列加密哈希函数的成员，无论输入长度如何，都会产生固定的 512 位（128 个十六进制字符）摘要。",
+        "哈希在您的浏览器中使用 Web Crypto API 本地计算。您的输入不会被上传或存储在服务器上，使此工具适用于快速验证任务、完整性检查和开发工作流程。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中输入或粘贴文本。",
+        "点击<strong>生成</strong>以产生哈希摘要。",
+        "128 个字符的十六进制哈希值将显示在输出编辑器中。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 SHA-512？",
+      "whatIsParas": [
+        "SHA-512（安全哈希算法 512 位）是 SHA-2 系列的加密哈希函数，由 NSA 设计，NIST 发布。它产生固定的 512 位（64 字节）哈希值，表示为 128 个字符的十六进制字符串。",
+        "SHA-512 用于高安全性应用，包括数字签名、证书颁发机构、密码哈希和区块链系统。它被认为是最强的哈希函数之一，能够抵抗所有已知的实际攻击。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具接受任何文本，包括 Unicode 字符、表情符号和多行内容。即使对输入的微小更改（如单个字符）也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+      "example": "示例",
+      "examplePara": "对短语进行哈希会产生固定长度的 128 个字符摘要：",
+      "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-512 哈希 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Base64 编码解码 — Coding.Tools",
+      "description": "在浏览器中直接将文本编码为 Base64 或将 Base64 解码回可读文本。快速、私密、免费使用。",
+      "toolTitle": "Base64 编码",
+      "toolDescription": "将文本转换为 Base64，将 Base64 解码回可读文本，并复制或下载结果。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "输入文本进行编码或粘贴 Base64 进行解码...",
+      "outputPlaceholder": "编码或解码结果将显示在此处...",
+      "descTitle": "Base64 编码解码",
+      "descParas": [
+        "此 Base64 工具将纯文本转换为 Base64，并将 Base64 字符串转换回可读文本。当您需要为 API 准备数据、从日志中检查编码值、测试请求负载或通过纯文本系统传输小段数据时，它非常有用。",
+        "转换在您的浏览器中本地运行。您粘贴到编辑器中的文本不会被上传、存储或发送到服务器，因此您可以在不改变工作流程的情况下快速使用此工具。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将纯文本或 Base64 值粘贴到输入编辑器中。",
+        "选择<strong>编码</strong>创建 Base64 字符串，或<strong>解码</strong>读取现有的 Base64 字符串。",
+        "检查输出编辑器和状态消息。当解码失败时，无效的 Base64 输入会立即报告。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 Base64？",
+      "whatIsParas": [
+        "Base64 是一种将字节表示为可打印文本的方式。它使用字母、数字、加号、斜杠和填充字符，使二进制数据能够通过期望普通文本的系统传输，如 JSON、HTML、电子邮件、配置文件和命令行输出。",
+        "Base64 是一种编码格式，不是加密。任何人都可以在获得字符串的情况下解码它。它还会将数据大小增加大约三分之一，因此最适合传输和嵌入，而非压缩或保密。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "编码支持普通文本，包括 Unicode 字符。解码时，请确保输入是完整的 Base64 字符串，不包含不相关的标题、标签或编码值周围的额外文本。",
+      "example": "示例",
+      "examplePara": "相同的值可以被编码并解码回原始文本：",
+      "exampleCode": "--- 纯文本 ---\nHello, World!\n\n--- Base64 编码 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 解码还原 ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Base64 解码 — Coding.Tools",
+      "description": "在浏览器中直接将 Base64 字符串解码回可读文本。快速、私密、免费使用。",
+      "toolTitle": "Base64 解码",
+      "toolDescription": "将 Base64 字符串解码回可读文本，或将文本编码为 Base64，并复制或下载结果。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "粘贴 Base64 文本进行解码或输入纯文本进行编码...",
+      "outputPlaceholder": "解码或编码结果将显示在此处...",
+      "descTitle": "Base64 解码",
+      "descParas": [
+        "此工具将 Base64 编码的字符串解码回可读文本。当您需要检查 API 响应、电子邮件头、数据 URI、身份验证令牌或任何以 Base64 格式传输数据的系统中的编码值时，它非常有用。",
+        "解码在您的浏览器中本地运行。您粘贴到编辑器中的 Base64 字符串不会被上传、存储或发送到服务器，因此您可以安全地解码敏感值。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将 Base64 编码的字符串粘贴到输入编辑器中。",
+        "点击<strong>解码</strong>将其转换回可读文本。",
+        "检查输出编辑器和状态消息。当解码失败时，无效的 Base64 输入会立即报告。",
+        "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      ],
+      "whatIs": "什么是 Base64？",
+      "whatIsParas": [
+        "Base64 是一种将字节表示为可打印文本的方式。它使用字母、数字、加号、斜杠和填充字符，使二进制数据能够通过期望普通文本的系统传输，如 JSON、HTML、电子邮件、配置文件和命令行输出。",
+        "Base64 是一种编码格式，不是加密。任何人都可以在获得字符串的情况下解码它。它还会将数据大小增加大约三分之一，因此最适合传输和嵌入，而非压缩或保密。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "请确保输入是完整的 Base64 字符串，不包含不相关的标题、标签或编码值周围的额外文本。如果输入包含无效字符或格式错误，解码器将报告错误。",
+      "example": "示例",
+      "examplePara": "Base64 编码的字符串可以解码回原始文本：",
+      "exampleCode": "--- Base64 编码输入 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 解码输出 ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "密码生成器 — Coding.Tools",
+      "description": "生成具有可自定义长度和字符类型的强随机密码。完全在浏览器中运行的安全密码生成。",
+      "toolTitle": "密码生成器",
+      "toolDescription": "创建具有可配置长度和字符类型的强随机密码。所有操作都在浏览器中本地运行——不会发送任何数据到服务器。",
+      "categoryName": "哈希与加密",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "点击生成以创建密码...",
+      "descTitle": "密码生成器",
+      "descParas": [
+        "此工具使用浏览器内置的加密安全随机数生成器创建随机密码。您可以控制密码长度和包含哪些字符类型，然后复制或下载结果。",
+        "密码在本地生成。它不会通过网络传输或存储在此页面之外的任何地方。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "使用滑块设置所需的密码长度（4 到 128 个字符）。",
+        "选择要包含的字符类型：大写字母、小写字母、数字和符号。",
+        "点击<strong>生成</strong>创建新的随机密码。",
+        "使用<strong>复制</strong>保存到剪贴板，或<strong>下载</strong>保存为文本文件。"
+      ],
+      "whatIs": "为什么使用随机密码？",
+      "whatIsParas": [
+        "可预测的密码是账户被攻破的最常见原因。具有足够长度和字符多样性的真正随机密码可以抵抗暴力破解和字典攻击。为每个服务使用唯一密码可以限制一个账户被攻破时的损失。",
+        "生成器使用 <code>crypto.getRandomValues()</code>，这是 Web Crypto API 的一部分。它直接从浏览器提供加密质量的随机性，不依赖较弱的 <code>Math.random()</code> 调用。要管理多个密码，请考虑将此生成器与专用密码管理器配合使用。"
+      ],
+      "inputNotes": "安全说明",
+      "inputNotesPara": "生成器使用浏览器 Web Crypto API 的加密质量随机性。密码不会通过网络发送。为获得最佳安全性，请使用所有字符类型且长度至少为 16 个字符。",
+      "example": "示例",
+      "examplePara": "启用所有字符类型的 16 个字符密码可能如下所示：",
+      "exampleCode": "--- 设置 ---\n长度：16\n大写字母：A-Z\n小写字母：a-z\n数字：0-9\n符号：!@#$%^&*\n\n--- 生成的密码 ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "tw": {
+    "md5-generator": {
+      "title": "MD5 產生器 — Coding.Tools",
+      "description": "在瀏覽器中直接產生任意文字的 MD5 雜湊值。快速、私密、免費使用。",
+      "toolTitle": "MD5 產生器",
+      "toolDescription": "從任意文字輸入產生 MD5 雜湊值。複製或下載雜湊值，無需傳送資料。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "輸入文字以產生 MD5 雜湊...",
+      "outputPlaceholder": "MD5 雜湊值將顯示在此處...",
+      "hashLength": 32,
+      "descTitle": "MD5 產生器",
+      "descParas": [
+        "此 MD5 工具根據您提供的任意文字輸入產生 128 位元雜湊摘要。它可用於驗證資料完整性、建立檢查碼、產生唯一識別碼或比較檔案內容而不洩露原始資料。",
+        "雜湊產生在您的瀏覽器中本機執行。您貼上到輸入編輯器中的文字不會被上傳、儲存或傳送到伺服器，因此您可以在不改變工作流程的情況下快速使用此工具。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "將文字貼上或輸入到輸入編輯器中。",
+        "點擊<strong>產生 MD5</strong>以建立雜湊摘要。",
+        "在輸出編輯器中查看 32 個字元的十六進位 MD5 雜湊值。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 MD5？",
+      "whatIsParas": [
+        "MD5（訊息摘要演算法第5版）是一種廣泛使用的加密雜湊函數，產生 128 位元（16 位元組）的雜湊值。它通常表示為 32 個字元的十六進位數。MD5 由 Ronald Rivest 於 1991 年設計，用於替代早期的雜湊函數 MD4。",
+        "雖然 MD5 由於已知漏洞不再被認為適用於加密目的，但它仍然適用於檢查碼、檔案驗證以及速度和簡易性比抗碰撞性更重要的非安全應用。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具支援任何文字輸入，包括 Unicode 字元。相同的輸入始終會產生相同的 MD5 雜湊值，因此它是確定性的。即使輸入文字的微小變化也會產生完全不同的雜湊值（雪崩效應）。",
+      "example": "範例",
+      "examplePara": "相同的值可以被雜湊產生一致的 MD5 摘要：",
+      "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- MD5 雜湊 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 另一個範例 ---\nCoding.Tools\n\n--- MD5 雜湊 ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "SHA1 產生器 — Coding.Tools",
+      "description": "在瀏覽器中直接產生任意文字的 SHA-1 雜湊值。快速、私密、免費使用。",
+      "toolTitle": "SHA1 產生器",
+      "toolDescription": "從任意文字輸入產生 SHA-1 雜湊值。複製或下載雜湊值，無需傳送資料。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "輸入文字以產生 SHA-1 雜湊...",
+      "outputPlaceholder": "SHA-1 雜湊值將顯示在此處...",
+      "hashLength": 40,
+      "descTitle": "SHA1 產生器",
+      "descParas": [
+        "此 SHA-1 產生器根據您輸入的任意文字建立 160 位元雜湊摘要。貼上或輸入文字，按下產生，工具會在您的瀏覽器中即時產生 40 個字元的十六進位 SHA-1 雜湊值。",
+        "雜湊運算在本機使用每個現代瀏覽器內建的 Web Crypto API 執行。您的輸入不會被上傳或儲存在伺服器上，因此您可以私密、快速地產生雜湊值。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中輸入或貼上文字。",
+        "點擊<strong>產生 SHA1</strong>以計算雜湊摘要。",
+        "40 個字元的十六進位雜湊值將顯示在輸出編輯器中，並顯示確認訊息。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 SHA-1？",
+      "whatIsParas": [
+        "SHA-1（安全雜湊演算法 1）是一種加密雜湊函數，產生 160 位元（20 位元組）的雜湊值，通常呈現為 40 個字元的十六進位字串。它由 NSA 設計，NIST 於 1995 年發布。",
+        "SHA-1 是確定性的：相同的輸入始終產生相同的雜湊值。它是一個單向函數，意味著您無法反轉雜湊來恢復原始輸入。雖然 SHA-1 不再被認為適用於數位簽章或憑證驗證，但它仍廣泛用於檢查碼、內容定址和非安全關鍵的指紋識別。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具支援任何文字輸入，包括 Unicode 字元和多行內容。即使對輸入的微小更改也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+      "example": "範例",
+      "examplePara": "以下是一個短文字訊息如何對應到其 SHA-1 雜湊值：",
+      "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-1 雜湊 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "SHA-256 產生器 — Coding.Tools",
+      "description": "在瀏覽器中直接產生任意文字的 SHA-256 雜湊值。快速、私密、免費使用。",
+      "toolTitle": "SHA-256 產生器",
+      "toolDescription": "從任意文字輸入產生 SHA-256 雜湊值。複製或下載雜湊值，無需傳送資料。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "輸入文字以產生 SHA-256 雜湊...",
+      "outputPlaceholder": "SHA-256 雜湊值將顯示在此處...",
+      "hashLength": 64,
+      "descTitle": "SHA-256 產生器",
+      "descParas": [
+        "此工具根據您提供的任意文字產生 SHA-256 雜湊值。SHA-256 是 SHA-2 系列加密雜湊函數的成員，無論輸入長度如何，都會產生固定的 256 位元（64 個十六進位字元）摘要。",
+        "雜湊在您的瀏覽器中使用 Web Crypto API 本機計算。您的輸入不會被上傳或儲存在伺服器上，使此工具適用於快速驗證任務、完整性檢查和開發工作流程。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中輸入或貼上文字。",
+        "點擊<strong>產生</strong>以產生雜湊摘要。",
+        "64 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 SHA-256？",
+      "whatIsParas": [
+        "SHA-256（安全雜湊演算法 256 位元）是 SHA-2 系列的加密雜湊函數，由 NSA 設計，NIST 發布。它產生固定的 256 位元（32 位元組）雜湊值，表示為 64 個字元的十六進位字串。",
+        "SHA-256 廣泛應用於區塊鏈技術（比特幣）、數位簽章、TLS/SSL 憑證和資料完整性驗證。它被認為對大多數加密應用是安全的，是最受信任的雜湊函數之一。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具接受任何文字，包括 Unicode 字元、表情符號和多行內容。即使對輸入的微小更改（如單個字元）也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+      "example": "範例",
+      "examplePara": "對詞組進行雜湊會產生固定長度的 64 個字元摘要：",
+      "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-256 雜湊 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "SHA384 產生器 — Coding.Tools",
+      "description": "在瀏覽器中直接產生任意文字的 SHA-384 雜湊值。快速、私密、免費使用。",
+      "toolTitle": "SHA384 產生器",
+      "toolDescription": "從任意文字輸入產生 SHA-384 雜湊值。複製或下載雜湊值，無需傳送資料。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "輸入文字以產生 SHA-384 雜湊...",
+      "outputPlaceholder": "SHA-384 雜湊值將顯示在此處...",
+      "hashLength": 96,
+      "descTitle": "SHA384 產生器",
+      "descParas": [
+        "此工具根據您提供的任意文字產生 SHA-384 雜湊值。SHA-384 是 SHA-2 系列加密雜湊函數的成員，無論輸入長度如何，都會產生固定的 384 位元（96 個十六進位字元）摘要。",
+        "雜湊在您的瀏覽器中使用 Web Crypto API 本機計算。您的輸入不會被上傳或儲存在伺服器上，使此工具適用於快速驗證任務、完整性檢查和開發工作流程。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中輸入或貼上文字。",
+        "點擊<strong>產生</strong>以產生雜湊摘要。",
+        "96 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 SHA-384？",
+      "whatIsParas": [
+        "SHA-384（安全雜湊演算法 384 位元）是 SHA-2 系列的加密雜湊函數，由 NSA 設計，NIST 發布。它與 SHA-512 密切相關——使用相同的演算法，但產生截斷的 384 位元（48 位元組）雜湊值，表示為 96 個字元的十六進位字串。",
+        "SHA-384 用於 TLS/SSL 憑證、數位簽章和安全協定，這些場景需要強雜湊但偏好比 SHA-512 稍短的輸出。它在安全強度和 64 位元處理器效能之間提供了良好的平衡。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具接受任何文字，包括 Unicode 字元、表情符號和多行內容。即使對輸入的微小更改（如單個字元）也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+      "example": "範例",
+      "examplePara": "對詞組進行雜湊會產生固定長度的 96 個字元摘要：",
+      "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-384 雜湊 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "SHA-512 產生器 — Coding.Tools",
+      "description": "在瀏覽器中直接產生任意文字的 SHA-512 雜湊值。快速、私密、免費使用。",
+      "toolTitle": "SHA-512 產生器",
+      "toolDescription": "從任意文字輸入產生 SHA-512 雜湊值。複製或下載雜湊值，無需傳送資料。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "輸入文字以產生 SHA-512 雜湊...",
+      "outputPlaceholder": "SHA-512 雜湊值將顯示在此處...",
+      "hashLength": 128,
+      "descTitle": "SHA-512 產生器",
+      "descParas": [
+        "此工具根據您提供的任意文字產生 SHA-512 雜湊值。SHA-512 是 SHA-2 系列加密雜湊函數的成員，無論輸入長度如何，都會產生固定的 512 位元（128 個十六進位字元）摘要。",
+        "雜湊在您的瀏覽器中使用 Web Crypto API 本機計算。您的輸入不會被上傳或儲存在伺服器上，使此工具適用於快速驗證任務、完整性檢查和開發工作流程。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中輸入或貼上文字。",
+        "點擊<strong>產生</strong>以產生雜湊摘要。",
+        "128 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 SHA-512？",
+      "whatIsParas": [
+        "SHA-512（安全雜湊演算法 512 位元）是 SHA-2 系列的加密雜湊函數，由 NSA 設計，NIST 發布。它產生固定的 512 位元（64 位元組）雜湊值，表示為 128 個字元的十六進位字串。",
+        "SHA-512 用於高安全性應用，包括數位簽章、憑證頒發機構、密碼雜湊和區塊鏈系統。它被認為是最強的雜湊函數之一，能夠抵抗所有已知的實際攻擊。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具接受任何文字，包括 Unicode 字元、表情符號和多行內容。即使對輸入的微小更改（如單個字元）也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+      "example": "範例",
+      "examplePara": "對詞組進行雜湊會產生固定長度的 128 個字元摘要：",
+      "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-512 雜湊 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Base64 編碼解碼 — Coding.Tools",
+      "description": "在瀏覽器中直接將文字編碼為 Base64 或將 Base64 解碼回可讀文字。快速、私密、免費使用。",
+      "toolTitle": "Base64 編碼",
+      "toolDescription": "將文字轉換為 Base64，將 Base64 解碼回可讀文字，並複製或下載結果。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "輸入文字進行編碼或貼上 Base64 進行解碼...",
+      "outputPlaceholder": "編碼或解碼結果將顯示在此處...",
+      "descTitle": "Base64 編碼解碼",
+      "descParas": [
+        "此 Base64 工具將純文字轉換為 Base64，並將 Base64 字串轉換回可讀文字。當您需要為 API 準備資料、從日誌中檢查編碼值、測試請求負載或透過純文字系統傳輸小段資料時，它非常有用。",
+        "轉換在您的瀏覽器中本機執行。您貼上到編輯器中的文字不會被上傳、儲存或傳送到伺服器，因此您可以在不改變工作流程的情況下快速使用此工具。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "將純文字或 Base64 值貼上到輸入編輯器中。",
+        "選擇<strong>編碼</strong>建立 Base64 字串，或<strong>解碼</strong>讀取現有的 Base64 字串。",
+        "檢查輸出編輯器和狀態訊息。當解碼失敗時，無效的 Base64 輸入會立即報告。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 Base64？",
+      "whatIsParas": [
+        "Base64 是一種將位元組表示為可列印文字的方式。它使用字母、數字、加號、斜線和填充字元，使二進位資料能夠通過期望普通文字的系統傳輸，如 JSON、HTML、電子郵件、設定檔和命令列輸出。",
+        "Base64 是一種編碼格式，不是加密。任何人都可以在獲得字串的情況下解碼它。它還會將資料大小增加大約三分之一，因此最適合傳輸和嵌入，而非壓縮或保密。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "編碼支援普通文字，包括 Unicode 字元。解碼時，請確保輸入是完整的 Base64 字串，不包含不相關的標題、標籤或編碼值周圍的額外文字。",
+      "example": "範例",
+      "examplePara": "相同的值可以被編碼並解碼回原始文字：",
+      "exampleCode": "--- 純文字 ---\nHello, World!\n\n--- Base64 編碼 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 解碼還原 ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Base64 解碼 — Coding.Tools",
+      "description": "在瀏覽器中直接將 Base64 字串解碼回可讀文字。快速、私密、免費使用。",
+      "toolTitle": "Base64 解碼",
+      "toolDescription": "將 Base64 字串解碼回可讀文字，或將文字編碼為 Base64，並複製或下載結果。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "貼上 Base64 文字進行解碼或輸入純文字進行編碼...",
+      "outputPlaceholder": "解碼或編碼結果將顯示在此處...",
+      "descTitle": "Base64 解碼",
+      "descParas": [
+        "此工具將 Base64 編碼的字串解碼回可讀文字。當您需要檢查 API 回應、電子郵件標頭、資料 URI、身分驗證權杖或任何以 Base64 格式傳輸資料的系統中的編碼值時，它非常有用。",
+        "解碼在您的瀏覽器中本機執行。您貼上到編輯器中的 Base64 字串不會被上傳、儲存或傳送到伺服器，因此您可以安全地解碼敏感值。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "將 Base64 編碼的字串貼上到輸入編輯器中。",
+        "點擊<strong>解碼</strong>將其轉換回可讀文字。",
+        "檢查輸出編輯器和狀態訊息。當解碼失敗時，無效的 Base64 輸入會立即報告。",
+        "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      ],
+      "whatIs": "什麼是 Base64？",
+      "whatIsParas": [
+        "Base64 是一種將位元組表示為可列印文字的方式。它使用字母、數字、加號、斜線和填充字元，使二進位資料能夠通過期望普通文字的系統傳輸，如 JSON、HTML、電子郵件、設定檔和命令列輸出。",
+        "Base64 是一種編碼格式，不是加密。任何人都可以在獲得字串的情況下解碼它。它還會將資料大小增加大約三分之一，因此最適合傳輸和嵌入，而非壓縮或保密。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "請確保輸入是完整的 Base64 字串，不包含不相關的標題、標籤或編碼值周圍的額外文字。如果輸入包含無效字元或格式錯誤，解碼器將報告錯誤。",
+      "example": "範例",
+      "examplePara": "Base64 編碼的字串可以解碼回原始文字：",
+      "exampleCode": "--- Base64 編碼輸入 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 解碼輸出 ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "密碼產生器 — Coding.Tools",
+      "description": "產生具有可自訂長度和字元類型的強隨機密碼。完全在瀏覽器中執行的安全密碼產生。",
+      "toolTitle": "密碼產生器",
+      "toolDescription": "建立具有可設定長度和字元類型的強隨機密碼。所有操作都在瀏覽器中本機執行——不會傳送任何資料到伺服器。",
+      "categoryName": "哈希與加密",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "點擊產生以建立密碼...",
+      "descTitle": "密碼產生器",
+      "descParas": [
+        "此工具使用瀏覽器內建的加密安全隨機數產生器建立隨機密碼。您可以控制密碼長度和包含哪些字元類型，然後複製或下載結果。",
+        "密碼在本機產生。它不會透過網路傳輸或儲存在此頁面之外的任何地方。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "使用滑桿設定所需的密碼長度（4 到 128 個字元）。",
+        "選擇要包含的字元類型：大寫字母、小寫字母、數字和符號。",
+        "點擊<strong>產生</strong>建立新的隨機密碼。",
+        "使用<strong>複製</strong>儲存到剪貼簿，或<strong>下載</strong>儲存為文字檔。"
+      ],
+      "whatIs": "為什麼使用隨機密碼？",
+      "whatIsParas": [
+        "可預測的密碼是帳戶被攻破的最常見原因。具有足夠長度和字元多樣性的真正隨機密碼可以抵抗暴力破解和字典攻擊。為每個服務使用唯一密碼可以限制一個帳戶被攻破時的損失。",
+        "產生器使用 <code>crypto.getRandomValues()</code>，這是 Web Crypto API 的一部分。它直接從瀏覽器提供加密品質的隨機性，不依賴較弱的 <code>Math.random()</code> 呼叫。要管理多個密碼，請考慮將此產生器與專用密碼管理器配合使用。"
+      ],
+      "inputNotes": "安全說明",
+      "inputNotesPara": "產生器使用瀏覽器 Web Crypto API 的加密品質隨機性。密碼不會透過網路傳送。為獲得最佳安全性，請使用所有字元類型且長度至少為 16 個字元。",
+      "example": "範例",
+      "examplePara": "啟用所有字元類型的 16 個字元密碼可能如下所示：",
+      "exampleCode": "--- 設定 ---\n長度：16\n大寫字母：A-Z\n小寫字母：a-z\n數字：0-9\n符號：!@#$%^&*\n\n--- 產生的密碼 ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "jp": {
+    "md5-generator": {
+      "title": "MD5 ジェネレーター — Coding.Tools",
+      "description": "ブラウザで任意のテキストからMD5ハッシュを直接生成。高速・プライベート・無料。",
+      "toolTitle": "MD5 ジェネレーター",
+      "toolDescription": "任意のテキスト入力からMD5ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "MD5ハッシュを生成するテキストを入力...",
+      "outputPlaceholder": "MD5ハッシュがここに表示されます...",
+      "hashLength": 32,
+      "descTitle": "MD5 ジェネレーター",
+      "descParas": [
+        "このMD5ツールは、入力した任意のテキストから128ビットのダイジェストを生成します。データ整合性の確認、チェックサムの作成、一意の識別子の生成、元データを公開せずにファイル内容を比較する場合に便利です。",
+        "ハッシュ生成はブラウザ内でローカルに実行されます。入力エディタに貼り付けたテキストはアップロード、保存、サーバー送信されないため、ワークフローを変更せずに素早く利用できます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを貼り付けるか入力します。",
+        "<strong>MD5生成</strong>をクリックしてハッシュダイジェストを作成します。",
+        "出力エディタに32文字の16進数MD5ハッシュが表示されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "MD5とは？",
+      "whatIsParas": [
+        "MD5（メッセージダイジェストアルゴリズム5）は、128ビット（16バイト）のハッシュ値を生成する広く使用されている暗号化ハッシュ関数です。通常32文字の16進数として表されます。MD5は1991年にRonald Rivestが以前のハッシュ関数MD4の代替として設計しました。",
+        "MD5は既知の脆弱性により暗号化目的としては安全とは見なされなくなりましたが、チェックサム、ファイル検証、衝突耐性よりも速度と簡潔さが重要な非セキュリティアプリケーションでは引き続き有用です。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "このツールはUnicode文字を含む任意のテキスト入力をサポートします。同じ入力は常に同じMD5ハッシュを生成するため、決定論的です。入力テキストの小さな変更でも完全に異なるハッシュが生成されます（雪崩効果）。",
+      "example": "例",
+      "examplePara": "同じ値をハッシュすると一貫したMD5ダイジェストが生成されます：",
+      "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- MD5ハッシュ ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 別の例 ---\nCoding.Tools\n\n--- MD5ハッシュ ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "SHA1 ジェネレーター — Coding.Tools",
+      "description": "ブラウザで任意のテキストからSHA-1ハッシュを直接生成。高速・プライベート・無料。",
+      "toolTitle": "SHA1 ジェネレーター",
+      "toolDescription": "任意のテキスト入力からSHA-1ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "SHA-1ハッシュを生成するテキストを入力...",
+      "outputPlaceholder": "SHA-1ハッシュがここに表示されます...",
+      "hashLength": 40,
+      "descTitle": "SHA1 ジェネレーター",
+      "descParas": [
+        "このSHA-1ジェネレーターは、入力したテキストから160ビットのダイジェストを生成します。テキストを貼り付けて生成を押すと、ブラウザ内で40文字の16進数SHA-1ハッシュが即座に生成されます。",
+        "ハッシュ処理はすべてのモダンブラウザに組み込まれたWeb Crypto APIを使用してローカルで実行されます。入力はアップロードやサーバーに保存されないため、プライベートに素早くハッシュを生成できます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを入力または貼り付けます。",
+        "<strong>SHA1生成</strong>をクリックしてハッシュダイジェストを計算します。",
+        "40文字の16進数ハッシュが出力エディタに表示され、確認メッセージが表示されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "SHA-1とは？",
+      "whatIsParas": [
+        "SHA-1（Secure Hash Algorithm 1）は、160ビット（20バイト）のハッシュ値を生成する暗号化ハッシュ関数で、通常40文字の16進数文字列として表現されます。NSAが設計し、NISTが1995年に公開しました。",
+        "SHA-1は決定論的です。同じ入力は常に同じハッシュを生成します。ハッシュを逆変換して元の入力を復元できない単方向関数です。SHA-1はデジタル署名や証明書検証としては安全とは見なされなくなりましたが、チェックサム、コンテンツアドレッシング、非セキュリティ重要なフィンガープリントでは引き続き広く使用されています。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "このツールはUnicode文字や複数行のコンテンツを含む任意のテキスト入力をサポートします。入力への小さな変更でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+      "example": "例",
+      "examplePara": "短いテキストメッセージがSHA-1ハッシュにどのようにマッピングされるか：",
+      "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-1ハッシュ ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "SHA-256 ジェネレーター — Coding.Tools",
+      "description": "ブラウザで任意のテキストからSHA-256ハッシュを直接生成。高速・プライベート・無料。",
+      "toolTitle": "SHA-256 ジェネレーター",
+      "toolDescription": "任意のテキスト入力からSHA-256ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "SHA-256ハッシュを生成するテキストを入力...",
+      "outputPlaceholder": "SHA-256ハッシュがここに表示されます...",
+      "hashLength": 64,
+      "descTitle": "SHA-256 ジェネレーター",
+      "descParas": [
+        "このツールは入力したテキストからSHA-256ハッシュを生成します。SHA-256はSHA-2ファミリーの暗号化ハッシュ関数で、入力の長さに関係なく固定256ビット（64文字の16進数）のダイジェストを生成します。",
+        "ハッシュはブラウザのWeb Crypto APIを使用してローカルで計算されます。入力はサーバーにアップロードや保存されないため、迅速な検証、整合性チェック、開発ワークフローに適しています。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを入力または貼り付けます。",
+        "<strong>生成</strong>をクリックしてハッシュダイジェストを生成します。",
+        "64文字の16進数ハッシュが出力エディタに表示されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "SHA-256とは？",
+      "whatIsParas": [
+        "SHA-256（Secure Hash Algorithm 256-bit）は、NSAが設計しNISTが公開したSHA-2ファミリーの暗号化ハッシュ関数です。固定256ビット（32バイト）のハッシュ値を生成し、64文字の16進数文字列として表現されます。",
+        "SHA-256はブロックチェーン技術（ビットコイン）、デジタル署名、TLS/SSL証明書、データ整合性検証に広く使用されています。ほとんどの暗号化アプリケーションで安全と見なされ、最も信頼されているハッシュ関数の一つです。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "このツールはUnicode文字、絵文字、複数行コンテンツを含む任意のテキストを受け付けます。入力への小さな変更（1文字の変更など）でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+      "example": "例",
+      "examplePara": "短いフレーズをハッシュすると固定長64文字のダイジェストが生成されます：",
+      "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-256ハッシュ ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "SHA384 ジェネレーター — Coding.Tools",
+      "description": "ブラウザで任意のテキストからSHA-384ハッシュを直接生成。高速・プライベート・無料。",
+      "toolTitle": "SHA384 ジェネレーター",
+      "toolDescription": "任意のテキスト入力からSHA-384ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "SHA-384ハッシュを生成するテキストを入力...",
+      "outputPlaceholder": "SHA-384ハッシュがここに表示されます...",
+      "hashLength": 96,
+      "descTitle": "SHA384 ジェネレーター",
+      "descParas": [
+        "このツールは入力したテキストからSHA-384ハッシュを生成します。SHA-384はSHA-2ファミリーの暗号化ハッシュ関数で、入力の長さに関係なく固定384ビット（96文字の16進数）のダイジェストを生成します。",
+        "ハッシュはブラウザのWeb Crypto APIを使用してローカルで計算されます。入力はサーバーにアップロードや保存されないため、迅速な検証、整合性チェック、開発ワークフローに適しています。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを入力または貼り付けます。",
+        "<strong>生成</strong>をクリックしてハッシュダイジェストを生成します。",
+        "96文字の16進数ハッシュが出力エディタに表示されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "SHA-384とは？",
+      "whatIsParas": [
+        "SHA-384（Secure Hash Algorithm 384-bit）は、NSAが設計しNISTが公開したSHA-2ファミリーの暗号化ハッシュ関数です。SHA-512と密接に関連しており、同じアルゴリズムを使用しますが、切り詰められた384ビット（48バイト）のハッシュ値を生成し、96文字の16進数文字列として表現されます。",
+        "SHA-384はTLS/SSL証明書、デジタル署名、SHA-512よりやや短い出力を好むセキュリティプロトコルで使用されます。セキュリティ強度と64ビットプロセッサのパフォーマンスのバランスが取れています。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "このツールはUnicode文字、絵文字、複数行コンテンツを含む任意のテキストを受け付けます。入力への小さな変更（1文字の変更など）でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+      "example": "例",
+      "examplePara": "短いフレーズをハッシュすると固定長96文字のダイジェストが生成されます：",
+      "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-384ハッシュ ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "SHA-512 ジェネレーター — Coding.Tools",
+      "description": "ブラウザで任意のテキストからSHA-512ハッシュを直接生成。高速・プライベート・無料。",
+      "toolTitle": "SHA-512 ジェネレーター",
+      "toolDescription": "任意のテキスト入力からSHA-512ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "SHA-512ハッシュを生成するテキストを入力...",
+      "outputPlaceholder": "SHA-512ハッシュがここに表示されます...",
+      "hashLength": 128,
+      "descTitle": "SHA-512 ジェネレーター",
+      "descParas": [
+        "このツールは入力したテキストからSHA-512ハッシュを生成します。SHA-512はSHA-2ファミリーの暗号化ハッシュ関数で、入力の長さに関係なく固定512ビット（128文字の16進数）のダイジェストを生成します。",
+        "ハッシュはブラウザのWeb Crypto APIを使用してローカルで計算されます。入力はサーバーにアップロードや保存されないため、迅速な検証、整合性チェック、開発ワークフローに適しています。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを入力または貼り付けます。",
+        "<strong>生成</strong>をクリックしてハッシュダイジェストを生成します。",
+        "128文字の16進数ハッシュが出力エディタに表示されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "SHA-512とは？",
+      "whatIsParas": [
+        "SHA-512（Secure Hash Algorithm 512-bit）は、NSAが設計しNISTが公開したSHA-2ファミリーの暗号化ハッシュ関数です。固定512ビット（64バイト）のハッシュ値を生成し、128文字の16進数文字列として表現されます。",
+        "SHA-512はデジタル署名、認証局、パスワードハッシュ、ブロックチェーンシステムなどの高セキュリティアプリケーションで使用されています。最も強力なハッシュ関数の一つと見なされ、すべての既知の実際的な攻撃に対して耐性があります。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "このツールはUnicode文字、絵文字、複数行コンテンツを含む任意のテキストを受け付けます。入力への小さな変更（1文字の変更など）でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+      "example": "例",
+      "examplePara": "短いフレーズをハッシュすると固定長128文字のダイジェストが生成されます：",
+      "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-512ハッシュ ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Base64 エンコード・デコード — Coding.Tools",
+      "description": "ブラウザでテキストをBase64にエンコード、またはBase64を可読テキストに直接デコード。高速・プライベート・無料。",
+      "toolTitle": "Base64 エンコード",
+      "toolDescription": "テキストをBase64に変換し、Base64を可読テキストにデコードし、結果をコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "エンコードするテキストを入力するか、デコードするBase64を貼り付け...",
+      "outputPlaceholder": "エンコードまたはデコード結果がここに表示されます...",
+      "descTitle": "Base64 エンコード・デコード",
+      "descParas": [
+        "このBase64ツールはプレーンテキストをBase64に変換し、Base64文字列を可読テキストに戻します。API用のデータ準備、ログからのエンコード値の確認、リクエストペイロードのテスト、テキストのみのシステムでのデータ転送に便利です。",
+        "変換はブラウザ内でローカルに実行されます。エディタに貼り付けたテキストはアップロード、保存、サーバー送信されないため、ワークフローを変更せずに素早く利用できます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "プレーンテキストまたはBase64値を入力エディタに貼り付けます。",
+        "<strong>エンコード</strong>でBase64文字列を作成するか、<strong>デコード</strong>で既存のBase64文字列を読み取ります。",
+        "出力エディタとステータスメッセージを確認します。デコード失敗時に無効なBase64入力は即座に報告されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "Base64とは？",
+      "whatIsParas": [
+        "Base64はバイト列を印刷可能なテキストとして表現する方法です。文字、数字、プラス記号、スラッシュ、パディング文字を使用して、バイナリデータをJSON、HTML、メール、設定ファイル、コマンドライン出力などの通常のテキストを期待するシステム間で転送できるようにします。",
+        "Base64はエンコード形式であり、暗号化ではありません。文字列を持てば誰でもデコードできます。データサイズが約3分の1増加するため、圧縮や秘匿ではなく、転送や埋め込みに最適です。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "エンコードはUnicode文字を含む通常のテキストをサポートします。デコード時は、入力が完全なBase64文字列であり、エンコード値の周囲に無関係なヘッダーやラベル、余分なテキストが含まれていないことを確認してください。",
+      "example": "例",
+      "examplePara": "同じ値をエンコードして元のテキストにデコードできます：",
+      "exampleCode": "--- プレーンテキスト ---\nHello, World!\n\n--- Base64 エンコード ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- デコード復元 ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Base64 デコード — Coding.Tools",
+      "description": "ブラウザでBase64文字列を可読テキストに直接デコード。高速・プライベート・無料。",
+      "toolTitle": "Base64 デコード",
+      "toolDescription": "Base64文字列を可読テキストにデコードするか、テキストをBase64にエンコードし、結果をコピーまたはダウンロード。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "デコードするBase64テキストを貼り付けるか、エンコードするプレーンテキストを入力...",
+      "outputPlaceholder": "デコードまたはエンコード結果がここに表示されます...",
+      "descTitle": "Base64 デコード",
+      "descParas": [
+        "このツールはBase64エンコードされた文字列を可読テキストに戻します。APIレスポンス、メールヘッダー、データURI、認証トークン、またはBase64形式でデータを送信するシステムからエンコード値を確認する場合に便利です。",
+        "デコードはブラウザ内でローカルに実行されます。エディタに貼り付けたBase64文字列はアップロード、保存、サーバー送信されないため、安全にデコードできます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "Base64エンコードされた文字列を入力エディタに貼り付けます。",
+        "<strong>デコード</strong>をクリックして可読テキストに戻します。",
+        "出力エディタとステータスメッセージを確認します。デコード失敗時に無効なBase64入力は即座に報告されます。",
+        "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      ],
+      "whatIs": "Base64とは？",
+      "whatIsParas": [
+        "Base64はバイト列を印刷可能なテキストとして表現する方法です。文字、数字、プラス記号、スラッシュ、パディング文字を使用して、バイナリデータをJSON、HTML、メール、設定ファイル、コマンドライン出力などの通常のテキストを期待するシステム間で転送できるようにします。",
+        "Base64はエンコード形式であり、暗号化ではありません。文字列を持てば誰でもデコードできます。データサイズが約3分の1増加するため、圧縮や秘匿ではなく、転送や埋め込みに最適です。"
+      ],
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "入力が完全なBase64文字列であり、無関係なヘッダー、ラベル、エンコード値の周囲の余分なテキストが含まれていないことを確認してください。入力に無効な文字が含まれているか形式が不正な場合、デコーダーはエラーを報告します。",
+      "example": "例",
+      "examplePara": "Base64エンコードされた文字列は元のテキストにデコードできます：",
+      "exampleCode": "--- Base64 エンコード入力 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- デコード出力 ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "パスワードジェネレーター — Coding.Tools",
+      "description": "カスタマイズ可能な長さと文字タイプで強力なランダムパスワードを生成。ブラウザ内で完全に実行される安全なパスワード生成。",
+      "toolTitle": "パスワードジェネレーター",
+      "toolDescription": "設定可能な長さと文字タイプで強力なランダムパスワードを作成。すべてブラウザ内でローカルに実行され、サーバーに送信されません。",
+      "categoryName": "ハッシュと暗号",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "生成をクリックしてパスワードを作成...",
+      "descTitle": "パスワードジェネレーター",
+      "descParas": [
+        "このツールはブラウザに組み込まれた暗号化品質のランダム数ジェネレーターを使用してランダムパスワードを作成します。パスワードの長さと含める文字タイプを制御し、結果をコピーまたはダウンロードできます。",
+        "パスワードはローカルで生成されます。ネットワーク経由で送信されることも、このページの外部に保存されることもありません。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "スライダーでパスワードの長さを設定します（4〜128文字）。",
+        "含める文字タイプを選択します：大文字、小文字、数字、記号。",
+        "<strong>生成</strong>をクリックして新しいランダムパスワードを作成します。",
+        "<strong>コピー</strong>でクリップボードに保存、<strong>ダウンロード</strong>でテキストファイルとして保存できます。"
+      ],
+      "whatIs": "なぜランダムパスワードを使うのか？",
+      "whatIsParas": [
+        "予測可能なパスワードはアカウントが侵害される最も一般的な方法です。十分な長さと文字の多様性を持つ真のランダムパスワードは、ブルートフォース攻撃と辞書攻撃に耐性があります。各サービスにユニークなパスワードを使用すると、1つのアカウントが侵害された場合の被害を制限できます。",
+        "ジェネレーターはWeb Crypto APIの一部である<code>crypto.getRandomValues()</code>を使用します。これにより、弱い<code>Math.random()</code>コールに依存せずに、ブラウザから暗号化品質のランダム性が直接提供されます。多数のパスワードを管理するには、専用のパスワードマネージャーとの併用を検討してください。"
+      ],
+      "inputNotes": "セキュリティに関する注意",
+      "inputNotesPara": "ジェネレーターはブラウザのWeb Crypto APIから暗号化品質のランダム性を使用します。パスワードはネットワーク経由で送信されません。最高のセキュリティのために、すべての文字タイプを使用し、長さは16文字以上にしてください。",
+      "example": "例",
+      "examplePara": "すべての文字タイプを有効にした16文字のパスワードは次のようになります：",
+      "exampleCode": "--- 設定 ---\n長さ：16\n大文字：A-Z\n小文字：a-z\n数字：0-9\n記号：!@#$%^&*\n\n--- 生成されたパスワード ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "kr": {
+    "md5-generator": {
+      "title": "MD5 생성기 — Coding.Tools",
+      "description": "브라우저에서 직접 텍스트의 MD5 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "MD5 생성기",
+      "toolDescription": "텍스트 입력에서 MD5 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "MD5 해시를 생성할 텍스트를 입력하세요...",
+      "outputPlaceholder": "MD5 해시가 여기에 표시됩니다...",
+      "hashLength": 32,
+      "descTitle": "MD5 생성기",
+      "descParas": [
+        "이 MD5 도구는 입력한 텍스트에서 128비트 해시 다이제스트를 생성합니다. 데이터 무결성 확인, 체크섬 생성, 고유 식별자 생성 또는 원본 데이터를 노출하지 않고 파일 내용을 비교할 때 유용합니다.",
+        "해시 생성은 브라우저에서 로컬로 실행됩니다. 입력 편집기에 붙여넣은 텍스트는 업로드, 저장 또는 서버로 전송되지 않으므로 워크플로를 변경하지 않고 빠르게 사용할 수 있습니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 붙여넣거나 입력합니다.",
+        "<strong>MD5 생성</strong>을 클릭하여 해시 다이제스트를 만듭니다.",
+        "출력 편집기에 32자리 16진수 MD5 해시가 표시됩니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "MD5란 무엇인가요?",
+      "whatIsParas": [
+        "MD5(메시지 다이제스트 알고리즘 5)는 128비트(16바이트) 해시 값을 생성하는 널리 사용되는 암호화 해시 함수입니다. 일반적으로 32자리 16진수로 표현됩니다. MD5는 1991년 Ronald Rivest가 이전 해시 함수 MD4를 대체하기 위해 설계했습니다.",
+        "MD5는 알려진 취약점으로 인해 암호화 목적으로 더 이상 안전하다고 간주되지 않지만, 체크섬, 파일 검증 및 충돌 저항보다 속도와 단순성이 더 중요한 비보안 애플리케이션에서는 여전히 유용합니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "이 도구는 Unicode 문자를 포함한 모든 텍스트 입력을 지원합니다. 동일한 입력은 항상 동일한 MD5 해시를 생성하므로 결정론적입니다. 입력 텍스트의 작은 변경도 완전히 다른 해시를 생성합니다(눈사태 효과).",
+      "example": "예제",
+      "examplePara": "같은 값을 해시하면 일관된 MD5 다이제스트가 생성됩니다:",
+      "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- MD5 해시 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 다른 예제 ---\nCoding.Tools\n\n--- MD5 해시 ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "SHA1 생성기 — Coding.Tools",
+      "description": "브라우저에서 직접 텍스트의 SHA-1 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "SHA1 생성기",
+      "toolDescription": "텍스트 입력에서 SHA-1 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "SHA-1 해시를 생성할 텍스트를 입력하세요...",
+      "outputPlaceholder": "SHA-1 해시가 여기에 표시됩니다...",
+      "hashLength": 40,
+      "descTitle": "SHA1 생성기",
+      "descParas": [
+        "이 SHA-1 생성기는 입력한 텍스트에서 160비트 해시 다이제스트를 생성합니다. 텍스트를 붙여넣고 생성을 누르면 브라우저에서 40자리 16진수 SHA-1 해시가 즉시 생성됩니다.",
+        "해시 처리는 모든 최신 브라우저에 내장된 Web Crypto API를 사용하여 로컬로 실행됩니다. 입력은 업로드되거나 서버에 저장되지 않으므로 프라이버시를 유지하면서 빠르게 해시를 생성할 수 있습니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+        "<strong>SHA1 생성</strong>을 클릭하여 해시 다이제스트를 계산합니다.",
+        "40자리 16진수 해시가 출력 편집기에 표시되고 확인 메시지가 나타납니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "SHA-1이란 무엇인가요?",
+      "whatIsParas": [
+        "SHA-1(보안 해시 알고리즘 1)은 160비트(20바이트) 해시 값을 생성하는 암호화 해시 함수로, 일반적으로 40자리 16진수 문자열로 표현됩니다. NSA가 설계하고 NIST가 1995년에 발표했습니다.",
+        "SHA-1은 결정론적입니다. 동일한 입력은 항상 동일한 해시를 생성합니다. 해시를 역변환하여 원본 입력을 복구할 수 없는 단방향 함수입니다. SHA-1은 디지털 서명이나 인증서 검증에 더 이상 안전하다고 간주되지 않지만, 체크섬, 콘텐츠 주소 지정 및 비보안 중요 지문에는 여전히 널리 사용됩니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "이 도구는 Unicode 문자와 여러 줄 콘텐츠를 포함한 모든 텍스트 입력을 지원합니다. 입력의 작은 변경도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+      "example": "예제",
+      "examplePara": "짧은 텍스트 메시지가 SHA-1 해시에 어떻게 매핑되는지:",
+      "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-1 해시 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "SHA-256 생성기 — Coding.Tools",
+      "description": "브라우저에서 직접 텍스트의 SHA-256 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "SHA-256 생성기",
+      "toolDescription": "텍스트 입력에서 SHA-256 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "SHA-256 해시를 생성할 텍스트를 입력하세요...",
+      "outputPlaceholder": "SHA-256 해시가 여기에 표시됩니다...",
+      "hashLength": 64,
+      "descTitle": "SHA-256 생성기",
+      "descParas": [
+        "이 도구는 입력한 텍스트에서 SHA-256 해시를 생성합니다. SHA-256은 SHA-2 계열의 암호화 해시 함수로, 입력 길이에 관계없이 고정 256비트(64자리 16진수) 다이제스트를 생성합니다.",
+        "해시는 브라우저의 Web Crypto API를 사용하여 로컬로 계산됩니다. 입력은 서버에 업로드되거나 저장되지 않으므로 빠른 검증, 무결성 확인 및 개발 워크플로에 적합합니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+        "<strong>생성</strong>을 클릭하여 해시 다이제스트를 생성합니다.",
+        "64자리 16진수 해시가 출력 편집기에 표시됩니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "SHA-256이란 무엇인가요?",
+      "whatIsParas": [
+        "SHA-256(보안 해시 알고리즘 256비트)은 NSA가 설계하고 NIST가 발표한 SHA-2 계열의 암호화 해시 함수입니다. 고정 256비트(32바이트) 해시 값을 생성하며 64자리 16진수 문자열로 표현됩니다.",
+        "SHA-256은 블록체인 기술(비트코인), 디지털 서명, TLS/SSL 인증서 및 데이터 무결성 검증에 널리 사용됩니다. 대부분의 암호화 애플리케이션에 안전한 것으로 간주되며 가장 신뢰할 수 있는 해시 함수 중 하나입니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "이 도구는 Unicode 문자, 이모티콘, 여러 줄 콘텐츠를 포함한 모든 텍스트를 허용합니다. 입력의 작은 변경(예: 단일 문자)도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+      "example": "예제",
+      "examplePara": "짧은 구문을 해시하면 고정 길이 64자 다이제스트가 생성됩니다:",
+      "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-256 해시 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "SHA384 생성기 — Coding.Tools",
+      "description": "브라우저에서 직접 텍스트의 SHA-384 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "SHA384 생성기",
+      "toolDescription": "텍스트 입력에서 SHA-384 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "SHA-384 해시를 생성할 텍스트를 입력하세요...",
+      "outputPlaceholder": "SHA-384 해시가 여기에 표시됩니다...",
+      "hashLength": 96,
+      "descTitle": "SHA384 생성기",
+      "descParas": [
+        "이 도구는 입력한 텍스트에서 SHA-384 해시를 생성합니다. SHA-384는 SHA-2 계열의 암호화 해시 함수로, 입력 길이에 관계없이 고정 384비트(96자리 16진수) 다이제스트를 생성합니다.",
+        "해시는 브라우저의 Web Crypto API를 사용하여 로컬로 계산됩니다. 입력은 서버에 업로드되거나 저장되지 않으므로 빠른 검증, 무결성 확인 및 개발 워크플로에 적합합니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+        "<strong>생성</strong>을 클릭하여 해시 다이제스트를 생성합니다.",
+        "96자리 16진수 해시가 출력 편집기에 표시됩니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "SHA-384란 무엇인가요?",
+      "whatIsParas": [
+        "SHA-384(보안 해시 알고리즘 384비트)는 NSA가 설계하고 NIST가 발표한 SHA-2 계열의 암호화 해시 함수입니다. SHA-512와 밀접하게 관련되어 있으며 동일한 알고리즘을 사용하지만 잘린 384비트(48바이트) 해시 값을 생성하고 96자리 16진수 문자열로 표현됩니다.",
+        "SHA-384는 TLS/SSL 인증서, 디지털 서명 및 SHA-512보다 약간 짧은 출력을 선호하는 보안 프로토콜에 사용됩니다. 보안 강도와 64비트 프로세서 성능 사이의 좋은 균형을 제공합니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "이 도구는 Unicode 문자, 이모티콘, 여러 줄 콘텐츠를 포함한 모든 텍스트를 허용합니다. 입력의 작은 변경(예: 단일 문자)도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+      "example": "예제",
+      "examplePara": "짧은 구문을 해시하면 고정 길이 96자 다이제스트가 생성됩니다:",
+      "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-384 해시 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "SHA-512 생성기 — Coding.Tools",
+      "description": "브라우저에서 직접 텍스트의 SHA-512 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "SHA-512 생성기",
+      "toolDescription": "텍스트 입력에서 SHA-512 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "SHA-512 해시를 생성할 텍스트를 입력하세요...",
+      "outputPlaceholder": "SHA-512 해시가 여기에 표시됩니다...",
+      "hashLength": 128,
+      "descTitle": "SHA-512 생성기",
+      "descParas": [
+        "이 도구는 입력한 텍스트에서 SHA-512 해시를 생성합니다. SHA-512는 SHA-2 계열의 암호화 해시 함수로, 입력 길이에 관계없이 고정 512비트(128자리 16진수) 다이제스트를 생성합니다.",
+        "해시는 브라우저의 Web Crypto API를 사용하여 로컬로 계산됩니다. 입력은 서버에 업로드되거나 저장되지 않으므로 빠른 검증, 무결성 확인 및 개발 워크플로에 적합합니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+        "<strong>생성</strong>을 클릭하여 해시 다이제스트를 생성합니다.",
+        "128자리 16진수 해시가 출력 편집기에 표시됩니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "SHA-512란 무엇인가요?",
+      "whatIsParas": [
+        "SHA-512(보안 해시 알고리즘 512비트)는 NSA가 설계하고 NIST가 발표한 SHA-2 계열의 암호화 해시 함수입니다. 고정 512비트(64바이트) 해시 값을 생성하며 128자리 16진수 문자열로 표현됩니다.",
+        "SHA-512는 디지털 서명, 인증 기관, 비밀번호 해시, 블록체인 시스템 등 고보안 애플리케이션에 사용됩니다. 가장 강력한 해시 함수 중 하나로 간주되며 모든 알려진 실질적 공격에 저항합니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "이 도구는 Unicode 문자, 이모티콘, 여러 줄 콘텐츠를 포함한 모든 텍스트를 허용합니다. 입력의 작은 변경(예: 단일 문자)도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+      "example": "예제",
+      "examplePara": "짧은 구문을 해시하면 고정 길이 128자 다이제스트가 생성됩니다:",
+      "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-512 해시 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Base64 인코딩 및 디코딩 — Coding.Tools",
+      "description": "브라우저에서 직접 텍스트를 Base64로 인코딩하거나 Base64를 읽을 수 있는 텍스트로 디코딩합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "Base64 인코딩",
+      "toolDescription": "텍스트를 Base64로 변환하고, Base64를 읽을 수 있는 텍스트로 디코딩하며, 결과를 복사하거나 다운로드합니다.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "인코딩할 텍스트를 입력하거나 디코딩할 Base64를 붙여넣으세요...",
+      "outputPlaceholder": "인코딩 또는 디코딩 결과가 여기에 표시됩니다...",
+      "descTitle": "Base64 인코딩 및 디코딩",
+      "descParas": [
+        "이 Base64 도구는 일반 텍스트를 Base64로 변환하고 Base64 문자열을 읽을 수 있는 텍스트로 다시 변환합니다. API용 데이터 준비, 로그에서 인코딩된 값 확인, 요청 페이로드 테스트 또는 텍스트 전용 시스템을 통한 소량 데이터 전송에 유용합니다.",
+        "변환은 브라우저에서 로컬로 실행됩니다. 편집기에 붙여넣은 텍스트는 업로드, 저장 또는 서버로 전송되지 않으므로 워크플로를 변경하지 않고 빠르게 사용할 수 있습니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "일반 텍스트 또는 Base64 값을 입력 편집기에 붙여넣습니다.",
+        "<strong>인코딩</strong>으로 Base64 문자열을 만들거나, <strong>디코딩</strong>으로 기존 Base64 문자열을 읽습니다.",
+        "출력 편집기와 상태 메시지를 확인합니다. 디코딩 실패 시 잘못된 Base64 입력이 즉시 보고됩니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "Base64란 무엇인가요?",
+      "whatIsParas": [
+        "Base64는 바이트를 인쇄 가능한 텍스트로 표현하는 방법입니다. 문자, 숫자, 더하기 기호, 슬래시 및 패딩 문자를 사용하여 바이너리 데이터가 JSON, HTML, 이메일, 설정 파일, 명령줄 출력과 같은 일반 텍스트를 기대하는 시스템을 통해 이동할 수 있도록 합니다.",
+        "Base64는 인코딩 형식이며 암호화가 아닙니다. 문자열이 있으면 누구나 디코딩할 수 있습니다. 데이터 크기가 약 3분의 1 증가하므로 압축이나 비밀 유지보다는 전송 및 삽입에 가장 적합합니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "인코딩은 Unicode 문자를 포함한 일반 텍스트를 지원합니다. 디코딩 시 입력이 완전한 Base64 문자열이며 인코딩된 값 주위에 관련 없는 헤더, 라벨 또는 추가 텍스트가 포함되지 않았는지 확인하세요.",
+      "example": "예제",
+      "examplePara": "같은 값을 인코딩하고 원래 텍스트로 디코딩할 수 있습니다:",
+      "exampleCode": "--- 일반 텍스트 ---\nHello, World!\n\n--- Base64 인코딩 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 디코딩 복원 ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Base64 디코딩 — Coding.Tools",
+      "description": "브라우저에서 직접 Base64 문자열을 읽을 수 있는 텍스트로 디코딩합니다. 빠르고 안전하며 무료입니다.",
+      "toolTitle": "Base64 디코딩",
+      "toolDescription": "Base64 문자열을 읽을 수 있는 텍스트로 디코딩하거나, 텍스트를 Base64로 인코딩하고, 결과를 복사하거나 다운로드합니다.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "디코딩할 Base64 텍스트를 붙여넣거나 인코딩할 일반 텍스트를 입력하세요...",
+      "outputPlaceholder": "디코딩 또는 인코딩 결과가 여기에 표시됩니다...",
+      "descTitle": "Base64 디코딩",
+      "descParas": [
+        "이 도구는 Base64로 인코딩된 문자열을 읽을 수 있는 텍스트로 디코딩합니다. API 응답, 이메일 헤더, 데이터 URI, 인증 토큰 또는 Base64 형식으로 데이터를 전송하는 모든 시스템에서 인코딩된 값을 확인할 때 유용합니다.",
+        "디코딩은 브라우저에서 로컬로 실행됩니다. 편집기에 붙여넣은 Base64 문자열은 업로드, 저장 또는 서버로 전송되지 않으므로 민감한 값을 안전하게 디코딩할 수 있습니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "Base64로 인코딩된 문자열을 입력 편집기에 붙여넣습니다.",
+        "<strong>디코딩</strong>을 클릭하여 읽을 수 있는 텍스트로 변환합니다.",
+        "출력 편집기와 상태 메시지를 확인합니다. 디코딩 실패 시 잘못된 Base64 입력이 즉시 보고됩니다.",
+        "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      ],
+      "whatIs": "Base64란 무엇인가요?",
+      "whatIsParas": [
+        "Base64는 바이트를 인쇄 가능한 텍스트로 표현하는 방법입니다. 문자, 숫자, 더하기 기호, 슬래시 및 패딩 문자를 사용하여 바이너리 데이터가 JSON, HTML, 이메일, 설정 파일, 명령줄 출력과 같은 일반 텍스트를 기대하는 시스템을 통해 이동할 수 있도록 합니다.",
+        "Base64는 인코딩 형식이며 암호화가 아닙니다. 문자열이 있으면 누구나 디코딩할 수 있습니다. 데이터 크기가 약 3분의 1 증가하므로 압축이나 비밀 유지보다는 전송 및 삽입에 가장 적합합니다."
+      ],
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "입력이 완전한 Base64 문자열이며 인코딩된 값 주위에 관련 없는 헤더, 라벨 또는 추가 텍스트가 포함되지 않았는지 확인하세요. 입력에 잘못된 문자가 포함되어 있거나 형식이 잘못된 경우 디코더가 오류를 보고합니다.",
+      "example": "예제",
+      "examplePara": "Base64로 인코딩된 문자열은 원래 텍스트로 디코딩할 수 있습니다:",
+      "exampleCode": "--- Base64 인코딩 입력 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 디코딩 출력 ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "비밀번호 생성기 — Coding.Tools",
+      "description": "사자마자 가능한 길이와 문자 유형으로 강력한 무작위 비밀번호를 생성합니다. 브라우저에서 완전히 실행되는 안전한 비밀번호 생성.",
+      "toolTitle": "비밀번호 생성기",
+      "toolDescription": "구성 가능한 길이와 문자 유형으로 강력한 무작위 비밀번호를 만듭니다. 모든 것이 브라우저에서 로컬로 실행되며 서버로 전송되지 않습니다.",
+      "categoryName": "해시 및 암호화",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "생성을 클릭하여 비밀번호를 만드세요...",
+      "descTitle": "비밀번호 생성기",
+      "descParas": [
+        "이 도구는 브라우저에 내장된 암호화 품질의 난수 생성기를 사용하여 무작위 비밀번호를 만듭니다. 비밀번호 길이와 포함할 문자 유형을 제어한 다음 결과를 복사하거나 다운로드할 수 있습니다.",
+        "비밀번호는 로컬에서 생성됩니다. 네트워크를 통해 전송되거나 이 페이지 외부에 저장되지 않습니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "슬라이더로 원하는 비밀번호 길이를 설정합니다(4~128자).",
+        "포함할 문자 유형을 선택합니다: 대문자, 소문자, 숫자, 기호.",
+        "<strong>생성</strong>을 클릭하여 새 무작위 비밀번호를 만듭니다.",
+        "<strong>복사</strong>로 클립보드에 저장하거나, <strong>다운로드</strong>로 텍스트 파일로 저장합니다."
+      ],
+      "whatIs": "왜 무작위 비밀번호를 사용하나요?",
+      "whatIsParas": [
+        "예측 가능한 비밀번호는 계정이 침해되는 가장 일반적인 방법입니다. 충분한 길이와 문자 다양성을 갖춘 진정한 무작위 비밀번호는 무차별 대입 및 사전 공격에 강합니다. 각 서비스에 고유한 비밀번호를 사용하면 하나의 계정이 침해될 때 피해를 제한할 수 있습니다.",
+        "생성기는 Web Crypto API의 일부인 <code>crypto.getRandomValues()</code>를 사용합니다. 이를 통해 약한 <code>Math.random()</code> 호출에 의존하지 않고 브라우저에서 직접 암호화 품질의 무작위성이 제공됩니다. 많은 비밀번호를 관리하려면 전용 비밀번호 관리자와 함께 사용하는 것이 좋습니다."
+      ],
+      "inputNotes": "보안 참고사항",
+      "inputNotesPara": "생성기는 브라우저의 Web Crypto API에서 암호화 품질의 무작위성을 사용합니다. 비밀번호는 네트워크를 통해 전송되지 않습니다. 최상의 보안을 위해 모든 문자 유형을 사용하고 길이를 16자 이상으로 설정하세요.",
+      "example": "예제",
+      "examplePara": "모든 문자 유형이 활성화된 16자 비밀번호는 다음과 같을 수 있습니다:",
+      "exampleCode": "--- 설정 ---\n길이: 16\n대문자: A-Z\n소문자: a-z\n숫자: 0-9\n기호: !@#$%^&*\n\n--- 생성된 비밀번호 ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "fr": {
+    "md5-generator": {
+      "title": "Générateur MD5 — Coding.Tools",
+      "description": "Générez un hash MD5 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Générateur MD5",
+      "toolDescription": "Générez un hash MD5 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Entrez le texte pour générer le hash MD5...",
+      "outputPlaceholder": "Le hash MD5 apparaîtra ici...",
+      "hashLength": 32,
+      "descTitle": "Générateur MD5",
+      "descParas": [
+        "Cet outil MD5 génère un condensé de 128 bits à partir de n'importe quel texte que vous fournissez. Il est utile pour vérifier l'intégrité des données, créer des sommes de contrôle, générer des identifiants uniques ou comparer le contenu de fichiers sans révéler les données originales.",
+        "La génération du hash s'exécute localement dans votre navigateur. Le texte que vous collez dans l'éditeur d'entrée n'est pas téléchargé, stocké ou envoyé à un serveur, vous pouvez donc utiliser l'outil rapidement sans modifier votre flux de travail."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez ou saisissez votre texte dans l'éditeur d'entrée.",
+        "Cliquez sur <strong>Générer MD5</strong> pour créer le condensé.",
+        "Vérifiez le hash MD5 hexadécimal de 32 caractères dans l'éditeur de sortie.",
+        "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte, ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
+      ],
+      "whatIs": "Qu'est-ce que MD5 ?",
+      "whatIsParas": [
+        "MD5 (Message-Digest Algorithm 5) est une fonction de hachage cryptographique largement utilisée qui produit une valeur de hachage de 128 bits (16 octets). Elle est généralement exprimée sous forme d'un nombre hexadécimal de 32 caractères. MD5 a été conçu par Ronald Rivest en 1991 pour remplacer une fonction de hachage antérieure, MD4.",
+        "Bien que MD5 ne soit plus considéré comme sûr pour les fins cryptographiques en raison de vulnérabilités connues, il reste utile pour les sommes de contrôle, la vérification de fichiers et les applications non sécuritaires où la vitesse et la simplicité sont plus importantes que la résistance aux collisions."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "L'outil prend en charge toute entrée de texte, y compris les caractères Unicode. La même entrée produira toujours le même hash MD5, ce qui le rend déterministe. Même un petit changement dans le texte d'entrée produira un hash complètement différent (effet avalanche).",
+      "example": "Exemple",
+      "examplePara": "La même valeur peut être hachée pour produire un condensé MD5 cohérent :",
+      "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash MD5 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Autre exemple ---\nCoding.Tools\n\n--- Hash MD5 ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "Générateur SHA1 — Coding.Tools",
+      "description": "Générez un hash SHA-1 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Générateur SHA1",
+      "toolDescription": "Générez un hash SHA-1 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Entrez le texte pour générer le hash SHA-1...",
+      "outputPlaceholder": "Le hash SHA-1 apparaîtra ici...",
+      "hashLength": 40,
+      "descTitle": "Générateur SHA1",
+      "descParas": [
+        "Ce générateur SHA-1 crée un condensé de 160 bits à partir de n'importe quel texte que vous saisissez. Collez ou tapez votre entrée, appuyez sur Générer, et l'outil produit instantanément le hash SHA-1 hexadécimal de 40 caractères dans votre navigateur.",
+        "Le hachage s'exécute localement en utilisant l'API Web Crypto intégrée dans chaque navigateur moderne. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez du texte dans l'éditeur d'entrée.",
+        "Cliquez sur <strong>Générer SHA1</strong> pour calculer le condensé.",
+        "Le hash hexadécimal de 40 caractères apparaît dans l'éditeur de sortie avec un message de confirmation.",
+        "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte, ou <strong>Effacer</strong> pour réinitialiser."
+      ],
+      "whatIs": "Qu'est-ce que SHA-1 ?",
+      "whatIsParas": [
+        "SHA-1 (Secure Hash Algorithm 1) est une fonction de hachage cryptographique qui produit une valeur de hachage de 160 bits (20 octets), typiquement rendue sous forme d'une chaîne hexadécimale de 40 caractères. Elle a été conçue par la NSA et publiée par le NIST en 1995.",
+        "SHA-1 est déterministe : la même entrée produit toujours le même hash. C'est une fonction à sens unique. Bien que SHA-1 ne soit plus considéré comme sûr pour les signatures numériques, il reste largement utilisé pour les sommes de contrôle et l'adressage de contenu."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "L'outil prend en charge toute entrée de texte, y compris les caractères Unicode et le contenu multiligne. Même un petit changement dans l'entrée produit un hash complètement différent, une propriété appelée effet avalanche.",
+      "example": "Exemple",
+      "examplePara": "Voici comment un court message texte se traduit en hash SHA-1 :",
+      "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "Générateur SHA-256 — Coding.Tools",
+      "description": "Générez un hash SHA-256 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Générateur SHA-256",
+      "toolDescription": "Générez un hash SHA-256 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Entrez le texte pour générer le hash SHA-256...",
+      "outputPlaceholder": "Le hash SHA-256 apparaîtra ici...",
+      "hashLength": 64,
+      "descTitle": "Générateur SHA-256",
+      "descParas": [
+        "Cet outil génère un hash SHA-256 à partir de n'importe quel texte. SHA-256 est un membre de la famille SHA-2 de fonctions de hachage cryptographiques et produit un condensé fixe de 256 bits (64 caractères hexadécimaux) quelle que soit la longueur de l'entrée.",
+        "Le hash est calculé localement dans votre navigateur via l'API Web Crypto. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez votre texte dans l'éditeur d'entrée.",
+        "Cliquez sur <strong>Générer</strong> pour produire le condensé.",
+        "Le hash hexadécimal de 64 caractères apparaît dans l'éditeur de sortie.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce que SHA-256 ?",
+      "whatIsParas": [
+        "SHA-256 (Secure Hash Algorithm 256-bit) est une fonction de hachage cryptographique de la famille SHA-2, conçue par la NSA et publiée par le NIST. Elle produit une valeur de hachage fixe de 256 bits (32 octets), représentée par une chaîne hexadécimale de 64 caractères.",
+        "SHA-256 est largement utilisé dans la technologie blockchain (Bitcoin), les signatures numériques, les certificats TLS/SSL et la vérification d'intégrité des données. Il est considéré comme sûr pour la plupart des applications cryptographiques."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "L'outil accepte tout texte, y compris les caractères Unicode, les émojis et le contenu multiligne. Même un petit changement produit un hash complètement différent (effet avalanche).",
+      "example": "Exemple",
+      "examplePara": "Hacher une courte phrase produit un condensé de 64 caractères :",
+      "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-256 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "Générateur SHA384 — Coding.Tools",
+      "description": "Générez un hash SHA-384 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Générateur SHA384",
+      "toolDescription": "Générez un hash SHA-384 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Entrez le texte pour générer le hash SHA-384...",
+      "outputPlaceholder": "Le hash SHA-384 apparaîtra ici...",
+      "hashLength": 96,
+      "descTitle": "Générateur SHA384",
+      "descParas": [
+        "Cet outil génère un hash SHA-384 à partir de n'importe quel texte. SHA-384 est un membre de la famille SHA-2 et produit un condensé fixe de 384 bits (96 caractères hexadécimaux) quelle que soit la longueur de l'entrée.",
+        "Le hash est calculé localement dans votre navigateur via l'API Web Crypto. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez votre texte dans l'éditeur d'entrée.",
+        "Cliquez sur <strong>Générer</strong> pour produire le condensé.",
+        "Le hash hexadécimal de 96 caractères apparaît dans l'éditeur de sortie.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce que SHA-384 ?",
+      "whatIsParas": [
+        "SHA-384 (Secure Hash Algorithm 384-bit) est une fonction de hachage cryptographique de la famille SHA-2, conçue par la NSA et publiée par le NIST. Elle est étroitement liée à SHA-512 — elle utilise le même algorithme mais produit une valeur de hachage tronquée de 384 bits (48 octets), représentée par une chaîne hexadécimale de 96 caractères.",
+        "SHA-384 est utilisé dans les certificats TLS/SSL, les signatures numériques et les protocoles de sécurité nécessitant un hash fort mais une sortie légèrement plus courte que SHA-512."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "L'outil accepte tout texte, y compris les caractères Unicode, les émojis et le contenu multiligne. Même un petit changement produit un hash complètement différent (effet avalanche).",
+      "example": "Exemple",
+      "examplePara": "Hacher une courte phrase produit un condensé de 96 caractères :",
+      "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "Générateur SHA-512 — Coding.Tools",
+      "description": "Générez un hash SHA-512 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Générateur SHA-512",
+      "toolDescription": "Générez un hash SHA-512 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Entrez le texte pour générer le hash SHA-512...",
+      "outputPlaceholder": "Le hash SHA-512 apparaîtra ici...",
+      "hashLength": 128,
+      "descTitle": "Générateur SHA-512",
+      "descParas": [
+        "Cet outil génère un hash SHA-512 à partir de n'importe quel texte. SHA-512 est un membre de la famille SHA-2 et produit un condensé fixe de 512 bits (128 caractères hexadécimaux) quelle que soit la longueur de l'entrée.",
+        "Le hash est calculé localement dans votre navigateur via l'API Web Crypto. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez votre texte dans l'éditeur d'entrée.",
+        "Cliquez sur <strong>Générer</strong> pour produire le condensé.",
+        "Le hash hexadécimal de 128 caractères apparaît dans l'éditeur de sortie.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce que SHA-512 ?",
+      "whatIsParas": [
+        "SHA-512 (Secure Hash Algorithm 512-bit) est une fonction de hachage cryptographique de la famille SHA-2, conçue par la NSA et publiée par le NIST. Elle produit une valeur de hachage fixe de 512 bits (64 octets), représentée par une chaîne hexadécimale de 128 caractères.",
+        "SHA-512 est utilisé dans les applications de haute sécurité, y compris les signatures numériques, les autorités de certification, le hachage de mots de passe et les systèmes blockchain. Il est considéré comme l'une des fonctions de hachage les plus robustes."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "L'outil accepte tout texte, y compris les caractères Unicode, les émojis et le contenu multiligne. Même un petit changement produit un hash complètement différent (effet avalanche).",
+      "example": "Exemple",
+      "examplePara": "Hacher une courte phrase produit un condensé de 128 caractères :",
+      "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Encodage et Décodage Base64 — Coding.Tools",
+      "description": "Encodez du texte en Base64 ou décodez du Base64 en texte lisible directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Encodage Base64",
+      "toolDescription": "Convertissez du texte en Base64, décodez du Base64 en texte lisible, et copiez ou téléchargez le résultat.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Entrez le texte à encoder ou collez du Base64 à décoder...",
+      "outputPlaceholder": "Le résultat encodé ou décodé apparaîtra ici...",
+      "descTitle": "Encodage et Décodage Base64",
+      "descParas": [
+        "Cet outil Base64 convertit du texte brut en Base64 et retransforme les chaînes Base64 en texte lisible. Il est utile pour préparer des données pour les API, inspecter des valeurs encodées dans les journaux, tester des charges utiles ou transférer de petits extraits de données via des systèmes texte.",
+        "La conversion s'exécute localement dans votre navigateur. Le texte n'est pas téléchargé, stocké ni envoyé à un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez du texte brut ou une valeur Base64 dans l'éditeur d'entrée.",
+        "Choisissez <strong>Encoder</strong> pour créer une chaîne Base64, ou <strong>Décoder</strong> pour lire une chaîne existante.",
+        "Vérifiez l'éditeur de sortie et le message d'état.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce que le Base64 ?",
+      "whatIsParas": [
+        "Le Base64 est un moyen de représenter des octets sous forme de texte imprimable. Il utilise des lettres, chiffres, signes plus, barres obliques et caractères de remplissage pour que les données binaires puissent traverser des systèmes qui attendent du texte ordinaire.",
+        "Le Base64 est un format d'encodage, pas un chiffrement. N'importe qui peut le décoder s'il a la chaîne. Il augmente également la taille des données d'environ un tiers."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "L'encodage prend en charge le texte normal, y compris les caractères Unicode. Lors du décodage, assurez-vous que l'entrée est une chaîne Base64 complète sans en-têtes ni texte supplémentaire.",
+      "example": "Exemple",
+      "examplePara": "La même valeur peut être encodée puis décodée :",
+      "exampleCode": "--- Texte brut ---\nHello, World!\n\n--- Encodé en Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Décodé ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Décodage Base64 — Coding.Tools",
+      "description": "Décodez des chaînes Base64 en texte lisible directement dans votre navigateur. Rapide, privé et gratuit.",
+      "toolTitle": "Décodage Base64",
+      "toolDescription": "Décodez des chaînes Base64 en texte lisible, ou encodez du texte en Base64, et copiez ou téléchargez le résultat.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "Collez le texte Base64 à décoder ou entrez du texte brut à encoder...",
+      "outputPlaceholder": "Le résultat décodé ou encodé apparaîtra ici...",
+      "descTitle": "Décodage Base64",
+      "descParas": [
+        "Cet outil décode les chaînes Base64 en texte lisible. Il est utile pour inspecter des valeurs encodées dans les réponses d'API, les en-têtes d'e-mail, les URI de données, les jetons d'authentification.",
+        "Le décodage s'exécute localement dans votre navigateur. La chaîne Base64 n'est pas téléchargée, stockée ni envoyée à un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez une chaîne Base64 dans l'éditeur d'entrée.",
+        "Cliquez sur <strong>Décoder</strong> pour la convertir en texte lisible.",
+        "Vérifiez l'éditeur de sortie et le message d'état.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce que le Base64 ?",
+      "whatIsParas": [
+        "Le Base64 est un moyen de représenter des octets sous forme de texte imprimable. Il utilise des lettres, chiffres, signes plus, barres obliques et caractères de remplissage.",
+        "Le Base64 est un format d'encodage, pas un chiffrement. N'importe qui peut le décoder. Il augmente la taille des données d'environ un tiers."
+      ],
+      "inputNotes": "Notes sur l'entrée",
+      "inputNotesPara": "Assurez-vous que l'entrée est une chaîne Base64 complète sans en-têtes ni texte supplémentaire. Le décodeur signalera une erreur si l'entrée contient des caractères invalides.",
+      "example": "Exemple",
+      "examplePara": "Une chaîne Base64 peut être décodée en texte original :",
+      "exampleCode": "--- Entrée Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Sortie décodée ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "Générateur de Mot de Passe — Coding.Tools",
+      "description": "Générez des mots de passe aléatoires robustes avec des longueurs et types de caractères personnalisables. Génération sécurisée entièrement dans votre navigateur.",
+      "toolTitle": "Générateur de Mot de Passe",
+      "toolDescription": "Créez des mots de passe aléatoires robustes avec une longueur et des types de caractères configurables. Tout s'exécute localement dans votre navigateur.",
+      "categoryName": "Hachage et Cryptographie",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "Cliquez sur Générer pour créer un mot de passe...",
+      "descTitle": "Générateur de Mot de Passe",
+      "descParas": [
+        "Cet outil crée des mots de passe aléatoires en utilisant un générateur de nombres aléatoires cryptographiquement sécurisé intégré dans votre navigateur. Vous pouvez contrôler la longueur et les types de caractères inclus.",
+        "Le mot de passe est généré localement. Il n'est jamais transmis via le réseau ni stocké en dehors de cette page."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Réglez la longueur souhaitée avec le curseur (4 à 128 caractères).",
+        "Choisissez les types de caractères : majuscules, minuscules, chiffres et symboles.",
+        "Cliquez sur <strong>Générer</strong> pour créer un nouveau mot de passe aléatoire.",
+        "Utilisez <strong>Copier</strong> pour le presse-papiers, ou <strong>Télécharger</strong> pour sauvegarder en fichier texte."
+      ],
+      "whatIs": "Pourquoi utiliser un mot de passe aléatoire ?",
+      "whatIsParas": [
+        "Les mots de passe prévisibles sont la façon la plus courante dont les comptes sont compromis. Un mot de passe véritablement aléatoire avec suffisamment de longueur et de variété de caractères résiste aux attaques par force brute et par dictionnaire.",
+        "Le générateur utilise <code>crypto.getRandomValues()</code>, faisant partie de l'API Web Crypto. Cela fournit une qualité cryptographique d'aléatoire directement depuis le navigateur."
+      ],
+      "inputNotes": "Notes de sécurité",
+      "inputNotesPara": "Le générateur utilise l'aléatoire de qualité cryptographique de l'API Web Crypto du navigateur. Les mots de passe ne sont jamais envoyés via le réseau. Pour une sécurité optimale, utilisez tous les types de caractères et une longueur de 16 caractères ou plus.",
+      "example": "Exemple",
+      "examplePara": "Un mot de passe de 16 caractères avec tous les types activés pourrait ressembler à ceci :",
+      "exampleCode": "--- Paramètres ---\nLongueur : 16\nMajuscules : A-Z\nMinuscules : a-z\nChiffres : 0-9\nSymboles : !@#$%^&*\n\n--- Mot de passe généré ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "de": {
+    "md5-generator": {
+      "title": "MD5 Generator — Coding.Tools",
+      "description": "Erstellen Sie MD5-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+      "toolTitle": "MD5 Generator",
+      "toolDescription": "Erzeugen Sie einen MD5-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Text eingeben, um MD5-Hash zu erzeugen...",
+      "outputPlaceholder": "MD5-Hash wird hier angezeigt...",
+      "hashLength": 32,
+      "descTitle": "MD5 Generator",
+      "descParas": [
+        "Dieses MD5-Tool erzeugt einen 128-Bit-Hash-Digest aus beliebigem Text. Es eignet sich zur Überprüfung der Datenintegrität, zur Erstellung von Prüfsummen, zur Generierung eindeutiger Kennungen oder zum Vergleichen von Dateiinhalten ohne Offenlegung der Originaldaten.",
+        "Die Hash-Erstellung erfolgt lokal in Ihrem Browser. Der eingegebene Text wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Text in den Eingabe-Editor eingeben oder einfügen.",
+        "Auf <strong>MD5 generieren</strong> klicken, um den Hash-Digest zu erstellen.",
+        "Den 32-stelligen hexadezimalen MD5-Hash im Ausgabe-Editor prüfen.",
+        "<strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> als Textdatei oder <strong>Löschen</strong> zum Zurücksetzen verwenden."
+      ],
+      "whatIs": "Was ist MD5?",
+      "whatIsParas": [
+        "MD5 (Message-Digest Algorithm 5) ist eine weit verbreitete kryptografische Hash-Funktion, die einen 128-Bit (16-Byte) Hash-Wert erzeugt. Sie wird typischerweise als 32-stellige hexadezimale Zahl dargestellt. MD5 wurde 1991 von Ronald Rivest entworfen.",
+        "Obwohl MD5 aufgrund bekannter Schwachstellen nicht mehr als sicher für kryptografische Zwecke gilt, bleibt es nützlich für Prüfsummen, Dateiverifikation und nicht sicherheitskritische Anwendungen."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Das Tool unterstützt jede Texteingabe, einschließlich Unicode-Zeichen. Dieselbe Eingabe erzeugt immer denselben MD5-Hash (deterministisch). Selbst kleine Änderungen erzeugen einen völlig anderen Hash (Lawineneffekt).",
+      "example": "Beispiel",
+      "examplePara": "Derselbe Wert kann gehasht werden, um ein konsistentes MD5-Ergebnis zu erzeugen:",
+      "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- MD5 Hash ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Weiteres Beispiel ---\nCoding.Tools\n\n--- MD5 Hash ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "SHA1 Generator — Coding.Tools",
+      "description": "Erstellen Sie SHA-1-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+      "toolTitle": "SHA1 Generator",
+      "toolDescription": "Erzeugen Sie einen SHA-1-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Text eingeben, um SHA-1-Hash zu erzeugen...",
+      "outputPlaceholder": "SHA-1-Hash wird hier angezeigt...",
+      "hashLength": 40,
+      "descTitle": "SHA1 Generator",
+      "descParas": [
+        "Dieser SHA-1-Generator erstellt einen 160-Bit-Hash-Digest aus beliebigem Text. Fügen Sie Ihren Text ein, drücken Sie Generieren, und das Tool erzeugt sofort den 40-stelligen hexadezimalen SHA-1-Hash in Ihrem Browser.",
+        "Die Hash-Berechnung erfolgt lokal über die Web Crypto API. Ihre Eingabe wird nie hochgeladen oder auf einem Server gespeichert."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Text in den Eingabe-Editor eingeben oder einfügen.",
+        "Auf <strong>SHA1 generieren</strong> klicken.",
+        "Der 40-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist SHA-1?",
+      "whatIsParas": [
+        "SHA-1 (Secure Hash Algorithm 1) ist eine kryptografische Hash-Funktion, die einen 160-Bit (20-Byte) Hash-Wert erzeugt, typischerweise als 40-stellige hexadezimale Zeichenkette dargestellt. Sie wurde von der NSA entworfen und 1995 vom NIST veröffentlicht.",
+        "SHA-1 ist deterministisch: Dieselbe Eingabe erzeugt immer denselben Hash. Obwohl SHA-1 nicht mehr als sicher für digitale Signaturen gilt, wird es weiterhin für Prüfsummen und Inhaltsadressierung verwendet."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Das Tool unterstützt jede Texteingabe, einschließlich Unicode und mehrzeiliger Inhalte. Selbst kleine Änderungen erzeugen völlig unterschiedliche Hashes (Lawineneffekt).",
+      "example": "Beispiel",
+      "examplePara": "So wird eine kurze Nachricht in einen SHA-1-Hash umgewandelt:",
+      "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "SHA-256 Generator — Coding.Tools",
+      "description": "Erstellen Sie SHA-256-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+      "toolTitle": "SHA-256 Generator",
+      "toolDescription": "Erzeugen Sie einen SHA-256-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Text eingeben, um SHA-256-Hash zu erzeugen...",
+      "outputPlaceholder": "SHA-256-Hash wird hier angezeigt...",
+      "hashLength": 64,
+      "descTitle": "SHA-256 Generator",
+      "descParas": [
+        "Dieses Tool erzeugt einen SHA-256-Hash aus beliebigem Text. SHA-256 gehört zur SHA-2-Familie kryptografischer Hash-Funktionen und erzeugt einen festen 256-Bit (64 hexadezimale Zeichen) Digest unabhängig von der Eingabelänge.",
+        "Der Hash wird lokal in Ihrem Browser über die Web Crypto API berechnet. Ihre Eingabe wird nie hochgeladen oder gespeichert."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Text in den Eingabe-Editor eingeben oder einfügen.",
+        "Auf <strong>Generieren</strong> klicken.",
+        "Der 64-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist SHA-256?",
+      "whatIsParas": [
+        "SHA-256 (Secure Hash Algorithm 256-bit) ist eine kryptografische Hash-Funktion der SHA-2-Familie, entworfen von der NSA und veröffentlicht vom NIST. Sie erzeugt einen festen 256-Bit (32-Byte) Hash-Wert als 64-stellige hexadezimale Zeichenkette.",
+        "SHA-256 wird weit verbreitet in der Blockchain-Technologie (Bitcoin), bei digitalen Signaturen, TLS/SSL-Zertifikaten und Datenintegritätsprüfungen eingesetzt."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Das Tool akzeptiert jeden Text, einschließlich Unicode, Emojis und mehrzeiliger Inhalte. Selbst eine kleine Änderung erzeugt einen völlig anderen Hash (Lawineneffekt).",
+      "example": "Beispiel",
+      "examplePara": "Das Hashen eines kurzen Satzes erzeugt einen 64-stelligen Digest:",
+      "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-256 Hash ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "SHA384 Generator — Coding.Tools",
+      "description": "Erstellen Sie SHA-384-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+      "toolTitle": "SHA384 Generator",
+      "toolDescription": "Erzeugen Sie einen SHA-384-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Text eingeben, um SHA-384-Hash zu erzeugen...",
+      "outputPlaceholder": "SHA-384-Hash wird hier angezeigt...",
+      "hashLength": 96,
+      "descTitle": "SHA384 Generator",
+      "descParas": [
+        "Dieses Tool erzeugt einen SHA-384-Hash aus beliebigem Text. SHA-384 gehört zur SHA-2-Familie und erzeugt einen festen 384-Bit (96 hexadezimale Zeichen) Digest unabhängig von der Eingabelänge.",
+        "Der Hash wird lokal in Ihrem Browser über die Web Crypto API berechnet."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Text in den Eingabe-Editor eingeben oder einfügen.",
+        "Auf <strong>Generieren</strong> klicken.",
+        "Der 96-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist SHA-384?",
+      "whatIsParas": [
+        "SHA-384 (Secure Hash Algorithm 384-bit) ist eine kryptografische Hash-Funktion der SHA-2-Familie. Sie ist eng mit SHA-512 verwandt — verwendet denselben Algorithmus, erzeugt aber einen gekürzten 384-Bit (48-Byte) Hash-Wert als 96-stellige hexadezimale Zeichenkette.",
+        "SHA-384 wird in TLS/SSL-Zertifikaten, digitalen Signaturen und Sicherheitsprotokollen verwendet, die einen starken Hash mit etwas kürzerer Ausgabe als SHA-512 benötigen."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Das Tool akzeptiert jeden Text, einschließlich Unicode, Emojis und mehrzeiliger Inhalte. Selbst eine kleine Änderung erzeugt einen völlig anderen Hash (Lawineneffekt).",
+      "example": "Beispiel",
+      "examplePara": "Das Hashen eines kurzen Satzes erzeugt einen 96-stelligen Digest:",
+      "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "SHA-512 Generator — Coding.Tools",
+      "description": "Erstellen Sie SHA-512-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+      "toolTitle": "SHA-512 Generator",
+      "toolDescription": "Erzeugen Sie einen SHA-512-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Text eingeben, um SHA-512-Hash zu erzeugen...",
+      "outputPlaceholder": "SHA-512-Hash wird hier angezeigt...",
+      "hashLength": 128,
+      "descTitle": "SHA-512 Generator",
+      "descParas": [
+        "Dieses Tool erzeugt einen SHA-512-Hash aus beliebigem Text. SHA-512 gehört zur SHA-2-Familie und erzeugt einen festen 512-Bit (128 hexadezimale Zeichen) Digest unabhängig von der Eingabelänge.",
+        "Der Hash wird lokal in Ihrem Browser über die Web Crypto API berechnet."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Text in den Eingabe-Editor eingeben oder einfügen.",
+        "Auf <strong>Generieren</strong> klicken.",
+        "Der 128-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist SHA-512?",
+      "whatIsParas": [
+        "SHA-512 (Secure Hash Algorithm 512-bit) ist eine kryptografische Hash-Funktion der SHA-2-Familie. Sie erzeugt einen festen 512-Bit (64-Byte) Hash-Wert als 128-stellige hexadezimale Zeichenkette.",
+        "SHA-512 wird in hochsicheren Anwendungen verwendet, einschließlich digitaler Signaturen, Zertifizierungsstellen, Passwort-Hashing und Blockchain-Systemen. Es gilt als eine der stärksten verfügbaren Hash-Funktionen."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Das Tool akzeptiert jeden Text, einschließlich Unicode, Emojis und mehrzeiliger Inhalte. Selbst eine kleine Änderung erzeugt einen völlig anderen Hash (Lawineneffekt).",
+      "example": "Beispiel",
+      "examplePara": "Das Hashen eines kurzen Satzes erzeugt einen 128-stelligen Digest:",
+      "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Base64 Kodierung & Dekodierung — Coding.Tools",
+      "description": "Kodieren Sie Text zu Base64 oder dekodieren Sie Base64 direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+      "toolTitle": "Base64 Kodierung",
+      "toolDescription": "Konvertieren Sie Text zu Base64, dekodieren Sie Base64 zu lesbarem Text, und kopieren oder laden Sie das Ergebnis herunter.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Text zum Kodieren eingeben oder Base64 zum Dekodieren einfügen...",
+      "outputPlaceholder": "Kodiertes oder dekodiertes Ergebnis wird hier angezeigt...",
+      "descTitle": "Base64 Kodierung & Dekodierung",
+      "descParas": [
+        "Dieses Base64-Tool konvertiert Klartext in Base64 und wandelt Base64-Zeichenketten in lesbaren Text zurück. Es ist nützlich zur Datenvorbereitung für APIs, zum Inspektieren kodierter Werte in Logs oder zum Testen von Anfragedaten.",
+        "Die Konvertierung erfolgt lokal in Ihrem Browser. Der eingegebene Text wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Klartext oder einen Base64-Wert in den Eingabe-Editor einfügen.",
+        "<strong>Kodieren</strong> wählen, um eine Base64-Zeichenkette zu erstellen, oder <strong>Dekodieren</strong> zum Lesen.",
+        "Ausgabe-Editor und Statusmeldung prüfen.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist Base64?",
+      "whatIsParas": [
+        "Base64 ist eine Methode, Bytes als druckbaren Text darzustellen. Es verwendet Buchstaben, Zahlen, Pluszeichen, Schrägstriche und Füllzeichen, damit Binärdaten durch Systeme übertragen werden können, die normalen Text erwarten.",
+        "Base64 ist ein Kodierungsformat, keine Verschlüsselung. Jeder kann es dekodieren, wenn er die Zeichenkette hat. Es vergrößert die Daten um etwa ein Drittel."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Die Kodierung unterstützt normalen Text einschließlich Unicode-Zeichen. Beim Dekodieren muss die Eingabe eine vollständige Base64-Zeichenkette ohne zusätzliche Header oder Text sein.",
+      "example": "Beispiel",
+      "examplePara": "Derselbe Wert kann kodiert und wieder dekodiert werden:",
+      "exampleCode": "--- Klartext ---\nHello, World!\n\n--- Base64 kodiert ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Dekodiert ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Base64 Dekodierung — Coding.Tools",
+      "description": "Dekodieren Sie Base64-Zeichenketten direkt in Ihrem Browser zu lesbarem Text. Schnell, privat und kostenlos.",
+      "toolTitle": "Base64 Dekodierung",
+      "toolDescription": "Dekodieren Sie Base64-Zeichenketten zu lesbarem Text, oder kodieren Sie Text zu Base64, und kopieren oder laden Sie das Ergebnis herunter.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "Base64-Text zum Dekodieren einfügen oder Klartext zum Kodieren eingeben...",
+      "outputPlaceholder": "Dekodiertes oder kodiertes Ergebnis wird hier angezeigt...",
+      "descTitle": "Base64 Dekodierung",
+      "descParas": [
+        "Dieses Tool dekodiert Base64-kodierte Zeichenketten in lesbaren Text. Es ist nützlich zum Inspektieren kodierter Werte in API-Antworten, E-Mail-Headern, Data URIs oder Authentifizierungstoken.",
+        "Die Dekodierung erfolgt lokal in Ihrem Browser. Die Base64-Zeichenkette wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Eine Base64-kodierte Zeichenkette in den Eingabe-Editor einfügen.",
+        "Auf <strong>Dekodieren</strong> klicken, um sie in lesbaren Text umzuwandeln.",
+        "Ausgabe-Editor und Statusmeldung prüfen.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist Base64?",
+      "whatIsParas": [
+        "Base64 ist eine Methode, Bytes als druckbaren Text darzustellen. Es verwendet Buchstaben, Zahlen, Pluszeichen, Schrägstriche und Füllzeichen.",
+        "Base64 ist ein Kodierungsformat, keine Verschlüsselung. Jeder kann es dekodieren. Es vergrößert die Daten um etwa ein Drittel."
+      ],
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Stellen Sie sicher, dass die Eingabe eine vollständige Base64-Zeichenkette ohne zusätzliche Header oder Text ist. Der Decoder meldet einen Fehler bei ungültigen Zeichen.",
+      "example": "Beispiel",
+      "examplePara": "Eine Base64-kodierte Zeichenkette kann in Originaltext dekodiert werden:",
+      "exampleCode": "--- Base64 Eingabe ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Dekodiert ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "Passwort-Generator — Coding.Tools",
+      "description": "Erstellen Sie starke, zufällige Passwörter mit anpassbarer Länge und Zeichentypen. Sichere Passwortgenerierung direkt in Ihrem Browser.",
+      "toolTitle": "Passwort-Generator",
+      "toolDescription": "Erstellen Sie starke, zufällige Passwörter mit konfigurierbarer Länge und Zeichentypen. Alles läuft lokal in Ihrem Browser.",
+      "categoryName": "Hash & Kryptographie",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "Klicken Sie auf Generieren, um ein Passwort zu erstellen...",
+      "descTitle": "Passwort-Generator",
+      "descParas": [
+        "Dieses Tool erstellt zufällige Passwörter mit einem kryptografisch sicheren Zufallsgenerator Ihres Browsers. Sie können Länge und Zeichentypen steuern.",
+        "Das Passwort wird lokal generiert. Es wird nie über das Netzwerk übertragen oder außerhalb dieser Seite gespeichert."
+      ],
+      "howToUse": "Anleitung",
+      "steps": [
+        "Die gewünschte Passwortlänge mit dem Schieberegler einstellen (4 bis 128 Zeichen).",
+        "Zeichentypen wählen: Großbuchstaben, Kleinbuchstaben, Zahlen und Symbole.",
+        "Auf <strong>Generieren</strong> klicken, um ein neues zufälliges Passwort zu erstellen.",
+        "<strong>Kopieren</strong> für die Zwischenablage oder <strong>Herunterladen</strong> als Textdatei verwenden."
+      ],
+      "whatIs": "Warum ein zufälliges Passwort verwenden?",
+      "whatIsParas": [
+        "Vorhersagbare Passwörter sind die häufigste Art, wie Konten kompromittiert werden. Ein wirklich zufälliges Passwort mit ausreichender Länge und Zeichenvielfalt widersteht Brute-Force- und Wörterbuchangriffen.",
+        "Der Generator verwendet <code>crypto.getRandomValues()</code> aus der Web Crypto API. Dies liefert kryptografische Qualität direkt aus dem Browser."
+      ],
+      "inputNotes": "Sicherheitshinweise",
+      "inputNotesPara": "Der Generator verwendet kryptografisch sichere Zufallswerte aus der Web Crypto API des Browsers. Passwörter werden nie übers Netzwerk gesendet. Verwenden Sie für beste Sicherheit alle Zeichentypen und eine Länge von mindestens 16 Zeichen.",
+      "example": "Beispiel",
+      "examplePara": "Ein 16-stelliges Passwort mit allen Zeichentypen könnte so aussehen:",
+      "exampleCode": "--- Einstellungen ---\nLänge: 16\nGroßbuchstaben: A-Z\nKleinbuchstaben: a-z\nZahlen: 0-9\nSymbole: !@#$%^&*\n\n--- Generiertes Passwort ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "es": {
+    "md5-generator": {
+      "title": "Generador MD5 — Coding.Tools",
+      "description": "Genere hashes MD5 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Generador MD5",
+      "toolDescription": "Genere un hash MD5 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Ingrese texto para generar el hash MD5...",
+      "outputPlaceholder": "El hash MD5 aparecerá aquí...",
+      "hashLength": 32,
+      "descTitle": "Generador MD5",
+      "descParas": [
+        "Esta herramienta MD5 genera un resumen de 128 bits a partir de cualquier texto que proporcione. Es útil para verificar la integridad de datos, crear sumas de verificación, generar identificadores únicos o comparar contenido de archivos sin revelar los datos originales.",
+        "La generación del hash se ejecuta localmente en su navegador. El texto que pegue no se sube, almacena ni envía a un servidor."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue o escriba su texto en el editor de entrada.",
+        "Haga clic en <strong>Generar MD5</strong> para crear el resumen hash.",
+        "Verifique el hash MD5 hexadecimal de 32 caracteres en el editor de salida.",
+        "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> como archivo de texto, o <strong>Limpiar</strong> para reiniciar."
+      ],
+      "whatIs": "¿Qué es MD5?",
+      "whatIsParas": [
+        "MD5 (Message-Digest Algorithm 5) es una función hash criptográfica ampliamente utilizada que produce un valor hash de 128 bits (16 bytes). Se expresa típicamente como un número hexadecimal de 32 caracteres. MD5 fue diseñado por Ronald Rivest en 1991.",
+        "Aunque MD5 ya no se considera seguro para fines criptográficos, sigue siendo útil para sumas de verificación, verificación de archivos y aplicaciones donde la velocidad es más importante que la resistencia a colisiones."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La herramienta soporta cualquier entrada de texto, incluyendo caracteres Unicode. La misma entrada siempre produce el mismo hash MD5 (determinista). Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+      "example": "Ejemplo",
+      "examplePara": "El mismo valor puede ser hasheado para producir un resumen MD5 consistente:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash MD5 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Otro ejemplo ---\nCoding.Tools\n\n--- Hash MD5 ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "Generador SHA1 — Coding.Tools",
+      "description": "Genere hashes SHA-1 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Generador SHA1",
+      "toolDescription": "Genere un hash SHA-1 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Ingrese texto para generar el hash SHA-1...",
+      "outputPlaceholder": "El hash SHA-1 aparecerá aquí...",
+      "hashLength": 40,
+      "descTitle": "Generador SHA1",
+      "descParas": [
+        "Este generador SHA-1 crea un resumen de 160 bits a partir de cualquier texto. Pegue o escriba su entrada, presione Generar, y la herramienta produce instantáneamente el hash SHA-1 hexadecimal de 40 caracteres en su navegador.",
+        "El hashing se ejecuta localmente usando la API Web Crypto. Su entrada nunca se sube ni almacena en un servidor."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue texto en el editor de entrada.",
+        "Haga clic en <strong>Generar SHA1</strong> para calcular el resumen.",
+        "El hash hexadecimal de 40 caracteres aparece en el editor de salida.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es SHA-1?",
+      "whatIsParas": [
+        "SHA-1 (Secure Hash Algorithm 1) es una función hash criptográfica que produce un valor hash de 160 bits (20 bytes), típicamente representado como una cadena hexadecimal de 40 caracteres. Fue diseñada por la NSA y publicada por NIST en 1995.",
+        "SHA-1 es determinista: la misma entrada siempre produce el mismo hash. Aunque ya no se considera seguro para firmas digitales, se sigue usando ampliamente para sumas de verificación y direccionamiento de contenido."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La herramienta soporta cualquier entrada de texto, incluyendo caracteres Unicode y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+      "example": "Ejemplo",
+      "examplePara": "Así es como un mensaje corto se mapea a su hash SHA-1:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "Generador SHA-256 — Coding.Tools",
+      "description": "Genere hashes SHA-256 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Generador SHA-256",
+      "toolDescription": "Genere un hash SHA-256 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Ingrese texto para generar el hash SHA-256...",
+      "outputPlaceholder": "El hash SHA-256 aparecerá aquí...",
+      "hashLength": 64,
+      "descTitle": "Generador SHA-256",
+      "descParas": [
+        "Esta herramienta genera un hash SHA-256 a partir de cualquier texto. SHA-256 pertenece a la familia SHA-2 de funciones hash criptográficas y produce un resumen fijo de 256 bits (64 caracteres hexadecimales) independientemente de la longitud de la entrada.",
+        "El hash se calcula localmente en su navegador usando la API Web Crypto. Su entrada nunca se sube ni almacena en un servidor."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue su texto en el editor de entrada.",
+        "Haga clic en <strong>Generar</strong> para producir el resumen.",
+        "El hash hexadecimal de 64 caracteres aparece en el editor de salida.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es SHA-256?",
+      "whatIsParas": [
+        "SHA-256 (Secure Hash Algorithm 256-bit) es una función hash criptográfica de la familia SHA-2, diseñada por la NSA y publicada por NIST. Produce un valor hash fijo de 256 bits (32 bytes) representado como una cadena hexadecimal de 64 caracteres.",
+        "SHA-256 se usa ampliamente en tecnología blockchain (Bitcoin), firmas digitales, certificados TLS/SSL y verificación de integridad de datos."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La herramienta acepta cualquier texto, incluyendo caracteres Unicode, emojis y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+      "example": "Ejemplo",
+      "examplePara": "Hashear una frase corta produce un resumen de 64 caracteres:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-256 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "Generador SHA384 — Coding.Tools",
+      "description": "Genere hashes SHA-384 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Generador SHA384",
+      "toolDescription": "Genere un hash SHA-384 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Ingrese texto para generar el hash SHA-384...",
+      "outputPlaceholder": "El hash SHA-384 aparecerá aquí...",
+      "hashLength": 96,
+      "descTitle": "Generador SHA384",
+      "descParas": [
+        "Esta herramienta genera un hash SHA-384 a partir de cualquier texto. SHA-384 pertenece a la familia SHA-2 y produce un resumen fijo de 384 bits (96 caracteres hexadecimales) independientemente de la longitud de la entrada.",
+        "El hash se calcula localmente en su navegador usando la API Web Crypto."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue su texto en el editor de entrada.",
+        "Haga clic en <strong>Generar</strong> para producir el resumen.",
+        "El hash hexadecimal de 96 caracteres aparece en el editor de salida.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es SHA-384?",
+      "whatIsParas": [
+        "SHA-384 (Secure Hash Algorithm 384-bit) es una función hash criptográfica de la familia SHA-2. Está estrechamente relacionada con SHA-512 — usa el mismo algoritmo pero produce un valor hash truncado de 384 bits (48 bytes) representado como una cadena hexadecimal de 96 caracteres.",
+        "SHA-384 se usa en certificados TLS/SSL, firmas digitales y protocolos de seguridad que requieren un hash fuerte pero una salida ligeramente más corta que SHA-512."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La herramienta acepta cualquier texto, incluyendo caracteres Unicode, emojis y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+      "example": "Ejemplo",
+      "examplePara": "Hashear una frase corta produce un resumen de 96 caracteres:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "Generador SHA-512 — Coding.Tools",
+      "description": "Genere hashes SHA-512 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Generador SHA-512",
+      "toolDescription": "Genere un hash SHA-512 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Ingrese texto para generar el hash SHA-512...",
+      "outputPlaceholder": "El hash SHA-512 aparecerá aquí...",
+      "hashLength": 128,
+      "descTitle": "Generador SHA-512",
+      "descParas": [
+        "Esta herramienta genera un hash SHA-512 a partir de cualquier texto. SHA-512 pertenece a la familia SHA-2 y produce un resumen fijo de 512 bits (128 caracteres hexadecimales) independientemente de la longitud de la entrada.",
+        "El hash se calcula localmente en su navegador usando la API Web Crypto."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue su texto en el editor de entrada.",
+        "Haga clic en <strong>Generar</strong> para producir el resumen.",
+        "El hash hexadecimal de 128 caracteres aparece en el editor de salida.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es SHA-512?",
+      "whatIsParas": [
+        "SHA-512 (Secure Hash Algorithm 512-bit) es una función hash criptográfica de la familia SHA-2. Produce un valor hash fijo de 512 bits (64 bytes) representado como una cadena hexadecimal de 128 caracteres.",
+        "SHA-512 se usa en aplicaciones de alta seguridad, incluyendo firmas digitales, autoridades de certificación, hashing de contraseñas y sistemas blockchain. Se considera una de las funciones hash más robustas disponibles."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La herramienta acepta cualquier texto, incluyendo caracteres Unicode, emojis y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+      "example": "Ejemplo",
+      "examplePara": "Hashear una frase corta produce un resumen de 128 caracteres:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Codificación y Decodificación Base64 — Coding.Tools",
+      "description": "Codifique texto a Base64 o decodifique Base64 a texto legible directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Codificación Base64",
+      "toolDescription": "Convierta texto a Base64, decodifique Base64 a texto legible, y copie o descargue el resultado.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Ingrese texto para codificar o pegue Base64 para decodificar...",
+      "outputPlaceholder": "El resultado codificado o decodificado aparecerá aquí...",
+      "descTitle": "Codificación y Decodificación Base64",
+      "descParas": [
+        "Esta herramienta Base64 convierte texto plano en Base64 y transforma cadenas Base64 de vuelta a texto legible. Es útil para preparar datos para APIs, inspeccionar valores codificados en registros o probar cargas de solicitud.",
+        "La conversión se ejecuta localmente en su navegador. El texto no se sube, almacena ni envía a un servidor."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue texto plano o un valor Base64 en el editor de entrada.",
+        "Elija <strong>Codificar</strong> para crear una cadena Base64, o <strong>Decodificar</strong> para leer una existente.",
+        "Verifique el editor de salida y el mensaje de estado.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es Base64?",
+      "whatIsParas": [
+        "Base64 es una forma de representar bytes como texto imprimible. Usa letras, números, signos más, barras diagonales y caracteres de relleno para que los datos binarios puedan viajar a través de sistemas que esperan texto ordinario.",
+        "Base64 es un formato de codificación, no cifrado. Cualquiera puede decodificarlo si tiene la cadena. También aumenta el tamaño de los datos aproximadamente un tercio."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La codificación soporta texto normal, incluyendo caracteres Unicode. Al decodificar, asegúrese de que la entrada sea una cadena Base64 completa sin encabezados ni texto adicional.",
+      "example": "Ejemplo",
+      "examplePara": "El mismo valor puede ser codificado y decodificado de vuelta:",
+      "exampleCode": "--- Texto plano ---\nHello, World!\n\n--- Codificado en Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decodificado ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Decodificación Base64 — Coding.Tools",
+      "description": "Decodifique cadenas Base64 a texto legible directamente en su navegador. Rápido, privado y gratuito.",
+      "toolTitle": "Decodificación Base64",
+      "toolDescription": "Decodifique cadenas Base64 a texto legible, o codifique texto a Base64, y copie o descargue el resultado.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "Pegue texto Base64 para decodificar o ingrese texto plano para codificar...",
+      "outputPlaceholder": "El resultado decodificado o codificado aparecerá aquí...",
+      "descTitle": "Decodificación Base64",
+      "descParas": [
+        "Esta herramienta decodifica cadenas Base64 codificadas a texto legible. Es útil para inspeccionar valores codificados en respuestas de API, encabezados de correo, URIs de datos o tokens de autenticación.",
+        "La decodificación se ejecuta localmente en su navegador. La cadena Base64 no se sube, almacena ni envía a un servidor."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue una cadena Base64 codificada en el editor de entrada.",
+        "Haga clic en <strong>Decodificar</strong> para convertirla a texto legible.",
+        "Verifique el editor de salida y el mensaje de estado.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es Base64?",
+      "whatIsParas": [
+        "Base64 es una forma de representar bytes como texto imprimible. Usa letras, números, signos más, barras diagonales y caracteres de relleno.",
+        "Base64 es un formato de codificación, no cifrado. Cualquiera puede decodificarlo. Aumenta el tamaño de los datos aproximadamente un tercio."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Asegúrese de que la entrada sea una cadena Base64 completa sin encabezados ni texto adicional. El decodificador reportará un error si la entrada contiene caracteres inválidos.",
+      "example": "Ejemplo",
+      "examplePara": "Una cadena Base64 puede ser decodificada a su texto original:",
+      "exampleCode": "--- Entrada Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Salida decodificada ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "Generador de Contraseñas — Coding.Tools",
+      "description": "Genere contraseñas aleatorias fuertes con longitud y tipos de caracteres personalizables. Generación segura que se ejecuta completamente en su navegador.",
+      "toolTitle": "Generador de Contraseñas",
+      "toolDescription": "Cree contraseñas aleatorias fuertes con longitud y tipos de caracteres configurables. Todo se ejecuta localmente en su navegador.",
+      "categoryName": "Hash y Criptografía",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "Haga clic en Generar para crear una contraseña...",
+      "descTitle": "Generador de Contraseñas",
+      "descParas": [
+        "Esta herramienta crea contraseñas aleatorias usando un generador de números aleatorios criptográficamente seguro integrado en su navegador. Puede controlar la longitud y los tipos de caracteres incluidos.",
+        "La contraseña se genera localmente. Nunca se transmite por la red ni se almacena fuera de esta página."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Configure la longitud deseada con el deslizador (4 a 128 caracteres).",
+        "Elija los tipos de caracteres: mayúsculas, minúsculas, números y símbolos.",
+        "Haga clic en <strong>Generar</strong> para crear una nueva contraseña aleatoria.",
+        "Use <strong>Copiar</strong> para el portapapeles, o <strong>Descargar</strong> como archivo de texto."
+      ],
+      "whatIs": "¿Por qué usar una contraseña aleatoria?",
+      "whatIsParas": [
+        "Las contraseñas predecibles son la forma más común en que las cuentas se ven comprometidas. Una contraseña verdaderamente aleatoria con suficiente longitud y variedad de caracteres resiste ataques de fuerza bruta y de diccionario.",
+        "El generador usa <code>crypto.getRandomValues()</code> de la API Web Crypto, proporcionando aleatoriedad de calidad criptográfica directamente desde el navegador."
+      ],
+      "inputNotes": "Notas de seguridad",
+      "inputNotesPara": "El generador usa aleatoriedad de calidad criptográfica de la API Web Crypto del navegador. Las contraseñas nunca se envían por la red. Para máxima seguridad, use todos los tipos de caracteres y una longitud de 16 o más caracteres.",
+      "example": "Ejemplo",
+      "examplePara": "Una contraseña de 16 caracteres con todos los tipos activados podría verse así:",
+      "exampleCode": "--- Configuración ---\nLongitud: 16\nMayúsculas: A-Z\nMinúsculas: a-z\nNúmeros: 0-9\nSímbolos: !@#$%^&*\n\n--- Contraseña generada ---\nk7#Qm!2pXr&9LwN4"
+    }
+  },
+  "pt": {
+    "md5-generator": {
+      "title": "Gerador MD5 — Coding.Tools",
+      "description": "Gere hashes MD5 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Gerador MD5",
+      "toolDescription": "Gere um hash MD5 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Digite o texto para gerar o hash MD5...",
+      "outputPlaceholder": "O hash MD5 aparecerá aqui...",
+      "hashLength": 32,
+      "descTitle": "Gerador MD5",
+      "descParas": [
+        "Esta ferramenta MD5 gera um resumo de 128 bits a partir de qualquer texto que você fornecer. É útil para verificar a integridade de dados, criar checksums, gerar identificadores únicos ou comparar conteúdos de arquivos sem revelar os dados originais.",
+        "A geração do hash é executada localmente no seu navegador. O texto que você cola no editor não é enviado, armazenado ou transmitido a um servidor."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole ou digite seu texto no editor de entrada.",
+        "Clique em <strong>Gerar MD5</strong> para criar o resumo hash.",
+        "Verifique o hash MD5 hexadecimal de 32 caracteres no editor de saída.",
+        "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> como arquivo de texto, ou <strong>Limpar</strong> para redefinir."
+      ],
+      "whatIs": "O que é MD5?",
+      "whatIsParas": [
+        "MD5 (Message-Digest Algorithm 5) é uma função hash criptográfica amplamente utilizada que produz um valor hash de 128 bits (16 bytes). É tipicamente expresso como um número hexadecimal de 32 caracteres. MD5 foi projetado por Ronald Rivest em 1991.",
+        "Embora o MD5 já não seja considerado seguro para fins criptográficos, continua sendo útil para checksums, verificação de arquivos e aplicações não críticas onde a velocidade é mais importante que a resistência a colisões."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A ferramenta suporta qualquer entrada de texto, incluindo caracteres Unicode. A mesma entrada sempre produzirá o mesmo hash MD5 (determinístico). Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+      "example": "Exemplo",
+      "examplePara": "O mesmo valor pode ser hasheado para produzir um resumo MD5 consistente:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash MD5 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Outro exemplo ---\nCoding.Tools\n\n--- Hash MD5 ---\na1b2c3d4e5f67890123456789abcdef0"
+    },
+    "sha1-generator": {
+      "title": "Gerador SHA1 — Coding.Tools",
+      "description": "Gere hashes SHA-1 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Gerador SHA1",
+      "toolDescription": "Gere um hash SHA-1 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Digite o texto para gerar o hash SHA-1...",
+      "outputPlaceholder": "O hash SHA-1 aparecerá aqui...",
+      "hashLength": 40,
+      "descTitle": "Gerador SHA1",
+      "descParas": [
+        "Este gerador SHA-1 cria um resumo de 160 bits a partir de qualquer texto. Cole ou digite sua entrada, pressione Gerar, e a ferramenta produz instantaneamente o hash SHA-1 hexadecimal de 40 caracteres no seu navegador.",
+        "O hashing é executado localmente usando a API Web Crypto. Sua entrada nunca é enviada ou armazenada em um servidor."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole o texto no editor de entrada.",
+        "Clique em <strong>Gerar SHA1</strong> para calcular o resumo.",
+        "O hash hexadecimal de 40 caracteres aparece no editor de saída.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é SHA-1?",
+      "whatIsParas": [
+        "SHA-1 (Secure Hash Algorithm 1) é uma função hash criptográfica que produz um valor hash de 160 bits (20 bytes), tipicamente representado como uma string hexadecimal de 40 caracteres. Foi projetada pela NSA e publicada pelo NIST em 1995.",
+        "SHA-1 é determinística: a mesma entrada sempre produz o mesmo hash. Embora já não seja considerado seguro para assinaturas digitais, continua amplamente utilizado para checksums e endereçamento de conteúdo."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A ferramenta suporta qualquer entrada de texto, incluindo caracteres Unicode e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+      "example": "Exemplo",
+      "examplePara": "Veja como uma mensagem curta é mapeada para seu hash SHA-1:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    },
+    "sha256-generator": {
+      "title": "Gerador SHA-256 — Coding.Tools",
+      "description": "Gere hashes SHA-256 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Gerador SHA-256",
+      "toolDescription": "Gere um hash SHA-256 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Digite o texto para gerar o hash SHA-256...",
+      "outputPlaceholder": "O hash SHA-256 aparecerá aqui...",
+      "hashLength": 64,
+      "descTitle": "Gerador SHA-256",
+      "descParas": [
+        "Esta ferramenta gera um hash SHA-256 a partir de qualquer texto. SHA-256 pertence à família SHA-2 de funções hash criptográficas e produz um resumo fixo de 256 bits (64 caracteres hexadecimais) independentemente do tamanho da entrada.",
+        "O hash é calculado localmente no seu navegador usando a API Web Crypto. Sua entrada nunca é enviada ou armazenada em um servidor."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole seu texto no editor de entrada.",
+        "Clique em <strong>Gerar</strong> para produzir o resumo.",
+        "O hash hexadecimal de 64 caracteres aparece no editor de saída.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é SHA-256?",
+      "whatIsParas": [
+        "SHA-256 (Secure Hash Algorithm 256-bit) é uma função hash criptográfica da família SHA-2, projetada pela NSA e publicada pelo NIST. Produz um valor hash fixo de 256 bits (32 bytes) representado como uma string hexadecimal de 64 caracteres.",
+        "SHA-256 é amplamente utilizado em tecnologia blockchain (Bitcoin), assinaturas digitais, certificados TLS/SSL e verificação de integridade de dados."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A ferramenta aceita qualquer texto, incluindo caracteres Unicode, emojis e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+      "example": "Exemplo",
+      "examplePara": "Hashear uma frase curta produz um resumo de 64 caracteres:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-256 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
+    },
+    "sha384-generator": {
+      "title": "Gerador SHA384 — Coding.Tools",
+      "description": "Gere hashes SHA-384 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Gerador SHA384",
+      "toolDescription": "Gere um hash SHA-384 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Digite o texto para gerar o hash SHA-384...",
+      "outputPlaceholder": "O hash SHA-384 aparecerá aqui...",
+      "hashLength": 96,
+      "descTitle": "Gerador SHA384",
+      "descParas": [
+        "Esta ferramenta gera um hash SHA-384 a partir de qualquer texto. SHA-384 pertence à família SHA-2 e produz um resumo fixo de 384 bits (96 caracteres hexadecimais) independentemente do tamanho da entrada.",
+        "O hash é calculado localmente no seu navegador usando a API Web Crypto."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole seu texto no editor de entrada.",
+        "Clique em <strong>Gerar</strong> para produzir o resumo.",
+        "O hash hexadecimal de 96 caracteres aparece no editor de saída.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é SHA-384?",
+      "whatIsParas": [
+        "SHA-384 (Secure Hash Algorithm 384-bit) é uma função hash criptográfica da família SHA-2. Está intimamente relacionada com SHA-512 — usa o mesmo algoritmo, mas produz um valor hash truncado de 384 bits (48 bytes) representado como uma string hexadecimal de 96 caracteres.",
+        "SHA-384 é utilizado em certificados TLS/SSL, assinaturas digitais e protocolos de segurança que exigem um hash forte mas uma saída ligeiramente mais curta que SHA-512."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A ferramenta aceita qualquer texto, incluindo caracteres Unicode, emojis e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+      "example": "Exemplo",
+      "examplePara": "Hashear uma frase curta produz um resumo de 96 caracteres:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    },
+    "sha512-generator": {
+      "title": "Gerador SHA-512 — Coding.Tools",
+      "description": "Gere hashes SHA-512 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Gerador SHA-512",
+      "toolDescription": "Gere um hash SHA-512 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Digite o texto para gerar o hash SHA-512...",
+      "outputPlaceholder": "O hash SHA-512 aparecerá aqui...",
+      "hashLength": 128,
+      "descTitle": "Gerador SHA-512",
+      "descParas": [
+        "Esta ferramenta gera um hash SHA-512 a partir de qualquer texto. SHA-512 pertence à família SHA-2 e produz um resumo fixo de 512 bits (128 caracteres hexadecimais) independentemente do tamanho da entrada.",
+        "O hash é calculado localmente no seu navegador usando a API Web Crypto."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole seu texto no editor de entrada.",
+        "Clique em <strong>Gerar</strong> para produzir o resumo.",
+        "O hash hexadecimal de 128 caracteres aparece no editor de saída.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é SHA-512?",
+      "whatIsParas": [
+        "SHA-512 (Secure Hash Algorithm 512-bit) é uma função hash criptográfica da família SHA-2. Produz um valor hash fixo de 512 bits (64 bytes) representado como uma string hexadecimal de 128 caracteres.",
+        "SHA-512 é utilizado em aplicações de alta segurança, incluindo assinaturas digitais, autoridades certificadoras, hashing de senhas e sistemas blockchain. É considerado uma das funções hash mais robustas disponíveis."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A ferramenta aceita qualquer texto, incluindo caracteres Unicode, emojis e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+      "example": "Exemplo",
+      "examplePara": "Hashear uma frase curta produz um resumo de 128 caracteres:",
+      "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    },
+    "base64-encode": {
+      "title": "Codificação e Decodificação Base64 — Coding.Tools",
+      "description": "Codifique texto para Base64 ou decodifique Base64 de volta para texto legível diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Codificação Base64",
+      "toolDescription": "Converta texto para Base64, decodifique Base64 para texto legível, e copie ou baixe o resultado.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Digite o texto para codificar ou cole Base64 para decodificar...",
+      "outputPlaceholder": "O resultado codificado ou decodificado aparecerá aqui...",
+      "descTitle": "Codificação e Decodificação Base64",
+      "descParas": [
+        "Esta ferramenta Base64 converte texto simples em Base64 e transforma strings Base64 de volta em texto legível. É útil para preparar dados para APIs, inspecionar valores codificados em logs ou testar cargas de requisição.",
+        "A conversão é executada localmente no seu navegador. O texto não é enviado, armazenado ou transmitido a um servidor."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole texto simples ou um valor Base64 no editor de entrada.",
+        "Escolha <strong>Codificar</strong> para criar uma string Base64, ou <strong>Decodificar</strong> para ler uma existente.",
+        "Verifique o editor de saída e a mensagem de status.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é Base64?",
+      "whatIsParas": [
+        "Base64 é uma forma de representar bytes como texto imprimível. Usa letras, números, sinais de mais, barras diagonais e caracteres de preenchimento para que dados binários possam viajar através de sistemas que esperam texto comum.",
+        "Base64 é um formato de codificação, não criptografia. Qualquer pessoa pode decodificá-lo se tiver a string. Também aumenta o tamanho dos dados em aproximadamente um terço."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A codificação suporta texto comum, incluindo caracteres Unicode. Ao decodificar, certifique-se de que a entrada seja uma string Base64 completa sem cabeçalhos ou texto adicional.",
+      "example": "Exemplo",
+      "examplePara": "O mesmo valor pode ser codificado e decodificado de volta:",
+      "exampleCode": "--- Texto simples ---\nHello, World!\n\n--- Codificado em Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decodificado ---\nHello, World!"
+    },
+    "base64-decode": {
+      "title": "Decodificação Base64 — Coding.Tools",
+      "description": "Decodifique strings Base64 para texto legível diretamente no seu navegador. Rápido, privado e gratuito.",
+      "toolTitle": "Decodificação Base64",
+      "toolDescription": "Decodifique strings Base64 para texto legível, ou codifique texto para Base64, e copie ou baixe o resultado.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "Cole o texto Base64 para decodificar ou digite texto simples para codificar...",
+      "outputPlaceholder": "O resultado decodificado ou codificado aparecerá aqui...",
+      "descTitle": "Decodificação Base64",
+      "descParas": [
+        "Esta ferramenta decodifica strings Base64 codificadas para texto legível. É útil para inspecionar valores codificados em respostas de API, cabeçalhos de e-mail, URIs de dados ou tokens de autenticação.",
+        "A decodificação é executada localmente no seu navegador. A string Base64 não é enviada, armazenada ou transmitida a um servidor."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole uma string Base64 codificada no editor de entrada.",
+        "Clique em <strong>Decodificar</strong> para convertê-la em texto legível.",
+        "Verifique o editor de saída e a mensagem de status.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é Base64?",
+      "whatIsParas": [
+        "Base64 é uma forma de representar bytes como texto imprimível. Usa letras, números, sinais de mais, barras diagonais e caracteres de preenchimento.",
+        "Base64 é um formato de codificação, não criptografia. Qualquer pessoa pode decodificá-lo. Aumenta o tamanho dos dados em aproximadamente um terço."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Certifique-se de que a entrada seja uma string Base64 completa sem cabeçalhos ou texto adicional. O decodificador reportará um erro se a entrada contiver caracteres inválidos.",
+      "example": "Exemplo",
+      "examplePara": "Uma string Base64 pode ser decodificada para seu texto original:",
+      "exampleCode": "--- Entrada Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Saída decodificada ---\nHello, World!"
+    },
+    "password-generator": {
+      "title": "Gerador de Senhas — Coding.Tools",
+      "description": "Gere senhas aleatórias fortes com comprimento e tipos de caracteres personalizáveis. Geração segura executada completamente no seu navegador.",
+      "toolTitle": "Gerador de Senhas",
+      "toolDescription": "Crie senhas aleatórias fortes com comprimento e tipos de caracteres configuráveis. Tudo é executado localmente no seu navegador.",
+      "categoryName": "Hash e Criptografia",
+      "inputPlaceholder": "",
+      "outputPlaceholder": "Clique em Gerar para criar uma senha...",
+      "descTitle": "Gerador de Senhas",
+      "descParas": [
+        "Esta ferramenta cria senhas aleatórias usando um gerador de números aleatórios criptograficamente seguro integrado no seu navegador. Você pode controlar o comprimento e os tipos de caracteres incluídos.",
+        "A senha é gerada localmente. Nunca é transmitida pela rede nem armazenada fora desta página."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Configure o comprimento desejado com o controle deslizante (4 a 128 caracteres).",
+        "Escolha os tipos de caracteres: maiúsculas, minúsculas, números e símbolos.",
+        "Clique em <strong>Gerar</strong> para criar uma nova senha aleatória.",
+        "Use <strong>Copiar</strong> para a área de transferência, ou <strong>Baixar</strong> como arquivo de texto."
+      ],
+      "whatIs": "Por que usar uma senha aleatória?",
+      "whatIsParas": [
+        "Senhas previsíveis são a forma mais comum de comprometimento de contas. Uma senha verdadeiramente aleatória com comprimento suficiente e variedade de caracteres resiste a ataques de força bruta e de dicionário.",
+        "O gerador usa <code>crypto.getRandomValues()</code> da API Web Crypto, fornecendo aleatoriedade de qualidade criptográfica diretamente do navegador."
+      ],
+      "inputNotes": "Notas de segurança",
+      "inputNotesPara": "O gerador usa aleatoriedade de qualidade criptográfica da API Web Crypto do navegador. As senhas nunca são enviadas pela rede. Para máxima segurança, use todos os tipos de caracteres e um comprimento de 16 ou mais caracteres.",
+      "example": "Exemplo",
+      "examplePara": "Uma senha de 16 caracteres com todos os tipos ativados poderia ser assim:",
+      "exampleCode": "--- Configuração ---\nComprimento: 16\nMaiúsculas: A-Z\nMinúsculas: a-z\nNúmeros: 0-9\nSímbolos: !@#$%^&*\n\n--- Senha gerada ---\nk7#Qm!2pXr&9LwN4"
+    }
+  }
+}

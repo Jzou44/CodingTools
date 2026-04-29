@@ -1,0 +1,218 @@
+{
+  "en": {
+    "badge": "Free & Open Source",
+    "title": "The Developer Toolbox",
+    "subtitle": "60+ free, browser-based tools that save you time. Format JSON, generate hashes, convert numbers, compress images, and much more.",
+    "searchPlaceholder": "Search tools...",
+    "categories": {
+      "image-utilities": "Image Utilities",
+      "formatter-minifier": "Formatter & Minifier",
+      "internet-testing": "Internet Testing",
+      "hash-cryptography": "Hash & Cryptography",
+      "number-conversion": "Number Conversion",
+      "string-text-utilities": "String & Text Utilities"
+    },
+    "toolTitles": {
+      "base64-encode": "Base64 Encode",
+      "base64-decode": "Base64 Decode",
+      "md5-generator": "MD5 Generator",
+      "sha1-generator": "SHA1 Generator",
+      "sha256-generator": "SHA256 Generator",
+      "sha384-generator": "SHA384 Generator",
+      "sha512-generator": "SHA512 Generator",
+      "password-generator": "Password Generator"
+    }
+  },
+  "cn": {
+    "badge": "免费开源",
+    "title": "开发者工具箱",
+    "subtitle": "60+ 款免费浏览器工具，助您节省时间。格式化 JSON、生成哈希、转换数字、压缩图片等。",
+    "searchPlaceholder": "搜索工具...",
+    "categories": {
+      "image-utilities": "图片工具",
+      "formatter-minifier": "格式化与压缩",
+      "internet-testing": "网络测试",
+      "hash-cryptography": "哈希与加密",
+      "number-conversion": "数字转换",
+      "string-text-utilities": "字符串与文本"
+    },
+    "toolTitles": {
+      "base64-encode": "Base64 编码",
+      "base64-decode": "Base64 解码",
+      "md5-generator": "MD5 生成器",
+      "sha1-generator": "SHA1 生成器",
+      "sha256-generator": "SHA-256 生成器",
+      "sha384-generator": "SHA384 生成器",
+      "sha512-generator": "SHA-512 生成器",
+      "password-generator": "密码生成器"
+    }
+  },
+  "tw": {
+    "badge": "免費開源",
+    "title": "開發者工具箱",
+    "subtitle": "60+ 款免費瀏覽器工具，助您節省時間。格式化 JSON、產生雜湊、轉換數字、壓縮圖片等。",
+    "searchPlaceholder": "搜尋工具...",
+    "categories": {
+      "image-utilities": "圖片工具",
+      "formatter-minifier": "格式化與壓縮",
+      "internet-testing": "網路測試",
+      "hash-cryptography": "雜湊與加密",
+      "number-conversion": "數字轉換",
+      "string-text-utilities": "字串與文字"
+    },
+    "toolTitles": {
+      "base64-encode": "Base64 編碼",
+      "base64-decode": "Base64 解碼",
+      "md5-generator": "MD5 產生器",
+      "sha1-generator": "SHA1 產生器",
+      "sha256-generator": "SHA-256 產生器",
+      "sha384-generator": "SHA384 產生器",
+      "sha512-generator": "SHA-512 產生器",
+      "password-generator": "密碼產生器"
+    }
+  },
+  "jp": {
+    "badge": "無料・オープンソース",
+    "title": "開発者ツールボックス",
+    "subtitle": "60以上の無料ブラウザツールで時短を。JSON整形、ハッシュ生成、数値変換、画像圧縮など。",
+    "searchPlaceholder": "ツールを検索...",
+    "categories": {
+      "image-utilities": "画像ツール",
+      "formatter-minifier": "フォーマッター＆ミニファイア",
+      "internet-testing": "ネットワークテスト",
+      "hash-cryptography": "ハッシュ＆暗号",
+      "number-conversion": "数値変換",
+      "string-text-utilities": "文字列＆テキスト"
+    },
+    "toolTitles": {
+      "base64-encode": "Base64 エンコード",
+      "base64-decode": "Base64 デコード",
+      "md5-generator": "MD5 ジェネレーター",
+      "sha1-generator": "SHA1 ジェネレーター",
+      "sha256-generator": "SHA-256 ジェネレーター",
+      "sha384-generator": "SHA384 ジェネレーター",
+      "sha512-generator": "SHA-512 ジェネレーター",
+      "password-generator": "パスワードジェネレーター"
+    }
+  },
+  "kr": {
+    "badge": "무료 오픈소스",
+    "title": "개발자 도구 상자",
+    "subtitle": "60개 이상의 무료 브라우저 도구로 시간을 절약하세요. JSON 포맷, 해시 생성, 숫자 변환, 이미지 압축 등.",
+    "searchPlaceholder": "도구 검색...",
+    "categories": {
+      "image-utilities": "이미지 도구",
+      "formatter-minifier": "포맷터 & 미니파이어",
+      "internet-testing": "네트워크 테스트",
+      "hash-cryptography": "해시 & 암호화",
+      "number-conversion": "숫자 변환",
+      "string-text-utilities": "문자열 & 텍스트"
+    },
+    "toolTitles": {
+      "base64-encode": "Base64 인코딩",
+      "base64-decode": "Base64 디코딩",
+      "md5-generator": "MD5 생성기",
+      "sha1-generator": "SHA1 생성기",
+      "sha256-generator": "SHA-256 생성기",
+      "sha384-generator": "SHA384 생성기",
+      "sha512-generator": "SHA-512 생성기",
+      "password-generator": "비밀번호 생성기"
+    }
+  },
+  "fr": {
+    "badge": "Gratuit et open source",
+    "title": "La boîte à outils du développeur",
+    "subtitle": "60+ outils gratuits dans le navigateur pour gagner du temps. Formatez JSON, générez des hashes, convertissez des nombres, compressez des images, et plus encore.",
+    "searchPlaceholder": "Rechercher des outils...",
+    "categories": {
+      "image-utilities": "Outils image",
+      "formatter-minifier": "Formateur & Minifieur",
+      "internet-testing": "Test réseau",
+      "hash-cryptography": "Hash & Cryptographie",
+      "number-conversion": "Conversion de nombres",
+      "string-text-utilities": "Chaînes & Texte"
+    },
+    "toolTitles": {
+      "base64-encode": "Encodage Base64",
+      "base64-decode": "Décodage Base64",
+      "md5-generator": "Générateur MD5",
+      "sha1-generator": "Générateur SHA1",
+      "sha256-generator": "Générateur SHA-256",
+      "sha384-generator": "Générateur SHA384",
+      "sha512-generator": "Générateur SHA-512",
+      "password-generator": "Générateur de mots de passe"
+    }
+  },
+  "de": {
+    "badge": "Kostenlos & Open Source",
+    "title": "Die Entwickler-Werkzeugkiste",
+    "subtitle": "60+ kostenlose Browser-Tools, die Ihnen Zeit sparen. JSON formatieren, Hashes generieren, Zahlen konvertieren, Bilder komprimieren und mehr.",
+    "searchPlaceholder": "Tools suchen...",
+    "categories": {
+      "image-utilities": "Bild-Tools",
+      "formatter-minifier": "Formatter & Minifier",
+      "internet-testing": "Netzwerktest",
+      "hash-cryptography": "Hash & Kryptographie",
+      "number-conversion": "Zahlenkonvertierung",
+      "string-text-utilities": "Zeichenketten & Text"
+    },
+    "toolTitles": {
+      "base64-encode": "Base64 Kodierung",
+      "base64-decode": "Base64 Dekodierung",
+      "md5-generator": "MD5 Generator",
+      "sha1-generator": "SHA1 Generator",
+      "sha256-generator": "SHA-256 Generator",
+      "sha384-generator": "SHA384 Generator",
+      "sha512-generator": "SHA-512 Generator",
+      "password-generator": "Passwort Generator"
+    }
+  },
+  "es": {
+    "badge": "Gratuito y código abierto",
+    "title": "La caja de herramientas del desarrollador",
+    "subtitle": "60+ herramientas gratuitas en el navegador que le ahorran tiempo. Formatee JSON, genere hashes, convierta números, comprima imágenes y más.",
+    "searchPlaceholder": "Buscar herramientas...",
+    "categories": {
+      "image-utilities": "Utilidades de imagen",
+      "formatter-minifier": "Formateador y Minificador",
+      "internet-testing": "Prueba de red",
+      "hash-cryptography": "Hash y Criptografía",
+      "number-conversion": "Conversión de números",
+      "string-text-utilities": "Cadenas y Texto"
+    },
+    "toolTitles": {
+      "base64-encode": "Codificación Base64",
+      "base64-decode": "Decodificación Base64",
+      "md5-generator": "Generador MD5",
+      "sha1-generator": "Generador SHA1",
+      "sha256-generator": "Generador SHA-256",
+      "sha384-generator": "Generador SHA384",
+      "sha512-generator": "Generador SHA-512",
+      "password-generator": "Generador de contraseñas"
+    }
+  },
+  "pt": {
+    "badge": "Gratuito e código aberto",
+    "title": "A caixa de ferramentas do desenvolvedor",
+    "subtitle": "60+ ferramentas gratuitas no navegador que economizam seu tempo. Formate JSON, gere hashes, converta números, comprima imagens e mais.",
+    "searchPlaceholder": "Pesquisar ferramentas...",
+    "categories": {
+      "image-utilities": "Ferramentas de imagem",
+      "formatter-minifier": "Formatador e Minificador",
+      "internet-testing": "Teste de rede",
+      "hash-cryptography": "Hash e Criptografia",
+      "number-conversion": "Conversão de números",
+      "string-text-utilities": "Strings e Texto"
+    },
+    "toolTitles": {
+      "base64-encode": "Codificação Base64",
+      "base64-decode": "Decodificação Base64",
+      "md5-generator": "Gerador MD5",
+      "sha1-generator": "Gerador SHA1",
+      "sha256-generator": "Gerador SHA-256",
+      "sha384-generator": "Gerador SHA384",
+      "sha512-generator": "Gerador SHA-512",
+      "password-generator": "Gerador de senhas"
+    }
+  }
+}

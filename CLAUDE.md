@@ -62,21 +62,80 @@ templates/
 
 Template inheritance: `base_layout.html` → tool templates via `{% extends %}` + `{% block content %}`.
 
-### New UI (`new_ui/`) — In Progress
+### New UI (`new_ui/`) — Eleventy + Nunjucks
 
-Standalone static HTML redesign, not yet integrated into Flask. Silicon Valley aesthetic.
+Standalone Eleventy-based redesign, not yet integrated into Flask. Uses Nunjucks templates with i18n support for 9 languages.
+
+#### Running the New UI
+
+```bash
+# Build (Eleventy generates dist/ from src/)
+cd new_ui && npx @11ty/eleventy
+
+# Start dev server (serves dist/ on localhost:5500)
+node new_ui/server.js
+
+# After changing src/ files, rebuild then restart:
+cd new_ui && npx @11ty/eleventy
+# Kill old process: taskkill //F //PID <pid>  (Windows) or pkill -f "node.*server.js"
+node new_ui/server.js
+```
+
+**Important**: The server serves from `dist/`, not `src/`. Always rebuild with Eleventy after template/data changes. The server handles directory URLs (e.g., `/cn` → `/cn/index.html`).
+
+#### Directory Structure
 
 ```
 new_ui/
-├── index.html          # Homepage with search + 71 tool cards
-├── tool.html           # JSON Formatter (template for tool pages)
-├── base64-encode.html  # Working Base64 encode/decode tool
-├── server.js           # Dev server (port 5500, resolves .html extensions)
-├── css/style.css       # Design system (Plus Jakarta Sans, category colors)
-└── js/main.js          # Scroll animations, search filter, toast system
+├── server.js                    # Static file server (port 5500, serves dist/)
+├── .eleventy.js                 # Eleventy config
+├── package.json                 # Scripts: build, dev, debug
+├── css/style.css                # Design system (DM Sans, category colors)
+├── js/
+│   ├── main.js                  # Scroll animations (IntersectionObserver), search filter, toast
+│   └── tool-common.js           # Shared tool page utilities (copy, download, line numbers)
+├── src/
+│   ├── index.njk                # English homepage
+│   ├── localized-index.njk      # Generates /cn/, /tw/, ... /pt/ index pages via pagination
+│   ├── _includes/
+│   │   ├── base.njk             # Base HTML layout (head, body, scripts blocks)
+│   │   ├── navbar.njk           # Top nav (lang-aware home link)
+│   │   ├── sidebar.njk          # Tool sidebar (lang-aware links + translated titles)
+│   │   ├── footer.njk           # Footer with language switcher
+│   │   └── tool-layout.njk      # Shared tool page layout (extends base.njk)
+│   ├── _data/
+│   │   ├── tools.json           # Tool metadata (title, slug, category, icon SVG)
+│   │   ├── categories.json      # Category metadata (id, name, count, icon SVG)
+│   │   ├── t.json               # UI string translations (buttons, labels) per language
+│   │   ├── toolData.json        # Per-tool content translations (descriptions, steps, etc.)
+│   │   └── homepage.json        # Homepage translations (hero text, category names, tool titles)
+│   └── tools/                   # Tool page templates
+│       ├── *.njk                # English tool pages (8 tools)
+│       ├── cn/cn.11tydata.js    # Chinese data resolver + cn/*.njk tool pages
+│       ├── tw/tw.11tydata.js    # Traditional Chinese
+│       ├── jp/jp.11tydata.js    # Japanese
+│       ├── kr/kr.11tydata.js    # Korean
+│       ├── fr/fr.11tydata.js    # French
+│       ├── de/de.11tydata.js    # German
+│       ├── es/es.11tydata.js    # Spanish
+│       └── pt/pt.11tydata.js    # Portuguese
+└── dist/                        # Generated output (served by server.js)
 ```
 
-Design system: CSS custom properties in `style.css`. Category-specific accent colors (purple/blue/cyan/amber/emerald/pink). All icons are inline SVGs (no Font Awesome). All tool logic runs client-side.
+#### i18n Pattern (New UI)
+
+Each language has a `<lang>.11tydata.js` that loads translations from `t.json` and `toolData.json`, exposing computed data (`toolTitle`, `toolDescription`, `categoryName`, etc.) and `sidebarToolTitles` for the sidebar.
+
+Localized tool pages set `lang` and `toolId` in frontmatter; content is rendered via `{{ t.ui.* }}` and `{{ toolData.* }}` (with `| safe` for HTML-containing fields like steps and descriptions).
+
+Localized index pages are generated from `localized-index.njk` using Eleventy pagination over the language list.
+
+Key Nunjucks patterns:
+- `{{ toolData.steps[i] | safe }}` — renders HTML (e.g., `<strong>`) in translated content
+- `{{ homepage[lang].title }}` — localized homepage text
+- `{% if lang and lang != 'en' %}/{{ lang }}/{% else %}/{% endif %}` — language-aware links
+
+Current tools (8): base64-encode, base64-decode, md5-generator, sha1-generator, sha256-generator, sha384-generator, sha512-generator, password-generator
 
 ### Key Patterns
 

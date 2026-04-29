@@ -16,15 +16,22 @@ http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
   let filePath = path.join(dir, url.pathname === '/' ? 'index.html' : url.pathname);
 
-  // Try file, then try with .html extension
+  // Try file, then try with .html extension, then try index.html in directory
   fs.readFile(filePath, (err, data) => {
     if (err) {
-      // Try adding .html
       let htmlPath = filePath + '.html';
       fs.readFile(htmlPath, (err2, data2) => {
         if (err2) {
-          res.writeHead(404, {'Content-Type': 'text/plain'});
-          res.end('Not found: ' + url.pathname);
+          let indexPath = path.join(filePath, 'index.html');
+          fs.readFile(indexPath, (err3, data3) => {
+            if (err3) {
+              res.writeHead(404, {'Content-Type': 'text/plain'});
+              res.end('Not found: ' + url.pathname);
+              return;
+            }
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+            res.end(data3);
+          });
           return;
         }
         const ext = path.extname(htmlPath);

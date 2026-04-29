@@ -68,12 +68,20 @@ description: "Coding.Tools — 60+ free, browser-based developer tools. Format J
     <p class="footer-text">&copy; 2024 Coding.Tools</p>
     <p class="footer-text">Built for developers, by developers</p>
     <div class="footer-links">
-      <a href="/">English</a>
-      <a href="/zh">中文</a>
-      <a href="/zh-tw">繁體</a>
-      <a href="/ja">日本語</a>
-      <a href="/ko">한국어</a>
+      <a href="/" lang="en">English</a>
+      <a href="/cn" lang="zh-CN">中文</a>
+      <a href="/tw" lang="zh-TW">繁體</a>
+      <a href="/jp" lang="ja">日本語</a>
+      <a href="/kr" lang="ko">한국어</a>
+      <a href="/fr" lang="fr">Français</a>
+      <a href="/de" lang="de">Deutsch</a>
+      <a href="/es" lang="es">Español</a>
+      <a href="/pt" lang="pt">Português</a>
     </div>
   </div>
 </footer>
+{% endblock %}
+
+{% block scripts %}
+  <script src="/js/main.js"></script>
 {% endblock %}

@@ -1,0 +1,200 @@
+{
+  "en": {
+    "ui": {
+      "input": "Input",
+      "output": "Output",
+      "generate": "Generate",
+      "clear": "Clear",
+      "copy": "Copy",
+      "download": "Download",
+      "characters": "characters",
+      "lines": "lines",
+      "copyExample": "Copy example",
+      "options": "Options",
+      "passwordLength": "Password Length",
+      "uppercase": "Uppercase (A-Z)",
+      "lowercase": "Lowercase (a-z)",
+      "numbers": "Numbers (0-9)",
+      "symbols": "Symbols (!@#$)",
+      "generatedPassword": "Generated Password",
+      "encode": "Encode",
+      "decode": "Decode"
+    }
+  },
+  "cn": {
+    "ui": {
+      "input": "输入",
+      "output": "输出",
+      "generate": "生成",
+      "clear": "清除",
+      "copy": "复制",
+      "download": "下载",
+      "characters": "字符",
+      "lines": "行",
+      "copyExample": "复制示例",
+      "options": "选项",
+      "passwordLength": "密码长度",
+      "uppercase": "大写字母 (A-Z)",
+      "lowercase": "小写字母 (a-z)",
+      "numbers": "数字 (0-9)",
+      "symbols": "符号 (!@#$)",
+      "generatedPassword": "生成的密码",
+      "encode": "编码",
+      "decode": "解码"
+    }
+  },
+  "tw": {
+    "ui": {
+      "input": "輸入",
+      "output": "輸出",
+      "generate": "生成",
+      "clear": "清除",
+      "copy": "複製",
+      "download": "下載",
+      "characters": "字元",
+      "lines": "行",
+      "copyExample": "複製範例",
+      "options": "選項",
+      "passwordLength": "密碼長度",
+      "uppercase": "大寫字母 (A-Z)",
+      "lowercase": "小寫字母 (a-z)",
+      "numbers": "數字 (0-9)",
+      "symbols": "符號 (!@#$)",
+      "generatedPassword": "生成的密碼",
+      "encode": "編碼",
+      "decode": "解碼"
+    }
+  },
+  "jp": {
+    "ui": {
+      "input": "入力",
+      "output": "出力",
+      "generate": "生成",
+      "clear": "クリア",
+      "copy": "コピー",
+      "download": "ダウンロード",
+      "characters": "文字",
+      "lines": "行",
+      "copyExample": "例をコピー",
+      "options": "オプション",
+      "passwordLength": "パスワード長",
+      "uppercase": "大文字 (A-Z)",
+      "lowercase": "小文字 (a-z)",
+      "numbers": "数字 (0-9)",
+      "symbols": "記号 (!@#$)",
+      "generatedPassword": "生成されたパスワード",
+      "encode": "エンコード",
+      "decode": "デコード"
+    }
+  },
+  "kr": {
+    "ui": {
+      "input": "입력",
+      "output": "출력",
+      "generate": "생성",
+      "clear": "지우기",
+      "copy": "복사",
+      "download": "다운로드",
+      "characters": "문자",
+      "lines": "줄",
+      "copyExample": "예제 복사",
+      "options": "옵션",
+      "passwordLength": "비밀번호 길이",
+      "uppercase": "대문자 (A-Z)",
+      "lowercase": "소문자 (a-z)",
+      "numbers": "숫자 (0-9)",
+      "symbols": "기호 (!@#$)",
+      "generatedPassword": "생성된 비밀번호",
+      "encode": "인코딩",
+      "decode": "디코딩"
+    }
+  },
+  "fr": {
+    "ui": {
+      "input": "Entrée",
+      "output": "Sortie",
+      "generate": "Générer",
+      "clear": "Effacer",
+      "copy": "Copier",
+      "download": "Télécharger",
+      "characters": "caractères",
+      "lines": "lignes",
+      "copyExample": "Copier l'exemple",
+      "options": "Options",
+      "passwordLength": "Longueur du mot de passe",
+      "uppercase": "Majuscules (A-Z)",
+      "lowercase": "Minuscules (a-z)",
+      "numbers": "Chiffres (0-9)",
+      "symbols": "Symboles (!@#$)",
+      "generatedPassword": "Mot de passe généré",
+      "encode": "Encoder",
+      "decode": "Décoder"
+    }
+  },
+  "de": {
+    "ui": {
+      "input": "Eingabe",
+      "output": "Ausgabe",
+      "generate": "Generieren",
+      "clear": "Löschen",
+      "copy": "Kopieren",
+      "download": "Herunterladen",
+      "characters": "Zeichen",
+      "lines": "Zeilen",
+      "copyExample": "Beispiel kopieren",
+      "options": "Optionen",
+      "passwordLength": "Passwortlänge",
+      "uppercase": "Großbuchstaben (A-Z)",
+      "lowercase": "Kleinbuchstaben (a-z)",
+      "numbers": "Zahlen (0-9)",
+      "symbols": "Symbole (!@#$)",
+      "generatedPassword": "Generiertes Passwort",
+      "encode": "Codieren",
+      "decode": "Decodieren"
+    }
+  },
+  "es": {
+    "ui": {
+      "input": "Entrada",
+      "output": "Salida",
+      "generate": "Generar",
+      "clear": "Limpiar",
+      "copy": "Copiar",
+      "download": "Descargar",
+      "characters": "caracteres",
+      "lines": "líneas",
+      "copyExample": "Copiar ejemplo",
+      "options": "Opciones",
+      "passwordLength": "Longitud de contraseña",
+      "uppercase": "Mayúsculas (A-Z)",
+      "lowercase": "Minúsculas (a-z)",
+      "numbers": "Números (0-9)",
+      "symbols": "Símbolos (!@#$)",
+      "generatedPassword": "Contraseña generada",
+      "encode": "Codificar",
+      "decode": "Decodificar"
+    }
+  },
+  "pt": {
+    "ui": {
+      "input": "Entrada",
+      "output": "Saída",
+      "generate": "Gerar",
+      "clear": "Limpar",
+      "copy": "Copiar",
+      "download": "Baixar",
+      "characters": "caracteres",
+      "lines": "linhas",
+      "copyExample": "Copiar exemplo",
+      "options": "Opções",
+      "passwordLength": "Comprimento da senha",
+      "uppercase": "Maiúsculas (A-Z)",
+      "lowercase": "Minúsculas (a-z)",
+      "numbers": "Números (0-9)",
+      "symbols": "Símbolos (!@#$)",
+      "generatedPassword": "Senha gerada",
+      "encode": "Codificar",
+      "decode": "Decodificar"
+    }
+  }
+}

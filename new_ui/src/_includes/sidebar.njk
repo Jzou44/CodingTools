@@ -2,16 +2,20 @@
 
   <!-- Related Tools Card -->
   <div class="sidebar-card">
-    <h2 class="sidebar-card-title">Related Tools</h2>
+    <h2 class="sidebar-card-title">{% if lang and lang != 'en' %}{{ t.ui.relatedTools | default("Related Tools") }}{% else %}Related Tools{% endif %}</h2>
     <ul class="related-tools-list">
       {% for slug, tool in tools %}
         {% if tool.category == 'hash-cryptography' %}
           <li>
-            <a href="/{{ slug }}" {% if slug == activeTool %}class="active"{% endif %}>
+            {% set linkPrefix = "" %}
+            {% if lang and lang != 'en' %}
+              {% set linkPrefix = "/" + lang %}
+            {% endif %}
+            <a href="{{ linkPrefix }}/{{ slug }}" {% if slug == activeTool %}class="active"{% endif %}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 {{ tool.icon | safe }}
               </svg>
-              {{ tool.title }}
+              {% if sidebarToolTitles and sidebarToolTitles[slug] %}{{ sidebarToolTitles[slug] }}{% else %}{{ tool.title }}{% endif %}
             </a>
           </li>
         {% endif %}
@@ -21,7 +25,7 @@
 
   <!-- Categories Card -->
   <div class="sidebar-card">
-    <h2 class="sidebar-card-title">Categories</h2>
+    <h2 class="sidebar-card-title">{% if lang and lang != 'en' %}{{ t.ui.categories | default("Categories") }}{% else %}Categories{% endif %}</h2>
     <ul class="category-list">
       {% for cat in categories %}
         <li>
