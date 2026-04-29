@@ -170,7 +170,7 @@ permalink: "/es/decimal-to-octal.html"
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="tool-output-value empty" id="octal-output">Result will appear here</div>
+      <div class="tool-output-value empty" id="octal-output">{{ t.ui.resultPlaceholder }}</div>
     </div>
 
     <!-- Secondary Results -->
@@ -203,7 +203,7 @@ permalink: "/es/decimal-to-octal.html"
 
     <!-- Quick Reference -->
     <div class="nc-ref">
-      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
       <div class="nc-ref-grid">
         <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="oct">0</span></div>
         <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="oct">1</span></div>
@@ -288,7 +288,7 @@ permalink: "/es/decimal-to-octal.html"
       function convert() {
         var input = decimalInput.value.replace(/\s/g, '');
         if (!input) {
-          showPrimary('Result will appear here', 'empty');
+          showPrimary('{{ t.ui.resultPlaceholder }}', 'empty');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
@@ -299,12 +299,12 @@ permalink: "/es/decimal-to-octal.html"
           showPrimary(result.toString(8), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
-          showPrimary('Invalid decimal input', 'error');
+          showPrimary('{{ t.ui.invalidDecimalInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');
         }
       }
 
@@ -312,7 +312,7 @@ permalink: "/es/decimal-to-octal.html"
 
       btnClear.addEventListener('click', function () {
         decimalInput.value = '';
-        showPrimary('Result will appear here', 'empty');
+        showPrimary('{{ t.ui.resultPlaceholder }}', 'empty');
         showSecondary(hexOutput, hexCard, '—', 'empty');
         showSecondary(binaryOutput, binaryCard, '—', 'empty');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');

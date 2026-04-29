@@ -81,11 +81,11 @@ permalink: "/tw/rgba-to-hex.html"
       </div>
       <div class="rgba-hex-output-row">
         <div class="tool-output-value empty" id="hex-output">{{ toolData.resultPlaceholder }}</div>
-        <span class="rgba-hex-opacity-badge" id="opacity-badge" style="display:none;"><span id="opacity-badge-val">100%</span> opacity</span>
+        <span class="rgba-hex-opacity-badge" id="opacity-badge" style="display:none;"><span id="opacity-badge-val">100%</span> {{ t.ui.opacity }}</span>
       </div>
       <div class="rgba-hex-swatch" id="swatch-container">
         <div class="rgba-hex-swatch-fill" id="color-preview"></div>
-        <div class="rgba-hex-swatch-empty" id="swatch-placeholder">Preview</div>
+        <div class="rgba-hex-swatch-empty" id="swatch-placeholder">{{ t.ui.preview }}</div>
       </div>
     </div>
 
@@ -224,10 +224,10 @@ permalink: "/tw/rgba-to-hex.html"
       btnCopy.addEventListener('click', function () {
         var text = hexOutput.textContent;
         if (text && !hexOutput.classList.contains('empty') && !hexOutput.classList.contains('error')) {
-          var copyText = text + ' (opacity: ' + aInput.value + '%)';
+          var copyText = text + ' ({{ t.ui.opacity }}: ' + aInput.value + '%)';
           navigator.clipboard.writeText(copyText).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });

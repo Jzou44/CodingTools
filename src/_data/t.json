@@ -44,6 +44,7 @@
       "rgbColor": "RGB Color",
       "rgbaColor": "RGBA Color",
       "opacity": "Opacity",
+      "preview": "Preview",
       "pickRandomColor": "Pick a Random Color",
       "delimiter": "Delimiter",
       "none": "None",
@@ -71,7 +72,19 @@
       "content": "Content",
       "noExif": "No EXIF data found",
       "files": "files",
-      "home": "Home"
+      "home": "Home",
+      "rgbValue": "RGB Value",
+      "invalidHexColor": "Invalid hex color",
+      "convertedSuccessfully": "Converted successfully",
+      "converted": "Converted",
+      "resultPlaceholder": "Result will appear here",
+      "quickReference": "Quick Reference",
+      "invalidOctalInput": "Invalid octal input",
+      "validOctalDigits": "Valid:",
+      "octalDigitsOnly": "0-7 only",
+      "invalidDecimalInput": "Invalid decimal input",
+      "validDecimalDigits": "Valid:",
+      "decimalDigitsOnly": "0-9 (integers)"
     }
   },
   "cn": {
@@ -119,6 +132,7 @@
       "rgbColor": "RGB 颜色",
       "rgbaColor": "RGBA 颜色",
       "opacity": "不透明度",
+      "preview": "预览",
       "pickRandomColor": "随机颜色",
       "delimiter": "分隔符",
       "none": "无",
@@ -146,7 +160,19 @@
       "content": "内容",
       "noExif": "未找到EXIF数据",
       "files": "个文件",
-      "home": "首页"
+      "home": "首页",
+      "rgbValue": "RGB 值",
+      "invalidHexColor": "无效的十六进制颜色",
+      "convertedSuccessfully": "转换成功",
+      "converted": "已转换",
+      "resultPlaceholder": "结果将显示在这里",
+      "quickReference": "快速参考",
+      "invalidOctalInput": "无效的八进制输入",
+      "validOctalDigits": "有效：",
+      "octalDigitsOnly": "仅限 0-7",
+      "invalidDecimalInput": "无效的十进制输入",
+      "validDecimalDigits": "有效：",
+      "decimalDigitsOnly": "0-9（整数）"
     }
   },
   "tw": {
@@ -194,6 +220,7 @@
       "rgbColor": "RGB 顏色",
       "rgbaColor": "RGBA 顏色",
       "opacity": "不透明度",
+      "preview": "預覽",
       "pickRandomColor": "隨機顏色",
       "delimiter": "分隔符",
       "none": "無",
@@ -221,7 +248,19 @@
       "content": "內容",
       "noExif": "未找到EXIF資料",
       "files": "個檔案",
-      "home": "首頁"
+      "home": "首頁",
+      "rgbValue": "RGB 值",
+      "invalidHexColor": "無效的十六進位顏色",
+      "convertedSuccessfully": "轉換成功",
+      "converted": "已轉換",
+      "resultPlaceholder": "結果將顯示在這裡",
+      "quickReference": "快速參考",
+      "invalidOctalInput": "無效的八進位輸入",
+      "validOctalDigits": "有效：",
+      "octalDigitsOnly": "僅限 0-7",
+      "invalidDecimalInput": "無效的十進位輸入",
+      "validDecimalDigits": "有效：",
+      "decimalDigitsOnly": "0-9（整數）"
     }
   },
   "jp": {
@@ -269,6 +308,7 @@
       "rgbColor": "RGB色",
       "rgbaColor": "RGBA色",
       "opacity": "不透明度",
+      "preview": "プレビュー",
       "pickRandomColor": "ランダムな色",
       "delimiter": "区切り",
       "none": "なし",
@@ -296,7 +336,19 @@
       "content": "内容",
       "noExif": "EXIFデータが見つかりません",
       "files": "ファイル",
-      "home": "ホーム"
+      "home": "ホーム",
+      "rgbValue": "RGB値",
+      "invalidHexColor": "無効な16進数カラー",
+      "convertedSuccessfully": "変換完了",
+      "converted": "変換済み",
+      "resultPlaceholder": "結果はここに表示されます",
+      "quickReference": "クイックリファレンス",
+      "invalidOctalInput": "無効な8進数入力",
+      "validOctalDigits": "有効：",
+      "octalDigitsOnly": "0-7のみ",
+      "invalidDecimalInput": "無効な10進数入力",
+      "validDecimalDigits": "有効：",
+      "decimalDigitsOnly": "0-9（整数）"
     }
   },
   "kr": {
@@ -344,6 +396,7 @@
       "rgbColor": "RGB 색상",
       "rgbaColor": "RGBA 색상",
       "opacity": "불투명도",
+      "preview": "미리보기",
       "pickRandomColor": "랜덤 색상",
       "delimiter": "구분자",
       "none": "없음",
@@ -371,7 +424,19 @@
       "content": "내용",
       "noExif": "EXIF 데이터를 찾을 수 없습니다",
       "files": "파일",
-      "home": "홈"
+      "home": "홈",
+      "rgbValue": "RGB 값",
+      "invalidHexColor": "잘못된 16진수 색상",
+      "convertedSuccessfully": "변환 완료",
+      "converted": "변환됨",
+      "resultPlaceholder": "결과가 여기에 표시됩니다",
+      "quickReference": "빠른 참조",
+      "invalidOctalInput": "잘못된 8진수 입력",
+      "validOctalDigits": "유효：",
+      "octalDigitsOnly": "0-7만",
+      "invalidDecimalInput": "잘못된 10진수 입력",
+      "validDecimalDigits": "유효：",
+      "decimalDigitsOnly": "0-9（정수）"
     }
   },
   "fr": {
@@ -419,6 +484,7 @@
       "rgbColor": "Couleur RGB",
       "rgbaColor": "Couleur RGBA",
       "opacity": "Opacité",
+      "preview": "Aperçu",
       "pickRandomColor": "Couleur aléatoire",
       "delimiter": "Délimiteur",
       "none": "Aucun",
@@ -446,7 +512,19 @@
       "content": "Contenu",
       "noExif": "Aucune donnée EXIF trouvée",
       "files": "fichiers",
-      "home": "Accueil"
+      "home": "Accueil",
+      "rgbValue": "Valeur RGB",
+      "invalidHexColor": "Couleur hexadécimale invalide",
+      "convertedSuccessfully": "Conversion réussie",
+      "converted": "Converti",
+      "resultPlaceholder": "Le résultat apparaîtra ici",
+      "quickReference": "Référence rapide",
+      "invalidOctalInput": "Entrée octale invalide",
+      "validOctalDigits": "Valide :",
+      "octalDigitsOnly": "0-7 uniquement",
+      "invalidDecimalInput": "Entrée décimale invalide",
+      "validDecimalDigits": "Valide :",
+      "decimalDigitsOnly": "0-9 (entiers)"
     }
   },
   "de": {
@@ -494,6 +572,7 @@
       "rgbColor": "RGB-Farbe",
       "rgbaColor": "RGBA-Farbe",
       "opacity": "Deckkraft",
+      "preview": "Vorschau",
       "pickRandomColor": "Zufällige Farbe",
       "delimiter": "Trennzeichen",
       "none": "Keine",
@@ -521,7 +600,19 @@
       "content": "Inhalt",
       "noExif": "Keine EXIF-Daten gefunden",
       "files": "Dateien",
-      "home": "Startseite"
+      "home": "Startseite",
+      "rgbValue": "RGB-Wert",
+      "invalidHexColor": "Ungültige Hex-Farbe",
+      "convertedSuccessfully": "Erfolgreich konvertiert",
+      "converted": "Konvertiert",
+      "resultPlaceholder": "Das Ergebnis wird hier angezeigt",
+      "quickReference": "Schnellreferenz",
+      "invalidOctalInput": "Ungültige Oktaleingabe",
+      "validOctalDigits": "Gültig:",
+      "octalDigitsOnly": "Nur 0-7",
+      "invalidDecimalInput": "Ungültige Dezimaleingabe",
+      "validDecimalDigits": "Gültig:",
+      "decimalDigitsOnly": "0-9 (Ganzzahlen)"
     }
   },
   "es": {
@@ -569,6 +660,7 @@
       "rgbColor": "Color RGB",
       "rgbaColor": "Color RGBA",
       "opacity": "Opacidad",
+      "preview": "Vista previa",
       "pickRandomColor": "Color aleatorio",
       "delimiter": "Delimitador",
       "none": "Ninguno",
@@ -596,7 +688,19 @@
       "content": "Contenido",
       "noExif": "No se encontraron datos EXIF",
       "files": "archivos",
-      "home": "Inicio"
+      "home": "Inicio",
+      "rgbValue": "Valor RGB",
+      "invalidHexColor": "Color hexadecimal inválido",
+      "convertedSuccessfully": "Conversión exitosa",
+      "converted": "Convertido",
+      "resultPlaceholder": "El resultado aparecerá aquí",
+      "quickReference": "Referencia rápida",
+      "invalidOctalInput": "Entrada octal inválida",
+      "validOctalDigits": "Válido:",
+      "octalDigitsOnly": "Solo 0-7",
+      "invalidDecimalInput": "Entrada decimal inválida",
+      "validDecimalDigits": "Válido:",
+      "decimalDigitsOnly": "0-9 (enteros)"
     }
   },
   "pt": {
@@ -644,6 +748,7 @@
       "rgbColor": "Cor RGB",
       "rgbaColor": "Cor RGBA",
       "opacity": "Opacidade",
+      "preview": "Pré-visualização",
       "pickRandomColor": "Cor aleatória",
       "delimiter": "Delimitador",
       "none": "Nenhum",
@@ -671,7 +776,19 @@
       "content": "Conteúdo",
       "noExif": "Nenhum dado EXIF encontrado",
       "files": "arquivos",
-      "home": "Início"
+      "home": "Início",
+      "rgbValue": "Valor RGB",
+      "invalidHexColor": "Cor hexadecimal inválida",
+      "convertedSuccessfully": "Conversão bem-sucedida",
+      "converted": "Convertido",
+      "resultPlaceholder": "O resultado aparecerá aqui",
+      "quickReference": "Referência rápida",
+      "invalidOctalInput": "Entrada octal inválida",
+      "validOctalDigits": "Válido:",
+      "octalDigitsOnly": "Apenas 0-7",
+      "invalidDecimalInput": "Entrada decimal inválida",
+      "validDecimalDigits": "Válido:",
+      "decimalDigitsOnly": "0-9 (inteiros)"
     }
   }
 }

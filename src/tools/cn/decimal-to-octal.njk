@@ -151,7 +151,7 @@ permalink: "/cn/decimal-to-octal.html"
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
       <div class="tool-label">{{ t.ui.decimalNumber }}</div>
       <input type="text" class="tool-input-field" id="decimal-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
-      <div class="tool-hint">Valid: <code>0-9</code> (integers)</div>
+      <div class="tool-hint">{{ t.ui.validDecimalDigits }} <code>0-9</code> {{ t.ui.decimalDigitsOnly }}</div>
     </div>
 
     <!-- Arrow -->
@@ -165,12 +165,12 @@ permalink: "/cn/decimal-to-octal.html"
     <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
       <div class="tool-output-label">
         <span>{{ t.ui.octalNumber }}</span>
-        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="tool-output-value empty" id="octal-output">Result will appear here</div>
+      <div class="tool-output-value empty" id="octal-output">{{ t.ui.resultPlaceholder }}</div>
     </div>
 
     <!-- Secondary Results -->
@@ -203,7 +203,7 @@ permalink: "/cn/decimal-to-octal.html"
 
     <!-- Quick Reference -->
     <div class="nc-ref">
-      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
       <div class="nc-ref-grid">
         <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="oct">0</span></div>
         <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="oct">1</span></div>
@@ -288,7 +288,7 @@ permalink: "/cn/decimal-to-octal.html"
       function convert() {
         var input = decimalInput.value.replace(/\s/g, '');
         if (!input) {
-          showPrimary('Result will appear here', 'empty');
+          showPrimary('{{ t.ui.resultPlaceholder }}', 'empty');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
@@ -299,12 +299,12 @@ permalink: "/cn/decimal-to-octal.html"
           showPrimary(result.toString(8), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
-          showPrimary('Invalid decimal input', 'error');
+          showPrimary('{{ t.ui.invalidDecimalInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');
         }
       }
 
@@ -312,7 +312,7 @@ permalink: "/cn/decimal-to-octal.html"
 
       btnClear.addEventListener('click', function () {
         decimalInput.value = '';
-        showPrimary('Result will appear here', 'empty');
+        showPrimary('{{ t.ui.resultPlaceholder }}', 'empty');
         showSecondary(hexOutput, hexCard, '—', 'empty');
         showSecondary(binaryOutput, binaryCard, '—', 'empty');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');

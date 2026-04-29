@@ -155,7 +155,7 @@ permalink: "/kr/decimal-to-octal.html"
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
       <div class="tool-label">{{ t.ui.decimalNumber }}</div>
       <input type="text" class="tool-input-field" id="decimal-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
-      <div class="tool-hint">Valid: <code>0-9</code> (integers)</div>
+      <div class="tool-hint">{{ t.ui.validDecimalDigits }} <code>0-9</code> {{ t.ui.decimalDigitsOnly }}</div>
     </div>
 
     <!-- Arrow -->
@@ -207,7 +207,7 @@ permalink: "/kr/decimal-to-octal.html"
 
     <!-- Quick Reference -->
     <div class="nc-ref">
-      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
       <div class="nc-ref-grid">
         <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="oct">0</span></div>
         <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="oct">1</span></div>
@@ -303,12 +303,12 @@ permalink: "/kr/decimal-to-octal.html"
           showPrimary(result.toString(8), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
-          showPrimary('Invalid decimal input', 'error');
+          showPrimary('{{ t.ui.invalidDecimalInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');
         }
       }
 

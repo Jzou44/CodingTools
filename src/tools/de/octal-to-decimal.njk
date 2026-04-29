@@ -151,7 +151,7 @@ permalink: "/de/octal-to-decimal.html"
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
       <div class="tool-label">{{ t.ui.octalNumber }}</div>
       <input type="text" class="tool-input-field" id="octal-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
-      <div class="tool-hint">Valid: <code>0-7</code> only</div>
+      <div class="tool-hint">{{ t.ui.validOctalDigits }} <code>0-7</code> {{ t.ui.octalDigitsOnly }}</div>
     </div>
 
     <!-- Arrow -->
@@ -203,7 +203,7 @@ permalink: "/de/octal-to-decimal.html"
 
     <!-- Quick Reference -->
     <div class="nc-ref">
-      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
       <div class="nc-ref-grid">
         <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="oct">0</span></div>
         <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="oct">1</span></div>
@@ -299,12 +299,12 @@ permalink: "/de/octal-to-decimal.html"
           showPrimary(result.toString(10), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
-          showPrimary('Invalid octal input', 'error');
+          showPrimary('{{ t.ui.invalidOctalInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid octal input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidOctalInput }}');
         }
       }
 

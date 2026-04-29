@@ -778,7 +778,7 @@
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "Hex to RGB",
       "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
-      "categoryName": "Conversão de números",
+      "categoryName": "Number Conversion",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
       "descTitle": "Hex to RGB Converter",
@@ -4121,59 +4121,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "八進位轉十進位",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "將八進位數轉換為十進位、十六進位和二進位。",
       "categoryName": "數字轉換",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "八進位轉十進位轉換器",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "此工具將八進位（基數8）數轉換為十進位（基數10），並顯示十六進位和二進位等效值。",
+        "轉換在瀏覽器本地運行。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方法",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "在輸入欄位中輸入或貼上八進位數。",
+        "點擊<strong>轉換</strong>查看十進位、十六進位和二進位結果。",
+        "使用<strong>複製</strong>複製結果。"
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "什麼是八進位？",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "八進位是使用數字0-7的基數8數字系統。它常用於Unix檔案權限。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "僅使用數字0-7輸入有效的八進位數。",
+      "example": "範例",
+      "examplePara": "將八進位轉換為十進位：",
+      "exampleCode": "--- 八進位輸入 ---\n377\n\n--- 十進位 ---\n255\n\n--- 十六進位 ---\nFF\n\n--- 二進位 ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "十進位轉八進位",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "將十進位數轉換為八進位。",
       "categoryName": "數字轉換",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "十進位轉八進位轉換器",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "此工具將十進位（基數10）數轉換為八進位（基數8）格式。",
+        "轉換在瀏覽器本地運行。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方法",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "在輸入欄位中輸入或貼上十進位數。",
+        "點擊<strong>轉換</strong>查看八進位結果。",
+        "使用<strong>複製</strong>複製結果。"
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "什麼是十進位轉八進位？",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "十進位轉八進位是將基數10的數字轉換為基數8的數字系統。八進位常用於Unix檔案權限。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "輸入有效的十進位整數。",
+      "example": "範例",
+      "examplePara": "將十進位轉換為八進位：",
+      "exampleCode": "--- 十進位輸入 ---\n255\n\n--- 八進位 ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -4612,31 +4612,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "十六進位轉RGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "將十六進位顏色代碼轉換為RGB顏色值。",
       "categoryName": "數字轉換",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "十六進位轉RGB轉換器",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "此工具將十六進位顏色代碼轉換為RGB（紅綠藍）顏色值，並提供即時顏色預覽。",
+        "轉換在瀏覽器本地運行。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方法",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "在輸入欄位中輸入或貼上十六進位顏色代碼。",
+        "RGB値和顏色預覽會自動更新。",
+        "點擊<strong>隨機顏色</strong>獲取隨機的十六進位顏色。",
+        "使用<strong>複製</strong>複製RGB値。"
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "什麼是十六進位轉RGB？",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "十六進位顏色代碼使用十六進位數字來表示顏色。#FF5733 表示紅色=FF(255)、綠色=57(87)、藍色=33(51)。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "輸入帶或不帶 # 前綴的十六進位顏色。支援3位和6位格式。",
+      "example": "範例",
+      "examplePara": "將十六進位顏色轉換為RGB：",
+      "exampleCode": "--- 十六進位輸入 ---\n#FF5733\n\n--- RGB 輸出 ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
@@ -4699,34 +4699,34 @@
       "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
     },
     "rgba-to-hex": {
-      "title": "RGBA to Hex Converter — Coding.Tools",
-      "description": "Convert RGBA color values to hex color codes with opacity.",
+      "title": "RGBA 轉十六進位色彩 — Coding.Tools",
+      "description": "將 RGBA 色彩值轉換為十六進位色彩代碼並顯示透明度。",
       "toolTitle": "RGBA轉十六進位",
-      "toolDescription": "Convert RGBA colors to hex codes with opacity display.",
+      "toolDescription": "將 RGBA 色彩轉換為十六進位代碼並顯示透明度。",
       "categoryName": "數字轉換",
-      "inputPlaceholder": "Enter RGBA color (e.g. rgba(255,87,51,0.5))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGBA to Hex Converter",
+      "inputPlaceholder": "輸入 RGBA 色彩（例如 rgba(255,87,51,0.5)）...",
+      "outputPlaceholder": "十六進位色彩將顯示在這裡...",
+      "descTitle": "RGBA 轉十六進位轉換器",
       "descParas": [
-        "This tool converts RGBA color values to hexadecimal color codes, extracting the opacity as a separate value.",
-        "The conversion runs locally in your browser."
+        "此工具將 RGBA 色彩值轉換為十六進位色彩代碼，並將透明度分離顯示。",
+        "轉換過程在您的瀏覽器中本地執行。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方式",
       "steps": [
-        "Type or paste an RGBA color value into the input field.",
-        "The hex code and opacity update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "在輸入欄位中輸入或貼上 RGBA 色彩值。",
+        "十六進位代碼和透明度會自動更新。",
+        "點擊<strong>隨機選擇色彩</strong>來選擇隨機色彩。",
+        "使用<strong>複製</strong>來複製十六進位值。"
       ],
-      "whatIs": "What is RGBA to Hex?",
+      "whatIs": "什麼是 RGBA 轉十六進位？",
       "whatIsParas": [
-        "Converting RGBA to hex extracts the RGB portion as a hex code and displays the alpha channel as a percentage."
+        "將 RGBA 轉換為十六進位時，會將 RGB 部分提取為十六進位代碼，並將 Alpha 通道顯示為百分比。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGBA values as rgba(R,G,B,A). R/G/B are 0-255, A is 0-1.",
-      "example": "Example",
-      "examplePara": "Converting RGBA to hex:",
-      "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "以 rgba(R,G,B,A) 格式輸入 RGBA 值。R/G/B 範圍為 0-255，A 範圍為 0-1。",
+      "example": "範例",
+      "examplePara": "將 RGBA 轉換為十六進位：",
+      "exampleCode": "--- RGBA 輸入 ---\nrgba(255, 87, 51, 0.5)\n\n--- 十六進位輸出 ---\n#FF5733\n透明度: 50%"
     },
     "roman-numerals-chart": {
       "title": "Roman Numerals Chart — Coding.Tools",
@@ -6038,59 +6038,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "8進数から10進数",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "8進数を10進数、16進数、2進数に変換します。",
       "categoryName": "数値変換",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "8進数から10進数変換",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "このツールは8進数（基数8）を10進数（基数10）に変換し、16進数と2進数の等価値も表示します。",
+        "変換はブラウザ内でローカルに実行されます。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使い方",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "入力欄に8進数を入力または貼り付けます。",
+        "<strong>変換</strong>をクリックして10進数、16進数、2進数の結果を表示します。",
+        "<strong>コピー</strong>で結果をコピーします。"
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "8進数とは？",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "8進数は数字0-7を使用する基数8の数値システムです。Unixのファイル権限で一般的に使用されます。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "数字0-7のみを使用して有効な8進数を入力してください。",
+      "example": "例",
+      "examplePara": "8進数を10進数に変換：",
+      "exampleCode": "--- 8進数入力 ---\n377\n\n--- 10進数 ---\n255\n\n--- 16進数 ---\nFF\n\n--- 2進数 ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "10進数から8進数",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "10進数を8進数に変換します。",
       "categoryName": "数値変換",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "10進数から8進数変換",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "このツールは10進数（基数10）を8進数（基数8）形式に変換します。",
+        "変換はブラウザ内でローカルに実行されます。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使い方",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "入力欄に10進数を入力または貼り付けます。",
+        "<strong>変換</strong>をクリックして8進数の結果を表示します。",
+        "<strong>コピー</strong>で結果をコピーします。"
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "10進数から8進数とは？",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "10進数から8進数への変換は、基数10の数値を基数8の数値システムに変換することです。8進数はUnixのファイル権限で一般的に使用されます。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "入力に関する注意",
+      "inputNotesPara": "有効な10進数の整数を入力してください。",
+      "example": "例",
+      "examplePara": "10進数を8進数に変換：",
+      "exampleCode": "--- 10進数入力 ---\n255\n\n--- 8進数 ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -6529,31 +6529,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "16進数からRGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "16進数カラーコードをRGB値に変換します。",
       "categoryName": "数値変換",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "16進数からRGB変換",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "このツールは16進数カラーコードをRGB（赤・緑・青）カラー值に変換し、ライブプレビューを提供します。",
+        "変換はブラウザ内でローカルに実行されます。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使い方",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "入力欄に16進数カラーコードを入力または貼り付けます。",
+        "RGB値とカラープレビューが自動的に更新されます。",
+        "<strong>ランダムな色</strong>をクリックしてランダムな16進数カラーを取得します。",
+        "<strong>コピー</strong>でRGB値をコピーします。"
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "16進数からRGBとは？",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "16進数カラーコードは16進数を使って色を表现する方法です。#FF5733 は赤=FF(255)、緑=57(87)、青=33(51)を意味します。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "入力についての注意",
+      "inputNotesPara": "#プレフィックスの有無は問いません。3桂と6桂の形式に対応しています。",
+      "example": "例",
+      "examplePara": "16進数カラーをRGBに変換：",
+      "exampleCode": "--- 16進数入力 ---\n#FF5733\n\n--- RGB出力 ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
@@ -7954,59 +7954,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "8진수에서 10진수",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "8진수를 10진수, 16진수, 2진수로 변환합니다.",
       "categoryName": "숫자 변환",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "8진수에서 10진수 변환",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "이 도구는 8진수(基数8)를 10진수(基数10)로 변환하고 16진수와 2진수 등가값도 표시합니다.",
+        "변환은 브라우저에서 로컬로 실행됩니다."
       ],
-      "howToUse": "How to use",
+      "howToUse": "사용 방법",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "입력 필드에 8진수를 입력하거나 붙여넣습니다.",
+        "<strong>변환</strong>을 클릭하여 10진수, 16진수, 2진수 결과를 확인합니다.",
+        "<strong>복사</strong>로 결과를 복사합니다."
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "8진수란?",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "8진수는 숫자 0-7을 사용하는基数8 숫자 시스템입니다. Unix 파일 권限에서 일반적으로 사용됩니다."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "숫자 0-7만 사용하여 유효한 8진수를 입력하세요.",
+      "example": "예시",
+      "examplePara": "8진수를 10진수로 변환:",
+      "exampleCode": "--- 8진수 입력 ---\n377\n\n--- 10진수 ---\n255\n\n--- 16진수 ---\nFF\n\n--- 2진수 ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "10진수에서 8진수",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "10진수를 8진수로 변환합니다.",
       "categoryName": "숫자 변환",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "10진수에서 8진수 변환",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "이 도구는 10진수(基数10)를 8진수(基数8) 형식으로 변환합니다.",
+        "변환은 브라우저에서 로컬로 실행됩니다."
       ],
-      "howToUse": "How to use",
+      "howToUse": "사용 방법",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "입력 필드에 10진수를 입력하거나 붙여넣습니다.",
+        "<strong>변환</strong>을 클릭하여 8진수 결과를 확인합니다.",
+        "<strong>복사</strong>로 결과를 복사합니다."
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "10진수에서 8진수란?",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "10진수에서 8진수 변환은基数10의 숫자를基数8의 숫자 시스템으로 변환하는 것입니다. 8진수는 Unix 파일 권한에서 일반적으로 사용됩니다."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "유효한 10진수 정수를 입력하세요.",
+      "example": "예시",
+      "examplePara": "10진수를 8진수로 변환:",
+      "exampleCode": "--- 10진수 입력 ---\n255\n\n--- 8진수 ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -8445,31 +8445,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "16진수에서 RGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "16진수색상 코드를 RGB 값으로 변환합니다.",
       "categoryName": "숫자 변환",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "16진수에서 RGB 변환",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "이 도구는 16진수색상 코드를 RGB(빨간색 · 초록색 · 파란색) 색상 값으로 변환하고 실시간 미리보기를 제공합니다.",
+        "변환은 브라우저에서 로컬로 실행됩니다."
       ],
-      "howToUse": "How to use",
+      "howToUse": "사용 방법",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "입력 필드에 16진수색상 코드를 입력하거나 붙여넣습니다.",
+        "RGB 값과 색상 미리보기가 자동으로 업데이트됩니다.",
+        "<strong>랜덤 색상</strong>을 클릭하여 무작위 16진수색상을 가져옵니다.",
+        "<strong>복사</strong>로 RGB 값을 복사합니다."
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "16진수에서 RGB란?",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "16진수색상 코드는 16진수를 사용하여 색상을 표현하는 방법입니다. #FF5733은 빨간=FF(255), 초록=57(87), 파란=33(51)을 의미합니다."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "# 접두사 포함 똔 미포함 상태로 16진수색상을 입력하세요. 3자리 및 6자리 형식을 지원합니다.",
+      "example": "예시",
+      "examplePara": "16진수색상을 RGB로 변환:",
+      "exampleCode": "--- 16진수 입력 ---\n#FF5733\n\n--- RGB 출력 ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
@@ -9870,59 +9870,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "Octal en Décimal",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "Convertissez les nombres octaux en décimal, hexadécimal et binaire.",
       "categoryName": "Conversion de nombres",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "Convertisseur Octal vers Décimal",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Cet outil convertit les nombres octaux (base 8) en décimal (base 10), et affiche également les équivalents hexadécimaux et binaires.",
+        "La conversion s'exécute localement dans votre navigateur."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Comment utiliser",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Tapez ou collez un nombre octal dans le champ de saisie.",
+        "Cliquez sur <strong>Convertir</strong> pour voir les résultats décimal, hexadécimal et binaire.",
+        "Utilisez <strong>Copier</strong> pour copier le résultat."
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "Qu'est-ce que l'octal ?",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "L'octal est un système de numération en base 8 utilisant les chiffres 0-7. Il est couramment utilisé dans les permissions de fichiers Unix."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Entrez un nombre octal valide en utilisant uniquement les chiffres 0-7.",
+      "example": "Exemple",
+      "examplePara": "Conversion d'octal en décimal :",
+      "exampleCode": "--- Entrée octale ---\n377\n\n--- Décimal ---\n255\n\n--- Hexadécimal ---\nFF\n\n--- Binaire ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "Décimal en Octal",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "Convertissez les nombres décimaux en octal.",
       "categoryName": "Conversion de nombres",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "Convertisseur Décimal vers Octal",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Cet outil convertit les nombres décimaux (base 10) en format octal (base 8).",
+        "La conversion s'exécute localement dans votre navigateur."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Comment utiliser",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Tapez ou collez un nombre décimal dans le champ de saisie.",
+        "Cliquez sur <strong>Convertir</strong> pour voir le résultat octal.",
+        "Utilisez <strong>Copier</strong> pour copier le résultat."
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "Qu'est-ce que Décimal vers Octal ?",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "La conversion décimal vers octal transforme les nombres de base 10 en base 8. L'octal est couramment utilisé dans les permissions de fichiers Unix."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Entrez un nombre décimal entier valide.",
+      "example": "Exemple",
+      "examplePara": "Conversion de décimal en octal :",
+      "exampleCode": "--- Entrée décimale ---\n255\n\n--- Octal ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -10361,31 +10361,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "Hexadécimal en RGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "Convertissez les codes couleur hexadécimaux en valeurs RGB.",
       "categoryName": "Conversion de nombres",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "Convertisseur Hex vers RGB",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "Cet outil convertit les codes couleur hexadécimaux en valeurs RGB (rouge, vert, bleu) avec un aperçu en direct.",
+        "La conversion s'exécute localement dans votre navigateur."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Comment utiliser",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "Tapez ou collez un code couleur hexadécimal dans le champ de saisie.",
+        "La valeur RGB et l'aperçu de couleur se mettent à jour automatiquement.",
+        "Cliquez sur <strong>Couleur aléatoire</strong> pour obtenir une couleur hexadécimale aléatoire.",
+        "Utilisez <strong>Copier</strong> pour copier la valeur RGB."
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "Qu'est-ce que Hex vers RGB ?",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "Les codes couleur hexadécimaux utilisent des nombres hexadécimaux pour représenter les couleurs. #FF5733 signifie Rouge=FF(255), Vert=57(87), Bleu=33(51)."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Entrez une couleur hexadécimale avec ou sans le préfixe #. Les formats 3 et 6 chiffres sont supportés.",
+      "example": "Exemple",
+      "examplePara": "Conversion d'une couleur hexadécimale en RGB :",
+      "exampleCode": "--- Entrée hexadécimale ---\n#FF5733\n\n--- Sortie RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
@@ -11787,59 +11787,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "Oktal zu Dezimal",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "Konvertieren Sie Oktalzahlen in Dezimal, Hexadezimal und Binär.",
       "categoryName": "Zahlenkonvertierung",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "Oktal zu Dezimal Konverter",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Dieses Tool konvertiert Oktalzahlen (Basis 8) in Dezimal (Basis 10) und zeigt auch Hexadezimal- und Binärequivalente an.",
+        "Die Konvertierung erfolgt lokal in Ihrem Browser."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Verwendung",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Geben Sie eine Oktalzahl in das Eingabefeld ein.",
+        "Klicken Sie auf <strong>Konvertieren</strong> um die Dezimal-, Hexadezimal- und Binärergebnisse anzuzeigen.",
+        "Verwenden Sie <strong>Kopieren</strong> um das Ergebnis zu kopieren."
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "Was ist Oktal?",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "Oktal ist ein Zahlensystem mit Basis 8, das die Ziffern 0-7 verwendet. Es wird häufig bei Unix-Dateiberechtigungen verwendet."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Geben Sie eine gültige Oktalzahl nur mit den Ziffern 0-7 ein.",
+      "example": "Beispiel",
+      "examplePara": "Oktal in Dezimal konvertieren:",
+      "exampleCode": "--- Oktaleingabe ---\n377\n\n--- Dezimal ---\n255\n\n--- Hexadezimal ---\nFF\n\n--- Binär ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "Dezimal zu Oktal",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "Konvertieren Sie Dezimalzahlen in Oktal.",
       "categoryName": "Zahlenkonvertierung",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "Dezimal zu Oktal Konverter",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Dieses Tool konvertiert Dezimalzahlen (Basis 10) in das Oktalformat (Basis 8).",
+        "Die Konvertierung erfolgt lokal in Ihrem Browser."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Verwendung",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Geben Sie eine Dezimalzahl in das Eingabefeld ein.",
+        "Klicken Sie auf <strong>Konvertieren</strong> um das Oktalergebnis anzuzeigen.",
+        "Verwenden Sie <strong>Kopieren</strong> um das Ergebnis zu kopieren."
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "Was ist Dezimal zu Oktal?",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "Die Dezimal-zu-Oktal-Konvertierung wandelt Zahlen von Basis 10 in Basis 8 um. Oktal wird häufig bei Unix-Dateiberechtigungen verwendet."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Geben Sie eine gültige Dezimalzahl ein.",
+      "example": "Beispiel",
+      "examplePara": "Dezimal in Oktal konvertieren:",
+      "exampleCode": "--- Dezimaleingabe ---\n255\n\n--- Oktal ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -12278,31 +12278,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "Hexadezimal zu RGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "Konvertieren Sie Hex-Farbcodes in RGB-Werte.",
       "categoryName": "Zahlenkonvertierung",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "Hex zu RGB Konverter",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "Dieses Tool konvertiert Hex-Farbcodes in RGB (Rot, Grün, Blau) Farbwerte mit einer Live-Vorschau.",
+        "Die Konvertierung erfolgt lokal in Ihrem Browser."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Verwendung",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "Geben Sie einen Hex-Farbcode in das Eingabefeld ein.",
+        "Der RGB-Wert und die Farbvorschau werden automatisch aktualisiert.",
+        "Klicken Sie auf <strong>Zufällige Farbe</strong> für einen zufälligen Hex-Farbcode.",
+        "Verwenden Sie <strong>Kopieren</strong> um den RGB-Wert zu kopieren."
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "Was ist Hex zu RGB?",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "Hex-Farbcodes verwenden Hexadezimalzahlen um Farben darzustellen. #FF5733 bedeutet Rot=FF(255), Grün=57(87), Blau=33(51)."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Geben Sie eine Hex-Farbe mit oder ohne #-Präfix ein. 3-stellige und 6-stellige Formate werden unterstützt.",
+      "example": "Beispiel",
+      "examplePara": "Hex-Farbe in RGB konvertieren:",
+      "exampleCode": "--- Hex-Eingabe ---\n#FF5733\n\n--- RGB-Ausgabe ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
@@ -13704,59 +13704,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "Octal a Decimal",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "Convierte números octales a decimal, hexadecimal y binario.",
       "categoryName": "Conversión de números",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "Conversor de Octal a Decimal",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Esta herramienta convierte números octales (base 8) a decimal (base 10), y también muestra equivalentes hexadecimales y binarios.",
+        "La conversión se ejecuta localmente en su navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Cómo usar",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Escriba o pegue un número octal en el campo de entrada.",
+        "Haga clic en <strong>Convertir</strong> para ver los resultados decimal, hexadecimal y binario.",
+        "Use <strong>Copiar</strong> para copiar el resultado."
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "¿Qué es el octal?",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "El octal es un sistema numérico en base 8 que usa los dígitos 0-7. Se usa comúnmente en permisos de archivos Unix."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese un número octal válido usando solo los dígitos 0-7.",
+      "example": "Ejemplo",
+      "examplePara": "Conversión de octal a decimal:",
+      "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binario ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "Decimal a Octal",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "Convierte números decimales a octal.",
       "categoryName": "Conversión de números",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "Conversor de Decimal a Octal",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Esta herramienta convierte números decimales (base 10) a formato octal (base 8).",
+        "La conversión se ejecuta localmente en su navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Cómo usar",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Escriba o pegue un número decimal en el campo de entrada.",
+        "Haga clic en <strong>Convertir</strong> para ver el resultado octal.",
+        "Use <strong>Copiar</strong> para copiar el resultado."
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "¿Qué es Decimal a Octal?",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "La conversión de decimal a octal transforma números de base 10 a base 8. El octal se usa comúnmente en permisos de archivos Unix."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese un número decimal entero válido.",
+      "example": "Ejemplo",
+      "examplePara": "Conversión de decimal a octal:",
+      "exampleCode": "--- Entrada decimal ---\n255\n\n--- Octal ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -14195,31 +14195,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "Hexadecimal a RGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "Convierte códigos de color hexadecimal a valores RGB.",
       "categoryName": "Conversión de números",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "Conversor de Hex a RGB",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "Esta herramienta convierte códigos de color hexadecimal a valores RGB (rojo, verde, azul) con una vista previa en directo.",
+        "La conversión se ejecuta localmente en su navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Cómo usar",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "Escriba o pegue un código de color hexadecimal en el campo de entrada.",
+        "El valor RGB y la vista previa del color se actualizan automáticamente.",
+        "Haga clic en <strong>Color aleatorio</strong> para obtener un color hexadecimal aleatorio.",
+        "Use <strong>Copiar</strong> para copiar el valor RGB."
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "¿Qué es Hex a RGB?",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "Los códigos de color hexadecimal utilizan números hexadecimales para representar colores. #FF5733 significa Rojo=FF(255), Verde=57(87), Azul=33(51)."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese un color hexadecimal con o sin el prefijo #. Se admiten formatos de 3 y 6 dígitos.",
+      "example": "Ejemplo",
+      "examplePara": "Conversión de color hexadecimal a RGB:",
+      "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Salida RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
@@ -15621,59 +15621,59 @@
       "title": "Octal to Decimal Converter — Coding.Tools",
       "description": "Convert octal numbers to decimal format directly in your browser.",
       "toolTitle": "Octal to Decimal",
-      "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+      "toolDescription": "Converta números octais para decimal, hexadecimal e binário.",
       "categoryName": "Conversão de números",
       "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
       "outputPlaceholder": "Decimal result will appear here...",
-      "descTitle": "Octal to Decimal Converter",
+      "descTitle": "Conversor de Octal para Decimal",
       "descParas": [
-        "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Esta ferramenta converte números octais (base 8) em decimal (base 10), e também mostra equivalentes hexadecimais e binários.",
+        "A conversão é executada localmente no seu navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Como usar",
       "steps": [
-        "Type or paste an octal number into the input field.",
-        "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Digite ou cole um número octal no campo de entrada.",
+        "Clique em <strong>Converter</strong> para ver os resultados decimal, hexadecimal e binário.",
+        "Use <strong>Copiar</strong> para copiar o resultado."
       ],
-      "whatIs": "What is Octal?",
+      "whatIs": "O que é octal?",
       "whatIsParas": [
-        "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+        "Octal é um sistema numérico na base 8 usando os dígitos 0-7. É comumente usado em permissões de arquivos Unix."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
-      "example": "Example",
-      "examplePara": "Converting octal to decimal:",
-      "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira um número octal válido usando apenas os dígitos 0-7.",
+      "example": "Exemplo",
+      "examplePara": "Conversão de octal para decimal:",
+      "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binário ---\n11111111"
     },
     "decimal-to-octal": {
       "title": "Decimal to Octal Converter — Coding.Tools",
       "description": "Convert decimal numbers to octal format directly in your browser.",
       "toolTitle": "Decimal to Octal",
-      "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+      "toolDescription": "Converta números decimais para octal.",
       "categoryName": "Conversão de números",
       "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
       "outputPlaceholder": "Octal result will appear here...",
-      "descTitle": "Decimal to Octal Converter",
+      "descTitle": "Conversor de Decimal para Octal",
       "descParas": [
-        "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
-        "The conversion runs locally in your browser."
+        "Esta ferramenta converte números decimais (base 10) em formato octal (base 8).",
+        "A conversão é executada localmente no seu navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Como usar",
       "steps": [
-        "Type or paste a decimal number into the input field.",
-        "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Digite ou cole um número decimal no campo de entrada.",
+        "Clique em <strong>Converter</strong> para ver o resultado octal.",
+        "Use <strong>Copiar</strong> para copiar o resultado."
       ],
-      "whatIs": "What is Decimal to Octal?",
+      "whatIs": "O que é Decimal para Octal?",
       "whatIsParas": [
-        "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+        "A conversão de decimal para octal transforma números de base 10 para base 8. O octal é comumente usado em permissões de arquivos Unix."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a valid decimal number (integer).",
-      "example": "Example",
-      "examplePara": "Converting decimal to octal:",
-      "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira um número decimal inteiro válido.",
+      "example": "Exemplo",
+      "examplePara": "Conversão de decimal para octal:",
+      "exampleCode": "--- Entrada decimal ---\n255\n\n--- Octal ---\n377"
     },
     "binary-to-decimal": {
       "title": "Binary to Decimal Converter — Coding.Tools",
@@ -16112,31 +16112,31 @@
       "title": "Hex to RGB Converter — Coding.Tools",
       "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
       "toolTitle": "Hex to RGB",
-      "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+      "toolDescription": "Converta códigos de cor hexadecimal em valores RGB.",
       "categoryName": "Conversão de números",
       "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
       "outputPlaceholder": "RGB color will appear here...",
-      "descTitle": "Hex to RGB Converter",
+      "descTitle": "Conversor de Hex para RGB",
       "descParas": [
-        "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-        "The conversion runs locally in your browser."
+        "Esta ferramenta converte códigos de cor hexadecimal em valores RGB (vermelho, verde, azul) com visualização ao vivo.",
+        "A conversão é executada localmente no seu navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Como usar",
       "steps": [
-        "Type or paste a hex color code into the input field.",
-        "The RGB value and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random hex color.",
-        "Use <strong>Copy</strong> to copy the RGB value."
+        "Digite ou cole um código de cor hexadecimal no campo de entrada.",
+        "O valor RGB e a visualização da cor são atualizados automaticamente.",
+        "Clique em <strong>Cor aleatória</strong> para obter uma cor hexadecimal aleatória.",
+        "Use <strong>Copiar</strong> para copiar o valor RGB."
       ],
-      "whatIs": "What is Hex to RGB?",
+      "whatIs": "O que é Hex para RGB?",
       "whatIsParas": [
-        "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+        "Os códigos de cor hexadecimal usam números hexadecimais para representar cores. #FF5733 significa Vermelho=FF(255), Verde=57(87), Azul=33(51)."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
-      "example": "Example",
-      "examplePara": "Converting hex color to RGB:",
-      "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira uma cor hexadecimal com ou sem o prefixo #. Formatos de 3 e 6 dígitos são suportados.",
+      "example": "Exemplo",
+      "examplePara": "Conversão de cor hexadecimal para RGB:",
+      "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Saída RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
       "title": "RGB to Hex Converter — Coding.Tools",
