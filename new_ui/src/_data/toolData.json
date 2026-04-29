@@ -1006,6 +1006,310 @@
       "example": "Example",
       "examplePara": "Converting a hex number to its decimal equivalent:",
       "exampleCode": "--- Hex Input ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binary ---\n11111111"
+    },
+    "text-editor": {
+      "title": "Text Editor Online — Coding.Tools",
+      "description": "Edit text online with line numbers, word wrap, and instant character and line counts. Free, fast, and private.",
+      "toolTitle": "Text Editor Online",
+      "toolDescription": "Write and edit plain text directly in your browser with line numbers, copy, download, and character counting.",
+      "categoryName": "String & Text Utilities",
+      "inputPlaceholder": "Start typing or paste text here...",
+      "descTitle": "Text Editor Online",
+      "descParas": [
+        "This online text editor lets you write and edit plain text directly in your browser. It comes with line numbers, character counting, line counting, copy, and download features. It is useful for drafting notes, formatting snippets, cleaning up text, or quickly editing content without opening a desktop application.",
+        "The editor runs entirely in your browser. The text you type or paste is not uploaded, stored, or sent to a server, so your content stays private and you can use the tool instantly without any setup."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste your text into the editor area.",
+        "The status bar below updates in real time with the <strong>character count</strong> and <strong>line count</strong>.",
+        "Use <strong>Copy</strong> to copy the entire text to your clipboard.",
+        "Use <strong>Download</strong> to save the text as a <code>.txt</code> file, or <strong>Clear</strong> to reset the editor."
+      ],
+      "features": "Features",
+      "featuresList": [
+        "<strong>Line numbers</strong> — visible on the left side of the editor and synced with scrolling.",
+        "<strong>Tab key support</strong> — pressing Tab inserts two spaces instead of moving focus.",
+        "<strong>Instant counts</strong> — character and line counts update as you type, with no button press required."
+      ],
+      "example": "Example",
+      "examplePara": "Paste the following text into the editor to see the line numbers and character count in action:",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "Regex Tester — Coding.Tools",
+      "description": "Test regular expressions live with match highlighting and flag controls. Free browser-based regex testing tool.",
+      "toolTitle": "Regex Tester",
+      "toolDescription": "Test regex patterns in real time with live match highlighting. No data leaves your browser.",
+      "categoryName": "String & Text Utilities",
+      "regexPattern": "Regex Pattern",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "Test Text",
+      "inputPlaceholder": "Enter or paste text to test against...",
+      "matchResults": "Match Results",
+      "matchesAppearHere": "Matches will appear here...",
+      "noMatches": "0 matches",
+      "noMatchesFound": "No matches found",
+      "matchesSuffix": " matches",
+      "matchesFoundSuffix": " matches found",
+      "invalidRegex": "Invalid regex pattern",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "case-insensitive",
+      "flagMultiline": "multiline",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Regex Tester",
+      "descParas": [
+        "This regular expression tester lets you write and validate regex patterns against sample text directly in your browser. All six standard JavaScript regex flags are available: global, case-insensitive, multiline, dotAll, unicode, and sticky. Matches are highlighted in real time so you can see exactly what your pattern captures.",
+        "The regex runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can test patterns privately and quickly without changing your workflow."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste a regex pattern into the <strong>Regex Pattern</strong> input field. You do not need to include the leading and trailing slashes.",
+        "Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).",
+        "Enter or paste your test text into the editor below.",
+        "Matches are highlighted automatically. The match count appears in the status bar.",
+        "Use <strong>Copy</strong> to copy the test text to the clipboard, <strong>Download</strong> to save it as a file, or <strong>Clear</strong> to reset everything."
+      ],
+      "whatIs": "What are regular expressions?",
+      "whatIsParas": [
+        "A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.",
+        "JavaScript implements regex natively via the RegExp object. The same syntax works in most programming languages with minor variations. Learning regex is a core skill for text processing, data cleaning, log parsing, and input validation."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "Enter the regex pattern without delimiters (no /pattern/flags syntax). The flags are controlled by the checkboxes. Invalid patterns are caught and an error message is shown instead of crashing the tool.",
+      "example": "Example",
+      "examplePara": "A simple pattern to find email-like strings in text:",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "Regex Replace — Coding.Tools",
+      "description": "Find and replace text using regular expressions with live match highlighting and backreference support. Free browser-based tool.",
+      "toolTitle": "Regex Replace",
+      "toolDescription": "Find and replace text with regex patterns in real time. Supports backreferences like $1, $2. No data leaves your browser.",
+      "categoryName": "String & Text Utilities",
+      "regexPattern": "Regex Pattern",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "Replace With",
+      "replacePlaceholder": "Replacement string (supports $1, $2 backreferences)",
+      "testText": "Test Text",
+      "inputPlaceholder": "Enter or paste text to search and replace...",
+      "matchPreview": "Match Preview",
+      "matchesAppearHere": "Matches will appear here...",
+      "noMatches": "0 matches",
+      "noMatchesFound": "No matches found",
+      "noMatchesToReplace": "No matches to replace",
+      "replacedSuccessfully": "Replaced successfully",
+      "matchesSuffix": " matches",
+      "matchesFoundSuffix": " matches found",
+      "invalidRegex": "Invalid regex pattern",
+      "replaceAll": "Replace All",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "case-insensitive",
+      "flagMultiline": "multiline",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Regex Replace",
+      "descParas": [
+        "This regex find-and-replace tool lets you search for patterns and replace them with new text in real time. All six JavaScript regex flags are supported, and the replacement string understands backreferences like $1, $2, so you can rearrange captured groups. Matches are highlighted before you commit the replacement.",
+        "The search and replace runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can transform content privately and quickly."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste a regex pattern into the <strong>Regex Pattern</strong> field. No delimiters needed.",
+        "Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).",
+        "Enter a replacement string in the <strong>Replace With</strong> field. Use $1, $2 for backreferences to captured groups.",
+        "Paste or type your test text into the editor below. Matches are highlighted as you type.",
+        "Click <strong>Replace All</strong> to apply the replacement to the entire text.",
+        "Use <strong>Copy</strong> to copy the result, <strong>Download</strong> to save it, or <strong>Clear</strong> to reset everything."
+      ],
+      "whatIs": "What are regular expressions?",
+      "whatIsParas": [
+        "A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.",
+        "JavaScript implements regex natively via the RegExp object. Regex find-and-replace is one of the most powerful text transformation techniques available to developers."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "Enter the regex pattern without delimiters. The flags are controlled by the checkboxes. The replacement string supports standard backreferences: $1 through $9 for captured groups, and $& for the entire match.",
+      "example": "Example",
+      "examplePara": "Reformatting dates from MM/DD/YYYY to YYYY-MM-DD using backreferences:",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "Word Counter — Coding.Tools",
+      "description": "Count words, characters, sentences, and paragraphs instantly. Free online word counter tool.",
+      "toolTitle": "Word Counter",
+      "toolDescription": "Count words, characters, sentences, paragraphs, and estimate reading and speaking time.",
+      "categoryName": "String & Text Utilities",
+      "inputPlaceholder": "Paste or type your text here to count words, characters, sentences, and paragraphs...",
+      "statsTitle": "Statistics",
+      "statsWords": "Words",
+      "statsCharsWithSpaces": "Characters (with spaces)",
+      "statsCharsNoSpaces": "Characters (no spaces)",
+      "statsSentences": "Sentences",
+      "statsParagraphs": "Paragraphs",
+      "statsLines": "Lines",
+      "statsReadingTime": "Reading time",
+      "statsSpeakingTime": "Speaking time",
+      "timeZero": "~0 min",
+      "statusUpdated": "Statistics updated",
+      "descTitle": "Word Counter Online",
+      "descParas": [
+        "This word counter tool counts words, characters, sentences, and paragraphs in real time as you type or paste text. It also estimates reading and speaking time based on standard rates, making it useful for writers, students, and content creators who need quick text statistics.",
+        "All counting happens locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so your content stays private and the tool works instantly without any delay."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste or type your text into the input editor.",
+        "View live statistics in the panel below the editor. Every metric updates instantly as you type.",
+        "Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset the editor and all statistics."
+      ],
+      "whatIs": "What is a word counter?",
+      "whatIsParas": [
+        "A word counter is a tool that analyzes a piece of text and reports how many words, characters, sentences, and paragraphs it contains. Word counters are commonly used by writers, bloggers, students, and professionals who need to meet specific length requirements for essays, articles, reports, or social media posts.",
+        "This tool goes beyond basic counting by also calculating reading time (based on an average of 200 words per minute) and speaking time (based on an average of 130 words per minute), which are helpful for planning presentations, speeches, and content pacing."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool handles any text input, including Unicode characters and multi-line content. Words are counted by splitting on whitespace, sentences are detected by punctuation marks followed by whitespace or end of text, and paragraphs are counted as blocks of non-empty lines separated by blank lines.",
+      "example": "Example",
+      "examplePara": "Paste a sample text and watch the statistics update live:",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "Character Count — Coding.Tools",
+      "description": "Count characters, words, lines, and bytes instantly. Free online character counter with Twitter limit tracker.",
+      "toolTitle": "Character Count",
+      "toolDescription": "Count characters, words, lines, and UTF-8 bytes. Includes a Twitter 280-character limit tracker.",
+      "categoryName": "String & Text Utilities",
+      "inputPlaceholder": "Paste or type your text here to count characters, words, lines, and bytes...",
+      "statsTitle": "Statistics",
+      "statsTotalChars": "Total Characters",
+      "statsCharsNoSpaces": "Characters (no spaces)",
+      "statsWords": "Words",
+      "statsLines": "Lines",
+      "statsBytes": "Bytes (UTF-8)",
+      "statsTwitter": "Twitter remaining",
+      "statusUpdated": "Statistics updated",
+      "descTitle": "Character Count Online",
+      "descParas": [
+        "This character counter tool counts total characters, characters without spaces, words, lines, and UTF-8 bytes in real time. It also tracks how many characters you have left before hitting the Twitter 280-character limit, making it ideal for social media managers, writers, and developers.",
+        "All counting happens locally in your browser. Your text is never uploaded, stored, or sent to a server, so the tool is fast, private, and free to use without any restrictions."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste or type your text into the input editor.",
+        "View live statistics in the panel below the editor. All metrics update instantly as you type.",
+        "Check the <strong>Twitter remaining</strong> counter to see how many characters you have left for a tweet. It turns red when you exceed 280 characters.",
+        "Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset everything."
+      ],
+      "whatIs": "What is a character counter?",
+      "whatIsParas": [
+        "A character counter is a tool that analyzes text and reports the number of characters it contains. Unlike a word counter, which groups text by spaces, a character counter measures every individual letter, number, symbol, and whitespace character. This is especially important for platforms with strict character limits, such as Twitter (280 characters), SMS messages (160 characters), and meta descriptions for SEO (around 155 characters).",
+        "This tool also displays the UTF-8 byte count, which is useful for developers working with APIs, databases, or systems that enforce byte-level size limits on text fields."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool handles any text input, including Unicode characters such as emojis, accented letters, and CJK characters. Note that multi-byte Unicode characters count as 1 character but may take 2-4 bytes in UTF-8 encoding, which is why the byte count may be higher than the character count.",
+      "example": "Example",
+      "examplePara": "Paste a sample text and watch the statistics update live:",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "Case Converter — Coding.Tools",
+      "description": "Convert text to uppercase, lowercase, sentence case, title case, or invert case instantly.",
+      "toolTitle": "Case Converter",
+      "toolDescription": "Transform text between uppercase, lowercase, sentence case, title case, and inverted case.",
+      "categoryName": "String & Text Utilities",
+      "inputPlaceholder": "Enter or paste text to convert...",
+      "descTitle": "Case Converter",
+      "descParas": [
+        "This case converter transforms text between five common capitalization styles: upper case, lower case, sentence case, title case, and inverted case. It is useful when you need to reformat text for headlines, documents, code comments, or any situation where consistent casing matters.",
+        "The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste or type your text into the input editor.",
+        "Click one of the five conversion buttons: <strong>UPPER CASE</strong>, <strong>lower case</strong>, <strong>Sentence case</strong>, <strong>Title Case</strong>, or <strong>Invert Case</strong>.",
+        "The text in the editor is converted in place. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor."
+      ],
+      "whatIs": "What are the different case styles?",
+      "whatIsParas": [
+        "<strong>UPPER CASE</strong> converts every letter to its uppercase form. <strong>lower case</strong> converts every letter to its lowercase form. <strong>Sentence case</strong> capitalizes the first letter of each sentence and lowercases the rest. <strong>Title Case</strong> capitalizes the first letter of every word. <strong>Invert Case</strong> swaps the case of every character, turning upper into lower and vice versa."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool works with any text, including Unicode characters. Sentence case uses periods, exclamation marks, and question marks as sentence boundaries. Title case capitalizes every word without exceptions for articles or prepositions.",
+      "example": "Example",
+      "examplePara": "See how the same sentence looks in each case style:",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "UPPER CASE",
+      "lowerCase": "lower case",
+      "sentenceCase": "Sentence case",
+      "titleCase": "Title Case",
+      "invertCase": "Invert Case"
+    },
+    "reverse-text": {
+      "title": "Reverse Text — Coding.Tools",
+      "description": "Reverse any text string instantly. Free online text reversal tool.",
+      "toolTitle": "Reverse Text",
+      "toolDescription": "Reverse text character by character, useful for obfuscation, testing, and fun.",
+      "categoryName": "String & Text Utilities",
+      "inputPlaceholder": "Enter or paste text to reverse...",
+      "descTitle": "Reverse Text",
+      "descParas": [
+        "This tool reverses any text string character by character. It is useful for obfuscation, testing string handling in applications, creating mirror text, or simply having fun with words and sentences.",
+        "The reversal runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool privately and instantly."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Paste or type your text into the input editor.",
+        "Click <strong>Reverse Text</strong> to reverse the entire string character by character.",
+        "The reversed text replaces the input in the editor. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor."
+      ],
+      "whatIs": "What is text reversal?",
+      "whatIsParas": [
+        "Text reversal is the process of rearranging the characters in a string so that the last character becomes the first, the second-to-last becomes the second, and so on. For example, \"hello\" becomes \"olleh\". This is sometimes called a string reverse or mirror text operation."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool works with any text, including Unicode characters, emojis, and multi-line content. Each line is preserved in the output; only the order of characters within the full text is reversed.",
+      "example": "Example",
+      "examplePara": "See how text looks before and after reversal:",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "Reverse Text"
+    },
+    "number-to-words": {
+      "title": "Number to Words Converter — Coding.Tools",
+      "description": "Convert numbers to English words, ordinals, and ordinal numbers instantly.",
+      "toolTitle": "Number to Words",
+      "toolDescription": "Convert integers to English words, ordinal words, and ordinal numbers.",
+      "categoryName": "String & Text Utilities",
+      "inputPlaceholder": "Enter a number (e.g. 42, -7, 1000000)",
+      "descTitle": "Number to Words Converter",
+      "descParas": [
+        "This tool converts any integer into its English word representation, ordinal word, and ordinal number format. It is useful for writing checks, generating human-readable reports, creating educational materials, or formatting numbers in legal documents.",
+        "The conversion runs locally in your browser using the number-to-words library. The number you enter is not uploaded, stored, or sent to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Type or paste a number into the input field.",
+        "Click <strong>Convert</strong> or simply type to see live results.",
+        "Three results are displayed: the word form (e.g. \"forty-two\"), the ordinal word (e.g. \"forty-second\"), and the ordinal number (e.g. \"42nd\").",
+        "Use <strong>Copy</strong> to copy the word result to the clipboard, or <strong>Clear</strong> to reset."
+      ],
+      "whatIs": "What is number to words conversion?",
+      "whatIsParas": [
+        "Number to words conversion transforms a numeric value into its spelled-out English form. The ordinal form adds the appropriate suffix (st, nd, rd, th) to describe position or order in a sequence. This is commonly used in financial documents, legal writing, and formal correspondence."
+      ],
+      "inputNotes": "Input notes",
+      "inputNotesPara": "The tool accepts integers, including negative numbers and zero. Very large numbers (billions and above) are supported. Decimal numbers are not supported — only whole integers can be converted to words.",
+      "example": "Example",
+      "examplePara": "See how different numbers convert to words:",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "Word Result",
+      "ordinalWordResult": "Ordinal Word Result",
+      "ordinalNumberResult": "Ordinal Number Result",
+      "invalidInput": "Please enter a valid integer",
+      "convertedSuccess": "Converted successfully",
+      "conversionFailed": "Conversion failed: "
     }
   },
   "cn": {
@@ -2015,6 +2319,310 @@
       "example": "示例",
       "examplePara": "将十六进制数转换为十进制：",
       "exampleCode": "--- 十六进制输入 ---\nFF\n\n--- 十进制 ---\n255\n\n--- 八进制 ---\n377\n\n--- 二进制 ---\n11111111"
+    },
+    "text-editor": {
+      "title": "在线文本编辑器 — Coding.Tools",
+      "description": "在线编辑文本，支持行号、自动换行和即时字符行数统计。免费、快速、私密。",
+      "toolTitle": "在线文本编辑器",
+      "toolDescription": "在浏览器中直接编写和编辑纯文本，支持行号、复制、下载和字符统计。",
+      "categoryName": "字符串与文本",
+      "inputPlaceholder": "在此输入或粘贴文本...",
+      "descTitle": "在线文本编辑器",
+      "descParas": [
+        "这个在线文本编辑器让您可以直接在浏览器中编写和编辑纯文本。它具有行号、字符统计、行数统计、复制和下载功能。适用于起草笔记、格式化代码片段、清理文本或快速编辑内容，无需打开桌面应用程序。",
+        "编辑器完全在浏览器中运行。您输入或粘贴的文本不会被上传、存储或发送到服务器，因此您的内容保持私密，可以立即使用该工具。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在编辑器区域输入或粘贴文本。",
+        "下方的状态栏会实时更新<strong>字符数</strong>和<strong>行数</strong>。",
+        "使用<strong>复制</strong>将全部文本复制到剪贴板。",
+        "使用<strong>下载</strong>将文本保存为 <code>.txt</code> 文件，或<strong>清除</strong>重置编辑器。"
+      ],
+      "features": "功能特点",
+      "featuresList": [
+        "<strong>行号</strong> — 显示在编辑器左侧，与滚动同步。",
+        "<strong>Tab 键支持</strong> — 按 Tab 键插入两个空格而不是切换焦点。",
+        "<strong>即时统计</strong> — 字符数和行数在输入时自动更新，无需点击按钮。"
+      ],
+      "example": "示例",
+      "examplePara": "将以下文本粘贴到编辑器中，查看行号和字符统计效果：",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "正则表达式测试 — Coding.Tools",
+      "description": "在线测试正则表达式，支持匹配高亮和标志控制。免费的浏览器正则测试工具。",
+      "toolTitle": "正则表达式测试",
+      "toolDescription": "实时测试正则表达式，支持匹配高亮。数据不会离开您的浏览器。",
+      "categoryName": "字符串与文本",
+      "regexPattern": "正则表达式",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "测试文本",
+      "inputPlaceholder": "输入或粘贴要测试的文本...",
+      "matchResults": "匹配结果",
+      "matchesAppearHere": "匹配结果将显示在这里...",
+      "noMatches": "0 个匹配",
+      "noMatchesFound": "未找到匹配",
+      "matchesSuffix": " 个匹配",
+      "matchesFoundSuffix": " 个匹配",
+      "invalidRegex": "无效的正则表达式",
+      "flagGlobal": "全局",
+      "flagCaseInsensitive": "不区分大小写",
+      "flagMultiline": "多行",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "粘性",
+      "descTitle": "正则表达式测试",
+      "descParas": [
+        "这个正则表达式测试工具让您可以直接在浏览器中编写和验证正则表达式。支持所有六种标准 JavaScript 正则标志。匹配结果实时高亮显示。",
+        "正则表达式在浏览器中本地运行。您输入的文本不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在<strong>正则表达式</strong>输入框中输入或粘贴正则表达式。不需要包含前后的斜杠。",
+        "选择需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）或 <strong>y</strong>（粘性）。",
+        "在下方的编辑器中输入或粘贴测试文本。",
+        "匹配结果会自动高亮显示。匹配计数显示在状态栏中。",
+        "使用<strong>复制</strong>复制测试文本，<strong>下载</strong>保存为文件，或<strong>清除</strong>重置。"
+      ],
+      "whatIs": "什么是正则表达式？",
+      "whatIsParas": [
+        "正则表达式（regex）是定义搜索模式的字符序列。它用于在字符串中进行模式匹配，如查找特定单词、验证电子邮件或电话号码格式，或按复杂分隔符拆分文本。",
+        "JavaScript 通过 RegExp 对象原生实现正则表达式。学习正则表达式是文本处理、数据清洗、日志解析和输入验证的核心技能。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "输入正则表达式时不需要分隔符。标志由复选框控制。无效的模式会被捕获并显示错误消息。",
+      "example": "示例",
+      "examplePara": "一个简单的模式，用于查找文本中的电子邮件格式字符串：",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "正则表达式替换 — Coding.Tools",
+      "description": "使用正则表达式查找和替换文本，支持匹配高亮和反向引用。免费浏览器工具。",
+      "toolTitle": "正则表达式替换",
+      "toolDescription": "使用正则表达式实时查找和替换文本。支持 $1、$2 等反向引用。数据不会离开您的浏览器。",
+      "categoryName": "字符串与文本",
+      "regexPattern": "正则表达式",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "替换为",
+      "replacePlaceholder": "替换字符串（支持 $1、$2 反向引用）",
+      "testText": "测试文本",
+      "inputPlaceholder": "输入或粘贴要搜索和替换的文本...",
+      "matchPreview": "匹配预览",
+      "matchesAppearHere": "匹配结果将显示在这里...",
+      "noMatches": "0 个匹配",
+      "noMatchesFound": "未找到匹配",
+      "noMatchesToReplace": "没有可替换的匹配",
+      "replacedSuccessfully": "替换成功",
+      "matchesSuffix": " 个匹配",
+      "matchesFoundSuffix": " 个匹配",
+      "invalidRegex": "无效的正则表达式",
+      "replaceAll": "全部替换",
+      "flagGlobal": "全局",
+      "flagCaseInsensitive": "不区分大小写",
+      "flagMultiline": "多行",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "粘性",
+      "descTitle": "正则表达式替换",
+      "descParas": [
+        "这个正则表达式查找替换工具让您可以实时搜索模式并替换为新文本。支持所有六种 JavaScript 正则标志，替换字符串支持 $1、$2 等反向引用。",
+        "搜索和替换在浏览器中本地运行。您输入的文本不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在<strong>正则表达式</strong>字段中输入或粘贴正则表达式。不需要分隔符。",
+        "选择需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）或 <strong>y</strong>（粘性）。",
+        "在<strong>替换为</strong>字段中输入替换字符串。使用 $1、$2 引用捕获的分组。",
+        "在下方的编辑器中粘贴或输入测试文本。匹配会在输入时高亮显示。",
+        "点击<strong>全部替换</strong>对整个文本执行替换。",
+        "使用<strong>复制</strong>复制结果，<strong>下载</strong>保存，或<strong>清除</strong>重置。"
+      ],
+      "whatIs": "什么是正则表达式？",
+      "whatIsParas": [
+        "正则表达式（regex）是定义搜索模式的字符序列。它用于在字符串中进行模式匹配。",
+        "JavaScript 通过 RegExp 对象原生实现正则表达式。正则查找替换是开发者最强大的文本转换技术之一。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "输入正则表达式时不需要分隔符。标志由复选框控制。替换字符串支持标准反向引用：$1 到 $9 引用捕获的分组，$& 引用整个匹配。",
+      "example": "示例",
+      "examplePara": "使用反向引用将日期从 MM/DD/YYYY 格式转换为 YYYY-MM-DD 格式：",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "字数统计 — Coding.Tools",
+      "description": "即时统计单词、字符、句子和段落数量。免费在线字数统计工具。",
+      "toolTitle": "字数统计",
+      "toolDescription": "统计单词、字符、句子、段落数量，并估算阅读和朗读时间。",
+      "categoryName": "字符串与文本",
+      "inputPlaceholder": "在此粘贴或输入文本，统计单词、字符、句子和段落数...",
+      "statsTitle": "统计数据",
+      "statsWords": "单词数",
+      "statsCharsWithSpaces": "字符数（含空格）",
+      "statsCharsNoSpaces": "字符数（不含空格）",
+      "statsSentences": "句子数",
+      "statsParagraphs": "段落数",
+      "statsLines": "行数",
+      "statsReadingTime": "阅读时间",
+      "statsSpeakingTime": "朗读时间",
+      "timeZero": "约0分钟",
+      "statusUpdated": "统计数据已更新",
+      "descTitle": "在线字数统计",
+      "descParas": [
+        "这个字数统计工具在您输入或粘贴文本时实时统计单词、字符、句子和段落数量。它还基于标准速度估算阅读和朗读时间。",
+        "所有统计都在浏览器中本地完成。您输入的文本不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中粘贴或输入文本。",
+        "查看编辑器下方的实时统计数据。每个指标在输入时即时更新。",
+        "使用<strong>复制</strong>复制文本到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置编辑器和所有统计数据。"
+      ],
+      "whatIs": "什么是字数统计？",
+      "whatIsParas": [
+        "字数统计工具分析文本并报告其中包含的单词、字符、句子和段落数量。字数统计工具通常被作家、博主、学生和需要满足特定长度要求的专业人士使用。",
+        "此工具不仅进行基本统计，还计算阅读时间（基于平均每分钟200个单词）和朗读时间（基于平均每分钟130个单词）。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具处理任何文本输入，包括 Unicode 字符和多行内容。单词通过空格分割计算，句子通过标点符号后跟空格或文本结尾来检测，段落通过空行分隔的非空行块来计算。",
+      "example": "示例",
+      "examplePara": "粘贴示例文本，查看实时统计数据：",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "字符计数 — Coding.Tools",
+      "description": "即时统计字符、单词、行数和字节数。免费在线字符计数器，带 Twitter 限制追踪。",
+      "toolTitle": "字符计数",
+      "toolDescription": "统计字符、单词、行数和 UTF-8 字节数。包含 Twitter 280 字符限制追踪。",
+      "categoryName": "字符串与文本",
+      "inputPlaceholder": "在此粘贴或输入文本，统计字符、单词、行数和字节数...",
+      "statsTitle": "统计数据",
+      "statsTotalChars": "总字符数",
+      "statsCharsNoSpaces": "字符数（不含空格）",
+      "statsWords": "单词数",
+      "statsLines": "行数",
+      "statsBytes": "字节数（UTF-8）",
+      "statsTwitter": "Twitter 剩余",
+      "statusUpdated": "统计数据已更新",
+      "descTitle": "在线字符计数",
+      "descParas": [
+        "这个字符计数工具实时统计总字符数、不含空格的字符数、单词数、行数和 UTF-8 字节数。它还追踪您在达到 Twitter 280 字符限制之前剩余的字符数。",
+        "所有统计都在浏览器中本地完成。您的文本不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中粘贴或输入文本。",
+        "查看编辑器下方的实时统计数据。所有指标在输入时即时更新。",
+        "查看<strong>Twitter 剩余</strong>计数器，了解推文剩余字符数。超过 280 字符时会变红。",
+        "使用<strong>复制</strong>复制文本到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置。"
+      ],
+      "whatIs": "什么是字符计数器？",
+      "whatIsParas": [
+        "字符计数器是分析文本并报告其中字符数量的工具。与按空格分组的单词计数器不同，字符计数器测量每个字母、数字、符号和空白字符。这对于有严格字符限制的平台尤为重要，如 Twitter（280 字符）、短信（160 字符）和 SEO 元描述（约 155 字符）。",
+        "此工具还显示 UTF-8 字节数，这对处理 API、数据库或对文本字段有字节级大小限制的系统的开发者很有用。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具处理任何文本输入，包括 Unicode 字符如表情符号、带重音的字母和 CJK 字符。注意多字节 Unicode 字符计为 1 个字符，但在 UTF-8 编码中可能占 2-4 个字节。",
+      "example": "示例",
+      "examplePara": "粘贴示例文本，查看实时统计数据：",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "大小写转换 — Coding.Tools",
+      "description": "即时将文本转换为大写、小写、句首大写、标题大写或反转大小写。",
+      "toolTitle": "大小写转换",
+      "toolDescription": "在大写、小写、句首大写、标题大写和反转大小写之间转换文本。",
+      "categoryName": "字符串与文本",
+      "inputPlaceholder": "输入或粘贴要转换的文本...",
+      "descTitle": "大小写转换",
+      "descParas": [
+        "这个大小写转换工具可以在五种常见的大小写样式之间转换文本：大写、小写、句首大写、标题大写和反转大小写。",
+        "转换在浏览器中本地运行。您粘贴到编辑器中的文本不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中粘贴或输入文本。",
+        "点击五个转换按钮之一：<strong>大写</strong>、<strong>小写</strong>、<strong>句首大写</strong>、<strong>标题大写</strong>或<strong>反转大小写</strong>。",
+        "编辑器中的文本会被原地转换。使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置编辑器。"
+      ],
+      "whatIs": "不同的大小写样式是什么？",
+      "whatIsParas": [
+        "<strong>大写</strong>将每个字母转换为大写形式。<strong>小写</strong>将每个字母转换为小写形式。<strong>句首大写</strong>将每个句子的首字母大写。<strong>标题大写</strong>将每个单词的首字母大写。<strong>反转大小写</strong>交换每个字符的大小写。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具适用于任何文本，包括 Unicode 字符。句首大写使用句号、感叹号和问号作为句子边界。标题大写对每个单词首字母大写，不考虑冠词或介词。",
+      "example": "示例",
+      "examplePara": "查看同一句子在各种大小写样式中的效果：",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "大写",
+      "lowerCase": "小写",
+      "sentenceCase": "句首大写",
+      "titleCase": "标题大写",
+      "invertCase": "反转大小写"
+    },
+    "reverse-text": {
+      "title": "文本反转 — Coding.Tools",
+      "description": "即时反转任何文本字符串。免费在线文本反转工具。",
+      "toolTitle": "文本反转",
+      "toolDescription": "逐字符反转文本，可用于混淆、测试和娱乐。",
+      "categoryName": "字符串与文本",
+      "inputPlaceholder": "输入或粘贴要反转的文本...",
+      "descTitle": "文本反转",
+      "descParas": [
+        "此工具逐字符反转任何文本字符串。它可用于混淆、测试应用程序中的字符串处理、创建镜像文本，或简单地玩文字游戏。",
+        "反转在浏览器中本地运行。您粘贴到编辑器中的文本不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入编辑器中粘贴或输入文本。",
+        "点击<strong>文本反转</strong>逐字符反转整个字符串。",
+        "反转后的文本替换编辑器中的输入。使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置编辑器。"
+      ],
+      "whatIs": "什么是文本反转？",
+      "whatIsParas": [
+        "文本反转是重新排列字符串中字符的过程，使最后一个字符成为第一个，倒数第二个成为第二个，依此类推。例如，\"hello\" 变成 \"olleh\"。这有时被称为字符串反转或镜像文本操作。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具适用于任何文本，包括 Unicode 字符、表情符号和多行内容。输出中保留每行；只有整个文本中字符的顺序被反转。",
+      "example": "示例",
+      "examplePara": "查看文本反转前后的效果：",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "文本反转"
+    },
+    "number-to-words": {
+      "title": "数字转英文 — Coding.Tools",
+      "description": "即时将数字转换为英文单词、序数词和序数。",
+      "toolTitle": "数字转英文",
+      "toolDescription": "将整数转换为英文单词、序数词和序数。",
+      "categoryName": "字符串与文本",
+      "inputPlaceholder": "输入数字（如 42、-7、1000000）",
+      "descTitle": "数字转英文转换器",
+      "descParas": [
+        "此工具将任何整数转换为其英文单词表示、序数词和序数格式。它适用于写支票、生成可读报告、创建教育材料或在法律文件中格式化数字。",
+        "转换在浏览器中使用 number-to-words 库本地运行。您输入的数字不会被上传、存储或发送到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在输入字段中输入或粘贴数字。",
+        "点击<strong>转换</strong>或直接输入查看实时结果。",
+        "显示三个结果：单词形式（如 \"forty-two\"）、序数词（如 \"forty-second\"）和序数（如 \"42nd\"）。",
+        "使用<strong>复制</strong>将单词结果复制到剪贴板，或<strong>清除</strong>重置。"
+      ],
+      "whatIs": "什么是数字转英文？",
+      "whatIsParas": [
+        "数字转英文是将数值转换为英文拼写形式的过程。序数形式添加适当的后缀（st、nd、rd、th）来描述序列中的位置或顺序。这通常用于财务文件、法律写作和正式信函。"
+      ],
+      "inputNotes": "输入说明",
+      "inputNotesPara": "该工具接受整数，包括负数和零。支持非常大的数字（十亿及以上）。不支持小数数字——只有整数可以转换为单词。",
+      "example": "示例",
+      "examplePara": "查看不同数字如何转换为单词：",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "单词结果",
+      "ordinalWordResult": "序数词结果",
+      "ordinalNumberResult": "序数结果",
+      "invalidInput": "请输入有效的整数",
+      "convertedSuccess": "转换成功",
+      "conversionFailed": "转换失败："
     }
   },
   "tw": {
@@ -3023,6 +3631,310 @@
       "example": "範例",
       "examplePara": "將十六進位數轉換為十進位：",
       "exampleCode": "--- 十六進位輸入 ---\nFF\n\n--- 十進位 ---\n255\n\n--- 八進位 ---\n377\n\n--- 二進位 ---\n11111111"
+    },
+    "text-editor": {
+      "title": "線上文字編輯器 — Coding.Tools",
+      "description": "線上編輯文字，支援行號、自動換行和即時字元行數統計。免費、快速、私密。",
+      "toolTitle": "線上文字編輯器",
+      "toolDescription": "在瀏覽器中直接編寫和編輯純文字，支援行號、複製、下載和字元統計。",
+      "categoryName": "字串與文字",
+      "inputPlaceholder": "在此輸入或貼上文字...",
+      "descTitle": "線上文字編輯器",
+      "descParas": [
+        "這個線上文字編輯器讓您可以直接在瀏覽器中編寫和編輯純文字。它具有行號、字元統計、行數統計、複製和下載功能。適用於起草筆記、格式化程式碼片段、清理文字或快速編輯內容。",
+        "編輯器完全在瀏覽器中運行。您輸入或貼上的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在編輯器區域輸入或貼上文字。",
+        "下方的狀態列會即時更新<strong>字元數</strong>和<strong>行數</strong>。",
+        "使用<strong>複製</strong>將全部文字複製到剪貼簿。",
+        "使用<strong>下載</strong>將文字儲存為 <code>.txt</code> 檔案，或<strong>清除</strong>重設編輯器。"
+      ],
+      "features": "功能特點",
+      "featuresList": [
+        "<strong>行號</strong> — 顯示在編輯器左側，與捲動同步。",
+        "<strong>Tab 鍵支援</strong> — 按 Tab 鍵插入兩個空格而不是切換焦點。",
+        "<strong>即時統計</strong> — 字元數和行數在輸入時自動更新，無需點擊按鈕。"
+      ],
+      "example": "範例",
+      "examplePara": "將以下文字貼到編輯器中，查看行號和字元統計效果：",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "正規表達式測試 — Coding.Tools",
+      "description": "線上測試正規表達式，支援匹配高亮和標誌控制。免費的瀏覽器正規測試工具。",
+      "toolTitle": "正規表達式測試",
+      "toolDescription": "即時測試正規表達式，支援匹配高亮。資料不會離開您的瀏覽器。",
+      "categoryName": "字串與文字",
+      "regexPattern": "正規表達式",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "測試文字",
+      "inputPlaceholder": "輸入或貼上要測試的文字...",
+      "matchResults": "匹配結果",
+      "matchesAppearHere": "匹配結果將顯示在這裡...",
+      "noMatches": "0 個匹配",
+      "noMatchesFound": "未找到匹配",
+      "matchesSuffix": " 個匹配",
+      "matchesFoundSuffix": " 個匹配",
+      "invalidRegex": "無效的正規表達式",
+      "flagGlobal": "全域",
+      "flagCaseInsensitive": "不分大小寫",
+      "flagMultiline": "多行",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "粘性",
+      "descTitle": "正規表達式測試",
+      "descParas": [
+        "這個正規表達式測試工具讓您可以直接在瀏覽器中編寫和驗證正規表達式。支援所有六種標準 JavaScript 正規標誌。匹配結果即時高亮顯示。",
+        "正規表達式在瀏覽器中本地運行。您輸入的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在<strong>正規表達式</strong>輸入框中輸入或貼上正規表達式。不需要包含前後的斜線。",
+        "選擇需要的標誌：<strong>g</strong>（全域）、<strong>i</strong>（不分大小寫）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）或 <strong>y</strong>（粘性）。",
+        "在下方的編輯器中輸入或貼上測試文字。",
+        "匹配結果會自動高亮顯示。匹配計數顯示在狀態列中。",
+        "使用<strong>複製</strong>複製測試文字，<strong>下載</strong>儲存為檔案，或<strong>清除</strong>重設。"
+      ],
+      "whatIs": "什麼是正規表達式？",
+      "whatIsParas": [
+        "正規表達式（regex）是定義搜尋模式的字元序列。它用於在字串中進行模式匹配。",
+        "JavaScript 透過 RegExp 物件原生實作正規表達式。學習正規表達式是文字處理、資料清理、日誌解析和輸入驗證的核心技能。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "輸入正規表達式時不需要分隔符號。標誌由複選框控制。無效的模式會被捕獲並顯示錯誤訊息。",
+      "example": "範例",
+      "examplePara": "一個簡單的模式，用於尋找文字中的電子郵件格式字串：",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "正規表達式替換 — Coding.Tools",
+      "description": "使用正規表達式尋找和替換文字，支援匹配高亮和反向參照。免費瀏覽器工具。",
+      "toolTitle": "正規表達式替換",
+      "toolDescription": "使用正規表達式即時尋找和替換文字。支援 $1、$2 等反向參照。資料不會離開您的瀏覽器。",
+      "categoryName": "字串與文字",
+      "regexPattern": "正規表達式",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "替換為",
+      "replacePlaceholder": "替換字串（支援 $1、$2 反向參照）",
+      "testText": "測試文字",
+      "inputPlaceholder": "輸入或貼上要搜尋和替換的文字...",
+      "matchPreview": "匹配預覽",
+      "matchesAppearHere": "匹配結果將顯示在這裡...",
+      "noMatches": "0 個匹配",
+      "noMatchesFound": "未找到匹配",
+      "noMatchesToReplace": "沒有可替換的匹配",
+      "replacedSuccessfully": "替換成功",
+      "matchesSuffix": " 個匹配",
+      "matchesFoundSuffix": " 個匹配",
+      "invalidRegex": "無效的正規表達式",
+      "replaceAll": "全部替換",
+      "flagGlobal": "全域",
+      "flagCaseInsensitive": "不分大小寫",
+      "flagMultiline": "多行",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "粘性",
+      "descTitle": "正規表達式替換",
+      "descParas": [
+        "這個正規表達式尋找替換工具讓您可以即時搜尋模式並替換為新文字。支援所有六種 JavaScript 正規標誌，替換字串支援 $1、$2 等反向參照。",
+        "搜尋和替換在瀏覽器中本地運行。您輸入的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在<strong>正規表達式</strong>欄位中輸入或貼上正規表達式。不需要分隔符號。",
+        "選擇需要的標誌。<strong>g</strong>（全域）、<strong>i</strong>（不分大小寫）、<strong>m</strong>（多行）等。",
+        "在<strong>替換為</strong>欄位中輸入替換字串。使用 $1、$2 引用捕獲的分組。",
+        "在下方的編輯器中貼上或輸入測試文字。匹配會在輸入時高亮顯示。",
+        "點擊<strong>全部替換</strong>對整個文字執行替換。",
+        "使用<strong>複製</strong>複製結果，<strong>下載</strong>儲存，或<strong>清除</strong>重設。"
+      ],
+      "whatIs": "什麼是正規表達式？",
+      "whatIsParas": [
+        "正規表達式（regex）是定義搜尋模式的字元序列。它用於在字串中進行模式匹配。",
+        "JavaScript 透過 RegExp 物件原生實作正規表達式。正規尋找替換是開發者最強大的文字轉換技術之一。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "輸入正規表達式時不需要分隔符號。標誌由複選框控制。替換字串支援標準反向參照：$1 到 $9 引用捕獲的分組，$& 引用整個匹配。",
+      "example": "範例",
+      "examplePara": "使用反向參照將日期從 MM/DD/YYYY 格式轉換為 YYYY-MM-DD 格式：",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "字數統計 — Coding.Tools",
+      "description": "即時統計單詞、字元、句子和段落數量。免費線上字數統計工具。",
+      "toolTitle": "字數統計",
+      "toolDescription": "統計單詞、字元、句子、段落數量，並估算閱讀和朗讀時間。",
+      "categoryName": "字串與文字",
+      "inputPlaceholder": "在此貼上或輸入文字，統計單詞、字元、句子和段落數...",
+      "statsTitle": "統計資料",
+      "statsWords": "單詞數",
+      "statsCharsWithSpaces": "字元數（含空格）",
+      "statsCharsNoSpaces": "字元數（不含空格）",
+      "statsSentences": "句子數",
+      "statsParagraphs": "段落數",
+      "statsLines": "行數",
+      "statsReadingTime": "閱讀時間",
+      "statsSpeakingTime": "朗讀時間",
+      "timeZero": "約0分鐘",
+      "statusUpdated": "統計資料已更新",
+      "descTitle": "線上字數統計",
+      "descParas": [
+        "這個字數統計工具在您輸入或貼上文字時即時統計單詞、字元、句子和段落數量。它還基於標準速度估算閱讀和朗讀時間。",
+        "所有統計都在瀏覽器中本地完成。您輸入的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中貼上或輸入文字。",
+        "查看編輯器下方的即時統計資料。每個指標在輸入時即時更新。",
+        "使用<strong>複製</strong>複製文字到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設編輯器和所有統計資料。"
+      ],
+      "whatIs": "什麼是字數統計？",
+      "whatIsParas": [
+        "字數統計工具分析文字並報告其中包含的單詞、字元、句子和段落數量。",
+        "此工具不僅進行基本統計，還計算閱讀時間（基於平均每分鐘200個單詞）和朗讀時間（基於平均每分鐘130個單詞）。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具處理任何文字輸入，包括 Unicode 字元和多行內容。",
+      "example": "範例",
+      "examplePara": "貼上範例文字，查看即時統計資料：",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "字元計數 — Coding.Tools",
+      "description": "即時統計字元、單詞、行數和位元組數。免費線上字元計數器，帶 Twitter 限制追蹤。",
+      "toolTitle": "字元計數",
+      "toolDescription": "統計字元、單詞、行數和 UTF-8 位元組數。包含 Twitter 280 字元限制追蹤。",
+      "categoryName": "字串與文字",
+      "inputPlaceholder": "在此貼上或輸入文字，統計字元、單詞、行數和位元組數...",
+      "statsTitle": "統計資料",
+      "statsTotalChars": "總字元數",
+      "statsCharsNoSpaces": "字元數（不含空格）",
+      "statsWords": "單詞數",
+      "statsLines": "行數",
+      "statsBytes": "位元組數（UTF-8）",
+      "statsTwitter": "Twitter 剩餘",
+      "statusUpdated": "統計資料已更新",
+      "descTitle": "線上字元計數",
+      "descParas": [
+        "這個字元計數工具即時統計總字元數、不含空格的字元數、單詞數、行數和 UTF-8 位元組數。它還追蹤您在達到 Twitter 280 字元限制之前剩餘的字元數。",
+        "所有統計都在瀏覽器中本地完成。您的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中貼上或輸入文字。",
+        "查看編輯器下方的即時統計資料。所有指標在輸入時即時更新。",
+        "查看<strong>Twitter 剩餘</strong>計數器，了解推文剩餘字元數。超過 280 字元時會變紅。",
+        "使用<strong>複製</strong>複製文字到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設。"
+      ],
+      "whatIs": "什麼是字元計數器？",
+      "whatIsParas": [
+        "字元計數器是分析文字並報告其中字元數量的工具。與按空格分組的單詞計數器不同，字元計數器測量每個字母、數字、符號和空白字元。",
+        "此工具還顯示 UTF-8 位元組數，這對處理 API、資料庫或對文字欄位有位元組級大小限制的系統的開發者很有用。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具處理任何文字輸入，包括 Unicode 字元如表情符號、帶重音的字母和 CJK 字元。",
+      "example": "範例",
+      "examplePara": "貼上範例文字，查看即時統計資料：",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "大小寫轉換 — Coding.Tools",
+      "description": "即時將文字轉換為大寫、小寫、句首大寫、標題大寫或反轉大小寫。",
+      "toolTitle": "大小寫轉換",
+      "toolDescription": "在大寫、小寫、句首大寫、標題大寫和反轉大小寫之間轉換文字。",
+      "categoryName": "字串與文字",
+      "inputPlaceholder": "輸入或貼上要轉換的文字...",
+      "descTitle": "大小寫轉換",
+      "descParas": [
+        "這個大小寫轉換工具可以在五種常見的大小寫樣式之間轉換文字。",
+        "轉換在瀏覽器中本地運行。您貼到編輯器中的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中貼上或輸入文字。",
+        "點擊五個轉換按鈕之一。",
+        "編輯器中的文字會被原地轉換。使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設編輯器。"
+      ],
+      "whatIs": "不同的大小寫樣式是什麼？",
+      "whatIsParas": [
+        "<strong>大寫</strong>將每個字母轉換為大寫形式。<strong>小寫</strong>將每個字母轉換為小寫形式。<strong>句首大寫</strong>將每個句子的首字母大寫。<strong>標題大寫</strong>將每個單詞的首字母大寫。<strong>反轉大小寫</strong>交換每個字元的大小寫。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具適用於任何文字，包括 Unicode 字元。",
+      "example": "範例",
+      "examplePara": "查看同一句子在各種大小寫樣式中的效果：",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "大寫",
+      "lowerCase": "小寫",
+      "sentenceCase": "句首大寫",
+      "titleCase": "標題大寫",
+      "invertCase": "反轉大小寫"
+    },
+    "reverse-text": {
+      "title": "文字反轉 — Coding.Tools",
+      "description": "即時反轉任何文字字串。免費線上文字反轉工具。",
+      "toolTitle": "文字反轉",
+      "toolDescription": "逐字元反轉文字，可用於混淆、測試和娛樂。",
+      "categoryName": "字串與文字",
+      "inputPlaceholder": "輸入或貼上要反轉的文字...",
+      "descTitle": "文字反轉",
+      "descParas": [
+        "此工具逐字元反轉任何文字字串。它可用於混淆、測試應用程式中的字串處理、建立鏡像文字。",
+        "反轉在瀏覽器中本地運行。您貼到編輯器中的文字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入編輯器中貼上或輸入文字。",
+        "點擊<strong>文字反轉</strong>逐字元反轉整個字串。",
+        "反轉後的文字替換編輯器中的輸入。使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設編輯器。"
+      ],
+      "whatIs": "什麼是文字反轉？",
+      "whatIsParas": [
+        "文字反轉是重新排列字串中字元的過程，使最後一個字元成為第一個，依此類推。例如，\"hello\" 變成 \"olleh\"。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具適用於任何文字，包括 Unicode 字元、表情符號和多行內容。",
+      "example": "範例",
+      "examplePara": "查看文字反轉前後的效果：",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "文字反轉"
+    },
+    "number-to-words": {
+      "title": "數字轉英文 — Coding.Tools",
+      "description": "即時將數字轉換為英文單詞、序數詞和序數。",
+      "toolTitle": "數字轉英文",
+      "toolDescription": "將整數轉換為英文單詞、序數詞和序數。",
+      "categoryName": "字串與文字",
+      "inputPlaceholder": "輸入數字（如 42、-7、1000000）",
+      "descTitle": "數字轉英文轉換器",
+      "descParas": [
+        "此工具將任何整數轉換為其英文單詞表示、序數詞和序數格式。它適用於寫支票、產生可讀報告、建立教育材料或在法律文件中格式化數字。",
+        "轉換在瀏覽器中使用 number-to-words 函式庫本地運行。您輸入的數字不會被上傳、儲存或傳送到伺服器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "在輸入欄位中輸入或貼上數字。",
+        "點擊<strong>轉換</strong>或直接輸入查看即時結果。",
+        "顯示三個結果：單詞形式、序數詞和序數。",
+        "使用<strong>複製</strong>將單詞結果複製到剪貼簿，或<strong>清除</strong>重設。"
+      ],
+      "whatIs": "什麼是數字轉英文？",
+      "whatIsParas": [
+        "數字轉英文是將數值轉換為英文拼寫形式的過程。序數形式添加適當的後綴來描述序列中的位置。"
+      ],
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "該工具接受整數，包括負數和零。支援非常大的數字。不支援小數數字。",
+      "example": "範例",
+      "examplePara": "查看不同數字如何轉換為單詞：",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "單詞結果",
+      "ordinalWordResult": "序數詞結果",
+      "ordinalNumberResult": "序數結果",
+      "invalidInput": "請輸入有效的整數",
+      "convertedSuccess": "轉換成功",
+      "conversionFailed": "轉換失敗："
     }
   },
   "jp": {
@@ -4030,6 +4942,310 @@
       "example": "例",
       "examplePara": "16進数を10進数に変換:",
       "exampleCode": "--- 16進数入力 ---\nFF\n\n--- 10進数 ---\n255\n\n--- 8進数 ---\n377\n\n--- 2進数 ---\n11111111"
+    },
+    "text-editor": {
+      "title": "オンラインテキストエディタ — Coding.Tools",
+      "description": "行番号、ワードラップ、即時文字・行数カウント付きのオンラインテキスト編集。無料・高速・プライベート。",
+      "toolTitle": "オンラインテキストエディタ",
+      "toolDescription": "ブラウザでプレーンテキストを直接作成・編集。行番号、コピー、ダウンロード、文字カウント機能付き。",
+      "categoryName": "文字列＆テキスト",
+      "inputPlaceholder": "ここに入力または貼り付け...",
+      "descTitle": "オンラインテキストエディタ",
+      "descParas": [
+        "このオンラインテキストエディタは、ブラウザでプレーンテキストを直接作成・編集できます。行番号、文字カウント、行数カウント、コピー、ダウンロード機能を備えています。",
+        "エディタは完全にブラウザ内で動作します。入力または貼り付けたテキストはアップロード、保存、サーバー送信されません。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "エディタエリアにテキストを入力または貼り付けます。",
+        "下部のステータスバーに<strong>文字数</strong>と<strong>行数</strong>がリアルタイムで表示されます。",
+        "<strong>コピー</strong>でテキスト全体をクリップボードにコピーします。",
+        "<strong>ダウンロード</strong>でテキストを <code>.txt</code> ファイルとして保存するか、<strong>クリア</strong>でエディタをリセットします。"
+      ],
+      "features": "機能",
+      "featuresList": [
+        "<strong>行番号</strong> — エディタの左側に表示され、スクロールと同期します。",
+        "<strong>Tabキー対応</strong> — Tabキーでスペース2つを挿入します。",
+        "<strong>即時カウント</strong> — 文字数と行数が入力時に自動更新されます。"
+      ],
+      "example": "例",
+      "examplePara": "次のテキストをエディタに貼り付けて、行番号と文字カウントを確認してください：",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "正規表現テスター — Coding.Tools",
+      "description": "マッチハイライトとフラグ制御付きのオンライン正規表現テスト。無料のブラウザベースツール。",
+      "toolTitle": "正規表現テスター",
+      "toolDescription": "リアルタイムでマッチハイライト付きの正規表現パターンをテスト。データはブラウザから送信されません。",
+      "categoryName": "文字列＆テキスト",
+      "regexPattern": "正規表現",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "テストテキスト",
+      "inputPlaceholder": "テストするテキストを入力または貼り付け...",
+      "matchResults": "マッチ結果",
+      "matchesAppearHere": "マッチがここに表示されます...",
+      "noMatches": "0 マッチ",
+      "noMatchesFound": "マッチが見つかりません",
+      "matchesSuffix": " マッチ",
+      "matchesFoundSuffix": " マッチ見つかりました",
+      "invalidRegex": "無効な正規表現",
+      "flagGlobal": "グローバル",
+      "flagCaseInsensitive": "大文字小文字を区別しない",
+      "flagMultiline": "複数行",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "スティッキー",
+      "descTitle": "正規表現テスター",
+      "descParas": [
+        "この正規表現テスターは、ブラウザで正規表現パターンを作成・検証できます。6つの標準JavaScript正規表現フラグすべてに対応しています。",
+        "正規表現はブラウザ内でローカルに実行されます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "<strong>正規表現</strong>入力欄にパターンを入力または貼り付けます。",
+        "フラグを選択：<strong>g</strong>（グローバル）、<strong>i</strong>（大文字小文字を区別しない）、<strong>m</strong>（複数行）等。",
+        "下のエディタにテストテキストを入力または貼り付けます。",
+        "マッチが自動的にハイライトされます。",
+        "<strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>クリア</strong>で操作します。"
+      ],
+      "whatIs": "正規表現とは？",
+      "whatIsParas": [
+        "正規表現（regex）は検索パターンを定義する文字列です。文字列内のパターンマッチングに使用されます。",
+        "JavaScriptはRegExpオブジェクトで正規表現をネイティブに実装しています。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "正規表現パターンを区切り文字なしで入力してください。フラグはチェックボックスで制御します。",
+      "example": "例",
+      "examplePara": "メールアドレスのような文字列を見つける簡単なパターン：",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "正規表現置換 — Coding.Tools",
+      "description": "正規表現を使ったテキスト検索・置換。マッチハイライトと後方参照対応。無料ブラウザツール。",
+      "toolTitle": "正規表現置換",
+      "toolDescription": "正規表現パターンでリアルタイムにテキストを検索・置換。$1、$2などの後方参照に対応。",
+      "categoryName": "文字列＆テキスト",
+      "regexPattern": "正規表現",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "置換文字列",
+      "replacePlaceholder": "置換文字列（$1、$2の後方参照対応）",
+      "testText": "テストテキスト",
+      "inputPlaceholder": "検索・置換するテキストを入力または貼り付け...",
+      "matchPreview": "マッチプレビュー",
+      "matchesAppearHere": "マッチがここに表示されます...",
+      "noMatches": "0 マッチ",
+      "noMatchesFound": "マッチが見つかりません",
+      "noMatchesToReplace": "置換するマッチがありません",
+      "replacedSuccessfully": "置換成功",
+      "matchesSuffix": " マッチ",
+      "matchesFoundSuffix": " マッチ見つかりました",
+      "invalidRegex": "無効な正規表現",
+      "replaceAll": "すべて置換",
+      "flagGlobal": "グローバル",
+      "flagCaseInsensitive": "大文字小文字を区別しない",
+      "flagMultiline": "複数行",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "スティッキー",
+      "descTitle": "正規表現置換",
+      "descParas": [
+        "この正規表現検索・置換ツールは、パターンを検索して新しいテキストにリアルタイムで置換できます。6つのJavaScript正規表現フラグすべてに対応し、$1、$2などの後方参照が使えます。",
+        "検索・置換はブラウザ内でローカルに実行されます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "<strong>正規表現</strong>欄にパターンを入力または貼り付けます。区切り文字は不要です。",
+        "フラグを選択します：<strong>g</strong>（グローバル）、<strong>i</strong>（大文字小文字を区別しない）、<strong>m</strong>（複数行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）、<strong>y</strong>（スティッキー）。",
+        "<strong>置換文字列</strong>フィールドに置換文字列を入力。、でキャプチャグループを参照。",
+        "テストテキストを貼り付けまたは入力。マッチが入力時にハイライトされます。",
+        "<strong>すべて置換</strong>をクリックしてテキスト全体に置換を適用。",
+        "<strong>コピー</strong>で結果をコピー、<strong>ダウンロード</strong>で保存、<strong>クリア</strong>でリセット。"
+      ],
+      "whatIs": "正規表現とは？",
+      "whatIsParas": [
+        "正規表現（regex）は検索パターンを定義する文字列です。",
+        "JavaScriptはRegExpオブジェクトで正規表現をネイティブに実装しています。正規表現の検索・置換は最も強力なテキスト変換技術の一つです。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "正規表現パターンを区切り文字なしで入力。置換文字列は$1〜$9の後方参照と$&で全体マッチをサポート。",
+      "example": "例",
+      "examplePara": "後方参照を使って日付をMM/DD/YYYYからYYYY-MM-DDに変換：",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "単語カウンター — Coding.Tools",
+      "description": "単語、文字、文、段落を即座にカウント。無料オンライン単語カウンター。",
+      "toolTitle": "単語カウンター",
+      "toolDescription": "単語、文字、文、段落をカウントし、読了・発話時間を推定。",
+      "categoryName": "文字列＆テキスト",
+      "inputPlaceholder": "ここにテキストを貼り付けて単語、文字、文、段落をカウント...",
+      "statsTitle": "統計",
+      "statsWords": "単語数",
+      "statsCharsWithSpaces": "文字数（スペース込み）",
+      "statsCharsNoSpaces": "文字数（スペースなし）",
+      "statsSentences": "文数",
+      "statsParagraphs": "段落数",
+      "statsLines": "行数",
+      "statsReadingTime": "読了時間",
+      "statsSpeakingTime": "発話時間",
+      "timeZero": "約0分",
+      "statusUpdated": "統計を更新しました",
+      "descTitle": "オンライン単語カウンター",
+      "descParas": [
+        "この単語カウンターツールは、テキストの入力中に単語、文字、文、段落をリアルタイムでカウントします。",
+        "すべてのカウントはブラウザ内でローカルに行われます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを貼り付けるか入力します。",
+        "エディタ下部の統計パネルでリアルタイムの統計を確認します。",
+        "<strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>クリア</strong>で操作します。"
+      ],
+      "whatIs": "単語カウンターとは？",
+      "whatIsParas": [
+        "単語カウンターはテキストを分析し、単語、文字、文、段落の数を報告するツールです。",
+        "このツールは基本的なカウントに加え、読了時間（1分間約200単語）と発話時間（1分間約130単語）も計算します。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "Unicode文字や複数行のテキストを含む、あらゆる入力に対応しています。",
+      "example": "例",
+      "examplePara": "サンプルテキストを貼り付けて統計を確認：",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "文字カウント — Coding.Tools",
+      "description": "文字、単語、行、バイト数を即座にカウント。Twitter制限トラッカー付き無料ツール。",
+      "toolTitle": "文字カウント",
+      "toolDescription": "文字、単語、行、UTF-8バイト数をカウント。Twitter 280文字制限トラッカー付き。",
+      "categoryName": "文字列＆テキスト",
+      "inputPlaceholder": "ここにテキストを貼り付けて文字、単語、行、バイト数をカウント...",
+      "statsTitle": "統計",
+      "statsTotalChars": "総文字数",
+      "statsCharsNoSpaces": "文字数（スペースなし）",
+      "statsWords": "単語数",
+      "statsLines": "行数",
+      "statsBytes": "バイト数（UTF-8）",
+      "statsTwitter": "Twitter残り",
+      "statusUpdated": "統計を更新しました",
+      "descTitle": "オンライン文字カウンター",
+      "descParas": [
+        "この文字カウンターツールは、総文字数、スペースなし文字数、単語数、行数、UTF-8バイト数をリアルタイムでカウントします。",
+        "すべてのカウントはブラウザ内でローカルに行われます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを貼り付けるか入力します。",
+        "エディタ下部の統計パネルを確認。すべての指標が入力時に即座に更新されます。",
+        "<strong>Twitter残り</strong>カウンターを確認。280文字を超えると赤くなります。",
+        "<strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>クリア</strong>で操作します。"
+      ],
+      "whatIs": "文字カウンターとは？",
+      "whatIsParas": [
+        "文字カウンターはテキストを分析し、文字数を報告するツールです。Twitter（280文字）やSMS（160文字）など、文字数制限があるプラットフォームに特に重要です。",
+        "UTF-8バイト数も表示され、APIやデータベースでバイト単位の制限がある開発者に便利です。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "絵文字、アクセント付き文字、CJK文字など、あらゆるUnicode入力に対応。",
+      "example": "例",
+      "examplePara": "サンプルテキストを貼り付けて統計を確認：",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "大文字小文字変換 — Coding.Tools",
+      "description": "テキストを大文字、小文字、文頭大文字、タイトルケース、反転に即座に変換。",
+      "toolTitle": "大文字小文字変換",
+      "toolDescription": "大文字、小文字、文頭大文字、タイトルケース、反転の間でテキストを変換。",
+      "categoryName": "文字列＆テキスト",
+      "inputPlaceholder": "変換するテキストを入力または貼り付け...",
+      "descTitle": "大文字小文字変換",
+      "descParas": [
+        "この大文字小文字変換ツールは、5つの一般的な大文字小文字スタイル間でテキストを変換します。",
+        "変換はブラウザ内でローカルに実行されます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを貼り付けるか入力します。",
+        "5つの変換ボタンのいずれかをクリック。",
+        "テキストがその場で変換されます。"
+      ],
+      "whatIs": "大文字小文字スタイルとは？",
+      "whatIsParas": [
+        "<strong>大文字</strong>はすべての文字を大文字に変換。<strong>小文字</strong>はすべて小文字に。<strong>文頭大文字</strong>は各文の最初の大文字に。<strong>タイトルケース</strong>は各単語の最初の大文字に。<strong>反転</strong>は大文字と小文字を入れ替えます。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "Unicode文字を含むあらゆるテキストで動作します。",
+      "example": "例",
+      "examplePara": "同じ文が各スタイルでどう見えるか：",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "大文字",
+      "lowerCase": "小文字",
+      "sentenceCase": "文頭大文字",
+      "titleCase": "タイトルケース",
+      "invertCase": "反転"
+    },
+    "reverse-text": {
+      "title": "テキスト反転 — Coding.Tools",
+      "description": "任意のテキスト文字列を即座に反転。無料オンラインテキスト反転ツール。",
+      "toolTitle": "テキスト反転",
+      "toolDescription": "文字ごとにテキストを反転。難読化、テスト、遊びに便利。",
+      "categoryName": "文字列＆テキスト",
+      "inputPlaceholder": "反転するテキストを入力または貼り付け...",
+      "descTitle": "テキスト反転",
+      "descParas": [
+        "このツールは任意のテキスト文字列を文字ごとに反転します。難読化、アプリケーションの文字列処理テスト、ミラーテキスト作成に便利です。",
+        "反転はブラウザ内でローカルに実行されます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力エディタにテキストを貼り付けるか入力します。",
+        "<strong>テキスト反転</strong>をクリックして文字列全体を反転。",
+        "反転されたテキストが入力を置き換えます。"
+      ],
+      "whatIs": "テキスト反転とは？",
+      "whatIsParas": [
+        "テキスト反転は、文字列の文字を最後の文字が最初になるよう並べ替える処理です。例えば「hello」は「olleh」になります。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "Unicode文字、絵文字、複数行のテキストを含むあらゆる入力に対応。",
+      "example": "例",
+      "examplePara": "反転前後のテキストを確認：",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "テキスト反転"
+    },
+    "number-to-words": {
+      "title": "数字を英語に — Coding.Tools",
+      "description": "数字を英単語、序数語、序数に即座に変換。",
+      "toolTitle": "数字を英語に",
+      "toolDescription": "整数を英単語、序数語、序数に変換。",
+      "categoryName": "文字列＆テキスト",
+      "inputPlaceholder": "数字を入力（例：42、-7、1000000）",
+      "descTitle": "数字を英語に変換",
+      "descParas": [
+        "このツールは任意の整数を英単語、序数語、序数形式に変換します。小切手の作成、レポート作成、教材作成、法的文書の数字フォーマットに便利です。",
+        "変換はブラウザ内でnumber-to-wordsライブラリを使用してローカルに実行されます。"
+      ],
+      "howToUse": "使い方",
+      "steps": [
+        "入力欄に数字を入力または貼り付けます。",
+        "<strong>変換</strong>をクリックするか、入力すると即座に結果が表示されます。",
+        "3つの結果が表示されます：単語形式、序数語、序数。",
+        "<strong>コピー</strong>でクリップボードにコピー、<strong>クリア</strong>でリセット。"
+      ],
+      "whatIs": "数字を英語への変換とは？",
+      "whatIsParas": [
+        "数字を英語への変換は、数値を英語の綴りに変換する処理です。序数形は適切な接尾辞を追加して順序を表します。"
+      ],
+      "inputNotes": "入力について",
+      "inputNotesPara": "負の数とゼロを含む整数を受け付けます。非常に大きな数字にも対応。小数はサポートされていません。",
+      "example": "例",
+      "examplePara": "異なる数字の変換例：",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "単語結果",
+      "ordinalWordResult": "序数語結果",
+      "ordinalNumberResult": "序数結果",
+      "invalidInput": "有効な整数を入力してください",
+      "convertedSuccess": "変換成功",
+      "conversionFailed": "変換失敗："
     }
   },
   "kr": {
@@ -5037,6 +6253,310 @@
       "example": "예시",
       "examplePara": "16진수를 10진수로 변환:",
       "exampleCode": "--- 16진수 입력 ---\nFF\n\n--- 10진수 ---\n255\n\n--- 8진수 ---\n377\n\n--- 2진수 ---\n11111111"
+    },
+    "text-editor": {
+      "title": "온라인 텍스트 편집기 — Coding.Tools",
+      "description": "줄 번호, 자동 줄 바꿈, 즉시 문자·줄 수 카운트로 온라인 텍스트 편집. 무료, 빠르고 안전합니다.",
+      "toolTitle": "온라인 텍스트 편집기",
+      "toolDescription": "브라우저에서 직접 일반 텍스트를 작성하고 편집하세요. 줄 번호, 복사, 다운로드, 문자 카운트 기능 포함.",
+      "categoryName": "문자열 & 텍스트",
+      "inputPlaceholder": "여기에 입력하거나 텍스트를 붙여넣으세요...",
+      "descTitle": "온라인 텍스트 편집기",
+      "descParas": [
+        "이 온라인 텍스트 편집기를 사용하면 브라우저에서 직접 일반 텍스트를 작성하고 편집할 수 있습니다. 줄 번호, 문자 카운트, 줄 수 카운트, 복사, 다운로드 기능이 있습니다.",
+        "편집기는 완전히 브라우저에서 실행됩니다. 입력하거나 붙여넣은 텍스트는 업로드, 저장 또는 서버로 전송되지 않습니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "편집 영역에 텍스트를 입력하거나 붙여넣으세요.",
+        "아래 상태 표시줄에 <strong>문자 수</strong>와 <strong>줄 수</strong>가 실시간으로 업데이트됩니다.",
+        "<strong>복사</strong>로 전체 텍스트를 클립보드에 복사합니다.",
+        "<strong>다운로드</strong>로 텍스트를 <code>.txt</code> 파일로 저장하거나 <strong>지우기</strong>로 편집기를 초기화합니다."
+      ],
+      "features": "기능",
+      "featuresList": [
+        "<strong>줄 번호</strong> — 편집기 왼쪽에 표시되며 스크롤과 동기화됩니다.",
+        "<strong>Tab 키 지원</strong> — Tab 키를 누르면 포커스 이동 대신 두 개의 공백을 삽입합니다.",
+        "<strong>즉시 카운트</strong> — 문자 수와 줄 수가 입력 시 자동으로 업데이트됩니다."
+      ],
+      "example": "예시",
+      "examplePara": "다음 텍스트를 편집기에 붙여넣어 줄 번호와 문자 카운트를 확인하세요:",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "정규식 테스터 — Coding.Tools",
+      "description": "매치 하이라이트와 플래그 제어가 가능한 온라인 정규식 테스트. 무료 브라우저 도구.",
+      "toolTitle": "정규식 테스터",
+      "toolDescription": "실시간 매치 하이라이트로 정규식 패턴을 테스트하세요. 데이터가 브라우저를 떠나지 않습니다.",
+      "categoryName": "문자열 & 텍스트",
+      "regexPattern": "정규식",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "테스트 텍스트",
+      "inputPlaceholder": "테스트할 텍스트를 입력하거나 붙여넣으세요...",
+      "matchResults": "매치 결과",
+      "matchesAppearHere": "매치가 여기에 표시됩니다...",
+      "noMatches": "0 매치",
+      "noMatchesFound": "매치를 찾을 수 없습니다",
+      "matchesSuffix": " 매치",
+      "matchesFoundSuffix": " 매치 발견",
+      "invalidRegex": "잘못된 정규식",
+      "flagGlobal": "전역",
+      "flagCaseInsensitive": "대소문자 무시",
+      "flagMultiline": "여러 줄",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "유니코드",
+      "flagSticky": "스티키",
+      "descTitle": "정규식 테스터",
+      "descParas": [
+        "이 정규식 테스터를 사용하면 브라우저에서 직접 정규식 패턴을 작성하고 검증할 수 있습니다. 6가지 표준 JavaScript 정규식 플래그를 모두 지원합니다.",
+        "정규식은 브라우저에서 로컬로 실행됩니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "<strong>정규식</strong> 입력란에 패턴을 입력하거나 붙여넣으세요.",
+        "플래그를 선택하세요: <strong>g</strong>(전역), <strong>i</strong>(대소문자 무시), <strong>m</strong>(여러 줄) 등.",
+        "아래 편집기에 테스트 텍스트를 입력하거나 붙여넣으세요.",
+        "매치가 자동으로 하이라이트됩니다.",
+        "<strong>복사</strong>, <strong>다운로드</strong>, <strong>지우기</strong>로 작업하세요."
+      ],
+      "whatIs": "정규식이란?",
+      "whatIsParas": [
+        "정규식(regex)은 검색 패턴을 정의하는 문자 시퀀스입니다. 문자열 내 패턴 매칭에 사용됩니다.",
+        "JavaScript는 RegExp 객체로 정규식을 네이티브로 구현합니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "정규식 패턴을 구분자 없이 입력하세요. 플래그는 체크박스로 제어합니다.",
+      "example": "예시",
+      "examplePara": "이메일과 같은 문자열을 찾는 간단한 패턴:",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "정규식 치환 — Coding.Tools",
+      "description": "정규식으로 텍스트를 찾고 바꾸기. 매치 하이라이트와 역참조 지원. 무료 브라우저 도구.",
+      "toolTitle": "정규식 치환",
+      "toolDescription": "정규식 패턴으로 실시간 텍스트 검색 및 치환. $1, $2 등 역참조 지원.",
+      "categoryName": "문자열 & 텍스트",
+      "regexPattern": "정규식",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "치환 문자열",
+      "replacePlaceholder": "치환 문자열 ($1, $2 역참조 지원)",
+      "testText": "테스트 텍스트",
+      "inputPlaceholder": "검색하고 바꿀 텍스트를 입력하거나 붙여넣으세요...",
+      "matchPreview": "매치 미리보기",
+      "matchesAppearHere": "매치가 여기에 표시됩니다...",
+      "noMatches": "0 매치",
+      "noMatchesFound": "매치를 찾을 수 없습니다",
+      "noMatchesToReplace": "치환할 매치가 없습니다",
+      "replacedSuccessfully": "치환 성공",
+      "matchesSuffix": " 매치",
+      "matchesFoundSuffix": " 매치 발견",
+      "invalidRegex": "잘못된 정규식",
+      "replaceAll": "모두 치환",
+      "flagGlobal": "전역",
+      "flagCaseInsensitive": "대소문자 무시",
+      "flagMultiline": "여러 줄",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "유니코드",
+      "flagSticky": "스티키",
+      "descTitle": "정규식 치환",
+      "descParas": [
+        "이 정규식 찾기 및 바꾸기 도구는 패턴을 검색하고 새 텍스트로 실시간 치환할 수 있습니다.",
+        "검색 및 치환은 브라우저에서 로컬로 실행됩니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "<strong>정규식</strong> 필드에 패턴을 입력하거나 붙여넣으세요. 구분자는 필요 없습니다.",
+        "플래그를 선택하세요: <strong>g</strong>(전역), <strong>i</strong>(대소문자 무시), <strong>m</strong>(여러 줄), <strong>s</strong>(dotAll), <strong>u</strong>(유니코드), <strong>y</strong>(스티키).",
+        "<strong>치환 문자열</strong>에 치환 문자열을 입력하세요. , 로 캡처 그룹을 참조합니다.",
+        "테스트 텍스트를 붙여넣거나 입력하세요. 입력 시 매치가 하이라이트됩니다.",
+        "<strong>모두 치환</strong>을 클릭하여 전체 텍스트에 치환을 적용합니다.",
+        "<strong>복사</strong>로 결과를 복사, <strong>다운로드</strong>로 저장, <strong>지우기</strong>로 초기화하세요."
+      ],
+      "whatIs": "정규식이란?",
+      "whatIsParas": [
+        "정규식(regex)은 검색 패턴을 정의하는 문자 시퀀스입니다.",
+        "JavaScript는 RegExp 객체로 정규식을 네이티브로 구현합니다. 정규식 찾기 및 바꾸기는 가장 강력한 텍스트 변환 기술 중 하나입니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "정규식 패턴을 구분자 없이 입력. 치환 문자열은 $1~$9 역참조와 $&로 전체 매치를 지원.",
+      "example": "예시",
+      "examplePara": "역참조를 사용하여 날짜를 MM/DD/YYYY에서 YYYY-MM-DD로 변환:",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "단어 수 세기 — Coding.Tools",
+      "description": "단어, 문자, 문장, 문단을 즉시 카운트. 무료 온라인 단어 카운터.",
+      "toolTitle": "단어 수 세기",
+      "toolDescription": "단어, 문자, 문장, 문단을 카운트하고 읽기 및 말하기 시간을 추정합니다.",
+      "categoryName": "문자열 & 텍스트",
+      "inputPlaceholder": "여기에 텍스트를 붙여넣어 단어, 문자, 문장, 문단을 세세요...",
+      "statsTitle": "통계",
+      "statsWords": "단어 수",
+      "statsCharsWithSpaces": "문자 수 (공백 포함)",
+      "statsCharsNoSpaces": "문자 수 (공백 제외)",
+      "statsSentences": "문장 수",
+      "statsParagraphs": "문단 수",
+      "statsLines": "줄 수",
+      "statsReadingTime": "읽기 시간",
+      "statsSpeakingTime": "말하기 시간",
+      "timeZero": "~0분",
+      "statusUpdated": "통계 업데이트됨",
+      "descTitle": "온라인 단어 카운터",
+      "descParas": [
+        "이 단어 카운터 도구는 텍스트를 입력하거나 붙여넣을 때 단어, 문자, 문장, 문단을 실시간으로 카운트합니다.",
+        "모든 카운팅은 브라우저에서 로컬로 이루어집니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
+        "편집기 아래의 통계 패널에서 실시간 통계를 확인하세요.",
+        "<strong>복사</strong>, <strong>다운로드</strong>, <strong>지우기</strong>로 작업하세요."
+      ],
+      "whatIs": "단어 카운터란?",
+      "whatIsParas": [
+        "단어 카운터는 텍스트를 분석하여 단어, 문자, 문장, 문단 수를 보고하는 도구입니다.",
+        "이 도구는 기본 카운팅 외에도 읽기 시간(분당 약 200단어)과 말하기 시간(분당 약 130단어)도 계산합니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "유니코드 문자와 여러 줄 텍스트를 포함한 모든 텍스트 입력을 처리합니다.",
+      "example": "예시",
+      "examplePara": "샘플 텍스트를 붙여넣어 통계를 확인하세요:",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "문자 수 세기 — Coding.Tools",
+      "description": "문자, 단어, 줄, 바이트를 즉시 카운트. Twitter 제한 추적기 포함 무료 도구.",
+      "toolTitle": "문자 수 세기",
+      "toolDescription": "문자, 단어, 줄, UTF-8 바이트를 카운트. Twitter 280자 제한 추적기 포함.",
+      "categoryName": "문자열 & 텍스트",
+      "inputPlaceholder": "여기에 텍스트를 붙여넣어 문자, 단어, 줄, 바이트를 세세요...",
+      "statsTitle": "통계",
+      "statsTotalChars": "총 문자 수",
+      "statsCharsNoSpaces": "문자 수 (공백 제외)",
+      "statsWords": "단어 수",
+      "statsLines": "줄 수",
+      "statsBytes": "바이트 (UTF-8)",
+      "statsTwitter": "Twitter 남은 글자",
+      "statusUpdated": "통계 업데이트됨",
+      "descTitle": "온라인 문자 카운터",
+      "descParas": [
+        "이 문자 카운터 도구는 총 문자 수, 공백 제외 문자 수, 단어 수, 줄 수, UTF-8 바이트를 실시간으로 카운트합니다.",
+        "모든 카운팅은 브라우저에서 로컬로 이루어집니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
+        "편집기 아래의 통계 패널을 확인. 모든 지표가 입력 시 즉시 업데이트됩니다.",
+        "<strong>Twitter 남은 글자</strong> 카운터를 확인하세요. 280자를 초과하면 빨간색으로 변합니다.",
+        "<strong>복사</strong>, <strong>다운로드</strong>, <strong>지우기</strong>로 작업하세요."
+      ],
+      "whatIs": "문자 카운터란?",
+      "whatIsParas": [
+        "문자 카운터는 텍스트를 분석하여 문자 수를 보고하는 도구입니다. Twitter(280자)나 SMS(160자) 같은 문자 제한이 있는 플랫폼에 특히 중요합니다.",
+        "UTF-8 바이트 수도 표시되어 API나 데이터베이스에서 바이트 단위 제한이 있는 개발자에게 유용합니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "이모지, 악센트 문자, CJK 문자 등 모든 유니코드 입력을 처리합니다.",
+      "example": "예시",
+      "examplePara": "샘플 텍스트를 붙여넣어 통계를 확인하세요:",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "대소문자 변환 — Coding.Tools",
+      "description": "텍스트를 대문자, 소문자, 문장 대문자, 제목 대문자 또는 반전으로 즉시 변환.",
+      "toolTitle": "대소문자 변환",
+      "toolDescription": "대문자, 소문자, 문장 대문자, 제목 대문자, 반전 간에 텍스트를 변환합니다.",
+      "categoryName": "문자열 & 텍스트",
+      "inputPlaceholder": "변환할 텍스트를 입력하거나 붙여넣으세요...",
+      "descTitle": "대소문자 변환",
+      "descParas": [
+        "이 대소문자 변환 도구는 다섯 가지 일반적인 대소문자 스타일 간에 텍스트를 변환합니다.",
+        "변환은 브라우저에서 로컬로 실행됩니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
+        "다섯 가지 변환 버튼 중 하나를 클릭합니다.",
+        "텍스트가 그 자리에서 변환됩니다."
+      ],
+      "whatIs": "대소문자 스타일이란?",
+      "whatIsParas": [
+        "<strong>대문자</strong>는 모든 글자를 대문자로 변환합니다. <strong>소문자</strong>는 모든 글자를 소문자로 변환합니다. <strong>문장 대문자</strong>는 각 문장의 첫 글자를 대문자로 합니다. <strong>제목 대문자</strong>는 각 단어의 첫 글자를 대문자로 합니다. <strong>반전</strong>은 대문자와 소문자를 바꿉니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "유니코드 문자를 포함한 모든 텍스트에서 작동합니다.",
+      "example": "예시",
+      "examplePara": "같은 문장이 각 스타일에서 어떻게 보이는지 확인:",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "대문자",
+      "lowerCase": "소문자",
+      "sentenceCase": "문장 대문자",
+      "titleCase": "제목 대문자",
+      "invertCase": "반전"
+    },
+    "reverse-text": {
+      "title": "텍스트 반전 — Coding.Tools",
+      "description": "텍스트 문자열을 즉시 반전. 무료 온라인 텍스트 반전 도구.",
+      "toolTitle": "텍스트 반전",
+      "toolDescription": "문자별로 텍스트를 반전. 난독화, 테스트, 재미에 유용.",
+      "categoryName": "문자열 & 텍스트",
+      "inputPlaceholder": "반전할 텍스트를 입력하거나 붙여넣으세요...",
+      "descTitle": "텍스트 반전",
+      "descParas": [
+        "이 도구는 텍스트 문자열을 문자별로 반전합니다. 난독화, 문자열 처리 테스트, 미러 텍스트 생성에 유용합니다.",
+        "반전은 브라우저에서 로컬로 실행됩니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
+        "<strong>텍스트 반전</strong>을 클릭하여 전체 문자열을 반전합니다.",
+        "반전된 텍스트가 입력을 대체합니다."
+      ],
+      "whatIs": "텍스트 반전이란?",
+      "whatIsParas": [
+        "텍스트 반전은 문자열의 문자 순서를 뒤집는 처리입니다. 예를 들어 \"hello\"는 \"olleh\"가 됩니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "유니코드 문자, 이모지, 여러 줄 텍스트를 포함한 모든 입력에 작동합니다.",
+      "example": "예시",
+      "examplePara": "반전 전후의 텍스트를 확인:",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "텍스트 반전"
+    },
+    "number-to-words": {
+      "title": "숫자를 영어로 — Coding.Tools",
+      "description": "숫자를 영어 단어, 서수어, 서수로 즉시 변환.",
+      "toolTitle": "숫자를 영어로",
+      "toolDescription": "정수를 영어 단어, 서수어, 서수로 변환합니다.",
+      "categoryName": "문자열 & 텍스트",
+      "inputPlaceholder": "숫자 입력 (예: 42, -7, 1000000)",
+      "descTitle": "숫자를 영어로 변환기",
+      "descParas": [
+        "이 도구는 모든 정수를 영어 단어, 서수어, 서수 형식으로 변환합니다. 수표 작성, 보고서 생성, 교육 자료 제작, 법률 문서에 유용합니다.",
+        "변환은 브라우저에서 number-to-words 라이브러리를 사용하여 로컬로 실행됩니다."
+      ],
+      "howToUse": "사용 방법",
+      "steps": [
+        "입력란에 숫자를 입력하거나 붙여넣으세요.",
+        "<strong>변환</strong>을 클릭하거나 입력하면 실시간 결과가 표시됩니다.",
+        "세 가지 결과가 표시됩니다: 단어 형태, 서수어, 서수.",
+        "<strong>복사</strong>로 클립보드에 복사, <strong>지우기</strong>로 초기화."
+      ],
+      "whatIs": "숫자를 영어로 변환이란?",
+      "whatIsParas": [
+        "숫자를 영어로 변환은 숫자 값을 영어 철자 형태로 변환하는 처리입니다. 서수형은 적절한 접미사를 추가하여 순서를 나타냅니다."
+      ],
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "음수와 0을 포함한 정수를 허용합니다. 매우 큰 숫자도 지원됩니다. 소수는 지원되지 않습니다.",
+      "example": "예시",
+      "examplePara": "다양한 숫자의 변환 예:",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "단어 결과",
+      "ordinalWordResult": "서수어 결과",
+      "ordinalNumberResult": "서수 결과",
+      "invalidInput": "유효한 정수를 입력하세요",
+      "convertedSuccess": "변환 성공",
+      "conversionFailed": "변환 실패: "
     }
   },
   "fr": {
@@ -6045,6 +7565,310 @@
       "example": "Exemple",
       "examplePara": "Conversion d'un nombre hexadécimal en décimal:",
       "exampleCode": "--- Entrée Hexadécimale ---\nFF\n\n--- Décimal ---\n255\n\n--- Octal ---\n377\n\n--- Binaire ---\n11111111"
+    },
+    "text-editor": {
+      "title": "Éditeur de texte — Coding.Tools",
+      "description": "Éditez du texte en ligne avec numéros de ligne, retour à la ligne et comptage instantané des caractères. Gratuit, rapide et privé.",
+      "toolTitle": "Éditeur de texte",
+      "toolDescription": "Écrivez et éditez du texte brut directement dans votre navigateur avec numéros de ligne, copie, téléchargement et comptage de caractères.",
+      "categoryName": "Chaînes & Texte",
+      "inputPlaceholder": "Commencez à taper ou collez du texte ici...",
+      "descTitle": "Éditeur de texte",
+      "descParas": [
+        "Cet éditeur de texte en ligne vous permet d'écrire et d'éditer du texte brut directement dans votre navigateur. Il dispose de numéros de ligne, comptage de caractères, comptage de lignes, copie et téléchargement.",
+        "L'éditeur fonctionne entièrement dans votre navigateur. Le texte que vous tapez ou collez n'est pas téléchargé, stocké ou envoyé à un serveur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez votre texte dans la zone d'éditeur.",
+        "La barre d'état se met à jour en temps réel avec le <strong>nombre de caractères</strong> et le <strong>nombre de lignes</strong>.",
+        "Utilisez <strong>Copier</strong> pour copier le texte dans le presse-papiers.",
+        "Utilisez <strong>Télécharger</strong> pour sauvegarder en <code>.txt</code>, ou <strong>Effacer</strong> pour réinitialiser."
+      ],
+      "features": "Fonctionnalités",
+      "featuresList": [
+        "<strong>Numéros de ligne</strong> — visibles à gauche et synchronisés avec le défilement.",
+        "<strong>Support Tab</strong> — la touche Tab insère deux espaces au lieu de changer le focus.",
+        "<strong>Comptage instantané</strong> — les caractères et lignes sont comptés à la frappe."
+      ],
+      "example": "Exemple",
+      "examplePara": "Collez le texte suivant pour voir les numéros de ligne et le comptage en action :",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "Testeur Regex — Coding.Tools",
+      "description": "Testez les expressions régulières en direct avec mise en surbrillance et contrôles de drapeaux. Outil gratuit.",
+      "toolTitle": "Testeur Regex",
+      "toolDescription": "Testez les motifs regex en temps réel avec mise en surbrillance. Aucune donnée ne quitte votre navigateur.",
+      "categoryName": "Chaînes & Texte",
+      "regexPattern": "Motif Regex",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "Texte de test",
+      "inputPlaceholder": "Entrez ou collez le texte à tester...",
+      "matchResults": "Résultats",
+      "matchesAppearHere": "Les résultats apparaîtront ici...",
+      "noMatches": "0 correspondance",
+      "noMatchesFound": "Aucune correspondance trouvée",
+      "matchesSuffix": " correspondances",
+      "matchesFoundSuffix": " correspondances trouvées",
+      "invalidRegex": "Motif regex invalide",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "insensible à la casse",
+      "flagMultiline": "multiligne",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Testeur Regex",
+      "descParas": [
+        "Ce testeur d'expressions régulières vous permet d'écrire et valider des motifs regex directement dans votre navigateur. Les six drapeaux JavaScript standard sont disponibles.",
+        "Le regex s'exécute localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez un motif dans le champ <strong>Motif Regex</strong>. Pas besoin de barres obliques.",
+        "Sélectionnez les drapeaux : <strong>g</strong> (global), <strong>i</strong> (insensible à la casse), <strong>m</strong> (multiligne), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
+        "Entrez ou collez votre texte de test dans l'éditeur ci-dessous.",
+        "Les correspondances sont mises en surbrillance automatiquement. Le nombre de correspondances apparaît dans la barre d'état.",
+        "Utilisez <strong>Copier</strong> pour copier le texte, <strong>Télécharger</strong> pour sauvegarder, ou <strong>Effacer</strong> pour réinitialiser."
+      ],
+      "whatIs": "Qu'est-ce qu'une expression régulière ?",
+      "whatIsParas": [
+        "Une expression régulière (regex) est une séquence de caractères définissant un modèle de recherche.",
+        "JavaScript implémente les regex nativement via l'objet RegExp."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Entrez le motif regex sans délimiteurs. Les drapeaux sont contrôlés par les cases à cocher.",
+      "example": "Exemple",
+      "examplePara": "Un motif simple pour trouver des chaînes de type email :",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "Remplacement Regex — Coding.Tools",
+      "description": "Recherchez et remplacez du texte avec des expressions régulières. Supporte les références arrières. Outil gratuit.",
+      "toolTitle": "Remplacement Regex",
+      "toolDescription": "Recherchez et remplacez du texte avec des motifs regex en temps réel. Supporte $1, $2.",
+      "categoryName": "Chaînes & Texte",
+      "regexPattern": "Motif Regex",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "Remplacer par",
+      "replacePlaceholder": "Chaîne de remplacement (supporte $1, $2)",
+      "testText": "Texte de test",
+      "inputPlaceholder": "Entrez ou collez le texte à rechercher et remplacer...",
+      "matchPreview": "Aperçu",
+      "matchesAppearHere": "Les résultats apparaîtront ici...",
+      "noMatches": "0 correspondance",
+      "noMatchesFound": "Aucune correspondance trouvée",
+      "noMatchesToReplace": "Aucune correspondance à remplacer",
+      "replacedSuccessfully": "Remplacement réussi",
+      "matchesSuffix": " correspondances",
+      "matchesFoundSuffix": " correspondances trouvées",
+      "invalidRegex": "Motif regex invalide",
+      "replaceAll": "Tout remplacer",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "insensible à la casse",
+      "flagMultiline": "multiligne",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Remplacement Regex",
+      "descParas": [
+        "Cet outil de recherche et remplacement regex vous permet de rechercher des motifs et les remplacer en temps réal.",
+        "La recherche et le remplacement s'exécutent localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Tapez ou collez un motif dans le champ <strong>Motif Regex</strong>. Pas besoin de délimiteurs.",
+        "Sélectionnez les drapeaux : <strong>g</strong> (global), <strong>i</strong> (insensible à la casse), <strong>m</strong> (multiligne), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
+        "Entrez une chaîne de remplacement dans le champ <strong>Remplacer par</strong>. Utilisez ,  pour les références arrières.",
+        "Collez ou tapez votre texte de test ci-dessous. Les correspondances sont mises en surbrillance.",
+        "Cliquez <strong>Tout remplacer</strong> pour appliquer le remplacement à tout le texte.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce qu'une expression régulière ?",
+      "whatIsParas": [
+        "Une expression régulière (regex) est une séquence de caractères définissant un modèle de recherche.",
+        "Le remplacement regex est l'une des techniques de transformation de texte les plus puissantes."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Entrez le motif sans délimiteurs. La chaîne de remplacement supporte $1 à $9 et $& pour la correspondance complète.",
+      "example": "Exemple",
+      "examplePara": "Reformater des dates de MM/DD/YYYY en YYYY-MM-DD :",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "Compteur de mots — Coding.Tools",
+      "description": "Comptez les mots, caractères, phrases et paragraphes instantanément. Outil gratuit.",
+      "toolTitle": "Compteur de mots",
+      "toolDescription": "Comptez les mots, caractères, phrases, paragraphes et estimez les temps de lecture et d'élocution.",
+      "categoryName": "Chaînes & Texte",
+      "inputPlaceholder": "Collez ou tapez votre texte ici pour compter...",
+      "statsTitle": "Statistiques",
+      "statsWords": "Mots",
+      "statsCharsWithSpaces": "Caractères (avec espaces)",
+      "statsCharsNoSpaces": "Caractères (sans espaces)",
+      "statsSentences": "Phrases",
+      "statsParagraphs": "Paragraphes",
+      "statsLines": "Lignes",
+      "statsReadingTime": "Temps de lecture",
+      "statsSpeakingTime": "Temps d'élocution",
+      "timeZero": "~0 min",
+      "statusUpdated": "Statistiques mises à jour",
+      "descTitle": "Compteur de mots en ligne",
+      "descParas": [
+        "Cet outil de comptage de mots comptent les mots, caractères, phrases et paragraphes en temps réel.",
+        "Tout le comptage se fait localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez ou tapez votre texte dans l'éditeur.",
+        "Consultez les statistiques en direct ci-dessous.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce qu'un compteur de mots ?",
+      "whatIsParas": [
+        "Un compteur de mots analyse un texte et rapporte le nombre de mots, caractères, phrases et paragraphes.",
+        "Cet outil calcule également le temps de lecture (200 mots/min) et d'élocution (130 mots/min)."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "L'outil gère toute saisie de texte, y compris les caractères Unicode.",
+      "example": "Exemple",
+      "examplePara": "Collez un texte exemple et voyez les statistiques :",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "Compteur de caractères — Coding.Tools",
+      "description": "Comptez les caractères, mots, lignes et octets instantanément. Outil gratuit avec suivi Twitter.",
+      "toolTitle": "Compteur de caractères",
+      "toolDescription": "Comptez les caractères, mots, lignes et octets UTF-8. Inclut un suivi de la limite Twitter de 280 caractères.",
+      "categoryName": "Chaînes & Texte",
+      "inputPlaceholder": "Collez ou tapez votre texte ici pour compter...",
+      "statsTitle": "Statistiques",
+      "statsTotalChars": "Total caractères",
+      "statsCharsNoSpaces": "Caractères (sans espaces)",
+      "statsWords": "Mots",
+      "statsLines": "Lignes",
+      "statsBytes": "Octets (UTF-8)",
+      "statsTwitter": "Twitter restant",
+      "statusUpdated": "Statistiques mises à jour",
+      "descTitle": "Compteur de caractères en ligne",
+      "descParas": [
+        "Cet outil comptent les caractères totaux, sans espaces, mots, lignes et octets UTF-8 en temps réel.",
+        "Tout le comptage se fait localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez ou tapez votre texte dans l'éditeur.",
+        "Consultez les statistiques en direct dans le panneau ci-dessous. Toutes les métriques se mettent à jour instantanément.",
+        "Vérifiez le compteur <strong>Twitter restant</strong> pour voir combien de caractères il vous reste. Il devient rouge au-delà de 280 caractères.",
+        "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce qu'un compteur de caractères ?",
+      "whatIsParas": [
+        "Un compteur de caractères analyse le texte et rapporte le nombre de caractères. Important pour les plateformes avec limites strictes comme Twitter (280 caractères).",
+        "L'outil affiche également le comptage d'octets UTF-8."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Gère toute saisie de texte, y compris les caractères Unicode multi-octets.",
+      "example": "Exemple",
+      "examplePara": "Collez un texte exemple et voyez les statistiques :",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "Convertisseur de casse — Coding.Tools",
+      "description": "Transformez le texte entre majuscules, minuscules, casse de phrase, casse de titre et casse inversée.",
+      "toolTitle": "Convertisseur de casse",
+      "toolDescription": "Transformez le texte entre majuscules, minuscules, casse de phrase, casse de titre et casse inversée.",
+      "categoryName": "Chaînes & Texte",
+      "inputPlaceholder": "Entrez ou collez le texte à convertir...",
+      "descTitle": "Convertisseur de casse",
+      "descParas": [
+        "Ce convertisseur transforme le texte entre cinq styles de casse courants.",
+        "La conversion s'exécute localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez ou tapez votre texte dans l'éditeur.",
+        "Cliquez sur l'un des cinq boutons de conversion.",
+        "Le texte est converti sur place."
+      ],
+      "whatIs": "Quels sont les styles de casse ?",
+      "whatIsParas": [
+        "<strong>MAJUSCULES</strong> convertit chaque lettre en majuscule. <strong>minuscules</strong> en minuscule. <strong>Casse de phrase</strong> majuscule la première lettre de chaque phrase. <strong>Casse de Titre</strong> majuscule chaque mot. <strong>Inverser</strong> échange la casse."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Fonctionne avec tout texte, y compris les caractères Unicode.",
+      "example": "Exemple",
+      "examplePara": "Voyez la même phrase dans chaque style :",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "MAJUSCULES",
+      "lowerCase": "minuscules",
+      "sentenceCase": "Casse de phrase",
+      "titleCase": "Casse de Titre",
+      "invertCase": "Inverser"
+    },
+    "reverse-text": {
+      "title": "Inverser le texte — Coding.Tools",
+      "description": "Inversez le texte caractère par caractère, utile pour l'obfuscation, les tests et le divertissement.",
+      "toolTitle": "Inverser le texte",
+      "toolDescription": "Inversez le texte caractère par caractère, utile pour l'obfuscation, les tests et le divertissement.",
+      "categoryName": "Chaînes & Texte",
+      "inputPlaceholder": "Entrez ou collez le texte à inverser...",
+      "descTitle": "Inverser le texte",
+      "descParas": [
+        "Cet outil inverse n'importe quelle chaîne caractère par caractère.",
+        "L'inversion s'exécute localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Collez ou tapez votre texte dans l'éditeur.",
+        "Cliquez <strong>Inverser le texte</strong>.",
+        "Le texte inversé remplace l'entrée."
+      ],
+      "whatIs": "Qu'est-ce que l'inversion de texte ?",
+      "whatIsParas": [
+        "L'inversion de texte réarrange les caractères d'une chaîne. Par exemple, \"hello\" devient \"olleh\"."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "Fonctionne avec tout texte, y compris les caractères Unicode et les émojis.",
+      "example": "Exemple",
+      "examplePara": "Voyez le texte avant et après inversion :",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "Inverser le texte"
+    },
+    "number-to-words": {
+      "title": "Nombres en lettres — Coding.Tools",
+      "description": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
+      "toolTitle": "Nombres en lettres",
+      "toolDescription": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
+      "categoryName": "Chaînes & Texte",
+      "inputPlaceholder": "Entrez un nombre (ex: 42, -7, 1000000)",
+      "descTitle": "Convertisseur de nombres en lettres",
+      "descParas": [
+        "Cet outil convertit tout entier en sa représentation en mots, mot ordinal et nombre ordinal.",
+        "La conversion s'exécute localement dans votre navigateur."
+      ],
+      "howToUse": "Comment utiliser",
+      "steps": [
+        "Entrez un nombre dans le champ.",
+        "Cliquez <strong>Convertir</strong> ou tapez simplement pour voir les résultats.",
+        "Trois résultats sont affichés.",
+        "Utilisez <strong>Copier</strong> ou <strong>Effacer</strong>."
+      ],
+      "whatIs": "Qu'est-ce que la conversion de nombres en lettres ?",
+      "whatIsParas": [
+        "La conversion de nombres en lettres transforme une valeur numérique en sa forme écrite anglaise."
+      ],
+      "inputNotes": "Notes de saisie",
+      "inputNotesPara": "L'outil accepte les entiers, y compris les négatifs et zéro. Les décimaux ne sont pas supportés.",
+      "example": "Exemple",
+      "examplePara": "Voyez comment différents nombres se convertissent :",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "Résultat mot",
+      "ordinalWordResult": "Résultat mot ordinal",
+      "ordinalNumberResult": "Résultat nombre ordinal",
+      "invalidInput": "Veuillez entrer un entier valide",
+      "convertedSuccess": "Conversion réussie",
+      "conversionFailed": "Échec de la conversion : "
     }
   },
   "de": {
@@ -7053,6 +8877,310 @@
       "example": "Beispiel",
       "examplePara": "Konvertierung einer Hexadezimalzahl:",
       "exampleCode": "--- Hex-Eingabe ---\nFF\n\n--- Dezimal ---\n255\n\n--- Oktal ---\n377\n\n--- Binär ---\n11111111"
+    },
+    "text-editor": {
+      "title": "Texteditor Online — Coding.Tools",
+      "description": "Text online bearbeiten mit Zeilennummerierung, Zeilenumbruch und sofortiger Zeichen- und Zeilenzählung. Kostenlos, schnell und privat.",
+      "toolTitle": "Texteditor Online",
+      "toolDescription": "Schreiben und bearbeiten Sie reinen Text direkt in Ihrem Browser mit Zeilennummerierung, Kopieren, Download und Zeichenzählung.",
+      "categoryName": "Zeichenketten & Text",
+      "inputPlaceholder": "Tippen Sie ein oder fügen Sie Text hier ein...",
+      "descTitle": "Texteditor Online",
+      "descParas": [
+        "Dieser Online-Texteditor ermöglicht das Schreiben und Bearbeiten von reinem Text direkt im Browser. Er verfügt über Zeilennummerierung, Zeichenzählung, Zeilenzählung, Kopieren und Download.",
+        "Der Editor läuft vollständig im Browser. Ihr Text wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Tippen oder fügen Sie Text in den Editor ein.",
+        "Die Statusleiste aktualisiert sich in Echtzeit mit der <strong>Zeichenzahl</strong> und <strong>Zeilenanzahl</strong>.",
+        "Verwenden Sie <strong>Kopieren</strong> um den Text in die Zwischenablage zu kopieren.",
+        "Verwenden Sie <strong>Herunterladen</strong> um als <code>.txt</code> zu speichern, oder <strong>Löschen</strong> zum Zurücksetzen."
+      ],
+      "features": "Funktionen",
+      "featuresList": [
+        "<strong>Zeilennummerierung</strong> — sichtbar auf der linken Seite, synchronisiert mit dem Scrollen.",
+        "<strong>Tab-Taste</strong> — drückt Tab fügt zwei Leerzeichen ein statt den Fokus zu wechseln.",
+        "<strong>Sofortige Zählung</strong> — Zeichen und Zeilen werden bei der Eingabe automatisch aktualisiert."
+      ],
+      "example": "Beispiel",
+      "examplePara": "Fügen Sie den folgenden Text ein, um die Zeilennummerierung und Zeichenzählung zu sehen:",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "Regex Tester — Coding.Tools",
+      "description": "Testen Sie reguläre Ausdrücke live mit Match-Highlighting und Flag-Steuerung. Kostenloses Browser-Tool.",
+      "toolTitle": "Regex Tester",
+      "toolDescription": "Testen Sie Regex-Muster in Echtzeit mit Live-Match-Highlighting. Keine Daten verlassen Ihren Browser.",
+      "categoryName": "Zeichenketten & Text",
+      "regexPattern": "Regex-Muster",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "Testtext",
+      "inputPlaceholder": "Text zum Testen eingeben oder einfügen...",
+      "matchResults": "Ergebnisse",
+      "matchesAppearHere": "Ergebnisse erscheinen hier...",
+      "noMatches": "0 Treffer",
+      "noMatchesFound": "Keine Treffer gefunden",
+      "matchesSuffix": " Treffer",
+      "matchesFoundSuffix": " Treffer gefunden",
+      "invalidRegex": "Ungültiges Regex-Muster",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "Groß-/Kleinschreibung ignorieren",
+      "flagMultiline": "mehrzeilig",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Regex Tester",
+      "descParas": [
+        "Dieser Regex-Tester ermöglicht das Schreiben und Validieren von Regex-Mustern direkt im Browser. Alle sechs JavaScript-Regex-Flags sind verfügbar.",
+        "Der Regex wird lokal im Browser ausgeführt."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Geben Sie ein Regex-Muster in das <strong>Regex-Muster</strong> Eingabefeld ein. Schrägstriche sind nicht nötig.",
+        "Wählen Sie die Flags: <strong>g</strong> (global), <strong>i</strong> (Groß-/Kleinschreibung ignorieren), <strong>m</strong> (mehrzeilig), <strong>s</strong> (dotAll), <strong>u</strong> (Unicode) oder <strong>y</strong> (sticky).",
+        "Geben Sie Ihren Testtext in den Editor unten ein.",
+        "Treffer werden automatisch hervorgehoben. Die Anzahl erscheint in der Statusleiste.",
+        "Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong>."
+      ],
+      "whatIs": "Was sind reguläre Ausdrücke ?",
+      "whatIsParas": [
+        "Ein regulärer Ausdruck (Regex) ist eine Zeichenfolge, die ein Suchmuster definiert.",
+        "JavaScript implementiert Regex nativ über das RegExp-Objekt."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Geben Sie das Regex-Muster ohne Trennzeichen ein. Die Flags werden über die Kontrollkästchen gesteuert.",
+      "example": "Beispiel",
+      "examplePara": "Ein einfaches Muster zum Finden von E-Mail-ähnlichen Zeichenfolgen:",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "Regex Ersetzen — Coding.Tools",
+      "description": "Text mit regulären Ausdrücken suchen und ersetzen. Unterstützt Rückreferenzen. Kostenloses Browser-Tool.",
+      "toolTitle": "Regex Ersetzen",
+      "toolDescription": "Text mit Regex-Mustern in Echtzeit suchen und ersetzen. Unterstützt $1, $2 Rückreferenzen.",
+      "categoryName": "Zeichenketten & Text",
+      "regexPattern": "Regex-Muster",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "Ersetzen durch",
+      "replacePlaceholder": "Ersetzungszeichenkette (unterstützt $1, $2)",
+      "testText": "Testtext",
+      "inputPlaceholder": "Text zum Suchen und Ersetzen eingeben...",
+      "matchPreview": "Vorschau",
+      "matchesAppearHere": "Ergebnisse erscheinen hier...",
+      "noMatches": "0 Treffer",
+      "noMatchesFound": "Keine Treffer gefunden",
+      "noMatchesToReplace": "Keine Treffer zum Ersetzen",
+      "replacedSuccessfully": "Erfolgreich ersetzt",
+      "matchesSuffix": " Treffer",
+      "matchesFoundSuffix": " Treffer gefunden",
+      "invalidRegex": "Ungültiges Regex-Muster",
+      "replaceAll": "Alle ersetzen",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "Groß-/Kleinschreibung ignorieren",
+      "flagMultiline": "mehrzeilig",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "Unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Regex Ersetzen",
+      "descParas": [
+        "Dieses Regex-Such-und-Ersetz-Tool ermöglicht das Suchen nach Mustern und Ersetzen in Echtzeit.",
+        "Suchen und Ersetzen läuft lokal im Browser."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Geben Sie ein Regex-Muster in das <strong>Regex-Muster</strong> Feld ein. Keine Trennzeichen nötig.",
+        "Wählen Sie die Flags: <strong>g</strong> (global), <strong>i</strong> (Groß-/Kleinschreibung ignorieren), <strong>m</strong> (mehrzeilig), <strong>s</strong> (dotAll), <strong>u</strong> (Unicode) oder <strong>y</strong> (sticky).",
+        "Geben Sie eine Ersetzungszeichenkette in das <strong>Ersetzen durch</strong> Feld ein. Verwenden Sie ,  für Rückreferenzen.",
+        "Fügen Sie Ihren Testtext ein oder tippen Sie ihn. Treffer werden bei der Eingabe hervorgehoben.",
+        "Klicken Sie <strong>Alle ersetzen</strong>, um die Ersetzung auf den gesamten Text anzuwenden.",
+        "Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong>."
+      ],
+      "whatIs": "Was sind reguläre Ausdrücke ?",
+      "whatIsParas": [
+        "Ein regulärer Ausdruck (Regex) ist eine Zeichenfolge, die ein Suchmuster definiert.",
+        "Regex-Suchen und -Ersetzen ist eine der mächtigsten Texttransformationstechniken."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Geben Sie das Muster ohne Trennzeichen ein. Die Ersetzungszeichenkette unterstützt $1 bis $9 und $&.",
+      "example": "Beispiel",
+      "examplePara": "Datumsformat von MM/DD/YYYY auf YYYY-MM-DD ändern:",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "Wortzähler — Coding.Tools",
+      "description": "Wörter, Zeichen, Sätze und Absätze sofort zählen. Kostenloses Online-Tool.",
+      "toolTitle": "Wortzähler",
+      "toolDescription": "Zählen Sie Wörter, Zeichen, Sätze, Absätze und schätzen Sie Lese- und Sprechzeit.",
+      "categoryName": "Zeichenketten & Text",
+      "inputPlaceholder": "Text hier einfügen oder tippen zum Zählen...",
+      "statsTitle": "Statistik",
+      "statsWords": "Wörter",
+      "statsCharsWithSpaces": "Zeichen (mit Leerzeichen)",
+      "statsCharsNoSpaces": "Zeichen (ohne Leerzeichen)",
+      "statsSentences": "Sätze",
+      "statsParagraphs": "Absätze",
+      "statsLines": "Zeilen",
+      "statsReadingTime": "Lesezeit",
+      "statsSpeakingTime": "Sprechzeit",
+      "timeZero": "~0 Min",
+      "statusUpdated": "Statistik aktualisiert",
+      "descTitle": "Online-Wortzähler",
+      "descParas": [
+        "Dieses Werkzeug zählt Wörter, Zeichen, Sätze und Absätze in Echtzeit.",
+        "Alle Zählungen erfolgen lokal im Browser."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Text in den Editor einfügen oder tippen.",
+        "Live-Statistiken unten anzeigen lassen.",
+        "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist ein Wortzähler ?",
+      "whatIsParas": [
+        "Ein Wortzähler analysiert Text und meldet die Anzahl der Wörter, Zeichen, Sätze und Absätze.",
+        "Dieses Tool berechnet auch Lesezeit (200 Wörter/Min) und Sprechzeit (130 Wörter/Min)."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Das Tool verarbeitet jede Texteingabe, einschließlich Unicode-Zeichen.",
+      "example": "Beispiel",
+      "examplePara": "Beispieltext einfügen und Statistiken ansehen:",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "Zeichenzähler — Coding.Tools",
+      "description": "Zeichen, Wörter, Zeilen und Bytes sofort zählen. Kostenloses Online-Tool mit Twitter-Tracking.",
+      "toolTitle": "Zeichenzähler",
+      "toolDescription": "Zählen Sie Zeichen, Wörter, Zeilen und UTF-8-Bytes. Enthält Twitter 280-Zeichen-Limit-Tracking.",
+      "categoryName": "Zeichenketten & Text",
+      "inputPlaceholder": "Text hier einfügen oder tippen zum Zählen...",
+      "statsTitle": "Statistik",
+      "statsTotalChars": "Gesamtzeichen",
+      "statsCharsNoSpaces": "Zeichen (ohne Leerzeichen)",
+      "statsWords": "Wörter",
+      "statsLines": "Zeilen",
+      "statsBytes": "Bytes (UTF-8)",
+      "statsTwitter": "Twitter verbleibend",
+      "statusUpdated": "Statistik aktualisiert",
+      "descTitle": "Online-Zeichenzähler",
+      "descParas": [
+        "Dieses Werkzeug zählt Gesamtzeichen, Zeichen ohne Leerzeichen, Wörter, Zeilen und UTF-8-Bytes in Echtzeit.",
+        "Alle Zählungen erfolgen lokal im Browser."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Fügen Sie Text in den Editor ein oder tippen Sie ihn.",
+        "Prüfen Sie die Live-Statistiken im Panel unten. Alle Metriken werden sofort aktualisiert.",
+        "Prüfen Sie den <strong>Twitter verbleibend</strong> Zähler. Er wird rot, wenn Sie 280 Zeichen überschreiten.",
+        "Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong>."
+      ],
+      "whatIs": "Was ist ein Zeichenzähler ?",
+      "whatIsParas": [
+        "Ein Zeichenzähler analysiert Text und meldet die Zeichenanzahl. Wichtig für Plattformen mit strikten Zeichenlimits wie Twitter (280 Zeichen).",
+        "Das Tool zeigt auch die UTF-8-Byte-Anzahl an."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Verarbeitet jede Texteingabe, einschließlich mehrbyteiger Unicode-Zeichen.",
+      "example": "Beispiel",
+      "examplePara": "Beispieltext einfügen und Statistiken ansehen:",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "Groß-/Kleinschreibung — Coding.Tools",
+      "description": "Text sofort in Großbuchstaben, Kleinbuchstaben, Satzanfang, Titel oder umgekehrt konvertieren.",
+      "toolTitle": "Groß-/Kleinschreibung",
+      "toolDescription": "Text zwischen Großbuchstaben, Kleinbuchstaben, Satzanfang, Titel und invertierter Schreibung umwandeln.",
+      "categoryName": "Zeichenketten & Text",
+      "inputPlaceholder": "Text zum Konvertieren eingeben oder einfügen...",
+      "descTitle": "Groß-/Kleinschreibung",
+      "descParas": [
+        "Dieses Tool konvertiert Text zwischen fünf gängigen Schreibstilen.",
+        "Die Konvertierung läuft lokal im Browser."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Text in den Editor eingeben oder einfügen.",
+        "Einen der fünf Konvertierungsbuttons klicken.",
+        "Text wird an Ort und Stelle konvertiert."
+      ],
+      "whatIs": "Was sind die verschiedenen Schreibstile ?",
+      "whatIsParas": [
+        "<strong>GROSSBUCHSTABEN</strong> konvertiert jeden Buchstaben in Großbuchstaben. <strong>Kleinbuchstaben</strong> in Kleinbuchstaben. <strong>Satzanfang</strong> großschreibt den ersten Buchstaben jedes Satzes. <strong>Titelschreibung</strong> großschreibt jedes Wort. <strong>Invertieren</strong> tauscht Groß- und Kleinschreibung."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Funktioniert mit jedem Text, einschließlich Unicode-Zeichen.",
+      "example": "Beispiel",
+      "examplePara": "Sehen Sie denselben Satz in jedem Stil:",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "GROSSBUCHSTABEN",
+      "lowerCase": "Kleinbuchstaben",
+      "sentenceCase": "Satzanfang",
+      "titleCase": "Titelschreibung",
+      "invertCase": "Invertieren"
+    },
+    "reverse-text": {
+      "title": "Text umkehren — Coding.Tools",
+      "description": "Beliebigen Text sofort umkehren. Kostenloses Online-Tool.",
+      "toolTitle": "Text umkehren",
+      "toolDescription": "Text zeichenweise umkehren, nützlich zur Verschleierung, zum Testen und zum Spaß.",
+      "categoryName": "Zeichenketten & Text",
+      "inputPlaceholder": "Text zum Umkehren eingeben oder einfügen...",
+      "descTitle": "Text umkehren",
+      "descParas": [
+        "Dieses Tool kehrt beliebige Textzeichenfolgen zeichenweise um.",
+        "Die Umkehrung läuft lokal im Browser."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Text in den Editor eingeben oder einfügen.",
+        "<strong>Text umkehren</strong> klicken.",
+        "Der umgekehrte Text ersetzt die Eingabe."
+      ],
+      "whatIs": "Was ist Textumkehrung ?",
+      "whatIsParas": [
+        "Textumkehrung ordnet die Zeichen einer Zeichenfolge um. Aus \"hello\" wird \"olleh\"."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Funktioniert mit jedem Text, einschließlich Unicode-Zeichen und Emojis.",
+      "example": "Beispiel",
+      "examplePara": "Text vor und nach der Umkehrung:",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "Text umkehren"
+    },
+    "number-to-words": {
+      "title": "Zahlen in Wörter — Coding.Tools",
+      "description": "Zahlen sofort in englische Wörter, Ordinalzahlen und Ordnungszahlen konvertieren.",
+      "toolTitle": "Zahlen in Wörter",
+      "toolDescription": "Ganzzahlen in englische Wörter, Ordinalwörter und Ordnungszahlen konvertieren.",
+      "categoryName": "Zeichenketten & Text",
+      "inputPlaceholder": "Zahl eingeben (z.B. 42, -7, 1000000)",
+      "descTitle": "Zahlen-in-Wörter-Konverter",
+      "descParas": [
+        "Dieses Tool konvertiert jede Ganzzahl in ihre englische Wortdarstellung, Ordinalwort und Ordnungszahl.",
+        "Die Konvertierung läuft lokal im Browser."
+      ],
+      "howToUse": "Verwendung",
+      "steps": [
+        "Zahl in das Eingabefeld eingeben.",
+        "<strong>Konvertieren</strong> klicken oder einfach tippen.",
+        "Drei Ergebnisse werden angezeigt.",
+        "<strong>Kopieren</strong> oder <strong>Löschen</strong> verwenden."
+      ],
+      "whatIs": "Was ist Zahlen-in-Wörter-Konvertierung ?",
+      "whatIsParas": [
+        "Die Konvertierung wandelt einen numerischen Wert in seine englische Schreibform um."
+      ],
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Akzeptiert Ganzzahlen, einschließlich negativer Zahlen und Null. Dezimalzahlen werden nicht unterstützt.",
+      "example": "Beispiel",
+      "examplePara": "Sehen Sie, wie verschiedene Zahlen konvertiert werden:",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "Wortergebnis",
+      "ordinalWordResult": "Ordinalwort-Ergebnis",
+      "ordinalNumberResult": "Ordnungszahl-Ergebnis",
+      "invalidInput": "Bitte geben Sie eine gültige Ganzzahl ein",
+      "convertedSuccess": "Erfolgreich konvertiert",
+      "conversionFailed": "Konvertierung fehlgeschlagen: "
     }
   },
   "es": {
@@ -8061,6 +10189,310 @@
       "example": "Ejemplo",
       "examplePara": "Conversión de hexadecimal a decimal:",
       "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binario ---\n11111111"
+    },
+    "text-editor": {
+      "title": "Editor de texto — Coding.Tools",
+      "description": "Edite texto en línea con números de línea, ajuste de línea y conteo instantáneo de caracteres. Gratis, rápido y privado.",
+      "toolTitle": "Editor de texto",
+      "toolDescription": "Escriba y edite texto plano directamente en su navegador con números de línea, copiar, descargar y conteo de caracteres.",
+      "categoryName": "Cadenas y Texto",
+      "inputPlaceholder": "Comience a escribir o pegue texto aquí...",
+      "descTitle": "Editor de texto",
+      "descParas": [
+        "Este editor de texto en línea le permite escribir y editar texto plano directamente en su navegador. Cuenta con números de línea, conteo de caracteres, conteo de líneas, copiar y descargar.",
+        "El editor funciona completamente en su navegador. El texto que escribe o pega no se carga, almacena ni envía a un servidor."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue su texto en el área del editor.",
+        "La barra de estado se actualiza en tiempo real con el <strong>conteo de caracteres</strong> y <strong>conteo de líneas</strong>.",
+        "Use <strong>Copiar</strong> para copiar el texto al portapapeles.",
+        "Use <strong>Descargar</strong> para guardar como <code>.txt</code>, o <strong>Limpiar</strong> para reiniciar."
+      ],
+      "features": "Características",
+      "featuresList": [
+        "<strong>Números de línea</strong> — visibles a la izquierda, sincronizados con el desplazamiento.",
+        "<strong>Soporte Tab</strong> — Tab inserta dos espacios en lugar de cambiar el foco.",
+        "<strong>Conteo instantáneo</strong> — caracteres y líneas se actualizan al escribir."
+      ],
+      "example": "Ejemplo",
+      "examplePara": "Pegue el siguiente texto para ver los números de línea y el conteo en acción:",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "Probador Regex — Coding.Tools",
+      "description": "Pruebe expresiones regulares en vivo con resaltado de coincidencias y controles de banderas. Herramienta gratuita.",
+      "toolTitle": "Probador Regex",
+      "toolDescription": "Pruebe patrones regex en tiempo real con resaltado de coincidencias. Ningún dato sale de su navegador.",
+      "categoryName": "Cadenas y Texto",
+      "regexPattern": "Patrón Regex",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "Texto de prueba",
+      "inputPlaceholder": "Ingrese o pegue texto para probar...",
+      "matchResults": "Resultados",
+      "matchesAppearHere": "Los resultados aparecerán aquí...",
+      "noMatches": "0 coincidencias",
+      "noMatchesFound": "No se encontraron coincidencias",
+      "matchesSuffix": " coincidencias",
+      "matchesFoundSuffix": " coincidencias encontradas",
+      "invalidRegex": "Patrón regex inválido",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "insensible a mayúsculas",
+      "flagMultiline": "multilínea",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Probador Regex",
+      "descParas": [
+        "Este probador de expresiones regulares le permite escribir y validar patrones regex directamente en su navegador.",
+        "El regex se ejecuta localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue un patrón en el campo <strong>Patrón Regex</strong>. No necesita barras.",
+        "Seleccione las banderas: <strong>g</strong> (global), <strong>i</strong> (insensible a mayúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), o <strong>y</strong> (sticky).",
+        "Ingrese o pegue su texto de prueba en el editor de abajo.",
+        "Las coincidencias se resaltan automáticamente. El conteo aparece en la barra de estado.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué son las expresiones regulares?",
+      "whatIsParas": [
+        "Una expresión regular (regex) es una secuencia de caracteres que define un patrón de búsqueda.",
+        "JavaScript implementa regex nativamente a través del objeto RegExp."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese el patrón regex sin delimitadores. Las banderas se controlan con las casillas.",
+      "example": "Ejemplo",
+      "examplePara": "Un patrón simple para encontrar cadenas tipo email:",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "Reemplazo Regex — Coding.Tools",
+      "description": "Busque y reemplace texto con expresiones regulares. Soporta referencias cruzadas. Herramienta gratuita.",
+      "toolTitle": "Reemplazo Regex",
+      "toolDescription": "Busque y reemplace texto con patrones regex en tiempo real. Soporta $1, $2.",
+      "categoryName": "Cadenas y Texto",
+      "regexPattern": "Patrón Regex",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "Reemplazar con",
+      "replacePlaceholder": "Cadena de reemplazo (soporta $1, $2)",
+      "testText": "Texto de prueba",
+      "inputPlaceholder": "Ingrese o pegue texto para buscar y reemplazar...",
+      "matchPreview": "Vista previa",
+      "matchesAppearHere": "Los resultados aparecerán aquí...",
+      "noMatches": "0 coincidencias",
+      "noMatchesFound": "No se encontraron coincidencias",
+      "noMatchesToReplace": "No hay coincidencias para reemplazar",
+      "replacedSuccessfully": "Reemplazado exitosamente",
+      "matchesSuffix": " coincidencias",
+      "matchesFoundSuffix": " coincidencias encontradas",
+      "invalidRegex": "Patrón regex inválido",
+      "replaceAll": "Reemplazar todo",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "insensible a mayúsculas",
+      "flagMultiline": "multilínea",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Reemplazo Regex",
+      "descParas": [
+        "Esta herramienta de búsqueda y reemplazo regex le permite buscar patrones y reemplazarlos en tiempo real.",
+        "La búsqueda y reemplazo se ejecuta localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Escriba o pegue un patrón en el campo <strong>Patrón Regex</strong>. No se necesitan delimitadores.",
+        "Seleccione las banderas: <strong>g</strong> (global), <strong>i</strong> (insensible a mayúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), o <strong>y</strong> (sticky).",
+        "Ingrese una cadena de reemplazo en el campo <strong>Reemplazar con</strong>. Use ,  para referencias cruzadas.",
+        "Pegue o escriba su texto de prueba. Las coincidencias se resaltan al escribir.",
+        "Haga clic en <strong>Reemplazar todo</strong> para aplicar el reemplazo a todo el texto.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué son las expresiones regulares?",
+      "whatIsParas": [
+        "Una expresión regular (regex) es una secuencia de caracteres que define un patrón de búsqueda.",
+        "La búsqueda y reemplazo regex es una de las técnicas de transformación de texto más poderosas."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese el patrón sin delimitadores. La cadena de reemplazo soporta $1 a $9 y $&.",
+      "example": "Ejemplo",
+      "examplePara": "Reformatear fechas de MM/DD/YYYY a YYYY-MM-DD:",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "Contador de palabras — Coding.Tools",
+      "description": "Cuente palabras, caracteres, oraciones y párrafos al instante. Herramienta gratuita.",
+      "toolTitle": "Contador de palabras",
+      "toolDescription": "Cuente palabras, caracteres, oraciones, párrafos y estime tiempos de lectura y habla.",
+      "categoryName": "Cadenas y Texto",
+      "inputPlaceholder": "Pegue o escriba su texto aquí para contar...",
+      "statsTitle": "Estadísticas",
+      "statsWords": "Palabras",
+      "statsCharsWithSpaces": "Caracteres (con espacios)",
+      "statsCharsNoSpaces": "Caracteres (sin espacios)",
+      "statsSentences": "Oraciones",
+      "statsParagraphs": "Párrafos",
+      "statsLines": "Líneas",
+      "statsReadingTime": "Tiempo de lectura",
+      "statsSpeakingTime": "Tiempo de habla",
+      "timeZero": "~0 min",
+      "statusUpdated": "Estadísticas actualizadas",
+      "descTitle": "Contador de palabras en línea",
+      "descParas": [
+        "Esta herramienta cuenta palabras, caracteres, oraciones y párrafos en tiempo real.",
+        "Todo el conteo ocurre localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue o escriba su texto en el editor.",
+        "Vea las estadísticas en vivo abajo.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es un contador de palabras?",
+      "whatIsParas": [
+        "Un contador de palabras analiza un texto y reporta el número de palabras, caracteres, oraciones y párrafos.",
+        "Esta herramienta también calcula el tiempo de lectura (200 palabras/min) y habla (130 palabras/min)."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "La herramienta maneja cualquier entrada de texto, incluyendo caracteres Unicode.",
+      "example": "Ejemplo",
+      "examplePara": "Pegue un texto de ejemplo y vea las estadísticas:",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "Contador de caracteres — Coding.Tools",
+      "description": "Cuente caracteres, palabras, líneas y bytes al instante. Herramienta gratuita con seguimiento de Twitter.",
+      "toolTitle": "Contador de caracteres",
+      "toolDescription": "Cuente caracteres, palabras, líneas y bytes UTF-8. Incluye seguimiento del límite de 280 caracteres de Twitter.",
+      "categoryName": "Cadenas y Texto",
+      "inputPlaceholder": "Pegue o escriba su texto aquí para contar...",
+      "statsTitle": "Estadísticas",
+      "statsTotalChars": "Total de caracteres",
+      "statsCharsNoSpaces": "Caracteres (sin espacios)",
+      "statsWords": "Palabras",
+      "statsLines": "Líneas",
+      "statsBytes": "Bytes (UTF-8)",
+      "statsTwitter": "Twitter restante",
+      "statusUpdated": "Estadísticas actualizadas",
+      "descTitle": "Contador de caracteres en línea",
+      "descParas": [
+        "Esta herramienta cuenta caracteres totales, sin espacios, palabras, líneas y bytes UTF-8 en tiempo real.",
+        "Todo el conteo ocurre localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue o escriba su texto en el editor.",
+        "Vea las estadísticas en vivo en el panel inferior. Todas las métricas se actualizan al instante.",
+        "Consulte el contador de <strong>Twitter restante</strong> para ver cuántos caracteres le quedan. Se pone rojo al superar los 280 caracteres.",
+        "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es un contador de caracteres?",
+      "whatIsParas": [
+        "Un contador de caracteres analiza el texto y reporta el número de caracteres. Importante para plataformas con límites estrictos como Twitter (280 caracteres).",
+        "La herramienta también muestra el conteo de bytes UTF-8."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Maneja cualquier entrada de texto, incluyendo caracteres Unicode multibyte.",
+      "example": "Ejemplo",
+      "examplePara": "Pegue un texto de ejemplo y vea las estadísticas:",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "Convertidor de mayúsculas — Coding.Tools",
+      "description": "Convierta texto a mayúsculas, minúsculas, caso de oración, caso de título o invierta mayúsculas y minúsculas.",
+      "toolTitle": "Convertidor de mayúsculas",
+      "toolDescription": "Transforme texto entre mayúsculas, minúsculas, caso de oración, caso de título y caso invertido.",
+      "categoryName": "Cadenas y Texto",
+      "inputPlaceholder": "Ingrese o pegue texto para convertir...",
+      "descTitle": "Convertidor de mayúsculas",
+      "descParas": [
+        "Este convertidor transforma el texto entre cinco estilos de mayúsculas comunes.",
+        "La conversión se ejecuta localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue o escriba su texto en el editor.",
+        "Haga clic en uno de los cinco botones de conversión.",
+        "El texto se convierte en el lugar."
+      ],
+      "whatIs": "¿Cuáles son los diferentes estilos?",
+      "whatIsParas": [
+        "<strong>MAYÚSCULAS</strong> convierte cada letra a mayúscula. <strong>minúsculas</strong> a minúscula. <strong>Caso oración</strong> capitaliza la primera letra de cada oración. <strong>Caso Título</strong> capitaliza cada palabra. <strong>Invertir</strong> intercambia mayúsculas y minúsculas."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Funciona con cualquier texto, incluyendo caracteres Unicode.",
+      "example": "Ejemplo",
+      "examplePara": "Vea la misma oración en cada estilo:",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "MAYÚSCULAS",
+      "lowerCase": "minúsculas",
+      "sentenceCase": "Caso oración",
+      "titleCase": "Caso Título",
+      "invertCase": "Invertir"
+    },
+    "reverse-text": {
+      "title": "Invertir texto — Coding.Tools",
+      "description": "Invierta cualquier cadena de texto al instante. Herramienta gratuita.",
+      "toolTitle": "Invertir texto",
+      "toolDescription": "Invierta texto carácter por carácter, útil para ofuscación, pruebas y diversión.",
+      "categoryName": "Cadenas y Texto",
+      "inputPlaceholder": "Ingrese o pegue texto para invertir...",
+      "descTitle": "Invertir texto",
+      "descParas": [
+        "Esta herramienta invierte cualquier cadena carácter por carácter.",
+        "La inversión se ejecuta localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Pegue o escriba su texto en el editor.",
+        "Haga clic en <strong>Invertir texto</strong>.",
+        "El texto invertido reemplaza la entrada."
+      ],
+      "whatIs": "¿Qué es la inversión de texto?",
+      "whatIsParas": [
+        "La inversión de texto reorganiza los caracteres de una cadena. Por ejemplo, \"hello\" se convierte en \"olleh\"."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Funciona con cualquier texto, incluyendo caracteres Unicode y emojis.",
+      "example": "Ejemplo",
+      "examplePara": "Vea el texto antes y después de la inversión:",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "Invertir texto"
+    },
+    "number-to-words": {
+      "title": "Números a palabras — Coding.Tools",
+      "description": "Convierta números a palabras en inglés, ordinales y números ordinales al instante.",
+      "toolTitle": "Números a palabras",
+      "toolDescription": "Convierta enteros a palabras en inglés, palabras ordinales y números ordinales.",
+      "categoryName": "Cadenas y Texto",
+      "inputPlaceholder": "Ingrese un número (ej: 42, -7, 1000000)",
+      "descTitle": "Convertidor de números a palabras",
+      "descParas": [
+        "Esta herramienta convierte cualquier entero en su representación en palabras, palabra ordinal y número ordinal.",
+        "La conversión se ejecuta localmente en su navegador."
+      ],
+      "howToUse": "Cómo usar",
+      "steps": [
+        "Ingrese un número en el campo.",
+        "Haga clic en <strong>Convertir</strong> o simplemente escriba.",
+        "Se muestran tres resultados.",
+        "Use <strong>Copiar</strong> o <strong>Limpiar</strong>."
+      ],
+      "whatIs": "¿Qué es la conversión de números a palabras?",
+      "whatIsParas": [
+        "La conversión transforma un valor numérico en su forma escrita en inglés."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Acepta enteros, incluyendo negativos y cero. Los decimales no son compatibles.",
+      "example": "Ejemplo",
+      "examplePara": "Vea cómo diferentes números se convierten:",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "Resultado palabra",
+      "ordinalWordResult": "Resultado palabra ordinal",
+      "ordinalNumberResult": "Resultado número ordinal",
+      "invalidInput": "Ingrese un entero válido",
+      "convertedSuccess": "Convertido exitosamente",
+      "conversionFailed": "Error en la conversión: "
     }
   },
   "pt": {
@@ -9069,6 +11501,310 @@
       "example": "Exemplo",
       "examplePara": "Convertendo hexadecimal para decimal:",
       "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binário ---\n11111111"
+    },
+    "text-editor": {
+      "title": "Editor de texto — Coding.Tools",
+      "description": "Edite texto online com números de linha, quebra de linha e contagem instantânea de caracteres. Gratuito, rápido e privado.",
+      "toolTitle": "Editor de texto",
+      "toolDescription": "Escreva e edite texto puro diretamente no navegador com números de linha, copiar, baixar e contagem de caracteres.",
+      "categoryName": "Strings e Texto",
+      "inputPlaceholder": "Comece a digitar ou cole o texto aqui...",
+      "descTitle": "Editor de texto",
+      "descParas": [
+        "Este editor de texto online permite escrever e editar texto puro diretamente no navegador. Possui números de linha, contagem de caracteres, contagem de linhas, copiar e baixar.",
+        "O editor funciona inteiramente no navegador. O texto digitado ou colado não é enviado, armazenado ou enviado a um servidor."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole seu texto na área do editor.",
+        "A barra de status é atualizada em tempo real com a <strong>contagem de caracteres</strong> e <strong>contagem de linhas</strong>.",
+        "Use <strong>Copiar</strong> para copiar o texto.",
+        "Use <strong>Baixar</strong> para salvar como <code>.txt</code>, ou <strong>Limpar</strong> para reiniciar."
+      ],
+      "features": "Recursos",
+      "featuresList": [
+        "<strong>Números de linha</strong> — visíveis à esquerda, sincronizados com a rolagem.",
+        "<strong>Suporte Tab</strong> — Tab insere dois espaços em vez de mudar o foco.",
+        "<strong>Contagem instantânea</strong> — caracteres e linhas são atualizados ao digitar."
+      ],
+      "example": "Exemplo",
+      "examplePara": "Cole o seguinte texto para ver os números de linha e contagem em ação:",
+      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+    },
+    "regex-tester": {
+      "title": "Testador Regex — Coding.Tools",
+      "description": "Teste expressões regulares ao vivo com destaque de correspondências e controles de bandeiras. Ferramenta gratuita.",
+      "toolTitle": "Testador Regex",
+      "toolDescription": "Teste padrões regex em tempo real com destaque de correspondências. Nenhum dado sai do navegador.",
+      "categoryName": "Strings e Texto",
+      "regexPattern": "Padrão Regex",
+      "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
+      "testText": "Texto de teste",
+      "inputPlaceholder": "Insira ou cole texto para testar...",
+      "matchResults": "Resultados",
+      "matchesAppearHere": "Os resultados aparecerão aqui...",
+      "noMatches": "0 correspondências",
+      "noMatchesFound": "Nenhuma correspondência encontrada",
+      "matchesSuffix": " correspondências",
+      "matchesFoundSuffix": " correspondências encontradas",
+      "invalidRegex": "Padrão regex inválido",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "ignorar maiúsculas/minúsculas",
+      "flagMultiline": "multilinha",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Testador Regex",
+      "descParas": [
+        "Este testador de expressões regulares permite escrever e validar padrões regex diretamente no navegador.",
+        "O regex é executado localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole um padrão no campo <strong>Padrão Regex</strong>. Não precisa de barras.",
+        "Selecione as bandeiras: <strong>g</strong> (global), <strong>i</strong> (ignorar maiúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
+        "Insira ou cole seu texto de teste no editor abaixo.",
+        "As correspondências são destacadas automaticamente. A contagem aparece na barra de status.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que são expressões regulares?",
+      "whatIsParas": [
+        "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca.",
+        "JavaScript implementa regex nativamente através do objeto RegExp."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira o padrão regex sem delimitadores. As bandeiras são controladas pelas caixas de seleção.",
+      "example": "Exemplo",
+      "examplePara": "Um padrão simples para encontrar strings tipo email:",
+      "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    },
+    "regex-replace": {
+      "title": "Substituição Regex — Coding.Tools",
+      "description": "Busque e substitua texto com expressões regulares. Suporta referências cruzadas. Ferramenta gratuita.",
+      "toolTitle": "Substituição Regex",
+      "toolDescription": "Busque e substitua texto com padrões regex em tempo real. Suporta $1, $2.",
+      "categoryName": "Strings e Texto",
+      "regexPattern": "Padrão Regex",
+      "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+      "replaceWith": "Substituir por",
+      "replacePlaceholder": "String de substituição (suporta $1, $2)",
+      "testText": "Texto de teste",
+      "inputPlaceholder": "Insira ou cole texto para buscar e substituir...",
+      "matchPreview": "Pré-visualização",
+      "matchesAppearHere": "Os resultados aparecerão aqui...",
+      "noMatches": "0 correspondências",
+      "noMatchesFound": "Nenhuma correspondência encontrada",
+      "noMatchesToReplace": "Nenhuma correspondência para substituir",
+      "replacedSuccessfully": "Substituído com sucesso",
+      "matchesSuffix": " correspondências",
+      "matchesFoundSuffix": " correspondências encontradas",
+      "invalidRegex": "Padrão regex inválido",
+      "replaceAll": "Substituir tudo",
+      "flagGlobal": "global",
+      "flagCaseInsensitive": "ignorar maiúsculas/minúsculas",
+      "flagMultiline": "multilinha",
+      "flagDotAll": "dotAll",
+      "flagUnicode": "unicode",
+      "flagSticky": "sticky",
+      "descTitle": "Substituição Regex",
+      "descParas": [
+        "Esta ferramenta de busca e substituição regex permite buscar padrões e substituí-los em tempo real.",
+        "A busca e substituição é executada localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Digite ou cole um padrão no campo <strong>Padrão Regex</strong>. Não precisa de delimitadores.",
+        "Selecione as bandeiras: <strong>g</strong> (global), <strong>i</strong> (ignorar maiúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
+        "Insira uma string de substituição no campo <strong>Substituir por</strong>. Use ,  para referências cruzadas.",
+        "Cole ou digite seu texto de teste. As correspondências são destacadas ao digitar.",
+        "Clique em <strong>Substituir tudo</strong> para aplicar a substituição a todo o texto.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que são expressões regulares?",
+      "whatIsParas": [
+        "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca.",
+        "A busca e substituição regex é uma das técnicas de transformação de texto mais poderosas."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira o padrão sem delimitadores. A string de substituição suporta $1 a $9 e $&.",
+      "example": "Exemplo",
+      "examplePara": "Reformatar datas de MM/DD/YYYY para YYYY-MM-DD:",
+      "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    },
+    "word-counter": {
+      "title": "Contador de palavras — Coding.Tools",
+      "description": "Conte palavras, caracteres, frases e parágrafos instantaneamente. Ferramenta gratuita.",
+      "toolTitle": "Contador de palavras",
+      "toolDescription": "Conte palavras, caracteres, frases, parágrafos e estime tempos de leitura e fala.",
+      "categoryName": "Strings e Texto",
+      "inputPlaceholder": "Cole ou digite seu texto aqui para contar...",
+      "statsTitle": "Estatísticas",
+      "statsWords": "Palavras",
+      "statsCharsWithSpaces": "Caracteres (com espaços)",
+      "statsCharsNoSpaces": "Caracteres (sem espaços)",
+      "statsSentences": "Frases",
+      "statsParagraphs": "Parágrafos",
+      "statsLines": "Linhas",
+      "statsReadingTime": "Tempo de leitura",
+      "statsSpeakingTime": "Tempo de fala",
+      "timeZero": "~0 min",
+      "statusUpdated": "Estatísticas atualizadas",
+      "descTitle": "Contador de palavras online",
+      "descParas": [
+        "Esta ferramenta conta palavras, caracteres, frases e parágrafos em tempo real.",
+        "Toda a contagem é feita localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole ou digite seu texto no editor.",
+        "Veja as estatísticas ao vivo abaixo.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é um contador de palavras?",
+      "whatIsParas": [
+        "Um contador de palavras analisa um texto e relata o número de palavras, caracteres, frases e parágrafos.",
+        "Esta ferramenta também calcula o tempo de leitura (200 palavras/min) e fala (130 palavras/min)."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "A ferramenta lida com qualquer entrada de texto, incluindo caracteres Unicode.",
+      "example": "Exemplo",
+      "examplePara": "Cole um texto de exemplo e veja as estatísticas:",
+      "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    },
+    "character-count": {
+      "title": "Contador de caracteres — Coding.Tools",
+      "description": "Conte caracteres, palavras, linhas e bytes instantaneamente. Ferramenta gratuita com rastreamento do Twitter.",
+      "toolTitle": "Contador de caracteres",
+      "toolDescription": "Conte caracteres, palavras, linhas e bytes UTF-8. Inclui rastreamento do limite de 280 caracteres do Twitter.",
+      "categoryName": "Strings e Texto",
+      "inputPlaceholder": "Cole ou digite seu texto aqui para contar...",
+      "statsTitle": "Estatísticas",
+      "statsTotalChars": "Total de caracteres",
+      "statsCharsNoSpaces": "Caracteres (sem espaços)",
+      "statsWords": "Palavras",
+      "statsLines": "Linhas",
+      "statsBytes": "Bytes (UTF-8)",
+      "statsTwitter": "Twitter restante",
+      "statusUpdated": "Estatísticas atualizadas",
+      "descTitle": "Contador de caracteres online",
+      "descParas": [
+        "Esta ferramenta conta caracteres totais, sem espaços, palavras, linhas e bytes UTF-8 em tempo real.",
+        "Toda a contagem é feita localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole ou digite seu texto no editor.",
+        "Veja as estatísticas ao vivo no painel abaixo. Todas as métricas são atualizadas instantaneamente.",
+        "Verifique o contador de <strong>Twitter restante</strong> para ver quantos caracteres restam. Fica vermelho ao ultrapassar 280 caracteres.",
+        "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é um contador de caracteres?",
+      "whatIsParas": [
+        "Um contador de caracteres analisa o texto e relata o número de caracteres. Importante para plataformas com limites rígidos como Twitter (280 caracteres).",
+        "A ferramenta também exibe a contagem de bytes UTF-8."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Lida com qualquer entrada de texto, incluindo caracteres Unicode multibyte.",
+      "example": "Exemplo",
+      "examplePara": "Cole um texto de exemplo e veja as estatísticas:",
+      "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    },
+    "case-converter": {
+      "title": "Conversor de maiúsculas — Coding.Tools",
+      "description": "Converta texto para maiúsculas, minúsculas, caso de frase, caso de título ou inverta maiúsculas e minúsculas.",
+      "toolTitle": "Conversor de maiúsculas",
+      "toolDescription": "Transforme texto entre maiúsculas, minúsculas, caso de frase, caso de título e caso invertido.",
+      "categoryName": "Strings e Texto",
+      "inputPlaceholder": "Insira ou cole texto para converter...",
+      "descTitle": "Conversor de maiúsculas",
+      "descParas": [
+        "Este conversor transforma o texto entre cinco estilos de maiúsculas comuns.",
+        "A conversão é executada localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole ou digite seu texto no editor.",
+        "Clique em um dos cinco botões de conversão.",
+        "O texto é convertido no local."
+      ],
+      "whatIs": "Quais são os diferentes estilos?",
+      "whatIsParas": [
+        "<strong>MAIÚSCULAS</strong> converte cada letra para maiúscula. <strong>minúsculas</strong> para minúscula. <strong>Caso frase</strong> capitaliza a primeira letra de cada frase. <strong>Caso Título</strong> capitaliza cada palavra. <strong>Inverter</strong> troca maiúsculas e minúsculas."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Funciona com qualquer texto, incluindo caracteres Unicode.",
+      "example": "Exemplo",
+      "examplePara": "Veja a mesma frase em cada estilo:",
+      "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+      "upperCase": "MAIÚSCULAS",
+      "lowerCase": "minúsculas",
+      "sentenceCase": "Caso frase",
+      "titleCase": "Caso Título",
+      "invertCase": "Inverter"
+    },
+    "reverse-text": {
+      "title": "Inverter texto — Coding.Tools",
+      "description": "Inverta qualquer string de texto instantaneamente. Ferramenta gratuita.",
+      "toolTitle": "Inverter texto",
+      "toolDescription": "Inverta texto caractere por caractere, útil para ofuscação, testes e diversão.",
+      "categoryName": "Strings e Texto",
+      "inputPlaceholder": "Insira ou cole texto para inverter...",
+      "descTitle": "Inverter texto",
+      "descParas": [
+        "Esta ferramenta inverte qualquer string caractere por caractere.",
+        "A inversão é executada localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Cole ou digite seu texto no editor.",
+        "Clique em <strong>Inverter texto</strong>.",
+        "O texto invertido substitui a entrada."
+      ],
+      "whatIs": "O que é inversão de texto?",
+      "whatIsParas": [
+        "A inversão de texto reorganiza os caracteres de uma string. Por exemplo, \"hello\" se torna \"olleh\"."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Funciona com qualquer texto, incluindo caracteres Unicode e emojis.",
+      "example": "Exemplo",
+      "examplePara": "Veja o texto antes e depois da inversão:",
+      "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+      "reverseText": "Inverter texto"
+    },
+    "number-to-words": {
+      "title": "Números por extenso — Coding.Tools",
+      "description": "Converta números para palavras em inglês, ordinais e números ordinais instantaneamente.",
+      "toolTitle": "Números por extenso",
+      "toolDescription": "Converta inteiros para palavras em inglês, palavras ordinais e números ordinais.",
+      "categoryName": "Strings e Texto",
+      "inputPlaceholder": "Insira um número (ex: 42, -7, 1000000)",
+      "descTitle": "Conversor de números por extenso",
+      "descParas": [
+        "Esta ferramenta converte qualquer inteiro em sua representação em palavras, palavra ordinal e número ordinal.",
+        "A conversão é executada localmente no navegador."
+      ],
+      "howToUse": "Como usar",
+      "steps": [
+        "Insira um número no campo.",
+        "Clique em <strong>Converter</strong> ou simplesmente digite.",
+        "Três resultados são exibidos.",
+        "Use <strong>Copiar</strong> ou <strong>Limpar</strong>."
+      ],
+      "whatIs": "O que é conversão de números por extenso?",
+      "whatIsParas": [
+        "A conversão transforma um valor numérico em sua forma escrita em inglês."
+      ],
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Aceita inteiros, incluindo negativos e zero. Decimais não são suportados.",
+      "example": "Exemplo",
+      "examplePara": "Veja como diferentes números são convertidos:",
+      "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+      "wordResult": "Resultado palavra",
+      "ordinalWordResult": "Resultado palavra ordinal",
+      "ordinalNumberResult": "Resultado número ordinal",
+      "invalidInput": "Insira um inteiro válido",
+      "convertedSuccess": "Convertido com sucesso",
+      "conversionFailed": "Falha na conversão: "
     }
   }
 }

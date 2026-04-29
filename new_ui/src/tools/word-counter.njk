@@ -1,0 +1,258 @@
+---
+title: "Word Counter Online — Coding.Tools"
+description: "Count words, characters, sentences, and paragraphs instantly. Free online word counter tool."
+toolTitle: "Word Counter"
+toolDescription: "Count words, characters, sentences, paragraphs, and estimate reading and speaking time."
+category: "string-text-utilities"
+categoryName: "String & Text Utilities"
+activeTool: "word-counter"
+permalink: "/word-counter.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Paste or type your text here to count words, characters, sentences, and paragraphs..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Statistics Panel -->
+  <div style="margin-top: 24px;">
+    <label class="section-label">Statistics</label>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-label">Words</span>
+        <span class="stat-value" id="stat-words">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Characters (with spaces)</span>
+        <span class="stat-value" id="stat-chars-spaces">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Characters (no spaces)</span>
+        <span class="stat-value" id="stat-chars-nospaces">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Sentences</span>
+        <span class="stat-value" id="stat-sentences">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Paragraphs</span>
+        <span class="stat-value" id="stat-paragraphs">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Lines</span>
+        <span class="stat-value" id="stat-lines">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Reading time</span>
+        <span class="stat-value" id="stat-reading-time">~0 min</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Speaking time</span>
+        <span class="stat-value" id="stat-speaking-time">~0 min</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Word Counter Online</h2>
+  <p>This word counter tool counts words, characters, sentences, and paragraphs in real time as you type or paste text. It also estimates reading and speaking time based on standard rates, making it useful for writers, students, and content creators who need quick text statistics.</p>
+  <p>All counting happens locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so your content stays private and the tool works instantly without any delay.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Paste or type your text into the input editor.</li>
+    <li>View live statistics in the panel below the editor. Every metric updates instantly as you type.</li>
+    <li>Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset the editor and all statistics.</li>
+  </ol>
+
+  <h3>What is a word counter?</h3>
+  <p>A word counter is a tool that analyzes a piece of text and reports how many words, characters, sentences, and paragraphs it contains. Word counters are commonly used by writers, bloggers, students, and professionals who need to meet specific length requirements for essays, articles, reports, or social media posts.</p>
+  <p>This tool goes beyond basic counting by also calculating reading time (based on an average of 200 words per minute) and speaking time (based on an average of 130 words per minute), which are helpful for planning presentations, speeches, and content pacing.</p>
+
+  <h3>Input notes</h3>
+  <p>The tool handles any text input, including Unicode characters and multi-line content. Words are counted by splitting on whitespace, sentences are detected by punctuation marks followed by whitespace or end of text, and paragraphs are counted as blocks of non-empty lines separated by blank lines.</p>
+
+  <h3>Example</h3>
+  <p>Paste a sample text and watch the statistics update live:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Sample Text ---
+The quick brown fox jumps over the lazy dog. This is a simple sentence used for testing word counters and typography tools.
+
+It contains multiple paragraphs, sentences, and words to demonstrate how the statistics panel works in real time.
+
+--- Expected Statistics ---
+Words: 30
+Characters (with spaces): 176
+Characters (no spaces): 145
+Sentences: 3
+Paragraphs: 3
+Lines: 4
+Reading time: ~1 min
+Speaking time: ~1 min</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor   = document.getElementById('input-editor');
+      var btnClear      = document.getElementById('btn-clear');
+      var btnCopy       = document.getElementById('btn-copy');
+      var btnDownload   = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+      var charCount     = document.getElementById('char-count');
+      var lineCount     = document.getElementById('line-count');
+      var inputLineNums = document.getElementById('input-line-numbers');
+
+      var statWords        = document.getElementById('stat-words');
+      var statCharsSpaces  = document.getElementById('stat-chars-spaces');
+      var statCharsNoSpaces = document.getElementById('stat-chars-nospaces');
+      var statSentences    = document.getElementById('stat-sentences');
+      var statParagraphs   = document.getElementById('stat-paragraphs');
+      var statLines        = document.getElementById('stat-lines');
+      var statReadingTime  = document.getElementById('stat-reading-time');
+      var statSpeakingTime = document.getElementById('stat-speaking-time');
+
+      function countWords(text) {
+        var trimmed = text.trim();
+        if (!trimmed) return 0;
+        return trimmed.split(/\s+/).filter(function (w) { return w.length > 0; }).length;
+      }
+
+      function countSentences(text) {
+        if (!text.trim()) return 0;
+        var matches = text.match(/[.!?]+[\s​]+|[.!?]+$|[.!?]+$/gm);
+        return matches ? matches.length : 0;
+      }
+
+      function countParagraphs(text) {
+        if (!text.trim()) return 0;
+        var blocks = text.split(/\n\s*\n/);
+        var count = 0;
+        for (var i = 0; i < blocks.length; i++) {
+          if (blocks[i].trim().length > 0) count++;
+        }
+        return count;
+      }
+
+      function formatTime(minutes) {
+        if (minutes < 1) return '< 1 min';
+        if (minutes < 60) return '~' + Math.ceil(minutes) + ' min';
+        var hours = Math.floor(minutes / 60);
+        var mins = Math.ceil(minutes % 60);
+        return '~' + hours + ' hr' + (hours !== 1 ? 's' : '') + (mins > 0 ? ' ' + mins + ' min' : '');
+      }
+
+      function updateStats() {
+        var text = inputEditor.value;
+        var words = countWords(text);
+        var charsSpaces = text.length;
+        var charsNoSpaces = text.replace(/\s/g, '').length;
+        var sentences = countSentences(text);
+        var paragraphs = countParagraphs(text);
+        var lines = ToolCommon.countLines(text);
+        var readingTime = words / 200;
+        var speakingTime = words / 130;
+
+        statWords.textContent = words;
+        statCharsSpaces.textContent = charsSpaces;
+        statCharsNoSpaces.textContent = charsNoSpaces;
+        statSentences.textContent = sentences;
+        statParagraphs.textContent = paragraphs;
+        statLines.textContent = lines;
+        statReadingTime.textContent = formatTime(readingTime);
+        statSpeakingTime.textContent = formatTime(speakingTime);
+
+        charCount.textContent = ToolCommon.pluralise(charsSpaces, 'character');
+        lineCount.textContent = ToolCommon.pluralise(lines, 'line');
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      }
+
+      inputEditor.addEventListener('input', function () {
+        updateStats();
+        if (inputEditor.value) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Statistics updated');
+        } else {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        }
+      });
+
+      btnClear.addEventListener('click', function () {
+        inputEditor.value = '';
+        updateStats();
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        inputEditor.focus();
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(inputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(inputEditor, 'word-counter-input.txt');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+    })();
+  </script>
+{% endblock %}

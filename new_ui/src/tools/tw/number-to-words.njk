@@ -1,0 +1,183 @@
+---
+lang: "tw"
+toolId: "number-to-words"
+category: "string-text-utilities"
+activeTool: "number-to-words"
+permalink: "/tw/number-to-words.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <script src="/js/numberToWords.min.js"></script>
+{% endblock %}
+
+{% block tool_content %}
+  <label class="section-label" for="input-number">{{ t.ui.number }}</label>
+  <div class="input-field-wrapper">
+    <input type="text" class="input-field" id="input-number" spellcheck="false" placeholder="{{ toolData.inputPlaceholder }}" autocomplete="off" />
+  </div>
+
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-convert" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="17 1 21 5 17 9"></polyline>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          <polyline points="7 23 3 19 7 15"></polyline>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+        </svg>
+        {{ t.ui.convert }}
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        {{ t.ui.clear }}
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        {{ t.ui.copy }}
+      </button>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <label class="section-label" for="result-word">{{ toolData.wordResult }}</label>
+    <div class="input-field-wrapper">
+      <input type="text" class="input-field readonly" id="result-word" readonly placeholder="" />
+    </div>
+
+    <label class="section-label" for="result-ordinal-word" style="margin-top: 16px;">{{ toolData.ordinalWordResult }}</label>
+    <div class="input-field-wrapper">
+      <input type="text" class="input-field readonly" id="result-ordinal-word" readonly placeholder="" />
+    </div>
+
+    <label class="section-label" for="result-ordinal-number" style="margin-top: 16px;">{{ toolData.ordinalNumberResult }}</label>
+    <div class="input-field-wrapper">
+      <input type="text" class="input-field readonly" id="result-ordinal-number" readonly placeholder="" />
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 {{ t.ui.characters }}</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputNumber       = document.getElementById('input-number');
+      var resultWord        = document.getElementById('result-word');
+      var resultOrdinalWord = document.getElementById('result-ordinal-word');
+      var resultOrdinalNum  = document.getElementById('result-ordinal-number');
+      var btnConvert        = document.getElementById('btn-convert');
+      var btnClear          = document.getElementById('btn-clear');
+      var btnCopy           = document.getElementById('btn-copy');
+      var statusMessage     = document.getElementById('status-message');
+      var statusDot         = document.getElementById('status-dot');
+      var statusText        = document.getElementById('status-text');
+      var charCount         = document.getElementById('char-count');
+
+      function convert() {
+        var raw = inputNumber.value.trim();
+        if (!raw) {
+          resultWord.value = '';
+          resultOrdinalWord.value = '';
+          resultOrdinalNum.value = '';
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          charCount.textContent = '0 {{ t.ui.characters }}';
+          return;
+        }
+
+        var num = Number(raw);
+        if (isNaN(num) || !isFinite(num) || num !== Math.floor(num)) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.invalidInput }}');
+          return;
+        }
+
+        try {
+          var word = numberToWords.toWords(num);
+          var ordinalWord = numberToWords.toWordsOrdinal(num);
+          var ordinalNum = numberToWords.toOrdinal(num);
+
+          resultWord.value = word;
+          resultOrdinalWord.value = ordinalWord;
+          resultOrdinalNum.value = ordinalNum;
+
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ toolData.convertedSuccess }}');
+          charCount.textContent = ToolCommon.pluralise(word.length, 'character');
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.conversionFailed }}' + e.message);
+        }
+      }
+
+      inputNumber.addEventListener('input', convert);
+
+      btnConvert.onclick = convert;
+
+      btnClear.addEventListener('click', function () {
+        inputNumber.value = '';
+        resultWord.value = '';
+        resultOrdinalWord.value = '';
+        resultOrdinalNum.value = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        charCount.textContent = '0 {{ t.ui.characters }}';
+      });
+
+      btnCopy.addEventListener('click', function () {
+        if (resultWord.value) {
+          navigator.clipboard.writeText(resultWord.value).then(function () {
+            var original = btnCopy.textContent;
+            btnCopy.textContent = '{{ t.ui.copyExample }}';
+            setTimeout(function () { btnCopy.textContent = original; }, 1500);
+          });
+        }
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

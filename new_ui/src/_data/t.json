@@ -45,7 +45,12 @@
       "space": "Space",
       "loadExample": "Example",
       "saveResult": "Save Result",
-      "copyResult": "Copy Result"
+      "copyResult": "Copy Result",
+      "replace": "Replace",
+      "search": "Search",
+      "replaceAll": "Replace All",
+      "text": "Text",
+      "flags": "Flags"
     }
   },
   "cn": {
@@ -94,7 +99,12 @@
       "space": "空格",
       "loadExample": "示例",
       "saveResult": "保存结果",
-      "copyResult": "复制结果"
+      "copyResult": "复制结果",
+      "replace": "替换",
+      "search": "搜索",
+      "replaceAll": "全部替换",
+      "text": "文本",
+      "flags": "标志"
     }
   },
   "tw": {
@@ -143,7 +153,12 @@
       "space": "空格",
       "loadExample": "範例",
       "saveResult": "儲存結果",
-      "copyResult": "複製結果"
+      "copyResult": "複製結果",
+      "replace": "替換",
+      "search": "搜尋",
+      "replaceAll": "全部替換",
+      "text": "文字",
+      "flags": "標誌"
     }
   },
   "jp": {
@@ -192,7 +207,12 @@
       "space": "スペース",
       "loadExample": "例",
       "saveResult": "結果を保存",
-      "copyResult": "結果をコピー"
+      "copyResult": "結果をコピー",
+      "replace": "置換",
+      "search": "検索",
+      "replaceAll": "すべて置換",
+      "text": "テキスト",
+      "flags": "フラグ"
     }
   },
   "kr": {
@@ -241,7 +261,12 @@
       "space": "공백",
       "loadExample": "예시",
       "saveResult": "결과 저장",
-      "copyResult": "결과 복사"
+      "copyResult": "결과 복사",
+      "replace": "치환",
+      "search": "검색",
+      "replaceAll": "모두 치환",
+      "text": "텍스트",
+      "flags": "플래그"
     }
   },
   "fr": {
@@ -290,7 +315,12 @@
       "space": "Espace",
       "loadExample": "Exemple",
       "saveResult": "Enregistrer le résultat",
-      "copyResult": "Copier le résultat"
+      "copyResult": "Copier le résultat",
+      "replace": "Remplacer",
+      "search": "Rechercher",
+      "replaceAll": "Tout remplacer",
+      "text": "Texte",
+      "flags": "Drapeaux"
     }
   },
   "de": {
@@ -339,7 +369,12 @@
       "space": "Leerzeichen",
       "loadExample": "Beispiel",
       "saveResult": "Ergebnis speichern",
-      "copyResult": "Ergebnis kopieren"
+      "copyResult": "Ergebnis kopieren",
+      "replace": "Ersetzen",
+      "search": "Suchen",
+      "replaceAll": "Alle ersetzen",
+      "text": "Text",
+      "flags": "Flags"
     }
   },
   "es": {
@@ -388,7 +423,12 @@
       "space": "Espacio",
       "loadExample": "Ejemplo",
       "saveResult": "Guardar resultado",
-      "copyResult": "Copiar resultado"
+      "copyResult": "Copiar resultado",
+      "replace": "Reemplazar",
+      "search": "Buscar",
+      "replaceAll": "Reemplazar todo",
+      "text": "Texto",
+      "flags": "Banderas"
     }
   },
   "pt": {
@@ -437,7 +477,12 @@
       "space": "Espaço",
       "loadExample": "Exemplo",
       "saveResult": "Salvar resultado",
-      "copyResult": "Copiar resultado"
+      "copyResult": "Copiar resultado",
+      "replace": "Substituir",
+      "search": "Pesquisar",
+      "replaceAll": "Substituir tudo",
+      "text": "Texto",
+      "flags": "Bandeiras"
     }
   }
 }

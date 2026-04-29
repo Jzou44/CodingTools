@@ -1,0 +1,151 @@
+---
+lang: "de"
+toolId: "reverse-text"
+category: "string-text-utilities"
+activeTool: "reverse-text"
+permalink: "/de/reverse-text.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <label class="section-label" for="input-editor">{{ t.ui.input }}</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
+  </div>
+
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-reverse" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="14 17 3 17 3 6"></polyline>
+          <polyline points="10 21 3 14 10 7"></polyline>
+        </svg>
+        {{ toolData.reverseText }}
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        {{ t.ui.clear }}
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        {{ t.ui.copy }}
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        {{ t.ui.download }}
+      </button>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 {{ t.ui.characters }}</span>
+      <span id="line-count">0 {{ t.ui.lines }}</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor   = document.getElementById('input-editor');
+      var btnReverse    = document.getElementById('btn-reverse');
+      var btnClear      = document.getElementById('btn-clear');
+      var btnCopy       = document.getElementById('btn-copy');
+      var btnDownload   = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+      var charCount     = document.getElementById('char-count');
+      var lineCount     = document.getElementById('line-count');
+      var inputLineNums = document.getElementById('input-line-numbers');
+
+      function updateCounts() {
+        var text = inputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      }
+
+      btnReverse.onclick = function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        inputEditor.value = text.split('').reverse().join('');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ toolData.reverseText }}');
+        updateCounts();
+      };
+
+      btnClear.addEventListener('click', function () {
+        inputEditor.value = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        charCount.textContent = '0 {{ t.ui.characters }}';
+        lineCount.textContent = '0 {{ t.ui.lines }}';
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(inputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(inputEditor, 'reversed-text.txt');
+      });
+
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnReverse);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+
+      inputEditor.addEventListener('input', updateCounts);
+    })();
+  </script>
+{% endblock %}

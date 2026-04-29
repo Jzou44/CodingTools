@@ -236,5 +236,61 @@
     "category": "number-conversion",
     "description": "Convert decimal numbers to Roman numerals.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
+  },
+  "text-editor": {
+    "title": "Text Editor Online",
+    "slug": "text-editor",
+    "category": "string-text-utilities",
+    "description": "Edit text online with line numbers, word wrap, and character counting.",
+    "icon": "<path d=\"M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z\"></path><path d=\"m15 5 4 4\"></path>"
+  },
+  "regex-tester": {
+    "title": "Regex Tester",
+    "slug": "regex-tester",
+    "category": "string-text-utilities",
+    "description": "Test regular expressions live with match highlighting and flag controls.",
+    "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"></line>"
+  },
+  "regex-replace": {
+    "title": "Regex Replace",
+    "slug": "regex-replace",
+    "category": "string-text-utilities",
+    "description": "Find and replace text using regular expressions with backreference support.",
+    "icon": "<polyline points=\"17 1 21 5 17 9\"></polyline><path d=\"M3 11V9a4 4 0 0 1 4-4h14\"></path><polyline points=\"7 23 3 19 7 15\"></polyline><path d=\"M21 13v2a4 4 0 0 1-4 4H3\"></path>"
+  },
+  "word-counter": {
+    "title": "Word Counter",
+    "slug": "word-counter",
+    "category": "string-text-utilities",
+    "description": "Count words, characters, sentences, and paragraphs instantly.",
+    "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
+  },
+  "character-count": {
+    "title": "Character Count",
+    "slug": "character-count",
+    "category": "string-text-utilities",
+    "description": "Count characters, words, lines, and UTF-8 bytes with Twitter limit tracker.",
+    "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
+  },
+  "case-converter": {
+    "title": "Case Converter",
+    "slug": "case-converter",
+    "category": "string-text-utilities",
+    "description": "Convert text to uppercase, lowercase, sentence case, title case, or invert case.",
+    "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
+  },
+  "reverse-text": {
+    "title": "Reverse Text",
+    "slug": "reverse-text",
+    "category": "string-text-utilities",
+    "description": "Reverse any text string instantly.",
+    "icon": "<polyline points=\"14 17 3 17 3 6\"></polyline><polyline points=\"10 21 3 14 10 7\"></polyline>"
+  },
+  "number-to-words": {
+    "title": "Number to Words",
+    "slug": "number-to-words",
+    "category": "string-text-utilities",
+    "description": "Convert numbers to English words, ordinals, and ordinal numbers.",
+    "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
   }
 }

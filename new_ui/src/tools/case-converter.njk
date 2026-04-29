@@ -1,0 +1,232 @@
+---
+title: "Case Converter Online — Coding.Tools"
+description: "Convert text to uppercase, lowercase, sentence case, title case, or invert case instantly."
+toolTitle: "Case Converter"
+toolDescription: "Transform text between uppercase, lowercase, sentence case, title case, and inverted case."
+category: "string-text-utilities"
+categoryName: "String & Text Utilities"
+activeTool: "case-converter"
+permalink: "/case-converter.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Enter or paste text to convert..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-upper" type="button">
+        UPPER CASE
+      </button>
+      <button class="btn btn-primary" id="btn-lower" type="button">
+        lower case
+      </button>
+      <button class="btn btn-primary" id="btn-sentence" type="button">
+        Sentence case
+      </button>
+      <button class="btn btn-primary" id="btn-title" type="button">
+        Title Case
+      </button>
+      <button class="btn btn-primary" id="btn-invert" type="button">
+        Invert Case
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Case Converter</h2>
+  <p>This case converter transforms text between five common capitalization styles: upper case, lower case, sentence case, title case, and inverted case. It is useful when you need to reformat text for headlines, documents, code comments, or any situation where consistent casing matters.</p>
+  <p>The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Paste or type your text into the input editor.</li>
+    <li>Click one of the five conversion buttons: <strong>UPPER CASE</strong>, <strong>lower case</strong>, <strong>Sentence case</strong>, <strong>Title Case</strong>, or <strong>Invert Case</strong>.</li>
+    <li>The text in the editor is converted in place. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor.</li>
+  </ol>
+
+  <h3>What are the different case styles?</h3>
+  <p><strong>UPPER CASE</strong> converts every letter to its uppercase form. <strong>lower case</strong> converts every letter to its lowercase form. <strong>Sentence case</strong> capitalizes the first letter of each sentence and lowercases the rest. <strong>Title Case</strong> capitalizes the first letter of every word. <strong>Invert Case</strong> swaps the case of every character, turning upper into lower and vice versa.</p>
+
+  <h3>Input notes</h3>
+  <p>The tool works with any text, including Unicode characters. Sentence case uses periods, exclamation marks, and question marks as sentence boundaries. Title case capitalizes every word without exceptions for articles or prepositions.</p>
+
+  <h3>Example</h3>
+  <p>See how the same sentence looks in each case style:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Original ---
+hello world! this is a test sentence.
+
+--- UPPER CASE ---
+HELLO WORLD! THIS IS A TEST SENTENCE.
+
+--- lower case ---
+hello world! this is a test sentence.
+
+--- Sentence case ---
+Hello world! This is a test sentence.
+
+--- Title Case ---
+Hello World! This Is A Test Sentence.
+
+--- Invert Case ---
+HELLO WORLD! THIS IS A TEST SENTENCE.</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor   = document.getElementById('input-editor');
+      var btnUpper      = document.getElementById('btn-upper');
+      var btnLower      = document.getElementById('btn-lower');
+      var btnSentence   = document.getElementById('btn-sentence');
+      var btnTitle      = document.getElementById('btn-title');
+      var btnInvert     = document.getElementById('btn-invert');
+      var btnClear      = document.getElementById('btn-clear');
+      var btnCopy       = document.getElementById('btn-copy');
+      var btnDownload   = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+      var charCount     = document.getElementById('char-count');
+      var lineCount     = document.getElementById('line-count');
+      var inputLineNums = document.getElementById('input-line-numbers');
+
+      function updateCounts() {
+        var text = inputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      }
+
+      function toSentenceCase(str) {
+        return str.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, function (c) {
+          return c.toUpperCase();
+        });
+      }
+
+      function toTitleCase(str) {
+        return str.toLowerCase().replace(/\b\w/g, function (c) {
+          return c.toUpperCase();
+        });
+      }
+
+      function invertCase(str) {
+        return str.split('').map(function (c) {
+          if (c === c.toUpperCase()) return c.toLowerCase();
+          return c.toUpperCase();
+        }).join('');
+      }
+
+      btnUpper.onclick = function () {
+        if (!inputEditor.value) return;
+        inputEditor.value = inputEditor.value.toUpperCase();
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to UPPER CASE');
+        updateCounts();
+      };
+
+      btnLower.onclick = function () {
+        if (!inputEditor.value) return;
+        inputEditor.value = inputEditor.value.toLowerCase();
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to lower case');
+        updateCounts();
+      };
+
+      btnSentence.onclick = function () {
+        if (!inputEditor.value) return;
+        inputEditor.value = toSentenceCase(inputEditor.value);
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to Sentence case');
+        updateCounts();
+      };
+
+      btnTitle.onclick = function () {
+        if (!inputEditor.value) return;
+        inputEditor.value = toTitleCase(inputEditor.value);
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to Title Case');
+        updateCounts();
+      };
+
+      btnInvert.onclick = function () {
+        if (!inputEditor.value) return;
+        inputEditor.value = invertCase(inputEditor.value);
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Inverted case');
+        updateCounts();
+      };
+
+      btnClear.addEventListener('click', function () {
+        inputEditor.value = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        charCount.textContent = '0 characters';
+        lineCount.textContent = '0 lines';
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(inputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(inputEditor, 'case-converted.txt');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+
+      inputEditor.addEventListener('input', updateCounts);
+    })();
+  </script>
+{% endblock %}

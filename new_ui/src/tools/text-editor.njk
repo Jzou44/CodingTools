@@ -1,0 +1,148 @@
+---
+title: "Text Editor Online — Coding.Tools"
+description: "Edit text online with line numbers, word wrap, and instant character and line counts. Free, fast, and private."
+toolTitle: "Text Editor Online"
+toolDescription: "Write and edit plain text directly in your browser with line numbers, copy, download, and character counting."
+category: "string-text-utilities"
+categoryName: "String & Text Utilities"
+activeTool: "text-editor"
+permalink: "/text-editor.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Editor Section -->
+  <label class="section-label" for="editor">Editor</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="editor-line-numbers">1</div>
+    <textarea class="editor-area" id="editor" spellcheck="false" placeholder="Start typing or paste text here..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Text Editor Online</h2>
+  <p>This online text editor lets you write and edit plain text directly in your browser. It comes with line numbers, character counting, line counting, copy, and download features. It is useful for drafting notes, formatting snippets, cleaning up text, or quickly editing content without opening a desktop application.</p>
+  <p>The editor runs entirely in your browser. The text you type or paste is not uploaded, stored, or sent to a server, so your content stays private and you can use the tool instantly without any setup.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Type or paste your text into the editor area.</li>
+    <li>The status bar below updates in real time with the <strong>character count</strong> and <strong>line count</strong>.</li>
+    <li>Use <strong>Copy</strong> to copy the entire text to your clipboard.</li>
+    <li>Use <strong>Download</strong> to save the text as a <code>.txt</code> file, or <strong>Clear</strong> to reset the editor.</li>
+  </ol>
+
+  <h3>Features</h3>
+  <ul class="steps-list">
+    <li><strong>Line numbers</strong> &mdash; visible on the left side of the editor and synced with scrolling.</li>
+    <li><strong>Tab key support</strong> &mdash; pressing Tab inserts two spaces instead of moving focus.</li>
+    <li><strong>Instant counts</strong> &mdash; character and line counts update as you type, with no button press required.</li>
+  </ul>
+
+  <h3>Example</h3>
+  <p>Paste the following text into the editor to see the line numbers and character count in action:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">Hello, World!
+This is a sample text.
+Line numbers appear on the left.
+Characters and lines are counted automatically.</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var editor         = document.getElementById('editor');
+      var btnClear       = document.getElementById('btn-clear');
+      var btnCopy        = document.getElementById('btn-copy');
+      var btnDownload    = document.getElementById('btn-download');
+      var statusMessage  = document.getElementById('status-message');
+      var statusDot      = document.getElementById('status-dot');
+      var statusText     = document.getElementById('status-text');
+      var charCount      = document.getElementById('char-count');
+      var lineCount      = document.getElementById('line-count');
+      var editorLineNums = document.getElementById('editor-line-numbers');
+
+      function updateCounts() {
+        var text = editor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(editor, editorLineNums);
+      }
+
+      editor.addEventListener('input', updateCounts);
+
+      btnClear.addEventListener('click', function () {
+        editor.value = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        charCount.textContent = '0 characters';
+        lineCount.textContent = '0 lines';
+        ToolCommon.updateLineNumbers(editor, editorLineNums);
+        editor.focus();
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(editor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(editor, 'text-editor-output.txt');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(editor, editorLineNums);
+      ToolCommon.initScrollSync(editor, editorLineNums);
+      ToolCommon.initTabKey(editor, editorLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.updateLineNumbers(editor, editorLineNums);
+    })();
+  </script>
+{% endblock %}

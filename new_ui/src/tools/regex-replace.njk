@@ -1,0 +1,296 @@
+---
+title: "Regex Replace Online — Coding.Tools"
+description: "Find and replace text using regular expressions with live match highlighting and backreference support. Free browser-based tool."
+toolTitle: "Regex Replace"
+toolDescription: "Find and replace text with regex patterns in real time. Supports backreferences like $1, $2. No data leaves your browser."
+category: "string-text-utilities"
+categoryName: "String & Text Utilities"
+activeTool: "regex-replace"
+permalink: "/regex-replace.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Regex Pattern Input -->
+  <label class="section-label" for="regex-input">Regex Pattern</label>
+  <div class="editor-wrapper" style="margin-bottom: 8px;">
+    <textarea class="editor-area" id="regex-input" spellcheck="false" placeholder="Enter regex pattern, e.g. \b\w+@\w+\.\w+\b" rows="1"></textarea>
+  </div>
+
+  <!-- Flags -->
+  <div class="flags-row" style="margin-bottom: 8px;">
+    <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>global</small></label>
+    <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>case-insensitive</small></label>
+    <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>multiline</small></label>
+    <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>dotAll</small></label>
+    <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>unicode</small></label>
+    <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>sticky</small></label>
+  </div>
+
+  <!-- Replacement Input -->
+  <label class="section-label" for="replace-input">Replace With</label>
+  <div class="editor-wrapper" style="margin-bottom: 20px;">
+    <textarea class="editor-area" id="replace-input" spellcheck="false" placeholder="Replacement string (supports $1, $2 backreferences)" rows="1"></textarea>
+  </div>
+
+  <!-- Input Textarea -->
+  <label class="section-label" for="input-editor">Test Text</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Enter or paste text to search and replace..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-replace" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="17 1 21 5 17 9"></polyline>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          <polyline points="7 23 3 19 7 15"></polyline>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+        </svg>
+        Replace All
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Match Highlighting -->
+  <div style="margin-top: 24px;">
+    <label class="section-label">Match Preview</label>
+    <div id="match-output" class="highlight-box"></div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="match-count">0 matches</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Regex Replace</h2>
+  <p>This regex find-and-replace tool lets you search for patterns and replace them with new text in real time. All six JavaScript regex flags are supported, and the replacement string understands backreferences like <code>$1</code>, <code>$2</code>, so you can rearrange captured groups. Matches are highlighted before you commit the replacement.</p>
+  <p>The search and replace runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can transform content privately and quickly.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Type or paste a regex pattern into the <strong>Regex Pattern</strong> field. No delimiters needed.</li>
+    <li>Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).</li>
+    <li>Enter a replacement string in the <strong>Replace With</strong> field. Use <code>$1</code>, <code>$2</code> for backreferences to captured groups.</li>
+    <li>Paste or type your test text into the editor below. Matches are highlighted as you type.</li>
+    <li>Click <strong>Replace All</strong> to apply the replacement to the entire text.</li>
+    <li>Use <strong>Copy</strong> to copy the result, <strong>Download</strong> to save it, or <strong>Clear</strong> to reset everything.</li>
+  </ol>
+
+  <h3>What are regular expressions?</h3>
+  <p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.</p>
+  <p>JavaScript implements regex natively via the <code>RegExp</code> object. The same syntax works in most programming languages with minor variations. Regex find-and-replace is one of the most powerful text transformation techniques available to developers.</p>
+
+  <h3>Input notes</h3>
+  <p>Enter the regex pattern without delimiters. The flags are controlled by the checkboxes. The replacement string supports standard backreferences: <code>$1</code> through <code>$9</code> for captured groups, and <code>$&amp;</code> for the entire match.</p>
+
+  <h3>Example</h3>
+  <p>Reformatting dates from MM/DD/YYYY to YYYY-MM-DD using backreferences:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy example</button>
+    <pre class="code-block" id="example-code">--- Pattern ---
+(\d{2})/(\d{2})/(\d{4})
+
+--- Replacement ---
+$3-$1-$2
+
+--- Flags ---
+g (global)
+
+--- Test Text ---
+Today is 04/29/2026 and tomorrow is 04/30/2026.
+
+--- Result ---
+Today is 2026-04-29 and tomorrow is 2026-04-30.</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var regexInput    = document.getElementById('regex-input');
+      var replaceInput  = document.getElementById('replace-input');
+      var inputEditor   = document.getElementById('input-editor');
+      var matchOutput   = document.getElementById('match-output');
+      var btnReplace    = document.getElementById('btn-replace');
+      var btnClear      = document.getElementById('btn-clear');
+      var btnCopy       = document.getElementById('btn-copy');
+      var btnDownload   = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+      var matchCount    = document.getElementById('match-count');
+      var inputLineNums = document.getElementById('input-line-numbers');
+      var flagG         = document.getElementById('flag-g');
+      var flagI         = document.getElementById('flag-i');
+      var flagM         = document.getElementById('flag-m');
+      var flagS         = document.getElementById('flag-s');
+      var flagU         = document.getElementById('flag-u');
+      var flagY         = document.getElementById('flag-y');
+
+      function escapeHtml(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      function getFlags() {
+        var flags = '';
+        if (flagG.checked) flags += 'g';
+        if (flagI.checked) flags += 'i';
+        if (flagM.checked) flags += 'm';
+        if (flagS.checked) flags += 's';
+        if (flagU.checked) flags += 'u';
+        if (flagY.checked) flags += 'y';
+        return flags;
+      }
+
+      function previewRegex() {
+        var pattern = regexInput.value;
+        var text = inputEditor.value;
+
+        if (!pattern || !text) {
+          matchOutput.innerHTML = text ? escapeHtml(text) : '<span class="muted">Matches will appear here...</span>';
+          matchCount.textContent = '0 matches';
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+
+        try {
+          var flags = getFlags();
+          if (!flags.includes('g')) flags += 'g';
+          var regex = new RegExp(pattern, flags);
+          var matches = [];
+          var match;
+
+          while ((match = regex.exec(text)) !== null) {
+            matches.push({ index: match.index, length: match[0].length, value: match[0] });
+            if (match[0].length === 0) { regex.lastIndex++; }
+            if (matches.length > 10000) break;
+          }
+
+          if (matches.length === 0) {
+            matchOutput.innerHTML = escapeHtml(text);
+            matchCount.textContent = '0 matches';
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'No matches found');
+            return;
+          }
+
+          var html = '';
+          var lastIndex = 0;
+          for (var i = 0; i < matches.length; i++) {
+            html += escapeHtml(text.substring(lastIndex, matches[i].index));
+            html += '<mark>' + escapeHtml(matches[i].value) + '</mark>';
+            lastIndex = matches[i].index + matches[i].length;
+          }
+          html += escapeHtml(text.substring(lastIndex));
+
+          matchOutput.innerHTML = html;
+          matchCount.textContent = matches.length + (matches.length === 1 ? ' match' : ' matches');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', matches.length + (matches.length === 1 ? ' match found' : ' matches found'));
+        } catch (e) {
+          matchOutput.innerHTML = '<span class="muted">Invalid regex pattern</span>';
+          matchCount.textContent = '0 matches';
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid regex: ' + e.message);
+        }
+      }
+
+      btnReplace.onclick = function () {
+        var pattern = regexInput.value;
+        var replacement = replaceInput.value;
+        var text = inputEditor.value;
+
+        if (!pattern || !text) return;
+
+        try {
+          var flags = getFlags();
+          if (!flags.includes('g')) flags += 'g';
+          var regex = new RegExp(pattern, flags);
+          var result = text.replace(regex, replacement);
+
+          if (result === text) {
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'No matches to replace');
+            return;
+          }
+
+          inputEditor.value = result;
+          ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+          previewRegex();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Replaced successfully');
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid regex: ' + e.message);
+        }
+      };
+
+      regexInput.addEventListener('input', previewRegex);
+      inputEditor.addEventListener('input', previewRegex);
+      [flagG, flagI, flagM, flagS, flagU, flagY].forEach(function (cb) {
+        cb.addEventListener('change', previewRegex);
+      });
+
+      btnClear.addEventListener('click', function () {
+        regexInput.value = '';
+        replaceInput.value = '';
+        inputEditor.value = '';
+        matchOutput.innerHTML = '<span class="muted">Matches will appear here...</span>';
+        matchCount.textContent = '0 matches';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+        inputEditor.focus();
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(inputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(inputEditor, 'regex-replace.txt');
+      });
+
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnReplace);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+    })();
+  </script>
+{% endblock %}

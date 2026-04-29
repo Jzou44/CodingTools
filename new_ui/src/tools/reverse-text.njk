@@ -1,0 +1,169 @@
+---
+title: "Reverse Text Online — Coding.Tools"
+description: "Reverse any text string instantly. Free online text reversal tool."
+toolTitle: "Reverse Text"
+toolDescription: "Reverse text character by character, useful for obfuscation, testing, and fun."
+category: "string-text-utilities"
+categoryName: "String & Text Utilities"
+activeTool: "reverse-text"
+permalink: "/reverse-text.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Enter or paste text to reverse..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-reverse" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="14 17 3 17 3 6"></polyline>
+          <polyline points="10 21 3 14 10 7"></polyline>
+        </svg>
+        Reverse Text
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Reverse Text</h2>
+  <p>This tool reverses any text string character by character. It is useful for obfuscation, testing string handling in applications, creating mirror text, or simply having fun with words and sentences.</p>
+  <p>The reversal runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool privately and instantly.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Paste or type your text into the input editor.</li>
+    <li>Click <strong>Reverse Text</strong> to reverse the entire string character by character.</li>
+    <li>The reversed text replaces the input in the editor. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor.</li>
+  </ol>
+
+  <h3>What is text reversal?</h3>
+  <p>Text reversal is the process of rearranging the characters in a string so that the last character becomes the first, the second-to-last becomes the second, and so on. For example, "hello" becomes "olleh". This is sometimes called a string reverse or mirror text operation.</p>
+
+  <h3>Input notes</h3>
+  <p>The tool works with any text, including Unicode characters, emojis, and multi-line content. Each line is preserved in the output; only the order of characters within the full text is reversed.</p>
+
+  <h3>Example</h3>
+  <p>See how text looks before and after reversal:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Original Text ---
+Hello, World!
+
+--- Reversed Text ---
+!dlroW ,olleH
+
+--- Another Example ---
+Coding.Tools
+
+--- Reversed ---
+slooT.gnidoC</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor   = document.getElementById('input-editor');
+      var btnReverse    = document.getElementById('btn-reverse');
+      var btnClear      = document.getElementById('btn-clear');
+      var btnCopy       = document.getElementById('btn-copy');
+      var btnDownload   = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+      var charCount     = document.getElementById('char-count');
+      var lineCount     = document.getElementById('line-count');
+      var inputLineNums = document.getElementById('input-line-numbers');
+
+      function updateCounts() {
+        var text = inputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      }
+
+      btnReverse.onclick = function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        inputEditor.value = text.split('').reverse().join('');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Text reversed successfully');
+        updateCounts();
+      };
+
+      btnClear.addEventListener('click', function () {
+        inputEditor.value = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        charCount.textContent = '0 characters';
+        lineCount.textContent = '0 lines';
+        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(inputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(inputEditor, 'reversed-text.txt');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnReverse);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+
+      inputEditor.addEventListener('input', updateCounts);
+    })();
+  </script>
+{% endblock %}
