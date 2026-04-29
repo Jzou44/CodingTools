@@ -18,30 +18,8 @@ permalink: "/rgb-to-hex.html"
       flex-direction: column;
       gap: 0;
     }
-    .rgb-hex-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .rgb-hex-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
+    .tool-input-card::before {
       background: linear-gradient(90deg, #e74c3c, #2ecc71, #3498db);
-    }
-    .rgb-hex-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
     }
     .rgb-hex-input-fields {
       display: flex;
@@ -88,20 +66,6 @@ permalink: "/rgb-to-hex.html"
     .rgb-hex-field-input.r-field:focus { border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1); }
     .rgb-hex-field-input.g-field:focus { border-color: #27ae60; box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1); }
     .rgb-hex-field-input.b-field:focus { border-color: #2980b9; box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1); }
-    .rgb-hex-input-hint {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 12px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .rgb-hex-input-hint code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--text-secondary);
-    }
     .rgb-hex-actions {
       display: flex;
       align-items: center;
@@ -143,59 +107,6 @@ permalink: "/rgb-to-hex.html"
     .rgb-hex-arrow-icon:hover {
       transform: scale(1.08);
       box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4);
-    }
-
-    .rgb-hex-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .rgb-hex-output-card.has-result {
-      border-color: var(--accent);
-    }
-    .rgb-hex-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .rgb-hex-output-value {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 32px;
-      font-weight: 600;
-      color: var(--text-primary);
-      letter-spacing: 0.04em;
-      line-height: 1.2;
-      min-height: 40px;
-      word-break: break-all;
-      transition: color 0.3s;
-    }
-    .rgb-hex-output-value.empty {
-      color: var(--text-muted);
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0;
-    }
-    .rgb-hex-output-value.error {
-      color: var(--error);
-      font-size: 15px;
-      font-weight: 500;
-      font-style: normal;
-      letter-spacing: 0;
-      font-family: 'DM Sans', sans-serif;
     }
 
     /* Color Preview Swatch */
@@ -244,16 +155,14 @@ permalink: "/rgb-to-hex.html"
 
     @media (max-width: 600px) {
       .rgb-hex-field-input { font-size: 22px; padding: 8px; }
-      .rgb-hex-output-value { font-size: 24px; }
-      .rgb-hex-input-card, .rgb-hex-output-card { padding: 20px; }
       .rgb-hex-swatch { height: 72px; }
     }
   </style>
 
   <div class="rgb-hex-converter">
     <!-- Input Card -->
-    <div class="rgb-hex-input-card">
-      <div class="rgb-hex-label">RGB Color</div>
+    <div class="tool-input-card">
+      <div class="tool-label">RGB Color</div>
       <div class="rgb-hex-input-fields">
         <div class="rgb-hex-field-group">
           <span class="rgb-hex-field-label">Red (R)</span>
@@ -268,7 +177,7 @@ permalink: "/rgb-to-hex.html"
           <input type="number" class="rgb-hex-field-input b-field" id="b-input" min="0" max="255" placeholder="0–255" spellcheck="false" autocomplete="off" autofocus>
         </div>
       </div>
-      <div class="rgb-hex-input-hint">Values from <code>0</code> to <code>255</code> per channel</div>
+      <div class="tool-hint">Values from <code>0</code> to <code>255</code> per channel</div>
       <div class="rgb-hex-actions">
         <button class="btn btn-secondary" id="btn-random" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
@@ -285,15 +194,15 @@ permalink: "/rgb-to-hex.html"
     </div>
 
     <!-- Output Card -->
-    <div class="rgb-hex-output-card" id="output-card">
-      <div class="rgb-hex-output-label">
+    <div class="tool-output-card" id="output-card" style="--tool-accent: var(--accent)">
+      <div class="tool-output-label">
         <span>Hex Code</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           Copy
         </button>
       </div>
-      <div class="rgb-hex-output-value empty" id="hex-output">Result will appear here</div>
+      <div class="tool-output-value empty" id="hex-output">Result will appear here</div>
 
       <!-- Color Preview Swatch -->
       <div class="rgb-hex-swatch" id="swatch-container">
@@ -377,7 +286,7 @@ Hex: #3366CC</pre>
 
       function showResult(text, type, hex) {
         hexOutput.textContent = text;
-        hexOutput.className = 'rgb-hex-output-value';
+        hexOutput.className = 'tool-output-value';
         if (type === 'empty') hexOutput.className += ' empty';
         else if (type === 'error') hexOutput.className += ' error';
         if (type === 'valid') {

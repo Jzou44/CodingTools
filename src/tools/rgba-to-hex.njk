@@ -18,30 +18,8 @@ permalink: "/rgba-to-hex.html"
       flex-direction: column;
       gap: 0;
     }
-    .rgba-hex-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .rgba-hex-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
+    .tool-input-card::before {
       background: linear-gradient(90deg, #e74c3c, #2ecc71, #3498db, var(--accent));
-    }
-    .rgba-hex-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
     }
     .rgba-hex-input-fields {
       display: flex;
@@ -89,20 +67,6 @@ permalink: "/rgba-to-hex.html"
     .rgba-hex-field-input.g-field:focus { border-color: #27ae60; box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1); }
     .rgba-hex-field-input.b-field:focus { border-color: #2980b9; box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1); }
     .rgba-hex-field-input.a-field:focus { border-color: var(--accent); }
-    .rgba-hex-input-hint {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 12px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .rgba-hex-input-hint code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--text-secondary);
-    }
     .rgba-hex-actions {
       display: flex;
       align-items: center;
@@ -146,62 +110,10 @@ permalink: "/rgba-to-hex.html"
       box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4);
     }
 
-    .rgba-hex-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .rgba-hex-output-card.has-result {
-      border-color: var(--accent);
-    }
-    .rgba-hex-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
     .rgba-hex-output-row {
       display: flex;
       align-items: baseline;
       gap: 16px;
-    }
-    .rgba-hex-output-value {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 30px;
-      font-weight: 600;
-      color: var(--text-primary);
-      letter-spacing: 0.04em;
-      line-height: 1.2;
-      min-height: 38px;
-      word-break: break-all;
-      transition: color 0.3s;
-    }
-    .rgba-hex-output-value.empty {
-      color: var(--text-muted);
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0;
-    }
-    .rgba-hex-output-value.error {
-      color: var(--error);
-      font-size: 15px;
-      font-weight: 500;
-      font-style: normal;
-      letter-spacing: 0;
-      font-family: 'DM Sans', sans-serif;
     }
     .rgba-hex-opacity-badge {
       display: inline-flex;
@@ -261,8 +173,6 @@ permalink: "/rgba-to-hex.html"
 
     @media (max-width: 600px) {
       .rgba-hex-field-input { font-size: 20px; padding: 8px 4px; }
-      .rgba-hex-output-value { font-size: 22px; }
-      .rgba-hex-input-card, .rgba-hex-output-card { padding: 20px; }
       .rgba-hex-swatch { height: 72px; }
       .rgba-hex-input-fields { gap: 6px; }
     }
@@ -270,8 +180,8 @@ permalink: "/rgba-to-hex.html"
 
   <div class="rgba-hex-converter">
     <!-- Input Card -->
-    <div class="rgba-hex-input-card">
-      <div class="rgba-hex-label">RGBA Color</div>
+    <div class="tool-input-card">
+      <div class="tool-label">RGBA Color</div>
       <div class="rgba-hex-input-fields">
         <div class="rgba-hex-field-group">
           <span class="rgba-hex-field-label">Red (R)</span>
@@ -290,7 +200,7 @@ permalink: "/rgba-to-hex.html"
           <input type="number" class="rgba-hex-field-input a-field" id="a-input" min="0" max="100" value="100" placeholder="0–100" spellcheck="false" autocomplete="off" autofocus>
         </div>
       </div>
-      <div class="rgba-hex-input-hint">RGB: <code>0</code>–<code>255</code>, Alpha: <code>0</code>–<code>100%</code></div>
+      <div class="tool-hint">RGB: <code>0</code>–<code>255</code>, Alpha: <code>0</code>–<code>100%</code></div>
       <div class="rgba-hex-actions">
         <button class="btn btn-secondary" id="btn-random" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
@@ -307,8 +217,8 @@ permalink: "/rgba-to-hex.html"
     </div>
 
     <!-- Output Card -->
-    <div class="rgba-hex-output-card" id="output-card">
-      <div class="rgba-hex-output-label">
+    <div class="tool-output-card" id="output-card" style="--tool-accent: var(--accent)">
+      <div class="tool-output-label">
         <span>Hex + Opacity</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -316,7 +226,7 @@ permalink: "/rgba-to-hex.html"
         </button>
       </div>
       <div class="rgba-hex-output-row">
-        <div class="rgba-hex-output-value empty" id="hex-output">Result will appear here</div>
+        <div class="tool-output-value empty" id="hex-output">Result will appear here</div>
         <span class="rgba-hex-opacity-badge" id="opacity-badge" style="display:none;"><span id="opacity-badge-val">100%</span> opacity</span>
       </div>
 
@@ -406,7 +316,7 @@ Hex: #3366CC, Opacity: 75%</pre>
 
       function showResult(text, type, r, g, b, alpha, opacityPct) {
         hexOutput.textContent = text;
-        hexOutput.className = 'rgba-hex-output-value';
+        hexOutput.className = 'tool-output-value';
         if (type === 'empty') hexOutput.className += ' empty';
         else if (type === 'error') hexOutput.className += ' error';
         if (type === 'valid') {
