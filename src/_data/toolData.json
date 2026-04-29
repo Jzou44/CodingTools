@@ -831,7 +831,9 @@
       "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
       "example": "Example",
       "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733",
+      "inputHint": "Values from <code>0</code> to <code>255</code> per channel",
+      "resultPlaceholder": "Result will appear here"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -2720,34 +2722,36 @@
       "exampleCode": "--- 十六进制输入 ---\n#FF5733\n\n--- RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
+      "title": "RGB转十六进制转换器 — Coding.Tools",
+      "description": "将RGB颜色值转换为十六进制颜色代码，并提供实时预览。",
       "toolTitle": "RGB转十六进制",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "toolDescription": "将RGB颜色值转换为十六进制代码，并提供实时颜色预览。",
       "categoryName": "数字转换",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "输入RGB颜色（例如 rgb(255,87,51)）...",
+      "outputPlaceholder": "十六进制颜色将显示在这里...",
+      "inputHint": "每个通道的值范围为 <code>0</code> 到 <code>255</code>",
+      "descTitle": "RGB转十六进制转换器",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "此工具将RGB（红、绿、蓝）颜色值转换为十六进制颜色代码。包含实时颜色预览，让您直观查看颜色效果。随机颜色按钮可每次生成新的颜色。",
+        "转换完全在浏览器中进行。每个颜色通道输入0到255的值。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方法",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "为红色、绿色和蓝色输入0到255的值。",
+        "点击<strong>转换</strong>查看十六进制颜色代码和预览。",
+        "点击<strong>随机颜色</strong>生成随机颜色。",
+        "使用<strong>复制</strong>将十六进制值复制到剪贴板。"
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "什么是RGB？",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB是一种颜色模型，通过组合红光、绿光和蓝光来表示颜色。每个通道的值范围为0（无强度）到255（最大强度）。通过混合不同比例的三原色，可以在屏幕上创建任何可见颜色。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "输入说明",
+      "inputNotesPara": "以 rgb(R,G,B) 格式或直接输入 R,G,B。每个值必須为0-255。",
+      "example": "示例",
+      "examplePara": "将RGB转换为十六进制：",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "结果将显示在这里"
     },
     "hex-to-rgba": {
       "title": "十六进制转RGBA转换器 — Coding.Tools",
@@ -2951,7 +2955,7 @@
       ],
       "example": "示例",
       "examplePara": "将以下文本粘贴到编辑器中，查看行号和字符统计效果：",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "你好，世界！\n这是一段示例文本。\n行号显示在左侧。\n字符数和行数会自动统计。"
     },
     "regex-tester": {
       "title": "正则表达式测试 — Coding.Tools",
@@ -4147,13 +4151,13 @@
       "exampleCode": "--- 八進位輸入 ---\n377\n\n--- 十進位 ---\n255\n\n--- 十六進位 ---\nFF\n\n--- 二進位 ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "十進位轉八進位轉換器 — Coding.Tools",
+      "description": "在瀏覽器中直接將十進位數字轉換為八進位格式。",
       "toolTitle": "十進位轉八進位",
       "toolDescription": "將十進位數轉換為八進位。",
       "categoryName": "數字轉換",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "輸入十進位數（如 255、1024）...",
+      "outputPlaceholder": "八進位結果將顯示在這裡...",
       "descTitle": "十進位轉八進位轉換器",
       "descParas": [
         "此工具將十進位（基數10）數轉換為八進位（基數8）格式。",
@@ -4580,33 +4584,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
+      "title": "分數轉百分比轉換器 — Coding.Tools",
+      "description": "在瀏覽器中直接將分數轉換為百分比。",
       "toolTitle": "分數轉百分比",
-      "toolDescription": "Convert fractions to percentage values.",
+      "toolDescription": "將分數轉換為百分比表示。",
       "categoryName": "數字轉換",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "百分比結果將顯示在這裡...",
+      "descTitle": "分數轉百分比轉換器",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "此工具將分數轉換為百分比表示。",
+        "轉換在瀏覽器本地運行。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方法",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "輸入整數部分（選填）、分子和分母。",
+        "點擊<strong>轉換</strong>查看百分比結果。",
+        "使用<strong>複製</strong>複製結果。"
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "什麼是分數轉百分比？",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "分數轉百分比：將分子除以分母，加上整數，再乘以 100。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "輸入整數（選填）、分子和分母。",
+      "example": "範例",
+      "examplePara": "將分數轉換為百分比：",
+      "exampleCode": "--- 分數輸入 ---\n整數: 0\n分子: 3\n分母: 4\n\n--- 百分比輸出 ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -4639,34 +4643,36 @@
       "exampleCode": "--- 十六進位輸入 ---\n#FF5733\n\n--- RGB 輸出 ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
+      "title": "RGB轉十六進位轉換器 — Coding.Tools",
+      "description": "將RGB顏色值轉換為十六進位顏色代碼，並提供即時預覽。",
       "toolTitle": "RGB轉十六進位",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "toolDescription": "將RGB顏色值轉換為十六進位代碼，並提供即時顏色預覽。",
       "categoryName": "數字轉換",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "輸入RGB顏色（例如 rgb(255,87,51)）...",
+      "outputPlaceholder": "十六進位顏色將顯示在這裡...",
+      "inputHint": "每個通道的值範圍為 <code>0</code> 到 <code>255</code>",
+      "descTitle": "RGB轉十六進位轉換器",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "此工具將RGB（紅、綠、藝）顏色值轉換為十六進位顏色代碼。包含即時顏色預覽，讓您直觀查看顏色效果。隨機顏色按鈕可每次生成新的顏色。",
+        "轉換完全在瀏覽器中進行。每個顏色通道輸入0到255的值。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使用方法",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "為紅色、綠色和藝色輸入0到255的值。",
+        "點擊<strong>轉換</strong>查看十六進位顏色代碼和預覽。",
+        "點擊<strong>隨機顏色</strong>生成隨機顏色。",
+        "使用<strong>複製</strong>將十六進位值複製到剪貼簿。"
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "什麼是RGB？",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB是一種顏色模型，通過組合紅光、綠光和藝光來表示顏色。每個通道的值範圍為0（無強度）到255（最大強度）。通過混合不同比例的三原色，可以在螢幕上創建任何可見顏色。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "輸入說明",
+      "inputNotesPara": "以 rgb(R,G,B) 格式或直接輸入 R,G,B。每個值必須為0-255。",
+      "example": "範例",
+      "examplePara": "將RGB轉換為十六進位：",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "結果將顯示在這裡"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -4868,7 +4874,7 @@
       ],
       "example": "範例",
       "examplePara": "將以下文字貼到編輯器中，查看行號和字元統計效果：",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "你好，世界！\n這是一段範例文字。\n行號顯示在左側。\n字元數和行數會自動統計。"
     },
     "regex-tester": {
       "title": "正規表達式測試 — Coding.Tools",
@@ -6064,13 +6070,13 @@
       "exampleCode": "--- 8進数入力 ---\n377\n\n--- 10進数 ---\n255\n\n--- 16進数 ---\nFF\n\n--- 2進数 ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "10進数から8進数変換 — Coding.Tools",
+      "description": "ブラウザで10進数を8進数形式に直接変換します。",
       "toolTitle": "10進数から8進数",
       "toolDescription": "10進数を8進数に変換します。",
       "categoryName": "数値変換",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "10進数を入力（例: 255、1024）...",
+      "outputPlaceholder": "8進数の結果がここに表示されます...",
       "descTitle": "10進数から8進数変換",
       "descParas": [
         "このツールは10進数（基数10）を8進数（基数8）形式に変換します。",
@@ -6497,33 +6503,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
+      "title": "分数からパーセント変換ツール — Coding.Tools",
+      "description": "ブラウザで直接分数をパーセントに変換します。",
       "toolTitle": "分数からパーセント",
-      "toolDescription": "Convert fractions to percentage values.",
+      "toolDescription": "分数をパーセント値に変換します。",
       "categoryName": "数値変換",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "パーセント結果がここに表示されます...",
+      "descTitle": "分数からパーセント変換ツール",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "このツールは分数をパーセントに変換します。",
+        "変換はブラウザ内でローカルに実行されます。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使い方",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "整数部分（任意）、分子、分母を入力してください。",
+        "<strong>変換</strong>をクリックしてパーセントに変換します。",
+        "<strong>コピー</strong>で結果をコピーします。"
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "分数からパーセントとは？",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "分数からパーセントへの変換：分子を分母で割り、整数を足し、100を掛けます。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "入力についての注意",
+      "inputNotesPara": "整数（任意）、分子、分母を入力してください。",
+      "example": "例",
+      "examplePara": "分数をパーセントに変換：",
+      "exampleCode": "--- 分数入力 ---\n整数: 0\n分子: 3\n分母: 4\n\n--- パーセント出力 ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -6556,34 +6562,36 @@
       "exampleCode": "--- 16進数入力 ---\n#FF5733\n\n--- RGB出力 ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
-      "toolTitle": "RGBから16進数",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
-      "categoryName": "数値変換",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "title": "RGB→16進数変換ツール — Coding.Tools",
+      "description": "RGBカラー値を16進数カラーコードに変換し、ライブプレビューを提供します。",
+      "toolTitle": "RGB→16進数",
+      "toolDescription": "RGBカラー値を16進数コードに変換し、ライブカラーを表示します。",
+      "categoryName": "数值変換",
+      "inputPlaceholder": "RGBカラーを入力（例: rgb(255,87,51)）...",
+      "outputPlaceholder": "16進数カラーがここに表示されます...",
+      "inputHint": "各チャネルの値は <code>0</code> から <code>255</code>",
+      "descTitle": "RGB→16進数変換ツール",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "このツールはRGB（赤、緑、青）カラー値を16進数カラーコードに変換します。ライブカラープレビューで色を直感的に確認できます。ランダムカラーボタンで毎回新しい色を生成できます。",
+        "変換は完全にブラウザ内で行われます。各カラーに0から255の値を入力してください。"
       ],
-      "howToUse": "How to use",
+      "howToUse": "使い方",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "赤、緑、青に0から255の値を入力します。",
+        "<strong>変換</strong>をクリックして16進数カラーコードとプレビューを表示。",
+        "<strong>ランダム</strong>をクリックしてランダムな色を生成。",
+        "<strong>コピー</strong>で16進数値をクリップボードにコピー。"
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "RGBとは？",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGBは、赤、緑、青の光を組み合わせて色を表すカラーモデルです。各チャネルの値は0（強度なし）から255（最大強度）です。三原色の異なる量を混ぜることで、画面に表示できる任意の色を作成できます。"
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "入力の注意",
+      "inputNotesPara": "rgb(R,G,B) 形式または R,G,B の形式で入力してください。各値は0-255でなければなりません。",
+      "example": "例",
+      "examplePara": "RGBを16進数に変換：",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "結果がここに表示されます"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -6784,7 +6792,7 @@
       ],
       "example": "例",
       "examplePara": "次のテキストをエディタに貼り付けて、行番号と文字カウントを確認してください：",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "こんにちは、世界！\nこれはサンプルテキストです。\n行番号は左側に表示されます。\n文字数と行数は自動的にカウントされます。"
     },
     "regex-tester": {
       "title": "正規表現テスター — Coding.Tools",
@@ -7980,13 +7988,13 @@
       "exampleCode": "--- 8진수 입력 ---\n377\n\n--- 10진수 ---\n255\n\n--- 16진수 ---\nFF\n\n--- 2진수 ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "10진수에서 8진수 변환기 — Coding.Tools",
+      "description": "브라우저에서 직접 10진수를 8진수 형식으로 변환합니다.",
       "toolTitle": "10진수에서 8진수",
       "toolDescription": "10진수를 8진수로 변환합니다.",
       "categoryName": "숫자 변환",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "10진수 입력 (예: 255, 1024)...",
+      "outputPlaceholder": "8진수 결과가 여기에 표시됩니다...",
       "descTitle": "10진수에서 8진수 변환",
       "descParas": [
         "이 도구는 10진수(基数10)를 8진수(基数8) 형식으로 변환합니다.",
@@ -8413,33 +8421,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
+      "title": "분수에서 퍼센트 변환기 — Coding.Tools",
+      "description": "브라우저에서 직접 분수를 퍼센트로 변환하세요.",
       "toolTitle": "분수에서 퍼센트",
-      "toolDescription": "Convert fractions to percentage values.",
+      "toolDescription": "분수를 퍼센트 값으로 변환합니다.",
       "categoryName": "숫자 변환",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "퍼센트 결과가 여기에 표시됩니다...",
+      "descTitle": "분수에서 퍼센트 변환기",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "이 도구는 분수를 퍼센트로 변환합니다.",
+        "변환은 브라우저에서 로컬로 실행됩니다."
       ],
-      "howToUse": "How to use",
+      "howToUse": "사용 방법",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "정수 부분(선택), 분자, 분모를 입력하세요.",
+        "<strong>변환</strong>을 클릭하여 퍼센트로 변환합니다.",
+        "<strong>복사</strong>를 사용하여 결과를 복사합니다."
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "분수에서 퍼센트란?",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "분수에서 퍼센트 변환: 분자를 분모로 나눅고, 정수를 더한 후 100을 곱합니다."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "입력 참고사항",
+      "inputNotesPara": "정수(선택), 분자, 분모를 입력하세요.",
+      "example": "예시",
+      "examplePara": "분수를 퍼센트로 변환:",
+      "exampleCode": "--- 분수 입력 ---\n정수: 0\n분자: 3\n분모: 4\n\n--- 퍼센트 출력 ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -8472,34 +8480,36 @@
       "exampleCode": "--- 16진수 입력 ---\n#FF5733\n\n--- RGB 출력 ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
-      "toolTitle": "RGB에서 16진수",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "title": "RGB to Hex 변환기 — Coding.Tools",
+      "description": "RGB 색상 값을 16진수 색상 코드로 변환하고 실시간 미리보기를 제공합니다.",
+      "toolTitle": "RGB to Hex",
+      "toolDescription": "RGB 색상 값을 16진수 코드로 변환하고 실시간 색상 미리보기를 제공합니다.",
       "categoryName": "숫자 변환",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "RGB 색상 입력 (예: rgb(255,87,51))...",
+      "outputPlaceholder": "16진수 색상이 여기에 표시됩니다...",
+      "inputHint": "각 채널의 값 범위: <code>0</code> ~ <code>255</code>",
+      "descTitle": "RGB to Hex 변환기",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "이 도구는 RGB(빨간색, 녽색, 파란색) 색상 값을 16진수 색상 코드로 변환합니다. 실시간 색상 미리보기로 색상을 직광적으로 확인할 수 있습니다. 무작위 색상 버튼으로 마다 새로운 색상을 생성할 수 있습니다.",
+        "변환은 브라우저에서 완전히 이루어집니다. 각 색상 채널에 0에서 255 사이의 값을 입력하세요."
       ],
-      "howToUse": "How to use",
+      "howToUse": "사용 방법",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "빨간색, 녽색, 파란색에 0에서 255 사이의 값을 입력합니다.",
+        "<strong>변환</strong>을 클릭하여 16진수 색상 코드와 미리보기를 확인합니다.",
+        "<strong>무작위</strong>을 클릭하여 무작위 색상을 생성합니다.",
+        "<strong>복사</strong>를 사용하여 16진수 값을 클립보드에 복사합니다."
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "RGB란?",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB는 빨간색, 녽색, 파란색 빜을 결합하여 색상을 표현하는 색상 모델입니다. 각 채널의 값은 0(강도 없음)에서 255(최대 강도)입니다. 삼원색의 다른 비율을 밵어 모든 색상을 만들 수 있습니다."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "입력 참고",
+      "inputNotesPara": "rgb(R,G,B) 형식 또는 R,G,B 형식으로 입력하세요. 각 값은 0-255여야 합니다.",
+      "example": "예시",
+      "examplePara": "RGB를 16진수로 변환:",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "결과가 여기에 표시됩니다"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -8700,7 +8710,7 @@
       ],
       "example": "예시",
       "examplePara": "다음 텍스트를 편집기에 붙여넣어 줄 번호와 문자 카운트를 확인하세요:",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "안녕하세요, 세계!\n이것은 샘플 텍스트입니다.\n줄 번호는 왼쪽에 표시됩니다.\n문자 수와 줄 수는 자동으로 계산됩니다."
     },
     "regex-tester": {
       "title": "정규식 테스터 — Coding.Tools",
@@ -9896,13 +9906,13 @@
       "exampleCode": "--- Entrée octale ---\n377\n\n--- Décimal ---\n255\n\n--- Hexadécimal ---\nFF\n\n--- Binaire ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "Convertisseur Décimal en Octal — Coding.Tools",
+      "description": "Convertissez les nombres décimaux en format octal directement dans votre navigateur.",
       "toolTitle": "Décimal en Octal",
       "toolDescription": "Convertissez les nombres décimaux en octal.",
       "categoryName": "Conversion de nombres",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "Entrez un nombre décimal (ex. 255, 1024)...",
+      "outputPlaceholder": "Le résultat octal apparaîtra ici...",
       "descTitle": "Convertisseur Décimal vers Octal",
       "descParas": [
         "Cet outil convertit les nombres décimaux (base 10) en format octal (base 8).",
@@ -10329,33 +10339,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
+      "title": "Convertisseur Fraction en Pourcentage — Coding.Tools",
+      "description": "Convertissez des fractions en pourcentages directement dans votre navigateur.",
       "toolTitle": "Fraction en Pourcentage",
-      "toolDescription": "Convert fractions to percentage values.",
+      "toolDescription": "Convertissez des fractions en valeurs en pourcentage.",
       "categoryName": "Conversion de nombres",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "Le résultat en pourcentage apparaîtra ici...",
+      "descTitle": "Convertisseur Fraction en Pourcentage",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "Cet outil convertit les fractions en pourcentages.",
+        "La conversion s’exécute localement dans votre navigateur."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Comment utiliser",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Entrez la partie entière (facultative), le numérateur et le dénominateur.",
+        "Cliquez sur <strong>Convertir</strong> pour convertir en pourcentage.",
+        "Utilisez <strong>Copier</strong> pour copier le résultat."
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "Qu’est-ce que Fraction en Pourcentage ?",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "Conversion de fraction en pourcentage : diviser le numérateur par le dénominateur, ajouter l’entière, multiplier par 100."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "Notes sur la saisie",
+      "inputNotesPara": "Entrez l’entière (facultatif), le numérateur et le dénominateur.",
+      "example": "Exemple",
+      "examplePara": "Conversion de fraction en pourcentage :",
+      "exampleCode": "--- Saisie Fraction ---\nEntière : 0\nNumérateur : 3\nDénominateur : 4\n\n--- Sortie Pourcentage ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -10388,34 +10398,36 @@
       "exampleCode": "--- Entrée hexadécimale ---\n#FF5733\n\n--- Sortie RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
-      "toolTitle": "RGB en Hexadécimal",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "title": "Convertisseur RGB vers Hex — Coding.Tools",
+      "description": "Convertissez les valeurs de couleur RGB en codes hexadécimaux avec aperçu en direct.",
+      "toolTitle": "RGB vers Hex",
+      "toolDescription": "Convertissez les valeurs de couleur RGB en codes hexadécimaux avec un aperçu de couleur en direct.",
       "categoryName": "Conversion de nombres",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "Entrez une couleur RGB (ex: rgb(255,87,51))...",
+      "outputPlaceholder": "La couleur hexadécimale apparaîtra ici...",
+      "inputHint": "Valeurs de <code>0</code> à <code>255</code> par canal",
+      "descTitle": "Convertisseur RGB vers Hex",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "Cet outil convertit les valeurs de couleur RGB (Rouge, Vert, Bleu) en code couleur hexadécimal. Il inclut un aperçu de couleur en direct pour voir exactement à quoi ressemble la couleur. Le bouton couleur aléatoire génère une nouvelle couleur à chaque fois.",
+        "La conversion s’effectue entièrement dans votre navigateur. Entrez des valeurs de 0 à 255 pour chaque canal de couleur."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Comment utiliser",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "Entrez des valeurs de 0 à 255 pour Rouge, Vert et Bleu.",
+        "Cliquez sur <strong>Convertir</strong> pour voir le code couleur hexadécimal et l’aperçu.",
+        "Cliquez sur <strong>Aléatoire</strong> pour générer une couleur aléatoire.",
+        "Utilisez <strong>Copier</strong> pour copier la valeur hexadécimale dans le presse-papiers."
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "Qu’est-ce que RGB ?",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB est un modèle de couleur qui représente les couleurs en combinant la lumière rouge, verte et bleue. Chaque canal a une valeur de 0 (aucune intensité) à 255 (intensité maximale). En mélangeant différentes quantités de chaque couleur primaire, vous pouvez créer toute couleur visible sur un écran."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "Notes sur la saisie",
+      "inputNotesPara": "Entrez les valeurs RGB au format rgb(R,G,B) ou simplement R,G,B. Chaque valeur doit être comprise entre 0 et 255.",
+      "example": "Exemple",
+      "examplePara": "Conversion de RGB en hexadécimal :",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "Le résultat apparaîtra ici"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -10617,7 +10629,7 @@
       ],
       "example": "Exemple",
       "examplePara": "Collez le texte suivant pour voir les numéros de ligne et le comptage en action :",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "Bonjour le monde !\nCeci est un texte d'exemple.\nLes numéros de ligne apparaissent à gauche.\nLes caractères et les lignes sont comptés automatiquement."
     },
     "regex-tester": {
       "title": "Testeur Regex — Coding.Tools",
@@ -11813,13 +11825,13 @@
       "exampleCode": "--- Oktaleingabe ---\n377\n\n--- Dezimal ---\n255\n\n--- Hexadezimal ---\nFF\n\n--- Binär ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "Dezimal-zu-Oktal-Konverter — Coding.Tools",
+      "description": "Konvertieren Sie Dezimalzahlen direkt in Ihrem Browser ins Oktalformat.",
       "toolTitle": "Dezimal zu Oktal",
       "toolDescription": "Konvertieren Sie Dezimalzahlen in Oktal.",
       "categoryName": "Zahlenkonvertierung",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "Dezimalzahl eingeben (z.B. 255, 1024)...",
+      "outputPlaceholder": "Oktalergebnis wird hier angezeigt...",
       "descTitle": "Dezimal zu Oktal Konverter",
       "descParas": [
         "Dieses Tool konvertiert Dezimalzahlen (Basis 10) in das Oktalformat (Basis 8).",
@@ -12246,33 +12258,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
+      "title": "Bruch-zu-Prozent-Rechner — Coding.Tools",
+      "description": "Konvertieren Sie Brüche direkt in Ihrem Browser in Prozentsätze.",
       "toolTitle": "Bruch zu Prozent",
-      "toolDescription": "Convert fractions to percentage values.",
+      "toolDescription": "Konvertieren Sie Brüche in Prozentwerte.",
       "categoryName": "Zahlenkonvertierung",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "Prozentergebnis wird hier angezeigt...",
+      "descTitle": "Bruch-zu-Prozent-Rechner",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "Dieses Tool konvertiert Brüche in Prozentsätze.",
+        "Die Konvertierung erfolgt lokal in Ihrem Browser."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Anleitung",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Geben Sie den Ganzzahlteil (optional), Zähler und Nenner ein.",
+        "Klicken Sie auf <strong>Konvertieren</strong>, um in Prozent umzurechnen.",
+        "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "Was ist Bruch zu Prozent?",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "Bruch-zu-Prozent-Konvertierung: Zähler durch Nenner teilen, Ganzzahl addieren, mit 100 multiplizieren."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "Hinweise zur Eingabe",
+      "inputNotesPara": "Geben Sie die Ganzzahl (optional), den Zähler und den Nenner ein.",
+      "example": "Beispiel",
+      "examplePara": "Bruch in Prozent umrechnen:",
+      "exampleCode": "--- Bruch-Eingabe ---\nGanzzahl: 0\nZähler: 3\nNenner: 4\n\n--- Prozent-Ausgabe ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -12305,34 +12317,36 @@
       "exampleCode": "--- Hex-Eingabe ---\n#FF5733\n\n--- RGB-Ausgabe ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
-      "toolTitle": "RGB zu Hexadezimal",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "title": "RGB-zu-Hex-Konverter — Coding.Tools",
+      "description": "Konvertieren Sie RGB-Farbwerte in Hex-Farbcodes mit Live-Vorschau.",
+      "toolTitle": "RGB zu Hex",
+      "toolDescription": "Konvertieren Sie RGB-Farbwerte in Hex-Codes mit einer Live-Farbvorschau.",
       "categoryName": "Zahlenkonvertierung",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "RGB-Farbe eingeben (z.B. rgb(255,87,51))...",
+      "outputPlaceholder": "Hex-Farbe wird hier angezeigt...",
+      "inputHint": "Werte von <code>0</code> bis <code>255</code> pro Kanal",
+      "descTitle": "RGB-zu-Hex-Konverter",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "Dieses Tool konvertiert RGB (Rot, Grün, Blau) Farbwerte in den hexadezimalen Farbcode. Es enthält eine Live-Farbvorschau, damit Sie genau sehen können, wie die Farbe aussieht. Die Zufallsfarb-Taste generiert jedes Mal eine neue Farbe.",
+        "Die Konvertierung erfolgt vollständig in Ihrem Browser. Geben Sie Werte von 0 bis 255 für jeden Farbkanal ein."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Anleitung",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "Geben Sie Werte von 0 bis 255 für Rot, Grün und Blau ein.",
+        "Klicken Sie auf <strong>Konvertieren</strong>, um den Hex-Farbcode und die Vorschau anzuzeigen.",
+        "Klicken Sie auf <strong>Zufällig</strong>, um eine zufällige Farbe zu erzeugen.",
+        "Verwenden Sie <strong>Kopieren</strong>, um den Hex-Wert in die Zwischenablage zu kopieren."
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "Was ist RGB?",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB ist ein Farbmodell, das Farben durch Kombination von rotem, grünem und blauem Licht darstellt. Jeder Kanal hat einen Wert von 0 (keine Intensität) bis 255 (volle Intensität). Durch Mischen verschiedener Mengen jeder Grundfarbe kann jede sichtbare Farbe auf einem Bildschirm erzeugt werden."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "Eingabehinweise",
+      "inputNotesPara": "Geben Sie RGB-Werte als rgb(R,G,B) oder einfach R,G,B ein. Jeder Wert muss zwischen 0 und 255 liegen.",
+      "example": "Beispiel",
+      "examplePara": "RGB in Hex konvertieren:",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "Das Ergebnis wird hier angezeigt"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -12534,7 +12548,7 @@
       ],
       "example": "Beispiel",
       "examplePara": "Fügen Sie den folgenden Text ein, um die Zeilennummerierung und Zeichenzählung zu sehen:",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "Hallo Welt!\nDies ist ein Beispieltext.\nZeilennummern werden links angezeigt.\nZeichen und Zeilen werden automatisch gezählt."
     },
     "regex-tester": {
       "title": "Regex Tester — Coding.Tools",
@@ -13730,13 +13744,13 @@
       "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binario ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "Conversor de Decimal a Octal — Coding.Tools",
+      "description": "Convierta números decimales a formato octal directamente en su navegador.",
       "toolTitle": "Decimal a Octal",
       "toolDescription": "Convierte números decimales a octal.",
       "categoryName": "Conversión de números",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "Ingrese número decimal (ej. 255, 1024)...",
+      "outputPlaceholder": "El resultado octal aparecerá aquí...",
       "descTitle": "Conversor de Decimal a Octal",
       "descParas": [
         "Esta herramienta convierte números decimales (base 10) a formato octal (base 8).",
@@ -14163,33 +14177,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
+      "title": "Convertidor de Fracción a Porcentaje — Coding.Tools",
+      "description": "Convierta fracciones a porcentajes directamente en su navegador.",
       "toolTitle": "Fracción a Porcentaje",
-      "toolDescription": "Convert fractions to percentage values.",
+      "toolDescription": "Convierta fracciones a valores porcentuales.",
       "categoryName": "Conversión de números",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "El resultado porcentual aparecerá aquí...",
+      "descTitle": "Convertidor de Fracción a Porcentaje",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "Esta herramienta convierte fracciones a porcentajes.",
+        "La conversión se ejecuta localmente en su navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Cómo usar",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Ingrese la parte entera (opcional), numerador y denominador.",
+        "Haga clic en <strong>Convertir</strong> para convertir a porcentaje.",
+        "Use <strong>Copiar</strong> para copiar el resultado."
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "¿Qué es Fracción a Porcentaje?",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "Conversión de fracción a porcentaje: dividir numerador por denominador, sumar entero, multiplicar por 100."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese el entero (opcional), numerador y denominador.",
+      "example": "Ejemplo",
+      "examplePara": "Conversión de fracción a porcentaje:",
+      "exampleCode": "--- Entrada de Fracción ---\nEntero: 0\nNumerador: 3\nDenominador: 4\n\n--- Salida Porcentaje ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -14222,34 +14236,36 @@
       "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Salida RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
-      "toolTitle": "RGB a Hexadecimal",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "title": "Convertidor de RGB a Hex — Coding.Tools",
+      "description": "Convierte valores de color RGB a códigos de color hexadecimal con vista previa en vivo.",
+      "toolTitle": "RGB a Hex",
+      "toolDescription": "Convierte valores de color RGB a códigos hexadecimales con una vista previa de color en vivo.",
       "categoryName": "Conversión de números",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "Ingrese un color RGB (ej: rgb(255,87,51))...",
+      "outputPlaceholder": "El color hexadecimal aparecerá aquí...",
+      "inputHint": "Valores de <code>0</code> a <code>255</code> por canal",
+      "descTitle": "Convertidor de RGB a Hex",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "Esta herramienta convierte valores de color RGB (Rojo, Verde, Azul) a su código de color hexadecimal equivalente. Incluye una vista previa de color en vivo para que pueda ver exactamente cómo se ve el color. El botón de color aleatorio genera un nuevo color cada vez.",
+        "La conversión se realiza completamente en su navegador. Ingrese valores de 0 a 255 para cada canal de color."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Cómo usar",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "Ingrese valores de 0 a 255 para Rojo, Verde y Azul.",
+        "Haga clic en <strong>Convertir</strong> para ver el código de color hexadecimal y la vista previa.",
+        "Haga clic en <strong>Aleatorio</strong> para generar un color aleatorio.",
+        "Use <strong>Copiar</strong> para copiar el valor hexadecimal al portapapeles."
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "¿Qué es RGB?",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB es un modelo de color que representa los colores combinando luz roja, verde y azul. Cada canal tiene un valor de 0 (sin intensidad) a 255 (intensidad máxima). Al mezclar diferentes cantidades de cada color primario, puede crear cualquier color visible en una pantalla."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Ingrese valores RGB como rgb(R,G,B) o simplemente R,G,B. Cada valor debe estar entre 0 y 255.",
+      "example": "Ejemplo",
+      "examplePara": "Conversión de RGB a hexadecimal:",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "El resultado aparecerá aquí"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -14451,7 +14467,7 @@
       ],
       "example": "Ejemplo",
       "examplePara": "Pegue el siguiente texto para ver los números de línea y el conteo en acción:",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "¡Hola, Mundo!\nEste es un texto de ejemplo.\nLos números de línea aparecen a la izquierda.\nLos caracteres y líneas se cuentan automáticamente."
     },
     "regex-tester": {
       "title": "Probador Regex — Coding.Tools",
@@ -15647,13 +15663,13 @@
       "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binário ---\n11111111"
     },
     "decimal-to-octal": {
-      "title": "Decimal to Octal Converter — Coding.Tools",
-      "description": "Convert decimal numbers to octal format directly in your browser.",
+      "title": "Conversor de Decimal para Octal — Coding.Tools",
+      "description": "Converta números decimais para formato octal diretamente no seu navegador.",
       "toolTitle": "Decimal to Octal",
       "toolDescription": "Converta números decimais para octal.",
       "categoryName": "Conversão de números",
-      "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
-      "outputPlaceholder": "Octal result will appear here...",
+      "inputPlaceholder": "Digite o número decimal (ex. 255, 1024)...",
+      "outputPlaceholder": "O resultado octal aparecerá aqui...",
       "descTitle": "Conversor de Decimal para Octal",
       "descParas": [
         "Esta ferramenta converte números decimais (base 10) em formato octal (base 8).",
@@ -16080,33 +16096,33 @@
       "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
     },
     "fraction-to-percent": {
-      "title": "Fraction to Percent Converter — Coding.Tools",
-      "description": "Convert fractions to percentages directly in your browser.",
-      "toolTitle": "Fraction to Percent",
-      "toolDescription": "Convert fractions to percentage values.",
+      "title": "Conversor de Fração para Porcentagem — Coding.Tools",
+      "description": "Converta frações em porcentagens diretamente no seu navegador.",
+      "toolTitle": "Fração para Porcentagem",
+      "toolDescription": "Converta frações em valores percentuais.",
       "categoryName": "Conversão de números",
       "inputPlaceholder": "",
-      "outputPlaceholder": "Percent result will appear here...",
-      "descTitle": "Fraction to Percent Converter",
+      "outputPlaceholder": "O resultado percentual aparecerá aqui...",
+      "descTitle": "Conversor de Fração para Porcentagem",
       "descParas": [
-        "This tool converts fractions to percentages.",
-        "The conversion runs locally in your browser."
+        "Esta ferramenta converte frações em porcentagens.",
+        "A conversão é executada localmente no seu navegador."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Como usar",
       "steps": [
-        "Enter the integer part (optional), numerator, and denominator.",
-        "Click <strong>Calculate</strong> to convert to percentage.",
-        "Use <strong>Copy</strong> to copy the result."
+        "Insira a parte inteira (opcional), numerador e denominador.",
+        "Clique em <strong>Converter</strong> para converter em porcentagem.",
+        "Use <strong>Copiar</strong> para copiar o resultado."
       ],
-      "whatIs": "What is Fraction to Percent?",
+      "whatIs": "O que é Fração para Porcentagem?",
       "whatIsParas": [
-        "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+        "Conversão de fração para porcentagem: dividir numerador pelo denominador, somar inteiro, multiplicar por 100."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
-      "example": "Example",
-      "examplePara": "Converting fraction to percent:",
-      "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira o inteiro (opcional), numerador e denominador.",
+      "example": "Exemplo",
+      "examplePara": "Conversão de fração para porcentagem:",
+      "exampleCode": "--- Entrada de Fração ---\nInteiro: 0\nNumerador: 3\nDenominador: 4\n\n--- Saída Porcentagem ---\n75%"
     },
     "hex-to-rgb": {
       "title": "Hex to RGB Converter — Coding.Tools",
@@ -16139,34 +16155,36 @@
       "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Saída RGB ---\nrgb(255, 87, 51)"
     },
     "rgb-to-hex": {
-      "title": "RGB to Hex Converter — Coding.Tools",
-      "description": "Convert RGB color values to hex color codes with live preview.",
-      "toolTitle": "RGB to Hex",
-      "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+      "title": "Conversor de RGB para Hex — Coding.Tools",
+      "description": "Converta valores de cor RGB para códigos de cor hexadecimal com visualização ao vivo.",
+      "toolTitle": "RGB para Hex",
+      "toolDescription": "Converta valores de cor RGB para códigos hexadecimais com uma visualização de cor ao vivo.",
       "categoryName": "Conversão de números",
-      "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
-      "outputPlaceholder": "Hex color will appear here...",
-      "descTitle": "RGB to Hex Converter",
+      "inputPlaceholder": "Insira uma cor RGB (ex: rgb(255,87,51))...",
+      "outputPlaceholder": "A cor hexadecimal aparecerá aqui...",
+      "inputHint": "Valores de <code>0</code> a <code>255</code> por canal",
+      "descTitle": "Conversor de RGB para Hex",
       "descParas": [
-        "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-        "The conversion runs locally in your browser."
+        "Esta ferramenta converte valores de cor RGB (Vermelho, Verde, Azul) em seu código de cor hexadecimal equivalente. Inclui uma visualização de cor ao vivo para que você possa ver exatamente como a cor aparece. O botão de cor aleatória gera uma nova cor a cada vez.",
+        "A conversão é feita inteiramente no seu navegador. Insira valores de 0 a 255 para cada canal de cor."
       ],
-      "howToUse": "How to use",
+      "howToUse": "Como usar",
       "steps": [
-        "Type or paste an RGB color value into the input field.",
-        "The hex code and color preview update automatically.",
-        "Click <strong>Pick a Random Color</strong> for a random color.",
-        "Use <strong>Copy</strong> to copy the hex value."
+        "Insira valores de 0 a 255 para Vermelho, Verde e Azul.",
+        "Clique em <strong>Converter</strong> para ver o código de cor hexadecimal e a visualização.",
+        "Clique em <strong>Aleatório</strong> para gerar uma cor aleatória.",
+        "Use <strong>Copiar</strong> para copiar o valor hexadecimal para a área de transferência."
       ],
-      "whatIs": "What is RGB to Hex?",
+      "whatIs": "O que é RGB?",
       "whatIsParas": [
-        "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+        "RGB é um modelo de cor que representa as cores combinando luz vermelha, verde e azul. Cada canal tem um valor de 0 (sem intensidade) a 255 (intensidade máxima). Ao misturar diferentes quantidades de cada cor primária, você pode criar qualquer cor visível em uma tela."
       ],
-      "inputNotes": "Input notes",
-      "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
-      "example": "Example",
-      "examplePara": "Converting RGB to hex:",
-      "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733"
+      "inputNotes": "Notas de entrada",
+      "inputNotesPara": "Insira valores RGB como rgb(R,G,B) ou simplesmente R,G,B. Cada valor deve estar entre 0 e 255.",
+      "example": "Exemplo",
+      "examplePara": "Convertendo RGB para hexadecimal:",
+      "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+      "resultPlaceholder": "O resultado aparecerá aqui"
     },
     "hex-to-rgba": {
       "title": "Hex to RGBA Converter — Coding.Tools",
@@ -16368,7 +16386,7 @@
       ],
       "example": "Exemplo",
       "examplePara": "Cole o seguinte texto para ver os números de linha e contagem em ação:",
-      "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
+      "exampleCode": "Olá, Mundo!\nEste é um texto de exemplo.\nOs números de linha aparecem à esquerda.\nOs caracteres e linhas são contados automaticamente."
     },
     "regex-tester": {
       "title": "Testador Regex — Coding.Tools",

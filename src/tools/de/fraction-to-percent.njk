@@ -48,7 +48,7 @@ permalink: "/de/fraction-to-percent.html"
 
   <div class="frac-pct-converter">
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
-      <div class="tool-label">Fraction</div>
+      <div class="tool-label">{{ t.ui.fraction }}</div>
       <div class="frac-pct-input-fields">
         <div class="frac-pct-field-group">
           <span class="frac-pct-field-label">{{ t.ui.integer }}</span>
@@ -103,7 +103,7 @@ permalink: "/de/fraction-to-percent.html"
     </div>
 
     <div class="frac-pct-ref">
-      <div class="frac-pct-ref-title">Quick Reference</div>
+      <div class="frac-pct-ref-title">{{ t.ui.quickReference }}</div>
       <div class="frac-pct-ref-grid">
         <div class="frac-pct-ref-item"><span class="frac">1/4</span><span class="arrow">&rarr;</span><span class="pct">25%</span></div>
         <div class="frac-pct-ref-item"><span class="frac">1/3</span><span class="arrow">&rarr;</span><span class="pct">33.33%</span></div>
@@ -187,16 +187,16 @@ permalink: "/de/fraction-to-percent.html"
           var numerator   = new BigNumber(numStr);
           var integerVal  = new BigNumber(integerInput.value.trim() || '0');
           if (denominator.isZero()) {
-            showResult('Denominator cannot be zero', 'error');
-            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Denominator cannot be zero');
+            showResult('{{ t.ui.denominatorCannotBeZero }}', 'error');
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.denominatorCannotBeZero }}');
             return;
           }
           var result = integerVal.plus(numerator.dividedBy(denominator)).multipliedBy(100);
           showResult(result.toString(10), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {
-          showResult('Invalid input', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid input');
+          showResult('{{ t.ui.invalidInput }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');
         }
       }
 
@@ -215,7 +215,7 @@ permalink: "/de/fraction-to-percent.html"
         if (text && !percentOutput.classList.contains('empty') && !percentOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text + '%').then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });

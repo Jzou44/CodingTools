@@ -84,7 +84,14 @@
       "octalDigitsOnly": "0-7 only",
       "invalidDecimalInput": "Invalid decimal input",
       "validDecimalDigits": "Valid:",
-      "decimalDigitsOnly": "0-9 (integers)"
+      "decimalDigitsOnly": "0-9 (integers)",
+      "invalidRgbInput": "Values must be 0-255",
+      "rgbRangeHint": "Values must be between 0 and 255",
+      "fraction": "Fraction",
+      "invalidInput": "Invalid input",
+      "denominatorCannotBeZero": "Denominator cannot be zero",
+      "beautifiedSuccessfully": "Beautified successfully",
+      "beautificationFailed": "Beautification failed: "
     }
   },
   "cn": {
@@ -172,7 +179,14 @@
       "octalDigitsOnly": "仅限 0-7",
       "invalidDecimalInput": "无效的十进制输入",
       "validDecimalDigits": "有效：",
-      "decimalDigitsOnly": "0-9（整数）"
+      "decimalDigitsOnly": "0-9（整数）",
+      "invalidRgbInput": "值必须为 0-255",
+      "rgbRangeHint": "值必须在 0 到 255 之间",
+      "fraction": "分数",
+      "invalidInput": "输入无效",
+      "denominatorCannotBeZero": "分母不能为零",
+      "beautifiedSuccessfully": "美化成功",
+      "beautificationFailed": "美化失败："
     }
   },
   "tw": {
@@ -260,7 +274,14 @@
       "octalDigitsOnly": "僅限 0-7",
       "invalidDecimalInput": "無效的十進位輸入",
       "validDecimalDigits": "有效：",
-      "decimalDigitsOnly": "0-9（整數）"
+      "decimalDigitsOnly": "0-9（整數）",
+      "invalidRgbInput": "值必須為 0-255",
+      "rgbRangeHint": "值必須在 0 到 255 之間",
+      "fraction": "分數",
+      "invalidInput": "輸入無效",
+      "denominatorCannotBeZero": "分母不能為零",
+      "beautifiedSuccessfully": "美化成功",
+      "beautificationFailed": "美化失敗："
     }
   },
   "jp": {
@@ -348,7 +369,14 @@
       "octalDigitsOnly": "0-7のみ",
       "invalidDecimalInput": "無効な10進数入力",
       "validDecimalDigits": "有効：",
-      "decimalDigitsOnly": "0-9（整数）"
+      "decimalDigitsOnly": "0-9（整数）",
+      "invalidRgbInput": "値は0〜255でなければなりません",
+      "rgbRangeHint": "値は0から255の間でなければなりません",
+      "fraction": "分数",
+      "invalidInput": "無効な入力",
+      "denominatorCannotBeZero": "分母はゼロにできません",
+      "beautifiedSuccessfully": "整形完了",
+      "beautificationFailed": "整形失敗："
     }
   },
   "kr": {
@@ -436,7 +464,14 @@
       "octalDigitsOnly": "0-7만",
       "invalidDecimalInput": "잘못된 10진수 입력",
       "validDecimalDigits": "유효：",
-      "decimalDigitsOnly": "0-9（정수）"
+      "decimalDigitsOnly": "0-9（정수）",
+      "invalidRgbInput": "값은 0-255 사이여야 합니다",
+      "rgbRangeHint": "값은 0에서 255 사이여야 합니다",
+      "fraction": "분수",
+      "invalidInput": "잘못된 입력",
+      "denominatorCannotBeZero": "분모는 0이 될 수 없습니다",
+      "beautifiedSuccessfully": "포맷 완료",
+      "beautificationFailed": "포맷 실패: "
     }
   },
   "fr": {
@@ -524,7 +559,14 @@
       "octalDigitsOnly": "0-7 uniquement",
       "invalidDecimalInput": "Entrée décimale invalide",
       "validDecimalDigits": "Valide :",
-      "decimalDigitsOnly": "0-9 (entiers)"
+      "decimalDigitsOnly": "0-9 (entiers)",
+      "invalidRgbInput": "Les valeurs doivent être 0-255",
+      "rgbRangeHint": "Les valeurs doivent être comprises entre 0 et 255",
+      "fraction": "Fraction",
+      "invalidInput": "Entrée invalide",
+      "denominatorCannotBeZero": "Le dénominateur ne peut pas être zéro",
+      "beautifiedSuccessfully": "Embellissement réussi",
+      "beautificationFailed": "Échec de l'embellissement : "
     }
   },
   "de": {
@@ -612,7 +654,14 @@
       "octalDigitsOnly": "Nur 0-7",
       "invalidDecimalInput": "Ungültige Dezimaleingabe",
       "validDecimalDigits": "Gültig:",
-      "decimalDigitsOnly": "0-9 (Ganzzahlen)"
+      "decimalDigitsOnly": "0-9 (Ganzzahlen)",
+      "invalidRgbInput": "Werte müssen 0-255 sein",
+      "rgbRangeHint": "Werte müssen zwischen 0 und 255 liegen",
+      "fraction": "Bruch",
+      "invalidInput": "Ungültige Eingabe",
+      "denominatorCannotBeZero": "Nenner darf nicht null sein",
+      "beautifiedSuccessfully": "Verschönerung erfolgreich",
+      "beautificationFailed": "Verschönerung fehlgeschlagen: "
     }
   },
   "es": {
@@ -700,7 +749,14 @@
       "octalDigitsOnly": "Solo 0-7",
       "invalidDecimalInput": "Entrada decimal inválida",
       "validDecimalDigits": "Válido:",
-      "decimalDigitsOnly": "0-9 (enteros)"
+      "decimalDigitsOnly": "0-9 (enteros)",
+      "invalidRgbInput": "Los valores deben ser 0-255",
+      "rgbRangeHint": "Los valores deben estar entre 0 y 255",
+      "fraction": "Fracción",
+      "invalidInput": "Entrada inválida",
+      "denominatorCannotBeZero": "El denominador no puede ser cero",
+      "beautifiedSuccessfully": "Embellissement réussi",
+      "beautificationFailed": "Fallo en el embellecimiento: "
     }
   },
   "pt": {
@@ -788,7 +844,14 @@
       "octalDigitsOnly": "Apenas 0-7",
       "invalidDecimalInput": "Entrada decimal inválida",
       "validDecimalDigits": "Válido:",
-      "decimalDigitsOnly": "0-9 (inteiros)"
+      "decimalDigitsOnly": "0-9 (inteiros)",
+      "invalidRgbInput": "Os valores devem ser 0-255",
+      "rgbRangeHint": "Os valores devem estar entre 0 e 255",
+      "fraction": "Fração",
+      "invalidInput": "Entrada inválida",
+      "denominatorCannotBeZero": "O denominador não pode ser zero",
+      "beautifiedSuccessfully": "Embelezamento bem-sucedido",
+      "beautificationFailed": "Falha no embelezamento: "
     }
   }
 }

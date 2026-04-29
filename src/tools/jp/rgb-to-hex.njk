@@ -79,7 +79,7 @@ permalink: "/jp/rgb-to-hex.html"
       <div class="tool-output-value empty" id="hex-output">{{ toolData.resultPlaceholder }}</div>
       <div class="rgb-hex-swatch" id="swatch-container">
         <div class="rgb-hex-swatch-fill" id="color-preview"></div>
-        <div class="rgb-hex-swatch-empty" id="swatch-placeholder">Preview</div>
+        <div class="rgb-hex-swatch-empty" id="swatch-placeholder">{{ t.ui.preview }}</div>
       </div>
     </div>
 
@@ -175,13 +175,13 @@ permalink: "/jp/rgb-to-hex.html"
         var g = parseInt(gInput.value, 10);
         var b = parseInt(bInput.value, 10);
         if (isNaN(r) || isNaN(g) || isNaN(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
-          showResult('Values must be 0–255', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Values must be between 0 and 255');
+          showResult('{{ t.ui.invalidRgbInput }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.rgbRangeHint }}');
           return;
         }
         var hex = '#' + toHex(r) + toHex(g) + toHex(b);
         showResult(hex, 'valid', hex);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
       }
 
       btnConvert.onclick = convert;
@@ -205,7 +205,7 @@ permalink: "/jp/rgb-to-hex.html"
         if (text && !hexOutput.classList.contains('empty') && !hexOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });
@@ -228,7 +228,7 @@ permalink: "/jp/rgb-to-hex.html"
         if (isNaN(r) || isNaN(g) || isNaN(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) return;
         var hex = '#' + toHex(r) + toHex(g) + toHex(b);
         showResult(hex, 'valid', hex);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
       }
 
       rInput.addEventListener('input', liveConvert);
