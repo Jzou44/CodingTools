@@ -4,6 +4,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addWatchTarget("src/_data/");
 
+  // Global data available in all templates
+  eleventyConfig.addGlobalData("currentYear", function () {
+    return new Date().getFullYear();
+  });
+
   return {
     dir: {
       input: "src",
