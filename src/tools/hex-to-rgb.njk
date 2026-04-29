@@ -18,62 +18,8 @@ permalink: "/hex-to-rgb.html"
       flex-direction: column;
       gap: 0;
     }
-    .hex-rgb-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .hex-rgb-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
+    .tool-input-card::before {
       background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6);
-    }
-    .hex-rgb-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-    .hex-rgb-input-field {
-      width: 100%;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 32px;
-      font-weight: 500;
-      color: var(--text-primary);
-      background: transparent;
-      border: none;
-      outline: none;
-      padding: 8px 0;
-      letter-spacing: 0.04em;
-      caret-color: var(--accent);
-    }
-    .hex-rgb-input-field::placeholder {
-      color: var(--text-muted);
-      font-size: 18px;
-      font-weight: 400;
-    }
-    .hex-rgb-input-hint {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .hex-rgb-input-hint code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--text-secondary);
     }
     .hex-rgb-actions {
       display: flex;
@@ -116,59 +62,6 @@ permalink: "/hex-to-rgb.html"
     .hex-rgb-arrow-icon:hover {
       transform: scale(1.08);
       box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4);
-    }
-
-    .hex-rgb-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .hex-rgb-output-card.has-result {
-      border-color: var(--accent);
-    }
-    .hex-rgb-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .hex-rgb-output-value {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 28px;
-      font-weight: 500;
-      color: var(--text-primary);
-      letter-spacing: 0.02em;
-      line-height: 1.2;
-      min-height: 36px;
-      word-break: break-all;
-      transition: color 0.3s;
-    }
-    .hex-rgb-output-value.empty {
-      color: var(--text-muted);
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0;
-    }
-    .hex-rgb-output-value.error {
-      color: var(--error);
-      font-size: 15px;
-      font-weight: 500;
-      font-style: normal;
-      letter-spacing: 0;
-      font-family: 'DM Sans', sans-serif;
     }
 
     /* Color Preview Swatch */
@@ -249,19 +142,16 @@ permalink: "/hex-to-rgb.html"
     }
 
     @media (max-width: 600px) {
-      .hex-rgb-input-field { font-size: 24px; }
-      .hex-rgb-output-value { font-size: 22px; }
-      .hex-rgb-input-card, .hex-rgb-output-card { padding: 20px; }
       .hex-rgb-swatch { height: 72px; }
     }
   </style>
 
   <div class="hex-rgb-converter">
     <!-- Input Card -->
-    <div class="hex-rgb-input-card">
-      <div class="hex-rgb-label">Hex Color</div>
-      <input type="text" class="hex-rgb-input-field" id="hex-input" placeholder="#FF5733" spellcheck="false" autocomplete="off" autofocus>
-      <div class="hex-rgb-input-hint">Enter a hex code like <code>#FF5733</code> or <code>#F00</code></div>
+    <div class="tool-input-card" style="--tool-accent: var(--accent)">
+      <div class="tool-label">Hex Color</div>
+      <input type="text" class="tool-input-field" id="hex-input" placeholder="#FF5733" spellcheck="false" autocomplete="off" autofocus>
+      <div class="tool-hint">Enter a hex code like <code>#FF5733</code> or <code>#F00</code></div>
       <div class="hex-rgb-actions">
         <button class="btn btn-secondary" id="btn-random" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
@@ -278,15 +168,15 @@ permalink: "/hex-to-rgb.html"
     </div>
 
     <!-- Output Card -->
-    <div class="hex-rgb-output-card" id="output-card">
-      <div class="hex-rgb-output-label">
+    <div class="tool-output-card" id="output-card" style="--tool-accent: var(--accent)">
+      <div class="tool-output-label">
         <span>RGB Value</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           Copy
         </button>
       </div>
-      <div class="hex-rgb-output-value empty" id="rgb-output">Result will appear here</div>
+      <div class="tool-output-value empty" id="rgb-output" style="--tool-output-font-size: 28px; --tool-output-font-size-mobile: 22px; --tool-accent: var(--accent)">Result will appear here</div>
 
       <!-- RGB Channels -->
       <div class="hex-rgb-channels" id="rgb-channels" style="display:none;">
@@ -383,7 +273,7 @@ RGB: rgb(51, 102, 204)</pre>
 
       function showResult(text, type, r, g, b) {
         rgbOutput.textContent = text;
-        rgbOutput.className = 'hex-rgb-output-value';
+        rgbOutput.className = 'tool-output-value';
         if (type === 'empty') rgbOutput.className += ' empty';
         else if (type === 'error') rgbOutput.className += ' error';
         if (type === 'valid') {
