@@ -462,3 +462,141 @@
   .editor-area { min-height: 180px; font-size: 13px; padding-left: 48px; }
   .line-numbers { width: 36px; font-size: 13px; }
 }
+
+/* --- Dropzone Area (image tools) --- */
+.dropzone-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 180px;
+  padding: 32px;
+  background: var(--code-bg);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.dropzone-area:hover,
+.dropzone-area.dragover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.dropzone-area svg {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.dropzone-area p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.dropzone-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* --- File List (image tools) --- */
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.file-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.file-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.compression-rate {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  color: var(--success);
+  font-size: 13px;
+}
+
+.file-status .btn-sm {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* --- EXIF Table (exif-viewer) --- */
+.exif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.exif-table th,
+.exif-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.exif-table th {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--code-bg);
+}
+
+.exif-table td {
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.exif-table tbody tr:hover {
+  background: var(--accent-light);
+}
+
+#map-container {
+  margin-top: 12px;
+}
+
+#map-container iframe {
+  border-radius: 8px;
+}
+
+/* --- Options Panel (image tools context) --- */
+.options-panel + .section-label {
+  margin-top: 16px;
+}

@@ -390,5 +390,47 @@
     "category": "formatter-minifier",
     "description": "Minify SQL by removing whitespace, comments, and unnecessary formatting.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "compress-png": {
+    "title": "Compress PNG",
+    "slug": "compress-png",
+    "category": "image-utilities",
+    "description": "Reduce PNG file size by converting to palette mode with optimization.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
+  },
+  "compress-jpeg": {
+    "title": "Compress JPEG",
+    "slug": "compress-jpeg",
+    "category": "image-utilities",
+    "description": "Reduce JPEG file size by re-encoding with adjustable quality.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
+  },
+  "progressive-jpeg": {
+    "title": "Progressive JPEG",
+    "slug": "progressive-jpeg",
+    "category": "image-utilities",
+    "description": "Convert baseline JPEG images to progressive JPEG format.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
+  },
+  "image-to-base64": {
+    "title": "Image to Base64",
+    "slug": "image-to-base64",
+    "category": "image-utilities",
+    "description": "Convert any image to a Base64 encoded data URI string.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
+  },
+  "exif-viewer": {
+    "title": "EXIF Viewer",
+    "slug": "exif-viewer",
+    "category": "image-utilities",
+    "description": "View EXIF metadata embedded in photos including GPS, camera, and date info.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
+  },
+  "exif-remover": {
+    "title": "EXIF Remover",
+    "slug": "exif-remover",
+    "category": "image-utilities",
+    "description": "Strip all EXIF metadata from images to protect your privacy.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   }
 }

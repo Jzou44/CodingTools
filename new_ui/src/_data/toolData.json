@@ -1744,6 +1744,177 @@
       "example": "Example",
       "examplePara": "Formatted JavaScript becomes compact after minification:",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "cn": {
@@ -3491,6 +3662,177 @@
       "example": "示例",
       "examplePara": "格式化后的 JavaScript 压缩后变得紧凑：",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "压缩 PNG — Coding.Tools",
+      "description": "在线压缩 PNG 图片，减小文件大小。免费、快速，在浏览器中运行。",
+      "toolTitle": "压缩 PNG",
+      "toolDescription": "通过转换为调色板模式并优化来减小 PNG 文件大小。支持拖放多张图片。",
+      "categoryName": "图片工具",
+      "dropzoneMessage": "点击或拖拽 PNG 文件上传",
+      "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
+      "descTitle": "压缩 PNG",
+      "descParas": [
+        "此工具通过将 PNG 图片转换为调色板模式并应用优化来压缩图片。压缩完全在浏览器中运行，无需上传到服务器。",
+        "PNG 格式使用 RGBA 颜色表示每个像素。A 代表透明度，支持透明背景。压缩时，我们转换为调色板模式以减少颜色数量，同时保持视觉质量。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将 PNG 文件拖放到上传区域，或点击选择文件。",
+        "每个文件自动压缩并显示压缩率。",
+        "下载单个压缩文件或使用<strong>下载全部</strong>获取 ZIP 压缩包。"
+      ],
+      "whatIs": "PNG 与 JPEG 对比",
+      "whatIsParas": [
+        "<strong>压缩：</strong>PNG 是无损压缩，JPEG 是有损压缩。PNG 保留所有原始数据；JPEG 丢弃部分数据以获得更小的文件。",
+        "<strong>透明度：</strong>PNG 支持透明（Alpha 通道），JPEG 不支持。",
+        "<strong>EXIF：</strong>PNG 不支持 EXIF 元数据，JPEG 支持。",
+        "<strong>适用场景：</strong>PNG 最适合图形、图标和带透明度的图片。JPEG 最适合照片。"
+      ],
+      "example": "用 Python 压缩",
+      "examplePara": "可以使用 Python 的 Pillow 库来压缩 PNG 图片：",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "压缩 JPEG — Coding.Tools",
+      "description": "在线压缩 JPEG 图片，减小文件大小。免费、快速，在浏览器中运行。",
+      "toolTitle": "压缩 JPEG",
+      "toolDescription": "通过质量优化重新编码来减小 JPEG 文件大小。支持拖放多张图片。",
+      "categoryName": "图片工具",
+      "dropzoneMessage": "点击或拖拽 JPEG 文件上传",
+      "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
+      "descTitle": "压缩 JPEG",
+      "descParas": [
+        "此工具通过使用优化的质量设置重新编码来压缩 JPEG 图片。压缩完全在浏览器中运行。",
+        "JPEG 使用有损压缩，意味着会丢弃一些图片数据以实现更小的文件大小。视觉质量保持较高，同时文件大小显著减小。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将 JPEG 文件拖放到上传区域，或点击选择文件。",
+        "每个文件自动压缩并显示压缩率。",
+        "下载单个压缩文件或使用<strong>下载全部</strong>获取 ZIP 压缩包。"
+      ],
+      "whatIs": "关于 JPEG 压缩",
+      "whatIsParas": [
+        "JPEG 压缩通过分析图片并移除人眼最不易察觉的视觉信息来工作。这就是为什么它被称为有损压缩。",
+        "典型的 JPEG 压缩可以实现 40-60% 的文件大小缩减，且视觉质量损失很小。压缩率取决于原始图片内容。"
+      ],
+      "example": "用 Python 压缩",
+      "examplePara": "可以使用 Python 的 Pillow 库来压缩 JPEG 图片：",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "渐进式 JPEG — Coding.Tools",
+      "description": "在线将基线 JPEG 转换为渐进式 JPEG 格式。免费，在浏览器中运行。",
+      "toolTitle": "渐进式 JPEG",
+      "toolDescription": "将基线 JPEG 图片转换为渐进式 JPEG，提供更好的网页加载体验。",
+      "categoryName": "图片工具",
+      "dropzoneMessage": "点击或拖拽 JPEG 文件上传",
+      "dropzoneHint": "最多 30 张图片 · 每张最大 10MB",
+      "descTitle": "渐进式 JPEG",
+      "descParas": [
+        "渐进式 JPEG 分多次加载图片——先显示模糊版本，然后逐步细化为完整图片。这让用户在图片加载时就能看到预览。",
+        "基线 JPEG 从上到下逐行加载。渐进式 JPEG 对网页性能感知更好。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将 JPEG 文件拖放到上传区域，或点击选择文件。",
+        "每个文件自动转换为渐进式 JPEG 格式。",
+        "下载单个文件或使用<strong>下载全部</strong>获取 ZIP 压缩包。"
+      ],
+      "whatIs": "基线 vs 渐进式 JPEG",
+      "whatIsParas": [
+        "<strong>基线 JPEG</strong> 从上到下逐行加载像素数据。用户看到图片逐渐出现。",
+        "<strong>渐进式 JPEG</strong> 分多次加载。首先显示低质量预览，然后每次传递都变得更清晰。即使总加载时间相似，用户也会感觉更快。"
+      ],
+      "example": "用 Python 转换",
+      "examplePara": "使用 Python 的 Pillow 将基线 JPEG 转换为渐进式：",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "图片转 Base64 — Coding.Tools",
+      "description": "在线将图片转换为 Base64 编码的 data URI 字符串。免费，在浏览器中运行。",
+      "toolTitle": "图片转 Base64",
+      "toolDescription": "将任何图片转换为 Base64 编码的 data URI，可嵌入 HTML 或 CSS 中。",
+      "categoryName": "图片工具",
+      "dropzoneMessage": "点击或拖拽图片文件上传",
+      "dropzoneHint": "1 张图片 · 最大 2MB",
+      "inputPlaceholder": "Base64 结果将在此显示...",
+      "descTitle": "图片转 Base64",
+      "descParas": [
+        "此工具将图片文件转换为 Base64 编码的 data URI 字符串。您可以直接在 HTML 或 CSS 中嵌入此字符串，无需单独的图片文件请求。",
+        "Base64 编码会使数据大小增加约 33%，因此最适合用于小图片（如图标和徽标），而非大照片。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将图片文件拖放到上传区域，或点击选择。",
+        "Base64 编码的 data URI 出现在下方的文本编辑器中。",
+        "使用<strong>复制</strong>复制结果或<strong>保存</strong>下载为文本文件。"
+      ],
+      "whatIs": "在 HTML 中嵌入图片",
+      "whatIsParas": [
+        "可以在 HTML img 标签中直接使用 Base64 data URI：&lt;img src=\"data:image/png;base64,...\"&gt;",
+        "在 CSS 中，可以将 data URI 用于背景图片：background: url(data:image/png;base64,...)"
+      ],
+      "example": "用 Python 转换",
+      "examplePara": "使用 Python 将图片转换为 Base64：",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF 查看器 — Coding.Tools",
+      "description": "在线查看照片中的 EXIF 元数据。查看 GPS、相机信息等。免费，在浏览器中运行。",
+      "toolTitle": "EXIF 查看器",
+      "toolDescription": "提取并显示照片中的 EXIF 元数据，包括 GPS 位置、相机设置和日期。",
+      "categoryName": "图片工具",
+      "dropzoneMessage": "点击或拖拽照片上传",
+      "dropzoneHint": "1 张图片 · 最大 10MB",
+      "descTitle": "EXIF 查看器",
+      "descParas": [
+        "EXIF（可交换图像文件格式）是相机和智能手机嵌入照片中的元数据。它包括 GPS 坐标、相机型号、光圈、快门速度、ISO 和拍摄日期等信息。",
+        "此工具读取并显示照片中的所有 EXIF 标签。如果存在 GPS 数据，将显示位置地图。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将照片拖放到上传区域，或点击选择。",
+        "所有 EXIF 元数据标签以表格形式显示。",
+        "如果找到 GPS 坐标，将显示照片位置的地图。"
+      ],
+      "whatIs": "什么是 EXIF 数据？",
+      "whatIsParas": [
+        "EXIF 数据由数码相机和智能手机嵌入 JPEG 和 TIFF 图像中。它记录相机设置（光圈、快门速度、ISO、焦距）、日期/时间，以及可选的 GPS 坐标。",
+        "社交媒体平台在上传时通常会剥离 EXIF 数据，但相机的原始文件仍包含这些信息。"
+      ],
+      "example": "用 Python 读取 EXIF",
+      "examplePara": "使用 Python 的 exifread 库提取 EXIF 数据：",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF 移除器 — Coding.Tools",
+      "description": "在线移除图片中的 EXIF 元数据以保护隐私。免费，在浏览器中运行。",
+      "toolTitle": "EXIF 移除器",
+      "toolDescription": "从图片中剥离所有 EXIF 元数据，包括 GPS 位置、相机信息和个人数据。",
+      "categoryName": "图片工具",
+      "dropzoneMessage": "点击或拖拽图片上传",
+      "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
+      "descTitle": "EXIF 移除器",
+      "descParas": [
+        "此工具通过 Canvas API 重新编码图片来移除所有 EXIF 元数据。GPS 坐标、相机信息、时间戳和所有其他元数据都被剥离。",
+        "工具完全在浏览器中处理图片，不会将文件上传到服务器。"
+      ],
+      "howToUse": "使用方法",
+      "steps": [
+        "将图片拖放到上传区域，或点击选择文件。",
+        "每张图片被处理，所有 EXIF 元数据被移除。",
+        "下载单个清理后的图片或使用<strong>下载全部</strong>获取 ZIP 压缩包。"
+      ],
+      "whatIs": "为什么要移除 EXIF 数据？",
+      "whatIsParas": [
+        "用智能手机拍摄的照片通常包含 GPS 坐标，可以精确显示照片拍摄位置。公开分享此类照片可能暴露您的家、工作场所或其他敏感位置。",
+        "在分享照片前移除 EXIF 数据可以保护您的隐私。由于不再包含元数据，文件大小也会略有减小。"
+      ],
+      "example": "用 Python 移除 EXIF",
+      "examplePara": "通过重新保存来剥离 EXIF 数据：",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # 默认不保留 EXIF"
     }
   },
   "tw": {
@@ -5237,6 +5579,177 @@
       "example": "範例",
       "examplePara": "格式化後的 JavaScript 壓縮後變得緊湊：",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "jp": {
@@ -6982,6 +7495,177 @@
       "example": "例",
       "examplePara": "フォーマットされた JavaScript はミニファイ後にコンパクトになります：",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "kr": {
@@ -8727,6 +9411,177 @@
       "example": "예시",
       "examplePara": "포맷된 JavaScript는 미니파이 후 컴팩트해집니다:",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "fr": {
@@ -10473,6 +11328,177 @@
       "example": "Exemple",
       "examplePara": "Le JS formaté devient compact après minification :",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "de": {
@@ -12219,6 +13245,177 @@
       "example": "Beispiel",
       "examplePara": "Formatiertes JavaScript wird nach der Minifizierung kompakt:",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "es": {
@@ -13965,6 +15162,177 @@
       "example": "Ejemplo",
       "examplePara": "El JS formateado se vuelve compacto después de la minificación:",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   },
   "pt": {
@@ -15711,6 +17079,177 @@
       "example": "Exemplo",
       "examplePara": "O JS formatado se torna compacto após a minificação:",
       "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}"
+    },
+    "compress-png": {
+      "title": "Compress PNG — Coding.Tools",
+      "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress PNG",
+      "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag PNG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress PNG",
+      "descParas": [
+        "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+        "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop PNG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "PNG vs JPEG comparison",
+      "whatIsParas": [
+        "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+        "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+        "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+        "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    },
+    "compress-jpeg": {
+      "title": "Compress JPEG — Coding.Tools",
+      "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+      "toolTitle": "Compress JPEG",
+      "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "Compress JPEG",
+      "descParas": [
+        "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
+        "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is compressed automatically and the compression rate is displayed.",
+        "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "About JPEG compression",
+      "whatIsParas": [
+        "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
+        "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      ],
+      "example": "Compress with Python",
+      "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    },
+    "progressive-jpeg": {
+      "title": "Progressive JPEG — Coding.Tools",
+      "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+      "toolTitle": "Progressive JPEG",
+      "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag JPEG files here to upload",
+      "dropzoneHint": "Up to 30 images · Max 10MB each",
+      "descTitle": "Progressive JPEG",
+      "descParas": [
+        "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
+        "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop JPEG files onto the upload area, or click to select files.",
+        "Each file is converted to progressive JPEG format automatically.",
+        "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Baseline vs Progressive JPEG",
+      "whatIsParas": [
+        "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
+        "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
+    },
+    "image-to-base64": {
+      "title": "Image to Base64 — Coding.Tools",
+      "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+      "toolTitle": "Image to Base64",
+      "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag an image file here to upload",
+      "dropzoneHint": "1 image · Max 2MB",
+      "inputPlaceholder": "Base64 result will appear here...",
+      "descTitle": "Image to Base64",
+      "descParas": [
+        "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+        "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop an image file onto the upload area, or click to select.",
+        "The Base64 encoded data URI appears in the text editor below.",
+        "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+      ],
+      "whatIs": "Embedding images in HTML",
+      "whatIsParas": [
+        "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+        "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      ],
+      "example": "Convert with Python",
+      "examplePara": "Convert an image to Base64 using Python:",
+      "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+    },
+    "exif-viewer": {
+      "title": "EXIF Viewer — Coding.Tools",
+      "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+      "toolTitle": "EXIF Viewer",
+      "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag a photo here to upload",
+      "dropzoneHint": "1 image · Max 10MB",
+      "descTitle": "EXIF Viewer",
+      "descParas": [
+        "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
+        "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop a photo onto the upload area, or click to select.",
+        "All EXIF metadata tags are displayed in a table.",
+        "If GPS coordinates are found, a map showing the photo location is displayed."
+      ],
+      "whatIs": "What is EXIF data?",
+      "whatIsParas": [
+        "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
+        "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      ],
+      "example": "Read EXIF with Python",
+      "examplePara": "Extract EXIF data using Python with the exifread library:",
+      "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    },
+    "exif-remover": {
+      "title": "EXIF Remover — Coding.Tools",
+      "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+      "toolTitle": "EXIF Remover",
+      "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+      "categoryName": "Image Utilities",
+      "dropzoneMessage": "Click or drag images here to upload",
+      "dropzoneHint": "Up to 20 images · Max 10MB each",
+      "descTitle": "EXIF Remover",
+      "descParas": [
+        "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
+        "The tool processes images entirely in your browser. No files are uploaded to a server."
+      ],
+      "howToUse": "How to use",
+      "steps": [
+        "Drag and drop images onto the upload area, or click to select files.",
+        "Each image is processed and all EXIF metadata is removed.",
+        "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      ],
+      "whatIs": "Why remove EXIF data?",
+      "whatIsParas": [
+        "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
+        "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      ],
+      "example": "Remove EXIF with Python",
+      "examplePara": "Strip EXIF data by re-saving with Pillow:",
+      "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
     }
   }
 }

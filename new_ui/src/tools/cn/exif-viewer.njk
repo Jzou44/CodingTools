@@ -1,0 +1,255 @@
+---
+lang: "cn"
+toolId: "exif-viewer"
+category: "image-utilities"
+activeTool: "exif-viewer"
+permalink: "/cn/exif-viewer.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <div class="dropzone-area" id="dropzone">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+    <p>{{ toolData.dropzoneMessage }}</p>
+    <span class="dropzone-hint">{{ toolData.dropzoneHint }}</span>
+    <input type="file" id="file-input" accept="image/*" hidden>
+  </div>
+
+  <div id="file-info" class="file-info" style="display:none;"></div>
+
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+        {{ t.ui.clear }}
+      </button>
+    </div>
+  </div>
+
+  <div id="exif-table-wrapper" style="display:none;">
+    <table class="exif-table" id="exif-table">
+      <thead>
+        <tr>
+          <th>{{ t.ui.tags }}</th>
+          <th>{{ t.ui.content }}</th>
+        </tr>
+      </thead>
+      <tbody id="exif-tbody"></tbody>
+    </table>
+  </div>
+
+  <div id="map-container" style="display:none;"></div>
+
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta"></div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var dropzone = document.getElementById('dropzone');
+      var fileInput = document.getElementById('file-input');
+      var fileInfo = document.getElementById('file-info');
+      var btnClear = document.getElementById('btn-clear');
+      var exifTableWrapper = document.getElementById('exif-table-wrapper');
+      var exifTbody = document.getElementById('exif-tbody');
+      var mapContainer = document.getElementById('map-container');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot = document.getElementById('status-dot');
+      var statusText = document.getElementById('status-text');
+
+      var TAGS = {
+        0x010F: 'Make', 0x0110: 'Model', 0x0112: 'Orientation',
+        0x011A: 'XResolution', 0x011B: 'YResolution', 0x0128: 'ResolutionUnit',
+        0x0131: 'Software', 0x0132: 'DateTime', 0x013E: 'WhitePoint',
+        0x013F: 'PrimaryChromaticities', 0x0211: 'YCbCrCoefficients',
+        0x0213: 'YCbCrPositioning', 0x0214: 'ReferenceBlackWhite',
+        0x8298: 'Copyright', 0x829A: 'ExposureTime', 0x829D: 'FNumber',
+        0x8822: 'ExposureProgram', 0x8827: 'ISOSpeedRatings',
+        0x9000: 'ExifVersion', 0x9003: 'DateTimeOriginal',
+        0x9004: 'DateTimeDigitized', 0x920A: 'FocalLength',
+        0xA001: 'ColorSpace', 0xA002: 'ExifImageWidth',
+        0xA003: 'ExifImageHeight', 0xA405: 'FocalLengthIn35mmFilm',
+        0xA420: 'ImageUniqueID', 0x010E: 'ImageDescription',
+        0x0100: 'ImageWidth', 0x0101: 'ImageHeight',
+        0xA431: 'SerialNumber', 0xA432: 'LensInfo',
+        0xA433: 'LensMake', 0xA434: 'LensModel'
+      };
+
+      var GPS_TAGS = {
+        0x0001: 'GPSLatitudeRef', 0x0002: 'GPSLatitude',
+        0x0003: 'GPSLongitudeRef', 0x0004: 'GPSLongitude',
+        0x0005: 'GPSAltitudeRef', 0x0006: 'GPSAltitude',
+        0x0007: 'GPSTimeStamp', 0x001D: 'GPSDateStamp'
+      };
+
+      function readExif(arrayBuffer) {
+        var view = new DataView(arrayBuffer);
+        if (view.getUint16(0) !== 0xFFD8) return null;
+        var offset = 2;
+        while (offset < view.byteLength - 1) {
+          if (view.getUint8(offset) !== 0xFF) break;
+          var marker = view.getUint8(offset + 1);
+          if (marker === 0xE1) {
+            var length = view.getUint16(offset + 2);
+            return parseExifData(arrayBuffer, offset + 4, length - 2);
+          }
+          if (marker === 0xDA) break;
+          offset += 2 + view.getUint16(offset + 2);
+        }
+        return null;
+      }
+
+      function parseExifData(buffer, start, length) {
+        var view = new DataView(buffer, start);
+        if (view.getUint16(0) !== 0x4578) return null;
+        var littleEndian = view.getUint16(8) === 0x4949;
+        var ifdOffset = view.getUint32(10, littleEndian);
+        var result = {};
+        readIFD(view, ifdOffset, littleEndian, TAGS, result);
+        var exifIFDOffset = view.getUint32(10 + ifdOffset + 102, littleEndian) || 0;
+        if (exifIFDOffset > 0) readIFD(view, 10 + exifIFDOffset, littleEndian, TAGS, result);
+        var gpsIFDOffset = 0;
+        readIFD(view, ifdOffset, littleEndian, {}, {}, function(tag, value) {
+          if (tag === 0x8825) gpsIFDOffset = value;
+        });
+        if (gpsIFDOffset > 0) readIFD(view, 10 + gpsIFDOffset, littleEndian, GPS_TAGS, result);
+        return result;
+      }
+
+      function readIFD(view, offset, littleEndian, tags, result, callback) {
+        var count = view.getUint16(offset, littleEndian);
+        for (var i = 0; i < count; i++) {
+          var entryOffset = offset + 2 + i * 12;
+          if (entryOffset + 12 > view.byteLength) break;
+          var tag = view.getUint16(entryOffset, littleEndian);
+          var type = view.getUint16(entryOffset + 2, littleEndian);
+          var numValues = view.getUint32(entryOffset + 4, littleEndian);
+          var valueOffset = entryOffset + 8;
+          if (type === 2 && numValues > 4) {
+            valueOffset = 10 + view.getUint32(entryOffset + 8, littleEndian);
+          }
+          var tagName = tags[tag] || ('Tag_0x' + tag.toString(16).toUpperCase());
+          var value;
+          if (type === 2) {
+            var str = '';
+            for (var j = 0; j < numValues && valueOffset + j < view.byteLength; j++) {
+              var c = view.getUint8(valueOffset + j);
+              if (c === 0) break;
+              str += String.fromCharCode(c);
+            }
+            value = str;
+          } else if (type === 3) {
+            value = view.getUint16(entryOffset + 8, littleEndian);
+          } else if (type === 4) {
+            value = view.getUint32(entryOffset + 8, littleEndian);
+          } else if (type === 5) {
+            var num = view.getUint32(valueOffset, littleEndian);
+            var den = view.getUint32(valueOffset + 4, littleEndian);
+            value = den ? (num / den).toFixed(6) : '0';
+          } else {
+            value = view.getUint32(entryOffset + 8, littleEndian);
+          }
+          if (callback) { callback(tag, value); }
+          else { result[tagName] = value; }
+        }
+      }
+
+      dropzone.addEventListener('click', function () { fileInput.click(); });
+      dropzone.addEventListener('dragover', function (e) { e.preventDefault(); dropzone.classList.add('dragover'); });
+      dropzone.addEventListener('dragleave', function () { dropzone.classList.remove('dragover'); });
+      dropzone.addEventListener('drop', function (e) {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+        if (e.dataTransfer.files.length > 0) processFile(e.dataTransfer.files[0]);
+      });
+      fileInput.addEventListener('change', function () {
+        if (this.files.length > 0) processFile(this.files[0]);
+        this.value = '';
+      });
+
+      function processFile(file) {
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', 'Reading EXIF data...');
+        fileInfo.innerHTML = '<strong>' + file.name + '</strong> (' + (file.size / 1024).toFixed(1) + ' KB)';
+        fileInfo.style.display = 'block';
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var exif = readExif(e.target.result);
+          exifTbody.innerHTML = '';
+          mapContainer.style.display = 'none';
+
+          if (!exif || Object.keys(exif).length === 0) {
+            exifTableWrapper.style.display = 'none';
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.noExif }}');
+            return;
+          }
+
+          exifTableWrapper.style.display = 'block';
+          Object.keys(exif).forEach(function (key) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + key + '</td><td>' + exif[key] + '</td>';
+            exifTbody.appendChild(tr);
+          });
+
+          if (exif.GPSLatitude && exif.GPSLongitude) {
+            var lat = parseFloat(exif.GPSLatitude);
+            var lon = parseFloat(exif.GPSLongitude);
+            if (exif.GPSLatitudeRef === 'S') lat = -lat;
+            if (exif.GPSLongitudeRef === 'W') lon = -lon;
+            mapContainer.innerHTML = '<iframe width="100%" height="300" frameborder="0" src="https://www.openstreetmap.org/export/embed.html?bbox=' + (lon-0.01) + ',' + (lat-0.01) + ',' + (lon+0.01) + ',' + (lat+0.01) + '&layer=mapnik&marker=' + lat + ',' + lon + '" style="border:1px solid #ccc;border-radius:8px;"></iframe>';
+            mapContainer.style.display = 'block';
+          }
+
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', Object.keys(exif).length + ' EXIF tags found');
+        };
+        reader.readAsArrayBuffer(file);
+      }
+
+      btnClear.addEventListener('click', function () {
+        fileInfo.style.display = 'none';
+        exifTableWrapper.style.display = 'none';
+        exifTbody.innerHTML = '';
+        mapContainer.style.display = 'none';
+        mapContainer.innerHTML = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

@@ -53,7 +53,19 @@
       "flags": "Flags",
       "format": "Format",
       "minify": "Minify",
-      "beautify": "Beautify"
+      "beautify": "Beautify",
+      "uploadImage": "Upload Image",
+      "clearQueue": "Clear Queue",
+      "downloadAll": "Download All",
+      "downloadAllZip": "Download All in Zip",
+      "processing": "Processing...",
+      "selectFile": "Select a file or drag and drop",
+      "maxFileSize": "Max file size",
+      "compressionRate": "Compression rate",
+      "tags": "Tags",
+      "content": "Content",
+      "noExif": "No EXIF data found",
+      "files": "files"
     }
   },
   "cn": {
@@ -110,7 +122,19 @@
       "flags": "标志",
       "format": "格式化",
       "minify": "压缩",
-      "beautify": "美化"
+      "beautify": "美化",
+      "uploadImage": "上传图片",
+      "clearQueue": "清空队列",
+      "downloadAll": "下载全部",
+      "downloadAllZip": "下载全部(ZIP)",
+      "processing": "处理中...",
+      "selectFile": "选择文件或拖拽上传",
+      "maxFileSize": "最大文件大小",
+      "compressionRate": "压缩率",
+      "tags": "标签",
+      "content": "内容",
+      "noExif": "未找到EXIF数据",
+      "files": "个文件"
     }
   },
   "tw": {
@@ -167,7 +191,19 @@
       "flags": "標誌",
       "format": "格式化",
       "minify": "壓縮",
-      "beautify": "美化"
+      "beautify": "美化",
+      "uploadImage": "上傳圖片",
+      "clearQueue": "清空佇列",
+      "downloadAll": "下載全部",
+      "downloadAllZip": "下載全部(ZIP)",
+      "processing": "處理中...",
+      "selectFile": "選擇檔案或拖曳上傳",
+      "maxFileSize": "最大檔案大小",
+      "compressionRate": "壓縮率",
+      "tags": "標籤",
+      "content": "內容",
+      "noExif": "未找到EXIF資料",
+      "files": "個檔案"
     }
   },
   "jp": {
@@ -224,7 +260,19 @@
       "flags": "フラグ",
       "format": "フォーマット",
       "minify": "ミニファイ",
-      "beautify": "整形"
+      "beautify": "整形",
+      "uploadImage": "画像をアップロード",
+      "clearQueue": "キューをクリア",
+      "downloadAll": "すべてダウンロード",
+      "downloadAllZip": "すべてダウンロード(ZIP)",
+      "processing": "処理中...",
+      "selectFile": "ファイルを選択またはドロップ",
+      "maxFileSize": "最大ファイルサイズ",
+      "compressionRate": "圧縮率",
+      "tags": "タグ",
+      "content": "内容",
+      "noExif": "EXIFデータが見つかりません",
+      "files": "ファイル"
     }
   },
   "kr": {
@@ -281,7 +329,19 @@
       "flags": "플래그",
       "format": "포맷",
       "minify": "미니파이",
-      "beautify": "포맷"
+      "beautify": "포맷",
+      "uploadImage": "이미지 업로드",
+      "clearQueue": "대기열 지우기",
+      "downloadAll": "모두 다운로드",
+      "downloadAllZip": "모두 다운로드(ZIP)",
+      "processing": "처리 중...",
+      "selectFile": "파일 선택 또는 드래그 앤 드롭",
+      "maxFileSize": "최대 파일 크기",
+      "compressionRate": "압축률",
+      "tags": "태그",
+      "content": "내용",
+      "noExif": "EXIF 데이터를 찾을 수 없습니다",
+      "files": "파일"
     }
   },
   "fr": {
@@ -338,7 +398,19 @@
       "flags": "Drapeaux",
       "format": "Formater",
       "minify": "Minifier",
-      "beautify": "Embellir"
+      "beautify": "Embellir",
+      "uploadImage": "Télécharger une image",
+      "clearQueue": "Vider la file",
+      "downloadAll": "Tout télécharger",
+      "downloadAllZip": "Tout télécharger (ZIP)",
+      "processing": "Traitement...",
+      "selectFile": "Sélectionnez un fichier ou glissez-déposez",
+      "maxFileSize": "Taille max du fichier",
+      "compressionRate": "Taux de compression",
+      "tags": "Tags",
+      "content": "Contenu",
+      "noExif": "Aucune donnée EXIF trouvée",
+      "files": "fichiers"
     }
   },
   "de": {
@@ -395,7 +467,19 @@
       "flags": "Flags",
       "format": "Formatieren",
       "minify": "Minifizieren",
-      "beautify": "Verschönern"
+      "beautify": "Verschönern",
+      "uploadImage": "Bild hochladen",
+      "clearQueue": "Warteschlange leeren",
+      "downloadAll": "Alle herunterladen",
+      "downloadAllZip": "Alle herunterladen (ZIP)",
+      "processing": "Verarbeitung...",
+      "selectFile": "Datei wählen oder per Drag & Drop",
+      "maxFileSize": "Max. Dateigröße",
+      "compressionRate": "Komprimierungsrate",
+      "tags": "Tags",
+      "content": "Inhalt",
+      "noExif": "Keine EXIF-Daten gefunden",
+      "files": "Dateien"
     }
   },
   "es": {
@@ -452,7 +536,19 @@
       "flags": "Banderas",
       "format": "Formatear",
       "minify": "Minificar",
-      "beautify": "Embellecer"
+      "beautify": "Embellecer",
+      "uploadImage": "Subir imagen",
+      "clearQueue": "Vaciar cola",
+      "downloadAll": "Descargar todo",
+      "downloadAllZip": "Descargar todo (ZIP)",
+      "processing": "Procesando...",
+      "selectFile": "Seleccione un archivo o arrastre aquí",
+      "maxFileSize": "Tamaño máx. del archivo",
+      "compressionRate": "Tasa de compresión",
+      "tags": "Etiquetas",
+      "content": "Contenido",
+      "noExif": "No se encontraron datos EXIF",
+      "files": "archivos"
     }
   },
   "pt": {
@@ -509,7 +605,19 @@
       "flags": "Bandeiras",
       "format": "Formatar",
       "minify": "Minificar",
-      "beautify": "Embelezar"
+      "beautify": "Embelezar",
+      "uploadImage": "Enviar imagem",
+      "clearQueue": "Limpar fila",
+      "downloadAll": "Baixar tudo",
+      "downloadAllZip": "Baixar tudo (ZIP)",
+      "processing": "Processando...",
+      "selectFile": "Selecione um arquivo ou arraste aqui",
+      "maxFileSize": "Tam. máx. do arquivo",
+      "compressionRate": "Taxa de compressão",
+      "tags": "Tags",
+      "content": "Conteúdo",
+      "noExif": "Nenhum dado EXIF encontrado",
+      "files": "arquivos"
     }
   }
 }

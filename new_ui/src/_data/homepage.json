@@ -68,7 +68,13 @@
       "css-beautifier": "CSS Beautifier",
       "css-minifier": "CSS Minifier",
       "sql-formatter": "SQL Formatter",
-      "sql-minifier": "SQL Minifier"
+      "sql-minifier": "SQL Minifier",
+      "compress-png": "Compress PNG",
+      "compress-jpeg": "Compress JPEG",
+      "progressive-jpeg": "Progressive JPEG",
+      "image-to-base64": "Image to Base64",
+      "exif-viewer": "EXIF Viewer",
+      "exif-remover": "EXIF Remover"
     },
     "categoryDescs": {
       "image-utilities": "Compress, convert, and inspect image files right in your browser.",
@@ -149,7 +155,13 @@
       "css-beautifier": "CSS 美化",
       "css-minifier": "CSS 压缩",
       "sql-formatter": "SQL 格式化",
-      "sql-minifier": "SQL 压缩"
+      "sql-minifier": "SQL 压缩",
+      "compress-png": "压缩 PNG",
+      "compress-jpeg": "压缩 JPEG",
+      "progressive-jpeg": "渐进式 JPEG",
+      "image-to-base64": "图片转 Base64",
+      "exif-viewer": "EXIF 查看器",
+      "exif-remover": "EXIF 移除器"
     },
     "categoryDescs": {
       "image-utilities": "在浏览器中直接压缩、转换和检查图片文件。",
@@ -229,7 +241,13 @@
       "css-beautifier": "CSS 美化",
       "css-minifier": "CSS 壓縮",
       "sql-formatter": "SQL 格式化",
-      "sql-minifier": "SQL 壓縮"
+      "sql-minifier": "SQL 壓縮",
+      "compress-png": "壓縮 PNG",
+      "compress-jpeg": "壓縮 JPEG",
+      "progressive-jpeg": "漸進式 JPEG",
+      "image-to-base64": "圖片轉 Base64",
+      "exif-viewer": "EXIF 檢視器",
+      "exif-remover": "EXIF 移除器"
     },
     "categoryDescs": {
       "image-utilities": "在瀏覽器中直接壓縮、轉換和檢查圖片檔案。",
@@ -309,7 +327,13 @@
       "css-beautifier": "CSS 整形",
       "css-minifier": "CSS ミニファイア",
       "sql-formatter": "SQL フォーマッター",
-      "sql-minifier": "SQL ミニファイア"
+      "sql-minifier": "SQL ミニファイア",
+      "compress-png": "PNG 圧縮",
+      "compress-jpeg": "JPEG 圧縮",
+      "progressive-jpeg": "プログレッシブ JPEG",
+      "image-to-base64": "画像→Base64",
+      "exif-viewer": "EXIF ビューア",
+      "exif-remover": "EXIF 除去"
     },
     "categoryDescs": {
       "image-utilities": "ブラウザで画像ファイルを圧縮、変換、検査。",
@@ -389,7 +413,13 @@
       "css-beautifier": "CSS 포맷터",
       "css-minifier": "CSS 미니파이어",
       "sql-formatter": "SQL 포맷터",
-      "sql-minifier": "SQL 미니파이어"
+      "sql-minifier": "SQL 미니파이어",
+      "compress-png": "PNG 압축",
+      "compress-jpeg": "JPEG 압축",
+      "progressive-jpeg": "프로그레시브 JPEG",
+      "image-to-base64": "이미지→Base64",
+      "exif-viewer": "EXIF 뷰어",
+      "exif-remover": "EXIF 제거"
     },
     "categoryDescs": {
       "image-utilities": "브라우저에서 이미지 파일을 압축, 변환, 검사하세요.",
@@ -469,7 +499,13 @@
       "css-beautifier": "Formateur CSS",
       "css-minifier": "Minifieur CSS",
       "sql-formatter": "Formateur SQL",
-      "sql-minifier": "Minifieur SQL"
+      "sql-minifier": "Minifieur SQL",
+      "compress-png": "Compresser PNG",
+      "compress-jpeg": "Compresser JPEG",
+      "progressive-jpeg": "JPEG Progressif",
+      "image-to-base64": "Image en Base64",
+      "exif-viewer": "Visionneuse EXIF",
+      "exif-remover": "Supprimer EXIF"
     },
     "categoryDescs": {
       "image-utilities": "Compressez, convertissez et inspectez des images directement dans votre navigateur.",
@@ -549,7 +585,13 @@
       "css-beautifier": "CSS-Formatierer",
       "css-minifier": "CSS-Minifizierer",
       "sql-formatter": "SQL-Formatierer",
-      "sql-minifier": "SQL-Minifizierer"
+      "sql-minifier": "SQL-Minifizierer",
+      "compress-png": "PNG komprimieren",
+      "compress-jpeg": "JPEG komprimieren",
+      "progressive-jpeg": "Progressives JPEG",
+      "image-to-base64": "Bild zu Base64",
+      "exif-viewer": "EXIF-Betrachter",
+      "exif-remover": "EXIF entfernen"
     },
     "categoryDescs": {
       "image-utilities": "Komprimieren, konvertieren und inspizieren Sie Bilddateien direkt im Browser.",
@@ -629,7 +671,13 @@
       "css-beautifier": "Formateador CSS",
       "css-minifier": "Minificador CSS",
       "sql-formatter": "Formateador SQL",
-      "sql-minifier": "Minificador SQL"
+      "sql-minifier": "Minificador SQL",
+      "compress-png": "Comprimir PNG",
+      "compress-jpeg": "Comprimir JPEG",
+      "progressive-jpeg": "JPEG Progresivo",
+      "image-to-base64": "Imagen a Base64",
+      "exif-viewer": "Visor EXIF",
+      "exif-remover": "Eliminar EXIF"
     },
     "categoryDescs": {
       "image-utilities": "Comprima, convierta e inspeccione imágenes directamente en su navegador.",
@@ -709,7 +757,13 @@
       "css-beautifier": "Formatador CSS",
       "css-minifier": "Minificador CSS",
       "sql-formatter": "Formatador SQL",
-      "sql-minifier": "Minificador SQL"
+      "sql-minifier": "Minificador SQL",
+      "compress-png": "Comprimir PNG",
+      "compress-jpeg": "Comprimir JPEG",
+      "progressive-jpeg": "JPEG Progressivo",
+      "image-to-base64": "Imagem para Base64",
+      "exif-viewer": "Visualizador EXIF",
+      "exif-remover": "Remover EXIF"
     },
     "categoryDescs": {
       "image-utilities": "Comprima, converta e inspecione imagens diretamente no seu navegador.",
