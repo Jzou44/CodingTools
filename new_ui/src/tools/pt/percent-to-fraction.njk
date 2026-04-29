@@ -1,0 +1,250 @@
+---
+lang: "pt"
+toolId: "percent-to-fraction"
+category: "number-conversion"
+activeTool: "percent-to-fraction"
+permalink: "/pt/percent-to-fraction.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <style>
+    .pct-frac-converter { display: flex; flex-direction: column; gap: 0; }
+    .pct-frac-input-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+    .pct-frac-input-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--secondary)); }
+    .pct-frac-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; }
+    .pct-frac-input-wrap { display: flex; align-items: baseline; gap: 4px; }
+    .pct-frac-input-field { flex: 1; font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 500; color: var(--text-primary); background: transparent; border: none; outline: none; padding: 8px 0; letter-spacing: 0.02em; caret-color: var(--accent); }
+    .pct-frac-input-field::placeholder { color: var(--text-muted); font-size: 20px; font-weight: 400; }
+    .pct-frac-suffix { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700; color: var(--accent); opacity: 0.6; }
+    .pct-frac-input-hint { font-size: 13px; color: var(--text-muted); margin-top: 8px; font-family: 'DM Sans', sans-serif; }
+    .pct-frac-input-hint code { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--code-bg); padding: 2px 6px; border-radius: 4px; color: var(--text-secondary); }
+    .pct-frac-arrow { display: flex; align-items: center; justify-content: center; height: 48px; position: relative; }
+    .pct-frac-arrow::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
+    .pct-frac-arrow-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--secondary); color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(45, 106, 79, 0.3); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+    .pct-frac-arrow-icon:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4); }
+    .pct-frac-output-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; min-height: 140px; display: flex; flex-direction: column; transition: border-color 0.3s; }
+    .pct-frac-output-card.has-result { border-color: var(--secondary); }
+    .pct-frac-output-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+    .pct-frac-output-value { font-family: 'Fraunces', serif; font-size: 42px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.02em; line-height: 1.2; min-height: 50px; transition: color 0.3s; display: flex; align-items: baseline; gap: 8px; }
+    .pct-frac-output-value.empty { color: var(--text-muted); font-size: 18px; font-weight: 400; font-style: italic; letter-spacing: 0; font-family: 'DM Sans', sans-serif; }
+    .pct-frac-output-value.error { color: var(--error); font-size: 15px; font-weight: 500; font-style: normal; letter-spacing: 0; font-family: 'DM Sans', sans-serif; }
+    .pct-frac-frac-display { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; vertical-align: middle; }
+    .pct-frac-frac-display .numerator { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 600; color: var(--secondary); border-bottom: 2px solid var(--text-primary); padding-bottom: 2px; min-width: 24px; text-align: center; }
+    .pct-frac-frac-display .denominator { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 600; color: var(--secondary); padding-top: 2px; min-width: 24px; text-align: center; }
+    .pct-frac-integer { color: var(--secondary); }
+    .pct-frac-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; gap: 8px; }
+    .pct-frac-toolbar-left, .pct-frac-toolbar-right { display: flex; align-items: center; gap: 8px; }
+    .pct-frac-ref { margin-top: 24px; background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+    .pct-frac-ref-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; }
+    .pct-frac-ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+    .pct-frac-ref-item { display: flex; align-items: center; gap: 6px; font-size: 13px; padding: 4px 0; }
+    .pct-frac-ref-item .pct { font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: var(--text-secondary); min-width: 40px; }
+    .pct-frac-ref-item .arrow { color: var(--text-muted); font-size: 11px; }
+    .pct-frac-ref-item .frac { font-family: 'Fraunces', serif; font-weight: 600; color: var(--secondary); }
+    @media (max-width: 600px) { .pct-frac-input-field { font-size: 24px; } .pct-frac-suffix { font-size: 24px; } .pct-frac-output-value { font-size: 32px; } .pct-frac-input-card, .pct-frac-output-card { padding: 20px; } }
+  </style>
+
+  <div class="pct-frac-converter">
+    <div class="pct-frac-input-card">
+      <div class="pct-frac-label">{{ t.ui.percent }}</div>
+      <div class="pct-frac-input-wrap">
+        <input type="text" class="pct-frac-input-field" id="percent-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
+        <span class="pct-frac-suffix">%</span>
+      </div>
+      <div class="pct-frac-input-hint">{{ toolData.inputHint | safe }}</div>
+    </div>
+
+    <div class="pct-frac-arrow">
+      <div class="pct-frac-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div>
+    </div>
+
+    <div class="pct-frac-output-card" id="output-card">
+      <div class="pct-frac-output-label">
+        <span>Fraction</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+      </div>
+      <div class="pct-frac-output-value empty" id="fraction-output">{{ toolData.resultPlaceholder }}</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="pct-frac-toolbar">
+      <div class="pct-frac-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+      </div>
+      <div class="pct-frac-toolbar-right">
+        <div class="status-message idle" id="status-message">
+          <span class="status-dot" id="status-dot" style="display:none;"></span>
+          <span id="status-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pct-frac-ref">
+      <div class="pct-frac-ref-title">Quick Reference</div>
+      <div class="pct-frac-ref-grid">
+        <div class="pct-frac-ref-item"><span class="pct">10%</span><span class="arrow">&rarr;</span><span class="frac">1/10</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">20%</span><span class="arrow">&rarr;</span><span class="frac">1/5</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">25%</span><span class="arrow">&rarr;</span><span class="frac">1/4</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">33%</span><span class="arrow">&rarr;</span><span class="frac">1/3</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">50%</span><span class="arrow">&rarr;</span><span class="frac">1/2</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">75%</span><span class="arrow">&rarr;</span><span class="frac">3/4</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">125%</span><span class="arrow">&rarr;</span><span class="frac">1 1/4</span></div>
+        <div class="pct-frac-ref-item"><span class="pct">200%</span><span class="arrow">&rarr;</span><span class="frac">2</span></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+      var percentInput   = document.getElementById('percent-input');
+      var fractionOutput = document.getElementById('fraction-output');
+      var outputCard     = document.getElementById('output-card');
+      var btnConvert     = document.getElementById('btn-convert');
+      var btnClear       = document.getElementById('btn-clear');
+      var btnCopy        = document.getElementById('btn-copy');
+      var statusMessage  = document.getElementById('status-message');
+      var statusDot      = document.getElementById('status-dot');
+      var statusText     = document.getElementById('status-text');
+
+      var lastFraction = '';
+
+      function gcd(a, b) {
+        a = Math.abs(a); b = Math.abs(b);
+        while (b) { var t = b; b = a % b; a = t; }
+        return a;
+      }
+
+      function showResult(html, type) {
+        if (type === 'empty' || type === 'error') {
+          fractionOutput.textContent = html;
+          fractionOutput.className = 'pct-frac-output-value';
+          if (type === 'empty') fractionOutput.className += ' empty';
+          else fractionOutput.className += ' error';
+        } else {
+          fractionOutput.innerHTML = html;
+          fractionOutput.className = 'pct-frac-output-value';
+        }
+        if (type === 'valid') outputCard.classList.add('has-result');
+        else outputCard.classList.remove('has-result');
+      }
+
+      function convert() {
+        var input = percentInput.value.trim();
+        if (!input) return;
+        try {
+          var num = parseFloat(input);
+          if (isNaN(num)) throw new Error('Invalid number');
+          var isNegative = num < 0;
+          num = Math.abs(num);
+          var decStr = input.replace(/^-/, '');
+          var parts = decStr.split('.');
+          var decPlaces = parts[1] ? parts[1].length : 0;
+          var denominator = Math.pow(10, decPlaces) * 100;
+          var numerator = Math.round(num * denominator / 100);
+          var integerPart = Math.floor(numerator / denominator);
+          var remainder = numerator - integerPart * denominator;
+          var g = gcd(remainder, denominator);
+          remainder = remainder / g;
+          denominator = denominator / g;
+          if (isNegative && integerPart > 0) integerPart = -integerPart;
+          else if (isNegative && integerPart === 0) remainder = -remainder;
+          var html = '';
+          var textForCopy = '';
+          if (remainder === 0) {
+            html = '<span class="pct-frac-integer">' + integerPart + '</span>';
+            textForCopy = '' + integerPart;
+          } else if (integerPart === 0) {
+            html = '<span class="pct-frac-frac-display"><span class="numerator">' + remainder + '</span><span class="denominator">' + denominator + '</span></span>';
+            textForCopy = remainder + '/' + denominator;
+          } else {
+            html = '<span class="pct-frac-integer">' + integerPart + '</span> <span class="pct-frac-frac-display"><span class="numerator">' + remainder + '</span><span class="denominator">' + denominator + '</span></span>';
+            textForCopy = integerPart + ' ' + remainder + '/' + denominator;
+          }
+          lastFraction = textForCopy;
+          showResult(html, 'valid');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        } catch (e) {
+          showResult('Invalid percent input', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid percent input');
+        }
+      }
+
+      btnConvert.onclick = convert;
+
+      btnClear.addEventListener('click', function () {
+        percentInput.value = '';
+        lastFraction = '';
+        showResult('{{ toolData.resultPlaceholder }}', 'empty');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnCopy.addEventListener('click', function () {
+        if (lastFraction) {
+          navigator.clipboard.writeText(lastFraction).then(function () {
+            var orig = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.classList.add('copied');
+            setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
+          });
+        }
+      });
+
+      percentInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') btnConvert.click();
+      });
+
+      percentInput.addEventListener('input', function () {
+        var input = percentInput.value.trim();
+        if (!input) {
+          lastFraction = '';
+          showResult('{{ toolData.resultPlaceholder }}', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+        convert();
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

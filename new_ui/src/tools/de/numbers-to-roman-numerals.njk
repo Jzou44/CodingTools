@@ -1,0 +1,418 @@
+---
+lang: "de"
+toolId: "numbers-to-roman-numerals"
+category: "number-conversion"
+activeTool: "numbers-to-roman-numerals"
+permalink: "/de/numbers-to-roman-numerals.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <style>
+    .roman-converter {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .roman-input-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .roman-input-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--secondary));
+    }
+    .roman-input-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .roman-input-field {
+      width: 100%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--text-primary);
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 8px 0;
+      letter-spacing: 0.02em;
+      caret-color: var(--accent);
+    }
+    .roman-input-field::placeholder {
+      color: var(--text-muted);
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .roman-input-hint {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .roman-input-hint code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    .roman-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      position: relative;
+    }
+    .roman-arrow::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .roman-arrow-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 8px rgba(196, 93, 58, 0.3);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .roman-arrow-icon:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4);
+    }
+
+    .roman-output-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s;
+    }
+    .roman-output-card.has-result {
+      border-color: var(--accent);
+    }
+    .roman-output-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .roman-output-value {
+      font-family: 'Fraunces', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      min-height: 50px;
+      word-break: break-all;
+      transition: color 0.3s;
+    }
+    .roman-output-value.empty {
+      color: var(--text-muted);
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0;
+    }
+    .roman-output-value.error {
+      color: var(--error);
+      font-size: 15px;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .roman-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      gap: 8px;
+    }
+    .roman-toolbar-left,
+    .roman-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .roman-ref {
+      margin-top: 24px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .roman-ref-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .roman-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 6px;
+    }
+    .roman-ref-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      padding: 4px 0;
+    }
+    .roman-ref-item .num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      color: var(--text-secondary);
+      min-width: 28px;
+    }
+    .roman-ref-item .arrow {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+    .roman-ref-item .sym {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .roman-input-field { font-size: 24px; }
+      .roman-output-value { font-size: 32px; }
+      .roman-input-card, .roman-output-card { padding: 20px; }
+    }
+  </style>
+
+  <div class="roman-converter">
+    <!-- Input Card -->
+    <div class="roman-input-card">
+      <div class="roman-input-label">Number</div>
+      <input type="text" class="roman-input-field" id="number-input" placeholder="Enter a number..." spellcheck="false" autocomplete="off" autofocus>
+      <div class="roman-input-hint">Range: <code>1</code> &ndash; <code>3999</code></div>
+    </div>
+
+    <!-- Arrow -->
+    <div class="roman-arrow">
+      <div class="roman-arrow-icon" id="btn-convert" title="Convert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </div>
+    </div>
+
+    <!-- Output Card -->
+    <div class="roman-output-card" id="output-card">
+      <div class="roman-output-label">
+        <span>Roman Numeral</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+      </div>
+      <div class="roman-output-value empty" id="roman-output">Result will appear here</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="roman-toolbar">
+      <div class="roman-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+      </div>
+      <div class="roman-toolbar-right">
+        <div class="status-message idle" id="status-message">
+          <span class="status-dot" id="status-dot" style="display:none;"></span>
+          <span id="status-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="roman-ref">
+      <div class="roman-ref-title">Quick Reference</div>
+      <div class="roman-ref-grid">
+        <div class="roman-ref-item"><span class="num">1</span><span class="arrow">&rarr;</span><span class="sym">I</span></div>
+        <div class="roman-ref-item"><span class="num">5</span><span class="arrow">&rarr;</span><span class="sym">V</span></div>
+        <div class="roman-ref-item"><span class="num">10</span><span class="arrow">&rarr;</span><span class="sym">X</span></div>
+        <div class="roman-ref-item"><span class="num">50</span><span class="arrow">&rarr;</span><span class="sym">L</span></div>
+        <div class="roman-ref-item"><span class="num">100</span><span class="arrow">&rarr;</span><span class="sym">C</span></div>
+        <div class="roman-ref-item"><span class="num">500</span><span class="arrow">&rarr;</span><span class="sym">D</span></div>
+        <div class="roman-ref-item"><span class="num">1000</span><span class="arrow">&rarr;</span><span class="sym">M</span></div>
+        <div class="roman-ref-item"><span class="num">4</span><span class="arrow">&rarr;</span><span class="sym">IV</span></div>
+        <div class="roman-ref-item"><span class="num">9</span><span class="arrow">&rarr;</span><span class="sym">IX</span></div>
+        <div class="roman-ref-item"><span class="num">40</span><span class="arrow">&rarr;</span><span class="sym">XL</span></div>
+        <div class="roman-ref-item"><span class="num">90</span><span class="arrow">&rarr;</span><span class="sym">XC</span></div>
+        <div class="roman-ref-item"><span class="num">400</span><span class="arrow">&rarr;</span><span class="sym">CD</span></div>
+        <div class="roman-ref-item"><span class="num">900</span><span class="arrow">&rarr;</span><span class="sym">CM</span></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var numberInput = document.getElementById('number-input');
+      var romanOutput = document.getElementById('roman-output');
+      var outputCard  = document.getElementById('output-card');
+      var btnConvert  = document.getElementById('btn-convert');
+      var btnClear    = document.getElementById('btn-clear');
+      var btnCopy     = document.getElementById('btn-copy');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+
+      function intToRoman(num) {
+        if (num < 1 || num > 3999) return null;
+        var values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        var symbols = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+        var result = '';
+        for (var i = 0; i < values.length; i++) {
+          while (num >= values[i]) {
+            result += symbols[i];
+            num -= values[i];
+          }
+        }
+        return result;
+      }
+
+      function showResult(text, type) {
+        romanOutput.textContent = text;
+        romanOutput.className = 'roman-output-value';
+        if (type === 'empty') romanOutput.className += ' empty';
+        else if (type === 'error') romanOutput.className += ' error';
+        if (type === 'valid') outputCard.classList.add('has-result');
+        else outputCard.classList.remove('has-result');
+      }
+
+      btnConvert.onclick = function () {
+        var input = numberInput.value.trim();
+        if (!input) return;
+        var num = parseInt(input, 10);
+        if (isNaN(num) || num < 1 || num > 3999) {
+          showResult('Enter a number between 1 and 3999', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Out of range');
+          return;
+        }
+        showResult(intToRoman(num), 'valid');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+      };
+
+      btnClear.addEventListener('click', function () {
+        numberInput.value = '';
+        showResult('Result will appear here', 'empty');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnCopy.addEventListener('click', function () {
+        var text = romanOutput.textContent;
+        if (text && !romanOutput.classList.contains('empty') && !romanOutput.classList.contains('error')) {
+          navigator.clipboard.writeText(text).then(function () {
+            var orig = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.classList.add('copied');
+            setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
+          });
+        }
+      });
+
+      numberInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') btnConvert.click();
+      });
+
+      // Live conversion on input
+      numberInput.addEventListener('input', function () {
+        var input = numberInput.value.trim();
+        if (!input) {
+          showResult('Result will appear here', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+        var num = parseInt(input, 10);
+        if (isNaN(num) || num < 1 || num > 3999) {
+          showResult('Enter a number between 1 and 3999', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Out of range');
+          return;
+        }
+        showResult(intToRoman(num), 'valid');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

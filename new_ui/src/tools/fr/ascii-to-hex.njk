@@ -1,0 +1,308 @@
+---
+lang: "fr"
+toolId: "ascii-to-hex"
+category: "number-conversion"
+activeTool: "ascii-to-hex"
+permalink: "/fr/ascii-to-hex.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script>
+{% endblock %}
+
+{% block tool_content %}
+  <style>
+    .dual-pane { display: flex; flex-direction: column; gap: 0; }
+
+    .pane-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .pane-card--input { border-left: 4px solid var(--accent); }
+    .pane-card--output { border-left: 4px solid var(--secondary); }
+
+    .pane-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pane-label-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .pane-label-dot--accent { background: var(--accent); }
+    .pane-label-dot--secondary { background: var(--secondary); }
+
+    .pane-card .CodeMirror {
+      height: 200px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 4px 0;
+    }
+    .pane-card .CodeMirror-scroll { padding: 8px 12px; }
+    .pane-card .CodeMirror-gutters {
+      background: var(--code-bg);
+      border-right: 1px solid var(--border);
+    }
+
+    .pane-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pane-toolbar-left,
+    .pane-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .delimiter-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .delimiter-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .delimiter-select {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      padding: 6px 28px 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--text-primary);
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23a09585' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .delimiter-select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
+    }
+
+    .status-bar-dual {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 4px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .status-meta-dual {
+      display: flex;
+      gap: 16px;
+    }
+    .status-meta-dual span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .pane-card { padding: 16px; }
+      .pane-card .CodeMirror { height: 160px; font-size: 13px; }
+      .pane-toolbar { gap: 6px; }
+    }
+  </style>
+
+  <div class="dual-pane">
+    <!-- Input Card -->
+    <div class="pane-card pane-card--input">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>ASCII Input</span>
+      </div>
+      <textarea id="code1" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="pane-toolbar">
+      <div class="pane-toolbar-left">
+        <button class="btn btn-primary" id="btn-convert" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          {{ t.ui.convert }}
+        </button>
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+        <div class="delimiter-group">
+          <label for="delimiter-select">{{ t.ui.delimiter }}:</label>
+          <select id="delimiter-select" class="delimiter-select">
+            <option value="space">{{ t.ui.space }}</option>
+            <option value="none">{{ t.ui["none"] }}</option>
+            <option value="comma">Comma</option>
+            <option value="colon">Colon</option>
+          </select>
+        </div>
+      </div>
+      <div class="pane-toolbar-right">
+        <button class="btn btn-ghost" id="btn-copy" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+        <button class="btn btn-ghost" id="btn-download" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          {{ t.ui.download }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Output Card -->
+    <div class="pane-card pane-card--output">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Hex Output</span>
+      </div>
+      <textarea id="code2" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar-dual">
+      <div class="status-message idle" id="status-message">
+        <span class="status-dot" id="status-dot" style="display:none;"></span>
+        <span id="status-text"></span>
+      </div>
+      <div class="status-meta-dual">
+        <span id="char-count">0 characters</span>
+        <span id="byte-count">0 bytes</span>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var editor1 = CodeMirror.fromTextArea(document.getElementById('code1'), { lineNumbers: true, lineWrapping: true });
+      var editor2 = CodeMirror.fromTextArea(document.getElementById('code2'), { lineNumbers: true, lineWrapping: true, readOnly: true });
+
+      var btnConvert      = document.getElementById('btn-convert');
+      var btnClear        = document.getElementById('btn-clear');
+      var btnCopy         = document.getElementById('btn-copy');
+      var btnDownload     = document.getElementById('btn-download');
+      var delimiterSelect = document.getElementById('delimiter-select');
+      var statusMessage   = document.getElementById('status-message');
+      var statusDot       = document.getElementById('status-dot');
+      var statusText      = document.getElementById('status-text');
+      var charCount       = document.getElementById('char-count');
+      var byteCount       = document.getElementById('byte-count');
+
+      var DELIMITERS = { space: ' ', comma: ',', colon: ':', none: '' };
+
+      function updateCounts() {
+        var text = editor2.getValue();
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        byteCount.textContent = ToolCommon.pluralise(editor1.getValue().length, 'byte');
+      }
+
+      btnConvert.onclick = function () {
+        var input = editor1.getValue();
+        if (!input) return;
+        try {
+          var delimiter = DELIMITERS[delimiterSelect.value] !== undefined ? DELIMITERS[delimiterSelect.value] : ' ';
+          var hexValues = [];
+          for (var i = 0; i < input.length; i++) {
+            var hex = input.charCodeAt(i).toString(16).toUpperCase();
+            if (hex.length === 1) hex = '0' + hex;
+            hexValues.push(hex);
+          }
+          editor2.setValue(hexValues.join(delimiter));
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length, 'byte'));
+          updateCounts();
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Conversion failed: ' + e.message);
+        }
+      };
+
+      btnClear.addEventListener('click', function () {
+        editor1.setValue('');
+        editor2.setValue('');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        charCount.textContent = '0 characters';
+        byteCount.textContent = '0 bytes';
+      });
+
+      btnCopy.addEventListener('click', function () {
+        var text = editor2.getValue();
+        if (text) {
+          navigator.clipboard.writeText(text).then(function () {
+            btnCopy.textContent = 'Copied!';
+            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy'; }, 1500);
+          });
+        }
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput({ value: editor2.getValue() }, 'ascii-to-hex-output.txt');
+      });
+
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnConvert);
+    })();
+  </script>
+{% endblock %}

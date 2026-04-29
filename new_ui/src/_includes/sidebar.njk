@@ -5,7 +5,7 @@
     <h2 class="sidebar-card-title">{% if lang and lang != 'en' %}{{ t.ui.relatedTools | default("Related Tools") }}{% else %}Related Tools{% endif %}</h2>
     <ul class="related-tools-list">
       {% for slug, tool in tools %}
-        {% if tool.category == 'hash-cryptography' %}
+        {% if tool.category == category %}
           <li>
             {% set linkPrefix = "" %}
             {% if lang and lang != 'en' %}

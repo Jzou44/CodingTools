@@ -1,0 +1,263 @@
+---
+lang: "kr"
+toolId: "hex-to-rgba"
+category: "number-conversion"
+activeTool: "hex-to-rgba"
+permalink: "/kr/hex-to-rgba.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <style>
+    .hex-rgba-converter { display: flex; flex-direction: column; gap: 0; }
+    .hex-rgba-input-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+    .hex-rgba-input-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6); }
+    .hex-rgba-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; }
+    .hex-rgba-input-field { width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 500; color: var(--text-primary); background: transparent; border: none; outline: none; padding: 8px 0; letter-spacing: 0.04em; caret-color: var(--accent); }
+    .hex-rgba-input-field::placeholder { color: var(--text-muted); font-size: 18px; font-weight: 400; }
+    .hex-rgba-opacity-row { display: flex; align-items: center; gap: 16px; margin-top: 16px; }
+    .hex-rgba-opacity-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); white-space: nowrap; }
+    .hex-rgba-opacity-slider { flex: 1; accent-color: var(--accent); cursor: pointer; height: 6px; }
+    .hex-rgba-opacity-value { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: var(--accent); min-width: 44px; text-align: right; }
+    .hex-rgba-input-hint { font-size: 13px; color: var(--text-muted); margin-top: 8px; font-family: 'DM Sans', sans-serif; }
+    .hex-rgba-input-hint code { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--code-bg); padding: 2px 6px; border-radius: 4px; color: var(--text-secondary); }
+    .hex-rgba-actions { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+    .hex-rgba-arrow { display: flex; align-items: center; justify-content: center; height: 48px; position: relative; }
+    .hex-rgba-arrow::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
+    .hex-rgba-arrow-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(196, 93, 58, 0.3); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+    .hex-rgba-arrow-icon:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4); }
+    .hex-rgba-output-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; display: flex; flex-direction: column; transition: border-color 0.3s; }
+    .hex-rgba-output-card.has-result { border-color: var(--accent); }
+    .hex-rgba-output-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+    .hex-rgba-output-value { font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; color: var(--text-primary); letter-spacing: 0.02em; line-height: 1.2; min-height: 32px; word-break: break-all; transition: color 0.3s; }
+    .hex-rgba-output-value.empty { color: var(--text-muted); font-size: 18px; font-weight: 400; font-style: italic; letter-spacing: 0; }
+    .hex-rgba-output-value.error { color: var(--error); font-size: 15px; font-weight: 500; font-style: normal; letter-spacing: 0; font-family: 'DM Sans', sans-serif; }
+    .hex-rgba-swatch { margin-top: 16px; border-radius: 12px; height: 96px; background: repeating-conic-gradient(#e8e0d4 0% 25%, #faf8f0 0% 50%) 50% / 20px 20px; position: relative; overflow: hidden; border: 1px solid var(--border); }
+    .hex-rgba-swatch-fill { position: absolute; inset: 0; border-radius: 11px; transition: background-color 0.2s; }
+    .hex-rgba-swatch-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-muted); z-index: 1; pointer-events: none; }
+    .hex-rgba-channels { display: flex; gap: 8px; margin-top: 16px; }
+    .hex-rgba-channel { flex: 1; background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 8px; text-align: center; }
+    .hex-rgba-channel-label { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 4px; }
+    .hex-rgba-channel-value { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 600; color: var(--text-primary); }
+    .hex-rgba-channel-value.r { color: #c0392b; }
+    .hex-rgba-channel-value.g { color: #27ae60; }
+    .hex-rgba-channel-value.b { color: #2980b9; }
+    .hex-rgba-channel-value.a { color: var(--accent); }
+    .hex-rgba-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; gap: 8px; }
+    .hex-rgba-toolbar-left, .hex-rgba-toolbar-right { display: flex; align-items: center; gap: 8px; }
+    @media (max-width: 600px) { .hex-rgba-input-field { font-size: 24px; } .hex-rgba-output-value { font-size: 20px; } .hex-rgba-input-card, .hex-rgba-output-card { padding: 20px; } .hex-rgba-swatch { height: 72px; } }
+  </style>
+
+  <div class="hex-rgba-converter">
+    <div class="hex-rgba-input-card">
+      <div class="hex-rgba-label">{{ t.ui.hexColor }}</div>
+      <input type="text" class="hex-rgba-input-field" id="hex-input" placeholder="#FF5733" spellcheck="false" autocomplete="off" autofocus>
+      <div class="hex-rgba-opacity-row">
+        <span class="hex-rgba-opacity-label">{{ t.ui.opacity }}</span>
+        <input type="range" class="hex-rgba-opacity-slider" id="opacity-slider" min="0" max="100" value="100">
+        <span class="hex-rgba-opacity-value" id="opacity-display">100%</span>
+      </div>
+      <div class="hex-rgba-input-hint">{{ toolData.inputHint | safe }}</div>
+      <div class="hex-rgba-actions">
+        <button class="btn btn-secondary" id="btn-random" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+          {{ t.ui.pickRandomColor }}
+        </button>
+      </div>
+    </div>
+
+    <div class="hex-rgba-arrow">
+      <div class="hex-rgba-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div>
+    </div>
+
+    <div class="hex-rgba-output-card" id="output-card">
+      <div class="hex-rgba-output-label">
+        <span>RGBA Value</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+      </div>
+      <div class="hex-rgba-output-value empty" id="rgba-output">{{ toolData.resultPlaceholder }}</div>
+      <div class="hex-rgba-channels" id="rgba-channels" style="display:none;">
+        <div class="hex-rgba-channel"><div class="hex-rgba-channel-label">R</div><div class="hex-rgba-channel-value r" id="channel-r">0</div></div>
+        <div class="hex-rgba-channel"><div class="hex-rgba-channel-label">G</div><div class="hex-rgba-channel-value g" id="channel-g">0</div></div>
+        <div class="hex-rgba-channel"><div class="hex-rgba-channel-label">B</div><div class="hex-rgba-channel-value b" id="channel-b">0</div></div>
+        <div class="hex-rgba-channel"><div class="hex-rgba-channel-label">A</div><div class="hex-rgba-channel-value a" id="channel-a">1</div></div>
+      </div>
+      <div class="hex-rgba-swatch" id="swatch-container">
+        <div class="hex-rgba-swatch-fill" id="color-preview"></div>
+        <div class="hex-rgba-swatch-empty" id="swatch-placeholder">Preview</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="hex-rgba-toolbar">
+      <div class="hex-rgba-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+      </div>
+      <div class="hex-rgba-toolbar-right">
+        <div class="status-message idle" id="status-message">
+          <span class="status-dot" id="status-dot" style="display:none;"></span>
+          <span id="status-text"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+      var hexInput = document.getElementById('hex-input');
+      var opacitySlider = document.getElementById('opacity-slider');
+      var opacityDisplay = document.getElementById('opacity-display');
+      var rgbaOutput = document.getElementById('rgba-output');
+      var outputCard = document.getElementById('output-card');
+      var colorPreview = document.getElementById('color-preview');
+      var swatchPlaceholder = document.getElementById('swatch-placeholder');
+      var rgbaChannels = document.getElementById('rgba-channels');
+      var channelR = document.getElementById('channel-r');
+      var channelG = document.getElementById('channel-g');
+      var channelB = document.getElementById('channel-b');
+      var channelA = document.getElementById('channel-a');
+      var btnConvert = document.getElementById('btn-convert');
+      var btnRandom = document.getElementById('btn-random');
+      var btnClear = document.getElementById('btn-clear');
+      var btnCopy = document.getElementById('btn-copy');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot = document.getElementById('status-dot');
+      var statusText = document.getElementById('status-text');
+
+      function showResult(text, type, r, g, b, a) {
+        rgbaOutput.textContent = text;
+        rgbaOutput.className = 'hex-rgba-output-value';
+        if (type === 'empty') rgbaOutput.className += ' empty';
+        else if (type === 'error') rgbaOutput.className += ' error';
+        if (type === 'valid') {
+          outputCard.classList.add('has-result');
+          colorPreview.style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+          swatchPlaceholder.style.display = 'none';
+          channelR.textContent = r;
+          channelG.textContent = g;
+          channelB.textContent = b;
+          channelA.textContent = a;
+          rgbaChannels.style.display = 'flex';
+        } else {
+          outputCard.classList.remove('has-result');
+          colorPreview.style.backgroundColor = 'transparent';
+          swatchPlaceholder.style.display = '';
+          rgbaChannels.style.display = 'none';
+        }
+      }
+
+      function convert() {
+        var input = hexInput.value.trim().replace(/^#/, '').replace(/\s/g, '');
+        if (input.length === 3) input = input[0]+input[0]+input[1]+input[1]+input[2]+input[2];
+        if (input.length !== 6 || !/^[0-9A-Fa-f]{6}$/.test(input)) {
+          showResult('Invalid hex color', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid hex color');
+          return;
+        }
+        var r = parseInt(input.substring(0, 2), 16);
+        var g = parseInt(input.substring(2, 4), 16);
+        var b = parseInt(input.substring(4, 6), 16);
+        var opacity = parseInt(opacitySlider.value, 10);
+        var alpha = opacity / 100;
+        showResult('rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')', 'valid', r, g, b, alpha);
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+      }
+
+      btnConvert.onclick = convert;
+      btnRandom.onclick = function () {
+        var hex = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0').toUpperCase();
+        hexInput.value = '#' + hex;
+        opacitySlider.value = Math.floor(Math.random() * 101);
+        opacityDisplay.textContent = opacitySlider.value + '%';
+        convert();
+      };
+
+      btnClear.addEventListener('click', function () {
+        hexInput.value = '';
+        opacitySlider.value = 100;
+        opacityDisplay.textContent = '100%';
+        showResult('{{ toolData.resultPlaceholder }}', 'empty');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnCopy.addEventListener('click', function () {
+        var text = rgbaOutput.textContent;
+        if (text && !rgbaOutput.classList.contains('empty') && !rgbaOutput.classList.contains('error')) {
+          navigator.clipboard.writeText(text).then(function () {
+            var orig = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.classList.add('copied');
+            setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
+          });
+        }
+      });
+
+      hexInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') btnConvert.click(); });
+
+      opacitySlider.addEventListener('input', function () {
+        opacityDisplay.textContent = opacitySlider.value + '%';
+        convert();
+      });
+
+      hexInput.addEventListener('input', function () {
+        var input = hexInput.value.trim().replace(/^#/, '').replace(/\s/g, '');
+        if (input.length === 3) input = input[0]+input[0]+input[1]+input[1]+input[2]+input[2];
+        if (!input) {
+          showResult('{{ toolData.resultPlaceholder }}', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+        if (input.length === 6 && /^[0-9A-Fa-f]{6}$/.test(input)) {
+          var r = parseInt(input.substring(0, 2), 16);
+          var g = parseInt(input.substring(2, 4), 16);
+          var b = parseInt(input.substring(4, 6), 16);
+          var opacity = parseInt(opacitySlider.value, 10);
+          var alpha = opacity / 100;
+          showResult('rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')', 'valid', r, g, b, alpha);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        }
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

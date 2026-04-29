@@ -1,0 +1,458 @@
+---
+lang: "tw"
+toolId: "decimal-to-binary"
+category: "number-conversion"
+activeTool: "decimal-to-binary"
+permalink: "/tw/decimal-to-binary.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <style>
+    .nc-converter { display: flex; flex-direction: column; gap: 0; }
+    .nc-input-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .nc-input-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--secondary);
+    }
+    .nc-input-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .nc-input-field {
+      width: 100%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--text-primary);
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 8px 0;
+      letter-spacing: 0.02em;
+      caret-color: var(--secondary);
+    }
+    .nc-input-field::placeholder {
+      color: var(--text-muted);
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .nc-input-hint {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .nc-input-hint code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    .nc-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      position: relative;
+    }
+    .nc-arrow::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .nc-arrow-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--secondary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 8px rgba(45, 106, 79, 0.3);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .nc-arrow-icon:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4);
+    }
+
+    .nc-output-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s;
+    }
+    .nc-output-card.has-result { border-color: var(--secondary); }
+    .nc-output-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nc-output-value {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 42px;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      min-height: 50px;
+      word-break: break-all;
+      transition: color 0.3s;
+    }
+    .nc-output-value.empty {
+      color: var(--text-muted);
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0;
+    }
+    .nc-output-value.error {
+      color: var(--error);
+      font-size: 15px;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .nc-secondary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .nc-secondary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s;
+    }
+    .nc-secondary-card.has-result { border-color: var(--secondary); }
+    .nc-secondary-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .nc-secondary-value {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-primary);
+      word-break: break-all;
+      min-height: 24px;
+      line-height: 1.3;
+    }
+    .nc-secondary-value.empty {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .nc-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      gap: 8px;
+    }
+    .nc-toolbar-left, .nc-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nc-ref {
+      margin-top: 24px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .nc-ref-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .nc-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 6px;
+    }
+    .nc-ref-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      padding: 4px 0;
+    }
+    .nc-ref-item .dec {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      color: var(--text-secondary);
+      min-width: 28px;
+    }
+    .nc-ref-item .arrow { color: var(--text-muted); font-size: 11px; }
+    .nc-ref-item .bin {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    @media (max-width: 600px) {
+      .nc-input-field { font-size: 24px; }
+      .nc-output-value { font-size: 32px; }
+      .nc-input-card, .nc-output-card { padding: 20px; }
+      .nc-secondary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="nc-converter">
+    <!-- Input Card -->
+    <div class="nc-input-card">
+      <div class="nc-input-label">{{ t.ui.decimalNumber }}</div>
+      <input type="text" class="nc-input-field" id="decimal-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
+      <div class="nc-input-hint">Valid: <code>0-9</code> (integers)</div>
+    </div>
+
+    <!-- Arrow -->
+    <div class="nc-arrow">
+      <div class="nc-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </div>
+    </div>
+
+    <!-- Primary Output Card -->
+    <div class="nc-output-card" id="output-card">
+      <div class="nc-output-label">
+        <span>{{ t.ui.binaryNumber }}</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+      </div>
+      <div class="nc-output-value empty" id="binary-output">Result will appear here</div>
+    </div>
+
+    <!-- Secondary Results -->
+    <div class="nc-secondary-grid">
+      <div class="nc-secondary-card" id="hex-card">
+        <div class="nc-secondary-label">{{ t.ui.hexNumber }}</div>
+        <div class="nc-secondary-value empty" id="hex-output">&mdash;</div>
+      </div>
+      <div class="nc-secondary-card" id="octal-card">
+        <div class="nc-secondary-label">{{ t.ui.octalNumber }}</div>
+        <div class="nc-secondary-value empty" id="octal-output">&mdash;</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="nc-toolbar">
+      <div class="nc-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+      </div>
+      <div class="nc-toolbar-right">
+        <div class="status-message idle" id="status-message">
+          <span class="status-dot" id="status-dot" style="display:none;"></span>
+          <span id="status-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="nc-ref">
+      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-grid">
+        <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="bin">0</span></div>
+        <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="bin">1</span></div>
+        <div class="nc-ref-item"><span class="dec">2</span><span class="arrow">&rarr;</span><span class="bin">10</span></div>
+        <div class="nc-ref-item"><span class="dec">4</span><span class="arrow">&rarr;</span><span class="bin">100</span></div>
+        <div class="nc-ref-item"><span class="dec">8</span><span class="arrow">&rarr;</span><span class="bin">1000</span></div>
+        <div class="nc-ref-item"><span class="dec">16</span><span class="arrow">&rarr;</span><span class="bin">10000</span></div>
+        <div class="nc-ref-item"><span class="dec">32</span><span class="arrow">&rarr;</span><span class="bin">100000</span></div>
+        <div class="nc-ref-item"><span class="dec">64</span><span class="arrow">&rarr;</span><span class="bin">1000000</span></div>
+        <div class="nc-ref-item"><span class="dec">128</span><span class="arrow">&rarr;</span><span class="bin">10000000</span></div>
+        <div class="nc-ref-item"><span class="dec">255</span><span class="arrow">&rarr;</span><span class="bin">11111111</span></div>
+        <div class="nc-ref-item"><span class="dec">256</span><span class="arrow">&rarr;</span><span class="bin">100000000</span></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var decimalInput = document.getElementById('decimal-input');
+      var binaryOutput = document.getElementById('binary-output');
+      var hexOutput    = document.getElementById('hex-output');
+      var octalOutput  = document.getElementById('octal-output');
+      var outputCard   = document.getElementById('output-card');
+      var hexCard      = document.getElementById('hex-card');
+      var octalCard    = document.getElementById('octal-card');
+      var btnConvert   = document.getElementById('btn-convert');
+      var btnClear     = document.getElementById('btn-clear');
+      var btnCopy      = document.getElementById('btn-copy');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+
+      function showPrimary(text, type) {
+        binaryOutput.textContent = text;
+        binaryOutput.className = 'nc-output-value';
+        if (type === 'empty') binaryOutput.className += ' empty';
+        else if (type === 'error') binaryOutput.className += ' error';
+        if (type === 'valid') outputCard.classList.add('has-result');
+        else outputCard.classList.remove('has-result');
+      }
+
+      function showSecondary(el, card, text, type) {
+        el.textContent = text;
+        el.className = 'nc-secondary-value';
+        if (type === 'empty') el.className += ' empty';
+        if (type === 'valid') card.classList.add('has-result');
+        else card.classList.remove('has-result');
+      }
+
+      function convert() {
+        var input = decimalInput.value.replace(/\s/g, '');
+        if (!input) {
+          showPrimary('Result will appear here', 'empty');
+          showSecondary(hexOutput, hexCard, '—', 'empty');
+          showSecondary(octalOutput, octalCard, '—', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+        try {
+          var result = new BigNumber(input, 10);
+          showPrimary(result.toString(2), 'valid');
+          showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
+          showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        } catch (e) {
+          showPrimary('Invalid decimal input', 'error');
+          showSecondary(hexOutput, hexCard, '—', 'empty');
+          showSecondary(octalOutput, octalCard, '—', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+        }
+      }
+
+      btnConvert.onclick = convert;
+
+      btnClear.addEventListener('click', function () {
+        decimalInput.value = '';
+        showPrimary('Result will appear here', 'empty');
+        showSecondary(hexOutput, hexCard, '—', 'empty');
+        showSecondary(octalOutput, octalCard, '—', 'empty');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnCopy.addEventListener('click', function () {
+        var text = binaryOutput.textContent;
+        if (text && !binaryOutput.classList.contains('empty') && !binaryOutput.classList.contains('error')) {
+          navigator.clipboard.writeText(text).then(function () {
+            var orig = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.classList.add('copied');
+            setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
+          });
+        }
+      });
+
+      decimalInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') btnConvert.click();
+      });
+
+      // Live conversion on input
+      decimalInput.addEventListener('input', convert);
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

@@ -1,0 +1,507 @@
+---
+lang: "de"
+toolId: "decimal-to-fraction"
+category: "number-conversion"
+activeTool: "decimal-to-fraction"
+permalink: "/de/decimal-to-fraction.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <style>
+    .dec-converter {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* Input Card */
+    .dec-input-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .dec-input-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--secondary), #3d8b6a);
+    }
+    .dec-input-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .dec-input-field {
+      width: 100%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--text-primary);
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 8px 0;
+      letter-spacing: 0.02em;
+      caret-color: var(--secondary);
+    }
+    .dec-input-field::placeholder {
+      color: var(--text-muted);
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .dec-input-hint {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .dec-input-hint code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    /* Arrow */
+    .dec-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      position: relative;
+    }
+    .dec-arrow::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .dec-arrow-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--secondary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 8px rgba(45, 106, 79, 0.3);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .dec-arrow-icon:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4);
+    }
+
+    /* Output Card */
+    .dec-output-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s;
+    }
+    .dec-output-card.has-result {
+      border-color: var(--secondary);
+    }
+    .dec-output-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Fraction result visual */
+    .dec-result-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 80px;
+    }
+    .dec-result-visual.empty {
+      justify-content: flex-start;
+    }
+    .dec-result-visual.empty .dec-result-empty {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-muted);
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+    }
+    .dec-result-visual.error .dec-result-empty {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--error);
+      font-size: 15px;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .dec-res-integer {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+    }
+    .dec-res-dot {
+      font-size: 28px;
+      color: var(--text-muted);
+      font-weight: 700;
+      user-select: none;
+    }
+    .dec-res-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .dec-res-num-row {
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--secondary);
+      text-align: center;
+    }
+    .dec-res-den-row {
+      padding-top: 6px;
+      text-align: center;
+    }
+    .dec-res-num-row span,
+    .dec-res-den-row span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+    }
+
+    /* Toolbar */
+    .dec-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      gap: 8px;
+    }
+    .dec-toolbar-left,
+    .dec-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Quick Reference */
+    .dec-ref {
+      margin-top: 24px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .dec-ref-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .dec-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 6px;
+    }
+    .dec-ref-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      padding: 4px 0;
+    }
+    .dec-ref-item .dec {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      color: var(--text-secondary);
+      min-width: 40px;
+    }
+    .dec-ref-item .eq {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+    .dec-ref-item .frac {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    @media (max-width: 600px) {
+      .dec-input-field { font-size: 24px; }
+      .dec-res-integer, .dec-res-num-row span, .dec-res-den-row span { font-size: 32px; }
+      .dec-input-card, .dec-output-card { padding: 20px; }
+      .dec-ref-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+    }
+  </style>
+
+  <div class="dec-converter">
+    <!-- Input Card -->
+    <div class="dec-input-card">
+      <div class="dec-input-label">{{ t.ui.decimalNumber }}</div>
+      <input type="text" class="dec-input-field" id="decimal-input" placeholder="Enter a decimal..." spellcheck="false" autocomplete="off" autofocus>
+      <div class="dec-input-hint">Examples: <code>2.75</code>, <code>0.333</code>, <code>3.125</code></div>
+    </div>
+
+    <!-- Arrow -->
+    <div class="dec-arrow">
+      <div class="dec-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </div>
+    </div>
+
+    <!-- Output Card -->
+    <div class="dec-output-card" id="output-card">
+      <div class="dec-output-label">
+        <span>Fraction Result</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+      </div>
+      <div class="dec-result-visual empty" id="result-visual">
+        <span class="dec-result-empty" id="result-text">Result will appear here</span>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="dec-toolbar">
+      <div class="dec-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+      </div>
+      <div class="dec-toolbar-right">
+        <div class="status-message idle" id="status-message">
+          <span class="status-dot" id="status-dot" style="display:none;"></span>
+          <span id="status-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="dec-ref">
+      <div class="dec-ref-title">Quick Reference</div>
+      <div class="dec-ref-grid">
+        <div class="dec-ref-item"><span class="dec">0.5</span><span class="eq">=</span><span class="frac">1/2</span></div>
+        <div class="dec-ref-item"><span class="dec">0.25</span><span class="eq">=</span><span class="frac">1/4</span></div>
+        <div class="dec-ref-item"><span class="dec">0.75</span><span class="eq">=</span><span class="frac">3/4</span></div>
+        <div class="dec-ref-item"><span class="dec">0.125</span><span class="eq">=</span><span class="frac">1/8</span></div>
+        <div class="dec-ref-item"><span class="dec">0.375</span><span class="eq">=</span><span class="frac">3/8</span></div>
+        <div class="dec-ref-item"><span class="dec">0.2</span><span class="eq">=</span><span class="frac">1/5</span></div>
+        <div class="dec-ref-item"><span class="dec">0.0625</span><span class="eq">=</span><span class="frac">1/16</span></div>
+        <div class="dec-ref-item"><span class="dec">0.01</span><span class="eq">=</span><span class="frac">1/100</span></div>
+        <div class="dec-ref-item"><span class="dec">1.5</span><span class="eq">=</span><span class="frac">1 1/2</span></div>
+        <div class="dec-ref-item"><span class="dec">2.75</span><span class="eq">=</span><span class="frac">2 3/4</span></div>
+        <div class="dec-ref-item"><span class="dec">3.125</span><span class="eq">=</span><span class="frac">3 1/8</span></div>
+        <div class="dec-ref-item"><span class="dec">0.333</span><span class="eq">=</span><span class="frac">333/1000</span></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var decimalInput     = document.getElementById('decimal-input');
+      var resultVisual     = document.getElementById('result-visual');
+      var resultText       = document.getElementById('result-text');
+      var outputCard       = document.getElementById('output-card');
+      var btnConvert       = document.getElementById('btn-convert');
+      var btnClear         = document.getElementById('btn-clear');
+      var btnCopy          = document.getElementById('btn-copy');
+      var statusMessage    = document.getElementById('status-message');
+      var statusDot        = document.getElementById('status-dot');
+      var statusText       = document.getElementById('status-text');
+
+      // Store the last computed fraction for copy
+      var lastFraction = '';
+
+      function gcd(a, b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
+        while (b) { var t = b; b = a % b; a = t; }
+        return a;
+      }
+
+      function showEmpty(text) {
+        resultVisual.className = 'dec-result-visual empty';
+        resultVisual.innerHTML = '<span class="dec-result-empty">' + (text || 'Result will appear here') + '</span>';
+        outputCard.classList.remove('has-result');
+        lastFraction = '';
+      }
+
+      function showError(text) {
+        resultVisual.className = 'dec-result-visual error';
+        resultVisual.innerHTML = '<span class="dec-result-empty">' + text + '</span>';
+        outputCard.classList.remove('has-result');
+        lastFraction = '';
+      }
+
+      function showFraction(intPart, numPart, denPart) {
+        var intDisplay = intPart !== '0' ? intPart : '';
+        var html = '';
+
+        if (intDisplay) {
+          html += '<span class="dec-res-integer">' + intDisplay + '</span>';
+          html += '<span class="dec-res-dot">&middot;</span>';
+        }
+
+        html += '<div class="dec-res-stack">';
+        html += '<div class="dec-res-num-row"><span>' + numPart + '</span></div>';
+        html += '<div class="dec-res-den-row"><span>' + denPart + '</span></div>';
+        html += '</div>';
+
+        resultVisual.className = 'dec-result-visual';
+        resultVisual.innerHTML = html;
+        outputCard.classList.add('has-result');
+
+        lastFraction = (intDisplay ? intDisplay + ' ' : '') + numPart + '/' + denPart;
+      }
+
+      function doConvert() {
+        var input = decimalInput.value.trim();
+        if (!input) return;
+        try {
+          var num = parseFloat(input);
+          if (isNaN(num)) throw new Error('Invalid number');
+
+          var isNegative = num < 0;
+          num = Math.abs(num);
+
+          var integerPart = Math.floor(num);
+          var decimalPart = num - integerPart;
+
+          if (decimalPart === 0) {
+            var intStr = integerPart === 0 ? '0' : '' + integerPart;
+            if (isNegative) intStr = '-' + intStr;
+            showFraction(intStr, '0', '1');
+          } else {
+            var decStr = input.replace(/^-/, '').split('.')[1] || '';
+            var places = decStr.length;
+            var denominator = Math.pow(10, places);
+            var numerator = Math.round(decimalPart * denominator);
+            var g = gcd(numerator, denominator);
+            numerator   = numerator / g;
+            denominator = denominator / g;
+
+            var intStr2 = integerPart === 0 ? '0' : '' + integerPart;
+            if (isNegative && integerPart === 0 && numerator > 0) intStr2 = '-0';
+            else if (isNegative) intStr2 = '-' + intStr2;
+
+            showFraction(intStr2, '' + numerator, '' + denominator);
+          }
+
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        } catch (e) {
+          showError('Invalid decimal input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+        }
+      }
+
+      btnConvert.onclick = doConvert;
+
+      btnClear.addEventListener('click', function () {
+        decimalInput.value = '';
+        showEmpty('Result will appear here');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnCopy.addEventListener('click', function () {
+        if (lastFraction) {
+          navigator.clipboard.writeText(lastFraction).then(function () {
+            var orig = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.classList.add('copied');
+            setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
+          });
+        }
+      });
+
+      decimalInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') doConvert();
+      });
+
+      // Live conversion on input
+      decimalInput.addEventListener('input', function () {
+        var input = decimalInput.value.trim();
+        if (!input) {
+          showEmpty('Result will appear here');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+        doConvert();
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}

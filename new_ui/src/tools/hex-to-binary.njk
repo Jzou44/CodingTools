@@ -1,0 +1,162 @@
+---
+title: "Hex to Binary Converter — Coding.Tools"
+description: "Convert hexadecimal numbers to binary, decimal, and octal instantly in your browser. Fast, private, and free to use."
+toolTitle: "Hex to Binary"
+toolDescription: "Enter a hexadecimal number and convert it to binary, decimal, and octal. Results appear instantly in your browser."
+category: "number-conversion"
+categoryName: "Number Conversion"
+activeTool: "hex-to-binary"
+permalink: "/hex-to-binary.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="hex-input">Hexadecimal Input</label>
+  <div class="input-row">
+    <input type="text" class="text-input" id="hex-input" placeholder="Enter hex value (e.g. 1A2F)" spellcheck="false" autocomplete="off">
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-convert" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        Convert
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        Copy
+      </button>
+    </div>
+  </div>
+
+  <!-- Output Section -->
+  <div style="margin-top: 24px;">
+    <label class="section-label" for="binary-output">Binary (Base 2)</label>
+    <div class="input-row">
+      <input type="text" class="text-input output-field" id="binary-output" readonly placeholder="Binary result">
+      <button class="btn btn-ghost btn-icon" id="btn-copy-binary" type="button" title="Copy binary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <div style="margin-top: 16px;">
+    <label class="section-label" for="decimal-output">Decimal (Base 10)</label>
+    <div class="input-row">
+      <input type="text" class="text-input output-field" id="decimal-output" readonly placeholder="Decimal result">
+    </div>
+  </div>
+
+  <div style="margin-top: 16px;">
+    <label class="section-label" for="octal-output">Octal (Base 8)</label>
+    <div class="input-row">
+      <input type="text" class="text-input output-field" id="octal-output" readonly placeholder="Octal result">
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>Hex to Binary Converter</h2>
+  <p>This tool converts hexadecimal (base 16) numbers into their binary (base 2), decimal (base 10), and octal (base 8) equivalents. It is useful when you need to see the individual bit pattern of a hex value for debugging, hardware programming, or protocol analysis.</p>
+  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Type or paste a hexadecimal number into the input field (e.g. <code>1A2F</code> or <code>FF</code>).</li>
+    <li>Click <strong>Convert</strong> to see the binary, decimal, and octal results.</li>
+    <li>Use the <strong>Copy</strong> button to copy the binary result to your clipboard.</li>
+    <li>Click <strong>Clear</strong> to reset all fields.</li>
+  </ol>
+
+  <h3>Hex to binary relationship</h3>
+  <p>Each hexadecimal digit maps directly to four binary digits. This makes hex a convenient shorthand for binary: <code>F</code> = <code>1111</code>, <code>A</code> = <code>1010</code>, and so on. For example, <code>1A2F</code> in hex becomes <code>1101000101111</code> in binary.</p>
+
+  <h3>Example</h3>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">Hexadecimal: 1A2F
+Binary:      1101000101111
+Decimal:     6703
+Octal:       15057</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var hexInput      = document.getElementById('hex-input');
+      var binaryOutput  = document.getElementById('binary-output');
+      var decimalOutput = document.getElementById('decimal-output');
+      var octalOutput   = document.getElementById('octal-output');
+      var btnConvert    = document.getElementById('btn-convert');
+      var btnClear      = document.getElementById('btn-clear');
+      var btnCopy       = document.getElementById('btn-copy');
+      var btnCopyBin    = document.getElementById('btn-copy-binary');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+
+      btnConvert.onclick = function () {
+        var input = hexInput.value.replace(/\s/g, '');
+        if (!input) return;
+        try {
+          var result = new BigNumber(input, 16);
+          binaryOutput.value  = result.toString(2);
+          decimalOutput.value = result.toString(10);
+          octalOutput.value   = result.toString(8);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid hexadecimal input');
+        }
+      };
+
+      btnClear.addEventListener('click', function () {
+        hexInput.value      = '';
+        binaryOutput.value  = '';
+        decimalOutput.value = '';
+        octalOutput.value   = '';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnCopy.addEventListener('click', function () {
+        if (binaryOutput.value) {
+          navigator.clipboard.writeText(binaryOutput.value).then(function () {
+            btnCopy.textContent = 'Copied!';
+            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy'; }, 1500);
+          });
+        }
+      });
+
+      btnCopyBin.addEventListener('click', function () {
+        if (binaryOutput.value) {
+          navigator.clipboard.writeText(binaryOutput.value);
+        }
+      });
+
+      hexInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') btnConvert.click();
+      });
+
+      ToolCommon.initExampleCopy();
+    })();
+  </script>
+{% endblock %}
