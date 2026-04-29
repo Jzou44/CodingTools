@@ -292,5 +292,103 @@
     "category": "string-text-utilities",
     "description": "Convert numbers to English words, ordinals, and ordinal numbers.",
     "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
+  },
+  "json-formatter": {
+    "title": "JSON Formatter",
+    "slug": "json-formatter",
+    "category": "formatter-minifier",
+    "description": "Format and beautify JSON code with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "json-minifier": {
+    "title": "JSON Minifier",
+    "slug": "json-minifier",
+    "category": "formatter-minifier",
+    "description": "Minify JSON by removing whitespace and formatting.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "xml-formatter": {
+    "title": "XML Formatter",
+    "slug": "xml-formatter",
+    "category": "formatter-minifier",
+    "description": "Format and beautify XML code with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "xml-minifier": {
+    "title": "XML Minifier",
+    "slug": "xml-minifier",
+    "category": "formatter-minifier",
+    "description": "Minify XML by removing whitespace and formatting.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "json-to-xml": {
+    "title": "JSON to XML",
+    "slug": "json-to-xml",
+    "category": "formatter-minifier",
+    "description": "Convert JSON data to XML format.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "xml-to-json": {
+    "title": "XML to JSON",
+    "slug": "xml-to-json",
+    "category": "formatter-minifier",
+    "description": "Convert XML data to JSON format.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "html-beautifier": {
+    "title": "HTML Beautifier",
+    "slug": "html-beautifier",
+    "category": "formatter-minifier",
+    "description": "Beautify and format HTML code with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "html-minifier": {
+    "title": "HTML Minifier",
+    "slug": "html-minifier",
+    "category": "formatter-minifier",
+    "description": "Minify HTML by removing whitespace, comments, and unnecessary characters.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "javascript-beautifier": {
+    "title": "JavaScript Beautifier",
+    "slug": "javascript-beautifier",
+    "category": "formatter-minifier",
+    "description": "Beautify and format JavaScript code with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "javascript-minifier": {
+    "title": "JavaScript Minifier",
+    "slug": "javascript-minifier",
+    "category": "formatter-minifier",
+    "description": "Minify JavaScript by removing whitespace, comments, and shortening variable names.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "css-beautifier": {
+    "title": "CSS Beautifier",
+    "slug": "css-beautifier",
+    "category": "formatter-minifier",
+    "description": "Beautify and format CSS code with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "css-minifier": {
+    "title": "CSS Minifier",
+    "slug": "css-minifier",
+    "category": "formatter-minifier",
+    "description": "Minify CSS by removing whitespace, comments, and unnecessary characters.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "sql-formatter": {
+    "title": "SQL Formatter",
+    "slug": "sql-formatter",
+    "category": "formatter-minifier",
+    "description": "Format and beautify SQL queries with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "sql-minifier": {
+    "title": "SQL Minifier",
+    "slug": "sql-minifier",
+    "category": "formatter-minifier",
+    "description": "Minify SQL by removing whitespace, comments, and unnecessary formatting.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   }
 }

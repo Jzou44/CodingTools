@@ -1,0 +1,184 @@
+---
+title: "XML Minifier — Coding.Tools"
+description: "Minify and compress XML documents by removing whitespace and comments. Runs locally in your browser, fast and free."
+toolTitle: "XML Minifier"
+toolDescription: "Minify XML documents by stripping whitespace, comments, and unnecessary formatting. Copy or download the result without sending data anywhere."
+category: "formatter-minifier"
+categoryName: "Formatter & Minifier"
+activeTool: "xml-minifier"
+permalink: "/xml-minifier.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <script src="https://cdn.jsdelivr.net/npm/html-minifier@4.0.0/dist/htmlminifier.min.js"></script>
+{% endblock %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Paste your XML here..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-generate" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+        Minify XML
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Output Section -->
+  <div style="margin-top: 24px;">
+    <label class="section-label" for="output-editor">Output</label>
+    <div class="editor-wrapper readonly-wrapper">
+      <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
+      <textarea class="editor-area readonly" id="output-editor" spellcheck="false" readonly placeholder="Minified XML will appear here..."></textarea>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>XML Minifier</h2>
+  <p>This XML Minifier removes unnecessary whitespace, indentation, line breaks, and comments from XML documents to produce the most compact representation. It reduces file size for faster network transmission and lower storage requirements.</p>
+  <p>The minification runs entirely in your browser. No XML data is uploaded to a server, making it safe for processing configuration files, API responses, sitemaps, or any XML content that may contain sensitive information.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Paste your formatted or pretty-printed XML into the input editor.</li>
+    <li>Click <strong>Minify XML</strong> to strip whitespace and comments.</li>
+    <li>View the compact XML in the output editor.</li>
+    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .xml file, or <strong>Clear</strong> to reset both editors.</li>
+  </ol>
+
+  <h3>What is XML minification?</h3>
+  <p>XML minification is the process of removing all characters from an XML document that are not required for correct parsing. This includes stripping whitespace between tags, removing indentation, collapsing line breaks, and optionally removing comments.</p>
+  <p>Minified XML is used in production environments where bandwidth and storage efficiency are important, such as SOAP web service payloads, RSS feeds, large configuration files, and data interchange between microservices.</p>
+
+  <h3>Input notes</h3>
+  <p>The tool accepts any well-formed XML input. It collapses whitespace between tags while preserving text content within elements. XML comments are removed during minification.</p>
+
+  <h3>Example</h3>
+  <p>Formatted XML is compressed by removing whitespace:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Input (formatted) ---
+&lt;root&gt;
+  &lt;!-- User data --&gt;
+  &lt;user id="1"&gt;
+    &lt;name&gt;Alice&lt;/name&gt;
+    &lt;email&gt;alice@example.com&lt;/email&gt;
+  &lt;/user&gt;
+&lt;/root&gt;
+
+--- Output (minified) ---
+&lt;root&gt;&lt;user id="1"&gt;&lt;name&gt;Alice&lt;/name&gt;&lt;email&gt;alice@example.com&lt;/email&gt;&lt;/user&gt;&lt;/root&gt;</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor    = document.getElementById('input-editor');
+      var outputEditor   = document.getElementById('output-editor');
+      var btnGenerate    = document.getElementById('btn-generate');
+      var btnClear       = document.getElementById('btn-clear');
+      var btnCopy        = document.getElementById('btn-copy');
+      var btnDownload    = document.getElementById('btn-download');
+      var statusMessage  = document.getElementById('status-message');
+      var statusDot      = document.getElementById('status-dot');
+      var statusText     = document.getElementById('status-text');
+      var charCount      = document.getElementById('char-count');
+      var lineCount      = document.getElementById('line-count');
+      var inputLineNums  = document.getElementById('input-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      btnGenerate.onclick = function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        try {
+          outputEditor.value = htmlminifier.minify(text, {collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true});
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML minified successfully');
+          updateCounts();
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Minification failed: ' + e.message);
+        }
+      };
+
+      btnClear.addEventListener('click', function () {
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(outputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(outputEditor, 'result.xml');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnGenerate);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endblock %}

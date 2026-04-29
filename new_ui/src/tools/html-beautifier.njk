@@ -1,0 +1,182 @@
+---
+title: "HTML Beautifier — Coding.Tools"
+description: "Beautify and format HTML code with proper indentation and structure. Runs locally in your browser, fast and free."
+toolTitle: "HTML Beautifier"
+toolDescription: "Beautify HTML code with consistent indentation and proper nesting. Copy or download the formatted result without sending data anywhere."
+category: "formatter-minifier"
+categoryName: "Formatter & Minifier"
+activeTool: "html-beautifier"
+permalink: "/html-beautifier.html"
+---
+
+{% extends "tool-layout.njk" %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify-html.js"></script>
+{% endblock %}
+
+{% block tool_content %}
+  <!-- Input Section -->
+  <label class="section-label" for="input-editor">Input</label>
+  <div class="editor-wrapper">
+    <div class="line-numbers" id="input-line-numbers">1</div>
+    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="Paste your HTML here..."></textarea>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <button class="btn btn-primary" id="btn-generate" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+        Beautify HTML
+      </button>
+      <button class="btn btn-ghost" id="btn-clear" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+        </svg>
+        Clear
+      </button>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn btn-ghost" id="btn-copy" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy
+      </button>
+      <button class="btn btn-ghost" id="btn-download" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download
+      </button>
+    </div>
+  </div>
+
+  <!-- Output Section -->
+  <div style="margin-top: 24px;">
+    <label class="section-label" for="output-editor">Output</label>
+    <div class="editor-wrapper readonly-wrapper">
+      <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
+      <textarea class="editor-area readonly" id="output-editor" spellcheck="false" readonly placeholder="Beautified HTML will appear here..."></textarea>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-message idle" id="status-message">
+      <span class="status-dot" id="status-dot" style="display:none;"></span>
+      <span id="status-text"></span>
+    </div>
+    <div class="status-meta">
+      <span id="char-count">0 characters</span>
+      <span id="line-count">0 lines</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>HTML Beautifier</h2>
+  <p>This HTML Beautifier takes raw, minified, or poorly indented HTML and reformats it with consistent indentation, proper nesting, and clean line breaks. It makes dense HTML markup readable and easier to debug.</p>
+  <p>The beautification runs entirely in your browser using the js-beautify library. Your HTML code never leaves your device, making it ideal for formatting templates, email HTML, scraped content, or any markup that needs cleanup.</p>
+
+  <h3>How to use</h3>
+  <ol class="steps-list">
+    <li>Paste your raw or minified HTML into the input editor.</li>
+    <li>Click <strong>Beautify HTML</strong> to apply indentation and structure.</li>
+    <li>View the formatted HTML in the output editor with proper nesting.</li>
+    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .html file, or <strong>Clear</strong> to reset both editors.</li>
+  </ol>
+
+  <h3>What is HTML beautification?</h3>
+  <p>HTML beautification is the process of reformatting HTML markup to follow consistent indentation and line-break rules. It takes compressed or messy HTML and adds proper spacing so the document structure is visually clear through nesting levels.</p>
+  <p>Well-formatted HTML is essential for debugging layout issues, code reviews, and maintaining templates over time. Beautified HTML also helps developers understand the DOM hierarchy at a glance without relying on browser developer tools.</p>
+
+  <h3>Input notes</h3>
+  <p>The tool accepts any HTML input, whether it is a full document or a fragment. It preserves all tags, attributes, and content while reformatting the structure. Self-closing tags and void elements are handled correctly.</p>
+
+  <h3>Example</h3>
+  <p>Minified HTML becomes readable after beautification:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">--- Input (minified) ---
+&lt;div class="card"&gt;&lt;h2&gt;Title&lt;/h2&gt;&lt;p&gt;Description text&lt;/p&gt;&lt;a href="/link"&gt;Read more&lt;/a&gt;&lt;/div&gt;
+
+--- Output (beautified) ---
+&lt;div class="card"&gt;
+  &lt;h2&gt;Title&lt;/h2&gt;
+  &lt;p&gt;Description text&lt;/p&gt;
+  &lt;a href="/link"&gt;Read more&lt;/a&gt;
+&lt;/div&gt;</pre>
+  </div>
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor    = document.getElementById('input-editor');
+      var outputEditor   = document.getElementById('output-editor');
+      var btnGenerate    = document.getElementById('btn-generate');
+      var btnClear       = document.getElementById('btn-clear');
+      var btnCopy        = document.getElementById('btn-copy');
+      var btnDownload    = document.getElementById('btn-download');
+      var statusMessage  = document.getElementById('status-message');
+      var statusDot      = document.getElementById('status-dot');
+      var statusText     = document.getElementById('status-text');
+      var charCount      = document.getElementById('char-count');
+      var lineCount      = document.getElementById('line-count');
+      var inputLineNums  = document.getElementById('input-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      btnGenerate.onclick = function () {
+        var text = inputEditor.value;
+        if (!text) return;
+        try {
+          outputEditor.value = html_beautify(text, { indent_size: 2 });
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'HTML beautified successfully');
+          updateCounts();
+        } catch (e) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Beautification failed: ' + e.message);
+        }
+      };
+
+      btnClear.addEventListener('click', function () {
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums);
+      });
+
+      btnCopy.addEventListener('click', function () {
+        ToolCommon.copyOutput(outputEditor, btnCopy);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        ToolCommon.downloadOutput(outputEditor, 'result.html');
+      });
+
+      // Init shared behaviors
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnGenerate);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endblock %}

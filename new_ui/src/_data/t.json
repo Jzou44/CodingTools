@@ -50,7 +50,10 @@
       "search": "Search",
       "replaceAll": "Replace All",
       "text": "Text",
-      "flags": "Flags"
+      "flags": "Flags",
+      "format": "Format",
+      "minify": "Minify",
+      "beautify": "Beautify"
     }
   },
   "cn": {
@@ -104,7 +107,10 @@
       "search": "搜索",
       "replaceAll": "全部替换",
       "text": "文本",
-      "flags": "标志"
+      "flags": "标志",
+      "format": "格式化",
+      "minify": "压缩",
+      "beautify": "美化"
     }
   },
   "tw": {
@@ -158,7 +164,10 @@
       "search": "搜尋",
       "replaceAll": "全部替換",
       "text": "文字",
-      "flags": "標誌"
+      "flags": "標誌",
+      "format": "格式化",
+      "minify": "壓縮",
+      "beautify": "美化"
     }
   },
   "jp": {
@@ -212,7 +221,10 @@
       "search": "検索",
       "replaceAll": "すべて置換",
       "text": "テキスト",
-      "flags": "フラグ"
+      "flags": "フラグ",
+      "format": "フォーマット",
+      "minify": "ミニファイ",
+      "beautify": "整形"
     }
   },
   "kr": {
@@ -266,7 +278,10 @@
       "search": "검색",
       "replaceAll": "모두 치환",
       "text": "텍스트",
-      "flags": "플래그"
+      "flags": "플래그",
+      "format": "포맷",
+      "minify": "미니파이",
+      "beautify": "포맷"
     }
   },
   "fr": {
@@ -320,7 +335,10 @@
       "search": "Rechercher",
       "replaceAll": "Tout remplacer",
       "text": "Texte",
-      "flags": "Drapeaux"
+      "flags": "Drapeaux",
+      "format": "Formater",
+      "minify": "Minifier",
+      "beautify": "Embellir"
     }
   },
   "de": {
@@ -374,7 +392,10 @@
       "search": "Suchen",
       "replaceAll": "Alle ersetzen",
       "text": "Text",
-      "flags": "Flags"
+      "flags": "Flags",
+      "format": "Formatieren",
+      "minify": "Minifizieren",
+      "beautify": "Verschönern"
     }
   },
   "es": {
@@ -428,7 +449,10 @@
       "search": "Buscar",
       "replaceAll": "Reemplazar todo",
       "text": "Texto",
-      "flags": "Banderas"
+      "flags": "Banderas",
+      "format": "Formatear",
+      "minify": "Minificar",
+      "beautify": "Embellecer"
     }
   },
   "pt": {
@@ -482,7 +506,10 @@
       "search": "Pesquisar",
       "replaceAll": "Substituir tudo",
       "text": "Texto",
-      "flags": "Bandeiras"
+      "flags": "Bandeiras",
+      "format": "Formatar",
+      "minify": "Minificar",
+      "beautify": "Embelezar"
     }
   }
 }
