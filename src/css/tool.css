@@ -600,3 +600,155 @@
 .options-panel + .section-label {
   margin-top: 16px;
 }
+
+/* ============================================================
+   Shared Converter Components
+   Replaces tool-specific prefixes (nc-, roman-, dec-, etc.)
+   with unified classes. Customize via CSS custom properties.
+   ============================================================ */
+
+/* --- Input Card --- */
+.tool-input-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-input-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--tool-accent, var(--secondary));
+}
+
+/* --- Input Field --- */
+.tool-input-field {
+  width: 100%;
+  font-family: var(--tool-font, 'IBM Plex Mono', monospace);
+  font-size: var(--tool-font-size, 32px);
+  font-weight: 500;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  letter-spacing: 0.02em;
+  caret-color: var(--tool-accent, var(--secondary));
+}
+
+.tool-input-field::placeholder {
+  color: var(--text-muted);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* --- Label --- */
+.tool-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* --- Hint --- */
+.tool-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.tool-hint code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+/* --- Output Card --- */
+.tool-output-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s;
+}
+
+.tool-output-card.has-result {
+  border-color: var(--tool-accent, var(--secondary));
+}
+
+/* --- Output Label --- */
+.tool-output-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Output Value --- */
+.tool-output-value {
+  font-family: var(--tool-font, 'IBM Plex Mono', monospace);
+  font-size: var(--tool-output-font-size, 42px);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  min-height: 50px;
+  word-break: break-all;
+  transition: color 0.3s;
+}
+
+.tool-output-value.empty {
+  color: var(--text-muted);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.tool-output-value.error {
+  color: var(--error);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .tool-input-field {
+    font-size: var(--tool-font-size-mobile, 24px);
+  }
+  .tool-output-value {
+    font-size: var(--tool-output-font-size-mobile, 32px);
+  }
+  .tool-input-card,
+  .tool-output-card {
+    padding: 20px;
+  }
+}
