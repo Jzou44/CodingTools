@@ -10,29 +10,17 @@ permalink: "/es/hex-to-rgba.html"
 
 {% block tool_content %}
   <style>
+    .tool-input-card::before { background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6); }
     .hex-rgba-converter { display: flex; flex-direction: column; gap: 0; }
-    .hex-rgba-input-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
-    .hex-rgba-input-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6); }
-    .hex-rgba-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; }
-    .hex-rgba-input-field { width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 500; color: var(--text-primary); background: transparent; border: none; outline: none; padding: 8px 0; letter-spacing: 0.04em; caret-color: var(--accent); }
-    .hex-rgba-input-field::placeholder { color: var(--text-muted); font-size: 18px; font-weight: 400; }
     .hex-rgba-opacity-row { display: flex; align-items: center; gap: 16px; margin-top: 16px; }
     .hex-rgba-opacity-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); white-space: nowrap; }
     .hex-rgba-opacity-slider { flex: 1; accent-color: var(--accent); cursor: pointer; height: 6px; }
     .hex-rgba-opacity-value { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: var(--accent); min-width: 44px; text-align: right; }
-    .hex-rgba-input-hint { font-size: 13px; color: var(--text-muted); margin-top: 8px; font-family: 'DM Sans', sans-serif; }
-    .hex-rgba-input-hint code { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--code-bg); padding: 2px 6px; border-radius: 4px; color: var(--text-secondary); }
     .hex-rgba-actions { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
     .hex-rgba-arrow { display: flex; align-items: center; justify-content: center; height: 48px; position: relative; }
     .hex-rgba-arrow::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
     .hex-rgba-arrow-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(196, 93, 58, 0.3); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
     .hex-rgba-arrow-icon:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4); }
-    .hex-rgba-output-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; display: flex; flex-direction: column; transition: border-color 0.3s; }
-    .hex-rgba-output-card.has-result { border-color: var(--accent); }
-    .hex-rgba-output-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
-    .hex-rgba-output-value { font-family: 'IBM Plex Mono', monospace; font-size: 24px; font-weight: 500; color: var(--text-primary); letter-spacing: 0.02em; line-height: 1.2; min-height: 32px; word-break: break-all; transition: color 0.3s; }
-    .hex-rgba-output-value.empty { color: var(--text-muted); font-size: 18px; font-weight: 400; font-style: italic; letter-spacing: 0; }
-    .hex-rgba-output-value.error { color: var(--error); font-size: 15px; font-weight: 500; font-style: normal; letter-spacing: 0; font-family: 'DM Sans', sans-serif; }
     .hex-rgba-swatch { margin-top: 16px; border-radius: 12px; height: 96px; background: repeating-conic-gradient(#e8e0d4 0% 25%, #faf8f0 0% 50%) 50% / 20px 20px; position: relative; overflow: hidden; border: 1px solid var(--border); }
     .hex-rgba-swatch-fill { position: absolute; inset: 0; border-radius: 11px; transition: background-color 0.2s; }
     .hex-rgba-swatch-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-muted); z-index: 1; pointer-events: none; }
@@ -46,19 +34,19 @@ permalink: "/es/hex-to-rgba.html"
     .hex-rgba-channel-value.a { color: var(--accent); }
     .hex-rgba-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; gap: 8px; }
     .hex-rgba-toolbar-left, .hex-rgba-toolbar-right { display: flex; align-items: center; gap: 8px; }
-    @media (max-width: 600px) { .hex-rgba-input-field { font-size: 24px; } .hex-rgba-output-value { font-size: 20px; } .hex-rgba-input-card, .hex-rgba-output-card { padding: 20px; } .hex-rgba-swatch { height: 72px; } }
+    @media (max-width: 600px) { .tool-input-card, .hex-rgba-swatch { height: 72px; } }
   </style>
 
   <div class="hex-rgba-converter">
-    <div class="hex-rgba-input-card">
-      <div class="hex-rgba-label">{{ t.ui.hexColor }}</div>
-      <input type="text" class="hex-rgba-input-field" id="hex-input" placeholder="#FF5733" spellcheck="false" autocomplete="off" autofocus>
+    <div class="tool-input-card">
+      <div class="tool-label">{{ t.ui.hexColor }}</div>
+      <input type="text" class="tool-input-field" style="--tool-accent: var(--accent)" id="hex-input" placeholder="#FF5733" spellcheck="false" autocomplete="off" autofocus>
       <div class="hex-rgba-opacity-row">
         <span class="hex-rgba-opacity-label">{{ t.ui.opacity }}</span>
         <input type="range" class="hex-rgba-opacity-slider" id="opacity-slider" min="0" max="100" value="100">
         <span class="hex-rgba-opacity-value" id="opacity-display">100%</span>
       </div>
-      <div class="hex-rgba-input-hint">{{ toolData.inputHint | safe }}</div>
+      <div class="tool-hint">{{ toolData.inputHint | safe }}</div>
       <div class="hex-rgba-actions">
         <button class="btn btn-secondary" id="btn-random" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
@@ -71,15 +59,15 @@ permalink: "/es/hex-to-rgba.html"
       <div class="hex-rgba-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div>
     </div>
 
-    <div class="hex-rgba-output-card" id="output-card">
-      <div class="hex-rgba-output-label">
+    <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
+      <div class="tool-output-label">
         <span>RGBA Value</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="hex-rgba-output-value empty" id="rgba-output">{{ toolData.resultPlaceholder }}</div>
+      <div class="tool-output-value empty" id="rgba-output">{{ toolData.resultPlaceholder }}</div>
       <div class="hex-rgba-channels" id="rgba-channels" style="display:none;">
         <div class="hex-rgba-channel"><div class="hex-rgba-channel-label">R</div><div class="hex-rgba-channel-value r" id="channel-r">0</div></div>
         <div class="hex-rgba-channel"><div class="hex-rgba-channel-label">G</div><div class="hex-rgba-channel-value g" id="channel-g">0</div></div>
@@ -165,7 +153,7 @@ permalink: "/es/hex-to-rgba.html"
 
       function showResult(text, type, r, g, b, a) {
         rgbaOutput.textContent = text;
-        rgbaOutput.className = 'hex-rgba-output-value';
+        rgbaOutput.className = 'tool-output-value';
         if (type === 'empty') rgbaOutput.className += ' empty';
         else if (type === 'error') rgbaOutput.className += ' error';
         if (type === 'valid') {
