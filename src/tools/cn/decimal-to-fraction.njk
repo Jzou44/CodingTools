@@ -17,64 +17,6 @@ permalink: "/cn/decimal-to-fraction.html"
     }
 
     /* Input Card */
-    .dec-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .dec-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--secondary), #3d8b6a);
-    }
-    .dec-input-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-    .dec-input-field {
-      width: 100%;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 32px;
-      font-weight: 500;
-      color: var(--text-primary);
-      background: transparent;
-      border: none;
-      outline: none;
-      padding: 8px 0;
-      letter-spacing: 0.02em;
-      caret-color: var(--secondary);
-    }
-    .dec-input-field::placeholder {
-      color: var(--text-muted);
-      font-size: 20px;
-      font-weight: 400;
-    }
-    .dec-input-hint {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .dec-input-hint code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--text-secondary);
-    }
-
     /* Arrow */
     .dec-arrow {
       display: flex;
@@ -113,34 +55,6 @@ permalink: "/cn/decimal-to-fraction.html"
     }
 
     /* Output Card */
-    .dec-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .dec-output-card.has-result {
-      border-color: var(--secondary);
-    }
-    .dec-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
     /* Fraction result visual */
     .dec-result-visual {
       display: flex;
@@ -264,19 +178,22 @@ permalink: "/cn/decimal-to-fraction.html"
     }
 
     @media (max-width: 600px) {
-      .dec-input-field { font-size: 24px; }
       .dec-res-integer, .dec-res-num-row span, .dec-res-den-row span { font-size: 32px; }
-      .dec-input-card, .dec-output-card { padding: 20px; }
       .dec-ref-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
     }
-  </style>
+
+    /* Gradient accent bar override */
+    .tool-input-card::before {
+      background: linear-gradient(90deg, var(--secondary), #3d8b6a);
+    }
+</style>
 
   <div class="dec-converter">
     <!-- Input Card -->
-    <div class="dec-input-card">
-      <div class="dec-input-label">{{ t.ui.decimalNumber }}</div>
-      <input type="text" class="dec-input-field" id="decimal-input" placeholder="Enter a decimal..." spellcheck="false" autocomplete="off" autofocus>
-      <div class="dec-input-hint">Examples: <code>2.75</code>, <code>0.333</code>, <code>3.125</code></div>
+    <div class="tool-input-card" style="--tool-accent: var(--secondary)">
+      <div class="tool-label">{{ t.ui.decimalNumber }}</div>
+      <input type="text" class="tool-input-field" id="decimal-input" placeholder="Enter a decimal..." spellcheck="false" autocomplete="off" autofocus>
+      <div class="tool-hint">Examples: <code>2.75</code>, <code>0.333</code>, <code>3.125</code></div>
     </div>
 
     <!-- Arrow -->
@@ -287,8 +204,8 @@ permalink: "/cn/decimal-to-fraction.html"
     </div>
 
     <!-- Output Card -->
-    <div class="dec-output-card" id="output-card">
-      <div class="dec-output-label">
+    <div class="tool-output-card" style="--tool-accent: var(--secondary)" id="output-card">
+      <div class="tool-output-label">
         <span>Fraction Result</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>

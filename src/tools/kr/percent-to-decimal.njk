@@ -11,25 +11,12 @@ permalink: "/kr/percent-to-decimal.html"
 {% block tool_content %}
   <style>
     .pct-dec-converter { display: flex; flex-direction: column; gap: 0; }
-    .pct-dec-input-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
-    .pct-dec-input-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), #d4725a); }
-    .pct-dec-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; }
     .pct-dec-input-wrap { display: flex; align-items: baseline; gap: 4px; }
-    .pct-dec-input-field { flex: 1; font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 500; color: var(--text-primary); background: transparent; border: none; outline: none; padding: 8px 0; letter-spacing: 0.02em; caret-color: var(--accent); }
-    .pct-dec-input-field::placeholder { color: var(--text-muted); font-size: 20px; font-weight: 400; }
     .pct-dec-suffix { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 700; color: var(--accent); opacity: 0.6; }
-    .pct-dec-input-hint { font-size: 13px; color: var(--text-muted); margin-top: 8px; font-family: 'DM Sans', sans-serif; }
-    .pct-dec-input-hint code { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--code-bg); padding: 2px 6px; border-radius: 4px; color: var(--text-secondary); }
     .pct-dec-arrow { display: flex; align-items: center; justify-content: center; height: 48px; position: relative; }
     .pct-dec-arrow::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
     .pct-dec-arrow-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(196, 93, 58, 0.3); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
     .pct-dec-arrow-icon:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4); }
-    .pct-dec-output-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-sm); position: relative; min-height: 120px; display: flex; flex-direction: column; transition: border-color 0.3s; }
-    .pct-dec-output-card.has-result { border-color: var(--accent); }
-    .pct-dec-output-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
-    .pct-dec-output-value { font-family: 'IBM Plex Mono', monospace; font-size: 36px; font-weight: 500; color: var(--text-primary); letter-spacing: 0.02em; line-height: 1.2; min-height: 44px; word-break: break-all; transition: color 0.3s; }
-    .pct-dec-output-value.empty { color: var(--text-muted); font-size: 18px; font-weight: 400; font-style: italic; letter-spacing: 0; }
-    .pct-dec-output-value.error { color: var(--error); font-size: 15px; font-weight: 500; font-style: normal; letter-spacing: 0; font-family: 'DM Sans', sans-serif; }
     .pct-dec-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; gap: 8px; }
     .pct-dec-toolbar-left, .pct-dec-toolbar-right { display: flex; align-items: center; gap: 8px; }
     .pct-dec-ref { margin-top: 24px; background: var(--code-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
@@ -39,32 +26,38 @@ permalink: "/kr/percent-to-decimal.html"
     .pct-dec-ref-item .pct { font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: var(--text-secondary); min-width: 40px; }
     .pct-dec-ref-item .arrow { color: var(--text-muted); font-size: 11px; }
     .pct-dec-ref-item .dec { font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: var(--accent); }
-    @media (max-width: 600px) { .pct-dec-input-field { font-size: 24px; } .pct-dec-suffix { font-size: 24px; } .pct-dec-output-value { font-size: 28px; } .pct-dec-input-card, .pct-dec-output-card { padding: 20px; } }
-  </style>
+ .pct-dec-suffix { font-size: 24px; }
+ }
+
+    /* Gradient accent bar override */
+    .tool-input-card::before {
+      background: linear-gradient(90deg, var(--accent), #d4725a);
+    }
+</style>
 
   <div class="pct-dec-converter">
-    <div class="pct-dec-input-card">
-      <div class="pct-dec-label">{{ t.ui.percent }}</div>
+    <div class="tool-input-card" style="--tool-accent: var(--accent)">
+      <div class="tool-label">{{ t.ui.percent }}</div>
       <div class="pct-dec-input-wrap">
-        <input type="text" class="pct-dec-input-field" id="percent-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
+        <input type="text" class="tool-input-field" id="percent-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
         <span class="pct-dec-suffix">%</span>
       </div>
-      <div class="pct-dec-input-hint">{{ toolData.inputHint | safe }}</div>
+      <div class="tool-hint">{{ toolData.inputHint | safe }}</div>
     </div>
 
     <div class="pct-dec-arrow">
       <div class="pct-dec-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div>
     </div>
 
-    <div class="pct-dec-output-card" id="output-card">
-      <div class="pct-dec-output-label">
+    <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
+      <div class="tool-output-label">
         <span>{{ t.ui.decimalNumber }}</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="pct-dec-output-value empty" id="decimal-output">{{ toolData.resultPlaceholder }}</div>
+      <div class="tool-output-value empty" id="decimal-output">{{ toolData.resultPlaceholder }}</div>
     </div>
 
     <!-- Toolbar -->
@@ -144,7 +137,7 @@ permalink: "/kr/percent-to-decimal.html"
 
       function showResult(text, type) {
         decimalOutput.textContent = text;
-        decimalOutput.className = 'pct-dec-output-value';
+        decimalOutput.className = 'tool-output-value';
         if (type === 'empty') decimalOutput.className += ' empty';
         else if (type === 'error') decimalOutput.className += ' error';
         if (type === 'valid') outputCard.classList.add('has-result');

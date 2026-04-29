@@ -11,64 +11,6 @@ permalink: "/jp/decimal-to-binary.html"
 {% block tool_content %}
   <style>
     .nc-converter { display: flex; flex-direction: column; gap: 0; }
-    .nc-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .nc-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--secondary);
-    }
-    .nc-input-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-    .nc-input-field {
-      width: 100%;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 32px;
-      font-weight: 500;
-      color: var(--text-primary);
-      background: transparent;
-      border: none;
-      outline: none;
-      padding: 8px 0;
-      letter-spacing: 0.02em;
-      caret-color: var(--secondary);
-    }
-    .nc-input-field::placeholder {
-      color: var(--text-muted);
-      font-size: 20px;
-      font-weight: 400;
-    }
-    .nc-input-hint {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .nc-input-hint code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--text-secondary);
-    }
-
     .nc-arrow {
       display: flex;
       align-items: center;
@@ -104,59 +46,6 @@ permalink: "/jp/decimal-to-binary.html"
       transform: scale(1.08);
       box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4);
     }
-
-    .nc-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .nc-output-card.has-result { border-color: var(--secondary); }
-    .nc-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nc-output-value {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 42px;
-      font-weight: 500;
-      color: var(--text-primary);
-      letter-spacing: 0.02em;
-      line-height: 1.2;
-      min-height: 50px;
-      word-break: break-all;
-      transition: color 0.3s;
-    }
-    .nc-output-value.empty {
-      color: var(--text-muted);
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0;
-    }
-    .nc-output-value.error {
-      color: var(--error);
-      font-size: 15px;
-      font-weight: 500;
-      font-style: normal;
-      letter-spacing: 0;
-      font-family: 'DM Sans', sans-serif;
-    }
-
     .nc-secondary-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -253,19 +142,16 @@ permalink: "/jp/decimal-to-binary.html"
     }
 
     @media (max-width: 600px) {
-      .nc-input-field { font-size: 24px; }
-      .nc-output-value { font-size: 32px; }
-      .nc-input-card, .nc-output-card { padding: 20px; }
       .nc-secondary-grid { grid-template-columns: 1fr; }
     }
   </style>
 
   <div class="nc-converter">
     <!-- Input Card -->
-    <div class="nc-input-card">
-      <div class="nc-input-label">{{ t.ui.decimalNumber }}</div>
-      <input type="text" class="nc-input-field" id="decimal-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
-      <div class="nc-input-hint">Valid: <code>0-9</code> (integers)</div>
+    <div class="tool-input-card" style="--tool-accent: var(--accent)">
+      <div class="tool-label">{{ t.ui.decimalNumber }}</div>
+      <input type="text" class="tool-input-field" id="decimal-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
+      <div class="tool-hint">Valid: <code>0-9</code> (integers)</div>
     </div>
 
     <!-- Arrow -->
@@ -276,15 +162,15 @@ permalink: "/jp/decimal-to-binary.html"
     </div>
 
     <!-- Primary Output Card -->
-    <div class="nc-output-card" id="output-card">
-      <div class="nc-output-label">
+    <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
+      <div class="tool-output-label">
         <span>{{ t.ui.binaryNumber }}</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="nc-output-value empty" id="binary-output">Result will appear here</div>
+      <div class="tool-output-value empty" id="binary-output">Result will appear here</div>
     </div>
 
     <!-- Secondary Results -->
@@ -385,7 +271,7 @@ permalink: "/jp/decimal-to-binary.html"
 
       function showPrimary(text, type) {
         binaryOutput.textContent = text;
-        binaryOutput.className = 'nc-output-value';
+        binaryOutput.className = 'tool-output-value';
         if (type === 'empty') binaryOutput.className += ' empty';
         else if (type === 'error') binaryOutput.className += ' error';
         if (type === 'valid') outputCard.classList.add('has-result');

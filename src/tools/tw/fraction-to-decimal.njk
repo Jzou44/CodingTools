@@ -17,32 +17,6 @@ permalink: "/tw/fraction-to-decimal.html"
     }
 
     /* Input Card */
-    .frac-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .frac-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), #d4725a);
-    }
-    .frac-input-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
     /* Fraction visual: integer + fraction stack */
     .frac-visual {
       display: flex;
@@ -178,33 +152,6 @@ permalink: "/tw/fraction-to-decimal.html"
     }
 
     /* Output Card */
-    .frac-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .frac-output-card.has-result {
-      border-color: var(--accent);
-    }
-    .frac-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
     .frac-output-value {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 42px;
@@ -299,15 +246,19 @@ permalink: "/tw/fraction-to-decimal.html"
       .frac-den-row input { width: 56px; font-size: 22px; }
       .frac-stack { min-width: 70px; }
       .frac-output-value { font-size: 32px; }
-      .frac-input-card, .frac-output-card { padding: 20px; }
       .frac-ref-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
     }
-  </style>
+
+    /* Gradient accent bar override */
+    .tool-input-card::before {
+      background: linear-gradient(90deg, var(--accent), #d4725a);
+    }
+</style>
 
   <div class="frac-converter">
     <!-- Input Card -->
-    <div class="frac-input-card">
-      <div class="frac-input-label">Fraction</div>
+    <div class="tool-input-card" style="--tool-accent: var(--accent)">
+      <div class="tool-label">Fraction</div>
       <div class="frac-visual">
         <input type="text" class="frac-integer-field" id="integer-input" placeholder="0" spellcheck="false" autocomplete="off" autofocus>
         <div class="frac-separator-dot">&middot;</div>
@@ -331,8 +282,8 @@ permalink: "/tw/fraction-to-decimal.html"
     </div>
 
     <!-- Output Card -->
-    <div class="frac-output-card" id="output-card">
-      <div class="frac-output-label">
+    <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
+      <div class="tool-output-label">
         <span>Decimal Result</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
