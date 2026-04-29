@@ -6,7 +6,11 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve --port=5500",
-    "debug": "npx @11ty/eleventy --serve --port=5500 --debug"
+    "debug": "npx @11ty/eleventy --serve --port=5500 --debug",
+    "docker:build": "docker build -t coding-tools .",
+    "docker:run": "docker run -d --name coding-tools-test -p 8080:80 coding-tools",
+    "docker:stop": "docker stop coding-tools-test && docker rm coding-tools-test",
+    "docker:test": "npm run docker:build && npm run docker:run"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
