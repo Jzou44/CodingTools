@@ -8,66 +8,23 @@ permalink: "/jp/sha512-generator.html"
 
 {% extends "tool-layout.njk" %}
 
-{% block tool_content %}
-  <label class="section-label" for="input-editor">{{ t.ui.input }}</label>
-  <div class="editor-wrapper">
-    <div class="line-numbers" id="input-line-numbers">1</div>
-    <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
-  </div>
+{% import "macros/editor.njk" as editor %}
+{% import "macros/toolbar.njk" as toolbar %}
+{% import "macros/status-bar.njk" as status %}
 
-  <div class="toolbar">
-    <div class="toolbar-left">
+{% block tool_content %}
+  {{ editor.inputEditor(toolData.inputPlaceholder, t.ui.input) }}
+
+  {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
       <button class="btn btn-primary" id="btn-generate" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
         {{ t.ui.generate }}
       </button>
-      <button class="btn btn-ghost" id="btn-clear" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="3 6 5 6 21 6"></polyline>
-          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-          <line x1="10" y1="11" x2="10" y2="17"></line>
-          <line x1="14" y1="11" x2="14" y2="17"></line>
-        </svg>
-        {{ t.ui.clear }}
-      </button>
-    </div>
-    <div class="toolbar-right">
-            <button class="btn btn-ghost" id="btn-copy" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-        {{ t.ui.copy }}
-      </button>
-      <button class="btn btn-ghost" id="btn-download" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        {{ t.ui.download }}
-      </button>
-    </div>
-  </div>
+  {% endcall %}
 
-  <div style="margin-top: 24px;">
-    <label class="section-label" for="output-editor">{{ t.ui.output }}</label>
-    <div class="editor-wrapper readonly-wrapper">
-      <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
-      <textarea class="editor-area readonly" id="output-editor" spellcheck="false" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
-    </div>
-  </div>
+  {{ editor.outputEditor(toolData.outputPlaceholder, t.ui.output) }}
 
-  <div class="status-bar">
-    <div class="status-message idle" id="status-message">
-      <span class="status-dot" id="status-dot" style="display:none;"></span>
-      <span id="status-text"></span>
-    </div>
-    <div class="status-meta">
-      <span id="char-count">0 {{ t.ui.characters }}</span>
-      <span id="hash-length">{{ toolData.hashLength }}</span>
-    </div>
-  </div>
+  {{ status.statusBar(t.ui.characters, t.ui.characters, "hash-length") }}
 {% endblock %}
 
 {% block description %}

@@ -8,6 +8,10 @@ permalink: "/jp/hex-to-rgba.html"
 
 {% extends "tool-layout.njk" %}
 
+{% import "macros/editor.njk" as editor %}
+{% import "macros/toolbar.njk" as toolbar %}
+{% import "macros/status-bar.njk" as status %}
+
 {% block tool_content %}
   <style>
     .tool-input-card::before { background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6); }

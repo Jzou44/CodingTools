@@ -1,0 +1,25 @@
+{% import "macros/icons.njk" as icons %}
+
+{% macro toolbar(clearLabel, copyLabel, downloadLabel, showDownload) %}
+<div class="toolbar">
+  <div class="toolbar-left">
+    {{ caller() }}
+    <button class="btn btn-ghost" id="btn-clear" type="button">
+      {{ icons.iconTrash() }}
+      {{ clearLabel or "Clear" }}
+    </button>
+  </div>
+  <div class="toolbar-right">
+    <button class="btn btn-ghost" id="btn-copy" type="button">
+      {{ icons.iconCopy() }}
+      {{ copyLabel or "Copy" }}
+    </button>
+    {% if showDownload != false %}
+    <button class="btn btn-ghost" id="btn-download" type="button">
+      {{ icons.iconDownload() }}
+      {{ downloadLabel or "Download" }}
+    </button>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

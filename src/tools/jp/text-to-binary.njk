@@ -15,6 +15,10 @@ permalink: "/jp/text-to-binary.html"
   <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script>
 {% endblock %}
 
+{% import "macros/editor.njk" as editor %}
+{% import "macros/toolbar.njk" as toolbar %}
+{% import "macros/status-bar.njk" as status %}
+
 {% block tool_content %}
   <style>
     .dual-pane { display: flex; flex-direction: column; gap: 0; }

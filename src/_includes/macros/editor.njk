@@ -1,0 +1,17 @@
+{% macro inputEditor(placeholder, label) %}
+<label class="section-label" for="input-editor">{{ label or "Input" }}</label>
+<div class="editor-wrapper">
+  <div class="line-numbers" id="input-line-numbers">1</div>
+  <textarea class="editor-area" id="input-editor" spellcheck="false" placeholder="{{ placeholder }}"></textarea>
+</div>
+{% endmacro %}
+
+{% macro outputEditor(placeholder, label) %}
+<div style="margin-top: 24px;">
+  <label class="section-label" for="output-editor">{{ label or "Output" }}</label>
+  <div class="editor-wrapper readonly-wrapper">
+    <div class="line-numbers readonly-bg" id="output-line-numbers">1</div>
+    <textarea class="editor-area readonly" id="output-editor" spellcheck="false" readonly placeholder="{{ placeholder }}"></textarea>
+  </div>
+</div>
+{% endmacro %}
