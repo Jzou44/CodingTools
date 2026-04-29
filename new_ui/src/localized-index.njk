@@ -54,7 +54,7 @@ languages:
       </div>
       <h2 class="category-title">{{ homepage[lang].categories[cat.id] or cat.name }}</h2>
     </div>
-    <p class="category-desc">{{ cat.description }}</p>
+    <p class="category-desc">{% if homepage[lang].categoryDescs[cat.id] %}{{ homepage[lang].categoryDescs[cat.id] }}{% else %}{{ cat.description }}{% endif %}</p>
     <div class="tool-grid">
       {% for slug, tool in tools %}
         {% if tool.category == cat.id %}

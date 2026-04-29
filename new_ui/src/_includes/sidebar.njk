@@ -29,12 +29,12 @@
     <ul class="category-list">
       {% for cat in categories %}
         <li>
-          <a href="/#{{ cat.id }}">
+          <a href="{% if lang and lang != 'en' %}/{{ lang }}/#{{ cat.id }}{% else %}/#{{ cat.id }}{% endif %}">
             <span class="category-left">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 {{ cat.icon | safe }}
               </svg>
-              {{ cat.name }}
+              {% if lang and lang != 'en' and homepage[lang] and homepage[lang].categories[cat.id] %}{{ homepage[lang].categories[cat.id] }}{% else %}{{ cat.name }}{% endif %}
             </span>
             <span class="category-count">{{ cat.count }}</span>
           </a>

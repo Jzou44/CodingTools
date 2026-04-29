@@ -21,6 +21,14 @@
       "sha384-generator": "SHA384 Generator",
       "sha512-generator": "SHA512 Generator",
       "password-generator": "Password Generator"
+    },
+    "categoryDescs": {
+      "image-utilities": "Compress, convert, and inspect image files right in your browser.",
+      "formatter-minifier": "Beautify or minify JSON, XML, HTML, CSS, JavaScript, and SQL.",
+      "internet-testing": "Network diagnostics, DNS tools, and connectivity testing.",
+      "hash-cryptography": "Generate hashes, encode/decode data, and create secure passwords.",
+      "number-conversion": "Convert between number systems, color formats, and encodings.",
+      "string-text-utilities": "Transform, analyze, and manipulate text and strings."
     }
   },
   "cn": {
@@ -45,6 +53,14 @@
       "sha384-generator": "SHA384 生成器",
       "sha512-generator": "SHA-512 生成器",
       "password-generator": "密码生成器"
+    },
+    "categoryDescs": {
+      "image-utilities": "在浏览器中直接压缩、转换和检查图片文件。",
+      "formatter-minifier": "美化或压缩 JSON、XML、HTML、CSS、JavaScript 和 SQL。",
+      "internet-testing": "网络诊断、DNS 工具和连接测试。",
+      "hash-cryptography": "生成哈希、编码/解码数据和创建安全密码。",
+      "number-conversion": "在数字系统、颜色格式和编码之间转换。",
+      "string-text-utilities": "转换、分析和操作文本和字符串。"
     }
   },
   "tw": {
@@ -69,6 +85,14 @@
       "sha384-generator": "SHA384 產生器",
       "sha512-generator": "SHA-512 產生器",
       "password-generator": "密碼產生器"
+    },
+    "categoryDescs": {
+      "image-utilities": "在瀏覽器中直接壓縮、轉換和檢查圖片檔案。",
+      "formatter-minifier": "美化或壓縮 JSON、XML、HTML、CSS、JavaScript 和 SQL。",
+      "internet-testing": "網路診斷、DNS 工具和連線測試。",
+      "hash-cryptography": "產生雜湊、編碼/解碼資料和建立安全密碼。",
+      "number-conversion": "在數字系統、顏色格式和編碼之間轉換。",
+      "string-text-utilities": "轉換、分析和操作文字和字串。"
     }
   },
   "jp": {
@@ -93,6 +117,14 @@
       "sha384-generator": "SHA384 ジェネレーター",
       "sha512-generator": "SHA-512 ジェネレーター",
       "password-generator": "パスワードジェネレーター"
+    },
+    "categoryDescs": {
+      "image-utilities": "ブラウザで画像ファイルを圧縮、変換、検査。",
+      "formatter-minifier": "JSON、XML、HTML、CSS、JavaScript、SQLの整形・圧縮。",
+      "internet-testing": "ネットワーク診断、DNSツール、接続テスト。",
+      "hash-cryptography": "ハッシュ生成、データのエンコード/デコード、安全なパスワード作成。",
+      "number-conversion": "数値システム、カラーフォーマット、エンコーディングの変換。",
+      "string-text-utilities": "テキストと文字列の変換、分析、操作。"
     }
   },
   "kr": {
@@ -117,6 +149,14 @@
       "sha384-generator": "SHA384 생성기",
       "sha512-generator": "SHA-512 생성기",
       "password-generator": "비밀번호 생성기"
+    },
+    "categoryDescs": {
+      "image-utilities": "브라우저에서 이미지 파일을 압축, 변환, 검사하세요.",
+      "formatter-minifier": "JSON, XML, HTML, CSS, JavaScript, SQL을 정렬하거나 압축합니다.",
+      "internet-testing": "네트워크 진단, DNS 도구, 연결 테스트.",
+      "hash-cryptography": "해시 생성, 데이터 인코딩/디코딩, 안전한 비밀번호 생성.",
+      "number-conversion": "숫자 시스템, 색상 포맷, 인코딩 간 변환。",
+      "string-text-utilities": "텍스트와 문자열 변환, 분석, 조작。"
     }
   },
   "fr": {
@@ -141,6 +181,14 @@
       "sha384-generator": "Générateur SHA384",
       "sha512-generator": "Générateur SHA-512",
       "password-generator": "Générateur de mots de passe"
+    },
+    "categoryDescs": {
+      "image-utilities": "Compressez, convertissez et inspectez des images directement dans votre navigateur.",
+      "formatter-minifier": "Formatez ou minifiez JSON, XML, HTML, CSS, JavaScript et SQL.",
+      "internet-testing": "Diagnostics réseau, outils DNS et tests de connectivité.",
+      "hash-cryptography": "Générez des hashes, encodez/décodez des données et créez des mots de passe sécurisés.",
+      "number-conversion": "Convertissez entre systèmes numériques, formats de couleur et encodages.",
+      "string-text-utilities": "Transformez, analysez et manipulez du texte et des chaînes."
     }
   },
   "de": {
@@ -165,6 +213,14 @@
       "sha384-generator": "SHA384 Generator",
       "sha512-generator": "SHA-512 Generator",
       "password-generator": "Passwort Generator"
+    },
+    "categoryDescs": {
+      "image-utilities": "Komprimieren, konvertieren und inspizieren Sie Bilddateien direkt im Browser.",
+      "formatter-minifier": "Formatieren oder minimieren Sie JSON, XML, HTML, CSS, JavaScript und SQL.",
+      "internet-testing": "Netzwerkdiagnose, DNS-Tools und Konnektivitätstests.",
+      "hash-cryptography": "Hashes generieren, Daten kodieren/decodieren und sichere Passwörter erstellen.",
+      "number-conversion": "Konvertieren zwischen Zahlensystemen, Farbformaten und Kodierungen.",
+      "string-text-utilities": "Text und Zeichenfolgen transformieren, analysieren und manipulieren."
     }
   },
   "es": {
@@ -189,6 +245,14 @@
       "sha384-generator": "Generador SHA384",
       "sha512-generator": "Generador SHA-512",
       "password-generator": "Generador de contraseñas"
+    },
+    "categoryDescs": {
+      "image-utilities": "Comprima, convierta e inspeccione imágenes directamente en su navegador.",
+      "formatter-minifier": "Formatee o minimice JSON, XML, HTML, CSS, JavaScript y SQL.",
+      "internet-testing": "Diagnóstico de red, herramientas DNS y pruebas de conectividad.",
+      "hash-cryptography": "Genere hashes, codifique/decodifique datos y cree contraseñas seguras.",
+      "number-conversion": "Convierta entre sistemas numéricos, formatos de color y codificaciones.",
+      "string-text-utilities": "Transforme, analice y manipule texto y cadenas."
     }
   },
   "pt": {
@@ -213,6 +277,14 @@
       "sha384-generator": "Gerador SHA384",
       "sha512-generator": "Gerador SHA-512",
       "password-generator": "Gerador de senhas"
+    },
+    "categoryDescs": {
+      "image-utilities": "Comprima, converta e inspecione imagens diretamente no seu navegador.",
+      "formatter-minifier": "Formate ou minimize JSON, XML, HTML, CSS, JavaScript e SQL.",
+      "internet-testing": "Diagnóstico de rede, ferramentas DNS e testes de conectividade.",
+      "hash-cryptography": "Gere hashes, codifique/decodifique dados e crie senhas seguras.",
+      "number-conversion": "Converta entre sistemas numéricos, formatos de cor e codificações.",
+      "string-text-utilities": "Transforme, analise e manipule texto e strings."
     }
   }
 }
