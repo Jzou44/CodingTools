@@ -256,8 +256,8 @@ permalink: "/de/ascii-to-hex.html"
 
       function updateCounts() {
         var text = editor2.getValue();
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        byteCount.textContent = ToolCommon.pluralise(editor1.getValue().length, 'byte');
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        byteCount.textContent = ToolCommon.pluralise(editor1.getValue().length, '{{ t.ui.byte }}', '{{ t.ui.bytes }}');
       }
 
       btnConvert.onclick = function () {
@@ -272,7 +272,7 @@ permalink: "/de/ascii-to-hex.html"
             hexValues.push(hex);
           }
           editor2.setValue(hexValues.join(delimiter));
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length, 'byte'));
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length, '{{ t.ui.byte }}', '{{ t.ui.bytes }}'));
           updateCounts();
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Conversion failed: ' + e.message);
@@ -283,8 +283,8 @@ permalink: "/de/ascii-to-hex.html"
         editor1.setValue('');
         editor2.setValue('');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-        charCount.textContent = '0 characters';
-        byteCount.textContent = '0 bytes';
+        charCount.textContent = '0 {{ t.ui.characters }}';
+        byteCount.textContent = '0 {{ t.ui.bytes }}';
       });
 
       btnCopy.addEventListener('click', function () {

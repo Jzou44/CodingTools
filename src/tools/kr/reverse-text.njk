@@ -73,8 +73,8 @@ permalink: "/kr/reverse-text.html"
 
       function updateCounts() {
         var text = inputEditor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), '{{ t.ui.line }}', '{{ t.ui.lines }}');
         ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
       }
 

@@ -78,8 +78,8 @@ permalink: "/kr/sha1-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = text.length === 40 ? '40 hex characters' : ToolCommon.pluralise(text.length, 'character');
-        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        charCount.textContent = text.length === 40 ? '40 hex characters' : ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), '{{ t.ui.line }}', '{{ t.ui.lines }}');
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 

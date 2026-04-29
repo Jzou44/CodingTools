@@ -77,8 +77,8 @@ permalink: "/pt/sha1-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = text.length === 40 ? '40 hex characters' : ToolCommon.pluralise(text.length, 'character');
-        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        charCount.textContent = text.length === 40 ? '40 hex {{ t.ui.characters }}' : ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), '{{ t.ui.line }}', '{{ t.ui.lines }}');
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 
@@ -93,7 +93,7 @@ permalink: "/pt/sha1-generator.html"
             return b.toString(16).padStart(2, '0');
           }).join('');
           outputEditor.value = hashHex;
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-1 hash generated \u2014 40 hex characters');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-1 hash generated \u2014 40 hex {{ t.ui.characters }}');
           updateCounts();
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Hash generation failed: ' + e.message);

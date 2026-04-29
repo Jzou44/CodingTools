@@ -119,7 +119,7 @@ permalink: "/tw/image-to-base64.html"
           var base64 = e.target.result;
           outputEditor.value = base64;
           var chars = base64.length;
-          charCount.textContent = ToolCommon.pluralise(chars, 'character');
+          charCount.textContent = ToolCommon.pluralise(chars, '{{ t.ui.character }}', '{{ t.ui.characters }}');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Image converted to Base64');
         };
         reader.readAsDataURL(file);
@@ -127,7 +127,7 @@ permalink: "/tw/image-to-base64.html"
 
       btnClear.addEventListener('click', function () {
         outputEditor.value = '';
-        charCount.textContent = '0 characters';
+        charCount.textContent = '0 {{ t.ui.characters }}';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 

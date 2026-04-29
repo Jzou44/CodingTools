@@ -159,8 +159,8 @@ permalink: "/jp/word-counter.html"
         statReadingTime.textContent = formatTime(readingTime);
         statSpeakingTime.textContent = formatTime(speakingTime);
 
-        charCount.textContent = ToolCommon.pluralise(charsSpaces, 'character');
-        lineCount.textContent = ToolCommon.pluralise(lines, 'line');
+        charCount.textContent = ToolCommon.pluralise(charsSpaces, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        lineCount.textContent = ToolCommon.pluralise(lines, '{{ t.ui.line }}', '{{ t.ui.lines }}');
         ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
       }
 

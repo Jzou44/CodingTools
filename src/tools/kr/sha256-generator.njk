@@ -78,7 +78,7 @@ permalink: "/kr/sha256-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
         hashLength.textContent = text.length === 64 ? '64 characters' : text.length + ' characters';
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }

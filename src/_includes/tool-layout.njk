@@ -50,6 +50,18 @@
 {% endblock %}
 
 {% block scripts %}
+  <script>
+    window.I18N = {
+      charSingular: '{{ t.ui.character or "character" }}',
+      charPlural:   '{{ t.ui.characters or "characters" }}',
+      lineSingular: '{{ t.ui.line or "line" }}',
+      linePlural:   '{{ t.ui.lines or "lines" }}',
+      byteSingular: '{{ t.ui.byte or "byte" }}',
+      bytePlural:   '{{ t.ui.bytes or "bytes" }}',
+      copied:       '{{ t.ui.copied or "Copied!" }}',
+      copy:         '{{ t.ui.copy or "Copy" }}'
+    };
+  </script>
   <script src="/js/main.js"></script>
   <script src="/js/tool-common.js"></script>
   {% block tool_script %}{% endblock %}

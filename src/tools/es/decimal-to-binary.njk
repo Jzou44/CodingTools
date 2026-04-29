@@ -296,7 +296,7 @@ permalink: "/es/decimal-to-binary.html"
           return;
         }
         try {
-          var result = new BigNumber(input, 10);
+          var result = BigInt(input);
           showPrimary(result.toString(2), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(octalOutput, octalCard, result.toString(8), 'valid');

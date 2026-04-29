@@ -77,8 +77,8 @@ permalink: "/pt/sha384-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        hashLength.textContent = text.length === 96 ? '96 characters' : text.length + ' characters';
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        hashLength.textContent = text.length === 96 ? '96 {{ t.ui.characters }}' : text.length + ' {{ t.ui.characters }}';
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 
@@ -93,7 +93,7 @@ permalink: "/pt/sha384-generator.html"
             return b.toString(16).padStart(2, '0');
           }).join('');
           outputEditor.value = hashHex;
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-384 hash generated \u2014 96 hex characters');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-384 hash generated \u2014 96 hex {{ t.ui.characters }}');
           updateCounts();
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Hash generation failed: ' + e.message);

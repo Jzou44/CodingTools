@@ -77,8 +77,8 @@ permalink: "/cn/sha384-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        hashLength.textContent = text.length === 96 ? '96 characters' : text.length + ' characters';
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        hashLength.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 

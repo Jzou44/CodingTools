@@ -129,8 +129,8 @@ permalink: "/cn/character-count.html"
           statTwitter.style.color = '';
         }
 
-        charCount.textContent = ToolCommon.pluralise(totalChars, 'character');
-        lineCount.textContent = ToolCommon.pluralise(lines, 'line');
+        charCount.textContent = ToolCommon.pluralise(totalChars, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        lineCount.textContent = ToolCommon.pluralise(lines, '{{ t.ui.line }}', '{{ t.ui.lines }}');
         ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
       }
 

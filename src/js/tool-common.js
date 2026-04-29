@@ -9,8 +9,9 @@ var ToolCommon = (function () {
     return text.split('\n').length;
   }
 
-  function pluralise(count, word) {
-    return count + ' ' + word + (count !== 1 ? 's' : '');
+  function pluralise(count, singular, plural) {
+    var w = (count !== 1 && plural) ? plural : singular;
+    return count + ' ' + w;
   }
 
   function updateLineNumbers(textarea, container) {
@@ -37,8 +38,9 @@ var ToolCommon = (function () {
     if (inputEditor) inputEditor.value = '';
     if (outputEditor) outputEditor.value = '';
     updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-    if (charCount) charCount.textContent = '0 characters';
-    if (lineCount) lineCount.textContent = '0 lines';
+    var i18n = window.I18N || {};
+    if (charCount) charCount.textContent = '0 ' + (i18n.charPlural || 'characters');
+    if (lineCount) lineCount.textContent = '0 ' + (i18n.linePlural || 'lines');
     if (inputEditor && inputLineNums) updateLineNumbers(inputEditor, inputLineNums);
     if (outputEditor && outputLineNums) updateLineNumbers(outputEditor, outputLineNums);
     if (inputEditor) inputEditor.focus();
@@ -49,9 +51,10 @@ var ToolCommon = (function () {
     if (!text) return;
     navigator.clipboard.writeText(text).then(function () {
       var originalHTML = btnCopy.innerHTML;
+      var i18n = window.I18N || {};
       btnCopy.classList.add('copied');
       btnCopy.innerHTML =
-        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> ' + (i18n.copied || 'Copied!');
       setTimeout(function () {
         btnCopy.innerHTML = originalHTML;
         btnCopy.classList.remove('copied');
@@ -81,10 +84,11 @@ var ToolCommon = (function () {
     if (!exampleCopy) return;
     exampleCopy.addEventListener('click', function () {
       var code = document.getElementById('example-code').textContent;
+      var i18n = window.I18N || {};
       navigator.clipboard.writeText(code).then(function () {
-        exampleCopy.textContent = 'Copied!';
+        exampleCopy.textContent = i18n.copied || 'Copied!';
         setTimeout(function () {
-          exampleCopy.textContent = 'Copy';
+          exampleCopy.textContent = i18n.copy || 'Copy';
         }, 2000);
       });
     });

@@ -78,7 +78,7 @@ permalink: "/kr/sha512-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
         hashLength.textContent = text.length === 128 ? '128 characters' : text.length + ' characters';
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }

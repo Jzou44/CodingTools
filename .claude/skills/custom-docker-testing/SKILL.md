@@ -1,5 +1,5 @@
 ---
-name: docker-testing
+name: custom-docker-testing
 description: Use when the user wants to build, run, or test the Coding.Tools Docker container locally
 ---
 

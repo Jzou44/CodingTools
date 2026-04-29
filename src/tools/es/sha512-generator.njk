@@ -77,8 +77,8 @@ permalink: "/es/sha512-generator.html"
 
       function updateCounts() {
         var text = outputEditor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        hashLength.textContent = text.length === 128 ? '128 characters' : text.length + ' characters';
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        hashLength.textContent = text.length === 128 ? '128 {{ t.ui.characters }}' : text.length + ' {{ t.ui.characters }}';
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 
@@ -93,7 +93,7 @@ permalink: "/es/sha512-generator.html"
             return b.toString(16).padStart(2, '0');
           }).join('');
           outputEditor.value = hashHex;
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-512 hash generated \u2014 128 hex characters');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-512 hash generated \u2014 128 hex {{ t.ui.characters }}');
           updateCounts();
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Hash generation failed: ' + e.message);

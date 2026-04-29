@@ -104,8 +104,8 @@ permalink: "/fr/text-editor.html"
 
       function updateCounts() {
         var text = editor.value;
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), 'line');
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), '{{ t.ui.line }}', '{{ t.ui.lines }}');
         ToolCommon.updateLineNumbers(editor, editorLineNums);
       }
 
@@ -114,8 +114,8 @@ permalink: "/fr/text-editor.html"
       btnClear.addEventListener('click', function () {
         editor.value = '';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-        charCount.textContent = '0 characters';
-        lineCount.textContent = '0 lines';
+        charCount.textContent = '0 {{ t.ui.characters }}';
+        lineCount.textContent = '0 {{ t.ui.lines }}';
         ToolCommon.updateLineNumbers(editor, editorLineNums);
         editor.focus();
       });

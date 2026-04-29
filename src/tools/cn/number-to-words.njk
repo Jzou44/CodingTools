@@ -148,7 +148,7 @@ permalink: "/cn/number-to-words.html"
           resultOrdinalNum.value = ordinalNum;
 
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ toolData.convertedSuccess }}');
-          charCount.textContent = ToolCommon.pluralise(word.length, 'character');
+          charCount.textContent = ToolCommon.pluralise(word.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.conversionFailed }}' + e.message);
         }

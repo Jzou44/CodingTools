@@ -295,7 +295,7 @@ permalink: "/cn/decimal-to-hex.html"
           return;
         }
         try {
-          var result = new BigNumber(input, 10);
+          var result = BigInt(input);
           showPrimary(result.toString(16).toUpperCase(), 'valid');
           showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');

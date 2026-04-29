@@ -212,8 +212,8 @@ permalink: "/es/hex-to-ascii.html"
 
       function updateCounts() {
         var text = editor2.getValue();
-        charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-        byteCount.textContent = ToolCommon.pluralise(new TextEncoder().encode(text).length, 'byte');
+        charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+        byteCount.textContent = ToolCommon.pluralise(new TextEncoder().encode(text).length, '{{ t.ui.byte }}', '{{ t.ui.bytes }}');
       }
 
       btnConvert.onclick = function () {
@@ -231,7 +231,7 @@ permalink: "/es/hex-to-ascii.html"
             output += String.fromCharCode(byte);
           }
           editor2.setValue(output);
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length / 2, 'byte'));
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length / 2, '{{ t.ui.byte }}', '{{ t.ui.bytes }}'));
           updateCounts();
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid hexadecimal input');
@@ -242,8 +242,8 @@ permalink: "/es/hex-to-ascii.html"
         editor1.setValue('');
         editor2.setValue('');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-        charCount.textContent = '0 characters';
-        byteCount.textContent = '0 bytes';
+        charCount.textContent = '0 {{ t.ui.characters }}';
+        byteCount.textContent = '0 {{ t.ui.bytes }}';
       });
 
       btnCopy.addEventListener('click', function () {
