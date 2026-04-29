@@ -1,0 +1,14 @@
+{
+  "name": "coding-tools",
+  "version": "2.0.0",
+  "description": "Free, multilingual developer toolbox with 62+ browser-based tools",
+  "private": true,
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve --port=5500",
+    "debug": "npx @11ty/eleventy --serve --port=5500 --debug"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
