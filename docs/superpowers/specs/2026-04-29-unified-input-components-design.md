@@ -15,7 +15,7 @@ The converter tools that use `<input type="text">` each define their own card co
 
 ### Shared CSS Classes (in `src/css/tool.css`)
 
-Two new classes replace all tool-specific variants:
+Six new classes replace all tool-specific variants:
 
 **`.tool-input-card`** — card container:
 ```css
@@ -61,11 +61,98 @@ Two new classes replace all tool-specific variants:
   font-size: 20px;
   font-weight: 400;
 }
+```
 
+**`.tool-label`** — section label (input/output):
+```css
+.tool-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+```
+
+**`.tool-hint`** — hint text below input:
+```css
+.tool-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.tool-hint code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+```
+
+**`.tool-output-card`** — output card container:
+```css
+.tool-output-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s;
+}
+
+.tool-output-card.has-result {
+  border-color: var(--tool-accent, var(--secondary));
+}
+```
+
+**`.tool-output-value`** — output value display:
+```css
+.tool-output-value {
+  font-family: var(--tool-font, 'IBM Plex Mono', monospace);
+  font-size: var(--tool-output-font-size, 42px);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  min-height: 50px;
+  word-break: break-all;
+  transition: color 0.3s;
+}
+
+.tool-output-value.empty {
+  color: var(--text-muted);
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.tool-output-value.error {
+  color: var(--error);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+```
+
+**Responsive** (shared across all above):
+```css
 @media (max-width: 600px) {
-  .tool-input-field {
-    font-size: var(--tool-font-size-mobile, 24px);
-  }
+  .tool-input-field { font-size: var(--tool-font-size-mobile, 24px); }
+  .tool-output-value { font-size: var(--tool-output-font-size-mobile, 32px); }
+  .tool-input-card, .tool-output-card { padding: 20px; }
 }
 ```
 
@@ -75,10 +162,12 @@ Tools customize via CSS variables set on the card element:
 
 | Variable | Default | Purpose |
 |----------|---------|---------|
-| `--tool-accent` | `var(--secondary)` | Accent bar color and caret color |
-| `--tool-font` | `'IBM Plex Mono', monospace` | Input font family |
+| `--tool-accent` | `var(--secondary)` | Accent bar color, caret color, output border color |
+| `--tool-font` | `'IBM Plex Mono', monospace` | Input and output font family |
 | `--tool-font-size` | `32px` | Input font size |
 | `--tool-font-size-mobile` | `24px` | Input font size on mobile |
+| `--tool-output-font-size` | `42px` | Output value font size |
+| `--tool-output-font-size-mobile` | `32px` | Output value font size on mobile |
 
 For gradient accent bars (e.g., rgb-to-hex), the tool overrides the `::before` background in its own inline `<style>` block.
 
