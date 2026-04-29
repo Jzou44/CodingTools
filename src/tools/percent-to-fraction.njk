@@ -18,53 +18,16 @@ permalink: "/percent-to-fraction.html"
       flex-direction: column;
       gap: 0;
     }
-    .pct-frac-input-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-    .pct-frac-input-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
+
+    /* Gradient accent bar override */
+    .pct-frac-converter .tool-input-card::before {
       background: linear-gradient(90deg, var(--accent), var(--secondary));
     }
-    .pct-frac-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
+
     .pct-frac-input-wrap {
       display: flex;
       align-items: baseline;
       gap: 4px;
-    }
-    .pct-frac-input-field {
-      flex: 1;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 32px;
-      font-weight: 500;
-      color: var(--text-primary);
-      background: transparent;
-      border: none;
-      outline: none;
-      padding: 8px 0;
-      letter-spacing: 0.02em;
-      caret-color: var(--accent);
-    }
-    .pct-frac-input-field::placeholder {
-      color: var(--text-muted);
-      font-size: 20px;
-      font-weight: 400;
     }
     .pct-frac-suffix {
       font-family: 'Fraunces', serif;
@@ -72,20 +35,6 @@ permalink: "/percent-to-fraction.html"
       font-weight: 700;
       color: var(--accent);
       opacity: 0.6;
-    }
-    .pct-frac-input-hint {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .pct-frac-input-hint code {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--text-secondary);
     }
 
     .pct-frac-arrow {
@@ -124,33 +73,7 @@ permalink: "/percent-to-fraction.html"
       box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4);
     }
 
-    .pct-frac-output-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      min-height: 140px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.3s;
-    }
-    .pct-frac-output-card.has-result {
-      border-color: var(--secondary);
-    }
-    .pct-frac-output-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    /* Custom output value (Fraunces font, flex layout for fraction display) */
     .pct-frac-output-value {
       font-family: 'Fraunces', serif;
       font-size: 42px;
@@ -268,22 +191,20 @@ permalink: "/percent-to-fraction.html"
     }
 
     @media (max-width: 600px) {
-      .pct-frac-input-field { font-size: 24px; }
       .pct-frac-suffix { font-size: 24px; }
       .pct-frac-output-value { font-size: 32px; }
-      .pct-frac-input-card, .pct-frac-output-card { padding: 20px; }
     }
   </style>
 
   <div class="pct-frac-converter">
     <!-- Input Card -->
-    <div class="pct-frac-input-card">
-      <div class="pct-frac-label">Percent</div>
+    <div class="tool-input-card" style="--tool-accent: var(--secondary)">
+      <div class="tool-label">Percent</div>
       <div class="pct-frac-input-wrap">
-        <input type="text" class="pct-frac-input-field" id="percent-input" placeholder="Enter percent value..." spellcheck="false" autocomplete="off" autofocus>
+        <input type="text" class="tool-input-field" id="percent-input" placeholder="Enter percent value..." spellcheck="false" autocomplete="off" autofocus>
         <span class="pct-frac-suffix">%</span>
       </div>
-      <div class="pct-frac-input-hint">Enter a value like <code>75</code> or <code>125</code></div>
+      <div class="tool-hint">Enter a value like <code>75</code> or <code>125</code></div>
     </div>
 
     <!-- Arrow -->
@@ -294,8 +215,8 @@ permalink: "/percent-to-fraction.html"
     </div>
 
     <!-- Output Card -->
-    <div class="pct-frac-output-card" id="output-card">
-      <div class="pct-frac-output-label">
+    <div class="tool-output-card" id="output-card" style="--tool-accent: var(--secondary)">
+      <div class="tool-output-label">
         <span>Fraction</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
