@@ -1,434 +1,372 @@
 {
   "base64-encode": {
     "title": "Base64 Encode",
-    "slug": "base64-encode",
     "category": "hash-cryptography",
     "description": "Encode text to Base64 or decode Base64 back to readable text.",
     "icon": "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"></path>"
   },
   "base64-decode": {
     "title": "Base64 Decode",
-    "slug": "base64-decode",
     "category": "hash-cryptography",
     "description": "Decode Base64 strings back to readable text.",
     "icon": "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 9.9-1\"></path>"
   },
   "md5-generator": {
     "title": "MD5 Generator",
-    "slug": "md5-generator",
     "category": "hash-cryptography",
     "description": "Generate MD5 hash from any text input.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line><line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\"></line>"
   },
   "sha1-generator": {
     "title": "SHA1 Generator",
-    "slug": "sha1-generator",
     "category": "hash-cryptography",
     "description": "Generate SHA-1 hash from any text input.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line><line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\"></line>"
   },
   "sha256-generator": {
     "title": "SHA256 Generator",
-    "slug": "sha256-generator",
     "category": "hash-cryptography",
     "description": "Generate SHA-256 hash from any text input.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line><line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\"></line>"
   },
   "sha384-generator": {
     "title": "SHA384 Generator",
-    "slug": "sha384-generator",
     "category": "hash-cryptography",
     "description": "Generate SHA-384 hash from any text input.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line><line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\"></line>"
   },
   "sha512-generator": {
     "title": "SHA512 Generator",
-    "slug": "sha512-generator",
     "category": "hash-cryptography",
     "description": "Generate SHA-512 hash from any text input.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line><line x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\"></line>"
   },
   "password-generator": {
     "title": "Password Generator",
-    "slug": "password-generator",
     "category": "hash-cryptography",
     "description": "Generate strong random passwords with customizable options.",
     "icon": "<path d=\"M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4\"></path>"
   },
   "hex-to-decimal": {
     "title": "Hex to Decimal",
-    "slug": "hex-to-decimal",
     "category": "number-conversion",
     "description": "Convert hexadecimal numbers to decimal format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "decimal-to-hex": {
     "title": "Decimal to Hex",
-    "slug": "decimal-to-hex",
     "category": "number-conversion",
     "description": "Convert decimal numbers to hexadecimal format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "octal-to-decimal": {
     "title": "Octal to Decimal",
-    "slug": "octal-to-decimal",
     "category": "number-conversion",
     "description": "Convert octal numbers to decimal format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "decimal-to-octal": {
     "title": "Decimal to Octal",
-    "slug": "decimal-to-octal",
     "category": "number-conversion",
     "description": "Convert decimal numbers to octal format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "binary-to-decimal": {
     "title": "Binary to Decimal",
-    "slug": "binary-to-decimal",
     "category": "number-conversion",
     "description": "Convert binary numbers to decimal format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "decimal-to-binary": {
     "title": "Decimal to Binary",
-    "slug": "decimal-to-binary",
     "category": "number-conversion",
     "description": "Convert decimal numbers to binary format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "binary-to-hex": {
     "title": "Binary to Hex",
-    "slug": "binary-to-hex",
     "category": "number-conversion",
     "description": "Convert binary numbers to hexadecimal format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "hex-to-binary": {
     "title": "Hex to Binary",
-    "slug": "hex-to-binary",
     "category": "number-conversion",
     "description": "Convert hexadecimal numbers to binary format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "ascii-table": {
     "title": "ASCII Table",
-    "slug": "ascii-table",
     "category": "number-conversion",
     "description": "View the complete ASCII character table with codes and symbols.",
     "icon": "<path d=\"M4 7V4h16v3\"></path><line x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\"></line><line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\"></line>"
   },
   "hex-to-ascii": {
     "title": "Hex to ASCII",
-    "slug": "hex-to-ascii",
     "category": "number-conversion",
     "description": "Convert hexadecimal values to ASCII text.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "ascii-to-hex": {
     "title": "ASCII to Hex",
-    "slug": "ascii-to-hex",
     "category": "number-conversion",
     "description": "Convert ASCII text to hexadecimal values.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "binary-to-text": {
     "title": "Binary to Text",
-    "slug": "binary-to-text",
     "category": "number-conversion",
     "description": "Convert binary code to readable ASCII text.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "text-to-binary": {
     "title": "Text to Binary",
-    "slug": "text-to-binary",
     "category": "number-conversion",
     "description": "Convert text to binary code representation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "fraction-to-decimal": {
     "title": "Fraction to Decimal",
-    "slug": "fraction-to-decimal",
     "category": "number-conversion",
     "description": "Convert fractions to decimal numbers.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line>"
   },
   "decimal-to-fraction": {
     "title": "Decimal to Fraction",
-    "slug": "decimal-to-fraction",
     "category": "number-conversion",
     "description": "Convert decimal numbers to fractions.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line>"
   },
   "percent-to-decimal": {
     "title": "Percent to Decimal",
-    "slug": "percent-to-decimal",
     "category": "number-conversion",
     "description": "Convert percentages to decimal numbers.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line>"
   },
   "decimal-to-percent": {
     "title": "Decimal to Percent",
-    "slug": "decimal-to-percent",
     "category": "number-conversion",
     "description": "Convert decimal numbers to percentages.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line>"
   },
   "percent-to-fraction": {
     "title": "Percent to Fraction",
-    "slug": "percent-to-fraction",
     "category": "number-conversion",
     "description": "Convert percentages to fractions.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line>"
   },
   "fraction-to-percent": {
     "title": "Fraction to Percent",
-    "slug": "fraction-to-percent",
     "category": "number-conversion",
     "description": "Convert fractions to percentages.",
     "icon": "<line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"></line><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"></line><line x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\"></line>"
   },
   "hex-to-rgb": {
     "title": "Hex to RGB",
-    "slug": "hex-to-rgb",
     "category": "number-conversion",
     "description": "Convert hex color codes to RGB format with live preview.",
     "icon": "<circle cx=\"13.5\" cy=\"6.5\" r=\"2.5\"></circle><path d=\"M17.5 10.5c1.4 1.4 2 3.3 2 5.5H3c0-3.5 2.5-6.5 6-8\"></path><circle cx=\"8.5\" cy=\"14.5\" r=\"2.5\"></circle>"
   },
   "rgb-to-hex": {
     "title": "RGB to Hex",
-    "slug": "rgb-to-hex",
     "category": "number-conversion",
     "description": "Convert RGB color values to hex color codes with live preview.",
     "icon": "<circle cx=\"13.5\" cy=\"6.5\" r=\"2.5\"></circle><path d=\"M17.5 10.5c1.4 1.4 2 3.3 2 5.5H3c0-3.5 2.5-6.5 6-8\"></path><circle cx=\"8.5\" cy=\"14.5\" r=\"2.5\"></circle>"
   },
   "hex-to-rgba": {
     "title": "Hex to RGBA",
-    "slug": "hex-to-rgba",
     "category": "number-conversion",
     "description": "Convert hex color codes to RGBA format with opacity control.",
     "icon": "<circle cx=\"13.5\" cy=\"6.5\" r=\"2.5\"></circle><path d=\"M17.5 10.5c1.4 1.4 2 3.3 2 5.5H3c0-3.5 2.5-6.5 6-8\"></path><circle cx=\"8.5\" cy=\"14.5\" r=\"2.5\"></circle>"
   },
   "rgba-to-hex": {
     "title": "RGBA to Hex",
-    "slug": "rgba-to-hex",
     "category": "number-conversion",
     "description": "Convert RGBA color values to hex color codes with opacity.",
     "icon": "<circle cx=\"13.5\" cy=\"6.5\" r=\"2.5\"></circle><path d=\"M17.5 10.5c1.4 1.4 2 3.3 2 5.5H3c0-3.5 2.5-6.5 6-8\"></path><circle cx=\"8.5\" cy=\"14.5\" r=\"2.5\"></circle>"
   },
   "roman-numerals-chart": {
     "title": "Roman Numerals Chart",
-    "slug": "roman-numerals-chart",
     "category": "number-conversion",
     "description": "View a complete Roman numerals reference chart from 1 to 1000.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\"></line><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\"></line>"
   },
   "roman-numerals-to-numbers": {
     "title": "Roman to Numbers",
-    "slug": "roman-numerals-to-numbers",
     "category": "number-conversion",
     "description": "Convert Roman numerals to decimal numbers.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "numbers-to-roman-numerals": {
     "title": "Numbers to Roman",
-    "slug": "numbers-to-roman-numerals",
     "category": "number-conversion",
     "description": "Convert decimal numbers to Roman numerals.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline>"
   },
   "text-editor": {
     "title": "Text Editor Online",
-    "slug": "text-editor",
     "category": "string-text-utilities",
     "description": "Edit text online with line numbers, word wrap, and character counting.",
     "icon": "<path d=\"M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z\"></path><path d=\"m15 5 4 4\"></path>"
   },
   "regex-tester": {
     "title": "Regex Tester",
-    "slug": "regex-tester",
     "category": "string-text-utilities",
     "description": "Test regular expressions live with match highlighting and flag controls.",
     "icon": "<circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"></line>"
   },
   "regex-replace": {
     "title": "Regex Replace",
-    "slug": "regex-replace",
     "category": "string-text-utilities",
     "description": "Find and replace text using regular expressions with backreference support.",
     "icon": "<polyline points=\"17 1 21 5 17 9\"></polyline><path d=\"M3 11V9a4 4 0 0 1 4-4h14\"></path><polyline points=\"7 23 3 19 7 15\"></polyline><path d=\"M21 13v2a4 4 0 0 1-4 4H3\"></path>"
   },
   "word-counter": {
     "title": "Word Counter",
-    "slug": "word-counter",
     "category": "string-text-utilities",
     "description": "Count words, characters, sentences, and paragraphs instantly.",
     "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
   },
   "character-count": {
     "title": "Character Count",
-    "slug": "character-count",
     "category": "string-text-utilities",
     "description": "Count characters, words, lines, and UTF-8 bytes with Twitter limit tracker.",
     "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
   },
   "case-converter": {
     "title": "Case Converter",
-    "slug": "case-converter",
     "category": "string-text-utilities",
     "description": "Convert text to uppercase, lowercase, sentence case, title case, or invert case.",
     "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
   },
   "reverse-text": {
     "title": "Reverse Text",
-    "slug": "reverse-text",
     "category": "string-text-utilities",
     "description": "Reverse any text string instantly.",
     "icon": "<polyline points=\"14 17 3 17 3 6\"></polyline><polyline points=\"10 21 3 14 10 7\"></polyline>"
   },
   "number-to-words": {
     "title": "Number to Words",
-    "slug": "number-to-words",
     "category": "string-text-utilities",
     "description": "Convert numbers to English words, ordinals, and ordinal numbers.",
     "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
   },
   "json-formatter": {
     "title": "JSON Formatter",
-    "slug": "json-formatter",
     "category": "formatter-minifier",
     "description": "Format and beautify JSON code with proper indentation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "json-minifier": {
     "title": "JSON Minifier",
-    "slug": "json-minifier",
     "category": "formatter-minifier",
     "description": "Minify JSON by removing whitespace and formatting.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "xml-formatter": {
     "title": "XML Formatter",
-    "slug": "xml-formatter",
     "category": "formatter-minifier",
     "description": "Format and beautify XML code with proper indentation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "xml-minifier": {
     "title": "XML Minifier",
-    "slug": "xml-minifier",
     "category": "formatter-minifier",
     "description": "Minify XML by removing whitespace and formatting.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "json-to-xml": {
     "title": "JSON to XML",
-    "slug": "json-to-xml",
     "category": "formatter-minifier",
     "description": "Convert JSON data to XML format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "xml-to-json": {
     "title": "XML to JSON",
-    "slug": "xml-to-json",
     "category": "formatter-minifier",
     "description": "Convert XML data to JSON format.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "html-beautifier": {
     "title": "HTML Beautifier",
-    "slug": "html-beautifier",
     "category": "formatter-minifier",
     "description": "Beautify and format HTML code with proper indentation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "html-minifier": {
     "title": "HTML Minifier",
-    "slug": "html-minifier",
     "category": "formatter-minifier",
     "description": "Minify HTML by removing whitespace, comments, and unnecessary characters.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "javascript-beautifier": {
     "title": "JavaScript Beautifier",
-    "slug": "javascript-beautifier",
     "category": "formatter-minifier",
     "description": "Beautify and format JavaScript code with proper indentation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "javascript-minifier": {
     "title": "JavaScript Minifier",
-    "slug": "javascript-minifier",
     "category": "formatter-minifier",
     "description": "Minify JavaScript by removing whitespace, comments, and shortening variable names.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "css-beautifier": {
     "title": "CSS Beautifier",
-    "slug": "css-beautifier",
     "category": "formatter-minifier",
     "description": "Beautify and format CSS code with proper indentation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "css-minifier": {
     "title": "CSS Minifier",
-    "slug": "css-minifier",
     "category": "formatter-minifier",
     "description": "Minify CSS by removing whitespace, comments, and unnecessary characters.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "sql-formatter": {
     "title": "SQL Formatter",
-    "slug": "sql-formatter",
     "category": "formatter-minifier",
     "description": "Format and beautify SQL queries with proper indentation.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "sql-minifier": {
     "title": "SQL Minifier",
-    "slug": "sql-minifier",
     "category": "formatter-minifier",
     "description": "Minify SQL by removing whitespace, comments, and unnecessary formatting.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "compress-png": {
     "title": "Compress PNG",
-    "slug": "compress-png",
     "category": "image-utilities",
     "description": "Reduce PNG file size by converting to palette mode with optimization.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   },
   "compress-jpeg": {
     "title": "Compress JPEG",
-    "slug": "compress-jpeg",
     "category": "image-utilities",
     "description": "Reduce JPEG file size by re-encoding with adjustable quality.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   },
   "progressive-jpeg": {
     "title": "Progressive JPEG",
-    "slug": "progressive-jpeg",
     "category": "image-utilities",
     "description": "Convert baseline JPEG images to progressive JPEG format.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   },
   "image-to-base64": {
     "title": "Image to Base64",
-    "slug": "image-to-base64",
     "category": "image-utilities",
     "description": "Convert any image to a Base64 encoded data URI string.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   },
   "exif-viewer": {
     "title": "EXIF Viewer",
-    "slug": "exif-viewer",
     "category": "image-utilities",
     "description": "View EXIF metadata embedded in photos including GPS, camera, and date info.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   },
   "exif-remover": {
     "title": "EXIF Remover",
-    "slug": "exif-remover",
     "category": "image-utilities",
     "description": "Strip all EXIF metadata from images to protect your privacy.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"

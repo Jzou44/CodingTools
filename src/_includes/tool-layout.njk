@@ -9,9 +9,15 @@
 
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
+    {% if lang and lang != 'en' %}
+    <a href="/{{ lang }}/">{{ t.ui.home or "Home" }}</a>
+    <span class="separator">/</span>
+    <a href="/{{ lang }}/#{{ category }}">{{ categoryName }}</a>
+    {% else %}
     <a href="/">Home</a>
     <span class="separator">/</span>
     <a href="/#{{ category }}">{{ categoryName }}</a>
+    {% endif %}
     <span class="separator">/</span>
     <span class="current">{{ toolTitle }}</span>
   </nav>

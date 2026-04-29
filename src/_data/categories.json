@@ -2,7 +2,7 @@
   {
     "id": "image-utilities",
     "name": "Image Utilities",
-    "count": 8,
+    "count": 6,
     "description": "Compress, convert, and inspect image files right in your browser.",
     "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>"
   },
@@ -13,17 +13,10 @@
     "description": "Beautify or minify JSON, XML, HTML, CSS, JavaScript, and SQL.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
-  {
-    "id": "internet-testing",
-    "name": "Internet Testing",
-    "count": 6,
-    "description": "Network diagnostics, DNS tools, and connectivity testing.",
-    "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\"></path><path d=\"M2 12h20\"></path>"
-  },
-  {
+{
     "id": "hash-cryptography",
     "name": "Hash & Cryptography",
-    "count": 9,
+    "count": 8,
     "description": "Generate hashes, encode/decode data, and create secure passwords.",
     "icon": "<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"></path>"
   },
@@ -37,7 +30,7 @@
   {
     "id": "string-text-utilities",
     "name": "String & Text Utilities",
-    "count": 9,
+    "count": 8,
     "description": "Transform, analyze, and manipulate text and strings.",
     "icon": "<polyline points=\"4 7 4 4 20 4 20 7\"></polyline><line x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\"></line><line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\"></line>"
   }

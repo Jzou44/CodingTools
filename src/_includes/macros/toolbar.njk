@@ -3,7 +3,6 @@
 {% macro toolbar(clearLabel, copyLabel, downloadLabel, showDownload) %}
 <div class="toolbar">
   <div class="toolbar-left">
-    {{ caller() }}
     <button class="btn btn-ghost" id="btn-clear" type="button">
       {{ icons.iconTrash() }}
       {{ clearLabel or "Clear" }}

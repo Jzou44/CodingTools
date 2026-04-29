@@ -281,14 +281,12 @@ img {
 
 [data-category="image-utilities"] .category-icon { background: #f0ebe4; color: #7c6a5b; }
 [data-category="formatter-minifier"] .category-icon { background: #e8f5ee; color: #2d6a4f; }
-[data-category="internet-testing"] .category-icon { background: #e4f0f3; color: #3d7a8a; }
 [data-category="hash-cryptography"] .category-icon { background: #faf0d4; color: #b8860b; }
 [data-category="number-conversion"] .category-icon { background: #e8f5ee; color: #2d6a4f; }
 [data-category="string-text-utilities"] .category-icon { background: #f5e8ee; color: #8b4a5e; }
 
 [data-category="image-utilities"]   { border-left: 3px solid #7c6a5b; padding-left: 24px; border-radius: 0 0 0 8px; }
 [data-category="formatter-minifier"] { border-left: 3px solid #2d6a4f; padding-left: 24px; border-radius: 0 0 0 8px; }
-[data-category="internet-testing"]  { border-left: 3px solid #3d7a8a; padding-left: 24px; border-radius: 0 0 0 8px; }
 [data-category="hash-cryptography"]  { border-left: 3px solid #b8860b; padding-left: 24px; border-radius: 0 0 0 8px; }
 [data-category="number-conversion"]  { border-left: 3px solid #2d6a4f; padding-left: 24px; border-radius: 0 0 0 8px; }
 [data-category="string-text-utilities"] { border-left: 3px solid #8b4a5e; padding-left: 24px; border-radius: 0 0 0 8px; }
@@ -370,7 +368,6 @@ img {
 
 [data-category="image-utilities"] .tool-card:hover    { border-color: #7c6a5b; border-left: 3px solid #7c6a5b; box-shadow: 0 8px 24px rgba(124, 106, 91, 0.15); }
 [data-category="formatter-minifier"] .tool-card:hover { border-color: #2d6a4f; border-left: 3px solid #2d6a4f; box-shadow: 0 8px 24px rgba(45, 106, 79, 0.15); }
-[data-category="internet-testing"] .tool-card:hover   { border-color: #3d7a8a; border-left: 3px solid #3d7a8a; box-shadow: 0 8px 24px rgba(61, 122, 138, 0.15); }
 [data-category="hash-cryptography"] .tool-card:hover  { border-color: #b8860b; border-left: 3px solid #b8860b; box-shadow: 0 8px 24px rgba(184, 134, 11, 0.15); }
 [data-category="number-conversion"] .tool-card:hover  { border-color: #2d6a4f; border-left: 3px solid #2d6a4f; box-shadow: 0 8px 24px rgba(45, 106, 79, 0.15); }
 [data-category="string-text-utilities"] .tool-card:hover { border-color: #8b4a5e; border-left: 3px solid #8b4a5e; box-shadow: 0 8px 24px rgba(139, 74, 94, 0.15); }
@@ -524,59 +521,8 @@ img {
   letter-spacing: -0.02em;
 }
 
-.tool-description {
-  color: var(--text-secondary);
-  font-size: 15px;
-  margin-top: 8px;
-  max-width: 600px;
-}
-
-/* ============================================================
-   Editor
-   ============================================================ */
 .editor-wrapper {
   margin-bottom: 16px;
-}
-
-.editor-label {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  margin-bottom: 8px;
-}
-
-.editor {
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  min-height: 240px;
-  position: relative;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.editor:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.08);
-}
-
-.editor textarea {
-  width: 100%;
-  min-height: 240px;
-  padding: 16px;
-  border: none;
-  background: transparent;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 14px;
-  line-height: 1.6;
-  resize: vertical;
-  outline: none;
-  color: var(--text-primary);
-}
-
-.editor textarea::placeholder {
-  color: var(--text-muted);
 }
 
 /* ============================================================
@@ -696,20 +642,6 @@ img {
   display: inline-block;
 }
 
-.status-dot.success {
-  background: var(--success);
-}
-
-.status-dot.error {
-  background: var(--error);
-}
-
-.status-info {
-  color: var(--text-muted);
-  display: flex;
-  gap: 16px;
-}
-
 /* ============================================================
    Sidebar Cards
    ============================================================ */
@@ -719,51 +651,6 @@ img {
   border-radius: var(--radius-lg);
   padding: 20px;
   margin-bottom: 16px;
-}
-
-.sidebar-title {
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.sidebar-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.sidebar-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: all 0.15s;
-}
-
-.sidebar-link:hover {
-  background: var(--accent-light);
-  color: var(--accent);
-}
-
-.sidebar-link.active {
-  background: var(--accent-light);
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.sidebar-link .link-count {
-  margin-left: auto;
-  font-size: 12px;
-  color: var(--text-muted);
 }
 
 /* ============================================================
@@ -839,12 +726,6 @@ img {
   border: 1px solid var(--border);
 }
 
-.code-block .copy-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-}
-
 /* ============================================================
    Toast Notification
    ============================================================ */
@@ -912,36 +793,6 @@ img {
   animation: fadeInUp 0.6s ease 0.3s forwards;
   opacity: 0;
 }
-
-/* ============================================================
-   Utility Classes
-   ============================================================ */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 32px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mt-1 { margin-top: 8px; }
-.mt-2 { margin-top: 16px; }
-.mt-3 { margin-top: 24px; }
-.mt-4 { margin-top: 32px; }
 
 /* ============================================================
    Responsive — Navbar & Hero tweaks

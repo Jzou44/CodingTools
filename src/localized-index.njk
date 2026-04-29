@@ -75,6 +75,26 @@ languages:
 </main>
 {% endblock %}
 
+{% block footer %}
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-text">&copy; {{ currentYear }} Coding.Tools</p>
+    <p class="footer-text">{{ homepage[lang].tagline or "Built for developers, by developers" }}</p>
+    <div class="footer-links">
+      <a href="/" lang="en">English</a>
+      <a href="/cn/" lang="zh-CN">中文</a>
+      <a href="/tw/" lang="zh-TW">繁體</a>
+      <a href="/jp/" lang="ja">日本語</a>
+      <a href="/kr/" lang="ko">한국어</a>
+      <a href="/fr/" lang="fr">Français</a>
+      <a href="/de/" lang="de">Deutsch</a>
+      <a href="/es/" lang="es">Español</a>
+      <a href="/pt/" lang="pt">Português</a>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
 {% block scripts %}
   <script src="/js/main.js"></script>
 {% endblock %}
