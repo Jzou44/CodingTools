@@ -1,0 +1,281 @@
+{
+  "en": {
+    "title": "HTML Beautifier — Coding.Tools",
+    "description": "Beautify and format HTML code with proper indentation directly in your browser.",
+    "toolTitle": "HTML Beautifier",
+    "toolDescription": "Clean up messy HTML with consistent indentation and structure. Copy or download the beautified result.",
+    "categoryName": "Formatter & Minifier",
+    "inputPlaceholder": "Paste HTML to beautify...",
+    "outputPlaceholder": "Beautified HTML will appear here...",
+    "descTitle": "HTML Beautifier",
+    "descParas": [
+      "This tool beautifies HTML code by adding proper indentation, line breaks, and consistent formatting. Paste minified or poorly formatted HTML and get clean, readable output instantly.",
+      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste your HTML code into the input editor.",
+      "Click <strong>Beautify HTML</strong> to clean up the code.",
+      "The beautified HTML appears in the output editor with proper indentation.",
+      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
+    ],
+    "whatIs": "What is HTML beautification?",
+    "whatIsParas": [
+      "HTML beautification adds indentation and line breaks to HTML code, making it human-readable. Minified HTML has all whitespace removed to reduce file size, but is difficult to read and debug.",
+      "Beautifying HTML is essential for debugging web pages, reviewing templates, and collaborating with other developers."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool accepts any HTML input. The beautifier preserves all tags and attributes — it only changes whitespace and indentation for readability.",
+    "example": "Example",
+    "examplePara": "Minified HTML becomes readable after beautification:",
+    "exampleCode": "--- Minified Input ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Beautified Output ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "cn": {
+    "title": "HTML 美化 — Coding.Tools",
+    "description": "在浏览器中美化和格式化 HTML 代码。",
+    "toolTitle": "HTML 美化",
+    "toolDescription": "清理杂乱的 HTML，添加一致的缩进和结构。复制或下载美化结果。",
+    "categoryName": "格式化与压缩",
+    "inputPlaceholder": "粘贴要美化的 HTML...",
+    "outputPlaceholder": "美化后的 HTML 将在此显示...",
+    "descTitle": "HTML 美化",
+    "descParas": [
+      "该工具美化 HTML 代码，添加适当的缩进、换行和一致的格式。粘贴压缩或格式不佳的 HTML，即可获取干净、可读的输出。",
+      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "将 HTML 代码粘贴到输入编辑器中。",
+      "点击<strong>美化 HTML</strong>来清理代码。",
+      "美化后的 HTML 将以适当的缩进显示在输出编辑器中。",
+      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什么是 HTML 美化？",
+    "whatIsParas": [
+      "HTML 美化为 HTML 代码添加缩进和换行，使其易于阅读。压缩的 HTML 移除了所有空白字符以减小文件大小，但难以阅读和调试。",
+      "美化 HTML 对于调试网页、查看模板和与其他开发者协作至关重要。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具接受任何 HTML 输入。美化器保留所有标签和属性——只改变空白和缩进以提高可读性。",
+    "example": "示例",
+    "examplePara": "压缩的 HTML 美化后变得可读：",
+    "exampleCode": "--- 压缩输入 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 美化输出 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "tw": {
+    "title": "HTML 美化 — Coding.Tools",
+    "description": "在瀏覽器中美化和格式化 HTML 程式碼。",
+    "toolTitle": "HTML 美化",
+    "toolDescription": "清理雜亂的 HTML，添加一致的縮排和結構。複製或下載美化結果。",
+    "categoryName": "格式化與壓縮",
+    "inputPlaceholder": "貼上要美化的 HTML...",
+    "outputPlaceholder": "美化後的 HTML 將在此顯示...",
+    "descTitle": "HTML 美化",
+    "descParas": [
+      "該工具美化 HTML 程式碼，添加適當的縮排、換行和一致的格式。貼上壓縮或格式不佳的 HTML，即可取得乾淨、可讀的輸出。",
+      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "將 HTML 程式碼貼上到輸入編輯器中。",
+      "點擊<strong>美化 HTML</strong>來清理程式碼。",
+      "美化後的 HTML 將以適當的縮排顯示在輸出編輯器中。",
+      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什麼是 HTML 美化？",
+    "whatIsParas": [
+      "HTML 美化為 HTML 程式碼添加縮排和換行，使其易於閱讀。壓縮的 HTML 移除了所有空白字元以減小檔案大小，但難以閱讀和除錯。",
+      "美化 HTML 對於除錯網頁、檢視樣板和與其他開發者協作至關重要。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具接受任何 HTML 輸入。美化器保留所有標籤和屬性——只改變空白和縮排以提高可讀性。",
+    "example": "範例",
+    "examplePara": "壓縮的 HTML 美化後變得可讀：",
+    "exampleCode": "--- 壓縮輸入 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 美化輸出 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "jp": {
+    "title": "HTML 整形 — Coding.Tools",
+    "description": "ブラウザで HTML コードを整形して美しくします。",
+    "toolTitle": "HTML 整形",
+    "toolDescription": "乱れた HTML を一貫したインデントと構造で整理します。コピーまたはダウンロード。",
+    "categoryName": "フォーマッター＆ミニファイア",
+    "inputPlaceholder": "整形する HTML を貼り付け...",
+    "outputPlaceholder": "整形された HTML がここに表示されます...",
+    "descTitle": "HTML 整形",
+    "descParas": [
+      "このツールは HTML コードに適切なインデント、改行、一貫したフォーマットを追加して美しく整形します。圧縮またはフォーマットが不正な HTML を貼り付けると、きれいな読みやすい出力が得られます。",
+      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "HTML コードを入力エディタに貼り付けます。",
+      "<strong>HTML 整形</strong>をクリックしてコードを整理します。",
+      "整形された HTML が適切なインデントで出力エディタに表示されます。",
+      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+    ],
+    "whatIs": "HTML 整形とは？",
+    "whatIsParas": [
+      "HTML 整形は HTML コードにインデントと改行を追加し、人間が読めるようにします。圧縮された HTML はファイルサイズを小さくするためにすべての空白が除去されていますが、読むのは困難です。",
+      "HTML の整形はウェブページのデバッグ、テンプレートの確認、他の開発者との協力に不可欠です。"
+    ],
+    "inputNotes": "入力に関する注意",
+    "inputNotesPara": "このツールは任意の HTML 入力を受け付けます。整形ツールはすべてのタグと属性を保持し、可読性のために空白とインデントのみを変更します。",
+    "example": "例",
+    "examplePara": "圧縮された HTML は整形後に読みやすくなります：",
+    "exampleCode": "--- 圧縮入力 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 整形出力 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "kr": {
+    "title": "HTML 포맷터 — Coding.Tools",
+    "description": "브라우저에서 HTML 코드를 포맷하고 아름답게 정리합니다.",
+    "toolTitle": "HTML 포맷터",
+    "toolDescription": "混乱된 HTML을 일관된 들여쓰기와 구조로 정리합니다. 복사 또는 다운로드하세요.",
+    "categoryName": "포맷터 & 미니파이어",
+    "inputPlaceholder": "포맷할 HTML을 붙여넣으세요...",
+    "outputPlaceholder": "포맷된 HTML이 여기에 표시됩니다...",
+    "descTitle": "HTML 포맷터",
+    "descParas": [
+      "이 도구는 HTML 코드에 적절한 들여쓰기, 줄 바꿈, 일관된 포맷을 추가하여 아름답게 정리합니다. 압축되었거나 잘못 포맷된 HTML을 붙여넣으면 깔끔하고 읽기 쉬운 출력을 얻을 수 있습니다.",
+      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "HTML 코드를 입력 편집기에 붙여넣으세요.",
+      "<strong>HTML 포맷</strong>을 클릭하여 코드를 정리합니다.",
+      "포맷된 HTML이 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
+      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+    ],
+    "whatIs": "HTML 포맷팅이란?",
+    "whatIsParas": [
+      "HTML 포맷팅은 HTML 코드에 들여쓰기와 줄 바꿈을 추가하여 사람이 읽을 수 있게 합니다. 압축된 HTML은 파일 크기를 줄이기 위해 모든 공백이 제거되어 읽기 어렵습니다.",
+      "HTML 포맷팅은 웹 페이지 디버깅, 템플릿 검토, 다른 개발자와의 협업에 필수적입니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "이 도구는 모든 HTML 입력을 허용합니다. 포맷터는 모든 태그와 속성을 보존하고 가독성을 위해 공백과 들여쓰기만 변경합니다.",
+    "example": "예시",
+    "examplePara": "압축된 HTML은 포맷 후 읽기 쉬워집니다:",
+    "exampleCode": "--- 압축 입력 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 포맷 출력 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "fr": {
+    "title": "Formateur HTML — Coding.Tools",
+    "description": "Embellissez et formatez le code HTML avec une indentation correcte directement dans votre navigateur.",
+    "toolTitle": "Formateur HTML",
+    "toolDescription": "Nettoyez le HTML désordonné avec une indentation et une structure cohérentes. Copiez ou téléchargez le résultat.",
+    "categoryName": "Formateur & Minifieur",
+    "inputPlaceholder": "Collez le HTML à embellir...",
+    "outputPlaceholder": "Le HTML embell apparaîtra ici...",
+    "descTitle": "Formateur HTML",
+    "descParas": [
+      "Cet outil embellit le code HTML en ajoutant une indentation correcte, des retours à la ligne et un formatage cohérent. Collez du HTML minifié ou mal formaté pour obtenir une sortie propre et lisible instantanément.",
+      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez votre code HTML dans l'éditeur d'entrée.",
+      "Cliquez sur <strong>Embellir HTML</strong> pour nettoyer le code.",
+      "Le HTML embell apparaît dans l'éditeur de sortie avec une indentation correcte.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+    ],
+    "whatIs": "Qu'est-ce que l'embellissement HTML ?",
+    "whatIsParas": [
+      "L'embellissement HTML ajoute de l'indentation et des retours à la ligne au code HTML, le rendant lisible par l'homme. Le HTML minifié a tous les espaces supprimés pour réduire la taille du fichier, mais est difficile à lire et à déboguer.",
+      "L'embellissement HTML est essentiel pour le débogage de pages web, l'examen de modèles et la collaboration avec d'autres développeurs."
+    ],
+    "inputNotes": "Notes d'entrée",
+    "inputNotesPara": "L'outil accepte toute entrée HTML. L'embellisseur préserve toutes les balises et attributs — il ne modifie que les espaces et l'indentation pour la lisibilité.",
+    "example": "Exemple",
+    "examplePara": "Le HTML minifié devient lisible après embellissement :",
+    "exampleCode": "--- Entrée minifiée ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Sortie embellie ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "de": {
+    "title": "HTML-Formatierer — Coding.Tools",
+    "description": "Verschönern und formatieren Sie HTML-Code mit korrekter Einrückung direkt in Ihrem Browser.",
+    "toolTitle": "HTML-Formatierer",
+    "toolDescription": "Bereinigen Sie unordentliches HTML mit konsistenter Einrückung und Struktur. Kopieren oder laden Sie das Ergebnis herunter.",
+    "categoryName": "Formatter & Minifier",
+    "inputPlaceholder": "HTML zum Verschönern einfügen...",
+    "outputPlaceholder": "Verschönertes HTML wird hier angezeigt...",
+    "descTitle": "HTML-Formatierer",
+    "descParas": [
+      "Dieses Tool verschönert HTML-Code, indem es korrekte Einrückung, Zeilenumbrüche und konsistente Formatierung hinzufügt. Fügen Sie minifiziertes oder schlecht formatiertes HTML ein und erhalten Sie sofort saubere, lesbare Ausgabe.",
+      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Fügen Sie Ihren HTML-Code in den Eingabe-Editor ein.",
+      "Klicken Sie auf <strong>HTML verschönern</strong>, um den Code zu bereinigen.",
+      "Das verschönerte HTML wird im Ausgabe-Editor mit korrekter Einrückung angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+    ],
+    "whatIs": "Was ist HTML-Verschönerung?",
+    "whatIsParas": [
+      "HTML-Verschönerung fügt Einrückungen und Zeilenumbrüche zum HTML-Code hinzu und macht ihn lesbar. Minifiziertes HTML hat alle Leerzeichen entfernt, um die Dateigröße zu reduzieren, ist aber schwer zu lesen.",
+      "Die Verschönerung von HTML ist unerlässlich für das Debuggen von Webseiten, die Überprüfung von Vorlagen und die Zusammenarbeit mit anderen Entwicklern."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Das Tool akzeptiert jede HTML-Eingabe. Der Verschönerer bewahrt alle Tags und Attribute auf — er ändert nur Leerzeichen und Einrückung für die Lesbarkeit.",
+    "example": "Beispiel",
+    "examplePara": "Minifiziertes HTML wird nach der Verschönerung lesbar:",
+    "exampleCode": "--- Minifizierte Eingabe ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Verschönerte Ausgabe ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "es": {
+    "title": "Formateador HTML — Coding.Tools",
+    "description": "Embellezca y formatee el código HTML con indentación correcta directamente en su navegador.",
+    "toolTitle": "Formateador HTML",
+    "toolDescription": "Limpie HTML desordenado con indentación y estructura consistentes. Copie o descargue el resultado.",
+    "categoryName": "Formateador y Minificador",
+    "inputPlaceholder": "Pegue HTML para embellecer...",
+    "outputPlaceholder": "El HTML embellecido aparecerá aquí...",
+    "descTitle": "Formateador HTML",
+    "descParas": [
+      "Esta herramienta embellece el código HTML agregando indentación correcta, saltos de línea y formato consistente. Pegue HTML minificado o mal formateado y obtenga una salida limpia y legible al instante.",
+      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Pegue su código HTML en el editor de entrada.",
+      "Haga clic en <strong>Embellecer HTML</strong> para limpiar el código.",
+      "El HTML embellecido aparece en el editor de salida con indentación correcta.",
+      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+    ],
+    "whatIs": "¿Qué es el embellecimiento HTML?",
+    "whatIsParas": [
+      "El embellecimiento HTML agrega indentación y saltos de línea al código HTML, haciéndolo legible. El HTML minificado tiene todos los espacios eliminados para reducir el tamaño del archivo, pero es difícil de leer y depurar.",
+      "El embellecimiento HTML es esencial para depurar páginas web, revisar plantillas y colaborar con otros desarrolladores."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "La herramienta acepta cualquier entrada HTML. El embellecedor preserva todas las etiquetas y atributos — solo cambia espacios e indentación para la legibilidad.",
+    "example": "Ejemplo",
+    "examplePara": "El HTML minificado se vuelve legible después del embellecimiento:",
+    "exampleCode": "--- Entrada minificada ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Salida embellecida ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  },
+  "pt": {
+    "title": "Formatador HTML — Coding.Tools",
+    "description": "Embeleze e formate o código HTML com indentação correta diretamente no seu navegador.",
+    "toolTitle": "Formatador HTML",
+    "toolDescription": "Limpe HTML desordenado com indentação e estrutura consistentes. Copie ou baixe o resultado.",
+    "categoryName": "Formatador e Minificador",
+    "inputPlaceholder": "Cole HTML para embelezar...",
+    "outputPlaceholder": "O HTML embelezado aparecerá aqui...",
+    "descTitle": "Formatador HTML",
+    "descParas": [
+      "Esta ferramenta embeleze o código HTML adicionando indentação correta, quebras de linha e formatação consistente. Cole HTML minificado ou mal formatado e obtenha uma saída limpa e legível instantaneamente.",
+      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole seu código HTML no editor de entrada.",
+      "Clique em <strong>Embelezar HTML</strong> para limpar o código.",
+      "O HTML embelezado aparece no editor de saída com indentação correta.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+    ],
+    "whatIs": "O que é embelezamento HTML?",
+    "whatIsParas": [
+      "O embelezamento HTML adiciona indentação e quebras de linha ao código HTML, tornando-o legível. O HTML minificado tem todos os espaços removidos para reduzir o tamanho do arquivo, mas é difícil de ler e depurar.",
+      "O embelezamento HTML é essencial para depurar páginas web, revisar templates e colaborar com outros desenvolvedores."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "A ferramenta aceita qualquer entrada HTML. O embelezador preserva todas as tags e atributos — ele apenas altera espaços e indentação para legibilidade.",
+    "example": "Exemplo",
+    "examplePara": "O HTML minificado se torna legível após o embelezamento:",
+    "exampleCode": "--- Entrada minificada ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Saída embelezada ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+  }
+}

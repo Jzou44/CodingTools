@@ -1,0 +1,281 @@
+{
+  "en": {
+    "title": "CSS Beautifier — Coding.Tools",
+    "description": "Beautify and format CSS code with proper indentation directly in your browser.",
+    "toolTitle": "CSS Beautifier",
+    "toolDescription": "Clean up messy or minified CSS with consistent indentation and structure. Copy or download the beautified result.",
+    "categoryName": "Formatter & Minifier",
+    "inputPlaceholder": "Paste CSS to beautify...",
+    "outputPlaceholder": "Beautified CSS will appear here...",
+    "descTitle": "CSS Beautifier",
+    "descParas": [
+      "This tool beautifies CSS code by adding proper indentation, line breaks, and consistent formatting. Paste minified or poorly formatted CSS and get clean, readable output instantly.",
+      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste your CSS code into the input editor.",
+      "Click <strong>Beautify CSS</strong> to clean up the code.",
+      "The beautified CSS appears in the output editor with proper indentation.",
+      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
+    ],
+    "whatIs": "What is CSS beautification?",
+    "whatIsParas": [
+      "CSS beautification adds indentation and line breaks to CSS code, making it human-readable. Minified CSS has all whitespace removed to reduce file size, but is difficult to read and debug.",
+      "Beautifying CSS is essential for debugging styles, reviewing frameworks, and collaborating with other developers."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool accepts any CSS input. The beautifier preserves all styles and selectors — it only changes whitespace and indentation for readability.",
+    "example": "Example",
+    "examplePara": "Minified CSS becomes readable after beautification:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "cn": {
+    "title": "CSS 美化 — Coding.Tools",
+    "description": "在浏览器中美化和格式化 CSS 代码。",
+    "toolTitle": "CSS 美化",
+    "toolDescription": "清理杂乱或压缩的 CSS，添加一致的缩进和结构。复制或下载美化结果。",
+    "categoryName": "格式化与压缩",
+    "inputPlaceholder": "粘贴要美化的 CSS...",
+    "outputPlaceholder": "美化后的 CSS 将在此显示...",
+    "descTitle": "CSS 美化",
+    "descParas": [
+      "该工具美化 CSS 代码，添加适当的缩进、换行和一致的格式。粘贴压缩或格式不佳的 CSS，即可获取干净、可读的输出。",
+      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "将 CSS 代码粘贴到输入编辑器中。",
+      "点击<strong>美化 CSS</strong>来清理代码。",
+      "美化后的 CSS 将以适当的缩进显示在输出编辑器中。",
+      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什么是 CSS 美化？",
+    "whatIsParas": [
+      "CSS 美化为 CSS 代码添加缩进和换行，使其易于阅读。压缩的 CSS 移除了所有空白字符以减小文件大小，但难以阅读和调试。",
+      "美化 CSS 对于调试样式、查看框架和与其他开发者协作至关重要。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具接受任何 CSS 输入。美化器保留所有样式和选择器——只改变空白和缩进以提高可读性。",
+    "example": "示例",
+    "examplePara": "压缩的 CSS 美化后变得可读：",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "tw": {
+    "title": "CSS 美化 — Coding.Tools",
+    "description": "在瀏覽器中美化和格式化 CSS 程式碼。",
+    "toolTitle": "CSS 美化",
+    "toolDescription": "清理雜亂或壓縮的 CSS，添加一致的縮排和結構。複製或下載美化結果。",
+    "categoryName": "格式化與壓縮",
+    "inputPlaceholder": "貼上要美化的 CSS...",
+    "outputPlaceholder": "美化後的 CSS 將在此顯示...",
+    "descTitle": "CSS 美化",
+    "descParas": [
+      "該工具美化 CSS 程式碼，添加適當的縮排、換行和一致的格式。貼上壓縮或格式不佳的 CSS，即可取得乾淨、可讀的輸出。",
+      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "將 CSS 程式碼貼上到輸入編輯器中。",
+      "點擊<strong>美化 CSS</strong>來清理程式碼。",
+      "美化後的 CSS 將以適當的縮排顯示在輸出編輯器中。",
+      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什麼是 CSS 美化？",
+    "whatIsParas": [
+      "CSS 美化為 CSS 程式碼添加縮排和換行，使其易於閱讀。壓縮的 CSS 移除了所有空白字元以減小檔案大小，但難以閱讀和除錯。",
+      "美化 CSS 對於除錯樣式、檢視框架和與其他開發者協作至關重要。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具接受任何 CSS 輸入。美化器保留所有樣式和選擇器——只改變空白和縮排以提高可讀性。",
+    "example": "範例",
+    "examplePara": "壓縮的 CSS 美化後變得可讀：",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "jp": {
+    "title": "CSS 整形 — Coding.Tools",
+    "description": "ブラウザで CSS コードを整形して美しくします。",
+    "toolTitle": "CSS 整形",
+    "toolDescription": "乱れたまたは圧縮された CSS を一貫したインデントと構造で整理します。コピーまたはダウンロード。",
+    "categoryName": "フォーマッター＆ミニファイア",
+    "inputPlaceholder": "整形する CSS を貼り付け...",
+    "outputPlaceholder": "整形された CSS がここに表示されます...",
+    "descTitle": "CSS 整形",
+    "descParas": [
+      "このツールは CSS コードに適切なインデント、改行、一貫したフォーマットを追加して美しく整形します。圧縮またはフォーマットが不正な CSS を貼り付けると、きれいな読みやすい出力が得られます。",
+      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "CSS コードを入力エディタに貼り付けます。",
+      "<strong>CSS 整形</strong>をクリックしてコードを整理します。",
+      "整形された CSS が適切なインデントで出力エディタに表示されます。",
+      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+    ],
+    "whatIs": "CSS 整形とは？",
+    "whatIsParas": [
+      "CSS 整形は CSS コードにインデントと改行を追加し、人間が読めるようにします。圧縮された CSS はファイルサイズを小さくするためにすべての空白が除去されていますが、読むのは困難です。",
+      "CSS の整形はスタイルのデバッグ、フレームワークの確認、他の開発者との協力に不可欠です。"
+    ],
+    "inputNotes": "入力に関する注意",
+    "inputNotesPara": "このツールは任意の CSS 入力を受け付けます。整形ツールはすべてのスタイルとセレクタを保持し、可読性のために空白とインデントのみを変更します。",
+    "example": "例",
+    "examplePara": "圧縮された CSS は整形後に読みやすくなります：",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "kr": {
+    "title": "CSS 포맷터 — Coding.Tools",
+    "description": "브라우저에서 CSS 코드를 포맷하고 아름답게 정리합니다.",
+    "toolTitle": "CSS 포맷터",
+    "toolDescription": "混乱되거나 압축된 CSS를 일관된 들여쓰기와 구조로 정리합니다. 복사 또는 다운로드하세요.",
+    "categoryName": "포맷터 & 미니파이어",
+    "inputPlaceholder": "포맷할 CSS를 붙여넣으세요...",
+    "outputPlaceholder": "포맷된 CSS가 여기에 표시됩니다...",
+    "descTitle": "CSS 포맷터",
+    "descParas": [
+      "이 도구는 CSS 코드에 적절한 들여쓰기, 줄 바꿈, 일관된 포맷을 추가하여 아름답게 정리합니다. 압축되었거나 잘못 포맷된 CSS를 붙여넣으면 깔끔하고 읽기 쉬운 출력을 얻을 수 있습니다.",
+      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "CSS 코드를 입력 편집기에 붙여넣으세요.",
+      "<strong>CSS 포맷</strong>을 클릭하여 코드를 정리합니다.",
+      "포맷된 CSS가 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
+      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+    ],
+    "whatIs": "CSS 포맷팅이란?",
+    "whatIsParas": [
+      "CSS 포맷팅은 CSS 코드에 들여쓰기와 줄 바꿈을 추가하여 사람이 읽을 수 있게 합니다. 압축된 CSS는 파일 크기를 줄이기 위해 모든 공백이 제거되어 읽기 어렵습니다.",
+      "CSS 포맷팅은 스타일 디버깅, 프레임워크 검토, 다른 개발자와의 협업에 필수적입니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "이 도구는 모든 CSS 입력을 허용합니다. 포맷터는 모든 스타일과 선택자를 보존하고 가독성을 위해 공백과 들여쓰기만 변경합니다.",
+    "example": "예시",
+    "examplePara": "압축된 CSS는 포맷 후 읽기 쉬워집니다:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "fr": {
+    "title": "Formateur CSS — Coding.Tools",
+    "description": "Embellissez et formatez le code CSS avec une indentation correcte directement dans votre navigateur.",
+    "toolTitle": "Formateur CSS",
+    "toolDescription": "Nettoyez le CSS désordonné ou minifié avec une indentation et une structure cohérentes. Copiez ou téléchargez le résultat.",
+    "categoryName": "Formateur & Minifieur",
+    "inputPlaceholder": "Collez le CSS à embellir...",
+    "outputPlaceholder": "Le CSS embell apparaîtra ici...",
+    "descTitle": "Formateur CSS",
+    "descParas": [
+      "Cet outil embellit le code CSS en ajoutant une indentation correcte, des retours à la ligne et un formatage cohérent. Collez du CSS minifié ou mal formaté pour obtenir une sortie propre et lisible instantanément.",
+      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez votre code CSS dans l'éditeur d'entrée.",
+      "Cliquez sur <strong>Embellir CSS</strong> pour nettoyer le code.",
+      "Le CSS embell apparaît dans l'éditeur de sortie avec une indentation correcte.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+    ],
+    "whatIs": "Qu'est-ce que l'embellissement CSS ?",
+    "whatIsParas": [
+      "L'embellissement CSS ajoute de l'indentation et des retours à la ligne au code CSS, le rendant lisible par l'homme. Le CSS minifié a tous les espaces supprimés pour réduire la taille du fichier, mais est difficile à lire.",
+      "L'embellissement CSS est essentiel pour le débogage des styles, l'examen des frameworks et la collaboration."
+    ],
+    "inputNotes": "Notes d'entrée",
+    "inputNotesPara": "L'outil accepte toute entrée CSS. L'embellisseur préserve tous les styles et sélecteurs.",
+    "example": "Exemple",
+    "examplePara": "Le CSS minifié devient lisible après embellissement :",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "de": {
+    "title": "CSS-Formatierer — Coding.Tools",
+    "description": "Verschönern und formatieren Sie CSS-Code mit korrekter Einrückung direkt in Ihrem Browser.",
+    "toolTitle": "CSS-Formatierer",
+    "toolDescription": "Bereinigen Sie unordentliches oder minifiziertes CSS mit konsistenter Einrückung und Struktur.",
+    "categoryName": "Formatter & Minifier",
+    "inputPlaceholder": "CSS zum Verschönern einfügen...",
+    "outputPlaceholder": "Verschönertes CSS wird hier angezeigt...",
+    "descTitle": "CSS-Formatierer",
+    "descParas": [
+      "Dieses Tool verschönert CSS-Code durch korrekte Einrückung, Zeilenumbrüche und konsistente Formatierung.",
+      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Fügen Sie Ihren CSS-Code in den Eingabe-Editor ein.",
+      "Klicken Sie auf <strong>CSS verschönern</strong>.",
+      "Das verschönerte CSS wird mit korrekter Einrückung angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+    ],
+    "whatIs": "Was ist CSS-Verschönerung?",
+    "whatIsParas": [
+      "CSS-Verschönerung fügt Einrückungen hinzu und macht den Code lesbar.",
+      "CSS-Verschönerung ist unerlässlich für Debugging und Zusammenarbeit."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Das Tool akzeptiert jede CSS-Eingabe.",
+    "example": "Beispiel",
+    "examplePara": "Minifiziertes CSS wird nach der Verschönerung lesbar:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "es": {
+    "title": "Formateador CSS — Coding.Tools",
+    "description": "Embellezca y formatee el código CSS con indentación correcta directamente en su navegador.",
+    "toolTitle": "Formateador CSS",
+    "toolDescription": "Limpie CSS desordenado o minificado con indentación y estructura consistentes.",
+    "categoryName": "Formateador y Minificador",
+    "inputPlaceholder": "Pegue CSS para embellecer...",
+    "outputPlaceholder": "El CSS embellecido aparecerá aquí...",
+    "descTitle": "Formateador CSS",
+    "descParas": [
+      "Esta herramienta embellece el código CSS con indentación correcta y formato consistente.",
+      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Pegue su código CSS en el editor de entrada.",
+      "Haga clic en <strong>Embellecer CSS</strong>.",
+      "El CSS embellecido aparece con indentación correcta.",
+      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+    ],
+    "whatIs": "¿Qué es el embellecimiento CSS?",
+    "whatIsParas": [
+      "El embellecimiento CSS agrega indentación y hace el código legible.",
+      "El embellecimiento CSS es esencial para depurar y colaborar."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "La herramienta acepta cualquier entrada CSS.",
+    "example": "Ejemplo",
+    "examplePara": "El CSS minificado se vuelve legible después del embellecimiento:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  },
+  "pt": {
+    "title": "Formatador CSS — Coding.Tools",
+    "description": "Embeleze e formate o código CSS com indentação correta diretamente no seu navegador.",
+    "toolTitle": "Formatador CSS",
+    "toolDescription": "Limpe CSS desordenado ou minificado com indentação e estrutura consistentes.",
+    "categoryName": "Formatador e Minificador",
+    "inputPlaceholder": "Cole CSS para embelezar...",
+    "outputPlaceholder": "O CSS embelezado aparecerá aqui...",
+    "descTitle": "Formatador CSS",
+    "descParas": [
+      "Esta ferramenta embeleze o código CSS com indentação correta e formatação consistente.",
+      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole seu código CSS no editor de entrada.",
+      "Clique em <strong>Embelezar CSS</strong>.",
+      "O CSS embelezado aparece com indentação correta.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+    ],
+    "whatIs": "O que é embelezamento CSS?",
+    "whatIsParas": [
+      "O embelezamento CSS adiciona indentação e torna o código legível.",
+      "O embelezamento CSS é essencial para depuração e colaboração."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "A ferramenta aceita qualquer entrada CSS.",
+    "example": "Exemplo",
+    "examplePara": "O CSS minificado se torna legível após o embelezamento:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+  }
+}

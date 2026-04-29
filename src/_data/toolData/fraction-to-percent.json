@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Fraction to Percent Converter — Coding.Tools",
+    "description": "Convert fractions to percentages directly in your browser.",
+    "toolTitle": "Fraction to Percent",
+    "toolDescription": "Convert fractions to percentage values.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Percent result will appear here...",
+    "descTitle": "Fraction to Percent Converter",
+    "descParas": [
+      "This tool converts fractions to percentages.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (optional), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert to percentage.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Fraction to Percent?",
+    "whatIsParas": [
+      "Converting fraction to percent: divide numerator by denominator, add integer, multiply by 100."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional), numerator, and denominator.",
+    "example": "Example",
+    "examplePara": "Converting fraction to percent:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 0\nNumerator: 3\nDenominator: 4\n\n--- Percent Output ---\n75%"
+  },
+  "cn": {
+    "title": "分数转百分比转换器 — Coding.Tools",
+    "description": "在浏览器中直接将分数转换为百分比。",
+    "toolTitle": "分数转百分比",
+    "toolDescription": "将分数转换为百分比表示。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入分数（如 3/4、1/2）...",
+    "outputPlaceholder": "百分比结果将显示在这里...",
+    "descTitle": "分数转百分比转换器",
+    "descParas": [
+      "此工具将分数转换为百分比表示。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入分数（格式：分子/分母）。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是分数转百分比？",
+    "whatIsParas": [
+      "分数转百分比是将分数转换为等值的百分比。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的分数，格式为分子/分母（如 3/4）。",
+    "example": "示例",
+    "examplePara": "将分数转换为百分比：",
+    "exampleCode": "--- 分数输入 ---\n3/4\n\n--- 百分比 ---\n75%\n\n--- 小数 ---\n0.75"
+  },
+  "tw": {
+    "title": "分數轉百分比轉換器 — Coding.Tools",
+    "description": "在瀏覽器中直接將分數轉換為百分比。",
+    "toolTitle": "分數轉百分比",
+    "toolDescription": "將分數轉換為百分比表示。",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "百分比結果將顯示在這裡...",
+    "descTitle": "分數轉百分比轉換器",
+    "descParas": [
+      "此工具將分數轉換為百分比表示。",
+      "轉換在瀏覽器本地運行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "輸入整數部分（選填）、分子和分母。",
+      "點擊<strong>轉換</strong>查看百分比結果。",
+      "使用<strong>複製</strong>複製結果。"
+    ],
+    "whatIs": "什麼是分數轉百分比？",
+    "whatIsParas": [
+      "分數轉百分比：將分子除以分母，加上整數，再乘以 100。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "輸入整數（選填）、分子和分母。",
+    "example": "範例",
+    "examplePara": "將分數轉換為百分比：",
+    "exampleCode": "--- 分數輸入 ---\n整數: 0\n分子: 3\n分母: 4\n\n--- 百分比輸出 ---\n75%"
+  },
+  "jp": {
+    "title": "分数からパーセント変換ツール — Coding.Tools",
+    "description": "ブラウザで直接分数をパーセントに変換します。",
+    "toolTitle": "分数からパーセント",
+    "toolDescription": "分数をパーセント値に変換します。",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "パーセント結果がここに表示されます...",
+    "descTitle": "分数からパーセント変換ツール",
+    "descParas": [
+      "このツールは分数をパーセントに変換します。",
+      "変換はブラウザ内でローカルに実行されます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "整数部分（任意）、分子、分母を入力してください。",
+      "<strong>変換</strong>をクリックしてパーセントに変換します。",
+      "<strong>コピー</strong>で結果をコピーします。"
+    ],
+    "whatIs": "分数からパーセントとは？",
+    "whatIsParas": [
+      "分数からパーセントへの変換：分子を分母で割り、整数を足し、100を掛けます。"
+    ],
+    "inputNotes": "入力についての注意",
+    "inputNotesPara": "整数（任意）、分子、分母を入力してください。",
+    "example": "例",
+    "examplePara": "分数をパーセントに変換：",
+    "exampleCode": "--- 分数入力 ---\n整数: 0\n分子: 3\n分母: 4\n\n--- パーセント出力 ---\n75%"
+  },
+  "kr": {
+    "title": "분수에서 퍼센트 변환기 — Coding.Tools",
+    "description": "브라우저에서 직접 분수를 퍼센트로 변환하세요.",
+    "toolTitle": "분수에서 퍼센트",
+    "toolDescription": "분수를 퍼센트 값으로 변환합니다.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "퍼센트 결과가 여기에 표시됩니다...",
+    "descTitle": "분수에서 퍼센트 변환기",
+    "descParas": [
+      "이 도구는 분수를 퍼센트로 변환합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "정수 부분(선택), 분자, 분모를 입력하세요.",
+      "<strong>변환</strong>을 클릭하여 퍼센트로 변환합니다.",
+      "<strong>복사</strong>를 사용하여 결과를 복사합니다."
+    ],
+    "whatIs": "분수에서 퍼센트란?",
+    "whatIsParas": [
+      "분수에서 퍼센트 변환: 분자를 분모로 나눅고, 정수를 더한 후 100을 곱합니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "정수(선택), 분자, 분모를 입력하세요.",
+    "example": "예시",
+    "examplePara": "분수를 퍼센트로 변환:",
+    "exampleCode": "--- 분수 입력 ---\n정수: 0\n분자: 3\n분모: 4\n\n--- 퍼센트 출력 ---\n75%"
+  },
+  "fr": {
+    "title": "Convertisseur Fraction en Pourcentage — Coding.Tools",
+    "description": "Convertissez des fractions en pourcentages directement dans votre navigateur.",
+    "toolTitle": "Fraction en Pourcentage",
+    "toolDescription": "Convertissez des fractions en valeurs en pourcentage.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Le résultat en pourcentage apparaîtra ici...",
+    "descTitle": "Convertisseur Fraction en Pourcentage",
+    "descParas": [
+      "Cet outil convertit les fractions en pourcentages.",
+      "La conversion s’exécute localement dans votre navigateur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Entrez la partie entière (facultative), le numérateur et le dénominateur.",
+      "Cliquez sur <strong>Convertir</strong> pour convertir en pourcentage.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
+    ],
+    "whatIs": "Qu’est-ce que Fraction en Pourcentage ?",
+    "whatIsParas": [
+      "Conversion de fraction en pourcentage : diviser le numérateur par le dénominateur, ajouter l’entière, multiplier par 100."
+    ],
+    "inputNotes": "Notes sur la saisie",
+    "inputNotesPara": "Entrez l’entière (facultatif), le numérateur et le dénominateur.",
+    "example": "Exemple",
+    "examplePara": "Conversion de fraction en pourcentage :",
+    "exampleCode": "--- Saisie Fraction ---\nEntière : 0\nNumérateur : 3\nDénominateur : 4\n\n--- Sortie Pourcentage ---\n75%"
+  },
+  "de": {
+    "title": "Bruch-zu-Prozent-Rechner — Coding.Tools",
+    "description": "Konvertieren Sie Brüche direkt in Ihrem Browser in Prozentsätze.",
+    "toolTitle": "Bruch zu Prozent",
+    "toolDescription": "Konvertieren Sie Brüche in Prozentwerte.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Prozentergebnis wird hier angezeigt...",
+    "descTitle": "Bruch-zu-Prozent-Rechner",
+    "descParas": [
+      "Dieses Tool konvertiert Brüche in Prozentsätze.",
+      "Die Konvertierung erfolgt lokal in Ihrem Browser."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Geben Sie den Ganzzahlteil (optional), Zähler und Nenner ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um in Prozent umzurechnen.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+    ],
+    "whatIs": "Was ist Bruch zu Prozent?",
+    "whatIsParas": [
+      "Bruch-zu-Prozent-Konvertierung: Zähler durch Nenner teilen, Ganzzahl addieren, mit 100 multiplizieren."
+    ],
+    "inputNotes": "Hinweise zur Eingabe",
+    "inputNotesPara": "Geben Sie die Ganzzahl (optional), den Zähler und den Nenner ein.",
+    "example": "Beispiel",
+    "examplePara": "Bruch in Prozent umrechnen:",
+    "exampleCode": "--- Bruch-Eingabe ---\nGanzzahl: 0\nZähler: 3\nNenner: 4\n\n--- Prozent-Ausgabe ---\n75%"
+  },
+  "es": {
+    "title": "Convertidor de Fracción a Porcentaje — Coding.Tools",
+    "description": "Convierta fracciones a porcentajes directamente en su navegador.",
+    "toolTitle": "Fracción a Porcentaje",
+    "toolDescription": "Convierta fracciones a valores porcentuales.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "El resultado porcentual aparecerá aquí...",
+    "descTitle": "Convertidor de Fracción a Porcentaje",
+    "descParas": [
+      "Esta herramienta convierte fracciones a porcentajes.",
+      "La conversión se ejecuta localmente en su navegador."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Ingrese la parte entera (opcional), numerador y denominador.",
+      "Haga clic en <strong>Convertir</strong> para convertir a porcentaje.",
+      "Use <strong>Copiar</strong> para copiar el resultado."
+    ],
+    "whatIs": "¿Qué es Fracción a Porcentaje?",
+    "whatIsParas": [
+      "Conversión de fracción a porcentaje: dividir numerador por denominador, sumar entero, multiplicar por 100."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese el entero (opcional), numerador y denominador.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de fracción a porcentaje:",
+    "exampleCode": "--- Entrada de Fracción ---\nEntero: 0\nNumerador: 3\nDenominador: 4\n\n--- Salida Porcentaje ---\n75%"
+  },
+  "pt": {
+    "title": "Conversor de Fração para Porcentagem — Coding.Tools",
+    "description": "Converta frações em porcentagens diretamente no seu navegador.",
+    "toolTitle": "Fração para Porcentagem",
+    "toolDescription": "Converta frações em valores percentuais.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "O resultado percentual aparecerá aqui...",
+    "descTitle": "Conversor de Fração para Porcentagem",
+    "descParas": [
+      "Esta ferramenta converte frações em porcentagens.",
+      "A conversão é executada localmente no seu navegador."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Insira a parte inteira (opcional), numerador e denominador.",
+      "Clique em <strong>Converter</strong> para converter em porcentagem.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
+    ],
+    "whatIs": "O que é Fração para Porcentagem?",
+    "whatIsParas": [
+      "Conversão de fração para porcentagem: dividir numerador pelo denominador, somar inteiro, multiplicar por 100."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira o inteiro (opcional), numerador e denominador.",
+    "example": "Exemplo",
+    "examplePara": "Conversão de fração para porcentagem:",
+    "exampleCode": "--- Entrada de Fração ---\nInteiro: 0\nNumerador: 3\nDenominador: 4\n\n--- Saída Porcentagem ---\n75%"
+  }
+}

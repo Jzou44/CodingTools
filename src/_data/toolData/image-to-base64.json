@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "Image to Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "Image Utilities",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "cn": {
+    "title": "图片转 Base64 — Coding.Tools",
+    "description": "在线将图片转换为 Base64 编码的 data URI 字符串。免费，在浏览器中运行。",
+    "toolTitle": "图片转 Base64",
+    "toolDescription": "将任何图片转换为 Base64 编码的 data URI，可嵌入 HTML 或 CSS 中。",
+    "categoryName": "图片工具",
+    "dropzoneMessage": "点击或拖拽图片文件上传",
+    "dropzoneHint": "1 张图片 · 最大 2MB",
+    "inputPlaceholder": "Base64 结果将在此显示...",
+    "descTitle": "图片转 Base64",
+    "descParas": [
+      "此工具将图片文件转换为 Base64 编码的 data URI 字符串。您可以直接在 HTML 或 CSS 中嵌入此字符串，无需单独的图片文件请求。",
+      "Base64 编码会使数据大小增加约 33%，因此最适合用于小图片（如图标和徽标），而非大照片。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "将图片文件拖放到上传区域，或点击选择。",
+      "Base64 编码的 data URI 出现在下方的文本编辑器中。",
+      "使用<strong>复制</strong>复制结果或<strong>保存</strong>下载为文本文件。"
+    ],
+    "whatIs": "在 HTML 中嵌入图片",
+    "whatIsParas": [
+      "可以在 HTML img 标签中直接使用 Base64 data URI：&lt;img src=\"data:image/png;base64,...\"&gt;",
+      "在 CSS 中，可以将 data URI 用于背景图片：background: url(data:image/png;base64,...)"
+    ],
+    "example": "用 Python 转换",
+    "examplePara": "使用 Python 将图片转换为 Base64：",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "tw": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "圖片轉Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "圖片工具",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "jp": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "画像からBase64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "画像ツール",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "kr": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "이미지에서 Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "이미지 도구",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "fr": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "Image en Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "Utilitaires d'image",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "de": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "Bild zu Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "Bild-Tools",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "es": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "Imagen a Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "Utilidades de imagen",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  },
+  "pt": {
+    "title": "Image to Base64 — Coding.Tools",
+    "description": "Convert images to Base64 encoded data URI strings online. Free and runs in your browser.",
+    "toolTitle": "Image to Base64",
+    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "categoryName": "Image Utilities",
+    "dropzoneMessage": "Click or drag an image file here to upload",
+    "dropzoneHint": "1 image · Max 2MB",
+    "inputPlaceholder": "Base64 result will appear here...",
+    "descTitle": "Image to Base64",
+    "descParas": [
+      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
+      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop an image file onto the upload area, or click to select.",
+      "The Base64 encoded data URI appears in the text editor below.",
+      "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
+    ],
+    "whatIs": "Embedding images in HTML",
+    "whatIsParas": [
+      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
+      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+    ],
+    "example": "Convert with Python",
+    "examplePara": "Convert an image to Base64 using Python:",
+    "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
+  }
+}

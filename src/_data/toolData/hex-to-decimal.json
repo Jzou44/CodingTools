@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Hex to Decimal Converter — Coding.Tools",
+    "description": "Convert hexadecimal numbers to decimal format directly in your browser. Fast, private, and free to use.",
+    "toolTitle": "Hex to Decimal",
+    "toolDescription": "Convert hex numbers to decimal, octal, and binary. Copy or download the result without sending data anywhere.",
+    "categoryName": "Number Conversion",
+    "inputPlaceholder": "Enter hex number (e.g. FF, 1A3F)...",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Hex to Decimal Converter",
+    "descParas": [
+      "This tool converts hexadecimal (base 16) numbers to decimal (base 10), and also shows the octal (base 8) and binary (base 2) equivalents. It is useful for programmers, network engineers, and anyone working with color codes, memory addresses, or encoded data.",
+      "The conversion runs locally in your browser using the BigNumber library. Your input is never uploaded or stored on a server."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hexadecimal number into the input field.",
+      "Click <strong>Convert</strong> to see the decimal, octal, and binary results.",
+      "Use <strong>Copy</strong> to copy the decimal result to clipboard, or <strong>Clear</strong> to reset."
+    ],
+    "whatIs": "What is Hexadecimal?",
+    "whatIsParas": [
+      "Hexadecimal (hex) is a base-16 number system that uses digits 0-9 and letters A-F. It is widely used in computing because it provides a compact representation of binary data. Each hex digit represents exactly 4 binary digits (bits).",
+      "Common uses include HTML color codes (e.g. #FF5733), MAC addresses, memory addresses, and cryptographic hashes."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid hexadecimal number using digits 0-9 and letters A-F (case insensitive). Spaces are automatically removed.",
+    "example": "Example",
+    "examplePara": "Converting a hex number to its decimal equivalent:",
+    "exampleCode": "--- Hex Input ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binary ---\n11111111"
+  },
+  "cn": {
+    "title": "十六进制转十进制转换器 — Coding.Tools",
+    "description": "在浏览器中直接将十六进制数字转换为十进制格式。快速、私密、免费使用。",
+    "toolTitle": "十六进制转十进制",
+    "toolDescription": "将十六进制数字转换为十进制、八进制和二进制。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入十六进制数（如 FF, 1A3F）...",
+    "outputPlaceholder": "十进制结果将显示在这里...",
+    "descTitle": "十六进制转十进制转换器",
+    "descParas": [
+      "此工具将十六进制（基数16）数字转换为十进制（基数10），同时显示八进制（基数8）和二进制（基数2）等价值。",
+      "转换在浏览器本地运行，使用 BigNumber 库。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在输入框中输入或粘贴十六进制数字。",
+      "点击<strong>转换</strong>查看十进制、八进制和二进制结果。",
+      "使用<strong>复制</strong>将十进制结果复制到剪贴板。"
+    ],
+    "whatIs": "什么是十六进制？",
+    "whatIsParas": [
+      "十六进制（hex）是一种基数为16的数字系统，使用数字0-9和字母A-F。",
+      "常见用途包括HTML颜色代码、MAC地址、内存地址和加密哈希。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "使用数字0-9和字母A-F输入有效的十六进制数字。",
+    "example": "示例",
+    "examplePara": "将十六进制数转换为十进制：",
+    "exampleCode": "--- 十六进制输入 ---\nFF\n\n--- 十进制 ---\n255\n\n--- 八进制 ---\n377\n\n--- 二进制 ---\n11111111"
+  },
+  "tw": {
+    "title": "十六進位轉十進位轉換器 — Coding.Tools",
+    "description": "在瀏覽器中直接將十六進位數字轉換為十進位格式。",
+    "toolTitle": "十六進位轉十進位",
+    "toolDescription": "將十六進位數字轉換為十進位、八進位和二進位。",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "輸入十六進位數（如 FF, 1A3F）...",
+    "outputPlaceholder": "十進位結果將顯示在這裡...",
+    "descTitle": "十六進位轉十進位轉換器",
+    "descParas": [
+      "此工具將十六進位數字轉換為十進位，同時顯示八進位和二進位等價值。",
+      "轉換在瀏覽器本地執行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "輸入或貼上十六進位數字。",
+      "點擊<strong>轉換</strong>查看結果。",
+      "使用<strong>複製</strong>複製結果。"
+    ],
+    "whatIs": "什麼是十六進位？",
+    "whatIsParas": [
+      "十六進位是一種基數為16的數字系統。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "使用數字0-9和字母A-F輸入有效的十六進位數字。",
+    "example": "範例",
+    "examplePara": "將十六進位數轉換為十進位：",
+    "exampleCode": "--- 十六進位輸入 ---\nFF\n\n--- 十進位 ---\n255\n\n--- 八進位 ---\n377\n\n--- 二進位 ---\n11111111"
+  },
+  "jp": {
+    "title": "16進数→10進数変換器 — Coding.Tools",
+    "description": "ブラウザで16進数を10進数に直接変換。",
+    "toolTitle": "16進数→10進数",
+    "toolDescription": "16進数を10進数、8進数、2進数に変換。",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "16進数を入力（例: FF, 1A3F）...",
+    "outputPlaceholder": "10進数の結果がここに表示されます...",
+    "descTitle": "16進数→10進数変換器",
+    "descParas": [
+      "このツールは16進数を10進数に変換します。",
+      "変換はブラウザ内でローカル実行されます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "入力欄に16進数を入力または貼り付けます。",
+      "<strong>変換</strong>をクリックして結果を確認します。"
+    ],
+    "whatIs": "16進数とは？",
+    "whatIsParas": [
+      "16進数は0-9とA-Fを使用する基数16の数値システムです。"
+    ],
+    "inputNotes": "入力について",
+    "inputNotesPara": "数字0-9と文字A-Fで有効な16進数を入力してください。",
+    "example": "例",
+    "examplePara": "16進数を10進数に変換:",
+    "exampleCode": "--- 16進数入力 ---\nFF\n\n--- 10進数 ---\n255\n\n--- 8進数 ---\n377\n\n--- 2進数 ---\n11111111"
+  },
+  "kr": {
+    "title": "16진수→10진수 변환기 — Coding.Tools",
+    "description": "브라우저에서 16진수를 10진수로 바로 변환합니다.",
+    "toolTitle": "16진수→10진수",
+    "toolDescription": "16진수를 10진수, 8진수, 2진수로 변환합니다.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "16진수 입력 (예: FF, 1A3F)...",
+    "outputPlaceholder": "10진수 결과가 여기에 표시됩니다...",
+    "descTitle": "16진수→10진수 변환기",
+    "descParas": [
+      "이 도구는 16진수를 10진수로 변환하고 8진수와 2진수도 표시합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "입력 필드에 16진수를 입력하거나 붙여넣습니다.",
+      "<strong>변환</strong>을 클릭하여 결과를 확인합니다."
+    ],
+    "whatIs": "16진수란?",
+    "whatIsParas": [
+      "16진수는 0-9와 A-F를 사용하는 기수16의 숫자 시스템입니다."
+    ],
+    "inputNotes": "입력 참고",
+    "inputNotesPara": "숫자 0-9와 문자 A-F로 유효한 16진수를 입력하세요.",
+    "example": "예시",
+    "examplePara": "16진수를 10진수로 변환:",
+    "exampleCode": "--- 16진수 입력 ---\nFF\n\n--- 10진수 ---\n255\n\n--- 8진수 ---\n377\n\n--- 2진수 ---\n11111111"
+  },
+  "fr": {
+    "title": "Convertisseur Hexadécimal en Décimal — Coding.Tools",
+    "description": "Convertissez les nombres hexadécimaux en format décimal directement dans votre navigateur.",
+    "toolTitle": "Hexadécimal en Décimal",
+    "toolDescription": "Convertissez les nombres hexadécimaux en décimal, octal et binaire.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "Entrez un nombre hexadécimal (ex: FF, 1A3F)...",
+    "outputPlaceholder": "Le résultat décimal apparaîtra ici...",
+    "descTitle": "Convertisseur Hexadécimal en Décimal",
+    "descParas": [
+      "Cet outil convertit les nombres hexadécimaux en décimal, et affiche également les équivalents octal et binaire.",
+      "La conversion s'exécute localement dans votre navigateur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Tapez ou collez un nombre hexadécimal.",
+      "Cliquez sur <strong>Convertir</strong> pour voir les résultats.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
+    ],
+    "whatIs": "Qu'est-ce que l'hexadécimal?",
+    "whatIsParas": [
+      "L'hexadécimal est un système numérique en base 16 utilisant les chiffres 0-9 et les lettres A-F."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Entrez un nombre hexadécimal valide.",
+    "example": "Exemple",
+    "examplePara": "Conversion d'un nombre hexadécimal en décimal:",
+    "exampleCode": "--- Entrée Hexadécimale ---\nFF\n\n--- Décimal ---\n255\n\n--- Octal ---\n377\n\n--- Binaire ---\n11111111"
+  },
+  "de": {
+    "title": "Hexadezimal-zu-Dezimal-Konverter — Coding.Tools",
+    "description": "Konvertieren Sie Hexadezimalzahlen direkt in Ihrem Browser ins Dezimalformat.",
+    "toolTitle": "Hexadezimal zu Dezimal",
+    "toolDescription": "Konvertieren Sie Hexadezimalzahlen in Dezimal, Oktal und Binär.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "Hexadezimalzahl eingeben (z.B. FF, 1A3F)...",
+    "outputPlaceholder": "Dezimalergebnis wird hier angezeigt...",
+    "descTitle": "Hexadezimal-zu-Dezimal-Konverter",
+    "descParas": [
+      "Dieses Tool konvertiert Hexadezimalzahlen in Dezimal und zeigt auch Oktal- und Binär-Äquivalente an.",
+      "Die Konvertierung erfolgt lokal in Ihrem Browser."
+    ],
+    "howToUse": "Verwendung",
+    "steps": [
+      "Geben Sie eine Hexadezimalzahl ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>.",
+      "Verwenden Sie <strong>Kopieren</strong> um das Ergebnis zu kopieren."
+    ],
+    "whatIs": "Was ist Hexadezimal?",
+    "whatIsParas": [
+      "Hexadezimal ist ein Zahlensystem zur Basis 16."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Geben Sie eine gültige Hexadezimalzahl ein.",
+    "example": "Beispiel",
+    "examplePara": "Konvertierung einer Hexadezimalzahl:",
+    "exampleCode": "--- Hex-Eingabe ---\nFF\n\n--- Dezimal ---\n255\n\n--- Oktal ---\n377\n\n--- Binär ---\n11111111"
+  },
+  "es": {
+    "title": "Convertidor Hexadecimal a Decimal — Coding.Tools",
+    "description": "Convierta números hexadecimales a formato decimal en su navegador.",
+    "toolTitle": "Hexadecimal a Decimal",
+    "toolDescription": "Convierta números hexadecimales a decimal, octal y binario.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "Ingrese número hexadecimal (ej: FF, 1A3F)...",
+    "outputPlaceholder": "El resultado decimal aparecerá aquí...",
+    "descTitle": "Convertidor Hexadecimal a Decimal",
+    "descParas": [
+      "Esta herramienta convierte números hexadecimales a decimal, octal y binario.",
+      "La conversión se ejecuta localmente en su navegador."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Escriba o pegue un número hexadecimal.",
+      "Haga clic en <strong>Convertir</strong>.",
+      "Use <strong>Copiar</strong> para copiar el resultado."
+    ],
+    "whatIs": "Qué es Hexadecimal?",
+    "whatIsParas": [
+      "Hexadecimal es un sistema numérico en base 16."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese un número hexadecimal válido.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de hexadecimal a decimal:",
+    "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binario ---\n11111111"
+  },
+  "pt": {
+    "title": "Conversor Hexadecimal para Decimal — Coding.Tools",
+    "description": "Converta números hexadecimais para formato decimal no seu navegador.",
+    "toolTitle": "Hexadecimal para Decimal",
+    "toolDescription": "Converta números hexadecimais para decimal, octal e binário.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Digite o número hexadecimal (ex: FF, 1A3F)...",
+    "outputPlaceholder": "O resultado decimal aparecerá aqui...",
+    "descTitle": "Conversor Hexadecimal para Decimal",
+    "descParas": [
+      "Esta ferramenta converte números hexadecimais para decimal, octal e binário.",
+      "A conversão é executada localmente no navegador."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Digite ou cole um número hexadecimal.",
+      "Clique em <strong>Converter</strong>.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
+    ],
+    "whatIs": "O que é Hexadecimal?",
+    "whatIsParas": [
+      "Hexadecimal é um sistema numérico na base 16."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Digite um número hexadecimal válido.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo hexadecimal para decimal:",
+    "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binário ---\n11111111"
+  }
+}

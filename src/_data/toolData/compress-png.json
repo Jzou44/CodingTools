@@ -1,0 +1,272 @@
+{
+  "en": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "Compress PNG",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "Image Utilities",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "cn": {
+    "title": "压缩 PNG — Coding.Tools",
+    "description": "在线压缩 PNG 图片，减小文件大小。免费、快速，在浏览器中运行。",
+    "toolTitle": "压缩 PNG",
+    "toolDescription": "通过转换为调色板模式并优化来减小 PNG 文件大小。支持拖放多张图片。",
+    "categoryName": "图片工具",
+    "dropzoneMessage": "点击或拖拽 PNG 文件上传",
+    "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
+    "descTitle": "压缩 PNG",
+    "descParas": [
+      "此工具通过将 PNG 图片转换为调色板模式并应用优化来压缩图片。压缩完全在浏览器中运行，无需上传到服务器。",
+      "PNG 格式使用 RGBA 颜色表示每个像素。A 代表透明度，支持透明背景。压缩时，我们转换为调色板模式以减少颜色数量，同时保持视觉质量。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "将 PNG 文件拖放到上传区域，或点击选择文件。",
+      "每个文件自动压缩并显示压缩率。",
+      "下载单个压缩文件或使用<strong>下载全部</strong>获取 ZIP 压缩包。"
+    ],
+    "whatIs": "PNG 与 JPEG 对比",
+    "whatIsParas": [
+      "<strong>压缩：</strong>PNG 是无损压缩，JPEG 是有损压缩。PNG 保留所有原始数据；JPEG 丢弃部分数据以获得更小的文件。",
+      "<strong>透明度：</strong>PNG 支持透明（Alpha 通道），JPEG 不支持。",
+      "<strong>EXIF：</strong>PNG 不支持 EXIF 元数据，JPEG 支持。",
+      "<strong>适用场景：</strong>PNG 最适合图形、图标和带透明度的图片。JPEG 最适合照片。"
+    ],
+    "example": "用 Python 压缩",
+    "examplePara": "可以使用 Python 的 Pillow 库来压缩 PNG 图片：",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "tw": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "壓縮PNG",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "圖片工具",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "jp": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "PNG圧縮",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "画像ツール",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "kr": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "PNG 압축",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "이미지 도구",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "fr": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "Compresser PNG",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "Utilitaires d'image",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "de": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "PNG komprimieren",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "Bild-Tools",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "es": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "Comprimir PNG",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "Utilidades de imagen",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  },
+  "pt": {
+    "title": "Compress PNG — Coding.Tools",
+    "description": "Compress PNG images online to reduce file size. Free, fast, and runs in your browser.",
+    "toolTitle": "Compress PNG",
+    "toolDescription": "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images.",
+    "categoryName": "Image Utilities",
+    "dropzoneMessage": "Click or drag PNG files here to upload",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
+    "descTitle": "Compress PNG",
+    "descParas": [
+      "This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.",
+      "PNG format uses RGBA color for each pixel. The A stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Drag and drop PNG files onto the upload area, or click to select files.",
+      "Each file is compressed automatically and the compression rate is displayed.",
+      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+    ],
+    "whatIs": "PNG vs JPEG comparison",
+    "whatIsParas": [
+      "<strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.",
+      "<strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.",
+      "<strong>EXIF:</strong> PNG does not support EXIF metadata, JPEG does.",
+      "<strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs."
+    ],
+    "example": "Compress with Python",
+    "examplePara": "You can compress PNG images programmatically using Python with the Pillow library:",
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "en": {
+    "title": "SHA1 Generator — Coding.Tools",
+    "description": "Generate SHA-1 hash from any text input directly in your browser. Fast, private, and free to use.",
+    "toolTitle": "SHA1 Generator",
+    "toolDescription": "Generate a SHA-1 hash from any text input. Copy or download the hash without sending data anywhere.",
+    "categoryName": "Hash & Cryptography",
+    "inputPlaceholder": "Enter text to generate its SHA-1 hash...",
+    "outputPlaceholder": "SHA-1 hash will appear here...",
+    "hashLength": 40,
+    "descTitle": "SHA1 Generator",
+    "descParas": [
+      "This SHA-1 generator creates a 160-bit hash digest from any text you enter. Paste or type your input, press Generate, and the tool produces the 40-character hexadecimal SHA-1 hash instantly in your browser.",
+      "The hashing runs locally using the Web Crypto API built into every modern browser. Your input is never uploaded or stored on a server, so you can generate hashes privately and quickly without changing your workflow."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste text into the input editor.",
+      "Click <strong>Generate SHA1</strong> to compute the hash digest.",
+      "The 40-character hexadecimal hash appears in the output editor with a confirmation message.",
+      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+    ],
+    "whatIs": "What is SHA-1?",
+    "whatIsParas": [
+      "SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function that produces a 160-bit (20-byte) hash value, typically rendered as a 40-character hexadecimal string. It was designed by the NSA and published by NIST in 1995.",
+      "SHA-1 is deterministic: the same input always produces the same hash. It is a one-way function, meaning you cannot reverse a hash to recover the original input. While SHA-1 is no longer considered secure for digital signatures or certificate verification, it remains widely used for checksums, content addressing, and non-security-critical fingerprinting."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool supports any text input, including Unicode characters and multi-line content. Even a small change to the input produces a completely different hash, a property known as the avalanche effect.",
+    "example": "Example",
+    "examplePara": "Here is how a short text message maps to its SHA-1 hash:",
+    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "cn": {
+    "title": "SHA1 生成器 — Coding.Tools",
+    "description": "在浏览器中直接生成任意文本的 SHA-1 哈希值。快速、私密、免费使用。",
+    "toolTitle": "SHA1 生成器",
+    "toolDescription": "从任意文本输入生成 SHA-1 哈希值。复制或下载哈希值，无需发送数据。",
+    "categoryName": "哈希与加密",
+    "inputPlaceholder": "输入文本以生成 SHA-1 哈希...",
+    "outputPlaceholder": "SHA-1 哈希值将显示在此处...",
+    "hashLength": 40,
+    "descTitle": "SHA1 生成器",
+    "descParas": [
+      "此 SHA-1 生成器根据您输入的任意文本创建 160 位哈希摘要。粘贴或输入文本，按下生成，工具会在您的浏览器中即时生成 40 个字符的十六进制 SHA-1 哈希值。",
+      "哈希运算在本地使用每个现代浏览器内置的 Web Crypto API 运行。您的输入不会被上传或存储在服务器上，因此您可以私密、快速地生成哈希值。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在输入编辑器中输入或粘贴文本。",
+      "点击<strong>生成 SHA1</strong>以计算哈希摘要。",
+      "40 个字符的十六进制哈希值将显示在输出编辑器中，并显示确认消息。",
+      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+    ],
+    "whatIs": "什么是 SHA-1？",
+    "whatIsParas": [
+      "SHA-1（安全哈希算法 1）是一种加密哈希函数，产生 160 位（20 字节）的哈希值，通常呈现为 40 个字符的十六进制字符串。它由 NSA 设计，NIST 于 1995 年发布。",
+      "SHA-1 是确定性的：相同的输入始终产生相同的哈希值。它是一个单向函数，意味着您无法反转哈希来恢复原始输入。虽然 SHA-1 不再被认为适用于数字签名或证书验证，但它仍广泛用于校验和、内容寻址和非安全关键的指纹识别。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具支持任何文本输入，包括 Unicode 字符和多行内容。即使对输入的微小更改也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+    "example": "示例",
+    "examplePara": "以下是一个短文本消息如何映射到其 SHA-1 哈希值：",
+    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-1 哈希 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "tw": {
+    "title": "SHA1 產生器 — Coding.Tools",
+    "description": "在瀏覽器中直接產生任意文字的 SHA-1 雜湊值。快速、私密、免費使用。",
+    "toolTitle": "SHA1 產生器",
+    "toolDescription": "從任意文字輸入產生 SHA-1 雜湊值。複製或下載雜湊值，無需傳送資料。",
+    "categoryName": "哈希與加密",
+    "inputPlaceholder": "輸入文字以產生 SHA-1 雜湊...",
+    "outputPlaceholder": "SHA-1 雜湊值將顯示在此處...",
+    "hashLength": 40,
+    "descTitle": "SHA1 產生器",
+    "descParas": [
+      "此 SHA-1 產生器根據您輸入的任意文字建立 160 位元雜湊摘要。貼上或輸入文字，按下產生，工具會在您的瀏覽器中即時產生 40 個字元的十六進位 SHA-1 雜湊值。",
+      "雜湊運算在本機使用每個現代瀏覽器內建的 Web Crypto API 執行。您的輸入不會被上傳或儲存在伺服器上，因此您可以私密、快速地產生雜湊值。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在輸入編輯器中輸入或貼上文字。",
+      "點擊<strong>產生 SHA1</strong>以計算雜湊摘要。",
+      "40 個字元的十六進位雜湊值將顯示在輸出編輯器中，並顯示確認訊息。",
+      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+    ],
+    "whatIs": "什麼是 SHA-1？",
+    "whatIsParas": [
+      "SHA-1（安全雜湊演算法 1）是一種加密雜湊函數，產生 160 位元（20 位元組）的雜湊值，通常呈現為 40 個字元的十六進位字串。它由 NSA 設計，NIST 於 1995 年發布。",
+      "SHA-1 是確定性的：相同的輸入始終產生相同的雜湊值。它是一個單向函數，意味著您無法反轉雜湊來恢復原始輸入。雖然 SHA-1 不再被認為適用於數位簽章或憑證驗證，但它仍廣泛用於檢查碼、內容定址和非安全關鍵的指紋識別。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具支援任何文字輸入，包括 Unicode 字元和多行內容。即使對輸入的微小更改也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+    "example": "範例",
+    "examplePara": "以下是一個短文字訊息如何對應到其 SHA-1 雜湊值：",
+    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-1 雜湊 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "jp": {
+    "title": "SHA1 ジェネレーター — Coding.Tools",
+    "description": "ブラウザで任意のテキストからSHA-1ハッシュを直接生成。高速・プライベート・無料。",
+    "toolTitle": "SHA1 ジェネレーター",
+    "toolDescription": "任意のテキスト入力からSHA-1ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+    "categoryName": "ハッシュと暗号",
+    "inputPlaceholder": "SHA-1ハッシュを生成するテキストを入力...",
+    "outputPlaceholder": "SHA-1ハッシュがここに表示されます...",
+    "hashLength": 40,
+    "descTitle": "SHA1 ジェネレーター",
+    "descParas": [
+      "このSHA-1ジェネレーターは、入力したテキストから160ビットのダイジェストを生成します。テキストを貼り付けて生成を押すと、ブラウザ内で40文字の16進数SHA-1ハッシュが即座に生成されます。",
+      "ハッシュ処理はすべてのモダンブラウザに組み込まれたWeb Crypto APIを使用してローカルで実行されます。入力はアップロードやサーバーに保存されないため、プライベートに素早くハッシュを生成できます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "入力エディタにテキストを入力または貼り付けます。",
+      "<strong>SHA1生成</strong>をクリックしてハッシュダイジェストを計算します。",
+      "40文字の16進数ハッシュが出力エディタに表示され、確認メッセージが表示されます。",
+      "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+    ],
+    "whatIs": "SHA-1とは？",
+    "whatIsParas": [
+      "SHA-1（Secure Hash Algorithm 1）は、160ビット（20バイト）のハッシュ値を生成する暗号化ハッシュ関数で、通常40文字の16進数文字列として表現されます。NSAが設計し、NISTが1995年に公開しました。",
+      "SHA-1は決定論的です。同じ入力は常に同じハッシュを生成します。ハッシュを逆変換して元の入力を復元できない単方向関数です。SHA-1はデジタル署名や証明書検証としては安全とは見なされなくなりましたが、チェックサム、コンテンツアドレッシング、非セキュリティ重要なフィンガープリントでは引き続き広く使用されています。"
+    ],
+    "inputNotes": "入力に関する注意",
+    "inputNotesPara": "このツールはUnicode文字や複数行のコンテンツを含む任意のテキスト入力をサポートします。入力への小さな変更でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+    "example": "例",
+    "examplePara": "短いテキストメッセージがSHA-1ハッシュにどのようにマッピングされるか：",
+    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-1ハッシュ ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "kr": {
+    "title": "SHA1 생성기 — Coding.Tools",
+    "description": "브라우저에서 직접 텍스트의 SHA-1 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+    "toolTitle": "SHA1 생성기",
+    "toolDescription": "텍스트 입력에서 SHA-1 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+    "categoryName": "해시 및 암호화",
+    "inputPlaceholder": "SHA-1 해시를 생성할 텍스트를 입력하세요...",
+    "outputPlaceholder": "SHA-1 해시가 여기에 표시됩니다...",
+    "hashLength": 40,
+    "descTitle": "SHA1 생성기",
+    "descParas": [
+      "이 SHA-1 생성기는 입력한 텍스트에서 160비트 해시 다이제스트를 생성합니다. 텍스트를 붙여넣고 생성을 누르면 브라우저에서 40자리 16진수 SHA-1 해시가 즉시 생성됩니다.",
+      "해시 처리는 모든 최신 브라우저에 내장된 Web Crypto API를 사용하여 로컬로 실행됩니다. 입력은 업로드되거나 서버에 저장되지 않으므로 프라이버시를 유지하면서 빠르게 해시를 생성할 수 있습니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+      "<strong>SHA1 생성</strong>을 클릭하여 해시 다이제스트를 계산합니다.",
+      "40자리 16진수 해시가 출력 편집기에 표시되고 확인 메시지가 나타납니다.",
+      "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+    ],
+    "whatIs": "SHA-1이란 무엇인가요?",
+    "whatIsParas": [
+      "SHA-1(보안 해시 알고리즘 1)은 160비트(20바이트) 해시 값을 생성하는 암호화 해시 함수로, 일반적으로 40자리 16진수 문자열로 표현됩니다. NSA가 설계하고 NIST가 1995년에 발표했습니다.",
+      "SHA-1은 결정론적입니다. 동일한 입력은 항상 동일한 해시를 생성합니다. 해시를 역변환하여 원본 입력을 복구할 수 없는 단방향 함수입니다. SHA-1은 디지털 서명이나 인증서 검증에 더 이상 안전하다고 간주되지 않지만, 체크섬, 콘텐츠 주소 지정 및 비보안 중요 지문에는 여전히 널리 사용됩니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "이 도구는 Unicode 문자와 여러 줄 콘텐츠를 포함한 모든 텍스트 입력을 지원합니다. 입력의 작은 변경도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+    "example": "예제",
+    "examplePara": "짧은 텍스트 메시지가 SHA-1 해시에 어떻게 매핑되는지:",
+    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-1 해시 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "fr": {
+    "title": "Générateur SHA1 — Coding.Tools",
+    "description": "Générez un hash SHA-1 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+    "toolTitle": "Générateur SHA1",
+    "toolDescription": "Générez un hash SHA-1 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+    "categoryName": "Hachage et Cryptographie",
+    "inputPlaceholder": "Entrez le texte pour générer le hash SHA-1...",
+    "outputPlaceholder": "Le hash SHA-1 apparaîtra ici...",
+    "hashLength": 40,
+    "descTitle": "Générateur SHA1",
+    "descParas": [
+      "Ce générateur SHA-1 crée un condensé de 160 bits à partir de n'importe quel texte que vous saisissez. Collez ou tapez votre entrée, appuyez sur Générer, et l'outil produit instantanément le hash SHA-1 hexadécimal de 40 caractères dans votre navigateur.",
+      "Le hachage s'exécute localement en utilisant l'API Web Crypto intégrée dans chaque navigateur moderne. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Tapez ou collez du texte dans l'éditeur d'entrée.",
+      "Cliquez sur <strong>Générer SHA1</strong> pour calculer le condensé.",
+      "Le hash hexadécimal de 40 caractères apparaît dans l'éditeur de sortie avec un message de confirmation.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte, ou <strong>Effacer</strong> pour réinitialiser."
+    ],
+    "whatIs": "Qu'est-ce que SHA-1 ?",
+    "whatIsParas": [
+      "SHA-1 (Secure Hash Algorithm 1) est une fonction de hachage cryptographique qui produit une valeur de hachage de 160 bits (20 octets), typiquement rendue sous forme d'une chaîne hexadécimale de 40 caractères. Elle a été conçue par la NSA et publiée par le NIST en 1995.",
+      "SHA-1 est déterministe : la même entrée produit toujours le même hash. C'est une fonction à sens unique. Bien que SHA-1 ne soit plus considéré comme sûr pour les signatures numériques, il reste largement utilisé pour les sommes de contrôle et l'adressage de contenu."
+    ],
+    "inputNotes": "Notes sur l'entrée",
+    "inputNotesPara": "L'outil prend en charge toute entrée de texte, y compris les caractères Unicode et le contenu multiligne. Même un petit changement dans l'entrée produit un hash complètement différent, une propriété appelée effet avalanche.",
+    "example": "Exemple",
+    "examplePara": "Voici comment un court message texte se traduit en hash SHA-1 :",
+    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "de": {
+    "title": "SHA1 Generator — Coding.Tools",
+    "description": "Erstellen Sie SHA-1-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+    "toolTitle": "SHA1 Generator",
+    "toolDescription": "Erzeugen Sie einen SHA-1-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+    "categoryName": "Hash & Kryptographie",
+    "inputPlaceholder": "Text eingeben, um SHA-1-Hash zu erzeugen...",
+    "outputPlaceholder": "SHA-1-Hash wird hier angezeigt...",
+    "hashLength": 40,
+    "descTitle": "SHA1 Generator",
+    "descParas": [
+      "Dieser SHA-1-Generator erstellt einen 160-Bit-Hash-Digest aus beliebigem Text. Fügen Sie Ihren Text ein, drücken Sie Generieren, und das Tool erzeugt sofort den 40-stelligen hexadezimalen SHA-1-Hash in Ihrem Browser.",
+      "Die Hash-Berechnung erfolgt lokal über die Web Crypto API. Ihre Eingabe wird nie hochgeladen oder auf einem Server gespeichert."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Text in den Eingabe-Editor eingeben oder einfügen.",
+      "Auf <strong>SHA1 generieren</strong> klicken.",
+      "Der 40-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
+      "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+    ],
+    "whatIs": "Was ist SHA-1?",
+    "whatIsParas": [
+      "SHA-1 (Secure Hash Algorithm 1) ist eine kryptografische Hash-Funktion, die einen 160-Bit (20-Byte) Hash-Wert erzeugt, typischerweise als 40-stellige hexadezimale Zeichenkette dargestellt. Sie wurde von der NSA entworfen und 1995 vom NIST veröffentlicht.",
+      "SHA-1 ist deterministisch: Dieselbe Eingabe erzeugt immer denselben Hash. Obwohl SHA-1 nicht mehr als sicher für digitale Signaturen gilt, wird es weiterhin für Prüfsummen und Inhaltsadressierung verwendet."
+    ],
+    "inputNotes": "Hinweise zur Eingabe",
+    "inputNotesPara": "Das Tool unterstützt jede Texteingabe, einschließlich Unicode und mehrzeiliger Inhalte. Selbst kleine Änderungen erzeugen völlig unterschiedliche Hashes (Lawineneffekt).",
+    "example": "Beispiel",
+    "examplePara": "So wird eine kurze Nachricht in einen SHA-1-Hash umgewandelt:",
+    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "es": {
+    "title": "Generador SHA1 — Coding.Tools",
+    "description": "Genere hashes SHA-1 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+    "toolTitle": "Generador SHA1",
+    "toolDescription": "Genere un hash SHA-1 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+    "categoryName": "Hash y Criptografía",
+    "inputPlaceholder": "Ingrese texto para generar el hash SHA-1...",
+    "outputPlaceholder": "El hash SHA-1 aparecerá aquí...",
+    "hashLength": 40,
+    "descTitle": "Generador SHA1",
+    "descParas": [
+      "Este generador SHA-1 crea un resumen de 160 bits a partir de cualquier texto. Pegue o escriba su entrada, presione Generar, y la herramienta produce instantáneamente el hash SHA-1 hexadecimal de 40 caracteres en su navegador.",
+      "El hashing se ejecuta localmente usando la API Web Crypto. Su entrada nunca se sube ni almacena en un servidor."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Escriba o pegue texto en el editor de entrada.",
+      "Haga clic en <strong>Generar SHA1</strong> para calcular el resumen.",
+      "El hash hexadecimal de 40 caracteres aparece en el editor de salida.",
+      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+    ],
+    "whatIs": "¿Qué es SHA-1?",
+    "whatIsParas": [
+      "SHA-1 (Secure Hash Algorithm 1) es una función hash criptográfica que produce un valor hash de 160 bits (20 bytes), típicamente representado como una cadena hexadecimal de 40 caracteres. Fue diseñada por la NSA y publicada por NIST en 1995.",
+      "SHA-1 es determinista: la misma entrada siempre produce el mismo hash. Aunque ya no se considera seguro para firmas digitales, se sigue usando ampliamente para sumas de verificación y direccionamiento de contenido."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "La herramienta soporta cualquier entrada de texto, incluyendo caracteres Unicode y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+    "example": "Ejemplo",
+    "examplePara": "Así es como un mensaje corto se mapea a su hash SHA-1:",
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  },
+  "pt": {
+    "title": "Gerador SHA1 — Coding.Tools",
+    "description": "Gere hashes SHA-1 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+    "toolTitle": "Gerador SHA1",
+    "toolDescription": "Gere um hash SHA-1 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+    "categoryName": "Hash e Criptografia",
+    "inputPlaceholder": "Digite o texto para gerar o hash SHA-1...",
+    "outputPlaceholder": "O hash SHA-1 aparecerá aqui...",
+    "hashLength": 40,
+    "descTitle": "Gerador SHA1",
+    "descParas": [
+      "Este gerador SHA-1 cria um resumo de 160 bits a partir de qualquer texto. Cole ou digite sua entrada, pressione Gerar, e a ferramenta produz instantaneamente o hash SHA-1 hexadecimal de 40 caracteres no seu navegador.",
+      "O hashing é executado localmente usando a API Web Crypto. Sua entrada nunca é enviada ou armazenada em um servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Digite ou cole o texto no editor de entrada.",
+      "Clique em <strong>Gerar SHA1</strong> para calcular o resumo.",
+      "O hash hexadecimal de 40 caracteres aparece no editor de saída.",
+      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+    ],
+    "whatIs": "O que é SHA-1?",
+    "whatIsParas": [
+      "SHA-1 (Secure Hash Algorithm 1) é uma função hash criptográfica que produz um valor hash de 160 bits (20 bytes), tipicamente representado como uma string hexadecimal de 40 caracteres. Foi projetada pela NSA e publicada pelo NIST em 1995.",
+      "SHA-1 é determinística: a mesma entrada sempre produz o mesmo hash. Embora já não seja considerado seguro para assinaturas digitais, continua amplamente utilizado para checksums e endereçamento de conteúdo."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "A ferramenta suporta qualquer entrada de texto, incluindo caracteres Unicode e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+    "example": "Exemplo",
+    "examplePara": "Veja como uma mensagem curta é mapeada para seu hash SHA-1:",
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+  }
+}

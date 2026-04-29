@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Decimal to Hex Converter — Coding.Tools",
+    "description": "Convert decimal numbers to hexadecimal format directly in your browser.",
+    "toolTitle": "Decimal to Hex",
+    "toolDescription": "Convert decimal numbers to hex, octal, and binary.",
+    "categoryName": "Number Conversion",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 4096)...",
+    "outputPlaceholder": "Hex result will appear here...",
+    "descTitle": "Decimal to Hex Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to hexadecimal (base 16), and also shows the octal (base 8) and binary (base 2) equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the hex, octal, and binary results.",
+      "Use <strong>Copy</strong> to copy the hex result to clipboard."
+    ],
+    "whatIs": "What is Decimal to Hex?",
+    "whatIsParas": [
+      "Converting decimal to hexadecimal is useful in programming and web development. Each hex digit represents 4 binary digits."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer). Spaces are automatically removed.",
+    "example": "Example",
+    "examplePara": "Converting a decimal number to hex:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377\n\n--- Binary ---\n11111111"
+  },
+  "cn": {
+    "title": "十进制转十六进制转换器 — Coding.Tools",
+    "description": "在浏览器中直接将十进制数字转换为十六进制格式。",
+    "toolTitle": "十进制转十六进制",
+    "toolDescription": "将十进制数字转换为十六进制、八进制和二进制。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入十进制数（如 255, 4096）...",
+    "outputPlaceholder": "十六进制结果将显示在这里...",
+    "descTitle": "十进制转十六进制转换器",
+    "descParas": [
+      "此工具将十进制数字转换为十六进制，同时显示八进制和二进制等价值。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入或粘贴十进制数字。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是十进制转十六进制？",
+    "whatIsParas": [
+      "十进制转十六进制在编程和Web开发中非常有用。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的十进制数字。",
+    "example": "示例",
+    "examplePara": "将十进制数转换为十六进制：",
+    "exampleCode": "--- 十进制输入 ---\n255\n\n--- 十六进制 ---\nFF\n\n--- 八进制 ---\n377\n\n--- 二进制 ---\n11111111"
+  },
+  "tw": {
+    "title": "十進位轉十六進位轉換器 — Coding.Tools",
+    "description": "在瀏覽器中直接將十進位數字轉換為十六進位格式。",
+    "toolTitle": "十進位轉十六進位",
+    "toolDescription": "將十進位數字轉換為十六進位、八進位和二進位。",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "輸入十進位數...",
+    "outputPlaceholder": "十六進位結果將顯示在這裡...",
+    "descTitle": "十進位轉十六進位轉換器",
+    "descParas": [
+      "此工具將十進位數字轉換為十六進位。",
+      "轉換在瀏覽器本地執行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "輸入十進位數字。",
+      "點擊<strong>轉換</strong>查看結果。",
+      "使用<strong>複製</strong>複製結果。"
+    ],
+    "whatIs": "什麼是十進位轉十六進位？",
+    "whatIsParas": [
+      "十進位轉十六進位在程式設計中非常有用。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "輸入有效的十進位數字。",
+    "example": "範例",
+    "examplePara": "將十進位數轉換為十六進位：",
+    "exampleCode": "--- 十進位輸入 ---\n255\n\n--- 十六進位 ---\nFF\n\n--- 八進位 ---\n377\n\n--- 二進位 ---\n11111111"
+  },
+  "jp": {
+    "title": "10進数→16進数変換器 — Coding.Tools",
+    "description": "ブラウザで10進数を16進数に直接変換。",
+    "toolTitle": "10進数→16進数",
+    "toolDescription": "10進数を16進数、8進数、2進数に変換。",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "10進数を入力...",
+    "outputPlaceholder": "16進数の結果がここに表示されます...",
+    "descTitle": "10進数→16進数変換器",
+    "descParas": [
+      "10進数を16進数に変換します。",
+      "変換はブラウザ内でローカル実行されます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "10進数を入力。",
+      "<strong>変換</strong>をクリック。",
+      "<strong>コピー</strong>で結果をコピー。"
+    ],
+    "whatIs": "10進数→16進数とは？",
+    "whatIsParas": [
+      "プログラミングやWeb開発で有用です。"
+    ],
+    "inputNotes": "入力について",
+    "inputNotesPara": "有効な10進数を入力してください。",
+    "example": "例",
+    "examplePara": "10進数を16進数に変換:",
+    "exampleCode": "--- 10進数入力 ---\n255\n\n--- 16進数 ---\nFF\n\n--- 8進数 ---\n377\n\n--- 2進数 ---\n11111111"
+  },
+  "kr": {
+    "title": "10진수→16진수 변환기 — Coding.Tools",
+    "description": "브라우저에서 10진수를 16진수로 변환합니다.",
+    "toolTitle": "10진수→16진수",
+    "toolDescription": "10진수를 16진수, 8진수, 2진수로 변환합니다.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "10진수 입력...",
+    "outputPlaceholder": "16진수 결과가 여기에 표시됩니다...",
+    "descTitle": "10진수→16진수 변환기",
+    "descParas": [
+      "10진수를 16진수로 변환합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "10진수를 입력합니다.",
+      "<strong>변환</strong>을 클릭합니다.",
+      "<strong>복사</strong>로 결과를 복사합니다."
+    ],
+    "whatIs": "10진수→16진수란?",
+    "whatIsParas": [
+      "프로그래밍과 웹 개발에서 유용합니다."
+    ],
+    "inputNotes": "입력 참고",
+    "inputNotesPara": "유효한 10진수를 입력하세요.",
+    "example": "예시",
+    "examplePara": "10진수를 16진수로 변환:",
+    "exampleCode": "--- 10진수 입력 ---\n255\n\n--- 16진수 ---\nFF\n\n--- 8진수 ---\n377\n\n--- 2진수 ---\n11111111"
+  },
+  "fr": {
+    "title": "Convertisseur Décimal en Hexadécimal — Coding.Tools",
+    "description": "Convertissez les nombres décimaux en hexadécimal dans votre navigateur.",
+    "toolTitle": "Décimal en Hexadécimal",
+    "toolDescription": "Convertissez les nombres décimaux en hexadécimal, octal et binaire.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "Entrez un nombre décimal...",
+    "outputPlaceholder": "Le résultat hexadécimal apparaîtra ici...",
+    "descTitle": "Convertisseur Décimal en Hexadécimal",
+    "descParas": [
+      "Cet outil convertit les nombres décimaux en hexadécimal.",
+      "La conversion s'exécute localement."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Entrez un nombre décimal.",
+      "Cliquez sur <strong>Convertir</strong>.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
+    ],
+    "whatIs": "Décimal en Hexadécimal?",
+    "whatIsParas": [
+      "Utile en programmation et développement web."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Entrez un nombre décimal valide.",
+    "example": "Exemple",
+    "examplePara": "Conversion décimal en hexadécimal:",
+    "exampleCode": "--- Entrée Décimale ---\n255\n\n--- Hexadécimal ---\nFF\n\n--- Octal ---\n377\n\n--- Binaire ---\n11111111"
+  },
+  "de": {
+    "title": "Dezimal-zu-Hexadezimal-Konverter — Coding.Tools",
+    "description": "Konvertieren Sie Dezimalzahlen ins Hexadezimalformat.",
+    "toolTitle": "Dezimal zu Hexadezimal",
+    "toolDescription": "Konvertieren Sie Dezimalzahlen in Hexadezimal, Oktal und Binär.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "Dezimalzahl eingeben...",
+    "outputPlaceholder": "Hexadezimalergebnis wird hier angezeigt...",
+    "descTitle": "Dezimal-zu-Hexadezimal-Konverter",
+    "descParas": [
+      "Dieses Tool konvertiert Dezimalzahlen in Hexadezimal.",
+      "Die Konvertierung erfolgt lokal im Browser."
+    ],
+    "howToUse": "Verwendung",
+    "steps": [
+      "Geben Sie eine Dezimalzahl ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>.",
+      "Verwenden Sie <strong>Kopieren</strong>."
+    ],
+    "whatIs": "Dezimal zu Hexadezimal?",
+    "whatIsParas": [
+      "Nützlich in der Programmierung."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Geben Sie eine gültige Dezimalzahl ein.",
+    "example": "Beispiel",
+    "examplePara": "Dezimal zu Hexadezimal:",
+    "exampleCode": "--- Dezimaleingabe ---\n255\n\n--- Hexadezimal ---\nFF\n\n--- Oktal ---\n377\n\n--- Binär ---\n11111111"
+  },
+  "es": {
+    "title": "Convertidor Decimal a Hexadecimal — Coding.Tools",
+    "description": "Convierta números decimales a formato hexadecimal en su navegador.",
+    "toolTitle": "Decimal a Hexadecimal",
+    "toolDescription": "Convierta números decimales a hexadecimal, octal y binario.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "Ingrese número decimal...",
+    "outputPlaceholder": "El resultado hexadecimal aparecerá aquí...",
+    "descTitle": "Convertidor Decimal a Hexadecimal",
+    "descParas": [
+      "Esta herramienta convierte números decimales a hexadecimal.",
+      "La conversión se ejecuta localmente."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Ingrese un número decimal.",
+      "Haga clic en <strong>Convertir</strong>.",
+      "Use <strong>Copiar</strong> para copiar el resultado."
+    ],
+    "whatIs": "Decimal a Hexadecimal?",
+    "whatIsParas": [
+      "Útil en programación y desarrollo web."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese un número decimal válido.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión decimal a hexadecimal:",
+    "exampleCode": "--- Entrada Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Octal ---\n377\n\n--- Binario ---\n11111111"
+  },
+  "pt": {
+    "title": "Conversor Decimal para Hexadecimal — Coding.Tools",
+    "description": "Converta números decimais para formato hexadecimal no navegador.",
+    "toolTitle": "Decimal para Hexadecimal",
+    "toolDescription": "Converta números decimais para hexadecimal, octal e binário.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Digite o número decimal...",
+    "outputPlaceholder": "O resultado hexadecimal aparecerá aqui...",
+    "descTitle": "Conversor Decimal para Hexadecimal",
+    "descParas": [
+      "Esta ferramenta converte números decimais para hexadecimal.",
+      "A conversão é executada localmente."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Digite um número decimal.",
+      "Clique em <strong>Converter</strong>.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
+    ],
+    "whatIs": "Decimal para Hexadecimal?",
+    "whatIsParas": [
+      "Útil em programação e desenvolvimento web."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Digite um número decimal válido.",
+    "example": "Exemplo",
+    "examplePara": "Conversão decimal para hexadecimal:",
+    "exampleCode": "--- Entrada Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Octal ---\n377\n\n--- Binário ---\n11111111"
+  }
+}

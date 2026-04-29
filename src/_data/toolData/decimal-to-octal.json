@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Decimal to Octal Converter — Coding.Tools",
+    "description": "Convert decimal numbers to octal format directly in your browser.",
+    "toolTitle": "Decimal to Octal",
+    "toolDescription": "Convert decimal numbers to octal, hex, and binary.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Octal result will appear here...",
+    "descTitle": "Decimal to Octal Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to octal (base 8), and also shows hex and binary equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the octal, hex, and binary results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Octal?",
+    "whatIsParas": [
+      "Converting decimal to octal is useful for Unix file permissions and low-level programming."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to octal:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Octal ---\n377\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
+  },
+  "cn": {
+    "title": "十进制转八进制转换器 — Coding.Tools",
+    "description": "在浏览器中直接将十进制数字转换为八进制格式。",
+    "toolTitle": "十进制转八进制",
+    "toolDescription": "将十进制数字转换为八进制、十六进制和二进制。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入十进制数字（如 255、1024）...",
+    "outputPlaceholder": "八进制结果将显示在这里...",
+    "descTitle": "十进制转八进制转换器",
+    "descParas": [
+      "此工具将十进制（基数10）数字转换为八进制（基数8），同时显示十六进制和二进制等价值。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入或粘贴十进制数字。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是十进制转八进制？",
+    "whatIsParas": [
+      "十进制转八进制是计算机科学和数字电子学中的基础操作。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的十进制数字（整数）。",
+    "example": "示例",
+    "examplePara": "将十进制转换为八进制：",
+    "exampleCode": "--- 十进制输入 ---\n255\n\n--- 八进制 ---\n377\n\n--- 十六进制 ---\nFF\n\n--- 二进制 ---\n11111111"
+  },
+  "tw": {
+    "title": "十進位轉八進位轉換器 — Coding.Tools",
+    "description": "在瀏覽器中直接將十進位數字轉換為八進位格式。",
+    "toolTitle": "十進位轉八進位",
+    "toolDescription": "將十進位數轉換為八進位。",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "輸入十進位數（如 255、1024）...",
+    "outputPlaceholder": "八進位結果將顯示在這裡...",
+    "descTitle": "十進位轉八進位轉換器",
+    "descParas": [
+      "此工具將十進位（基數10）數轉換為八進位（基數8）格式。",
+      "轉換在瀏覽器本地運行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在輸入欄位中輸入或貼上十進位數。",
+      "點擊<strong>轉換</strong>查看八進位結果。",
+      "使用<strong>複製</strong>複製結果。"
+    ],
+    "whatIs": "什麼是十進位轉八進位？",
+    "whatIsParas": [
+      "十進位轉八進位是將基數10的數字轉換為基數8的數字系統。八進位常用於Unix檔案權限。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "輸入有效的十進位整數。",
+    "example": "範例",
+    "examplePara": "將十進位轉換為八進位：",
+    "exampleCode": "--- 十進位輸入 ---\n255\n\n--- 八進位 ---\n377"
+  },
+  "jp": {
+    "title": "10進数から8進数変換 — Coding.Tools",
+    "description": "ブラウザで10進数を8進数形式に直接変換します。",
+    "toolTitle": "10進数から8進数",
+    "toolDescription": "10進数を8進数に変換します。",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "10進数を入力（例: 255、1024）...",
+    "outputPlaceholder": "8進数の結果がここに表示されます...",
+    "descTitle": "10進数から8進数変換",
+    "descParas": [
+      "このツールは10進数（基数10）を8進数（基数8）形式に変換します。",
+      "変換はブラウザ内でローカルに実行されます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "入力欄に10進数を入力または貼り付けます。",
+      "<strong>変換</strong>をクリックして8進数の結果を表示します。",
+      "<strong>コピー</strong>で結果をコピーします。"
+    ],
+    "whatIs": "10進数から8進数とは？",
+    "whatIsParas": [
+      "10進数から8進数への変換は、基数10の数値を基数8の数値システムに変換することです。8進数はUnixのファイル権限で一般的に使用されます。"
+    ],
+    "inputNotes": "入力に関する注意",
+    "inputNotesPara": "有効な10進数の整数を入力してください。",
+    "example": "例",
+    "examplePara": "10進数を8進数に変換：",
+    "exampleCode": "--- 10進数入力 ---\n255\n\n--- 8進数 ---\n377"
+  },
+  "kr": {
+    "title": "10진수에서 8진수 변환기 — Coding.Tools",
+    "description": "브라우저에서 직접 10진수를 8진수 형식으로 변환합니다.",
+    "toolTitle": "10진수에서 8진수",
+    "toolDescription": "10진수를 8진수로 변환합니다.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "10진수 입력 (예: 255, 1024)...",
+    "outputPlaceholder": "8진수 결과가 여기에 표시됩니다...",
+    "descTitle": "10진수에서 8진수 변환",
+    "descParas": [
+      "이 도구는 10진수(基数10)를 8진수(基数8) 형식으로 변환합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "입력 필드에 10진수를 입력하거나 붙여넣습니다.",
+      "<strong>변환</strong>을 클릭하여 8진수 결과를 확인합니다.",
+      "<strong>복사</strong>로 결과를 복사합니다."
+    ],
+    "whatIs": "10진수에서 8진수란?",
+    "whatIsParas": [
+      "10진수에서 8진수 변환은基数10의 숫자를基数8의 숫자 시스템으로 변환하는 것입니다. 8진수는 Unix 파일 권한에서 일반적으로 사용됩니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "유효한 10진수 정수를 입력하세요.",
+    "example": "예시",
+    "examplePara": "10진수를 8진수로 변환:",
+    "exampleCode": "--- 10진수 입력 ---\n255\n\n--- 8진수 ---\n377"
+  },
+  "fr": {
+    "title": "Convertisseur Décimal en Octal — Coding.Tools",
+    "description": "Convertissez les nombres décimaux en format octal directement dans votre navigateur.",
+    "toolTitle": "Décimal en Octal",
+    "toolDescription": "Convertissez les nombres décimaux en octal.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "Entrez un nombre décimal (ex. 255, 1024)...",
+    "outputPlaceholder": "Le résultat octal apparaîtra ici...",
+    "descTitle": "Convertisseur Décimal vers Octal",
+    "descParas": [
+      "Cet outil convertit les nombres décimaux (base 10) en format octal (base 8).",
+      "La conversion s'exécute localement dans votre navigateur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Tapez ou collez un nombre décimal dans le champ de saisie.",
+      "Cliquez sur <strong>Convertir</strong> pour voir le résultat octal.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
+    ],
+    "whatIs": "Qu'est-ce que Décimal vers Octal ?",
+    "whatIsParas": [
+      "La conversion décimal vers octal transforme les nombres de base 10 en base 8. L'octal est couramment utilisé dans les permissions de fichiers Unix."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Entrez un nombre décimal entier valide.",
+    "example": "Exemple",
+    "examplePara": "Conversion de décimal en octal :",
+    "exampleCode": "--- Entrée décimale ---\n255\n\n--- Octal ---\n377"
+  },
+  "de": {
+    "title": "Dezimal-zu-Oktal-Konverter — Coding.Tools",
+    "description": "Konvertieren Sie Dezimalzahlen direkt in Ihrem Browser ins Oktalformat.",
+    "toolTitle": "Dezimal zu Oktal",
+    "toolDescription": "Konvertieren Sie Dezimalzahlen in Oktal.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "Dezimalzahl eingeben (z.B. 255, 1024)...",
+    "outputPlaceholder": "Oktalergebnis wird hier angezeigt...",
+    "descTitle": "Dezimal zu Oktal Konverter",
+    "descParas": [
+      "Dieses Tool konvertiert Dezimalzahlen (Basis 10) in das Oktalformat (Basis 8).",
+      "Die Konvertierung erfolgt lokal in Ihrem Browser."
+    ],
+    "howToUse": "Verwendung",
+    "steps": [
+      "Geben Sie eine Dezimalzahl in das Eingabefeld ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong> um das Oktalergebnis anzuzeigen.",
+      "Verwenden Sie <strong>Kopieren</strong> um das Ergebnis zu kopieren."
+    ],
+    "whatIs": "Was ist Dezimal zu Oktal?",
+    "whatIsParas": [
+      "Die Dezimal-zu-Oktal-Konvertierung wandelt Zahlen von Basis 10 in Basis 8 um. Oktal wird häufig bei Unix-Dateiberechtigungen verwendet."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Geben Sie eine gültige Dezimalzahl ein.",
+    "example": "Beispiel",
+    "examplePara": "Dezimal in Oktal konvertieren:",
+    "exampleCode": "--- Dezimaleingabe ---\n255\n\n--- Oktal ---\n377"
+  },
+  "es": {
+    "title": "Conversor de Decimal a Octal — Coding.Tools",
+    "description": "Convierta números decimales a formato octal directamente en su navegador.",
+    "toolTitle": "Decimal a Octal",
+    "toolDescription": "Convierte números decimales a octal.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "Ingrese número decimal (ej. 255, 1024)...",
+    "outputPlaceholder": "El resultado octal aparecerá aquí...",
+    "descTitle": "Conversor de Decimal a Octal",
+    "descParas": [
+      "Esta herramienta convierte números decimales (base 10) a formato octal (base 8).",
+      "La conversión se ejecuta localmente en su navegador."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Escriba o pegue un número decimal en el campo de entrada.",
+      "Haga clic en <strong>Convertir</strong> para ver el resultado octal.",
+      "Use <strong>Copiar</strong> para copiar el resultado."
+    ],
+    "whatIs": "¿Qué es Decimal a Octal?",
+    "whatIsParas": [
+      "La conversión de decimal a octal transforma números de base 10 a base 8. El octal se usa comúnmente en permisos de archivos Unix."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese un número decimal entero válido.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de decimal a octal:",
+    "exampleCode": "--- Entrada decimal ---\n255\n\n--- Octal ---\n377"
+  },
+  "pt": {
+    "title": "Conversor de Decimal para Octal — Coding.Tools",
+    "description": "Converta números decimais para formato octal diretamente no seu navegador.",
+    "toolTitle": "Decimal to Octal",
+    "toolDescription": "Converta números decimais para octal.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Digite o número decimal (ex. 255, 1024)...",
+    "outputPlaceholder": "O resultado octal aparecerá aqui...",
+    "descTitle": "Conversor de Decimal para Octal",
+    "descParas": [
+      "Esta ferramenta converte números decimais (base 10) em formato octal (base 8).",
+      "A conversão é executada localmente no seu navegador."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Digite ou cole um número decimal no campo de entrada.",
+      "Clique em <strong>Converter</strong> para ver o resultado octal.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
+    ],
+    "whatIs": "O que é Decimal para Octal?",
+    "whatIsParas": [
+      "A conversão de decimal para octal transforma números de base 10 para base 8. O octal é comumente usado em permissões de arquivos Unix."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira um número decimal inteiro válido.",
+    "example": "Exemplo",
+    "examplePara": "Conversão de decimal para octal:",
+    "exampleCode": "--- Entrada decimal ---\n255\n\n--- Octal ---\n377"
+  }
+}

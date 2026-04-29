@@ -1,0 +1,290 @@
+{
+  "en": {
+    "title": "MD5 Generator — Coding.Tools",
+    "description": "Generate MD5 hash from any text input directly in your browser. Fast, private, and free to use.",
+    "toolTitle": "MD5 Generator",
+    "toolDescription": "Generate an MD5 hash from any text input. Copy or download the hash without sending data anywhere.",
+    "categoryName": "Hash & Cryptography",
+    "inputPlaceholder": "Enter text to generate MD5 hash...",
+    "outputPlaceholder": "MD5 hash will appear here...",
+    "hashLength": 32,
+    "descTitle": "MD5 Generator",
+    "descParas": [
+      "This MD5 tool generates a 128-bit hash digest from any text input you provide. It is useful for verifying data integrity, creating checksums, generating unique identifiers, or comparing file contents without revealing the original data.",
+      "The hash generation runs locally in your browser. The text you paste into the input editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste or type your text into the input editor.",
+      "Click <strong>Generate MD5</strong> to create the hash digest.",
+      "Check the output editor for the 32-character hexadecimal MD5 hash.",
+      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+    ],
+    "whatIs": "What is MD5?",
+    "whatIsParas": [
+      "MD5 (Message-Digest Algorithm 5) is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value. It is typically expressed as a 32-character hexadecimal number. MD5 was designed by Ronald Rivest in 1991 to replace an earlier hash function, MD4.",
+      "While MD5 is no longer considered secure for cryptographic purposes due to known vulnerabilities, it remains useful for checksums, file verification, and non-security applications where speed and simplicity are more important than collision resistance."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool supports any text input, including Unicode characters. The same input will always produce the same MD5 hash, making it deterministic. Even a small change in the input text will produce a completely different hash (avalanche effect).",
+    "example": "Example",
+    "examplePara": "The same value can be hashed to produce a consistent MD5 digest:",
+    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- MD5 Hash ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Another Example ---\nCoding.Tools\n\n--- MD5 Hash ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "cn": {
+    "title": "MD5 生成器 — Coding.Tools",
+    "description": "在浏览器中直接生成任意文本的 MD5 哈希值。快速、私密、免费使用。",
+    "toolTitle": "MD5 生成器",
+    "toolDescription": "从任意文本输入生成 MD5 哈希值。复制或下载哈希值，无需发送数据。",
+    "categoryName": "哈希与加密",
+    "inputPlaceholder": "输入文本以生成 MD5 哈希...",
+    "outputPlaceholder": "MD5 哈希值将显示在此处...",
+    "hashLength": 32,
+    "descTitle": "MD5 生成器",
+    "descParas": [
+      "此 MD5 工具根据您提供的任意文本输入生成 128 位哈希摘要。它可用于验证数据完整性、创建校验和、生成唯一标识符或比较文件内容而不泄露原始数据。",
+      "哈希生成在您的浏览器中本地运行。您粘贴到输入编辑器中的文本不会被上传、存储或发送到服务器，因此您可以在不改变工作流程的情况下快速使用此工具。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "将文本粘贴或输入到输入编辑器中。",
+      "点击<strong>生成 MD5</strong>以创建哈希摘要。",
+      "在输出编辑器中查看 32 个字符的十六进制 MD5 哈希值。",
+      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+    ],
+    "whatIs": "什么是 MD5？",
+    "whatIsParas": [
+      "MD5（消息摘要算法第5版）是一种广泛使用的加密哈希函数，产生 128 位（16 字节）的哈希值。它通常表示为 32 个字符的十六进制数。MD5 由 Ronald Rivest 于 1991 年设计，用于替代早期的哈希函数 MD4。",
+      "虽然 MD5 由于已知漏洞不再被认为适用于加密目的，但它仍然适用于校验和、文件验证以及速度和简单性比抗碰撞性更重要的非安全应用。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具支持任何文本输入，包括 Unicode 字符。相同的输入始终会产生相同的 MD5 哈希值，因此它是确定性的。即使输入文本的微小变化也会产生完全不同的哈希值（雪崩效应）。",
+    "example": "示例",
+    "examplePara": "相同的值可以被哈希生成一致的 MD5 摘要：",
+    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- MD5 哈希 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 另一个示例 ---\nCoding.Tools\n\n--- MD5 哈希 ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "tw": {
+    "title": "MD5 產生器 — Coding.Tools",
+    "description": "在瀏覽器中直接產生任意文字的 MD5 雜湊值。快速、私密、免費使用。",
+    "toolTitle": "MD5 產生器",
+    "toolDescription": "從任意文字輸入產生 MD5 雜湊值。複製或下載雜湊值，無需傳送資料。",
+    "categoryName": "哈希與加密",
+    "inputPlaceholder": "輸入文字以產生 MD5 雜湊...",
+    "outputPlaceholder": "MD5 雜湊值將顯示在此處...",
+    "hashLength": 32,
+    "descTitle": "MD5 產生器",
+    "descParas": [
+      "此 MD5 工具根據您提供的任意文字輸入產生 128 位元雜湊摘要。它可用於驗證資料完整性、建立檢查碼、產生唯一識別碼或比較檔案內容而不洩露原始資料。",
+      "雜湊產生在您的瀏覽器中本機執行。您貼上到輸入編輯器中的文字不會被上傳、儲存或傳送到伺服器，因此您可以在不改變工作流程的情況下快速使用此工具。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "將文字貼上或輸入到輸入編輯器中。",
+      "點擊<strong>產生 MD5</strong>以建立雜湊摘要。",
+      "在輸出編輯器中查看 32 個字元的十六進位 MD5 雜湊值。",
+      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+    ],
+    "whatIs": "什麼是 MD5？",
+    "whatIsParas": [
+      "MD5（訊息摘要演算法第5版）是一種廣泛使用的加密雜湊函數，產生 128 位元（16 位元組）的雜湊值。它通常表示為 32 個字元的十六進位數。MD5 由 Ronald Rivest 於 1991 年設計，用於替代早期的雜湊函數 MD4。",
+      "雖然 MD5 由於已知漏洞不再被認為適用於加密目的，但它仍然適用於檢查碼、檔案驗證以及速度和簡易性比抗碰撞性更重要的非安全應用。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具支援任何文字輸入，包括 Unicode 字元。相同的輸入始終會產生相同的 MD5 雜湊值，因此它是確定性的。即使輸入文字的微小變化也會產生完全不同的雜湊值（雪崩效應）。",
+    "example": "範例",
+    "examplePara": "相同的值可以被雜湊產生一致的 MD5 摘要：",
+    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- MD5 雜湊 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 另一個範例 ---\nCoding.Tools\n\n--- MD5 雜湊 ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "jp": {
+    "title": "MD5 ジェネレーター — Coding.Tools",
+    "description": "ブラウザで任意のテキストからMD5ハッシュを直接生成。高速・プライベート・無料。",
+    "toolTitle": "MD5 ジェネレーター",
+    "toolDescription": "任意のテキスト入力からMD5ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+    "categoryName": "ハッシュと暗号",
+    "inputPlaceholder": "MD5ハッシュを生成するテキストを入力...",
+    "outputPlaceholder": "MD5ハッシュがここに表示されます...",
+    "hashLength": 32,
+    "descTitle": "MD5 ジェネレーター",
+    "descParas": [
+      "このMD5ツールは、入力した任意のテキストから128ビットのダイジェストを生成します。データ整合性の確認、チェックサムの作成、一意の識別子の生成、元データを公開せずにファイル内容を比較する場合に便利です。",
+      "ハッシュ生成はブラウザ内でローカルに実行されます。入力エディタに貼り付けたテキストはアップロード、保存、サーバー送信されないため、ワークフローを変更せずに素早く利用できます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "入力エディタにテキストを貼り付けるか入力します。",
+      "<strong>MD5生成</strong>をクリックしてハッシュダイジェストを作成します。",
+      "出力エディタに32文字の16進数MD5ハッシュが表示されます。",
+      "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+    ],
+    "whatIs": "MD5とは？",
+    "whatIsParas": [
+      "MD5（メッセージダイジェストアルゴリズム5）は、128ビット（16バイト）のハッシュ値を生成する広く使用されている暗号化ハッシュ関数です。通常32文字の16進数として表されます。MD5は1991年にRonald Rivestが以前のハッシュ関数MD4の代替として設計しました。",
+      "MD5は既知の脆弱性により暗号化目的としては安全とは見なされなくなりましたが、チェックサム、ファイル検証、衝突耐性よりも速度と簡潔さが重要な非セキュリティアプリケーションでは引き続き有用です。"
+    ],
+    "inputNotes": "入力に関する注意",
+    "inputNotesPara": "このツールはUnicode文字を含む任意のテキスト入力をサポートします。同じ入力は常に同じMD5ハッシュを生成するため、決定論的です。入力テキストの小さな変更でも完全に異なるハッシュが生成されます（雪崩効果）。",
+    "example": "例",
+    "examplePara": "同じ値をハッシュすると一貫したMD5ダイジェストが生成されます：",
+    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- MD5ハッシュ ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 別の例 ---\nCoding.Tools\n\n--- MD5ハッシュ ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "kr": {
+    "title": "MD5 생성기 — Coding.Tools",
+    "description": "브라우저에서 직접 텍스트의 MD5 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+    "toolTitle": "MD5 생성기",
+    "toolDescription": "텍스트 입력에서 MD5 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+    "categoryName": "해시 및 암호화",
+    "inputPlaceholder": "MD5 해시를 생성할 텍스트를 입력하세요...",
+    "outputPlaceholder": "MD5 해시가 여기에 표시됩니다...",
+    "hashLength": 32,
+    "descTitle": "MD5 생성기",
+    "descParas": [
+      "이 MD5 도구는 입력한 텍스트에서 128비트 해시 다이제스트를 생성합니다. 데이터 무결성 확인, 체크섬 생성, 고유 식별자 생성 또는 원본 데이터를 노출하지 않고 파일 내용을 비교할 때 유용합니다.",
+      "해시 생성은 브라우저에서 로컬로 실행됩니다. 입력 편집기에 붙여넣은 텍스트는 업로드, 저장 또는 서버로 전송되지 않으므로 워크플로를 변경하지 않고 빠르게 사용할 수 있습니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "입력 편집기에 텍스트를 붙여넣거나 입력합니다.",
+      "<strong>MD5 생성</strong>을 클릭하여 해시 다이제스트를 만듭니다.",
+      "출력 편집기에 32자리 16진수 MD5 해시가 표시됩니다.",
+      "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+    ],
+    "whatIs": "MD5란 무엇인가요?",
+    "whatIsParas": [
+      "MD5(메시지 다이제스트 알고리즘 5)는 128비트(16바이트) 해시 값을 생성하는 널리 사용되는 암호화 해시 함수입니다. 일반적으로 32자리 16진수로 표현됩니다. MD5는 1991년 Ronald Rivest가 이전 해시 함수 MD4를 대체하기 위해 설계했습니다.",
+      "MD5는 알려진 취약점으로 인해 암호화 목적으로 더 이상 안전하다고 간주되지 않지만, 체크섬, 파일 검증 및 충돌 저항보다 속도와 단순성이 더 중요한 비보안 애플리케이션에서는 여전히 유용합니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "이 도구는 Unicode 문자를 포함한 모든 텍스트 입력을 지원합니다. 동일한 입력은 항상 동일한 MD5 해시를 생성하므로 결정론적입니다. 입력 텍스트의 작은 변경도 완전히 다른 해시를 생성합니다(눈사태 효과).",
+    "example": "예제",
+    "examplePara": "같은 값을 해시하면 일관된 MD5 다이제스트가 생성됩니다:",
+    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- MD5 해시 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 다른 예제 ---\nCoding.Tools\n\n--- MD5 해시 ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "fr": {
+    "title": "Générateur MD5 — Coding.Tools",
+    "description": "Générez un hash MD5 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+    "toolTitle": "Générateur MD5",
+    "toolDescription": "Générez un hash MD5 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+    "categoryName": "Hachage et Cryptographie",
+    "inputPlaceholder": "Entrez le texte pour générer le hash MD5...",
+    "outputPlaceholder": "Le hash MD5 apparaîtra ici...",
+    "hashLength": 32,
+    "descTitle": "Générateur MD5",
+    "descParas": [
+      "Cet outil MD5 génère un condensé de 128 bits à partir de n'importe quel texte que vous fournissez. Il est utile pour vérifier l'intégrité des données, créer des sommes de contrôle, générer des identifiants uniques ou comparer le contenu de fichiers sans révéler les données originales.",
+      "La génération du hash s'exécute localement dans votre navigateur. Le texte que vous collez dans l'éditeur d'entrée n'est pas téléchargé, stocké ou envoyé à un serveur, vous pouvez donc utiliser l'outil rapidement sans modifier votre flux de travail."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez ou saisissez votre texte dans l'éditeur d'entrée.",
+      "Cliquez sur <strong>Générer MD5</strong> pour créer le condensé.",
+      "Vérifiez le hash MD5 hexadécimal de 32 caractères dans l'éditeur de sortie.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte, ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
+    ],
+    "whatIs": "Qu'est-ce que MD5 ?",
+    "whatIsParas": [
+      "MD5 (Message-Digest Algorithm 5) est une fonction de hachage cryptographique largement utilisée qui produit une valeur de hachage de 128 bits (16 octets). Elle est généralement exprimée sous forme d'un nombre hexadécimal de 32 caractères. MD5 a été conçu par Ronald Rivest en 1991 pour remplacer une fonction de hachage antérieure, MD4.",
+      "Bien que MD5 ne soit plus considéré comme sûr pour les fins cryptographiques en raison de vulnérabilités connues, il reste utile pour les sommes de contrôle, la vérification de fichiers et les applications non sécuritaires où la vitesse et la simplicité sont plus importantes que la résistance aux collisions."
+    ],
+    "inputNotes": "Notes sur l'entrée",
+    "inputNotesPara": "L'outil prend en charge toute entrée de texte, y compris les caractères Unicode. La même entrée produira toujours le même hash MD5, ce qui le rend déterministe. Même un petit changement dans le texte d'entrée produira un hash complètement différent (effet avalanche).",
+    "example": "Exemple",
+    "examplePara": "La même valeur peut être hachée pour produire un condensé MD5 cohérent :",
+    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash MD5 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Autre exemple ---\nCoding.Tools\n\n--- Hash MD5 ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "de": {
+    "title": "MD5 Generator — Coding.Tools",
+    "description": "Erstellen Sie MD5-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+    "toolTitle": "MD5 Generator",
+    "toolDescription": "Erzeugen Sie einen MD5-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+    "categoryName": "Hash & Kryptographie",
+    "inputPlaceholder": "Text eingeben, um MD5-Hash zu erzeugen...",
+    "outputPlaceholder": "MD5-Hash wird hier angezeigt...",
+    "hashLength": 32,
+    "descTitle": "MD5 Generator",
+    "descParas": [
+      "Dieses MD5-Tool erzeugt einen 128-Bit-Hash-Digest aus beliebigem Text. Es eignet sich zur Überprüfung der Datenintegrität, zur Erstellung von Prüfsummen, zur Generierung eindeutiger Kennungen oder zum Vergleichen von Dateiinhalten ohne Offenlegung der Originaldaten.",
+      "Die Hash-Erstellung erfolgt lokal in Ihrem Browser. Der eingegebene Text wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Text in den Eingabe-Editor eingeben oder einfügen.",
+      "Auf <strong>MD5 generieren</strong> klicken, um den Hash-Digest zu erstellen.",
+      "Den 32-stelligen hexadezimalen MD5-Hash im Ausgabe-Editor prüfen.",
+      "<strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> als Textdatei oder <strong>Löschen</strong> zum Zurücksetzen verwenden."
+    ],
+    "whatIs": "Was ist MD5?",
+    "whatIsParas": [
+      "MD5 (Message-Digest Algorithm 5) ist eine weit verbreitete kryptografische Hash-Funktion, die einen 128-Bit (16-Byte) Hash-Wert erzeugt. Sie wird typischerweise als 32-stellige hexadezimale Zahl dargestellt. MD5 wurde 1991 von Ronald Rivest entworfen.",
+      "Obwohl MD5 aufgrund bekannter Schwachstellen nicht mehr als sicher für kryptografische Zwecke gilt, bleibt es nützlich für Prüfsummen, Dateiverifikation und nicht sicherheitskritische Anwendungen."
+    ],
+    "inputNotes": "Hinweise zur Eingabe",
+    "inputNotesPara": "Das Tool unterstützt jede Texteingabe, einschließlich Unicode-Zeichen. Dieselbe Eingabe erzeugt immer denselben MD5-Hash (deterministisch). Selbst kleine Änderungen erzeugen einen völlig anderen Hash (Lawineneffekt).",
+    "example": "Beispiel",
+    "examplePara": "Derselbe Wert kann gehasht werden, um ein konsistentes MD5-Ergebnis zu erzeugen:",
+    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- MD5 Hash ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Weiteres Beispiel ---\nCoding.Tools\n\n--- MD5 Hash ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "es": {
+    "title": "Generador MD5 — Coding.Tools",
+    "description": "Genere hashes MD5 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+    "toolTitle": "Generador MD5",
+    "toolDescription": "Genere un hash MD5 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+    "categoryName": "Hash y Criptografía",
+    "inputPlaceholder": "Ingrese texto para generar el hash MD5...",
+    "outputPlaceholder": "El hash MD5 aparecerá aquí...",
+    "hashLength": 32,
+    "descTitle": "Generador MD5",
+    "descParas": [
+      "Esta herramienta MD5 genera un resumen de 128 bits a partir de cualquier texto que proporcione. Es útil para verificar la integridad de datos, crear sumas de verificación, generar identificadores únicos o comparar contenido de archivos sin revelar los datos originales.",
+      "La generación del hash se ejecuta localmente en su navegador. El texto que pegue no se sube, almacena ni envía a un servidor."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Pegue o escriba su texto en el editor de entrada.",
+      "Haga clic en <strong>Generar MD5</strong> para crear el resumen hash.",
+      "Verifique el hash MD5 hexadecimal de 32 caracteres en el editor de salida.",
+      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> como archivo de texto, o <strong>Limpiar</strong> para reiniciar."
+    ],
+    "whatIs": "¿Qué es MD5?",
+    "whatIsParas": [
+      "MD5 (Message-Digest Algorithm 5) es una función hash criptográfica ampliamente utilizada que produce un valor hash de 128 bits (16 bytes). Se expresa típicamente como un número hexadecimal de 32 caracteres. MD5 fue diseñado por Ronald Rivest en 1991.",
+      "Aunque MD5 ya no se considera seguro para fines criptográficos, sigue siendo útil para sumas de verificación, verificación de archivos y aplicaciones donde la velocidad es más importante que la resistencia a colisiones."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "La herramienta soporta cualquier entrada de texto, incluyendo caracteres Unicode. La misma entrada siempre produce el mismo hash MD5 (determinista). Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+    "example": "Ejemplo",
+    "examplePara": "El mismo valor puede ser hasheado para producir un resumen MD5 consistente:",
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash MD5 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Otro ejemplo ---\nCoding.Tools\n\n--- Hash MD5 ---\na1b2c3d4e5f67890123456789abcdef0"
+  },
+  "pt": {
+    "title": "Gerador MD5 — Coding.Tools",
+    "description": "Gere hashes MD5 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+    "toolTitle": "Gerador MD5",
+    "toolDescription": "Gere um hash MD5 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+    "categoryName": "Hash e Criptografia",
+    "inputPlaceholder": "Digite o texto para gerar o hash MD5...",
+    "outputPlaceholder": "O hash MD5 aparecerá aqui...",
+    "hashLength": 32,
+    "descTitle": "Gerador MD5",
+    "descParas": [
+      "Esta ferramenta MD5 gera um resumo de 128 bits a partir de qualquer texto que você fornecer. É útil para verificar a integridade de dados, criar checksums, gerar identificadores únicos ou comparar conteúdos de arquivos sem revelar os dados originais.",
+      "A geração do hash é executada localmente no seu navegador. O texto que você cola no editor não é enviado, armazenado ou transmitido a um servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole ou digite seu texto no editor de entrada.",
+      "Clique em <strong>Gerar MD5</strong> para criar o resumo hash.",
+      "Verifique o hash MD5 hexadecimal de 32 caracteres no editor de saída.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> como arquivo de texto, ou <strong>Limpar</strong> para redefinir."
+    ],
+    "whatIs": "O que é MD5?",
+    "whatIsParas": [
+      "MD5 (Message-Digest Algorithm 5) é uma função hash criptográfica amplamente utilizada que produz um valor hash de 128 bits (16 bytes). É tipicamente expresso como um número hexadecimal de 32 caracteres. MD5 foi projetado por Ronald Rivest em 1991.",
+      "Embora o MD5 já não seja considerado seguro para fins criptográficos, continua sendo útil para checksums, verificação de arquivos e aplicações não críticas onde a velocidade é mais importante que a resistência a colisões."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "A ferramenta suporta qualquer entrada de texto, incluindo caracteres Unicode. A mesma entrada sempre produzirá o mesmo hash MD5 (determinístico). Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+    "example": "Exemplo",
+    "examplePara": "O mesmo valor pode ser hasheado para produzir um resumo MD5 consistente:",
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash MD5 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- Outro exemplo ---\nCoding.Tools\n\n--- Hash MD5 ---\na1b2c3d4e5f67890123456789abcdef0"
+  }
+}

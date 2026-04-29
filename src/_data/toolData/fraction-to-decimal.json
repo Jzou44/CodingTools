@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "Fraction to Decimal",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "cn": {
+    "title": "分数转小数转换器 — Coding.Tools",
+    "description": "在浏览器中直接将分数转换为小数。",
+    "toolTitle": "分数转小数",
+    "toolDescription": "将分数转换为小数表示。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入分数（如 3/4、1/2）...",
+    "outputPlaceholder": "小数结果将显示在这里...",
+    "descTitle": "分数转小数转换器",
+    "descParas": [
+      "此工具将分数转换为小数表示。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入分数（格式：分子/分母）。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是分数转小数？",
+    "whatIsParas": [
+      "分数转小数是将分数表示转换为等值的小数表示。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的分数，格式为分子/分母（如 3/4）。",
+    "example": "示例",
+    "examplePara": "将分数转换为小数：",
+    "exampleCode": "--- 分数输入 ---\n3/4\n\n--- 小数 ---\n0.75\n\n--- 百分比 ---\n75%"
+  },
+  "tw": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "分數轉小數",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "jp": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "分数から小数",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "kr": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "분수에서 소수",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "fr": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "Fraction en Décimal",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "de": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "Bruch zu Dezimal",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "es": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "Fracción a Decimal",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  },
+  "pt": {
+    "title": "Fraction to Decimal Converter — Coding.Tools",
+    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "toolTitle": "Fraction to Decimal",
+    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "",
+    "outputPlaceholder": "Decimal result will appear here...",
+    "descTitle": "Fraction to Decimal Converter",
+    "descParas": [
+      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
+      "The conversion runs locally in your browser using the BigNumber library."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Enter the integer part (default is 0), numerator, and denominator.",
+      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is a Fraction?",
+    "whatIsParas": [
+      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "example": "Example",
+    "examplePara": "Converting a fraction to decimal:",
+    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+  }
+}

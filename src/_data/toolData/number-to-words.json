@@ -1,0 +1,317 @@
+{
+  "en": {
+    "title": "Number to Words Converter — Coding.Tools",
+    "description": "Convert numbers to English words, ordinals, and ordinal numbers instantly.",
+    "toolTitle": "Number to Words",
+    "toolDescription": "Convert integers to English words, ordinal words, and ordinal numbers.",
+    "categoryName": "String & Text Utilities",
+    "inputPlaceholder": "Enter a number (e.g. 42, -7, 1000000)",
+    "descTitle": "Number to Words Converter",
+    "descParas": [
+      "This tool converts any integer into its English word representation, ordinal word, and ordinal number format. It is useful for writing checks, generating human-readable reports, creating educational materials, or formatting numbers in legal documents.",
+      "The conversion runs locally in your browser using the number-to-words library. The number you enter is not uploaded, stored, or sent to a server."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a number into the input field.",
+      "Click <strong>Convert</strong> or simply type to see live results.",
+      "Three results are displayed: the word form (e.g. \"forty-two\"), the ordinal word (e.g. \"forty-second\"), and the ordinal number (e.g. \"42nd\").",
+      "Use <strong>Copy</strong> to copy the word result to the clipboard, or <strong>Clear</strong> to reset."
+    ],
+    "whatIs": "What is number to words conversion?",
+    "whatIsParas": [
+      "Number to words conversion transforms a numeric value into its spelled-out English form. The ordinal form adds the appropriate suffix (st, nd, rd, th) to describe position or order in a sequence. This is commonly used in financial documents, legal writing, and formal correspondence."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool accepts integers, including negative numbers and zero. Very large numbers (billions and above) are supported. Decimal numbers are not supported — only whole integers can be converted to words.",
+    "example": "Example",
+    "examplePara": "See how different numbers convert to words:",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "Word Result",
+    "ordinalWordResult": "Ordinal Word Result",
+    "ordinalNumberResult": "Ordinal Number Result",
+    "invalidInput": "Please enter a valid integer",
+    "convertedSuccess": "Converted successfully",
+    "conversionFailed": "Conversion failed: "
+  },
+  "cn": {
+    "title": "数字转英文 — Coding.Tools",
+    "description": "即时将数字转换为英文单词、序数词和序数。",
+    "toolTitle": "数字转英文",
+    "toolDescription": "将整数转换为英文单词、序数词和序数。",
+    "categoryName": "字符串与文本",
+    "inputPlaceholder": "输入数字（如 42、-7、1000000）",
+    "descTitle": "数字转英文转换器",
+    "descParas": [
+      "此工具将任何整数转换为其英文单词表示、序数词和序数格式。它适用于写支票、生成可读报告、创建教育材料或在法律文件中格式化数字。",
+      "转换在浏览器中使用 number-to-words 库本地运行。您输入的数字不会被上传、存储或发送到服务器。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在输入字段中输入或粘贴数字。",
+      "点击<strong>转换</strong>或直接输入查看实时结果。",
+      "显示三个结果：单词形式（如 \"forty-two\"）、序数词（如 \"forty-second\"）和序数（如 \"42nd\"）。",
+      "使用<strong>复制</strong>将单词结果复制到剪贴板，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什么是数字转英文？",
+    "whatIsParas": [
+      "数字转英文是将数值转换为英文拼写形式的过程。序数形式添加适当的后缀（st、nd、rd、th）来描述序列中的位置或顺序。这通常用于财务文件、法律写作和正式信函。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具接受整数，包括负数和零。支持非常大的数字（十亿及以上）。不支持小数数字——只有整数可以转换为单词。",
+    "example": "示例",
+    "examplePara": "查看不同数字如何转换为单词：",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "单词结果",
+    "ordinalWordResult": "序数词结果",
+    "ordinalNumberResult": "序数结果",
+    "invalidInput": "请输入有效的整数",
+    "convertedSuccess": "转换成功",
+    "conversionFailed": "转换失败："
+  },
+  "tw": {
+    "title": "數字轉英文 — Coding.Tools",
+    "description": "即時將數字轉換為英文單詞、序數詞和序數。",
+    "toolTitle": "數字轉英文",
+    "toolDescription": "將整數轉換為英文單詞、序數詞和序數。",
+    "categoryName": "字串與文字",
+    "inputPlaceholder": "輸入數字（如 42、-7、1000000）",
+    "descTitle": "數字轉英文轉換器",
+    "descParas": [
+      "此工具將任何整數轉換為其英文單詞表示、序數詞和序數格式。它適用於寫支票、產生可讀報告、建立教育材料或在法律文件中格式化數字。",
+      "轉換在瀏覽器中使用 number-to-words 函式庫本地運行。您輸入的數字不會被上傳、儲存或傳送到伺服器。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在輸入欄位中輸入或貼上數字。",
+      "點擊<strong>轉換</strong>或直接輸入查看即時結果。",
+      "顯示三個結果：單詞形式、序數詞和序數。",
+      "使用<strong>複製</strong>將單詞結果複製到剪貼簿，或<strong>清除</strong>重設。"
+    ],
+    "whatIs": "什麼是數字轉英文？",
+    "whatIsParas": [
+      "數字轉英文是將數值轉換為英文拼寫形式的過程。序數形式添加適當的後綴來描述序列中的位置。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具接受整數，包括負數和零。支援非常大的數字。不支援小數數字。",
+    "example": "範例",
+    "examplePara": "查看不同數字如何轉換為單詞：",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "單詞結果",
+    "ordinalWordResult": "序數詞結果",
+    "ordinalNumberResult": "序數結果",
+    "invalidInput": "請輸入有效的整數",
+    "convertedSuccess": "轉換成功",
+    "conversionFailed": "轉換失敗："
+  },
+  "jp": {
+    "title": "数字を英語に — Coding.Tools",
+    "description": "数字を英単語、序数語、序数に即座に変換。",
+    "toolTitle": "数字を英語に",
+    "toolDescription": "整数を英単語、序数語、序数に変換。",
+    "categoryName": "文字列＆テキスト",
+    "inputPlaceholder": "数字を入力（例：42、-7、1000000）",
+    "descTitle": "数字を英語に変換",
+    "descParas": [
+      "このツールは任意の整数を英単語、序数語、序数形式に変換します。小切手の作成、レポート作成、教材作成、法的文書の数字フォーマットに便利です。",
+      "変換はブラウザ内でnumber-to-wordsライブラリを使用してローカルに実行されます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "入力欄に数字を入力または貼り付けます。",
+      "<strong>変換</strong>をクリックするか、入力すると即座に結果が表示されます。",
+      "3つの結果が表示されます：単語形式、序数語、序数。",
+      "<strong>コピー</strong>でクリップボードにコピー、<strong>クリア</strong>でリセット。"
+    ],
+    "whatIs": "数字を英語への変換とは？",
+    "whatIsParas": [
+      "数字を英語への変換は、数値を英語の綴りに変換する処理です。序数形は適切な接尾辞を追加して順序を表します。"
+    ],
+    "inputNotes": "入力について",
+    "inputNotesPara": "負の数とゼロを含む整数を受け付けます。非常に大きな数字にも対応。小数はサポートされていません。",
+    "example": "例",
+    "examplePara": "異なる数字の変換例：",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "単語結果",
+    "ordinalWordResult": "序数語結果",
+    "ordinalNumberResult": "序数結果",
+    "invalidInput": "有効な整数を入力してください",
+    "convertedSuccess": "変換成功",
+    "conversionFailed": "変換失敗："
+  },
+  "kr": {
+    "title": "숫자를 영어로 — Coding.Tools",
+    "description": "숫자를 영어 단어, 서수어, 서수로 즉시 변환.",
+    "toolTitle": "숫자를 영어로",
+    "toolDescription": "정수를 영어 단어, 서수어, 서수로 변환합니다.",
+    "categoryName": "문자열 & 텍스트",
+    "inputPlaceholder": "숫자 입력 (예: 42, -7, 1000000)",
+    "descTitle": "숫자를 영어로 변환기",
+    "descParas": [
+      "이 도구는 모든 정수를 영어 단어, 서수어, 서수 형식으로 변환합니다. 수표 작성, 보고서 생성, 교육 자료 제작, 법률 문서에 유용합니다.",
+      "변환은 브라우저에서 number-to-words 라이브러리를 사용하여 로컬로 실행됩니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "입력란에 숫자를 입력하거나 붙여넣으세요.",
+      "<strong>변환</strong>을 클릭하거나 입력하면 실시간 결과가 표시됩니다.",
+      "세 가지 결과가 표시됩니다: 단어 형태, 서수어, 서수.",
+      "<strong>복사</strong>로 클립보드에 복사, <strong>지우기</strong>로 초기화."
+    ],
+    "whatIs": "숫자를 영어로 변환이란?",
+    "whatIsParas": [
+      "숫자를 영어로 변환은 숫자 값을 영어 철자 형태로 변환하는 처리입니다. 서수형은 적절한 접미사를 추가하여 순서를 나타냅니다."
+    ],
+    "inputNotes": "입력 참고",
+    "inputNotesPara": "음수와 0을 포함한 정수를 허용합니다. 매우 큰 숫자도 지원됩니다. 소수는 지원되지 않습니다.",
+    "example": "예시",
+    "examplePara": "다양한 숫자의 변환 예:",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "단어 결과",
+    "ordinalWordResult": "서수어 결과",
+    "ordinalNumberResult": "서수 결과",
+    "invalidInput": "유효한 정수를 입력하세요",
+    "convertedSuccess": "변환 성공",
+    "conversionFailed": "변환 실패: "
+  },
+  "fr": {
+    "title": "Nombres en lettres — Coding.Tools",
+    "description": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
+    "toolTitle": "Nombres en lettres",
+    "toolDescription": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
+    "categoryName": "Chaînes & Texte",
+    "inputPlaceholder": "Entrez un nombre (ex: 42, -7, 1000000)",
+    "descTitle": "Convertisseur de nombres en lettres",
+    "descParas": [
+      "Cet outil convertit tout entier en sa représentation en mots, mot ordinal et nombre ordinal.",
+      "La conversion s'exécute localement dans votre navigateur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Entrez un nombre dans le champ.",
+      "Cliquez <strong>Convertir</strong> ou tapez simplement pour voir les résultats.",
+      "Trois résultats sont affichés.",
+      "Utilisez <strong>Copier</strong> ou <strong>Effacer</strong>."
+    ],
+    "whatIs": "Qu'est-ce que la conversion de nombres en lettres ?",
+    "whatIsParas": [
+      "La conversion de nombres en lettres transforme une valeur numérique en sa forme écrite anglaise."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "L'outil accepte les entiers, y compris les négatifs et zéro. Les décimaux ne sont pas supportés.",
+    "example": "Exemple",
+    "examplePara": "Voyez comment différents nombres se convertissent :",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "Résultat mot",
+    "ordinalWordResult": "Résultat mot ordinal",
+    "ordinalNumberResult": "Résultat nombre ordinal",
+    "invalidInput": "Veuillez entrer un entier valide",
+    "convertedSuccess": "Conversion réussie",
+    "conversionFailed": "Échec de la conversion : "
+  },
+  "de": {
+    "title": "Zahlen in Wörter — Coding.Tools",
+    "description": "Zahlen sofort in englische Wörter, Ordinalzahlen und Ordnungszahlen konvertieren.",
+    "toolTitle": "Zahlen in Wörter",
+    "toolDescription": "Ganzzahlen in englische Wörter, Ordinalwörter und Ordnungszahlen konvertieren.",
+    "categoryName": "Zeichenketten & Text",
+    "inputPlaceholder": "Zahl eingeben (z.B. 42, -7, 1000000)",
+    "descTitle": "Zahlen-in-Wörter-Konverter",
+    "descParas": [
+      "Dieses Tool konvertiert jede Ganzzahl in ihre englische Wortdarstellung, Ordinalwort und Ordnungszahl.",
+      "Die Konvertierung läuft lokal im Browser."
+    ],
+    "howToUse": "Verwendung",
+    "steps": [
+      "Zahl in das Eingabefeld eingeben.",
+      "<strong>Konvertieren</strong> klicken oder einfach tippen.",
+      "Drei Ergebnisse werden angezeigt.",
+      "<strong>Kopieren</strong> oder <strong>Löschen</strong> verwenden."
+    ],
+    "whatIs": "Was ist Zahlen-in-Wörter-Konvertierung ?",
+    "whatIsParas": [
+      "Die Konvertierung wandelt einen numerischen Wert in seine englische Schreibform um."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Akzeptiert Ganzzahlen, einschließlich negativer Zahlen und Null. Dezimalzahlen werden nicht unterstützt.",
+    "example": "Beispiel",
+    "examplePara": "Sehen Sie, wie verschiedene Zahlen konvertiert werden:",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "Wortergebnis",
+    "ordinalWordResult": "Ordinalwort-Ergebnis",
+    "ordinalNumberResult": "Ordnungszahl-Ergebnis",
+    "invalidInput": "Bitte geben Sie eine gültige Ganzzahl ein",
+    "convertedSuccess": "Erfolgreich konvertiert",
+    "conversionFailed": "Konvertierung fehlgeschlagen: "
+  },
+  "es": {
+    "title": "Números a palabras — Coding.Tools",
+    "description": "Convierta números a palabras en inglés, ordinales y números ordinales al instante.",
+    "toolTitle": "Números a palabras",
+    "toolDescription": "Convierta enteros a palabras en inglés, palabras ordinales y números ordinales.",
+    "categoryName": "Cadenas y Texto",
+    "inputPlaceholder": "Ingrese un número (ej: 42, -7, 1000000)",
+    "descTitle": "Convertidor de números a palabras",
+    "descParas": [
+      "Esta herramienta convierte cualquier entero en su representación en palabras, palabra ordinal y número ordinal.",
+      "La conversión se ejecuta localmente en su navegador."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Ingrese un número en el campo.",
+      "Haga clic en <strong>Convertir</strong> o simplemente escriba.",
+      "Se muestran tres resultados.",
+      "Use <strong>Copiar</strong> o <strong>Limpiar</strong>."
+    ],
+    "whatIs": "¿Qué es la conversión de números a palabras?",
+    "whatIsParas": [
+      "La conversión transforma un valor numérico en su forma escrita en inglés."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Acepta enteros, incluyendo negativos y cero. Los decimales no son compatibles.",
+    "example": "Ejemplo",
+    "examplePara": "Vea cómo diferentes números se convierten:",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "Resultado palabra",
+    "ordinalWordResult": "Resultado palabra ordinal",
+    "ordinalNumberResult": "Resultado número ordinal",
+    "invalidInput": "Ingrese un entero válido",
+    "convertedSuccess": "Convertido exitosamente",
+    "conversionFailed": "Error en la conversión: "
+  },
+  "pt": {
+    "title": "Números por extenso — Coding.Tools",
+    "description": "Converta números para palavras em inglês, ordinais e números ordinais instantaneamente.",
+    "toolTitle": "Números por extenso",
+    "toolDescription": "Converta inteiros para palavras em inglês, palavras ordinais e números ordinais.",
+    "categoryName": "Strings e Texto",
+    "inputPlaceholder": "Insira um número (ex: 42, -7, 1000000)",
+    "descTitle": "Conversor de números por extenso",
+    "descParas": [
+      "Esta ferramenta converte qualquer inteiro em sua representação em palavras, palavra ordinal e número ordinal.",
+      "A conversão é executada localmente no navegador."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Insira um número no campo.",
+      "Clique em <strong>Converter</strong> ou simplesmente digite.",
+      "Três resultados são exibidos.",
+      "Use <strong>Copiar</strong> ou <strong>Limpar</strong>."
+    ],
+    "whatIs": "O que é conversão de números por extenso?",
+    "whatIsParas": [
+      "A conversão transforma um valor numérico em sua forma escrita em inglês."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Aceita inteiros, incluindo negativos e zero. Decimais não são suportados.",
+    "example": "Exemplo",
+    "examplePara": "Veja como diferentes números são convertidos:",
+    "exampleCode": "--- Number: 42 ---\nWord: forty-two\nOrdinal Word: forty-second\nOrdinal Number: 42nd\n\n--- Number: 1000000 ---\nWord: one million\nOrdinal Word: one millionth\nOrdinal Number: 1000000th\n\n--- Number: -7 ---\nWord: negative seven\nOrdinal Word: negative seventh\nOrdinal Number: -7th",
+    "wordResult": "Resultado palavra",
+    "ordinalWordResult": "Resultado palavra ordinal",
+    "ordinalNumberResult": "Resultado número ordinal",
+    "invalidInput": "Insira um inteiro válido",
+    "convertedSuccess": "Convertido com sucesso",
+    "conversionFailed": "Falha na conversão: "
+  }
+}

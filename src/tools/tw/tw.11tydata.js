@@ -1,5 +1,5 @@
-var tData = require('../../_data/t.json');
-var toolDataAll = require('../../_data/toolData.json');
+var tData = require('../../_data/t');
+var toolDataAll = require('../../_data/toolData');
 
 module.exports = function () {
   var lang = 'tw';

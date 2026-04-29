@@ -33,3 +33,7 @@ docker-compose.override.yml
 *.temp
 .tmp/
 .temp/
+tmp*
+
+# Documentation
+docs/*

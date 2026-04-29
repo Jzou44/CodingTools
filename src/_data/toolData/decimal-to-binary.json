@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "Decimal to Binary",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "cn": {
+    "title": "十进制转二进制转换器 — Coding.Tools",
+    "description": "在浏览器中直接将十进制数字转换为二进制格式。",
+    "toolTitle": "十进制转二进制",
+    "toolDescription": "将十进制数字转换为二进制、十六进制和八进制。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入十进制数字（如 255、1024）...",
+    "outputPlaceholder": "二进制结果将显示在这里...",
+    "descTitle": "十进制转二进制转换器",
+    "descParas": [
+      "此工具将十进制（基数10）数字转换为二进制（基数2），同时显示十六进制和八进制等价值。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入或粘贴十进制数字。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是十进制转二进制？",
+    "whatIsParas": [
+      "十进制转二进制是计算机科学和数字电子学中的基础操作。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的十进制数字（整数）。",
+    "example": "示例",
+    "examplePara": "将十进制转换为二进制：",
+    "exampleCode": "--- 十进制输入 ---\n255\n\n--- 二进制 ---\n11111111\n\n--- 十六进制 ---\nFF\n\n--- 八进制 ---\n377"
+  },
+  "tw": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "十進位轉二進位",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "jp": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "10進数から2進数",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "kr": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "10진수에서 2진수",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "fr": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "Décimal en Binaire",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "de": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "Dezimal zu Binär",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "es": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "Decimal a Binario",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  },
+  "pt": {
+    "title": "Decimal to Binary Converter — Coding.Tools",
+    "description": "Convert decimal numbers to binary format directly in your browser.",
+    "toolTitle": "Decimal to Binary",
+    "toolDescription": "Convert decimal numbers to binary, hex, and octal.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Enter decimal number (e.g. 255, 1024)...",
+    "outputPlaceholder": "Binary result will appear here...",
+    "descTitle": "Decimal to Binary Converter",
+    "descParas": [
+      "This tool converts decimal (base 10) numbers to binary (base 2), and also shows hex and octal equivalents.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a decimal number into the input field.",
+      "Click <strong>Convert</strong> to see the binary, hex, and octal results.",
+      "Use <strong>Copy</strong> to copy the result."
+    ],
+    "whatIs": "What is Decimal to Binary?",
+    "whatIsParas": [
+      "Converting decimal to binary is fundamental in computer science and digital electronics."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a valid decimal number (integer).",
+    "example": "Example",
+    "examplePara": "Converting decimal to binary:",
+    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+  }
+}

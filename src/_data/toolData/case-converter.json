@@ -1,0 +1,299 @@
+{
+  "en": {
+    "title": "Case Converter — Coding.Tools",
+    "description": "Convert text to uppercase, lowercase, sentence case, title case, or invert case instantly.",
+    "toolTitle": "Case Converter",
+    "toolDescription": "Transform text between uppercase, lowercase, sentence case, title case, and inverted case.",
+    "categoryName": "String & Text Utilities",
+    "inputPlaceholder": "Enter or paste text to convert...",
+    "descTitle": "Case Converter",
+    "descParas": [
+      "This case converter transforms text between five common capitalization styles: upper case, lower case, sentence case, title case, and inverted case. It is useful when you need to reformat text for headlines, documents, code comments, or any situation where consistent casing matters.",
+      "The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste or type your text into the input editor.",
+      "Click one of the five conversion buttons: <strong>UPPER CASE</strong>, <strong>lower case</strong>, <strong>Sentence case</strong>, <strong>Title Case</strong>, or <strong>Invert Case</strong>.",
+      "The text in the editor is converted in place. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor."
+    ],
+    "whatIs": "What are the different case styles?",
+    "whatIsParas": [
+      "<strong>UPPER CASE</strong> converts every letter to its uppercase form. <strong>lower case</strong> converts every letter to its lowercase form. <strong>Sentence case</strong> capitalizes the first letter of each sentence and lowercases the rest. <strong>Title Case</strong> capitalizes the first letter of every word. <strong>Invert Case</strong> swaps the case of every character, turning upper into lower and vice versa."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool works with any text, including Unicode characters. Sentence case uses periods, exclamation marks, and question marks as sentence boundaries. Title case capitalizes every word without exceptions for articles or prepositions.",
+    "example": "Example",
+    "examplePara": "See how the same sentence looks in each case style:",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "UPPER CASE",
+    "lowerCase": "lower case",
+    "sentenceCase": "Sentence case",
+    "titleCase": "Title Case",
+    "invertCase": "Invert Case"
+  },
+  "cn": {
+    "title": "大小写转换 — Coding.Tools",
+    "description": "即时将文本转换为大写、小写、句首大写、标题大写或反转大小写。",
+    "toolTitle": "大小写转换",
+    "toolDescription": "在大写、小写、句首大写、标题大写和反转大小写之间转换文本。",
+    "categoryName": "字符串与文本",
+    "inputPlaceholder": "输入或粘贴要转换的文本...",
+    "descTitle": "大小写转换",
+    "descParas": [
+      "这个大小写转换工具可以在五种常见的大小写样式之间转换文本：大写、小写、句首大写、标题大写和反转大小写。",
+      "转换在浏览器中本地运行。您粘贴到编辑器中的文本不会被上传、存储或发送到服务器。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在输入编辑器中粘贴或输入文本。",
+      "点击五个转换按钮之一：<strong>大写</strong>、<strong>小写</strong>、<strong>句首大写</strong>、<strong>标题大写</strong>或<strong>反转大小写</strong>。",
+      "编辑器中的文本会被原地转换。使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置编辑器。"
+    ],
+    "whatIs": "不同的大小写样式是什么？",
+    "whatIsParas": [
+      "<strong>大写</strong>将每个字母转换为大写形式。<strong>小写</strong>将每个字母转换为小写形式。<strong>句首大写</strong>将每个句子的首字母大写。<strong>标题大写</strong>将每个单词的首字母大写。<strong>反转大小写</strong>交换每个字符的大小写。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具适用于任何文本，包括 Unicode 字符。句首大写使用句号、感叹号和问号作为句子边界。标题大写对每个单词首字母大写，不考虑冠词或介词。",
+    "example": "示例",
+    "examplePara": "查看同一句子在各种大小写样式中的效果：",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "大写",
+    "lowerCase": "小写",
+    "sentenceCase": "句首大写",
+    "titleCase": "标题大写",
+    "invertCase": "反转大小写"
+  },
+  "tw": {
+    "title": "大小寫轉換 — Coding.Tools",
+    "description": "即時將文字轉換為大寫、小寫、句首大寫、標題大寫或反轉大小寫。",
+    "toolTitle": "大小寫轉換",
+    "toolDescription": "在大寫、小寫、句首大寫、標題大寫和反轉大小寫之間轉換文字。",
+    "categoryName": "字串與文字",
+    "inputPlaceholder": "輸入或貼上要轉換的文字...",
+    "descTitle": "大小寫轉換",
+    "descParas": [
+      "這個大小寫轉換工具可以在五種常見的大小寫樣式之間轉換文字。",
+      "轉換在瀏覽器中本地運行。您貼到編輯器中的文字不會被上傳、儲存或傳送到伺服器。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "在輸入編輯器中貼上或輸入文字。",
+      "點擊五個轉換按鈕之一。",
+      "編輯器中的文字會被原地轉換。使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設編輯器。"
+    ],
+    "whatIs": "不同的大小寫樣式是什麼？",
+    "whatIsParas": [
+      "<strong>大寫</strong>將每個字母轉換為大寫形式。<strong>小寫</strong>將每個字母轉換為小寫形式。<strong>句首大寫</strong>將每個句子的首字母大寫。<strong>標題大寫</strong>將每個單詞的首字母大寫。<strong>反轉大小寫</strong>交換每個字元的大小寫。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具適用於任何文字，包括 Unicode 字元。",
+    "example": "範例",
+    "examplePara": "查看同一句子在各種大小寫樣式中的效果：",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "大寫",
+    "lowerCase": "小寫",
+    "sentenceCase": "句首大寫",
+    "titleCase": "標題大寫",
+    "invertCase": "反轉大小寫"
+  },
+  "jp": {
+    "title": "大文字小文字変換 — Coding.Tools",
+    "description": "テキストを大文字、小文字、文頭大文字、タイトルケース、反転に即座に変換。",
+    "toolTitle": "大文字小文字変換",
+    "toolDescription": "大文字、小文字、文頭大文字、タイトルケース、反転の間でテキストを変換。",
+    "categoryName": "文字列＆テキスト",
+    "inputPlaceholder": "変換するテキストを入力または貼り付け...",
+    "descTitle": "大文字小文字変換",
+    "descParas": [
+      "この大文字小文字変換ツールは、5つの一般的な大文字小文字スタイル間でテキストを変換します。",
+      "変換はブラウザ内でローカルに実行されます。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "入力エディタにテキストを貼り付けるか入力します。",
+      "5つの変換ボタンのいずれかをクリック。",
+      "テキストがその場で変換されます。"
+    ],
+    "whatIs": "大文字小文字スタイルとは？",
+    "whatIsParas": [
+      "<strong>大文字</strong>はすべての文字を大文字に変換。<strong>小文字</strong>はすべて小文字に。<strong>文頭大文字</strong>は各文の最初の大文字に。<strong>タイトルケース</strong>は各単語の最初の大文字に。<strong>反転</strong>は大文字と小文字を入れ替えます。"
+    ],
+    "inputNotes": "入力について",
+    "inputNotesPara": "Unicode文字を含むあらゆるテキストで動作します。",
+    "example": "例",
+    "examplePara": "同じ文が各スタイルでどう見えるか：",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "大文字",
+    "lowerCase": "小文字",
+    "sentenceCase": "文頭大文字",
+    "titleCase": "タイトルケース",
+    "invertCase": "反転"
+  },
+  "kr": {
+    "title": "대소문자 변환 — Coding.Tools",
+    "description": "텍스트를 대문자, 소문자, 문장 대문자, 제목 대문자 또는 반전으로 즉시 변환.",
+    "toolTitle": "대소문자 변환",
+    "toolDescription": "대문자, 소문자, 문장 대문자, 제목 대문자, 반전 간에 텍스트를 변환합니다.",
+    "categoryName": "문자열 & 텍스트",
+    "inputPlaceholder": "변환할 텍스트를 입력하거나 붙여넣으세요...",
+    "descTitle": "대소문자 변환",
+    "descParas": [
+      "이 대소문자 변환 도구는 다섯 가지 일반적인 대소문자 스타일 간에 텍스트를 변환합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
+      "다섯 가지 변환 버튼 중 하나를 클릭합니다.",
+      "텍스트가 그 자리에서 변환됩니다."
+    ],
+    "whatIs": "대소문자 스타일이란?",
+    "whatIsParas": [
+      "<strong>대문자</strong>는 모든 글자를 대문자로 변환합니다. <strong>소문자</strong>는 모든 글자를 소문자로 변환합니다. <strong>문장 대문자</strong>는 각 문장의 첫 글자를 대문자로 합니다. <strong>제목 대문자</strong>는 각 단어의 첫 글자를 대문자로 합니다. <strong>반전</strong>은 대문자와 소문자를 바꿉니다."
+    ],
+    "inputNotes": "입력 참고",
+    "inputNotesPara": "유니코드 문자를 포함한 모든 텍스트에서 작동합니다.",
+    "example": "예시",
+    "examplePara": "같은 문장이 각 스타일에서 어떻게 보이는지 확인:",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "대문자",
+    "lowerCase": "소문자",
+    "sentenceCase": "문장 대문자",
+    "titleCase": "제목 대문자",
+    "invertCase": "반전"
+  },
+  "fr": {
+    "title": "Convertisseur de casse — Coding.Tools",
+    "description": "Transformez le texte entre majuscules, minuscules, casse de phrase, casse de titre et casse inversée.",
+    "toolTitle": "Convertisseur de casse",
+    "toolDescription": "Transformez le texte entre majuscules, minuscules, casse de phrase, casse de titre et casse inversée.",
+    "categoryName": "Chaînes & Texte",
+    "inputPlaceholder": "Entrez ou collez le texte à convertir...",
+    "descTitle": "Convertisseur de casse",
+    "descParas": [
+      "Ce convertisseur transforme le texte entre cinq styles de casse courants.",
+      "La conversion s'exécute localement dans votre navigateur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez ou tapez votre texte dans l'éditeur.",
+      "Cliquez sur l'un des cinq boutons de conversion.",
+      "Le texte est converti sur place."
+    ],
+    "whatIs": "Quels sont les styles de casse ?",
+    "whatIsParas": [
+      "<strong>MAJUSCULES</strong> convertit chaque lettre en majuscule. <strong>minuscules</strong> en minuscule. <strong>Casse de phrase</strong> majuscule la première lettre de chaque phrase. <strong>Casse de Titre</strong> majuscule chaque mot. <strong>Inverser</strong> échange la casse."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Fonctionne avec tout texte, y compris les caractères Unicode.",
+    "example": "Exemple",
+    "examplePara": "Voyez la même phrase dans chaque style :",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "MAJUSCULES",
+    "lowerCase": "minuscules",
+    "sentenceCase": "Casse de phrase",
+    "titleCase": "Casse de Titre",
+    "invertCase": "Inverser"
+  },
+  "de": {
+    "title": "Groß-/Kleinschreibung — Coding.Tools",
+    "description": "Text sofort in Großbuchstaben, Kleinbuchstaben, Satzanfang, Titel oder umgekehrt konvertieren.",
+    "toolTitle": "Groß-/Kleinschreibung",
+    "toolDescription": "Text zwischen Großbuchstaben, Kleinbuchstaben, Satzanfang, Titel und invertierter Schreibung umwandeln.",
+    "categoryName": "Zeichenketten & Text",
+    "inputPlaceholder": "Text zum Konvertieren eingeben oder einfügen...",
+    "descTitle": "Groß-/Kleinschreibung",
+    "descParas": [
+      "Dieses Tool konvertiert Text zwischen fünf gängigen Schreibstilen.",
+      "Die Konvertierung läuft lokal im Browser."
+    ],
+    "howToUse": "Verwendung",
+    "steps": [
+      "Text in den Editor eingeben oder einfügen.",
+      "Einen der fünf Konvertierungsbuttons klicken.",
+      "Text wird an Ort und Stelle konvertiert."
+    ],
+    "whatIs": "Was sind die verschiedenen Schreibstile ?",
+    "whatIsParas": [
+      "<strong>GROSSBUCHSTABEN</strong> konvertiert jeden Buchstaben in Großbuchstaben. <strong>Kleinbuchstaben</strong> in Kleinbuchstaben. <strong>Satzanfang</strong> großschreibt den ersten Buchstaben jedes Satzes. <strong>Titelschreibung</strong> großschreibt jedes Wort. <strong>Invertieren</strong> tauscht Groß- und Kleinschreibung."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Funktioniert mit jedem Text, einschließlich Unicode-Zeichen.",
+    "example": "Beispiel",
+    "examplePara": "Sehen Sie denselben Satz in jedem Stil:",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "GROSSBUCHSTABEN",
+    "lowerCase": "Kleinbuchstaben",
+    "sentenceCase": "Satzanfang",
+    "titleCase": "Titelschreibung",
+    "invertCase": "Invertieren"
+  },
+  "es": {
+    "title": "Convertidor de mayúsculas — Coding.Tools",
+    "description": "Convierta texto a mayúsculas, minúsculas, caso de oración, caso de título o invierta mayúsculas y minúsculas.",
+    "toolTitle": "Convertidor de mayúsculas",
+    "toolDescription": "Transforme texto entre mayúsculas, minúsculas, caso de oración, caso de título y caso invertido.",
+    "categoryName": "Cadenas y Texto",
+    "inputPlaceholder": "Ingrese o pegue texto para convertir...",
+    "descTitle": "Convertidor de mayúsculas",
+    "descParas": [
+      "Este convertidor transforma el texto entre cinco estilos de mayúsculas comunes.",
+      "La conversión se ejecuta localmente en su navegador."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Pegue o escriba su texto en el editor.",
+      "Haga clic en uno de los cinco botones de conversión.",
+      "El texto se convierte en el lugar."
+    ],
+    "whatIs": "¿Cuáles son los diferentes estilos?",
+    "whatIsParas": [
+      "<strong>MAYÚSCULAS</strong> convierte cada letra a mayúscula. <strong>minúsculas</strong> a minúscula. <strong>Caso oración</strong> capitaliza la primera letra de cada oración. <strong>Caso Título</strong> capitaliza cada palabra. <strong>Invertir</strong> intercambia mayúsculas y minúsculas."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Funciona con cualquier texto, incluyendo caracteres Unicode.",
+    "example": "Ejemplo",
+    "examplePara": "Vea la misma oración en cada estilo:",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "MAYÚSCULAS",
+    "lowerCase": "minúsculas",
+    "sentenceCase": "Caso oración",
+    "titleCase": "Caso Título",
+    "invertCase": "Invertir"
+  },
+  "pt": {
+    "title": "Conversor de maiúsculas — Coding.Tools",
+    "description": "Converta texto para maiúsculas, minúsculas, caso de frase, caso de título ou inverta maiúsculas e minúsculas.",
+    "toolTitle": "Conversor de maiúsculas",
+    "toolDescription": "Transforme texto entre maiúsculas, minúsculas, caso de frase, caso de título e caso invertido.",
+    "categoryName": "Strings e Texto",
+    "inputPlaceholder": "Insira ou cole texto para converter...",
+    "descTitle": "Conversor de maiúsculas",
+    "descParas": [
+      "Este conversor transforma o texto entre cinco estilos de maiúsculas comuns.",
+      "A conversão é executada localmente no navegador."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole ou digite seu texto no editor.",
+      "Clique em um dos cinco botões de conversão.",
+      "O texto é convertido no local."
+    ],
+    "whatIs": "Quais são os diferentes estilos?",
+    "whatIsParas": [
+      "<strong>MAIÚSCULAS</strong> converte cada letra para maiúscula. <strong>minúsculas</strong> para minúscula. <strong>Caso frase</strong> capitaliza a primeira letra de cada frase. <strong>Caso Título</strong> capitaliza cada palavra. <strong>Inverter</strong> troca maiúsculas e minúsculas."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Funciona com qualquer texto, incluindo caracteres Unicode.",
+    "example": "Exemplo",
+    "examplePara": "Veja a mesma frase em cada estilo:",
+    "exampleCode": "--- Original ---\nhello world! this is a test.\n\n--- UPPER CASE ---\nHELLO WORLD! THIS IS A TEST.\n\n--- lower case ---\nhello world! this is a test.\n\n--- Sentence case ---\nHello world! This is a test.\n\n--- Title Case ---\nHello World! This Is A Test.\n\n--- Invert Case ---\nHELLO WORLD! THIS IS A TEST.",
+    "upperCase": "MAIÚSCULAS",
+    "lowerCase": "minúsculas",
+    "sentenceCase": "Caso frase",
+    "titleCase": "Caso Título",
+    "invertCase": "Inverter"
+  }
+}

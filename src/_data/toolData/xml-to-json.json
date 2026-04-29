@@ -1,0 +1,281 @@
+{
+  "en": {
+    "title": "XML to JSON Converter — Coding.Tools",
+    "description": "Convert XML data to JSON format directly in your browser.",
+    "toolTitle": "XML to JSON Converter",
+    "toolDescription": "Transform XML documents into clean JSON objects. Copy or download the converted result.",
+    "categoryName": "Formatter & Minifier",
+    "inputPlaceholder": "Paste XML to convert...",
+    "outputPlaceholder": "JSON output will appear here...",
+    "descTitle": "XML to JSON Converter",
+    "descParas": [
+      "This tool converts XML data into JSON format. It handles nested elements, attributes, and text content, producing clean, properly formatted JSON output.",
+      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste your XML data into the input editor.",
+      "Click <strong>Convert to JSON</strong> to transform the data.",
+      "The JSON output appears in the output editor with proper formatting.",
+      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
+    ],
+    "whatIs": "What is XML to JSON conversion?",
+    "whatIsParas": [
+      "XML to JSON conversion transforms Extensible Markup Language (XML) into JavaScript Object Notation (JSON). JSON is lighter and easier to work with in modern web applications.",
+      "This conversion is useful when consuming XML APIs, migrating data to JSON-based systems, or working with modern JavaScript frameworks."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "The tool accepts valid XML input. XML elements become JSON objects, repeated elements become arrays, and text content becomes string values.",
+    "example": "Example",
+    "examplePara": "An XML document converts to a clean JSON object:",
+    "exampleCode": "--- XML Input ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON Output ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "cn": {
+    "title": "XML 转 JSON — Coding.Tools",
+    "description": "在浏览器中直接将 XML 数据转换为 JSON 格式。",
+    "toolTitle": "XML 转 JSON",
+    "toolDescription": "将 XML 文档转换为干净的 JSON 对象。复制或下载转换结果。",
+    "categoryName": "格式化与压缩",
+    "inputPlaceholder": "粘贴要转换的 XML...",
+    "outputPlaceholder": "JSON 输出将在此显示...",
+    "descTitle": "XML 转 JSON",
+    "descParas": [
+      "该工具将 XML 数据转换为 JSON 格式。它处理嵌套元素、属性和文本内容，产生干净、格式正确的 JSON 输出。",
+      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "将 XML 数据粘贴到输入编辑器中。",
+      "点击<strong>转换为 JSON</strong>来转换数据。",
+      "JSON 输出将以适当的格式显示在输出编辑器中。",
+      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什么是 XML 转 JSON？",
+    "whatIsParas": [
+      "XML 转 JSON 将可扩展标记语言 (XML) 转换为 JavaScript 对象表示法 (JSON)。JSON 更轻量，在现代 Web 应用中更易使用。",
+      "此转换在消费 XML API、将数据迁移到基于 JSON 的系统或使用现代 JavaScript 框架时很有用。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "该工具接受有效的 XML 输入。XML 元素变为 JSON 对象，重复元素变为数组，文本内容变为字符串值。",
+    "example": "示例",
+    "examplePara": "XML 文档转换为干净的 JSON 对象：",
+    "exampleCode": "--- XML 输入 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 输出 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "tw": {
+    "title": "XML 轉 JSON — Coding.Tools",
+    "description": "在瀏覽器中直接將 XML 資料轉換為 JSON 格式。",
+    "toolTitle": "XML 轉 JSON",
+    "toolDescription": "將 XML 文件轉換為乾淨的 JSON 物件。複製或下載轉換結果。",
+    "categoryName": "格式化與壓縮",
+    "inputPlaceholder": "貼上要轉換的 XML...",
+    "outputPlaceholder": "JSON 輸出將在此顯示...",
+    "descTitle": "XML 轉 JSON",
+    "descParas": [
+      "該工具將 XML 資料轉換為 JSON 格式。它處理嵌套元素、屬性和文字內容，產生乾淨、格式正確的 JSON 輸出。",
+      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "將 XML 資料貼上到輸入編輯器中。",
+      "點擊<strong>轉換為 JSON</strong>來轉換資料。",
+      "JSON 輸出將以適當的格式顯示在輸出編輯器中。",
+      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+    ],
+    "whatIs": "什麼是 XML 轉 JSON？",
+    "whatIsParas": [
+      "XML 轉 JSON 將可延伸標記語言 (XML) 轉換為 JavaScript 物件表示法 (JSON)。JSON 更輕量，在現代 Web 應用中更易使用。",
+      "此轉換在消費 XML API、將資料遷移到基於 JSON 的系統或使用現代 JavaScript 框架時很有用。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "該工具接受有效的 XML 輸入。XML 元素變為 JSON 物件，重複元素變為陣列，文字內容變為字串值。",
+    "example": "範例",
+    "examplePara": "XML 文件轉換為乾淨的 JSON 物件：",
+    "exampleCode": "--- XML 輸入 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 輸出 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "jp": {
+    "title": "XML → JSON 変換 — Coding.Tools",
+    "description": "ブラウザで XML データを JSON 形式に直接変換します。",
+    "toolTitle": "XML → JSON 変換",
+    "toolDescription": "XML ドキュメントをきれいな JSON オブジェクトに変換します。コピーまたはダウンロード。",
+    "categoryName": "フォーマッター＆ミニファイア",
+    "inputPlaceholder": "変換する XML を貼り付け...",
+    "outputPlaceholder": "JSON 出力がここに表示されます...",
+    "descTitle": "XML → JSON 変換",
+    "descParas": [
+      "このツールは XML データを JSON 形式に変換します。ネストされた要素、属性、テキストコンテンツを処理し、きれいな適切にフォーマットされた JSON 出力を生成します。",
+      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "XML データを入力エディタに貼り付けます。",
+      "<strong>JSON に変換</strong>をクリックしてデータを変換します。",
+      "JSON 出力が適切なフォーマットで出力エディタに表示されます。",
+      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+    ],
+    "whatIs": "XML → JSON 変換とは？",
+    "whatIsParas": [
+      "XML → JSON 変換は Extensible Markup Language (XML) を JavaScript Object Notation (JSON) に変換します。JSON はより軽量で、現代の Web アプリケーションで扱いやすいです。",
+      "この変換は XML API の利用、JSON ベースのシステムへのデータ移行、現代の JavaScript フレームワークでの作業に役立ちます。"
+    ],
+    "inputNotes": "入力に関する注意",
+    "inputNotesPara": "このツールは有効な XML 入力を受け付けます。XML 要素は JSON オブジェクトに、繰り返し要素は配列に、テキストコンテンツは文字列値になります。",
+    "example": "例",
+    "examplePara": "XML ドキュメントはきれいな JSON オブジェクトに変換されます：",
+    "exampleCode": "--- XML 入力 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 出力 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "kr": {
+    "title": "XML → JSON 변환 — Coding.Tools",
+    "description": "브라우저에서 XML 데이터를 JSON 형식으로 직접 변환합니다.",
+    "toolTitle": "XML → JSON 변환",
+    "toolDescription": "XML 문서를 깔끔한 JSON 객체로 변환합니다. 복사 또는 다운로드하세요.",
+    "categoryName": "포맷터 & 미니파이어",
+    "inputPlaceholder": "변환할 XML을 붙여넣으세요...",
+    "outputPlaceholder": "JSON 출력이 여기에 표시됩니다...",
+    "descTitle": "XML → JSON 변환",
+    "descParas": [
+      "이 도구는 XML 데이터를 JSON 형식으로 변환합니다. 중첩된 요소, 속성, 텍스트 내용을 처리하여 깔끔하고 적절하게 포맷된 JSON 출력을 생성합니다.",
+      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "XML 데이터를 입력 편집기에 붙여넣으세요.",
+      "<strong>JSON으로 변환</strong>을 클릭하여 데이터를 변환합니다.",
+      "JSON 출력이 적절한 형식으로 출력 편집기에 표시됩니다.",
+      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+    ],
+    "whatIs": "XML → JSON 변환이란?",
+    "whatIsParas": [
+      "XML → JSON 변환은 Extensible Markup Language (XML)을 JavaScript Object Notation (JSON)으로 변환합니다. JSON은 더 가볍고 현대 웹 애플리케이션에서 다루기 쉽습니다.",
+      "이 변환은 XML API 소비, JSON 기반 시스템으로의 데이터 마이그레이션, 현대 JavaScript 프레임워크 작업에 유용합니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "이 도구는 유효한 XML 입력을 허용합니다. XML 요소는 JSON 객체로, 반복 요소는 배열로, 텍스트 내용은 문자열 값으로 변환됩니다.",
+    "example": "예시",
+    "examplePara": "XML 문서는 깔끔한 JSON 객체로 변환됩니다:",
+    "exampleCode": "--- XML 입력 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 출력 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "fr": {
+    "title": "Convertisseur XML vers JSON — Coding.Tools",
+    "description": "Convertissez les données XML en format JSON directement dans votre navigateur.",
+    "toolTitle": "Convertisseur XML vers JSON",
+    "toolDescription": "Transformez les documents XML en objets JSON propres. Copiez ou téléchargez le résultat.",
+    "categoryName": "Formateur & Minifieur",
+    "inputPlaceholder": "Collez le XML à convertir...",
+    "outputPlaceholder": "La sortie JSON apparaîtra ici...",
+    "descTitle": "Convertisseur XML vers JSON",
+    "descParas": [
+      "Cet outil convertit les données XML en format JSON. Il gère les éléments imbriqués, les attributs et le contenu texte, produisant une sortie JSON propre et correctement formatée.",
+      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez vos données XML dans l'éditeur d'entrée.",
+      "Cliquez sur <strong>Convertir en JSON</strong> pour transformer les données.",
+      "La sortie JSON apparaît dans l'éditeur de sortie avec un formatage correct.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+    ],
+    "whatIs": "Qu'est-ce que la conversion XML vers JSON ?",
+    "whatIsParas": [
+      "La conversion XML vers JSON transforme Extensible Markup Language (XML) en JavaScript Object Notation (JSON). JSON est plus léger et plus facile à utiliser dans les applications web modernes.",
+      "Cette conversion est utile pour consommer des API XML, migrer des données vers des systèmes JSON ou travailler avec des frameworks JavaScript modernes."
+    ],
+    "inputNotes": "Notes d'entrée",
+    "inputNotesPara": "L'outil accepte une entrée XML valide. Les éléments XML deviennent des objets JSON, les éléments répétés deviennent des tableaux et le contenu texte devient des valeurs de chaîne.",
+    "example": "Exemple",
+    "examplePara": "Un document XML se convertit en un objet JSON propre :",
+    "exampleCode": "--- Entrée XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- Sortie JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "de": {
+    "title": "XML-zu-JSON-Konverter — Coding.Tools",
+    "description": "Konvertieren Sie XML-Daten direkt in Ihrem Browser in das JSON-Format.",
+    "toolTitle": "XML-zu-JSON-Konverter",
+    "toolDescription": "Transformieren Sie XML-Dokumente in saubere JSON-Objekte. Kopieren oder laden Sie das Ergebnis herunter.",
+    "categoryName": "Formatter & Minifier",
+    "inputPlaceholder": "XML zum Konvertieren einfügen...",
+    "outputPlaceholder": "JSON-Ausgabe wird hier angezeigt...",
+    "descTitle": "XML-zu-JSON-Konverter",
+    "descParas": [
+      "Dieses Tool konvertiert XML-Daten in das JSON-Format. Es verarbeitet verschachtelte Elemente, Attribute und Textinhalte und erzeugt saubere, korrekt formatierte JSON-Ausgabe.",
+      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Fügen Sie Ihre XML-Daten in den Eingabe-Editor ein.",
+      "Klicken Sie auf <strong>In JSON konvertieren</strong>, um die Daten zu transformieren.",
+      "Die JSON-Ausgabe wird im Ausgabe-Editor mit korrekter Formatierung angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+    ],
+    "whatIs": "Was ist XML-zu-JSON-Konvertierung?",
+    "whatIsParas": [
+      "Die XML-zu-JSON-Konvertierung transformiert Extensible Markup Language (XML) in JavaScript Object Notation (JSON). JSON ist leichter und einfacher in modernen Webanwendungen zu verwenden.",
+      "Diese Konvertierung ist nützlich bei der Nutzung von XML-APIs, der Migration von Daten zu JSON-basierten Systemen oder der Arbeit mit modernen JavaScript-Frameworks."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Das Tool akzeptiert gültige XML-Eingaben. XML-Elemente werden zu JSON-Objekten, wiederholte Elemente zu Arrays und Textinhalte zu Zeichenkettenwerten.",
+    "example": "Beispiel",
+    "examplePara": "Ein XML-Dokument wird in ein sauberes JSON-Objekt konvertiert:",
+    "exampleCode": "--- XML-Eingabe ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON-Ausgabe ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "es": {
+    "title": "Convertidor XML a JSON — Coding.Tools",
+    "description": "Convierta datos XML a formato JSON directamente en su navegador.",
+    "toolTitle": "Convertidor XML a JSON",
+    "toolDescription": "Transforme documentos XML en objetos JSON limpios. Copie o descargue el resultado.",
+    "categoryName": "Formateador y Minificador",
+    "inputPlaceholder": "Pegue XML para convertir...",
+    "outputPlaceholder": "La salida JSON aparecerá aquí...",
+    "descTitle": "Convertidor XML a JSON",
+    "descParas": [
+      "Esta herramienta convierte datos XML a formato JSON. Maneja elementos anidados, atributos y contenido de texto, produciendo una salida JSON limpia y correctamente formateada.",
+      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+    ],
+    "howToUse": "Cómo usar",
+    "steps": [
+      "Pegue sus datos XML en el editor de entrada.",
+      "Haga clic en <strong>Convertir a JSON</strong> para transformar los datos.",
+      "La salida JSON aparece en el editor de salida con formato correcto.",
+      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+    ],
+    "whatIs": "¿Qué es la conversión XML a JSON?",
+    "whatIsParas": [
+      "La conversión XML a JSON transforma Extensible Markup Language (XML) a JavaScript Object Notation (JSON). JSON es más ligero y fácil de trabajar en aplicaciones web modernas.",
+      "Esta conversión es útil al consumir APIs XML, migrar datos a sistemas basados en JSON o trabajar con frameworks JavaScript modernos."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "La herramienta acepta entrada XML válida. Los elementos XML se convierten en objetos JSON, los elementos repetidos en arrays y el contenido de texto en valores de cadena.",
+    "example": "Ejemplo",
+    "examplePara": "Un documento XML se convierte en un objeto JSON limpio:",
+    "exampleCode": "--- Entrada XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- Salida JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  },
+  "pt": {
+    "title": "Conversor XML para JSON — Coding.Tools",
+    "description": "Converta dados XML para formato JSON diretamente no seu navegador.",
+    "toolTitle": "Conversor XML para JSON",
+    "toolDescription": "Transforme documentos XML em objetos JSON limpos. Copie ou baixe o resultado.",
+    "categoryName": "Formatador e Minificador",
+    "inputPlaceholder": "Cole XML para converter...",
+    "outputPlaceholder": "A saída JSON aparecerá aqui...",
+    "descTitle": "Conversor XML para JSON",
+    "descParas": [
+      "Esta ferramenta converte dados XML para formato JSON. Ela lida com elementos aninhados, atributos e conteúdo de texto, produzindo uma saída JSON limpa e corretamente formatada.",
+      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole seus dados XML no editor de entrada.",
+      "Clique em <strong>Converter para JSON</strong> para transformar os dados.",
+      "A saída JSON aparece no editor de saída com formatação correta.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+    ],
+    "whatIs": "O que é conversão XML para JSON?",
+    "whatIsParas": [
+      "A conversão XML para JSON transforma Extensible Markup Language (XML) em JavaScript Object Notation (JSON). JSON é mais leve e fácil de trabalhar em aplicações web modernas.",
+      "Esta conversão é útil ao consumir APIs XML, migrar dados para sistemas baseados em JSON ou trabalhar com frameworks JavaScript modernos."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "A ferramenta aceita entrada XML válida. Elementos XML se tornam objetos JSON, elementos repetidos se tornam arrays e conteúdo de texto se torna valores de string.",
+    "example": "Exemplo",
+    "examplePara": "Um documento XML é convertido em um objeto JSON limpo:",
+    "exampleCode": "--- Entrada XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- Saída JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}"
+  }
+}

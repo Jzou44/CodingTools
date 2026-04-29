@@ -1,0 +1,263 @@
+{
+  "en": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "Hex to ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "cn": {
+    "title": "十六进制转ASCII转换器 — Coding.Tools",
+    "description": "在浏览器中直接将十六进制数字转换为ASCII文本。",
+    "toolTitle": "十六进制转ASCII",
+    "toolDescription": "将十六进制数字转换为ASCII文本字符。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入十六进制数字（如 48656C6C6F）...",
+    "outputPlaceholder": "ASCII文本将显示在这里...",
+    "descTitle": "十六进制转ASCII转换器",
+    "descParas": [
+      "此工具将十六进制编码转换为可读的ASCII文本字符。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入或粘贴十六进制数字。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是十六进制转ASCII？",
+    "whatIsParas": [
+      "ASCII是美国信息交换标准代码，每个字符对应一个十六进制值。此工具将十六进制值解码回文本。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的十六进制数字（使用数字0-9和字母A-F）。",
+    "example": "示例",
+    "examplePara": "将十六进制转换为ASCII：",
+    "exampleCode": "--- 十六进制输入 ---\n48656C6C6F\n\n--- ASCII ---\nHello"
+  },
+  "tw": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "十六進位轉ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "jp": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "16進数からASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "kr": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "16진수에서 ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "fr": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "Hexadécimal en ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "de": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "Hexadezimal zu ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "es": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "Hexadecimal a ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  },
+  "pt": {
+    "title": "Hex to ASCII Converter — Coding.Tools",
+    "description": "Convert hexadecimal values to ASCII text directly in your browser.",
+    "toolTitle": "Hex to ASCII",
+    "toolDescription": "Convert hex-encoded strings to readable ASCII text.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Paste hex values here (e.g. 48 65 6C 6C 6F)...",
+    "outputPlaceholder": "ASCII text will appear here...",
+    "descTitle": "Hex to ASCII Converter",
+    "descParas": [
+      "This tool converts hexadecimal byte values into readable ASCII text.",
+      "Supports various hex formats including space-separated, 0x prefix, and \\x prefix."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste hex values into the input editor.",
+      "Click <strong>Convert</strong> to decode the hex to ASCII text.",
+      "Use <strong>Copy</strong> to copy the result, or <strong>Download</strong> to save as a text file."
+    ],
+    "whatIs": "What is Hex to ASCII?",
+    "whatIsParas": [
+      "Hex to ASCII conversion interprets pairs of hexadecimal digits as byte values and maps them to their corresponding ASCII characters."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Supports hex values separated by spaces, 0x, 0X, \\x, \\X prefixes, or continuous hex strings.",
+    "example": "Example",
+    "examplePara": "Converting hex values to ASCII text:",
+    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+  }
+}

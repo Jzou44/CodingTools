@@ -1,0 +1,271 @@
+{
+  "en": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "Hex to RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "cn": {
+    "title": "十六进制转RGBA转换器 — Coding.Tools",
+    "description": "在浏览器中直接将十六进制颜色代码转换为RGBA值。",
+    "toolTitle": "十六进制转RGBA",
+    "toolDescription": "将十六进制颜色代码转换为RGBA颜色值。",
+    "categoryName": "数字转换",
+    "inputPlaceholder": "输入十六进制颜色（如 #FF5733CC、FF573380）...",
+    "outputPlaceholder": "RGBA结果将显示在这里...",
+    "descTitle": "十六进制转RGBA转换器",
+    "descParas": [
+      "此工具将十六进制颜色代码转换为RGBA（红绿蓝+透明度）颜色值。",
+      "转换在浏览器本地运行。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "输入十六进制颜色代码（含透明度）。",
+      "点击<strong>转换</strong>查看结果。",
+      "使用<strong>复制</strong>复制结果。"
+    ],
+    "whatIs": "什么是十六进制转RGBA？",
+    "whatIsParas": [
+      "RGBA在RGB基础上增加了Alpha通道（透明度），十六进制颜色代码可以用8位表示RGBA值。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "输入有效的十六进制颜色代码（8位，含透明度，可带#前缀）。",
+    "example": "示例",
+    "examplePara": "将十六进制转换为RGBA：",
+    "exampleCode": "--- 十六进制输入 ---\n#FF573380\n\n--- RGBA ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "tw": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "十六進位轉RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "數字轉換",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "jp": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "16進数からRGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "数値変換",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "kr": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "16진수에서 RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "숫자 변환",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "fr": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "Hexadécimal en RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "Conversion de nombres",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "de": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "Hexadezimal zu RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "Zahlenkonvertierung",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "es": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "Hexadecimal a RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "Conversión de números",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  },
+  "pt": {
+    "title": "Hex to RGBA Converter — Coding.Tools",
+    "description": "Convert hex color codes to RGBA format with opacity control.",
+    "toolTitle": "Hex to RGBA",
+    "toolDescription": "Convert hex colors to RGBA with adjustable opacity and live preview.",
+    "categoryName": "Conversão de números",
+    "inputPlaceholder": "Enter hex color (e.g. #FF5733)...",
+    "outputPlaceholder": "RGBA color will appear here...",
+    "descTitle": "Hex to RGBA Converter",
+    "descParas": [
+      "This tool converts hex color codes to RGBA format, adding an alpha (opacity) channel.",
+      "The conversion runs locally in your browser."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Type or paste a hex color code into the input field.",
+      "Set the opacity percentage (0-100%).",
+      "The RGBA value and color preview update automatically.",
+      "Use <strong>Copy</strong> to copy the RGBA value."
+    ],
+    "whatIs": "What is Hex to RGBA?",
+    "whatIsParas": [
+      "RGBA extends RGB with an alpha channel for transparency. rgba(255,87,51,0.5) means the color at 50% opacity."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Enter a hex color code. Opacity defaults to 100% if not specified.",
+    "example": "Example",
+    "examplePara": "Converting hex to RGBA:",
+    "exampleCode": "--- Hex Input ---\n#FF5733\nOpacity: 50%\n\n--- RGBA Output ---\nrgba(255, 87, 51, 0.5)"
+  }
+}
