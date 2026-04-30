@@ -456,6 +456,10 @@
   .toolbar-left, .toolbar-right { width: 100%; }
   .toolbar-right { justify-content: flex-end; }
   .status-bar { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .pane-toolbar { flex-direction: column; align-items: flex-start; }
+  .pane-toolbar-left, .pane-toolbar-right { width: 100%; }
+  .pane-toolbar-right { justify-content: flex-end; }
+  .status-bar-dual { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
 
 @media (max-width: 480px) {
@@ -599,6 +603,138 @@
 /* --- Options Panel (image tools context) --- */
 .options-panel + .section-label {
   margin-top: 16px;
+}
+
+/* ============================================================
+   Pane Card — Editor/Output card style (ascii-to-hex aesthetic)
+   Used by formatter-minifier and case-converter tools.
+   ============================================================ */
+
+.pane-card {
+  background: var(--surface);
+  border: 1px solid var(--code-bg);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.pane-card--input { border-left: 4px solid var(--accent); }
+.pane-card--output { border-left: 4px solid var(--secondary); }
+
+.pane-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pane-label-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.pane-label-dot--accent { background: var(--accent); }
+.pane-label-dot--secondary { background: var(--secondary); }
+
+/* Textarea inside pane-card (replaces CodeMirror-specific rules) */
+.pane-editor-wrapper {
+  position: relative;
+}
+
+.pane-line-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 100%;
+  padding: 12px 8px 12px 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-align: right;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+  border-right: 1px solid var(--code-bg);
+  background: transparent;
+}
+.pane-line-numbers.readonly-bg {
+  background: transparent;
+}
+
+.pane-card .pane-editor {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  padding: 12px;
+  padding-left: 48px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--code-bg);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+  outline: none;
+  tab-size: 2;
+}
+.pane-card .pane-editor:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
+}
+.pane-card .pane-editor[readonly] {
+  background: #f7f3ea;
+  cursor: default;
+}
+
+/* --- Pane Toolbar --- */
+.pane-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pane-toolbar-left,
+.pane-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* --- Status Bar Dual --- */
+.status-bar-dual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.status-meta-dual {
+  display: flex;
+  gap: 16px;
+}
+.status-meta-dual span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .pane-card { padding: 16px; }
+  .pane-card .pane-editor { min-height: 160px; font-size: 13px; }
+  .pane-toolbar { gap: 6px; }
 }
 
 /* ============================================================

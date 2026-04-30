@@ -1,10 +1,10 @@
 {% macro statusBar(charLabel, lineLabel, lineId) %}
-<div class="status-bar">
+<div class="status-bar-dual">
   <div class="status-message idle" id="status-message">
     <span class="status-dot" id="status-dot" style="display:none;"></span>
     <span id="status-text"></span>
   </div>
-  <div class="status-meta">
+  <div class="status-meta-dual">
     <span id="char-count">0 {{ charLabel or "characters" }}</span>
     <span id="{{ lineId or 'line-count' }}">0 {{ lineLabel or "lines" }}</span>
   </div>
