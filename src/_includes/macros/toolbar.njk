@@ -9,6 +9,7 @@
     </button>
   </div>
   <div class="pane-toolbar-right">
+    {{ caller() }}
     <button class="btn btn-ghost" id="btn-copy" type="button">
       {{ icons.iconCopy() }}
       {{ copyLabel or "Copy" }}

@@ -692,7 +692,7 @@
   box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
 }
 .pane-card .pane-editor[readonly] {
-  background: #f7f3ea;
+  background: transparent;
   cursor: default;
 }
 
