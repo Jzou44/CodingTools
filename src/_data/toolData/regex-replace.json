@@ -59,7 +59,7 @@
     "toolDescription": "使用正则表达式实时查找和替换文本。支持 $1、$2 等反向引用。数据不会离开您的浏览器。",
     "categoryName": "字符串与文本",
     "regexPattern": "正则表达式",
-    "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
+    "regexPlaceholder": "输入正则表达式，例如 (\\d{2})/(\\d{2})/(\\d{4})",
     "replaceWith": "替换为",
     "replacePlaceholder": "替换字符串（支持 $1、$2 反向引用）",
     "testText": "测试文本",
