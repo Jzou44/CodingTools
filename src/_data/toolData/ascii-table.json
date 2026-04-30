@@ -25,23 +25,22 @@
     "exampleCode": ""
   },
   "cn": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "ASCII码表 — Coding.Tools",
+    "description": "查看完整的ASCII字符表，包含十进制、十六进制、八进制和二进制代码。",
     "toolTitle": "ASCII码表",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "浏览完整的ASCII字符表，包含十进制、十六进制、八进制和二进制表示。",
     "categoryName": "数字转换",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "ASCII码表",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "ASCII（美国信息交换标准代码）是一种字符编码标准，将整数（0-127）映射到文本字符。它包括大小写拉丁字母、数字、标点符号和控制字符。下表显示了每个ASCII字符及其十进制、十六进制、八进制和二进制表示。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "关于ASCII",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII于1963年首次发布，已成为现代字符编码的基础。它定义了128个字符（0-127），其中95个是可打印字符（字母、数字、标点符号），33个是控制字符（如换行、制表符和回车）。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
