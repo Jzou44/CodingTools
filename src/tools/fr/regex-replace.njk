@@ -1,85 +1,315 @@
 ---
 lang: "fr"
 toolId: "regex-replace"
+title: "Regex Replace Online — Coding.Tools"
+description: "Find and replace text using regular expressions with live match highlighting and backreference support. Free browser-based tool."
+toolTitle: "Regex Replace"
+toolDescription: "Find and replace text with regex patterns in real time. Supports backreferences like $1, $2. No data leaves your browser."
 category: "string-text-utilities"
+categoryName: "String & Text Utilities"
 activeTool: "regex-replace"
 permalink: "/fr/regex-replace.html"
 ---
 
 {% extends "tool-layout.njk" %}
 
-{% import "macros/editor.njk" as editor %}
-{% import "macros/toolbar.njk" as toolbar %}
-{% import "macros/status-bar.njk" as status %}
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script>
+{% endblock %}
 
 {% block tool_content %}
-  <label class="section-label" for="regex-input">{{ toolData.regexPattern }}</label>
-  <div class="editor-wrapper" style="margin-bottom: 8px;">
-    <textarea class="editor-area" id="regex-input" spellcheck="false" placeholder="{{ toolData.regexPlaceholder }}" rows="1"></textarea>
+  <style>
+    .dual-pane { display: flex; flex-direction: column; gap: 0; }
+
+    .pane-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .pane-card--input { border-left: 4px solid var(--accent); }
+    .pane-card--output { border-left: 4px solid var(--secondary); }
+
+    .pane-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: inherit;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pane-label-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .pane-label-dot--accent { background: var(--accent); }
+    .pane-label-dot--secondary { background: var(--secondary); }
+
+    .regex-pattern-input {
+      width: 100%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      outline: none;
+      margin-bottom: 12px;
+    }
+    .regex-pattern-input::placeholder { color: var(--text-muted); }
+    .regex-pattern-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
+    }
+
+    .replacement-input {
+      width: 100%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      outline: none;
+      margin-bottom: 12px;
+    }
+    .replacement-input::placeholder { color: var(--text-muted); }
+    .replacement-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
+    }
+
+    .flags-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .flags-row label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .flags-row label span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .flags-row label small {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .pane-card .CodeMirror {
+      height: 200px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      padding: 4px 0;
+    }
+    .pane-card .CodeMirror-scroll { padding: 8px 12px; }
+    .pane-card .CodeMirror-gutters {
+      background: #fff;
+      border-right: 1px solid var(--border);
+    }
+
+    .pane-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pane-toolbar-left,
+    .pane-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-box {
+      min-height: 100px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .highlight-box mark {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 3px;
+      padding: 1px 2px;
+    }
+    .highlight-box .muted {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .status-bar-dual {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 4px 0;
+      font-size: 12px;
+      color: inherit;
+    }
+    .status-meta-dual {
+      display: flex;
+      gap: 16px;
+    }
+    .status-meta-dual span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .pane-card { padding: 16px; }
+      .pane-card .CodeMirror { height: 160px; font-size: 13px; }
+      .pane-toolbar { gap: 6px; }
+    }
+  </style>
+
+  <div class="dual-pane">
+    <!-- Input Card -->
+    <div class="pane-card pane-card--input">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>Regex Pattern</span>
+      </div>
+      <input type="text" class="regex-pattern-input" id="regex-input" placeholder="Enter regex pattern, e.g. \b\w+@\w+\.\w+\b">
+
+      <div class="flags-row">
+        <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>global</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>case-insensitive</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>multiline</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>dotAll</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>unicode</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>sticky</small></label>
+      </div>
+
+      <div class="pane-label">
+        <span>Replace With</span>
+      </div>
+      <input type="text" class="replacement-input" id="replace-input" placeholder="Replacement string (supports $1, $2 backreferences)">
+
+      <div class="pane-label">
+        <span>Test Text</span>
+      </div>
+      <textarea id="code1" placeholder="Enter or paste text to search and replace..."></textarea>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="pane-toolbar">
+      <div class="pane-toolbar-left">
+        <button class="btn btn-primary" id="btn-replace" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+          Replace All
+        </button>
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          Clear
+        </button>
+      </div>
+      <div class="pane-toolbar-right">
+        <button class="btn btn-ghost" id="btn-copy" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copy
+        </button>
+        <button class="btn btn-ghost" id="btn-download" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download
+        </button>
+      </div>
+    </div>
+
+    <!-- Output Card -->
+    <div class="pane-card pane-card--output">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Match Preview</span>
+      </div>
+      <div id="match-output" class="highlight-box"><span class="muted">Matches will appear here...</span></div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar-dual">
+      <div class="status-message idle" id="status-message">
+        <span class="status-dot" id="status-dot" style="display:none;"></span>
+        <span id="status-text"></span>
+      </div>
+      <div class="status-meta-dual">
+        <span id="char-count">0 characters</span>
+        <span id="match-count">0 matches</span>
+      </div>
+    </div>
   </div>
-
-  <div class="flags-row" style="margin-bottom: 8px;">
-    <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>{{ toolData.flagGlobal }}</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>{{ toolData.flagCaseInsensitive }}</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>{{ toolData.flagMultiline }}</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>{{ toolData.flagDotAll }}</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>{{ toolData.flagUnicode }}</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>{{ toolData.flagSticky }}</small></label>
-  </div>
-
-  <label class="section-label" for="replace-input">{{ toolData.replaceWith }}</label>
-  <div class="editor-wrapper" style="margin-bottom: 20px;">
-    <textarea class="editor-area" id="replace-input" spellcheck="false" placeholder="{{ toolData.replacePlaceholder }}" rows="1"></textarea>
-  </div>
-
-  {{ editor.inputEditor(toolData.inputPlaceholder, toolData.testText) }}
-
-  {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
-    <button class="btn btn-primary" id="btn-replace" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="17 1 21 5 17 9"></polyline>
-          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-          <polyline points="7 23 3 19 7 15"></polyline>
-          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-        </svg>
-      {{ toolData.replaceAll }}
-    </button>
-  {% endcall %}
-
-  <div style="margin-top: 24px;">
-    <label class="section-label">{{ toolData.matchPreview }}</label>
-    <div id="match-output" class="highlight-box"></div>
-  </div>
-
-  {{ status.statusBar(t.ui.characters, t.ui.characters, "match-count") }}
 {% endblock %}
 
 {% block description %}
-  <h2>{{ toolData.descTitle }}</h2>
-  {% for para in toolData.descParas %}
-  <p>{{ para | safe }}</p>
-  {% endfor %}
+  <h2>Regex Replace</h2>
+  <p>This regex find-and-replace tool lets you search for patterns and replace them with new text in real time. All six JavaScript regex flags are supported, and the replacement string understands backreferences like <code>$1</code>, <code>$2</code>, so you can rearrange captured groups. Matches are highlighted before you commit the replacement.</p>
+  <p>The search and replace runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can transform content privately and quickly.</p>
 
-  <h3>{{ toolData.howToUse }}</h3>
+  <h3>How to use</h3>
   <ol class="steps-list">
-    {% for step in toolData.steps %}
-    <li>{{ step | safe }}</li>
-    {% endfor %}
+    <li>Type or paste a regex pattern into the <strong>Regex Pattern</strong> field. No delimiters needed.</li>
+    <li>Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).</li>
+    <li>Enter a replacement string in the <strong>Replace With</strong> field. Use <code>$1</code>, <code>$2</code> for backreferences to captured groups.</li>
+    <li>Paste or type your test text into the editor below. Matches are highlighted as you type.</li>
+    <li>Click <strong>Replace All</strong> to apply the replacement to the entire text.</li>
+    <li>Use <strong>Copy</strong> to copy the result, <strong>Download</strong> to save it, or <strong>Clear</strong> to reset everything.</li>
   </ol>
 
-  <h3>{{ toolData.whatIs }}</h3>
-  {% for para in toolData.whatIsParas %}
-  <p>{{ para | safe }}</p>
-  {% endfor %}
+  <h3>What are regular expressions?</h3>
+  <p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.</p>
+  <p>JavaScript implements regex natively via the <code>RegExp</code> object. The same syntax works in most programming languages with minor variations. Regex find-and-replace is one of the most powerful text transformation techniques available to developers.</p>
 
-  <h3>{{ toolData.inputNotes }}</h3>
-  <p>{{ toolData.inputNotesPara | safe }}</p>
+  <h3>Input notes</h3>
+  <p>Enter the regex pattern without delimiters. The flags are controlled by the checkboxes. The replacement string supports standard backreferences: <code>$1</code> through <code>$9</code> for captured groups, and <code>$&amp;</code> for the entire match.</p>
 
-  <h3>{{ toolData.example }}</h3>
-  <p>{{ toolData.examplePara | safe }}</p>
+  <h3>Example</h3>
+  <p>Reformatting dates from MM/DD/YYYY to YYYY-MM-DD using backreferences:</p>
   <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
-    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+    <button class="code-block-copy" id="example-copy" type="button">Copy example</button>
+    <pre class="code-block" id="example-code">--- Pattern ---
+(\d{2})/(\d{2})/(\d{4})
+
+--- Replacement ---
+$3-$1-$2
+
+--- Flags ---
+g (global)
+
+--- Test Text ---
+Today is 04/29/2026 and tomorrow is 04/30/2026.
+
+--- Result ---
+Today is 2026-04-29 and tomorrow is 2026-04-30.</pre>
   </div>
 {% endblock %}
 
@@ -88,9 +318,10 @@ permalink: "/fr/regex-replace.html"
     (function () {
       'use strict';
 
+      var editor = CodeMirror.fromTextArea(document.getElementById('code1'), { lineNumbers: true, lineWrapping: true });
+
       var regexInput    = document.getElementById('regex-input');
       var replaceInput  = document.getElementById('replace-input');
-      var inputEditor   = document.getElementById('input-editor');
       var matchOutput   = document.getElementById('match-output');
       var btnReplace    = document.getElementById('btn-replace');
       var btnClear      = document.getElementById('btn-clear');
@@ -100,7 +331,7 @@ permalink: "/fr/regex-replace.html"
       var statusDot     = document.getElementById('status-dot');
       var statusText    = document.getElementById('status-text');
       var matchCount    = document.getElementById('match-count');
-      var inputLineNums = document.getElementById('input-line-numbers');
+      var charCount     = document.getElementById('char-count');
       var flagG         = document.getElementById('flag-g');
       var flagI         = document.getElementById('flag-i');
       var flagM         = document.getElementById('flag-m');
@@ -125,12 +356,13 @@ permalink: "/fr/regex-replace.html"
 
       function previewRegex() {
         var pattern = regexInput.value;
-        var text = inputEditor.value;
+        var text = editor.getValue();
 
         if (!pattern || !text) {
-          matchOutput.innerHTML = text ? escapeHtml(text) : '<span class="muted">{{ toolData.matchesAppearHere }}</span>';
-          matchCount.textContent = '{{ toolData.noMatches }}';
+          matchOutput.innerHTML = text ? escapeHtml(text) : '<span class="muted">Matches will appear here...</span>';
+          matchCount.textContent = '0 matches';
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
           return;
         }
 
@@ -149,34 +381,37 @@ permalink: "/fr/regex-replace.html"
 
           if (matches.length === 0) {
             matchOutput.innerHTML = escapeHtml(text);
-            matchCount.textContent = '{{ toolData.noMatches }}';
-            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.noMatchesFound }}');
+            matchCount.textContent = '0 matches';
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'No matches found');
+            charCount.textContent = ToolCommon.pluralise(text.length, 'character');
             return;
           }
 
           var html = '';
-          var lastIdx = 0;
+          var lastIndex = 0;
           for (var i = 0; i < matches.length; i++) {
-            html += escapeHtml(text.substring(lastIdx, matches[i].index));
+            html += escapeHtml(text.substring(lastIndex, matches[i].index));
             html += '<mark>' + escapeHtml(matches[i].value) + '</mark>';
-            lastIdx = matches[i].index + matches[i].length;
+            lastIndex = matches[i].index + matches[i].length;
           }
-          html += escapeHtml(text.substring(lastIdx));
+          html += escapeHtml(text.substring(lastIndex));
 
           matchOutput.innerHTML = html;
-          matchCount.textContent = matches.length + '{{ toolData.matchesSuffix }}';
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', matches.length + '{{ toolData.matchesFoundSuffix }}');
+          matchCount.textContent = matches.length + (matches.length === 1 ? ' match' : ' matches');
+          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', matches.length + (matches.length === 1 ? ' match found' : ' matches found'));
         } catch (e) {
-          matchOutput.innerHTML = '<span class="muted">{{ toolData.invalidRegex }}</span>';
-          matchCount.textContent = '{{ toolData.noMatches }}';
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.invalidRegex }}: ' + e.message);
+          matchOutput.innerHTML = '<span class="muted">Invalid regex pattern</span>';
+          matchCount.textContent = '0 matches';
+          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid regex: ' + e.message);
         }
       }
 
       btnReplace.onclick = function () {
         var pattern = regexInput.value;
         var replacement = replaceInput.value;
-        var text = inputEditor.value;
+        var text = editor.getValue();
 
         if (!pattern || !text) return;
 
@@ -187,21 +422,20 @@ permalink: "/fr/regex-replace.html"
           var result = text.replace(regex, replacement);
 
           if (result === text) {
-            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.noMatchesToReplace }}');
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'No matches to replace');
             return;
           }
 
-          inputEditor.value = result;
-          ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+          editor.setValue(result);
           previewRegex();
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ toolData.replacedSuccessfully }}');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Replaced successfully');
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.invalidRegex }}: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid regex: ' + e.message);
         }
       };
 
       regexInput.addEventListener('input', previewRegex);
-      inputEditor.addEventListener('input', previewRegex);
+      editor.on('change', previewRegex);
       [flagG, flagI, flagM, flagS, flagU, flagY].forEach(function (cb) {
         cb.addEventListener('change', previewRegex);
       });
@@ -209,28 +443,29 @@ permalink: "/fr/regex-replace.html"
       btnClear.addEventListener('click', function () {
         regexInput.value = '';
         replaceInput.value = '';
-        inputEditor.value = '';
-        matchOutput.innerHTML = '<span class="muted">{{ toolData.matchesAppearHere }}</span>';
-        matchCount.textContent = '{{ toolData.noMatches }}';
+        editor.setValue('');
+        matchOutput.innerHTML = '<span class="muted">Matches will appear here...</span>';
+        matchCount.textContent = '0 matches';
+        charCount.textContent = '0 characters';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
-        inputEditor.focus();
       });
 
       btnCopy.addEventListener('click', function () {
-        ToolCommon.copyOutput(inputEditor, btnCopy);
+        var text = editor.getValue();
+        if (text) {
+          navigator.clipboard.writeText(text).then(function () {
+            btnCopy.textContent = 'Copied!';
+            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy'; }, 1500);
+          });
+        }
       });
 
       btnDownload.addEventListener('click', function () {
-        ToolCommon.downloadOutput(inputEditor, 'regex-replace.txt');
+        ToolCommon.downloadOutput({ value: editor.getValue() }, 'regex-replace.txt');
       });
 
-      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
-      ToolCommon.initScrollSync(inputEditor, inputLineNums);
-      ToolCommon.initTabKey(inputEditor, inputLineNums);
       ToolCommon.initExampleCopy();
       ToolCommon.initKeyboardShortcut(btnReplace);
-      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
     })();
   </script>
 {% endblock %}

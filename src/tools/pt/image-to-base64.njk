@@ -1,79 +1,239 @@
 ---
 lang: "pt"
 toolId: "image-to-base64"
+title: "Image to Base64 — Coding.Tools"
+description: "Convert images to Base64 encoded data URI strings online. Free and runs in your browser."
+toolTitle: "Image to Base64"
+toolDescription: "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS."
 category: "image-utilities"
+categoryName: "Image Utilities"
 activeTool: "image-to-base64"
 permalink: "/pt/image-to-base64.html"
 ---
 
 {% extends "tool-layout.njk" %}
 
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script>
+{% endblock %}
+
 {% block tool_content %}
-  <div class="dropzone-area" id="dropzone">
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-    <p>{{ toolData.dropzoneMessage }}</p>
-    <span class="dropzone-hint">{{ toolData.dropzoneHint }}</span>
-    <input type="file" id="file-input" accept="image/*" hidden>
-  </div>
+  <style>
+    .dual-pane { display: flex; flex-direction: column; gap: 0; }
 
-  <label class="section-label" for="output-editor">{{ toolData.outputLabel }}</label>
-  <div class="editor-wrapper">
-    <textarea class="editor-area" id="output-editor" spellcheck="false" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
-  </div>
+    .pane-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .pane-card--input { border-left: 4px solid var(--accent); }
+    .pane-card--output { border-left: 4px solid var(--secondary); }
 
-  <div class="toolbar">
-    <div class="toolbar-left">
-      <button class="btn btn-ghost" id="btn-clear" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-        {{ t.ui.clear }}
-      </button>
-    </div>
-    <div class="toolbar-right">
-      <button class="btn btn-ghost" id="btn-copy" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-        {{ t.ui.copy }}
-      </button>
-      <button class="btn btn-ghost" id="btn-download" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-        {{ t.ui.save }}
-      </button>
-    </div>
-  </div>
+    .pane-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: inherit;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pane-label-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .pane-label-dot--accent { background: var(--accent); }
+    .pane-label-dot--secondary { background: var(--secondary); }
 
-  <div class="status-bar">
-    <div class="status-message idle" id="status-message">
-      <span class="status-dot" id="status-dot" style="display:none;"></span>
-      <span id="status-text"></span>
+    .dropzone-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 140px;
+      padding: 32px;
+      background: var(--code-bg);
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .dropzone-area:hover,
+    .dropzone-area.dragover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    .dropzone-area svg { color: var(--text-muted); flex-shrink: 0; }
+    .dropzone-area p {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    .dropzone-hint {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .pane-card .CodeMirror {
+      height: 200px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      padding: 4px 0;
+    }
+    .pane-card .CodeMirror-scroll { padding: 8px 12px; }
+    .pane-card .CodeMirror-gutters {
+      background: #fff;
+      border-right: 1px solid var(--border);
+    }
+
+    .pane-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pane-toolbar-left,
+    .pane-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .status-bar-dual {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 4px 0;
+      font-size: 12px;
+      color: inherit;
+    }
+    .status-meta-dual {
+      display: flex;
+      gap: 16px;
+    }
+    .status-meta-dual span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .pane-card { padding: 16px; }
+      .pane-card .CodeMirror { height: 160px; font-size: 13px; }
+      .pane-toolbar { gap: 6px; }
+    }
+  </style>
+
+  <div class="dual-pane">
+    <!-- Input Card -->
+    <div class="pane-card pane-card--input">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>Image Upload</span>
+      </div>
+      <div class="dropzone-area" id="dropzone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        <p>Click or drag an image file here</p>
+        <span class="dropzone-hint">1 image · Max 2MB</span>
+        <input type="file" id="file-input" accept="image/*" hidden>
+      </div>
     </div>
-    <div class="status-meta">
-      <span id="char-count">0 {{ t.ui.characters }}</span>
+
+    <!-- Toolbar -->
+    <div class="pane-toolbar">
+      <div class="pane-toolbar-left">
+        <button class="btn btn-primary" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          Clear
+        </button>
+      </div>
+      <div class="pane-toolbar-right">
+        <button class="btn btn-ghost" id="btn-copy" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copy
+        </button>
+        <button class="btn btn-ghost" id="btn-download" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Save
+        </button>
+      </div>
+    </div>
+
+    <!-- Output Card -->
+    <div class="pane-card pane-card--output">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Base64 Result</span>
+      </div>
+      <textarea id="code2" readonly placeholder="Base64 result will appear here..."></textarea>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar-dual">
+      <div class="status-message idle" id="status-message">
+        <span class="status-dot" id="status-dot" style="display:none;"></span>
+        <span id="status-text"></span>
+      </div>
+      <div class="status-meta-dual">
+        <span id="char-count">0 characters</span>
+      </div>
     </div>
   </div>
 {% endblock %}
 
 {% block description %}
-  <h2>{{ toolData.descTitle }}</h2>
-  {% for para in toolData.descParas %}
-  <p>{{ para | safe }}</p>
-  {% endfor %}
+  <h2>Image to Base64</h2>
+  <p>This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.</p>
+  <p>Base64 encoding increases the data size by approximately 33%, so it's best used for small images like icons and logos rather than large photographs.</p>
 
-  <h3>{{ toolData.howToUse }}</h3>
+  <h3>How to use</h3>
   <ol class="steps-list">
-    {% for step in toolData.steps %}
-    <li>{{ step | safe }}</li>
-    {% endfor %}
+    <li>Drag and drop an image file onto the upload area, or click to select.</li>
+    <li>The Base64 encoded data URI appears in the text editor below.</li>
+    <li>Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file.</li>
   </ol>
 
-  <h3>{{ toolData.whatIs }}</h3>
-  {% for para in toolData.whatIsParas %}
-  <p>{{ para | safe }}</p>
-  {% endfor %}
-
-  <h3>{{ toolData.example }}</h3>
-  <p>{{ toolData.examplePara | safe }}</p>
+  <h3>Embedding images in HTML</h3>
+  <p>You can use Base64 data URIs directly in HTML img tags:</p>
   <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
-    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
+    <pre class="code-block" id="example-code">&lt;img src="data:image/png;base64,ivborw0kggo..." width="300" height="100" alt="base64 image"/&gt;
+
+/* In CSS */
+.logo {
+  background: url('data:image/png;base64,ivborw0kggo...');
+}</pre>
+  </div>
+
+  <h3>Convert with Python</h3>
+  <p>Convert an image to Base64 using Python:</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy-2" type="button">Copy</button>
+    <pre class="code-block" id="example-code-2">import base64
+
+with open('image.png', 'rb') as f:
+    encoded = base64.b64encode(f.read())
+
+data_uri = 'data:image/png;base64,' + encoded.decode()</pre>
   </div>
 {% endblock %}
 
@@ -82,16 +242,17 @@ permalink: "/pt/image-to-base64.html"
     (function () {
       'use strict';
 
-      var dropzone = document.getElementById('dropzone');
-      var fileInput = document.getElementById('file-input');
-      var outputEditor = document.getElementById('output-editor');
-      var btnClear = document.getElementById('btn-clear');
-      var btnCopy = document.getElementById('btn-copy');
+      var editor = CodeMirror.fromTextArea(document.getElementById('code2'), { lineNumbers: false, lineWrapping: true, readOnly: true });
+
+      var dropzone    = document.getElementById('dropzone');
+      var fileInput   = document.getElementById('file-input');
+      var btnClear    = document.getElementById('btn-clear');
+      var btnCopy     = document.getElementById('btn-copy');
       var btnDownload = document.getElementById('btn-download');
       var statusMessage = document.getElementById('status-message');
-      var statusDot = document.getElementById('status-dot');
-      var statusText = document.getElementById('status-text');
-      var charCount = document.getElementById('char-count');
+      var statusDot   = document.getElementById('status-dot');
+      var statusText  = document.getElementById('status-text');
+      var charCount   = document.getElementById('char-count');
 
       var MAX_SIZE = 2 * 1024 * 1024;
 
@@ -113,33 +274,42 @@ permalink: "/pt/image-to-base64.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'File too large (max 2MB)');
           return;
         }
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '{{ t.ui.processing }}');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', 'Processing...');
         var reader = new FileReader();
         reader.onload = function (e) {
           var base64 = e.target.result;
-          outputEditor.value = base64;
+          editor.setValue(base64);
           var chars = base64.length;
-          charCount.textContent = ToolCommon.pluralise(chars, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+          charCount.textContent = ToolCommon.pluralise(chars, 'character');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Image converted to Base64');
         };
         reader.readAsDataURL(file);
       }
 
       btnClear.addEventListener('click', function () {
-        outputEditor.value = '';
-        charCount.textContent = '0 {{ t.ui.characters }}';
+        editor.setValue('');
+        charCount.textContent = '0 characters';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 
       btnCopy.addEventListener('click', function () {
-        ToolCommon.copyOutput(outputEditor, btnCopy);
+        var text = editor.getValue();
+        if (text) {
+          navigator.clipboard.writeText(text).then(function () {
+            btnCopy.textContent = 'Copied!';
+            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy'; }, 1500);
+          });
+        }
       });
 
       btnDownload.addEventListener('click', function () {
-        ToolCommon.downloadOutput(outputEditor, 'base64-result.txt');
+        ToolCommon.downloadOutput({ value: editor.getValue() }, 'base64-result.txt');
       });
 
-      ToolCommon.initExampleCopy();
+      ToolCommon.initExampleCopy({
+        'example-copy': 'example-code',
+        'example-copy-2': 'example-code-2'
+      });
     })();
   </script>
 {% endblock %}

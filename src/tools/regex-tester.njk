@@ -11,39 +11,234 @@ permalink: "/regex-tester.html"
 
 {% extends "tool-layout.njk" %}
 
-{% import "macros/editor.njk" as editor %}
-{% import "macros/toolbar.njk" as toolbar %}
-{% import "macros/status-bar.njk" as status %}
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script>
+{% endblock %}
 
 {% block tool_content %}
-  <!-- Regex Pattern Input -->
-  <label class="section-label" for="regex-input">Regex Pattern</label>
-  <div class="editor-wrapper" style="margin-bottom: 8px;">
-    <textarea class="editor-area" id="regex-input" spellcheck="false" placeholder="Enter regex pattern, e.g. \b\w+@\w+\.\w+\b" rows="1"></textarea>
+  <style>
+    .dual-pane { display: flex; flex-direction: column; gap: 0; }
+
+    .pane-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .pane-card--input { border-left: 4px solid var(--accent); }
+    .pane-card--output { border-left: 4px solid var(--secondary); }
+
+    .pane-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: inherit;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pane-label-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .pane-label-dot--accent { background: var(--accent); }
+    .pane-label-dot--secondary { background: var(--secondary); }
+
+    .regex-pattern-input {
+      width: 100%;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      outline: none;
+      margin-bottom: 12px;
+    }
+    .regex-pattern-input::placeholder { color: var(--text-muted); }
+    .regex-pattern-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
+    }
+
+    .flags-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .flags-row label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .flags-row label span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .flags-row label small {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .pane-card .CodeMirror {
+      height: 200px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      padding: 4px 0;
+    }
+    .pane-card .CodeMirror-scroll { padding: 8px 12px; }
+    .pane-card .CodeMirror-gutters {
+      background: #fff;
+      border-right: 1px solid var(--border);
+    }
+
+    .pane-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pane-toolbar-left,
+    .pane-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-box {
+      min-height: 100px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: var(--radius-sm);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .highlight-box mark {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 3px;
+      padding: 1px 2px;
+    }
+    .highlight-box .muted {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .status-bar-dual {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 4px 0;
+      font-size: 12px;
+      color: inherit;
+    }
+    .status-meta-dual {
+      display: flex;
+      gap: 16px;
+    }
+    .status-meta-dual span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .pane-card { padding: 16px; }
+      .pane-card .CodeMirror { height: 160px; font-size: 13px; }
+      .pane-toolbar { gap: 6px; }
+    }
+  </style>
+
+  <div class="dual-pane">
+    <!-- Input Card -->
+    <div class="pane-card pane-card--input">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>Regex Pattern</span>
+      </div>
+      <input type="text" class="regex-pattern-input" id="regex-input" placeholder="Enter regex pattern, e.g. \b\w+@\w+\.\w+\b">
+
+      <div class="flags-row">
+        <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>global</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>case-insensitive</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>multiline</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>dotAll</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>unicode</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>sticky</small></label>
+      </div>
+
+      <div class="pane-label">
+        <span>Test Text</span>
+      </div>
+      <textarea id="code1" placeholder="Enter or paste text to test against..."></textarea>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="pane-toolbar">
+      <div class="pane-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          Clear
+        </button>
+      </div>
+      <div class="pane-toolbar-right">
+        <button class="btn btn-ghost" id="btn-copy" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copy
+        </button>
+        <button class="btn btn-ghost" id="btn-download" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download
+        </button>
+      </div>
+    </div>
+
+    <!-- Output Card -->
+    <div class="pane-card pane-card--output">
+      <div class="pane-label">
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Match Results</span>
+      </div>
+      <div id="match-output" class="highlight-box"><span class="muted">Matches will appear here...</span></div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar-dual">
+      <div class="status-message idle" id="status-message">
+        <span class="status-dot" id="status-dot" style="display:none;"></span>
+        <span id="status-text"></span>
+      </div>
+      <div class="status-meta-dual">
+        <span id="char-count">0 characters</span>
+        <span id="match-count">0 matches</span>
+      </div>
+    </div>
   </div>
-
-  <!-- Flags -->
-  <div class="flags-row" style="margin-bottom: 20px;">
-    <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>global</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>case-insensitive</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>multiline</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>dotAll</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>unicode</small></label>
-    <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>sticky</small></label>
-  </div>
-
-  {{ editor.inputEditor("Enter or paste text to test against...", "Test Text") }}
-
-  {% call toolbar.toolbar("Clear", "Copy", "Download") %}
-  {% endcall %}
-
-  <!-- Match Highlighting -->
-  <div style="margin-top: 24px;">
-    <label class="section-label">Match Results</label>
-    <div id="match-output" class="highlight-box"></div>
-  </div>
-
-  {{ status.statusBar("characters", "matches", "match-count") }}
 {% endblock %}
 
 {% block description %}
@@ -93,23 +288,24 @@ Invalid: @missing.com or user@
     (function () {
       'use strict';
 
-      var regexInput    = document.getElementById('regex-input');
-      var inputEditor   = document.getElementById('input-editor');
-      var matchOutput   = document.getElementById('match-output');
-      var btnClear      = document.getElementById('btn-clear');
-      var btnCopy       = document.getElementById('btn-copy');
-      var btnDownload   = document.getElementById('btn-download');
+      var editor = CodeMirror.fromTextArea(document.getElementById('code1'), { lineNumbers: true, lineWrapping: true });
+
+      var regexInput  = document.getElementById('regex-input');
+      var matchOutput = document.getElementById('match-output');
+      var btnClear    = document.getElementById('btn-clear');
+      var btnCopy     = document.getElementById('btn-copy');
+      var btnDownload = document.getElementById('btn-download');
       var statusMessage = document.getElementById('status-message');
-      var statusDot     = document.getElementById('status-dot');
-      var statusText    = document.getElementById('status-text');
-      var matchCount    = document.getElementById('match-count');
-      var inputLineNums = document.getElementById('input-line-numbers');
-      var flagG         = document.getElementById('flag-g');
-      var flagI         = document.getElementById('flag-i');
-      var flagM         = document.getElementById('flag-m');
-      var flagS         = document.getElementById('flag-s');
-      var flagU         = document.getElementById('flag-u');
-      var flagY         = document.getElementById('flag-y');
+      var statusDot   = document.getElementById('status-dot');
+      var statusText  = document.getElementById('status-text');
+      var charCount   = document.getElementById('char-count');
+      var matchCount  = document.getElementById('match-count');
+      var flagG       = document.getElementById('flag-g');
+      var flagI       = document.getElementById('flag-i');
+      var flagM       = document.getElementById('flag-m');
+      var flagS       = document.getElementById('flag-s');
+      var flagU       = document.getElementById('flag-u');
+      var flagY       = document.getElementById('flag-y');
 
       function escapeHtml(str) {
         return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -128,12 +324,13 @@ Invalid: @missing.com or user@
 
       function runRegex() {
         var pattern = regexInput.value;
-        var text = inputEditor.value;
+        var text = editor.getValue();
 
         if (!pattern || !text) {
           matchOutput.innerHTML = text ? escapeHtml(text) : '<span class="muted">Matches will appear here...</span>';
           matchCount.textContent = '0 matches';
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
           return;
         }
 
@@ -164,6 +361,7 @@ Invalid: @missing.com or user@
             matchOutput.innerHTML = escapeHtml(text);
             matchCount.textContent = '0 matches';
             ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'No matches found');
+            charCount.textContent = ToolCommon.pluralise(text.length, 'character');
             return;
           }
 
@@ -178,43 +376,47 @@ Invalid: @missing.com or user@
 
           matchOutput.innerHTML = html;
           matchCount.textContent = matches.length + (matches.length === 1 ? ' match' : ' matches');
+          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', matches.length + (matches.length === 1 ? ' match found' : ' matches found'));
         } catch (e) {
           matchOutput.innerHTML = '<span class="muted">Invalid regex pattern</span>';
           matchCount.textContent = '0 matches';
+          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid regex: ' + e.message);
         }
       }
 
       regexInput.addEventListener('input', runRegex);
-      inputEditor.addEventListener('input', runRegex);
+      editor.on('change', runRegex);
       [flagG, flagI, flagM, flagS, flagU, flagY].forEach(function (cb) {
         cb.addEventListener('change', runRegex);
       });
 
       btnClear.addEventListener('click', function () {
         regexInput.value = '';
-        inputEditor.value = '';
+        editor.setValue('');
         matchOutput.innerHTML = '<span class="muted">Matches will appear here...</span>';
         matchCount.textContent = '0 matches';
+        charCount.textContent = '0 characters';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-        ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
-        inputEditor.focus();
       });
 
       btnCopy.addEventListener('click', function () {
-        ToolCommon.copyOutput(inputEditor, btnCopy);
+        var text = editor.getValue();
+        if (text) {
+          navigator.clipboard.writeText(text).then(function () {
+            btnCopy.textContent = 'Copied!';
+            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy'; }, 1500);
+          });
+        }
       });
 
       btnDownload.addEventListener('click', function () {
-        ToolCommon.downloadOutput(inputEditor, 'regex-test.txt');
+        ToolCommon.downloadOutput({ value: editor.getValue() }, 'regex-test.txt');
       });
 
-      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
-      ToolCommon.initScrollSync(inputEditor, inputLineNums);
-      ToolCommon.initTabKey(inputEditor, inputLineNums);
       ToolCommon.initExampleCopy();
-      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initKeyboardShortcut(btnClear);
     })();
   </script>
 {% endblock %}
