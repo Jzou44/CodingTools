@@ -602,6 +602,253 @@
 }
 
 /* ============================================================
+   ASCII Table — Terminal Archive aesthetic
+   Dark terminal-inspired reference with prominent characters,
+   phosphor-glow hover effects, and code-column styling.
+   ============================================================ */
+
+/* --- Section Headers (h3 for table sections) --- */
+.description-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 40px;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.description-section h3::before {
+  content: '$';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.description-section h3::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* --- Table Container --- */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --- ASCII Table --- */
+table.ascii-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+table.ascii-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+table.ascii-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  background: var(--code-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Column widths */
+table.ascii-table th:nth-child(1),
+table.ascii-table td:nth-child(1) { width: 10%; }  /* Dec */
+
+table.ascii-table th:nth-child(2),
+table.ascii-table td:nth-child(2) { width: 10%; }  /* Hex */
+
+table.ascii-table th:nth-child(3),
+table.ascii-table td:nth-child(3) { width: 10%; }  /* Oct */
+
+table.ascii-table th:nth-child(4),
+table.ascii-table td:nth-child(4) { width: 18%; }  /* Bin */
+
+table.ascii-table th:nth-child(5),
+table.ascii-table td:nth-child(5) { width: 10%; }  /* Char / Abbr */
+
+table.ascii-table th:nth-child(6),
+table.ascii-table td:nth-child(6) { width: 42%; }  /* Description */
+
+/* --- Data Cells --- */
+table.ascii-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(232, 224, 212, 0.5);
+  color: var(--text-secondary);
+  vertical-align: middle;
+  transition: background 0.12s, color 0.12s;
+}
+
+table.ascii-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table.ascii-table tbody tr:hover td {
+  background: var(--accent-light);
+  color: var(--text-primary);
+}
+
+/* Numeric columns (Dec, Hex, Oct) */
+table.ascii-table td:nth-child(1),
+table.ascii-table td:nth-child(2),
+table.ascii-table td:nth-child(3) {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+table.ascii-table th:nth-child(1),
+table.ascii-table th:nth-child(2),
+table.ascii-table th:nth-child(3) {
+  text-align: right;
+}
+
+/* Binary column — dimmed */
+table.ascii-table td:nth-child(4) {
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+/* Character cell — the hero */
+table.ascii-table td:nth-child(5) {
+  text-align: center;
+}
+
+table.ascii-table td:nth-child(5) code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+
+table.ascii-table tbody tr:hover td:nth-child(5) code {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(196, 93, 58, 0.25);
+}
+
+/* Space character special handling */
+table.ascii-table td:nth-child(5) code.space-char {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+/* Control character abbreviation */
+table.ascii-table td:nth-child(5) abbr {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary);
+  background: var(--secondary-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+}
+
+table.ascii-table tbody tr:hover td:nth-child(5) abbr {
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* Description column */
+table.ascii-table td:nth-child(6) {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+table.ascii-table tbody tr:hover td:nth-child(6) {
+  color: var(--text-primary);
+}
+
+/* --- About ASCII paragraph styling --- */
+.description-section > p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  table.ascii-table {
+    font-size: 12px;
+  }
+
+  table.ascii-table th,
+  table.ascii-table td {
+    padding: 8px 10px;
+  }
+
+  table.ascii-table td:nth-child(5) code {
+    min-width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  /* Hide binary column on small screens */
+  table.ascii-table th:nth-child(4),
+  table.ascii-table td:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hide octal column on very small screens */
+  table.ascii-table th:nth-child(3),
+  table.ascii-table td:nth-child(3) {
+    display: none;
+  }
+
+  table.ascii-table th:nth-child(6),
+  table.ascii-table td:nth-child(6) {
+    font-size: 12px;
+  }
+}
+
+/* ============================================================
    Shared Converter Components
    Replaces tool-specific prefixes (nc-, roman-, dec-, etc.)
    with unified classes. Customize via CSS custom properties.

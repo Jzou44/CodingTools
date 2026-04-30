@@ -9,57 +9,215 @@ permalink: "/cn/hex-to-binary.html"
 {% extends "tool-layout.njk" %}
 
 {% block tool_content %}
-  <label class="section-label" for="hex-input">{{ t.ui.hexNumber }}</label>
-  <div class="input-row">
-    <input type="text" class="text-input" id="hex-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off">
-  </div>
+  <style>
+    .nc-converter { display: flex; flex-direction: column; gap: 0; }
+    .nc-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      position: relative;
+    }
+    .nc-arrow::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .nc-arrow-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--secondary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 8px rgba(45, 106, 79, 0.3);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .nc-arrow-icon:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(45, 106, 79, 0.4);
+    }
+    .nc-secondary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .nc-secondary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s;
+    }
+    .nc-secondary-card.has-result { border-color: var(--secondary); }
+    .nc-secondary-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: inherit;
+      margin-bottom: 8px;
+    }
+    .nc-secondary-value {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-primary);
+      word-break: break-all;
+      min-height: 24px;
+      line-height: 1.3;
+    }
+    .nc-secondary-value.empty {
+      color: inherit;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic;
+    }
 
-  <div class="toolbar">
-    <div class="toolbar-left">
-      <button class="btn btn-primary" id="btn-convert" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        {{ t.ui.convert }}
-      </button>
-      <button class="btn btn-ghost" id="btn-swap" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-        {{ t.ui.swap }}
-      </button>
-      <button class="btn btn-ghost" id="btn-clear" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-        {{ t.ui.clear }}
-      </button>
-    </div>
-    <div class="toolbar-right">
-      <button class="btn btn-ghost" id="btn-copy" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-        {{ t.ui.copy }}
-      </button>
-    </div>
-  </div>
+    .nc-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      gap: 8px;
+    }
+    .nc-toolbar-left, .nc-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-  <div style="margin-top: 24px;">
-    <label class="section-label" for="binary-output">{{ t.ui.binaryNumber }}</label>
-    <div class="input-row">
-      <input type="text" class="text-input output-field" id="binary-output" readonly placeholder="{{ t.ui.binaryResult }}">
-    </div>
-  </div>
+    .nc-ref {
+      margin-top: 24px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .nc-ref-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: inherit;
+      margin-bottom: 12px;
+    }
+    .nc-ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 6px;
+    }
+    .nc-ref-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      padding: 4px 0;
+    }
+    .nc-ref-item .hex {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 500;
+      color: var(--text-secondary);
+      min-width: 28px;
+    }
+    .nc-ref-item .arrow { color: inherit; font-size: 11px; }
+    .nc-ref-item .bin {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      color: var(--secondary);
+    }
 
-  <div style="margin-top: 16px;">
-    <label class="section-label" for="decimal-output">{{ t.ui.decimalNumber }}</label>
-    <div class="input-row">
-      <input type="text" class="text-input output-field" id="decimal-output" readonly placeholder="{{ t.ui.decimalResult }}">
+    @media (max-width: 600px) {
+      .nc-secondary-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <div class="nc-converter">
+    <!-- Input Card -->
+    <div class="tool-input-card" style="--tool-accent: var(--secondary)">
+      <div class="tool-label">{{ t.ui.hexNumber }}</div>
+      <input type="text" class="tool-input-field" id="hex-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
+      <div class="tool-hint">Valid: <code>0-9, A-F</code></div>
     </div>
-  </div>
-  <div style="margin-top: 16px;">
-    <label class="section-label" for="octal-output">{{ t.ui.octalNumber }}</label>
-    <div class="input-row">
-      <input type="text" class="text-input output-field" id="octal-output" readonly placeholder="{{ t.ui.octalResult }}">
+
+    <!-- Arrow -->
+    <div class="nc-arrow">
+      <div class="nc-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </div>
     </div>
-  </div>
-  <div class="status-bar">
-    <div class="status-message idle" id="status-message">
-      <span class="status-dot" id="status-dot" style="display:none;"></span>
-      <span id="status-text"></span>
+
+    <!-- Primary Output Card -->
+    <div class="tool-output-card" style="--tool-accent: var(--secondary)" id="output-card">
+      <div class="tool-output-label">
+        <span>{{ t.ui.binaryNumber }}</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copyToClipboard }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          {{ t.ui.copy }}
+        </button>
+      </div>
+      <div class="tool-output-value empty" id="binary-output">{{ toolData.outputPlaceholder }}</div>
+    </div>
+
+    <!-- Secondary Results -->
+    <div class="nc-secondary-grid">
+      <div class="nc-secondary-card" id="decimal-card">
+        <div class="nc-secondary-label">{{ t.ui.decimalNumber }}</div>
+        <div class="nc-secondary-value empty" id="decimal-output">&mdash;</div>
+      </div>
+      <div class="nc-secondary-card" id="octal-card">
+        <div class="nc-secondary-label">{{ t.ui.octalNumber }}</div>
+        <div class="nc-secondary-value empty" id="octal-output">&mdash;</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="nc-toolbar">
+      <div class="nc-toolbar-left">
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          {{ t.ui.clear }}
+        </button>
+        <button class="btn btn-ghost" id="btn-swap" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+          {{ t.ui.swap }}
+        </button>
+      </div>
+      <div class="nc-toolbar-right">
+        <div class="status-message idle" id="status-message">
+          <span class="status-dot" id="status-dot" style="display:none;"></span>
+          <span id="status-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="nc-ref">
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
+      <div class="nc-ref-grid">
+        <div class="nc-ref-item"><span class="hex">0</span><span class="arrow">&rarr;</span><span class="bin">0000</span></div>
+        <div class="nc-ref-item"><span class="hex">1</span><span class="arrow">&rarr;</span><span class="bin">0001</span></div>
+        <div class="nc-ref-item"><span class="hex">9</span><span class="arrow">&rarr;</span><span class="bin">1001</span></div>
+        <div class="nc-ref-item"><span class="hex">A</span><span class="arrow">&rarr;</span><span class="bin">1010</span></div>
+        <div class="nc-ref-item"><span class="hex">F</span><span class="arrow">&rarr;</span><span class="bin">1111</span></div>
+        <div class="nc-ref-item"><span class="hex">10</span><span class="arrow">&rarr;</span><span class="bin">10000</span></div>
+        <div class="nc-ref-item"><span class="hex">FF</span><span class="arrow">&rarr;</span><span class="bin">11111111</span></div>
+        <div class="nc-ref-item"><span class="hex">100</span><span class="arrow">&rarr;</span><span class="bin">100000000</span></div>
+      </div>
     </div>
   </div>
 {% endblock %}
@@ -96,42 +254,95 @@ permalink: "/cn/hex-to-binary.html"
 {% block tool_script %}
   <script>
     (function () {
-  'use strict';
-  var input = document.getElementById('hex-input');
-  var output = document.getElementById('binary-output');
-  var btnConvert = document.getElementById('btn-convert');
-  var btnSwap = document.getElementById('btn-swap');
-  var btnClear = document.getElementById('btn-clear');
-  var btnCopy = document.getElementById('btn-copy');
-  var statusMessage = document.getElementById('status-message');
-  var statusDot = document.getElementById('status-dot');
-  var statusText = document.getElementById('status-text');
+      'use strict';
 
-  function convert() {
-    var val = input.value.replace(/\s/g, '');
-    if (!val) return;
-    try {
-      var result = new BigNumber(val, 16);
-      output.value = result.toString(2);
-      document.getElementById('decimal-output').value = result.toString(10);
-      document.getElementById('octal-output').value = result.toString(8);
-      ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
-    } catch (e) {
-      ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');
-    }
-  }
-  btnConvert.onclick = convert;
-  btnSwap.onclick = function () { window.location.href = '/cn/binary-to-hex'; };
-  btnClear.onclick = function () {
-    input.value = ''; output.value = '';
-    document.getElementById('decimal-output').value = '';
-    document.getElementById('octal-output').value = '';
-    ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-  };
-  btnCopy.onclick = function () { ToolCommon.copyOutput(output, btnCopy); };
-  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') convert(); });
-  ToolCommon.initExampleCopy();
-  ToolCommon.initKeyboardShortcut(btnConvert);
-})();
+      var hexInput     = document.getElementById('hex-input');
+      var binaryOutput = document.getElementById('binary-output');
+      var decimalOutput = document.getElementById('decimal-output');
+      var octalOutput  = document.getElementById('octal-output');
+      var outputCard   = document.getElementById('output-card');
+      var decimalCard  = document.getElementById('decimal-card');
+      var octalCard    = document.getElementById('octal-card');
+      var btnConvert   = document.getElementById('btn-convert');
+      var btnClear     = document.getElementById('btn-clear');
+      var btnSwap      = document.getElementById('btn-swap');
+      var btnCopy      = document.getElementById('btn-copy');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot     = document.getElementById('status-dot');
+      var statusText    = document.getElementById('status-text');
+
+      function showPrimary(text, type) {
+        binaryOutput.textContent = text;
+        binaryOutput.className = 'tool-output-value';
+        if (type === 'empty') binaryOutput.className += ' empty';
+        else if (type === 'error') binaryOutput.className += ' error';
+        if (type === 'valid') outputCard.classList.add('has-result');
+        else outputCard.classList.remove('has-result');
+      }
+
+      function showSecondary(el, card, text, type) {
+        el.textContent = text;
+        el.className = 'nc-secondary-value';
+        if (type === 'empty') el.className += ' empty';
+        if (type === 'valid') card.classList.add('has-result');
+        else card.classList.remove('has-result');
+      }
+
+      function convert() {
+        var input = hexInput.value.replace(/\s/g, '');
+        if (!input) {
+          showPrimary('{{ toolData.outputPlaceholder }}', 'empty');
+          showSecondary(decimalOutput, decimalCard, '&mdash;', 'empty');
+          showSecondary(octalOutput, octalCard, '&mdash;', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+          return;
+        }
+        if (!/^[0-9a-fA-F]+$/.test(input)) {
+          showPrimary('{{ t.ui.invalidHexadecimalInput }}', 'error');
+          showSecondary(decimalOutput, decimalCard, '&mdash;', 'empty');
+          showSecondary(octalOutput, octalCard, '&mdash;', 'empty');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidHexadecimalInput }}');
+          return;
+        }
+        var result = BigInt('0x' + input);
+        showPrimary(result.toString(2), 'valid');
+        showSecondary(decimalOutput, decimalCard, result.toString(10), 'valid');
+        showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
+      }
+
+      btnConvert.onclick = convert;
+
+      btnClear.addEventListener('click', function () {
+        hexInput.value = '';
+        showPrimary('{{ toolData.outputPlaceholder }}', 'empty');
+        showSecondary(decimalOutput, decimalCard, '&mdash;', 'empty');
+        showSecondary(octalOutput, octalCard, '&mdash;', 'empty');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+      });
+
+      btnSwap.onclick = function () { window.location.href = '/cn/binary-to-hex'; };
+
+      btnCopy.addEventListener('click', function () {
+        var text = binaryOutput.textContent;
+        if (text && !binaryOutput.classList.contains('empty') && !binaryOutput.classList.contains('error')) {
+          navigator.clipboard.writeText(text).then(function () {
+            var orig = btnCopy.innerHTML;
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
+            btnCopy.classList.add('copied');
+            setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
+          });
+        }
+      });
+
+      hexInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') btnConvert.click();
+      });
+
+      // Live conversion on input
+      hexInput.addEventListener('input', convert);
+
+      ToolCommon.initExampleCopy();
+    })();
   </script>
 {% endblock %}
