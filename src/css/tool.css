@@ -673,7 +673,7 @@
 .pane-card .pane-editor {
   display: block;
   width: 100%;
-  min-height: 200px;
+  min-height: 280px;
   padding: 12px;
   padding-left: 48px;
   font-family: 'IBM Plex Mono', monospace;
@@ -733,7 +733,7 @@
 
 @media (max-width: 600px) {
   .pane-card { padding: 16px; }
-  .pane-card .pane-editor { min-height: 160px; font-size: 13px; }
+  .pane-card .pane-editor { min-height: 200px; font-size: 13px; }
   .pane-toolbar { gap: 6px; }
 }
 
