@@ -207,7 +207,7 @@ permalink: "/kr/decimal-to-binary.html"
 
     <!-- Quick Reference -->
     <div class="nc-ref">
-      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
       <div class="nc-ref-grid">
         <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="bin">0</span></div>
         <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="bin">1</span></div>
@@ -306,10 +306,10 @@ permalink: "/kr/decimal-to-binary.html"
           showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
         } catch (e) {
-          showPrimary('Invalid decimal input', 'error');
+          showPrimary('{{ t.ui.invalidDecimalInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');
           showSecondary(octalOutput, octalCard, '—', 'empty');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');
         }
       }
 
@@ -328,7 +328,7 @@ permalink: "/kr/decimal-to-binary.html"
         if (text && !binaryOutput.classList.contains('empty') && !binaryOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });

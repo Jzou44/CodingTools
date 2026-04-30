@@ -288,13 +288,13 @@ permalink: "/jp/fraction-to-decimal.html"
     <!-- Output Card -->
     <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
       <div class="tool-output-label">
-        <span>Decimal Result</span>
-        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+        <span>{{ t.ui.decimalResult }}</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copyToClipboard }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="frac-output-value empty" id="decimal-output">Result will appear here</div>
+      <div class="frac-output-value empty" id="decimal-output">{{ toolData.resultPlaceholder }}</div>
     </div>
 
     <!-- Toolbar -->
@@ -315,7 +315,7 @@ permalink: "/jp/fraction-to-decimal.html"
 
     <!-- Quick Reference -->
     <div class="frac-ref">
-      <div class="frac-ref-title">Quick Reference</div>
+      <div class="frac-ref-title">{{ t.ui.quickReference }}</div>
       <div class="frac-ref-grid">
         <div class="frac-ref-item"><span class="frac">1/2</span><span class="eq">=</span><span class="dec">0.5</span></div>
         <div class="frac-ref-item"><span class="frac">1/3</span><span class="eq">=</span><span class="dec">0.333&hellip;</span></div>
@@ -398,7 +398,7 @@ permalink: "/jp/fraction-to-decimal.html"
           var numerator   = new BigNumber(numStr);
           var integerVal  = new BigNumber(integerInput.value.trim() || '0');
           if (denominator.isZero()) {
-            showResult('Denominator cannot be zero', 'error');
+            showResult('{{ t.ui.denominatorCannotBeZero }}', 'error');
             ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Cannot divide by zero');
             return;
           }
@@ -406,8 +406,8 @@ permalink: "/jp/fraction-to-decimal.html"
           showResult(result.toString(10), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
         } catch (e) {
-          showResult('Invalid input', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid input');
+          showResult('{{ t.ui.invalidInput }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');
         }
       }
 
@@ -417,7 +417,7 @@ permalink: "/jp/fraction-to-decimal.html"
         integerInput.value     = '';
         numeratorInput.value   = '';
         denominatorInput.value = '';
-        showResult('Result will appear here', 'empty');
+        showResult('{{ toolData.resultPlaceholder }}', 'empty');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 
@@ -426,7 +426,7 @@ permalink: "/jp/fraction-to-decimal.html"
         if (text && !decimalOutput.classList.contains('empty') && !decimalOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });
@@ -440,7 +440,7 @@ permalink: "/jp/fraction-to-decimal.html"
           var denStr = denominatorInput.value.trim();
           var numStr = numeratorInput.value.trim();
           if (!denStr || !numStr) {
-            showResult('Result will appear here', 'empty');
+            showResult('{{ toolData.resultPlaceholder }}', 'empty');
             ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
             return;
           }

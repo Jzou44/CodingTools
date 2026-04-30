@@ -117,13 +117,13 @@ permalink: "/fr/numbers-to-roman-numerals.html"
     <!-- Input Card -->
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
       <div class="tool-label">Number</div>
-      <input type="text" class="tool-input-field" style="--tool-font: 'IBM Plex Mono', monospace; --tool-font-size: 32px; --tool-font-size-mobile: 24px; --tool-accent: var(--accent);" id="number-input" placeholder="Enter a number..." spellcheck="false" autocomplete="off" autofocus>
+      <input type="text" class="tool-input-field" style="--tool-font: 'IBM Plex Mono', monospace; --tool-font-size: 32px; --tool-font-size-mobile: 24px; --tool-accent: var(--accent);" id="number-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
       <div class="tool-hint">Range: <code>1</code> &ndash; <code>3999</code></div>
     </div>
 
     <!-- Arrow -->
     <div class="roman-arrow">
-      <div class="roman-arrow-icon" id="btn-convert" title="Convert">
+      <div class="roman-arrow-icon" id="btn-convert" title="{{ t.ui.convert }}">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
       </div>
     </div>
@@ -131,13 +131,13 @@ permalink: "/fr/numbers-to-roman-numerals.html"
     <!-- Output Card -->
     <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
       <div class="tool-output-label">
-        <span>Roman Numeral</span>
-        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+        <span>{{ t.ui.romanNumeral }}</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copyToClipboard }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="tool-output-value empty" style="--tool-font: 'Fraunces', serif; --tool-output-font-size: 48px; --tool-output-font-size-mobile: 36px; font-weight: 700; letter-spacing: 0.08em;" id="roman-output">Result will appear here</div>
+      <div class="tool-output-value empty" style="--tool-font: 'Fraunces', serif; --tool-output-font-size: 48px; --tool-output-font-size-mobile: 36px; font-weight: 700; letter-spacing: 0.08em;" id="roman-output">{{ toolData.resultPlaceholder }}</div>
     </div>
 
     <!-- Toolbar -->
@@ -158,7 +158,7 @@ permalink: "/fr/numbers-to-roman-numerals.html"
 
     <!-- Quick Reference -->
     <div class="roman-ref">
-      <div class="roman-ref-title">Quick Reference</div>
+      <div class="roman-ref-title">{{ t.ui.quickReference }}</div>
       <div class="roman-ref-grid">
         <div class="roman-ref-item"><span class="num">1</span><span class="arrow">&rarr;</span><span class="sym">I</span></div>
         <div class="roman-ref-item"><span class="num">5</span><span class="arrow">&rarr;</span><span class="sym">V</span></div>
@@ -250,7 +250,7 @@ permalink: "/fr/numbers-to-roman-numerals.html"
         if (!input) return;
         var num = parseInt(input, 10);
         if (isNaN(num) || num < 1 || num > 3999) {
-          showResult('Enter a number between 1 and 3999', 'error');
+          showResult('{{ t.ui.enterNumberBetween1And3999 }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Out of range');
           return;
         }
@@ -260,7 +260,7 @@ permalink: "/fr/numbers-to-roman-numerals.html"
 
       btnClear.addEventListener('click', function () {
         numberInput.value = '';
-        showResult('Result will appear here', 'empty');
+        showResult('{{ toolData.resultPlaceholder }}', 'empty');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 
@@ -269,7 +269,7 @@ permalink: "/fr/numbers-to-roman-numerals.html"
         if (text && !romanOutput.classList.contains('empty') && !romanOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });
@@ -284,13 +284,13 @@ permalink: "/fr/numbers-to-roman-numerals.html"
       numberInput.addEventListener('input', function () {
         var input = numberInput.value.trim();
         if (!input) {
-          showResult('Result will appear here', 'empty');
+          showResult('{{ toolData.resultPlaceholder }}', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }
         var num = parseInt(input, 10);
         if (isNaN(num) || num < 1 || num > 3999) {
-          showResult('Enter a number between 1 and 3999', 'error');
+          showResult('{{ t.ui.enterNumberBetween1And3999 }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Out of range');
           return;
         }

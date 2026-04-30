@@ -177,8 +177,8 @@ permalink: "/es/hex-to-rgba.html"
         var input = hexInput.value.trim().replace(/^#/, '').replace(/\s/g, '');
         if (input.length === 3) input = input[0]+input[0]+input[1]+input[1]+input[2]+input[2];
         if (input.length !== 6 || !/^[0-9A-Fa-f]{6}$/.test(input)) {
-          showResult('Invalid hex color', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid hex color');
+          showResult('{{ t.ui.invalidHexColor }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidHexColor }}');
           return;
         }
         var r = parseInt(input.substring(0, 2), 16);
@@ -212,7 +212,7 @@ permalink: "/es/hex-to-rgba.html"
         if (text && !rgbaOutput.classList.contains('empty') && !rgbaOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });

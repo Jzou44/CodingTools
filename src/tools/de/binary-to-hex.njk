@@ -40,20 +40,20 @@ permalink: "/de/binary-to-hex.html"
   <div style="margin-top: 24px;">
     <label class="section-label" for="hex-output">{{ t.ui.hexNumber }}</label>
     <div class="input-row">
-      <input type="text" class="text-input output-field" id="hex-output" readonly placeholder="Hex result">
+      <input type="text" class="text-input output-field" id="hex-output" readonly placeholder="{{ t.ui.hexResult }}">
     </div>
   </div>
 
   <div style="margin-top: 16px;">
     <label class="section-label" for="decimal-output">{{ t.ui.decimalNumber }}</label>
     <div class="input-row">
-      <input type="text" class="text-input output-field" id="decimal-output" readonly placeholder="Decimal result">
+      <input type="text" class="text-input output-field" id="decimal-output" readonly placeholder="{{ t.ui.decimalResult }}">
     </div>
   </div>
   <div style="margin-top: 16px;">
     <label class="section-label" for="octal-output">{{ t.ui.octalNumber }}</label>
     <div class="input-row">
-      <input type="text" class="text-input output-field" id="octal-output" readonly placeholder="Octal result">
+      <input type="text" class="text-input output-field" id="octal-output" readonly placeholder="{{ t.ui.octalResult }}">
     </div>
   </div>
   <div class="status-bar">
@@ -117,7 +117,7 @@ permalink: "/de/binary-to-hex.html"
       document.getElementById('octal-output').value = result.toString(8);
       ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
     } catch (e) {
-      ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid input');
+      ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');
     }
   }
   btnConvert.onclick = convert;

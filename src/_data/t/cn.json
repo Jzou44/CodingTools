@@ -90,6 +90,25 @@
     "invalidInput": "输入无效",
     "denominatorCannotBeZero": "分母不能为零",
     "beautifiedSuccessfully": "美化成功",
-    "beautificationFailed": "美化失败："
+    "beautificationFailed": "美化失败：",
+    "invalidBinaryInput": "无效的二进制输入",
+    "invalidHexadecimalInput": "无效的十六进制输入",
+    "invalidPercentInput": "无效的百分比输入",
+    "invalidRomanNumeral": "无效的罗马数字",
+    "enterNumberBetween1And3999": "请输入1到3999之间的数字",
+    "alphaMustBe0to100": "透明度必须为0-100",
+    "readingExif": "正在读取EXIF数据...",
+    "selectAtLeastOneCharType": "请至少选择一种字符类型",
+    "hexResult": "十六进制结果",
+    "decimalResult": "十进制结果",
+    "octalResult": "八进制结果",
+    "binaryResult": "二进制结果",
+    "enterDecimal": "输入十进制数...",
+    "copyToClipboard": "复制到剪贴板",
+    "comma": "逗号",
+    "colon": "冒号",
+    "binaryInput": "二进制输入",
+    "textOutput": "文本输出",
+    "fractionResult": "分数结果"
   }
 }

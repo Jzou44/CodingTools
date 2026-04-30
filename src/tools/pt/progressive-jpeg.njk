@@ -137,7 +137,7 @@ permalink: "/pt/progressive-jpeg.html"
               results.push({ name: name, blob: blob, url: url });
 
               var statusEl = item.querySelector('.file-status');
-              statusEl.innerHTML = '<span class="compression-rate">' + rate + '%</span> <a href="' + url + '" download="' + name + '" class="btn btn-ghost btn-sm">Download</a>';
+              statusEl.innerHTML = '<span class="compression-rate">' + rate + '%</span> <a href="' + url + '" download="' + name + '" class="btn btn-ghost btn-sm">{{ t.ui.download }}</a>';
 
               fileCount.textContent = results.length + ' files';
               btnDownloadAll.disabled = false;

@@ -170,7 +170,7 @@ permalink: "/pt/hex-to-decimal.html"
           {{ t.ui.copy }}
         </button>
       </div>
-      <div class="tool-output-value empty" id="decimal-output">Result will appear here</div>
+      <div class="tool-output-value empty" id="decimal-output">{{ toolData.resultPlaceholder }}</div>
     </div>
 
     <!-- Secondary Results -->
@@ -203,7 +203,7 @@ permalink: "/pt/hex-to-decimal.html"
 
     <!-- Quick Reference -->
     <div class="nc-ref">
-      <div class="nc-ref-title">Quick Reference</div>
+      <div class="nc-ref-title">{{ t.ui.quickReference }}</div>
       <div class="nc-ref-grid">
         <div class="nc-ref-item"><span class="dec">0</span><span class="arrow">&rarr;</span><span class="hex">0</span></div>
         <div class="nc-ref-item"><span class="dec">1</span><span class="arrow">&rarr;</span><span class="hex">1</span></div>
@@ -294,7 +294,7 @@ permalink: "/pt/hex-to-decimal.html"
       function convert() {
         var input = hexInput.value.replace(/\s/g, '');
         if (!input) {
-          showPrimary('Result will appear here', 'empty');
+          showPrimary('{{ toolData.resultPlaceholder }}', 'empty');
           showSecondary(octalOutput, octalCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
@@ -307,10 +307,10 @@ permalink: "/pt/hex-to-decimal.html"
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
         } catch (e) {
-          showPrimary('Invalid hexadecimal input', 'error');
+          showPrimary('{{ t.ui.invalidHexadecimalInput }}', 'error');
           showSecondary(octalOutput, octalCard, '—', 'empty');
           showSecondary(binaryOutput, binaryCard, '—', 'empty');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid hex input');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidHexadecimalInput }}');
         }
       }
 
@@ -318,7 +318,7 @@ permalink: "/pt/hex-to-decimal.html"
 
       btnClear.addEventListener('click', function () {
         hexInput.value = '';
-        showPrimary('Result will appear here', 'empty');
+        showPrimary('{{ toolData.resultPlaceholder }}', 'empty');
         showSecondary(octalOutput, octalCard, '—', 'empty');
         showSecondary(binaryOutput, binaryCard, '—', 'empty');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
@@ -329,7 +329,7 @@ permalink: "/pt/hex-to-decimal.html"
         if (text && !decimalOutput.classList.contains('empty') && !decimalOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });

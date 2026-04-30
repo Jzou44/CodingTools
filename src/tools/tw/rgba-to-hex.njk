@@ -193,8 +193,8 @@ permalink: "/tw/rgba-to-hex.html"
           return;
         }
         if (isNaN(a) || a < 0 || a > 100) {
-          showResult('Alpha must be 0–100', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Alpha must be between 0 and 100');
+          showResult('{{ t.ui.alphaMustBe0to100 }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.alphaMustBe0to100 }}');
           return;
         }
         var hex = '#' + toHex(r) + toHex(g) + toHex(b);

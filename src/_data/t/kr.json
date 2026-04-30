@@ -90,6 +90,25 @@
     "invalidInput": "잘못된 입력",
     "denominatorCannotBeZero": "분모는 0이 될 수 없습니다",
     "beautifiedSuccessfully": "포맷 완료",
-    "beautificationFailed": "포맷 실패: "
+    "beautificationFailed": "포맷 실패: ",
+    "invalidBinaryInput": "잘못된 이진 입력",
+    "invalidHexadecimalInput": "잘못된 16진수 입력",
+    "invalidPercentInput": "잘못된 백분율 입력",
+    "invalidRomanNumeral": "잘못된 로마 숫자",
+    "enterNumberBetween1And3999": "1에서 3999 사이의 숫자를 입력하세요",
+    "alphaMustBe0to100": "알파값은 0-100 사이여야 합니다",
+    "readingExif": "EXIF 데이터 읽는 중...",
+    "selectAtLeastOneCharType": "최소 한 가지 문자 유형을 선택하세요",
+    "hexResult": "16진수 결과",
+    "decimalResult": "10진수 결과",
+    "octalResult": "8진수 결과",
+    "binaryResult": "2진수 결과",
+    "enterDecimal": "10진수 입력...",
+    "copyToClipboard": "클립보드에 복사",
+    "comma": "쉼표",
+    "colon": "콜론",
+    "binaryInput": "이진 입력",
+    "textOutput": "텍스트 출력",
+    "fractionResult": "분수 결과"
   }
 }

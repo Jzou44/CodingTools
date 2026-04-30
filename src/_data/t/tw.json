@@ -90,6 +90,25 @@
     "invalidInput": "輸入無效",
     "denominatorCannotBeZero": "分母不能為零",
     "beautifiedSuccessfully": "美化成功",
-    "beautificationFailed": "美化失敗："
+    "beautificationFailed": "美化失敗：",
+    "invalidBinaryInput": "無效的二進位輸入",
+    "invalidHexadecimalInput": "無效的十六進位輸入",
+    "invalidPercentInput": "無效的百分比輸入",
+    "invalidRomanNumeral": "無效的羅馬數字",
+    "enterNumberBetween1And3999": "請輸入1到3999之間的數字",
+    "alphaMustBe0to100": "透明度必須為0-100",
+    "readingExif": "正在讀取EXIF資料...",
+    "selectAtLeastOneCharType": "請至少選擇一種字元類型",
+    "hexResult": "十六進位結果",
+    "decimalResult": "十進位結果",
+    "octalResult": "八進位結果",
+    "binaryResult": "二進位結果",
+    "enterDecimal": "輸入十進位數...",
+    "copyToClipboard": "複製到剪貼簿",
+    "comma": "逗號",
+    "colon": "冒號",
+    "binaryInput": "二進位輸入",
+    "textOutput": "文字輸出",
+    "fractionResult": "分數結果"
   }
 }

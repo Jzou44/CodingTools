@@ -90,6 +90,25 @@
     "invalidInput": "Entrée invalide",
     "denominatorCannotBeZero": "Le dénominateur ne peut pas être zéro",
     "beautifiedSuccessfully": "Embellissement réussi",
-    "beautificationFailed": "Échec de l'embellissement : "
+    "beautificationFailed": "Échec de l'embellissement : ",
+    "invalidBinaryInput": "Entrée binaire invalide",
+    "invalidHexadecimalInput": "Entrée hexadécimale invalide",
+    "invalidPercentInput": "Entrée de pourcentage invalide",
+    "invalidRomanNumeral": "Chiffre romain invalide",
+    "enterNumberBetween1And3999": "Entrez un nombre entre 1 et 3999",
+    "alphaMustBe0to100": "L'alpha doit être 0-100",
+    "readingExif": "Lecture des données EXIF...",
+    "selectAtLeastOneCharType": "Sélectionnez au moins un type de caractère",
+    "hexResult": "Résultat hexadécimal",
+    "decimalResult": "Résultat décimal",
+    "octalResult": "Résultal octal",
+    "binaryResult": "Résultat binaire",
+    "enterDecimal": "Entrez un décimal...",
+    "copyToClipboard": "Copier dans le presse-papiers",
+    "comma": "Virgule",
+    "colon": "Deux-points",
+    "binaryInput": "Entrée binaire",
+    "textOutput": "Sortie texte",
+    "fractionResult": "Résultat fraction"
   }
 }

@@ -115,7 +115,7 @@ permalink: "/de/compress-png.html"
         var item = document.createElement('div');
         item.className = 'file-item';
         item.id = id;
-        item.innerHTML = '<span class="file-name">' + file.name + '</span><span class="file-status">Processing...</span>';
+        item.innerHTML = '<span class="file-name">' + file.name + '</span><span class="file-status">{{ t.ui.processing }}</span>';
         fileList.appendChild(item);
 
         var reader = new FileReader();
@@ -137,7 +137,7 @@ permalink: "/de/compress-png.html"
               results.push({ name: name, blob: blob, url: url });
 
               var statusEl = item.querySelector('.file-status');
-              statusEl.innerHTML = '<span class="compression-rate">' + rate + '%</span> <a href="' + url + '" download="' + name + '" class="btn btn-ghost btn-sm">Download</a>';
+              statusEl.innerHTML = '<span class="compression-rate">' + rate + '%</span> <a href="' + url + '" download="' + name + '" class="btn btn-ghost btn-sm">{{ t.ui.download }}</a>';
 
               fileCount.textContent = results.length + ' files';
               btnDownloadAll.disabled = false;

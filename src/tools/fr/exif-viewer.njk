@@ -101,7 +101,7 @@ permalink: "/fr/exif-viewer.html"
       });
 
       function processFile(file) {
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', 'Reading EXIF data...');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '{{ t.ui.readingExif }}');
         var reader = new FileReader();
         reader.onload = function (e) {
           var buffer = new Uint8Array(e.target.result);

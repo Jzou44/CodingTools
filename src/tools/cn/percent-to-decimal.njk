@@ -77,7 +77,7 @@ permalink: "/cn/percent-to-decimal.html"
     </div>
 
     <div class="pct-dec-ref">
-      <div class="pct-dec-ref-title">Quick Reference</div>
+      <div class="pct-dec-ref-title">{{ t.ui.quickReference }}</div>
       <div class="pct-dec-ref-grid">
         <div class="pct-dec-ref-item"><span class="pct">1%</span><span class="arrow">&rarr;</span><span class="dec">0.01</span></div>
         <div class="pct-dec-ref-item"><span class="pct">10%</span><span class="arrow">&rarr;</span><span class="dec">0.1</span></div>
@@ -152,8 +152,8 @@ permalink: "/cn/percent-to-decimal.html"
           showResult(result.toString(10), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
         } catch (e) {
-          showResult('Invalid percent input', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid percent input');
+          showResult('{{ t.ui.invalidPercentInput }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidPercentInput }}');
         }
       }
 
@@ -170,7 +170,7 @@ permalink: "/cn/percent-to-decimal.html"
         if (text && !decimalOutput.classList.contains('empty') && !decimalOutput.classList.contains('error')) {
           navigator.clipboard.writeText(text).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });
@@ -193,8 +193,8 @@ permalink: "/cn/percent-to-decimal.html"
           showResult(result.toString(10), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
         } catch (e) {
-          showResult('Invalid percent input', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid input');
+          showResult('{{ t.ui.invalidPercentInput }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');
         }
       });
 

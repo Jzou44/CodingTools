@@ -192,7 +192,7 @@ permalink: "/tw/decimal-to-fraction.html"
     <!-- Input Card -->
     <div class="tool-input-card" style="--tool-accent: var(--secondary)">
       <div class="tool-label">{{ t.ui.decimalNumber }}</div>
-      <input type="text" class="tool-input-field" id="decimal-input" placeholder="Enter a decimal..." spellcheck="false" autocomplete="off" autofocus>
+      <input type="text" class="tool-input-field" id="decimal-input" placeholder="{{ t.ui.enterDecimal }}" spellcheck="false" autocomplete="off" autofocus>
       <div class="tool-hint">Examples: <code>2.75</code>, <code>0.333</code>, <code>3.125</code></div>
     </div>
 
@@ -206,14 +206,14 @@ permalink: "/tw/decimal-to-fraction.html"
     <!-- Output Card -->
     <div class="tool-output-card" style="--tool-accent: var(--secondary)" id="output-card">
       <div class="tool-output-label">
-        <span>Fraction Result</span>
-        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="Copy to clipboard">
+        <span>{{ t.ui.fractionResult }}</span>
+        <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copyToClipboard }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
         </button>
       </div>
       <div class="dec-result-visual empty" id="result-visual">
-        <span class="dec-result-empty" id="result-text">Result will appear here</span>
+        <span class="dec-result-empty" id="result-text">{{ toolData.resultPlaceholder }}</span>
       </div>
     </div>
 
@@ -235,7 +235,7 @@ permalink: "/tw/decimal-to-fraction.html"
 
     <!-- Quick Reference -->
     <div class="dec-ref">
-      <div class="dec-ref-title">Quick Reference</div>
+      <div class="dec-ref-title">{{ t.ui.quickReference }}</div>
       <div class="dec-ref-grid">
         <div class="dec-ref-item"><span class="dec">0.5</span><span class="eq">=</span><span class="frac">1/2</span></div>
         <div class="dec-ref-item"><span class="dec">0.25</span><span class="eq">=</span><span class="frac">1/4</span></div>
@@ -311,7 +311,7 @@ permalink: "/tw/decimal-to-fraction.html"
 
       function showEmpty(text) {
         resultVisual.className = 'dec-result-visual empty';
-        resultVisual.innerHTML = '<span class="dec-result-empty">' + (text || 'Result will appear here') + '</span>';
+        resultVisual.innerHTML = '<span class="dec-result-empty">' + (text || '{{ toolData.resultPlaceholder }}') + '</span>';
         outputCard.classList.remove('has-result');
         lastFraction = '';
       }
@@ -379,8 +379,8 @@ permalink: "/tw/decimal-to-fraction.html"
 
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
         } catch (e) {
-          showError('Invalid decimal input');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid decimal input');
+          showError('{{ t.ui.invalidDecimalInput }}');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');
         }
       }
 
@@ -388,7 +388,7 @@ permalink: "/tw/decimal-to-fraction.html"
 
       btnClear.addEventListener('click', function () {
         decimalInput.value = '';
-        showEmpty('Result will appear here');
+        showEmpty('{{ toolData.resultPlaceholder }}');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 
@@ -396,7 +396,7 @@ permalink: "/tw/decimal-to-fraction.html"
         if (lastFraction) {
           navigator.clipboard.writeText(lastFraction).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });
@@ -411,7 +411,7 @@ permalink: "/tw/decimal-to-fraction.html"
       decimalInput.addEventListener('input', function () {
         var input = decimalInput.value.trim();
         if (!input) {
-          showEmpty('Result will appear here');
+          showEmpty('{{ toolData.resultPlaceholder }}');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }

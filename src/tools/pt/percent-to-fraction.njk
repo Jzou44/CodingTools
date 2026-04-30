@@ -55,7 +55,7 @@ permalink: "/pt/percent-to-fraction.html"
 
     <div class="tool-output-card" style="--tool-accent: var(--secondary)" id="output-card">
       <div class="tool-output-label">
-        <span>Fraction</span>
+        <span>{{ t.ui.fraction }}</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
@@ -81,7 +81,7 @@ permalink: "/pt/percent-to-fraction.html"
     </div>
 
     <div class="pct-frac-ref">
-      <div class="pct-frac-ref-title">Quick Reference</div>
+      <div class="pct-frac-ref-title">{{ t.ui.quickReference }}</div>
       <div class="pct-frac-ref-grid">
         <div class="pct-frac-ref-item"><span class="pct">10%</span><span class="arrow">&rarr;</span><span class="frac">1/10</span></div>
         <div class="pct-frac-ref-item"><span class="pct">20%</span><span class="arrow">&rarr;</span><span class="frac">1/5</span></div>
@@ -197,8 +197,8 @@ permalink: "/pt/percent-to-fraction.html"
           showResult(html, 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
         } catch (e) {
-          showResult('Invalid percent input', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid percent input');
+          showResult('{{ t.ui.invalidPercentInput }}', 'error');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidPercentInput }}');
         }
       }
 
@@ -215,7 +215,7 @@ permalink: "/pt/percent-to-fraction.html"
         if (lastFraction) {
           navigator.clipboard.writeText(lastFraction).then(function () {
             var orig = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!';
+            btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
             setTimeout(function () { btnCopy.innerHTML = orig; btnCopy.classList.remove('copied'); }, 1500);
           });

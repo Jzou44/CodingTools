@@ -203,7 +203,7 @@ permalink: "/cn/exif-viewer.html"
       });
 
       function processFile(file) {
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', 'Reading EXIF data...');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '{{ t.ui.readingExif }}');
         fileInfo.innerHTML = '<strong>' + file.name + '</strong> (' + (file.size / 1024).toFixed(1) + ' KB)';
         fileInfo.style.display = 'block';
 

@@ -90,6 +90,25 @@
     "invalidInput": "Invalid input",
     "denominatorCannotBeZero": "Denominator cannot be zero",
     "beautifiedSuccessfully": "Beautified successfully",
-    "beautificationFailed": "Beautification failed: "
+    "beautificationFailed": "Beautification failed: ",
+    "invalidBinaryInput": "Invalid binary input",
+    "invalidHexadecimalInput": "Invalid hexadecimal input",
+    "invalidPercentInput": "Invalid percent input",
+    "invalidRomanNumeral": "Invalid Roman numeral",
+    "enterNumberBetween1And3999": "Enter a number between 1 and 3999",
+    "alphaMustBe0to100": "Alpha must be 0-100",
+    "readingExif": "Reading EXIF data...",
+    "selectAtLeastOneCharType": "Select at least one character type",
+    "hexResult": "Hex result",
+    "decimalResult": "Decimal result",
+    "octalResult": "Octal result",
+    "binaryResult": "Binary result",
+    "enterDecimal": "Enter a decimal...",
+    "copyToClipboard": "Copy to clipboard",
+    "comma": "Comma",
+    "colon": "Colon",
+    "binaryInput": "Binary Input",
+    "textOutput": "Text Output",
+    "fractionResult": "Fraction Result"
   }
 }

@@ -113,7 +113,7 @@ permalink: "/cn/image-to-base64.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'File too large (max 2MB)');
           return;
         }
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', 'Processing...');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '{{ t.ui.processing }}');
         var reader = new FileReader();
         reader.onload = function (e) {
           var base64 = e.target.result;
