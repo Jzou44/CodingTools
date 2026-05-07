@@ -2,6 +2,8 @@ module.exports = function (eleventyConfig) {
   // Copy static assets to output
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({ "src/assets/favicons/favicon.ico": "favicon.ico" });
   eleventyConfig.addWatchTarget("src/_data/");
 
   eleventyConfig.addTransform("removeBrokenCdnScripts", function (content, outputPath) {
