@@ -335,6 +335,12 @@
     "description": "Minify SQL by removing whitespace, comments, and unnecessary formatting.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
+  "photo2pixel": {
+    "title": "Photo2Pixel",
+    "category": "image-utilities",
+    "description": "Convert photos to 8-bit pixel art with adjustable style and pixel size.",
+    "icon": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 7h.01\"></path><path d=\"M11 7h.01\"></path><path d=\"M15 7h.01\"></path><path d=\"M7 11h.01\"></path><path d=\"M11 11h.01\"></path><path d=\"M15 11h.01\"></path><path d=\"M7 15h.01\"></path><path d=\"M11 15h.01\"></path><path d=\"M15 15h.01\"></path>"
+  },
   "compress-png": {
     "title": "Compress PNG",
     "category": "image-utilities",

@@ -1,0 +1,585 @@
+{% extends "tool-layout.njk" %}
+
+{% block head_extra %}
+  <link rel="stylesheet" href="/css/tool.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/onnxruntime-web/1.16.3/ort.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+{% block tool_content %}
+  <style>
+    .p2p-shell { display: grid; gap: 16px; }
+    .p2p-dropzone { min-height: 170px; }
+    .p2p-workspace {
+      display: block;
+    }
+    .p2p-preview-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      min-width: 0;
+    }
+    .p2p-preview-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .p2p-preview-frame {
+      position: relative;
+      height: clamp(300px, 48vw, 560px);
+      min-height: 300px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      perspective: 1200px;
+    }
+    .p2p-preview-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.28s ease;
+    }
+    .p2p-preview-frame.is-original .p2p-preview-inner {
+      transform: rotateY(180deg);
+    }
+    .p2p-preview-face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      backface-visibility: hidden;
+    }
+    .p2p-preview-face-source {
+      transform: rotateY(180deg);
+    }
+    .p2p-preview-frame img,
+    .p2p-preview-frame canvas {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      image-rendering: pixelated;
+    }
+    .p2p-flip-toggle[hidden] { display: none; }
+    .p2p-placeholder {
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .p2p-options {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .p2p-option-group + .p2p-option-group { margin-top: 14px; }
+    .p2p-option-heading {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+    .p2p-segmented {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .p2p-segmented input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .p2p-segmented label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .p2p-segmented input:checked + label {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .p2p-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .p2p-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .p2p-meta {
+      color: var(--text-muted);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+    }
+    .p2p-demo-figure {
+      margin: 22px 0 28px;
+    }
+    .p2p-demo-figure img {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--code-bg);
+      image-rendering: pixelated;
+    }
+    .p2p-reference-link {
+      font-weight: 700;
+    }
+    @media (max-width: 820px) {
+      .p2p-preview-frame {
+        height: clamp(240px, 72vw, 420px);
+        min-height: 240px;
+      }
+    }
+  </style>
+
+  <div class="p2p-shell">
+    <div class="dropzone-area p2p-dropzone" id="dropzone">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M7 17h10"></path><path d="M7 13h10"></path><path d="M9 9h6"></path></svg>
+      <p>{{ toolData.dropzoneMessage or "Click or drag an image here" }}</p>
+      <span class="dropzone-hint">{{ toolData.dropzoneHint or "PNG, JPEG, WebP · Max 10MB" }}</span>
+      <input type="file" id="file-input" accept="image/*" hidden>
+    </div>
+
+    <div class="p2p-options">
+      <div class="p2p-option-group">
+        <span class="p2p-option-heading">{{ toolData.styleMode or "Style Mode" }}</span>
+        <div class="p2p-segmented" id="style-options">
+          <input type="radio" name="style_mode" id="style-mode-edge" value="Enhance_Edge" checked>
+          <label for="style-mode-edge">{{ toolData.enhanceEdge or "Enhance Edge" }}</label>
+          <input type="radio" name="style_mode" id="style-mode-isolate" value="Isolate_Pixel">
+          <label for="style-mode-isolate">{{ toolData.isolatePixel or "Isolate Pixel" }}</label>
+          <input type="radio" name="style_mode" id="style-mode-raw" value="Raw_Pixel">
+          <label for="style-mode-raw">{{ toolData.rawPixel or "Raw Pixel" }}</label>
+        </div>
+      </div>
+
+      <div class="p2p-option-group">
+        <span class="p2p-option-heading">{{ toolData.pixelSize or "Pixel Size" }}</span>
+        <div class="p2p-segmented" id="size-options">
+          <input type="radio" name="pixel_size" id="pixel-size-xs" value="Extra_Small">
+          <label for="pixel-size-xs">{{ toolData.extraSmall or "Extra Small" }}</label>
+          <input type="radio" name="pixel_size" id="pixel-size-sm" value="Small" checked>
+          <label for="pixel-size-sm">{{ toolData.small or "Small" }}</label>
+          <input type="radio" name="pixel_size" id="pixel-size-md" value="Medium">
+          <label for="pixel-size-md">{{ toolData.medium or "Medium" }}</label>
+          <input type="radio" name="pixel_size" id="pixel-size-lg" value="Large">
+          <label for="pixel-size-lg">{{ toolData.large or "Large" }}</label>
+          <input type="radio" name="pixel_size" id="pixel-size-xl" value="Extra_Large">
+          <label for="pixel-size-xl">{{ toolData.extraLarge or "Extra Large" }}</label>
+        </div>
+      </div>
+
+      <div class="p2p-option-group" id="edge-density-form">
+        <span class="p2p-option-heading">{{ toolData.edgeDensity or "Edge Density" }}</span>
+        <div class="p2p-segmented">
+          <input type="radio" name="edge_density" id="edge-density-sm" value="Small">
+          <label for="edge-density-sm">{{ toolData.small or "Small" }}</label>
+          <input type="radio" name="edge_density" id="edge-density-md" value="Medium">
+          <label for="edge-density-md">{{ toolData.medium or "Medium" }}</label>
+          <input type="radio" name="edge_density" id="edge-density-lg" value="Large" checked>
+          <label for="edge-density-lg">{{ toolData.large or "Large" }}</label>
+          <input type="radio" name="edge_density" id="edge-density-xl" value="Extra_Large">
+          <label for="edge-density-xl">{{ toolData.extraLarge or "Extra Large" }}</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="p2p-toolbar">
+      <div class="status-message idle" id="status-message">
+        <span class="status-dot" id="status-dot" style="display:none;"></span>
+        <span id="status-text">{{ toolData.readyStatus or "Ready" }}</span>
+      </div>
+      <div class="p2p-toolbar-actions">
+        <span class="p2p-meta" id="image-meta">0 x 0</span>
+        <button class="btn btn-ghost" id="btn-clear" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          {{ t.ui.clear or "Clear" }}
+        </button>
+        <button class="btn btn-primary" id="btn-download" type="button" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          {{ t.ui.download or "Download" }}
+        </button>
+      </div>
+    </div>
+
+    <div class="p2p-workspace">
+      <div class="p2p-preview-card">
+        <div class="p2p-preview-title">
+          <span id="preview-title">{{ toolData.resultPreview or "Pixel Art" }}</span>
+          <button
+            class="btn btn-ghost p2p-flip-toggle"
+            id="btn-flip"
+            type="button"
+            data-original-label="{{ toolData.originalPreview or 'Original' }}"
+            data-result-label="{{ toolData.resultPreview or 'Pixel Art' }}"
+            data-view-original="{{ toolData.viewOriginal or 'View original' }}"
+            data-view-result="{{ toolData.viewResult or 'View pixel art' }}"
+            hidden>
+            {{ toolData.viewOriginal or "View original" }}
+          </button>
+        </div>
+        <div class="p2p-preview-frame" id="preview-frame">
+          <div class="p2p-preview-inner">
+            <div class="p2p-preview-face p2p-preview-face-result">
+              <div class="p2p-placeholder" id="result-placeholder">{{ toolData.resultPlaceholder or "Result will appear here" }}</div>
+              <canvas id="result-canvas" hidden></canvas>
+            </div>
+            <div class="p2p-preview-face p2p-preview-face-source">
+              <div class="p2p-placeholder" id="source-placeholder">{{ toolData.sourcePlaceholder or "Upload an image" }}</div>
+              <img id="source-preview" alt="" hidden>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="source-canvas" hidden></canvas>
+  </div>
+{% endblock %}
+
+{% block description %}
+  <h2>{{ toolData.descTitle or "Photo2Pixel" }}</h2>
+  <p>
+    <a class="p2p-reference-link" href="https://github.com/Jzou44/photo2pixel" target="_blank" rel="noopener noreferrer">https://github.com/Jzou44/photo2pixel</a>
+  </p>
+  {% if toolData.descParas %}
+    {% for para in toolData.descParas %}
+    <p>{{ para | safe }}</p>
+    {% endfor %}
+  {% else %}
+    <p>Photo2Pixel converts photos into pixel art in the browser using the same ONNX model workflow as the reference project. Images stay local and are processed with WebAssembly.</p>
+  {% endif %}
+  <figure class="p2p-demo-figure">
+    <img src="/assets/img/photo2pixel-demo.png" alt="Photo2Pixel 8-bit mountain pixel art demo" loading="lazy">
+  </figure>
+
+  <h3>{{ toolData.howToUse or "How to use" }}</h3>
+  <ol class="steps-list">
+    {% if toolData.steps %}
+      {% for step in toolData.steps %}
+      <li>{{ step | safe }}</li>
+      {% endfor %}
+    {% else %}
+      <li>Upload a PNG, JPEG, or WebP image.</li>
+      <li>Choose the style, pixel size, and edge density options.</li>
+      <li>Download the generated pixel art as a PNG.</li>
+    {% endif %}
+  </ol>
+
+  <h3>{{ toolData.whatIs or "Pixel art conversion" }}</h3>
+  {% if toolData.whatIsParas %}
+    {% for para in toolData.whatIsParas %}
+    <p>{{ para | safe }}</p>
+    {% endfor %}
+  {% else %}
+    <p>The converter downsamples visual regions into blocky color areas and can enhance boundaries so the result reads like hand-tuned 8-bit art.</p>
+  {% endif %}
+{% endblock %}
+
+{% block tool_script %}
+  <script>
+    (function () {
+      'use strict';
+
+      var dropzone = document.getElementById('dropzone');
+      var fileInput = document.getElementById('file-input');
+      var sourcePreview = document.getElementById('source-preview');
+      var sourcePlaceholder = document.getElementById('source-placeholder');
+      var resultPlaceholder = document.getElementById('result-placeholder');
+      var sourceCanvas = document.getElementById('source-canvas');
+      var sourceCtx = sourceCanvas.getContext('2d');
+      var resultCanvas = document.getElementById('result-canvas');
+      var resultCtx = resultCanvas.getContext('2d');
+      var previewFrame = document.getElementById('preview-frame');
+      var previewTitle = document.getElementById('preview-title');
+      var btnFlip = document.getElementById('btn-flip');
+      var btnClear = document.getElementById('btn-clear');
+      var btnDownload = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot = document.getElementById('status-dot');
+      var statusText = document.getElementById('status-text');
+      var imageMeta = document.getElementById('image-meta');
+      var edgeDensityForm = document.getElementById('edge-density-form');
+
+      var MAX_SIZE = 10 * 1024 * 1024;
+      var MAX_AREA = 2000 * 1100;
+      var currentImageSrc = '';
+      var resultUrl = '';
+      var showingOriginal = false;
+      var runId = 0;
+
+      if (window.ort) {
+        ort.env.wasm.wasmPaths = 'https://cdnjs.cloudflare.com/ajax/libs/onnxruntime-web/1.16.3/';
+      }
+
+      var sessionPromise = window.ort
+        ? ort.InferenceSession.create('/assets/onnx/photo2pixel.onnx', { executionProviders: ['wasm'] })
+        : Promise.reject(new Error('ONNX Runtime failed to load'));
+
+      function setStatus(type, message) {
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, type, message);
+      }
+
+      function selectedValue(name) {
+        var selected = document.querySelector('input[name="' + name + '"]:checked');
+        return selected ? selected.value : '';
+      }
+
+      function pixelSizeValue(pixelSize) {
+        if (pixelSize === 'Extra_Small') return 6;
+        if (pixelSize === 'Small') return 10;
+        if (pixelSize === 'Medium') return 15;
+        if (pixelSize === 'Large') return 20;
+        if (pixelSize === 'Extra_Large') return 28;
+        return 10;
+      }
+
+      function edgeThresholdValue(edgeDensity) {
+        if (edgeDensity === 'Small') return 210;
+        if (edgeDensity === 'Medium') return 168;
+        if (edgeDensity === 'Large') return 128;
+        if (edgeDensity === 'Extra_Large') return 80;
+        return 128;
+      }
+
+      function getOptions() {
+        var styleMode = selectedValue('style_mode') || 'Enhance_Edge';
+        edgeDensityForm.style.display = styleMode === 'Enhance_Edge' ? '' : 'none';
+        return {
+          styleMode: styleMode,
+          pixelSize: selectedValue('pixel_size') || 'Small',
+          edgeDensity: selectedValue('edge_density') || 'Large'
+        };
+      }
+
+      function updateFlipView(showOriginal) {
+        showingOriginal = !!showOriginal;
+        previewFrame.classList.toggle('is-original', showingOriginal);
+        previewTitle.textContent = showingOriginal ? btnFlip.dataset.originalLabel : btnFlip.dataset.resultLabel;
+        btnFlip.textContent = showingOriginal ? btnFlip.dataset.viewResult : btnFlip.dataset.viewOriginal;
+      }
+
+      function imageDataToRgbTensor(imageData, width, height) {
+        var rgba = imageData.data;
+        var channelSize = width * height;
+        var rgb = new Float32Array(3 * channelSize);
+        for (var i = 0; i < channelSize; i++) {
+          var rgbaIndex = i * 4;
+          rgb[i] = rgba[rgbaIndex];
+          rgb[channelSize + i] = rgba[rgbaIndex + 1];
+          rgb[2 * channelSize + i] = rgba[rgbaIndex + 2];
+        }
+        return new ort.Tensor('float32', rgb, [1, 3, height, width]);
+      }
+
+      function outputTensorToImageData(outputTensor, styleMode, pixelSize) {
+        var dims = outputTensor.dims;
+        var height = dims[2];
+        var width = dims[3];
+        var channelSize = width * height;
+        var outputRgb = outputTensor.data;
+        var outputRgba = new Uint8ClampedArray(channelSize * 4);
+
+        for (var i = 0; i < channelSize; i++) {
+          outputRgba[i * 4] = outputRgb[i];
+          outputRgba[i * 4 + 1] = outputRgb[channelSize + i];
+          outputRgba[i * 4 + 2] = outputRgb[2 * channelSize + i];
+          outputRgba[i * 4 + 3] = 255;
+        }
+
+        if (styleMode === 'Isolate_Pixel') {
+          for (var y = pixelSize - 1; y < height; y += pixelSize) {
+            for (var x = 0; x < width; x++) {
+              var rowIdx = (y * width + x) * 4;
+              outputRgba[rowIdx] = 22;
+              outputRgba[rowIdx + 1] = 22;
+              outputRgba[rowIdx + 2] = 22;
+            }
+          }
+          for (var gx = pixelSize - 1; gx < width; gx += pixelSize) {
+            for (var gy = 0; gy < height; gy++) {
+              var colIdx = (gy * width + gx) * 4;
+              outputRgba[colIdx] = 22;
+              outputRgba[colIdx + 1] = 22;
+              outputRgba[colIdx + 2] = 22;
+            }
+          }
+        }
+
+        return new ImageData(outputRgba, width, height);
+      }
+
+      function renderCurrentImage() {
+        if (!currentImageSrc) return;
+        var thisRun = ++runId;
+        var options = getOptions();
+        setStatus('idle', 'Processing image...');
+        btnDownload.disabled = true;
+
+        var img = new Image();
+        img.onload = function () {
+          var area = img.width * img.height;
+          var width = img.width;
+          var height = img.height;
+          if (area > MAX_AREA) {
+            var scale = Math.sqrt(MAX_AREA / area);
+            width = Math.max(1, Math.floor(width * scale));
+            height = Math.max(1, Math.floor(height * scale));
+          }
+
+          sourceCanvas.width = width;
+          sourceCanvas.height = height;
+          sourceCtx.clearRect(0, 0, width, height);
+          sourceCtx.drawImage(img, 0, 0, width, height);
+
+          var imageData = sourceCtx.getImageData(0, 0, width, height);
+          var pixelSize = pixelSizeValue(options.pixelSize);
+          var kernelSize = options.styleMode === 'Enhance_Edge' ? 10 : 1;
+          var edgeThreshold = options.styleMode === 'Enhance_Edge' ? edgeThresholdValue(options.edgeDensity) : 1000000;
+
+          sessionPromise.then(function (session) {
+            return session.run({
+              rgb: imageDataToRgbTensor(imageData, width, height),
+              param_kernel_size: new ort.Tensor('int64', BigInt64Array.from([BigInt(kernelSize)]), []),
+              param_pixel_size: new ort.Tensor('int64', BigInt64Array.from([BigInt(pixelSize)]), []),
+              param_edge_thresh: new ort.Tensor('float32', Float32Array.from([edgeThreshold]), [])
+            });
+          }).then(function (results) {
+            if (thisRun !== runId) return;
+            var resultImageData = outputTensorToImageData(results.output, options.styleMode, pixelSize);
+            resultCanvas.width = resultImageData.width;
+            resultCanvas.height = resultImageData.height;
+            resultCtx.putImageData(resultImageData, 0, 0);
+            resultCanvas.hidden = false;
+            resultPlaceholder.hidden = true;
+            imageMeta.textContent = resultImageData.width + ' x ' + resultImageData.height;
+
+            resultCanvas.toBlob(function (blob) {
+              if (resultUrl) URL.revokeObjectURL(resultUrl);
+              resultUrl = URL.createObjectURL(blob);
+              btnDownload.disabled = false;
+              setStatus('valid', 'Pixel art generated');
+            }, 'image/png');
+          }).catch(function (error) {
+            setStatus('invalid', error.message || 'Conversion failed');
+          });
+        };
+        img.onerror = function () {
+          setStatus('invalid', 'Could not read image');
+        };
+        img.src = currentImageSrc;
+      }
+
+      function processFile(file) {
+        if (!file || !file.type.match(/^image\//)) {
+          setStatus('invalid', 'Select an image file');
+          return;
+        }
+        if (file.size > MAX_SIZE) {
+          setStatus('invalid', 'File too large (max 10MB)');
+          return;
+        }
+
+        var reader = new FileReader();
+        reader.onload = function (event) {
+          currentImageSrc = event.target.result;
+          sourcePreview.src = currentImageSrc;
+          sourcePreview.hidden = false;
+          sourcePlaceholder.hidden = true;
+          btnFlip.hidden = false;
+          updateFlipView(false);
+          renderCurrentImage();
+        };
+        reader.readAsDataURL(file);
+      }
+
+      dropzone.addEventListener('click', function () { fileInput.click(); });
+      dropzone.addEventListener('dragover', function (event) {
+        event.preventDefault();
+        dropzone.classList.add('dragover');
+      });
+      dropzone.addEventListener('dragleave', function () {
+        dropzone.classList.remove('dragover');
+      });
+      dropzone.addEventListener('drop', function (event) {
+        event.preventDefault();
+        dropzone.classList.remove('dragover');
+        processFile(event.dataTransfer.files[0]);
+      });
+      fileInput.addEventListener('change', function () {
+        processFile(this.files[0]);
+        this.value = '';
+      });
+
+      document.querySelectorAll('input[name="style_mode"], input[name="pixel_size"], input[name="edge_density"]').forEach(function (input) {
+        input.addEventListener('change', renderCurrentImage);
+      });
+
+      btnClear.addEventListener('click', function () {
+        currentImageSrc = '';
+        sourcePreview.removeAttribute('src');
+        sourcePreview.hidden = true;
+        sourcePlaceholder.hidden = false;
+        btnFlip.hidden = true;
+        updateFlipView(false);
+        resultCanvas.hidden = true;
+        resultPlaceholder.hidden = false;
+        resultCtx.clearRect(0, 0, resultCanvas.width, resultCanvas.height);
+        if (resultUrl) URL.revokeObjectURL(resultUrl);
+        resultUrl = '';
+        imageMeta.textContent = '0 x 0';
+        btnDownload.disabled = true;
+        setStatus('idle', 'Ready');
+      });
+
+      btnFlip.addEventListener('click', function () {
+        updateFlipView(!showingOriginal);
+      });
+
+      btnDownload.addEventListener('click', function () {
+        if (!resultUrl) return;
+        var link = document.createElement('a');
+        link.href = resultUrl;
+        link.download = 'photo2pixel.png';
+        link.click();
+      });
+
+      getOptions();
+      sessionPromise.then(function () {
+        if (!currentImageSrc) setStatus('idle', 'Ready');
+      }).catch(function (error) {
+        setStatus('invalid', error.message || 'Model failed to load');
+      });
+    })();
+  </script>
+{% endblock %}
