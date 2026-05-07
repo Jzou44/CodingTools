@@ -53,10 +53,13 @@ jobs:
             exit 1
           fi
 
-      - name: Start SSH agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+      - name: Install SSH key
+        env:
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${VPS_SSH_KEY}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
 
       - name: Trust VPS host key
         env:
@@ -75,7 +78,7 @@ jobs:
           WEB_ROOT: ${{ secrets.WEB_ROOT || '/var/www/coding-tools' }}
           DEPLOY_REF: ${{ github.sha }}
         run: |
-          ssh -p "${VPS_PORT}" "${VPS_USER}@${VPS_HOST}" \
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -p "${VPS_PORT}" "${VPS_USER}@${VPS_HOST}" \
             "DEPLOY_REF='${DEPLOY_REF}' VPS_PATH='${VPS_PATH}' WEB_ROOT='${WEB_ROOT}' bash -se" <<'REMOTE'
           set -euo pipefail
 
