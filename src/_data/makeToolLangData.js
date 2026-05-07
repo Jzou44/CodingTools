@@ -3,7 +3,8 @@ const toolDataAll = require("./toolData");
 
 function dataForTool(data) {
   const toolId = data.toolId || data.activeTool || (data.page && data.page.fileSlug);
-  const lookup = data.toolDataLookup || {};
+  const lang = data.lang || "en";
+  const lookup = toolDataAll[lang] || toolDataAll.en || {};
   return toolId ? (lookup[toolId] || {}) : {};
 }
 

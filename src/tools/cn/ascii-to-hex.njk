@@ -144,7 +144,7 @@ permalink: "/cn/ascii-to-hex.html"
     <!-- Input Card -->
     <div class="pane-card pane-card--input">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--accent"></span>ASCII Input</span>
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>ASCII 输入</span>
       </div>
       <textarea id="code1" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
     </div>
@@ -185,7 +185,7 @@ permalink: "/cn/ascii-to-hex.html"
     <!-- Output Card -->
     <div class="pane-card pane-card--output">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Hex Output</span>
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>十六进制输出</span>
       </div>
       <textarea id="code2" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
     </div>
@@ -272,7 +272,7 @@ permalink: "/cn/ascii-to-hex.html"
             hexValues.push(hex);
           }
           editor2.setValue(hexValues.join(delimiter));
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length, '{{ t.ui.byte }}', '{{ t.ui.bytes }}'));
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }} \u2014 ' + ToolCommon.pluralise(input.length, '{{ t.ui.byte }}', '{{ t.ui.bytes }}'));
           updateCounts();
         } catch (e) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.conversionFailed }}' + e.message);

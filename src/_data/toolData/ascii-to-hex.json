@@ -54,10 +54,10 @@
       "ASCII 转十六进制会将每个字符映射为对应的十六进制字节值。例如，'H' = 十六进制 48。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "支持任意文本。可选择的分隔符包括：无、空格、0x、0X、\\x、\\X。",
+    "inputNotesPara": "支持任意文本。可选择的分隔符包括：空格、无、逗号、冒号。",
     "example": "示例",
     "examplePara": "将 ASCII 文本转换为十六进制：",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- ASCII 输入 ---\nHello, World!\n\n--- 十六进制输出（空格分隔） ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "tw": {
     "title": "ASCII 到十六進位轉換器 — Coding.Tools",
