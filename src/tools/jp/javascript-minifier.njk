@@ -87,7 +87,7 @@ permalink: "/jp/javascript-minifier.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var wrapped = '<script>' + text + '</script>';
+          var wrapped = '<script>' + text + '<' + '/script>';
           var minified = htmlminifier.minify(wrapped, {collapseWhitespace: true, minifyJS: true, removeComments: true});
           outputEditor.value = minified.replace(/<\/?script>/g, '');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'JavaScript minified successfully');

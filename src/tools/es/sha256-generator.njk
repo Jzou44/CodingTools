@@ -101,7 +101,8 @@ permalink: "/es/sha256-generator.html"
       };
 
       btnClear.addEventListener('click', function () {
-        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, hashLength, inputLineNums, outputLineNums);
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, null, inputLineNums, outputLineNums);
+        hashLength.textContent = ToolCommon.pluralise(0, '{{ t.ui.character }}', '{{ t.ui.characters }}');
       });
 
       btnCopy.addEventListener('click', function () {

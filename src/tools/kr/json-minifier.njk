@@ -55,7 +55,6 @@ permalink: "/kr/json-minifier.html"
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css">
-  <script src="https://cdn.jsdelivr.net/npm/html-minifier@4.0.0/dist/htmlminifier.min.js"></script>
 {% endblock %}
 
 {% block tool_script %}
@@ -88,8 +87,7 @@ permalink: "/kr/json-minifier.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var result = htmlminifier.minify(text, {collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true});
-          result = result.replace(/\s*([{}\[\]():,"])\s*/g, '$1');
+          var result = JSON.stringify(JSON.parse(text));
           outputEditor.value = result;
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'JSON minified successfully');
           updateCounts();

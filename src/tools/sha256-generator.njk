@@ -130,7 +130,8 @@ dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f
       };
 
       btnClear.addEventListener('click', function () {
-        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, hashLength, inputLineNums, outputLineNums);
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, null, inputLineNums, outputLineNums);
+        hashLength.textContent = '0 characters';
       });
 
       btnCopy.addEventListener('click', function () {

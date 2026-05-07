@@ -13,6 +13,9 @@ languages:
   - de
   - es
   - pt
+eleventyComputed:
+  title: "{{ homepage[lang].title }} — Coding.Tools"
+  description: "{{ homepage[lang].subtitle }}"
 ---
 
 {% extends "base.njk" %}
