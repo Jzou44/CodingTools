@@ -50,6 +50,30 @@
 {% endblock %}
 
 {% block scripts %}
+  {% set currentTool = activeTool or toolId %}
+  {% set bigNumberTools = [
+    "binary-to-decimal",
+    "binary-to-hex",
+    "decimal-to-binary",
+    "decimal-to-hex",
+    "decimal-to-octal",
+    "decimal-to-percent",
+    "fraction-to-decimal",
+    "fraction-to-percent",
+    "hex-to-binary",
+    "hex-to-decimal",
+    "octal-to-decimal",
+    "percent-to-decimal"
+  ] %}
+  {% set htmlCompatTools = [
+    "css-minifier",
+    "html-minifier",
+    "javascript-minifier",
+    "json-to-xml",
+    "xml-formatter",
+    "xml-minifier",
+    "xml-to-json"
+  ] %}
   <script>
     window.I18N = {
       charSingular: '{{ t.ui.character or "character" }}',
@@ -62,9 +86,12 @@
       copy:         '{{ t.ui.copy or "Copy" }}'
     };
   </script>
-  <script src="/js/main.js"></script>
+  {% if currentTool in bigNumberTools %}
   <script src="/js/bignumber-lite.js"></script>
+  {% endif %}
   <script src="/js/tool-common.js"></script>
+  {% if currentTool in htmlCompatTools %}
   <script src="/js/html-minifier-compat.js"></script>
+  {% endif %}
   {% block tool_script %}{% endblock %}
 {% endblock %}

@@ -21,75 +21,6 @@
   margin-bottom: 8px;
 }
 
-/* --- Editor --- */
-.editor-wrapper {
-  position: relative;
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.editor-wrapper:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.1);
-}
-
-.editor-wrapper.readonly-wrapper {
-  background: #f7f3ea;
-  border-color: #d9cfc0;
-}
-
-.editor-area {
-  display: block;
-  width: 100%;
-  min-height: 240px;
-  padding: 16px;
-  padding-left: 56px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text-primary);
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  resize: vertical;
-  outline: none;
-  tab-size: 2;
-}
-
-.editor-area::placeholder {
-  color: var(--text-muted);
-}
-
-.editor-area.readonly {
-  cursor: default;
-}
-
-.line-numbers {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 100%;
-  padding: 16px 8px 16px 0;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text-muted);
-  text-align: right;
-  user-select: none;
-  pointer-events: none;
-  overflow: hidden;
-  border-right: 1px solid var(--border);
-  background: var(--code-bg);
-}
-
-.line-numbers.readonly-bg {
-  background: #f7f3ea;
-}
-
 /* --- Button overrides --- */
 .btn svg {
   width: 16px;
@@ -376,15 +307,6 @@
   user-select: none;
 }
 
-/* --- Password Options (password-generator specific) --- */
-.options-panel {
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 16px;
-}
-
 .option-row {
   display: flex;
   align-items: center;
@@ -396,15 +318,6 @@
   border-top: 1px solid var(--border);
 }
 
-.option-label {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .option-value {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
@@ -412,12 +325,6 @@
   color: var(--accent);
   min-width: 32px;
   text-align: right;
-}
-
-.slider-row {
-  display: block;
-  padding-top: 4px;
-  padding-bottom: 14px;
 }
 
 .length-slider {
@@ -460,11 +367,6 @@
   .pane-toolbar-left, .pane-toolbar-right { width: 100%; }
   .pane-toolbar-right { justify-content: flex-end; }
   .status-bar-dual { flex-direction: column; align-items: flex-start; gap: 4px; }
-}
-
-@media (max-width: 480px) {
-  .editor-area { min-height: 180px; font-size: 13px; padding-left: 48px; }
-  .line-numbers { width: 36px; font-size: 13px; }
 }
 
 /* --- Dropzone Area (image tools) --- */
@@ -598,11 +500,6 @@
 
 #map-container iframe {
   border-radius: 8px;
-}
-
-/* --- Options Panel (image tools context) --- */
-.options-panel + .section-label {
-  margin-top: 16px;
 }
 
 /* ============================================================

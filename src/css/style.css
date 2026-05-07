@@ -727,32 +727,6 @@ img {
 }
 
 /* ============================================================
-   Toast Notification
-   ============================================================ */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1000;
-  background: var(--text-primary);
-  color: #faf8f0;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: var(--shadow-xl);
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-.toast.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* ============================================================
    Animations
    ============================================================ */
 @keyframes fadeInUp {
