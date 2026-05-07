@@ -135,33 +135,46 @@ permalink: "/jp/exif-viewer.html"
       }
 
       function parseExifData(buffer, start, length) {
-        var view = new DataView(buffer, start);
-        if (view.getUint16(0) !== 0x4578) return null;
-        var littleEndian = view.getUint16(8) === 0x4949;
-        var ifdOffset = view.getUint32(10, littleEndian);
+        var view = new DataView(buffer, start, length);
+        if (view.byteLength < 14 || view.getUint32(0) !== 0x45786966) return null;
+
+        var tiffStart = 6;
+        var byteOrder = view.getUint16(tiffStart);
+        var littleEndian;
+        if (byteOrder === 0x4949) littleEndian = true;
+        else if (byteOrder === 0x4D4D) littleEndian = false;
+        else return null;
+
+        if (view.getUint16(tiffStart + 2, littleEndian) !== 0x002A) return null;
+
+        var ifdOffset = tiffStart + view.getUint32(tiffStart + 4, littleEndian);
         var result = {};
-        readIFD(view, ifdOffset, littleEndian, TAGS, result);
-        var exifIFDOffset = view.getUint32(10 + ifdOffset + 102, littleEndian) || 0;
-        if (exifIFDOffset > 0) readIFD(view, 10 + exifIFDOffset, littleEndian, TAGS, result);
+        var exifIFDOffset = 0;
         var gpsIFDOffset = 0;
-        readIFD(view, ifdOffset, littleEndian, {}, {}, function(tag, value) {
+
+        readIFD(view, ifdOffset, littleEndian, tiffStart, TAGS, result, function(tag, value) {
+          if (tag === 0x8769) exifIFDOffset = value;
           if (tag === 0x8825) gpsIFDOffset = value;
         });
-        if (gpsIFDOffset > 0) readIFD(view, 10 + gpsIFDOffset, littleEndian, GPS_TAGS, result);
+        if (exifIFDOffset > 0) readIFD(view, tiffStart + exifIFDOffset, littleEndian, tiffStart, TAGS, result);
+        if (gpsIFDOffset > 0) readIFD(view, tiffStart + gpsIFDOffset, littleEndian, tiffStart, GPS_TAGS, result);
         return result;
       }
 
-      function readIFD(view, offset, littleEndian, tags, result, callback) {
+      function readIFD(view, offset, littleEndian, tiffStart, tags, result, callback) {
+        if (offset < 0 || offset + 2 > view.byteLength) return;
         var count = view.getUint16(offset, littleEndian);
-        for (var i = 0; i < count; i++) {
+        var typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8 };
+        for (var i = 0; i < count && i < 512; i++) {
           var entryOffset = offset + 2 + i * 12;
           if (entryOffset + 12 > view.byteLength) break;
           var tag = view.getUint16(entryOffset, littleEndian);
           var type = view.getUint16(entryOffset + 2, littleEndian);
           var numValues = view.getUint32(entryOffset + 4, littleEndian);
+          var byteCount = (typeSizes[type] || 0) * numValues;
           var valueOffset = entryOffset + 8;
-          if (type === 2 && numValues > 4) {
-            valueOffset = 10 + view.getUint32(entryOffset + 8, littleEndian);
+          if (byteCount > 4) {
+            valueOffset = tiffStart + view.getUint32(entryOffset + 8, littleEndian);
           }
           var tagName = tags[tag] || ('Tag_0x' + tag.toString(16).toUpperCase());
           var value;
@@ -174,18 +187,26 @@ permalink: "/jp/exif-viewer.html"
             }
             value = str;
           } else if (type === 3) {
-            value = view.getUint16(entryOffset + 8, littleEndian);
+            value = valueOffset + 2 <= view.byteLength ? view.getUint16(valueOffset, littleEndian) : '';
           } else if (type === 4) {
-            value = view.getUint32(entryOffset + 8, littleEndian);
+            value = valueOffset + 4 <= view.byteLength ? view.getUint32(valueOffset, littleEndian) : 0;
           } else if (type === 5) {
-            var num = view.getUint32(valueOffset, littleEndian);
-            var den = view.getUint32(valueOffset + 4, littleEndian);
-            value = den ? (num / den).toFixed(6) : '0';
+            var rationals = [];
+            for (var r = 0; r < numValues && r < 4 && valueOffset + r * 8 + 8 <= view.byteLength; r++) {
+              var num = view.getUint32(valueOffset + r * 8, littleEndian);
+              var den = view.getUint32(valueOffset + r * 8 + 4, littleEndian);
+              rationals.push(den ? num / den : 0);
+            }
+            if ((tag === 0x0002 || tag === 0x0004) && rationals.length >= 3) {
+              value = (rationals[0] + rationals[1] / 60 + rationals[2] / 3600).toFixed(6);
+            } else {
+              value = rationals.length === 1 ? rationals[0].toFixed(6) : rationals.map(function (item) { return item.toFixed(6); }).join(', ');
+            }
           } else {
-            value = view.getUint32(entryOffset + 8, littleEndian);
+            value = valueOffset + 4 <= view.byteLength ? view.getUint32(valueOffset, littleEndian) : '';
           }
           if (callback) { callback(tag, value); }
-          else { result[tagName] = value; }
+          result[tagName] = value;
         }
       }
 
@@ -209,7 +230,12 @@ permalink: "/jp/exif-viewer.html"
 
         var reader = new FileReader();
         reader.onload = function (e) {
-          var exif = readExif(e.target.result);
+          var exif = null;
+          try {
+            exif = readExif(e.target.result);
+          } catch (error) {
+            exif = null;
+          }
           exifTbody.innerHTML = '';
           mapContainer.style.display = 'none';
 
@@ -236,6 +262,9 @@ permalink: "/jp/exif-viewer.html"
           }
 
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', Object.keys(exif).length + ' {{ t.ui.exifTagsFound }}');
+        };
+        reader.onerror = function () {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.noExif }}');
         };
         reader.readAsArrayBuffer(file);
       }
