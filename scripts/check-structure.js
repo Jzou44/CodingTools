@@ -102,6 +102,49 @@ function checkTranslationShape(name, data) {
   });
 }
 
+function checkDataShapeAgainstBaseline(name, baseline, value, prefix) {
+  if (Array.isArray(baseline)) {
+    if (!Array.isArray(value)) {
+      fail(`${name}.${prefix} should be an array`);
+      return;
+    }
+    if (value.length !== baseline.length) {
+      fail(`${name}.${prefix} has ${value.length} item(s), expected ${baseline.length}`);
+      return;
+    }
+    baseline.forEach((item, index) => {
+      checkDataShapeAgainstBaseline(name, item, value[index], `${prefix}[${index}]`);
+    });
+    return;
+  }
+
+  if (baseline && typeof baseline === "object") {
+    if (!value || typeof value !== "object" || Array.isArray(value)) {
+      fail(`${name}.${prefix} should be an object`);
+      return;
+    }
+    Object.keys(baseline).forEach((key) => {
+      const nextPrefix = prefix ? `${prefix}.${key}` : key;
+      if (!Object.prototype.hasOwnProperty.call(value, key)) {
+        fail(`${name}.${nextPrefix} is missing`);
+        return;
+      }
+      checkDataShapeAgainstBaseline(name, baseline[key], value[key], nextPrefix);
+    });
+    return;
+  }
+
+  if (typeof baseline === "string") {
+    if (typeof value !== "string") {
+      fail(`${name}.${prefix} should be a string`);
+      return;
+    }
+    if (baseline.trim() && !value.trim()) {
+      fail(`${name}.${prefix} is empty but the English baseline is not`);
+    }
+  }
+}
+
 function checkToolDataFiles() {
   const dataDir = path.join(srcDir, "_data", "toolData");
   const slugs = Object.keys(tools);
@@ -117,6 +160,14 @@ function checkToolDataFiles() {
     const languages = Object.keys(data);
     diff(site.languageIds, languages).forEach((lang) => fail(`_data/toolData/${slug}.json is missing language "${lang}"`));
     unexpected(site.languageIds, languages).forEach((lang) => fail(`_data/toolData/${slug}.json has unknown language "${lang}"`));
+
+    if (data.en) {
+      site.localizedLanguageIds.forEach((lang) => {
+        if (data[lang]) {
+          checkDataShapeAgainstBaseline(`_data/toolData/${slug}.json.${lang}`, data.en, data[lang], "");
+        }
+      });
+    }
   });
 }
 
@@ -180,6 +231,25 @@ function checkCategories() {
 
 function checkToolPages() {
   const slugs = sorted(Object.keys(tools));
+  const localizedMetadataOverrides = ["title", "description", "toolTitle", "toolDescription", "categoryName"];
+  const localizedEnglishLiterals = [
+    />Regex Pattern</,
+    />Test Text</,
+    />Replace With</,
+    />Match Results</,
+    />Match Preview</,
+    />Fraction</,
+    />Example:/,
+    />ASCII Input</,
+    />Hex Input</,
+    />Hex Output</,
+    />ASCII Output</,
+    />Binary Output</,
+    /Cannot divide by zero/,
+    /placeholder="Enter regex pattern/,
+    /placeholder="Replacement string/,
+    /placeholder="Enter or paste text/
+  ];
 
   slugs.forEach((slug) => {
     const enPath = path.join(toolsDir, `${slug}.njk`);
@@ -204,6 +274,19 @@ function checkToolPages() {
       }
 
       const data = parseFrontMatter(filePath);
+      localizedMetadataOverrides.forEach((key) => {
+        if (Object.prototype.hasOwnProperty.call(data, key)) {
+          fail(`${path.relative(root, filePath)} should use translated data instead of localized frontmatter "${key}"`);
+        }
+      });
+
+      const content = fs.readFileSync(filePath, "utf8");
+      localizedEnglishLiterals.forEach((pattern) => {
+        if (pattern.test(content)) {
+          fail(`${path.relative(root, filePath)} contains hard-coded English UI matching ${pattern}`);
+        }
+      });
+
       const expectedPermalink = site.pathFor(lang, slug);
       if (data.permalink && data.permalink !== expectedPermalink) {
         fail(`${path.relative(root, filePath)} permalink is "${data.permalink}", expected "${expectedPermalink}"`);

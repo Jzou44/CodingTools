@@ -18,25 +18,33 @@ permalink: "/tw/ascii-table.html"
   <p>{{ para | safe }}</p>
   {% endfor %}
 
+  {% if toolData.howToUse and toolData.steps and toolData.steps.length %}
   <h3>{{ toolData.howToUse }}</h3>
   <ol class="steps-list">
     {% for step in toolData.steps %}
     <li>{{ step | safe }}</li>
     {% endfor %}
   </ol>
+  {% endif %}
 
   <h3>{{ toolData.whatIs }}</h3>
   {% for para in toolData.whatIsParas %}
   <p>{{ para | safe }}</p>
   {% endfor %}
 
+  {% if toolData.inputNotes or toolData.inputNotesPara %}
   <h3>{{ toolData.inputNotes }}</h3>
   <p>{{ toolData.inputNotesPara | safe }}</p>
+  {% endif %}
 
+  {% if toolData.example or toolData.examplePara or toolData.exampleCode %}
   <h3>{{ toolData.example }}</h3>
   <p>{{ toolData.examplePara | safe }}</p>
+  {% if toolData.exampleCode %}
   <div class="code-block-wrapper">
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
     <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
   </div>
+  {% endif %}
+  {% endif %}
 {% endblock %}

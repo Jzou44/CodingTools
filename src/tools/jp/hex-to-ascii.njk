@@ -116,7 +116,7 @@ permalink: "/jp/hex-to-ascii.html"
     <!-- Input Card -->
     <div class="pane-card pane-card--input">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--accent"></span>Hex Input</span>
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>{{ t.ui.hexNumber }}</span>
       </div>
       <textarea id="code1" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
     </div>
@@ -148,7 +148,7 @@ permalink: "/jp/hex-to-ascii.html"
     <!-- Output Card -->
     <div class="pane-card pane-card--output">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--secondary"></span>ASCII Output</span>
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>ASCII {{ t.ui.output }}</span>
       </div>
       <textarea id="code2" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
     </div>

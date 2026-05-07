@@ -1,12 +1,7 @@
 ---
 lang: "pt"
 toolId: "regex-tester"
-title: "Regex Tester Online — Coding.Tools"
-description: "Test regular expressions live with match highlighting and flag controls. Free browser-based regex testing tool."
-toolTitle: "Regex Tester"
-toolDescription: "Test regex patterns in real time with live match highlighting. No data leaves your browser."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "regex-tester"
 permalink: "/pt/regex-tester.html"
 ---
@@ -182,23 +177,23 @@ permalink: "/pt/regex-tester.html"
     <!-- Input Card -->
     <div class="pane-card pane-card--input">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--accent"></span>Regex Pattern</span>
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>{{ toolData.regexPattern }}</span>
       </div>
-      <input type="text" class="regex-pattern-input" id="regex-input" placeholder="Enter regex pattern, e.g. \b\w+@\w+\.\w+\b">
+      <input type="text" class="regex-pattern-input" id="regex-input" placeholder="{{ toolData.regexPlaceholder }}">
 
       <div class="flags-row">
-        <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>global</small></label>
-        <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>case-insensitive</small></label>
-        <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>multiline</small></label>
-        <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>dotAll</small></label>
-        <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>unicode</small></label>
-        <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>sticky</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-g" checked> <span>g</span> <small>{{ toolData.flagGlobal }}</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-i"> <span>i</span> <small>{{ toolData.flagCaseInsensitive }}</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-m"> <span>m</span> <small>{{ toolData.flagMultiline }}</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-s"> <span>s</span> <small>{{ toolData.flagDotAll }}</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-u"> <span>u</span> <small>{{ toolData.flagUnicode }}</small></label>
+        <label class="checkbox-label"><input type="checkbox" id="flag-y"> <span>y</span> <small>{{ toolData.flagSticky }}</small></label>
       </div>
 
       <div class="pane-label">
-        <span>Test Text</span>
+        <span>{{ toolData.testText }}</span>
       </div>
-      <textarea id="code1" placeholder="Enter or paste text to test against..."></textarea>
+      <textarea id="code1" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
     </div>
 
     <!-- Toolbar -->
@@ -206,17 +201,17 @@ permalink: "/pt/regex-tester.html"
       <div class="pane-toolbar-left">
         <button class="btn btn-ghost" id="btn-clear" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-          Clear
+          {{ t.ui.clear }}
         </button>
       </div>
       <div class="pane-toolbar-right">
         <button class="btn btn-ghost" id="btn-copy" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          Copy
+          {{ t.ui.copy }}
         </button>
         <button class="btn btn-ghost" id="btn-download" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          Download
+          {{ t.ui.download }}
         </button>
       </div>
     </div>
@@ -224,9 +219,9 @@ permalink: "/pt/regex-tester.html"
     <!-- Output Card -->
     <div class="pane-card pane-card--output">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Match Results</span>
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ toolData.matchResults }}</span>
       </div>
-      <div id="match-output" class="highlight-box"><span class="muted">Matches will appear here...</span></div>
+      <div id="match-output" class="highlight-box"><span class="muted">{{ toolData.matchesAppearHere }}</span></div>
     </div>
 
     <!-- Status Bar -->
@@ -236,52 +231,39 @@ permalink: "/pt/regex-tester.html"
         <span id="status-text"></span>
       </div>
       <div class="status-meta-dual">
-        <span id="char-count">0 characters</span>
-        <span id="match-count">0 matches</span>
+        <span id="char-count">0 {{ t.ui.characters }}</span>
+        <span id="match-count">{{ toolData.noMatches }}</span>
       </div>
     </div>
   </div>
 {% endblock %}
 
 {% block description %}
-  <h2>Regex Tester</h2>
-  <p>This regular expression tester lets you write and validate regex patterns against sample text directly in your browser. All six standard JavaScript regex flags are available: global, case-insensitive, multiline, dotAll, unicode, and sticky. Matches are highlighted in real time so you can see exactly what your pattern captures.</p>
-  <p>The regex runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can test patterns privately and quickly without changing your workflow.</p>
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
 
-  <h3>How to use</h3>
+  <h3>{{ toolData.howToUse }}</h3>
   <ol class="steps-list">
-    <li>Type or paste a regex pattern into the <strong>Regex Pattern</strong> input field. You do not need to include the leading and trailing slashes.</li>
-    <li>Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).</li>
-    <li>Enter or paste your test text into the editor below.</li>
-    <li>Matches are highlighted automatically. The match count appears in the status bar.</li>
-    <li>Use <strong>Copy</strong> to copy the test text to the clipboard, <strong>Download</strong> to save it as a file, or <strong>Clear</strong> to reset everything.</li>
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
   </ol>
 
-  <h3>What are regular expressions?</h3>
-  <p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.</p>
-  <p>JavaScript implements regex natively via the <code>RegExp</code> object. The same syntax works in most programming languages with minor variations. Learning regex is a core skill for text processing, data cleaning, log parsing, and input validation.</p>
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
 
-  <h3>Input notes</h3>
-  <p>Enter the regex pattern without delimiters (no <code>/pattern/flags</code> syntax). The flags are controlled by the checkboxes. Invalid patterns are caught and an error message is shown instead of crashing the tool.</p>
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
 
-  <h3>Example</h3>
-  <p>A simple pattern to find email-like strings in text:</p>
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
   <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy example</button>
-    <pre class="code-block" id="example-code">--- Pattern ---
-\b\w+@\w+\.\w+\b
-
---- Flags ---
-g (global)
-
---- Test Text ---
-Contact us at support@example.com or sales@company.org.
-Invalid: @missing.com or user@
-
---- Matches Found ---
-2 matches:
-  1. support@example.com
-  2. sales@company.org</pre>
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
   </div>
 {% endblock %}
 
@@ -329,10 +311,10 @@ Invalid: @missing.com or user@
         var text = editor.getValue();
 
         if (!pattern || !text) {
-          matchOutput.innerHTML = text ? escapeHtml(text) : '<span class="muted">Matches will appear here...</span>';
-          matchCount.textContent = '0 matches';
+          matchOutput.innerHTML = text ? escapeHtml(text) : '<span class="muted">{{ toolData.matchesAppearHere }}</span>';
+          matchCount.textContent = '{{ toolData.noMatches }}';
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+          charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
           return;
         }
 
@@ -361,9 +343,9 @@ Invalid: @missing.com or user@
 
           if (matches.length === 0) {
             matchOutput.innerHTML = escapeHtml(text);
-            matchCount.textContent = '0 matches';
-            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'No matches found');
-            charCount.textContent = ToolCommon.pluralise(text.length, 'character');
+            matchCount.textContent = '{{ toolData.noMatches }}';
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.noMatchesFound }}');
+            charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
             return;
           }
 
@@ -377,14 +359,14 @@ Invalid: @missing.com or user@
           html += escapeHtml(text.substring(lastIndex));
 
           matchOutput.innerHTML = html;
-          matchCount.textContent = matches.length + (matches.length === 1 ? ' match' : ' matches');
-          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', matches.length + (matches.length === 1 ? ' match found' : ' matches found'));
+          matchCount.textContent = matches.length + '{{ toolData.matchesSuffix }}';
+          charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', matches.length + '{{ toolData.matchesFoundSuffix }}');
         } catch (e) {
-          matchOutput.innerHTML = '<span class="muted">Invalid regex pattern</span>';
-          matchCount.textContent = '0 matches';
-          charCount.textContent = ToolCommon.pluralise(text.length, 'character');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid regex: ' + e.message);
+          matchOutput.innerHTML = '<span class="muted">{{ toolData.invalidRegex }}</span>';
+          matchCount.textContent = '{{ toolData.noMatches }}';
+          charCount.textContent = ToolCommon.pluralise(text.length, '{{ t.ui.character }}', '{{ t.ui.characters }}');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.invalidRegex }}: ' + e.message);
         }
       }
 
@@ -397,9 +379,9 @@ Invalid: @missing.com or user@
       btnClear.addEventListener('click', function () {
         regexInput.value = '';
         editor.setValue('');
-        matchOutput.innerHTML = '<span class="muted">Matches will appear here...</span>';
-        matchCount.textContent = '0 matches';
-        charCount.textContent = '0 characters';
+        matchOutput.innerHTML = '<span class="muted">{{ toolData.matchesAppearHere }}</span>';
+        matchCount.textContent = '{{ toolData.noMatches }}';
+        charCount.textContent = '0 {{ t.ui.characters }}';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 
@@ -407,7 +389,7 @@ Invalid: @missing.com or user@
         var text = editor.getValue();
         if (text) {
           navigator.clipboard.writeText(text).then(function () {
-            btnCopy.textContent = 'Copied!';
+            btnCopy.textContent = '{{ t.ui.copied }}';
             setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copy }}'; }, 1500);
           });
         }

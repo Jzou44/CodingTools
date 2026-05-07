@@ -262,7 +262,7 @@ permalink: "/kr/fraction-to-decimal.html"
   <div class="frac-converter">
     <!-- Input Card -->
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
-      <div class="tool-label">Fraction</div>
+      <div class="tool-label">{{ t.ui.fraction }}</div>
       <div class="frac-visual">
         <input type="text" class="frac-integer-field" id="integer-input" placeholder="0" spellcheck="false" autocomplete="off" autofocus>
         <div class="frac-separator-dot">&middot;</div>
@@ -275,7 +275,7 @@ permalink: "/kr/fraction-to-decimal.html"
           </div>
         </div>
       </div>
-      <div class="frac-input-hint">Example: <code>2</code> &middot; <code>3</code>&frasl;<code>4</code> = 2.75</div>
+      <div class="frac-input-hint">{{ t.ui.example }}: <code>2</code> &middot; <code>3</code>&frasl;<code>4</code> = 2.75</div>
     </div>
 
     <!-- Arrow -->
@@ -399,7 +399,7 @@ permalink: "/kr/fraction-to-decimal.html"
           var integerVal  = new BigNumber(integerInput.value.trim() || '0');
           if (denominator.isZero()) {
             showResult('{{ t.ui.denominatorCannotBeZero }}', 'error');
-            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Cannot divide by zero');
+            ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.denominatorCannotBeZero }}');
             return;
           }
           var result = integerVal.plus(numerator.dividedBy(denominator));

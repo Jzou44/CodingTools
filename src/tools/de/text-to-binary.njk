@@ -144,7 +144,7 @@ permalink: "/de/text-to-binary.html"
     <!-- Input Card -->
     <div class="pane-card pane-card--input">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--accent"></span>Text Input</span>
+        <span><span class="pane-label-dot pane-label-dot--accent"></span>{{ t.ui.text }} {{ t.ui.input }}</span>
       </div>
       <textarea id="code1" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
     </div>
@@ -183,7 +183,7 @@ permalink: "/de/text-to-binary.html"
     <!-- Output Card -->
     <div class="pane-card pane-card--output">
       <div class="pane-label">
-        <span><span class="pane-label-dot pane-label-dot--secondary"></span>Binary Output</span>
+        <span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ t.ui.binaryResult }}</span>
       </div>
       <textarea id="code2" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
     </div>
