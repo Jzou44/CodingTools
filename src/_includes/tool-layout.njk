@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {% block head_extra %}
-  <link rel="stylesheet" href="/css/tool.css">
+  <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
 {% endblock %}
 
 {% block content %}
@@ -87,11 +87,11 @@
     };
   </script>
   {% if currentTool in bigNumberTools %}
-  <script src="/js/bignumber-lite.js"></script>
+  <script src="/js/bignumber-lite.js?v={{ site.assetVersion }}"></script>
   {% endif %}
-  <script src="/js/tool-common.js"></script>
+  <script src="/js/tool-common.js?v={{ site.assetVersion }}"></script>
   {% if currentTool in htmlCompatTools %}
-  <script src="/js/html-minifier-compat.js"></script>
+  <script src="/js/html-minifier-compat.js?v={{ site.assetVersion }}"></script>
   {% endif %}
   {% block tool_script %}{% endblock %}
 {% endblock %}

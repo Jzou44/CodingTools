@@ -32,6 +32,7 @@ function absoluteUrl(path) {
 module.exports = {
   baseUrl,
   siteName: "Coding.Tools",
+  assetVersion: "20260508-1",
   ogImage: "/assets/favicons/favicon-512x512.png",
   languages,
   languageIds: languages.map((item) => item.id),
