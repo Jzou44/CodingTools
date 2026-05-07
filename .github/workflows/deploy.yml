@@ -1,0 +1,127 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coding-tools-production
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: "24"
+
+jobs:
+  build:
+    name: Check and build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+  deploy:
+    name: Deploy to VPS
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Validate required secrets
+        env:
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+        run: |
+          if [ -z "${VPS_SSH_KEY}" ]; then
+            echo "::error::Missing required repository secret: VPS_SSH_KEY"
+            exit 1
+          fi
+
+      - name: Start SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Trust VPS host key
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST || '35.239.243.94' }}
+          VPS_PORT: ${{ secrets.VPS_PORT || '22' }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${VPS_PORT}" -H "${VPS_HOST}" >> ~/.ssh/known_hosts
+
+      - name: Pull, build, and reload nginx
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST || '35.239.243.94' }}
+          VPS_USER: ${{ secrets.VPS_USER || 'bylearner' }}
+          VPS_PORT: ${{ secrets.VPS_PORT || '22' }}
+          VPS_PATH: ${{ secrets.VPS_PATH || '/home/bylearner/app/CodingTools' }}
+          WEB_ROOT: ${{ secrets.WEB_ROOT || '/var/www/coding-tools' }}
+          DEPLOY_REF: ${{ github.sha }}
+        run: |
+          ssh -p "${VPS_PORT}" "${VPS_USER}@${VPS_HOST}" \
+            "DEPLOY_REF='${DEPLOY_REF}' VPS_PATH='${VPS_PATH}' WEB_ROOT='${WEB_ROOT}' bash -se" <<'REMOTE'
+          set -euo pipefail
+
+          if [ -f "$HOME/.nvm/nvm.sh" ]; then
+            . "$HOME/.nvm/nvm.sh"
+          fi
+
+          cd "$VPS_PATH"
+          git fetch --prune origin master
+          git reset --hard "$DEPLOY_REF"
+
+          npm ci
+          npm run build
+          test -f "$VPS_PATH/dist/index.html"
+          sudo mkdir -p "$WEB_ROOT"
+          sudo rsync -a --delete --chown=www-data:www-data --chmod=D755,F644 "$VPS_PATH/dist/" "$WEB_ROOT/"
+
+          pkill -f '[e]leventy.*serve' 2>/dev/null || true
+
+          sudo tee /etc/nginx/sites-available/default > /dev/null <<EOF
+          server {
+              listen 80 default_server;
+              listen [::]:80 default_server;
+
+              root $WEB_ROOT;
+              index index.html;
+
+              location / {
+                  try_files \$uri \$uri/ \$uri.html /index.html;
+              }
+
+              location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json|webp|wasm|onnx)$ {
+                  expires 1y;
+                  add_header Cache-Control "public, immutable";
+                  try_files \$uri =404;
+              }
+          }
+          EOF
+
+          sudo nginx -t
+          sudo systemctl reload nginx
+          curl -fsS -o /dev/null http://localhost:80/
+          REMOTE
+
+      - name: Verify public site
+        env:
+          PUBLIC_URL: ${{ secrets.PUBLIC_URL || 'http://35.239.243.94/' }}
+        run: |
+          curl -fsS --location --max-time 20 --output /dev/null "${PUBLIC_URL}"
