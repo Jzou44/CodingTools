@@ -141,7 +141,7 @@ permalink: "/de/compress-png.html"
 
               fileCount.textContent = results.length + ' files';
               btnDownloadAll.disabled = false;
-              ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', results.length + ' file(s) compressed');
+              ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', results.length + ' {{ t.ui.filesCompressed }}');
             }, 'image/png');
           };
           img.src = e.target.result;

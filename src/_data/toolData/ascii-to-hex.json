@@ -4,7 +4,7 @@
     "description": "Convert ASCII text to hexadecimal values directly in your browser.",
     "toolTitle": "ASCII to Hex",
     "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Type or paste text here...",
     "outputPlaceholder": "Hex values will appear here...",
     "descTitle": "ASCII to Hex Converter",
@@ -30,243 +30,243 @@
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "cn": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "ASCII 转十六进制转换器 — Coding.Tools",
+    "description": "在浏览器中直接将 ASCII 文本转换为十六进制值。",
     "toolTitle": "ASCII转十六进制",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "将文本转换为十六进制编码字符串，并支持自定义分隔符。",
     "categoryName": "数字转换",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "输入或粘贴文本...",
+    "outputPlaceholder": "十六进制值将显示在这里...",
+    "descTitle": "ASCII 转十六进制转换器",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "此工具将 ASCII 文本转换为带可配置分隔符的十六进制字节值。",
+      "转换在浏览器本地运行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在输入编辑器中输入或粘贴文本。",
+      "从下拉菜单中选择十六进制分隔符。",
+      "点击<strong>转换</strong>将文本编码为十六进制。",
+      "使用<strong>复制</strong>复制结果。"
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "什么是 ASCII 转十六进制？",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "ASCII 转十六进制会将每个字符映射为对应的十六进制字节值。例如，'H' = 十六进制 48。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "输入说明",
+    "inputNotesPara": "支持任意文本。可选择的分隔符包括：无、空格、0x、0X、\\x、\\X。",
+    "example": "示例",
+    "examplePara": "将 ASCII 文本转换为十六进制：",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "tw": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "ASCII 到十六進位轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將 ASCII 文字轉換為十六進位值。",
     "toolTitle": "ASCII轉十六進位",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "將文字轉換為具有可配置分隔符號的十六進位編碼字串。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "在此輸入或貼上文字...",
+    "outputPlaceholder": "十六進制值將出現在這裡...",
+    "descTitle": "ASCII 到十六進位轉換器",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "該工具將 ASCII 文字轉換為具有可配置分隔符號的十六進位位元組值。",
+      "轉換在您的瀏覽器本地運行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在輸入編輯器中鍵入或貼上文字。",
+      "從下拉清單中選擇十六進位分隔符號。",
+      "點選<strong>轉換</strong>將文字編碼為十六進位。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "什麼是 ASCII 到 Hex？",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "ASCII 到十六進位的轉換將每個字元對應到其十六進位位元組值。例如，“H”= 十六進位 48。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "支援任何文字。從分隔符號中選擇：無、空格、0x、0X、\\x、\\X。",
+    "example": "例子",
+    "examplePara": "將 ASCII 文字轉換為十六進位：",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "jp": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "ASCII から 16 進数へのコンバーター —coding.tools",
+    "description": "ブラウザで ASCII テキストを 16 進値に直接変換します。",
     "toolTitle": "ASCIIから16進数",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "構成可能な区切り文字を使用して、テキストを 16 進数でエンコードされた文字列に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "ここにテキストを入力するか貼り付けます...",
+    "outputPlaceholder": "ここに 16 進数の値が表示されます...",
+    "descTitle": "ASCII から 16 進数へのコンバーター",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "このツールは、ASCII テキストを構成可能な区切り文字を使用して 16 進バイト値に変換します。",
+      "変換はブラウザ内でローカルに実行されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "入力エディターにテキストを入力または貼り付けます。",
+      "ドロップダウンから 16 進区切り文字を選択します。",
+      "[<strong>変換</strong>] をクリックしてテキストを 16 進数にエンコードします。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "ASCII から 16 進数への変換とは何ですか?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "ASCII から 16 進数への変換では、各文字が 16 進数のバイト値にマップされます。たとえば、「H」= 16 進数 48。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "あらゆるテキストをサポートします。区切り文字は、なし、スペース、0x、0X、\\x、\\X から選択します。",
+    "example": "例",
+    "examplePara": "ASCII テキストを 16 進数に変換します。",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "kr": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "ASCII-16진수 변환기 — Coding.Tools",
+    "description": "브라우저에서 직접 ASCII 텍스트를 16진수 값으로 변환합니다.",
     "toolTitle": "ASCII에서 16진수",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "구성 가능한 구분 기호를 사용하여 텍스트를 16진수로 인코딩된 문자열로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "여기에 텍스트를 입력하거나 붙여넣으세요...",
+    "outputPlaceholder": "16진수 값이 여기에 표시됩니다...",
+    "descTitle": "ASCII-16진수 변환기",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "이 도구는 구성 가능한 구분 기호를 사용하여 ASCII 텍스트를 16진수 바이트 값으로 변환합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+      "드롭다운에서 16진수 구분 기호를 선택하세요.",
+      "텍스트를 16진수로 인코딩하려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "ASCII를 16진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "ASCII에서 16진수로의 변환은 각 문자를 16진수 바이트 값으로 매핑합니다. 예를 들어 'H' = 16진수 48입니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "모든 텍스트를 지원합니다. 구분 기호(없음, 공백, 0x, 0X, \\x, \\X) 중에서 선택합니다.",
+    "example": "예",
+    "examplePara": "ASCII 텍스트를 16진수로 변환:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "fr": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "Convertisseur ASCII en Hex — Coding.Tools",
+    "description": "Convertissez le texte ASCII en valeurs hexadécimales directement dans votre navigateur.",
     "toolTitle": "ASCII en Hexadécimal",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "Convertissez le texte en chaînes codées en hexadécimal avec des délimiteurs configurables.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "Tapez ou collez le texte ici...",
+    "outputPlaceholder": "Les valeurs hexadécimales apparaîtront ici...",
+    "descTitle": "Convertisseur ASCII en Hex",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "Cet outil convertit le texte ASCII en valeurs d'octets hexadécimaux avec des délimiteurs configurables.",
+      "La conversion s'exécute localement dans votre navigateur."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Tapez ou collez du texte dans l'éditeur de saisie.",
+      "Choisissez un délimiteur hexadécimal dans la liste déroulante.",
+      "Cliquez sur <strong>Convertir</strong> pour encoder le texte en hexadécimal.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "Qu’est-ce que l’ASCII en Hex ?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "La conversion ASCII en hexadécimal mappe chaque caractère à sa valeur d'octet hexadécimal. Par exemple, « H » = hexadécimal 48."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Prend en charge n’importe quel texte. Choisissez parmi les délimiteurs : Aucun, Espace, 0x, 0X, \\x, \\X.",
+    "example": "Exemple",
+    "examplePara": "Conversion du texte ASCII en hexadécimal :",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "de": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "ASCII-zu-Hex-Konverter – Coding.Tools",
+    "description": "Konvertieren Sie ASCII-Text direkt in Ihrem Browser in Hexadezimalwerte.",
     "toolTitle": "ASCII zu Hexadezimal",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "Konvertieren Sie Text in hexadezimal kodierte Zeichenfolgen mit konfigurierbaren Trennzeichen.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "Geben Sie hier Text ein oder fügen Sie ihn ein...",
+    "outputPlaceholder": "Hier werden Hex-Werte angezeigt...",
+    "descTitle": "ASCII-zu-Hex-Konverter",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "Dieses Tool konvertiert ASCII-Text in hexadezimale Bytewerte mit konfigurierbaren Trennzeichen.",
+      "Die Konvertierung läuft lokal in Ihrem Browser."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Geben Sie Text in den Eingabeeditor ein oder fügen Sie ihn ein.",
+      "Wählen Sie im Dropdown-Menü ein Hex-Trennzeichen aus.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um den Text in Hex zu kodieren.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "Was ist ASCII zu Hex?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "Die ASCII-zu-Hex-Konvertierung ordnet jedes Zeichen seinem hexadezimalen Bytewert zu. Beispiel: „H“ = Hex 48."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Unterstützt jeden Text. Wählen Sie aus den Trennzeichen: Keine, Leerzeichen, 0x, 0X, \\x, \\X.",
+    "example": "Beispiel",
+    "examplePara": "ASCII-Text in Hex umwandeln:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "es": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "Convertidor de ASCII a hexadecimal — Coding.Tools",
+    "description": "Convierta texto ASCII a valores hexadecimales directamente en su navegador.",
     "toolTitle": "ASCII a Hexadecimal",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "Convierta texto en cadenas codificadas en hexadecimal con delimitadores configurables.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "Escriba o pegue texto aquí...",
+    "outputPlaceholder": "Los valores hexadecimales aparecerán aquí...",
+    "descTitle": "Convertidor de ASCII a hexadecimal",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "Esta herramienta convierte texto ASCII en valores de bytes hexadecimales con delimitadores configurables.",
+      "La conversión se ejecuta localmente en su navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Escriba o pegue texto en el editor de entrada.",
+      "Elija un delimitador hexadecimal en el menú desplegable.",
+      "Haga clic en <strong>Convertir</strong> para codificar el texto a hexadecimal.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "¿Qué es ASCII a hexadecimal?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "La conversión de ASCII a hexadecimal asigna cada carácter a su valor de byte hexadecimal. Por ejemplo, 'H' = hexadecimal 48."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Soporta cualquier texto. Elija entre delimitadores: Ninguno, Espacio, 0x, 0X, \\x, \\X.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de texto ASCII a hexadecimal:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "pt": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
-    "toolTitle": "ASCII to Hex",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "title": "Conversor ASCII para Hex — Coding.Tools",
+    "description": "Converta texto ASCII em valores hexadecimais diretamente no seu navegador.",
+    "toolTitle": "ASCII para hexadecimal",
+    "toolDescription": "Converta texto em strings codificadas em hexadecimal com delimitadores configuráveis.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "inputPlaceholder": "Digite ou cole o texto aqui...",
+    "outputPlaceholder": "Valores hexadecimais aparecerão aqui...",
+    "descTitle": "Conversor ASCII para Hexadecimal",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "Esta ferramenta converte texto ASCII em valores de bytes hexadecimais com delimitadores configuráveis.",
+      "A conversão é executada localmente no seu navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Digite ou cole o texto no editor de entrada.",
+      "Escolha um delimitador hexadecimal no menu suspenso.",
+      "Clique em <strong>Converter</strong> para codificar o texto em hexadecimal.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "O que é ASCII para hexadecimal?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "A conversão de ASCII para hexadecimal mapeia cada caractere para seu valor de byte hexadecimal. Por exemplo, 'H' = hexadecimal 48."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
-    "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Suporta qualquer texto. Escolha entre delimitadores: Nenhum, Espaço, 0x, 0X, \\x, \\X.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo texto ASCII em hexadecimal:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   }
 }

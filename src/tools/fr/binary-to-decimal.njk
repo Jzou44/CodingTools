@@ -301,7 +301,7 @@ permalink: "/fr/binary-to-decimal.html"
           showPrimary(result.toString(10), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
           showPrimary('{{ t.ui.invalidBinaryInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');

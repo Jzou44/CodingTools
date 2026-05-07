@@ -259,7 +259,7 @@ permalink: "/jp/numbers-to-roman-numerals.html"
           return;
         }
         showResult(intToRoman(num), 'valid');
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
       };
 
       btnClear.addEventListener('click', function () {
@@ -299,7 +299,7 @@ permalink: "/jp/numbers-to-roman-numerals.html"
           return;
         }
         showResult(intToRoman(num), 'valid');
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
       });
 
       ToolCommon.initExampleCopy();

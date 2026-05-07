@@ -4,7 +4,7 @@
     "description": "View a complete Roman numerals reference chart from 1 to 1000.",
     "toolTitle": "Roman Numerals Chart",
     "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
     "descTitle": "Roman Numerals Chart",
@@ -39,13 +39,11 @@
       "所有计算在浏览器本地运行。"
     ],
     "howToUse": "使用方法",
-    "steps": [
-      "浏览罗马数字对照表。",
-      "了解每个罗马数字对应的阿拉伯数字。"
-    ],
+    "steps": [],
     "whatIs": "什么是罗马数字？",
     "whatIsParas": [
-      "罗马数字是古罗马使用的数字系统，使用字母I、V、X、L、C、D、M来表示数字。"
+      "罗马数字是古罗马使用的数字系统，使用字母 I、V、X、L、C、D、M 来表示数字。",
+      "罗马数字今天仍用于钟表表盘、书籍章节、电影续集和正式文件。"
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "此工具为参考表，无需输入。",
@@ -54,24 +52,24 @@
     "exampleCode": "I = 1\nV = 5\nX = 10\nL = 50\nC = 100\nD = 500\nM = 1000"
   },
   "tw": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "羅馬數字表 — Coding.Tools",
+    "description": "查看從 1 到 1000 的完整羅馬數字參考表。",
     "toolTitle": "羅馬數字表",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "瀏覽從 1 到 1000 的完整羅馬數字表。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "羅馬數字表",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "本頁顯示了從 1 到 1000 的羅馬數字的完整參考表。",
+      "此圖表以 100 個為一組進行組織，以便於參考。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "什麼是羅馬數字？",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "羅馬數字是起源於古羅馬的數字系統，使用字母：I(1)、V(5)、X(10)、L(50)、C(100)、D(500)、M(1000)。",
+      "羅馬數字至今仍在鐘面、書籍章節、電影續集和正式文件中使用。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -80,24 +78,24 @@
     "exampleCode": ""
   },
   "jp": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "ローマ数字チャート —coding.tools",
+    "description": "1 から 1000 までの完全なローマ数字の参照表をご覧ください。",
     "toolTitle": "ローマ数字表",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "1 から 1000 までの完全なローマ数字表を参照してください。",
     "categoryName": "数値変換",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "ローマ数字チャート",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "このページには、1 から 1000 までのローマ数字の完全な参照表が表示されます。",
+      "このグラフは、参照しやすいように 100 個のグループにまとめられています。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "ローマ数字とは何ですか?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "ローマ数字は古代ローマで生まれた数字体系で、I(1)、V(5)、X(10)、L(50)、C(100)、D(500)、M(1000)の文字を使用します。",
+      "ローマ数字は現在でも時計の文字盤、本の章、映画の続編、正式な文書などで使用されています。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -106,24 +104,24 @@
     "exampleCode": ""
   },
   "kr": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "로마 숫자 차트 — Coding.Tools",
+    "description": "1부터 1000까지의 전체 로마 숫자 참조 차트를 확인하세요.",
     "toolTitle": "로마 숫자표",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "1부터 1000까지 전체 로마 숫자 차트를 찾아보세요.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "로마 숫자 차트",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "이 페이지에는 1부터 1000까지의 로마 숫자에 대한 전체 참조 차트가 표시됩니다.",
+      "차트는 쉽게 참조할 수 있도록 100개의 그룹으로 구성되어 있습니다."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "로마 숫자란 무엇입니까?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "로마 숫자는 고대 로마에서 유래한 숫자 체계로 I(1), V(5), X(10), L(50), C(100), D(500), M(1000) 문자를 사용합니다.",
+      "로마 숫자는 오늘날에도 여전히 시계 문자판, 책의 장, 영화 속편, 공식 문서에 사용되고 있습니다."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -132,24 +130,24 @@
     "exampleCode": ""
   },
   "fr": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "Tableau des chiffres romains — Coding.Tools",
+    "description": "Consultez un tableau complet de référence des chiffres romains de 1 à 1000.",
     "toolTitle": "Table des chiffres romains",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "Parcourez le tableau complet des chiffres romains de 1 à 1000.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "Tableau des chiffres romains",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "Cette page affiche un tableau de référence complet des chiffres romains de 1 à 1000.",
+      "Le tableau est organisé en groupes de 100 pour une référence facile."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "Que sont les chiffres romains ?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "Les chiffres romains sont un système numérique originaire de la Rome antique, utilisant les lettres : I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
+      "Les chiffres romains sont encore utilisés aujourd’hui dans les cadrans d’horloge, les chapitres de livres, les suites de films et les documents officiels."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -158,24 +156,24 @@
     "exampleCode": ""
   },
   "de": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "Römisches Zahlendiagramm – Coding.Tools",
+    "description": "Sehen Sie sich eine vollständige Referenztabelle für römische Ziffern von 1 bis 1000 an.",
     "toolTitle": "Römische Zifferntabelle",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "Durchsuchen Sie die vollständige Tabelle der römischen Ziffern von 1 bis 1000.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "Römische Zahlentabelle",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "Diese Seite zeigt eine vollständige Referenztabelle der römischen Ziffern von 1 bis 1000.",
+      "Zur leichteren Orientierung ist das Diagramm in 100er-Gruppen gegliedert."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "Was sind römische Ziffern?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "Römische Ziffern sind ein Zahlensystem, das seinen Ursprung im antiken Rom hat und die folgenden Buchstaben verwendet: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
+      "Römische Ziffern werden auch heute noch in Zifferblättern, Buchkapiteln, Filmsequenzen und formellen Dokumenten verwendet."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -184,24 +182,24 @@
     "exampleCode": ""
   },
   "es": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "Tabla de números romanos — Coding.Tools",
+    "description": "Vea una tabla de referencia completa de números romanos del 1 al 1000.",
     "toolTitle": "Tabla de números romanos",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "Explore la tabla completa de números romanos del 1 al 1000.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "Tabla de números romanos",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "Esta página muestra una tabla de referencia completa de números romanos del 1 al 1000.",
+      "El cuadro está organizado en grupos de 100 para facilitar su consulta."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "¿Qué son los números romanos?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "Los números romanos son un sistema de numeración originado en la antigua Roma, que utiliza las letras: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
+      "Los números romanos todavía se utilizan hoy en día en esferas de relojes, capítulos de libros, secuelas de películas y documentos formales."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -210,24 +208,24 @@
     "exampleCode": ""
   },
   "pt": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
-    "toolTitle": "Roman Numerals Chart",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "title": "Gráfico de algarismos romanos - Coding.Tools",
+    "description": "Veja um gráfico de referência completo em algarismos romanos de 1 a 1000.",
+    "toolTitle": "Gráfico de algarismos romanos",
+    "toolDescription": "Navegue pelo gráfico completo de algarismos romanos de 1 a 1000.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "Gráfico de algarismos romanos",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "Esta página exibe um gráfico de referência completo de algarismos romanos de 1 a 1000.",
+      "O gráfico está organizado em grupos de 100 para fácil referência."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "O que são algarismos romanos?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "Os algarismos romanos são um sistema numeral originado na Roma antiga, usando letras: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
+      "Os algarismos romanos ainda são usados ​​hoje em mostradores de relógio, capítulos de livros, sequências de filmes e documentos formais."
     ],
     "inputNotes": "",
     "inputNotesPara": "",

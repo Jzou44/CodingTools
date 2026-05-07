@@ -56,199 +56,199 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "tw": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+    "title": "壓縮 JPEG — Coding.Tools",
+    "description": "在線壓縮 JPEG 影像以減小檔案大小。免費、快速並在瀏覽器中運作。",
     "toolTitle": "壓縮JPEG",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+    "toolDescription": "透過品質優化重新編碼來減少 JPEG 檔案大小。拖放多個影像。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "dropzoneMessage": "點擊或拖曳 JPEG 檔案至此處上傳",
+    "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
+    "descTitle": "壓縮JPEG",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "該工具透過使用優化的品質設定重新編碼來壓縮 JPEG 影像。壓縮完全在您的瀏覽器中運作。",
+      "JPEG 使用有損壓縮，這意味著一些影像資料會被丟棄以實現更小的檔案大小。視覺品質保持高水平，同時文件大小顯著減小。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "將 JPEG 檔案拖放到上傳區域，或按一下選擇檔案。",
+      "每個檔案都會自動壓縮並顯示壓縮率。",
+      "下載單一壓縮檔或使用<strong>全部下載</strong>來取得 ZIP 檔案。"
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "關於 JPEG 壓縮",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "JPEG 壓縮的工作原理是分析影像並刪除人眼最不易察覺的視覺資訊。這就是為什麼它被稱為有損壓縮。",
+      "典型的 JPEG 壓縮可減少 40-60% 的檔案大小，同時將可見的品質損失降至最低。壓縮率取決於原始影像內容。"
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "使用Python壓縮",
+    "examplePara": "您可以使用 Python 和 Pillow 程式庫以程式設計方式壓縮 JPEG 映像：",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "jp": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+    "title": "JPEG を圧縮する —coding.tools",
+    "description": "オンラインで JPEG 画像を圧縮してファイル サイズを削減します。無料、高速、ブラウザ上で実行できます。",
     "toolTitle": "JPEG圧縮",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+    "toolDescription": "品質を最適化して再エンコードすることで、JPEG ファイルのサイズを削減します。複数の画像をドラッグ アンド ドロップします。",
     "categoryName": "画像ツール",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "dropzoneMessage": "ここに JPEG ファイルをクリックまたはドラッグしてアップロードします",
+    "dropzoneHint": "画像最大20枚・各最大10MB",
+    "descTitle": "JPEGを圧縮する",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "このツールは、最適化された品質設定で JPEG 画像を再エンコードすることで JPEG 画像を圧縮します。圧縮は完全にブラウザ内で実行されます。",
+      "JPEG は非可逆圧縮を使用します。つまり、ファイル サイズを小さくするために一部の画像データが破棄されます。ファイルサイズが大幅に削減されながらも、高いビジュアル品質が維持されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "JPEG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
+      "各ファイルは自動的に圧縮され、圧縮率が表示されます。",
+      "個別の圧縮ファイルをダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "JPEG圧縮について",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "JPEG 圧縮は、画像を分析し、人間の目には最も目立たない視覚情報を削除することによって機能します。これが非可逆圧縮と呼ばれる理由です。",
+      "一般的な JPEG 圧縮では、目に見える品質の低下を最小限に抑えながら、ファイル サイズを 40 ～ 60% 削減できます。圧縮率は元の画像の内容によって異なります。"
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "Pythonで圧縮する",
+    "examplePara": "Python と Pillow ライブラリを使用して、プログラムで JPEG 画像を圧縮できます。",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "kr": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+    "title": "JPEG 압축 — Coding.Tools",
+    "description": "JPEG 이미지를 온라인으로 압축하여 파일 크기를 줄이세요. 무료이며 빠르며 브라우저에서 실행됩니다.",
     "toolTitle": "JPEG 압축",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
+    "toolDescription": "품질 최적화를 통해 다시 인코딩하여 JPEG 파일 크기를 줄입니다. 여러 이미지를 드래그 앤 드롭하세요.",
     "categoryName": "이미지 도구",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "dropzoneMessage": "업로드하려면 여기에서 JPEG 파일을 클릭하거나 드래그하세요.",
+    "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
+    "descTitle": "JPEG 압축",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "이 도구는 JPEG 이미지를 최적화된 품질 설정으로 다시 인코딩하여 압축합니다. 압축은 전적으로 브라우저에서 실행됩니다.",
+      "JPEG는 손실 압축을 사용합니다. 즉, 파일 크기를 더 작게 만들기 위해 일부 이미지 데이터가 삭제됩니다. 파일 크기가 크게 줄어들면서 시각적 품질은 높게 유지됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "JPEG 파일을 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택합니다.",
+      "각 파일은 자동으로 압축되며 압축률이 표시됩니다.",
+      "개별 압축 파일을 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "JPEG 압축 정보",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "JPEG 압축은 이미지를 분석하고 사람의 눈에 가장 잘 보이지 않는 시각적 정보를 제거하는 방식으로 작동합니다. 이것이 바로 손실 압축이라고 불리는 이유입니다.",
+      "일반적인 JPEG 압축은 눈에 보이는 품질 손실을 최소화하면서 파일 크기를 40-60% 줄입니다. 압축률은 원본 이미지 내용에 따라 달라집니다."
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "Python으로 압축",
+    "examplePara": "Python과 Pillow 라이브러리를 사용하여 프로그래밍 방식으로 JPEG 이미지를 압축할 수 있습니다.",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "fr": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+    "title": "Compresser JPEG — Codage.Tools",
+    "description": "Compressez les images JPEG en ligne pour réduire la taille du fichier. Gratuit, rapide et fonctionne dans votre navigateur.",
     "toolTitle": "Compresser JPEG",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
-    "categoryName": "Utilitaires d'image",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "toolDescription": "Réduisez la taille du fichier JPEG en réencodant avec une optimisation de la qualité. Faites glisser et déposez plusieurs images.",
+    "categoryName": "Outils d’image",
+    "dropzoneMessage": "Cliquez ou faites glisser les fichiers JPEG ici pour les télécharger",
+    "dropzoneHint": "Jusqu'à 20 images · Max 10 Mo chacune",
+    "descTitle": "Compresser JPEG",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "Cet outil compresse les images JPEG en les réencodant avec des paramètres de qualité optimisés. La compression s'exécute entièrement dans votre navigateur.",
+      "JPEG utilise une compression avec perte, ce qui signifie que certaines données d'image sont supprimées pour obtenir des fichiers de plus petite taille. La qualité visuelle reste élevée tandis que la taille du fichier est considérablement réduite."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "Faites glisser et déposez les fichiers JPEG sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
+      "Chaque fichier est compressé automatiquement et le taux de compression est affiché.",
+      "Téléchargez des fichiers compressés individuels ou utilisez <strong>Télécharger tout</strong> pour obtenir une archive ZIP."
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "À propos de la compression JPEG",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "La compression JPEG fonctionne en analysant l'image et en supprimant les informations visuelles les moins visibles à l'œil humain. C’est pourquoi on parle de compression avec perte.",
+      "La compression JPEG typique permet une réduction de la taille du fichier de 40 à 60 % avec une perte de qualité visible minimale. Le taux de compression dépend du contenu de l'image originale."
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "Compresser avec Python",
+    "examplePara": "Vous pouvez compresser des images JPEG par programme à l'aide de Python avec la bibliothèque Pillow :",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "de": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+    "title": "JPEG komprimieren – Coding.Tools",
+    "description": "Komprimieren Sie JPEG-Bilder online, um die Dateigröße zu reduzieren. Kostenlos, schnell und läuft in Ihrem Browser.",
     "toolTitle": "JPEG komprimieren",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
-    "categoryName": "Bild-Tools",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "toolDescription": "Reduzieren Sie die Größe der JPEG-Datei durch Neukodierung mit Qualitätsoptimierung. Ziehen Sie mehrere Bilder per Drag & Drop.",
+    "categoryName": "Bildwerkzeuge",
+    "dropzoneMessage": "Klicken oder ziehen Sie JPEG-Dateien hierher, um sie hochzuladen",
+    "dropzoneHint": "Bis zu 20 Bilder · Maximal jeweils 10 MB",
+    "descTitle": "JPEG komprimieren",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "Dieses Tool komprimiert JPEG-Bilder, indem es sie mit optimierten Qualitätseinstellungen neu kodiert. Die Komprimierung läuft vollständig in Ihrem Browser.",
+      "JPEG verwendet eine verlustbehaftete Komprimierung, was bedeutet, dass einige Bilddaten verworfen werden, um kleinere Dateigrößen zu erreichen. Die visuelle Qualität bleibt hoch, während die Dateigröße deutlich reduziert wird."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "Ziehen Sie JPEG-Dateien per Drag-and-Drop in den Upload-Bereich oder klicken Sie, um Dateien auszuwählen.",
+      "Jede Datei wird automatisch komprimiert und die Komprimierungsrate wird angezeigt.",
+      "Laden Sie einzelne komprimierte Dateien herunter oder verwenden Sie <strong>Alle herunterladen</strong>, um ein ZIP-Archiv zu erhalten."
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "Über JPEG-Komprimierung",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "Bei der JPEG-Komprimierung wird das Bild analysiert und visuelle Informationen entfernt, die für das menschliche Auge am wenigsten wahrnehmbar sind. Aus diesem Grund spricht man von verlustbehafteter Komprimierung.",
+      "Bei der typischen JPEG-Komprimierung wird eine Reduzierung der Dateigröße um 40–60 % bei minimalem sichtbaren Qualitätsverlust erreicht. Das Komprimierungsverhältnis hängt vom ursprünglichen Bildinhalt ab."
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "Mit Python komprimieren",
+    "examplePara": "Sie können JPEG-Bilder programmgesteuert mit Python mit der Pillow-Bibliothek komprimieren:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "es": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
+    "title": "Comprimir JPEG - Coding.Tools",
+    "description": "Comprima imágenes JPEG en línea para reducir el tamaño del archivo. Gratis, rápido y se ejecuta en tu navegador.",
     "toolTitle": "Comprimir JPEG",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
-    "categoryName": "Utilidades de imagen",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "toolDescription": "Reduzca el tamaño del archivo JPEG recodificando con optimización de calidad. Arrastra y suelta varias imágenes.",
+    "categoryName": "Herramientas de imagen",
+    "dropzoneMessage": "Haga clic o arrastre los archivos JPEG aquí para cargarlos.",
+    "dropzoneHint": "Hasta 20 imágenes · Máximo 10 MB cada una",
+    "descTitle": "Comprimir JPEG",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "Esta herramienta comprime imágenes JPEG recodificandolas con configuraciones de calidad optimizadas. La compresión se ejecuta completamente en su navegador.",
+      "JPEG utiliza compresión con pérdida, lo que significa que algunos datos de la imagen se descartan para lograr tamaños de archivo más pequeños. La calidad visual sigue siendo alta mientras que el tamaño del archivo se reduce significativamente."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "Arrastre y suelte archivos JPEG en el área de carga o haga clic para seleccionar archivos.",
+      "Cada archivo se comprime automáticamente y se muestra la tasa de compresión.",
+      "Descargue archivos comprimidos individuales o utilice <strong>Descargar todo</strong> para obtener un archivo ZIP."
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "Acerca de la compresión JPEG",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "La compresión JPEG funciona analizando la imagen y eliminando la información visual que es menos perceptible para el ojo humano. Por eso se llama compresión con pérdida.",
+      "La compresión JPEG típica logra una reducción del tamaño del archivo del 40 al 60 % con una mínima pérdida de calidad visible. La relación de compresión depende del contenido de la imagen original."
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "Comprimir con Python",
+    "examplePara": "Puede comprimir imágenes JPEG mediante programación usando Python con la biblioteca Pillow:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "pt": {
-    "title": "Compress JPEG — Coding.Tools",
-    "description": "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser.",
-    "toolTitle": "Compress JPEG",
-    "toolDescription": "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images.",
-    "categoryName": "Image Utilities",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "Compress JPEG",
+    "title": "Compactar JPEG – Ferramentas de codificação",
+    "description": "Compacte imagens JPEG online para reduzir o tamanho do arquivo. Gratuito, rápido e roda no seu navegador.",
+    "toolTitle": "Compactar JPEG",
+    "toolDescription": "Reduza o tamanho do arquivo JPEG recodificando com otimização de qualidade. Arraste e solte várias imagens.",
+    "categoryName": "Ferramentas de imagem",
+    "dropzoneMessage": "Clique ou arraste os arquivos JPEG aqui para fazer upload",
+    "dropzoneHint": "Até 20 imagens · Máximo de 10 MB cada",
+    "descTitle": "Compactar JPEG",
     "descParas": [
-      "This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser.",
-      "JPEG uses lossy compression, meaning some image data is discarded to achieve smaller file sizes. The visual quality remains high while the file size is significantly reduced."
+      "Esta ferramenta compacta imagens JPEG, recodificando-as com configurações de qualidade otimizadas. A compactação é executada inteiramente no seu navegador.",
+      "JPEG usa compactação com perdas, o que significa que alguns dados de imagem são descartados para obter tamanhos de arquivo menores. A qualidade visual permanece alta enquanto o tamanho do arquivo é significativamente reduzido."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "Arraste e solte arquivos JPEG na área de upload ou clique para selecionar os arquivos.",
+      "Cada arquivo é compactado automaticamente e a taxa de compactação é exibida.",
+      "Baixe arquivos compactados individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
     ],
-    "whatIs": "About JPEG compression",
+    "whatIs": "Sobre compactação JPEG",
     "whatIsParas": [
-      "JPEG compression works by analyzing the image and removing visual information that is least noticeable to the human eye. This is why it is called lossy compression.",
-      "Typical JPEG compression achieves 40-60% file size reduction with minimal visible quality loss. The compression ratio depends on the original image content."
+      "A compactação JPEG funciona analisando a imagem e removendo informações visuais menos perceptíveis ao olho humano. É por isso que é chamada de compactação com perdas.",
+      "A compactação JPEG típica atinge uma redução de 40-60% no tamanho do arquivo com perda mínima de qualidade visível. A taxa de compressão depende do conteúdo da imagem original."
     ],
-    "example": "Compress with Python",
-    "examplePara": "You can compress JPEG images programmatically using Python with the Pillow library:",
+    "example": "Compactar com Python",
+    "examplePara": "Você pode compactar imagens JPEG programaticamente usando Python com a biblioteca Pillow:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   }
 }

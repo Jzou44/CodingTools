@@ -4,7 +4,7 @@
     "description": "Convert decimal numbers to percentages directly in your browser.",
     "toolTitle": "Decimal to Percent",
     "toolDescription": "Convert decimal numbers to percentage values.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
     "outputPlaceholder": "Percent result will appear here...",
     "descTitle": "Decimal to Percent Converter",
@@ -58,206 +58,206 @@
     "exampleCode": "--- 小数输入 ---\n0.75\n\n--- 百分比 ---\n75%\n\n--- 分数 ---\n3/4"
   },
   "tw": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "小數到百分比轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將小數轉換為百分比。",
     "toolTitle": "小數轉百分比",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "將小數轉換為百分比值。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "輸入小數（例如 0.75、1.5）...",
+    "outputPlaceholder": "百分比結果將出現在這裡...",
+    "descTitle": "小數到百分比轉換器",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "該工具透過乘以 100 將小數轉換為百分比。",
+      "轉換在您的瀏覽器本地運行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在輸入欄位中鍵入或貼上十進制數。",
+      "點選<strong>轉換</strong>即可取得百分比。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "什麼是小數化成百分比？",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "若要將小數轉換為百分比，請乘以 100。例如，0.75 = 75%。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "輸入有效的十進制數。",
+    "example": "例子",
+    "examplePara": "將小數轉換為百分比：",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "jp": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "10 進数からパーセントへのコンバーター —coding.Tools",
+    "description": "ブラウザで小数をパーセントに直接変換します。",
     "toolTitle": "小数からパーセント",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "10 進数をパーセント値に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "10 進数を入力してください (例: 0.75、1.5)...",
+    "outputPlaceholder": "パーセントの結果がここに表示されます...",
+    "descTitle": "10 進数からパーセントへのコンバーター",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "このツールは、100 を乗算して 10 進数をパーセンテージに変換します。",
+      "変換はブラウザ内でローカルに実行されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "入力フィールドに 10 進数を入力するか貼り付けます。",
+      "[<strong>変換</strong>] をクリックしてパーセンテージを取得します。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "10 進数からパーセントへの変換とは何ですか?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "小数をパーセントに変換するには、100 を掛けます。たとえば、0.75 = 75% です。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "有効な 10 進数を入力してください。",
+    "example": "例",
+    "examplePara": "小数点をパーセントに変換すると、次のようになります。",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "kr": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "십진수를 백분율로 변환하는 변환기 — Coding.Tools",
+    "description": "브라우저에서 직접 십진수를 백분율로 변환하세요.",
     "toolTitle": "소수에서 퍼센트",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "십진수를 백분율 값으로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "10진수를 입력하세요(예: 0.75, 1.5)...",
+    "outputPlaceholder": "백분율 결과가 여기에 표시됩니다...",
+    "descTitle": "소수를 백분율로 변환",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "이 도구는 100을 곱하여 십진수를 백분율로 변환합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 필드에 10진수를 입력하거나 붙여넣습니다.",
+      "백분율을 확인하려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "소수점 이하 백분율은 무엇입니까?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "소수를 백분율로 변환하려면 100을 곱합니다. 예를 들어 0.75 = 75%입니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "유효한 십진수를 입력하세요.",
+    "example": "예",
+    "examplePara": "소수를 퍼센트로 변환:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "fr": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "Convertisseur décimal en pourcentage - Coding.Tools",
+    "description": "Convertissez les nombres décimaux en pourcentages directement dans votre navigateur.",
     "toolTitle": "Décimal en Pourcentage",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "Convertissez des nombres décimaux en valeurs de pourcentage.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "Entrez un nombre décimal (par exemple 0,75, 1,5)...",
+    "outputPlaceholder": "Le résultat en pourcentage apparaîtra ici...",
+    "descTitle": "Convertisseur décimal en pourcentage",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "Cet outil convertit les nombres décimaux en pourcentages en les multipliant par 100.",
+      "La conversion s'exécute localement dans votre navigateur."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Tapez ou collez un nombre décimal dans le champ de saisie.",
+      "Cliquez sur <strong>Convertir</strong> pour obtenir le pourcentage.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "Qu'est-ce que le nombre décimal en pourcentage ?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "Pour convertir une valeur décimale en pourcentage, multipliez par 100. Par exemple, 0,75 = 75 %."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Entrez un nombre décimal valide.",
+    "example": "Exemple",
+    "examplePara": "Conversion d'un nombre décimal en pourcentage :",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "de": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "Dezimal-Prozent-Konverter – Coding.Tools",
+    "description": "Wandeln Sie Dezimalzahlen direkt in Ihrem Browser in Prozentwerte um.",
     "toolTitle": "Dezimal zu Prozent",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "Konvertieren Sie Dezimalzahlen in Prozentwerte.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "Dezimalzahl eingeben (z. B. 0,75, 1,5)...",
+    "outputPlaceholder": "Das prozentuale Ergebnis wird hier angezeigt ...",
+    "descTitle": "Dezimal-Prozent-Konverter",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "Dieses Tool wandelt Dezimalzahlen durch Multiplikation mit 100 in Prozentwerte um.",
+      "Die Konvertierung läuft lokal in Ihrem Browser."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Geben oder fügen Sie eine Dezimalzahl in das Eingabefeld ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um den Prozentsatz zu erhalten.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "Was ist Dezimal in Prozent?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "Um eine Dezimalzahl in Prozent umzuwandeln, multiplizieren Sie sie mit 100. Beispiel: 0,75 = 75 %."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Geben Sie eine gültige Dezimalzahl ein.",
+    "example": "Beispiel",
+    "examplePara": "Dezimalzahl in Prozent umrechnen:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "es": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "Convertidor de decimal a porcentaje: Coding.Tools",
+    "description": "Convierte números decimales a porcentajes directamente en tu navegador.",
     "toolTitle": "Decimal a Porcentaje",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "Convierte números decimales a valores porcentuales.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "Ingrese el número decimal (por ejemplo, 0,75, 1,5)...",
+    "outputPlaceholder": "El resultado porcentual aparecerá aquí...",
+    "descTitle": "Convertidor de decimal a porcentaje",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "Esta herramienta convierte números decimales a porcentajes multiplicándolos por 100.",
+      "La conversión se ejecuta localmente en su navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Escriba o pegue un número decimal en el campo de entrada.",
+      "Haga clic en <strong>Convertir</strong> para obtener el porcentaje.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "¿Qué es decimal a porcentaje?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "Para convertir un decimal a porcentaje, multiplique por 100. Por ejemplo, 0,75 = 75%."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Introduzca un número decimal válido.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de decimal a porcentaje:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "pt": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
-    "toolTitle": "Decimal to Percent",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "title": "Conversor Decimal para Porcentagem — Coding.Tools",
+    "description": "Converta números decimais em porcentagens diretamente no seu navegador.",
+    "toolTitle": "Decimal para porcentagem",
+    "toolDescription": "Converta números decimais em valores percentuais.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
-    "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "inputPlaceholder": "Insira o número decimal (por exemplo, 0,75, 1,5)...",
+    "outputPlaceholder": "O resultado percentual aparecerá aqui...",
+    "descTitle": "Conversor Decimal para Porcentagem",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "Esta ferramenta converte números decimais em porcentagens multiplicando por 100.",
+      "A conversão é executada localmente no seu navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Digite ou cole um número decimal no campo de entrada.",
+      "Clique em <strong>Converter</strong> para obter a porcentagem.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "O que é decimal para porcentagem?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "Para converter um decimal em porcentagem, multiplique por 100. Por exemplo, 0,75 = 75%."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
-    "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira um número decimal válido.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo decimal em porcentagem:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   }
 }

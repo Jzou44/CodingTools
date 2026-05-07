@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv debug-skill *)",
+      "Bash(mv docker-testing *)",
+      "Bash(mkdir -p .claude/skills/custom-debug-skill)",
+      "Bash(cp ~/.claude/skills/custom-debug-skill/SKILL.md .claude/skills/custom-debug-skill/SKILL.md)",
+      "Bash(mkdir -p ~/.claude/skills/custom-deploy)",
+      "Bash(mv \"D:/workspace/CodingTools/.claude/skills/custom-deploy/SKILL.md\" ~/.claude/skills/custom-deploy/SKILL.md)"
+    ]
+  }
+}

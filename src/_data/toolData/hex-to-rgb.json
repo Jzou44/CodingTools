@@ -45,8 +45,9 @@
     "howToUse": "使用方法",
     "steps": [
       "输入十六进制颜色代码。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "RGB 值和颜色预览会自动更新。",
+      "点击<strong>随机颜色</strong>获取随机十六进制颜色。",
+      "使用<strong>复制</strong>复制 RGB 值。"
     ],
     "whatIs": "什么是十六进制转RGB？",
     "whatIsParas": [
@@ -59,13 +60,13 @@
     "exampleCode": "--- 十六进制输入 ---\n#FF5733\n\n--- RGB ---\nrgb(255, 87, 51)"
   },
   "tw": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "十六進位到 RGB 轉換器 — Coding.Tools",
+    "description": "透過即時預覽將十六進位顏色代碼轉換為 RGB 格式。快速、私密且免費。",
     "toolTitle": "十六進位轉RGB",
     "toolDescription": "將十六進位顏色代碼轉換為RGB顏色值。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "輸入十六進位顏色（例如#FF5733、3498db）...",
+    "outputPlaceholder": "RGB顏色將會出現在這裡...",
     "descTitle": "十六進位轉RGB轉換器",
     "descParas": [
       "此工具將十六進位顏色代碼轉換為RGB（紅綠藍）顏色值，並提供即時顏色預覽。",
@@ -89,13 +90,13 @@
     "exampleCode": "--- 十六進位輸入 ---\n#FF5733\n\n--- RGB 輸出 ---\nrgb(255, 87, 51)"
   },
   "jp": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "16 進数から RGB へのコンバーター —coding.tools",
+    "description": "ライブ プレビューを使用して 16 進カラー コードを RGB 形式に変換します。高速、プライベート、そして無料。",
     "toolTitle": "16進数からRGB",
     "toolDescription": "16進数カラーコードをRGB値に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "16 進数の色を入力してください (例: #FF5733、3498db)...",
+    "outputPlaceholder": "ここにRGBカラーが表示されます...",
     "descTitle": "16進数からRGB変換",
     "descParas": [
       "このツールは16進数カラーコードをRGB（赤・緑・青）カラー值に変換し、ライブプレビューを提供します。",
@@ -119,13 +120,13 @@
     "exampleCode": "--- 16進数入力 ---\n#FF5733\n\n--- RGB出力 ---\nrgb(255, 87, 51)"
   },
   "kr": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "16진수-RGB 변환기 — Coding.Tools",
+    "description": "실시간 미리보기를 통해 16진수 색상 코드를 RGB 형식으로 변환하세요. 빠르고 비공개이며 무료입니다.",
     "toolTitle": "16진수에서 RGB",
     "toolDescription": "16진수색상 코드를 RGB 값으로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "16진수 색상을 입력하세요(예: #FF5733, 3498db)...",
+    "outputPlaceholder": "RGB 색상이 여기에 표시됩니다...",
     "descTitle": "16진수에서 RGB 변환",
     "descParas": [
       "이 도구는 16진수색상 코드를 RGB(빨간색 · 초록색 · 파란색) 색상 값으로 변환하고 실시간 미리보기를 제공합니다.",
@@ -149,13 +150,13 @@
     "exampleCode": "--- 16진수 입력 ---\n#FF5733\n\n--- RGB 출력 ---\nrgb(255, 87, 51)"
   },
   "fr": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "Convertisseur Hex vers RVB — Coding.Tools",
+    "description": "Convertissez les codes de couleur hexadécimaux au format RVB avec aperçu en direct. Rapide, privé et gratuit.",
     "toolTitle": "Hexadécimal en RGB",
     "toolDescription": "Convertissez les codes couleur hexadécimaux en valeurs RGB.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "Entrez la couleur hexadécimale (par exemple #FF5733, 3498db)...",
+    "outputPlaceholder": "La couleur RVB apparaîtra ici...",
     "descTitle": "Convertisseur Hex vers RGB",
     "descParas": [
       "Cet outil convertit les codes couleur hexadécimaux en valeurs RGB (rouge, vert, bleu) avec un aperçu en direct.",
@@ -179,13 +180,13 @@
     "exampleCode": "--- Entrée hexadécimale ---\n#FF5733\n\n--- Sortie RGB ---\nrgb(255, 87, 51)"
   },
   "de": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "Hex-zu-RGB-Konverter – Coding.Tools",
+    "description": "Konvertieren Sie Hex-Farbcodes mit Live-Vorschau in das RGB-Format. Schnell, privat und kostenlos.",
     "toolTitle": "Hexadezimal zu RGB",
     "toolDescription": "Konvertieren Sie Hex-Farbcodes in RGB-Werte.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "Geben Sie die Hex-Farbe ein (z. B. #FF5733, 3498db) ...",
+    "outputPlaceholder": "Hier erscheint die RGB-Farbe...",
     "descTitle": "Hex zu RGB Konverter",
     "descParas": [
       "Dieses Tool konvertiert Hex-Farbcodes in RGB (Rot, Grün, Blau) Farbwerte mit einer Live-Vorschau.",
@@ -209,13 +210,13 @@
     "exampleCode": "--- Hex-Eingabe ---\n#FF5733\n\n--- RGB-Ausgabe ---\nrgb(255, 87, 51)"
   },
   "es": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "Convertidor de hexadecimal a RGB - Coding.Tools",
+    "description": "Convierta códigos de color hexadecimales al formato RGB con vista previa en vivo. Rápido, privado y gratuito.",
     "toolTitle": "Hexadecimal a RGB",
     "toolDescription": "Convierte códigos de color hexadecimal a valores RGB.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "Ingrese el color hexadecimal (por ejemplo, #FF5733, 3498db)...",
+    "outputPlaceholder": "El color RGB aparecerá aquí...",
     "descTitle": "Conversor de Hex a RGB",
     "descParas": [
       "Esta herramienta convierte códigos de color hexadecimal a valores RGB (rojo, verde, azul) con una vista previa en directo.",
@@ -239,13 +240,13 @@
     "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Salida RGB ---\nrgb(255, 87, 51)"
   },
   "pt": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
-    "toolTitle": "Hex to RGB",
+    "title": "Conversor Hex para RGB — Coding.Tools",
+    "description": "Converta códigos de cores hexadecimais para o formato RGB com visualização ao vivo. Rápido, privado e gratuito.",
+    "toolTitle": "Hexadecimal para RGB",
     "toolDescription": "Converta códigos de cor hexadecimal em valores RGB.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
-    "outputPlaceholder": "RGB color will appear here...",
+    "inputPlaceholder": "Insira a cor hexadecimal (por exemplo, #FF5733, 3498db)...",
+    "outputPlaceholder": "A cor RGB aparecerá aqui...",
     "descTitle": "Conversor de Hex para RGB",
     "descParas": [
       "Esta ferramenta converte códigos de cor hexadecimal em valores RGB (vermelho, verde, azul) com visualização ao vivo.",

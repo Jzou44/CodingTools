@@ -98,10 +98,10 @@ permalink: "/tw/base64-encode.html"
         if (!text) return;
         try {
           outputEditor.value = btoa(unescape(encodeURIComponent(text)));
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Encoded successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.encodedSuccessfully }}');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Encoding failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.encodingFailed }}' + e.message);
         }
       };
 
@@ -110,10 +110,10 @@ permalink: "/tw/base64-encode.html"
         if (!text) return;
         try {
           outputEditor.value = decodeURIComponent(escape(atob(text)));
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Decoded successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.decodedSuccessfully }}');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid Base64 string');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidBase64String }}');
         }
       };
 

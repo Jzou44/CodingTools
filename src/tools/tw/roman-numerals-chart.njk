@@ -9,34 +9,37 @@ permalink: "/tw/roman-numerals-chart.html"
 {% extends "tool-layout.njk" %}
 
 {% block tool_content %}
-  <!-- Static reference page - no interactive tool -->
+  {% include "roman-numerals-chart-table.njk" %}
 {% endblock %}
 
 {% block description %}
-  <h2>{{ toolData.descTitle }}</h2>
-  {% for para in toolData.descParas %}
-  <p>{{ para | safe }}</p>
-  {% endfor %}
-
-  <h3>{{ toolData.howToUse }}</h3>
+  {% if toolData.howToUse and toolData.steps.length %}
+  <h2>{{ toolData.howToUse }}</h2>
   <ol class="steps-list">
     {% for step in toolData.steps %}
     <li>{{ step | safe }}</li>
     {% endfor %}
   </ol>
+  {% endif %}
 
-  <h3>{{ toolData.whatIs }}</h3>
+  {% if toolData.whatIs %}
+  <h2>{{ toolData.whatIs }}</h2>
   {% for para in toolData.whatIsParas %}
   <p>{{ para | safe }}</p>
   {% endfor %}
+  {% endif %}
 
+  {% if toolData.inputNotes and toolData.inputNotesPara %}
   <h3>{{ toolData.inputNotes }}</h3>
   <p>{{ toolData.inputNotesPara | safe }}</p>
+  {% endif %}
 
+  {% if toolData.example and toolData.exampleCode %}
   <h3>{{ toolData.example }}</h3>
   <p>{{ toolData.examplePara | safe }}</p>
   <div class="code-block-wrapper">
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
     <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
   </div>
+  {% endif %}
 {% endblock %}

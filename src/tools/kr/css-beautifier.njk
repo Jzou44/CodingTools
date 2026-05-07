@@ -89,10 +89,10 @@ permalink: "/kr/css-beautifier.html"
         if (!text) return;
         try {
           outputEditor.value = css_beautify(text, { indent_size: 2 });
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'CSS beautified successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.beautifiedSuccessfully }}');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Beautification failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.beautificationFailed }}' + e.message);
         }
       };
 

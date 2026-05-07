@@ -4,7 +4,7 @@
     "description": "Convert text to binary code representation directly in your browser.",
     "toolTitle": "Text to Binary",
     "toolDescription": "Convert ASCII text to binary byte sequences.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Type or paste text here...",
     "outputPlaceholder": "Binary code will appear here...",
     "descTitle": "Text to Binary Converter",
@@ -45,7 +45,8 @@
     "howToUse": "使用方法",
     "steps": [
       "输入或粘贴文本。",
-      "点击<strong>转换</strong>查看结果。",
+      "选择二进制分隔符（无或空格）。",
+      "点击<strong>转换</strong>将文本编码为二进制。",
       "使用<strong>复制</strong>复制结果。"
     ],
     "whatIs": "什么是文本转二进制？",
@@ -59,213 +60,213 @@
     "exampleCode": "--- 文本输入 ---\nHello\n\n--- 二进制 ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "tw": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "文字到二進位轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將文字轉換為二進位代碼表示形式。",
     "toolTitle": "文字轉二進位",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "將 ASCII 文字轉換為二進位位元組序列。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "在此輸入或貼上文字...",
+    "outputPlaceholder": "二進位代碼將出現在這裡...",
+    "descTitle": "文字到二進制轉換器",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "該工具將 ASCII 文字轉換為二進位（基數 2）位元組表示形式。每個字元都編碼為 8 位元二進位數。",
+      "轉換在您的瀏覽器本地運行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在輸入編輯器中鍵入或貼上文字。",
+      "選擇二進位分隔符號（無或空格）。",
+      "點選<strong>轉換</strong>將文字編碼為二進位。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "什麼是文字到二進位？",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "文字到二進位轉換將每個字元對應為其 8 位元二進位表示形式。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "支援任何 ASCII 文字。每個字元都會轉換為其 8 位元二進位代碼。",
+    "example": "例子",
+    "examplePara": "將文字轉換為二進位：",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "jp": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "テキストからバイナリへのコンバーター —coding.tools",
+    "description": "ブラウザでテキストをバイナリ コード表現に直接変換します。",
     "toolTitle": "テキストから2進数",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "ASCII テキストをバイナリ バイト シーケンスに変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "ここにテキストを入力するか貼り付けます...",
+    "outputPlaceholder": "ここにバイナリコードが表示されます...",
+    "descTitle": "テキストからバイナリへのコンバーター",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "このツールは、ASCII テキストをバイナリ (base 2) バイト表現に変換します。各文字は 8 ビットの 2 進数としてエンコードされます。",
+      "変換はブラウザ内でローカルに実行されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "入力エディターにテキストを入力または貼り付けます。",
+      "バイナリ区切り文字 (なしまたはスペース) を選択します。",
+      "[<strong>変換</strong>] をクリックしてテキストをバイナリにエンコードします。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "テキストからバイナリへの変換とは何ですか?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "テキストからバイナリへの変換では、各文字が 8 ビットのバイナリ表現にマップされます。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "あらゆる ASCII テキストをサポートします。各文字は 8 ビットのバイナリ コードに変換されます。",
+    "example": "例",
+    "examplePara": "テキストをバイナリに変換します。",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "kr": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "텍스트를 이진 변환기로 — Coding.Tools",
+    "description": "브라우저에서 텍스트를 바이너리 코드 표현으로 직접 변환하세요.",
     "toolTitle": "텍스트에서 2진수",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "ASCII 텍스트를 이진 바이트 시퀀스로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "여기에 텍스트를 입력하거나 붙여넣으세요...",
+    "outputPlaceholder": "여기에 바이너리 코드가 나타납니다...",
+    "descTitle": "텍스트를 바이너리 변환기로",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "이 도구는 ASCII 텍스트를 이진(기본 2) 바이트 표현으로 변환합니다. 각 문자는 8비트 이진수로 인코딩됩니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
+      "이진 구분 기호(없음 또는 공백)를 선택합니다.",
+      "텍스트를 바이너리로 인코딩하려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "텍스트를 바이너리로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "텍스트를 이진으로 변환하면 각 문자가 8비트 이진 표현으로 매핑됩니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "모든 ASCII 텍스트를 지원합니다. 각 문자는 8비트 이진 코드로 변환됩니다.",
+    "example": "예",
+    "examplePara": "텍스트를 바이너리로 변환:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "fr": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "Convertisseur de texte en binaire — Coding.Tools",
+    "description": "Convertissez le texte en représentation de code binaire directement dans votre navigateur.",
     "toolTitle": "Texte en Binaire",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "Convertissez le texte ASCII en séquences d'octets binaires.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "Tapez ou collez le texte ici...",
+    "outputPlaceholder": "Le code binaire apparaîtra ici...",
+    "descTitle": "Convertisseur de texte en binaire",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "Cet outil convertit le texte ASCII en représentation binaire (base 2) d'octets. Chaque caractère est codé sous forme de nombre binaire de 8 bits.",
+      "La conversion s'exécute localement dans votre navigateur."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Tapez ou collez du texte dans l'éditeur de saisie.",
+      "Choisissez un délimiteur binaire (Aucun ou Espace).",
+      "Cliquez sur <strong>Convertir</strong> pour encoder le texte en binaire.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "Qu’est-ce que le texte en binaire ?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "La conversion texte en binaire mappe chaque caractère à sa représentation binaire 8 bits."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Prend en charge n'importe quel texte ASCII. Chaque caractère est converti en son code binaire de 8 bits.",
+    "example": "Exemple",
+    "examplePara": "Conversion de texte en binaire :",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "de": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "Text-zu-Binär-Konverter – Coding.Tools",
+    "description": "Konvertieren Sie Text direkt in Ihrem Browser in eine binäre Codedarstellung.",
     "toolTitle": "Text zu Binär",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "Konvertieren Sie ASCII-Text in binäre Bytesequenzen.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "Geben Sie hier Text ein oder fügen Sie ihn ein...",
+    "outputPlaceholder": "Hier erscheint Binärcode...",
+    "descTitle": "Text-zu-Binär-Konverter",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "Dieses Tool konvertiert ASCII-Text in eine binäre (Basis 2) Byte-Darstellung. Jedes Zeichen ist als 8-Bit-Binärzahl kodiert.",
+      "Die Konvertierung läuft lokal in Ihrem Browser."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Geben Sie Text in den Eingabeeditor ein oder fügen Sie ihn ein.",
+      "Wählen Sie ein binäres Trennzeichen (Kein oder Leerzeichen).",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um den Text in eine Binärdatei zu kodieren.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "Was ist Text to Binary?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "Die Text-zu-Binär-Konvertierung ordnet jedes Zeichen seiner 8-Bit-Binärdarstellung zu."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Unterstützt jeden ASCII-Text. Jedes Zeichen wird in seinen 8-Bit-Binärcode umgewandelt.",
+    "example": "Beispiel",
+    "examplePara": "Text in Binär umwandeln:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "es": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "Convertidor de texto a binario - Coding.Tools",
+    "description": "Convierta texto a representación de código binario directamente en su navegador.",
     "toolTitle": "Texto a Binario",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "Convierta texto ASCII en secuencias de bytes binarios.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "Escriba o pegue texto aquí...",
+    "outputPlaceholder": "El código binario aparecerá aquí...",
+    "descTitle": "Convertidor de texto a binario",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "Esta herramienta convierte texto ASCII en representación de bytes binarios (base 2). Cada carácter está codificado como un número binario de 8 bits.",
+      "La conversión se ejecuta localmente en su navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Escriba o pegue texto en el editor de entrada.",
+      "Elija un delimitador binario (Ninguno o Espacio).",
+      "Haga clic en <strong>Convertir</strong> para codificar el texto a binario.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "¿Qué es Texto a Binario?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "La conversión de texto a binario asigna cada carácter a su representación binaria de 8 bits."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Admite cualquier texto ASCII. Cada carácter se convierte a su código binario de 8 bits.",
+    "example": "Ejemplo",
+    "examplePara": "Convirtiendo texto a binario:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "pt": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
-    "toolTitle": "Text to Binary",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "title": "Conversor de texto para binário — Coding.Tools",
+    "description": "Converta texto em representação de código binário diretamente em seu navegador.",
+    "toolTitle": "Texto para binário",
+    "toolDescription": "Converta texto ASCII em sequências de bytes binários.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Type or paste text here...",
-    "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "inputPlaceholder": "Digite ou cole o texto aqui...",
+    "outputPlaceholder": "O código binário aparecerá aqui...",
+    "descTitle": "Conversor de texto para binário",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "Esta ferramenta converte texto ASCII em representação de bytes binários (base 2). Cada caractere é codificado como um número binário de 8 bits.",
+      "A conversão é executada localmente no seu navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Digite ou cole o texto no editor de entrada.",
+      "Escolha um delimitador binário (Nenhum ou Espaço).",
+      "Clique em <strong>Converter</strong> para codificar o texto em binário.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "O que é texto para binário?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "A conversão de texto em binário mapeia cada caractere para sua representação binária de 8 bits."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
-    "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Suporta qualquer texto ASCII. Cada caractere é convertido em seu código binário de 8 bits.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo texto em binário:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   }
 }

@@ -109,6 +109,19 @@
     "colon": "Colon",
     "binaryInput": "Binary Input",
     "textOutput": "Text Output",
-    "fractionResult": "Fraction Result"
+    "fractionResult": "Fraction Result",
+    "encodedSuccessfully": "Encoded successfully",
+    "decodedSuccessfully": "Decoded successfully",
+    "encodingFailed": "Encoding failed: ",
+    "invalidBase64String": "Invalid Base64 string",
+    "conversionFailed": "Conversion failed: ",
+    "formattingFailed": "Formatting failed: ",
+    "minifiedSuccessfully": "Minified successfully",
+    "minificationFailed": "Minification failed: ",
+    "binaryLengthMultipleOf8": "Binary string length must be a multiple of 8",
+    "invalidBinaryOnly01": "Invalid binary input - only 0 and 1 are allowed",
+    "filesCompressed": "file(s) compressed",
+    "filesProcessed": "file(s) processed",
+    "exifTagsFound": "EXIF tags found"
   }
 }

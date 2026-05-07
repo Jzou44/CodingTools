@@ -4,7 +4,7 @@
     "description": "Convert Roman numerals to decimal numbers directly in your browser.",
     "toolTitle": "Roman to Numbers",
     "toolDescription": "Convert Roman numeral strings to decimal numbers.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
     "outputPlaceholder": "Number will appear here...",
     "descTitle": "Roman Numerals to Numbers Converter",
@@ -58,206 +58,206 @@
     "exampleCode": "--- 罗马数字输入 ---\nXIV\n\n--- 阿拉伯数字 ---\n14"
   },
   "tw": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "羅馬數字到數位轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將羅馬數字轉換為十進制數字。",
     "toolTitle": "羅馬數字轉數字",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "將羅馬數字字串轉換為十進制數字。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "輸入羅馬數字（例如 XIV、MMXXIV）...",
+    "outputPlaceholder": "號碼將會出現在這裡...",
+    "descTitle": "羅馬數字到數位轉換器",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "該工具將羅馬數字字串轉換為其等效的十進制數字。它處理減法表示法（IV=4、IX=9、XL=40 等）。",
+      "轉換在您的瀏覽器本地運行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在輸入欄位中鍵入或貼上羅馬數字。",
+      "點選<strong>轉換</strong>即可取得十進制數。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "羅馬數字是什麼？",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "轉換器從左到右讀取羅馬數字字串，並添加值。當較小的值在較大的值之前時，它使用減法表示法。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "使用字母 I、V、X、L、C、D、M（不區分大小寫）輸入有效的羅馬數字。",
+    "example": "例子",
+    "examplePara": "將羅馬數字轉換為數字：",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "jp": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "ローマ数字から数字へのコンバーター —coding.Tools",
+    "description": "ブラウザでローマ数字を 10 進数に直接変換します。",
     "toolTitle": "ローマ数字から数字",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "ローマ数字列を 10 進数に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "ローマ数字を入力してください (例: XIV、MMXXIV)...",
+    "outputPlaceholder": "ここに数字が表示されます...",
+    "descTitle": "ローマ数字から数字へのコンバーター",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "このツールは、ローマ数字の文字列を等価な 10 進数に変換します。減算表記 (IV=4、IX=9、XL=40 など) を処理します。",
+      "変換はブラウザ内でローカルに実行されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "入力フィールドにローマ数字を入力するか貼り付けます。",
+      "[<strong>変換</strong>] をクリックして 10 進数を取得します。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "ローマ字と数字とは何ですか?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "コンバーターはローマ数字の文字列を左から右に読み取り、値を加算します。小さい値が大きい値の前にある場合は、減算表記が使用されます。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "I、V、X、L、C、D、M の文字を使用して有効なローマ数字を入力します (大文字と小文字は区別されません)。",
+    "example": "例",
+    "examplePara": "ローマ数字を数値に変換するには:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "kr": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "로마 숫자를 숫자로 변환하는 변환기 — Coding.Tools",
+    "description": "브라우저에서 로마 숫자를 십진수로 직접 변환하세요.",
     "toolTitle": "로마 숫자에서 숫자",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "로마 숫자 문자열을 십진수로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "로마 숫자를 입력하세요(예: XIV, MMXXIV)...",
+    "outputPlaceholder": "여기에 번호가 표시됩니다...",
+    "descTitle": "로마 숫자를 숫자로 변환하는 변환기",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "이 도구는 로마 숫자 문자열을 해당하는 십진수로 변환합니다. 빼기 표기법(IV=4, IX=9, XL=40 등)을 처리합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 필드에 로마 숫자를 입력하거나 붙여넣습니다.",
+      "십진수를 얻으려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "로마 숫자를 숫자로 변환하는 것은 무엇입니까?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "변환기는 로마 숫자 문자열을 왼쪽에서 오른쪽으로 읽어 값을 추가합니다. 작은 값이 큰 값 앞에 오면 빼기 표기법을 사용합니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "I, V, X, L, C, D, M 문자를 사용하여 유효한 로마 숫자를 입력하세요(대소문자 구분 안 함).",
+    "example": "예",
+    "examplePara": "로마 숫자를 숫자로 변환:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "fr": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "Convertisseur de chiffres romains en nombres — Coding.Tools",
+    "description": "Convertissez des chiffres romains en nombres décimaux directement dans votre navigateur.",
     "toolTitle": "Chiffres romains en nombres",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "Convertissez les chaînes de chiffres romains en nombres décimaux.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "Entrez le chiffre romain (par exemple XIV, MMXXIV)...",
+    "outputPlaceholder": "Le numéro apparaîtra ici...",
+    "descTitle": "Convertisseur de chiffres romains en chiffres",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "Cet outil convertit les chaînes de chiffres romains en leurs équivalents décimaux. Il gère la notation soustractive (IV=4, IX=9, XL=40, etc.).",
+      "La conversion s'exécute localement dans votre navigateur."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Tapez ou collez un chiffre romain dans le champ de saisie.",
+      "Cliquez sur <strong>Convertir</strong> pour obtenir le nombre décimal.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "Qu'est-ce que le roman des nombres ?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "Le convertisseur lit la chaîne de chiffres romains de gauche à droite, en ajoutant des valeurs. Lorsqu’une valeur plus petite précède une valeur plus grande, la notation soustractive est utilisée."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Saisissez des chiffres romains valides en utilisant les lettres I, V, X, L, C, D, M (insensible à la casse).",
+    "example": "Exemple",
+    "examplePara": "Conversion de chiffres romains en nombres :",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "de": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "Konverter römischer Ziffern in Zahlen – Coding.Tools",
+    "description": "Konvertieren Sie römische Ziffern direkt in Ihrem Browser in Dezimalzahlen.",
     "toolTitle": "Römische Ziffern zu Zahlen",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "Konvertieren Sie römische Ziffernfolgen in Dezimalzahlen.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "Geben Sie eine römische Zahl ein (z. B. XIV, MMXXIV)...",
+    "outputPlaceholder": "Die Nummer erscheint hier...",
+    "descTitle": "Konverter römischer Ziffern in Zahlen",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "Dieses Tool konvertiert römische Ziffernfolgen in ihre dezimalen Zahlenäquivalente. Es beherrscht die subtraktive Notation (IV=4, IX=9, XL=40 usw.).",
+      "Die Konvertierung läuft lokal in Ihrem Browser."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Geben oder fügen Sie eine römische Zahl in das Eingabefeld ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um die Dezimalzahl zu erhalten.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "Was bedeutet Roman to Numbers?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "Der Konverter liest die römische Ziffernfolge von links nach rechts und addiert Werte. Wenn ein kleinerer Wert vor einem größeren Wert steht, wird die subtraktive Schreibweise verwendet."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Geben Sie gültige römische Ziffern mit den Buchstaben I, V, X, L, C, D, M ein (Groß- und Kleinschreibung wird nicht beachtet).",
+    "example": "Beispiel",
+    "examplePara": "Römische Ziffern in Zahlen umwandeln:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "es": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "Convertidor de números romanos a números — Coding.Tools",
+    "description": "Convierta números romanos a números decimales directamente en su navegador.",
     "toolTitle": "Números romanos a números",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "Convierta cadenas de números romanos a números decimales.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "Introduzca el número romano (por ejemplo, XIV, MMXXIV)...",
+    "outputPlaceholder": "El número aparecerá aquí...",
+    "descTitle": "Convertidor de números romanos a números",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "Esta herramienta convierte cadenas de números romanos a sus equivalentes en números decimales. Maneja notación sustractiva (IV=4, IX=9, XL=40, etc.).",
+      "La conversión se ejecuta localmente en su navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Escriba o pegue un número romano en el campo de entrada.",
+      "Haga clic en <strong>Convertir</strong> para obtener el número decimal.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "¿Qué es el romano con números?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "El convertidor lee la cadena de números romanos de izquierda a derecha, sumando valores. Cuando un valor menor precede a uno mayor, se utiliza notación sustractiva."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese números romanos válidos usando las letras I, V, X, L, C, D, M (no distingue entre mayúsculas y minúsculas).",
+    "example": "Ejemplo",
+    "examplePara": "Convertir números romanos a números:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "pt": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
-    "toolTitle": "Roman to Numbers",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "title": "Conversor de algarismos romanos para números — Coding.Tools",
+    "description": "Converta algarismos romanos em números decimais diretamente no seu navegador.",
+    "toolTitle": "Romano para Números",
+    "toolDescription": "Converta sequências de algarismos romanos em números decimais.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
-    "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "inputPlaceholder": "Digite o algarismo romano (por exemplo, XIV, MMXXIV)...",
+    "outputPlaceholder": "O número aparecerá aqui...",
+    "descTitle": "Conversor de algarismos romanos para números",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "Esta ferramenta converte strings de algarismos romanos em seus equivalentes de números decimais. Ele lida com notação subtrativa (IV=4, IX=9, XL=40, etc.).",
+      "A conversão é executada localmente no seu navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Digite ou cole um algarismo romano no campo de entrada.",
+      "Clique em <strong>Converter</strong> para obter o número decimal.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "O que é romano para números?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "O conversor lê a sequência de algarismos romanos da esquerda para a direita, adicionando valores. Quando um valor menor precede um valor maior, utiliza-se a notação subtrativa."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
-    "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira algarismos romanos válidos usando as letras I, V, X, L, C, D, M (sem distinção entre maiúsculas e minúsculas).",
+    "example": "Exemplo",
+    "examplePara": "Convertendo algarismos romanos em números:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   }
 }

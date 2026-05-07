@@ -377,7 +377,7 @@ permalink: "/fr/decimal-to-fraction.html"
             showFraction(intStr2, '' + numerator, '' + denominator);
           }
 
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {
           showError('{{ t.ui.invalidDecimalInput }}');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');

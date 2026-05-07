@@ -95,10 +95,10 @@ permalink: "/cn/css-minifier.html"
           var result = htmlminifier.minify(wrapped, {collapseWhitespace:true, minifyCSS:true, removeComments:true});
           result = result.replace(/<\/?style[^>]*>/g, '');
           outputEditor.value = result;
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'CSS minified successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.minifiedSuccessfully }}');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Minification failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };
 

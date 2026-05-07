@@ -256,7 +256,7 @@ permalink: "/de/roman-numerals-to-numbers.html"
           return;
         }
         showResult(result.toString(), 'valid');
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
       };
 
       btnClear.addEventListener('click', function () {
@@ -296,7 +296,7 @@ permalink: "/de/roman-numerals-to-numbers.html"
           return;
         }
         showResult(result.toString(), 'valid');
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
       });
 
       ToolCommon.initExampleCopy();

@@ -156,7 +156,7 @@ permalink: "/tw/decimal-to-percent.html"
         try {
           var result = new BigNumber(input).multipliedBy(100);
           showResult(result.toString(10), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {
           showResult('{{ t.ui.invalidDecimalInput }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidDecimalInput }}');
@@ -197,7 +197,7 @@ permalink: "/tw/decimal-to-percent.html"
         try {
           var result = new BigNumber(input).multipliedBy(100);
           showResult(result.toString(10), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
           showResult('{{ t.ui.invalidDecimalInput }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');

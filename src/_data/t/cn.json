@@ -111,6 +111,19 @@
     "colon": "冒号",
     "binaryInput": "二进制输入",
     "textOutput": "文本输出",
-    "fractionResult": "分数结果"
+    "fractionResult": "分数结果",
+    "encodedSuccessfully": "编码成功",
+    "decodedSuccessfully": "解码成功",
+    "encodingFailed": "编码失败：",
+    "invalidBase64String": "无效的 Base64 字符串",
+    "conversionFailed": "转换失败：",
+    "formattingFailed": "格式化失败：",
+    "minifiedSuccessfully": "压缩成功",
+    "minificationFailed": "压缩失败：",
+    "binaryLengthMultipleOf8": "二进制字符串长度必须是 8 的倍数",
+    "invalidBinaryOnly01": "无效的二进制输入，只允许 0 和 1",
+    "filesCompressed": "个文件已压缩",
+    "filesProcessed": "个文件已处理",
+    "exifTagsFound": "个 EXIF 标签"
   }
 }

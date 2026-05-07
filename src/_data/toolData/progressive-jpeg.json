@@ -56,199 +56,199 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "tw": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+    "title": "漸進式 JPEG — Coding.Tools",
+    "description": "在線上將基線 JPEG 轉換為漸進式 JPEG 格式。免費並在您的瀏覽器中運行。",
     "toolTitle": "漸進式JPEG",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+    "toolDescription": "將基線 JPEG 影像轉換為漸進式 JPEG，以獲得更好的 Web 載入體驗。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "dropzoneMessage": "點擊或拖曳 JPEG 檔案至此處上傳",
+    "dropzoneHint": "最多 30 張圖像·每張最大 10MB",
+    "descTitle": "漸進式 JPEG",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "漸進式 JPEG 分多次載入影像 - 首先顯示模糊版本，然後逐步細化為完整影像。這可以在圖像加載時為用戶提供視覺預覽。",
+      "基線 JPEG 從上到下逐行載入。漸進式 JPEG 更適合 Web 效能感知。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "將 JPEG 檔案拖放到上傳區域，或按一下選擇檔案。",
+      "每個檔案都會自動轉換為漸進式 JPEG 格式。",
+      "下載單一檔案或使用<strong>全部下載</strong>來取得 ZIP 檔案。"
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "基線與漸進式 JPEG",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>Baseline JPEG</strong>從上到下逐行載入像素資料。使用者看到圖像逐漸出現。",
+      "<strong>漸進式 JPEG</strong> 分多次載入。首先出現低品質預覽，然後每次通過都會銳化。儘管總加載時間可能相似，但用戶感覺更快。"
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "用Python轉換",
+    "examplePara": "使用 Python 和 Pillow 將基線 JPEG 轉換為漸進式：",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "jp": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+    "title": "プログレッシブ JPEG — コーディング.ツール",
+    "description": "オンラインでベースライン JPEG をプログレッシブ JPEG 形式に変換します。無料でブラウザ上で実行できます。",
     "toolTitle": "プログレッシブJPEG",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+    "toolDescription": "Web 読み込みエクスペリエンスを向上させるために、ベースライン JPEG 画像をプログレッシブ JPEG に変換します。",
     "categoryName": "画像ツール",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "dropzoneMessage": "ここに JPEG ファイルをクリックまたはドラッグしてアップロードします",
+    "dropzoneHint": "画像最大30枚・各最大10MB",
+    "descTitle": "プログレッシブJPEG",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "プログレッシブ JPEG は複数のパスで画像を読み込みます。最初にぼやけたバージョンを表示し、次に完全な画像に段階的に調整します。これにより、画像の読み込み中にユーザーに視覚的なプレビューが表示されます。",
+      "ベースライン JPEG は、上から下に 1 行ずつロードします。プログレッシブ JPEG は、Web パフォーマンスの認識に優れています。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "JPEG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
+      "各ファイルは自動的にプログレッシブ JPEG 形式に変換されます。",
+      "個別のファイルをダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "ベースラインとプログレッシブ JPEG",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>ベースライン JPEG</strong> は、ピクセル データを上から下に 1 行ずつ読み込みます。ユーザーは、画像が徐々に表示されるのを確認します。",
+      "<strong>プログレッシブ JPEG</strong> は複数のパスで読み込まれます。最初は低品質のプレビューが表示され、その後パスごとに鮮明になります。合計の読み込み時間は同じであっても、ユーザーにはこれが速く感じられます。"
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "Pythonで変換する",
+    "examplePara": "Python と Pillow を使用してベースライン JPEG をプログレッシブに変換します。",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "kr": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+    "title": "프로그레시브 JPEG — Coding.Tools",
+    "description": "온라인에서 기본 JPEG를 프로그레시브 JPEG 형식으로 변환하세요. 무료이며 브라우저에서 실행됩니다.",
     "toolTitle": "프로그레시브 JPEG",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
+    "toolDescription": "더 나은 웹 로딩 경험을 위해 기본 JPEG 이미지를 프로그레시브 JPEG로 변환합니다.",
     "categoryName": "이미지 도구",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "dropzoneMessage": "업로드하려면 여기에서 JPEG 파일을 클릭하거나 드래그하세요.",
+    "dropzoneHint": "이미지 최대 30개 · 각 최대 10MB",
+    "descTitle": "프로그레시브 JPEG",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "프로그레시브 JPEG는 여러 단계로 이미지를 로드합니다. 먼저 흐린 버전을 표시한 다음 점진적으로 전체 이미지로 개선합니다. 이를 통해 이미지가 로드되는 동안 사용자에게 시각적 미리보기가 제공됩니다.",
+      "Baseline JPEG는 위에서 아래로 한 줄씩 로드됩니다. 프로그레시브 JPEG는 웹 성능 인식에 더 좋습니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "JPEG 파일을 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택합니다.",
+      "각 파일은 자동으로 프로그레시브 JPEG 형식으로 변환됩니다.",
+      "개별 파일을 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "기준선과 프로그레시브 JPEG",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>기준 JPEG</strong>는 픽셀 데이터를 위에서 아래로 한 줄씩 로드합니다. 사용자는 이미지가 점진적으로 나타나는 것을 봅니다.",
+      "<strong>프로그레시브 JPEG</strong>는 여러 단계로 로드됩니다. 먼저 품질이 낮은 미리보기가 나타난 다음 패스할 때마다 선명해집니다. 총 로드 시간이 비슷하더라도 사용자에게는 이것이 더 빠르게 느껴집니다."
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "Python으로 변환",
+    "examplePara": "Python과 Pillow를 사용하여 기본 JPEG를 프로그레시브로 변환합니다.",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "fr": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+    "title": "JPEG progressif — Codage.Tools",
+    "description": "Convertissez le JPEG de base au format JPEG progressif en ligne. Gratuit et fonctionne dans votre navigateur.",
     "toolTitle": "JPEG progressif",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
-    "categoryName": "Utilitaires d'image",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "toolDescription": "Convertissez les images JPEG de base en JPEG progressif pour une meilleure expérience de chargement Web.",
+    "categoryName": "Outils d’image",
+    "dropzoneMessage": "Cliquez ou faites glisser les fichiers JPEG ici pour les télécharger",
+    "dropzoneHint": "Jusqu'à 30 images · Max 10 Mo chacune",
+    "descTitle": "JPEG progressif",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "Le JPEG progressif charge les images en plusieurs passes – affichant d’abord une version floue, puis affinant progressivement l’image complète. Cela donne aux utilisateurs un aperçu visuel pendant le chargement de l'image.",
+      "Baseline JPEG se charge ligne par ligne de haut en bas. Le JPEG progressif est meilleur pour la perception des performances Web."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "Faites glisser et déposez les fichiers JPEG sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
+      "Chaque fichier est automatiquement converti au format JPEG progressif.",
+      "Téléchargez des fichiers individuels ou utilisez <strong>Télécharger tout</strong> pour obtenir une archive ZIP."
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "JPEG de base vs JPEG progressif",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>Baseline JPEG</strong> charge les données de pixels ligne par ligne, de haut en bas. Les utilisateurs voient l'image apparaître progressivement.",
+      "Le <strong>JPEG progressif</strong> se charge en plusieurs passes. Un aperçu de mauvaise qualité apparaît d’abord, puis il s’accentue à chaque passage. Cela semble plus rapide aux utilisateurs même si le temps de chargement total peut être similaire."
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "Convertir avec Python",
+    "examplePara": "Convertissez le JPEG de base en progressif à l'aide de Python avec Pillow :",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "de": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+    "title": "Progressives JPEG – Coding.Tools",
+    "description": "Konvertieren Sie Baseline-JPEG online in das progressive JPEG-Format. Kostenlos und läuft in Ihrem Browser.",
     "toolTitle": "Progressives JPEG",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
-    "categoryName": "Bild-Tools",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "toolDescription": "Konvertieren Sie Baseline-JPEG-Bilder in progressives JPEG, um das Laden im Internet zu verbessern.",
+    "categoryName": "Bildwerkzeuge",
+    "dropzoneMessage": "Klicken oder ziehen Sie JPEG-Dateien hierher, um sie hochzuladen",
+    "dropzoneHint": "Bis zu 30 Bilder · Max. jeweils 10 MB",
+    "descTitle": "Progressives JPEG",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "Progressive JPEG lädt Bilder in mehreren Durchgängen – zunächst wird eine verschwommene Version angezeigt und dann schrittweise zum Vollbild verfeinert. Dadurch erhalten Benutzer eine visuelle Vorschau, während das Bild geladen wird.",
+      "Baseline JPEG wird Zeile für Zeile von oben nach unten geladen. Progressive JPEG ist besser für die Wahrnehmung der Webleistung."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "Ziehen Sie JPEG-Dateien per Drag-and-Drop in den Upload-Bereich oder klicken Sie, um Dateien auszuwählen.",
+      "Jede Datei wird automatisch in das progressive JPEG-Format konvertiert.",
+      "Laden Sie einzelne Dateien herunter oder verwenden Sie <strong>Alle herunterladen</strong>, um ein ZIP-Archiv zu erhalten."
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "Baseline vs. Progressive JPEG",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>Baseline JPEG</strong> lädt Pixeldaten Zeile für Zeile von oben nach unten. Benutzer sehen, wie das Bild nach und nach erscheint.",
+      "<strong>Progressive JPEG</strong> wird in mehreren Durchgängen geladen. Zunächst erscheint eine Vorschau mit geringer Qualität, die dann mit jedem Durchgang schärfer wird. Dies kommt den Benutzern gefühlt schneller vor, auch wenn die Gesamtladezeit ähnlich sein kann."
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "Mit Python konvertieren",
+    "examplePara": "Konvertieren Sie Basis-JPEG mit Python mit Pillow in Progressiv:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "es": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
+    "title": "JPEG progresivo - Coding.Tools",
+    "description": "Convierta JPEG básico a formato JPEG progresivo en línea. Gratis y se ejecuta en tu navegador.",
     "toolTitle": "JPEG progresivo",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
-    "categoryName": "Utilidades de imagen",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "toolDescription": "Convierta imágenes JPEG de referencia a JPEG progresivo para una mejor experiencia de carga web.",
+    "categoryName": "Herramientas de imagen",
+    "dropzoneMessage": "Haga clic o arrastre los archivos JPEG aquí para cargarlos.",
+    "dropzoneHint": "Hasta 30 imágenes · Máximo 10 MB cada una",
+    "descTitle": "JPEG progresivo",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "JPEG progresivo carga imágenes en varias pasadas: primero muestra una versión borrosa y luego las refina progresivamente hasta obtener la imagen completa. Esto brinda a los usuarios una vista previa visual mientras se carga la imagen.",
+      "Baseline JPEG se carga línea por línea de arriba a abajo. JPEG progresivo es mejor para la percepción del rendimiento web."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "Arrastre y suelte archivos JPEG en el área de carga o haga clic para seleccionar archivos.",
+      "Cada archivo se convierte automáticamente al formato JPEG progresivo.",
+      "Descargue archivos individuales o utilice <strong>Descargar todo</strong> para obtener un archivo ZIP."
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "Línea de base vs JPEG progresivo",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>Baseline JPEG</strong> carga datos de píxeles línea por línea de arriba a abajo. Los usuarios ven la imagen aparecer gradualmente.",
+      "El <strong>JPEG progresivo</strong> se carga en varias pasadas. Primero aparece una vista previa de baja calidad, luego se agudiza con cada pasada. Esto parece más rápido para los usuarios, aunque el tiempo total de carga puede ser similar."
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "Convertir con Python",
+    "examplePara": "Convierta JPEG básico a progresivo usando Python con Pillow:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   },
   "pt": {
-    "title": "Progressive JPEG — Coding.Tools",
-    "description": "Convert baseline JPEG to progressive JPEG format online. Free and runs in your browser.",
-    "toolTitle": "Progressive JPEG",
-    "toolDescription": "Convert baseline JPEG images to progressive JPEG for better web loading experience.",
-    "categoryName": "Image Utilities",
-    "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
-    "descTitle": "Progressive JPEG",
+    "title": "JPEG progressivo — Ferramentas de codificação",
+    "description": "Converta JPEG básico em formato JPEG progressivo online. Gratuito e roda no seu navegador.",
+    "toolTitle": "JPEG progressivo",
+    "toolDescription": "Converta imagens JPEG básicas em JPEG progressivo para uma melhor experiência de carregamento na web.",
+    "categoryName": "Ferramentas de imagem",
+    "dropzoneMessage": "Clique ou arraste os arquivos JPEG aqui para fazer upload",
+    "dropzoneHint": "Até 30 imagens · Máximo de 10 MB cada",
+    "descTitle": "JPEG progressivo",
     "descParas": [
-      "Progressive JPEG loads images in multiple passes — first showing a blurry version, then progressively refining to the full image. This gives users a visual preview while the image loads.",
-      "Baseline JPEG loads line by line from top to bottom. Progressive JPEG is better for web performance perception."
+      "O JPEG progressivo carrega imagens em várias passagens – primeiro mostrando uma versão borrada e depois refinando progressivamente até a imagem completa. Isso dá aos usuários uma visualização visual enquanto a imagem é carregada.",
+      "O JPEG de linha de base carrega linha por linha, de cima para baixo. JPEG progressivo é melhor para percepção de desempenho na web."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Drag and drop JPEG files onto the upload area, or click to select files.",
-      "Each file is converted to progressive JPEG format automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "Arraste e solte arquivos JPEG na área de upload ou clique para selecionar os arquivos.",
+      "Cada arquivo é convertido automaticamente para o formato JPEG progressivo.",
+      "Baixe arquivos individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
     ],
-    "whatIs": "Baseline vs Progressive JPEG",
+    "whatIs": "Linha de base vs JPEG progressivo",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong> loads pixel data line by line from top to bottom. Users see the image appearing gradually.",
-      "<strong>Progressive JPEG</strong> loads in multiple passes. First a low-quality preview appears, then it sharpens with each pass. This feels faster to users even though the total load time may be similar."
+      "<strong>Baseline JPEG</strong> carrega dados de pixel linha por linha, de cima para baixo. Os usuários veem a imagem aparecendo gradualmente.",
+      "<strong>JPEG progressivo</strong> carrega em várias passagens. Primeiro aparece uma visualização de baixa qualidade, depois ela fica mais nítida a cada passagem. Isso parece mais rápido para os usuários, embora o tempo total de carregamento possa ser semelhante."
     ],
-    "example": "Convert with Python",
-    "examplePara": "Convert baseline JPEG to progressive using Python with Pillow:",
+    "example": "Converter com Python",
+    "examplePara": "Converta JPEG básico em progressivo usando Python com Pillow:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpeg')\noriginal.convert('RGB')\noriginal.save('progressive.jpeg', optimize=True, quality=100, progressive=True)"
   }
 }

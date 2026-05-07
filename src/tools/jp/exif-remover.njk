@@ -138,11 +138,11 @@ permalink: "/jp/exif-remover.html"
               results.push({ name: name, blob: blob, url: url });
 
               var statusEl = item.querySelector('.file-status');
-              statusEl.innerHTML = '<a href="' + url + '" download="' + name + '" class="btn btn-ghost btn-sm">Download</a>';
+              statusEl.innerHTML = '<a href="' + url + '" download="' + name + '" class="btn btn-ghost btn-sm">{{ t.ui.download }}</a>';
 
               fileCount.textContent = results.length + ' files';
               btnDownloadAll.disabled = false;
-              ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', results.length + ' file(s) processed');
+              ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', results.length + ' {{ t.ui.filesProcessed }}');
             }, mimeType, quality);
           };
           img.src = e.target.result;

@@ -111,6 +111,19 @@
     "colon": "콜론",
     "binaryInput": "이진 입력",
     "textOutput": "텍스트 출력",
-    "fractionResult": "분수 결과"
+    "fractionResult": "분수 결과",
+    "encodedSuccessfully": "인코딩되었습니다",
+    "decodedSuccessfully": "디코딩되었습니다",
+    "encodingFailed": "인코딩 실패: ",
+    "invalidBase64String": "잘못된 Base64 문자열입니다",
+    "conversionFailed": "변환 실패: ",
+    "formattingFailed": "서식 지정 실패: ",
+    "minifiedSuccessfully": "압축되었습니다",
+    "minificationFailed": "압축 실패: ",
+    "binaryLengthMultipleOf8": "이진 문자열 길이는 8의 배수여야 합니다",
+    "invalidBinaryOnly01": "잘못된 이진 입력입니다. 0과 1만 사용할 수 있습니다",
+    "filesCompressed": "개 파일 압축됨",
+    "filesProcessed": "개 파일 처리됨",
+    "exifTagsFound": "개 EXIF 태그 발견"
   }
 }

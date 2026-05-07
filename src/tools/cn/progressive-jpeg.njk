@@ -141,7 +141,7 @@ permalink: "/cn/progressive-jpeg.html"
 
               fileCount.textContent = results.length + ' files';
               btnDownloadAll.disabled = false;
-              ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', results.length + ' file(s) processed');
+              ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', results.length + ' {{ t.ui.filesProcessed }}');
             }, 'image/jpeg', 1.0);
           };
           img.src = e.target.result;

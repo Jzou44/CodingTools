@@ -115,7 +115,7 @@ permalink: "/es/binary-to-hex.html"
       output.value = result.toString(16).toUpperCase();
       document.getElementById('decimal-output').value = result.toString(10);
       document.getElementById('octal-output').value = result.toString(8);
-      ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+      ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
     } catch (e) {
       ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');
     }

@@ -111,6 +111,19 @@
     "colon": "Dos puntos",
     "binaryInput": "Entrada binaria",
     "textOutput": "Salida de texto",
-    "fractionResult": "Resultado fracción"
+    "fractionResult": "Resultado fracción",
+    "encodedSuccessfully": "Codificado correctamente",
+    "decodedSuccessfully": "Decodificado correctamente",
+    "encodingFailed": "Error de codificación: ",
+    "invalidBase64String": "Cadena Base64 no válida",
+    "conversionFailed": "Error de conversión: ",
+    "formattingFailed": "Error de formato: ",
+    "minifiedSuccessfully": "Minificado correctamente",
+    "minificationFailed": "Error de minificación: ",
+    "binaryLengthMultipleOf8": "La longitud de la cadena binaria debe ser múltiplo de 8",
+    "invalidBinaryOnly01": "Entrada binaria no válida; solo se permiten 0 y 1",
+    "filesCompressed": "archivo(s) comprimido(s)",
+    "filesProcessed": "archivo(s) procesado(s)",
+    "exifTagsFound": "etiqueta(s) EXIF encontrada(s)"
   }
 }

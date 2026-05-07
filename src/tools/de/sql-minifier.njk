@@ -97,7 +97,7 @@ permalink: "/de/sql-minifier.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SQL minified successfully');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Minification failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };
 

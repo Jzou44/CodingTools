@@ -91,7 +91,7 @@ permalink: "/jp/javascript-beautifier.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'JavaScript beautified successfully');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Beautification failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.beautificationFailed }}' + e.message);
         }
       };
 

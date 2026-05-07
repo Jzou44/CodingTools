@@ -235,7 +235,7 @@ permalink: "/tw/exif-viewer.html"
             mapContainer.style.display = 'block';
           }
 
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', Object.keys(exif).length + ' EXIF tags found');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', Object.keys(exif).length + ' {{ t.ui.exifTagsFound }}');
         };
         reader.readAsArrayBuffer(file);
       }

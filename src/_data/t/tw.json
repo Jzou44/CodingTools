@@ -111,6 +111,19 @@
     "colon": "冒號",
     "binaryInput": "二進位輸入",
     "textOutput": "文字輸出",
-    "fractionResult": "分數結果"
+    "fractionResult": "分數結果",
+    "encodedSuccessfully": "編碼成功",
+    "decodedSuccessfully": "解碼成功",
+    "encodingFailed": "編碼失敗：",
+    "invalidBase64String": "無效的 Base64 字串",
+    "conversionFailed": "轉換失敗：",
+    "formattingFailed": "格式化失敗：",
+    "minifiedSuccessfully": "壓縮成功",
+    "minificationFailed": "壓縮失敗：",
+    "binaryLengthMultipleOf8": "二進位字串長度必須是 8 的倍數",
+    "invalidBinaryOnly01": "無效的二進位輸入，只允許 0 和 1",
+    "filesCompressed": "個檔案已壓縮",
+    "filesProcessed": "個檔案已處理",
+    "exifTagsFound": "個 EXIF 標籤"
   }
 }

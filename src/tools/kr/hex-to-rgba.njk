@@ -191,7 +191,7 @@ permalink: "/kr/hex-to-rgba.html"
         var opacity = parseInt(opacitySlider.value, 10);
         var alpha = opacity / 100;
         showResult('rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')', 'valid', r, g, b, alpha);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
       }
 
       btnConvert.onclick = convert;
@@ -245,7 +245,7 @@ permalink: "/kr/hex-to-rgba.html"
           var opacity = parseInt(opacitySlider.value, 10);
           var alpha = opacity / 100;
           showResult('rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')', 'valid', r, g, b, alpha);
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         }
       });
 

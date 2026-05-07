@@ -92,10 +92,10 @@ permalink: "/tw/css-beautifier.html"
         if (!text) return;
         try {
           outputEditor.value = css_beautify(text, { indent_size: 2 });
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'CSS formatted successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.beautifiedSuccessfully }}');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Formatting failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.formattingFailed }}' + e.message);
         }
       };
 

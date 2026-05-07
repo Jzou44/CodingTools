@@ -195,7 +195,7 @@ permalink: "/cn/percent-to-fraction.html"
           }
           lastFraction = textForCopy;
           showResult(html, 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {
           showResult('{{ t.ui.invalidPercentInput }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidPercentInput }}');

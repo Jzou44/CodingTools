@@ -400,7 +400,7 @@ permalink: "/es/fraction-to-decimal.html"
           }
           var result = integerVal.plus(numerator.dividedBy(denominator));
           showResult(result.toString(10), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {
           showResult('{{ t.ui.invalidInput }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidInput }}');

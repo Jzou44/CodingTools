@@ -111,6 +111,19 @@
     "colon": "コロン",
     "binaryInput": "バイナリ入力",
     "textOutput": "テキスト出力",
-    "fractionResult": "分数の結果"
+    "fractionResult": "分数の結果",
+    "encodedSuccessfully": "エンコードに成功しました",
+    "decodedSuccessfully": "デコードに成功しました",
+    "encodingFailed": "エンコードに失敗しました：",
+    "invalidBase64String": "無効な Base64 文字列です",
+    "conversionFailed": "変換に失敗しました：",
+    "formattingFailed": "整形に失敗しました：",
+    "minifiedSuccessfully": "圧縮に成功しました",
+    "minificationFailed": "圧縮に失敗しました：",
+    "binaryLengthMultipleOf8": "2進数文字列の長さは 8 の倍数である必要があります",
+    "invalidBinaryOnly01": "無効な2進数入力です。0 と 1 のみ使用できます",
+    "filesCompressed": "個のファイルを圧縮しました",
+    "filesProcessed": "個のファイルを処理しました",
+    "exifTagsFound": "個の EXIF タグが見つかりました"
   }
 }

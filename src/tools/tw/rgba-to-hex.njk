@@ -200,7 +200,7 @@ permalink: "/tw/rgba-to-hex.html"
         var hex = '#' + toHex(r) + toHex(g) + toHex(b);
         var alpha = a / 100;
         showResult(hex, 'valid', r, g, b, alpha, a);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
       }
 
       btnConvert.onclick = convert;
@@ -253,7 +253,7 @@ permalink: "/tw/rgba-to-hex.html"
         var hex = '#' + toHex(r) + toHex(g) + toHex(b);
         var alpha = a / 100;
         showResult(hex, 'valid', r, g, b, alpha, a);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
       }
 
       rInput.addEventListener('input', liveConvert);

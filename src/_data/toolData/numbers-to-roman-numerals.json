@@ -4,7 +4,7 @@
     "description": "Convert decimal numbers to Roman numerals directly in your browser.",
     "toolTitle": "Numbers to Roman",
     "toolDescription": "Convert decimal numbers to Roman numeral strings.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
     "outputPlaceholder": "Roman numeral will appear here...",
     "descTitle": "Numbers to Roman Numerals Converter",
@@ -58,206 +58,206 @@
     "exampleCode": "--- 数字输入 ---\n14\n\n--- 罗马数字 ---\nXIV"
   },
   "tw": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "數位到羅馬數位轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將十進制數字轉換為羅馬數字。",
     "toolTitle": "數字轉羅馬數字",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "將十進制數字轉換為羅馬數字字串。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "輸入數字（例如 2024、99）...",
+    "outputPlaceholder": "羅馬數字將出現在這裡...",
+    "descTitle": "數位到羅馬數位轉換器",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "該工具將十進制數字轉換為羅馬數字表示形式。支持從 1 到 99,999 的數字。",
+      "轉換在您的瀏覽器本地運行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在輸入欄位中鍵入或貼上數字。",
+      "點擊<strong>轉換</strong>即可取得羅馬數字。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "數字轉羅馬是什麼？",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "該轉換器使用貪心演算法，反覆減去可能的最大羅馬數字值。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "輸入 1 到 99,999 之間的正整數。",
+    "example": "例子",
+    "examplePara": "將數字轉換為羅馬數字：",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "jp": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "数字からローマ数字へのコンバーター —coding.Tools",
+    "description": "ブラウザで 10 進数をローマ数字に直接変換します。",
     "toolTitle": "数字からローマ数字",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "10 進数をローマ数字列に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "数字を入力してください (例: 2024、99)...",
+    "outputPlaceholder": "ここにローマ数字が表示されます...",
+    "descTitle": "数字からローマ数字へのコンバーター",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "このツールは、10 進数をローマ数字表現に変換します。 1 ～ 99,999 の数値をサポートします。",
+      "変換はブラウザ内でローカルに実行されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "入力フィールドに数値を入力するか貼り付けます。",
+      "[<strong>変換</strong>] をクリックしてローマ数字を取得します。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "ローマ数字への変換とは何ですか?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "コンバーターは貪欲なアルゴリズムを使用し、可能な限り最大のローマ数字を繰り返し減算します。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "1 ～ 99,999 の正の整数を入力します。",
+    "example": "例",
+    "examplePara": "数値をローマ数字に変換するには:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "kr": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "숫자를 로마 숫자로 변환하는 변환기 — Coding.Tools",
+    "description": "브라우저에서 직접 십진수를 로마 숫자로 변환하세요.",
     "toolTitle": "숫자에서 로마 숫자",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "십진수를 로마 숫자 문자열로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "숫자 입력(예: 2024, 99)...",
+    "outputPlaceholder": "여기에 로마 숫자가 나타납니다...",
+    "descTitle": "숫자를 로마 숫자로 변환기",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "이 도구는 십진수를 로마 숫자 표현으로 변환합니다. 1부터 99,999까지의 숫자를 지원합니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 필드에 숫자를 입력하거나 붙여넣습니다.",
+      "로마 숫자를 얻으려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "숫자는 로마자에게 무엇입니까?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "변환기는 그리디 알고리즘을 사용하여 가능한 가장 큰 로마 숫자 값을 반복적으로 뺍니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "1~99,999 사이의 양의 정수를 입력하세요.",
+    "example": "예",
+    "examplePara": "숫자를 로마 숫자로 변환:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "fr": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "Convertisseur de nombres en chiffres romains — Coding.Tools",
+    "description": "Convertissez les nombres décimaux en chiffres romains directement dans votre navigateur.",
     "toolTitle": "Nombres en chiffres romains",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "Convertissez les nombres décimaux en chaînes de chiffres romains.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "Entrez le numéro (par exemple 2024, 99)...",
+    "outputPlaceholder": "Le chiffre romain apparaîtra ici...",
+    "descTitle": "Convertisseur de chiffres en chiffres romains",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "Cet outil convertit les nombres décimaux en représentation en chiffres romains. Prend en charge les nombres de 1 à 99 999.",
+      "La conversion s'exécute localement dans votre navigateur."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Tapez ou collez un nombre dans le champ de saisie.",
+      "Cliquez sur <strong>Convertir</strong> pour obtenir le chiffre romain.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "Qu'est-ce que les nombres en romain ?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "Le convertisseur utilise un algorithme glouton, soustrayant à plusieurs reprises la plus grande valeur en chiffres romains possible."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Saisissez un entier positif compris entre 1 et 99 999.",
+    "example": "Exemple",
+    "examplePara": "Conversion de nombres en chiffres romains :",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "de": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "Konverter von Zahlen in römische Ziffern – Coding.Tools",
+    "description": "Konvertieren Sie Dezimalzahlen direkt in Ihrem Browser in römische Ziffern.",
     "toolTitle": "Zahlen zu römischen Ziffern",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "Konvertieren Sie Dezimalzahlen in römische Ziffernfolgen.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "Nummer eingeben (z. B. 2024, 99)...",
+    "outputPlaceholder": "Hier erscheinen römische Ziffern...",
+    "descTitle": "Konverter von Zahlen in römische Ziffern",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "Dieses Tool wandelt Dezimalzahlen in die Darstellung römischer Zahlen um. Unterstützt Zahlen von 1 bis 99.999.",
+      "Die Konvertierung läuft lokal in Ihrem Browser."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Geben oder fügen Sie eine Zahl in das Eingabefeld ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um die römische Zahl zu erhalten.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "Was ist das Zahlen-zu-Römische?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "Der Konverter verwendet einen Greedy-Algorithmus, der wiederholt den größtmöglichen römischen Zahlenwert subtrahiert."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Geben Sie eine positive Ganzzahl zwischen 1 und 99.999 ein.",
+    "example": "Beispiel",
+    "examplePara": "Zahlen in römische Zahlen umwandeln:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "es": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "Convertidor de números a números romanos — Coding.Tools",
+    "description": "Convierta números decimales a números romanos directamente en su navegador.",
     "toolTitle": "Números a romanos",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "Convierte números decimales en cadenas de números romanos.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "Introduzca el número (por ejemplo, 2024, 99)...",
+    "outputPlaceholder": "El número romano aparecerá aquí...",
+    "descTitle": "Convertidor de números a números romanos",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "Esta herramienta convierte números decimales a representación de números romanos. Admite números del 1 al 99.999.",
+      "La conversión se ejecuta localmente en su navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Escriba o pegue un número en el campo de entrada.",
+      "Haga clic en <strong>Convertir</strong> para obtener el número romano.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "¿Qué son los números romanos?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "El convertidor utiliza un algoritmo codicioso, restando repetidamente el mayor valor de número romano posible."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese un número entero positivo entre 1 y 99,999.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de números a números romanos:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "pt": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
-    "toolTitle": "Numbers to Roman",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "title": "Conversor de números para algarismos romanos — Coding.Tools",
+    "description": "Converta números decimais em algarismos romanos diretamente no seu navegador.",
+    "toolTitle": "Números para romano",
+    "toolDescription": "Converta números decimais em sequências de algarismos romanos.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
-    "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "inputPlaceholder": "Insira o número (por exemplo, 2024, 99)...",
+    "outputPlaceholder": "O algarismo romano aparecerá aqui...",
+    "descTitle": "Conversor de números para algarismos romanos",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "Esta ferramenta converte números decimais em representação de algarismos romanos. Suporta números de 1 a 99.999.",
+      "A conversão é executada localmente no seu navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Digite ou cole um número no campo de entrada.",
+      "Clique em <strong>Converter</strong> para obter o algarismo romano.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "O que são números para romanos?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "O conversor usa um algoritmo ganancioso, subtraindo repetidamente o maior valor de algarismo romano possível."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
-    "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira um número inteiro positivo entre 1 e 99.999.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo números em algarismos romanos:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   }
 }

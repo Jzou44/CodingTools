@@ -220,7 +220,7 @@ permalink: "/de/binary-to-text.html"
         var input = editor1.getValue().replace(/\s/g, '');
         if (!input) return;
         if (input.length % 8 !== 0) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Binary string length must be a multiple of 8');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.binaryLengthMultipleOf8 }}');
           return;
         }
         try {
@@ -236,7 +236,7 @@ permalink: "/de/binary-to-text.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully \u2014 ' + ToolCommon.pluralise(input.length / 8, '{{ t.ui.byte }}', '{{ t.ui.bytes }}'));
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Invalid binary input \u2014 only 0 and 1 are allowed');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidBinaryOnly01 }}');
         }
       };
 
@@ -253,7 +253,7 @@ permalink: "/de/binary-to-text.html"
         if (text) {
           navigator.clipboard.writeText(text).then(function () {
             btnCopy.textContent = '{{ t.ui.copied }}';
-            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy'; }, 1500);
+            setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copy }}'; }, 1500);
           });
         }
       });

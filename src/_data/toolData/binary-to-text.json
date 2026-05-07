@@ -4,7 +4,7 @@
     "description": "Convert binary code to readable ASCII text directly in your browser.",
     "toolTitle": "Binary to Text",
     "toolDescription": "Convert binary byte sequences to ASCII text.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
     "outputPlaceholder": "ASCII text will appear here...",
     "descTitle": "Binary to Text Converter",
@@ -58,206 +58,206 @@
     "exampleCode": "--- 二进制输入 ---\n01001000 01100101 01101100 01101100 01101111\n\n--- 文本 ---\nHello"
   },
   "tw": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
+    "title": "二進位到文字轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將二進位代碼轉換為可讀的 ASCII 文字。",
     "toolTitle": "二進位轉文字",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "toolDescription": "將二進位位元組序列轉換為 ASCII 文字。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "在此處貼上二進位代碼（例如 01001000 01100101）...",
+    "outputPlaceholder": "ASCII 文字將會出現在這裡...",
+    "descTitle": "二進位到文字轉換器",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "該工具將二進位位元組序列轉換為可讀的 ASCII 文字。每組 8 位元被解釋為一個 ASCII 字元。",
+      "轉換在您的瀏覽器本地運行。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "將二進位代碼貼到輸入編輯器中。",
+      "點擊<strong>轉換</strong>將二進位檔案解碼為文字。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "什麼是二進位到文字？",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "二進位到文字的轉換將每個 8 位元二進位序列解釋為 ASCII 字元代碼。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "輸入按 8 位元位元組分組的二進位數字（0 和 1）。位元組之間的空格是可選的。",
+    "example": "例子",
+    "examplePara": "將二進制轉換為文字：",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   },
   "jp": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
+    "title": "バイナリからテキストへのコンバーター —coding.tools",
+    "description": "ブラウザでバイナリ コードを読み取り可能な ASCII テキストに直接変換します。",
     "toolTitle": "2進数からテキスト",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "toolDescription": "バイナリ バイト シーケンスを ASCII テキストに変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "ここにバイナリ コードを貼り付けます (例: 01001000 01100101)...",
+    "outputPlaceholder": "ここに ASCII テキストが表示されます...",
+    "descTitle": "バイナリからテキストへのコンバータ",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "このツールは、バイナリ バイト シーケンスを読み取り可能な ASCII テキストに変換します。 8 ビットの各グループは 1 つの ASCII 文字として解釈されます。",
+      "変換はブラウザ内でローカルに実行されます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "バイナリ コードを入力エディタに貼り付けます。",
+      "[<strong>変換</strong>] をクリックしてバイナリをテキストにデコードします。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "バイナリからテキストへの変換とは何ですか?",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "バイナリからテキストへの変換では、各 8 ビット バイナリ シーケンスが ASCII 文字コードとして解釈されます。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "8 ビット バイトにグループ化された 2 進数 (0 と 1) を入力します。バイト間のスペースはオプションです。",
+    "example": "例",
+    "examplePara": "バイナリをテキストに変換する:",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   },
   "kr": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
+    "title": "바이너리를 텍스트로 변환기 — Coding.Tools",
+    "description": "바이너리 코드를 브라우저에서 직접 읽을 수 있는 ASCII 텍스트로 변환하세요.",
     "toolTitle": "2진수에서 텍스트",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "toolDescription": "이진 바이트 시퀀스를 ASCII 텍스트로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "여기에 바이너리 코드를 붙여넣으세요(예: 01001000 01100101)...",
+    "outputPlaceholder": "ASCII 텍스트가 여기에 표시됩니다...",
+    "descTitle": "바이너리를 텍스트로 변환기",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "이 도구는 이진 바이트 시퀀스를 읽을 수 있는 ASCII 텍스트로 변환합니다. 8비트의 각 그룹은 하나의 ASCII 문자로 해석됩니다.",
+      "변환은 브라우저에서 로컬로 실행됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 편집기에 바이너리 코드를 붙여넣습니다.",
+      "바이너리를 텍스트로 디코딩하려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "바이너리를 텍스트로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "이진에서 텍스트로의 변환은 각 8비트 이진 시퀀스를 ASCII 문자 코드로 해석합니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "8비트 바이트로 그룹화된 이진수(0과 1)를 입력합니다. 바이트 사이의 공백은 선택 사항입니다.",
+    "example": "예",
+    "examplePara": "바이너리를 텍스트로 변환:",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   },
   "fr": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
+    "title": "Convertisseur binaire en texte - Coding.Tools",
+    "description": "Convertissez le code binaire en texte ASCII lisible directement dans votre navigateur.",
     "toolTitle": "Binaire en Texte",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "toolDescription": "Convertissez les séquences d'octets binaires en texte ASCII.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "Collez le code binaire ici (par exemple 01001000 01100101)...",
+    "outputPlaceholder": "Le texte ASCII apparaîtra ici...",
+    "descTitle": "Convertisseur binaire en texte",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "Cet outil convertit les séquences d'octets binaires en texte ASCII lisible. Chaque groupe de 8 bits est interprété comme un caractère ASCII.",
+      "La conversion s'exécute localement dans votre navigateur."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Collez le code binaire dans l'éditeur d'entrée.",
+      "Cliquez sur <strong>Convertir</strong> pour décoder le binaire en texte.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "Qu'est-ce que le binaire en texte ?",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "La conversion binaire en texte interprète chaque séquence binaire de 8 bits comme un code de caractère ASCII."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Saisissez des chiffres binaires (0 et 1) regroupés en octets de 8 bits. Les espaces entre les octets sont facultatifs.",
+    "example": "Exemple",
+    "examplePara": "Conversion de binaire en texte :",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   },
   "de": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
+    "title": "Binär-zu-Text-Konverter – Coding.Tools",
+    "description": "Konvertieren Sie Binärcode direkt in Ihrem Browser in lesbaren ASCII-Text.",
     "toolTitle": "Binär zu Text",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "toolDescription": "Konvertieren Sie binäre Bytesequenzen in ASCII-Text.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "Fügen Sie hier den Binärcode ein (z. B. 01001000 01100101) ...",
+    "outputPlaceholder": "Hier erscheint ASCII-Text...",
+    "descTitle": "Binär-zu-Text-Konverter",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "Dieses Tool wandelt binäre Bytesequenzen in lesbaren ASCII-Text um. Jede Gruppe von 8 Bits wird als ein ASCII-Zeichen interpretiert.",
+      "Die Konvertierung läuft lokal in Ihrem Browser."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Fügen Sie Binärcode in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um die Binärdatei in Text zu dekodieren.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "Was ist Binär zu Text?",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "Bei der Binär-zu-Text-Konvertierung wird jede 8-Bit-Binärsequenz als ASCII-Zeichencode interpretiert."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Geben Sie Binärziffern (0 und 1) ein, gruppiert in 8-Bit-Bytes. Leerzeichen zwischen Bytes sind optional.",
+    "example": "Beispiel",
+    "examplePara": "Konvertieren von Binärdateien in Text:",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   },
   "es": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
+    "title": "Convertidor de binario a texto: Coding.Tools",
+    "description": "Convierta código binario en texto ASCII legible directamente en su navegador.",
     "toolTitle": "Binario a Texto",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "toolDescription": "Convierta secuencias de bytes binarios a texto ASCII.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "Pegue el código binario aquí (por ejemplo, 01001000 01100101)...",
+    "outputPlaceholder": "El texto ASCII aparecerá aquí...",
+    "descTitle": "Convertidor de binario a texto",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "Esta herramienta convierte secuencias de bytes binarios en texto ASCII legible. Cada grupo de 8 bits se interpreta como un carácter ASCII.",
+      "La conversión se ejecuta localmente en su navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Pegue el código binario en el editor de entrada.",
+      "Haga clic en <strong>Convertir</strong> para decodificar el binario en texto.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "¿Qué es binario a texto?",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "La conversión de binario a texto interpreta cada secuencia binaria de 8 bits como un código de caracteres ASCII."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese dígitos binarios (0 y 1) agrupados en bytes de 8 bits. Los espacios entre bytes son opcionales.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de binario a texto:",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   },
   "pt": {
-    "title": "Binary to Text Converter — Coding.Tools",
-    "description": "Convert binary code to readable ASCII text directly in your browser.",
-    "toolTitle": "Binary to Text",
-    "toolDescription": "Convert binary byte sequences to ASCII text.",
+    "title": "Conversor de binário para texto — Coding.Tools",
+    "description": "Converta código binário em texto ASCII legível diretamente no seu navegador.",
+    "toolTitle": "Binário para Texto",
+    "toolDescription": "Converta sequências de bytes binários em texto ASCII.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Paste binary code here (e.g. 01001000 01100101)...",
-    "outputPlaceholder": "ASCII text will appear here...",
-    "descTitle": "Binary to Text Converter",
+    "inputPlaceholder": "Cole o código binário aqui (por exemplo, 01001000 01100101)...",
+    "outputPlaceholder": "O texto ASCII aparecerá aqui...",
+    "descTitle": "Conversor binário para texto",
     "descParas": [
-      "This tool converts binary byte sequences into readable ASCII text. Each group of 8 bits is interpreted as one ASCII character.",
-      "The conversion runs locally in your browser."
+      "Esta ferramenta converte sequências de bytes binários em texto ASCII legível. Cada grupo de 8 bits é interpretado como um caractere ASCII.",
+      "A conversão é executada localmente no seu navegador."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Paste binary code into the input editor.",
-      "Click <strong>Convert</strong> to decode the binary to text.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Cole o código binário no editor de entrada.",
+      "Clique em <strong>Converter</strong> para decodificar o binário em texto.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is Binary to Text?",
+    "whatIs": "O que é binário para texto?",
     "whatIsParas": [
-      "Binary to text conversion interprets each 8-bit binary sequence as an ASCII character code."
+      "A conversão de binário em texto interpreta cada sequência binária de 8 bits como um código de caracteres ASCII."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter binary digits (0 and 1) grouped in 8-bit bytes. Spaces between bytes are optional.",
-    "example": "Example",
-    "examplePara": "Converting binary to text:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira dígitos binários (0 e 1) agrupados em bytes de 8 bits. Espaços entre bytes são opcionais.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo binário em texto:",
     "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
   }
 }

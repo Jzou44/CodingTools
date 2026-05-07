@@ -104,14 +104,15 @@
     "ordinalNumberResult": "序數結果",
     "invalidInput": "請輸入有效的整數",
     "convertedSuccess": "轉換成功",
-    "conversionFailed": "轉換失敗："
+    "conversionFailed": "轉換失敗：",
+    "resultPlaceholder": "例如：forty-two"
   },
   "jp": {
     "title": "数字を英語に — Coding.Tools",
     "description": "数字を英単語、序数語、序数に即座に変換。",
     "toolTitle": "数字を英語に",
     "toolDescription": "整数を英単語、序数語、序数に変換。",
-    "categoryName": "文字列＆テキスト",
+    "categoryName": "文字列とテキスト",
     "inputPlaceholder": "数字を入力（例：42、-7、1000000）",
     "descTitle": "数字を英語に変換",
     "descParas": [
@@ -139,14 +140,15 @@
     "ordinalNumberResult": "序数結果",
     "invalidInput": "有効な整数を入力してください",
     "convertedSuccess": "変換成功",
-    "conversionFailed": "変換失敗："
+    "conversionFailed": "変換失敗：",
+    "resultPlaceholder": "例：forty-two"
   },
   "kr": {
     "title": "숫자를 영어로 — Coding.Tools",
     "description": "숫자를 영어 단어, 서수어, 서수로 즉시 변환.",
     "toolTitle": "숫자를 영어로",
     "toolDescription": "정수를 영어 단어, 서수어, 서수로 변환합니다.",
-    "categoryName": "문자열 & 텍스트",
+    "categoryName": "문자열 및 텍스트",
     "inputPlaceholder": "숫자 입력 (예: 42, -7, 1000000)",
     "descTitle": "숫자를 영어로 변환기",
     "descParas": [
@@ -174,14 +176,15 @@
     "ordinalNumberResult": "서수 결과",
     "invalidInput": "유효한 정수를 입력하세요",
     "convertedSuccess": "변환 성공",
-    "conversionFailed": "변환 실패: "
+    "conversionFailed": "변환 실패: ",
+    "resultPlaceholder": "예: forty-two"
   },
   "fr": {
     "title": "Nombres en lettres — Coding.Tools",
     "description": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
     "toolTitle": "Nombres en lettres",
     "toolDescription": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
-    "categoryName": "Chaînes & Texte",
+    "categoryName": "Chaînes et texte",
     "inputPlaceholder": "Entrez un nombre (ex: 42, -7, 1000000)",
     "descTitle": "Convertisseur de nombres en lettres",
     "descParas": [
@@ -209,7 +212,8 @@
     "ordinalNumberResult": "Résultat nombre ordinal",
     "invalidInput": "Veuillez entrer un entier valide",
     "convertedSuccess": "Conversion réussie",
-    "conversionFailed": "Échec de la conversion : "
+    "conversionFailed": "Échec de la conversion : ",
+    "resultPlaceholder": "par ex. forty-two"
   },
   "de": {
     "title": "Zahlen in Wörter — Coding.Tools",
@@ -244,14 +248,15 @@
     "ordinalNumberResult": "Ordnungszahl-Ergebnis",
     "invalidInput": "Bitte geben Sie eine gültige Ganzzahl ein",
     "convertedSuccess": "Erfolgreich konvertiert",
-    "conversionFailed": "Konvertierung fehlgeschlagen: "
+    "conversionFailed": "Konvertierung fehlgeschlagen: ",
+    "resultPlaceholder": "z. B. forty-two"
   },
   "es": {
     "title": "Números a palabras — Coding.Tools",
     "description": "Convierta números a palabras en inglés, ordinales y números ordinales al instante.",
     "toolTitle": "Números a palabras",
     "toolDescription": "Convierta enteros a palabras en inglés, palabras ordinales y números ordinales.",
-    "categoryName": "Cadenas y Texto",
+    "categoryName": "Cadenas y texto",
     "inputPlaceholder": "Ingrese un número (ej: 42, -7, 1000000)",
     "descTitle": "Convertidor de números a palabras",
     "descParas": [
@@ -279,14 +284,15 @@
     "ordinalNumberResult": "Resultado número ordinal",
     "invalidInput": "Ingrese un entero válido",
     "convertedSuccess": "Convertido exitosamente",
-    "conversionFailed": "Error en la conversión: "
+    "conversionFailed": "Error en la conversión: ",
+    "resultPlaceholder": "p. ej. forty-two"
   },
   "pt": {
     "title": "Números por extenso — Coding.Tools",
     "description": "Converta números para palavras em inglês, ordinais e números ordinais instantaneamente.",
     "toolTitle": "Números por extenso",
     "toolDescription": "Converta inteiros para palavras em inglês, palavras ordinais e números ordinais.",
-    "categoryName": "Strings e Texto",
+    "categoryName": "Strings e texto",
     "inputPlaceholder": "Insira um número (ex: 42, -7, 1000000)",
     "descTitle": "Conversor de números por extenso",
     "descParas": [
@@ -314,6 +320,7 @@
     "ordinalNumberResult": "Resultado número ordinal",
     "invalidInput": "Insira um inteiro válido",
     "convertedSuccess": "Convertido com sucesso",
-    "conversionFailed": "Falha na conversão: "
+    "conversionFailed": "Falha na conversão: ",
+    "resultPlaceholder": "ex.: forty-two"
   }
 }

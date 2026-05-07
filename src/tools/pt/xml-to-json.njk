@@ -103,7 +103,7 @@ permalink: "/pt/xml-to-json.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to JSON successfully');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Conversion failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.conversionFailed }}' + e.message);
         }
       };
 

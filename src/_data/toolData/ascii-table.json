@@ -4,7 +4,7 @@
     "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
     "toolTitle": "ASCII Table",
     "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
     "descTitle": "ASCII Table",
@@ -34,7 +34,8 @@
     "outputPlaceholder": "",
     "descTitle": "ASCII码表",
     "descParas": [
-      "ASCII（美国信息交换标准代码）是一种字符编码标准，将整数（0-127）映射到文本字符。它包括大小写拉丁字母、数字、标点符号和控制字符。下表显示了每个ASCII字符及其十进制、十六进制、八进制和二进制表示。"
+      "ASCII（美国信息交换标准代码）是一种字符编码标准，将整数（0-127）映射到文本字符。它包括大小写拉丁字母、数字、标点符号和控制字符。",
+      "表格列出每个字符的十进制、十六进制、八进制和二进制表示。"
     ],
     "howToUse": "",
     "steps": [],
@@ -49,23 +50,23 @@
     "exampleCode": ""
   },
   "tw": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "ASCII 表 — Coding.Tools",
+    "description": "查看包含十進位、十六進位、八進位和二進位代碼的完整 ASCII 字元表。",
     "toolTitle": "ASCII碼表",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "瀏覽完整的 ASCII 表，其中包含十進位、十六進位、八進位和二進位字元代碼。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "ASCII 表",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "此頁面顯示完整的 ASCII 字元表。 ASCII 是一種字元編碼標準，將數字分配給 128 個字元。",
+      "此表顯示了每個字元及其十進制、十六進制、八進制和二進位表示形式。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "什麼是 ASCII？",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII 於 20 世紀 60 年代開發，至今仍是計算中字元編碼的基礎。它定義了 128 個字元 (0-127)。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -74,23 +75,23 @@
     "exampleCode": ""
   },
   "jp": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "ASCII テーブル — コーディング.ツール",
+    "description": "10 進数、16 進数、8 進数、およびバイナリ コードを含む完全な ASCII 文字テーブルを表示します。",
     "toolTitle": "ASCIIテーブル",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "10 進数、16 進数、8 進数、および 2 進数の文字コードを含む完全な ASCII テーブルを参照します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "アスキーテーブル",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "このページには、完全な ASCII 文字テーブルが表示されます。 ASCII は、128 文字に数字を割り当てる文字エンコード標準です。",
+      "この表は、各文字を 10 進数、16 進数、8 進数、および 2 進数で表したものです。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "アスキーとは何ですか?",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII は 1960 年代に開発され、今でもコンピューティングにおける文字エンコーディングの基礎となっています。 128 文字 (0 ～ 127) を定義します。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -99,23 +100,23 @@
     "exampleCode": ""
   },
   "kr": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "ASCII 테이블 — 코딩.도구",
+    "description": "10진수, 16진수, 8진수 및 2진수 코드가 포함된 전체 ASCII 문자 테이블을 봅니다.",
     "toolTitle": "ASCII 테이블",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "10진수, 16진수, 8진수, 2진수 문자 코드가 포함된 전체 ASCII 테이블을 찾아보세요.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "ASCII 테이블",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "이 페이지에는 전체 ASCII 문자 테이블이 표시됩니다. ASCII는 128자에 숫자를 할당하는 문자 인코딩 표준입니다.",
+      "표에는 각 문자가 10진수, 16진수, 8진수 및 2진수로 표시되어 있습니다."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "ASCII란 무엇입니까?",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII는 1960년대에 개발되었으며 컴퓨팅 분야의 문자 인코딩의 기초로 남아 있습니다. 128자(0-127)를 정의합니다."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -124,23 +125,23 @@
     "exampleCode": ""
   },
   "fr": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "Table ASCII — Codage.Outils",
+    "description": "Consultez la table complète des caractères ASCII avec les codes décimaux, hexadécimaux, octaux et binaires.",
     "toolTitle": "Table ASCII",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "Parcourez le tableau ASCII complet avec les codes de caractères en décimal, hexadécimal, octal et binaire.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "Tableau ASCII",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "Cette page affiche la table complète des caractères ASCII. ASCII est une norme de codage de caractères qui attribue des nombres à 128 caractères.",
+      "Le tableau montre chaque caractère avec sa représentation décimale, hexadécimale, octale et binaire."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "Qu’est-ce que l’ASCII ?",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII a été développé dans les années 1960 et reste le fondement du codage de caractères en informatique. Il définit 128 caractères (0-127)."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -149,23 +150,23 @@
     "exampleCode": ""
   },
   "de": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "ASCII-Tabelle – Coding.Tools",
+    "description": "Sehen Sie sich die vollständige ASCII-Zeichentabelle mit Dezimal-, Hex-, Oktal- und Binärcodes an.",
     "toolTitle": "ASCII-Tabelle",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "Durchsuchen Sie die vollständige ASCII-Tabelle mit Zeichencodes in Dezimal-, Hexadezimal-, Oktal- und Binärform.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "ASCII-Tabelle",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "Auf dieser Seite wird die vollständige ASCII-Zeichentabelle angezeigt. ASCII ist ein Zeichenkodierungsstandard, der 128 Zeichen Zahlen zuordnet.",
+      "Die Tabelle zeigt jedes Zeichen in seiner dezimalen, hexadezimalen, oktalen und binären Darstellung."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "Was ist ASCII?",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII wurde in den 1960er Jahren entwickelt und ist nach wie vor die Grundlage der Zeichenkodierung in der Informatik. Es definiert 128 Zeichen (0-127)."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -174,23 +175,23 @@
     "exampleCode": ""
   },
   "es": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
+    "title": "Tabla ASCII — Coding.Tools",
+    "description": "Vea la tabla completa de caracteres ASCII con códigos decimales, hexadecimales, octales y binarios.",
     "toolTitle": "Tabla ASCII",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "toolDescription": "Explore la tabla ASCII completa con códigos de caracteres en decimal, hexadecimal, octal y binario.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "Tabla ASCII",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "Esta página muestra la tabla completa de caracteres ASCII. ASCII es un estándar de codificación de caracteres que asigna números a 128 caracteres.",
+      "La tabla muestra cada carácter con su representación decimal, hexadecimal, octal y binaria."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "¿Qué es ASCII?",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "ASCII se desarrolló en la década de 1960 y sigue siendo la base de la codificación de caracteres en informática. Define 128 caracteres (0-127)."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -199,23 +200,23 @@
     "exampleCode": ""
   },
   "pt": {
-    "title": "ASCII Table — Coding.Tools",
-    "description": "View the complete ASCII character table with decimal, hex, octal, and binary codes.",
-    "toolTitle": "ASCII Table",
-    "toolDescription": "Browse the full ASCII table with character codes in decimal, hex, octal, and binary.",
+    "title": "Tabela ASCII - Ferramentas de codificação",
+    "description": "Veja a tabela completa de caracteres ASCII com códigos decimais, hexadecimais, octais e binários.",
+    "toolTitle": "Tabela ASCII",
+    "toolDescription": "Navegue pela tabela ASCII completa com códigos de caracteres em decimal, hexadecimal, octal e binário.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ASCII Table",
+    "descTitle": "Tabela ASCII",
     "descParas": [
-      "This page displays the complete ASCII character table. ASCII is a character encoding standard that assigns numbers to 128 characters.",
-      "The table shows each character with its decimal, hexadecimal, octal, and binary representation."
+      "Esta página exibe a tabela completa de caracteres ASCII. ASCII é um padrão de codificação de caracteres que atribui números a 128 caracteres.",
+      "A tabela mostra cada caractere com sua representação decimal, hexadecimal, octal e binária."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What is ASCII?",
+    "whatIs": "O que é ASCII?",
     "whatIsParas": [
-      "ASCII was developed in the 1960s and remains the foundation of character encoding in computing. It defines 128 characters (0-127)."
+      "O ASCII foi desenvolvido na década de 1960 e continua sendo a base da codificação de caracteres na computação. Define 128 caracteres (0-127)."
     ],
     "inputNotes": "",
     "inputNotesPara": "",

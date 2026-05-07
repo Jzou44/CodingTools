@@ -95,7 +95,7 @@ permalink: "/fr/sql-formatter.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SQL formatted successfully');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Formatting failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.formattingFailed }}' + e.message);
         }
       };
 

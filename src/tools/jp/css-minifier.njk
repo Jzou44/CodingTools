@@ -90,10 +90,10 @@ permalink: "/jp/css-minifier.html"
           var wrapped = '<style>' + text + '</style>';
           var minified = htmlminifier.minify(wrapped, {collapseWhitespace: true, minifyCSS: true, removeComments: true});
           outputEditor.value = minified.replace(/<\/?style>/g, '');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'CSS minified successfully');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.minifiedSuccessfully }}');
           updateCounts();
         } catch (e) {
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Minification failed: ' + e.message);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };
 

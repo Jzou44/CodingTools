@@ -4,7 +4,7 @@
     "description": "Convert octal numbers to decimal format directly in your browser.",
     "toolTitle": "Octal to Decimal",
     "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
     "outputPlaceholder": "Decimal result will appear here...",
     "descTitle": "Octal to Decimal Converter",
@@ -58,13 +58,13 @@
     "exampleCode": "--- 八进制输入 ---\n377\n\n--- 十进制 ---\n255\n\n--- 十六进制 ---\nFF\n\n--- 二进制 ---\n11111111"
   },
   "tw": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "八進位到十進位轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將八進制數轉換為十進位格式。",
     "toolTitle": "八進位轉十進位",
     "toolDescription": "將八進位數轉換為十進位、十六進位和二進位。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "輸入八進制數（例如 377、755）...",
+    "outputPlaceholder": "小數結果將會出現在這裡...",
     "descTitle": "八進位轉十進位轉換器",
     "descParas": [
       "此工具將八進位（基數8）數轉換為十進位（基數10），並顯示十六進位和二進位等效值。",
@@ -87,13 +87,13 @@
     "exampleCode": "--- 八進位輸入 ---\n377\n\n--- 十進位 ---\n255\n\n--- 十六進位 ---\nFF\n\n--- 二進位 ---\n11111111"
   },
   "jp": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "8 進数から 10 進数へのコンバーター —coding.Tools",
+    "description": "ブラウザで 8 進数を 10 進数形式に直接変換します。",
     "toolTitle": "8進数から10進数",
     "toolDescription": "8進数を10進数、16進数、2進数に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "8 進数を入力してください (例: 377、755)...",
+    "outputPlaceholder": "ここに小数の結果が表示されます...",
     "descTitle": "8進数から10進数変換",
     "descParas": [
       "このツールは8進数（基数8）を10進数（基数10）に変換し、16進数と2進数の等価値も表示します。",
@@ -116,13 +116,13 @@
     "exampleCode": "--- 8進数入力 ---\n377\n\n--- 10進数 ---\n255\n\n--- 16進数 ---\nFF\n\n--- 2進数 ---\n11111111"
   },
   "kr": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "8진수-10진수 변환기 — Coding.Tools",
+    "description": "브라우저에서 직접 8진수를 10진수 형식으로 변환하세요.",
     "toolTitle": "8진수에서 10진수",
     "toolDescription": "8진수를 10진수, 16진수, 2진수로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "8진수를 입력하세요(예: 377, 755)...",
+    "outputPlaceholder": "여기에 소수점 결과가 표시됩니다...",
     "descTitle": "8진수에서 10진수 변환",
     "descParas": [
       "이 도구는 8진수(基数8)를 10진수(基数10)로 변환하고 16진수와 2진수 등가값도 표시합니다.",
@@ -145,13 +145,13 @@
     "exampleCode": "--- 8진수 입력 ---\n377\n\n--- 10진수 ---\n255\n\n--- 16진수 ---\nFF\n\n--- 2진수 ---\n11111111"
   },
   "fr": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "Convertisseur octal en décimal — Coding.Tools",
+    "description": "Convertissez les nombres octaux au format décimal directement dans votre navigateur.",
     "toolTitle": "Octal en Décimal",
     "toolDescription": "Convertissez les nombres octaux en décimal, hexadécimal et binaire.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "Entrez le nombre octal (par exemple 377, 755)...",
+    "outputPlaceholder": "Le résultat décimal apparaîtra ici...",
     "descTitle": "Convertisseur Octal vers Décimal",
     "descParas": [
       "Cet outil convertit les nombres octaux (base 8) en décimal (base 10), et affiche également les équivalents hexadécimaux et binaires.",
@@ -174,13 +174,13 @@
     "exampleCode": "--- Entrée octale ---\n377\n\n--- Décimal ---\n255\n\n--- Hexadécimal ---\nFF\n\n--- Binaire ---\n11111111"
   },
   "de": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "Oktal-Dezimal-Konverter – Coding.Tools",
+    "description": "Konvertieren Sie Oktalzahlen direkt in Ihrem Browser in das Dezimalformat.",
     "toolTitle": "Oktal zu Dezimal",
     "toolDescription": "Konvertieren Sie Oktalzahlen in Dezimal, Hexadezimal und Binär.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "Oktalzahl eingeben (z. B. 377, 755)...",
+    "outputPlaceholder": "Hier wird das Dezimalergebnis angezeigt...",
     "descTitle": "Oktal zu Dezimal Konverter",
     "descParas": [
       "Dieses Tool konvertiert Oktalzahlen (Basis 8) in Dezimal (Basis 10) und zeigt auch Hexadezimal- und Binärequivalente an.",
@@ -203,13 +203,13 @@
     "exampleCode": "--- Oktaleingabe ---\n377\n\n--- Dezimal ---\n255\n\n--- Hexadezimal ---\nFF\n\n--- Binär ---\n11111111"
   },
   "es": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "Convertidor de octal a decimal - Coding.Tools",
+    "description": "Convierta números octales a formato decimal directamente en su navegador.",
     "toolTitle": "Octal a Decimal",
     "toolDescription": "Convierte números octales a decimal, hexadecimal y binario.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "Introduzca el número octal (por ejemplo, 377, 755)...",
+    "outputPlaceholder": "El resultado decimal aparecerá aquí...",
     "descTitle": "Conversor de Octal a Decimal",
     "descParas": [
       "Esta herramienta convierte números octales (base 8) a decimal (base 10), y también muestra equivalentes hexadecimales y binarios.",
@@ -232,13 +232,13 @@
     "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binario ---\n11111111"
   },
   "pt": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
-    "toolTitle": "Octal to Decimal",
+    "title": "Conversor de octal para decimal — Coding.Tools",
+    "description": "Converta números octais em formato decimal diretamente no seu navegador.",
+    "toolTitle": "Octal para Decimal",
     "toolDescription": "Converta números octais para decimal, hexadecimal e binário.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
-    "outputPlaceholder": "Decimal result will appear here...",
+    "inputPlaceholder": "Insira o número octal (por exemplo, 377, 755)...",
+    "outputPlaceholder": "O resultado decimal aparecerá aqui...",
     "descTitle": "Conversor de Octal para Decimal",
     "descParas": [
       "Esta ferramenta converte números octais (base 8) em decimal (base 10), e também mostra equivalentes hexadecimais e binários.",

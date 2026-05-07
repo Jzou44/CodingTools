@@ -300,7 +300,7 @@ permalink: "/tw/decimal-to-binary.html"
           showPrimary(result.toString(2), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
         } catch (e) {
           showPrimary('{{ t.ui.invalidDecimalInput }}', 'error');
           showSecondary(hexOutput, hexCard, '—', 'empty');

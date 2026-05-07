@@ -4,7 +4,7 @@
     "description": "Convert binary numbers to hexadecimal format directly in your browser.",
     "toolTitle": "Binary to Hex",
     "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
-    "categoryName": "Conversão de números",
+    "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
     "outputPlaceholder": "Hex result will appear here...",
     "descTitle": "Binary to Hex Converter",
@@ -58,206 +58,206 @@
     "exampleCode": "--- 二进制输入 ---\n11111111\n\n--- 十六进制 ---\nFF\n\n--- 十进制 ---\n255\n\n--- 八进制 ---\n377"
   },
   "tw": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
+    "title": "二進位到十六進位轉換器 — Coding.Tools",
+    "description": "直接在瀏覽器中將二進制數轉換為十六進位格式。",
     "toolTitle": "二進位轉十六進位",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "toolDescription": "將二進制數轉換為十六進制、十進制和八進制。",
     "categoryName": "數字轉換",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "輸入二進位數（例如 11111111、10101010）...",
+    "outputPlaceholder": "十六進制結果將出現在這裡...",
+    "descTitle": "二進位到十六進位轉換器",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "此工具可將二進位（以 2 為基數）數字轉換為十六進位（以 16 為基數），並顯示十進位和八進位等值。",
+      "每個十六進制數字直接對應到 4 個二進制數字。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "如何使用",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "在輸入欄位中鍵入或貼上二進制數。",
+      "點選<strong>轉換</strong>查看十六進制、十進制和八進制結果。",
+      "使用<strong>複製</strong>複製結果。"
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "什麼是二進位到十六進位？",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "二進位到十六進位的轉換將二進位數字分成 4 個群組，並將每個群組對應到其對應的十六進位數字。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "輸入註釋",
+    "inputNotesPara": "僅使用數字 0 和 1 輸入有效的二進位數。",
+    "example": "例子",
+    "examplePara": "將二進制轉換為十六進制：",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "jp": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
+    "title": "バイナリから 16 進へのコンバーター —coding.Tools",
+    "description": "ブラウザで直接 2 進数を 16 進数形式に変換します。",
     "toolTitle": "2進数から16進数",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "toolDescription": "2 進数を 16 進数、10 進数、および 8 進数に変換します。",
     "categoryName": "数値変換",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "2 進数を入力してください (例: 11111111、10101010)...",
+    "outputPlaceholder": "16 進数の結果がここに表示されます...",
+    "descTitle": "2進数から16進数へのコンバーター",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "このツールは、2 進数 (基数 2) を 16 進数 (基数 16) に変換し、10 進数と 8 進数の等価物も表示します。",
+      "各 16 進数は 4 つの 2 進数に直接マッピングされます。"
     ],
-    "howToUse": "How to use",
+    "howToUse": "使用方法",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "入力フィールドに 2 進数を入力するか貼り付けます。",
+      "[<strong>変換</strong>] をクリックすると、16 進数、10 進数、8 進数の結果が表示されます。",
+      "<strong>コピー</strong>を使用して結果をコピーします。"
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "2進数から16進数への変換とは何ですか?",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "2 進数から 16 進数への変換では、2 進数を 4 つのセットにグループ化し、各グループを対応する 16 進数にマップします。"
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "メモを入力する",
+    "inputNotesPara": "数字 0 と 1 のみを使用して有効な 2 進数を入力してください。",
+    "example": "例",
+    "examplePara": "2 進数を 16 進数に変換します。",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "kr": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
+    "title": "바이너리를 16진수로 변환하는 변환기 — Coding.Tools",
+    "description": "브라우저에서 이진수를 16진수 형식으로 직접 변환하세요.",
     "toolTitle": "2진수에서 16진수",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "toolDescription": "2진수를 16진수, 10진수, 8진수로 변환합니다.",
     "categoryName": "숫자 변환",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "이진수를 입력하세요(예: 11111111, 10101010)...",
+    "outputPlaceholder": "16진수 결과가 여기에 표시됩니다...",
+    "descTitle": "바이너리를 16진수로 변환기",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "이 도구는 2진수(진수 2) 숫자를 16진수(진수 16)로 변환하고 해당하는 10진수 및 8진수도 표시합니다.",
+      "각 16진수는 4개의 이진수에 직접 매핑됩니다."
     ],
-    "howToUse": "How to use",
+    "howToUse": "사용방법",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "입력 필드에 이진수를 입력하거나 붙여넣습니다.",
+      "16진수, 10진수, 8진수 결과를 보려면 <strong>변환</strong>을 클릭하세요.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "바이너리에서 16진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "2진수를 16진수로 변환하면 2진수를 4개 세트로 그룹화하고 각 그룹을 해당하는 16진수로 매핑합니다."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "메모 입력",
+    "inputNotesPara": "숫자 0과 1만 사용하여 유효한 이진수를 입력하세요.",
+    "example": "예",
+    "examplePara": "2진수를 16진수로 변환:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "fr": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
+    "title": "Convertisseur binaire en hexadécimal — Coding.Tools",
+    "description": "Convertissez les nombres binaires au format hexadécimal directement dans votre navigateur.",
     "toolTitle": "Binaire en Hexadécimal",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "toolDescription": "Convertissez les nombres binaires en hexadécimaux, décimaux et octaux.",
     "categoryName": "Conversion de nombres",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "Entrez un nombre binaire (par exemple 11111111, 10101010)...",
+    "outputPlaceholder": "Le résultat hexadécimal apparaîtra ici...",
+    "descTitle": "Convertisseur binaire en hexadécimal",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "Cet outil convertit les nombres binaires (base 2) en hexadécimaux (base 16) et affiche également les équivalents décimaux et octaux.",
+      "Chaque chiffre hexadécimal correspond directement à 4 chiffres binaires."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Comment utiliser",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Tapez ou collez un nombre binaire dans le champ de saisie.",
+      "Cliquez sur <strong>Convertir</strong> pour voir les résultats hexadécimaux, décimaux et octaux.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat."
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "Qu'est-ce que le binaire en hexadécimal ?",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "La conversion binaire en hexadécimal regroupe les chiffres binaires en ensembles de 4 et mappe chaque groupe à son équivalent hexadécimal."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Entrez un nombre binaire valide en utilisant uniquement les chiffres 0 et 1.",
+    "example": "Exemple",
+    "examplePara": "Conversion de binaire en hexadécimal :",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "de": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
+    "title": "Binär-zu-Hex-Konverter – Coding.Tools",
+    "description": "Konvertieren Sie Binärzahlen direkt in Ihrem Browser in das Hexadezimalformat.",
     "toolTitle": "Binär zu Hexadezimal",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "toolDescription": "Konvertieren Sie Binärzahlen in Hexadezimal-, Dezimal- und Oktalzahlen.",
     "categoryName": "Zahlenkonvertierung",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "Geben Sie eine Binärzahl ein (z. B. 11111111, 10101010)...",
+    "outputPlaceholder": "Das Hex-Ergebnis wird hier angezeigt ...",
+    "descTitle": "Binär-zu-Hex-Konverter",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "Dieses Tool wandelt Binärzahlen (Basis 2) in Hexadezimalzahlen (Basis 16) um und zeigt auch Dezimal- und Oktaläquivalente an.",
+      "Jede Hexadezimalziffer wird direkt auf 4 Binärziffern abgebildet."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Wie zu verwenden",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Geben oder fügen Sie eine Binärzahl in das Eingabefeld ein.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um die Hex-, Dezimal- und Oktalergebnisse anzuzeigen.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "Was ist Binär zu Hex?",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "Die Binär-zu-Hex-Konvertierung gruppiert Binärziffern in 4er-Sätze und ordnet jede Gruppe ihrem Hex-Äquivalent zu."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "Eingabenotizen",
+    "inputNotesPara": "Geben Sie eine gültige Binärzahl ein, die nur die Ziffern 0 und 1 enthält.",
+    "example": "Beispiel",
+    "examplePara": "Binär in Hex umwandeln:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "es": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
+    "title": "Convertidor de binario a hexadecimal: Coding.Tools",
+    "description": "Convierta números binarios a formato hexadecimal directamente en su navegador.",
     "toolTitle": "Binario a Hexadecimal",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "toolDescription": "Convierte números binarios a hexadecimales, decimales y octales.",
     "categoryName": "Conversión de números",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "Ingrese el número binario (por ejemplo, 11111111, 10101010)...",
+    "outputPlaceholder": "El resultado hexadecimal aparecerá aquí...",
+    "descTitle": "Convertidor de binario a hexadecimal",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "Esta herramienta convierte números binarios (base 2) a hexadecimales (base 16) y también muestra equivalentes decimales y octales.",
+      "Cada dígito hexadecimal se asigna directamente a 4 dígitos binarios."
     ],
-    "howToUse": "How to use",
+    "howToUse": "como usar",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Escriba o pegue un número binario en el campo de entrada.",
+      "Haga clic en <strong>Convertir</strong> para ver los resultados hexadecimales, decimales y octales.",
+      "Utilice <strong>Copiar</strong> para copiar el resultado."
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "¿Qué es binario a hexadecimal?",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "La conversión de binario a hexadecimal agrupa los dígitos binarios en conjuntos de 4 y asigna cada grupo a su equivalente hexadecimal."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Ingrese un número binario válido usando solo los dígitos 0 y 1.",
+    "example": "Ejemplo",
+    "examplePara": "Conversión de binario a hexadecimal:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "pt": {
-    "title": "Binary to Hex Converter — Coding.Tools",
-    "description": "Convert binary numbers to hexadecimal format directly in your browser.",
-    "toolTitle": "Binary to Hex",
-    "toolDescription": "Convert binary numbers to hex, decimal, and octal.",
+    "title": "Conversor binário para hexadecimal — Coding.Tools",
+    "description": "Converta números binários para o formato hexadecimal diretamente no seu navegador.",
+    "toolTitle": "Binário para hexadecimal",
+    "toolDescription": "Converta números binários em hexadecimais, decimais e octais.",
     "categoryName": "Conversão de números",
-    "inputPlaceholder": "Enter binary number (e.g. 11111111, 10101010)...",
-    "outputPlaceholder": "Hex result will appear here...",
-    "descTitle": "Binary to Hex Converter",
+    "inputPlaceholder": "Insira o número binário (por exemplo, 11111111, 10101010)...",
+    "outputPlaceholder": "O resultado hexadecimal aparecerá aqui...",
+    "descTitle": "Conversor binário para hexadecimal",
     "descParas": [
-      "This tool converts binary (base 2) numbers to hexadecimal (base 16), and also shows decimal and octal equivalents.",
-      "Each hex digit maps directly to 4 binary digits."
+      "Esta ferramenta converte números binários (base 2) em hexadecimais (base 16) e também mostra equivalentes decimais e octais.",
+      "Cada dígito hexadecimal é mapeado diretamente para 4 dígitos binários."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Como usar",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the hex, decimal, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Digite ou cole um número binário no campo de entrada.",
+      "Clique em <strong>Converter</strong> para ver os resultados hexadecimais, decimais e octais.",
+      "Use <strong>Copiar</strong> para copiar o resultado."
     ],
-    "whatIs": "What is Binary to Hex?",
+    "whatIs": "O que é binário para hexadecimal?",
     "whatIsParas": [
-      "Binary to hex conversion groups binary digits into sets of 4 and maps each group to its hex equivalent."
+      "A conversão de binário para hexadecimal agrupa dígitos binários em conjuntos de 4 e mapeia cada grupo para seu equivalente hexadecimal."
     ],
-    "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
-    "example": "Example",
-    "examplePara": "Converting binary to hex:",
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Insira um número binário válido usando apenas os dígitos 0 e 1.",
+    "example": "Exemplo",
+    "examplePara": "Convertendo binário em hexadecimal:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Hex ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   }
 }
