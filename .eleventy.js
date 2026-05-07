@@ -133,14 +133,6 @@ module.exports = function (eleventyConfig) {
     return `<script type="application/ld+json">${jsonForHtml(data)}</script>`;
   });
 
-  eleventyConfig.addTransform("removeBrokenCdnScripts", function (content, outputPath) {
-    if (!outputPath || !outputPath.endsWith(".html")) return content;
-    return content.replace(
-      /\s*<script src="https:\/\/cdn\.jsdelivr\.net\/npm\/(?:html-minifier@4\.0\.0\/dist\/htmlminifier\.min\.js|jxon@2\.0\.0\/dist\/jxon\.min\.js)"><\/script>/g,
-      ""
-    );
-  });
-
   // Global data available in all templates
   eleventyConfig.addGlobalData("currentYear", function () {
     return new Date().getFullYear();

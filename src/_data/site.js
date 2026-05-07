@@ -35,6 +35,7 @@ module.exports = {
   ogImage: "/assets/favicons/favicon-512x512.png",
   languages,
   languageIds: languages.map((item) => item.id),
+  localizedLanguageIds: languages.filter((item) => item.id !== "en").map((item) => item.id),
   htmlLang,
   pathFor,
   absoluteUrl

@@ -1,0 +1,14 @@
+{% set footerLang = homeLang or lang or 'en' %}
+{% set footerHome = homeData or homepage[footerLang] or homepage.en %}
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-text">&copy; {{ currentYear }} Coding.Tools</p>
+    <p class="footer-text">{{ footerHome.tagline or "Built for developers, by developers" }}</p>
+    <div class="footer-links">
+      {% for language in site.languages %}
+      <a href="{{ language.id | pathFor }}" lang="{{ language.htmlLang }}">{{ language.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>

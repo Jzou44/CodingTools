@@ -6,74 +6,15 @@ description: "Coding.Tools — 60+ free, browser-based developer tools. Format J
 {% extends "base.njk" %}
 
 {% block content %}
-<main>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-badge">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
-        <path d="M5 3v4"></path>
-        <path d="M19 17v4"></path>
-        <path d="M3 5h4"></path>
-        <path d="M17 19h4"></path>
-      </svg>
-      Free &amp; Open Source
-    </div>
-    <h1 class="hero-title">The Developer Toolbox</h1>
-    <p class="hero-subtitle">60+ free, browser-based tools that save you time. Format JSON, generate hashes, convert numbers, compress images, and much more.</p>
-    <div class="hero-search">
-      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <path d="m21 21-4.3-4.3"></path>
-      </svg>
-      <input type="text" id="tool-search" placeholder="Search tools..." autocomplete="off">
-    </div>
-  </section>
-
-  <!-- Tool Categories -->
-  {% for cat in categories %}
-  <section class="category-section" data-category="{{ cat.id }}" id="{{ cat.id }}">
-    <div class="category-header">
-      <div class="category-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          {{ cat.icon | safe }}
-        </svg>
-      </div>
-      <h2 class="category-title">{{ cat.name }}</h2>
-    </div>
-    <p class="category-desc">{{ cat.description }}</p>
-    <div class="tool-grid">
-      {% for slug, tool in tools %}
-        {% if tool.category == cat.id %}
-          <a href="{{ 'en' | pathFor(slug) }}" class="tool-card">
-            <span class="tool-card-name">{{ tool.title }}</span>
-            <svg class="tool-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-  {% endfor %}
-
-</main>
+{% set homeLang = "en" %}
+{% set homeData = homepage.en %}
+{% include "homepage-content.njk" %}
 {% endblock %}
 
 {% block footer %}
-<footer class="footer">
-  <div class="footer-inner">
-    <p class="footer-text">&copy; {{ currentYear }} Coding.Tools</p>
-    <p class="footer-text">Built for developers, by developers</p>
-    <div class="footer-links">
-      {% for language in site.languages %}
-      <a href="{{ language.id | pathFor }}" lang="{{ language.htmlLang }}">{{ language.label }}</a>
-      {% endfor %}
-    </div>
-  </div>
-</footer>
+{% set homeLang = "en" %}
+{% set homeData = homepage.en %}
+{% include "homepage-footer.njk" %}
 {% endblock %}
 
 {% block scripts %}

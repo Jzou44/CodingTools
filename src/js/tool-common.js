@@ -128,6 +128,122 @@ var ToolCommon = (function () {
     });
   }
 
+  function initTextTool(options) {
+    var opts = options || {};
+    var inputEditor = opts.inputEditor || document.getElementById(opts.inputId || 'input-editor');
+    var outputEditor = opts.outputEditor || document.getElementById(opts.outputId || 'output-editor');
+    var btnAction = opts.actionButton || document.getElementById(opts.actionId || 'btn-generate');
+    var btnClear = opts.clearButton || document.getElementById(opts.clearId || 'btn-clear');
+    var btnCopy = opts.copyButton || document.getElementById(opts.copyId || 'btn-copy');
+    var btnDownload = opts.downloadButton || document.getElementById(opts.downloadId || 'btn-download');
+    var statusMessage = opts.statusMessage || document.getElementById(opts.statusMessageId || 'status-message');
+    var statusDot = opts.statusDot || document.getElementById(opts.statusDotId || 'status-dot');
+    var statusText = opts.statusText || document.getElementById(opts.statusTextId || 'status-text');
+    var charCount = opts.charCount || document.getElementById(opts.charCountId || 'char-count');
+    var lineCount = opts.lineCount || document.getElementById(opts.lineCountId || 'line-count');
+    var inputLineNums = opts.inputLineNums || document.getElementById(opts.inputLineNumsId || 'input-line-numbers');
+    var outputLineNums = opts.outputLineNums || document.getElementById(opts.outputLineNumsId || 'output-line-numbers');
+    var i18n = window.I18N || {};
+
+    function setStatus(type, message) {
+      if (statusMessage && statusDot && statusText) {
+        updateStatus(statusMessage, statusDot, statusText, type, message || '');
+      }
+    }
+
+    function updateCounts() {
+      var text = outputEditor ? outputEditor.value : '';
+      if (charCount) {
+        charCount.textContent = pluralise(text.length, opts.charSingular || i18n.charSingular || 'character', opts.charPlural || i18n.charPlural || 'characters');
+      }
+      if (lineCount) {
+        lineCount.textContent = pluralise(countLines(text), opts.lineSingular || i18n.lineSingular || 'line', opts.linePlural || i18n.linePlural || 'lines');
+      }
+      if (outputEditor && outputLineNums) updateLineNumbers(outputEditor, outputLineNums);
+    }
+
+    function runAction() {
+      if (!opts.onAction || !inputEditor || !outputEditor) return;
+
+      try {
+        var result = opts.onAction({
+          input: inputEditor.value,
+          inputEditor: inputEditor,
+          outputEditor: outputEditor,
+          setStatus: setStatus,
+          updateCounts: updateCounts
+        });
+
+        if (typeof result === 'string') {
+          outputEditor.value = result;
+        } else if (result && Object.prototype.hasOwnProperty.call(result, 'output')) {
+          outputEditor.value = result.output == null ? '' : String(result.output);
+          if (result.statusType || result.statusMessage) {
+            setStatus(result.statusType || 'valid', result.statusMessage || '');
+          }
+        }
+
+        updateCounts();
+      } catch (e) {
+        setStatus('invalid', (opts.errorPrefix || 'Operation failed: ') + e.message);
+      }
+    }
+
+    if (btnAction) {
+      btnAction.addEventListener('click', runAction);
+      initKeyboardShortcut(btnAction);
+    }
+
+    if (btnClear) {
+      btnClear.addEventListener('click', function () {
+        clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums);
+      });
+    }
+
+    if (btnCopy && outputEditor) {
+      btnCopy.addEventListener('click', function () {
+        copyOutput(outputEditor, btnCopy);
+      });
+    }
+
+    if (btnDownload && outputEditor) {
+      btnDownload.addEventListener('click', function () {
+        downloadOutput(outputEditor, opts.downloadFilename || 'output.txt');
+      });
+    }
+
+    if (inputEditor && inputLineNums) {
+      initInputLineNumbers(inputEditor, inputLineNums);
+      initScrollSync(inputEditor, inputLineNums);
+      initTabKey(inputEditor, inputLineNums);
+      updateLineNumbers(inputEditor, inputLineNums);
+    }
+
+    if (outputEditor && outputLineNums) {
+      initScrollSync(outputEditor, outputLineNums);
+      updateLineNumbers(outputEditor, outputLineNums);
+    }
+
+    initExampleCopy();
+    updateCounts();
+
+    if (opts.autoRun && btnAction) {
+      btnAction.click();
+    }
+
+    return {
+      inputEditor: inputEditor,
+      outputEditor: outputEditor,
+      btnAction: btnAction,
+      btnClear: btnClear,
+      btnCopy: btnCopy,
+      btnDownload: btnDownload,
+      setStatus: setStatus,
+      updateCounts: updateCounts,
+      runAction: runAction
+    };
+  }
+
   return {
     countLines: countLines,
     pluralise: pluralise,
@@ -140,6 +256,7 @@ var ToolCommon = (function () {
     initTabKey: initTabKey,
     initScrollSync: initScrollSync,
     initInputLineNumbers: initInputLineNumbers,
-    initKeyboardShortcut: initKeyboardShortcut
+    initKeyboardShortcut: initKeyboardShortcut,
+    initTextTool: initTextTool
   };
 })();
