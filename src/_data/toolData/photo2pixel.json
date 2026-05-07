@@ -43,9 +43,9 @@
     ]
   },
   "cn": {
-    "title": "Photo2Pixel — Coding.Tools",
+    "title": "图片转体素风格化 — Coding.Tools",
     "description": "在线将照片转换为像素艺术。基于浏览器 ONNX 处理，免费且本地运行。",
-    "toolTitle": "Photo2Pixel",
+    "toolTitle": "图片转体素风格化",
     "toolDescription": "将照片转换为 8-bit 像素艺术，可调整风格、像素大小和边缘密度。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽图片到这里",
@@ -68,7 +68,7 @@
     "resultPlaceholder": "结果将在此显示",
     "viewOriginal": "查看原图",
     "viewResult": "查看像素图",
-    "descTitle": "Photo2Pixel",
+    "descTitle": "图片转体素风格化",
     "descParas": [
       "Photo2Pixel 使用参考项目相同的 ONNX 模型流程，在浏览器中将照片转换为像素艺术。图片保留在本地，并通过 WebAssembly 处理。",
       "你可以选择边缘增强、隔离像素或原始像素模式，并调整像素块大小来获得不同风格。"
