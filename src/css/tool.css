@@ -356,6 +356,68 @@
   color: var(--text-muted);
 }
 
+/* --- Statistics Grid (character-count, word-counter) --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.stat-item {
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, var(--surface) 0%, #fffaf4 100%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--accent);
+}
+
+.stat-item:nth-child(3n + 2)::before {
+  background: var(--secondary);
+}
+
+.stat-item:nth-child(3n)::before {
+  background: var(--cat-text);
+}
+
+.stat-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
+}
+
+.stat-value {
+  display: block;
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .main-content { padding: 0 20px; }
@@ -367,6 +429,13 @@
   .pane-toolbar-left, .pane-toolbar-right { width: 100%; }
   .pane-toolbar-right { justify-content: flex-end; }
   .status-bar-dual { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat-item { min-height: 88px; padding: 12px; }
+  .stat-value { font-size: 24px; }
+}
+
+@media (max-width: 420px) {
+  .stats-grid { grid-template-columns: 1fr; }
 }
 
 /* --- Dropzone Area (image tools) --- */
