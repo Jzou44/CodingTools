@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex and other coding agents when working with code in this repository.
 
 ## Project Overview
 
@@ -30,7 +30,7 @@ npm run build            # Generates dist/ from src/
 
 ### Directory Structure
 
-```
+```text
 coding-tools/
 ├── .eleventy.js              # Eleventy configuration
 ├── package.json              # Project manifest and scripts
@@ -88,6 +88,7 @@ Localized tool pages set `lang` and `toolId` in frontmatter; content renders via
 Localized index pages generated from `localized-index.njk` using Eleventy pagination over the language list.
 
 Key Nunjucks patterns:
+
 - `{{ toolData.steps[i] | safe }}` — renders HTML in translated content
 - `{{ homepage[lang].title }}` — localized homepage text
 - `{% if lang and lang != 'en' %}/{{ lang }}/{% else %}/{% endif %}` — language-aware links
