@@ -28,7 +28,7 @@
     "inputNotesPara": "The tool accepts any HTML input. The minifier removes comments, extra whitespace, and optional tags while preserving the page structure and functionality.",
     "example": "Example",
     "examplePara": "Formatted HTML becomes compact after minification:",
-    "exampleCode": "--- Formatted Input ---\n<!-- Page title -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- Minified Output ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- Formatted Input ---\n&lt;!-- Page title --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minified Output ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "cn": {
     "title": "HTML 压缩 — Coding.Tools",
@@ -59,7 +59,7 @@
     "inputNotesPara": "该工具接受任何 HTML 输入。压缩器移除注释、多余空白和可选标签，同时保留页面结构和功能。",
     "example": "示例",
     "examplePara": "格式化后的 HTML 压缩后变得紧凑：",
-    "exampleCode": "--- 格式化输入 ---\n<!-- 页面标题 -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- 压缩输出 ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- 格式化输入 ---\n&lt;!-- 页面标题 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 压缩输出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "tw": {
     "title": "HTML 壓縮 — Coding.Tools",
@@ -90,7 +90,7 @@
     "inputNotesPara": "該工具接受任何 HTML 輸入。壓縮器移除註解、多餘空白和可選標籤，同時保留頁面結構和功能。",
     "example": "範例",
     "examplePara": "格式化後的 HTML 壓縮後變得緊湊：",
-    "exampleCode": "--- 格式化輸入 ---\n<!-- 頁面標題 -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- 壓縮輸出 ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- 格式化輸入 ---\n&lt;!-- 頁面標題 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 壓縮輸出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "jp": {
     "title": "HTML ミニファイア — Coding.Tools",
@@ -121,7 +121,7 @@
     "inputNotesPara": "このツールは任意の HTML 入力を受け付けます。ミニファイアはコメント、余分な空白、オプションタグを削除しつつ、ページ構造と機能を保持します。",
     "example": "例",
     "examplePara": "フォーマットされた HTML はミニファイ後にコンパクトになります：",
-    "exampleCode": "--- フォーマット入力 ---\n<!-- ページタイトル -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- ミニファイ出力 ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- フォーマット入力 ---\n&lt;!-- ページタイトル --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- ミニファイ出力 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "kr": {
     "title": "HTML 미니파이어 — Coding.Tools",
@@ -152,7 +152,7 @@
     "inputNotesPara": "이 도구는 모든 HTML 입력을 허용합니다. 미니파이어는 주석, 여분의 공백, 선택적 태그를 제거하면서 페이지 구조와 기능을 보존합니다.",
     "example": "예시",
     "examplePara": "포맷된 HTML은 미니파이 후 컴팩트해집니다:",
-    "exampleCode": "--- 포맷 입력 ---\n<!-- 페이지 제목 -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- 미니파이 출력 ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- 포맷 입력 ---\n&lt;!-- 페이지 제목 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 미니파이 출력 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "fr": {
     "title": "Minifieur HTML — Coding.Tools",
@@ -183,7 +183,7 @@
     "inputNotesPara": "L'outil accepte toute entrée HTML. Le minifieur supprime les commentaires, les espaces supplémentaires et les balises optionnelles tout en préservant la structure et la fonctionnalité de la page.",
     "example": "Exemple",
     "examplePara": "Le HTML formaté devient compact après minification :",
-    "exampleCode": "--- Entrée formatée ---\n<!-- Titre de la page -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- Sortie minifiée ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- Entrée formatée ---\n&lt;!-- Titre de la page --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Sortie minifiée ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "de": {
     "title": "HTML-Minifizierer — Coding.Tools",
@@ -214,7 +214,7 @@
     "inputNotesPara": "Das Tool akzeptiert jede HTML-Eingabe. Der Minifizierer entfernt Kommentare, zusätzliche Leerzeichen und optionale Tags, bewahrt aber die Seitenstruktur und Funktionalität.",
     "example": "Beispiel",
     "examplePara": "Formatiertes HTML wird nach der Minifizierung kompakt:",
-    "exampleCode": "--- Formatierte Eingabe ---\n<!-- Seitentitel -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- Minifizierte Ausgabe ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- Formatierte Eingabe ---\n&lt;!-- Seitentitel --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minifizierte Ausgabe ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "es": {
     "title": "Minificador HTML — Coding.Tools",
@@ -245,7 +245,7 @@
     "inputNotesPara": "La herramienta acepta cualquier entrada HTML. El minificador elimina comentarios, espacios adicionales y etiquetas opcionales mientras preserva la estructura y funcionalidad de la página.",
     "example": "Ejemplo",
     "examplePara": "El HTML formateado se vuelve compacto después de la minificación:",
-    "exampleCode": "--- Entrada formateada ---\n<!-- Título de la página -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- Salida minificada ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- Entrada formateada ---\n&lt;!-- Título de la página --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Salida minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   },
   "pt": {
     "title": "Minificador HTML — Coding.Tools",
@@ -276,6 +276,6 @@
     "inputNotesPara": "A ferramenta aceita qualquer entrada HTML. O minificador remove comentários, espaços extras e tags opcionais enquanto preserva a estrutura e funcionalidade da página.",
     "example": "Exemplo",
     "examplePara": "O HTML formatado se torna compacto após a minificação:",
-    "exampleCode": "--- Entrada formatada ---\n<!-- Título da página -->\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n</html>\n\n--- Saída minificada ---\n<html><head><title>Test</title></head></html>"
+    "exampleCode": "--- Entrada formatada ---\n&lt;!-- Título da página --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Saída minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
   }
 }

@@ -46,7 +46,7 @@ description: "Coding.Tools — 60+ free, browser-based developer tools. Format J
     <div class="tool-grid">
       {% for slug, tool in tools %}
         {% if tool.category == cat.id %}
-          <a href="/{{ slug }}" class="tool-card">
+          <a href="{{ 'en' | pathFor(slug) }}" class="tool-card">
             <span class="tool-card-name">{{ tool.title }}</span>
             <svg class="tool-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
@@ -68,15 +68,9 @@ description: "Coding.Tools — 60+ free, browser-based developer tools. Format J
     <p class="footer-text">&copy; {{ currentYear }} Coding.Tools</p>
     <p class="footer-text">Built for developers, by developers</p>
     <div class="footer-links">
-      <a href="/" lang="en">English</a>
-      <a href="/cn" lang="zh-CN">中文</a>
-      <a href="/tw" lang="zh-TW">繁體</a>
-      <a href="/jp" lang="ja">日本語</a>
-      <a href="/kr" lang="ko">한국어</a>
-      <a href="/fr" lang="fr">Français</a>
-      <a href="/de" lang="de">Deutsch</a>
-      <a href="/es" lang="es">Español</a>
-      <a href="/pt" lang="pt">Português</a>
+      {% for language in site.languages %}
+      <a href="{{ language.id | pathFor }}" lang="{{ language.htmlLang }}">{{ language.label }}</a>
+      {% endfor %}
     </div>
   </div>
 </footer>

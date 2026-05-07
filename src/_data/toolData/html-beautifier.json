@@ -28,7 +28,7 @@
     "inputNotesPara": "The tool accepts any HTML input. The beautifier preserves all tags and attributes — it only changes whitespace and indentation for readability.",
     "example": "Example",
     "examplePara": "Minified HTML becomes readable after beautification:",
-    "exampleCode": "--- Minified Input ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Beautified Output ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- Minified Input ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- Beautified Output ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "cn": {
     "title": "HTML 美化 — Coding.Tools",
@@ -59,7 +59,7 @@
     "inputNotesPara": "该工具接受任何 HTML 输入。美化器保留所有标签和属性——只改变空白和缩进以提高可读性。",
     "example": "示例",
     "examplePara": "压缩的 HTML 美化后变得可读：",
-    "exampleCode": "--- 压缩输入 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 美化输出 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- 压缩输入 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- 美化输出 ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "tw": {
     "title": "HTML 美化 — Coding.Tools",
@@ -90,7 +90,7 @@
     "inputNotesPara": "該工具接受任何 HTML 輸入。美化器保留所有標籤和屬性——只改變空白和縮排以提高可讀性。",
     "example": "範例",
     "examplePara": "壓縮的 HTML 美化後變得可讀：",
-    "exampleCode": "--- 壓縮輸入 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 美化輸出 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- 壓縮輸入 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- 美化輸出 ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "jp": {
     "title": "HTML 整形 — Coding.Tools",
@@ -121,7 +121,7 @@
     "inputNotesPara": "このツールは任意の HTML 入力を受け付けます。整形ツールはすべてのタグと属性を保持し、可読性のために空白とインデントのみを変更します。",
     "example": "例",
     "examplePara": "圧縮された HTML は整形後に読みやすくなります：",
-    "exampleCode": "--- 圧縮入力 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 整形出力 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- 圧縮入力 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- 整形出力 ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "kr": {
     "title": "HTML 포맷터 — Coding.Tools",
@@ -152,7 +152,7 @@
     "inputNotesPara": "이 도구는 모든 HTML 입력을 허용합니다. 포맷터는 모든 태그와 속성을 보존하고 가독성을 위해 공백과 들여쓰기만 변경합니다.",
     "example": "예시",
     "examplePara": "압축된 HTML은 포맷 후 읽기 쉬워집니다:",
-    "exampleCode": "--- 압축 입력 ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- 포맷 출력 ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- 압축 입력 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- 포맷 출력 ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "fr": {
     "title": "Formateur HTML — Coding.Tools",
@@ -183,7 +183,7 @@
     "inputNotesPara": "L'outil accepte toute entrée HTML. L'embellisseur préserve toutes les balises et attributs — il ne modifie que les espaces et l'indentation pour la lisibilité.",
     "example": "Exemple",
     "examplePara": "Le HTML minifié devient lisible après embellissement :",
-    "exampleCode": "--- Entrée minifiée ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Sortie embellie ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- Entrée minifiée ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- Sortie embellie ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "de": {
     "title": "HTML-Formatierer — Coding.Tools",
@@ -214,7 +214,7 @@
     "inputNotesPara": "Das Tool akzeptiert jede HTML-Eingabe. Der Verschönerer bewahrt alle Tags und Attribute auf — er ändert nur Leerzeichen und Einrückung für die Lesbarkeit.",
     "example": "Beispiel",
     "examplePara": "Minifiziertes HTML wird nach der Verschönerung lesbar:",
-    "exampleCode": "--- Minifizierte Eingabe ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Verschönerte Ausgabe ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- Minifizierte Eingabe ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- Verschönerte Ausgabe ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "es": {
     "title": "Formateador HTML — Coding.Tools",
@@ -245,7 +245,7 @@
     "inputNotesPara": "La herramienta acepta cualquier entrada HTML. El embellecedor preserva todas las etiquetas y atributos — solo cambia espacios e indentación para la legibilidad.",
     "example": "Ejemplo",
     "examplePara": "El HTML minificado se vuelve legible después del embellecimiento:",
-    "exampleCode": "--- Entrada minificada ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Salida embellecida ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- Entrada minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- Salida embellecida ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   "pt": {
     "title": "Formatador HTML — Coding.Tools",
@@ -276,6 +276,6 @@
     "inputNotesPara": "A ferramenta aceita qualquer entrada HTML. O embelezador preserva todas as tags e atributos — ele apenas altera espaços e indentação para legibilidade.",
     "example": "Exemplo",
     "examplePara": "O HTML minificado se torna legível após o embelezamento:",
-    "exampleCode": "--- Entrada minificada ---\n<html><head><title>Test</title></head><body><p>Hello</p></body></html>\n\n--- Saída embelezada ---\n<html>\n  <head>\n    <title>Test</title>\n  </head>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>"
+    "exampleCode": "--- Entrada minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- Saída embelezada ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   }
 }

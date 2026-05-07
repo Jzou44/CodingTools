@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "Number to Words Converter — Coding.Tools",
-    "description": "Convert numbers to English words, ordinals, and ordinal numbers instantly.",
+    "description": "Convert integers to English words, ordinal words, and ordinal numbers instantly. Runs locally in your browser and supports zero, negatives, and large whole numbers.",
     "toolTitle": "Number to Words",
     "toolDescription": "Convert integers to English words, ordinal words, and ordinal numbers.",
     "categoryName": "String & Text Utilities",
@@ -37,7 +37,7 @@
   },
   "cn": {
     "title": "数字转英文 — Coding.Tools",
-    "description": "即时将数字转换为英文单词、序数词和序数。",
+    "description": "即时将整数转换为英文单词、序数词和序数，支持零、负数和较大的整数，并在浏览器本地运行。",
     "toolTitle": "数字转英文",
     "toolDescription": "将整数转换为英文单词、序数词和序数。",
     "categoryName": "字符串与文本",
@@ -73,7 +73,7 @@
   },
   "tw": {
     "title": "數字轉英文 — Coding.Tools",
-    "description": "即時將數字轉換為英文單詞、序數詞和序數。",
+    "description": "即時將整數轉換為英文單詞、序數詞與序數，支援零、負數與大型整數，並在瀏覽器本機執行。",
     "toolTitle": "數字轉英文",
     "toolDescription": "將整數轉換為英文單詞、序數詞和序數。",
     "categoryName": "字串與文字",
@@ -109,7 +109,7 @@
   },
   "jp": {
     "title": "数字を英語に — Coding.Tools",
-    "description": "数字を英単語、序数語、序数に即座に変換。",
+    "description": "整数を英単語、序数語、序数に即座に変換します。ゼロ、負数、大きな整数に対応し、ブラウザ内でローカル実行されます。",
     "toolTitle": "数字を英語に",
     "toolDescription": "整数を英単語、序数語、序数に変換。",
     "categoryName": "文字列とテキスト",
@@ -145,7 +145,7 @@
   },
   "kr": {
     "title": "숫자를 영어로 — Coding.Tools",
-    "description": "숫자를 영어 단어, 서수어, 서수로 즉시 변환.",
+    "description": "정수를 영어 단어, 서수어, 서수로 즉시 변환합니다. 0, 음수, 큰 정수를 지원하며 브라우저에서 로컬로 실행됩니다.",
     "toolTitle": "숫자를 영어로",
     "toolDescription": "정수를 영어 단어, 서수어, 서수로 변환합니다.",
     "categoryName": "문자열 및 텍스트",
@@ -181,7 +181,7 @@
   },
   "fr": {
     "title": "Nombres en lettres — Coding.Tools",
-    "description": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
+    "description": "Convertissez instantanément des entiers en mots anglais, mots ordinaux et nombres ordinaux. Fonctionne localement et prend en charge zéro, les négatifs et les grands entiers.",
     "toolTitle": "Nombres en lettres",
     "toolDescription": "Convertissez les entiers en mots anglais, mots ordinaux et nombres ordinaux.",
     "categoryName": "Chaînes et texte",
@@ -217,7 +217,7 @@
   },
   "de": {
     "title": "Zahlen in Wörter — Coding.Tools",
-    "description": "Zahlen sofort in englische Wörter, Ordinalzahlen und Ordnungszahlen konvertieren.",
+    "description": "Ganzzahlen sofort in englische Wörter, Ordinalwörter und Ordnungszahlen konvertieren. Läuft lokal im Browser und unterstützt Null, negative und große ganze Zahlen.",
     "toolTitle": "Zahlen in Wörter",
     "toolDescription": "Ganzzahlen in englische Wörter, Ordinalwörter und Ordnungszahlen konvertieren.",
     "categoryName": "Zeichenketten & Text",
@@ -253,7 +253,7 @@
   },
   "es": {
     "title": "Números a palabras — Coding.Tools",
-    "description": "Convierta números a palabras en inglés, ordinales y números ordinales al instante.",
+    "description": "Convierta enteros a palabras en inglés, palabras ordinales y números ordinales al instante. Se ejecuta localmente y admite cero, negativos y enteros grandes.",
     "toolTitle": "Números a palabras",
     "toolDescription": "Convierta enteros a palabras en inglés, palabras ordinales y números ordinales.",
     "categoryName": "Cadenas y texto",
@@ -289,7 +289,7 @@
   },
   "pt": {
     "title": "Números por extenso — Coding.Tools",
-    "description": "Converta números para palavras em inglês, ordinais e números ordinais instantaneamente.",
+    "description": "Converta inteiros para palavras em inglês, palavras ordinais e números ordinais instantaneamente. Roda localmente e aceita zero, negativos e inteiros grandes.",
     "toolTitle": "Números por extenso",
     "toolDescription": "Converta inteiros para palavras em inglês, palavras ordinais e números ordinais.",
     "categoryName": "Strings e texto",

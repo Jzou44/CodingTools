@@ -2,22 +2,9 @@
   <div class="footer-brand">&copy; {{ currentYear }} Coding.Tools</div>
   <div class="footer-tagline">{{ homepage[lang].tagline or "Built for developers, by developers" }}</div>
   <div class="footer-languages">
-    <a href="/" lang="en">English</a>
-    <span class="divider">|</span>
-    <a href="/cn" lang="zh-CN">中文</a>
-    <span class="divider">|</span>
-    <a href="/tw" lang="zh-TW">繁體</a>
-    <span class="divider">|</span>
-    <a href="/jp" lang="ja">日本語</a>
-    <span class="divider">|</span>
-    <a href="/kr" lang="ko">한국어</a>
-    <span class="divider">|</span>
-    <a href="/fr" lang="fr">Français</a>
-    <span class="divider">|</span>
-    <a href="/de" lang="de">Deutsch</a>
-    <span class="divider">|</span>
-    <a href="/es" lang="es">Español</a>
-    <span class="divider">|</span>
-    <a href="/pt" lang="pt">Português</a>
+    {% set pageSlug = activeTool or toolId %}
+    {% for language in site.languages %}
+    <a href="{{ language.id | pathFor(pageSlug) }}" lang="{{ language.htmlLang }}">{{ language.label }}</a>{% if not loop.last %}<span class="divider">|</span>{% endif %}
+    {% endfor %}
   </div>
 </footer>

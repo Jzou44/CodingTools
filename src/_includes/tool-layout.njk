@@ -5,18 +5,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="main-content">
+<main class="main-content">
 
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     {% if lang and lang != 'en' %}
-    <a href="/{{ lang }}/">{{ t.ui.home or "Home" }}</a>
+    <a href="{{ lang | pathFor }}">{{ t.ui.home or "Home" }}</a>
     <span class="separator">/</span>
-    <a href="/{{ lang }}/#{{ category }}">{{ categoryName }}</a>
+    <a href="{{ lang | pathFor }}#{{ category }}">{{ categoryName }}</a>
     {% else %}
-    <a href="/">Home</a>
+    <a href="{{ 'en' | pathFor }}">Home</a>
     <span class="separator">/</span>
-    <a href="/#{{ category }}">{{ categoryName }}</a>
+    <a href="{{ 'en' | pathFor }}#{{ category }}">{{ categoryName }}</a>
     {% endif %}
     <span class="separator">/</span>
     <span class="current">{{ toolTitle }}</span>
@@ -46,7 +46,7 @@
 
   </div>
 
-</div>
+</main>
 {% endblock %}
 
 {% block scripts %}

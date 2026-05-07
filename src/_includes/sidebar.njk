@@ -1,8 +1,8 @@
 <aside class="tool-sidebar">
 
   <!-- Related Tools Card -->
-  <div class="sidebar-card">
-    <h2 class="sidebar-card-title">{% if lang and lang != 'en' %}{{ t.ui.relatedTools | default("Related Tools") }}{% else %}Related Tools{% endif %}</h2>
+  <div class="sidebar-card" aria-labelledby="related-tools-title">
+    <div class="sidebar-card-title" id="related-tools-title">{% if lang and lang != 'en' %}{{ t.ui.relatedTools | default("Related Tools") }}{% else %}Related Tools{% endif %}</div>
     <ul class="related-tools-list">
       {% for slug, tool in tools %}
         {% if tool.category == category %}
@@ -11,7 +11,7 @@
             {% if lang and lang != 'en' %}
               {% set linkPrefix = "/" + lang %}
             {% endif %}
-            <a href="{{ linkPrefix }}/{{ slug }}" {% if slug == activeTool %}class="active"{% endif %}>
+            <a href="{{ (lang or 'en') | pathFor(slug) }}" {% if slug == activeTool %}class="active"{% endif %}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 {{ tool.icon | safe }}
               </svg>
@@ -24,12 +24,12 @@
   </div>
 
   <!-- Categories Card -->
-  <div class="sidebar-card">
-    <h2 class="sidebar-card-title">{% if lang and lang != 'en' %}{{ t.ui.categories | default("Categories") }}{% else %}Categories{% endif %}</h2>
+  <div class="sidebar-card" aria-labelledby="categories-title">
+    <div class="sidebar-card-title" id="categories-title">{% if lang and lang != 'en' %}{{ t.ui.categories | default("Categories") }}{% else %}Categories{% endif %}</div>
     <ul class="category-list">
       {% for cat in categories %}
         <li>
-          <a href="{% if lang and lang != 'en' %}/{{ lang }}/#{{ cat.id }}{% else %}/#{{ cat.id }}{% endif %}">
+          <a href="{{ (lang or 'en') | pathFor }}#{{ cat.id }}">
             <span class="category-left">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 {{ cat.icon | safe }}

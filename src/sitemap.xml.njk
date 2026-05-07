@@ -1,0 +1,29 @@
+---
+permalink: "/sitemap.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for language in site.languages %}
+  {% set pagePath = language.id | pathFor %}
+  <url>
+    <loc>{{ pagePath | absoluteUrl }}</loc>
+{% for alternate in site.languages %}
+    <xhtml:link rel="alternate" hreflang="{{ alternate.htmlLang }}" href="{{ (alternate.id | pathFor) | absoluteUrl }}" />
+{% endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ ('en' | pathFor) | absoluteUrl }}" />
+  </url>
+{% endfor %}
+{% for slug, tool in tools %}
+{% for language in site.languages %}
+  {% set pagePath = language.id | pathFor(slug) %}
+  <url>
+    <loc>{{ pagePath | absoluteUrl }}</loc>
+{% for alternate in site.languages %}
+    <xhtml:link rel="alternate" hreflang="{{ alternate.htmlLang }}" href="{{ (alternate.id | pathFor(slug)) | absoluteUrl }}" />
+{% endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ ('en' | pathFor(slug)) | absoluteUrl }}" />
+  </url>
+{% endfor %}
+{% endfor %}
+</urlset>
