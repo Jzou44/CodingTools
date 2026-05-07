@@ -4,13 +4,13 @@
 
 ### 开发者工具箱
 
-**62+ 免费、基于浏览器的开发者工具，保护您的隐私。**
+**63 个免费、基于浏览器运行、重视隐私的开发者工具。**
 
-无需注册。无需追踪。数据不会发送到服务器。一切在浏览器中运行。
+无需注册。无需追踪。数据不会发送到服务器。所有工具都在浏览器中运行。
 
 [![访问网站](https://img.shields.io/badge/访问-coding.tools-blue?style=for-the-badge)](https://coding.tools)
 [![开源协议](https://img.shields.io/badge/协议-MIT-green?style=for-the-badge)](#开源协议)
-[![多语言](https://img.shields.io/badge/语言-9-orange?style=for-the-badge)](#-多语言支持)
+[![多语言](https://img.shields.io/badge/语言-9-orange?style=for-the-badge)](#多语言支持)
 
 <br/>
 
@@ -22,13 +22,11 @@
 
 ## 为什么选择 Coding.Tools？
 
-大多数在线开发者工具充斥着广告、要求注册，或将您的数据发送到远程服务器。Coding.Tools 与众不同：
-
-- **隐私优先** — 所有工具 100% 在浏览器中运行。您的代码、密码和数据永远不会离开您的设备。
-- **零门槛** — 无需注册、无需 API 密钥、无需等待。打开即用。
-- **精美设计** — 简洁的界面，每个工具类别都有独特的配色方案。
-- **真正的多语言** — 完整支持 9 种语言，不仅仅是翻译标签。
-- **永久免费** — 开源项目，无付费层级，无隐藏费用。
+- **隐私优先**：工具全部在浏览器本地运行。
+- **静态输出**：生产环境产物是纯 HTML、CSS、JavaScript 和静态资源。
+- **多语言**：英文加 8 套本地化语言页面。
+- **无前端框架运行时**：Eleventy 负责生成页面，工具逻辑使用原生 JavaScript。
+- **翻译可校验**：`npm run check` 会检查页面覆盖、翻译结构、分类数量和本地化模板常见回归。
 
 ---
 
@@ -36,151 +34,140 @@
 
 | 分类 | 数量 | 功能 |
 |------|-----:|------|
-| 哈希与加密 | 8 | Base64、MD5、SHA-1/256/384/512、密码生成器 |
-| 数字转换 | 26 | 十六进制、十进制、二进制、八进制、ASCII、罗马数字、RGB、分数 |
-| 字符串与文本 | 8 | 正则测试、字数统计、大小写转换、文本编辑器 |
-| 格式化与压缩 | 14 | JSON、XML、HTML、CSS、JavaScript、SQL 格式化与压缩 |
-| 图片工具 | 6 | PNG/JPEG 压缩、EXIF 查看/移除、图片转 Base64 |
+| 哈希与加密 | 8 | Base64、MD5、SHA-1/256/384/512、密码生成 |
+| 数字转换 | 26 | 十六进制、十进制、二进制、八进制、ASCII、罗马数字、RGB/RGBA、分数、百分比 |
+| 字符串与文本工具 | 8 | 文本编辑、正则测试/替换、单词与字符统计、大小写转换 |
+| 格式化与压缩 | 14 | JSON、XML、HTML、CSS、JavaScript、SQL 格式化与压缩、JSON/XML 转换 |
+| 图片工具 | 7 | PNG/JPEG 压缩、渐进式 JPEG、Photo2Pixel、图片转 Base64、EXIF 查看/移除 |
 
-**62 个工具**，涵盖 **5 个分类**，支持 **9 种语言**。
+**63 个工具**，涵盖 **5 个分类**，支持 **9 种语言**。
 
 ---
 
 ## 快速开始
 
 ```bash
-# 克隆仓库
-git clone https://github.com/your-username/coding-tools.git
-cd coding-tools
-
-# 安装依赖
 npm install
-
-# 启动开发服务器
 npm run dev
 ```
 
-在浏览器中打开 [http://localhost:5500](http://localhost:5500)。
+Eleventy 开发服务器运行在 [http://localhost:5500](http://localhost:5500)。
 
-### 其他命令
+## 常用命令
 
 ```bash
-npm run build          # 构建静态站点到 dist/ 目录
-node server.js         # 生产环境服务器（在 5500 端口提供 dist/ 服务）
+npm run check          # 校验结构、i18n 覆盖、分类和本地化模板
+npm run build          # 先运行 check，再构建静态站点到 dist/
+npm run dev            # 在 localhost:5500 启动 Eleventy 开发服务器
+npm run debug          # 带 debug 日志的 Eleventy 开发服务器
+npm run docker:build   # 构建基于 nginx 的静态站点 Docker 镜像
+npm run docker:run     # 在 localhost:8080 运行 Docker 镜像
+npm run docker:stop    # 停止并删除本地 Docker 测试容器
+npm run docker:test    # 构建并运行 Docker 镜像
 ```
+
+仓库中没有 Node 生产服务器。部署时直接服务生成的 `dist/` 静态目录。
 
 ---
 
 ## 项目结构
 
-```
-coding.tools
-├── .eleventy.js           # Eleventy 配置文件
-├── server.js              # 生产环境静态文件服务器
+```text
+coding-tools/
+├── .eleventy.js                 # Eleventy 配置
+├── Dockerfile                   # 用于 dist/ 的静态 nginx 容器
+├── package.json                 # npm 脚本和依赖
+├── scripts/
+│   └── check-structure.js       # 结构和 i18n 校验
 ├── src/
-│   ├── index.njk          # 首页模板
-│   ├── _includes/         # 布局和局部模板
-│   │   ├── base.njk       # 基础 HTML 结构
-│   │   ├── navbar.njk     # 导航栏
-│   │   ├── sidebar.njk    # 工具侧边栏
-│   │   └── tool-layout.njk # 工具页面布局
-│   ├── _data/             # 工具数据和翻译
-│   │   ├── tools.json     # 工具定义
-│   │   ├── t.json         # UI 翻译
-│   │   └── toolData.json  # 工具内容翻译
-│   └── tools/             # 工具页面模板
-│       ├── *.njk          # 英文工具
-│       ├── cn/            # 简体中文
-│       ├── jp/            # 日语
-│       ├── kr/            # 韩语
-│       └── ...            # 更多语言
-├── css/                   # 样式表
-├── js/                    # 客户端 JavaScript
-└── dist/                  # 生成的输出
+│   ├── index.njk                # 英文首页
+│   ├── localized-index.njk      # 本地化首页生成器
+│   ├── sitemap.xml.njk          # 覆盖所有语言和工具的 sitemap
+│   ├── robots.txt.njk
+│   ├── _includes/               # 布局、局部模板和宏
+│   ├── _data/
+│   │   ├── site.js              # 站点元数据和语言列表
+│   │   ├── tools.json           # 工具元数据
+│   │   ├── categoryDefinitions.json
+│   │   ├── categories.js
+│   │   ├── homepage.json        # 首页翻译
+│   │   ├── t/                   # 按语言拆分的 UI 翻译
+│   │   ├── t.js                 # 加载 t/*.json
+│   │   ├── toolData/            # 按工具拆分的多语言内容
+│   │   └── toolData.js          # 加载 toolData/*.json
+│   ├── css/
+│   │   ├── style.css
+│   │   └── tool.css
+│   ├── js/                      # 共享客户端工具和内置库
+│   ├── assets/                  # favicon、图片、Photo2Pixel ONNX 模型
+│   └── tools/
+│       ├── *.njk                # 英文工具页面
+│       ├── cn/ tw/ jp/ kr/      # CJK 本地化工具页面
+│       └── fr/ de/ es/ pt/      # 欧洲语言本地化工具页面
+└── dist/                        # 构建输出，git 忽略
 ```
 
-**技术栈：** Eleventy v3 + Nunjucks + 原生 JS — 无框架，无冗余。
+**技术栈：** Eleventy v3、Nunjucks、自定义 CSS、原生 JavaScript。
 
 ---
 
 ## 多语言支持
 
-Coding.Tools 支持您的语言：
+支持语言：
 
-| | 语言 | 代码 | | 语言 | 代码 |
-|---|----------|------|---|----------|------|
-| 🇺🇸 | 英语 | `en` | 🇫🇷 | 法语 | `fr` |
-| 🇨🇳 | 简体中文 | `cn` | 🇩🇪 | 德语 | `de` |
-| 🇹🇼 | 繁体中文 | `tw` | 🇪🇸 | 西班牙语 | `es` |
-| 🇯🇵 | 日语 | `jp` | 🇧🇷 | 葡萄牙语 | `pt` |
-| 🇰🇷 | 韩语 | `kr` | | | |
+| 语言 | 代码 | HTML lang |
+|------|------|-----------|
+| 英语 | `en` | `en` |
+| 简体中文 | `cn` | `zh-CN` |
+| 繁体中文 | `tw` | `zh-TW` |
+| 日语 | `jp` | `ja` |
+| 韩语 | `kr` | `ko` |
+| 法语 | `fr` | `fr` |
+| 德语 | `de` | `de` |
+| 西班牙语 | `es` | `es` |
+| 葡萄牙语 | `pt` | `pt` |
 
-每种语言都有完整的工具描述、分步指南和 UI 元素翻译——不仅仅是标签。
+本地化工具页面在 frontmatter 中设置 `lang` 和 `toolId`，页面内容通过 `{{ t.ui.* }}` 和 `{{ toolData.* }}` 渲染。标题、描述、工具标题和分类名由 `src/_data/makeToolLangData.js` 从 `toolData` 计算。
 
----
-
-## 工具详情
-
-### 哈希与加密
-
-生成哈希值、编码数据、创建安全密码——全部离线完成。
-
-`Base64 编码` `Base64 解码` `MD5 生成器` `SHA1 生成器` `SHA256 生成器` `SHA384 生成器` `SHA512 生成器` `密码生成器`
-
-### 数字转换
-
-即时转换不同数字系统，实时显示结果。
-
-`十六进制 ↔ 十进制` `八进制 ↔ 十进制` `二进制 ↔ 十进制` `二进制 ↔ 十六进制` `ASCII 表` `十六进制 ↔ ASCII` `二进制 ↔ 文本` `分数 ↔ 十进制` `百分比 ↔ 十进制` `十六进制 ↔ RGB` `罗马数字`
-
-### 字符串与文本工具
-
-为开发者和写作者提供的强大文本处理工具。
-
-`文本编辑器` `正则测试器` `正则替换` `字数统计` `字符统计` `大小写转换` `文本反转` `数字转文字`
-
-### 格式化与压缩
-
-一键美化或压缩代码。
-
-`JSON` `XML` `HTML` `CSS` `JavaScript` `SQL` — 每个都有格式化和压缩选项，还有 `JSON ↔ XML` 转换。
-
-### 图片工具
-
-直接在浏览器中处理图片。无需上传。
-
-`PNG 压缩` `JPEG 压缩` `渐进式 JPEG` `图片转 Base64` `EXIF 查看器` `EXIF 移除器`
+不要在本地化页面中添加 `title`、`description`、`toolTitle`、`toolDescription`、`categoryName` 这类 frontmatter；它们会覆盖翻译数据，并会被 `npm run check` 拒绝。
 
 ---
 
-## 参与贡献
+## 校验
 
-欢迎贡献！无论是添加新工具、修复 bug，还是改进翻译。
+`npm run check` 会校验：
 
-1. Fork 本仓库
-2. 创建功能分支 (`git checkout -b feature/amazing-tool`)
-3. 提交更改 (`git commit -m '添加新工具'`)
-4. 推送到分支 (`git push origin feature/amazing-tool`)
-5. 创建 Pull Request
+- `site.js` 中的每种语言都存在首页和 UI 翻译数据
+- `tools.json` 中的每个工具都有对应的 `src/_data/toolData/<slug>.json`
+- 每个 toolData 文件都有 9 种语言，且键和数组长度与英文基准一致
+- 英文基准非空的本地化字段不能是空字符串
+- 分类数量与实际工具数一致
+- 英文和本地化工具模板都存在
+- 本地化模板的 `lang`、`toolId` 和 permalink 正确
+- 本地化模板不使用元数据 frontmatter 覆盖，也不包含已知硬编码英文 UI
 
-### 添加新工具
+`npm run build` 会通过 `prebuild` 自动先运行该校验。
 
-1. 在 `src/_data/tools.json` 中添加工具元数据
-2. 在 `src/tools/your-tool.njk` 中创建工具模板
-3. 在 `src/_data/t.json` 和 `src/_data/toolData.json` 中添加翻译
-4. 在各语言子目录中创建本地化版本
+---
+
+## 添加或更新工具
+
+1. 在 `src/_data/tools.json` 中添加或更新工具元数据。
+2. 在 `src/_data/toolData/<slug>.json` 中添加或更新各语言内容。
+3. 如需共享 UI 文案，在每个 `src/_data/t/<lang>.json` 中添加对应字段。
+4. 在 `src/tools/<slug>.njk` 中创建或更新英文模板。
+5. 在每个语言目录中创建或更新本地化模板。
+6. 运行 `npm run check` 和 `npm run build`。
 
 ---
 
 ## 开源协议
 
-MIT 协议 — 随意使用。
+MIT License。
 
 ---
 
 <div align="center">
-
-**为重视隐私和简洁的开发者精心打造。**
 
 [访问 coding.tools](https://coding.tools)
 

@@ -4,13 +4,13 @@
 
 ### The Developer Toolbox
 
-**62+ free, browser-based developer tools that respect your privacy.**
+**63 free, browser-based developer tools that respect your privacy.**
 
 No sign-up. No tracking. No data sent to servers. Everything runs in your browser.
 
 [![Live Site](https://img.shields.io/badge/Live-coding.tools-blue?style=for-the-badge)](https://coding.tools)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#license)
-[![Languages](https://img.shields.io/badge/Languages-9-orange?style=for-the-badge)](#-internationalization)
+[![Languages](https://img.shields.io/badge/Languages-9-orange?style=for-the-badge)](#internationalization)
 
 <br/>
 
@@ -22,13 +22,11 @@ No sign-up. No tracking. No data sent to servers. Everything runs in your browse
 
 ## Why Coding.Tools?
 
-Most online developer tools are cluttered with ads, require sign-ups, or send your data to remote servers. Coding.Tools is different:
-
-- **Privacy First** — All tools run 100% in your browser. Your code, passwords, and data never leave your device.
-- **Zero Friction** — No registration, no API keys, no waiting. Just open and use.
-- **Beautiful Design** — Clean interface with thoughtful color coding for each tool category.
-- **Truly Multilingual** — Full support for 9 languages, not just translated labels.
-- **Free Forever** — Open source, no premium tiers, no hidden costs.
+- **Privacy first**: tools run locally in the browser.
+- **Static by design**: the production output is plain HTML, CSS, JavaScript, and static assets.
+- **Multilingual**: English plus 8 localized language trees.
+- **No framework runtime**: Eleventy generates the site; tools use vanilla JavaScript.
+- **Checked translations**: `npm run check` validates page coverage, translation shape, category counts, and common localized-template regressions.
 
 ---
 
@@ -36,151 +34,140 @@ Most online developer tools are cluttered with ads, require sign-ups, or send yo
 
 | Category | Tools | What You Can Do |
 |----------|------:|-----------------|
-| Hash & Cryptography | 8 | Base64, MD5, SHA-1/256/384/512, Password Generator |
-| Number Conversion | 26 | Hex, Decimal, Binary, Octal, ASCII, Roman, RGB, Fractions |
-| String & Text | 8 | Regex Tester, Word Counter, Case Converter, Text Editor |
-| Formatter & Minifier | 14 | JSON, XML, HTML, CSS, JavaScript, SQL formatting & minification |
-| Image Utilities | 6 | Compress PNG/JPEG, EXIF viewer/remover, Image to Base64 |
+| Hash & Cryptography | 8 | Base64, MD5, SHA-1/256/384/512, password generation |
+| Number Conversion | 26 | Hex, decimal, binary, octal, ASCII, Roman numerals, RGB/RGBA, fractions, percentages |
+| String & Text Utilities | 8 | Text editing, regex testing/replacement, word and character counts, case conversion |
+| Formatter & Minifier | 14 | JSON, XML, HTML, CSS, JavaScript, SQL formatting and minification, JSON/XML conversion |
+| Image Utilities | 7 | PNG/JPEG compression, progressive JPEG, Photo2Pixel, image Base64, EXIF viewing/removal |
 
-**62 tools** across **5 categories**, available in **9 languages**.
+**63 tools** across **5 categories**, available in **9 languages**.
 
 ---
 
 ## Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/coding-tools.git
-cd coding-tools
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-Open [http://localhost:5500](http://localhost:5500) in your browser.
+The Eleventy dev server runs at [http://localhost:5500](http://localhost:5500).
 
-### Other Commands
+## Commands
 
 ```bash
-npm run build          # Build static site to dist/
-node server.js         # Production server (serves dist/ on port 5500)
+npm run check          # Validate structure, i18n coverage, categories, and localized templates
+npm run build          # Run check, then build the static site into dist/
+npm run dev            # Eleventy dev server on localhost:5500
+npm run debug          # Eleventy dev server with debug logging
+npm run docker:build   # Build the nginx-based Docker image
+npm run docker:run     # Run the Docker image on localhost:8080
+npm run docker:stop    # Stop and remove the local Docker test container
+npm run docker:test    # Build and run the Docker image
 ```
+
+There is no Node production server in this repository. Deployment serves the generated `dist/` directory as static files.
 
 ---
 
 ## Architecture
 
-```
-coding.tools
-├── .eleventy.js           # Eleventy configuration
-├── server.js              # Production static file server
+```text
+coding-tools/
+├── .eleventy.js                 # Eleventy configuration
+├── Dockerfile                   # Static nginx container for dist/
+├── package.json                 # npm scripts and dependencies
+├── scripts/
+│   └── check-structure.js       # Structure and i18n validation
 ├── src/
-│   ├── index.njk          # Homepage template
-│   ├── _includes/         # Layouts and partials
-│   │   ├── base.njk       # Base HTML structure
-│   │   ├── navbar.njk     # Navigation bar
-│   │   ├── sidebar.njk    # Tool sidebar
-│   │   └── tool-layout.njk # Tool page layout
-│   ├── _data/             # Tool data and translations
-│   │   ├── tools.json     # Tool definitions
-│   │   ├── t.json         # UI translations
-│   │   └── toolData.json  # Tool content translations
-│   └── tools/             # Tool page templates
-│       ├── *.njk          # English tools
-│       ├── cn/            # Chinese (Simplified)
-│       ├── jp/            # Japanese
-│       ├── kr/            # Korean
-│       └── ...            # 5 more languages
-├── css/                   # Stylesheets
-├── js/                    # Client-side JavaScript
-└── dist/                  # Generated output
+│   ├── index.njk                # English homepage
+│   ├── localized-index.njk      # Localized homepage generator
+│   ├── sitemap.xml.njk          # Sitemap for all languages and tools
+│   ├── robots.txt.njk
+│   ├── _includes/               # Layouts, partials, and macros
+│   ├── _data/
+│   │   ├── site.js              # Site metadata and language list
+│   │   ├── tools.json           # Tool metadata
+│   │   ├── categoryDefinitions.json
+│   │   ├── categories.js
+│   │   ├── homepage.json        # Homepage translations
+│   │   ├── t/                   # Per-language UI translations
+│   │   ├── t.js                 # Loads t/*.json
+│   │   ├── toolData/            # Per-tool translated content
+│   │   └── toolData.js          # Loads toolData/*.json
+│   ├── css/
+│   │   ├── style.css
+│   │   └── tool.css
+│   ├── js/                      # Shared client-side utilities and bundled libraries
+│   ├── assets/                  # Favicons, images, and Photo2Pixel ONNX model
+│   └── tools/
+│       ├── *.njk                # English tool pages
+│       ├── cn/ tw/ jp/ kr/      # CJK localized tool pages
+│       └── fr/ de/ es/ pt/      # European localized tool pages
+└── dist/                        # Generated output, gitignored
 ```
 
-**Tech Stack:** Eleventy v3 + Nunjucks + Vanilla JS — no frameworks, no bloat.
+**Tech stack:** Eleventy v3, Nunjucks, custom CSS, vanilla JavaScript.
 
 ---
 
 ## Internationalization
 
-Coding.Tools speaks your language:
+Supported languages:
 
-| | Language | Code | | Language | Code |
-|---|----------|------|---|----------|------|
-| 🇺🇸 | English | `en` | 🇫🇷 | French | `fr` |
-| 🇨🇳 | Chinese (Simplified) | `cn` | 🇩🇪 | German | `de` |
-| 🇹🇼 | Chinese (Traditional) | `tw` | 🇪🇸 | Spanish | `es` |
-| 🇯🇵 | Japanese | `jp` | 🇧🇷 | Portuguese | `pt` |
-| 🇰🇷 | Korean | `kr` | | | |
+| Language | Code | HTML lang |
+|----------|------|-----------|
+| English | `en` | `en` |
+| Chinese Simplified | `cn` | `zh-CN` |
+| Chinese Traditional | `tw` | `zh-TW` |
+| Japanese | `jp` | `ja` |
+| Korean | `kr` | `ko` |
+| French | `fr` | `fr` |
+| German | `de` | `de` |
+| Spanish | `es` | `es` |
+| Portuguese | `pt` | `pt` |
 
-Each language has fully translated tool descriptions, step-by-step guides, and UI elements — not just labels.
+Localized tool pages set `lang` and `toolId` in frontmatter, then render translated content through `{{ t.ui.* }}` and `{{ toolData.* }}`. Metadata such as title, description, tool title, and category name is computed from `toolData` by `src/_data/makeToolLangData.js`.
 
----
-
-## Tool Details
-
-### Hash & Cryptography
-
-Generate hashes, encode data, and create secure passwords — all offline.
-
-`Base64 Encode` `Base64 Decode` `MD5 Generator` `SHA1 Generator` `SHA256 Generator` `SHA384 Generator` `SHA512 Generator` `Password Generator`
-
-### Number Conversion
-
-Convert between number systems with instant, real-time results.
-
-`Hex ↔ Decimal` `Octal ↔ Decimal` `Binary ↔ Decimal` `Binary ↔ Hex` `ASCII Table` `Hex ↔ ASCII` `Binary ↔ Text` `Fraction ↔ Decimal` `Percent ↔ Decimal` `Hex ↔ RGB` `Roman Numerals`
-
-### String & Text Utilities
-
-Powerful text manipulation tools for developers and writers.
-
-`Text Editor` `Regex Tester` `Regex Replace` `Word Counter` `Character Count` `Case Converter` `Reverse Text` `Number to Words`
-
-### Formatter & Minifier
-
-Beautify or compress your code with one click.
-
-`JSON` `XML` `HTML` `CSS` `JavaScript` `SQL` — each with format and minify options, plus `JSON ↔ XML` conversion.
-
-### Image Utilities
-
-Process images directly in your browser. No uploads required.
-
-`Compress PNG` `Compress JPEG` `Progressive JPEG` `Image to Base64` `EXIF Viewer` `EXIF Remover`
+Do not add localized frontmatter fields like `title`, `description`, `toolTitle`, `toolDescription`, or `categoryName`; they override translated data and are rejected by `npm run check`.
 
 ---
 
-## Contributing
+## Validation
 
-Contributions are welcome! Whether it's adding a new tool, fixing a bug, or improving translations.
+`npm run check` verifies:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-tool`)
-3. Commit your changes (`git commit -m 'Add amazing tool'`)
-4. Push to the branch (`git push origin feature/amazing-tool`)
-5. Open a Pull Request
+- every language listed in `site.js` exists in homepage and UI translation data
+- every tool in `tools.json` has one `src/_data/toolData/<slug>.json`
+- every toolData file has all 9 languages with matching keys and array lengths
+- localized non-empty English baseline fields are not empty
+- category counts match actual tools
+- every English and localized tool template exists
+- localized templates have correct `lang`, `toolId`, and permalink data
+- localized templates do not use metadata frontmatter overrides or known hard-coded English UI strings
 
-### Adding a New Tool
+`npm run build` runs this validation first through `prebuild`.
 
-1. Add tool metadata to `src/_data/tools.json`
-2. Create the tool template in `src/tools/your-tool.njk`
-3. Add translations to `src/_data/t.json` and `src/_data/toolData.json`
-4. Create localized versions in language subdirectories
+---
+
+## Adding or Updating a Tool
+
+1. Add or update metadata in `src/_data/tools.json`.
+2. Add or update translated content in `src/_data/toolData/<slug>.json`.
+3. Add any shared UI strings to `src/_data/t/<lang>.json` for every language.
+4. Create or update the English template in `src/tools/<slug>.njk`.
+5. Create or update localized templates in each language directory.
+6. Run `npm run check` and `npm run build`.
 
 ---
 
 ## License
 
-MIT License — use it however you want.
+MIT License.
 
 ---
 
 <div align="center">
-
-**Built with care for developers who value privacy and simplicity.**
 
 [Visit coding.tools](https://coding.tools)
 
