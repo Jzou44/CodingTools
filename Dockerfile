@@ -20,20 +20,22 @@ FROM nginx:alpine
 # Copy built files to nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Custom nginx config for SPA routing
+# Custom nginx config for static routing
 RUN echo 'server { \
     listen 80; \
     server_name localhost; \
     root /usr/share/nginx/html; \
     index index.html; \
+    error_page 404 /404.html; \
     \
     location / { \
-        try_files $uri $uri/ $uri.html /index.html; \
+        try_files $uri $uri/ $uri.html =404; \
     } \
     \
-    location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json)$ { \
+    location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json|webp|wasm|onnx)$ { \
         expires 1y; \
         add_header Cache-Control "public, immutable"; \
+        try_files $uri =404; \
     } \
 }' > /etc/nginx/conf.d/default.conf
 

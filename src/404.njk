@@ -1,0 +1,53 @@
+---
+title: "Page not found - Coding.Tools"
+description: "The page you requested could not be found on Coding.Tools."
+permalink: "/404.html"
+eleventyExcludeFromCollections: true
+lang: "en"
+---
+
+{% extends "base.njk" %}
+
+{% block content %}
+<main class="not-found-main">
+  <section class="not-found-hero" aria-labelledby="not-found-title">
+    <div class="not-found-code">404</div>
+    <h1 id="not-found-title">Page not found</h1>
+    <p>The tool or page you are looking for may have moved, been renamed, or never existed.</p>
+    <div class="not-found-actions">
+      <a class="btn btn-primary" href="/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m3 9 9-7 9 7"></path>
+          <path d="M9 22V12h6v10"></path>
+        </svg>
+        Home
+      </a>
+      <a class="btn btn-secondary" href="/#formatter-minifier">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+          <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+          <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
+          <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+        </svg>
+        Browse tools
+      </a>
+    </div>
+  </section>
+
+  <section class="not-found-suggestions" aria-labelledby="not-found-suggestions-title">
+    <h2 id="not-found-suggestions-title">Popular tools</h2>
+    <div class="not-found-grid">
+      {% set suggestedTools = ["json-formatter", "base64-encode", "password-generator", "photo2pixel"] %}
+      {% for slug in suggestedTools %}
+        <a class="not-found-link" href="{{ 'en' | pathFor(slug) }}">
+          <span>{{ homepage.en.toolTitles[slug] or tools[slug].title }}</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+{% endblock %}

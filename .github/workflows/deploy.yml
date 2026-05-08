@@ -93,6 +93,7 @@ jobs:
           npm ci
           npm run build
           test -f "$VPS_PATH/dist/index.html"
+          test -f "$VPS_PATH/dist/404.html"
           sudo mkdir -p "$WEB_ROOT"
           sudo rsync -a --delete --chown=www-data:www-data --chmod=D755,F644 "$VPS_PATH/dist/" "$WEB_ROOT/"
 
@@ -105,9 +106,10 @@ jobs:
 
               root $WEB_ROOT;
               index index.html;
+              error_page 404 /404.html;
 
               location / {
-                  try_files \$uri \$uri/ \$uri.html /index.html;
+                  try_files \$uri \$uri/ \$uri.html =404;
               }
 
               location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json|webp|wasm|onnx)$ {
