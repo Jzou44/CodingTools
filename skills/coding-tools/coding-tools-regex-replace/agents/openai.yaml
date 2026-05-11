@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Regex Replace"
+  short_description: "Find and replace text using regular expressions with backrefe..."
+  default_prompt: "Use $coding-tools-regex-replace to run Regex Replace through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Regex Replace."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

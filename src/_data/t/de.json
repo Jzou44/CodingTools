@@ -124,6 +124,16 @@
     "invalidBinaryOnly01": "Ungültige Binäreingabe - nur 0 und 1 sind erlaubt",
     "filesCompressed": "Datei(en) komprimiert",
     "filesProcessed": "Datei(en) verarbeitet",
-    "exifTagsFound": "EXIF-Tag(s) gefunden"
+    "exifTagsFound": "EXIF-Tag(s) gefunden",
+    "mcpIntegrationTitle": "MCP-Integration",
+    "mcpIntegrationIntro": "MCP (Model Context Protocol) ermöglicht KI-Agenten und Apps, Coding.Tools-Werkzeuge zu entdecken und für wiederholbare Konvertierungs-, Formatierungs-, Hashing- und Generierungsabläufe auszuführen.",
+    "mcpToolNameLabel": "MCP-Toolname",
+    "mcpEndpointLabel": "MCP-Endpunkt",
+    "mcpDiscoveryNote": "Rufen Sie zuerst tools/list auf. Jeder Tool-Eintrag enthält inputSchema, outputSchema und examples, damit ein KI-Agent oder Client gültige Argumente ohne Raten erstellen kann.",
+    "mcpOutputNote": "Bei tools/call lesen Sie result.content[0].text für den Anzeigewert und result.structuredContent für maschinelles Parsen. Tool-Fehler liefern isError: true; Protokollfehler liefern einen JSON-RPC error.",
+    "mcpCurlIntro": "Beispiel für eine tools/call-Anfrage:",
+    "mcpArgumentsNote": "Die meisten Text- und Datentools akzeptieren eine input-Zeichenkette sowie optionale options. Bildtools, die Browser-Bild-APIs benötigen, werden zur Erkennung aufgelistet und geben bei Bedarf einen Link zur Weboberfläche zurück.",
+    "mcpBrowserOnlyNote": "Dieses Bildtool ist in MCP nur im Browser nutzbar. tools/call verarbeitet keine lokalen Bildbytes auf dem Server, sondern gibt isError: true plus einen resource_link zur Weboberfläche zurück.",
+    "mcpImageInputNote": "Für image-to-base64 übergeben Sie eine öffentliche Bild-URL als input.url. Für private lokale Dateien verwenden Sie die Weboberfläche oder senden die Dateibytes als Base64 mit options.mimeType."
   }
 }

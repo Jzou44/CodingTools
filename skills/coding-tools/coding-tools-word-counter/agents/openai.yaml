@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Word Counter"
+  short_description: "Count words, characters, sentences, and paragraphs instantly."
+  default_prompt: "Use $coding-tools-word-counter to run Word Counter through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Word Counter."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

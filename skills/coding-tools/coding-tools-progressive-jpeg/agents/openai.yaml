@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Progressive JPEG"
+  short_description: "Convert baseline JPEG images to progressive JPEG format."
+  default_prompt: "Use $coding-tools-progressive-jpeg to run Progressive JPEG through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Progressive JPEG."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

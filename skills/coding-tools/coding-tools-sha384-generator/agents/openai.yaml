@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools SHA384 Generator"
+  short_description: "Generate SHA-384 hash from any text input."
+  default_prompt: "Use $coding-tools-sha384-generator to run SHA384 Generator through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for SHA384 Generator."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

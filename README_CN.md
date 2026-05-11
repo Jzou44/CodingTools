@@ -6,7 +6,7 @@
 
 **63 个免费、基于浏览器运行、重视隐私的开发者工具。**
 
-无需注册。无需追踪。数据不会发送到服务器。所有工具都在浏览器中运行。
+无需注册。无需追踪。网站工具在浏览器中运行。可选的 A2A 运行时会为 agent-to-agent 调用提供一部分确定性工具的服务端执行能力。
 
 [![访问网站](https://img.shields.io/badge/访问-coding.tools-blue?style=for-the-badge)](https://coding.tools)
 [![开源协议](https://img.shields.io/badge/协议-MIT-green?style=for-the-badge)](#开源协议)
@@ -22,8 +22,9 @@
 
 ## 为什么选择 Coding.Tools？
 
-- **隐私优先**：工具全部在浏览器本地运行。
-- **静态输出**：生产环境产物是纯 HTML、CSS、JavaScript 和静态资源。
+- **隐私优先**：网站工具在浏览器本地运行。
+- **静态优先**：生产网站主体是纯 HTML、CSS、JavaScript 和静态资源。
+- **A2A 运行时**：`/a2a/*` 为 agent 客户端暴露可服务端执行的确定性工具。
 - **多语言**：英文加 8 套本地化语言页面。
 - **无前端框架运行时**：Eleventy 负责生成页面，工具逻辑使用原生 JavaScript。
 - **翻译可校验**：`npm run check` 会检查页面覆盖、翻译结构、分类数量和本地化模板常见回归。
@@ -60,13 +61,39 @@ npm run check          # 校验结构、i18n 覆盖、分类和本地化模板
 npm run build          # 先运行 check，再构建静态站点到 dist/
 npm run dev            # 在 localhost:5500 启动 Eleventy 开发服务器
 npm run debug          # 带 debug 日志的 Eleventy 开发服务器
+npm run a2a            # 在 localhost:5510 启动 A2A 运行时
+npm run a2a:test       # 验证 A2A 运行时接口
+npm run mcp            # 给本地 MCP 客户端使用的 stdio 服务
+npm run mcp:test       # 验证 MCP HTTP 和 stdio 接口
 npm run docker:build   # 构建基于 nginx 的静态站点 Docker 镜像
 npm run docker:run     # 在 localhost:8080 运行 Docker 镜像
+npm run docker:smoke   # 验证正在运行的 Docker 容器
 npm run docker:stop    # 停止并删除本地 Docker 测试容器
-npm run docker:test    # 构建并运行 Docker 镜像
+npm run docker:test    # 构建、运行并验证 Docker 镜像
 ```
 
-仓库中没有 Node 生产服务器。部署时直接服务生成的 `dist/` 静态目录。
+网站主体仍服务生成的 `dist/` 静态目录。A2A/MCP 运行时是独立 Node 进程，由 nginx 在 `/a2a/*` 和 `/mcp` 下反向代理。
+如果要为非生产域名构建镜像，可以设置 `SITE_BASE_URL`，例如 `docker build --build-arg SITE_BASE_URL=http://localhost:8080 -t coding-tools .`。
+
+## MCP
+
+MCP 运行时会把 `src/_data/tools.json` 里的每个工具都暴露到 `tools/list`。确定性的服务端工具可以通过 `tools/call` 直接执行；依赖浏览器图片 API 的工具会返回标准 MCP tool error，并附带网页工具链接。
+
+HTTP 入口：
+
+```bash
+curl http://localhost:5510/mcp \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json, text/event-stream' \
+  -H 'MCP-Protocol-Version: 2025-06-18' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"sha256-generator","arguments":{"input":"abc"}}}'
+```
+
+本地 MCP 客户端可以使用 stdio 命令：
+
+```bash
+node server/mcp-stdio.js
+```
 
 ---
 

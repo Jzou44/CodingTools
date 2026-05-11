@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Numbers to Roman"
+  short_description: "Convert decimal numbers to Roman numerals."
+  default_prompt: "Use $coding-tools-numbers-to-roman-numerals to run Numbers to Roman through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Numbers to Roman."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

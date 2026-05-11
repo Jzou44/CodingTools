@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Reverse Text"
+  short_description: "Reverse any text string instantly."
+  default_prompt: "Use $coding-tools-reverse-text to run Reverse Text through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Reverse Text."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

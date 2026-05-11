@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools EXIF Viewer"
+  short_description: "View EXIF metadata embedded in photos including GPS, camera, ..."
+  default_prompt: "Use $coding-tools-exif-viewer to run EXIF Viewer through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for EXIF Viewer."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

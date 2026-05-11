@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Image to Base64"
+  short_description: "Convert any image to a Base64 encoded data URI string."
+  default_prompt: "Use $coding-tools-image-to-base64 to run Image to Base64 through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Image to Base64."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

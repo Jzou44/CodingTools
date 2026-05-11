@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools JavaScript Beautifier"
+  short_description: "Beautify and format JavaScript code with proper indentation."
+  default_prompt: "Use $coding-tools-javascript-beautifier to run JavaScript Beautifier through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for JavaScript Beautifier."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

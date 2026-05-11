@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools CSS Beautifier"
+  short_description: "Beautify and format CSS code with proper indentation."
+  default_prompt: "Use $coding-tools-css-beautifier to run CSS Beautifier through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for CSS Beautifier."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

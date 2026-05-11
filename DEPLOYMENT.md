@@ -10,8 +10,9 @@ Production deploys are handled by `.github/workflows/deploy.yml`.
 4. The VPS checks out the exact Git commit that triggered the workflow.
 5. The VPS runs `npm ci` and `npm run build`.
 6. The generated `dist/` files are synced to the nginx web root.
-7. nginx is reloaded to serve the synced static files directly.
-8. The workflow verifies both local nginx on the VPS and the public URL.
+7. The `coding-tools-a2a` systemd service is installed or restarted.
+8. nginx is reloaded to serve static files and proxy `/a2a/*` and `/mcp` to the runtime.
+9. The workflow verifies local nginx, `/.well-known/agent-card.json`, `/a2a/healthz`, MCP `tools/call`, and the public URL.
 
 ## Required Repository Secret
 
@@ -33,5 +34,5 @@ Defaults match the current Google Cloud VPS:
 - The VPS user can pull `git@github.com:Jzou44/CodingTools.git`.
 - Node.js and npm are available, either globally or through `~/.nvm/nvm.sh`.
 - `rsync` is installed on the VPS.
-- The VPS user has passwordless sudo for `nginx -t` and `systemctl reload nginx`.
+- The VPS user has passwordless sudo for `nginx -t`, `systemctl reload nginx`, and managing the `coding-tools-a2a` systemd service.
 - nginx is installed and listens on port 80.

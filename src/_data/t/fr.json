@@ -124,6 +124,16 @@
     "invalidBinaryOnly01": "Entrée binaire invalide - seuls 0 et 1 sont autorisés",
     "filesCompressed": "fichier(s) compressé(s)",
     "filesProcessed": "fichier(s) traité(s)",
-    "exifTagsFound": "balise(s) EXIF trouvée(s)"
+    "exifTagsFound": "balise(s) EXIF trouvée(s)",
+    "mcpIntegrationTitle": "Intégration MCP",
+    "mcpIntegrationIntro": "MCP (Model Context Protocol) permet aux agents IA et aux applications de découvrir et d'exécuter les utilitaires Coding.Tools pour des workflows répétables de conversion, formatage, hachage et génération.",
+    "mcpToolNameLabel": "Nom de l'outil MCP",
+    "mcpEndpointLabel": "Point de terminaison MCP",
+    "mcpDiscoveryNote": "Appelez d'abord tools/list. Chaque outil inclut inputSchema, outputSchema et examples afin qu'un agent IA ou un client puisse construire des arguments valides sans deviner.",
+    "mcpOutputNote": "Pour tools/call, lisez result.content[0].text pour la valeur affichable et result.structuredContent pour l'analyse par programme. Les échecs d'outil renvoient isError: true ; les échecs de protocole renvoient une JSON-RPC error.",
+    "mcpCurlIntro": "Exemple de requête tools/call :",
+    "mcpArgumentsNote": "La plupart des outils de texte et de données acceptent une chaîne input et des options facultatives. Les outils d'image qui dépendent des API d'image du navigateur sont listés pour la découverte et renvoient un lien vers l'interface Web si nécessaire.",
+    "mcpBrowserOnlyNote": "Cet outil d'image est réservé au navigateur dans MCP. tools/call ne traite pas les octets d'image locaux côté serveur ; il renvoie isError: true avec un resource_link vers l'interface Web.",
+    "mcpImageInputNote": "Pour image-to-base64, passez une URL d'image publique dans input.url. Pour les fichiers locaux privés, utilisez l'interface Web ou envoyez les octets du fichier en Base64 avec options.mimeType."
   }
 }

@@ -124,6 +124,16 @@
     "invalidBinaryOnly01": "Entrada binária inválida - apenas 0 e 1 são permitidos",
     "filesCompressed": "arquivo(s) compactado(s)",
     "filesProcessed": "arquivo(s) processado(s)",
-    "exifTagsFound": "tag(s) EXIF encontrada(s)"
+    "exifTagsFound": "tag(s) EXIF encontrada(s)",
+    "mcpIntegrationTitle": "Integração MCP",
+    "mcpIntegrationIntro": "MCP (Model Context Protocol) permite que agentes de IA e aplicativos descubram e executem utilitários do Coding.Tools para fluxos repetíveis de conversão, formatação, hash e geração.",
+    "mcpToolNameLabel": "Nome da ferramenta MCP",
+    "mcpEndpointLabel": "Endpoint MCP",
+    "mcpDiscoveryNote": "Chame tools/list primeiro. Cada ferramenta inclui inputSchema, outputSchema e examples para que um agente de IA ou cliente possa montar argumentos válidos sem adivinhar.",
+    "mcpOutputNote": "Em tools/call, leia result.content[0].text para o valor exibível e result.structuredContent para parsing por máquina. Falhas da ferramenta retornam isError: true; falhas de protocolo retornam um JSON-RPC error.",
+    "mcpCurlIntro": "Exemplo de requisição tools/call:",
+    "mcpArgumentsNote": "A maioria das ferramentas de texto e dados aceita uma string input e options opcionais. Ferramentas de imagem que dependem das APIs de imagem do navegador são listadas para descoberta e retornam um link para a interface web quando precisam desses recursos.",
+    "mcpBrowserOnlyNote": "Esta ferramenta de imagem é somente para navegador no MCP. tools/call não processa bytes de imagem locais no servidor; retorna isError: true e um resource_link para a interface web.",
+    "mcpImageInputNote": "Para image-to-base64, envie uma URL pública de imagem como input.url. Para arquivos locais privados, use a interface web ou envie os bytes do arquivo como Base64 com options.mimeType."
   }
 }

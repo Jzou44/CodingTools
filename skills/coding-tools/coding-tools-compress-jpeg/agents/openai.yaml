@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Compress JPEG"
+  short_description: "Reduce JPEG file size by re-encoding with adjustable quality."
+  default_prompt: "Use $coding-tools-compress-jpeg to run Compress JPEG through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Compress JPEG."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

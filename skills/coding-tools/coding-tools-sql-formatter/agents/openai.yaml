@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools SQL Formatter"
+  short_description: "Format and beautify SQL queries with proper indentation."
+  default_prompt: "Use $coding-tools-sql-formatter to run SQL Formatter through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for SQL Formatter."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

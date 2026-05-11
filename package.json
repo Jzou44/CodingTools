@@ -4,15 +4,26 @@
   "description": "Free, multilingual developer toolbox with 62+ browser-based tools",
   "private": true,
   "scripts": {
-    "check": "node scripts/check-structure.js",
+    "check": "npm run check:site && npm run skills:check",
+    "check:site": "node scripts/check-structure.js",
+    "skills:generate": "node scripts/generate-coding-tools-skills.js",
+    "skills:check": "node scripts/check-coding-tools-skills.js",
     "prebuild": "npm run check",
     "build": "eleventy",
     "dev": "eleventy --serve --port=5500",
     "debug": "eleventy --serve --port=5500 --debug",
+    "a2a": "node server/a2a-runtime.js",
+    "a2a:test": "node scripts/test-a2a-runtime.js",
+    "mcp": "node server/mcp-stdio.js",
+    "mcp:test": "node scripts/test-mcp-runtime.js",
     "docker:build": "docker build -t coding-tools .",
-    "docker:run": "docker run -d --name coding-tools-test -p 8080:80 coding-tools",
-    "docker:stop": "docker stop coding-tools-test && docker rm coding-tools-test",
-    "docker:test": "npm run docker:build && npm run docker:run"
+    "docker:run": "node scripts/run-docker-container.js",
+    "docker:stop": "node scripts/stop-docker-container.js",
+    "docker:smoke": "node scripts/test-docker-container.js",
+    "docker:test": "npm run docker:build && npm run docker:run && npm run docker:smoke"
+  },
+  "bin": {
+    "install-coding-tools-skills": "./scripts/install-coding-tools-skills.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"

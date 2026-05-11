@@ -124,6 +124,16 @@
     "invalidBinaryOnly01": "잘못된 이진 입력입니다. 0과 1만 사용할 수 있습니다",
     "filesCompressed": "개 파일 압축됨",
     "filesProcessed": "개 파일 처리됨",
-    "exifTagsFound": "개 EXIF 태그 발견"
+    "exifTagsFound": "개 EXIF 태그 발견",
+    "mcpIntegrationTitle": "MCP 통합",
+    "mcpIntegrationIntro": "MCP(Model Context Protocol)를 통해 AI 에이전트와 앱은 Coding.Tools 유틸리티를 발견하고 반복 가능한 변환, 포맷팅, 해시, 생성 워크플로에서 실행할 수 있습니다.",
+    "mcpToolNameLabel": "MCP 도구 이름",
+    "mcpEndpointLabel": "MCP 엔드포인트",
+    "mcpDiscoveryNote": "먼저 tools/list를 호출하세요. 각 도구 항목에는 inputSchema, outputSchema, examples가 포함되어 AI 에이전트나 클라이언트가 추측 없이 유효한 인수를 만들 수 있습니다.",
+    "mcpOutputNote": "tools/call에서는 표시용 값은 result.content[0].text에서, 기계 파싱용 값은 result.structuredContent에서 읽으세요. 도구 수준 실패는 isError: true를 반환하고, 프로토콜 수준 실패는 JSON-RPC error를 반환합니다.",
+    "mcpCurlIntro": "tools/call 요청 예시:",
+    "mcpArgumentsNote": "대부분의 텍스트 및 데이터 도구는 input 문자열과 선택적 options를 받습니다. 브라우저 이미지 API가 필요한 이미지 도구는 검색 대상으로 제공되며, 브라우저 기능이 필요할 때 웹 UI 링크를 반환합니다.",
+    "mcpBrowserOnlyNote": "이 이미지 도구는 MCP에서 브라우저 전용입니다. tools/call은 서버에서 로컬 이미지 바이트를 처리하지 않고 isError: true와 웹 UI로 가는 resource_link를 반환합니다.",
+    "mcpImageInputNote": "image-to-base64에는 공개 이미지 URL을 input.url로 전달하세요. 비공개 로컬 파일은 웹 UI를 사용하거나 파일 바이트를 Base64로 변환한 뒤 options.mimeType으로 이미지 형식을 지정하세요."
   }
 }

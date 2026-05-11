@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Regex Tester"
+  short_description: "Test regular expressions live with match highlighting and fla..."
+  default_prompt: "Use $coding-tools-regex-tester to run Regex Tester through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Regex Tester."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

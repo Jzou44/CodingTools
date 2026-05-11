@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Roman Numerals Chart"
+  short_description: "View a complete Roman numerals reference chart from 1 to 1000."
+  default_prompt: "Use $coding-tools-roman-numerals-chart to run Roman Numerals Chart through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Roman Numerals Chart."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

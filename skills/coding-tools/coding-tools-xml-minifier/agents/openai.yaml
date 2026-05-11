@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools XML Minifier"
+  short_description: "Minify XML by removing whitespace and formatting."
+  default_prompt: "Use $coding-tools-xml-minifier to run XML Minifier through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for XML Minifier."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

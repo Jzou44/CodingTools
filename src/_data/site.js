@@ -1,4 +1,9 @@
-const baseUrl = "https://coding.tools";
+function normalizeBaseUrl(value) {
+  const candidate = (value || "https://coding.tools").replace(/\/+$/, "");
+  return /^https?:\/\//.test(candidate) ? candidate : "https://coding.tools";
+}
+
+const baseUrl = normalizeBaseUrl(process.env.SITE_BASE_URL);
 
 const languages = [
   { id: "en", htmlLang: "en", label: "English" },

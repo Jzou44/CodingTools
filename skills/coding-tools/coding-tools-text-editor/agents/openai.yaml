@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Text Editor Online"
+  short_description: "Edit text online with line numbers, word wrap, and character ..."
+  default_prompt: "Use $coding-tools-text-editor to run Text Editor Online through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Text Editor Online."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

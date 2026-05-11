@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Decimal to Octal"
+  short_description: "Convert decimal numbers to octal format."
+  default_prompt: "Use $coding-tools-decimal-to-octal to run Decimal to Octal through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Decimal to Octal."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

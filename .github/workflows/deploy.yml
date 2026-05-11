@@ -79,7 +79,7 @@ jobs:
           DEPLOY_REF: ${{ github.sha }}
         run: |
           ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -p "${VPS_PORT}" "${VPS_USER}@${VPS_HOST}" \
-            "DEPLOY_REF='${DEPLOY_REF}' VPS_PATH='${VPS_PATH}' WEB_ROOT='${WEB_ROOT}' bash -se" <<'REMOTE'
+            "DEPLOY_REF='${DEPLOY_REF}' VPS_PATH='${VPS_PATH}' WEB_ROOT='${WEB_ROOT}' SERVICE_USER='${VPS_USER}' bash -se" <<'REMOTE'
           set -euo pipefail
 
           if [ -f "$HOME/.nvm/nvm.sh" ]; then
@@ -94,6 +94,34 @@ jobs:
           npm run build
           test -f "$VPS_PATH/dist/index.html"
           test -f "$VPS_PATH/dist/404.html"
+          test -f "$VPS_PATH/dist/.well-known/agent-card.json"
+          npm run a2a:test
+
+          NODE_BIN="$(command -v node)"
+          sudo tee /etc/systemd/system/coding-tools-a2a.service > /dev/null <<EOF
+          [Unit]
+          Description=Coding.Tools A2A runtime
+          After=network.target
+
+          [Service]
+          Type=simple
+          User=$SERVICE_USER
+          WorkingDirectory=$VPS_PATH
+          Environment=NODE_ENV=production
+          Environment=HOST=127.0.0.1
+          Environment=PORT=5510
+          ExecStart=$NODE_BIN server/a2a-runtime.js
+          Restart=always
+          RestartSec=5
+
+          [Install]
+          WantedBy=multi-user.target
+          EOF
+
+          sudo systemctl daemon-reload
+          sudo systemctl enable coding-tools-a2a
+          sudo systemctl restart coding-tools-a2a
+
           sudo mkdir -p "$WEB_ROOT"
           sudo rsync -a --delete --chown=www-data:www-data --chmod=D755,F644 "$VPS_PATH/dist/" "$WEB_ROOT/"
 
@@ -112,6 +140,33 @@ jobs:
                   try_files \$uri \$uri/ \$uri.html =404;
               }
 
+              location = /a2a {
+                  proxy_pass http://127.0.0.1:5510/a2a;
+                  proxy_http_version 1.1;
+                  proxy_set_header Host \$host;
+                  proxy_set_header X-Real-IP \$remote_addr;
+                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto \$scheme;
+              }
+
+              location ^~ /a2a/ {
+                  proxy_pass http://127.0.0.1:5510/a2a/;
+                  proxy_http_version 1.1;
+                  proxy_set_header Host \$host;
+                  proxy_set_header X-Real-IP \$remote_addr;
+                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto \$scheme;
+              }
+
+              location = /mcp {
+                  proxy_pass http://127.0.0.1:5510/mcp;
+                  proxy_http_version 1.1;
+                  proxy_set_header Host \$host;
+                  proxy_set_header X-Real-IP \$remote_addr;
+                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                  proxy_set_header X-Forwarded-Proto \$scheme;
+              }
+
               location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json|webp|wasm|onnx)$ {
                   expires 1y;
                   add_header Cache-Control "public, immutable";
@@ -123,6 +178,19 @@ jobs:
           sudo nginx -t
           sudo systemctl reload nginx
           curl -fsS -o /dev/null http://localhost:80/
+          curl -fsS -o /dev/null http://localhost:80/.well-known/agent-card.json
+          curl -fsS -o /dev/null http://localhost:80/a2a/healthz
+          curl -fsS -o /dev/null \
+            -H 'Content-Type: application/a2a+json' \
+            -H 'A2A-Version: 1.0' \
+            -d '{"message":{"role":"ROLE_USER","messageId":"deploy-smoke","metadata":{"toolId":"sha256-generator"},"parts":[{"text":"abc"}]}}' \
+            http://localhost:80/a2a/message:send
+          curl -fsS -o /dev/null \
+            -H 'Content-Type: application/json' \
+            -H 'Accept: application/json, text/event-stream' \
+            -H 'MCP-Protocol-Version: 2025-06-18' \
+            -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"sha256-generator","arguments":{"input":"abc"}}}' \
+            http://localhost:80/mcp
           REMOTE
 
       - name: Verify public site

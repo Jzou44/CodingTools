@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Decimal to Hex"
+  short_description: "Convert decimal numbers to hexadecimal format."
+  default_prompt: "Use $coding-tools-decimal-to-hex to run Decimal to Hex through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Decimal to Hex."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

@@ -124,6 +124,16 @@
     "invalidBinaryOnly01": "無效的二進位輸入，只允許 0 和 1",
     "filesCompressed": "個檔案已壓縮",
     "filesProcessed": "個檔案已處理",
-    "exifTagsFound": "個 EXIF 標籤"
+    "exifTagsFound": "個 EXIF 標籤",
+    "mcpIntegrationTitle": "MCP 整合",
+    "mcpIntegrationIntro": "MCP（Model Context Protocol，模型上下文協議）讓 AI 代理和應用可以探索並呼叫 Coding.Tools 工具，用於可重複的轉換、格式化、雜湊和產生工作流程。",
+    "mcpToolNameLabel": "MCP 工具名稱",
+    "mcpEndpointLabel": "MCP 端點",
+    "mcpDiscoveryNote": "請先呼叫 tools/list。每個工具項目都包含 inputSchema、outputSchema 和 examples，AI 代理或客戶端可據此建立有效參數，不需要猜測。",
+    "mcpOutputNote": "呼叫 tools/call 後，result.content[0].text 是顯示用結果，result.structuredContent 是適合程式解析的結構化結果。工具層級失敗會回傳 isError: true；協議層級失敗會回傳 JSON-RPC error。",
+    "mcpCurlIntro": "tools/call 請求範例：",
+    "mcpArgumentsNote": "大多數文字與資料工具接受 input 字串以及可選的 options。只依賴瀏覽器圖片 API 的圖片工具會用於探索，並在需要瀏覽器能力時返回網頁入口。",
+    "mcpBrowserOnlyNote": "這個圖片工具在 MCP 中屬於瀏覽器專用工具。tools/call 不會在伺服器處理本機圖片位元組，而是回傳 isError: true 和指向網頁介面的 resource_link。",
+    "mcpImageInputNote": "對於 image-to-base64，請把公開圖片 URL 作為 input.url 傳入。私有本機檔案請使用網頁介面，或先把檔案位元組轉成 Base64，並透過 options.mimeType 指定圖片類型。"
   }
 }

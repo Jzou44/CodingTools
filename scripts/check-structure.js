@@ -11,6 +11,10 @@ const categories = require(path.join(srcDir, "_data", "categories.js"));
 const categoryDefinitions = require(path.join(srcDir, "_data", "categoryDefinitions.json"));
 const homepage = require(path.join(srcDir, "_data", "homepage.json"));
 const t = require(path.join(srcDir, "_data", "t.js"));
+const a2aCapabilities = require(path.join(srcDir, "_data", "a2aCapabilities.js"));
+const a2aAgentCard = require(path.join(srcDir, "_data", "a2aAgentCard.js"));
+const { supportedToolIds } = require(path.join(srcDir, "_data", "a2aRuntimeTools.js"));
+const mcpExamples = require(path.join(srcDir, "_data", "mcpExamples.js"));
 
 const errors = [];
 
@@ -298,6 +302,185 @@ function checkToolPages() {
   });
 }
 
+function checkA2aCapabilities() {
+  const slugs = sorted(Object.keys(tools));
+  const catalogTools = Array.isArray(a2aCapabilities.tools) ? a2aCapabilities.tools : [];
+  const catalogSlugs = sorted(catalogTools.map((tool) => tool.id));
+  const runtimeSlugs = sorted(supportedToolIds);
+
+  if (a2aCapabilities.a2a && a2aCapabilities.a2a.runtimeAvailable !== true) {
+    fail("a2aCapabilities.a2a.runtimeAvailable should be true when the A2A runtime is implemented");
+  }
+
+  if (!a2aCapabilities.a2a || !Array.isArray(a2aCapabilities.a2a.supportedInterfaces) || !a2aCapabilities.a2a.supportedInterfaces.length) {
+    fail("a2aCapabilities.a2a.supportedInterfaces should declare the live A2A runtime");
+  }
+
+  diff(slugs, catalogSlugs).forEach((slug) => fail(`a2aCapabilities.tools is missing tool "${slug}"`));
+  unexpected(slugs, catalogSlugs).forEach((slug) => fail(`a2aCapabilities.tools has unknown tool "${slug}"`));
+  unexpected(slugs, runtimeSlugs).forEach((slug) => fail(`a2aRuntimeTools references unknown tool "${slug}"`));
+
+  catalogTools.forEach((entry) => {
+    const slug = entry.id;
+    const source = tools[slug];
+    if (!source) return;
+
+    if (!entry.name || !entry.description) {
+      fail(`a2aCapabilities.tools.${slug} should have name and description`);
+    }
+
+    if (entry.category !== source.category) {
+      fail(`a2aCapabilities.tools.${slug}.category is "${entry.category}", expected "${source.category}"`);
+    }
+
+    const expectedUrl = site.absoluteUrl(site.pathFor("en", slug));
+    if (entry.url !== expectedUrl) {
+      fail(`a2aCapabilities.tools.${slug}.url is "${entry.url}", expected "${expectedUrl}"`);
+    }
+
+    site.languageIds.forEach((lang) => {
+      const expectedLocalizedUrl = site.absoluteUrl(site.pathFor(lang, slug));
+      if (!entry.localizedUrls || entry.localizedUrls[lang] !== expectedLocalizedUrl) {
+        fail(`a2aCapabilities.tools.${slug}.localizedUrls.${lang} is missing or incorrect`);
+      }
+    });
+
+    if (!Array.isArray(entry.tags) || !entry.tags.length) {
+      fail(`a2aCapabilities.tools.${slug}.tags should be a non-empty array`);
+    }
+
+    if (!Array.isArray(entry.inputModes) || !entry.inputModes.length) {
+      fail(`a2aCapabilities.tools.${slug}.inputModes should be a non-empty array`);
+    }
+
+    if (!Array.isArray(entry.outputModes) || !entry.outputModes.length) {
+      fail(`a2aCapabilities.tools.${slug}.outputModes should be a non-empty array`);
+    }
+
+    const shouldBeRuntimeAvailable = supportedToolIds.includes(slug);
+    if (!entry.runtime || entry.runtime.available !== shouldBeRuntimeAvailable) {
+      fail(`a2aCapabilities.tools.${slug}.runtime.available should be ${shouldBeRuntimeAvailable}`);
+    }
+  });
+}
+
+function checkA2aAgentCard() {
+  const skills = Array.isArray(a2aAgentCard.skills) ? a2aAgentCard.skills : [];
+  const skillIds = sorted(skills.map((skill) => skill.id));
+  const runtimeSlugs = sorted(supportedToolIds);
+
+  ["name", "description", "version"].forEach((key) => {
+    if (!a2aAgentCard[key]) fail(`a2aAgentCard.${key} is required`);
+  });
+
+  if (!Array.isArray(a2aAgentCard.supportedInterfaces) || !a2aAgentCard.supportedInterfaces.length) {
+    fail("a2aAgentCard.supportedInterfaces should declare at least one interface");
+  }
+
+  if (!a2aAgentCard.capabilities || a2aAgentCard.capabilities.streaming !== false || a2aAgentCard.capabilities.pushNotifications !== false) {
+    fail("a2aAgentCard.capabilities should explicitly disable streaming and pushNotifications");
+  }
+
+  diff(runtimeSlugs, skillIds).forEach((slug) => fail(`a2aAgentCard.skills is missing runtime tool "${slug}"`));
+  unexpected(runtimeSlugs, skillIds).forEach((slug) => fail(`a2aAgentCard.skills has unknown runtime tool "${slug}"`));
+
+  skills.forEach((skill) => {
+    if (!skill.name || !skill.description) {
+      fail(`a2aAgentCard.skills.${skill.id} should have name and description`);
+    }
+    if (!Array.isArray(skill.tags) || !skill.tags.length) {
+      fail(`a2aAgentCard.skills.${skill.id}.tags should be a non-empty array`);
+    }
+  });
+}
+
+function checkMcpDocumentation() {
+  const requiredUiKeys = [
+    "mcpIntegrationTitle",
+    "mcpIntegrationIntro",
+    "mcpToolNameLabel",
+    "mcpEndpointLabel",
+    "mcpCurlIntro",
+    "mcpArgumentsNote",
+    "mcpDiscoveryNote",
+    "mcpOutputNote",
+    "mcpBrowserOnlyNote",
+    "mcpImageInputNote"
+  ];
+  const layoutPath = path.join(srcDir, "_includes", "tool-layout.njk");
+  const mcpSectionPath = path.join(srcDir, "_includes", "mcp-integration-section.njk");
+  const layout = fs.existsSync(layoutPath) ? fs.readFileSync(layoutPath, "utf8") : "";
+  const mcpSection = fs.existsSync(mcpSectionPath) ? fs.readFileSync(mcpSectionPath, "utf8") : "";
+  const validExtends = [
+    '{% extends "tool-layout.njk" %}',
+    '{% extends "photo2pixel-page.njk" %}'
+  ];
+
+  if (!layout.includes('{% include "mcp-integration-section.njk" %}')) {
+    fail("tool-layout.njk should include the MCP integration documentation section");
+  }
+
+  if (!mcpSection) {
+    fail("mcp-integration-section.njk is missing");
+  } else {
+    ["tools/list", "tools/call", "MCP-Protocol-Version", "mcpToolName", "structuredContent", "isError"].forEach((needle) => {
+      if (!mcpSection.includes(needle)) {
+        fail(`mcp-integration-section.njk should mention "${needle}"`);
+      }
+    });
+    if (mcpSection.includes('mcpExampleInput = "Hello"') || mcpSection.includes('"input":"{{ mcpExampleInput }}"')) {
+      fail("mcp-integration-section.njk should use per-tool MCP examples instead of a hard-coded Hello input");
+    }
+  }
+
+  const mcpArgumentExamples = mcpExamples.arguments || {};
+  const mcpArgumentJson = mcpExamples.argumentsJson || {};
+  const slugs = Object.keys(tools);
+  diff(slugs, Object.keys(mcpArgumentExamples)).forEach((slug) => {
+    fail(`mcpExamples.arguments is missing tool "${slug}"`);
+  });
+  unexpected(slugs, Object.keys(mcpArgumentExamples)).forEach((slug) => {
+    fail(`mcpExamples.arguments has unknown tool "${slug}"`);
+  });
+  slugs.forEach((slug) => {
+    const example = mcpArgumentExamples[slug];
+    if (!example || typeof example !== "object" || Array.isArray(example)) {
+      fail(`mcpExamples.arguments.${slug} should be an arguments object`);
+      return;
+    }
+    const serialized = JSON.stringify(example);
+    if (serialized.includes('"input":"Hello"')) {
+      fail(`mcpExamples.arguments.${slug} should not use the generic Hello input`);
+    }
+    if (mcpArgumentJson[slug] !== serialized) {
+      fail(`mcpExamples.argumentsJson.${slug} should match the compact JSON form of arguments.${slug}`);
+    }
+  });
+
+  site.languageIds.forEach((lang) => {
+    requiredUiKeys.forEach((key) => {
+      const value = t[lang] && t[lang].ui && t[lang].ui[key];
+      if (typeof value !== "string" || !value.trim()) {
+        fail(`t.${lang}.ui.${key} is required for MCP documentation`);
+      }
+    });
+  });
+
+  Object.keys(tools).forEach((slug) => {
+    site.languageIds.forEach((lang) => {
+      const filePath = lang === "en"
+        ? path.join(toolsDir, `${slug}.njk`)
+        : path.join(toolsDir, lang, `${slug}.njk`);
+      if (!fs.existsSync(filePath)) return;
+
+      const content = fs.readFileSync(filePath, "utf8");
+      if (!validExtends.some((line) => content.includes(line))) {
+        fail(`${path.relative(root, filePath)} should extend tool-layout.njk or photo2pixel-page.njk so MCP documentation is rendered`);
+      }
+    });
+  });
+}
+
 checkLanguageSets();
 checkTranslationShape("homepage", homepage);
 checkTranslationShape("t", t);
@@ -305,6 +488,9 @@ checkToolDataFiles();
 checkHomepageToolTitles();
 checkCategories();
 checkToolPages();
+checkA2aCapabilities();
+checkA2aAgentCard();
+checkMcpDocumentation();
 
 if (errors.length) {
   console.error(`Structure check failed with ${errors.length} issue(s):`);

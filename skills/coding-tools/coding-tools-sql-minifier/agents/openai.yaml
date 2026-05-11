@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools SQL Minifier"
+  short_description: "Minify SQL by removing whitespace, comments, and unnecessary ..."
+  default_prompt: "Use $coding-tools-sql-minifier to run SQL Minifier through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for SQL Minifier."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

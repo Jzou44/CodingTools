@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools JavaScript Minifier"
+  short_description: "Minify JavaScript by removing whitespace, comments, and short..."
+  default_prompt: "Use $coding-tools-javascript-minifier to run JavaScript Minifier through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for JavaScript Minifier."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

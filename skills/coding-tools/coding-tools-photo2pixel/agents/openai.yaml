@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Photo2Pixel"
+  short_description: "Convert photos to 8-bit pixel art with adjustable style and p..."
+  default_prompt: "Use $coding-tools-photo2pixel to run Photo2Pixel through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Photo2Pixel."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

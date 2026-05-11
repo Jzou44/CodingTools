@@ -2,6 +2,8 @@
 FROM node:24-alpine AS builder
 
 WORKDIR /app
+ARG SITE_BASE_URL=https://coding.tools
+ENV SITE_BASE_URL=$SITE_BASE_URL
 
 # Install dependencies
 COPY package.json package-lock.json ./
@@ -9,36 +11,34 @@ RUN npm ci
 
 # Copy source files
 COPY .eleventy.js ./
+COPY scripts/ scripts/
+COPY server/ server/
+COPY skills/ skills/
 COPY src/ src/
 
 # Build static site
 RUN npm run build
 
-# Stage 2: Serve with nginx
-FROM nginx:alpine
+# Stage 2: Serve static files with nginx and run the A2A runtime
+FROM node:24-alpine
 
-# Copy built files to nginx
+RUN apk add --no-cache nginx
+
+WORKDIR /app
+ARG SITE_BASE_URL=https://coding.tools
+ENV SITE_BASE_URL=$SITE_BASE_URL
+
+# Copy runtime files and built static files
+COPY server/ server/
+COPY src/_data/ src/_data/
+COPY scripts/docker-entrypoint.sh scripts/docker-entrypoint.sh
+COPY docker/nginx.conf /etc/nginx/http.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Custom nginx config for static routing
-RUN echo 'server { \
-    listen 80; \
-    server_name localhost; \
-    root /usr/share/nginx/html; \
-    index index.html; \
-    error_page 404 /404.html; \
-    \
-    location / { \
-        try_files $uri $uri/ $uri.html =404; \
-    } \
-    \
-    location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json|webp|wasm|onnx)$ { \
-        expires 1y; \
-        add_header Cache-Control "public, immutable"; \
-        try_files $uri =404; \
-    } \
-}' > /etc/nginx/conf.d/default.conf
+RUN mkdir -p /run/nginx
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD wget -q -O /dev/null http://127.0.0.1/ && wget -q -O /dev/null http://127.0.0.1/a2a/healthz || exit 1
+
+CMD ["sh", "/app/scripts/docker-entrypoint.sh"]

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools XML to JSON"
+  short_description: "Convert XML data to JSON format."
+  default_prompt: "Use $coding-tools-xml-to-json to run XML to JSON through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for XML to JSON."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

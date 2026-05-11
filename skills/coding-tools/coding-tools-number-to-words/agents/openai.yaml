@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Number to Words"
+  short_description: "Convert numbers to English words, ordinals, and ordinal numbers."
+  default_prompt: "Use $coding-tools-number-to-words to run Number to Words through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Number to Words."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

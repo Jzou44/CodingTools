@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Decimal to Fraction"
+  short_description: "Convert decimal numbers to fractions."
+  default_prompt: "Use $coding-tools-decimal-to-fraction to run Decimal to Fraction through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Decimal to Fraction."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

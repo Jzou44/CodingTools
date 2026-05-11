@@ -1,0 +1,26 @@
+{% set mcpToolName = activeTool or toolId or pageSlug %}
+{% set mcpEndpoint = site.baseUrl + "/mcp" %}
+{% set mcpExampleArguments = mcpExamples.argumentsJson[mcpToolName] or "{}" %}
+{% if mcpToolName %}
+  <h3>{{ t.ui.mcpIntegrationTitle or "MCP integration" }}</h3>
+  <p>{{ t.ui.mcpIntegrationIntro or "Developers can call this tool through the Coding.Tools MCP endpoint. Use tools/list to discover the available tools, then call this tool by name with tools/call." }}</p>
+  <p><strong>{{ t.ui.mcpToolNameLabel or "MCP tool name" }}:</strong> <code>{{ mcpToolName }}</code></p>
+  <p><strong>{{ t.ui.mcpEndpointLabel or "MCP endpoint" }}:</strong> <code>{{ mcpEndpoint }}</code></p>
+  <p>{{ t.ui.mcpDiscoveryNote or "Call tools/list first. Each tool entry includes inputSchema, outputSchema, and examples so an AI agent or client can build valid arguments without guessing." }}</p>
+  <p>{{ t.ui.mcpOutputNote or "For tools/call, read result.content[0].text for the display value and result.structuredContent for machine parsing. Tool-level failures return isError: true; protocol failures return a JSON-RPC error." }}</p>
+  <p>{{ t.ui.mcpCurlIntro or "Example tools/call request:" }}</p>
+  <div class="code-block-wrapper">
+    <pre class="code-block">curl -s {{ mcpEndpoint }} \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "MCP-Protocol-Version: 2025-06-18" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"{{ mcpToolName }}","arguments":{{ mcpExampleArguments }}}}'</pre>
+  </div>
+  {% if mcpToolName == "image-to-base64" %}
+  <p>{{ t.ui.mcpImageInputNote or "For image-to-base64, pass a public image URL as input.url. For private local files, use the web UI or send the file bytes as Base64 with options.mimeType." }}</p>
+  {% endif %}
+  {% if mcpToolName == "photo2pixel" or mcpToolName == "compress-png" or mcpToolName == "compress-jpeg" or mcpToolName == "progressive-jpeg" or mcpToolName == "exif-viewer" or mcpToolName == "exif-remover" %}
+  <p>{{ t.ui.mcpBrowserOnlyNote or "This image tool is browser-only in MCP. tools/call returns isError: true plus a resource_link to the web UI instead of processing local image bytes on the server." }}</p>
+  {% endif %}
+  <p>{{ t.ui.mcpArgumentsNote or "Most text and data tools accept an input string plus optional options. Browser-only image tools are listed for discovery and return a web UI link when they need browser image APIs." }}</p>
+{% endif %}

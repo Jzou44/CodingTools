@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Hex to Binary"
+  short_description: "Convert hexadecimal numbers to binary format."
+  default_prompt: "Use $coding-tools-hex-to-binary to run Hex to Binary through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Hex to Binary."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

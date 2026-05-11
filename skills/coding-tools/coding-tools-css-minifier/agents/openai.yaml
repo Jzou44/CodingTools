@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools CSS Minifier"
+  short_description: "Minify CSS by removing whitespace, comments, and unnecessary ..."
+  default_prompt: "Use $coding-tools-css-minifier to run CSS Minifier through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for CSS Minifier."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

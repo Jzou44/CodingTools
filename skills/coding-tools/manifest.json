@@ -1,0 +1,386 @@
+{
+  "generatedFrom": "server/mcp-tools.js:listMcpTools",
+  "language": "en",
+  "endpoint": "https://coding.tools/mcp",
+  "skillCount": 63,
+  "skills": [
+    {
+      "name": "coding-tools-base64-encode",
+      "tool": "base64-encode",
+      "title": "Base64 Encode",
+      "webUi": "https://coding.tools/base64-encode.html"
+    },
+    {
+      "name": "coding-tools-base64-decode",
+      "tool": "base64-decode",
+      "title": "Base64 Decode",
+      "webUi": "https://coding.tools/base64-decode.html"
+    },
+    {
+      "name": "coding-tools-md5-generator",
+      "tool": "md5-generator",
+      "title": "MD5 Generator",
+      "webUi": "https://coding.tools/md5-generator.html"
+    },
+    {
+      "name": "coding-tools-sha1-generator",
+      "tool": "sha1-generator",
+      "title": "SHA1 Generator",
+      "webUi": "https://coding.tools/sha1-generator.html"
+    },
+    {
+      "name": "coding-tools-sha256-generator",
+      "tool": "sha256-generator",
+      "title": "SHA256 Generator",
+      "webUi": "https://coding.tools/sha256-generator.html"
+    },
+    {
+      "name": "coding-tools-sha384-generator",
+      "tool": "sha384-generator",
+      "title": "SHA384 Generator",
+      "webUi": "https://coding.tools/sha384-generator.html"
+    },
+    {
+      "name": "coding-tools-sha512-generator",
+      "tool": "sha512-generator",
+      "title": "SHA512 Generator",
+      "webUi": "https://coding.tools/sha512-generator.html"
+    },
+    {
+      "name": "coding-tools-password-generator",
+      "tool": "password-generator",
+      "title": "Password Generator",
+      "webUi": "https://coding.tools/password-generator.html"
+    },
+    {
+      "name": "coding-tools-hex-to-decimal",
+      "tool": "hex-to-decimal",
+      "title": "Hex to Decimal",
+      "webUi": "https://coding.tools/hex-to-decimal.html"
+    },
+    {
+      "name": "coding-tools-decimal-to-hex",
+      "tool": "decimal-to-hex",
+      "title": "Decimal to Hex",
+      "webUi": "https://coding.tools/decimal-to-hex.html"
+    },
+    {
+      "name": "coding-tools-octal-to-decimal",
+      "tool": "octal-to-decimal",
+      "title": "Octal to Decimal",
+      "webUi": "https://coding.tools/octal-to-decimal.html"
+    },
+    {
+      "name": "coding-tools-decimal-to-octal",
+      "tool": "decimal-to-octal",
+      "title": "Decimal to Octal",
+      "webUi": "https://coding.tools/decimal-to-octal.html"
+    },
+    {
+      "name": "coding-tools-binary-to-decimal",
+      "tool": "binary-to-decimal",
+      "title": "Binary to Decimal",
+      "webUi": "https://coding.tools/binary-to-decimal.html"
+    },
+    {
+      "name": "coding-tools-decimal-to-binary",
+      "tool": "decimal-to-binary",
+      "title": "Decimal to Binary",
+      "webUi": "https://coding.tools/decimal-to-binary.html"
+    },
+    {
+      "name": "coding-tools-binary-to-hex",
+      "tool": "binary-to-hex",
+      "title": "Binary to Hex",
+      "webUi": "https://coding.tools/binary-to-hex.html"
+    },
+    {
+      "name": "coding-tools-hex-to-binary",
+      "tool": "hex-to-binary",
+      "title": "Hex to Binary",
+      "webUi": "https://coding.tools/hex-to-binary.html"
+    },
+    {
+      "name": "coding-tools-ascii-table",
+      "tool": "ascii-table",
+      "title": "ASCII Table",
+      "webUi": "https://coding.tools/ascii-table.html"
+    },
+    {
+      "name": "coding-tools-hex-to-ascii",
+      "tool": "hex-to-ascii",
+      "title": "Hex to ASCII",
+      "webUi": "https://coding.tools/hex-to-ascii.html"
+    },
+    {
+      "name": "coding-tools-ascii-to-hex",
+      "tool": "ascii-to-hex",
+      "title": "ASCII to Hex",
+      "webUi": "https://coding.tools/ascii-to-hex.html"
+    },
+    {
+      "name": "coding-tools-binary-to-text",
+      "tool": "binary-to-text",
+      "title": "Binary to Text",
+      "webUi": "https://coding.tools/binary-to-text.html"
+    },
+    {
+      "name": "coding-tools-text-to-binary",
+      "tool": "text-to-binary",
+      "title": "Text to Binary",
+      "webUi": "https://coding.tools/text-to-binary.html"
+    },
+    {
+      "name": "coding-tools-fraction-to-decimal",
+      "tool": "fraction-to-decimal",
+      "title": "Fraction to Decimal",
+      "webUi": "https://coding.tools/fraction-to-decimal.html"
+    },
+    {
+      "name": "coding-tools-decimal-to-fraction",
+      "tool": "decimal-to-fraction",
+      "title": "Decimal to Fraction",
+      "webUi": "https://coding.tools/decimal-to-fraction.html"
+    },
+    {
+      "name": "coding-tools-percent-to-decimal",
+      "tool": "percent-to-decimal",
+      "title": "Percent to Decimal",
+      "webUi": "https://coding.tools/percent-to-decimal.html"
+    },
+    {
+      "name": "coding-tools-decimal-to-percent",
+      "tool": "decimal-to-percent",
+      "title": "Decimal to Percent",
+      "webUi": "https://coding.tools/decimal-to-percent.html"
+    },
+    {
+      "name": "coding-tools-percent-to-fraction",
+      "tool": "percent-to-fraction",
+      "title": "Percent to Fraction",
+      "webUi": "https://coding.tools/percent-to-fraction.html"
+    },
+    {
+      "name": "coding-tools-fraction-to-percent",
+      "tool": "fraction-to-percent",
+      "title": "Fraction to Percent",
+      "webUi": "https://coding.tools/fraction-to-percent.html"
+    },
+    {
+      "name": "coding-tools-hex-to-rgb",
+      "tool": "hex-to-rgb",
+      "title": "Hex to RGB",
+      "webUi": "https://coding.tools/hex-to-rgb.html"
+    },
+    {
+      "name": "coding-tools-rgb-to-hex",
+      "tool": "rgb-to-hex",
+      "title": "RGB to Hex",
+      "webUi": "https://coding.tools/rgb-to-hex.html"
+    },
+    {
+      "name": "coding-tools-hex-to-rgba",
+      "tool": "hex-to-rgba",
+      "title": "Hex to RGBA",
+      "webUi": "https://coding.tools/hex-to-rgba.html"
+    },
+    {
+      "name": "coding-tools-rgba-to-hex",
+      "tool": "rgba-to-hex",
+      "title": "RGBA to Hex",
+      "webUi": "https://coding.tools/rgba-to-hex.html"
+    },
+    {
+      "name": "coding-tools-roman-numerals-chart",
+      "tool": "roman-numerals-chart",
+      "title": "Roman Numerals Chart",
+      "webUi": "https://coding.tools/roman-numerals-chart.html"
+    },
+    {
+      "name": "coding-tools-roman-numerals-to-numbers",
+      "tool": "roman-numerals-to-numbers",
+      "title": "Roman to Numbers",
+      "webUi": "https://coding.tools/roman-numerals-to-numbers.html"
+    },
+    {
+      "name": "coding-tools-numbers-to-roman-numerals",
+      "tool": "numbers-to-roman-numerals",
+      "title": "Numbers to Roman",
+      "webUi": "https://coding.tools/numbers-to-roman-numerals.html"
+    },
+    {
+      "name": "coding-tools-text-editor",
+      "tool": "text-editor",
+      "title": "Text Editor Online",
+      "webUi": "https://coding.tools/text-editor.html"
+    },
+    {
+      "name": "coding-tools-regex-tester",
+      "tool": "regex-tester",
+      "title": "Regex Tester",
+      "webUi": "https://coding.tools/regex-tester.html"
+    },
+    {
+      "name": "coding-tools-regex-replace",
+      "tool": "regex-replace",
+      "title": "Regex Replace",
+      "webUi": "https://coding.tools/regex-replace.html"
+    },
+    {
+      "name": "coding-tools-word-counter",
+      "tool": "word-counter",
+      "title": "Word Counter",
+      "webUi": "https://coding.tools/word-counter.html"
+    },
+    {
+      "name": "coding-tools-character-count",
+      "tool": "character-count",
+      "title": "Character Count",
+      "webUi": "https://coding.tools/character-count.html"
+    },
+    {
+      "name": "coding-tools-case-converter",
+      "tool": "case-converter",
+      "title": "Case Converter",
+      "webUi": "https://coding.tools/case-converter.html"
+    },
+    {
+      "name": "coding-tools-reverse-text",
+      "tool": "reverse-text",
+      "title": "Reverse Text",
+      "webUi": "https://coding.tools/reverse-text.html"
+    },
+    {
+      "name": "coding-tools-number-to-words",
+      "tool": "number-to-words",
+      "title": "Number to Words",
+      "webUi": "https://coding.tools/number-to-words.html"
+    },
+    {
+      "name": "coding-tools-json-formatter",
+      "tool": "json-formatter",
+      "title": "JSON Formatter",
+      "webUi": "https://coding.tools/json-formatter.html"
+    },
+    {
+      "name": "coding-tools-json-minifier",
+      "tool": "json-minifier",
+      "title": "JSON Minifier",
+      "webUi": "https://coding.tools/json-minifier.html"
+    },
+    {
+      "name": "coding-tools-xml-formatter",
+      "tool": "xml-formatter",
+      "title": "XML Formatter",
+      "webUi": "https://coding.tools/xml-formatter.html"
+    },
+    {
+      "name": "coding-tools-xml-minifier",
+      "tool": "xml-minifier",
+      "title": "XML Minifier",
+      "webUi": "https://coding.tools/xml-minifier.html"
+    },
+    {
+      "name": "coding-tools-json-to-xml",
+      "tool": "json-to-xml",
+      "title": "JSON to XML",
+      "webUi": "https://coding.tools/json-to-xml.html"
+    },
+    {
+      "name": "coding-tools-xml-to-json",
+      "tool": "xml-to-json",
+      "title": "XML to JSON",
+      "webUi": "https://coding.tools/xml-to-json.html"
+    },
+    {
+      "name": "coding-tools-html-beautifier",
+      "tool": "html-beautifier",
+      "title": "HTML Beautifier",
+      "webUi": "https://coding.tools/html-beautifier.html"
+    },
+    {
+      "name": "coding-tools-html-minifier",
+      "tool": "html-minifier",
+      "title": "HTML Minifier",
+      "webUi": "https://coding.tools/html-minifier.html"
+    },
+    {
+      "name": "coding-tools-javascript-beautifier",
+      "tool": "javascript-beautifier",
+      "title": "JavaScript Beautifier",
+      "webUi": "https://coding.tools/javascript-beautifier.html"
+    },
+    {
+      "name": "coding-tools-javascript-minifier",
+      "tool": "javascript-minifier",
+      "title": "JavaScript Minifier",
+      "webUi": "https://coding.tools/javascript-minifier.html"
+    },
+    {
+      "name": "coding-tools-css-beautifier",
+      "tool": "css-beautifier",
+      "title": "CSS Beautifier",
+      "webUi": "https://coding.tools/css-beautifier.html"
+    },
+    {
+      "name": "coding-tools-css-minifier",
+      "tool": "css-minifier",
+      "title": "CSS Minifier",
+      "webUi": "https://coding.tools/css-minifier.html"
+    },
+    {
+      "name": "coding-tools-sql-formatter",
+      "tool": "sql-formatter",
+      "title": "SQL Formatter",
+      "webUi": "https://coding.tools/sql-formatter.html"
+    },
+    {
+      "name": "coding-tools-sql-minifier",
+      "tool": "sql-minifier",
+      "title": "SQL Minifier",
+      "webUi": "https://coding.tools/sql-minifier.html"
+    },
+    {
+      "name": "coding-tools-photo2pixel",
+      "tool": "photo2pixel",
+      "title": "Photo2Pixel",
+      "webUi": "https://coding.tools/photo2pixel.html"
+    },
+    {
+      "name": "coding-tools-compress-png",
+      "tool": "compress-png",
+      "title": "Compress PNG",
+      "webUi": "https://coding.tools/compress-png.html"
+    },
+    {
+      "name": "coding-tools-compress-jpeg",
+      "tool": "compress-jpeg",
+      "title": "Compress JPEG",
+      "webUi": "https://coding.tools/compress-jpeg.html"
+    },
+    {
+      "name": "coding-tools-progressive-jpeg",
+      "tool": "progressive-jpeg",
+      "title": "Progressive JPEG",
+      "webUi": "https://coding.tools/progressive-jpeg.html"
+    },
+    {
+      "name": "coding-tools-image-to-base64",
+      "tool": "image-to-base64",
+      "title": "Image to Base64",
+      "webUi": "https://coding.tools/image-to-base64.html"
+    },
+    {
+      "name": "coding-tools-exif-viewer",
+      "tool": "exif-viewer",
+      "title": "EXIF Viewer",
+      "webUi": "https://coding.tools/exif-viewer.html"
+    },
+    {
+      "name": "coding-tools-exif-remover",
+      "tool": "exif-remover",
+      "title": "EXIF Remover",
+      "webUi": "https://coding.tools/exif-remover.html"
+    }
+  ]
+}

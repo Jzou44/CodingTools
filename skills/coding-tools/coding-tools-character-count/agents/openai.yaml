@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Character Count"
+  short_description: "Count characters, words, lines, and UTF-8 bytes with Twitter ..."
+  default_prompt: "Use $coding-tools-character-count to run Character Count through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Character Count."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

@@ -126,6 +126,10 @@ module.exports = function (eleventyConfig) {
     return site.absoluteUrl(path);
   });
 
+  eleventyConfig.addFilter("json", function (value) {
+    return JSON.stringify(value, null, 2);
+  });
+
   eleventyConfig.addShortcode("seoJsonLd", function (pageType, lang, slug, title, description, toolTitle, categoryName, categoryId, categories) {
     const data = pageType === "tool"
       ? makeToolJsonLd(lang, slug, title, description, toolTitle, categoryName, categoryId, categories)

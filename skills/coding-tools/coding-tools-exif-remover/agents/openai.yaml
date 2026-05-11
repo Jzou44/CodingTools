@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools EXIF Remover"
+  short_description: "Strip all EXIF metadata from images to protect your privacy."
+  default_prompt: "Use $coding-tools-exif-remover to run EXIF Remover through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for EXIF Remover."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

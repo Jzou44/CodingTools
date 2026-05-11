@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Hex to ASCII"
+  short_description: "Convert hexadecimal values to ASCII text."
+  default_prompt: "Use $coding-tools-hex-to-ascii to run Hex to ASCII through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Hex to ASCII."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

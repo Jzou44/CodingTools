@@ -122,6 +122,16 @@
     "invalidBinaryOnly01": "Invalid binary input - only 0 and 1 are allowed",
     "filesCompressed": "file(s) compressed",
     "filesProcessed": "file(s) processed",
-    "exifTagsFound": "EXIF tags found"
+    "exifTagsFound": "EXIF tags found",
+    "mcpIntegrationTitle": "MCP integration",
+    "mcpIntegrationIntro": "MCP (Model Context Protocol) lets AI agents and apps discover and run Coding.Tools utilities for repeatable conversions, formatting, hashing, and generation workflows.",
+    "mcpToolNameLabel": "MCP tool name",
+    "mcpEndpointLabel": "MCP endpoint",
+    "mcpDiscoveryNote": "Call tools/list first. Each tool entry includes inputSchema, outputSchema, and examples so an AI agent or client can build valid arguments without guessing.",
+    "mcpOutputNote": "For tools/call, read result.content[0].text for the display value and result.structuredContent for machine parsing. Tool-level failures return isError: true; protocol failures return a JSON-RPC error.",
+    "mcpCurlIntro": "Example tools/call request:",
+    "mcpArgumentsNote": "Most text and data tools accept an input string plus optional options. Browser-only image tools are listed for discovery and return a web UI link when they need browser image APIs.",
+    "mcpBrowserOnlyNote": "This image tool is browser-only in MCP. tools/call returns isError: true plus a resource_link to the web UI instead of processing local image bytes on the server.",
+    "mcpImageInputNote": "For image-to-base64, pass a public image URL as input.url. For private local files, use the web UI or send the file bytes as Base64 with options.mimeType."
   }
 }

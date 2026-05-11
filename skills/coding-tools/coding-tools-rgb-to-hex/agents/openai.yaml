@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools RGB to Hex"
+  short_description: "Convert RGB color values to hex color codes with live preview."
+  default_prompt: "Use $coding-tools-rgb-to-hex to run RGB to Hex through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for RGB to Hex."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

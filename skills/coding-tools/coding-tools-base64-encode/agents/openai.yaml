@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Base64 Encode"
+  short_description: "Encode text to Base64 or decode Base64 back to readable text."
+  default_prompt: "Use $coding-tools-base64-encode to run Base64 Encode through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Base64 Encode."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

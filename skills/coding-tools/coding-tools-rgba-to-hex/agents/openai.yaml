@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools RGBA to Hex"
+  short_description: "Convert RGBA color values to hex color codes with opacity."
+  default_prompt: "Use $coding-tools-rgba-to-hex to run RGBA to Hex through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for RGBA to Hex."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

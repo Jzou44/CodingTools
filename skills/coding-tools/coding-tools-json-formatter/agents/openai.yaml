@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools JSON Formatter"
+  short_description: "Format and beautify JSON code with proper indentation."
+  default_prompt: "Use $coding-tools-json-formatter to run JSON Formatter through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for JSON Formatter."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

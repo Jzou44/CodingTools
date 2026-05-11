@@ -124,6 +124,16 @@
     "invalidBinaryOnly01": "無効な2進数入力です。0 と 1 のみ使用できます",
     "filesCompressed": "個のファイルを圧縮しました",
     "filesProcessed": "個のファイルを処理しました",
-    "exifTagsFound": "個の EXIF タグが見つかりました"
+    "exifTagsFound": "個の EXIF タグが見つかりました",
+    "mcpIntegrationTitle": "MCP 連携",
+    "mcpIntegrationIntro": "MCP (Model Context Protocol) により、AI エージェントやアプリは Coding.Tools のユーティリティを発見し、変換、整形、ハッシュ、生成ワークフローで実行できます。",
+    "mcpToolNameLabel": "MCP ツール名",
+    "mcpEndpointLabel": "MCP エンドポイント",
+    "mcpDiscoveryNote": "まず tools/list を呼び出してください。各ツールには inputSchema、outputSchema、examples が含まれるため、AI エージェントやクライアントは推測せずに有効な引数を作成できます。",
+    "mcpOutputNote": "tools/call では、表示用の値は result.content[0].text、機械処理用の値は result.structuredContent を読みます。ツール単位の失敗は isError: true、プロトコル単位の失敗は JSON-RPC error を返します。",
+    "mcpCurlIntro": "tools/call リクエスト例:",
+    "mcpArgumentsNote": "ほとんどのテキストおよびデータツールは input 文字列と任意の options を受け取ります。ブラウザの画像 API が必要な画像ツールは発見用に公開され、必要に応じて Web UI へのリンクを返します。",
+    "mcpBrowserOnlyNote": "この画像ツールは MCP ではブラウザ専用です。tools/call はサーバーでローカル画像バイトを処理せず、isError: true と Web UI への resource_link を返します。",
+    "mcpImageInputNote": "image-to-base64 では、公開画像 URL を input.url として渡します。非公開のローカルファイルは Web UI を使うか、ファイルのバイト列を Base64 に変換して options.mimeType で画像形式を指定してください。"
   }
 }
