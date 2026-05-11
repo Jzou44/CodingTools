@@ -136,6 +136,12 @@ jobs:
               index index.html;
               error_page 404 /404.html;
 
+              location = /.well-known/agent-card.json {
+                  expires 5m;
+                  add_header Cache-Control "public, max-age=300";
+                  try_files \$uri =404;
+              }
+
               location / {
                   try_files \$uri \$uri/ \$uri.html =404;
               }
