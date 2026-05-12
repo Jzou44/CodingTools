@@ -221,6 +221,24 @@
     "description": "Find and replace text using regular expressions with backreference support.",
     "icon": "<polyline points=\"17 1 21 5 17 9\"></polyline><path d=\"M3 11V9a4 4 0 0 1 4-4h14\"></path><polyline points=\"7 23 3 19 7 15\"></polyline><path d=\"M21 13v2a4 4 0 0 1-4 4H3\"></path>"
   },
+  "url-encode": {
+    "title": "URL Encode",
+    "category": "hash-cryptography",
+    "description": "Percent-encode URL text, query values, paths, or full URLs.",
+    "icon": "<path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"></path><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"></path>"
+  },
+  "url-decode": {
+    "title": "URL Decode / Query Parser",
+    "category": "hash-cryptography",
+    "description": "Decode URL-encoded text and parse query-string parameters.",
+    "icon": "<path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"></path><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"></path>"
+  },
+  "text-compare": {
+    "title": "Text Compare",
+    "category": "string-text-utilities",
+    "description": "Compare two blocks of text line by line.",
+    "icon": "<path d=\"M4 7V4h16v3\"></path><path d=\"M9 20h6\"></path><path d=\"M12 4v16\"></path>"
+  },
   "word-counter": {
     "title": "Word Counter",
     "category": "string-text-utilities",
@@ -255,6 +273,12 @@
     "title": "JSON Formatter",
     "category": "formatter-minifier",
     "description": "Format and beautify JSON code with proper indentation.",
+    "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
+  },
+  "json-diff": {
+    "title": "JSON Diff",
+    "category": "formatter-minifier",
+    "description": "Compare two JSON documents and highlight structural differences.",
     "icon": "<polyline points=\"16 18 22 12 16 6\"></polyline><polyline points=\"8 6 2 12 8 18\"></polyline><path d=\"m14.5 4-5 16\"></path>"
   },
   "json-minifier": {

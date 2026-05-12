@@ -1,0 +1,22 @@
+---
+lang: "es"
+toolId: "url-decode"
+category: "hash-cryptography"
+activeTool: "url-decode"
+permalink: "/es/url-decode.html"
+---
+
+{% extends "tool-layout.njk" %}
+{% import "macros/advanced-tools.njk" as advanced %}
+
+{% block tool_content %}
+  {{ advanced.simpleTransformContent(toolData, t, "decode") }}
+{% endblock %}
+
+{% block description %}
+  {{ advanced.translatedDescription(toolData, t) }}
+{% endblock %}
+
+{% block tool_script %}
+  {{ advanced.simpleTransformScript(toolData, "decode", "url-decoded.txt") }}
+{% endblock %}

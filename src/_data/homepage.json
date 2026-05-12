@@ -75,7 +75,11 @@
       "progressive-jpeg": "Progressive JPEG",
       "image-to-base64": "Image to Base64",
       "exif-viewer": "EXIF Viewer",
-      "exif-remover": "EXIF Remover"
+      "exif-remover": "EXIF Remover",
+      "url-encode": "URL Encode",
+      "url-decode": "URL Decode / Query Parser",
+      "json-diff": "JSON Diff",
+      "text-compare": "Text Compare"
     },
     "categoryDescs": {
       "image-utilities": "Compress, convert, and inspect image files right in your browser.",
@@ -161,7 +165,11 @@
       "progressive-jpeg": "渐进式 JPEG",
       "image-to-base64": "图片转 Base64",
       "exif-viewer": "EXIF 查看器",
-      "exif-remover": "EXIF 移除器"
+      "exif-remover": "EXIF 移除器",
+      "url-encode": "URL 编码",
+      "url-decode": "URL 解码 / 查询解析器",
+      "json-diff": "JSON 差异对比",
+      "text-compare": "文本对比"
     },
     "categoryDescs": {
       "image-utilities": "在浏览器中直接压缩、转换和检查图片文件。",
@@ -247,7 +255,11 @@
       "progressive-jpeg": "漸進式 JPEG",
       "image-to-base64": "圖片轉 Base64",
       "exif-viewer": "EXIF 檢視器",
-      "exif-remover": "EXIF 移除器"
+      "exif-remover": "EXIF 移除器",
+      "url-encode": "URL 編碼",
+      "url-decode": "URL 解碼 / 查詢解析器",
+      "json-diff": "JSON 差異比對",
+      "text-compare": "文字比對"
     },
     "categoryDescs": {
       "image-utilities": "在瀏覽器中直接壓縮、轉換和檢查圖片檔案。",
@@ -333,7 +345,11 @@
       "progressive-jpeg": "プログレッシブ JPEG",
       "image-to-base64": "画像→Base64",
       "exif-viewer": "EXIF ビューア",
-      "exif-remover": "EXIF 除去"
+      "exif-remover": "EXIF 除去",
+      "url-encode": "URL エンコード",
+      "url-decode": "URL デコード / クエリ解析",
+      "json-diff": "JSON 差分",
+      "text-compare": "テキスト比較"
     },
     "categoryDescs": {
       "image-utilities": "ブラウザで画像ファイルを圧縮、変換、検査。",
@@ -419,7 +435,11 @@
       "progressive-jpeg": "프로그레시브 JPEG",
       "image-to-base64": "이미지→Base64",
       "exif-viewer": "EXIF 뷰어",
-      "exif-remover": "EXIF 제거"
+      "exif-remover": "EXIF 제거",
+      "url-encode": "URL 인코딩",
+      "url-decode": "URL 디코딩 / 쿼리 파서",
+      "json-diff": "JSON 차이 비교",
+      "text-compare": "텍스트 비교"
     },
     "categoryDescs": {
       "image-utilities": "브라우저에서 이미지 파일을 압축, 변환, 검사하세요.",
@@ -505,7 +525,11 @@
       "progressive-jpeg": "JPEG Progressif",
       "image-to-base64": "Image en Base64",
       "exif-viewer": "Visionneuse EXIF",
-      "exif-remover": "Supprimer EXIF"
+      "exif-remover": "Supprimer EXIF",
+      "url-encode": "Encodage URL",
+      "url-decode": "Décodage URL / Analyseur de requête",
+      "json-diff": "Diff JSON",
+      "text-compare": "Comparaison de texte"
     },
     "categoryDescs": {
       "image-utilities": "Compressez, convertissez et inspectez des images directement dans votre navigateur.",
@@ -591,7 +615,11 @@
       "progressive-jpeg": "Progressives JPEG",
       "image-to-base64": "Bild zu Base64",
       "exif-viewer": "EXIF-Betrachter",
-      "exif-remover": "EXIF entfernen"
+      "exif-remover": "EXIF entfernen",
+      "url-encode": "URL kodieren",
+      "url-decode": "URL dekodieren / Query Parser",
+      "json-diff": "JSON-Diff",
+      "text-compare": "Textvergleich"
     },
     "categoryDescs": {
       "image-utilities": "Komprimieren, konvertieren und inspizieren Sie Bilddateien direkt im Browser.",
@@ -677,7 +705,11 @@
       "progressive-jpeg": "JPEG Progresivo",
       "image-to-base64": "Imagen a Base64",
       "exif-viewer": "Visor EXIF",
-      "exif-remover": "Eliminar EXIF"
+      "exif-remover": "Eliminar EXIF",
+      "url-encode": "Codificar URL",
+      "url-decode": "Decodificar URL / Analizador de consulta",
+      "json-diff": "Diferencias JSON",
+      "text-compare": "Comparar texto"
     },
     "categoryDescs": {
       "image-utilities": "Comprima, convierta e inspeccione imágenes directamente en su navegador.",
@@ -763,7 +795,11 @@
       "progressive-jpeg": "JPEG Progressivo",
       "image-to-base64": "Imagem para Base64",
       "exif-viewer": "Visualizador EXIF",
-      "exif-remover": "Remover EXIF"
+      "exif-remover": "Remover EXIF",
+      "url-encode": "Codificar URL",
+      "url-decode": "Decodificar URL / Analisador de consulta",
+      "json-diff": "Diff JSON",
+      "text-compare": "Comparar texto"
     },
     "categoryDescs": {
       "image-utilities": "Comprima, converta e inspecione imagens diretamente no seu navegador.",

@@ -1,0 +1,470 @@
+{
+  "en": {
+    "title": "URL Encode — Coding.Tools",
+    "description": "Percent-encode URL text, query values, paths, or full URLs directly in your browser.",
+    "toolTitle": "URL Encode",
+    "toolDescription": "Encode URL components or full URLs with options for plus-style spaces and line-by-line processing.",
+    "categoryName": "Hash & Cryptography",
+    "buttonLabel": "Encode URL",
+    "descTitle": "URL Encode",
+    "descParas": [
+      "URL Encode converts reserved and non-ASCII characters into percent-encoded sequences that are safe to place in links, query strings, form payloads, and API requests.",
+      "The conversion runs locally in your browser and does not send URLs, tokens, or query values to a server."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste the text, path, query value, or URL you want to encode.",
+      "Choose component mode for query values or full URI mode for an entire URL.",
+      "Enable plus-style spaces or line-by-line encoding when your target system needs it.",
+      "Click <strong>Encode URL</strong>, then copy or download the encoded result."
+    ],
+    "whatIs": "What is this tool?",
+    "whatIsParas": [
+      "URL encoding, also called percent encoding, represents characters as percent signs followed by hexadecimal byte values. It keeps spaces, Unicode text, and reserved delimiters unambiguous inside URLs.",
+      "Use component encoding for values such as search terms or redirect URLs. Use full URI encoding when you want to preserve URL separators like : / ? & and =."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Component mode uses encodeURIComponent and encodes separators. Full URI mode uses encodeURI and preserves URL structure. The plus-space option is useful for application/x-www-form-urlencoded query strings.",
+    "example": "Example",
+    "examplePara": "A search phrase becomes safe for a query parameter:",
+    "exampleCode": "Input\nhello world & tea=green\n\nComponent output\nhello%20world%20%26%20tea%3Dgreen\n\nWith + spaces\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "URL Input",
+      "output": "Encoded Output",
+      "encodeMode": "Encoding mode",
+      "componentMode": "Component / query value",
+      "uriMode": "Full URI",
+      "spacePlus": "Convert spaces to +",
+      "lineByLine": "Encode each line separately",
+      "summary": "Summary",
+      "added": "Added",
+      "removed": "Removed",
+      "changed": "Changed",
+      "unchanged": "Unchanged",
+      "noDiff": "No differences to display yet."
+    },
+    "messages": {
+      "empty": "Enter input first.",
+      "success": "URL encoded successfully",
+      "failed": "Operation failed: "
+    },
+    "inputPlaceholder": "Paste text, a URL path, or query value to encode...",
+    "outputPlaceholder": "Encoded output will appear here..."
+  },
+  "cn": {
+    "title": "URL 编码 — Coding.Tools",
+    "description": "在浏览器中对 URL 文本、查询值、路径或完整 URL 进行百分号编码。",
+    "toolTitle": "URL 编码",
+    "toolDescription": "编码 URL 组件或完整 URL，支持加号空格和逐行处理。",
+    "categoryName": "哈希与加密",
+    "buttonLabel": "编码 URL",
+    "descTitle": "URL 编码",
+    "descParas": [
+      "URL 编码会把保留字符和非 ASCII 字符转换为百分号编码序列，便于放入链接、查询字符串、表单内容和 API 请求。",
+      "转换过程完全在浏览器本地运行，输入的 URL、令牌或查询值不会上传到服务器。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "粘贴要编码的文本、路径、查询值或 URL。",
+      "查询参数值请选择组件模式；完整 URL 请选择完整 URI 模式。",
+      "如果目标系统需要，可以启用加号空格或逐行编码。",
+      "点击<strong>编码 URL</strong>，然后复制或下载编码结果。"
+    ],
+    "whatIs": "这个工具是什么？",
+    "whatIsParas": [
+      "URL 编码也叫百分号编码，会用百分号加十六进制字节表示字符，避免空格、Unicode 文本和保留分隔符在 URL 中产生歧义。",
+      "查询词、跳转地址等参数值适合使用组件编码；需要保留 : / ? & = 等 URL 结构时使用完整 URI 编码。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "组件模式使用 encodeURIComponent，会编码分隔符。完整 URI 模式使用 encodeURI，会保留 URL 结构。加号空格适合 application/x-www-form-urlencoded 查询字符串。",
+    "example": "示例",
+    "examplePara": "搜索短语可以转换为安全的查询参数值：",
+    "exampleCode": "输入\nhello world & tea=green\n\n组件输出\nhello%20world%20%26%20tea%3Dgreen\n\n使用 + 表示空格\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "URL 输入",
+      "output": "编码输出",
+      "encodeMode": "编码模式",
+      "componentMode": "组件 / 查询值",
+      "uriMode": "完整 URI",
+      "spacePlus": "将空格转为 +",
+      "lineByLine": "逐行编码",
+      "summary": "汇总",
+      "added": "新增",
+      "removed": "删除",
+      "changed": "变更",
+      "unchanged": "未变更",
+      "noDiff": "暂无差异可显示。"
+    },
+    "messages": {
+      "empty": "请先输入内容。",
+      "success": "URL 编码成功",
+      "failed": "操作失败："
+    },
+    "inputPlaceholder": "粘贴要编码的文本、URL 路径或查询值...",
+    "outputPlaceholder": "编码结果将在此显示..."
+  },
+  "tw": {
+    "title": "URL 編碼 — Coding.Tools",
+    "description": "在瀏覽器中對 URL 文字、查詢值、路徑或完整 URL 進行百分號編碼。",
+    "toolTitle": "URL 編碼",
+    "toolDescription": "編碼 URL 元件或完整 URL，支援加號空格與逐行處理。",
+    "categoryName": "雜湊與加密",
+    "buttonLabel": "編碼 URL",
+    "descTitle": "URL 編碼",
+    "descParas": [
+      "URL 編碼會將保留字元與非 ASCII 字元轉為百分號編碼序列，方便放入連結、查詢字串、表單內容與 API 請求。",
+      "轉換完全在瀏覽器本機執行，輸入的 URL、權杖或查詢值不會上傳到伺服器。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "貼上要編碼的文字、路徑、查詢值或 URL。",
+      "查詢參數值請選元件模式；完整 URL 請選完整 URI 模式。",
+      "如果目標系統需要，可啟用加號空格或逐行編碼。",
+      "點擊<strong>編碼 URL</strong>，然後複製或下載編碼結果。"
+    ],
+    "whatIs": "這個工具是什麼？",
+    "whatIsParas": [
+      "URL 編碼也稱為百分號編碼，會以百分號加十六進位位元組表示字元，避免空格、Unicode 文字與保留分隔符在 URL 中產生歧義。",
+      "查詢詞、跳轉網址等參數值適合使用元件編碼；需要保留 : / ? & = 等 URL 結構時使用完整 URI 編碼。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "元件模式使用 encodeURIComponent，會編碼分隔符。完整 URI 模式使用 encodeURI，會保留 URL 結構。加號空格適合 application/x-www-form-urlencoded 查詢字串。",
+    "example": "範例",
+    "examplePara": "搜尋短語可以轉成安全的查詢參數值：",
+    "exampleCode": "輸入\nhello world & tea=green\n\n元件輸出\nhello%20world%20%26%20tea%3Dgreen\n\n使用 + 表示空格\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "URL 輸入",
+      "output": "編碼輸出",
+      "encodeMode": "編碼模式",
+      "componentMode": "元件 / 查詢值",
+      "uriMode": "完整 URI",
+      "spacePlus": "將空格轉為 +",
+      "lineByLine": "逐行編碼",
+      "summary": "摘要",
+      "added": "新增",
+      "removed": "移除",
+      "changed": "變更",
+      "unchanged": "未變更",
+      "noDiff": "尚無差異可顯示。"
+    },
+    "messages": {
+      "empty": "請先輸入內容。",
+      "success": "URL 編碼成功",
+      "failed": "操作失敗："
+    },
+    "inputPlaceholder": "貼上要編碼的文字、URL 路徑或查詢值...",
+    "outputPlaceholder": "編碼結果會顯示於此..."
+  },
+  "jp": {
+    "title": "URL エンコード — Coding.Tools",
+    "description": "ブラウザで URL テキスト、クエリ値、パス、または完全な URL をパーセントエンコードします。",
+    "toolTitle": "URL エンコード",
+    "toolDescription": "URL コンポーネントまたは完全な URL をエンコードし、+ 空白と行単位処理にも対応します。",
+    "categoryName": "ハッシュと暗号化",
+    "buttonLabel": "URL をエンコード",
+    "descTitle": "URL エンコード",
+    "descParas": [
+      "URL エンコードは予約文字や非 ASCII 文字をパーセントエンコード列に変換し、リンク、クエリ文字列、フォーム送信、API リクエストで安全に扱えるようにします。",
+      "処理はブラウザ内で完結し、URL、トークン、クエリ値はサーバーへ送信されません。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "エンコードしたいテキスト、パス、クエリ値、または URL を貼り付けます。",
+      "クエリ値にはコンポーネントモード、完全な URL には完全 URI モードを選びます。",
+      "必要に応じて + 空白または行単位エンコードを有効にします。",
+      "<strong>URL をエンコード</strong>をクリックし、結果をコピーまたはダウンロードします。"
+    ],
+    "whatIs": "このツールとは？",
+    "whatIsParas": [
+      "URL エンコードはパーセントエンコードとも呼ばれ、文字をパーセント記号と 16 進バイトで表します。空白、Unicode テキスト、予約区切り文字の意味を URL 内で明確にできます。",
+      "検索語やリダイレクト先などの値にはコンポーネントエンコードを使います。: / ? & = などの URL 構造を残す場合は完全 URI モードを使います。"
+    ],
+    "inputNotes": "入力メモ",
+    "inputNotesPara": "コンポーネントモードは encodeURIComponent を使い、区切り文字もエンコードします。完全 URI モードは encodeURI を使い、URL 構造を保持します。+ 空白は application/x-www-form-urlencoded のクエリ文字列に便利です。",
+    "example": "例",
+    "examplePara": "検索語を安全なクエリ値に変換できます：",
+    "exampleCode": "入力\nhello world & tea=green\n\nコンポーネント出力\nhello%20world%20%26%20tea%3Dgreen\n\n+ で空白を表す\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "URL 入力",
+      "output": "エンコード結果",
+      "encodeMode": "エンコード方式",
+      "componentMode": "コンポーネント / クエリ値",
+      "uriMode": "完全 URI",
+      "spacePlus": "空白を + に変換",
+      "lineByLine": "行ごとにエンコード",
+      "summary": "概要",
+      "added": "追加",
+      "removed": "削除",
+      "changed": "変更",
+      "unchanged": "未変更",
+      "noDiff": "表示する差分はまだありません。"
+    },
+    "messages": {
+      "empty": "先に入力してください。",
+      "success": "URL をエンコードしました",
+      "failed": "操作に失敗しました: "
+    },
+    "inputPlaceholder": "エンコードするテキスト、URL パス、クエリ値を貼り付け...",
+    "outputPlaceholder": "エンコード結果がここに表示されます..."
+  },
+  "kr": {
+    "title": "URL 인코딩 — Coding.Tools",
+    "description": "브라우저에서 URL 텍스트, 쿼리 값, 경로 또는 전체 URL을 퍼센트 인코딩합니다.",
+    "toolTitle": "URL 인코딩",
+    "toolDescription": "URL 구성 요소나 전체 URL을 인코딩하고, + 공백과 줄별 처리 옵션을 지원합니다.",
+    "categoryName": "해시 및 암호화",
+    "buttonLabel": "URL 인코딩",
+    "descTitle": "URL 인코딩",
+    "descParas": [
+      "URL 인코딩은 예약 문자와 비 ASCII 문자를 퍼센트 인코딩 시퀀스로 바꾸어 링크, 쿼리 문자열, 폼 데이터, API 요청에서 안전하게 사용할 수 있게 합니다.",
+      "변환은 브라우저에서만 실행되며 URL, 토큰, 쿼리 값은 서버로 전송되지 않습니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "인코딩할 텍스트, 경로, 쿼리 값 또는 URL을 붙여넣습니다.",
+      "쿼리 값은 구성 요소 모드, 전체 URL은 전체 URI 모드를 선택합니다.",
+      "필요하면 + 공백 또는 줄별 인코딩을 켭니다.",
+      "<strong>URL 인코딩</strong>을 클릭한 뒤 결과를 복사하거나 다운로드합니다."
+    ],
+    "whatIs": "이 도구란?",
+    "whatIsParas": [
+      "URL 인코딩은 퍼센트 인코딩이라고도 하며, 문자를 퍼센트 기호와 16진수 바이트로 표현합니다. 공백, Unicode 텍스트, 예약 구분자의 의미를 URL 안에서 명확히 합니다.",
+      "검색어, 리다이렉트 주소 같은 값은 구성 요소 인코딩을 사용합니다. : / ? & = 같은 URL 구조를 보존하려면 전체 URI 모드를 사용합니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "구성 요소 모드는 encodeURIComponent를 사용해 구분자도 인코딩합니다. 전체 URI 모드는 encodeURI를 사용해 URL 구조를 보존합니다. + 공백 옵션은 application/x-www-form-urlencoded 쿼리 문자열에 유용합니다.",
+    "example": "예시",
+    "examplePara": "검색 문구를 안전한 쿼리 값으로 바꿀 수 있습니다:",
+    "exampleCode": "입력\nhello world & tea=green\n\n구성 요소 출력\nhello%20world%20%26%20tea%3Dgreen\n\n+ 로 공백 표시\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "URL 입력",
+      "output": "인코딩 결과",
+      "encodeMode": "인코딩 모드",
+      "componentMode": "구성 요소 / 쿼리 값",
+      "uriMode": "전체 URI",
+      "spacePlus": "공백을 + 로 변환",
+      "lineByLine": "줄별 인코딩",
+      "summary": "요약",
+      "added": "추가됨",
+      "removed": "삭제됨",
+      "changed": "변경됨",
+      "unchanged": "변경 없음",
+      "noDiff": "표시할 차이가 아직 없습니다."
+    },
+    "messages": {
+      "empty": "먼저 입력하세요.",
+      "success": "URL 인코딩 완료",
+      "failed": "작업 실패: "
+    },
+    "inputPlaceholder": "인코딩할 텍스트, URL 경로 또는 쿼리 값을 붙여넣으세요...",
+    "outputPlaceholder": "인코딩 결과가 여기에 표시됩니다..."
+  },
+  "fr": {
+    "title": "Encodage URL — Coding.Tools",
+    "description": "Encode en pourcentage du texte URL, des valeurs de requete, des chemins ou des URL completes dans le navigateur.",
+    "toolTitle": "Encodage URL",
+    "toolDescription": "Encode des composants URL ou des URL completes, avec options pour espaces en + et traitement ligne par ligne.",
+    "categoryName": "Hachage et cryptographie",
+    "buttonLabel": "Encoder URL",
+    "descTitle": "Encodage URL",
+    "descParas": [
+      "L’encodage URL transforme les caracteres reserves et non ASCII en sequences avec pourcentage, afin de les placer dans des liens, requetes, formulaires et appels API.",
+      "La conversion se fait localement dans le navigateur. Les URL, jetons et valeurs de requete ne sont pas envoyes a un serveur."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez le texte, le chemin, la valeur de requete ou l’URL a encoder.",
+      "Utilisez le mode composant pour une valeur de requete, et le mode URI complete pour une URL entiere.",
+      "Activez les espaces en + ou le traitement par ligne si le systeme cible le demande.",
+      "Cliquez sur <strong>Encoder URL</strong>, puis copiez ou telechargez le resultat."
+    ],
+    "whatIs": "A quoi sert cet outil ?",
+    "whatIsParas": [
+      "L’encodage URL, aussi appele encodage en pourcentage, represente les caracteres par un signe pourcentage suivi d’octets hexadecimaux. Il leve les ambiguites sur les espaces, le texte Unicode et les separateurs reserves.",
+      "Utilisez l’encodage de composant pour les valeurs comme les recherches ou URL de redirection. Utilisez URI complete pour conserver les separateurs : / ? & =."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Le mode composant utilise encodeURIComponent et encode les separateurs. Le mode URI complete utilise encodeURI et conserve la structure de l’URL. L’option espace en + convient aux requetes application/x-www-form-urlencoded.",
+    "example": "Exemple",
+    "examplePara": "Une expression de recherche devient une valeur de requete sure :",
+    "exampleCode": "Entree\nhello world & tea=green\n\nSortie composant\nhello%20world%20%26%20tea%3Dgreen\n\nAvec + pour les espaces\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "Saisie URL",
+      "output": "Resultat encode",
+      "encodeMode": "Mode d’encodage",
+      "componentMode": "Composant / valeur de requete",
+      "uriMode": "URI complete",
+      "spacePlus": "Convertir les espaces en +",
+      "lineByLine": "Encoder ligne par ligne",
+      "summary": "Resume",
+      "added": "Ajoute",
+      "removed": "Supprime",
+      "changed": "Modifie",
+      "unchanged": "Inchange",
+      "noDiff": "Aucune difference a afficher."
+    },
+    "messages": {
+      "empty": "Saisissez d’abord une valeur.",
+      "success": "URL encodee avec succes",
+      "failed": "Echec de l’operation : "
+    },
+    "inputPlaceholder": "Collez le texte, le chemin URL ou la valeur de requete a encoder...",
+    "outputPlaceholder": "Le resultat encode apparaitra ici..."
+  },
+  "de": {
+    "title": "URL kodieren — Coding.Tools",
+    "description": "Kodiert URL-Text, Query-Werte, Pfade oder vollstaendige URLs im Browser per Prozentkodierung.",
+    "toolTitle": "URL kodieren",
+    "toolDescription": "Kodiert URL-Komponenten oder ganze URLs mit Optionen fuer Plus-Leerzeichen und zeilenweise Verarbeitung.",
+    "categoryName": "Hash & Kryptografie",
+    "buttonLabel": "URL kodieren",
+    "descTitle": "URL kodieren",
+    "descParas": [
+      "URL-Kodierung wandelt reservierte und Nicht-ASCII-Zeichen in Prozentkodierung um, damit sie in Links, Query-Strings, Formularen und API-Anfragen eindeutig sind.",
+      "Die Umwandlung laeuft lokal im Browser. URLs, Tokens und Query-Werte werden nicht an einen Server gesendet."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Fuegen Sie Text, Pfad, Query-Wert oder URL ein.",
+      "Waehlen Sie Komponentenmodus fuer Query-Werte oder vollstaendige URI fuer eine ganze URL.",
+      "Aktivieren Sie Plus-Leerzeichen oder zeilenweise Kodierung, falls das Zielsystem dies erwartet.",
+      "Klicken Sie auf <strong>URL kodieren</strong> und kopieren oder laden Sie das Ergebnis herunter."
+    ],
+    "whatIs": "Was macht dieses Tool?",
+    "whatIsParas": [
+      "URL-Kodierung, auch Prozentkodierung, stellt Zeichen als Prozentzeichen mit hexadezimalen Bytewerten dar. So bleiben Leerzeichen, Unicode-Text und reservierte Trennzeichen eindeutig.",
+      "Nutzen Sie Komponenten-Kodierung fuer Werte wie Suchbegriffe oder Redirect-URLs. Nutzen Sie vollstaendige URI, wenn : / ? & = erhalten bleiben sollen."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Der Komponentenmodus nutzt encodeURIComponent und kodiert Trennzeichen. Der URI-Modus nutzt encodeURI und behaelt die URL-Struktur bei. Plus-Leerzeichen passt zu application/x-www-form-urlencoded Query-Strings.",
+    "example": "Beispiel",
+    "examplePara": "Ein Suchausdruck wird zu einem sicheren Query-Wert:",
+    "exampleCode": "Eingabe\nhello world & tea=green\n\nKomponenten-Ausgabe\nhello%20world%20%26%20tea%3Dgreen\n\nMit + fuer Leerzeichen\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "URL-Eingabe",
+      "output": "Kodiertes Ergebnis",
+      "encodeMode": "Kodierungsmodus",
+      "componentMode": "Komponente / Query-Wert",
+      "uriMode": "Vollstaendige URI",
+      "spacePlus": "Leerzeichen in + umwandeln",
+      "lineByLine": "Zeilenweise kodieren",
+      "summary": "Zusammenfassung",
+      "added": "Hinzugefuegt",
+      "removed": "Entfernt",
+      "changed": "Geaendert",
+      "unchanged": "Unveraendert",
+      "noDiff": "Noch keine Unterschiede zum Anzeigen."
+    },
+    "messages": {
+      "empty": "Geben Sie zuerst Inhalt ein.",
+      "success": "URL erfolgreich kodiert",
+      "failed": "Vorgang fehlgeschlagen: "
+    },
+    "inputPlaceholder": "Zu kodierenden Text, URL-Pfad oder Query-Wert einfuegen...",
+    "outputPlaceholder": "Das kodierte Ergebnis erscheint hier..."
+  },
+  "es": {
+    "title": "Codificar URL — Coding.Tools",
+    "description": "Codifica con porcentajes texto URL, valores de consulta, rutas o URL completas en el navegador.",
+    "toolTitle": "Codificar URL",
+    "toolDescription": "Codifica componentes URL o URL completas, con espacios como + y procesamiento por linea.",
+    "categoryName": "Hash y criptografia",
+    "buttonLabel": "Codificar URL",
+    "descTitle": "Codificar URL",
+    "descParas": [
+      "La codificacion URL convierte caracteres reservados y no ASCII en secuencias con porcentaje para usarlos con seguridad en enlaces, consultas, formularios y solicitudes API.",
+      "La conversion se ejecuta localmente en el navegador. Las URL, tokens y valores de consulta no se envian a ningun servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Pega el texto, ruta, valor de consulta o URL que quieres codificar.",
+      "Usa el modo componente para valores de consulta o el modo URI completa para una URL entera.",
+      "Activa espacios como + o codificacion por linea si el sistema destino lo requiere.",
+      "Haz clic en <strong>Codificar URL</strong> y copia o descarga el resultado."
+    ],
+    "whatIs": "Que hace esta herramienta?",
+    "whatIsParas": [
+      "La codificacion URL, tambien llamada codificacion por porcentaje, representa caracteres con un signo de porcentaje y bytes hexadecimales. Evita ambiguedades con espacios, texto Unicode y separadores reservados.",
+      "Usa codificacion de componente para busquedas o URL de redireccion. Usa URI completa para conservar separadores como : / ? & =."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "El modo componente usa encodeURIComponent y codifica separadores. El modo URI completa usa encodeURI y conserva la estructura. La opcion de + para espacios sirve para consultas application/x-www-form-urlencoded.",
+    "example": "Ejemplo",
+    "examplePara": "Una frase de busqueda se convierte en un valor seguro de consulta:",
+    "exampleCode": "Entrada\nhello world & tea=green\n\nSalida de componente\nhello%20world%20%26%20tea%3Dgreen\n\nCon + para espacios\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "Entrada URL",
+      "output": "Resultado codificado",
+      "encodeMode": "Modo de codificacion",
+      "componentMode": "Componente / valor de consulta",
+      "uriMode": "URI completa",
+      "spacePlus": "Convertir espacios en +",
+      "lineByLine": "Codificar por linea",
+      "summary": "Resumen",
+      "added": "Anadido",
+      "removed": "Eliminado",
+      "changed": "Cambiado",
+      "unchanged": "Sin cambios",
+      "noDiff": "Aun no hay diferencias para mostrar."
+    },
+    "messages": {
+      "empty": "Introduce contenido primero.",
+      "success": "URL codificada correctamente",
+      "failed": "Error en la operacion: "
+    },
+    "inputPlaceholder": "Pega texto, ruta URL o valor de consulta para codificar...",
+    "outputPlaceholder": "El resultado codificado aparecera aqui..."
+  },
+  "pt": {
+    "title": "Codificar URL — Coding.Tools",
+    "description": "Codifica texto URL, valores de consulta, caminhos ou URLs completas no navegador.",
+    "toolTitle": "Codificar URL",
+    "toolDescription": "Codifica componentes de URL ou URLs completas, com espacos como + e processamento por linha.",
+    "categoryName": "Hash e criptografia",
+    "buttonLabel": "Codificar URL",
+    "descTitle": "Codificar URL",
+    "descParas": [
+      "A codificacao URL transforma caracteres reservados e nao ASCII em sequencias com porcentagem para uso seguro em links, consultas, formularios e chamadas API.",
+      "A conversao roda localmente no navegador. URLs, tokens e valores de consulta nao sao enviados a servidor."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole o texto, caminho, valor de consulta ou URL que deseja codificar.",
+      "Use o modo componente para valores de consulta ou URI completa para uma URL inteira.",
+      "Ative espacos como + ou codificacao por linha se o sistema de destino exigir.",
+      "Clique em <strong>Codificar URL</strong> e copie ou baixe o resultado."
+    ],
+    "whatIs": "Para que serve esta ferramenta?",
+    "whatIsParas": [
+      "A codificacao URL, tambem chamada codificacao por porcentagem, representa caracteres com sinal de porcentagem e bytes hexadecimais. Isso evita ambiguidades com espacos, texto Unicode e separadores reservados.",
+      "Use codificacao de componente para buscas ou URLs de redirecionamento. Use URI completa para preservar separadores como : / ? & =."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "O modo componente usa encodeURIComponent e codifica separadores. O modo URI completa usa encodeURI e preserva a estrutura da URL. A opcao de + para espacos serve para consultas application/x-www-form-urlencoded.",
+    "example": "Exemplo",
+    "examplePara": "Uma frase de busca vira um valor seguro de consulta:",
+    "exampleCode": "Entrada\nhello world & tea=green\n\nSaida de componente\nhello%20world%20%26%20tea%3Dgreen\n\nCom + para espacos\nhello+world+%26+tea%3Dgreen",
+    "labels": {
+      "input": "Entrada URL",
+      "output": "Resultado codificado",
+      "encodeMode": "Modo de codificacao",
+      "componentMode": "Componente / valor de consulta",
+      "uriMode": "URI completa",
+      "spacePlus": "Converter espacos em +",
+      "lineByLine": "Codificar por linha",
+      "summary": "Resumo",
+      "added": "Adicionado",
+      "removed": "Removido",
+      "changed": "Alterado",
+      "unchanged": "Sem alteracao",
+      "noDiff": "Ainda nao ha diferencas para mostrar."
+    },
+    "messages": {
+      "empty": "Insira conteudo primeiro.",
+      "success": "URL codificada com sucesso",
+      "failed": "Falha na operacao: "
+    },
+    "inputPlaceholder": "Cole texto, caminho URL ou valor de consulta para codificar...",
+    "outputPlaceholder": "O resultado codificado aparecera aqui..."
+  }
+}

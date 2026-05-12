@@ -1,0 +1,22 @@
+---
+lang: "es"
+toolId: "url-encode"
+category: "hash-cryptography"
+activeTool: "url-encode"
+permalink: "/es/url-encode.html"
+---
+
+{% extends "tool-layout.njk" %}
+{% import "macros/advanced-tools.njk" as advanced %}
+
+{% block tool_content %}
+  {{ advanced.simpleTransformContent(toolData, t, "encode") }}
+{% endblock %}
+
+{% block description %}
+  {{ advanced.translatedDescription(toolData, t) }}
+{% endblock %}
+
+{% block tool_script %}
+  {{ advanced.simpleTransformScript(toolData, "encode", "url-encoded.txt") }}
+{% endblock %}

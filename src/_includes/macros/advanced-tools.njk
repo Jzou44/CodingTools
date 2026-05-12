@@ -1,0 +1,933 @@
+{% import "macros/editor.njk" as editor %}
+{% import "macros/toolbar.njk" as toolbar %}
+{% import "macros/status-bar.njk" as status %}
+{% import "macros/icons.njk" as icons %}
+
+{% macro advancedToolStyles() %}
+  <style>
+    .advanced-tool-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .advanced-tool-grid .pane-card {
+      min-width: 0;
+    }
+
+    .advanced-tool-grid .pane-editor {
+      min-height: 240px;
+    }
+
+    .tool-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px 18px;
+      padding: 14px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      margin-top: 12px;
+    }
+
+    .tool-options label,
+    .tool-options .select-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 500;
+      min-width: 0;
+    }
+
+    .tool-options select {
+      width: 100%;
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text-primary);
+      padding: 8px 10px;
+      font: inherit;
+    }
+
+    .tool-options input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .tool-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tool-summary-item {
+      min-height: 72px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tool-summary-label {
+      display: block;
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .tool-summary-value {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-primary);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .diff-preview,
+    .query-preview {
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .diff-preview-list {
+      max-height: 280px;
+      overflow: auto;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .diff-row {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 12px;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(232, 224, 212, 0.6);
+      word-break: break-word;
+    }
+
+    .diff-row:last-child {
+      border-bottom: 0;
+    }
+
+    .diff-row.added { background: rgba(39, 174, 96, 0.08); }
+    .diff-row.removed { background: rgba(231, 76, 60, 0.08); }
+    .diff-row.changed { background: rgba(243, 156, 18, 0.1); }
+    .diff-row.unchanged { color: var(--text-muted); }
+
+    .diff-kind {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .query-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .query-table th,
+    .query-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+      word-break: break-word;
+    }
+
+    .query-table th {
+      background: var(--code-bg);
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .query-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .empty-preview {
+      padding: 14px 16px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .advanced-tool-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .advanced-tool-grid .pane-editor {
+        min-height: 190px;
+      }
+
+      .diff-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+{% endmacro %}
+
+{% macro translatedDescription(toolData, t) %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">
+    {% for step in toolData.steps %}
+    <li>{{ step | safe }}</li>
+    {% endfor %}
+  </ol>
+
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}
+  <p>{{ para | safe }}</p>
+  {% endfor %}
+
+  <h3>{{ toolData.inputNotes }}</h3>
+  <p>{{ toolData.inputNotesPara | safe }}</p>
+
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper">
+    <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  </div>
+{% endmacro %}
+
+{% macro simpleTransformContent(toolData, t, mode) %}
+  {{ advancedToolStyles() }}
+  <div id="tool-i18n"
+    data-empty="{{ toolData.messages.empty }}"
+    data-success="{{ toolData.messages.success }}"
+    data-failed="{{ toolData.messages.failed }}"></div>
+
+  {{ editor.inputEditor(toolData.inputPlaceholder, toolData.labels.input) }}
+
+  <div class="tool-options" aria-label="{{ t.ui.options }}">
+    {% if mode == "encode" %}
+    <label class="select-label">
+      <span>{{ toolData.labels.encodeMode }}</span>
+      <select id="encode-mode">
+        <option value="component">{{ toolData.labels.componentMode }}</option>
+        <option value="uri">{{ toolData.labels.uriMode }}</option>
+      </select>
+    </label>
+    <label><input type="checkbox" id="space-plus"> {{ toolData.labels.spacePlus }}</label>
+    <label><input type="checkbox" id="line-by-line"> {{ toolData.labels.lineByLine }}</label>
+    {% else %}
+    <label><input type="checkbox" id="plus-space" checked> {{ toolData.labels.plusSpace }}</label>
+    <label><input type="checkbox" id="parse-query" checked> {{ toolData.labels.parseQuery }}</label>
+    {% endif %}
+  </div>
+
+  {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
+    <button class="btn btn-primary" id="btn-generate" type="button">
+      {% if mode == "encode" %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+      {% else %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+      {% endif %}
+      {{ toolData.buttonLabel }}
+    </button>
+  {% endcall %}
+
+  {{ editor.outputEditor(toolData.outputPlaceholder, toolData.labels.output) }}
+
+  {% if mode == "decode" %}
+  <div class="query-preview" aria-live="polite">
+    <table class="query-table">
+      <thead>
+        <tr>
+          <th>{{ toolData.labels.index }}</th>
+          <th>{{ toolData.labels.parameter }}</th>
+          <th>{{ toolData.labels.value }}</th>
+        </tr>
+      </thead>
+      <tbody id="query-table-body">
+        <tr><td colspan="3" class="empty-preview">{{ toolData.labels.noParameters }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+
+  {{ status.statusBar(t.ui.characters, t.ui.lines) }}
+{% endmacro %}
+
+{% macro simpleTransformScript(toolData, mode, filename) %}
+  <script>
+    (function () {
+      'use strict';
+
+      var inputEditor = document.getElementById('input-editor');
+      var outputEditor = document.getElementById('output-editor');
+      var btnGenerate = document.getElementById('btn-generate');
+      var btnClear = document.getElementById('btn-clear');
+      var btnCopy = document.getElementById('btn-copy');
+      var btnDownload = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot = document.getElementById('status-dot');
+      var statusText = document.getElementById('status-text');
+      var charCount = document.getElementById('char-count');
+      var lineCount = document.getElementById('line-count');
+      var inputLineNums = document.getElementById('input-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+      var i18n = document.getElementById('tool-i18n').dataset;
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        var labels = window.I18N || {};
+        charCount.textContent = ToolCommon.pluralise(text.length, labels.charSingular || 'character', labels.charPlural || 'characters');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), labels.lineSingular || 'line', labels.linePlural || 'lines');
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      function decodePart(value, plusAsSpace) {
+        var text = plusAsSpace ? value.replace(/\+/g, ' ') : value;
+        return decodeURIComponent(text);
+      }
+
+      function extractQuery(value) {
+        var trimmed = value.trim();
+        var hashless = trimmed.split('#')[0];
+        var question = hashless.indexOf('?');
+        if (question >= 0) return hashless.slice(question + 1);
+        return hashless.charAt(0) === '?' ? hashless.slice(1) : hashless;
+      }
+
+      function renderQueryRows(query, plusAsSpace) {
+        var body = document.getElementById('query-table-body');
+        if (!body) return [];
+
+        var source = extractQuery(query);
+        var pairs = source ? source.split('&').filter(function (part) { return part.length; }) : [];
+        if (!pairs.length || !/[=&]/.test(source)) {
+          body.innerHTML = '<tr><td colspan="3" class="empty-preview">{{ toolData.labels.noParameters }}</td></tr>';
+          return [];
+        }
+
+        var rows = pairs.map(function (pair, index) {
+          var eq = pair.indexOf('=');
+          var rawKey = eq >= 0 ? pair.slice(0, eq) : pair;
+          var rawValue = eq >= 0 ? pair.slice(eq + 1) : '';
+          var key = decodePart(rawKey, plusAsSpace);
+          var value = decodePart(rawValue, plusAsSpace);
+          return { index: index + 1, key: key, value: value };
+        });
+
+        body.innerHTML = rows.map(function (row) {
+          return '<tr><td>' + row.index + '</td><td>' + escapeHtml(row.key) + '</td><td>' + escapeHtml(row.value) + '</td></tr>';
+        }).join('');
+        return rows;
+      }
+
+      function decodeUrlText(value, plusAsSpace) {
+        if (value.indexOf('://') < 0) return decodePart(value, plusAsSpace);
+
+        var parsed = new URL(value);
+        var path = parsed.pathname.split('/').map(function (segment) {
+          return decodePart(segment, false);
+        }).join('/');
+        var rows = parseQueryRows(value, plusAsSpace);
+        var query = rows.length
+          ? '?' + rows.map(function (row) { return row.key + '=' + row.value; }).join('&')
+          : '';
+        var hash = parsed.hash ? '#' + decodePart(parsed.hash.slice(1), plusAsSpace) : '';
+        return parsed.origin + path + query + hash;
+      }
+
+      function parseQueryRows(query, plusAsSpace) {
+        var source = extractQuery(query);
+        var pairs = source ? source.split('&').filter(function (part) { return part.length; }) : [];
+        if (!pairs.length || !/[=&]/.test(source)) return [];
+
+        return pairs.map(function (pair, index) {
+          var eq = pair.indexOf('=');
+          var rawKey = eq >= 0 ? pair.slice(0, eq) : pair;
+          var rawValue = eq >= 0 ? pair.slice(eq + 1) : '';
+          return {
+            index: index + 1,
+            key: decodePart(rawKey, plusAsSpace),
+            value: decodePart(rawValue, plusAsSpace)
+          };
+        });
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (char) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+        });
+      }
+
+      function run() {
+        var text = inputEditor.value;
+        if (!text) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.empty);
+          return;
+        }
+
+        try {
+          {% if mode == "encode" %}
+          var encodeMode = document.getElementById('encode-mode').value;
+          var usePlus = document.getElementById('space-plus').checked;
+          var lineByLine = document.getElementById('line-by-line').checked;
+          var encoder = encodeMode === 'uri' ? encodeURI : encodeURIComponent;
+          var output = lineByLine
+            ? text.split(/\r?\n/).map(function (line) { return encoder(line); }).join('\n')
+            : encoder(text);
+          if (usePlus) output = output.replace(/%20/g, '+');
+          outputEditor.value = output;
+          {% else %}
+          var plusAsSpace = document.getElementById('plus-space').checked;
+          var parseQuery = document.getElementById('parse-query').checked;
+          var decoded = decodeUrlText(text, plusAsSpace);
+          var rows = parseQuery ? renderQueryRows(text, plusAsSpace) : [];
+          var outputLines = [decoded];
+          if (rows.length) {
+            outputLines.push('', '{{ toolData.labels.queryParameters }}');
+            rows.forEach(function (row) {
+              outputLines.push(row.index + '. ' + row.key + ' = ' + row.value);
+            });
+          }
+          outputEditor.value = outputLines.join('\n');
+          {% endif %}
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', i18n.success);
+          updateCounts();
+        } catch (error) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.failed + error.message);
+        }
+      }
+
+      btnGenerate.addEventListener('click', run);
+      btnClear.addEventListener('click', function () {
+        ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums);
+        var body = document.getElementById('query-table-body');
+        if (body) body.innerHTML = '<tr><td colspan="3" class="empty-preview">{{ toolData.labels.noParameters }}</td></tr>';
+      });
+      btnCopy.addEventListener('click', function () { ToolCommon.copyOutput(outputEditor, btnCopy); });
+      btnDownload.addEventListener('click', function () { ToolCommon.downloadOutput(outputEditor, '{{ filename }}'); });
+
+      ToolCommon.initInputLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(inputEditor, inputLineNums);
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initTabKey(inputEditor, inputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnGenerate);
+      ToolCommon.updateLineNumbers(inputEditor, inputLineNums);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endmacro %}
+
+{% macro compareContent(toolData, t, kind) %}
+  {{ advancedToolStyles() }}
+  <div id="tool-i18n"
+    data-empty="{{ toolData.messages.empty }}"
+    data-success="{{ toolData.messages.success }}"
+    data-failed="{{ toolData.messages.failed }}"></div>
+
+  <div class="advanced-tool-grid">
+    <div class="pane-card pane-card--input">
+      <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--accent"></span>{{ toolData.labels.leftInput }}</span></div>
+      <div class="pane-editor-wrapper">
+        <div class="pane-line-numbers" id="left-line-numbers">1</div>
+        <textarea class="pane-editor" id="left-editor" spellcheck="false" rows="12" placeholder="{{ toolData.leftPlaceholder }}"></textarea>
+      </div>
+    </div>
+    <div class="pane-card pane-card--input">
+      <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ toolData.labels.rightInput }}</span></div>
+      <div class="pane-editor-wrapper">
+        <div class="pane-line-numbers" id="right-line-numbers">1</div>
+        <textarea class="pane-editor" id="right-editor" spellcheck="false" rows="12" placeholder="{{ toolData.rightPlaceholder }}"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-options" aria-label="{{ t.ui.options }}">
+    {% if kind == "json" %}
+    <label><input type="checkbox" id="show-unchanged"> {{ toolData.labels.showUnchanged }}</label>
+    <label><input type="checkbox" id="sort-keys" checked> {{ toolData.labels.sortKeys }}</label>
+    {% else %}
+    <label><input type="checkbox" id="ignore-space"> {{ toolData.labels.ignoreWhitespace }}</label>
+    <label><input type="checkbox" id="ignore-case"> {{ toolData.labels.ignoreCase }}</label>
+    <label><input type="checkbox" id="show-unchanged"> {{ toolData.labels.showUnchanged }}</label>
+    {% endif %}
+  </div>
+
+  {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
+    <button class="btn btn-primary" id="btn-generate" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"></path><path d="M16 3h3a2 2 0 0 1 2 2v3"></path><path d="M8 21H5a2 2 0 0 1-2-2v-3"></path><path d="M16 21h3a2 2 0 0 0 2-2v-3"></path><path d="M9 12h6"></path><path d="M12 9v6"></path></svg>
+      {{ toolData.buttonLabel }}
+    </button>
+  {% endcall %}
+
+  <div class="pane-card pane-card--output">
+    <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ toolData.labels.output }}</span></div>
+    <div class="pane-editor-wrapper">
+      <div class="pane-line-numbers readonly-bg" id="output-line-numbers">1</div>
+      <textarea class="pane-editor" id="output-editor" spellcheck="false" readonly rows="12" placeholder="{{ toolData.outputPlaceholder }}"></textarea>
+    </div>
+  </div>
+
+  <div class="tool-summary" aria-live="polite">
+    <div class="tool-summary-item"><span class="tool-summary-label">{{ toolData.labels.added }}</span><span class="tool-summary-value" id="summary-added">0</span></div>
+    <div class="tool-summary-item"><span class="tool-summary-label">{{ toolData.labels.removed }}</span><span class="tool-summary-value" id="summary-removed">0</span></div>
+    <div class="tool-summary-item"><span class="tool-summary-label">{{ toolData.labels.changed }}</span><span class="tool-summary-value" id="summary-changed">0</span></div>
+    <div class="tool-summary-item"><span class="tool-summary-label">{{ toolData.labels.unchanged }}</span><span class="tool-summary-value" id="summary-unchanged">0</span></div>
+  </div>
+
+  <div class="diff-preview" aria-live="polite">
+    <div class="diff-preview-list" id="diff-preview-list">
+      <div class="empty-preview">{{ toolData.labels.noDiff }}</div>
+    </div>
+  </div>
+
+  {{ status.statusBar(t.ui.characters, t.ui.lines) }}
+{% endmacro %}
+
+{% macro jsonDiffScript(toolData) %}
+  <script>
+    (function () {
+      'use strict';
+
+      var leftEditor = document.getElementById('left-editor');
+      var rightEditor = document.getElementById('right-editor');
+      var outputEditor = document.getElementById('output-editor');
+      var btnGenerate = document.getElementById('btn-generate');
+      var btnClear = document.getElementById('btn-clear');
+      var btnCopy = document.getElementById('btn-copy');
+      var btnDownload = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot = document.getElementById('status-dot');
+      var statusText = document.getElementById('status-text');
+      var charCount = document.getElementById('char-count');
+      var lineCount = document.getElementById('line-count');
+      var leftLineNums = document.getElementById('left-line-numbers');
+      var rightLineNums = document.getElementById('right-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+      var previewList = document.getElementById('diff-preview-list');
+      var i18n = document.getElementById('tool-i18n').dataset;
+
+      function typeOf(value) {
+        if (Array.isArray(value)) return 'array';
+        if (value === null) return 'null';
+        return typeof value;
+      }
+
+      function stable(value) {
+        if (Array.isArray(value)) return value.map(stable);
+        if (!value || typeof value !== 'object') return value;
+        return Object.keys(value).sort().reduce(function (acc, key) {
+          acc[key] = stable(value[key]);
+          return acc;
+        }, {});
+      }
+
+      function comparable(value, sortKeys) {
+        return sortKeys ? stable(value) : value;
+      }
+
+      function same(a, b, sortKeys) {
+        return JSON.stringify(comparable(a, sortKeys)) === JSON.stringify(comparable(b, sortKeys));
+      }
+
+      function inspect(value) {
+        return JSON.stringify(value, null, 2);
+      }
+
+      function addChange(changes, type, path, left, right) {
+        changes.push({ type: type, path: path || '$', left: left, right: right });
+      }
+
+      function diffValues(left, right, path, changes, showUnchanged, sortKeys) {
+        if (same(left, right, sortKeys)) {
+          if (showUnchanged) addChange(changes, 'unchanged', path, left, right);
+          return;
+        }
+
+        var leftType = typeOf(left);
+        var rightType = typeOf(right);
+        if (leftType !== rightType) {
+          addChange(changes, 'changed', path, left, right);
+          return;
+        }
+
+        if (leftType === 'array') {
+          var max = Math.max(left.length, right.length);
+          for (var i = 0; i < max; i += 1) {
+            var childPath = path + '[' + i + ']';
+            if (i >= left.length) addChange(changes, 'added', childPath, undefined, right[i]);
+            else if (i >= right.length) addChange(changes, 'removed', childPath, left[i], undefined);
+            else diffValues(left[i], right[i], childPath, changes, showUnchanged, sortKeys);
+          }
+          return;
+        }
+
+        if (leftType === 'object') {
+          var keys = Array.from(new Set(Object.keys(left).concat(Object.keys(right))));
+          if (sortKeys) keys.sort();
+          var beforeCount = changes.length;
+          keys.forEach(function (key) {
+            var childPath = path + '.' + key;
+            if (!Object.prototype.hasOwnProperty.call(left, key)) addChange(changes, 'added', childPath, undefined, right[key]);
+            else if (!Object.prototype.hasOwnProperty.call(right, key)) addChange(changes, 'removed', childPath, left[key], undefined);
+            else diffValues(left[key], right[key], childPath, changes, showUnchanged, sortKeys);
+          });
+          if (!sortKeys && changes.length === beforeCount) {
+            addChange(changes, 'changed', path, left, right);
+          }
+          return;
+        }
+
+        addChange(changes, 'changed', path, left, right);
+      }
+
+      function summarize(changes) {
+        return changes.reduce(function (acc, item) {
+          acc[item.type] += 1;
+          return acc;
+        }, { added: 0, removed: 0, changed: 0, unchanged: 0 });
+      }
+
+      function render(changes, summary) {
+        var lines = [
+          '{{ toolData.labels.summary }}',
+          '{{ toolData.labels.added }}: ' + summary.added,
+          '{{ toolData.labels.removed }}: ' + summary.removed,
+          '{{ toolData.labels.changed }}: ' + summary.changed,
+          '{{ toolData.labels.unchanged }}: ' + summary.unchanged,
+          ''
+        ];
+
+        changes.forEach(function (item) {
+          lines.push('[' + item.type + '] ' + item.path);
+          if (item.type === 'added') lines.push('+ ' + inspect(item.right));
+          else if (item.type === 'removed') lines.push('- ' + inspect(item.left));
+          else if (item.type === 'changed') {
+            lines.push('- ' + inspect(item.left));
+            lines.push('+ ' + inspect(item.right));
+          } else {
+            lines.push('  ' + inspect(item.left));
+          }
+          lines.push('');
+        });
+
+        outputEditor.value = lines.join('\n').trim();
+        previewList.innerHTML = changes.length ? changes.map(function (item) {
+          return '<div class="diff-row ' + item.type + '"><span class="diff-kind">' + item.type + '</span><span>' + escapeHtml(item.path) + '</span></div>';
+        }).join('') : '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (char) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+        });
+      }
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        var labels = window.I18N || {};
+        charCount.textContent = ToolCommon.pluralise(text.length, labels.charSingular || 'character', labels.charPlural || 'characters');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), labels.lineSingular || 'line', labels.linePlural || 'lines');
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      function compare() {
+        if (!leftEditor.value || !rightEditor.value) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.empty);
+          return;
+        }
+
+        try {
+          var left = JSON.parse(leftEditor.value);
+          var right = JSON.parse(rightEditor.value);
+          var showUnchanged = document.getElementById('show-unchanged').checked;
+          var sortKeys = document.getElementById('sort-keys').checked;
+          var changes = [];
+          diffValues(left, right, '$', changes, showUnchanged, sortKeys);
+          var summary = summarize(changes);
+          document.getElementById('summary-added').textContent = summary.added;
+          document.getElementById('summary-removed').textContent = summary.removed;
+          document.getElementById('summary-changed').textContent = summary.changed;
+          document.getElementById('summary-unchanged').textContent = summary.unchanged;
+          render(changes, summary);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', i18n.success);
+          updateCounts();
+        } catch (error) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.failed + error.message);
+        }
+      }
+
+      function clearAll() {
+        leftEditor.value = '';
+        rightEditor.value = '';
+        outputEditor.value = '';
+        ['summary-added', 'summary-removed', 'summary-changed', 'summary-unchanged'].forEach(function (id) {
+          document.getElementById(id).textContent = '0';
+        });
+        previewList.innerHTML = '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        updateCounts();
+        ToolCommon.updateLineNumbers(leftEditor, leftLineNums);
+        ToolCommon.updateLineNumbers(rightEditor, rightLineNums);
+        leftEditor.focus();
+      }
+
+      btnGenerate.addEventListener('click', compare);
+      btnClear.addEventListener('click', clearAll);
+      btnCopy.addEventListener('click', function () { ToolCommon.copyOutput(outputEditor, btnCopy); });
+      btnDownload.addEventListener('click', function () { ToolCommon.downloadOutput(outputEditor, 'json-diff.txt'); });
+
+      [leftEditor, rightEditor].forEach(function (editor, index) {
+        var lineNums = index === 0 ? leftLineNums : rightLineNums;
+        ToolCommon.initInputLineNumbers(editor, lineNums);
+        ToolCommon.initScrollSync(editor, lineNums);
+        ToolCommon.initTabKey(editor, lineNums);
+        ToolCommon.updateLineNumbers(editor, lineNums);
+      });
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnGenerate);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endmacro %}
+
+{% macro textCompareScript(toolData) %}
+  <script>
+    (function () {
+      'use strict';
+
+      var leftEditor = document.getElementById('left-editor');
+      var rightEditor = document.getElementById('right-editor');
+      var outputEditor = document.getElementById('output-editor');
+      var btnGenerate = document.getElementById('btn-generate');
+      var btnClear = document.getElementById('btn-clear');
+      var btnCopy = document.getElementById('btn-copy');
+      var btnDownload = document.getElementById('btn-download');
+      var statusMessage = document.getElementById('status-message');
+      var statusDot = document.getElementById('status-dot');
+      var statusText = document.getElementById('status-text');
+      var charCount = document.getElementById('char-count');
+      var lineCount = document.getElementById('line-count');
+      var leftLineNums = document.getElementById('left-line-numbers');
+      var rightLineNums = document.getElementById('right-line-numbers');
+      var outputLineNums = document.getElementById('output-line-numbers');
+      var previewList = document.getElementById('diff-preview-list');
+      var i18n = document.getElementById('tool-i18n').dataset;
+
+      function normalize(value) {
+        var result = value;
+        if (document.getElementById('ignore-space').checked) result = result.replace(/\s+/g, ' ').trim();
+        if (document.getElementById('ignore-case').checked) result = result.toLowerCase();
+        return result;
+      }
+
+      function diffLines(leftLines, rightLines) {
+        var n = leftLines.length;
+        var m = rightLines.length;
+        var dp = Array.from({ length: n + 1 }, function () { return Array(m + 1).fill(0); });
+        var i;
+        var j;
+
+        for (i = n - 1; i >= 0; i -= 1) {
+          for (j = m - 1; j >= 0; j -= 1) {
+            dp[i][j] = normalize(leftLines[i]) === normalize(rightLines[j])
+              ? dp[i + 1][j + 1] + 1
+              : Math.max(dp[i + 1][j], dp[i][j + 1]);
+          }
+        }
+
+        var ops = [];
+        i = 0;
+        j = 0;
+        while (i < n && j < m) {
+          if (normalize(leftLines[i]) === normalize(rightLines[j])) {
+            ops.push({ type: 'unchanged', left: leftLines[i], right: rightLines[j], leftLine: i + 1, rightLine: j + 1 });
+            i += 1;
+            j += 1;
+          } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+            ops.push({ type: 'removed', left: leftLines[i], leftLine: i + 1 });
+            i += 1;
+          } else {
+            ops.push({ type: 'added', right: rightLines[j], rightLine: j + 1 });
+            j += 1;
+          }
+        }
+
+        while (i < n) {
+          ops.push({ type: 'removed', left: leftLines[i], leftLine: i + 1 });
+          i += 1;
+        }
+        while (j < m) {
+          ops.push({ type: 'added', right: rightLines[j], rightLine: j + 1 });
+          j += 1;
+        }
+
+        return combineChanges(ops);
+      }
+
+      function combineChanges(ops) {
+        var result = [];
+        var bufferRemoved = [];
+        var bufferAdded = [];
+
+        function flush() {
+          var pairs = Math.min(bufferRemoved.length, bufferAdded.length);
+          for (var k = 0; k < pairs; k += 1) {
+            result.push({
+              type: 'changed',
+              left: bufferRemoved[k].left,
+              right: bufferAdded[k].right,
+              leftLine: bufferRemoved[k].leftLine,
+              rightLine: bufferAdded[k].rightLine
+            });
+          }
+          result = result.concat(bufferRemoved.slice(pairs), bufferAdded.slice(pairs));
+          bufferRemoved = [];
+          bufferAdded = [];
+        }
+
+        ops.forEach(function (op) {
+          if (op.type === 'removed') bufferRemoved.push(op);
+          else if (op.type === 'added') bufferAdded.push(op);
+          else {
+            flush();
+            result.push(op);
+          }
+        });
+        flush();
+        return result;
+      }
+
+      function summarize(changes) {
+        return changes.reduce(function (acc, item) {
+          acc[item.type] += 1;
+          return acc;
+        }, { added: 0, removed: 0, changed: 0, unchanged: 0 });
+      }
+
+      function render(changes, summary, showUnchanged) {
+        var visible = showUnchanged ? changes : changes.filter(function (item) { return item.type !== 'unchanged'; });
+        var lines = [
+          '{{ toolData.labels.summary }}',
+          '{{ toolData.labels.added }}: ' + summary.added,
+          '{{ toolData.labels.removed }}: ' + summary.removed,
+          '{{ toolData.labels.changed }}: ' + summary.changed,
+          '{{ toolData.labels.unchanged }}: ' + summary.unchanged,
+          ''
+        ];
+
+        visible.forEach(function (item) {
+          if (item.type === 'unchanged') lines.push('  ' + item.left);
+          else if (item.type === 'added') lines.push('+ [' + item.rightLine + '] ' + item.right);
+          else if (item.type === 'removed') lines.push('- [' + item.leftLine + '] ' + item.left);
+          else {
+            lines.push('~ [' + item.leftLine + ' -> ' + item.rightLine + ']');
+            lines.push('- ' + item.left);
+            lines.push('+ ' + item.right);
+          }
+        });
+
+        outputEditor.value = lines.join('\n').trim();
+        previewList.innerHTML = visible.length ? visible.map(function (item) {
+          var label = item.type === 'changed' ? item.leftLine + ' -> ' + item.rightLine : (item.leftLine || item.rightLine || '');
+          var text = item.type === 'added' ? item.right : item.left;
+          return '<div class="diff-row ' + item.type + '"><span class="diff-kind">' + item.type + ' ' + label + '</span><span>' + escapeHtml(text) + '</span></div>';
+        }).join('') : '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (char) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+        });
+      }
+
+      function updateCounts() {
+        var text = outputEditor.value;
+        var labels = window.I18N || {};
+        charCount.textContent = ToolCommon.pluralise(text.length, labels.charSingular || 'character', labels.charPlural || 'characters');
+        lineCount.textContent = ToolCommon.pluralise(ToolCommon.countLines(text), labels.lineSingular || 'line', labels.linePlural || 'lines');
+        ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+      }
+
+      function compare() {
+        if (!leftEditor.value && !rightEditor.value) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.empty);
+          return;
+        }
+
+        try {
+          var changes = diffLines(leftEditor.value.split(/\r?\n/), rightEditor.value.split(/\r?\n/));
+          var summary = summarize(changes);
+          var showUnchanged = document.getElementById('show-unchanged').checked;
+          document.getElementById('summary-added').textContent = summary.added;
+          document.getElementById('summary-removed').textContent = summary.removed;
+          document.getElementById('summary-changed').textContent = summary.changed;
+          document.getElementById('summary-unchanged').textContent = summary.unchanged;
+          render(changes, summary, showUnchanged);
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', i18n.success);
+          updateCounts();
+        } catch (error) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.failed + error.message);
+        }
+      }
+
+      function clearAll() {
+        leftEditor.value = '';
+        rightEditor.value = '';
+        outputEditor.value = '';
+        ['summary-added', 'summary-removed', 'summary-changed', 'summary-unchanged'].forEach(function (id) {
+          document.getElementById(id).textContent = '0';
+        });
+        previewList.innerHTML = '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
+        updateCounts();
+        ToolCommon.updateLineNumbers(leftEditor, leftLineNums);
+        ToolCommon.updateLineNumbers(rightEditor, rightLineNums);
+        leftEditor.focus();
+      }
+
+      btnGenerate.addEventListener('click', compare);
+      btnClear.addEventListener('click', clearAll);
+      btnCopy.addEventListener('click', function () { ToolCommon.copyOutput(outputEditor, btnCopy); });
+      btnDownload.addEventListener('click', function () { ToolCommon.downloadOutput(outputEditor, 'text-compare.diff'); });
+
+      [leftEditor, rightEditor].forEach(function (editor, index) {
+        var lineNums = index === 0 ? leftLineNums : rightLineNums;
+        ToolCommon.initInputLineNumbers(editor, lineNums);
+        ToolCommon.initScrollSync(editor, lineNums);
+        ToolCommon.initTabKey(editor, lineNums);
+        ToolCommon.updateLineNumbers(editor, lineNums);
+      });
+      ToolCommon.initScrollSync(outputEditor, outputLineNums);
+      ToolCommon.initExampleCopy();
+      ToolCommon.initKeyboardShortcut(btnGenerate);
+      ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
+    })();
+  </script>
+{% endmacro %}

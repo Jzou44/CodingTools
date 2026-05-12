@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools URL Encode"
+  short_description: "Percent-encode URL text, query values, paths, or full URLs."
+  default_prompt: "Use $coding-tools-url-encode to run URL Encode through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for URL Encode."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

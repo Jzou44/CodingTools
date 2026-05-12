@@ -1,0 +1,488 @@
+{
+  "en": {
+    "title": "URL Decode / Query Parser — Coding.Tools",
+    "description": "Decode percent-encoded URLs and parse query-string parameters in the browser.",
+    "toolTitle": "URL Decode / Query Parser",
+    "toolDescription": "Decode URL-encoded text, inspect full URLs, and expand query parameters into a readable table.",
+    "categoryName": "Hash & Cryptography",
+    "buttonLabel": "Decode URL",
+    "descTitle": "URL Decode / Query Parser",
+    "descParas": [
+      "URL Decode converts percent-encoded sequences back into readable text and can break a query string into individual parameter names and values.",
+      "Everything runs locally in your browser, which is useful when inspecting callback URLs, analytics links, signed URLs, or API request parameters."
+    ],
+    "howToUse": "How to use",
+    "steps": [
+      "Paste a full URL, encoded path, or raw query string.",
+      "Keep <strong>Treat + as space</strong> enabled for form-style query strings.",
+      "Keep <strong>Parse query parameters</strong> enabled to extract key-value pairs.",
+      "Click <strong>Decode URL</strong>, then review the decoded text and parameter table."
+    ],
+    "whatIs": "What is this tool?",
+    "whatIsParas": [
+      "URL decoding reverses percent encoding by converting sequences such as %20 and %E2%9C%93 into their original characters.",
+      "The query parser splits the part after ? into key-value pairs and preserves repeated parameters as separate rows."
+    ],
+    "inputNotes": "Input notes",
+    "inputNotesPara": "Malformed percent escapes will be reported instead of silently changing the input. For full URLs, structural separators are preserved while encoded characters are decoded.",
+    "example": "Example",
+    "examplePara": "A callback URL can be decoded and parsed:",
+    "exampleCode": "Input\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\nDecoded\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\nParameters\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "Encoded URL Input",
+      "output": "Decoded Output",
+      "plusSpace": "Treat + as space",
+      "parseQuery": "Parse query parameters",
+      "index": "#",
+      "parameter": "Parameter",
+      "value": "Value",
+      "noParameters": "No query parameters parsed yet.",
+      "queryParameters": "Query Parameters",
+      "summary": "Summary",
+      "added": "Added",
+      "removed": "Removed",
+      "changed": "Changed",
+      "unchanged": "Unchanged",
+      "noDiff": "No differences to display yet."
+    },
+    "messages": {
+      "empty": "Enter input first.",
+      "success": "URL decoded successfully",
+      "failed": "Operation failed: "
+    },
+    "inputPlaceholder": "Paste an encoded URL or query string...",
+    "outputPlaceholder": "Decoded URL and parsed parameters will appear here..."
+  },
+  "cn": {
+    "title": "URL 解码 / 查询解析器 — Coding.Tools",
+    "description": "在浏览器中解码百分号编码 URL，并解析查询参数。",
+    "toolTitle": "URL 解码 / 查询解析器",
+    "toolDescription": "解码 URL 编码文本，查看完整 URL，并把查询参数展开为表格。",
+    "categoryName": "哈希与加密",
+    "buttonLabel": "解码 URL",
+    "descTitle": "URL 解码 / 查询解析器",
+    "descParas": [
+      "URL 解码会把百分号编码序列还原为可读文本，并可将查询字符串拆分为参数名和值。",
+      "所有操作都在浏览器本地运行，适合检查回调 URL、统计链接、签名 URL 或 API 请求参数。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "粘贴完整 URL、编码路径或原始查询字符串。",
+      "表单风格查询字符串请保持<strong>将 + 视为空格</strong>启用。",
+      "保持<strong>解析查询参数</strong>启用，可提取键值对。",
+      "点击<strong>解码 URL</strong>，查看解码文本和参数表。"
+    ],
+    "whatIs": "这个工具是什么？",
+    "whatIsParas": [
+      "URL 解码会反转百分号编码，把 %20、%E2%9C%93 等序列还原为原始字符。",
+      "查询解析器会把 ? 后面的部分拆成键值对，并将重复参数保留为独立行。"
+    ],
+    "inputNotes": "输入说明",
+    "inputNotesPara": "格式错误的百分号转义会直接报错，不会静默改写输入。完整 URL 会按组件解码，使参数值中的编码网址也能完整还原。",
+    "example": "示例",
+    "examplePara": "回调 URL 可以被解码并解析：",
+    "exampleCode": "输入\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\n解码结果\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\n参数\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "编码 URL 输入",
+      "output": "解码输出",
+      "plusSpace": "将 + 视为空格",
+      "parseQuery": "解析查询参数",
+      "index": "#",
+      "parameter": "参数",
+      "value": "值",
+      "noParameters": "尚未解析查询参数。",
+      "queryParameters": "查询参数",
+      "summary": "汇总",
+      "added": "新增",
+      "removed": "删除",
+      "changed": "变更",
+      "unchanged": "未变更",
+      "noDiff": "暂无差异可显示。"
+    },
+    "messages": {
+      "empty": "请先输入内容。",
+      "success": "URL 解码成功",
+      "failed": "操作失败："
+    },
+    "inputPlaceholder": "粘贴编码后的 URL 或查询字符串...",
+    "outputPlaceholder": "解码 URL 和解析参数将在此显示..."
+  },
+  "tw": {
+    "title": "URL 解碼 / 查詢解析器 — Coding.Tools",
+    "description": "在瀏覽器中解碼百分號編碼 URL，並解析查詢參數。",
+    "toolTitle": "URL 解碼 / 查詢解析器",
+    "toolDescription": "解碼 URL 編碼文字，檢視完整 URL，並將查詢參數展開為表格。",
+    "categoryName": "雜湊與加密",
+    "buttonLabel": "解碼 URL",
+    "descTitle": "URL 解碼 / 查詢解析器",
+    "descParas": [
+      "URL 解碼會將百分號編碼序列還原為可讀文字，並可將查詢字串拆成參數名稱和值。",
+      "所有操作都在瀏覽器本機執行，適合檢查回呼 URL、統計連結、簽名 URL 或 API 請求參數。"
+    ],
+    "howToUse": "使用方法",
+    "steps": [
+      "貼上完整 URL、編碼路徑或原始查詢字串。",
+      "表單風格查詢字串請保持<strong>將 + 視為空格</strong>啟用。",
+      "保持<strong>解析查詢參數</strong>啟用，可擷取鍵值對。",
+      "點擊<strong>解碼 URL</strong>，檢視解碼文字和參數表。"
+    ],
+    "whatIs": "這個工具是什麼？",
+    "whatIsParas": [
+      "URL 解碼會反轉百分號編碼，把 %20、%E2%9C%93 等序列還原為原始字元。",
+      "查詢解析器會把 ? 後面的部分拆成鍵值對，並將重複參數保留為獨立列。"
+    ],
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "格式錯誤的百分號逸出會直接回報錯誤，不會靜默改寫輸入。完整 URL 會依元件解碼，使參數值中的編碼網址也能完整還原。",
+    "example": "範例",
+    "examplePara": "回呼 URL 可以被解碼並解析：",
+    "exampleCode": "輸入\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\n解碼結果\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\n參數\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "編碼 URL 輸入",
+      "output": "解碼輸出",
+      "plusSpace": "將 + 視為空格",
+      "parseQuery": "解析查詢參數",
+      "index": "#",
+      "parameter": "參數",
+      "value": "值",
+      "noParameters": "尚未解析查詢參數。",
+      "queryParameters": "查詢參數",
+      "summary": "摘要",
+      "added": "新增",
+      "removed": "移除",
+      "changed": "變更",
+      "unchanged": "未變更",
+      "noDiff": "尚無差異可顯示。"
+    },
+    "messages": {
+      "empty": "請先輸入內容。",
+      "success": "URL 解碼成功",
+      "failed": "操作失敗："
+    },
+    "inputPlaceholder": "貼上編碼後的 URL 或查詢字串...",
+    "outputPlaceholder": "解碼 URL 與解析參數會顯示於此..."
+  },
+  "jp": {
+    "title": "URL デコード / クエリ解析 — Coding.Tools",
+    "description": "ブラウザでパーセントエンコードされた URL をデコードし、クエリパラメータを解析します。",
+    "toolTitle": "URL デコード / クエリ解析",
+    "toolDescription": "URL エンコード済みテキスト、完全な URL、クエリパラメータを読みやすい表に展開します。",
+    "categoryName": "ハッシュと暗号化",
+    "buttonLabel": "URL をデコード",
+    "descTitle": "URL デコード / クエリ解析",
+    "descParas": [
+      "URL デコードはパーセントエンコード列を読みやすい文字に戻し、クエリ文字列をパラメータ名と値に分解できます。",
+      "処理はすべてブラウザ内で実行され、コールバック URL、分析リンク、署名付き URL、API パラメータの確認に便利です。"
+    ],
+    "howToUse": "使い方",
+    "steps": [
+      "完全な URL、エンコード済みパス、または生のクエリ文字列を貼り付けます。",
+      "フォーム形式のクエリでは<strong>+ を空白として扱う</strong>を有効にします。",
+      "<strong>クエリパラメータを解析</strong>を有効にするとキーと値を抽出できます。",
+      "<strong>URL をデコード</strong>をクリックし、デコード結果と表を確認します。"
+    ],
+    "whatIs": "このツールとは？",
+    "whatIsParas": [
+      "URL デコードは %20 や %E2%9C%93 などの列を元の文字に戻します。",
+      "クエリ解析は ? 以降をキーと値に分割し、同じ名前のパラメータも別行として保持します。"
+    ],
+    "inputNotes": "入力メモ",
+    "inputNotesPara": "不正なパーセントエスケープはエラーとして表示されます。完全な URL はコンポーネントごとにデコードするため、パラメータ値内のエンコード済み URL も復元できます。",
+    "example": "例",
+    "examplePara": "コールバック URL をデコードして解析できます：",
+    "exampleCode": "入力\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\nデコード結果\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\nパラメータ\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "エンコード済み URL 入力",
+      "output": "デコード結果",
+      "plusSpace": "+ を空白として扱う",
+      "parseQuery": "クエリパラメータを解析",
+      "index": "#",
+      "parameter": "パラメータ",
+      "value": "値",
+      "noParameters": "解析されたクエリパラメータはまだありません。",
+      "queryParameters": "クエリパラメータ",
+      "summary": "概要",
+      "added": "追加",
+      "removed": "削除",
+      "changed": "変更",
+      "unchanged": "未変更",
+      "noDiff": "表示する差分はまだありません。"
+    },
+    "messages": {
+      "empty": "先に入力してください。",
+      "success": "URL をデコードしました",
+      "failed": "操作に失敗しました: "
+    },
+    "inputPlaceholder": "エンコード済み URL またはクエリ文字列を貼り付け...",
+    "outputPlaceholder": "デコード結果と解析パラメータがここに表示されます..."
+  },
+  "kr": {
+    "title": "URL 디코딩 / 쿼리 파서 — Coding.Tools",
+    "description": "브라우저에서 퍼센트 인코딩된 URL을 디코딩하고 쿼리 매개변수를 파싱합니다.",
+    "toolTitle": "URL 디코딩 / 쿼리 파서",
+    "toolDescription": "URL 인코딩된 텍스트와 전체 URL을 디코딩하고 쿼리 매개변수를 표로 펼칩니다.",
+    "categoryName": "해시 및 암호화",
+    "buttonLabel": "URL 디코딩",
+    "descTitle": "URL 디코딩 / 쿼리 파서",
+    "descParas": [
+      "URL 디코딩은 퍼센트 인코딩 시퀀스를 읽을 수 있는 텍스트로 되돌리고, 쿼리 문자열을 매개변수 이름과 값으로 나눌 수 있습니다.",
+      "모든 작업은 브라우저에서 로컬로 실행되며 콜백 URL, 분석 링크, 서명된 URL, API 요청 매개변수 확인에 유용합니다."
+    ],
+    "howToUse": "사용 방법",
+    "steps": [
+      "전체 URL, 인코딩된 경로 또는 원본 쿼리 문자열을 붙여넣습니다.",
+      "폼 스타일 쿼리 문자열은 <strong>+ 를 공백으로 처리</strong>를 켜 둡니다.",
+      "<strong>쿼리 매개변수 파싱</strong>을 켜 두면 키-값 쌍을 추출합니다.",
+      "<strong>URL 디코딩</strong>을 클릭한 뒤 디코딩 결과와 매개변수 표를 확인합니다."
+    ],
+    "whatIs": "이 도구란?",
+    "whatIsParas": [
+      "URL 디코딩은 %20, %E2%9C%93 같은 시퀀스를 원래 문자로 되돌립니다.",
+      "쿼리 파서는 ? 뒤의 부분을 키-값 쌍으로 나누고 반복 매개변수도 별도 행으로 유지합니다."
+    ],
+    "inputNotes": "입력 참고사항",
+    "inputNotesPara": "잘못된 퍼센트 이스케이프는 오류로 표시됩니다. 전체 URL은 구성 요소별로 디코딩하므로 매개변수 값 안의 인코딩된 URL도 복원할 수 있습니다.",
+    "example": "예시",
+    "examplePara": "콜백 URL을 디코딩하고 파싱할 수 있습니다:",
+    "exampleCode": "입력\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\n디코딩 결과\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\n매개변수\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "인코딩된 URL 입력",
+      "output": "디코딩 결과",
+      "plusSpace": "+ 를 공백으로 처리",
+      "parseQuery": "쿼리 매개변수 파싱",
+      "index": "#",
+      "parameter": "매개변수",
+      "value": "값",
+      "noParameters": "아직 파싱된 쿼리 매개변수가 없습니다.",
+      "queryParameters": "쿼리 매개변수",
+      "summary": "요약",
+      "added": "추가됨",
+      "removed": "삭제됨",
+      "changed": "변경됨",
+      "unchanged": "변경 없음",
+      "noDiff": "표시할 차이가 아직 없습니다."
+    },
+    "messages": {
+      "empty": "먼저 입력하세요.",
+      "success": "URL 디코딩 완료",
+      "failed": "작업 실패: "
+    },
+    "inputPlaceholder": "인코딩된 URL 또는 쿼리 문자열을 붙여넣으세요...",
+    "outputPlaceholder": "디코딩된 URL과 파싱된 매개변수가 여기에 표시됩니다..."
+  },
+  "fr": {
+    "title": "Decodage URL / Analyseur de requete — Coding.Tools",
+    "description": "Decode les URL encodees en pourcentage et analyse les parametres de requete dans le navigateur.",
+    "toolTitle": "Decodage URL / Analyseur de requete",
+    "toolDescription": "Decode du texte URL encode, inspecte les URL completes et affiche les parametres dans un tableau lisible.",
+    "categoryName": "Hachage et cryptographie",
+    "buttonLabel": "Decoder URL",
+    "descTitle": "Decodage URL / Analyseur de requete",
+    "descParas": [
+      "Le decodage URL transforme les sequences avec pourcentage en texte lisible et peut separer une requete en noms et valeurs de parametres.",
+      "Tout s’execute localement dans le navigateur, pratique pour verifier des URL de rappel, liens d’analyse, URL signees ou parametres API."
+    ],
+    "howToUse": "Comment utiliser",
+    "steps": [
+      "Collez une URL complete, un chemin encode ou une chaine de requete brute.",
+      "Gardez <strong>Traiter + comme espace</strong> actif pour les requetes de formulaire.",
+      "Gardez <strong>Analyser les parametres</strong> actif pour extraire les paires cle-valeur.",
+      "Cliquez sur <strong>Decoder URL</strong>, puis consultez le texte decode et le tableau."
+    ],
+    "whatIs": "A quoi sert cet outil ?",
+    "whatIsParas": [
+      "Le decodage URL inverse l’encodage en pourcentage en restaurant des sequences comme %20 et %E2%9C%93 en caracteres originaux.",
+      "L’analyseur de requete decoupe la partie apres ? en paires cle-valeur et conserve les parametres repetes sur des lignes separees."
+    ],
+    "inputNotes": "Notes de saisie",
+    "inputNotesPara": "Les echappements de pourcentage mal formes sont signales. Pour une URL complete, le decodage se fait par composant afin de restaurer aussi les URL encodees dans les valeurs.",
+    "example": "Exemple",
+    "examplePara": "Une URL de rappel peut etre decodee et analysee :",
+    "exampleCode": "Entree\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\nResultat decode\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\nParametres\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "Saisie URL encodee",
+      "output": "Resultat decode",
+      "plusSpace": "Traiter + comme espace",
+      "parseQuery": "Analyser les parametres",
+      "index": "#",
+      "parameter": "Parametre",
+      "value": "Valeur",
+      "noParameters": "Aucun parametre analyse pour le moment.",
+      "queryParameters": "Parametres de requete",
+      "summary": "Resume",
+      "added": "Ajoute",
+      "removed": "Supprime",
+      "changed": "Modifie",
+      "unchanged": "Inchange",
+      "noDiff": "Aucune difference a afficher."
+    },
+    "messages": {
+      "empty": "Saisissez d’abord une valeur.",
+      "success": "URL decodee avec succes",
+      "failed": "Echec de l’operation : "
+    },
+    "inputPlaceholder": "Collez une URL encodee ou une chaine de requete...",
+    "outputPlaceholder": "L’URL decodee et les parametres apparaitront ici..."
+  },
+  "de": {
+    "title": "URL dekodieren / Query Parser — Coding.Tools",
+    "description": "Dekodiert prozentkodierte URLs und analysiert Query-Parameter im Browser.",
+    "toolTitle": "URL dekodieren / Query Parser",
+    "toolDescription": "Dekodiert URL-kodierten Text, prueft ganze URLs und zeigt Query-Parameter als Tabelle.",
+    "categoryName": "Hash & Kryptografie",
+    "buttonLabel": "URL dekodieren",
+    "descTitle": "URL dekodieren / Query Parser",
+    "descParas": [
+      "URL-Dekodierung wandelt Prozentkodierungen wieder in lesbaren Text um und kann Query-Strings in Parameternamen und Werte zerlegen.",
+      "Alles laeuft lokal im Browser, nuetzlich fuer Callback-URLs, Tracking-Links, signierte URLs und API-Parameter."
+    ],
+    "howToUse": "Anleitung",
+    "steps": [
+      "Fuegen Sie eine vollstaendige URL, einen kodierten Pfad oder einen rohen Query-String ein.",
+      "Lassen Sie <strong>+ als Leerzeichen behandeln</strong> fuer Formular-Querys aktiv.",
+      "Lassen Sie <strong>Query-Parameter analysieren</strong> aktiv, um Schluessel-Wert-Paare zu extrahieren.",
+      "Klicken Sie auf <strong>URL dekodieren</strong> und pruefen Sie Text und Tabelle."
+    ],
+    "whatIs": "Was macht dieses Tool?",
+    "whatIsParas": [
+      "URL-Dekodierung kehrt Prozentkodierung um und stellt Sequenzen wie %20 oder %E2%9C%93 als urspruengliche Zeichen wieder her.",
+      "Der Query-Parser teilt den Teil nach ? in Schluessel-Wert-Paare und behaelt wiederholte Parameter als eigene Zeilen."
+    ],
+    "inputNotes": "Eingabehinweise",
+    "inputNotesPara": "Fehlerhafte Prozent-Escapes werden gemeldet. Vollstaendige URLs werden komponentenweise dekodiert, sodass auch kodierte URLs in Parameterwerten wiederhergestellt werden.",
+    "example": "Beispiel",
+    "examplePara": "Eine Callback-URL kann dekodiert und analysiert werden:",
+    "exampleCode": "Eingabe\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\nDekodiert\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\nParameter\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "Kodierte URL-Eingabe",
+      "output": "Dekodiertes Ergebnis",
+      "plusSpace": "+ als Leerzeichen behandeln",
+      "parseQuery": "Query-Parameter analysieren",
+      "index": "#",
+      "parameter": "Parameter",
+      "value": "Wert",
+      "noParameters": "Noch keine Query-Parameter analysiert.",
+      "queryParameters": "Query-Parameter",
+      "summary": "Zusammenfassung",
+      "added": "Hinzugefuegt",
+      "removed": "Entfernt",
+      "changed": "Geaendert",
+      "unchanged": "Unveraendert",
+      "noDiff": "Noch keine Unterschiede zum Anzeigen."
+    },
+    "messages": {
+      "empty": "Geben Sie zuerst Inhalt ein.",
+      "success": "URL erfolgreich dekodiert",
+      "failed": "Vorgang fehlgeschlagen: "
+    },
+    "inputPlaceholder": "Kodierte URL oder Query-String einfuegen...",
+    "outputPlaceholder": "Dekodierte URL und Parameter erscheinen hier..."
+  },
+  "es": {
+    "title": "Decodificar URL / Analizador de consulta — Coding.Tools",
+    "description": "Decodifica URL con porcentajes y analiza parametros de consulta en el navegador.",
+    "toolTitle": "Decodificar URL / Analizador de consulta",
+    "toolDescription": "Decodifica texto URL, inspecciona URL completas y muestra parametros en una tabla legible.",
+    "categoryName": "Hash y criptografia",
+    "buttonLabel": "Decodificar URL",
+    "descTitle": "Decodificar URL / Analizador de consulta",
+    "descParas": [
+      "La decodificacion URL convierte secuencias con porcentaje en texto legible y puede separar una cadena de consulta en nombres y valores.",
+      "Todo se ejecuta localmente en el navegador, util para revisar URL de retorno, enlaces de analitica, URL firmadas o parametros API."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Pega una URL completa, ruta codificada o cadena de consulta sin procesar.",
+      "Mantén <strong>Tratar + como espacio</strong> activado para consultas de formulario.",
+      "Mantén <strong>Analizar parametros</strong> activado para extraer pares clave-valor.",
+      "Haz clic en <strong>Decodificar URL</strong> y revisa el texto y la tabla."
+    ],
+    "whatIs": "Que hace esta herramienta?",
+    "whatIsParas": [
+      "La decodificacion URL revierte la codificacion por porcentaje y restaura secuencias como %20 y %E2%9C%93 a sus caracteres originales.",
+      "El analizador divide la parte despues de ? en pares clave-valor y conserva parametros repetidos en filas separadas."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Los escapes de porcentaje mal formados se informan como error. En URL completas, la decodificacion se hace por componente para restaurar tambien URL codificadas dentro de valores.",
+    "example": "Ejemplo",
+    "examplePara": "Una URL de retorno puede decodificarse y analizarse:",
+    "exampleCode": "Entrada\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\nDecodificado\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\nParametros\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "Entrada URL codificada",
+      "output": "Resultado decodificado",
+      "plusSpace": "Tratar + como espacio",
+      "parseQuery": "Analizar parametros",
+      "index": "#",
+      "parameter": "Parametro",
+      "value": "Valor",
+      "noParameters": "Aun no hay parametros analizados.",
+      "queryParameters": "Parametros de consulta",
+      "summary": "Resumen",
+      "added": "Anadido",
+      "removed": "Eliminado",
+      "changed": "Cambiado",
+      "unchanged": "Sin cambios",
+      "noDiff": "Aun no hay diferencias para mostrar."
+    },
+    "messages": {
+      "empty": "Introduce contenido primero.",
+      "success": "URL decodificada correctamente",
+      "failed": "Error en la operacion: "
+    },
+    "inputPlaceholder": "Pega una URL codificada o cadena de consulta...",
+    "outputPlaceholder": "La URL decodificada y los parametros apareceran aqui..."
+  },
+  "pt": {
+    "title": "Decodificar URL / Analisador de consulta — Coding.Tools",
+    "description": "Decodifica URLs com porcentagem e analisa parametros de consulta no navegador.",
+    "toolTitle": "Decodificar URL / Analisador de consulta",
+    "toolDescription": "Decodifica texto URL, inspeciona URLs completas e mostra parametros em uma tabela legivel.",
+    "categoryName": "Hash e criptografia",
+    "buttonLabel": "Decodificar URL",
+    "descTitle": "Decodificar URL / Analisador de consulta",
+    "descParas": [
+      "A decodificacao URL transforma sequencias com porcentagem em texto legivel e pode separar uma consulta em nomes e valores.",
+      "Tudo roda localmente no navegador, util para verificar URLs de retorno, links de analytics, URLs assinadas ou parametros API."
+    ],
+    "howToUse": "Como usar",
+    "steps": [
+      "Cole uma URL completa, caminho codificado ou string de consulta bruta.",
+      "Mantenha <strong>Tratar + como espaco</strong> ativo para consultas de formulario.",
+      "Mantenha <strong>Analisar parametros</strong> ativo para extrair pares chave-valor.",
+      "Clique em <strong>Decodificar URL</strong> e revise o texto e a tabela."
+    ],
+    "whatIs": "Para que serve esta ferramenta?",
+    "whatIsParas": [
+      "A decodificacao URL reverte a codificacao por porcentagem e restaura sequencias como %20 e %E2%9C%93 aos caracteres originais.",
+      "O analisador divide a parte apos ? em pares chave-valor e conserva parametros repetidos em linhas separadas."
+    ],
+    "inputNotes": "Notas de entrada",
+    "inputNotesPara": "Escapes de porcentagem malformados sao mostrados como erro. Em URLs completas, a decodificacao e feita por componente para restaurar tambem URLs codificadas dentro dos valores.",
+    "example": "Exemplo",
+    "examplePara": "Uma URL de retorno pode ser decodificada e analisada:",
+    "exampleCode": "Entrada\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\nDecodificado\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\nParametros\nq = hello world\nredirect = https://coding.tools/",
+    "labels": {
+      "input": "Entrada URL codificada",
+      "output": "Resultado decodificado",
+      "plusSpace": "Tratar + como espaco",
+      "parseQuery": "Analisar parametros",
+      "index": "#",
+      "parameter": "Parametro",
+      "value": "Valor",
+      "noParameters": "Ainda nao ha parametros analisados.",
+      "queryParameters": "Parametros de consulta",
+      "summary": "Resumo",
+      "added": "Adicionado",
+      "removed": "Removido",
+      "changed": "Alterado",
+      "unchanged": "Sem alteracao",
+      "noDiff": "Ainda nao ha diferencas para mostrar."
+    },
+    "messages": {
+      "empty": "Insira conteudo primeiro.",
+      "success": "URL decodificada com sucesso",
+      "failed": "Falha na operacao: "
+    },
+    "inputPlaceholder": "Cole uma URL codificada ou string de consulta...",
+    "outputPlaceholder": "A URL decodificada e os parametros aparecerao aqui..."
+  }
+}

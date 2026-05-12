@@ -1,0 +1,22 @@
+---
+lang: "tw"
+toolId: "text-compare"
+category: "string-text-utilities"
+activeTool: "text-compare"
+permalink: "/tw/text-compare.html"
+---
+
+{% extends "tool-layout.njk" %}
+{% import "macros/advanced-tools.njk" as advanced %}
+
+{% block tool_content %}
+  {{ advanced.compareContent(toolData, t, "text") }}
+{% endblock %}
+
+{% block description %}
+  {{ advanced.translatedDescription(toolData, t) }}
+{% endblock %}
+
+{% block tool_script %}
+  {{ advanced.textCompareScript(toolData) }}
+{% endblock %}

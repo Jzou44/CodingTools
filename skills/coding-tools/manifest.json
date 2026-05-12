@@ -2,7 +2,7 @@
   "generatedFrom": "server/mcp-tools.js:listMcpTools",
   "language": "en",
   "endpoint": "https://coding.tools/mcp",
-  "skillCount": 63,
+  "skillCount": 67,
   "skills": [
     {
       "name": "coding-tools-base64-encode",
@@ -227,6 +227,24 @@
       "webUi": "https://coding.tools/regex-replace.html"
     },
     {
+      "name": "coding-tools-url-encode",
+      "tool": "url-encode",
+      "title": "URL Encode",
+      "webUi": "https://coding.tools/url-encode.html"
+    },
+    {
+      "name": "coding-tools-url-decode",
+      "tool": "url-decode",
+      "title": "URL Decode / Query Parser",
+      "webUi": "https://coding.tools/url-decode.html"
+    },
+    {
+      "name": "coding-tools-text-compare",
+      "tool": "text-compare",
+      "title": "Text Compare",
+      "webUi": "https://coding.tools/text-compare.html"
+    },
+    {
       "name": "coding-tools-word-counter",
       "tool": "word-counter",
       "title": "Word Counter",
@@ -261,6 +279,12 @@
       "tool": "json-formatter",
       "title": "JSON Formatter",
       "webUi": "https://coding.tools/json-formatter.html"
+    },
+    {
+      "name": "coding-tools-json-diff",
+      "tool": "json-diff",
+      "title": "JSON Diff",
+      "webUi": "https://coding.tools/json-diff.html"
     },
     {
       "name": "coding-tools-json-minifier",

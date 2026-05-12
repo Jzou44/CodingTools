@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools URL Decode / Query Parser"
+  short_description: "Decode URL-encoded text and parse query-string parameters."
+  default_prompt: "Use $coding-tools-url-decode to run URL Decode / Query Parser through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for URL Decode / Query Parser."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

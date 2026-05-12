@@ -1,0 +1,22 @@
+---
+lang: "kr"
+toolId: "json-diff"
+category: "formatter-minifier"
+activeTool: "json-diff"
+permalink: "/kr/json-diff.html"
+---
+
+{% extends "tool-layout.njk" %}
+{% import "macros/advanced-tools.njk" as advanced %}
+
+{% block tool_content %}
+  {{ advanced.compareContent(toolData, t, "json") }}
+{% endblock %}
+
+{% block description %}
+  {{ advanced.translatedDescription(toolData, t) }}
+{% endblock %}
+
+{% block tool_script %}
+  {{ advanced.jsonDiffScript(toolData) }}
+{% endblock %}

@@ -66,12 +66,16 @@ const textInputDescriptions = {
   "text-editor": "Text to echo back with line and character counts.",
   "regex-tester": "Text to test against options.pattern.",
   "regex-replace": "Text to search and replace using options.pattern.",
+  "url-encode": "Text, URL component, path, query value, or full URL to percent-encode.",
+  "url-decode": "Percent-encoded URL, path, query value, or query string to decode.",
+  "text-compare": "Original text. Pass the changed text in options.compareTo.",
   "word-counter": "Text to count words, characters, lines, sentences, and paragraphs.",
   "character-count": "Text to count characters, UTF-8 bytes, words, and lines.",
   "case-converter": "Text whose case should be converted.",
   "reverse-text": "Text to reverse.",
   "number-to-words": "Integer from 0 to 999,999,999,999.",
   "json-formatter": "JSON string to format.",
+  "json-diff": "Original JSON string. Pass the changed JSON string in options.compareTo.",
   "json-minifier": "JSON string to minify.",
   "xml-formatter": "XML string to format.",
   "xml-minifier": "XML string to minify.",
@@ -205,6 +209,86 @@ const optionSchemas = {
     required: ["pattern"],
     additionalProperties: false
   },
+  "url-encode": {
+    type: "object",
+    properties: {
+      mode: {
+        type: "string",
+        enum: ["component", "uri"],
+        default: "component",
+        description: "Use component for query values; use uri to preserve full URL separators."
+      },
+      spaceAsPlus: {
+        type: "boolean",
+        default: false,
+        description: "Convert encoded spaces from %20 to + for form-style query strings."
+      },
+      lineByLine: {
+        type: "boolean",
+        default: false,
+        description: "Encode each input line independently."
+      }
+    },
+    additionalProperties: false
+  },
+  "url-decode": {
+    type: "object",
+    properties: {
+      plusAsSpace: {
+        type: "boolean",
+        default: true,
+        description: "Treat + characters as spaces before decoding."
+      },
+      parseQuery: {
+        type: "boolean",
+        default: true,
+        description: "Append parsed query-string parameters to the result."
+      }
+    },
+    additionalProperties: false
+  },
+  "json-diff": {
+    type: "object",
+    properties: {
+      compareTo: {
+        type: "string",
+        description: "Changed JSON string to compare against the input JSON."
+      },
+      includeUnchanged: {
+        type: "boolean",
+        default: false,
+        description: "Include unchanged paths in the diff output."
+      }
+    },
+    required: ["compareTo"],
+    additionalProperties: false
+  },
+  "text-compare": {
+    type: "object",
+    properties: {
+      compareTo: {
+        type: "string",
+        description: "Changed text to compare against the input text."
+      },
+      ignoreWhitespace: {
+        type: "boolean",
+        default: false,
+        description: "Normalize whitespace before matching lines."
+      },
+      ignoreCase: {
+        type: "boolean",
+        default: false,
+        description: "Match lines case-insensitively."
+      },
+      showUnchanged: {
+        type: "boolean",
+        default: false,
+        description: "Include unchanged lines in the diff output."
+      }
+    },
+    required: ["compareTo"],
+    additionalProperties: false
+  },
   "image-to-base64": {
     type: "object",
     properties: {
@@ -262,6 +346,10 @@ const resultDescriptions = {
   "css-minifier": "Minified CSS string.",
   "sql-formatter": "Formatted SQL string.",
   "sql-minifier": "Minified SQL string.",
+  "url-encode": "Percent-encoded URL text.",
+  "url-decode": "Decoded URL text and optional query parameter listing.",
+  "json-diff": "Path-by-path JSON diff summary.",
+  "text-compare": "Line-by-line text diff summary.",
   "image-to-base64": "Image data URI string."
 };
 
@@ -747,6 +835,304 @@ async function regexReplace(input, options) {
   return { text: result.text };
 }
 
+function urlEncode(input, options) {
+  const text = requireText(input);
+  const mode = options.mode === "uri" ? "uri" : "component";
+  const encode = mode === "uri" ? encodeURI : encodeURIComponent;
+  const output = options.lineByLine
+    ? text.split(/\r?\n/).map((line) => encode(line)).join("\n")
+    : encode(text);
+  return { text: options.spaceAsPlus ? output.replace(/%20/g, "+") : output };
+}
+
+function decodeUrlPart(value, plusAsSpace) {
+  const text = plusAsSpace ? String(value).replace(/\+/g, " ") : String(value);
+  return decodeURIComponent(text);
+}
+
+function extractQuery(value) {
+  const hashless = String(value).trim().split("#")[0];
+  const question = hashless.indexOf("?");
+  if (question >= 0) return hashless.slice(question + 1);
+  return hashless.charAt(0) === "?" ? hashless.slice(1) : hashless;
+}
+
+function parseQueryString(value, plusAsSpace) {
+  const source = extractQuery(value);
+  if (!source || !/[=&]/.test(source)) return [];
+  return source.split("&").filter(Boolean).map((pair, index) => {
+    const eq = pair.indexOf("=");
+    const rawKey = eq >= 0 ? pair.slice(0, eq) : pair;
+    const rawValue = eq >= 0 ? pair.slice(eq + 1) : "";
+    return {
+      index: index + 1,
+      key: decodeUrlPart(rawKey, plusAsSpace),
+      value: decodeUrlPart(rawValue, plusAsSpace)
+    };
+  });
+}
+
+function decodeUrlText(value, plusAsSpace) {
+  const text = requireText(value);
+  if (!text.includes("://")) {
+    return decodeUrlPart(text, plusAsSpace);
+  }
+
+  const parsed = new URL(text);
+  const path = parsed.pathname
+    .split("/")
+    .map((segment) => decodeUrlPart(segment, false))
+    .join("/");
+  const queryRows = parseQueryString(text, plusAsSpace);
+  const query = queryRows.length
+    ? `?${queryRows.map((row) => `${row.key}=${row.value}`).join("&")}`
+    : "";
+  const hash = parsed.hash ? `#${decodeUrlPart(parsed.hash.slice(1), plusAsSpace)}` : "";
+  return `${parsed.origin}${path}${query}${hash}`;
+}
+
+function urlDecode(input, options) {
+  const text = requireText(input);
+  const plusAsSpace = options.plusAsSpace !== false;
+  const decoded = decodeUrlText(text, plusAsSpace);
+  const rows = options.parseQuery === false ? [] : parseQueryString(text, plusAsSpace);
+  const lines = [decoded];
+  if (rows.length) {
+    lines.push("", "Query Parameters");
+    rows.forEach((row) => {
+      lines.push(`${row.index}. ${row.key} = ${row.value}`);
+    });
+  }
+  return { text: lines.join("\n") };
+}
+
+function stableJsonValue(value) {
+  if (Array.isArray(value)) return value.map(stableJsonValue);
+  if (!value || typeof value !== "object") return value;
+  return Object.keys(value).sort().reduce((result, key) => {
+    result[key] = stableJsonValue(value[key]);
+    return result;
+  }, {});
+}
+
+function jsonValuesEqual(left, right) {
+  return JSON.stringify(stableJsonValue(left)) === JSON.stringify(stableJsonValue(right));
+}
+
+function jsonType(value) {
+  if (Array.isArray(value)) return "array";
+  if (value === null) return "null";
+  return typeof value;
+}
+
+function pushJsonChange(changes, type, path, left, right) {
+  changes.push({ type, path: path || "$", left, right });
+}
+
+function collectJsonDiff(left, right, path, changes, includeUnchanged) {
+  if (jsonValuesEqual(left, right)) {
+    if (includeUnchanged) pushJsonChange(changes, "unchanged", path, left, right);
+    return;
+  }
+
+  const leftType = jsonType(left);
+  const rightType = jsonType(right);
+  if (leftType !== rightType) {
+    pushJsonChange(changes, "changed", path, left, right);
+    return;
+  }
+
+  if (leftType === "array") {
+    const length = Math.max(left.length, right.length);
+    for (let index = 0; index < length; index += 1) {
+      const childPath = `${path}[${index}]`;
+      if (index >= left.length) pushJsonChange(changes, "added", childPath, undefined, right[index]);
+      else if (index >= right.length) pushJsonChange(changes, "removed", childPath, left[index], undefined);
+      else collectJsonDiff(left[index], right[index], childPath, changes, includeUnchanged);
+    }
+    return;
+  }
+
+  if (leftType === "object") {
+    const keys = Array.from(new Set(Object.keys(left).concat(Object.keys(right)))).sort();
+    keys.forEach((key) => {
+      const childPath = `${path}.${key}`;
+      if (!Object.prototype.hasOwnProperty.call(left, key)) pushJsonChange(changes, "added", childPath, undefined, right[key]);
+      else if (!Object.prototype.hasOwnProperty.call(right, key)) pushJsonChange(changes, "removed", childPath, left[key], undefined);
+      else collectJsonDiff(left[key], right[key], childPath, changes, includeUnchanged);
+    });
+    return;
+  }
+
+  pushJsonChange(changes, "changed", path, left, right);
+}
+
+function summarizeChanges(changes) {
+  return changes.reduce((summary, change) => {
+    summary[change.type] += 1;
+    return summary;
+  }, { added: 0, removed: 0, changed: 0, unchanged: 0 });
+}
+
+function formatJsonValue(value) {
+  return JSON.stringify(value, null, 2);
+}
+
+function jsonDiff(input, options) {
+  if (typeof options.compareTo !== "string") {
+    throw new McpToolError("options.compareTo must contain the changed JSON string.");
+  }
+
+  let left;
+  let right;
+  try {
+    left = JSON.parse(requireText(input));
+    right = JSON.parse(requireText(options.compareTo));
+  } catch (error) {
+    throw new McpToolError(`Invalid JSON: ${error.message}`);
+  }
+
+  const changes = [];
+  collectJsonDiff(left, right, "$", changes, Boolean(options.includeUnchanged));
+  const summary = summarizeChanges(changes);
+  const lines = [
+    "Summary",
+    `Added: ${summary.added}`,
+    `Removed: ${summary.removed}`,
+    `Changed: ${summary.changed}`,
+    `Unchanged: ${summary.unchanged}`,
+    ""
+  ];
+
+  changes.forEach((change) => {
+    lines.push(`[${change.type}] ${change.path}`);
+    if (change.type === "added") lines.push(`+ ${formatJsonValue(change.right)}`);
+    else if (change.type === "removed") lines.push(`- ${formatJsonValue(change.left)}`);
+    else if (change.type === "changed") {
+      lines.push(`- ${formatJsonValue(change.left)}`);
+      lines.push(`+ ${formatJsonValue(change.right)}`);
+    } else {
+      lines.push(`  ${formatJsonValue(change.left)}`);
+    }
+    lines.push("");
+  });
+
+  return { text: lines.join("\n").trim() };
+}
+
+function normalizeCompareLine(value, options) {
+  let result = value;
+  if (options.ignoreWhitespace) result = result.replace(/\s+/g, " ").trim();
+  if (options.ignoreCase) result = result.toLowerCase();
+  return result;
+}
+
+function combineTextChanges(ops) {
+  const result = [];
+  let removed = [];
+  let added = [];
+
+  function flush() {
+    const pairs = Math.min(removed.length, added.length);
+    for (let index = 0; index < pairs; index += 1) {
+      result.push({
+        type: "changed",
+        left: removed[index].left,
+        right: added[index].right,
+        leftLine: removed[index].leftLine,
+        rightLine: added[index].rightLine
+      });
+    }
+    result.push(...removed.slice(pairs), ...added.slice(pairs));
+    removed = [];
+    added = [];
+  }
+
+  ops.forEach((op) => {
+    if (op.type === "removed") removed.push(op);
+    else if (op.type === "added") added.push(op);
+    else {
+      flush();
+      result.push(op);
+    }
+  });
+  flush();
+  return result;
+}
+
+function diffTextLines(leftLines, rightLines, options) {
+  const leftLength = leftLines.length;
+  const rightLength = rightLines.length;
+  const dp = Array.from({ length: leftLength + 1 }, () => Array(rightLength + 1).fill(0));
+
+  for (let leftIndex = leftLength - 1; leftIndex >= 0; leftIndex -= 1) {
+    for (let rightIndex = rightLength - 1; rightIndex >= 0; rightIndex -= 1) {
+      dp[leftIndex][rightIndex] = normalizeCompareLine(leftLines[leftIndex], options) === normalizeCompareLine(rightLines[rightIndex], options)
+        ? dp[leftIndex + 1][rightIndex + 1] + 1
+        : Math.max(dp[leftIndex + 1][rightIndex], dp[leftIndex][rightIndex + 1]);
+    }
+  }
+
+  const ops = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+  while (leftIndex < leftLength && rightIndex < rightLength) {
+    if (normalizeCompareLine(leftLines[leftIndex], options) === normalizeCompareLine(rightLines[rightIndex], options)) {
+      ops.push({ type: "unchanged", left: leftLines[leftIndex], right: rightLines[rightIndex], leftLine: leftIndex + 1, rightLine: rightIndex + 1 });
+      leftIndex += 1;
+      rightIndex += 1;
+    } else if (dp[leftIndex + 1][rightIndex] >= dp[leftIndex][rightIndex + 1]) {
+      ops.push({ type: "removed", left: leftLines[leftIndex], leftLine: leftIndex + 1 });
+      leftIndex += 1;
+    } else {
+      ops.push({ type: "added", right: rightLines[rightIndex], rightLine: rightIndex + 1 });
+      rightIndex += 1;
+    }
+  }
+
+  while (leftIndex < leftLength) {
+    ops.push({ type: "removed", left: leftLines[leftIndex], leftLine: leftIndex + 1 });
+    leftIndex += 1;
+  }
+  while (rightIndex < rightLength) {
+    ops.push({ type: "added", right: rightLines[rightIndex], rightLine: rightIndex + 1 });
+    rightIndex += 1;
+  }
+
+  return combineTextChanges(ops);
+}
+
+function textCompare(input, options) {
+  if (typeof options.compareTo !== "string") {
+    throw new McpToolError("options.compareTo must contain the changed text.");
+  }
+
+  const changes = diffTextLines(requireText(input).split(/\r?\n/), requireText(options.compareTo).split(/\r?\n/), options);
+  const summary = summarizeChanges(changes);
+  const visible = options.showUnchanged ? changes : changes.filter((change) => change.type !== "unchanged");
+  const lines = [
+    "Summary",
+    `Added: ${summary.added}`,
+    `Removed: ${summary.removed}`,
+    `Changed: ${summary.changed}`,
+    `Unchanged: ${summary.unchanged}`,
+    ""
+  ];
+
+  visible.forEach((change) => {
+    if (change.type === "unchanged") lines.push(`  ${change.left}`);
+    else if (change.type === "added") lines.push(`+ [${change.rightLine}] ${change.right}`);
+    else if (change.type === "removed") lines.push(`- [${change.leftLine}] ${change.left}`);
+    else {
+      lines.push(`~ [${change.leftLine} -> ${change.rightLine}]`);
+      lines.push(`- ${change.left}`);
+      lines.push(`+ ${change.right}`);
+    }
+  });
+
+  return { text: lines.join("\n").trim() };
+}
+
 function formatXml(input) {
   const text = requireText(input).trim();
   if (!text) return "";
@@ -1139,6 +1525,14 @@ async function executeMcpTool(toolId, args = {}) {
       return regexTester(input, options);
     case "regex-replace":
       return regexReplace(input, options);
+    case "url-encode":
+      return urlEncode(input, options);
+    case "url-decode":
+      return urlDecode(input, options);
+    case "json-diff":
+      return jsonDiff(input, options);
+    case "text-compare":
+      return textCompare(input, options);
     case "number-to-words":
       return numberToWords(input, options);
     case "xml-formatter":
