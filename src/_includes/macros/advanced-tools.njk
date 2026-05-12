@@ -563,6 +563,14 @@
         changes.push({ type: type, path: path || '$', left: left, right: right });
       }
 
+      function keyOrderChanged(left, right) {
+        var leftKeys = Object.keys(left);
+        var rightKeys = Object.keys(right);
+        return leftKeys.length === rightKeys.length && leftKeys.some(function (key, index) {
+          return key !== rightKeys[index];
+        });
+      }
+
       function diffValues(left, right, path, changes, showUnchanged, sortKeys) {
         if (same(left, right, sortKeys)) {
           if (showUnchanged) addChange(changes, 'unchanged', path, left, right);
@@ -588,6 +596,7 @@
         }
 
         if (leftType === 'object') {
+          var orderChanged = !sortKeys && keyOrderChanged(left, right);
           var keys = Array.from(new Set(Object.keys(left).concat(Object.keys(right))));
           if (sortKeys) keys.sort();
           var beforeCount = changes.length;
@@ -597,7 +606,10 @@
             else if (!Object.prototype.hasOwnProperty.call(right, key)) addChange(changes, 'removed', childPath, left[key], undefined);
             else diffValues(left[key], right[key], childPath, changes, showUnchanged, sortKeys);
           });
-          if (!sortKeys && changes.length === beforeCount) {
+          var hasChildChange = changes.slice(beforeCount).some(function (change) {
+            return change.type !== 'unchanged';
+          });
+          if (orderChanged && !hasChildChange) {
             addChange(changes, 'changed', path, left, right);
           }
           return;
