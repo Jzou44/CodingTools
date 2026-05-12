@@ -38,6 +38,21 @@
   color: var(--success);
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn:disabled:hover {
+  color: inherit;
+  background: transparent;
+  border-color: var(--border);
+  transform: none;
+  box-shadow: none;
+}
+
 /* --- Status Bar --- */
 .status-bar {
   display: flex;
@@ -419,6 +434,12 @@
 }
 
 /* --- Responsive --- */
+@media (max-width: 1024px) {
+  .tool-main {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .main-content { padding: 0 20px; }
   .toolbar { flex-direction: column; align-items: flex-start; }
@@ -697,10 +718,74 @@
   font-size: 12px;
 }
 
+/* ============================================================
+   Base64 Workbench
+   A compact vertical conversion flow that keeps the original
+   editor-first feel while reducing first-viewport sprawl.
+   ============================================================ */
+
+.base64-workbench {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.base64-workbench .pane-card {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.base64-workbench .pane-editor {
+  min-height: 168px;
+  height: clamp(168px, 24vh, 220px);
+  resize: vertical;
+}
+
+.base64-command-bar {
+  padding: 2px 0 0;
+}
+
+.base64-command-bar .pane-toolbar {
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+}
+
+.base64-command-bar .pane-toolbar-left,
+.base64-command-bar .pane-toolbar-right {
+  flex-wrap: wrap;
+}
+
+.base64-command-bar .pane-toolbar-right {
+  margin-left: auto;
+}
+
+.base64-workbench .status-bar-dual {
+  padding: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .pane-toolbar {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .pane-toolbar-left {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .pane-toolbar-right {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    min-width: 0;
+    width: auto;
+  }
+}
+
 @media (max-width: 600px) {
   .pane-card { padding: 16px; }
   .pane-card .pane-editor { min-height: 200px; font-size: 13px; }
-  .pane-toolbar { gap: 6px; }
 }
 
 /* ============================================================
