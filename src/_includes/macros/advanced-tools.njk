@@ -139,6 +139,121 @@
       color: var(--text-secondary);
     }
 
+    .text-diff-list {
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .text-diff-row {
+      display: grid;
+      grid-template-columns: 34px 72px 1fr;
+      gap: 10px;
+      min-height: 30px;
+      padding: 6px 12px;
+      border-bottom: 1px solid rgba(232, 224, 212, 0.55);
+      font-family: 'IBM Plex Mono', monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .text-diff-row:last-child {
+      border-bottom: 0;
+    }
+
+    .text-diff-row.added {
+      background: rgba(46, 160, 67, 0.18);
+    }
+
+    .text-diff-row.removed {
+      background: rgba(248, 81, 73, 0.18);
+    }
+
+    .text-diff-row.unchanged {
+      color: var(--text-muted);
+    }
+
+    .text-diff-row.inline-changed {
+      background: transparent;
+    }
+
+    .text-diff-sign {
+      color: var(--text-secondary);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .text-diff-line {
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .text-diff-code {
+      min-width: 0;
+    }
+
+    .text-compare-editor {
+      overflow: hidden;
+    }
+
+    .text-diff-highlights {
+      position: absolute;
+      inset: 1px;
+      z-index: 0;
+      overflow: hidden;
+      padding: 12px;
+      padding-left: 48px;
+      border-radius: var(--radius-sm);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      tab-size: 2;
+      pointer-events: none;
+    }
+
+    .text-diff-highlight-line {
+      min-height: 1.6em;
+      color: transparent;
+    }
+
+    .text-diff-highlight-line:not(.added):not(.removed) {
+      background: transparent !important;
+    }
+
+    .text-diff-highlight-line.added {
+      background: rgba(46, 160, 67, 0.18);
+    }
+
+    .text-diff-highlight-line.removed {
+      background: rgba(248, 81, 73, 0.18);
+    }
+
+    .text-diff-inline {
+      border-radius: 3px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .text-diff-inline.added {
+      background: rgba(46, 160, 67, 0.28);
+    }
+
+    .text-diff-inline.removed {
+      background: rgba(248, 81, 73, 0.28);
+    }
+
+    .text-compare-editor .pane-line-numbers {
+      z-index: 2;
+    }
+
+    .text-compare-editor .pane-editor {
+      position: relative;
+      z-index: 1;
+    }
+
     .query-table {
       width: 100%;
       border-collapse: collapse;
@@ -185,6 +300,16 @@
       .diff-row {
         grid-template-columns: 1fr;
         gap: 4px;
+      }
+
+      .text-diff-row {
+        grid-template-columns: 24px 54px 1fr;
+        gap: 8px;
+        padding: 6px 10px;
+      }
+
+      .text-diff-highlights {
+        font-size: 13px;
       }
     }
   </style>
@@ -453,14 +578,16 @@
   <div class="advanced-tool-grid">
     <div class="pane-card pane-card--input">
       <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--accent"></span>{{ toolData.labels.leftInput }}</span></div>
-      <div class="pane-editor-wrapper">
+      <div class="pane-editor-wrapper{% if kind == "text" %} text-compare-editor{% endif %}">
+        {% if kind == "text" %}<div class="text-diff-highlights" id="left-diff-highlights" aria-hidden="true"></div>{% endif %}
         <div class="pane-line-numbers" id="left-line-numbers">1</div>
         <textarea class="pane-editor" id="left-editor" spellcheck="false" rows="12" placeholder="{{ toolData.leftPlaceholder }}"></textarea>
       </div>
     </div>
     <div class="pane-card pane-card--input">
       <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ toolData.labels.rightInput }}</span></div>
-      <div class="pane-editor-wrapper">
+      <div class="pane-editor-wrapper{% if kind == "text" %} text-compare-editor{% endif %}">
+        {% if kind == "text" %}<div class="text-diff-highlights" id="right-diff-highlights" aria-hidden="true"></div>{% endif %}
         <div class="pane-line-numbers" id="right-line-numbers">1</div>
         <textarea class="pane-editor" id="right-editor" spellcheck="false" rows="12" placeholder="{{ toolData.rightPlaceholder }}"></textarea>
       </div>
@@ -501,7 +628,7 @@
   </div>
 
   <div class="diff-preview" aria-live="polite">
-    <div class="diff-preview-list" id="diff-preview-list">
+    <div class="diff-preview-list{% if kind == "text" %} text-diff-list{% endif %}" id="diff-preview-list">
       <div class="empty-preview">{{ toolData.labels.noDiff }}</div>
     </div>
   </div>
@@ -738,6 +865,8 @@
       var rightLineNums = document.getElementById('right-line-numbers');
       var outputLineNums = document.getElementById('output-line-numbers');
       var previewList = document.getElementById('diff-preview-list');
+      var leftHighlights = document.getElementById('left-diff-highlights');
+      var rightHighlights = document.getElementById('right-diff-highlights');
       var i18n = document.getElementById('tool-i18n').dataset;
 
       function normalize(value) {
@@ -854,11 +983,131 @@
         });
 
         outputEditor.value = lines.join('\n').trim();
-        previewList.innerHTML = visible.length ? visible.map(function (item) {
-          var label = item.type === 'changed' ? item.leftLine + ' -> ' + item.rightLine : (item.leftLine || item.rightLine || '');
-          var text = item.type === 'added' ? item.right : item.left;
-          return '<div class="diff-row ' + item.type + '"><span class="diff-kind">' + item.type + ' ' + label + '</span><span>' + escapeHtml(text) + '</span></div>';
-        }).join('') : '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+        renderEditorHighlights(changes);
+        previewList.innerHTML = visible.length ? visible.map(renderDiffRows).join('') : '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+      }
+
+      function renderEditorHighlights(changes) {
+        var leftHighlightsByLine = {};
+        var rightHighlightsByLine = {};
+
+        changes.forEach(function (item) {
+          if (item.type === 'removed') leftHighlightsByLine[item.leftLine] = { type: 'removed' };
+          else if (item.type === 'added') rightHighlightsByLine[item.rightLine] = { type: 'added' };
+          else if (item.type === 'changed') {
+            var inlineDiff = diffInlineTokens(item.left, item.right);
+            leftHighlightsByLine[item.leftLine] = { html: renderInlineTokens(inlineDiff.left, 'removed') };
+            rightHighlightsByLine[item.rightLine] = { html: renderInlineTokens(inlineDiff.right, 'added') };
+          }
+        });
+
+        renderHighlightLayer(leftEditor, leftHighlights, leftHighlightsByLine);
+        renderHighlightLayer(rightEditor, rightHighlights, rightHighlightsByLine);
+      }
+
+      function renderHighlightLayer(editor, container, highlightsByLine) {
+        if (!container) return;
+
+        var lines = editor.value.split(/\r?\n/);
+        container.innerHTML = lines.map(function (line, index) {
+          var highlight = highlightsByLine[index + 1] || {};
+          var type = highlight.type || '';
+          var html = highlight.html || escapeHtml(line);
+          return '<div class="text-diff-highlight-line ' + type + '">' + html + '</div>';
+        }).join('');
+        syncHighlightScroll(editor, container);
+      }
+
+      function tokenizeInline(value) {
+        return String(value).match(/\s+|[^\s]+/g) || [''];
+      }
+
+      function comparableToken(token) {
+        if (/^\s+$/.test(token)) return document.getElementById('ignore-space').checked ? ' ' : token;
+        return document.getElementById('ignore-case').checked ? token.toLowerCase() : token;
+      }
+
+      function diffInlineTokens(left, right) {
+        var leftTokens = tokenizeInline(left);
+        var rightTokens = tokenizeInline(right);
+        var n = leftTokens.length;
+        var m = rightTokens.length;
+        var dp = Array.from({ length: n + 1 }, function () { return Array(m + 1).fill(0); });
+        var i;
+        var j;
+
+        for (i = n - 1; i >= 0; i -= 1) {
+          for (j = m - 1; j >= 0; j -= 1) {
+            dp[i][j] = comparableToken(leftTokens[i]) === comparableToken(rightTokens[j])
+              ? dp[i + 1][j + 1] + 1
+              : Math.max(dp[i + 1][j], dp[i][j + 1]);
+          }
+        }
+
+        var leftParts = [];
+        var rightParts = [];
+        i = 0;
+        j = 0;
+        while (i < n && j < m) {
+          if (comparableToken(leftTokens[i]) === comparableToken(rightTokens[j])) {
+            leftParts.push({ text: leftTokens[i], changed: false });
+            rightParts.push({ text: rightTokens[j], changed: false });
+            i += 1;
+            j += 1;
+          } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+            leftParts.push({ text: leftTokens[i], changed: true });
+            i += 1;
+          } else {
+            rightParts.push({ text: rightTokens[j], changed: true });
+            j += 1;
+          }
+        }
+
+        while (i < n) {
+          leftParts.push({ text: leftTokens[i], changed: true });
+          i += 1;
+        }
+        while (j < m) {
+          rightParts.push({ text: rightTokens[j], changed: true });
+          j += 1;
+        }
+
+        return { left: leftParts, right: rightParts };
+      }
+
+      function renderInlineTokens(parts, type) {
+        return parts.map(function (part) {
+          var text = escapeHtml(part.text);
+          return part.changed ? '<span class="text-diff-inline ' + type + '">' + text + '</span>' : text;
+        }).join('');
+      }
+
+      function syncHighlightScroll(editor, container) {
+        if (container) container.scrollTop = editor.scrollTop;
+      }
+
+      function clearEditorHighlights() {
+        if (leftHighlights) leftHighlights.innerHTML = '';
+        if (rightHighlights) rightHighlights.innerHTML = '';
+      }
+
+      function renderDiffRows(item) {
+        if (item.type === 'changed') {
+          var inlineDiff = diffInlineTokens(item.left, item.right);
+          return renderDiffRow('inline-changed', '-', item.leftLine, renderInlineTokens(inlineDiff.left, 'removed'), true) +
+            renderDiffRow('inline-changed', '+', item.rightLine, renderInlineTokens(inlineDiff.right, 'added'), true);
+        }
+        if (item.type === 'added') return renderDiffRow('added', '+', item.rightLine, item.right);
+        if (item.type === 'removed') return renderDiffRow('removed', '-', item.leftLine, item.left);
+        return renderDiffRow('unchanged', ' ', item.leftLine, item.left);
+      }
+
+      function renderDiffRow(type, sign, line, text, isHtml) {
+        return '<div class="text-diff-row ' + type + '">' +
+          '<span class="text-diff-sign">' + sign + '</span>' +
+          '<span class="text-diff-line">' + (line || '') + '</span>' +
+          '<span class="text-diff-code">' + (isHtml ? text : escapeHtml(text)) + '</span>' +
+          '</div>';
       }
 
       function escapeHtml(value) {
@@ -905,6 +1154,7 @@
           document.getElementById(id).textContent = '0';
         });
         previewList.innerHTML = '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
+        clearEditorHighlights();
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
         updateCounts();
         ToolCommon.updateLineNumbers(leftEditor, leftLineNums);
@@ -924,6 +1174,10 @@
         ToolCommon.initTabKey(editor, lineNums);
         ToolCommon.updateLineNumbers(editor, lineNums);
       });
+      leftEditor.addEventListener('scroll', function () { syncHighlightScroll(leftEditor, leftHighlights); });
+      rightEditor.addEventListener('scroll', function () { syncHighlightScroll(rightEditor, rightHighlights); });
+      leftEditor.addEventListener('input', clearEditorHighlights);
+      rightEditor.addEventListener('input', clearEditorHighlights);
       ToolCommon.initScrollSync(outputEditor, outputLineNums);
       ToolCommon.initExampleCopy();
       ToolCommon.initKeyboardShortcut(btnGenerate);
