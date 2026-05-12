@@ -53,6 +53,11 @@ The production endpoint is a public remote service. Do not send secrets, private
           "type": "boolean",
           "default": false,
           "description": "Include unchanged paths in the diff output."
+        },
+        "sortKeys": {
+          "type": "boolean",
+          "default": true,
+          "description": "Sort object keys before comparing. Set to false to report key order changes."
         }
       },
       "required": [

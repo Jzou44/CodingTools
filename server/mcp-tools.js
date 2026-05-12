@@ -258,6 +258,11 @@ const optionSchemas = {
         type: "boolean",
         default: false,
         description: "Include unchanged paths in the diff output."
+      },
+      sortKeys: {
+        type: "boolean",
+        default: true,
+        description: "Sort object keys before comparing. Set to false to report key order changes."
       }
     },
     required: ["compareTo"],
@@ -915,8 +920,12 @@ function stableJsonValue(value) {
   }, {});
 }
 
-function jsonValuesEqual(left, right) {
-  return JSON.stringify(stableJsonValue(left)) === JSON.stringify(stableJsonValue(right));
+function comparableJsonValue(value, sortKeys) {
+  return sortKeys ? stableJsonValue(value) : value;
+}
+
+function jsonValuesEqual(left, right, sortKeys) {
+  return JSON.stringify(comparableJsonValue(left, sortKeys)) === JSON.stringify(comparableJsonValue(right, sortKeys));
 }
 
 function jsonType(value) {
@@ -929,8 +938,14 @@ function pushJsonChange(changes, type, path, left, right) {
   changes.push({ type, path: path || "$", left, right });
 }
 
-function collectJsonDiff(left, right, path, changes, includeUnchanged) {
-  if (jsonValuesEqual(left, right)) {
+function jsonObjectKeyOrderChanged(left, right) {
+  const leftKeys = Object.keys(left);
+  const rightKeys = Object.keys(right);
+  return leftKeys.length === rightKeys.length && leftKeys.some((key, index) => key !== rightKeys[index]);
+}
+
+function collectJsonDiff(left, right, path, changes, includeUnchanged, sortKeys) {
+  if (jsonValuesEqual(left, right, sortKeys)) {
     if (includeUnchanged) pushJsonChange(changes, "unchanged", path, left, right);
     return;
   }
@@ -948,19 +963,28 @@ function collectJsonDiff(left, right, path, changes, includeUnchanged) {
       const childPath = `${path}[${index}]`;
       if (index >= left.length) pushJsonChange(changes, "added", childPath, undefined, right[index]);
       else if (index >= right.length) pushJsonChange(changes, "removed", childPath, left[index], undefined);
-      else collectJsonDiff(left[index], right[index], childPath, changes, includeUnchanged);
+      else collectJsonDiff(left[index], right[index], childPath, changes, includeUnchanged, sortKeys);
     }
     return;
   }
 
   if (leftType === "object") {
-    const keys = Array.from(new Set(Object.keys(left).concat(Object.keys(right)))).sort();
+    const keyOrderChanged = !sortKeys && jsonObjectKeyOrderChanged(left, right);
+    const keys = Array.from(new Set(Object.keys(left).concat(Object.keys(right))));
+    if (sortKeys) keys.sort();
+    const beforeCount = changes.length;
     keys.forEach((key) => {
       const childPath = `${path}.${key}`;
       if (!Object.prototype.hasOwnProperty.call(left, key)) pushJsonChange(changes, "added", childPath, undefined, right[key]);
       else if (!Object.prototype.hasOwnProperty.call(right, key)) pushJsonChange(changes, "removed", childPath, left[key], undefined);
-      else collectJsonDiff(left[key], right[key], childPath, changes, includeUnchanged);
+      else collectJsonDiff(left[key], right[key], childPath, changes, includeUnchanged, sortKeys);
     });
+    const hasNonUnchangedChildChange = changes
+      .slice(beforeCount)
+      .some((change) => change.type !== "unchanged");
+    if (keyOrderChanged && !hasNonUnchangedChildChange) {
+      pushJsonChange(changes, "changed", path, left, right);
+    }
     return;
   }
 
@@ -993,7 +1017,8 @@ function jsonDiff(input, options) {
   }
 
   const changes = [];
-  collectJsonDiff(left, right, "$", changes, Boolean(options.includeUnchanged));
+  const sortKeys = options.sortKeys !== false;
+  collectJsonDiff(left, right, "$", changes, Boolean(options.includeUnchanged), sortKeys);
   const summary = summarizeChanges(changes);
   const lines = [
     "Summary",

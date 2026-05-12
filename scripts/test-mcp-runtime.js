@@ -164,6 +164,8 @@ async function runHttpTests() {
     assert.ok(rgbaTool.outputSchema.properties.result);
     const regexTool = listed.data.result.tools.find((tool) => tool.name === "regex-replace");
     assert.deepStrictEqual(regexTool.inputSchema.properties.options.required, ["pattern"]);
+    const jsonDiffTool = listed.data.result.tools.find((tool) => tool.name === "json-diff");
+    assert.ok(jsonDiffTool.inputSchema.properties.options.properties.sortKeys);
 
     const hash = await rpc(baseUrl, "tools/call", {
       name: "sha256-generator",
@@ -185,6 +187,33 @@ async function runHttpTests() {
     }, 3);
     assert.strictEqual(replace.data.result.isError, false);
     assert.strictEqual(replace.data.result.content[0].text, "xyz 123 xyz");
+
+    const jsonKeyOrderDiff = await rpc(baseUrl, "tools/call", {
+      name: "json-diff",
+      arguments: {
+        input: "{\"obj\":{\"b\":2,\"a\":1}}",
+        options: {
+          compareTo: "{\"obj\":{\"a\":1,\"b\":2}}",
+          sortKeys: false
+        }
+      }
+    }, 33);
+    assert.strictEqual(jsonKeyOrderDiff.data.result.isError, false);
+    assert.ok(jsonKeyOrderDiff.data.result.content[0].text.includes("Changed: 1"));
+    assert.ok(jsonKeyOrderDiff.data.result.content[0].text.includes("[changed] $.obj"));
+
+    const jsonSortedKeysDiff = await rpc(baseUrl, "tools/call", {
+      name: "json-diff",
+      arguments: {
+        input: "{\"obj\":{\"b\":2,\"a\":1}}",
+        options: {
+          compareTo: "{\"obj\":{\"a\":1,\"b\":2}}",
+          sortKeys: true
+        }
+      }
+    }, 34);
+    assert.strictEqual(jsonSortedKeysDiff.data.result.isError, false);
+    assert.ok(jsonSortedKeysDiff.data.result.content[0].text.includes("Changed: 0"));
 
     const regexTooManyMatches = await rpc(baseUrl, "tools/call", {
       name: "regex-tester",
