@@ -24,12 +24,38 @@
 
   <!-- Tool Header -->
   <header class="tool-header">
-    <h1>{{ toolTitle }}</h1>
-    <p>{{ toolDescription }}</p>
+    <div class="tool-header-copy">
+      <h1>{{ toolTitle }}</h1>
+      <p>{{ toolDescription }}</p>
+    </div>
+    <button
+      class="sidebar-toggle"
+      id="sidebar-toggle"
+      type="button"
+      aria-controls="tool-sidebar"
+      aria-expanded="true"
+      aria-label="{{ t.ui.hideSidebar or 'Hide sidebar' }}"
+      title="{{ t.ui.hideSidebar or 'Hide sidebar' }}"
+      data-show-label="{{ t.ui.showSidebar or 'Show sidebar' }}"
+      data-hide-label="{{ t.ui.hideSidebar or 'Hide sidebar' }}">
+      <span class="sidebar-toggle-icon" aria-hidden="true">
+        <svg class="sidebar-toggle-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M15 3v18"></path>
+          <path d="m10 9-3 3 3 3"></path>
+        </svg>
+        <svg class="sidebar-toggle-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M15 3v18"></path>
+          <path d="m7 9 3 3-3 3"></path>
+        </svg>
+      </span>
+      <span class="sidebar-toggle-label">{{ t.ui.sidebar or "Sidebar" }}</span>
+    </button>
   </header>
 
   <!-- Two-Column Layout -->
-  <div class="tool-layout">
+  <div class="tool-layout" id="tool-layout" data-tool-layout>
 
     <!-- Left Column — Tool Interface -->
     <div class="tool-main">
@@ -94,5 +120,46 @@
   {% if currentTool in htmlCompatTools %}
   <script src="/js/html-minifier-compat.js?v={{ site.assetVersion }}"></script>
   {% endif %}
+  <script>
+    (function () {
+      var layout = document.getElementById('tool-layout');
+      var toggle = document.getElementById('sidebar-toggle');
+      if (!layout || !toggle) return;
+
+      var cookieName = 'coding_tools_sidebar';
+
+      function readPreference() {
+        var pairs = document.cookie ? document.cookie.split('; ') : [];
+        for (var i = 0; i < pairs.length; i += 1) {
+          var parts = pairs[i].split('=');
+          if (decodeURIComponent(parts[0]) === cookieName) {
+            return decodeURIComponent(parts.slice(1).join('='));
+          }
+        }
+        return null;
+      }
+
+      function savePreference(visible) {
+        var value = visible ? 'visible' : 'hidden';
+        document.cookie = cookieName + '=' + encodeURIComponent(value) + '; Max-Age=31536000; Path=/; SameSite=Lax';
+      }
+
+      function setSidebarVisible(visible, persist) {
+        var label = visible ? toggle.dataset.hideLabel : toggle.dataset.showLabel;
+        layout.classList.toggle('sidebar-collapsed', !visible);
+        toggle.classList.toggle('is-collapsed', !visible);
+        toggle.setAttribute('aria-expanded', visible ? 'true' : 'false');
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
+        if (persist) savePreference(visible);
+      }
+
+      setSidebarVisible(readPreference() !== 'hidden', false);
+
+      toggle.addEventListener('click', function () {
+        setSidebarVisible(layout.classList.contains('sidebar-collapsed'), true);
+      });
+    })();
+  </script>
   {% block tool_script %}{% endblock %}
 {% endblock %}
