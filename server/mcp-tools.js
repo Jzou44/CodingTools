@@ -24,6 +24,8 @@ const REGEX_TIMEOUT_MS = 300;
 const MAX_JSON_TO_XML_DEPTH = 100;
 const browserOnlyToolIds = new Set([
   "photo2pixel",
+  "image-resize",
+  "image-crop",
   "compress-png",
   "compress-jpeg",
   "progressive-jpeg",

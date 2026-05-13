@@ -2,7 +2,7 @@
   "generatedFrom": "server/mcp-tools.js:listMcpTools",
   "language": "en",
   "endpoint": "https://coding.tools/mcp",
-  "skillCount": 67,
+  "skillCount": 69,
   "skills": [
     {
       "name": "coding-tools-base64-encode",
@@ -369,6 +369,18 @@
       "tool": "photo2pixel",
       "title": "Photo2Pixel",
       "webUi": "https://coding.tools/photo2pixel.html"
+    },
+    {
+      "name": "coding-tools-image-resize",
+      "tool": "image-resize",
+      "title": "Image Resize",
+      "webUi": "https://coding.tools/image-resize.html"
+    },
+    {
+      "name": "coding-tools-image-crop",
+      "tool": "image-crop",
+      "title": "Image Crop",
+      "webUi": "https://coding.tools/image-crop.html"
     },
     {
       "name": "coding-tools-compress-png",

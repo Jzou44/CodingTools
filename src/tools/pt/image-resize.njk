@@ -1,0 +1,27 @@
+---
+lang: "pt"
+toolId: "image-resize"
+category: "image-utilities"
+activeTool: "image-resize"
+permalink: "/pt/image-resize.html"
+---
+
+{% extends "tool-layout.njk" %}
+{% import "tools/image-resize.njk" as imageTool %}
+
+{% block head_extra %}
+  {{ super() }}
+  <link rel="stylesheet" href="/css/image-tools.css?v={{ site.assetVersion }}">
+{% endblock %}
+
+{% block tool_content %}
+  {{ imageTool.content(toolData) }}
+{% endblock %}
+
+{% block description %}
+  {{ imageTool.description(toolData, t) }}
+{% endblock %}
+
+{% block tool_script %}
+  {{ imageTool.script(toolData, site) }}
+{% endblock %}

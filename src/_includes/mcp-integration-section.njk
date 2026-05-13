@@ -19,7 +19,7 @@
   {% if mcpToolName == "image-to-base64" %}
   <p>{{ t.ui.mcpImageInputNote or "For image-to-base64, pass a public image URL as input.url. For private local files, use the web UI or send the file bytes as Base64 with options.mimeType." }}</p>
   {% endif %}
-  {% if mcpToolName == "photo2pixel" or mcpToolName == "compress-png" or mcpToolName == "compress-jpeg" or mcpToolName == "progressive-jpeg" or mcpToolName == "exif-viewer" or mcpToolName == "exif-remover" %}
+  {% if mcpToolName == "photo2pixel" or mcpToolName == "image-resize" or mcpToolName == "image-crop" or mcpToolName == "compress-png" or mcpToolName == "compress-jpeg" or mcpToolName == "progressive-jpeg" or mcpToolName == "exif-viewer" or mcpToolName == "exif-remover" %}
   <p>{{ t.ui.mcpBrowserOnlyNote or "This image tool is browser-only in MCP. tools/call returns isError: true plus a resource_link to the web UI instead of processing local image bytes on the server." }}</p>
   {% endif %}
   <p>{{ t.ui.mcpArgumentsNote or "Most text and data tools accept an input string plus optional options. Browser-only image tools are listed for discovery and return a web UI link when they need browser image APIs." }}</p>

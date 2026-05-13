@@ -1,0 +1,26 @@
+---
+toolId: "image-crop"
+category: "image-utilities"
+activeTool: "image-crop"
+permalink: "/image-crop.html"
+---
+
+{% extends "tool-layout.njk" %}
+{% import "tools/image-crop.njk" as imageTool %}
+
+{% block head_extra %}
+  {{ super() }}
+  <link rel="stylesheet" href="/css/image-tools.css?v={{ site.assetVersion }}">
+{% endblock %}
+
+{% block tool_content %}
+  {{ imageTool.content(toolData) }}
+{% endblock %}
+
+{% block description %}
+  {{ imageTool.description(toolData, t) }}
+{% endblock %}
+
+{% block tool_script %}
+  {{ imageTool.script(toolData, site) }}
+{% endblock %}

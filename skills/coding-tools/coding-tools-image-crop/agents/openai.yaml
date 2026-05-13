@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools Image Crop"
+  short_description: "Crop PNG, JPEG, and WebP images with a draggable crop box."
+  default_prompt: "Use $coding-tools-image-crop to run Image Crop through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for Image Crop."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

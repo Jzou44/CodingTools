@@ -66,6 +66,8 @@ const examples = {
   "sql-formatter": { input: "select id,total from invoices where paid = 1 order by total desc" },
   "sql-minifier": { input: "select id, total\nfrom invoices\nwhere paid = 1\norder by total desc" },
   "photo2pixel": {},
+  "image-resize": {},
+  "image-crop": {},
   "compress-png": {},
   "compress-jpeg": {},
   "progressive-jpeg": {},

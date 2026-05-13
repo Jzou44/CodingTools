@@ -6,6 +6,8 @@ const mcpExamples = require("../src/_data/mcpExamples");
 
 const browserOnlyToolIds = new Set([
   "photo2pixel",
+  "image-resize",
+  "image-crop",
   "compress-png",
   "compress-jpeg",
   "progressive-jpeg",
@@ -75,6 +77,8 @@ const toolSamples = {
   "sql-formatter": { input: "select * from users where id = 1" },
   "sql-minifier": { input: "select *\nfrom users\nwhere id = 1" },
   "photo2pixel": { input: "browser-only" },
+  "image-resize": { input: "browser-only" },
+  "image-crop": { input: "browser-only" },
   "compress-png": { input: "browser-only" },
   "compress-jpeg": { input: "browser-only" },
   "progressive-jpeg": { input: "browser-only" },

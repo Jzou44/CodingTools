@@ -1,0 +1,61 @@
+{% macro content(toolData) %}
+  {% set L = toolData.labels %}
+  <div class="image-workbench" data-image-crop>
+    <div class="image-dropzone" id="dropzone" role="button" tabindex="0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <p>{{ L.clickOrDrop }}</p>
+      <span>{{ L.hint }}</span>
+      <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp" hidden>
+    </div>
+
+    <div class="image-grid">
+      <div class="image-panel">
+        <div class="image-panel-title"><span>{{ L.crop }}</span></div>
+        <div class="crop-stage" id="crop-stage">
+          <img id="crop-image" alt="">
+          <div class="crop-overlay" id="crop-overlay">
+            <span class="crop-handle" data-handle="nw"></span><span class="crop-handle" data-handle="n"></span><span class="crop-handle" data-handle="ne"></span><span class="crop-handle" data-handle="e"></span><span class="crop-handle" data-handle="se"></span><span class="crop-handle" data-handle="s"></span><span class="crop-handle" data-handle="sw"></span><span class="crop-handle" data-handle="w"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-panel">
+        <div class="image-panel-title"><span>{{ L.controls }}</span></div>
+        <div class="control-stack">
+          <div class="field"><label for="ratio-select">{{ L.ratio }}</label><select id="ratio-select" disabled><option value="free">{{ L.free }}</option><option value="1">1:1</option><option value="1.3333333333">4:3</option><option value="1.7777777778">16:9</option><option value="0.75">3:4</option><option value="0.5625">9:16</option></select></div>
+          <div class="control-row"><div class="field"><label for="x-input">{{ L.x }}</label><input id="x-input" type="number" min="0" step="1" disabled></div><div class="field"><label for="y-input">{{ L.y }}</label><input id="y-input" type="number" min="0" step="1" disabled></div></div>
+          <div class="control-row"><div class="field"><label for="width-input">{{ L.width }}</label><input id="width-input" type="number" min="1" step="1" disabled></div><div class="field"><label for="height-input">{{ L.height }}</label><input id="height-input" type="number" min="1" step="1" disabled></div></div>
+          <div class="field"><label for="quality-input">{{ L.quality }} <span class="range-value" id="quality-value">90%</span></label><input id="quality-input" type="range" min="1" max="100" value="90" disabled></div>
+          <div class="result-preview"><img id="result-preview" alt=""></div>
+          <div class="image-actions"><button class="btn btn-ghost" id="btn-reset" type="button" disabled>{{ L.reset }}</button><button class="btn btn-primary" id="btn-download" type="button" disabled>{{ L.download }}</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric"><span class="metric-label">{{ L.originalSize }}</span><span class="metric-value" id="original-size">-</span></div>
+      <div class="metric"><span class="metric-label">{{ L.outputSize }}</span><span class="metric-value" id="output-size">-</span></div>
+      <div class="metric"><span class="metric-label">{{ L.cropBox }}</span><span class="metric-value" id="crop-meta">-</span></div>
+      <div class="metric"><span class="metric-label">{{ L.format }}</span><span class="metric-value" id="format-meta">-</span></div>
+    </div>
+
+    <div class="status-bar"><div class="status-message idle" id="status-message"><span class="status-dot" id="status-dot" style="display:none;"></span><span id="status-text">{{ L.ready }}</span></div><div class="status-meta"><span id="file-size-meta">-</span></div></div>
+  </div>
+{% endmacro %}
+
+{% macro description(toolData, t) %}
+  <h2>{{ toolData.descTitle }}</h2>
+  {% for para in toolData.descParas %}<p>{{ para | safe }}</p>{% endfor %}
+  <h3>{{ toolData.howToUse }}</h3>
+  <ol class="steps-list">{% for step in toolData.steps %}<li>{{ step | safe }}</li>{% endfor %}</ol>
+  <h3>{{ toolData.whatIs }}</h3>
+  {% for para in toolData.whatIsParas %}<p>{{ para | safe }}</p>{% endfor %}
+  <h3>{{ toolData.example }}</h3>
+  <p>{{ toolData.examplePara | safe }}</p>
+  <div class="code-block-wrapper"><button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button><pre class="code-block" id="example-code">{{ toolData.exampleCode }}</pre></div>
+{% endmacro %}
+
+{% macro script(toolData, site) %}
+  <script type="application/json" id="image-tool-labels">{{ toolData.labels | json | safe }}</script>
+  <script src="/js/image-crop.js?v={{ site.assetVersion }}"></script>
+{% endmacro %}
