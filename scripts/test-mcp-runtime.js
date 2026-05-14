@@ -1,6 +1,7 @@
 const assert = require("assert");
 const { spawn } = require("child_process");
 const { createServer } = require("../server/a2a-server");
+const { executeMcpTool } = require("../server/mcp-tools");
 const tools = require("../src/_data/tools.json");
 const mcpExamples = require("../src/_data/mcpExamples");
 
@@ -332,7 +333,37 @@ async function runStdioTest() {
   }
 }
 
+async function runSecurityUnitTests() {
+  const originalLookup = require("dns").promises.lookup;
+  const originalFetch = global.fetch;
+
+  try {
+    require("dns").promises.lookup = async () => [{ address: "93.184.216.34" }];
+    global.fetch = async () => new Response("", {
+      status: 302,
+      headers: {
+        location: "http://127.0.0.1/private.png"
+      }
+    });
+
+    const result = await executeMcpTool("image-to-base64", {
+      input: {
+        url: "https://public.example/image.png"
+      }
+    });
+    assert.fail(`Expected redirect to private network to fail, got ${result.text}`);
+  } catch (error) {
+    assert.ok(error.message.includes("Private network image URLs are not allowed"));
+  } finally {
+    require("dns").promises.lookup = originalLookup;
+    global.fetch = originalFetch;
+  }
+
+  console.log("MCP security unit tests passed.");
+}
+
 async function main() {
+  await runSecurityUnitTests();
   await runHttpTests();
   await runStdioTest();
 }

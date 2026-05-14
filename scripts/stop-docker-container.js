@@ -1,6 +1,7 @@
 const { spawnSync } = require("child_process");
+const containerName = process.env.DOCKER_CONTAINER_NAME || "coding-tools-test";
 
-const result = spawnSync("docker", ["rm", "-f", "coding-tools-test"], {
+const result = spawnSync("docker", ["rm", "-f", containerName], {
   stdio: "inherit",
   shell: false
 });

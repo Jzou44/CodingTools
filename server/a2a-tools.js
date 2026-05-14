@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const { supportedToolIds, isRuntimeTool } = require("../src/_data/a2aRuntimeTools");
+const { supportedToolIds, isRuntimeTool } = require("./tool-registry");
 
 const MAX_TEXT_CHARS = 200000;
 const MAX_INTEGER_DIGITS = 4096;

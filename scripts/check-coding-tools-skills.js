@@ -20,8 +20,12 @@ function read(file) {
   return fs.readFileSync(file, "utf8");
 }
 
+function normalizeLineEndings(value) {
+  return String(value).replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+}
+
 function parseFrontmatter(markdown, skillName) {
-  const match = markdown.match(/^---\n([\s\S]*?)\n---/);
+  const match = normalizeLineEndings(markdown).match(/^---\n([\s\S]*?)\n---/);
   if (!match) {
     fail(`${skillName} has invalid YAML frontmatter delimiters.`);
     return {};
@@ -126,7 +130,7 @@ function main() {
       continue;
     }
 
-    const markdown = read(skillPath);
+    const markdown = normalizeLineEndings(read(skillPath));
     const frontmatter = parseFrontmatter(markdown, skillName);
     const keys = Object.keys(frontmatter).sort();
     if (JSON.stringify(keys) !== JSON.stringify(["description", "name"])) {

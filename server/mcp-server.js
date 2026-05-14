@@ -14,6 +14,10 @@ function jsonRpcError(id, code, message, data) {
   return { jsonrpc: "2.0", id: id === undefined ? null : id, error };
 }
 
+function jsonRpcInternalError(id) {
+  return jsonRpcError(id, -32603, "Internal error.");
+}
+
 function isJsonRpcRequest(message) {
   return message && typeof message === "object" && !Array.isArray(message) && message.jsonrpc === "2.0" && typeof message.method === "string";
 }
@@ -174,7 +178,13 @@ async function handleMcpHttpRequest(req, res) {
     return;
   }
 
-  const response = await handleMcpMessage(message);
+  let response;
+  try {
+    response = await handleMcpMessage(message);
+  } catch (error) {
+    console.error("Unhandled MCP HTTP error:", error);
+    response = jsonRpcInternalError(message && message.id);
+  }
   if (!response) {
     sendHttpJson(res, 202, undefined);
     return;
@@ -185,5 +195,6 @@ async function handleMcpHttpRequest(req, res) {
 module.exports = {
   MCP_PROTOCOL_VERSION,
   handleMcpMessage,
-  handleMcpHttpRequest
+  handleMcpHttpRequest,
+  jsonRpcInternalError
 };

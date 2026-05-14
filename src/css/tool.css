@@ -27,6 +27,7 @@
 
 .tool-layout .description-section {
   max-width: 800px;
+  overflow-wrap: anywhere;
   transition: max-width 0.18s ease;
 }
 
@@ -308,6 +309,8 @@
   gap: 14px;
   padding: 10px 0;
   color: var(--text-secondary);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .steps-list li::before {
@@ -330,12 +333,15 @@
 .code-block-wrapper {
   position: relative;
   margin: 16px 0;
+  max-width: 100%;
 }
 
 .code-block {
   background: var(--code-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
+  box-sizing: border-box;
+  max-width: 100%;
   padding: 20px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;

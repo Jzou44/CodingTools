@@ -98,25 +98,11 @@ jobs:
           npm run a2a:test
 
           NODE_BIN="$(command -v node)"
-          sudo tee /etc/systemd/system/coding-tools-a2a.service > /dev/null <<EOF
-          [Unit]
-          Description=Coding.Tools A2A runtime
-          After=network.target
-
-          [Service]
-          Type=simple
-          User=$SERVICE_USER
-          WorkingDirectory=$VPS_PATH
-          Environment=NODE_ENV=production
-          Environment=HOST=127.0.0.1
-          Environment=PORT=5510
-          ExecStart=$NODE_BIN server/a2a-runtime.js
-          Restart=always
-          RestartSec=5
-
-          [Install]
-          WantedBy=multi-user.target
-          EOF
+          sed \
+            -e "s#__SERVICE_USER__#$SERVICE_USER#g" \
+            -e "s#__VPS_PATH__#$VPS_PATH#g" \
+            -e "s#__NODE_BIN__#$NODE_BIN#g" \
+            "$VPS_PATH/deploy/coding-tools-a2a.service" | sudo tee /etc/systemd/system/coding-tools-a2a.service > /dev/null
 
           sudo systemctl daemon-reload
           sudo systemctl enable coding-tools-a2a
@@ -127,59 +113,7 @@ jobs:
 
           pkill -f '[e]leventy.*serve' 2>/dev/null || true
 
-          sudo tee /etc/nginx/sites-available/default > /dev/null <<EOF
-          server {
-              listen 80 default_server;
-              listen [::]:80 default_server;
-
-              root $WEB_ROOT;
-              index index.html;
-              error_page 404 /404.html;
-
-              location = /.well-known/agent-card.json {
-                  expires 5m;
-                  add_header Cache-Control "public, max-age=300";
-                  try_files \$uri =404;
-              }
-
-              location / {
-                  try_files \$uri \$uri/ \$uri.html =404;
-              }
-
-              location = /a2a {
-                  proxy_pass http://127.0.0.1:5510/a2a;
-                  proxy_http_version 1.1;
-                  proxy_set_header Host \$host;
-                  proxy_set_header X-Real-IP \$remote_addr;
-                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-                  proxy_set_header X-Forwarded-Proto \$scheme;
-              }
-
-              location ^~ /a2a/ {
-                  proxy_pass http://127.0.0.1:5510/a2a/;
-                  proxy_http_version 1.1;
-                  proxy_set_header Host \$host;
-                  proxy_set_header X-Real-IP \$remote_addr;
-                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-                  proxy_set_header X-Forwarded-Proto \$scheme;
-              }
-
-              location = /mcp {
-                  proxy_pass http://127.0.0.1:5510/mcp;
-                  proxy_http_version 1.1;
-                  proxy_set_header Host \$host;
-                  proxy_set_header X-Real-IP \$remote_addr;
-                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-                  proxy_set_header X-Forwarded-Proto \$scheme;
-              }
-
-              location ~* \.(css|js|svg|png|jpg|jpeg|gif|ico|json|webp|wasm|onnx)$ {
-                  expires 1y;
-                  add_header Cache-Control "public, immutable";
-                  try_files \$uri =404;
-              }
-          }
-          EOF
+          sed "s#__WEB_ROOT__#$WEB_ROOT#g" "$VPS_PATH/deploy/nginx-site.conf" | sudo tee /etc/nginx/sites-available/default > /dev/null
 
           sudo nginx -t
           sudo systemctl reload nginx

@@ -1,0 +1,18 @@
+[Unit]
+Description=Coding.Tools A2A runtime
+After=network.target
+
+[Service]
+Type=simple
+User=__SERVICE_USER__
+WorkingDirectory=__VPS_PATH__
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=5510
+ExecStart=__NODE_BIN__ server/a2a-runtime.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

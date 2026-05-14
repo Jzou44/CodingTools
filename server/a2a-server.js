@@ -7,6 +7,8 @@ const { handleMcpHttpRequest } = require("./mcp-server");
 
 const MAX_BODY_BYTES = 1024 * 1024;
 const TASK_LIMIT = 1000;
+const TASK_TTL_MS = Number(process.env.A2A_TASK_TTL_MS || 15 * 60 * 1000);
+const MAX_STORED_TEXT_CHARS = Number(process.env.A2A_MAX_STORED_TEXT_CHARS || 50000);
 const tasks = new Map();
 
 function now() {
@@ -177,11 +179,62 @@ function makeAgentMessage(contextId, text, data) {
 }
 
 function rememberTask(task) {
-  tasks.set(task.id, task);
+  pruneExpiredTasks();
+  const storedTask = trimStoredText(task);
+  tasks.set(storedTask.id, storedTask);
   while (tasks.size > TASK_LIMIT) {
     const firstKey = tasks.keys().next().value;
     tasks.delete(firstKey);
   }
+}
+
+function pruneExpiredTasks() {
+  if (!TASK_TTL_MS || TASK_TTL_MS < 0) return;
+  const expiresBefore = Date.now() - TASK_TTL_MS;
+  for (const [taskId, task] of tasks) {
+    const timestamp = Date.parse(task.status && task.status.timestamp);
+    if (!Number.isFinite(timestamp) || timestamp < expiresBefore) {
+      tasks.delete(taskId);
+    }
+  }
+}
+
+function truncateText(value) {
+  if (typeof value !== "string" || value.length <= MAX_STORED_TEXT_CHARS) return value;
+  return `${value.slice(0, MAX_STORED_TEXT_CHARS)}\n[truncated ${value.length - MAX_STORED_TEXT_CHARS} characters]`;
+}
+
+function trimStoredPart(part) {
+  if (!part || typeof part !== "object") return;
+  if (typeof part.text === "string") part.text = truncateText(part.text);
+  if (part.data !== undefined) {
+    const serialized = JSON.stringify(part.data);
+    if (serialized.length > MAX_STORED_TEXT_CHARS) {
+      part.data = {
+        truncated: true,
+        originalBytes: Buffer.byteLength(serialized),
+        preview: truncateText(serialized)
+      };
+    }
+  }
+}
+
+function trimStoredMessage(message) {
+  if (!message || !Array.isArray(message.parts)) return;
+  message.parts.forEach(trimStoredPart);
+}
+
+function trimStoredText(task) {
+  if (!MAX_STORED_TEXT_CHARS || MAX_STORED_TEXT_CHARS < 0) return task;
+  const storedTask = JSON.parse(JSON.stringify(task));
+  if (storedTask.status && storedTask.status.message) trimStoredMessage(storedTask.status.message);
+  if (Array.isArray(storedTask.history)) storedTask.history.forEach(trimStoredMessage);
+  if (Array.isArray(storedTask.artifacts)) {
+    storedTask.artifacts.forEach((artifact) => {
+      if (Array.isArray(artifact.parts)) artifact.parts.forEach(trimStoredPart);
+    });
+  }
+  return storedTask;
 }
 
 function makeCompletedTask(userMessage, toolId, result) {
@@ -272,6 +325,7 @@ async function handleSendMessage(req, res) {
 }
 
 function handleTaskGet(pathname, res) {
+  pruneExpiredTasks();
   const match = pathname.match(/^\/tasks\/([^/]+)$/);
   if (!match) return false;
   const task = tasks.get(decodeURIComponent(match[1]));

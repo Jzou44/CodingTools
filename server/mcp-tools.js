@@ -1,10 +1,15 @@
-const tools = require("../src/_data/tools.json");
 const site = require("../src/_data/site");
 const dns = require("dns").promises;
 const net = require("net");
 const { Worker } = require("worker_threads");
 const { executeTool, ToolInputError } = require("./a2a-tools");
-const { isRuntimeTool } = require("../src/_data/a2aRuntimeTools");
+const {
+  tools,
+  toolIds,
+  browserOnlyToolIds,
+  noArgumentToolIds,
+  isRuntimeTool
+} = require("./tool-registry");
 const mcpExamples = require("../src/_data/mcpExamples");
 
 class McpToolError extends Error {
@@ -14,7 +19,6 @@ class McpToolError extends Error {
   }
 }
 
-const toolIds = Object.keys(tools);
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 const MAX_TEXT_CHARS = 200000;
 const MAX_REGEX_TEXT_CHARS = 20000;
@@ -22,19 +26,6 @@ const MAX_REGEX_PATTERN_CHARS = 500;
 const MAX_REGEX_MATCHES = 1000;
 const REGEX_TIMEOUT_MS = 300;
 const MAX_JSON_TO_XML_DEPTH = 100;
-const browserOnlyToolIds = new Set([
-  "photo2pixel",
-  "image-resize",
-  "image-crop",
-  "compress-png",
-  "compress-jpeg",
-  "progressive-jpeg",
-  "exif-viewer",
-  "exif-remover"
-]);
-
-const noArgumentToolIds = new Set(["ascii-table", "roman-numerals-chart"]);
-
 const textInputDescriptions = {
   "base64-encode": "Plain text to encode as Base64.",
   "base64-decode": "Base64 text to decode.",
@@ -1475,16 +1466,34 @@ async function assertPublicImageUrl(value) {
   if (addresses.some((entry) => isPrivateIp(entry.address))) {
     throw new McpToolError("Private network image URLs are not allowed.");
   }
+  return parsed;
 }
 
 async function fetchImageAsDataUri(url, options) {
-  await assertPublicImageUrl(url);
+  let currentUrl = url;
   let response;
-  try {
-    response = await fetch(url, { signal: AbortSignal.timeout(8000) });
-  } catch (error) {
-    throw new McpToolError(`Could not fetch image URL: ${error.message}`);
+  for (let redirectCount = 0; redirectCount <= 5; redirectCount += 1) {
+    const parsed = await assertPublicImageUrl(currentUrl);
+    try {
+      response = await fetch(parsed.href, {
+        redirect: "manual",
+        signal: AbortSignal.timeout(8000)
+      });
+    } catch (error) {
+      throw new McpToolError(`Could not fetch image URL: ${error.message}`);
+    }
+
+    if (![301, 302, 303, 307, 308].includes(response.status)) break;
+    const location = response.headers.get("location");
+    if (!location) {
+      throw new McpToolError(`Image URL returned HTTP ${response.status} without a redirect location.`);
+    }
+    if (redirectCount === 5) {
+      throw new McpToolError("Image URL redirected too many times.");
+    }
+    currentUrl = new URL(location, parsed.href).href;
   }
+
   if (!response.ok) {
     throw new McpToolError(`Image URL returned HTTP ${response.status}.`);
   }

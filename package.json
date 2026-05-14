@@ -20,7 +20,7 @@
     "docker:run": "node scripts/run-docker-container.js",
     "docker:stop": "node scripts/stop-docker-container.js",
     "docker:smoke": "node scripts/test-docker-container.js",
-    "docker:test": "npm run docker:build && npm run docker:run && npm run docker:smoke"
+    "docker:test": "node scripts/test-docker.js"
   },
   "bin": {
     "install-coding-tools-skills": "./scripts/install-coding-tools-skills.js"
