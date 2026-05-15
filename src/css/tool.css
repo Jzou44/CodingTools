@@ -141,6 +141,17 @@
   flex-shrink: 0;
 }
 
+.btn:focus-visible,
+.btn-icon:focus-visible,
+.sidebar-toggle:focus-visible,
+.code-block-copy:focus-visible,
+[role="button"]:focus-visible,
+#btn-convert[tabindex]:focus-visible {
+  outline: 3px solid rgba(196, 93, 58, 0.45);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 1px var(--surface);
+}
+
 .btn-primary:active,
 .btn-secondary:active,
 .btn-ghost:active {
@@ -568,8 +579,8 @@
   .sidebar-toggle { min-width: 40px; padding: 10px; }
   .sidebar-toggle-label { display: none; }
   .toolbar { flex-direction: column; align-items: flex-start; }
-  .toolbar-left, .toolbar-right { width: 100%; }
-  .toolbar-right { justify-content: flex-end; }
+  .toolbar-left, .toolbar-right { width: 100%; max-width: 100%; flex-wrap: wrap; }
+  .toolbar-right { justify-content: flex-start; }
   .status-bar { flex-direction: column; align-items: flex-start; gap: 4px; }
   .pane-toolbar { flex-direction: column; align-items: flex-start; }
   .pane-toolbar-left, .pane-toolbar-right { width: 100%; }
@@ -893,18 +904,18 @@
   .pane-toolbar {
     align-items: flex-start;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .pane-toolbar-left {
-    flex: 0 0 auto;
-    width: auto;
+    flex: 1 1 100%;
+    width: 100%;
   }
   .pane-toolbar-right {
-    flex: 1 1 auto;
-    justify-content: flex-end;
+    flex: 1 1 100%;
+    justify-content: flex-start;
     min-width: 0;
-    width: auto;
+    width: 100%;
   }
 }
 

@@ -128,6 +128,17 @@
     return String(name || '').toLowerCase();
   }
 
+  function safeXmlTagName(name) {
+    var source = String(name == null ? '' : name);
+    if (!source) return 'item';
+    var safe = source
+      .replace(/^[^A-Za-z_]/, function (ch) { return '_x' + ch.charCodeAt(0).toString(16) + '_'; })
+      .replace(/[^A-Za-z0-9._-]/g, function (ch) { return '_x' + ch.charCodeAt(0).toString(16) + '_'; });
+    if (!/^[A-Za-z_]/.test(safe)) safe = 'item_' + safe;
+    if (/^xml/i.test(safe)) safe = 'item_' + safe;
+    return safe || 'item';
+  }
+
   function escapeXml(value) {
     return String(value == null ? '' : value)
       .replace(/&/g, '&amp;')
@@ -185,9 +196,11 @@
   }
 
   function valueToXml(name, value) {
+    var tagName = safeXmlTagName(name);
+
     if (Array.isArray(value)) {
       return value.map(function (item) {
-        return valueToXml(name, item);
+        return valueToXml(tagName, item);
       }).join('');
     }
 
@@ -196,10 +209,10 @@
         if (key === '_text') return escapeXml(value[key]);
         return valueToXml(key, value[key]);
       }).join('');
-      return '<' + name + '>' + body + '</' + name + '>';
+      return '<' + tagName + '>' + body + '</' + tagName + '>';
     }
 
-    return '<' + name + '>' + escapeXml(value) + '</' + name + '>';
+    return '<' + tagName + '>' + escapeXml(value) + '</' + tagName + '>';
   }
 
   function jsToString(obj) {

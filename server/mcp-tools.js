@@ -1,5 +1,7 @@
 const site = require("../src/_data/site");
 const dns = require("dns").promises;
+const http = require("http");
+const https = require("https");
 const net = require("net");
 const { Worker } = require("worker_threads");
 const { executeTool, ToolInputError } = require("./a2a-tools");
@@ -26,6 +28,46 @@ const MAX_REGEX_PATTERN_CHARS = 500;
 const MAX_REGEX_MATCHES = 1000;
 const REGEX_TIMEOUT_MS = 300;
 const MAX_JSON_TO_XML_DEPTH = 100;
+const IMAGE_FETCH_TIMEOUT_MS = 8000;
+const privateIpv4Blocks = new net.BlockList();
+const privateIpv6Blocks = new net.BlockList();
+
+[
+  ["0.0.0.0", 8],
+  ["10.0.0.0", 8],
+  ["100.64.0.0", 10],
+  ["127.0.0.0", 8],
+  ["169.254.0.0", 16],
+  ["172.16.0.0", 12],
+  ["192.0.0.0", 24],
+  ["192.0.2.0", 24],
+  ["192.88.99.0", 24],
+  ["192.168.0.0", 16],
+  ["198.18.0.0", 15],
+  ["198.51.100.0", 24],
+  ["203.0.113.0", 24],
+  ["224.0.0.0", 4],
+  ["240.0.0.0", 4]
+].forEach(([address, prefix]) => privateIpv4Blocks.addSubnet(address, prefix, "ipv4"));
+
+[
+  ["::", 128],
+  ["::1", 128],
+  ["::", 96],
+  ["64:ff9b::", 96],
+  ["64:ff9b:1::", 48],
+  ["100::", 64],
+  ["2001::", 23],
+  ["2001:2::", 48],
+  ["2001:20::", 28],
+  ["2001:db8::", 32],
+  ["2002::", 16],
+  ["3fff::", 20],
+  ["fc00::", 7],
+  ["fe80::", 10],
+  ["ff00::", 8]
+].forEach(([address, prefix]) => privateIpv6Blocks.addSubnet(address, prefix, "ipv6"));
+
 const textInputDescriptions = {
   "base64-encode": "Plain text to encode as Base64.",
   "base64-decode": "Base64 text to decode.",
@@ -1422,26 +1464,44 @@ function imageInputParts(input) {
     : { url: "", base64: value, mimeType: "" };
 }
 
+function normalizeIpAddress(address) {
+  if (!address) return "";
+  let normalized = String(address).trim().replace(/^\[(.*)\]$/, "$1").toLowerCase();
+  if (normalized.includes("%")) {
+    normalized = normalized.split("%")[0];
+  }
+  const mappedIpv4 = normalized.match(/^::ffff:(\d{1,3}(?:\.\d{1,3}){3})$/);
+  if (mappedIpv4) return mappedIpv4[1];
+  const mappedHex = normalized.match(/^::ffff:([0-9a-f]{1,4}):([0-9a-f]{1,4})$/);
+  if (mappedHex) {
+    const high = Number.parseInt(mappedHex[1], 16);
+    const low = Number.parseInt(mappedHex[2], 16);
+    return [
+      (high >> 8) & 255,
+      high & 255,
+      (low >> 8) & 255,
+      low & 255
+    ].join(".");
+  }
+  return normalized;
+}
+
 function isPrivateIp(address) {
-  if (!address) return true;
-  const normalized = address.replace(/^::ffff:/i, "");
+  const normalized = normalizeIpAddress(address);
   if (net.isIP(normalized) === 4) {
-    const parts = normalized.split(".").map((part) => Number(part));
-    return parts[0] === 0 ||
-      parts[0] === 10 ||
-      parts[0] === 127 ||
-      (parts[0] === 169 && parts[1] === 254) ||
-      (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) ||
-      (parts[0] === 192 && parts[1] === 168);
+    return privateIpv4Blocks.check(normalized, "ipv4");
   }
   if (net.isIP(normalized) === 6) {
-    const lower = normalized.toLowerCase();
-    return lower === "::1" || lower.startsWith("fc") || lower.startsWith("fd") || lower.startsWith("fe80:");
+    return privateIpv6Blocks.check(normalized, "ipv6");
   }
   return true;
 }
 
-async function assertPublicImageUrl(value) {
+function normalizeUrlHostname(hostname) {
+  return String(hostname || "").trim().replace(/^\[(.*)\]$/, "$1").replace(/\.$/, "").toLowerCase();
+}
+
+async function resolvePublicImageUrl(value) {
   let parsed;
   try {
     parsed = new URL(value);
@@ -1451,39 +1511,157 @@ async function assertPublicImageUrl(value) {
   if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
     throw new McpToolError("Image URL must use http or https.");
   }
-  if (["localhost", "localhost.localdomain"].includes(parsed.hostname.toLowerCase())) {
+  const hostname = normalizeUrlHostname(parsed.hostname);
+  if (!hostname || hostname === "localhost" || hostname.endsWith(".localhost") || hostname === "localhost.localdomain") {
     throw new McpToolError("Private or localhost image URLs are not allowed.");
   }
-  const hostnameIsIp = net.isIP(parsed.hostname);
+  const hostnameIsIp = net.isIP(normalizeIpAddress(hostname));
   let addresses;
   try {
     addresses = hostnameIsIp
-      ? [{ address: parsed.hostname }]
-      : await dns.lookup(parsed.hostname, { all: true });
+      ? [{ address: normalizeIpAddress(hostname), family: hostnameIsIp }]
+      : await dns.lookup(hostname, { all: true });
   } catch (error) {
     throw new McpToolError(`Could not resolve image URL host: ${error.message}`);
   }
-  if (addresses.some((entry) => isPrivateIp(entry.address))) {
+  const normalizedAddresses = addresses
+    .map((entry) => {
+      const address = normalizeIpAddress(entry.address);
+      return {
+        address,
+        family: entry.family || net.isIP(address)
+      };
+    })
+    .filter((entry) => net.isIP(entry.address));
+  if (normalizedAddresses.length === 0) {
+    throw new McpToolError("Could not resolve image URL host to an IP address.");
+  }
+  if (normalizedAddresses.some((entry) => isPrivateIp(entry.address))) {
     throw new McpToolError("Private network image URLs are not allowed.");
   }
-  return parsed;
+  return {
+    parsed,
+    address: normalizedAddresses[0].address,
+    family: normalizedAddresses[0].family,
+    originalHostnameIsIp: Boolean(hostnameIsIp)
+  };
+}
+
+function responseHeaderGetter(headers) {
+  return {
+    get(name) {
+      const value = headers[String(name).toLowerCase()];
+      if (Array.isArray(value)) return value.join(", ");
+      return value === undefined ? null : String(value);
+    }
+  };
+}
+
+function requestPinnedImageUrl(resolvedUrl, abortController) {
+  const { parsed, address, family, originalHostnameIsIp } = resolvedUrl;
+  const isHttps = parsed.protocol === "https:";
+  const requestModule = isHttps ? https : http;
+  const requestOptions = {
+    protocol: parsed.protocol,
+    hostname: address,
+    family,
+    port: parsed.port || (isHttps ? 443 : 80),
+    path: `${parsed.pathname}${parsed.search}`,
+    method: "GET",
+    headers: {
+      Host: parsed.host,
+      Accept: "image/*,*/*;q=0.8",
+      "User-Agent": "Coding.Tools MCP image-to-base64"
+    },
+    signal: abortController.signal
+  };
+
+  if (isHttps) {
+    if (originalHostnameIsIp) {
+      requestOptions.servername = "";
+    } else {
+      requestOptions.servername = parsed.hostname;
+    }
+  }
+
+  return new Promise((resolve, reject) => {
+    const request = requestModule.request(requestOptions, (incoming) => {
+      resolve({
+        ok: incoming.statusCode >= 200 && incoming.statusCode < 300,
+        status: incoming.statusCode,
+        headers: responseHeaderGetter(incoming.headers),
+        body: incoming
+      });
+    });
+    request.on("error", reject);
+    request.end();
+  });
+}
+
+async function readLimitedResponseBody(response, maxBytes, abortController) {
+  if (!response.body) return Buffer.alloc(0);
+
+  const chunks = [];
+  let totalBytes = 0;
+  const reader = typeof response.body.getReader === "function" ? response.body.getReader() : null;
+
+  const addChunk = (value) => {
+    const chunk = Buffer.from(value);
+    totalBytes += chunk.length;
+    if (totalBytes > maxBytes) {
+      abortController.abort();
+      throw new McpToolError("Image is too large. Maximum size is 5 MB.");
+    }
+    chunks.push(chunk);
+  };
+
+  try {
+    if (reader) {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        addChunk(value);
+      }
+    } else {
+      for await (const value of response.body) {
+        addChunk(value);
+      }
+    }
+  } catch (error) {
+    if (error instanceof McpToolError) throw error;
+    throw new McpToolError(`Could not read image URL response: ${error.message}`);
+  } finally {
+    if (reader) reader.releaseLock();
+  }
+
+  return Buffer.concat(chunks, totalBytes);
 }
 
 async function fetchImageAsDataUri(url, options) {
   let currentUrl = url;
   let response;
+  let abortController;
+  let timeoutId;
   for (let redirectCount = 0; redirectCount <= 5; redirectCount += 1) {
-    const parsed = await assertPublicImageUrl(currentUrl);
+    const resolvedUrl = await resolvePublicImageUrl(currentUrl);
+    const { parsed } = resolvedUrl;
+    abortController = new AbortController();
+    timeoutId = setTimeout(() => abortController.abort(), IMAGE_FETCH_TIMEOUT_MS);
     try {
-      response = await fetch(parsed.href, {
-        redirect: "manual",
-        signal: AbortSignal.timeout(8000)
-      });
+      response = await requestPinnedImageUrl(resolvedUrl, abortController);
     } catch (error) {
+      clearTimeout(timeoutId);
       throw new McpToolError(`Could not fetch image URL: ${error.message}`);
     }
 
-    if (![301, 302, 303, 307, 308].includes(response.status)) break;
+    if (![301, 302, 303, 307, 308].includes(response.status)) {
+      break;
+    }
+    clearTimeout(timeoutId);
+    abortController.abort();
+    if (response.body && typeof response.body.destroy === "function") {
+      response.body.destroy();
+    }
     const location = response.headers.get("location");
     if (!location) {
       throw new McpToolError(`Image URL returned HTTP ${response.status} without a redirect location.`);
@@ -1494,22 +1672,25 @@ async function fetchImageAsDataUri(url, options) {
     currentUrl = new URL(location, parsed.href).href;
   }
 
-  if (!response.ok) {
-    throw new McpToolError(`Image URL returned HTTP ${response.status}.`);
+  try {
+    if (!response.ok) {
+      throw new McpToolError(`Image URL returned HTTP ${response.status}.`);
+    }
+    const contentLength = Number(response.headers.get("content-length") || 0);
+    if (contentLength > MAX_IMAGE_BYTES) {
+      abortController.abort();
+      throw new McpToolError("Image is too large. Maximum size is 5 MB.");
+    }
+    const mimeType = (response.headers.get("content-type") || options.mimeType || "image/png").split(";")[0].trim();
+    if (!mimeType.startsWith("image/")) {
+      abortController.abort();
+      throw new McpToolError("Image URL must return an image/* content type.");
+    }
+    const buffer = await readLimitedResponseBody(response, MAX_IMAGE_BYTES, abortController);
+    return `data:${mimeType};base64,${buffer.toString("base64")}`;
+  } finally {
+    clearTimeout(timeoutId);
   }
-  const contentLength = Number(response.headers.get("content-length") || 0);
-  if (contentLength > MAX_IMAGE_BYTES) {
-    throw new McpToolError("Image is too large. Maximum size is 5 MB.");
-  }
-  const mimeType = (response.headers.get("content-type") || options.mimeType || "image/png").split(";")[0].trim();
-  if (!mimeType.startsWith("image/")) {
-    throw new McpToolError("Image URL must return an image/* content type.");
-  }
-  const buffer = Buffer.from(await response.arrayBuffer());
-  if (buffer.length > MAX_IMAGE_BYTES) {
-    throw new McpToolError("Image is too large. Maximum size is 5 MB.");
-  }
-  return `data:${mimeType};base64,${buffer.toString("base64")}`;
 }
 
 async function imageToBase64(input, options) {

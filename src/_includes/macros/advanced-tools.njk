@@ -580,16 +580,16 @@
       <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--accent"></span>{{ toolData.labels.leftInput }}</span></div>
       <div class="pane-editor-wrapper{% if kind == "text" %} text-compare-editor{% endif %}">
         {% if kind == "text" %}<div class="text-diff-highlights" id="left-diff-highlights" aria-hidden="true"></div>{% endif %}
-        <div class="pane-line-numbers" id="left-line-numbers">1</div>
-        <textarea class="pane-editor" id="left-editor" spellcheck="false" rows="12" placeholder="{{ toolData.leftPlaceholder }}"></textarea>
+        <div class="pane-line-numbers" id="left-line-numbers" aria-hidden="true">1</div>
+        <textarea class="pane-editor" id="left-editor" spellcheck="false" rows="12" placeholder="{{ toolData.leftPlaceholder }}" aria-label="{{ toolData.labels.leftInput }}"></textarea>
       </div>
     </div>
     <div class="pane-card pane-card--input">
       <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ toolData.labels.rightInput }}</span></div>
       <div class="pane-editor-wrapper{% if kind == "text" %} text-compare-editor{% endif %}">
         {% if kind == "text" %}<div class="text-diff-highlights" id="right-diff-highlights" aria-hidden="true"></div>{% endif %}
-        <div class="pane-line-numbers" id="right-line-numbers">1</div>
-        <textarea class="pane-editor" id="right-editor" spellcheck="false" rows="12" placeholder="{{ toolData.rightPlaceholder }}"></textarea>
+        <div class="pane-line-numbers" id="right-line-numbers" aria-hidden="true">1</div>
+        <textarea class="pane-editor" id="right-editor" spellcheck="false" rows="12" placeholder="{{ toolData.rightPlaceholder }}" aria-label="{{ toolData.labels.rightInput }}"></textarea>
       </div>
     </div>
   </div>
@@ -615,8 +615,8 @@
   <div class="pane-card pane-card--output">
     <div class="pane-label"><span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ toolData.labels.output }}</span></div>
     <div class="pane-editor-wrapper">
-      <div class="pane-line-numbers readonly-bg" id="output-line-numbers">1</div>
-      <textarea class="pane-editor" id="output-editor" spellcheck="false" readonly rows="12" placeholder="{{ toolData.outputPlaceholder }}"></textarea>
+      <div class="pane-line-numbers readonly-bg" id="output-line-numbers" aria-hidden="true">1</div>
+      <textarea class="pane-editor" id="output-editor" spellcheck="false" readonly rows="12" placeholder="{{ toolData.outputPlaceholder }}" aria-label="{{ toolData.labels.output }}"></textarea>
     </div>
   </div>
 

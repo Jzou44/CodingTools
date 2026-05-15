@@ -34,12 +34,17 @@ jobs:
       - name: Validate structure and skills
         run: npm run check
 
+      - name: Build static site
+        run: npm run build
+
       - name: Test A2A runtime
         run: npm run a2a:test
 
       - name: Test MCP runtime
         run: npm run mcp:test
 
+      - name: Test Docker image
+        run: npm run docker:test
+
       - name: Audit dependencies
         run: npm audit --audit-level=high
-

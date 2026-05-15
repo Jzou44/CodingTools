@@ -93,17 +93,56 @@ function checkTranslationShape(name, data) {
     return;
   }
 
-  const requiredPaths = collectPaths(baseline).filter(Boolean);
   site.languageIds.forEach((lang) => {
     const value = data[lang];
     if (!value) return;
+    checkExactDataShape(name, baseline, value, lang);
+  });
+}
 
-    requiredPaths.forEach((requiredPath) => {
-      if (!hasPath(value, requiredPath)) {
-        fail(`${name}.${lang} is missing required key "${requiredPath}"`);
+function valueType(value) {
+  if (Array.isArray(value)) return "array";
+  if (value === null) return "null";
+  return typeof value;
+}
+
+function checkExactDataShape(name, baseline, value, prefix) {
+  const baselineType = valueType(baseline);
+  const actualType = valueType(value);
+
+  if (actualType !== baselineType) {
+    fail(`${name}.${prefix} should be a ${baselineType}, got ${actualType}`);
+    return;
+  }
+
+  if (Array.isArray(baseline)) {
+    if (value.length !== baseline.length) {
+      fail(`${name}.${prefix} has ${value.length} item(s), expected ${baseline.length}`);
+      return;
+    }
+    baseline.forEach((item, index) => {
+      checkExactDataShape(name, item, value[index], `${prefix}[${index}]`);
+    });
+    return;
+  }
+
+  if (baseline && typeof baseline === "object") {
+    const expectedKeys = Object.keys(baseline);
+    const actualKeys = Object.keys(value);
+    diff(expectedKeys, actualKeys).forEach((key) => fail(`${name}.${prefix} is missing required key "${key}"`));
+    unexpected(expectedKeys, actualKeys).forEach((key) => fail(`${name}.${prefix} has unexpected key "${key}"`));
+
+    expectedKeys.forEach((key) => {
+      if (Object.prototype.hasOwnProperty.call(value, key)) {
+        checkExactDataShape(name, baseline[key], value[key], `${prefix}.${key}`);
       }
     });
-  });
+    return;
+  }
+
+  if (typeof baseline === "string" && prefix !== "en" && baseline.trim() && !value.trim()) {
+    fail(`${name}.${prefix} is empty but the English baseline is not`);
+  }
 }
 
 function checkDataShapeAgainstBaseline(name, baseline, value, prefix) {
@@ -188,6 +227,17 @@ function checkHomepageToolTitles() {
     unexpected(slugs, Object.keys(toolTitles)).forEach((slug) => {
       fail(`homepage.${lang}.toolTitles references unknown tool "${slug}"`);
     });
+
+    slugs.forEach((slug) => {
+      const filePath = path.join(srcDir, "_data", "toolData", `${slug}.json`);
+      if (!fs.existsSync(filePath)) return;
+
+      const toolData = readJson(filePath);
+      const expectedTitle = toolData[lang] && toolData[lang].toolTitle;
+      if (expectedTitle && toolTitles[slug] && toolTitles[slug] !== expectedTitle) {
+        fail(`homepage.${lang}.toolTitles.${slug} is "${toolTitles[slug]}", expected toolData.${slug}.${lang}.toolTitle "${expectedTitle}"`);
+      }
+    });
   });
 }
 
@@ -254,6 +304,20 @@ function checkToolPages() {
     /placeholder="Replacement string/,
     /placeholder="Enter or paste text/
   ];
+  const localizedNonImageEnglishLiterals = [
+    />Red \(R\)</,
+    />Green \(G\)</,
+    />Blue \(B\)</,
+    />RGBA Value</,
+    />Preview</,
+    />Range:/,
+    /'Out of range'/
+  ];
+  const localizedImageFileCountSlugs = new Set(["compress-png", "compress-jpeg", "progressive-jpeg", "exif-remover"]);
+  const localizedImageFileCountEnglishLiterals = [
+    /fileCount\.textContent\s*=\s*results\.length\s*\+\s*['"] files['"]/,
+    /fileCount\.textContent\s*=\s*['"]0 files['"]/
+  ];
 
   slugs.forEach((slug) => {
     const enPath = path.join(toolsDir, `${slug}.njk`);
@@ -290,6 +354,20 @@ function checkToolPages() {
           fail(`${path.relative(root, filePath)} contains hard-coded English UI matching ${pattern}`);
         }
       });
+      if (tools[slug].category !== "image-utilities") {
+        localizedNonImageEnglishLiterals.forEach((pattern) => {
+          if (pattern.test(content)) {
+            fail(`${path.relative(root, filePath)} contains hard-coded English UI matching ${pattern}`);
+          }
+        });
+      }
+      if (localizedImageFileCountSlugs.has(slug)) {
+        localizedImageFileCountEnglishLiterals.forEach((pattern) => {
+          if (pattern.test(content)) {
+            fail(`${path.relative(root, filePath)} contains hard-coded English file-count UI matching ${pattern}`);
+          }
+        });
+      }
 
       const expectedPermalink = site.pathFor(lang, slug);
       if (data.permalink && data.permalink !== expectedPermalink) {

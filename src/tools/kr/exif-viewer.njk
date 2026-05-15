@@ -9,7 +9,7 @@ permalink: "/kr/exif-viewer.html"
 {% extends "tool-layout.njk" %}
 
 {% block tool_content %}
-  <div class="dropzone-area" id="dropzone">
+  <div class="dropzone-area" id="dropzone" role="button" tabindex="0">
     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
     <p>{{ toolData.dropzoneMessage }}</p>
     <span class="dropzone-hint">{{ toolData.dropzoneHint }}</span>
@@ -211,6 +211,12 @@ permalink: "/kr/exif-viewer.html"
       }
 
       dropzone.addEventListener('click', function () { fileInput.click(); });
+      dropzone.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          fileInput.click();
+        }
+      });
       dropzone.addEventListener('dragover', function (e) { e.preventDefault(); dropzone.classList.add('dragover'); });
       dropzone.addEventListener('dragleave', function () { dropzone.classList.remove('dragover'); });
       dropzone.addEventListener('drop', function (e) {
@@ -225,7 +231,11 @@ permalink: "/kr/exif-viewer.html"
 
       function processFile(file) {
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '{{ t.ui.readingExif }}');
-        fileInfo.innerHTML = '<strong>' + file.name + '</strong> (' + (file.size / 1024).toFixed(1) + ' KB)';
+        ToolCommon.clearElement(fileInfo);
+        var fileName = document.createElement('strong');
+        fileName.textContent = file.name;
+        fileInfo.appendChild(fileName);
+        fileInfo.appendChild(document.createTextNode(' (' + (file.size / 1024).toFixed(1) + ' KB)'));
         fileInfo.style.display = 'block';
 
         var reader = new FileReader();
@@ -236,8 +246,9 @@ permalink: "/kr/exif-viewer.html"
           } catch (error) {
             exif = null;
           }
-          exifTbody.innerHTML = '';
+          ToolCommon.clearElement(exifTbody);
           mapContainer.style.display = 'none';
+          ToolCommon.clearElement(mapContainer);
 
           if (!exif || Object.keys(exif).length === 0) {
             exifTableWrapper.style.display = 'none';
@@ -248,7 +259,12 @@ permalink: "/kr/exif-viewer.html"
           exifTableWrapper.style.display = 'block';
           Object.keys(exif).forEach(function (key) {
             var tr = document.createElement('tr');
-            tr.innerHTML = '<td>' + key + '</td><td>' + exif[key] + '</td>';
+            var keyCell = document.createElement('td');
+            var valueCell = document.createElement('td');
+            keyCell.textContent = key;
+            valueCell.textContent = String(exif[key] == null ? '' : exif[key]);
+            tr.appendChild(keyCell);
+            tr.appendChild(valueCell);
             exifTbody.appendChild(tr);
           });
 
@@ -257,8 +273,17 @@ permalink: "/kr/exif-viewer.html"
             var lon = parseFloat(exif.GPSLongitude);
             if (exif.GPSLatitudeRef === 'S') lat = -lat;
             if (exif.GPSLongitudeRef === 'W') lon = -lon;
-            mapContainer.innerHTML = '<iframe width="100%" height="300" frameborder="0" src="https://www.openstreetmap.org/export/embed.html?bbox=' + (lon-0.01) + ',' + (lat-0.01) + ',' + (lon+0.01) + ',' + (lat+0.01) + '&layer=mapnik&marker=' + lat + ',' + lon + '" style="border:1px solid #ccc;border-radius:8px;"></iframe>';
-            mapContainer.style.display = 'block';
+            if (isFinite(lat) && isFinite(lon)) {
+              ToolCommon.clearElement(mapContainer);
+              var iframe = document.createElement('iframe');
+              iframe.setAttribute('width', '100%');
+              iframe.setAttribute('height', '300');
+              iframe.setAttribute('frameborder', '0');
+              iframe.setAttribute('src', 'https://www.openstreetmap.org/export/embed.html?bbox=' + encodeURIComponent((lon - 0.01) + ',' + (lat - 0.01) + ',' + (lon + 0.01) + ',' + (lat + 0.01)) + '&layer=mapnik&marker=' + encodeURIComponent(lat + ',' + lon));
+              iframe.setAttribute('style', 'border:1px solid #ccc;border-radius:8px;');
+              mapContainer.appendChild(iframe);
+              mapContainer.style.display = 'block';
+            }
           }
 
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', Object.keys(exif).length + ' {{ t.ui.exifTagsFound }}');
@@ -272,9 +297,9 @@ permalink: "/kr/exif-viewer.html"
       btnClear.addEventListener('click', function () {
         fileInfo.style.display = 'none';
         exifTableWrapper.style.display = 'none';
-        exifTbody.innerHTML = '';
+        ToolCommon.clearElement(exifTbody);
         mapContainer.style.display = 'none';
-        mapContainer.innerHTML = '';
+        ToolCommon.clearElement(mapContainer);
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 

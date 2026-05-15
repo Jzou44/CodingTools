@@ -4,8 +4,8 @@
     <span><span class="pane-label-dot pane-label-dot--accent"></span>{{ label or "Input" }}</span>
   </div>
   <div class="pane-editor-wrapper">
-    <div class="pane-line-numbers" id="input-line-numbers">1</div>
-    <textarea class="pane-editor" id="input-editor" spellcheck="false" rows="12" placeholder="{{ placeholder }}"></textarea>
+    <div class="pane-line-numbers" id="input-line-numbers" aria-hidden="true">1</div>
+    <textarea class="pane-editor" id="input-editor" spellcheck="false" rows="12" placeholder="{{ placeholder }}" aria-label="{{ label or 'Input' }}"></textarea>
   </div>
 </div>
 {% endmacro %}
@@ -17,8 +17,8 @@
     <span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ label or "Output" }}</span>
   </div>
   <div class="pane-editor-wrapper">
-    <div class="pane-line-numbers readonly-bg" id="output-line-numbers">1</div>
-    <textarea class="pane-editor" id="output-editor" spellcheck="false" readonly rows="12" placeholder="{{ placeholder }}"></textarea>
+    <div class="pane-line-numbers readonly-bg" id="output-line-numbers" aria-hidden="true">1</div>
+    <textarea class="pane-editor" id="output-editor" spellcheck="false" readonly rows="12" placeholder="{{ placeholder }}" aria-label="{{ label or 'Output' }}"></textarea>
   </div>
 </div>
 </div>

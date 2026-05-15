@@ -1,5 +1,9 @@
 const assert = require("assert");
 const { spawn } = require("child_process");
+const { EventEmitter } = require("events");
+const http = require("http");
+const https = require("https");
+const { PassThrough } = require("stream");
 const { createServer } = require("../server/a2a-server");
 const { executeMcpTool } = require("../server/mcp-tools");
 const tools = require("../src/_data/tools.json");
@@ -334,30 +338,191 @@ async function runStdioTest() {
 }
 
 async function runSecurityUnitTests() {
-  const originalLookup = require("dns").promises.lookup;
+  const dnsPromises = require("dns").promises;
+  const originalLookup = dnsPromises.lookup;
   const originalFetch = global.fetch;
+  const originalHttpRequest = http.request;
+  const originalHttpsRequest = https.request;
 
-  try {
-    require("dns").promises.lookup = async () => [{ address: "93.184.216.34" }];
-    global.fetch = async () => new Response("", {
-      status: 302,
-      headers: {
-        location: "http://127.0.0.1/private.png"
-      }
-    });
-
-    const result = await executeMcpTool("image-to-base64", {
-      input: {
-        url: "https://public.example/image.png"
-      }
-    });
-    assert.fail(`Expected redirect to private network to fail, got ${result.text}`);
-  } catch (error) {
-    assert.ok(error.message.includes("Private network image URLs are not allowed"));
-  } finally {
-    require("dns").promises.lookup = originalLookup;
-    global.fetch = originalFetch;
+  function mockRequest(handler) {
+    return (options, callback) => {
+      const request = new EventEmitter();
+      request.end = () => {
+        Promise.resolve()
+          .then(() => handler(options))
+          .then((mockResponse) => {
+            const response = new PassThrough();
+            response.statusCode = mockResponse.status || 200;
+            response.headers = mockResponse.headers || {};
+            callback(response);
+            const chunks = mockResponse.chunks || [mockResponse.body || ""];
+            chunks.forEach((chunk) => response.write(chunk));
+            response.end();
+          })
+          .catch((error) => request.emit("error", error));
+      };
+      request.destroy = () => {};
+      return request;
+    };
   }
+
+  function blockUnexpectedRequest(options) {
+    throw new Error(`Network request should not be called for ${options.hostname}${options.path || ""}`);
+  }
+
+  async function withNetworkMocks({ lookup, request }, callback) {
+    try {
+      dnsPromises.lookup = lookup || originalLookup;
+      global.fetch = () => {
+        throw new Error("image-to-base64 URL fetch must not use global fetch.");
+      };
+      http.request = request || mockRequest(blockUnexpectedRequest);
+      https.request = request || mockRequest(blockUnexpectedRequest);
+      await callback();
+    } finally {
+      dnsPromises.lookup = originalLookup;
+      global.fetch = originalFetch;
+      http.request = originalHttpRequest;
+      https.request = originalHttpsRequest;
+    }
+  }
+
+  async function expectImageUrlRejected(url, message, lookup, request) {
+    await withNetworkMocks({ lookup, request }, async () => {
+      try {
+        const result = await executeMcpTool("image-to-base64", {
+          input: { url }
+        });
+        assert.fail(`Expected image URL to fail, got ${result.text}`);
+      } catch (error) {
+        assert.ok(
+          error.message.includes(message),
+          `Expected "${error.message}" to include "${message}"`
+        );
+      }
+    });
+  }
+
+  async function fetchImageUrl(url, lookup, request) {
+    let result;
+    await withNetworkMocks({ lookup, request }, async () => {
+      result = await executeMcpTool("image-to-base64", {
+        input: { url }
+      });
+    });
+    return result;
+  }
+
+  const privateNetworkMessage = "Private network image URLs are not allowed";
+  const blockedUrls = [
+    "http://0.0.0.0/image.png",
+    "http://100.64.0.1/image.png",
+    "http://192.0.2.1/image.png",
+    "http://198.18.0.1/image.png",
+    "http://203.0.113.1/image.png",
+    "http://224.0.0.1/image.png",
+    "http://240.0.0.1/image.png",
+    "http://[::1]/image.png",
+    "http://[fc00::1]/image.png",
+    "http://[fe80::1]/image.png",
+    "http://[2001:db8::1]/image.png",
+    "http://[::ffff:127.0.0.1]/image.png"
+  ];
+
+  for (const url of blockedUrls) {
+    await expectImageUrlRejected(url, privateNetworkMessage);
+  }
+
+  await expectImageUrlRejected(
+    "http://public.example/image.png",
+    privateNetworkMessage,
+    async () => [{ address: "169.254.169.254" }]
+  );
+
+  const publicAddress = "93.184.216.34";
+  let redirectRequests = 0;
+  await expectImageUrlRejected(
+    "http://public.example/image.png",
+    privateNetworkMessage,
+    async () => [{ address: publicAddress }],
+    mockRequest(() => {
+      redirectRequests += 1;
+      return {
+        status: 302,
+        headers: {
+          location: "http://127.0.0.1/private.png"
+        }
+      };
+    })
+  );
+  assert.strictEqual(redirectRequests, 1);
+
+  let lookupCount = 0;
+  const pinnedRequests = [];
+  const pinnedResult = await fetchImageUrl(
+    "http://rebind.example/image.png",
+    async () => {
+      lookupCount += 1;
+      return [{ address: lookupCount === 1 ? publicAddress : "10.0.0.1" }];
+    },
+    mockRequest((options) => {
+      pinnedRequests.push(options);
+      return {
+        status: 200,
+        headers: {
+          "content-type": "image/png"
+        },
+        body: "abc"
+      };
+    })
+  );
+  assert.strictEqual(pinnedResult.text, "data:image/png;base64,YWJj");
+  assert.strictEqual(lookupCount, 1);
+  assert.strictEqual(pinnedRequests.length, 1);
+  assert.strictEqual(pinnedRequests[0].hostname, publicAddress);
+  assert.strictEqual(pinnedRequests[0].headers.Host, "rebind.example");
+  assert.strictEqual(pinnedRequests[0].path, "/image.png");
+
+  const httpsRequests = [];
+  await fetchImageUrl(
+    "https://secure.example:8443/image.png?size=1",
+    async () => [{ address: publicAddress, family: 4 }],
+    mockRequest((options) => {
+      httpsRequests.push(options);
+      return {
+        status: 200,
+        headers: {
+          "content-type": "image/png"
+        },
+        body: "abc"
+      };
+    })
+  );
+  assert.strictEqual(httpsRequests.length, 1);
+  assert.strictEqual(httpsRequests[0].hostname, publicAddress);
+  assert.strictEqual(httpsRequests[0].servername, "secure.example");
+  assert.strictEqual(httpsRequests[0].headers.Host, "secure.example:8443");
+  assert.strictEqual(httpsRequests[0].path, "/image.png?size=1");
+
+  let aborted = false;
+  await expectImageUrlRejected(
+    "http://large.example/image.png",
+    "Image is too large. Maximum size is 5 MB.",
+    async () => [{ address: publicAddress }],
+    mockRequest((options) => {
+      options.signal.addEventListener("abort", () => {
+        aborted = true;
+      });
+      return {
+        status: 200,
+        headers: {
+          "content-type": "image/png"
+        },
+        chunks: Array.from({ length: 6 }, () => Buffer.alloc(1024 * 1024))
+      };
+    })
+  );
+  assert.strictEqual(aborted, true);
 
   console.log("MCP security unit tests passed.");
 }

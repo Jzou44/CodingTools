@@ -65,7 +65,7 @@ permalink: "/jp/hex-to-rgba.html"
 
     <div class="tool-output-card" style="--tool-accent: var(--accent)" id="output-card">
       <div class="tool-output-label">
-        <span>RGBA Value</span>
+        <span>{{ t.ui.rgbaValue }}</span>
         <button class="btn btn-ghost btn-sm" id="btn-copy" type="button" title="{{ t.ui.copy }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           {{ t.ui.copy }}
@@ -80,7 +80,7 @@ permalink: "/jp/hex-to-rgba.html"
       </div>
       <div class="hex-rgba-swatch" id="swatch-container">
         <div class="hex-rgba-swatch-fill" id="color-preview"></div>
-        <div class="hex-rgba-swatch-empty" id="swatch-placeholder">Preview</div>
+        <div class="hex-rgba-swatch-empty" id="swatch-placeholder">{{ t.ui.preview }}</div>
       </div>
     </div>
 
@@ -214,7 +214,8 @@ permalink: "/jp/hex-to-rgba.html"
       btnCopy.addEventListener('click', function () {
         var text = rgbaOutput.textContent;
         if (text && !rgbaOutput.classList.contains('empty') && !rgbaOutput.classList.contains('error')) {
-          navigator.clipboard.writeText(text).then(function () {
+          ToolCommon.copyText(text).then(function (copied) {
+            if (!copied) return;
             var orig = btnCopy.innerHTML;
             btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');

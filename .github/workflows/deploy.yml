@@ -108,12 +108,25 @@ jobs:
           sudo systemctl enable coding-tools-a2a
           sudo systemctl restart coding-tools-a2a
 
-          sudo mkdir -p "$WEB_ROOT"
-          sudo rsync -a --delete --chown=www-data:www-data --chmod=D755,F644 "$VPS_PATH/dist/" "$WEB_ROOT/"
+          WEB_ROOT_REAL="$(realpath -m "$WEB_ROOT")"
+          case "$WEB_ROOT_REAL" in
+            /var/www/coding-tools|/var/www/coding-tools/*|/srv/www/coding-tools|/srv/www/coding-tools/*) ;;
+            *)
+              echo "::error::Refusing to deploy with unsafe WEB_ROOT: $WEB_ROOT_REAL"
+              exit 1
+              ;;
+          esac
+          if [ "$WEB_ROOT_REAL" = "/" ] || [ "$WEB_ROOT_REAL" = "$VPS_PATH" ] || [ "$WEB_ROOT_REAL" = "$HOME" ]; then
+            echo "::error::Refusing to deploy with unsafe WEB_ROOT: $WEB_ROOT_REAL"
+            exit 1
+          fi
+
+          sudo mkdir -p "$WEB_ROOT_REAL"
+          sudo rsync -a --delete --chown=www-data:www-data --chmod=D755,F644 "$VPS_PATH/dist/" "$WEB_ROOT_REAL/"
 
           pkill -f '[e]leventy.*serve' 2>/dev/null || true
 
-          sed "s#__WEB_ROOT__#$WEB_ROOT#g" "$VPS_PATH/deploy/nginx-site.conf" | sudo tee /etc/nginx/sites-available/default > /dev/null
+          sed "s#__WEB_ROOT__#$WEB_ROOT_REAL#g" "$VPS_PATH/deploy/nginx-site.conf" | sudo tee /etc/nginx/sites-available/default > /dev/null
 
           sudo nginx -t
           sudo systemctl reload nginx

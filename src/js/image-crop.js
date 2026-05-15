@@ -163,9 +163,25 @@
     setStatus("valid", L.updated);
   }
 
+  function exportFailed() {
+    resetResultUrl();
+    resultPreview.removeAttribute("src");
+    outputSize.textContent = "-";
+    btnDownload.disabled = true;
+    setStatus("invalid", L.invalidInput || "Could not export image");
+  }
+
   function exportPng(canvas) {
+    if (typeof canvas.toBlob !== "function") {
+      exportFailed();
+      return;
+    }
     canvas.toBlob(function (blob) {
-      if (blob) setBlob(blob, canvas.width, canvas.height, "image/png");
+      if (!blob) {
+        exportFailed();
+        return;
+      }
+      setBlob(blob, canvas.width, canvas.height, "image/png");
     }, "image/png");
   }
 
@@ -183,6 +199,10 @@
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = "high";
     ctx.drawImage(state.image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);
+    if (typeof canvas.toBlob !== "function") {
+      exportFailed();
+      return;
+    }
     canvas.toBlob(function (blob) {
       if (!blob) {
         exportPng(canvas);
@@ -326,6 +346,9 @@
       };
       image.src = event.target.result;
     };
+    reader.onerror = function () {
+      setStatus("invalid", L.invalidFile);
+    };
     reader.readAsDataURL(file);
   }
 
@@ -378,7 +401,7 @@
     }
     var link = document.createElement("a");
     link.href = state.resultUrl;
-    link.download = baseName(state.name) + "-cropped." + extensionFor(state.mime);
+    link.download = ToolCommon.sanitizeDownloadFilename(baseName(state.name) + "-cropped." + extensionFor(state.mime), "image-cropped.png");
     link.click();
   });
   overlay.addEventListener("pointerdown", beginDrag);

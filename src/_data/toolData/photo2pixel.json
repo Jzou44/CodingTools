@@ -25,6 +25,7 @@
     "resultPlaceholder": "Result will appear here",
     "viewOriginal": "View original",
     "viewResult": "View pixel art",
+    "demoAlt": "Photo2Pixel demo showing a mountain photo converted into 8-bit pixel art",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel converts photos into pixel art in the browser using the same ONNX model workflow as the reference project. Images stay local and are processed with WebAssembly.",
@@ -68,6 +69,7 @@
     "resultPlaceholder": "结果将在此显示",
     "viewOriginal": "查看原图",
     "viewResult": "查看像素图",
+    "demoAlt": "Photo2Pixel 示例，展示山景照片转换成 8-bit 像素艺术",
     "descTitle": "图片转体素风格化",
     "descParas": [
       "Photo2Pixel 使用参考项目相同的 ONNX 模型流程，在浏览器中将照片转换为像素艺术。图片保留在本地，并通过 WebAssembly 处理。",
@@ -111,6 +113,7 @@
     "resultPlaceholder": "結果將在此顯示",
     "viewOriginal": "查看原圖",
     "viewResult": "查看像素圖",
+    "demoAlt": "Photo2Pixel 範例，展示山景照片轉換成 8-bit 像素藝術",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel 使用參考專案相同的 ONNX 模型流程，在瀏覽器中將照片轉換為像素藝術。圖片保留在本機，並透過 WebAssembly 處理。",
@@ -154,6 +157,7 @@
     "resultPlaceholder": "結果がここに表示されます",
     "viewOriginal": "元画像を見る",
     "viewResult": "ピクセルアートを見る",
+    "demoAlt": "山の写真を 8-bit ピクセルアートに変換した Photo2Pixel のデモ",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel は参照プロジェクトと同じ ONNX モデルの流れで、ブラウザ上で写真をピクセルアートに変換します。画像はローカルに残り、WebAssembly で処理されます。",
@@ -197,6 +201,7 @@
     "resultPlaceholder": "결과가 여기에 표시됩니다",
     "viewOriginal": "원본 보기",
     "viewResult": "픽셀 아트 보기",
+    "demoAlt": "산 사진을 8-bit 픽셀 아트로 변환한 Photo2Pixel 데모",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel은 참조 프로젝트와 같은 ONNX 모델 흐름을 사용해 브라우저에서 사진을 픽셀 아트로 변환합니다. 이미지는 로컬에 남고 WebAssembly로 처리됩니다.",
@@ -240,6 +245,7 @@
     "resultPlaceholder": "Le résultat apparaîtra ici",
     "viewOriginal": "Voir l’original",
     "viewResult": "Voir le pixel art",
+    "demoAlt": "Démo Photo2Pixel montrant une photo de montagne convertie en pixel art 8-bit",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel convertit les photos en pixel art dans le navigateur avec le même flux de modèle ONNX que le projet de référence. Les images restent locales et sont traitées avec WebAssembly.",
@@ -283,6 +289,7 @@
     "resultPlaceholder": "Ergebnis erscheint hier",
     "viewOriginal": "Original anzeigen",
     "viewResult": "Pixel Art anzeigen",
+    "demoAlt": "Photo2Pixel-Demo mit einem Bergfoto, das in 8-Bit-Pixel-Art umgewandelt wurde",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel konvertiert Fotos im Browser mit demselben ONNX-Modellablauf wie das Referenzprojekt in Pixel Art. Bilder bleiben lokal und werden mit WebAssembly verarbeitet.",
@@ -326,6 +333,7 @@
     "resultPlaceholder": "El resultado aparecerá aquí",
     "viewOriginal": "Ver original",
     "viewResult": "Ver pixel art",
+    "demoAlt": "Demo de Photo2Pixel con una foto de montaña convertida en pixel art de 8 bits",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel convierte fotos en pixel art dentro del navegador usando el mismo flujo de modelo ONNX del proyecto de referencia. Las imágenes permanecen locales y se procesan con WebAssembly.",
@@ -369,6 +377,7 @@
     "resultPlaceholder": "O resultado aparecerá aqui",
     "viewOriginal": "Ver original",
     "viewResult": "Ver pixel art",
+    "demoAlt": "Demonstração do Photo2Pixel com uma foto de montanha convertida em pixel art 8-bit",
     "descTitle": "Photo2Pixel",
     "descParas": [
       "Photo2Pixel converte fotos em pixel art no navegador usando o mesmo fluxo de modelo ONNX do projeto de referência. As imagens ficam locais e são processadas com WebAssembly.",

@@ -90,9 +90,25 @@
     setStatus("valid", L.updated);
   }
 
+  function exportFailed() {
+    resetUrls();
+    resultPreview.removeAttribute("src");
+    outputSize.textContent = "-";
+    btnDownload.disabled = true;
+    setStatus("invalid", L.invalidInput || "Could not export image");
+  }
+
   function exportPng(canvas) {
+    if (typeof canvas.toBlob !== "function") {
+      exportFailed();
+      return;
+    }
     canvas.toBlob(function (blob) {
-      if (blob) setBlob(blob, canvas.width, canvas.height, "image/png");
+      if (!blob) {
+        exportFailed();
+        return;
+      }
+      setBlob(blob, canvas.width, canvas.height, "image/png");
     }, "image/png");
   }
 
@@ -111,6 +127,10 @@
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = "high";
     ctx.drawImage(state.image, 0, 0, width, height);
+    if (typeof canvas.toBlob !== "function") {
+      exportFailed();
+      return;
+    }
     canvas.toBlob(function (blob) {
       if (!blob) {
         exportPng(canvas);
@@ -161,6 +181,9 @@
         setStatus("invalid", L.invalidFile);
       };
       image.src = event.target.result;
+    };
+    reader.onerror = function () {
+      setStatus("invalid", L.invalidFile);
     };
     reader.readAsDataURL(file);
   }
@@ -267,7 +290,7 @@
     }
     var link = document.createElement("a");
     link.href = state.resultUrl;
-    link.download = baseName(state.name) + "-resized." + extensionFor(state.mime);
+    link.download = ToolCommon.sanitizeDownloadFilename(baseName(state.name) + "-resized." + extensionFor(state.mime), "image-resized.png");
     link.click();
   });
 

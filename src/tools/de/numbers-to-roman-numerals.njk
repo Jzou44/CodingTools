@@ -118,7 +118,7 @@ permalink: "/de/numbers-to-roman-numerals.html"
     <div class="tool-input-card" style="--tool-accent: var(--accent)">
       <div class="tool-label">Number</div>
       <input type="text" class="tool-input-field" style="--tool-font: 'IBM Plex Mono', monospace; --tool-font-size: 32px; --tool-font-size-mobile: 24px; --tool-accent: var(--accent);" id="number-input" placeholder="{{ toolData.inputPlaceholder }}" spellcheck="false" autocomplete="off" autofocus>
-      <div class="tool-hint">Range: <code>1</code> &ndash; <code>3999</code></div>
+      <div class="tool-hint">{{ t.ui.range }}: <code>1</code> &ndash; <code>3999</code></div>
     </div>
 
     <!-- Arrow -->
@@ -251,7 +251,7 @@ permalink: "/de/numbers-to-roman-numerals.html"
         var num = parseInt(input, 10);
         if (isNaN(num) || num < 1 || num > 3999) {
           showResult('{{ t.ui.enterNumberBetween1And3999 }}', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Out of range');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.outOfRange }}');
           return;
         }
         showResult(intToRoman(num), 'valid');
@@ -267,7 +267,8 @@ permalink: "/de/numbers-to-roman-numerals.html"
       btnCopy.addEventListener('click', function () {
         var text = romanOutput.textContent;
         if (text && !romanOutput.classList.contains('empty') && !romanOutput.classList.contains('error')) {
-          navigator.clipboard.writeText(text).then(function () {
+          ToolCommon.copyText(text).then(function (copied) {
+            if (!copied) return;
             var orig = btnCopy.innerHTML;
             btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');
@@ -291,7 +292,7 @@ permalink: "/de/numbers-to-roman-numerals.html"
         var num = parseInt(input, 10);
         if (isNaN(num) || num < 1 || num > 3999) {
           showResult('{{ t.ui.enterNumberBetween1And3999 }}', 'error');
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Out of range');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.outOfRange }}');
           return;
         }
         showResult(intToRoman(num), 'valid');

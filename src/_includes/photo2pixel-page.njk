@@ -133,6 +133,7 @@
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
+      min-width: 0;
     }
     .p2p-meta {
       color: var(--text-muted);
@@ -159,11 +160,17 @@
         height: clamp(240px, 72vw, 420px);
         min-height: 240px;
       }
+      .p2p-toolbar {
+        align-items: flex-start;
+      }
+      .p2p-toolbar-actions {
+        width: 100%;
+      }
     }
   </style>
 
   <div class="p2p-shell">
-    <div class="dropzone-area p2p-dropzone" id="dropzone">
+    <div class="dropzone-area p2p-dropzone" id="dropzone" role="button" tabindex="0">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M7 17h10"></path><path d="M7 13h10"></path><path d="M9 9h6"></path></svg>
       <p>{{ toolData.dropzoneMessage or "Click or drag an image here" }}</p>
       <span class="dropzone-hint">{{ toolData.dropzoneHint or "PNG, JPEG, WebP · Max 10MB" }}</span>
@@ -280,7 +287,7 @@
     <p>Photo2Pixel converts photos into pixel art in the browser using the same ONNX model workflow as the reference project. Images stay local and are processed with WebAssembly.</p>
   {% endif %}
   <figure class="p2p-demo-figure">
-    <img src="/assets/img/photo2pixel-demo.png" alt="Photo2Pixel 8-bit mountain pixel art demo" loading="lazy">
+    <img src="/assets/img/photo2pixel-demo.png" alt="{{ toolData.demoAlt or 'Photo2Pixel 8-bit mountain pixel art demo' }}" loading="lazy">
   </figure>
 
   <h3>{{ toolData.howToUse or "How to use" }}</h3>
@@ -484,7 +491,22 @@
             resultPlaceholder.hidden = true;
             imageMeta.textContent = resultImageData.width + ' x ' + resultImageData.height;
 
+            if (typeof resultCanvas.toBlob !== 'function') {
+              if (resultUrl) URL.revokeObjectURL(resultUrl);
+              resultUrl = '';
+              btnDownload.disabled = true;
+              setStatus('invalid', 'Could not export image');
+              return;
+            }
+
             resultCanvas.toBlob(function (blob) {
+              if (!blob) {
+                if (resultUrl) URL.revokeObjectURL(resultUrl);
+                resultUrl = '';
+                btnDownload.disabled = true;
+                setStatus('invalid', 'Could not export image');
+                return;
+              }
               if (resultUrl) URL.revokeObjectURL(resultUrl);
               resultUrl = URL.createObjectURL(blob);
               btnDownload.disabled = false;
@@ -520,10 +542,19 @@
           updateFlipView(false);
           renderCurrentImage();
         };
+        reader.onerror = function () {
+          setStatus('invalid', 'Could not read image');
+        };
         reader.readAsDataURL(file);
       }
 
       dropzone.addEventListener('click', function () { fileInput.click(); });
+      dropzone.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          fileInput.click();
+        }
+      });
       dropzone.addEventListener('dragover', function (event) {
         event.preventDefault();
         dropzone.classList.add('dragover');
@@ -570,7 +601,7 @@
         if (!resultUrl) return;
         var link = document.createElement('a');
         link.href = resultUrl;
-        link.download = 'photo2pixel.png';
+        link.download = ToolCommon.sanitizeDownloadFilename('photo2pixel.png', 'photo2pixel.png');
         link.click();
       });
 

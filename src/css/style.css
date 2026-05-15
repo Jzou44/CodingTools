@@ -647,6 +647,8 @@ img {
   display: flex;
   gap: 8px;
   align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 /* ============================================================
@@ -666,6 +668,17 @@ img {
   border: none;
   outline: none;
   white-space: nowrap;
+}
+
+.btn:focus-visible,
+.btn-icon:focus-visible,
+[role="button"]:focus-visible,
+.code-block-copy:focus-visible,
+.tool-card:focus-visible,
+.footer-languages a:focus-visible {
+  outline: 3px solid rgba(196, 93, 58, 0.45);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 1px var(--surface);
 }
 
 .btn-primary {
@@ -895,6 +908,12 @@ img {
 
   .category-section {
     padding: 0 20px 48px;
+  }
+
+  .toolbar-left,
+  .toolbar-right {
+    justify-content: flex-start;
+    max-width: 100%;
   }
 
   .category-header h2 {

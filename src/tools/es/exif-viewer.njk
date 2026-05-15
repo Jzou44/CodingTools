@@ -9,7 +9,7 @@ permalink: "/es/exif-viewer.html"
 {% extends "tool-layout.njk" %}
 
 {% block tool_content %}
-  <div class="dropzone-area" id="dropzone">
+  <div class="dropzone-area" id="dropzone" role="button" tabindex="0">
     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
     <p>{{ toolData.dropzoneMessage }}</p>
     <span class="dropzone-hint">{{ toolData.dropzoneHint }}</span>
@@ -88,6 +88,12 @@ permalink: "/es/exif-viewer.html"
       var statusText = document.getElementById('status-text');
 
       dropzone.addEventListener('click', function () { fileInput.click(); });
+      dropzone.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          fileInput.click();
+        }
+      });
       dropzone.addEventListener('dragover', function (e) { e.preventDefault(); dropzone.classList.add('dragover'); });
       dropzone.addEventListener('dragleave', function () { dropzone.classList.remove('dragover'); });
       dropzone.addEventListener('drop', function (e) {
@@ -104,10 +110,19 @@ permalink: "/es/exif-viewer.html"
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '{{ t.ui.readingExif }}');
         var reader = new FileReader();
         reader.onload = function (e) {
-          var buffer = new Uint8Array(e.target.result);
-          var tags = parseExif(buffer);
+          var tags = {};
+          try {
+            var buffer = new Uint8Array(e.target.result);
+            tags = parseExif(buffer);
+          } catch (error) {
+            tags = {};
+          }
           displayExif(tags);
-          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Found ' + Object.keys(tags).length + ' EXIF tags');
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, Object.keys(tags).length ? 'valid' : 'invalid', Object.keys(tags).length ? Object.keys(tags).length + ' {{ t.ui.exifTagsFound }}' : '{{ t.ui.noExif }}');
+        };
+        reader.onerror = function () {
+          displayExif({});
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.noExif }}');
         };
         reader.readAsArrayBuffer(file);
       }
@@ -238,26 +253,46 @@ permalink: "/es/exif-viewer.html"
       }
 
       function displayExif(tags) {
-        exifBody.innerHTML = '';
-        mapContainer.innerHTML = '';
+        ToolCommon.clearElement(exifBody);
+        ToolCommon.clearElement(mapContainer);
         var keys = Object.keys(tags);
         if (keys.length === 0) {
-          exifBody.innerHTML = '<tr><td colspan="2">No EXIF data found</td></tr>';
+          var emptyRow = document.createElement('tr');
+          var emptyCell = document.createElement('td');
+          emptyCell.colSpan = 2;
+          emptyCell.textContent = '{{ t.ui.noExif }}';
+          emptyRow.appendChild(emptyCell);
+          exifBody.appendChild(emptyRow);
           return;
         }
         keys.forEach(function (key) {
           var tr = document.createElement('tr');
-          tr.innerHTML = '<td>' + key + '</td><td>' + tags[key] + '</td>';
+          var keyCell = document.createElement('td');
+          var valueCell = document.createElement('td');
+          keyCell.textContent = key;
+          valueCell.textContent = String(tags[key] == null ? '' : tags[key]);
+          tr.appendChild(keyCell);
+          tr.appendChild(valueCell);
           exifBody.appendChild(tr);
         });
         if (tags.GPSLatitude && tags.GPSLongitude) {
-          mapContainer.innerHTML = '<iframe width="100%" height="400" frameborder="0" style="border:1px solid #e1e1e1;border-radius:8px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDvTryAEw90t0gne_bqsnmJ9DYxrvcEg_Y&zoom=13&q=' + tags.GPSLatitude + ',' + tags.GPSLongitude + '" allowfullscreen></iframe>';
+          var lat = parseFloat(tags.GPSLatitude);
+          var lon = parseFloat(tags.GPSLongitude);
+          if (isFinite(lat) && isFinite(lon)) {
+            var iframe = document.createElement('iframe');
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '400');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('style', 'border:1px solid #e1e1e1;border-radius:8px');
+            iframe.setAttribute('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDvTryAEw90t0gne_bqsnmJ9DYxrvcEg_Y&zoom=13&q=' + encodeURIComponent(lat + ',' + lon));
+            iframe.setAttribute('allowfullscreen', '');
+            mapContainer.appendChild(iframe);
+          }
         }
       }
-
       btnClear.addEventListener('click', function () {
-        exifBody.innerHTML = '';
-        mapContainer.innerHTML = '';
+        ToolCommon.clearElement(exifBody);
+        ToolCommon.clearElement(mapContainer);
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
       });
 

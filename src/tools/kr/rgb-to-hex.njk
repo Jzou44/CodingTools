@@ -43,15 +43,15 @@ permalink: "/kr/rgb-to-hex.html"
       <div class="tool-label">{{ t.ui.rgbColor }}</div>
       <div class="rgb-hex-input-fields">
         <div class="rgb-hex-field-group">
-          <span class="rgb-hex-field-label">Red (R)</span>
+          <span class="rgb-hex-field-label">{{ t.ui.red }} (R)</span>
           <input type="number" class="rgb-hex-field-input r-field" id="r-input" min="0" max="255" placeholder="0–255" spellcheck="false" autocomplete="off">
         </div>
         <div class="rgb-hex-field-group">
-          <span class="rgb-hex-field-label">Green (G)</span>
+          <span class="rgb-hex-field-label">{{ t.ui.green }} (G)</span>
           <input type="number" class="rgb-hex-field-input g-field" id="g-input" min="0" max="255" placeholder="0–255" spellcheck="false" autocomplete="off">
         </div>
         <div class="rgb-hex-field-group">
-          <span class="rgb-hex-field-label">Blue (B)</span>
+          <span class="rgb-hex-field-label">{{ t.ui.blue }} (B)</span>
           <input type="number" class="rgb-hex-field-input b-field" id="b-input" min="0" max="255" placeholder="0–255" spellcheck="false" autocomplete="off" autofocus>
         </div>
       </div>
@@ -203,7 +203,8 @@ permalink: "/kr/rgb-to-hex.html"
       btnCopy.addEventListener('click', function () {
         var text = hexOutput.textContent;
         if (text && !hexOutput.classList.contains('empty') && !hexOutput.classList.contains('error')) {
-          navigator.clipboard.writeText(text).then(function () {
+          ToolCommon.copyText(text).then(function (copied) {
+            if (!copied) return;
             var orig = btnCopy.innerHTML;
             btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copied }}';
             btnCopy.classList.add('copied');

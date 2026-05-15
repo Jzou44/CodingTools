@@ -146,7 +146,7 @@ permalink: "/tw/image-to-base64.html"
       <div class="pane-label">
         <span><span class="pane-label-dot pane-label-dot--accent"></span>{{ t.ui.uploadImage }}</span>
       </div>
-      <div class="dropzone-area" id="dropzone">
+      <div class="dropzone-area" id="dropzone" role="button" tabindex="0">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
         <p>{{ toolData.dropzoneMessage }}</p>
         <span class="dropzone-hint">{{ toolData.dropzoneHint }}</span>
@@ -179,7 +179,7 @@ permalink: "/tw/image-to-base64.html"
       <div class="pane-label">
         <span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ t.ui.output }}</span>
       </div>
-      <textarea id="code2" readonly placeholder="{{ toolData.inputPlaceholder }}"></textarea>
+      <textarea id="code2" readonly placeholder="{{ toolData.inputPlaceholder }}" aria-label="{{ t.ui.output }}"></textarea>
     </div>
 
     <!-- Status Bar -->
@@ -227,6 +227,7 @@ permalink: "/tw/image-to-base64.html"
       'use strict';
 
       var editor = CodeMirror.fromTextArea(document.getElementById('code2'), { lineNumbers: false, lineWrapping: true, readOnly: true });
+      editor.getWrapperElement().setAttribute('aria-label', '{{ t.ui.output }}');
 
       var dropzone    = document.getElementById('dropzone');
       var fileInput   = document.getElementById('file-input');
@@ -241,6 +242,12 @@ permalink: "/tw/image-to-base64.html"
       var MAX_SIZE = 2 * 1024 * 1024;
 
       dropzone.addEventListener('click', function () { fileInput.click(); });
+      dropzone.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          fileInput.click();
+        }
+      });
       dropzone.addEventListener('dragover', function (e) { e.preventDefault(); dropzone.classList.add('dragover'); });
       dropzone.addEventListener('dragleave', function () { dropzone.classList.remove('dragover'); });
       dropzone.addEventListener('drop', function (e) {
@@ -267,6 +274,11 @@ permalink: "/tw/image-to-base64.html"
           charCount.textContent = ToolCommon.pluralise(chars, '{{ t.ui.character }}', '{{ t.ui.characters }}');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         };
+        reader.onerror = function () {
+          editor.setValue('');
+          charCount.textContent = '0 {{ t.ui.characters }}';
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.conversionFailed }}{{ t.ui.invalidInput }}');
+        };
         reader.readAsDataURL(file);
       }
 
@@ -279,7 +291,8 @@ permalink: "/tw/image-to-base64.html"
       btnCopy.addEventListener('click', function () {
         var text = editor.getValue();
         if (text) {
-          navigator.clipboard.writeText(text).then(function () {
+          ToolCommon.copyText(text).then(function (copied) {
+            if (!copied) return;
             btnCopy.textContent = '{{ t.ui.copied }}';
             setTimeout(function () { btnCopy.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> {{ t.ui.copy }}'; }, 1500);
           });
