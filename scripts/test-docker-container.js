@@ -39,7 +39,7 @@ async function main() {
   assert.strictEqual(card.name, "Coding.Tools");
   assert.ok(card.skills.some((skill) => skill.id === "base64-encode"));
 
-  const healthResponse = await fetch(`${baseUrl}/a2a/healthz`);
+  const healthResponse = await waitFor(`${baseUrl}/a2a/healthz`);
   assert.strictEqual(healthResponse.status, 200);
   const health = await readJson(healthResponse);
   assert.strictEqual(health.ok, true);
