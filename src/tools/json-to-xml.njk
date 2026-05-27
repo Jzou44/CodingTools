@@ -1,10 +1,5 @@
 ---
-title: "JSON to XML Converter — Coding.Tools"
-description: "Convert JSON data to XML format with proper formatting. Runs locally in your browser, fast and free."
-toolTitle: "JSON to XML Converter"
-toolDescription: "Convert JSON data to well-formatted XML. Copy or download the XML result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "json-to-xml"
 permalink: "/json-to-xml.html"
 ---
@@ -36,43 +31,7 @@ permalink: "/json-to-xml.html"
 {% endblock %}
 
 {% block description %}
-  <h2>JSON to XML Converter</h2>
-  <p>This tool converts JSON data into well-formatted XML. It parses the JSON structure, maps keys to XML elements, and produces indented, readable XML output that preserves the hierarchy and data types of the original JSON.</p>
-  <p>The conversion runs entirely in your browser using the JXON and vkbeautify libraries. Your data never leaves your device, making it ideal for quick data format migration or interoperability tasks.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your JSON data into the input editor.</li>
-    <li>Click <strong>Convert to XML</strong> to transform the data.</li>
-    <li>View the formatted XML in the output editor with proper indentation.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .xml file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is JSON to XML conversion?</h3>
-  <p>JSON to XML conversion transforms data from JavaScript Object Notation format into eXtensible Markup Language format. JSON uses key-value pairs and arrays, while XML uses nested elements with tags, so the converter maps JSON keys to XML element names and JSON values to element text content.</p>
-  <p>This conversion is useful when integrating systems that use different data formats, migrating data between JSON-based and XML-based APIs, or when you need XML output for tools like XSLT processors, SOAP services, or document generators.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any valid JSON object or array. JSON keys become XML element names, and values become text content. Arrays are represented as repeated elements with the same tag name. The output is wrapped in a root element and formatted with indentation.</p>
-
-  <h3>Example</h3>
-  <p>A JSON object is converted to structured XML:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (JSON) ---
-{
-  "user": {
-    "name": "Alice",
-    "age": 30
-  }
-}
-
---- Output (XML) ---
-&lt;user&gt;
-  &lt;name&gt;Alice&lt;/name&gt;
-  &lt;age&gt;30&lt;/age&gt;
-&lt;/user&gt;</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,10 +1,5 @@
 ---
-title: "Case Converter Online — Coding.Tools"
-description: "Convert text to uppercase, lowercase, sentence case, title case, or invert case instantly."
-toolTitle: "Case Converter"
-toolDescription: "Transform text between uppercase, lowercase, sentence case, title case, and inverted case."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "case-converter"
 permalink: "/case-converter.html"
 ---
@@ -40,45 +35,7 @@ permalink: "/case-converter.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Case Converter</h2>
-  <p>This case converter transforms text between five common capitalization styles: upper case, lower case, sentence case, title case, and inverted case. It is useful when you need to reformat text for headlines, documents, code comments, or any situation where consistent casing matters.</p>
-  <p>The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste or type your text into the input editor.</li>
-    <li>Click one of the five conversion buttons: <strong>UPPER CASE</strong>, <strong>lower case</strong>, <strong>Sentence case</strong>, <strong>Title Case</strong>, or <strong>Invert Case</strong>.</li>
-    <li>The text in the editor is converted in place. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor.</li>
-  </ol>
-
-  <h3>What are the different case styles?</h3>
-  <p><strong>UPPER CASE</strong> converts every letter to its uppercase form. <strong>lower case</strong> converts every letter to its lowercase form. <strong>Sentence case</strong> capitalizes the first letter of each sentence and lowercases the rest. <strong>Title Case</strong> capitalizes the first letter of every word. <strong>Invert Case</strong> swaps the case of every character, turning upper into lower and vice versa.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool works with any text, including Unicode characters. Sentence case uses periods, exclamation marks, and question marks as sentence boundaries. Title case capitalizes every word without exceptions for articles or prepositions.</p>
-
-  <h3>Example</h3>
-  <p>See how the same sentence looks in each case style:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Original ---
-hello world! this is a test sentence.
-
---- UPPER CASE ---
-HELLO WORLD! THIS IS A TEST SENTENCE.
-
---- lower case ---
-hello world! this is a test sentence.
-
---- Sentence case ---
-Hello world! This is a test sentence.
-
---- Title Case ---
-Hello World! This Is A Test Sentence.
-
---- Invert Case ---
-HELLO WORLD! THIS IS A TEST SENTENCE.</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

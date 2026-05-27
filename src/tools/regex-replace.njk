@@ -1,10 +1,5 @@
 ---
-title: "Regex Replace Online — Coding.Tools"
-description: "Find and replace text using regular expressions with live match highlighting and backreference support. Free browser-based tool."
-toolTitle: "Regex Replace"
-toolDescription: "Find and replace text with regex patterns in real time. Supports backreferences like $1, $2. No data leaves your browser."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "regex-replace"
 permalink: "/regex-replace.html"
 ---
@@ -269,46 +264,7 @@ permalink: "/regex-replace.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Regex Replace</h2>
-  <p>This regex find-and-replace tool lets you search for patterns and replace them with new text in real time. All six JavaScript regex flags are supported, and the replacement string understands backreferences like <code>$1</code>, <code>$2</code>, so you can rearrange captured groups. Matches are highlighted before you commit the replacement.</p>
-  <p>The search and replace runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can transform content privately and quickly.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a regex pattern into the <strong>Regex Pattern</strong> field. No delimiters needed.</li>
-    <li>Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).</li>
-    <li>Enter a replacement string in the <strong>Replace With</strong> field. Use <code>$1</code>, <code>$2</code> for backreferences to captured groups.</li>
-    <li>Paste or type your test text into the editor below. Matches are highlighted as you type.</li>
-    <li>Click <strong>Replace All</strong> to apply the replacement to the entire text.</li>
-    <li>Use <strong>Copy</strong> to copy the result, <strong>Download</strong> to save it, or <strong>Clear</strong> to reset everything.</li>
-  </ol>
-
-  <h3>What are regular expressions?</h3>
-  <p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.</p>
-  <p>JavaScript implements regex natively via the <code>RegExp</code> object. The same syntax works in most programming languages with minor variations. Regex find-and-replace is one of the most powerful text transformation techniques available to developers.</p>
-
-  <h3>Input notes</h3>
-  <p>Enter the regex pattern without delimiters. The flags are controlled by the checkboxes. The replacement string supports standard backreferences: <code>$1</code> through <code>$9</code> for captured groups, and <code>$&amp;</code> for the entire match.</p>
-
-  <h3>Example</h3>
-  <p>Reformatting dates from MM/DD/YYYY to YYYY-MM-DD using backreferences:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy example</button>
-    <pre class="code-block" id="example-code">--- Pattern ---
-(\d{2})/(\d{2})/(\d{4})
-
---- Replacement ---
-$3-$1-$2
-
---- Flags ---
-g (global)
-
---- Test Text ---
-Today is 04/29/2026 and tomorrow is 04/30/2026.
-
---- Result ---
-Today is 2026-04-29 and tomorrow is 2026-04-30.</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

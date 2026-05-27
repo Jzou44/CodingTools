@@ -63,6 +63,9 @@
 
       <!-- Description Section -->
       <section class="description-section">
+        {% if not lang or lang == 'en' %}
+        {% include "tool-geo-intro.njk" %}
+        {% endif %}
         {% block description %}{% endblock %}
         {% include "mcp-integration-section.njk" %}
       </section>

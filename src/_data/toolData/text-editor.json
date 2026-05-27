@@ -1,22 +1,22 @@
 {
   "en": {
-    "title": "Text Editor Online — Coding.Tools",
-    "description": "Edit text online with line numbers, word wrap, and instant character and line counts. Free, fast, and private.",
+    "title": "Online Text Editor - Coding.Tools",
+    "description": "Write, inspect, copy, and download plain text in a local browser editor with line numbers, word wrap, and live counts.",
     "toolTitle": "Text Editor Online",
-    "toolDescription": "Write and edit plain text directly in your browser with line numbers, copy, download, and character counting.",
+    "toolDescription": "Edit plain text locally with line numbers, word wrap, tab insertion, copy, download, and live character and line counts.",
     "categoryName": "String & Text Utilities",
     "inputPlaceholder": "Start typing or paste text here...",
-    "descTitle": "Text Editor Online",
+    "descTitle": "Edit plain text with line numbers and live counts",
     "descParas": [
-      "This online text editor lets you write and edit plain text directly in your browser. It comes with line numbers, character counting, line counting, copy, and download features. It is useful for drafting notes, formatting snippets, cleaning up text, or quickly editing content without opening a desktop application.",
-      "The editor runs entirely in your browser. The text you type or paste is not uploaded, stored, or sent to a server, so your content stays private and you can use the tool instantly without any setup."
+      "<strong>Text Editor Online is a local scratchpad for plain text, snippets, logs, notes, and quick cleanup work.</strong> Line numbers stay visible while you type, so you can reference exact lines from stack traces, compiler output, CSV rows, config files, or review comments.",
+      "The editor is intentionally simple: it does not format rich text, execute code, or auto-save drafts. It keeps your text in the browser page, supports word wrap for long lines, and shows live character and line counts before you copy or download the result."
     ],
     "howToUse": "How to use",
     "steps": [
       "Type or paste your text into the editor area.",
-      "The status bar below updates in real time with the <strong>character count</strong> and <strong>line count</strong>.",
-      "Use <strong>Copy</strong> to copy the entire text to your clipboard.",
-      "Use <strong>Download</strong> to save the text as a <code>.txt</code> file, or <strong>Clear</strong> to reset the editor."
+      "Use the line numbers to locate errors, log entries, copied rows, or sections you want to discuss.",
+      "Check the live <strong>character count</strong> and <strong>line count</strong> before reusing the text.",
+      "Copy the whole editor contents, download a <code>.txt</code> file, or clear the editor when you are done."
     ],
     "features": "Features",
     "featuresList": [
@@ -25,239 +25,239 @@
       "<strong>Instant counts</strong> — character and line counts update as you type, with no button press required."
     ],
     "example": "Example",
-    "examplePara": "Paste the following text into the editor to see the line numbers and character count in action:",
+    "examplePara": "Paste a small snippet, verify its line positions and counts, then copy or download the exact plain-text result:",
     "exampleCode": "Hello, World!\nThis is a sample text.\nLine numbers appear on the left.\nCharacters and lines are counted automatically."
   },
   "cn": {
-    "title": "在线文本编辑器 — Coding.Tools",
-    "description": "在线编辑文本，支持行号、自动换行和即时字符行数统计。免费、快速、私密。",
+    "title": "在线文本编辑器 - Coding.Tools",
+    "description": "在本地浏览器编辑器中编写、检查、复制和下载纯文本，包括行号、自动换行和实时计数。",
     "toolTitle": "在线文本编辑器",
-    "toolDescription": "在浏览器中直接编写和编辑纯文本，支持行号、复制、下载和字符统计。",
+    "toolDescription": "使用行号、自动换行、制表符插入、复制、下载以及实时字符和行数在本地编辑纯文本。",
     "categoryName": "字符串与文本",
     "inputPlaceholder": "在此输入或粘贴文本...",
-    "descTitle": "在线文本编辑器",
+    "descTitle": "编辑带有行号和实时计数的纯文本",
     "descParas": [
-      "这个在线文本编辑器让您可以直接在浏览器中编写和编辑纯文本。它具有行号、字符统计、行数统计、复制和下载功能。适用于起草笔记、格式化代码片段、清理文本或快速编辑内容，无需打开桌面应用程序。",
-      "编辑器完全在浏览器中运行。您输入或粘贴的文本不会被上传、存储或发送到服务器，因此您的内容保持私密，可以立即使用该工具。"
+      "<strong>在线文本编辑器 是用于纯文本、片段、日志、注释和快速清理工作的本地便笺本。</strong> 键入时行号保持可见，因此您可以引用堆栈跟踪、编译器输出、CSV 行、配置文件或审阅注释中的确切行。",
+      "该编辑器故意简单：它不格式化富文本、执行代码或自动保存草稿。它将您的文本保留在浏览器页面中，支持长行自动换行，并在复制或下载结果之前显示实时字符和行数。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在编辑器区域输入或粘贴文本。",
-      "下方的状态栏会实时更新<strong>字符数</strong>和<strong>行数</strong>。",
-      "使用<strong>复制</strong>将全部文本复制到剪贴板。",
-      "使用<strong>下载</strong>将文本保存为 <code>.txt</code> 文件，或<strong>清除</strong>重置编辑器。"
+      "在编辑器区域中输入或粘贴文本。",
+      "使用行号来查找错误、日志条目、复制的行或您想要讨论的部分。",
+      "在重新使用文本之前，请检查实时 <strong>字符数</strong> 和 <strong>行数</strong>。",
+      "复制整个编辑器内容，下载 <code>.txt</code> 文件，或在完成后清除编辑器。"
     ],
     "features": "功能特点",
     "featuresList": [
-      "<strong>行号</strong> — 显示在编辑器左侧，与滚动同步。",
-      "<strong>Tab 键支持</strong> — 按 Tab 键插入两个空格而不是切换焦点。",
-      "<strong>即时统计</strong> — 字符数和行数在输入时自动更新，无需点击按钮。"
+      "<strong>行号</strong> — 在编辑器左侧可见并与滚动同步。",
+      "<strong>Tab 键支持</strong> — 按 Tab 键插入两个空格而不是移动焦点。",
+      "<strong>即时计数</strong> — 字符和行数在您键入时更新，无需按下按钮。"
     ],
     "example": "示例",
-    "examplePara": "将以下文本粘贴到编辑器中，查看行号和字符统计效果：",
+    "examplePara": "粘贴一个小片段，验证其行位置和计数，然后复制或下载确切的纯文本结果：",
     "exampleCode": "你好，世界！\n这是一段示例文本。\n行号显示在左侧。\n字符数和行数会自动统计。"
   },
   "tw": {
-    "title": "線上文字編輯器 — Coding.Tools",
-    "description": "線上編輯文字，支援行號、自動換行和即時字元行數統計。免費、快速、私密。",
+    "title": "線上文字編輯器 - Coding.Tools",
+    "description": "在本機瀏覽器編輯器中編寫、檢查、複製和下載純文本，包括行號、自動換行和即時計數。",
     "toolTitle": "線上文字編輯器",
-    "toolDescription": "在瀏覽器中直接編寫和編輯純文字，支援行號、複製、下載和字元統計。",
+    "toolDescription": "使用行號、自動換行、製表符插入、複製、下載以及即時字元和行數在本機編輯純文字。",
     "categoryName": "字串與文字",
     "inputPlaceholder": "在此輸入或貼上文字...",
-    "descTitle": "線上文字編輯器",
+    "descTitle": "編輯帶有行號和即時計數的純文本",
     "descParas": [
-      "這個線上文字編輯器讓您可以直接在瀏覽器中編寫和編輯純文字。它具有行號、字元統計、行數統計、複製和下載功能。適用於起草筆記、格式化程式碼片段、清理文字或快速編輯內容。",
-      "編輯器完全在瀏覽器中運行。您輸入或貼上的文字不會被上傳、儲存或傳送到伺服器。"
+      "<strong>線上文字編輯器 是用於純文字、片段、日誌、註解和快速清理工作的本機便箋本。</strong> 鍵入時行號保持可見，因此您可以引用堆疊追蹤、編譯器輸出、CSV 行、設定檔或審查註解中的確切行。",
+      "該編輯器故意簡單：它不會格式化富文本、執行程式碼或自動儲存草稿。它將您的文字保留在瀏覽器頁面中，支援長行自動換行，並在複製或下載結果之前顯示即時字元和行數。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在編輯器區域輸入或貼上文字。",
-      "下方的狀態列會即時更新<strong>字元數</strong>和<strong>行數</strong>。",
-      "使用<strong>複製</strong>將全部文字複製到剪貼簿。",
-      "使用<strong>下載</strong>將文字儲存為 <code>.txt</code> 檔案，或<strong>清除</strong>重設編輯器。"
+      "在編輯器區域中輸入或貼上文字。",
+      "使用行號來尋找錯誤、日誌條目、複製的行或您想要討論的部分。",
+      "在重新使用文字之前，請檢查即時 <strong>字元數</strong> 和 <strong>行數</strong>。",
+      "複製整個編輯器內容，下載 <code>.txt</code> 文件，或完成後清除編輯器。"
     ],
     "features": "功能特點",
     "featuresList": [
-      "<strong>行號</strong> — 顯示在編輯器左側，與捲動同步。",
-      "<strong>Tab 鍵支援</strong> — 按 Tab 鍵插入兩個空格而不是切換焦點。",
-      "<strong>即時統計</strong> — 字元數和行數在輸入時自動更新，無需點擊按鈕。"
+      "<strong>行號</strong> — 在編輯器左側可見並與捲動同步。",
+      "<strong>Tab 鍵支援</strong> — 按 Tab 鍵插入兩個空格而不是移動焦點。",
+      "<strong>即時計數</strong> — 字元和行數在您鍵入時更新，無需按下按鈕。"
     ],
     "example": "範例",
-    "examplePara": "將以下文字貼到編輯器中，查看行號和字元統計效果：",
+    "examplePara": "貼上一個小片段，驗證其行位置和計數，然後複製或下載確切的純文字結果：",
     "exampleCode": "你好，世界！\n這是一段範例文字。\n行號顯示在左側。\n字元數和行數會自動統計。"
   },
   "jp": {
-    "title": "オンラインテキストエディタ — Coding.Tools",
-    "description": "行番号、ワードラップ、即時文字・行数カウント付きのオンラインテキスト編集。無料・高速・プライベート。",
+    "title": "オンライン テキスト エディター - Coding.Tools",
+    "description": "行番号、ワードラップ、ライブカウントを含むプレーンテキストをローカルブラウザエディタで書き込み、検査、コピー、ダウンロードします。",
     "toolTitle": "オンラインテキストエディタ",
-    "toolDescription": "ブラウザでプレーンテキストを直接作成・編集。行番号、コピー、ダウンロード、文字カウント機能付き。",
+    "toolDescription": "行番号、ワードラップ、タブ挿入、コピー、ダウンロード、ライブ文字数と行数を使用して、プレーン テキストをローカルで編集します。",
     "categoryName": "文字列とテキスト",
     "inputPlaceholder": "ここに入力または貼り付け...",
-    "descTitle": "オンラインテキストエディタ",
+    "descTitle": "行番号とライブカウントを含むプレーンテキストを編集する",
     "descParas": [
-      "このオンラインテキストエディタは、ブラウザでプレーンテキストを直接作成・編集できます。行番号、文字カウント、行数カウント、コピー、ダウンロード機能を備えています。",
-      "エディタは完全にブラウザ内で動作します。入力または貼り付けたテキストはアップロード、保存、サーバー送信されません。"
+      "<strong>オンラインテキストエディタ は、プレーン テキスト、スニペット、ログ、メモ、および簡単なクリーンアップ作業用のローカル スクラッチパッドです。</strong> 入力中に行番号が表示されるため、スタック トレース、コンパイラ出力、CSV 行、構成ファイル、またはレビュー コメントから正確な行を参照できます。",
+      "エディターは意図的にシンプルになっており、リッチ テキストの書式設定、コードの実行、下書きの自動保存は行いません。テキストをブラウザー ページに保持し、長い行のワードラップをサポートし、結果をコピーまたはダウンロードする前にライブの文字数と行数を表示します。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "エディタエリアにテキストを入力または貼り付けます。",
-      "下部のステータスバーに<strong>文字数</strong>と<strong>行数</strong>がリアルタイムで表示されます。",
-      "<strong>コピー</strong>でテキスト全体をクリップボードにコピーします。",
-      "<strong>ダウンロード</strong>でテキストを <code>.txt</code> ファイルとして保存するか、<strong>クリア</strong>でエディタをリセットします。"
+      "テキストをエディター領域に入力または貼り付けます。",
+      "行番号を使用して、エラー、ログ エントリ、コピーされた行、または議論したいセクションを見つけます。",
+      "テキストを再利用する前に、ライブ <strong>文字数</strong> と <strong>行数</strong> を確認してください。",
+      "完了したら、エディターの内容全体をコピーするか、<code>.txt</code> ファイルをダウンロードするか、エディターをクリアします。"
     ],
     "features": "機能",
     "featuresList": [
-      "<strong>行番号</strong> — エディタの左側に表示され、スクロールと同期します。",
-      "<strong>Tabキー対応</strong> — Tabキーでスペース2つを挿入します。",
-      "<strong>即時カウント</strong> — 文字数と行数が入力時に自動更新されます。"
+      "<strong>行番号</strong> — エディターの左側に表示され、スクロールと同期されます。",
+      "<strong>Tab キーのサポート</strong> — Tab キーを押すと、フォーカスを移動する代わりに 2 つのスペースが挿入されます。",
+      "<strong>インスタントカウント</strong> — ボタンを押す必要がなく、入力すると文字数と行数が更新されます。"
     ],
     "example": "例",
-    "examplePara": "次のテキストをエディタに貼り付けて、行番号と文字カウントを確認してください：",
+    "examplePara": "小さなスニペットを貼り付け、行の位置と行数を確認してから、正確なプレーンテキストの結果をコピーまたはダウンロードします。",
     "exampleCode": "こんにちは、世界！\nこれはサンプルテキストです。\n行番号は左側に表示されます。\n文字数と行数は自動的にカウントされます。"
   },
   "kr": {
-    "title": "온라인 텍스트 편집기 — Coding.Tools",
-    "description": "줄 번호, 자동 줄 바꿈, 즉시 문자·줄 수 카운트로 온라인 텍스트 편집. 무료, 빠르고 안전합니다.",
+    "title": "온라인 텍스트 편집기 - Coding.Tools",
+    "description": "로컬 브라우저 편집기에서 줄 번호, 단어 줄 바꿈 및 실시간 개수가 포함된 일반 텍스트를 작성, 검사, 복사 및 다운로드합니다.",
     "toolTitle": "온라인 텍스트 편집기",
-    "toolDescription": "브라우저에서 직접 일반 텍스트를 작성하고 편집하세요. 줄 번호, 복사, 다운로드, 문자 카운트 기능 포함.",
+    "toolDescription": "줄 번호, 줄 바꿈, 탭 삽입, 복사, 다운로드, 실시간 문자 및 줄 수를 사용하여 일반 텍스트를 로컬에서 편집합니다.",
     "categoryName": "문자열 및 텍스트",
     "inputPlaceholder": "여기에 입력하거나 텍스트를 붙여넣으세요...",
-    "descTitle": "온라인 텍스트 편집기",
+    "descTitle": "줄 번호 및 라이브 카운트로 일반 텍스트 편집",
     "descParas": [
-      "이 온라인 텍스트 편집기를 사용하면 브라우저에서 직접 일반 텍스트를 작성하고 편집할 수 있습니다. 줄 번호, 문자 카운트, 줄 수 카운트, 복사, 다운로드 기능이 있습니다.",
-      "편집기는 완전히 브라우저에서 실행됩니다. 입력하거나 붙여넣은 텍스트는 업로드, 저장 또는 서버로 전송되지 않습니다."
+      "<strong>온라인 텍스트 편집기은 일반 텍스트, 조각, 로그, 메모 및 빠른 정리 작업을 위한 로컬 스크래치패드입니다.</strong> 줄 번호는 입력하는 동안 계속 표시되므로 스택 추적, 컴파일러 출력, CSV 행, 구성 파일 또는 검토 주석에서 정확한 줄을 참조할 수 있습니다.",
+      "편집기는 의도적으로 간단합니다. 서식 있는 텍스트의 형식을 지정하거나 코드를 실행하거나 초안을 자동 저장하지 않습니다. 브라우저 페이지에 텍스트를 유지하고, 긴 줄에 대한 단어 줄 바꿈을 지원하며, 결과를 복사하거나 다운로드하기 전에 실시간 문자와 줄 수를 표시합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "편집 영역에 텍스트를 입력하거나 붙여넣으세요.",
-      "아래 상태 표시줄에 <strong>문자 수</strong>와 <strong>줄 수</strong>가 실시간으로 업데이트됩니다.",
-      "<strong>복사</strong>로 전체 텍스트를 클립보드에 복사합니다.",
-      "<strong>다운로드</strong>로 텍스트를 <code>.txt</code> 파일로 저장하거나 <strong>지우기</strong>로 편집기를 초기화합니다."
+      "편집기 영역에 텍스트를 입력하거나 붙여넣습니다.",
+      "줄 번호를 사용하여 논의하려는 오류, 로그 항목, 복사된 행 또는 섹션을 찾으세요.",
+      "텍스트를 재사용하기 전에 실시간 <strong>문자 수</strong> 및 <strong>라인 수</strong>를 확인하세요.",
+      "전체 편집기 내용을 복사하거나, <code>.txt</code> 파일을 다운로드하거나, 완료되면 편집기를 지우십시오."
     ],
     "features": "기능",
     "featuresList": [
-      "<strong>줄 번호</strong> — 편집기 왼쪽에 표시되며 스크롤과 동기화됩니다.",
-      "<strong>Tab 키 지원</strong> — Tab 키를 누르면 포커스 이동 대신 두 개의 공백을 삽입합니다.",
-      "<strong>즉시 카운트</strong> — 문자 수와 줄 수가 입력 시 자동으로 업데이트됩니다."
+      "<strong>라인 번호</strong> — 편집기 왼쪽에 표시되며 스크롤과 동기화됩니다.",
+      "<strong>Tab 키 지원</strong> — Tab을 누르면 초점을 이동하는 대신 공백 두 개가 삽입됩니다.",
+      "<strong>인스턴트 카운트</strong> — 버튼을 누를 필요 없이 입력하는 대로 문자 및 줄 수가 업데이트됩니다."
     ],
     "example": "예시",
-    "examplePara": "다음 텍스트를 편집기에 붙여넣어 줄 번호와 문자 카운트를 확인하세요:",
+    "examplePara": "작은 조각을 붙여넣고 줄 위치와 개수를 확인한 다음 정확한 일반 텍스트 결과를 복사하거나 다운로드하세요.",
     "exampleCode": "안녕하세요, 세계!\n이것은 샘플 텍스트입니다.\n줄 번호는 왼쪽에 표시됩니다.\n문자 수와 줄 수는 자동으로 계산됩니다."
   },
   "fr": {
-    "title": "Éditeur de texte — Coding.Tools",
-    "description": "Éditez du texte en ligne avec numéros de ligne, retour à la ligne et comptage instantané des caractères. Gratuit, rapide et privé.",
+    "title": "Éditeur de texte en ligne - Coding.Tools",
+    "description": "Écrivez, inspectez, copiez et téléchargez du texte brut dans un éditeur de navigateur local avec des numéros de ligne, des retours à la ligne et des décomptes en direct.",
     "toolTitle": "Éditeur de texte",
-    "toolDescription": "Écrivez et éditez du texte brut directement dans votre navigateur avec numéros de ligne, copie, téléchargement et comptage de caractères.",
+    "toolDescription": "Modifiez localement le texte brut avec les numéros de ligne, le retour à la ligne, l'insertion de tabulations, la copie, le téléchargement et le nombre de caractères et de lignes en direct.",
     "categoryName": "Chaînes et texte",
     "inputPlaceholder": "Commencez à taper ou collez du texte ici...",
-    "descTitle": "Éditeur de texte",
+    "descTitle": "Modifiez le texte brut avec les numéros de ligne et les décomptes en direct",
     "descParas": [
-      "Cet éditeur de texte en ligne vous permet d'écrire et d'éditer du texte brut directement dans votre navigateur. Il dispose de numéros de ligne, comptage de caractères, comptage de lignes, copie et téléchargement.",
-      "L'éditeur fonctionne entièrement dans votre navigateur. Le texte que vous tapez ou collez n'est pas téléchargé, stocké ou envoyé à un serveur."
+      "<strong>Éditeur de texte est un bloc-notes local pour le texte brut, les extraits de code, les journaux, les notes et les travaux de nettoyage rapide.</strong> Les numéros de ligne restent visibles pendant que vous tapez, afin que vous puissiez référencer des lignes exactes à partir des traces de pile, de la sortie du compilateur, des lignes CSV, des fichiers de configuration ou réviser les commentaires.",
+      "L'éditeur est intentionnellement simple : il ne formate pas de texte enrichi, n'exécute pas de code et n'enregistre pas automatiquement les brouillons. Il conserve votre texte dans la page du navigateur, prend en charge le retour à la ligne pour les longues lignes et affiche le nombre de caractères et de lignes en direct avant de copier ou de télécharger le résultat."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez votre texte dans la zone d'éditeur.",
-      "La barre d'état se met à jour en temps réel avec le <strong>nombre de caractères</strong> et le <strong>nombre de lignes</strong>.",
-      "Utilisez <strong>Copier</strong> pour copier le texte dans le presse-papiers.",
-      "Utilisez <strong>Télécharger</strong> pour sauvegarder en <code>.txt</code>, ou <strong>Effacer</strong> pour réinitialiser."
+      "Tapez ou collez votre texte dans la zone de l'éditeur.",
+      "Utilisez les numéros de ligne pour localiser les erreurs, les entrées de journal, les lignes copiées ou les sections dont vous souhaitez discuter.",
+      "Vérifiez le nombre de caractères <strong>en direct</strong> et le nombre de lignes <strong>en direct</strong> avant de réutiliser le texte.",
+      "Copiez tout le contenu de l'éditeur, téléchargez un fichier <code>.txt</code> ou effacez l'éditeur lorsque vous avez terminé."
     ],
     "features": "Fonctionnalités",
     "featuresList": [
-      "<strong>Numéros de ligne</strong> — visibles à gauche et synchronisés avec le défilement.",
-      "<strong>Support Tab</strong> — la touche Tab insère deux espaces au lieu de changer le focus.",
-      "<strong>Comptage instantané</strong> — les caractères et lignes sont comptés à la frappe."
+      "<strong>Numéros de ligne</strong> — visibles sur le côté gauche de l'éditeur et synchronisés avec le défilement.",
+      "<strong>Support de la touche Tab</strong> — appuyer sur Tab insère deux espaces au lieu de déplacer le focus.",
+      "<strong>Comptes instantanés</strong> — le nombre de caractères et de lignes se met à jour au fur et à mesure que vous tapez, sans qu'il soit nécessaire d'appuyer sur un bouton."
     ],
     "example": "Exemple",
-    "examplePara": "Collez le texte suivant pour voir les numéros de ligne et le comptage en action :",
+    "examplePara": "Collez un petit extrait, vérifiez ses positions et son nombre de lignes, puis copiez ou téléchargez le résultat exact en texte brut :",
     "exampleCode": "Bonjour le monde !\nCeci est un texte d'exemple.\nLes numéros de ligne apparaissent à gauche.\nLes caractères et les lignes sont comptés automatiquement."
   },
   "de": {
-    "title": "Texteditor Online — Coding.Tools",
-    "description": "Text online bearbeiten mit Zeilennummerierung, Zeilenumbruch und sofortiger Zeichen- und Zeilenzählung. Kostenlos, schnell und privat.",
+    "title": "Online-Texteditor - Coding.Tools",
+    "description": "Schreiben, prüfen, kopieren und laden Sie Klartext in einem lokalen Browser-Editor mit Zeilennummern, Zeilenumbruch und Live-Zählungen herunter.",
     "toolTitle": "Texteditor Online",
-    "toolDescription": "Schreiben und bearbeiten Sie reinen Text direkt in Ihrem Browser mit Zeilennummerierung, Kopieren, Download und Zeichenzählung.",
+    "toolDescription": "Bearbeiten Sie einfachen Text lokal mit Zeilennummern, Zeilenumbruch, Tabulatoreinfügung, Kopieren, Herunterladen und Live-Zeichen- und Zeilenanzahl.",
     "categoryName": "Zeichenketten & Text",
     "inputPlaceholder": "Tippen Sie ein oder fügen Sie Text hier ein...",
-    "descTitle": "Texteditor Online",
+    "descTitle": "Bearbeiten Sie Klartext mit Zeilennummern und Live-Zählungen",
     "descParas": [
-      "Dieser Online-Texteditor ermöglicht das Schreiben und Bearbeiten von reinem Text direkt im Browser. Er verfügt über Zeilennummerierung, Zeichenzählung, Zeilenzählung, Kopieren und Download.",
-      "Der Editor läuft vollständig im Browser. Ihr Text wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+      "<strong>Texteditor Online ist ein lokaler Notizblock für einfachen Text, Snippets, Protokolle, Notizen und schnelle Aufräumarbeiten.</strong> Zeilennummern bleiben während der Eingabe sichtbar, sodass Sie auf genaue Zeilen aus Stack-Traces, Compiler-Ausgaben, CSV-Zeilen, Konfigurationsdateien oder Überprüfungskommentaren verweisen können.",
+      "Der Editor ist bewusst einfach gehalten: Er formatiert keinen Rich Text, führt keinen Code aus und speichert keine Entwürfe automatisch. Es behält Ihren Text auf der Browserseite, unterstützt den Zeilenumbruch bei langen Zeilen und zeigt die Anzahl der Zeichen und Zeilen live an, bevor Sie das Ergebnis kopieren oder herunterladen."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Tippen oder fügen Sie Text in den Editor ein.",
-      "Die Statusleiste aktualisiert sich in Echtzeit mit der <strong>Zeichenzahl</strong> und <strong>Zeilenanzahl</strong>.",
-      "Verwenden Sie <strong>Kopieren</strong> um den Text in die Zwischenablage zu kopieren.",
-      "Verwenden Sie <strong>Herunterladen</strong> um als <code>.txt</code> zu speichern, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Geben Sie Ihren Text ein oder fügen Sie ihn in den Editorbereich ein.",
+      "Verwenden Sie die Zeilennummern, um Fehler, Protokolleinträge, kopierte Zeilen oder Abschnitte zu finden, die Sie besprechen möchten.",
+      "Überprüfen Sie die Live-<strong>-Zeichenanzahl</strong> und <strong>Zeilenanzahl</strong>, bevor Sie den Text wiederverwenden.",
+      "Kopieren Sie den gesamten Editorinhalt, laden Sie eine <code>.txt</code>-Datei herunter oder löschen Sie den Editor, wenn Sie fertig sind."
     ],
     "features": "Funktionen",
     "featuresList": [
-      "<strong>Zeilennummerierung</strong> — sichtbar auf der linken Seite, synchronisiert mit dem Scrollen.",
-      "<strong>Tab-Taste</strong> — drückt Tab fügt zwei Leerzeichen ein statt den Fokus zu wechseln.",
-      "<strong>Sofortige Zählung</strong> — Zeichen und Zeilen werden bei der Eingabe automatisch aktualisiert."
+      "<strong>Zeilennummern</strong> – sichtbar auf der linken Seite des Editors und synchronisiert mit dem Scrollen.",
+      "<strong>Tab-Tastenunterstützung</strong> – Durch Drücken der Tabulatortaste werden zwei Leerzeichen eingefügt, anstatt den Fokus zu verschieben.",
+      "<strong>Instant-Zählungen</strong> – Die Zeichen- und Zeilenanzahl wird während der Eingabe aktualisiert, ohne dass ein Tastendruck erforderlich ist."
     ],
     "example": "Beispiel",
-    "examplePara": "Fügen Sie den folgenden Text ein, um die Zeilennummerierung und Zeichenzählung zu sehen:",
+    "examplePara": "Fügen Sie einen kleinen Ausschnitt ein, überprüfen Sie dessen Zeilenpositionen und -anzahlen und kopieren Sie dann das genaue Klartext-Ergebnis oder laden Sie es herunter:",
     "exampleCode": "Hallo Welt!\nDies ist ein Beispieltext.\nZeilennummern werden links angezeigt.\nZeichen und Zeilen werden automatisch gezählt."
   },
   "es": {
-    "title": "Editor de texto — Coding.Tools",
-    "description": "Edite texto en línea con números de línea, ajuste de línea y conteo instantáneo de caracteres. Gratis, rápido y privado.",
+    "title": "Editor de texto en línea - Coding.Tools",
+    "description": "Escriba, inspeccione, copie y descargue texto sin formato en un editor de navegador local con números de línea, ajuste de palabras y recuentos en vivo.",
     "toolTitle": "Editor de texto",
-    "toolDescription": "Escriba y edite texto plano directamente en su navegador con números de línea, copiar, descargar y conteo de caracteres.",
+    "toolDescription": "Edite texto sin formato localmente con números de línea, ajuste de palabras, inserción de tabulaciones, copia, descarga y recuento de líneas y caracteres en vivo.",
     "categoryName": "Cadenas y texto",
     "inputPlaceholder": "Comience a escribir o pegue texto aquí...",
-    "descTitle": "Editor de texto",
+    "descTitle": "Edite texto sin formato con números de línea y recuentos en vivo",
     "descParas": [
-      "Este editor de texto en línea le permite escribir y editar texto plano directamente en su navegador. Cuenta con números de línea, conteo de caracteres, conteo de líneas, copiar y descargar.",
-      "El editor funciona completamente en su navegador. El texto que escribe o pega no se carga, almacena ni envía a un servidor."
+      "<strong>Editor de texto es un bloc de notas local para texto sin formato, fragmentos, registros, notas y trabajos de limpieza rápida.</strong> Los números de línea permanecen visibles mientras escribe, por lo que puede hacer referencia a líneas exactas de seguimientos de pila, resultados del compilador, filas CSV, archivos de configuración o comentarios de revisión.",
+      "El editor es intencionalmente simple: no formatea texto enriquecido, no ejecuta código ni guarda borradores automáticamente. Mantiene su texto en la página del navegador, admite ajuste de palabras para líneas largas y muestra el recuento de líneas y caracteres en vivo antes de copiar o descargar el resultado."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue su texto en el área del editor.",
-      "La barra de estado se actualiza en tiempo real con el <strong>conteo de caracteres</strong> y <strong>conteo de líneas</strong>.",
-      "Use <strong>Copiar</strong> para copiar el texto al portapapeles.",
-      "Use <strong>Descargar</strong> para guardar como <code>.txt</code>, o <strong>Limpiar</strong> para reiniciar."
+      "Utilice los números de línea para localizar errores, entradas de registro, filas copiadas o secciones que desee analizar.",
+      "Verifique el recuento de caracteres <strong>en vivo</strong> y el recuento de líneas <strong>en vivo</strong> antes de reutilizar el texto.",
+      "Copie todo el contenido del editor, descargue un archivo <code>.txt</code> o borre el editor cuando haya terminado."
     ],
     "features": "Características",
     "featuresList": [
-      "<strong>Números de línea</strong> — visibles a la izquierda, sincronizados con el desplazamiento.",
-      "<strong>Soporte Tab</strong> — Tab inserta dos espacios en lugar de cambiar el foco.",
-      "<strong>Conteo instantáneo</strong> — caracteres y líneas se actualizan al escribir."
+      "<strong>Números de línea</strong>: visibles en el lado izquierdo del editor y sincronizados con el desplazamiento.",
+      "<strong>Compatibilidad con la tecla Tab</strong>: al presionar Tab se insertan dos espacios en lugar de mover el foco.",
+      "<strong>Recuentos instantáneos</strong>: los recuentos de caracteres y líneas se actualizan a medida que escribe, sin necesidad de presionar ningún botón."
     ],
     "example": "Ejemplo",
-    "examplePara": "Pegue el siguiente texto para ver los números de línea y el conteo en acción:",
+    "examplePara": "Pegue un pequeño fragmento, verifique las posiciones de las líneas y los recuentos, luego copie o descargue el resultado exacto en texto sin formato:",
     "exampleCode": "¡Hola, Mundo!\nEste es un texto de ejemplo.\nLos números de línea aparecen a la izquierda.\nLos caracteres y líneas se cuentan automáticamente."
   },
   "pt": {
-    "title": "Editor de texto — Coding.Tools",
-    "description": "Edite texto online com números de linha, quebra de linha e contagem instantânea de caracteres. Gratuito, rápido e privado.",
+    "title": "Editor de texto on-line - Coding.Tools",
+    "description": "Escreva, inspecione, copie e baixe texto simples em um editor de navegador local com números de linha, quebra de linha e contagens dinâmicas.",
     "toolTitle": "Editor de texto",
-    "toolDescription": "Escreva e edite texto puro diretamente no navegador com números de linha, copiar, baixar e contagem de caracteres.",
+    "toolDescription": "Edite texto simples localmente com números de linha, quebra de linha, inserção de guias, cópia, download e contagens de caracteres e linhas ao vivo.",
     "categoryName": "Strings e texto",
     "inputPlaceholder": "Comece a digitar ou cole o texto aqui...",
-    "descTitle": "Editor de texto",
+    "descTitle": "Edite texto simples com números de linha e contagens ao vivo",
     "descParas": [
-      "Este editor de texto online permite escrever e editar texto puro diretamente no navegador. Possui números de linha, contagem de caracteres, contagem de linhas, copiar e baixar.",
-      "O editor funciona inteiramente no navegador. O texto digitado ou colado não é enviado, armazenado ou enviado a um servidor."
+      "<strong>Editor de texto é um bloco de notas local para texto simples, snippets, logs, notas e trabalho de limpeza rápida. Os números de linha</strong> permanecem visíveis enquanto você digita, para que você possa fazer referência a linhas exatas de rastreamentos de pilha, saída do compilador, linhas CSV, arquivos de configuração ou comentários de revisão.",
+      "O editor é intencionalmente simples: ele não formata rich text, não executa código nem salva rascunhos automaticamente. Ele mantém seu texto na página do navegador, suporta quebra de linha para linhas longas e mostra contagens de caracteres e linhas ao vivo antes de você copiar ou baixar o resultado."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Digite ou cole seu texto na área do editor.",
-      "A barra de status é atualizada em tempo real com a <strong>contagem de caracteres</strong> e <strong>contagem de linhas</strong>.",
-      "Use <strong>Copiar</strong> para copiar o texto.",
-      "Use <strong>Baixar</strong> para salvar como <code>.txt</code>, ou <strong>Limpar</strong> para reiniciar."
+      "Use os números de linha para localizar erros, entradas de log, linhas copiadas ou seções que você deseja discutir.",
+      "Verifique a contagem de caracteres <strong>ao vivo</strong> e a contagem de linhas <strong>ao vivo</strong> antes de reutilizar o texto.",
+      "Copie todo o conteúdo do editor, baixe um arquivo <code>.txt</code> ou limpe o editor quando terminar."
     ],
     "features": "Recursos",
     "featuresList": [
-      "<strong>Números de linha</strong> — visíveis à esquerda, sincronizados com a rolagem.",
-      "<strong>Suporte Tab</strong> — Tab insere dois espaços em vez de mudar o foco.",
-      "<strong>Contagem instantânea</strong> — caracteres e linhas são atualizados ao digitar."
+      "<strong>Números de linha</strong> — visíveis no lado esquerdo do editor e sincronizados com rolagem.",
+      "<strong>Suporte à tecla Tab</strong> — pressionar Tab insere dois espaços em vez de mover o foco.",
+      "<strong>Contagens instantâneas</strong> — as contagens de caracteres e linhas são atualizadas conforme você digita, sem a necessidade de pressionar nenhum botão."
     ],
     "example": "Exemplo",
-    "examplePara": "Cole o seguinte texto para ver os números de linha e contagem em ação:",
+    "examplePara": "Cole um pequeno trecho, verifique as posições e contagens das linhas e, em seguida, copie ou baixe o resultado exato em texto simples:",
     "exampleCode": "Olá, Mundo!\nEste é um texto de exemplo.\nOs números de linha aparecem à esquerda.\nOs caracteres e linhas são contados automaticamente."
   }
 }

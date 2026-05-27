@@ -1,290 +1,290 @@
 {
   "en": {
-    "title": "RGB to Hex Converter — Coding.Tools",
-    "description": "Convert RGB color values to hex color codes with live preview.",
+    "title": "RGB to Hex Converter - Coding.Tools",
+    "description": "Convert RGB channel values to CSS hexadecimal color notation with a live preview.",
     "toolTitle": "RGB to Hex",
-    "toolDescription": "Convert RGB color values to hex codes with a live color preview.",
+    "toolDescription": "Turn red, green, and blue channel values into a CSS hex color code.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter RGB color (e.g. rgb(255,87,51))...",
     "outputPlaceholder": "Hex color will appear here...",
-    "descTitle": "RGB to Hex Converter",
+    "descTitle": "Convert RGB channels to CSS hex colors",
     "descParas": [
-      "This tool converts RGB color values to hexadecimal color codes with a live color preview.",
-      "The conversion runs locally in your browser."
+      "<strong>RGB to Hex converts red, green, and blue channel values into a CSS <code>#RRGGBB</code> color.</strong> Use it when moving colors from design tools, canvas output, screenshots, or computed styles into hex-based palettes.",
+      "Each RGB channel must be an integer from <code>0</code> to <code>255</code>. The converter pads one-digit hex values automatically, so channel value <code>5</code> becomes <code>05</code> in the final color code."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste an RGB color value into the input field.",
-      "The hex code and color preview update automatically.",
-      "Click <strong>Pick a Random Color</strong> for a random color.",
-      "Use <strong>Copy</strong> to copy the hex value."
+      "Enter red, green, and blue values from 0 to 255.",
+      "Review the generated hex color and the live preview swatch.",
+      "Click <strong>Pick a Random Color</strong> to fill the channels with a sample color.",
+      "Use <strong>Copy</strong> to copy the hex color code."
     ],
-    "whatIs": "What is RGB to Hex?",
+    "whatIs": "What is RGB to hex conversion?",
     "whatIsParas": [
-      "RGB uses decimal numbers 0-255 for each color channel. Converting to hex provides a compact color code for CSS and HTML."
+      "<strong>RGB to hex conversion</strong> turns three decimal color channels into three two-digit hexadecimal pairs. Red, green, and blue are then combined as <code>#RRGGBB</code>, the common CSS hex color format."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter RGB values as rgb(R,G,B) or just R,G,B. Each value must be 0-255.",
+    "inputNotesPara": "Use whole-number channel values only. Values outside <code>0-255</code>, percentages, HSL values, and alpha values need conversion before they can become a standard 6-digit hex color.",
     "example": "Example",
-    "examplePara": "Converting RGB to hex:",
+    "examplePara": "RGB red 255, green 87, and blue 51 combine into <code>#FF5733</code>:",
     "exampleCode": "--- RGB Input ---\nrgb(255, 87, 51)\n\n--- Hex Output ---\n#FF5733",
     "inputHint": "Values from <code>0</code> to <code>255</code> per channel",
     "resultPlaceholder": "Result will appear here"
   },
   "cn": {
-    "title": "RGB转十六进制转换器 — Coding.Tools",
-    "description": "将RGB颜色值转换为十六进制颜色代码，并提供实时预览。",
+    "title": "RGB 到十六进制转换器 - Coding.Tools",
+    "description": "通过实时预览将 RGB 通道值转换为 CSS 十六进制颜色表示法。",
     "toolTitle": "RGB转十六进制",
-    "toolDescription": "将RGB颜色值转换为十六进制代码，并提供实时颜色预览。",
+    "toolDescription": "将红色、绿色和蓝色通道值转换为 CSS 十六进制颜色代码。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入RGB颜色（例如 rgb(255,87,51)）...",
     "outputPlaceholder": "十六进制颜色将显示在这里...",
-    "inputHint": "每个通道的值范围为 <code>0</code> 到 <code>255</code>",
-    "descTitle": "RGB转十六进制转换器",
+    "descTitle": "将 RGB 通道转换为 CSS 十六进制颜色",
     "descParas": [
-      "此工具将RGB（红、绿、蓝）颜色值转换为十六进制颜色代码。包含实时颜色预览，让您直观查看颜色效果。随机颜色按钮可每次生成新的颜色。",
-      "转换完全在浏览器中进行。每个颜色通道输入0到255的值。"
+      "<strong>RGB 到十六进制将红色、绿色和蓝色通道值转换为 CSS <code>#RRGGBB</code> 颜色。</strong> 将颜色从设计工具、画布输出、屏幕截图或计算样式移动到基于十六进制的调色板时使用它。",
+      "每个 RGB 通道必须是从 <code>0</code> 到 <code>255</code> 的整数。转换器自动填充一位十六进制值，因此通道值 <code>5</code> 在最终颜色代码中变为 <code>05</code>。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "为红色、绿色和蓝色输入0到255的值。",
-      "点击<strong>转换</strong>查看十六进制颜色代码和预览。",
-      "点击<strong>随机颜色</strong>生成随机颜色。",
-      "使用<strong>复制</strong>将十六进制值复制到剪贴板。"
+      "输入 0 到 255 之间的红色、绿色和蓝色值。",
+      "查看生成的十六进制颜色和实时预览样本。",
+      "单击 <strong>选择随机颜色</strong> 以使用样本颜色填充通道。",
+      "使用 <strong>复制</strong> 复制十六进制颜色代码。"
     ],
-    "whatIs": "什么是RGB？",
+    "whatIs": "RGB 到十六进制的转换是什么？",
     "whatIsParas": [
-      "RGB是一种颜色模型，通过组合红光、绿光和蓝光来表示颜色。每个通道的值范围为0（无强度）到255（最大强度）。通过混合不同比例的三原色，可以在屏幕上创建任何可见颜色。"
+      "<strong>RGB 到十六进制转换</strong> 将三个十进制颜色通道转换为三个两位数十六进制对。然后，红色、绿色和蓝色组合为 <code>#RRGGBB</code>，即常见的 CSS 十六进制颜色格式。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "以 rgb(R,G,B) 格式或直接输入 R,G,B。每个值必須为0-255。",
+    "inputNotesPara": "仅使用整数通道值。 <code>0-255</code> 之外的值、百分比、HSL 值和 alpha 值需要转换才能成为标准的 6 位十六进制颜色。",
     "example": "示例",
-    "examplePara": "将RGB转换为十六进制：",
+    "examplePara": "RGB 红色 255、绿色 87 和蓝色 51 组合成 <code>#FF5733</code>：",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "每个通道的值范围为 <code>0</code> 到 <code>255</code>",
     "resultPlaceholder": "结果将显示在这里"
   },
   "tw": {
-    "title": "RGB轉十六進位轉換器 — Coding.Tools",
-    "description": "將RGB顏色值轉換為十六進位顏色代碼，並提供即時預覽。",
+    "title": "RGB 到十六進位轉換器 - Coding.Tools",
+    "description": "透過即時預覽將 RGB 頻道值轉換為 CSS 十六進位顏色表示法。",
     "toolTitle": "RGB轉十六進位",
-    "toolDescription": "將RGB顏色值轉換為十六進位代碼，並提供即時顏色預覽。",
+    "toolDescription": "將紅色、綠色和藍色通道值轉換為 CSS 十六進位顏色代碼。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入RGB顏色（例如 rgb(255,87,51)）...",
     "outputPlaceholder": "十六進位顏色將顯示在這裡...",
-    "inputHint": "每個通道的值範圍為 <code>0</code> 到 <code>255</code>",
-    "descTitle": "RGB轉十六進位轉換器",
+    "descTitle": "將 RGB 頻道轉換為 CSS 十六進位顏色",
     "descParas": [
-      "此工具將RGB（紅、綠、藝）顏色值轉換為十六進位顏色代碼。包含即時顏色預覽，讓您直觀查看顏色效果。隨機顏色按鈕可每次生成新的顏色。",
-      "轉換完全在瀏覽器中進行。每個顏色通道輸入0到255的值。"
+      "<strong>RGB 到十六進位將紅色、綠色和藍色通道值轉換為 CSS <code>#RRGGBB</code> 顏色。</strong> 將顏色從設計工具、畫布輸出、螢幕截圖或計算樣式移動到基於十六進位的調色板時使用它。",
+      "每個 RGB 通道必須是從 <code>0</code> 到 <code>255</code> 的整數。轉換器會自動填入一位十六進位值，因此通道值 <code>5</code> 在最終顏色代碼中變成 <code>05</code>。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "為紅色、綠色和藝色輸入0到255的值。",
-      "點擊<strong>轉換</strong>查看十六進位顏色代碼和預覽。",
-      "點擊<strong>隨機顏色</strong>生成隨機顏色。",
-      "使用<strong>複製</strong>將十六進位值複製到剪貼簿。"
+      "輸入 0 到 255 之間的紅色、綠色和藍色值。",
+      "查看產生的十六進位顏色和即時預覽樣本。",
+      "點選 <strong>選擇隨機顏色</strong> 以使用樣本顏色填滿通道。",
+      "使用 <strong>複製</strong> 複製十六進位顏色代碼。"
     ],
-    "whatIs": "什麼是RGB？",
+    "whatIs": "RGB 到十六進位的轉換是什麼？",
     "whatIsParas": [
-      "RGB是一種顏色模型，通過組合紅光、綠光和藝光來表示顏色。每個通道的值範圍為0（無強度）到255（最大強度）。通過混合不同比例的三原色，可以在螢幕上創建任何可見顏色。"
+      "<strong>RGB 到十六進位轉換</strong> 將三個十進位顏色通道轉換為三個兩位數十六進位對。然後，紅色、綠色和藍色組合為 <code>#RRGGBB</code>，即常見的 CSS 十六進位顏色格式。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "以 rgb(R,G,B) 格式或直接輸入 R,G,B。每個值必須為0-255。",
+    "inputNotesPara": "僅使用整數通道值。 <code>0-255</code> 以外的值、百分比、HSL 值和 alpha 值需要轉換才能成為標準的 6 位元十六進位顏色。",
     "example": "範例",
-    "examplePara": "將RGB轉換為十六進位：",
+    "examplePara": "RGB 紅色 255、綠色 87 和藍色 51 組合成 <code>#FF5733</code>：",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "每個通道的值範圍為 <code>0</code> 到 <code>255</code>",
     "resultPlaceholder": "結果將顯示在這裡"
   },
   "jp": {
-    "title": "RGB→16進数変換ツール — Coding.Tools",
-    "description": "RGBカラー値を16進数カラーコードに変換し、ライブプレビューを提供します。",
+    "title": "RGB から 16 進数へのコンバーター - Coding.Tools",
+    "description": "ライブ プレビューを使用して、RGB チャンネル値を CSS 16 進カラー表記に変換します。",
     "toolTitle": "RGB→16進数",
-    "toolDescription": "RGBカラー値を16進数コードに変換し、ライブカラーを表示します。",
+    "toolDescription": "赤、緑、青のチャネル値を CSS 16 進カラー コードに変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "RGBカラーを入力（例: rgb(255,87,51)）...",
     "outputPlaceholder": "16進数カラーがここに表示されます...",
-    "inputHint": "各チャネルの値は <code>0</code> から <code>255</code>",
-    "descTitle": "RGB→16進数変換ツール",
+    "descTitle": "RGB チャネルを CSS 16 進カラーに変換",
     "descParas": [
-      "このツールはRGB（赤、緑、青）カラー値を16進数カラーコードに変換します。ライブカラープレビューで色を直感的に確認できます。ランダムカラーボタンで毎回新しい色を生成できます。",
-      "変換は完全にブラウザ内で行われます。各カラーに0から255の値を入力してください。"
+      "<strong>RGB→16進数 は、赤、緑、青のチャンネル値を CSS <code>#RRGGBB</code> カラーに変換します。</strong> デザイン ツール、キャンバス出力、スクリーンショット、または計算されたスタイルからカラーを 16 進数ベースのパレットに移動するときに使用します。",
+      "各 RGB チャネルは <code>0</code> から <code>255</code> までの整数でなければなりません。コンバーターは 1 桁の 16 進数値を自動的にパディングするため、チャネル値 <code>5</code> は最終的なカラー コードでは <code>05</code> になります。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "赤、緑、青に0から255の値を入力します。",
-      "<strong>変換</strong>をクリックして16進数カラーコードとプレビューを表示。",
-      "<strong>ランダム</strong>をクリックしてランダムな色を生成。",
-      "<strong>コピー</strong>で16進数値をクリップボードにコピー。"
+      "赤、緑、青の値を 0 ～ 255 の範囲で入力します。",
+      "生成された 16 進カラーとライブ プレビュー スウォッチを確認します。",
+      "<strong>ランダムな色を選択</strong> をクリックして、チャンネルをサンプル カラーで塗りつぶします。",
+      "<strong>コピー</strong> を使用して 16 進カラー コードをコピーします。"
     ],
-    "whatIs": "RGBとは？",
+    "whatIs": "RGB から 16 進数への変換とは何ですか?",
     "whatIsParas": [
-      "RGBは、赤、緑、青の光を組み合わせて色を表すカラーモデルです。各チャネルの値は0（強度なし）から255（最大強度）です。三原色の異なる量を混ぜることで、画面に表示できる任意の色を作成できます。"
+      "<strong>RGB から 16 進数への変換</strong> は、3 つの 10 進数のカラー チャネルを 3 つの 2 桁の 16 進数のペアに変換します。赤、緑、青は、共通の CSS 16 進カラー形式である <code>#RRGGBB</code> として結合されます。"
     ],
     "inputNotes": "入力の注意",
-    "inputNotesPara": "rgb(R,G,B) 形式または R,G,B の形式で入力してください。各値は0-255でなければなりません。",
+    "inputNotesPara": "整数のチャネル値のみを使用してください。 <code>0-255</code> 以外の値、パーセンテージ、HSL 値、およびアルファ値は、標準の 6 桁の 16 進カラーになる前に変換する必要があります。",
     "example": "例",
-    "examplePara": "RGBを16進数に変換：",
+    "examplePara": "RGB 赤 255、緑 87、青 51 を組み合わせて <code>#FF5733</code> にします。",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "各チャネルの値は <code>0</code> から <code>255</code>",
     "resultPlaceholder": "結果がここに表示されます"
   },
   "kr": {
-    "title": "RGB to Hex 변환기 — Coding.Tools",
-    "description": "RGB 색상 값을 16진수 색상 코드로 변환하고 실시간 미리보기를 제공합니다.",
+    "title": "RGB - 16진수 변환기 - Coding.Tools",
+    "description": "실시간 미리보기를 통해 RGB 채널 ​​값을 CSS 16진수 색상 표기법으로 변환합니다.",
     "toolTitle": "RGB를 16진수로",
-    "toolDescription": "RGB 색상 값을 16진수 코드로 변환하고 실시간 색상 미리보기를 제공합니다.",
+    "toolDescription": "빨간색, 녹색 및 파란색 채널 값을 CSS 16진수 색상 코드로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "RGB 색상 입력 (예: rgb(255,87,51))...",
     "outputPlaceholder": "16진수 색상이 여기에 표시됩니다...",
-    "inputHint": "각 채널의 값 범위: <code>0</code> ~ <code>255</code>",
-    "descTitle": "RGB to Hex 변환기",
+    "descTitle": "RGB 채널을 CSS 16진수 색상으로 변환",
     "descParas": [
-      "이 도구는 RGB(빨간색, 녽색, 파란색) 색상 값을 16진수 색상 코드로 변환합니다. 실시간 색상 미리보기로 색상을 직광적으로 확인할 수 있습니다. 무작위 색상 버튼으로 마다 새로운 색상을 생성할 수 있습니다.",
-      "변환은 브라우저에서 완전히 이루어집니다. 각 색상 채널에 0에서 255 사이의 값을 입력하세요."
+      "<strong>RGB를 16진수로는 빨간색, 녹색 및 파란색 채널 값을 CSS <code>#RRGGBB</code> 색상으로 변환합니다.</strong> 디자인 도구, 캔버스 출력, 스크린샷 또는 계산된 스타일의 색상을 16진수 기반 팔레트로 이동할 때 사용합니다.",
+      "각 RGB 채널은 <code>0</code>부터 <code>255</code>까지의 정수여야 합니다. 변환기는 한 자리 16진수 값을 자동으로 채우므로 채널 값 <code>5</code>는 최종 색상 코드에서 <code>05</code>가 됩니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "빨간색, 녽색, 파란색에 0에서 255 사이의 값을 입력합니다.",
-      "<strong>변환</strong>을 클릭하여 16진수 색상 코드와 미리보기를 확인합니다.",
-      "<strong>무작위</strong>을 클릭하여 무작위 색상을 생성합니다.",
-      "<strong>복사</strong>를 사용하여 16진수 값을 클립보드에 복사합니다."
+      "0~255 사이의 빨간색, 녹색, 파란색 값을 입력합니다.",
+      "생성된 16진수 색상과 실시간 미리보기 견본을 검토하세요.",
+      "<strong>임의의 색상을 선택</strong>를 클릭하여 채널을 샘플 색상으로 채웁니다.",
+      "16진수 색상 코드를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "RGB란?",
+    "whatIs": "RGB를 16진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "RGB는 빨간색, 녽색, 파란색 빜을 결합하여 색상을 표현하는 색상 모델입니다. 각 채널의 값은 0(강도 없음)에서 255(최대 강도)입니다. 삼원색의 다른 비율을 밵어 모든 색상을 만들 수 있습니다."
+      "<strong>RGB에서 16진수로 변환</strong>는 3개의 10진수 색상 채널을 3개의 2자리 16진수 쌍으로 변환합니다. 그런 다음 빨간색, 녹색 및 파란색이 일반적인 CSS 16진수 색상 형식인 <code>#RRGGBB</code>로 결합됩니다."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "rgb(R,G,B) 형식 또는 R,G,B 형식으로 입력하세요. 각 값은 0-255여야 합니다.",
+    "inputNotesPara": "정수 채널 값만 사용하세요. <code>0-255</code> 외부의 값, 백분율, HSL 값 및 알파 값은 표준 6자리 16진수 색상이 되기 전에 변환이 필요합니다.",
     "example": "예시",
-    "examplePara": "RGB를 16진수로 변환:",
+    "examplePara": "RGB 빨간색 255, 녹색 87 및 파란색 51이 <code>#FF5733</code>로 결합됩니다.",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "각 채널의 값 범위: <code>0</code> ~ <code>255</code>",
     "resultPlaceholder": "결과가 여기에 표시됩니다"
   },
   "fr": {
-    "title": "Convertisseur RGB vers Hex — Coding.Tools",
-    "description": "Convertissez les valeurs de couleur RGB en codes hexadécimaux avec aperçu en direct.",
+    "title": "Convertisseur RGB en hexadécimal - Coding.Tools",
+    "description": "Convertissez les valeurs des canaux RGB en notation de couleur hexadécimale CSS avec un aperçu en direct.",
     "toolTitle": "RGB vers Hex",
-    "toolDescription": "Convertissez les valeurs de couleur RGB en codes hexadécimaux avec un aperçu de couleur en direct.",
+    "toolDescription": "Transformez les valeurs des canaux rouge, vert et bleu en un code couleur hexadécimal CSS.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez une couleur RGB (ex: rgb(255,87,51))...",
     "outputPlaceholder": "La couleur hexadécimale apparaîtra ici...",
-    "inputHint": "Valeurs de <code>0</code> à <code>255</code> par canal",
-    "descTitle": "Convertisseur RGB vers Hex",
+    "descTitle": "Convertir les canaux RGB en couleurs hexadécimales CSS",
     "descParas": [
-      "Cet outil convertit les valeurs de couleur RGB (Rouge, Vert, Bleu) en code couleur hexadécimal. Il inclut un aperçu de couleur en direct pour voir exactement à quoi ressemble la couleur. Le bouton couleur aléatoire génère une nouvelle couleur à chaque fois.",
-      "La conversion s’effectue entièrement dans votre navigateur. Entrez des valeurs de 0 à 255 pour chaque canal de couleur."
+      "<strong>RGB vers Hex convertit les valeurs des canaux rouge, vert et bleu en une couleur CSS <code>#RRGGBB</code>.</strong> Utilisez-le lorsque vous déplacez des couleurs à partir d'outils de conception, de sorties de canevas, de captures d'écran ou de styles calculés vers des palettes hexadécimales.",
+      "Chaque canal RGB doit être un entier compris entre <code>0</code> et <code>255</code>. Le convertisseur complète automatiquement les valeurs hexadécimales à un chiffre, de sorte que la valeur du canal <code>5</code> devient <code>05</code> dans le code couleur final."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Entrez des valeurs de 0 à 255 pour Rouge, Vert et Bleu.",
-      "Cliquez sur <strong>Convertir</strong> pour voir le code couleur hexadécimal et l’aperçu.",
-      "Cliquez sur <strong>Aléatoire</strong> pour générer une couleur aléatoire.",
-      "Utilisez <strong>Copier</strong> pour copier la valeur hexadécimale dans le presse-papiers."
+      "Entrez les valeurs rouge, vert et bleu de 0 à 255.",
+      "Vérifiez la couleur hexadécimale générée et l'échantillon d'aperçu en direct.",
+      "Cliquez sur <strong>Choisissez une couleur aléatoire</strong> pour remplir les canaux avec un échantillon de couleur.",
+      "Utilisez <strong>Copier</strong> pour copier le code couleur hexadécimal."
     ],
-    "whatIs": "Qu’est-ce que RGB ?",
+    "whatIs": "Qu'est-ce que la conversion RGB en hexadécimal ?",
     "whatIsParas": [
-      "RGB est un modèle de couleur qui représente les couleurs en combinant la lumière rouge, verte et bleue. Chaque canal a une valeur de 0 (aucune intensité) à 255 (intensité maximale). En mélangeant différentes quantités de chaque couleur primaire, vous pouvez créer toute couleur visible sur un écran."
+      "Conversion de <strong>RGB en hexadécimal</strong> transforme trois canaux de couleur décimaux en trois paires hexadécimales à deux chiffres. Le rouge, le vert et le bleu sont ensuite combinés sous forme de <code>#RRGGBB</code>, le format de couleur hexadécimal commun CSS."
     ],
     "inputNotes": "Notes sur la saisie",
-    "inputNotesPara": "Entrez les valeurs RGB au format rgb(R,G,B) ou simplement R,G,B. Chaque valeur doit être comprise entre 0 et 255.",
+    "inputNotesPara": "Utilisez uniquement des valeurs de canal entières. Les valeurs en dehors de <code>0-255</code>, les pourcentages, les valeurs HSL et les valeurs alpha doivent être convertis avant de pouvoir devenir une couleur hexadécimale standard à 6 chiffres.",
     "example": "Exemple",
-    "examplePara": "Conversion de RGB en hexadécimal :",
+    "examplePara": "RGB rouge 255, vert 87 et bleu 51 se combinent en <code>#FF5733</code> :",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "Valeurs de <code>0</code> à <code>255</code> par canal",
     "resultPlaceholder": "Le résultat apparaîtra ici"
   },
   "de": {
-    "title": "RGB-zu-Hex-Konverter — Coding.Tools",
-    "description": "Konvertieren Sie RGB-Farbwerte in Hex-Farbcodes mit Live-Vorschau.",
+    "title": "RGB-zu-Hex-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie RGB-Kanalwerte mit einer Live-Vorschau in die hexadezimale Farbnotation CSS.",
     "toolTitle": "RGB zu Hex",
-    "toolDescription": "Konvertieren Sie RGB-Farbwerte in Hex-Codes mit einer Live-Farbvorschau.",
+    "toolDescription": "Wandeln Sie die Werte der roten, grünen und blauen Kanäle in einen hexadezimalen CSS-Farbcode um.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "RGB-Farbe eingeben (z.B. rgb(255,87,51))...",
     "outputPlaceholder": "Hex-Farbe wird hier angezeigt...",
-    "inputHint": "Werte von <code>0</code> bis <code>255</code> pro Kanal",
-    "descTitle": "RGB-zu-Hex-Konverter",
+    "descTitle": "Konvertieren Sie RGB-Kanäle in CSS-Hex-Farben",
     "descParas": [
-      "Dieses Tool konvertiert RGB (Rot, Grün, Blau) Farbwerte in den hexadezimalen Farbcode. Es enthält eine Live-Farbvorschau, damit Sie genau sehen können, wie die Farbe aussieht. Die Zufallsfarb-Taste generiert jedes Mal eine neue Farbe.",
-      "Die Konvertierung erfolgt vollständig in Ihrem Browser. Geben Sie Werte von 0 bis 255 für jeden Farbkanal ein."
+      "<strong>RGB zu Hex konvertiert Rot-, Grün- und Blaukanalwerte in eine CSS <code>#RRGGBB</code> Farbe.</strong> Verwenden Sie es, wenn Sie Farben aus Designtools, Canvas-Ausgaben, Screenshots oder berechneten Stilen in Hex-basierte Paletten verschieben.",
+      "Jeder RGB-Kanal muss eine Ganzzahl von <code>0</code> bis <code>255</code> sein. Der Konverter füllt einstellige Hexadezimalwerte automatisch auf, sodass der Kanalwert <code>5</code> im endgültigen Farbcode zu <code>05</code> wird."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Geben Sie Werte von 0 bis 255 für Rot, Grün und Blau ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um den Hex-Farbcode und die Vorschau anzuzeigen.",
-      "Klicken Sie auf <strong>Zufällig</strong>, um eine zufällige Farbe zu erzeugen.",
-      "Verwenden Sie <strong>Kopieren</strong>, um den Hex-Wert in die Zwischenablage zu kopieren."
+      "Geben Sie Rot-, Grün- und Blauwerte von 0 bis 255 ein.",
+      "Überprüfen Sie die generierte Hex-Farbe und das Live-Vorschau-Farbfeld.",
+      "Klicken Sie auf <strong>Wählen Sie eine zufällige Farbe aus</strong>, um die Kanäle mit einer Beispielfarbe zu füllen.",
+      "Verwenden Sie <strong>Kopieren</strong>, um den Hex-Farbcode zu kopieren."
     ],
-    "whatIs": "Was ist RGB?",
+    "whatIs": "Was ist die Konvertierung von RGB in Hex?",
     "whatIsParas": [
-      "RGB ist ein Farbmodell, das Farben durch Kombination von rotem, grünem und blauem Licht darstellt. Jeder Kanal hat einen Wert von 0 (keine Intensität) bis 255 (volle Intensität). Durch Mischen verschiedener Mengen jeder Grundfarbe kann jede sichtbare Farbe auf einem Bildschirm erzeugt werden."
+      "<strong>RGB zur Hex-Konvertierung</strong> wandelt drei dezimale Farbkanäle in drei zweistellige Hexadezimalpaare um. Rot, Grün und Blau werden dann als <code>#RRGGBB</code> kombiniert, das übliche CSS-Hex-Farbformat."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Geben Sie RGB-Werte als rgb(R,G,B) oder einfach R,G,B ein. Jeder Wert muss zwischen 0 und 255 liegen.",
+    "inputNotesPara": "Verwenden Sie nur ganzzahlige Kanalwerte. Werte außerhalb von <code>0-255</code>, Prozentsätze, HSL-Werte und Alphawerte müssen konvertiert werden, bevor sie in eine standardmäßige 6-stellige Hexadezimalfarbe umgewandelt werden können.",
     "example": "Beispiel",
-    "examplePara": "RGB in Hex konvertieren:",
+    "examplePara": "RGB Rot 255, Grün 87 und Blau 51 ergeben zusammen <code>#FF5733</code>:",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "Werte von <code>0</code> bis <code>255</code> pro Kanal",
     "resultPlaceholder": "Das Ergebnis wird hier angezeigt"
   },
   "es": {
-    "title": "Convertidor de RGB a Hex — Coding.Tools",
-    "description": "Convierte valores de color RGB a códigos de color hexadecimal con vista previa en vivo.",
+    "title": "Convertidor RGB a hexadecimal - Coding.Tools",
+    "description": "Convierta valores de canal RGB a notación de color hexadecimal CSS con una vista previa en vivo.",
     "toolTitle": "RGB a Hex",
-    "toolDescription": "Convierte valores de color RGB a códigos hexadecimales con una vista previa de color en vivo.",
+    "toolDescription": "Convierta los valores de los canales rojo, verde y azul en un código de color hexadecimal CSS.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Ingrese un color RGB (ej: rgb(255,87,51))...",
     "outputPlaceholder": "El color hexadecimal aparecerá aquí...",
-    "inputHint": "Valores de <code>0</code> a <code>255</code> por canal",
-    "descTitle": "Convertidor de RGB a Hex",
+    "descTitle": "Convierta canales RGB a colores hexadecimales CSS",
     "descParas": [
-      "Esta herramienta convierte valores de color RGB (Rojo, Verde, Azul) a su código de color hexadecimal equivalente. Incluye una vista previa de color en vivo para que pueda ver exactamente cómo se ve el color. El botón de color aleatorio genera un nuevo color cada vez.",
-      "La conversión se realiza completamente en su navegador. Ingrese valores de 0 a 255 para cada canal de color."
+      "<strong>RGB a Hex convierte los valores de los canales rojo, verde y azul en un color CSS <code>#RRGGBB</code>.</strong> Úselo al mover colores desde herramientas de diseño, resultados de lienzo, capturas de pantalla o estilos calculados a paletas hexadecimales.",
+      "Cada canal RGB debe ser un número entero de <code>0</code> a <code>255</code>. El convertidor rellena automáticamente los valores hexadecimales de un dígito, por lo que el valor del canal <code>5</code> se convierte en <code>05</code> en el código de color final."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Ingrese valores de 0 a 255 para Rojo, Verde y Azul.",
-      "Haga clic en <strong>Convertir</strong> para ver el código de color hexadecimal y la vista previa.",
-      "Haga clic en <strong>Aleatorio</strong> para generar un color aleatorio.",
-      "Use <strong>Copiar</strong> para copiar el valor hexadecimal al portapapeles."
+      "Introduzca valores de rojo, verde y azul de 0 a 255.",
+      "Revise el color hexadecimal generado y la muestra de vista previa en vivo.",
+      "Haga clic en <strong>Seleccione un color aleatorio</strong> para llenar los canales con un color de muestra.",
+      "Utilice <strong>Copiar</strong> para copiar el código de color hexadecimal."
     ],
-    "whatIs": "¿Qué es RGB?",
+    "whatIs": "¿Qué es la conversión de RGB a hexadecimal?",
     "whatIsParas": [
-      "RGB es un modelo de color que representa los colores combinando luz roja, verde y azul. Cada canal tiene un valor de 0 (sin intensidad) a 255 (intensidad máxima). Al mezclar diferentes cantidades de cada color primario, puede crear cualquier color visible en una pantalla."
+      "<strong>RGB a conversión hexadecimal</strong> convierte tres canales de color decimales en tres pares hexadecimales de dos dígitos. Luego, el rojo, el verde y el azul se combinan como <code>#RRGGBB</code>, el formato de color hexadecimal común CSS."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese valores RGB como rgb(R,G,B) o simplemente R,G,B. Cada valor debe estar entre 0 y 255.",
+    "inputNotesPara": "Utilice únicamente valores de canal de números enteros. Los valores fuera de <code>0-255</code>, porcentajes, valores HSL y valores alfa necesitan conversión antes de que puedan convertirse en un color hexadecimal estándar de 6 dígitos.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de RGB a hexadecimal:",
+    "examplePara": "RGB rojo 255, verde 87 y azul 51 se combinan en <code>#FF5733</code>:",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "Valores de <code>0</code> a <code>255</code> por canal",
     "resultPlaceholder": "El resultado aparecerá aquí"
   },
   "pt": {
-    "title": "Conversor de RGB para Hex — Coding.Tools",
-    "description": "Converta valores de cor RGB para códigos de cor hexadecimal com visualização ao vivo.",
+    "title": "Conversor RGB para Hexadecimal - Coding.Tools",
+    "description": "Converta os valores do canal RGB em notação de cor hexadecimal CSS com uma visualização ao vivo.",
     "toolTitle": "RGB para Hex",
-    "toolDescription": "Converta valores de cor RGB para códigos hexadecimais com uma visualização de cor ao vivo.",
+    "toolDescription": "Transforme os valores dos canais vermelho, verde e azul em um código de cor hexadecimal CSS.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira uma cor RGB (ex: rgb(255,87,51))...",
     "outputPlaceholder": "A cor hexadecimal aparecerá aqui...",
-    "inputHint": "Valores de <code>0</code> a <code>255</code> por canal",
-    "descTitle": "Conversor de RGB para Hex",
+    "descTitle": "Converter canais RGB em cores hexadecimais CSS",
     "descParas": [
-      "Esta ferramenta converte valores de cor RGB (Vermelho, Verde, Azul) em seu código de cor hexadecimal equivalente. Inclui uma visualização de cor ao vivo para que você possa ver exatamente como a cor aparece. O botão de cor aleatória gera uma nova cor a cada vez.",
-      "A conversão é feita inteiramente no seu navegador. Insira valores de 0 a 255 para cada canal de cor."
+      "<strong>RGB para Hex converte valores de canal vermelho, verde e azul em uma cor CSS <code>#RRGGBB</code>.</strong> Use-o ao mover cores de ferramentas de design, saída de tela, capturas de tela ou estilos computados para paletas baseadas em hexadecimal.",
+      "Cada canal RGB deve ser um número inteiro de <code>0</code> a <code>255</code>. O conversor preenche valores hexadecimais de um dígito automaticamente, de modo que o valor do canal <code>5</code> se torna <code>05</code> no código de cor final."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Insira valores de 0 a 255 para Vermelho, Verde e Azul.",
-      "Clique em <strong>Converter</strong> para ver o código de cor hexadecimal e a visualização.",
-      "Clique em <strong>Aleatório</strong> para gerar uma cor aleatória.",
-      "Use <strong>Copiar</strong> para copiar o valor hexadecimal para a área de transferência."
+      "Insira valores de vermelho, verde e azul de 0 a 255.",
+      "Revise a cor hexadecimal gerada e a amostra de visualização ao vivo.",
+      "Clique em <strong>Escolha uma cor aleatória</strong> para preencher os canais com uma cor de amostra.",
+      "Use <strong>Copiar</strong> para copiar o código de cor hexadecimal."
     ],
-    "whatIs": "O que é RGB?",
+    "whatIs": "O que é conversão de RGB para hexadecimal?",
     "whatIsParas": [
-      "RGB é um modelo de cor que representa as cores combinando luz vermelha, verde e azul. Cada canal tem um valor de 0 (sem intensidade) a 255 (intensidade máxima). Ao misturar diferentes quantidades de cada cor primária, você pode criar qualquer cor visível em uma tela."
+      "Conversão de <strong>RGB para hexadecimal</strong> transforma três canais de cores decimais em três pares hexadecimais de dois dígitos. Vermelho, verde e azul são então combinados como <code>#RRGGBB</code>, o formato hexadecimal comum CSS."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira valores RGB como rgb(R,G,B) ou simplesmente R,G,B. Cada valor deve estar entre 0 e 255.",
+    "inputNotesPara": "Use apenas valores de canal com números inteiros. Valores fora de <code>0-255</code>, porcentagens, valores HSL e valores alfa precisam de conversão antes de se tornarem uma cor hexadecimal padrão de 6 dígitos.",
     "example": "Exemplo",
-    "examplePara": "Convertendo RGB para hexadecimal:",
+    "examplePara": "RGB vermelho 255, verde 87 e azul 51 combinam-se em <code>#FF5733</code>:",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",
+    "inputHint": "Valores de <code>0</code> a <code>255</code> por canal",
     "resultPlaceholder": "O resultado aparecerá aqui"
   }
 }

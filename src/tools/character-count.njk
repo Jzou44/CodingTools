@@ -1,10 +1,5 @@
 ---
-title: "Character Count Online — Coding.Tools"
-description: "Count characters, words, lines, and bytes instantly. Free online character counter with Twitter limit tracker."
-toolTitle: "Character Count"
-toolDescription: "Count characters, words, lines, and UTF-8 bytes. Includes a Twitter 280-character limit tracker."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "character-count"
 permalink: "/character-count.html"
 ---
@@ -56,40 +51,7 @@ permalink: "/character-count.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Character Count Online</h2>
-  <p>This character counter tool counts total characters, characters without spaces, words, lines, and UTF-8 bytes in real time. It also tracks how many characters you have left before hitting the Twitter 280-character limit, making it ideal for social media managers, writers, and developers.</p>
-  <p>All counting happens locally in your browser. Your text is never uploaded, stored, or sent to a server, so the tool is fast, private, and free to use without any restrictions.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste or type your text into the input editor.</li>
-    <li>View live statistics in the panel below the editor. All metrics update instantly as you type.</li>
-    <li>Check the <strong>Twitter remaining</strong> counter to see how many characters you have left for a tweet. It turns red when you exceed 280 characters.</li>
-    <li>Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset everything.</li>
-  </ol>
-
-  <h3>What is a character counter?</h3>
-  <p>A character counter is a tool that analyzes text and reports the number of characters it contains. Unlike a word counter, which groups text by spaces, a character counter measures every individual letter, number, symbol, and whitespace character. This is especially important for platforms with strict character limits, such as Twitter (280 characters), SMS messages (160 characters), and meta descriptions for SEO (around 155 characters).</p>
-  <p>This tool also displays the UTF-8 byte count, which is useful for developers working with APIs, databases, or systems that enforce byte-level size limits on text fields.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool handles any text input, including Unicode characters such as emojis, accented letters, and CJK characters. Note that multi-byte Unicode characters count as 1 character but may take 2-4 bytes in UTF-8 encoding, which is why the byte count may be higher than the character count.</p>
-
-  <h3>Example</h3>
-  <p>Paste a sample text and watch the statistics update live:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Sample Text ---
-Hello, World! 🌍
-
---- Expected Statistics ---
-Total Characters: 16
-Characters (no spaces): 14
-Words: 2
-Lines: 2
-Bytes (UTF-8): 18
-Twitter remaining: 264</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

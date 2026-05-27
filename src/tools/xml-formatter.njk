@@ -1,10 +1,5 @@
 ---
-title: "XML Formatter — Coding.Tools"
-description: "Beautify and format XML documents with proper indentation and structure. Runs locally in your browser, fast and free."
-toolTitle: "XML Formatter"
-toolDescription: "Beautify XML documents with consistent indentation and proper nesting. Copy or download the formatted result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "xml-formatter"
 permalink: "/xml-formatter.html"
 ---
@@ -36,40 +31,7 @@ permalink: "/xml-formatter.html"
 {% endblock %}
 
 {% block description %}
-  <h2>XML Formatter</h2>
-  <p>This XML Formatter tool takes raw or minified XML and reformats it with proper indentation, line breaks, and nesting structure. It makes dense XML documents readable by organizing elements into a clear hierarchy.</p>
-  <p>The formatting runs locally in your browser using the vkbeautify library. Your XML data is never uploaded to a server, making it safe for formatting configuration files, SOAP responses, sitemaps, or any XML content.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your raw or minified XML into the input editor.</li>
-    <li>Click <strong>Format XML</strong> to apply indentation and structure.</li>
-    <li>View the beautified XML in the output editor with proper nesting.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .xml file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is XML?</h3>
-  <p>XML (eXtensible Markup Language) is a markup language designed to store and transport data. It uses tags to define elements and attributes to provide metadata, creating a tree-like structure that is both human-readable and machine-parseable.</p>
-  <p>XML is widely used in web services (SOAP, RSS), document formats (DOCX, SVG), configuration files (Maven, Android manifests), and data exchange between heterogeneous systems. Proper formatting is essential for debugging and maintaining large XML documents.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any well-formed XML input. It normalizes whitespace between tags while preserving content within text nodes. The XML declaration and comments are preserved in the formatted output.</p>
-
-  <h3>Example</h3>
-  <p>Minified XML becomes readable after formatting:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (minified) ---
-&lt;root&gt;&lt;user id="1"&gt;&lt;name&gt;Alice&lt;/name&gt;&lt;email&gt;alice@example.com&lt;/email&gt;&lt;/user&gt;&lt;/root&gt;
-
---- Output (formatted) ---
-&lt;root&gt;
-  &lt;user id="1"&gt;
-    &lt;name&gt;Alice&lt;/name&gt;
-    &lt;email&gt;alice@example.com&lt;/email&gt;
-  &lt;/user&gt;
-&lt;/root&gt;</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

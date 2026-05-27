@@ -1,10 +1,5 @@
 ---
-title: "Reverse Text Online — Coding.Tools"
-description: "Reverse text online character by character, including Unicode and multi-line input. Runs locally in your browser for private string testing."
-toolTitle: "Reverse Text"
-toolDescription: "Reverse text character by character, useful for obfuscation, testing, and fun."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "reverse-text"
 permalink: "/reverse-text.html"
 ---
@@ -32,39 +27,7 @@ permalink: "/reverse-text.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Reverse Text</h2>
-  <p>This tool reverses any text string character by character. It is useful for obfuscation, testing string handling in applications, creating mirror text, or simply having fun with words and sentences.</p>
-  <p>The reversal runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool privately and instantly.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste or type your text into the input editor.</li>
-    <li>Click <strong>Reverse Text</strong> to reverse the entire string character by character.</li>
-    <li>The reversed text replaces the input in the editor. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor.</li>
-  </ol>
-
-  <h3>What is text reversal?</h3>
-  <p>Text reversal is the process of rearranging the characters in a string so that the last character becomes the first, the second-to-last becomes the second, and so on. For example, "hello" becomes "olleh". This is sometimes called a string reverse or mirror text operation.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool works with any text, including Unicode characters, emojis, and multi-line content. Each line is preserved in the output; only the order of characters within the full text is reversed.</p>
-
-  <h3>Example</h3>
-  <p>See how text looks before and after reversal:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Original Text ---
-Hello, World!
-
---- Reversed Text ---
-!dlroW ,olleH
-
---- Another Example ---
-Coding.Tools
-
---- Reversed ---
-slooT.gnidoC</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Decimal to Percent Converter — Coding.Tools",
-    "description": "Convert decimal numbers to percentages directly in your browser.",
+    "title": "Decimal to Percent Converter - Coding.Tools",
+    "description": "Convert decimal values into percentages by multiplying by 100.",
     "toolTitle": "Decimal to Percent",
-    "toolDescription": "Convert decimal numbers to percentage values.",
+    "toolDescription": "Turn decimal values into percentage notation for reporting, formulas, and labels.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter decimal number (e.g. 0.75, 1.5)...",
     "outputPlaceholder": "Percent result will appear here...",
-    "descTitle": "Decimal to Percent Converter",
+    "descTitle": "Convert decimals to percentage values",
     "descParas": [
-      "This tool converts decimal numbers to percentages by multiplying by 100.",
-      "The conversion runs locally in your browser."
+      "<strong>Decimal to Percent converts a decimal into percentage form by multiplying by 100.</strong> Use it when turning ratios, probabilities, rates, or formula outputs into labels people expect to read as percentages.",
+      "Values between <code>0</code> and <code>1</code> become percentages from <code>0%</code> to <code>100%</code>. Values above <code>1</code> are valid too: <code>1.5</code> becomes <code>150%</code>."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste a decimal number into the input field.",
-      "Click <strong>Convert</strong> to get the percentage.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Enter the decimal value you want to convert.",
+      "Review the percent result after the value is multiplied by 100.",
+      "Copy the percent value, or clear the field before converting another decimal."
     ],
-    "whatIs": "What is Decimal to Percent?",
+    "whatIs": "What is decimal to percent conversion?",
     "whatIsParas": [
-      "To convert a decimal to percent, multiply by 100. For example, 0.75 = 75%."
+      "<strong>Decimal to percent conversion</strong> rewrites a ratio as parts per hundred. Multiplying by <code>100</code> moves <code>0.75</code> to <code>75%</code>, which is often easier to read in reports and UI labels."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid decimal number.",
+    "inputNotesPara": "Enter a plain numeric decimal without a percent sign. Decide how many decimal places the displayed percent should keep before using it in charts, finance sheets, or user-facing text.",
     "example": "Example",
-    "examplePara": "Converting decimal to percent:",
+    "examplePara": "The decimal value 0.75 represents seventy-five percent:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "cn": {
-    "title": "小数转百分比转换器 — Coding.Tools",
-    "description": "在浏览器中直接将小数转换为百分比。",
+    "title": "小数到百分比转换器 - Coding.Tools",
+    "description": "通过乘以 100 将小数值转换为百分比。",
     "toolTitle": "小数转百分比",
-    "toolDescription": "将小数转换为百分比表示。",
+    "toolDescription": "将小数值转换为报告、公式和标签的百分比表示法。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入小数（如 0.75、0.5）...",
     "outputPlaceholder": "百分比结果将显示在这里...",
-    "descTitle": "小数转百分比转换器",
+    "descTitle": "将小数转换为百分比值",
     "descParas": [
-      "此工具将小数转换为百分比表示。",
-      "转换在浏览器本地运行。"
+      "<strong>小数转百分比 通过乘以 100 将小数转换为百分比形式。</strong> 将比率、概率、比率或公式输出转换为人们希望以百分比形式读取的标签时使用它。",
+      "<code>0</code> 和 <code>1</code> 之间的值变为 <code>0%</code> 到 <code>100%</code> 的百分比。 <code>1</code> 以上的值也有效：<code>1.5</code> 变为 <code>150%</code>。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入小数。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "输入您要转换的十进制值。",
+      "将值乘以 100 后查看百分比结果。",
+      "复制百分比值，或在转换另一个小数之前清除该字段。"
     ],
-    "whatIs": "什么是小数转百分比？",
+    "whatIs": "什么是小数到百分比的转换？",
     "whatIsParas": [
-      "小数转百分比是将小数乘以100得到等值的百分比。"
+      "<strong>小数到百分比的转换</strong> 将比率重写为百分之几。乘以 <code>100</code> 将 <code>0.75</code> 移动到 <code>75%</code>，这通常更容易在报告和 UI 标签中阅读。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的小数数字。",
+    "inputNotesPara": "输入不带百分号的纯数字小数。在图表、财务表或面向用户的文本中使用显示的百分比之前，确定应保留多少位小数。",
     "example": "示例",
-    "examplePara": "将小数转换为百分比：",
+    "examplePara": "小数值 0.75 代表百分之七十五：",
     "exampleCode": "--- 小数输入 ---\n0.75\n\n--- 百分比 ---\n75%\n\n--- 分数 ---\n3/4"
   },
   "tw": {
-    "title": "小數到百分比轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將小數轉換為百分比。",
+    "title": "小數到百分比轉換器 - Coding.Tools",
+    "description": "透過乘以 100 將小數值轉換為百分比。",
     "toolTitle": "小數轉百分比",
-    "toolDescription": "將小數轉換為百分比值。",
+    "toolDescription": "將小數值轉換為報表、公式和標籤的百分比表示法。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入小數（例如 0.75、1.5）...",
     "outputPlaceholder": "百分比結果將出現在這裡...",
-    "descTitle": "小數到百分比轉換器",
+    "descTitle": "將小數轉換為百分比值",
     "descParas": [
-      "該工具透過乘以 100 將小數轉換為百分比。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>小數轉百分比 透過乘以 100 將小數轉換為百分比形式。</strong> 將比率、機率、比率或公式輸出轉換為人們希望以百分比形式讀取的標籤時使用它。",
+      "<code>0</code> 和 <code>1</code> 之間的值變為 <code>0%</code> 到 <code>100%</code> 的百分比。 <code>1</code> 以上的值也有效：<code>1.5</code> 變成 <code>150%</code>。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入欄位中鍵入或貼上十進制數。",
-      "點選<strong>轉換</strong>即可取得百分比。",
-      "使用<strong>複製</strong>複製結果。"
+      "輸入您要轉換的十進制值。",
+      "將數值乘以 100 後查看百分比結果。",
+      "複製百分比值，或在轉換另一個小數之前清除該欄位。"
     ],
-    "whatIs": "什麼是小數化成百分比？",
+    "whatIs": "什麼是小數到百分比的轉換？",
     "whatIsParas": [
-      "若要將小數轉換為百分比，請乘以 100。例如，0.75 = 75%。"
+      "<strong>小數到百分比的轉換</strong> 將比率重寫為百分之幾。乘以 <code>100</code> 將 <code>0.75</code> 移至 <code>75%</code>，這通常更容易在報告和 UI 標籤中閱讀。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "輸入有效的十進制數。",
+    "inputNotesPara": "輸入不含百分號的純數字小數。在圖表、財務表或使用者導向的文字中使用顯示的百分比之前，確定應保留多少位小數。",
     "example": "例子",
-    "examplePara": "將小數轉換為百分比：",
+    "examplePara": "小數值 0.75 代表百分之七十五：",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "jp": {
-    "title": "10 進数からパーセントへのコンバーター —coding.Tools",
-    "description": "ブラウザで小数をパーセントに直接変換します。",
+    "title": "10 進数からパーセントへのコンバータ - Coding.Tools",
+    "description": "100 を乗算して、10 進数値をパーセンテージに変換します。",
     "toolTitle": "小数からパーセント",
-    "toolDescription": "10 進数をパーセント値に変換します。",
+    "toolDescription": "レポート、数式、ラベルの 10 進数値をパーセンテージ表記に変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "10 進数を入力してください (例: 0.75、1.5)...",
     "outputPlaceholder": "パーセントの結果がここに表示されます...",
-    "descTitle": "10 進数からパーセントへのコンバーター",
+    "descTitle": "小数をパーセント値に変換する",
     "descParas": [
-      "このツールは、100 を乗算して 10 進数をパーセンテージに変換します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>小数からパーセント は、100 を掛けて小数をパーセンテージ形式に変換します。</strong> 比率、確率、レート、または数式の出力をパーセンテージとして読み取ることが期待されるラベルに変換する場合に使用します。",
+      "<code>0</code> と <code>1</code> の間の値は、<code>0%</code> から <code>100%</code> までのパーセンテージになります。 <code>1</code> を超える値も有効です。<code>1.5</code> は <code>150%</code> になります。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "入力フィールドに 10 進数を入力するか貼り付けます。",
-      "[<strong>変換</strong>] をクリックしてパーセンテージを取得します。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "変換したい10進数値を入力します。",
+      "値を 100 倍した後のパーセントの結果を確認します。",
+      "パーセント値をコピーするか、別の小数を変換する前にフィールドをクリアしてください。"
     ],
     "whatIs": "10 進数からパーセントへの変換とは何ですか?",
     "whatIsParas": [
-      "小数をパーセントに変換するには、100 を掛けます。たとえば、0.75 = 75% です。"
+      "<strong>10 進数からパーセントへの変換</strong> は、比率を 100 分の 1 に書き換えます。 <code>100</code> を乗算すると、<code>0.75</code> が <code>75%</code> に移動され、多くの場合、レポートや UI ラベルで読みやすくなります。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "有効な 10 進数を入力してください。",
+    "inputNotesPara": "パーセント記号を使用しない単純な小数を入力します。グラフ、財務シート、またはユーザー向けテキストで使用する前に、表示されるパーセントを小数点以下何桁まで保持するかを決定します。",
     "example": "例",
-    "examplePara": "小数点をパーセントに変換すると、次のようになります。",
+    "examplePara": "10 進数値 0.75 は 75 パーセントを表します。",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "kr": {
-    "title": "십진수를 백분율로 변환하는 변환기 — Coding.Tools",
-    "description": "브라우저에서 직접 십진수를 백분율로 변환하세요.",
+    "title": "소수를 퍼센트로 변환 - Coding.Tools",
+    "description": "소수점 값을 100을 곱하여 백분율로 변환합니다.",
     "toolTitle": "소수에서 퍼센트",
-    "toolDescription": "십진수를 백분율 값으로 변환합니다.",
+    "toolDescription": "보고, 수식 및 라벨에 대한 소수점 값을 백분율 표기법으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "10진수를 입력하세요(예: 0.75, 1.5)...",
     "outputPlaceholder": "백분율 결과가 여기에 표시됩니다...",
-    "descTitle": "소수를 백분율로 변환",
+    "descTitle": "소수를 백분율 값으로 변환",
     "descParas": [
-      "이 도구는 100을 곱하여 십진수를 백분율로 변환합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>소수에서 퍼센트는 100을 곱하여 소수를 백분율 형식으로 변환합니다.</strong> 비율, 확률, 요율 또는 공식 출력을 사람들이 백분율로 읽을 것으로 예상하는 레이블로 바꿀 때 사용합니다.",
+      "<code>0</code>와 <code>1</code> 사이의 값은 <code>0%</code>에서 <code>100%</code>까지의 백분율이 됩니다. <code>1</code> 이상의 값도 유효합니다. <code>1.5</code>는 <code>150%</code>가 됩니다."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 필드에 10진수를 입력하거나 붙여넣습니다.",
-      "백분율을 확인하려면 <strong>변환</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "변환하려는 십진수 값을 입력하세요.",
+      "값에 100을 곱한 후 백분율 결과를 검토합니다.",
+      "백분율 값을 복사하거나 다른 소수점을 변환하기 전에 필드를 지우십시오."
     ],
-    "whatIs": "소수점 이하 백분율은 무엇입니까?",
+    "whatIs": "십진수를 백분율로 변환하는 것은 무엇입니까?",
     "whatIsParas": [
-      "소수를 백분율로 변환하려면 100을 곱합니다. 예를 들어 0.75 = 75%입니다."
+      "<strong>십진수를 퍼센트로 변환</strong>는 비율을 백분율로 다시 씁니다. <code>100</code>를 곱하면 <code>0.75</code>가 <code>75%</code>로 이동하며 이는 보고서 및 UI 레이블에서 읽기가 더 쉬운 경우가 많습니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "유효한 십진수를 입력하세요.",
+    "inputNotesPara": "백분율 기호 없이 일반 숫자 십진수를 입력하세요. 차트, 재무 시트 또는 사용자에게 표시되는 텍스트에 사용하기 전에 표시된 백분율을 소수점 이하 자릿수로 유지해야 하는지 결정하십시오.",
     "example": "예",
-    "examplePara": "소수를 퍼센트로 변환:",
+    "examplePara": "십진수 값 0.75는 75%를 나타냅니다.",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "fr": {
     "title": "Convertisseur décimal en pourcentage - Coding.Tools",
-    "description": "Convertissez les nombres décimaux en pourcentages directement dans votre navigateur.",
+    "description": "Convertissez les valeurs décimales en pourcentages en multipliant par 100.",
     "toolTitle": "Décimal en Pourcentage",
-    "toolDescription": "Convertissez des nombres décimaux en valeurs de pourcentage.",
+    "toolDescription": "Transformez les valeurs décimales en pourcentages pour les rapports, les formules et les étiquettes.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez un nombre décimal (par exemple 0,75, 1,5)...",
     "outputPlaceholder": "Le résultat en pourcentage apparaîtra ici...",
-    "descTitle": "Convertisseur décimal en pourcentage",
+    "descTitle": "Convertir des décimales en valeurs de pourcentage",
     "descParas": [
-      "Cet outil convertit les nombres décimaux en pourcentages en les multipliant par 100.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Décimal en Pourcentage convertit une valeur décimale en pourcentage en multipliant par 100.</strong> Utilisez-le pour transformer des ratios, des probabilités, des taux ou des formules en étiquettes que les gens s'attendent à lire sous forme de pourcentages.",
+      "Les valeurs comprises entre <code>0</code> et <code>1</code> deviennent des pourcentages de <code>0%</code> à <code>100%</code>. Les valeurs supérieures à <code>1</code> sont également valables : <code>1.5</code> devient <code>150%</code>."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un nombre décimal dans le champ de saisie.",
-      "Cliquez sur <strong>Convertir</strong> pour obtenir le pourcentage.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Entrez la valeur décimale que vous souhaitez convertir.",
+      "Vérifiez le résultat en pourcentage une fois la valeur multipliée par 100.",
+      "Copiez la valeur en pourcentage ou effacez le champ avant de convertir une autre décimale."
     ],
-    "whatIs": "Qu'est-ce que le nombre décimal en pourcentage ?",
+    "whatIs": "Qu’est-ce que la conversion décimale en pourcentage ?",
     "whatIsParas": [
-      "Pour convertir une valeur décimale en pourcentage, multipliez par 100. Par exemple, 0,75 = 75 %."
+      "<strong>Conversion décimale en pourcentage</strong> réécrit un rapport en parties pour cent. La multiplication par <code>100</code> déplace <code>0.75</code> vers <code>75%</code>, qui est souvent plus facile à lire dans les rapports et les étiquettes de l'interface utilisateur."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez un nombre décimal valide.",
+    "inputNotesPara": "Entrez une décimale numérique simple sans signe de pourcentage. Décidez du nombre de décimales que le pourcentage affiché doit conserver avant de l'utiliser dans des graphiques, des feuilles financières ou du texte destiné aux utilisateurs.",
     "example": "Exemple",
-    "examplePara": "Conversion d'un nombre décimal en pourcentage :",
+    "examplePara": "La valeur décimale 0,75 représente soixante-quinze pour cent :",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "de": {
-    "title": "Dezimal-Prozent-Konverter – Coding.Tools",
-    "description": "Wandeln Sie Dezimalzahlen direkt in Ihrem Browser in Prozentwerte um.",
+    "title": "Dezimal-Prozent-Konverter - Coding.Tools",
+    "description": "Wandeln Sie Dezimalwerte in Prozent um, indem Sie sie mit 100 multiplizieren.",
     "toolTitle": "Dezimal zu Prozent",
-    "toolDescription": "Konvertieren Sie Dezimalzahlen in Prozentwerte.",
+    "toolDescription": "Wandeln Sie Dezimalwerte für Berichte, Formeln und Beschriftungen in Prozentwerte um.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Dezimalzahl eingeben (z. B. 0,75, 1,5)...",
     "outputPlaceholder": "Das prozentuale Ergebnis wird hier angezeigt ...",
-    "descTitle": "Dezimal-Prozent-Konverter",
+    "descTitle": "Konvertieren Sie Dezimalzahlen in Prozentwerte",
     "descParas": [
-      "Dieses Tool wandelt Dezimalzahlen durch Multiplikation mit 100 in Prozentwerte um.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>Dezimal zu Prozent wandelt eine Dezimalzahl in Prozentform um, indem es mit 100 multipliziert wird.</strong> Verwenden Sie es, wenn Sie Verhältnisse, Wahrscheinlichkeiten, Raten oder Formelausgaben in Beschriftungen umwandeln, die die Leute voraussichtlich als Prozentsätze lesen.",
+      "Werte zwischen <code>0</code> und <code>1</code> werden zu Prozentsätzen von <code>0%</code> bis <code>100%</code>. Werte über <code>1</code> sind ebenfalls gültig: <code>1.5</code> wird zu <code>150%</code>."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben oder fügen Sie eine Dezimalzahl in das Eingabefeld ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um den Prozentsatz zu erhalten.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben Sie den Dezimalwert ein, den Sie konvertieren möchten.",
+      "Überprüfen Sie das prozentuale Ergebnis, nachdem der Wert mit 100 multipliziert wurde.",
+      "Kopieren Sie den Prozentwert oder leeren Sie das Feld, bevor Sie eine andere Dezimalzahl konvertieren."
     ],
-    "whatIs": "Was ist Dezimal in Prozent?",
+    "whatIs": "Was ist die Umrechnung von Dezimalzahlen in Prozent?",
     "whatIsParas": [
-      "Um eine Dezimalzahl in Prozent umzuwandeln, multiplizieren Sie sie mit 100. Beispiel: 0,75 = 75 %."
+      "<strong>Umrechnung von Dezimalzahl in Prozent</strong> schreibt ein Verhältnis in Teile pro Hundert um. Durch Multiplikation mit <code>100</code> wird <code>0.75</code> zu <code>75%</code> verschoben, was in Berichten und UI-Beschriftungen oft einfacher zu lesen ist."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie eine gültige Dezimalzahl ein.",
+    "inputNotesPara": "Geben Sie eine einfache numerische Dezimalzahl ohne Prozentzeichen ein. Entscheiden Sie, wie viele Dezimalstellen der angezeigte Prozentsatz beibehalten soll, bevor Sie ihn in Diagrammen, Finanzblättern oder für den Benutzer sichtbaren Text verwenden.",
     "example": "Beispiel",
-    "examplePara": "Dezimalzahl in Prozent umrechnen:",
+    "examplePara": "Der Dezimalwert 0,75 steht für fünfundsiebzig Prozent:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "es": {
-    "title": "Convertidor de decimal a porcentaje: Coding.Tools",
-    "description": "Convierte números decimales a porcentajes directamente en tu navegador.",
+    "title": "Convertidor de decimal a porcentaje - Coding.Tools",
+    "description": "Convierte valores decimales en porcentajes multiplicando por 100.",
     "toolTitle": "Decimal a Porcentaje",
-    "toolDescription": "Convierte números decimales a valores porcentuales.",
+    "toolDescription": "Convierta valores decimales en notación porcentual para informes, fórmulas y etiquetas.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Ingrese el número decimal (por ejemplo, 0,75, 1,5)...",
     "outputPlaceholder": "El resultado porcentual aparecerá aquí...",
-    "descTitle": "Convertidor de decimal a porcentaje",
+    "descTitle": "Convertir decimales a valores porcentuales",
     "descParas": [
-      "Esta herramienta convierte números decimales a porcentajes multiplicándolos por 100.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Decimal a porcentaje convierte un decimal en porcentaje al multiplicarlo por 100.</strong> Úselo cuando convierta relaciones, probabilidades, tasas o resultados de fórmulas en etiquetas que la gente espera leer como porcentajes.",
+      "Los valores entre <code>0</code> y <code>1</code> se convierten en porcentajes de <code>0%</code> a <code>100%</code>. Los valores superiores a <code>1</code> también son válidos: <code>1.5</code> se convierte en <code>150%</code>."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue un número decimal en el campo de entrada.",
-      "Haga clic en <strong>Convertir</strong> para obtener el porcentaje.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Ingrese el valor decimal que desea convertir.",
+      "Revise el resultado porcentual después de multiplicar el valor por 100.",
+      "Copie el valor porcentual o borre el campo antes de convertir otro decimal."
     ],
-    "whatIs": "¿Qué es decimal a porcentaje?",
+    "whatIs": "¿Qué es la conversión de decimal a porcentaje?",
     "whatIsParas": [
-      "Para convertir un decimal a porcentaje, multiplique por 100. Por ejemplo, 0,75 = 75%."
+      "<strong>Conversión de decimal a porcentaje</strong> reescribe una proporción como partes por cien. Multiplicar por <code>100</code> mueve <code>0.75</code> a <code>75%</code>, que suele ser más fácil de leer en informes y etiquetas de interfaz de usuario."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Introduzca un número decimal válido.",
+    "inputNotesPara": "Ingrese un decimal numérico simple sin un signo de porcentaje. Decida cuántos decimales debe conservar el porcentaje mostrado antes de usarlo en gráficos, hojas financieras o texto de cara al usuario.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de decimal a porcentaje:",
+    "examplePara": "El valor decimal 0,75 representa el setenta y cinco por ciento:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   },
   "pt": {
-    "title": "Conversor Decimal para Porcentagem — Coding.Tools",
-    "description": "Converta números decimais em porcentagens diretamente no seu navegador.",
+    "title": "Conversor Decimal para Porcentagem - Coding.Tools",
+    "description": "Converta valores decimais em porcentagens multiplicando por 100.",
     "toolTitle": "Decimal para porcentagem",
-    "toolDescription": "Converta números decimais em valores percentuais.",
+    "toolDescription": "Transforme valores decimais em notação percentual para relatórios, fórmulas e rótulos.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira o número decimal (por exemplo, 0,75, 1,5)...",
     "outputPlaceholder": "O resultado percentual aparecerá aqui...",
-    "descTitle": "Conversor Decimal para Porcentagem",
+    "descTitle": "Converter decimais em valores percentuais",
     "descParas": [
-      "Esta ferramenta converte números decimais em porcentagens multiplicando por 100.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Decimal para Percent converte um decimal em porcentagem multiplicando por 100.</strong> Use-o ao transformar proporções, probabilidades, taxas ou saídas de fórmulas em rótulos que as pessoas esperam ler como porcentagens.",
+      "Valores entre <code>0</code> e <code>1</code> tornam-se porcentagens de <code>0%</code> a <code>100%</code>. Valores acima de <code>1</code> também são válidos: <code>1.5</code> passa a ser <code>150%</code>."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um número decimal no campo de entrada.",
-      "Clique em <strong>Converter</strong> para obter a porcentagem.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Insira o valor decimal que deseja converter.",
+      "Revise o resultado percentual depois que o valor for multiplicado por 100.",
+      "Copie o valor percentual ou limpe o campo antes de converter outro decimal."
     ],
-    "whatIs": "O que é decimal para porcentagem?",
+    "whatIs": "O que é conversão decimal em porcentagem?",
     "whatIsParas": [
-      "Para converter um decimal em porcentagem, multiplique por 100. Por exemplo, 0,75 = 75%."
+      "<strong>Conversão decimal em porcentagem</strong> reescreve uma proporção como partes por cem. Multiplicar por <code>100</code> move <code>0.75</code> para <code>75%</code>, que geralmente é mais fácil de ler em relatórios e rótulos de UI."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira um número decimal válido.",
+    "inputNotesPara": "Insira um decimal numérico simples sem sinal de porcentagem. Decida quantas casas decimais a porcentagem exibida deve manter antes de usá-la em gráficos, planilhas financeiras ou texto voltado ao usuário.",
     "example": "Exemplo",
-    "examplePara": "Convertendo decimal em porcentagem:",
+    "examplePara": "O valor decimal 0,75 representa setenta e cinco por cento:",
     "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
   }
 }

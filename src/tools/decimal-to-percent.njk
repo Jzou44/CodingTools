@@ -1,10 +1,5 @@
 ---
-title: "Decimal to Percent Converter — Coding.Tools"
-description: "Convert decimal numbers to percentage values instantly in your browser. Fast, private, and free to use."
-toolTitle: "Decimal to Percent"
-toolDescription: "Enter a decimal number and convert it to a percentage value. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "decimal-to-percent"
 permalink: "/decimal-to-percent.html"
 ---
@@ -199,32 +194,7 @@ permalink: "/decimal-to-percent.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Decimal to Percent Converter</h2>
-  <p>This tool converts a decimal number into its percentage equivalent. It is useful for financial calculations, statistics, grade calculations, or any situation where you need to express a decimal as a percentage.</p>
-  <p>The conversion is simple and runs entirely in your browser: multiply the decimal by 100 to get the percentage value.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter a decimal number in the input field (e.g. <code>0.75</code> or <code>1.5</code>).</li>
-    <li>Click <strong>Convert</strong> to see the percentage result.</li>
-    <li>Use <strong>Copy</strong> to copy the result to your clipboard, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>Formula</h3>
-  <p>The conversion formula is: <code>percent = decimal * 100</code>. For example, <code>0.75</code> becomes <code>0.75 * 100 = 75%</code>.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Decimal:  0.75
-Percent:  75%
-
-Decimal:  0.5
-Percent:  50%
-
-Decimal:  1.5
-Percent:  150%</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

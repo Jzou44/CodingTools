@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "XML Minifier — Coding.Tools",
-    "description": "Minify XML by removing all unnecessary whitespace and formatting directly in your browser.",
+    "title": "XML Minifier - Coding.Tools",
+    "description": "Minify XML by removing avoidable spacing between tags while preserving markup content.",
     "toolTitle": "XML Minifier",
-    "toolDescription": "Compress XML by stripping whitespace, indentation, and line breaks. Copy or download the minified result.",
+    "toolDescription": "Compress XML markup for smaller snippets and payloads in your browser.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste XML to minify...",
     "outputPlaceholder": "Minified XML will appear here...",
-    "descTitle": "XML Minifier",
+    "descTitle": "Compact XML without flattening meaningful text",
     "descParas": [
-      "This tool minifies XML data by removing all unnecessary whitespace, indentation, and line breaks. The result is compact XML that takes up less space while preserving all data.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>XML Minifier removes avoidable indentation and line breaks so XML takes less space.</strong> It is useful for compact examples, embedded XML strings, request bodies, and generated configuration snippets.",
+      "Whitespace inside text nodes can be meaningful in XML, especially in mixed content, preformatted text, CDATA, and signed documents. Minify only when the consumer does not depend on exact whitespace or canonical XML output."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your XML data into the input editor.",
-      "Click <strong>Minify XML</strong> to compress the code.",
-      "The minified XML appears in the output editor with all whitespace removed.",
+      "Click <strong>Minify XML</strong> to remove avoidable formatting whitespace.",
+      "The minified XML appears in the output editor as compact markup.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is XML minification?",
+    "whatIs": "What is XML Minifier?",
     "whatIsParas": [
-      "XML minification removes all unnecessary characters from XML data — whitespace, indentation, and line breaks — without changing its meaning. This reduces file size for faster transfer and storage.",
-      "Minifying XML is useful for production deployments, SOAP requests, and reducing bandwidth usage."
+      "<strong>XML Minifier</strong> is a browser-based utility for turning formatted XML into a smaller text representation. It keeps tags, attributes, and element content while reducing presentation whitespace where possible.",
+      "Unlike JSON minification, XML minification has more caveats because text nodes and whitespace-only nodes may carry meaning for some applications. Validate the output with the target parser before using it in production workflows."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts valid XML input. If the input contains XML syntax errors, the tool will report the error. The minifier preserves all data — it only removes whitespace.",
+    "inputNotesPara": "Use well-formed XML and avoid minifying documents where signatures, canonicalization, or exact text spacing matter. Remove copied labels or transport headers before processing.",
     "example": "Example",
-    "examplePara": "Formatted XML becomes compact after minification:",
-    "exampleCode": "--- Formatted Input ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minified Output ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "A simple element tree can be compacted by removing indentation between tags:",
+    "exampleCode": "--- Formatted Input ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minified Output ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "Minify XML"
   },
   "cn": {
-    "title": "XML 压缩 — Coding.Tools",
-    "description": "在浏览器中直接压缩 XML，移除所有不必要的空白和格式。",
+    "title": "XML 压缩器 - Coding.Tools",
+    "description": "通过删除标签之间可避免的间距来缩小 XML，同时保留标记内容。",
     "toolTitle": "XML 压缩",
-    "toolDescription": "通过去除空白、缩进和换行来压缩 XML。复制或下载压缩结果。",
+    "toolDescription": "压缩 XML 标记以在浏览器中获得更小的片段和有效负载。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要压缩的 XML...",
     "outputPlaceholder": "压缩后的 XML 将在此显示...",
-    "descTitle": "XML 压缩",
+    "descTitle": "紧凑 XML，无需展平有意义的文本",
     "descParas": [
-      "该工具压缩 XML 数据，移除所有不必要的空白、缩进和换行。结果是紧凑的 XML，占用更少空间同时保留所有数据。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>XML 压缩器删除了可避免的缩进和换行符，因此 XML 占用更少的空间。</strong> 它对于紧凑示例、嵌入式 XML 字符串、请求正文和生成的配置片段非常有用。",
+      "文本节点内的空格在 XML 中可能有意义，特别是在混合内容、预格式化文本、CDATA 和签名文档中。仅当消费者不依赖于精确的空白或规范的 XML 输出时才进行缩小。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 XML 数据粘贴到输入编辑器中。",
-      "点击<strong>压缩 XML</strong>来压缩代码。",
-      "压缩后的 XML 将移除所有空白字符后显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>压缩 XML</strong> 以删除可避免的格式空白。",
+      "缩小后的 XML 在输出编辑器中显示为紧凑标记。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 XML 压缩？",
+    "whatIs": "XML 压缩器是什么？",
     "whatIsParas": [
-      "XML 压缩移除 XML 数据中所有不必要的字符——空白、缩进和换行——而不改变其含义。这减小了文件大小，便于传输和存储。",
-      "压缩 XML 对于生产部署、SOAP 请求和减少带宽使用很有用。"
+      "<strong>XML 压缩</strong> 是一个基于浏览器的实用程序，用于将格式化的 XML 转换为较小的文本表示形式。它保留标签、属性和元素内容，同时尽可能减少表示空白。",
+      "与 JSON 缩小不同，XML 缩小有更多注意事项，因为文本节点和仅空白节点可能对某些应用程序有意义。在生产工作流程中使用输出之前，使用目标解析器验证输出。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受有效的 XML 输入。如果输入包含 XML 语法错误，工具将报告错误。压缩器保留所有数据——只移除空白。",
+    "inputNotesPara": "使用格式良好的 XML 并避免缩小签名、规范化或精确文本间距很重要的文档。处理前删除复制的标签或传输标头。",
     "example": "示例",
-    "examplePara": "格式化后的 XML 压缩后变得紧凑：",
-    "exampleCode": "--- 格式化输入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 压缩输出 ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "可以通过删除标签之间的缩进来压缩简单的元素树：",
+    "exampleCode": "--- 格式化输入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 压缩输出 ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "压缩 XML"
   },
   "tw": {
-    "title": "XML 壓縮 — Coding.Tools",
-    "description": "在瀏覽器中直接壓縮 XML，移除所有不必要的空白和格式。",
+    "title": "XML 壓縮器 - Coding.Tools",
+    "description": "透過刪除標籤之間可避免的間距來縮小 XML，同時保留標記內容。",
     "toolTitle": "XML 壓縮",
-    "toolDescription": "透過去除空白、縮排和換行來壓縮 XML。複製或下載壓縮結果。",
+    "toolDescription": "壓縮 XML 標記以在瀏覽器中獲得更小的片段和有效負載。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要壓縮的 XML...",
     "outputPlaceholder": "壓縮後的 XML 將在此顯示...",
-    "descTitle": "XML 壓縮",
+    "descTitle": "緊湊 XML，無需展平有意義的文本",
     "descParas": [
-      "該工具壓縮 XML 資料，移除所有不必要的空白、縮排和換行。結果是緊湊的 XML，佔用更少空間同時保留所有資料。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>XML 壓縮器刪除了可避免的縮排和換行符，因此 XML 佔用更少的空間。</strong> 它對於緊湊範例、嵌入式 XML 字串、請求正文和產生的設定片段非常有用。",
+      "文字節點內的空格在 XML 中可能有意義，特別是在混合內容、預先格式化文字、CDATA 和簽名文件中。僅當消費者不依賴精確的空白或規範的 XML 輸出時才縮小。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 XML 資料貼上到輸入編輯器中。",
-      "點擊<strong>壓縮 XML</strong>來壓縮程式碼。",
-      "壓縮後的 XML 將移除所有空白字元後顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 XML 資料貼到輸入編輯器中。",
+      "點選 <strong>壓縮 XML</strong> 以刪除可避免的格式空白。",
+      "縮小後的 XML 在輸出編輯器中顯示為緊湊標記。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 XML 壓縮？",
+    "whatIs": "XML 壓縮器是什麼？",
     "whatIsParas": [
-      "XML 壓縮移除 XML 資料中所有不必要的字元——空白、縮排和換行——而不改變其含義。這減小了檔案大小，便於傳輸和儲存。",
-      "壓縮 XML 對於生產部署、SOAP 請求和減少頻寬使用很有用。"
+      "<strong>XML 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將格式化的 XML 轉換為較小的文字表示形式。它保留標籤、屬性和元素內容，同時盡可能減少表示空白。",
+      "與 JSON 縮小不同，XML 縮小有更多注意事項，因為文字節點和僅空白節點可能對某些應用程式有意義。在生產工作流程中使用輸出之前，使用目標解析器驗證輸出。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受有效的 XML 輸入。如果輸入包含 XML 語法錯誤，工具將報告錯誤。壓縮器保留所有資料——只移除空白。",
+    "inputNotesPara": "使用格式良好的 XML 並避免縮小簽章、規範化或精確文字間距很重要的文件。處理前刪除複製的標籤或傳輸標頭。",
     "example": "範例",
-    "examplePara": "格式化後的 XML 壓縮後變得緊湊：",
-    "exampleCode": "--- 格式化輸入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 壓縮輸出 ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "可以透過刪除標籤之間的縮進來壓縮簡單的元素樹：",
+    "exampleCode": "--- 格式化輸入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 壓縮輸出 ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "壓縮 XML"
   },
   "jp": {
-    "title": "XML ミニファイア — Coding.Tools",
-    "description": "ブラウザで XML からすべての不要な空白とフォーマットを削除してミニファイします。",
+    "title": "XML ミニファイヤー - Coding.Tools",
+    "description": "マークアップ コンテンツを維持しながら、タグ間の回避可能なスペースを削除して、XML を縮小します。",
     "toolTitle": "XML ミニファイア",
-    "toolDescription": "空白、インデント、改行を削除して XML を圧縮します。コピーまたはダウンロード。",
+    "toolDescription": "ブラウザーでより小さなスニペットとペイロードを得るには、XML マークアップを圧縮します。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "ミニファイする XML を貼り付け...",
     "outputPlaceholder": "ミニファイされた XML がここに表示されます...",
-    "descTitle": "XML ミニファイア",
+    "descTitle": "意味のあるテキストを平坦化せずにコンパクトな XML",
     "descParas": [
-      "このツールは XML データからすべての不要な空白、インデント、改行を削除してミニファイします。すべてのデータを保持しながら、より少ないスペースになるコンパクトな XML が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>XML ミニファイア は、回避可能なインデントと改行を削除するため、XML のスペースが少なくなります。</strong> これは、コンパクトな例、埋め込まれた XML 文字列、リクエスト本文、および生成された構成スニペットに役立ちます。",
+      "テキスト ノード内の空白は、XML では、特に混合コンテンツ、フォーマット済みテキスト、CDATA、署名付きドキュメントで意味を持ちます。コンシューマーが正確な空白または正規の XML 出力に依存しない場合にのみ縮小します。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "XML データを入力エディタに貼り付けます。",
-      "<strong>XML ミニファイ</strong>をクリックしてコードを圧縮します。",
-      "ミニファイされた XML がすべての空白が除去された状態で出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "XML データを入力エディターに貼り付けます。",
+      "<strong>XML</strong> を縮小をクリックして、回避可能な書式空白を削除します。",
+      "縮小された XML は、出力エディターにコンパクトなマークアップとして表示されます。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "XML ミニファイとは？",
+    "whatIs": "XML ミニファイヤーとは何ですか?",
     "whatIsParas": [
-      "XML ミニファイは XML データからすべての不要な文字——空白、インデント、改行——を削除し、意味を変えません。これによりファイルサイズが小さくなり、転送と保存が高速化されます。",
-      "XML のミニファイは本番環境、SOAP リクエスト、帯域幅の節約に役立ちます。"
+      "<strong>XML ミニファイア</strong> は、フォーマットされた XML をより小さなテキスト表現に変換するためのブラウザベースのユーティリティです。可能な場合はプレゼンテーションの空白を減らしながら、タグ、属性、要素のコンテンツを保持します。",
+      "JSON 縮小化とは異なり、XML 縮小化にはさらに多くの注意事項があります。これは、アプリケーションによってはテキスト ノードや空白のみのノードが意味を持つ可能性があるためです。実稼働ワークフローで使用する前に、ターゲット パーサーを使用して出力を検証します。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは有効な XML 入力を受け付けます。入力に XML 構文エラーがある場合、エラーが報告されます。ミニファイアはすべてのデータを保持し、空白のみを削除します。",
+    "inputNotesPara": "整形式の XML を使用し、署名、正規化、正確なテキスト間隔が重要な文書の縮小は避けてください。処理する前に、コピーしたラベルまたはトランスポート ヘッダーを削除します。",
     "example": "例",
-    "examplePara": "フォーマットされた XML はミニファイ後にコンパクトになります：",
-    "exampleCode": "--- フォーマット入力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- ミニファイ出力 ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "単純な要素ツリーは、タグ間のインデントを削除することで圧縮できます。",
+    "exampleCode": "--- フォーマット入力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- ミニファイ出力 ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "XML をミニファイ"
   },
   "kr": {
-    "title": "XML 미니파이어 — Coding.Tools",
-    "description": "브라우저에서 XML에서 모든 불필요한 공백과 포맷을 제거하여 미니파이합니다.",
+    "title": "XML 축소기 - Coding.Tools",
+    "description": "마크업 콘텐츠를 유지하면서 태그 사이에 피할 수 있는 공백을 제거하여 XML를 축소합니다.",
     "toolTitle": "XML 미니파이어",
-    "toolDescription": "공백, 들여쓰기, 줄 바꿈을 제거하여 XML을 압축합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "브라우저에서 더 작은 조각과 페이로드를 위해 XML 마크업을 압축합니다.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "미니파이할 XML을 붙여넣으세요...",
     "outputPlaceholder": "미니파이된 XML이 여기에 표시됩니다...",
-    "descTitle": "XML 미니파이어",
+    "descTitle": "의미 있는 텍스트를 병합하지 않고 컴팩트한 XML",
     "descParas": [
-      "이 도구는 XML 데이터에서 모든 불필요한 공백, 들여쓰기, 줄 바꿈을 제거하여 미니파이합니다. 모든 데이터를 보존하면서 더 적은 공간을 차지하는 컴팩트한 XML을 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>XML 축소기는 피할 수 있는 들여쓰기와 줄 바꿈을 제거하여 XML가 공간을 덜 차지하도록 합니다.</strong> 압축 예제, 내장된 XML 문자열, 요청 본문 및 생성된 구성 조각에 유용합니다.",
+      "텍스트 노드 내부의 공백은 XML에서 특히 혼합 콘텐츠, 미리 서식이 지정된 텍스트, CDATA 및 서명된 문서에서 의미가 있을 수 있습니다. 소비자가 정확한 공백이나 표준 XML 출력에 의존하지 않는 경우에만 축소하세요."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "XML 데이터를 입력 편집기에 붙여넣으세요.",
-      "<strong>XML 미니파이</strong>를 클릭하여 코드를 압축합니다.",
-      "미니파이된 XML이 모든 공백이 제거된 상태로 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "XML 데이터를 입력 편집기에 붙여넣습니다.",
+      "피할 수 있는 서식 공백을 제거하려면 <strong>XML 미니파이</strong>를 클릭하세요.",
+      "축소된 XML는 출력 편집기에 압축 마크업으로 표시됩니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "XML 미니파이란?",
+    "whatIs": "XML 축소기는 무엇입니까?",
     "whatIsParas": [
-      "XML 미니파이는 XML 데이터에서 모든 불필요한 문자——공백, 들여쓰기, 줄 바꿈——를 제거하지만 의미는 변경하지 않습니다. 이를 통해 파일 크기가 줄어들어 전송과 저장이 빨라집니다.",
-      "XML 미니파이는 프로덕션 배포, SOAP 요청, 대역폭 절약에 유용합니다."
+      "<strong>XML 미니파이어</strong>는 형식이 지정된 XML를 더 작은 텍스트 표현으로 변환하는 브라우저 기반 유틸리티입니다. 가능한 경우 프레젠테이션 공백을 줄이면서 태그, 속성 및 요소 콘텐츠를 유지합니다.",
+      "JSON 축소와 달리 XML 축소에는 텍스트 노드와 공백 전용 노드가 일부 애플리케이션에 의미를 전달할 수 있으므로 더 많은 주의 사항이 있습니다. 프로덕션 워크플로에서 사용하기 전에 대상 파서로 출력을 검증합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 유효한 XML 입력을 허용합니다. 입력에 XML 구문 오류가 있으면 오류가 보고됩니다. 미니파이어는 모든 데이터를 보존하고 공백만 제거합니다.",
+    "inputNotesPara": "올바른 형식의 XML를 사용하고 서명, 정규화 또는 정확한 텍스트 간격이 중요한 문서를 축소하지 마세요. 처리하기 전에 복사된 라벨이나 전송 헤더를 제거하세요.",
     "example": "예시",
-    "examplePara": "포맷된 XML은 미니파이 후 컴팩트해집니다:",
-    "exampleCode": "--- 포맷 입력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 미니파이 출력 ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "태그 사이의 들여쓰기를 제거하여 간단한 요소 트리를 압축할 수 있습니다.",
+    "exampleCode": "--- 포맷 입력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 미니파이 출력 ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "XML 미니파이"
   },
   "fr": {
-    "title": "Minifieur XML — Coding.Tools",
-    "description": "Minifiez le XML en supprimant tous les espaces et le formatage inutiles directement dans votre navigateur.",
+    "title": "Minificateur XML - Coding.Tools",
+    "description": "Réduisez XML en supprimant l’espacement évitable entre les balises tout en préservant le contenu du balisage.",
     "toolTitle": "Minifieur XML",
-    "toolDescription": "Compressez le XML en supprimant les espaces, l'indentation et les retours à la ligne. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Compressez le balisage XML pour des extraits et des charges utiles plus petits dans votre navigateur.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le XML à minifier...",
     "outputPlaceholder": "Le XML minifié apparaîtra ici...",
-    "descTitle": "Minifieur XML",
+    "descTitle": "Compacter XML sans aplatir le texte significatif",
     "descParas": [
-      "Cet outil minifie les données XML en supprimant tous les espaces, l'indentation et les retours à la ligne inutiles. Le résultat est un XML compact qui prend moins de place tout en préservant toutes les données.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Minifieur XML supprime l'indentation et les sauts de ligne évitables afin que XML prenne moins de place.</strong> Il est utile pour les exemples compacts, les chaînes XML intégrées, les corps de requête et les extraits de configuration générés.",
+      "Les espaces à l'intérieur des nœuds de texte peuvent être significatifs dans XML, en particulier dans le contenu mixte, le texte préformaté, les CDATA et les documents signés. Réduire uniquement lorsque le consommateur ne dépend pas des espaces exacts ou de la sortie canonique XML."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez vos données XML dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Minifier XML</strong> pour compresser le code.",
-      "Le XML minifié apparaît dans l'éditeur de sortie sans espaces.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Cliquez sur <strong>Minifier XML</strong> pour supprimer les espaces de formatage évitables.",
+      "Le XML minifié apparaît dans l’éditeur de sortie sous forme de balisage compact.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que la minification XML ?",
+    "whatIs": "Qu'est-ce que le miniificateur XML ?",
     "whatIsParas": [
-      "La minification XML supprime tous les caractères inutiles des données XML — espaces, indentation et retours à la ligne — sans changer leur signification. Cela réduit la taille du fichier pour un transfert et un stockage plus rapides.",
-      "La minification XML est utile pour les déploiements en production, les requêtes SOAP et la réduction de la bande passante."
+      "<strong>Minifieur XML</strong> est un utilitaire basé sur un navigateur permettant de transformer le XML formaté en une représentation textuelle plus petite. Il conserve les balises, les attributs et le contenu des éléments tout en réduisant les espaces de présentation lorsque cela est possible.",
+      "Contrairement à la minification JSON, la minification XML comporte plus de mises en garde, car les nœuds de texte et les nœuds contenant uniquement des espaces peuvent avoir une signification pour certaines applications. Validez la sortie avec l'analyseur cible avant de l'utiliser dans les flux de production."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte une entrée XML valide. Si l'entrée contient des erreurs de syntaxe XML, l'outil les signalera. Le minifieur préserve toutes les données — il ne supprime que les espaces.",
+    "inputNotesPara": "Utilisez un XML bien formé et évitez de réduire les documents dans lesquels les signatures, la canonisation ou l'espacement exact du texte sont importants. Supprimez les étiquettes ou les en-têtes de transport copiés avant le traitement.",
     "example": "Exemple",
-    "examplePara": "Le XML formaté devient compact après minification :",
-    "exampleCode": "--- Entrée formatée ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Sortie minifiée ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "Une arborescence d'éléments simple peut être compactée en supprimant l'indentation entre les balises :",
+    "exampleCode": "--- Entrée formatée ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Sortie minifiée ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "Minifier XML"
   },
   "de": {
-    "title": "XML-Minifizierer — Coding.Tools",
-    "description": "Minifizieren Sie XML, indem Sie alle unnötigen Leerzeichen und Formatierungen direkt in Ihrem Browser entfernen.",
+    "title": "XML-Minifizierer - Coding.Tools",
+    "description": "Minimieren Sie XML, indem Sie vermeidbare Abstände zwischen Tags entfernen und gleichzeitig den Markup-Inhalt beibehalten.",
     "toolTitle": "XML-Minifizierer",
-    "toolDescription": "Komprimieren Sie XML durch Entfernen von Leerzeichen, Einrückungen und Zeilenumbrüchen. Kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Komprimieren Sie XML-Markup für kleinere Snippets und Nutzlasten in Ihrem Browser.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "XML zum Minifizieren einfügen...",
     "outputPlaceholder": "Minifiziertes XML wird hier angezeigt...",
-    "descTitle": "XML-Minifizierer",
+    "descTitle": "Komprimieren Sie XML, ohne aussagekräftigen Text zu reduzieren",
     "descParas": [
-      "Dieses Tool minifiziert XML-Daten, indem es alle unnötigen Leerzeichen, Einrückungen und Zeilenumbrüche entfernt. Das Ergebnis ist ein kompaktes XML, das weniger Speicherplatz benötigt und alle Daten bewahrt.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>XML-Minifizierer entfernt vermeidbare Einrückungen und Zeilenumbrüche, sodass XML weniger Platz benötigt.</strong> Es ist nützlich für kompakte Beispiele, eingebettete XML-Zeichenfolgen, Anforderungstexte und generierte Konfigurationsausschnitte.",
+      "Leerzeichen innerhalb von Textknoten können in XML sinnvoll sein, insbesondere in gemischten Inhalten, vorformatiertem Text, CDATA und signierten Dokumenten. Nur minimieren, wenn der Verbraucher nicht auf exakte Leerzeichen oder kanonische XML-Ausgabe angewiesen ist."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihre XML-Daten in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>XML minifizieren</strong>, um den Code zu komprimieren.",
-      "Das minifizierte XML wird im Ausgabe-Editor ohne Leerzeichen angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihre XML-Daten in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Minifizieren XML</strong>, um vermeidbare Leerzeichen bei der Formatierung zu entfernen.",
+      "Das minimierte XML erscheint im Ausgabeeditor als kompaktes Markup.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist XML-Minifizierung?",
+    "whatIs": "Was ist XML-Minifizierer?",
     "whatIsParas": [
-      "XML-Minifizierung entfernt alle unnötigen Zeichen aus XML-Daten — Leerzeichen, Einrückungen und Zeilenumbrüche — ohne die Bedeutung zu ändern. Dies reduziert die Dateigröße für schnellere Übertragung und Speicherung.",
-      "Die Minifizierung von XML ist nützlich für Produktionsbereitstellungen, SOAP-Anfragen und die Reduzierung der Bandbreitennutzung."
+      "<strong>XML-Minifizierer</strong> ist ein browserbasiertes Dienstprogramm zum Umwandeln formatierter XML in eine kleinere Textdarstellung. Tags, Attribute und Elementinhalte bleiben erhalten, während der Leerraum in der Präsentation nach Möglichkeit reduziert wird.",
+      "Im Gegensatz zur JSON-Minifizierung gibt es bei der XML-Minifizierung mehr Einschränkungen, da Textknoten und reine Leerzeichenknoten für einige Anwendungen möglicherweise eine Bedeutung haben. Validieren Sie die Ausgabe mit dem Zielparser, bevor Sie sie in Produktionsabläufen verwenden."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert gültige XML-Eingaben. Wenn die Eingabe XML-Syntaxfehler enthält, meldet das Tool den Fehler. Der Minifizierer bewahrt alle Daten auf — er entfernt nur Leerzeichen.",
+    "inputNotesPara": "Verwenden Sie wohlgeformtes XML und vermeiden Sie die Minimierung von Dokumenten, bei denen es auf Signaturen, Kanonisierung oder genaue Textabstände ankommt. Entfernen Sie kopierte Etiketten oder Transportköpfe vor der Verarbeitung.",
     "example": "Beispiel",
-    "examplePara": "Formatiertes XML wird nach der Minifizierung kompakt:",
-    "exampleCode": "--- Formatierte Eingabe ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minifizierte Ausgabe ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "Ein einfacher Elementbaum kann komprimiert werden, indem die Einrückung zwischen Tags entfernt wird:",
+    "exampleCode": "--- Formatierte Eingabe ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minifizierte Ausgabe ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "Minifizieren XML"
   },
   "es": {
-    "title": "Minificador XML — Coding.Tools",
-    "description": "Minifique XML eliminando todos los espacios en blanco y formato innecesarios directamente en su navegador.",
+    "title": "Minificador XML - Coding.Tools",
+    "description": "Minimice XML eliminando el espacio evitable entre etiquetas y preservando al mismo tiempo el contenido del marcado.",
     "toolTitle": "Minificador XML",
-    "toolDescription": "Comprima XML eliminando espacios, indentación y saltos de línea. Copie o descargue el resultado.",
+    "toolDescription": "Comprima el marcado XML para obtener fragmentos más pequeños y cargas útiles en su navegador.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue XML para minificar...",
     "outputPlaceholder": "El XML minificado aparecerá aquí...",
-    "descTitle": "Minificador XML",
+    "descTitle": "Compacto XML sin aplanar texto significativo",
     "descParas": [
-      "Esta herramienta minifica los datos XML eliminando todos los espacios, indentación y saltos de línea innecesarios. El resultado es un XML compacto que ocupa menos espacio mientras preserva todos los datos.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>Minificador XML elimina sangrías y saltos de línea evitables, por lo que XML ocupa menos espacio.</strong> Es útil para ejemplos compactos, cadenas XML incrustadas, cuerpos de solicitud y fragmentos de configuración generados.",
+      "Los espacios en blanco dentro de los nodos de texto pueden ser significativos en XML, especialmente en contenido mixto, texto preformateado, CDATA y documentos firmados. Minimice solo cuando el consumidor no dependa de espacios en blanco exactos o de la salida XML canónica."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue sus datos XML en el editor de entrada.",
-      "Haga clic en <strong>Minificar XML</strong> para comprimir el código.",
-      "El XML minificado aparece en el editor de salida sin espacios en blanco.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Minificar XML</strong> para eliminar los espacios en blanco de formato evitables.",
+      "El XML minimizado aparece en el editor de salida como marcado compacto.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es la minificación XML?",
+    "whatIs": "¿Qué es el minificador XML?",
     "whatIsParas": [
-      "La minificación XML elimina todos los caracteres innecesarios de los datos XML — espacios, indentación y saltos de línea — sin cambiar su significado. Esto reduce el tamaño del archivo para una transferencia y almacenamiento más rápidos.",
-      "La minificación XML es útil para implementaciones en producción, solicitudes SOAP y reducción del uso de ancho de banda."
+      "<strong>Minificador XML</strong> es una utilidad basada en navegador para convertir XML formateado en una representación de texto más pequeña. Mantiene etiquetas, atributos y contenido de elementos mientras reduce los espacios en blanco de la presentación siempre que sea posible.",
+      "A diferencia de la minificación JSON, la minificación XML tiene más advertencias porque los nodos de texto y los nodos de solo espacios en blanco pueden tener significado para algunas aplicaciones. Valide la salida con el analizador de destino antes de usarla en flujos de trabajo de producción."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta entrada XML válida. Si la entrada contiene errores de sintaxis XML, la herramienta los reportará. El minificador preserva todos los datos — solo elimina espacios.",
+    "inputNotesPara": "Utilice XML con el formato correcto y evite minimizar documentos donde las firmas, la canonicalización o el espaciado exacto del texto sean importantes. Retire las etiquetas copiadas o los encabezados de transporte antes de procesarlos.",
     "example": "Ejemplo",
-    "examplePara": "El XML formateado se vuelve compacto después de la minificación:",
-    "exampleCode": "--- Entrada formateada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Salida minificada ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "Un árbol de elementos simple se puede compactar eliminando la sangría entre etiquetas:",
+    "exampleCode": "--- Entrada formateada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Salida minificada ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "Minificar XML"
   },
   "pt": {
-    "title": "Minificador XML — Coding.Tools",
-    "description": "Minifique XML removendo todos os espaços em branco e formatação desnecessários diretamente no seu navegador.",
+    "title": "Minimificador XML - Coding.Tools",
+    "description": "Minimize XML removendo espaçamentos evitáveis entre tags enquanto preserva o conteúdo da marcação.",
     "toolTitle": "Minificador XML",
-    "toolDescription": "Comprima XML removendo espaços, indentação e quebras de linha. Copie ou baixe o resultado.",
+    "toolDescription": "Compacte a marcação XML para trechos e cargas menores em seu navegador.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole XML para minificar...",
     "outputPlaceholder": "O XML minificado aparecerá aqui...",
-    "descTitle": "Minificador XML",
+    "descTitle": "XML compacto sem nivelar texto significativo",
     "descParas": [
-      "Esta ferramenta minifica dados XML removendo todos os espaços, indentação e quebras de linha desnecessários. O resultado é um XML compacto que ocupa menos espaço enquanto preserva todos os dados.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>O minificador de XML remove recuos e quebras de linha evitáveis para que o XML ocupe menos espaço.</strong> É útil para exemplos compactos, strings XML incorporadas, corpos de solicitação e trechos de configuração gerados.",
+      "Os espaços em branco dentro dos nós de texto podem ser significativos em XML, especialmente em conteúdo misto, texto pré-formatado, CDATA e documentos assinados. Minifique apenas quando o consumidor não depender do espaço em branco exato ou da saída canônica XML."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seus dados XML no editor de entrada.",
-      "Clique em <strong>Minificar XML</strong> para comprimir o código.",
-      "O XML minificado aparece no editor de saída sem espaços em branco.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Minificar XML</strong> para remover espaços em branco de formatação evitáveis.",
+      "O XML reduzido aparece no editor de saída como marcação compacta.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é minificação XML?",
+    "whatIs": "O que é o minificador XML?",
     "whatIsParas": [
-      "A minificação XML remove todos os caracteres desnecessários dos dados XML — espaços, indentação e quebras de linha — sem alterar seu significado. Isso reduz o tamanho do arquivo para transferência e armazenamento mais rápidos.",
-      "A minificação XML é útil para implantações em produção, solicitações SOAP e redução do uso de largura de banda."
+      "<strong>Minificador XML</strong> é um utilitário baseado em navegador para transformar XML formatado em uma representação de texto menor. Ele mantém tags, atributos e conteúdo de elemento enquanto reduz os espaços em branco da apresentação sempre que possível.",
+      "Ao contrário da minificação JSON, a minificação XML tem mais advertências porque nós de texto e nós somente de espaço em branco podem ter significado para alguns aplicativos. Valide a saída com o analisador de destino antes de usá-la em fluxos de trabalho de produção."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita entrada XML válida. Se a entrada contiver erros de sintaxe XML, a ferramenta os reportará. O minificador preserva todos os dados — ele apenas remove espaços.",
+    "inputNotesPara": "Use XML bem formado e evite reduzir documentos onde assinaturas, canonização ou espaçamento exato de texto são importantes. Remova etiquetas ou cabeçalhos de transporte copiados antes do processamento.",
     "example": "Exemplo",
-    "examplePara": "O XML formatado se torna compacto após a minificação:",
-    "exampleCode": "--- Entrada formatada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Saída minificada ---\n<root><name>John</name><age>30</age></root>"
+    "examplePara": "Uma árvore de elementos simples pode ser compactada removendo o recuo entre as tags:",
+    "exampleCode": "--- Entrada formatada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Saída minificada ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "Minificar XML"
   }
 }

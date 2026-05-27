@@ -1,10 +1,5 @@
 ---
-title: "Decimal to Octal Converter — Coding.Tools"
-description: "Convert decimal numbers to octal, hexadecimal, and binary instantly in your browser. Fast, private, and free to use."
-toolTitle: "Decimal to Octal"
-toolDescription: "Enter a decimal number and convert it to octal, hexadecimal, and binary. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "decimal-to-octal"
 permalink: "/decimal-to-octal.html"
 ---
@@ -226,29 +221,7 @@ permalink: "/decimal-to-octal.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Decimal to Octal Converter</h2>
-  <p>This tool converts decimal (base 10) numbers into their octal (base 8), hexadecimal (base 16), and binary (base 2) equivalents. It is useful when setting Unix file permissions, working with legacy systems, or studying number system conversions.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a decimal number into the input field (e.g. <code>255</code> or <code>493</code>).</li>
-    <li>Click <strong>Convert</strong> to see the octal, hexadecimal, and binary results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the octal result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>What is octal?</h3>
-  <p>Octal is a base 8 number system using the digits 0 through 7. It is used in computing as a compact representation of binary numbers — each octal digit corresponds to three binary digits. Unix file permissions, for example, are commonly expressed in octal (e.g. <code>755</code> means read/write/execute for owner, read/execute for group and others).</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Decimal:     493
-Octal:       755
-Hexadecimal: 1ED
-Binary:      111101101</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

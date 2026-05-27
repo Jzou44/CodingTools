@@ -1,10 +1,5 @@
 ---
-title: "Binary to Text Converter — Coding.Tools"
-description: "Convert binary byte values to ASCII text directly in your browser. Fast, private, and free to use."
-toolTitle: "Binary to Text"
-toolDescription: "Convert binary byte values to readable ASCII text. Runs entirely in your browser — nothing is sent to a server."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "binary-to-text"
 permalink: "/binary-to-text.html"
 ---
@@ -167,30 +162,7 @@ permalink: "/binary-to-text.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Binary to Text Converter</h2>
-  <p>This tool converts binary byte values (groups of 8 bits) into their corresponding ASCII characters. It is useful when you need to read binary-encoded text from machine output, educational exercises, or encoding demonstrations.</p>
-  <p>The conversion runs locally in your browser. Enter 8-bit binary values separated by spaces or as a continuous string.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter binary byte values in the input editor. Each byte should be 8 bits (e.g. <code>01001000</code>). Bytes can be separated by spaces or written continuously.</li>
-    <li>Click <strong>Convert</strong> to decode the binary values to ASCII text.</li>
-    <li>The text result appears in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>Each ASCII character is represented by a unique 8-bit binary number. For example, the letter <code>H</code> is <code>01001000</code> in binary (72 in decimal). The tool groups the binary input into 8-bit chunks and converts each one to its corresponding ASCII character.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Binary Input ---
-01001000 01100101 01101100 01101100 01101111
-
---- Text Output ---
-Hello</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

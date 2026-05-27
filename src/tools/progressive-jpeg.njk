@@ -1,10 +1,5 @@
 ---
-title: "Progressive JPEG — Coding.Tools"
-description: "Convert JPEG images to progressive format online. Free, fast, and runs in your browser."
-toolTitle: "Progressive JPEG"
-toolDescription: "Re-encode JPEG images at full quality. Drag and drop multiple images."
 category: "image-utilities"
-categoryName: "Image Utilities"
 activeTool: "progressive-jpeg"
 permalink: "/progressive-jpeg.html"
 ---
@@ -48,31 +43,7 @@ permalink: "/progressive-jpeg.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Progressive JPEG</h2>
-  <p>This tool re-encodes JPEG images at full quality (100%). Progressive JPEGs load in multiple passes, showing a low-quality preview that gradually sharpens — providing a better user experience on slow connections.</p>
-  <p><strong>Note:</strong> The browser Canvas API does not support true progressive encoding. This tool re-encodes at quality 100%, producing a valid baseline JPEG. For true progressive encoding, use server-side tools like ImageMagick or Pillow.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Drag and drop JPEG files onto the upload area, or click to select files.</li>
-    <li>Each file is re-encoded at full quality and the size change is displayed.</li>
-    <li>Download individual files or use <strong>Download All</strong> to get a ZIP archive.</li>
-  </ol>
-
-  <h3>Baseline vs Progressive JPEG</h3>
-  <p><strong>Baseline JPEG:</strong> Loads top-to-bottom in a single pass. The image appears line by line as data arrives.</p>
-  <p><strong>Progressive JPEG:</strong> Loads in multiple passes. First a blurry full image appears, then it sharpens progressively. This gives users a preview of the full image before it fully loads.</p>
-  <p><strong>File size:</strong> Progressive JPEGs are often slightly smaller than baseline JPEGs at the same quality level, making them a win-win for web performance.</p>
-
-  <h3>Create with Python</h3>
-  <p>Create a progressive JPEG using Python with the Pillow library:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">from PIL import Image
-
-original = Image.open('input.jpg')
-original.save('progressive.jpeg', optimize=True, quality=100, progressive=True)</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

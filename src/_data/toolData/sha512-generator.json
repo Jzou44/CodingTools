@@ -1,17 +1,17 @@
 {
   "en": {
-    "title": "SHA-512 Generator — Coding.Tools",
-    "description": "Generate SHA-512 hash from any text input directly in your browser. Fast, private, and free to use.",
+    "title": "SHA-512 Generator - Coding.Tools",
+    "description": "Generate a 128-character SHA-512 hash from text for high-strength SHA-2 integrity and compatibility checks.",
     "toolTitle": "SHA-512 Generator",
-    "toolDescription": "Generate a SHA-512 hash from any text input. Copy or download the hash without sending data anywhere.",
+    "toolDescription": "Create SHA-512 digests for workflows that require a 512-bit SHA-2 hash.",
     "categoryName": "Hash & Cryptography",
     "inputPlaceholder": "Enter text to generate SHA-512 hash...",
     "outputPlaceholder": "SHA-512 hash will appear here...",
     "hashLength": 128,
-    "descTitle": "SHA-512 Generator",
+    "descTitle": "Generate SHA-512 hashes with 512-bit output",
     "descParas": [
-      "This tool generates a SHA-512 hash from any text you provide. SHA-512 is a member of the SHA-2 family of cryptographic hash functions and produces a fixed 512-bit (128 hexadecimal character) digest regardless of the input length.",
-      "The hash is computed locally in your browser using the Web Crypto API. Your input is never uploaded or stored on a server, making this tool suitable for quick verification tasks, integrity checks, and development workflows."
+      "<strong>This SHA-512 generator creates a deterministic 512-bit digest and displays it as 128 hexadecimal characters.</strong> Use it for release metadata, verification notes, fixtures, signatures, and systems that explicitly require SHA-512 output.",
+      "SHA-512 is a SHA-2 hash, not encryption. It can prove that two exact inputs match or that data has changed, but it does not conceal the input and should not be used alone as a password storage method."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -22,269 +22,269 @@
     ],
     "whatIs": "What is SHA-512?",
     "whatIsParas": [
-      "SHA-512 (Secure Hash Algorithm 512-bit) is a cryptographic hash function from the SHA-2 family, designed by the NSA and published by NIST. It produces a fixed 512-bit (64-byte) hash value, represented as a 128-character hexadecimal string.",
-      "SHA-512 is used in high-security applications including digital signatures, certificate authorities, password hashing, and blockchain systems. It is considered one of the strongest hash functions available and is resistant to all known practical attacks."
+      "<strong>SHA-512</strong> is a SHA-2 cryptographic hash function that maps input text or bytes to a fixed 512-bit digest. The output is commonly shown as a 128-character hexadecimal string.",
+      "It is appropriate when a protocol or checksum format asks for SHA-512. For message authenticity use an HMAC construction, and for human passwords use a slow, salted password hashing algorithm rather than a plain SHA-512 digest."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any text, including Unicode characters, emojis, and multi-line content. Even a small change to the input — such as a single character — produces a completely different hash, a property known as the avalanche effect.",
+    "inputNotesPara": "The output depends on the exact input text. Check line endings, leading or trailing spaces, copied prompts, and Unicode characters when comparing a SHA-512 value from another system.",
     "example": "Example",
-    "examplePara": "Hashing a short phrase produces a fixed-length 128-character digest:",
+    "examplePara": "Hashing a short phrase produces a fixed 128-character digest:",
     "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "cn": {
-    "title": "SHA-512 生成器 — Coding.Tools",
-    "description": "在浏览器中直接生成任意文本的 SHA-512 哈希值。快速、私密、免费使用。",
+    "title": "SHA-512 生成器 - Coding.Tools",
+    "description": "从文本生成 128 个字符的 SHA-512 哈希，以进行高强度 SHA-2 完整性和兼容性检查。",
     "toolTitle": "SHA-512 生成器",
-    "toolDescription": "从任意文本输入生成 SHA-512 哈希值。复制或下载哈希值，无需发送数据。",
+    "toolDescription": "为需要 512 位 SHA-2 哈希的工作流程创建 SHA-512 摘要。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本以生成 SHA-512 哈希...",
     "outputPlaceholder": "SHA-512 哈希值将显示在此处...",
     "hashLength": 128,
-    "descTitle": "SHA-512 生成器",
+    "descTitle": "生成具有 512 位输出的 SHA-512 哈希值",
     "descParas": [
-      "此工具根据您提供的任意文本生成 SHA-512 哈希值。SHA-512 是 SHA-2 系列加密哈希函数的成员，无论输入长度如何，都会产生固定的 512 位（128 个十六进制字符）摘要。",
-      "哈希在您的浏览器中使用 Web Crypto API 本地计算。您的输入不会被上传或存储在服务器上，使此工具适用于快速验证任务、完整性检查和开发工作流程。"
+      "<strong>此 SHA-512 生成器创建确定性 512 位摘要并将其显示为 128 个十六进制字符。</strong> 将其用于明确需要 SHA-512 输出的发布元数据、验证注释、测试数据、签名和系统。",
+      "SHA-512 是 SHA-2 哈希，而不是加密。它可以证明两个输入完全匹配或数据已更改，但它不会隐藏输入，不应该单独用作密码存储方法。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中输入或粘贴文本。",
-      "点击<strong>生成</strong>以产生哈希摘要。",
-      "128 个字符的十六进制哈希值将显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      "将文本键入或粘贴到输入编辑器中。",
+      "单击 <strong>生成</strong> 以生成哈希摘要。",
+      "128 个字符的十六进制哈希值出现在输出编辑器中。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置两个编辑器。"
     ],
-    "whatIs": "什么是 SHA-512？",
+    "whatIs": "SHA-512是什么？",
     "whatIsParas": [
-      "SHA-512（安全哈希算法 512 位）是 SHA-2 系列的加密哈希函数，由 NSA 设计，NIST 发布。它产生固定的 512 位（64 字节）哈希值，表示为 128 个字符的十六进制字符串。",
-      "SHA-512 用于高安全性应用，包括数字签名、证书颁发机构、密码哈希和区块链系统。它被认为是最强的哈希函数之一，能够抵抗所有已知的实际攻击。"
+      "<strong>SHA-512</strong> 是 SHA-2 加密哈希函数，它将输入文本或字节映射到固定的 512 位摘要。输出通常显示为 128 个字符的十六进制字符串。",
+      "当协议或校验和格式要求 SHA-512 时，它是合适的。对于消息真实性，请使用 HMAC 结构；对于人类密码，请使用缓慢的加盐密码哈希算法，而不是简单的 SHA-512 摘要。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何文本，包括 Unicode 字符、表情符号和多行内容。即使对输入的微小更改（如单个字符）也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+    "inputNotesPara": "输出取决于确切的输入文本。比较来自另一个系统的 SHA-512 值时，检查行结尾、前导或尾随空格、复制的提示和 Unicode 字符。",
     "example": "示例",
-    "examplePara": "对短语进行哈希会产生固定长度的 128 个字符摘要：",
+    "examplePara": "对一个短语进行哈希处理会生成一个固定的 128 个字符的摘要：",
     "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-512 哈希 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "tw": {
-    "title": "SHA-512 產生器 — Coding.Tools",
-    "description": "在瀏覽器中直接產生任意文字的 SHA-512 雜湊值。快速、私密、免費使用。",
+    "title": "SHA-512 產生器 - Coding.Tools",
+    "description": "從文字產生 128 個字元的 SHA-512 哈希，以進行高強度 SHA-2 完整性和相容性檢查。",
     "toolTitle": "SHA-512 產生器",
-    "toolDescription": "從任意文字輸入產生 SHA-512 雜湊值。複製或下載雜湊值，無需傳送資料。",
+    "toolDescription": "為需要 512 位元 SHA-2 雜湊的工作流程建立 SHA-512 摘要。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字以產生 SHA-512 雜湊...",
     "outputPlaceholder": "SHA-512 雜湊值將顯示在此處...",
     "hashLength": 128,
-    "descTitle": "SHA-512 產生器",
+    "descTitle": "產生具有 512 位元輸出的 SHA-512 雜湊值",
     "descParas": [
-      "此工具根據您提供的任意文字產生 SHA-512 雜湊值。SHA-512 是 SHA-2 系列加密雜湊函數的成員，無論輸入長度如何，都會產生固定的 512 位元（128 個十六進位字元）摘要。",
-      "雜湊在您的瀏覽器中使用 Web Crypto API 本機計算。您的輸入不會被上傳或儲存在伺服器上，使此工具適用於快速驗證任務、完整性檢查和開發工作流程。"
+      "<strong>此 SHA-512 產生器建立確定性 512 位元摘要並將其顯示為 128 個十六進位字元。</strong> 將其用於明確需要 SHA-512 輸出的發布元資料、驗證註解、測試資料、簽章和系統。",
+      "SHA-512 是 SHA-2 哈希，而不是加密。它可以證明兩個輸入完全匹配或資料已更改，但它不會隱藏輸入，不應該單獨用作密碼儲存方法。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中輸入或貼上文字。",
-      "點擊<strong>產生</strong>以產生雜湊摘要。",
-      "128 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      "將文字鍵入或貼上到輸入編輯器中。",
+      "按一下 <strong>生成</strong> 以產生雜湊摘要。",
+      "128 個字元的十六進位雜湊值出現在輸出編輯器中。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
     ],
-    "whatIs": "什麼是 SHA-512？",
+    "whatIs": "SHA-512是什麼？",
     "whatIsParas": [
-      "SHA-512（安全雜湊演算法 512 位元）是 SHA-2 系列的加密雜湊函數，由 NSA 設計，NIST 發布。它產生固定的 512 位元（64 位元組）雜湊值，表示為 128 個字元的十六進位字串。",
-      "SHA-512 用於高安全性應用，包括數位簽章、憑證頒發機構、密碼雜湊和區塊鏈系統。它被認為是最強的雜湊函數之一，能夠抵抗所有已知的實際攻擊。"
+      "<strong>SHA-512</strong> 是 SHA-2 加密雜湊函數，它將輸入文字或位元組對應到固定的 512 位元摘要。輸出通常顯示為 128 個字元的十六進位字串。",
+      "當協議或校驗和格式要求 SHA-512 時，它是合適的。對於訊息真實性，請使用 HMAC 結構；對於人類密碼，請使用緩慢的加鹽密碼雜湊演算法，而不是簡單的 SHA-512 摘要。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何文字，包括 Unicode 字元、表情符號和多行內容。即使對輸入的微小更改（如單個字元）也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+    "inputNotesPara": "輸出取決於確切的輸入文字。比較來自另一個系統的 SHA-512 值時，檢查行結尾、前導或尾隨空格、複製的提示和 Unicode 字元。",
     "example": "範例",
-    "examplePara": "對詞組進行雜湊會產生固定長度的 128 個字元摘要：",
+    "examplePara": "對一個短語進行雜湊處理會產生一個固定的 128 個字元的摘要：",
     "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-512 雜湊 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "jp": {
-    "title": "SHA-512 ジェネレーター — Coding.Tools",
-    "description": "ブラウザで任意のテキストからSHA-512ハッシュを直接生成。高速・プライベート・無料。",
+    "title": "SHA-512 ジェネレーター - Coding.Tools",
+    "description": "高強度の SHA-2 整合性と互換性チェックのために、テキストから 128 文字の SHA-512 ハッシュを生成します。",
     "toolTitle": "SHA-512 ジェネレーター",
-    "toolDescription": "任意のテキスト入力からSHA-512ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+    "toolDescription": "512 ビット SHA-2 ハッシュを必要とするワークフローの SHA-512 ダイジェストを作成します。",
     "categoryName": "ハッシュと暗号",
     "inputPlaceholder": "SHA-512ハッシュを生成するテキストを入力...",
     "outputPlaceholder": "SHA-512ハッシュがここに表示されます...",
     "hashLength": 128,
-    "descTitle": "SHA-512 ジェネレーター",
+    "descTitle": "512 ビット出力で SHA-512 ハッシュを生成",
     "descParas": [
-      "このツールは入力したテキストからSHA-512ハッシュを生成します。SHA-512はSHA-2ファミリーの暗号化ハッシュ関数で、入力の長さに関係なく固定512ビット（128文字の16進数）のダイジェストを生成します。",
-      "ハッシュはブラウザのWeb Crypto APIを使用してローカルで計算されます。入力はサーバーにアップロードや保存されないため、迅速な検証、整合性チェック、開発ワークフローに適しています。"
+      "<strong>この SHA-512 ジェネレーターは、確定的な 512 ビット ダイジェストを作成し、それを 128 の 16 進数文字として表示します。</strong> リリース メタデータ、検証ノート、テストデータ、署名、および SHA-512 出力を明示的に必要とするシステムに使用します。",
+      "SHA-512 は SHA-2 ハッシュであり、暗号化ではありません。 2 つの入力が正確に一致すること、またはデータが変更されたことを証明できますが、入力が隠蔽されるわけではないため、パスワードの保存方法として単独で使用しないでください。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを入力または貼り付けます。",
-      "<strong>生成</strong>をクリックしてハッシュダイジェストを生成します。",
-      "128文字の16進数ハッシュが出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      "テキストを入力エディターに入力または貼り付けます。",
+      "<strong>生成</strong> をクリックしてハッシュ ダイジェストを生成します。",
+      "128 文字の 16 進数のハッシュが出力エディターに表示されます。",
+      "クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、両方のエディタをリセットするには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "SHA-512とは？",
+    "whatIs": "SHA-512とは何ですか?",
     "whatIsParas": [
-      "SHA-512（Secure Hash Algorithm 512-bit）は、NSAが設計しNISTが公開したSHA-2ファミリーの暗号化ハッシュ関数です。固定512ビット（64バイト）のハッシュ値を生成し、128文字の16進数文字列として表現されます。",
-      "SHA-512はデジタル署名、認証局、パスワードハッシュ、ブロックチェーンシステムなどの高セキュリティアプリケーションで使用されています。最も強力なハッシュ関数の一つと見なされ、すべての既知の実際的な攻撃に対して耐性があります。"
+      "<strong>SHA-512</strong> は、入力テキストまたはバイトを固定の 512 ビット ダイジェストにマッピングする SHA-2 暗号化ハッシュ関数です。出力は通常、128 文字の 16 進文字列として表示されます。",
+      "プロトコルまたはチェックサム形式が SHA-512 を要求する場合に適しています。メッセージの信頼性には HMAC 構造を使用し、人間のパスワードにはプレーンな SHA-512 ダイジェストではなく、低速のソルト付きパスワード ハッシュ アルゴリズムを使用します。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールはUnicode文字、絵文字、複数行コンテンツを含む任意のテキストを受け付けます。入力への小さな変更（1文字の変更など）でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+    "inputNotesPara": "出力は正確な入力テキストに依存します。別のシステムからの SHA-512 値を比較する場合は、行末、先頭または末尾のスペース、コピーされたプロンプト、および Unicode 文字を確認してください。",
     "example": "例",
-    "examplePara": "短いフレーズをハッシュすると固定長128文字のダイジェストが生成されます：",
+    "examplePara": "短いフレーズをハッシュすると、固定の 128 文字のダイジェストが生成されます。",
     "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-512ハッシュ ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "kr": {
-    "title": "SHA-512 생성기 — Coding.Tools",
-    "description": "브라우저에서 직접 텍스트의 SHA-512 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+    "title": "SHA-512 생성기 - Coding.Tools",
+    "description": "강력한 SHA-2 무결성 및 호환성 검사를 위해 텍스트에서 128자 SHA-512 해시를 생성합니다.",
     "toolTitle": "SHA-512 생성기",
-    "toolDescription": "텍스트 입력에서 SHA-512 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+    "toolDescription": "512비트 SHA-2 해시가 필요한 워크플로에 대한 SHA-512 다이제스트를 만듭니다.",
     "categoryName": "해시 및 암호화",
     "inputPlaceholder": "SHA-512 해시를 생성할 텍스트를 입력하세요...",
     "outputPlaceholder": "SHA-512 해시가 여기에 표시됩니다...",
     "hashLength": 128,
-    "descTitle": "SHA-512 생성기",
+    "descTitle": "512비트 출력으로 SHA-512 해시 생성",
     "descParas": [
-      "이 도구는 입력한 텍스트에서 SHA-512 해시를 생성합니다. SHA-512는 SHA-2 계열의 암호화 해시 함수로, 입력 길이에 관계없이 고정 512비트(128자리 16진수) 다이제스트를 생성합니다.",
-      "해시는 브라우저의 Web Crypto API를 사용하여 로컬로 계산됩니다. 입력은 서버에 업로드되거나 저장되지 않으므로 빠른 검증, 무결성 확인 및 개발 워크플로에 적합합니다."
+      "<strong>이 SHA-512 생성기는 결정적 512비트 다이제스트를 생성하고 이를 128개의 16진수 문자로 표시합니다.</strong> SHA-512 출력이 명시적으로 필요한 릴리스 메타데이터, 확인 노트, 테스트 데이터, 서명 및 시스템에 사용합니다.",
+      "SHA-512는 암호화가 아닌 SHA-2 해시입니다. 두 개의 정확한 입력이 일치하거나 데이터가 변경되었음을 증명할 수 있지만 입력을 숨기지 않으며 비밀번호 저장 방법으로 단독으로 사용해서는 안됩니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "<strong>생성</strong>을 클릭하여 해시 다이제스트를 생성합니다.",
-      "128자리 16진수 해시가 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      "해시 다이제스트를 생성하려면 <strong>생성</strong>를 클릭하세요.",
+      "128자의 16진수 해시가 출력 편집기에 나타납니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-512란 무엇인가요?",
+    "whatIs": "SHA-512란 무엇입니까?",
     "whatIsParas": [
-      "SHA-512(보안 해시 알고리즘 512비트)는 NSA가 설계하고 NIST가 발표한 SHA-2 계열의 암호화 해시 함수입니다. 고정 512비트(64바이트) 해시 값을 생성하며 128자리 16진수 문자열로 표현됩니다.",
-      "SHA-512는 디지털 서명, 인증 기관, 비밀번호 해시, 블록체인 시스템 등 고보안 애플리케이션에 사용됩니다. 가장 강력한 해시 함수 중 하나로 간주되며 모든 알려진 실질적 공격에 저항합니다."
+      "<strong>SHA-512</strong>는 입력 텍스트 또는 바이트를 고정 512비트 다이제스트에 매핑하는 SHA-2 암호화 해시 함수입니다. 출력은 일반적으로 128자의 16진수 문자열로 표시됩니다.",
+      "프로토콜이나 체크섬 형식에서 SHA-512를 요구하는 경우에 적합합니다. 메시지 신뢰성을 위해 HMAC 구성을 사용하고 사람 비밀번호의 경우 일반 SHA-512 다이제스트 대신 느리고 솔트된 비밀번호 해싱 알고리즘을 사용합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 Unicode 문자, 이모티콘, 여러 줄 콘텐츠를 포함한 모든 텍스트를 허용합니다. 입력의 작은 변경(예: 단일 문자)도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+    "inputNotesPara": "출력은 정확한 입력 텍스트에 따라 달라집니다. 다른 시스템의 SHA-512 값을 비교할 때 줄 끝, 선행 또는 후행 공백, 복사된 프롬프트 및 유니코드 문자를 확인하세요.",
     "example": "예제",
-    "examplePara": "짧은 구문을 해시하면 고정 길이 128자 다이제스트가 생성됩니다:",
+    "examplePara": "짧은 구문을 해싱하면 고정된 128자 다이제스트가 생성됩니다.",
     "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-512 해시 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "fr": {
-    "title": "Générateur SHA-512 — Coding.Tools",
-    "description": "Générez un hash SHA-512 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+    "title": "Générateur SHA-512 - Coding.Tools",
+    "description": "Générez un hachage SHA-512 de 128 caractères à partir du texte pour des contrôles d'intégrité et de compatibilité SHA-2 de haute résistance.",
     "toolTitle": "Générateur SHA-512",
-    "toolDescription": "Générez un hash SHA-512 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+    "toolDescription": "Créez des résumés SHA-512 pour les flux de travail qui nécessitent un hachage SHA-2 de 512 bits.",
     "categoryName": "Hachage et cryptographie",
     "inputPlaceholder": "Entrez le texte pour générer le hash SHA-512...",
     "outputPlaceholder": "Le hash SHA-512 apparaîtra ici...",
     "hashLength": 128,
-    "descTitle": "Générateur SHA-512",
+    "descTitle": "Générer des hachages SHA-512 avec une sortie de 512 bits",
     "descParas": [
-      "Cet outil génère un hash SHA-512 à partir de n'importe quel texte. SHA-512 est un membre de la famille SHA-2 et produit un condensé fixe de 512 bits (128 caractères hexadécimaux) quelle que soit la longueur de l'entrée.",
-      "Le hash est calculé localement dans votre navigateur via l'API Web Crypto. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      "<strong>Ce générateur SHA-512 crée un résumé déterministe de 512 bits et l'affiche sous forme de 128 caractères hexadécimaux.</strong> Utilisez-le pour les métadonnées de version, les notes de vérification, les données de test, les signatures et les systèmes qui nécessitent explicitement la sortie SHA-512.",
+      "SHA-512 est un hachage SHA-2, pas un cryptage. Il peut prouver que deux entrées exactes correspondent ou que les données ont changé, mais il ne masque pas l'entrée et ne doit pas être utilisé seul comme méthode de stockage de mot de passe."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez votre texte dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Générer</strong> pour produire le condensé.",
-      "Le hash hexadécimal de 128 caractères apparaît dans l'éditeur de sortie.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Tapez ou collez votre texte dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Générer</strong> pour produire le résumé de hachage.",
+      "Le hachage hexadécimal de 128 caractères apparaît dans l'éditeur de sortie.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
     ],
-    "whatIs": "Qu'est-ce que SHA-512 ?",
+    "whatIs": "Qu'est-ce que SHA-512 ?",
     "whatIsParas": [
-      "SHA-512 (Secure Hash Algorithm 512-bit) est une fonction de hachage cryptographique de la famille SHA-2, conçue par la NSA et publiée par le NIST. Elle produit une valeur de hachage fixe de 512 bits (64 octets), représentée par une chaîne hexadécimale de 128 caractères.",
-      "SHA-512 est utilisé dans les applications de haute sécurité, y compris les signatures numériques, les autorités de certification, le hachage de mots de passe et les systèmes blockchain. Il est considéré comme l'une des fonctions de hachage les plus robustes."
+      "<strong>SHA-512</strong> est une fonction de hachage cryptographique SHA-2 qui mappe le texte ou les octets saisis à un résumé fixe de 512 bits. Le résultat est généralement affiché sous la forme d’une chaîne hexadécimale de 128 caractères.",
+      "Cela est approprié lorsqu'un protocole ou un format de somme de contrôle demande SHA-512. Pour l'authenticité du message, utilisez une construction HMAC et pour les mots de passe humains, utilisez un algorithme de hachage de mot de passe lent et salé plutôt qu'un simple résumé SHA-512."
     ],
     "inputNotes": "Notes sur l'entrée",
-    "inputNotesPara": "L'outil accepte tout texte, y compris les caractères Unicode, les émojis et le contenu multiligne. Même un petit changement produit un hash complètement différent (effet avalanche).",
+    "inputNotesPara": "Le résultat dépend du texte exact saisi. Vérifiez les fins de ligne, les espaces de début ou de fin, les invites copiées et les caractères Unicode lorsque vous comparez une valeur SHA-512 provenant d'un autre système.",
     "example": "Exemple",
-    "examplePara": "Hacher une courte phrase produit un condensé de 128 caractères :",
+    "examplePara": "Le hachage d'une phrase courte produit un résumé fixe de 128 caractères :",
     "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "de": {
-    "title": "SHA-512-Generator – Coding.Tools",
-    "description": "Erstellen Sie SHA-512-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+    "title": "SHA-512-Generator - Coding.Tools",
+    "description": "Generieren Sie einen 128 Zeichen langen SHA-512-Hash aus Text für hochsichere SHA-2-Integritäts- und Kompatibilitätsprüfungen.",
     "toolTitle": "SHA-512-Generator",
-    "toolDescription": "Erzeugen Sie einen SHA-512-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+    "toolDescription": "Erstellen Sie SHA-512-Hashwerte für Arbeitsabläufe, die einen 512-Bit-SHA-2-Hash erfordern.",
     "categoryName": "Hash & Kryptographie",
     "inputPlaceholder": "Text eingeben, um SHA-512-Hash zu erzeugen...",
     "outputPlaceholder": "SHA-512-Hash wird hier angezeigt...",
     "hashLength": 128,
-    "descTitle": "SHA-512-Generator",
+    "descTitle": "Generieren Sie SHA-512-Hashes mit 512-Bit-Ausgabe",
     "descParas": [
-      "Dieses Tool erzeugt einen SHA-512-Hash aus beliebigem Text. SHA-512 gehört zur SHA-2-Familie und erzeugt einen festen 512-Bit (128 hexadezimale Zeichen) Digest unabhängig von der Eingabelänge.",
-      "Der Hash wird lokal in Ihrem Browser über die Web Crypto API berechnet."
+      "<strong>Dieser SHA-512-Generator erstellt einen deterministischen 512-Bit-Hashwert und zeigt ihn als 128 Hexadezimalzeichen an.</strong> Verwenden Sie ihn für Release-Metadaten, Verifizierungshinweise, Testdaten, Signaturen und Systeme, die explizit eine SHA-512-Ausgabe erfordern.",
+      "SHA-512 ist ein SHA-2-Hash, keine Verschlüsselung. Es kann nachweisen, dass zwei genaue Eingaben übereinstimmen oder dass sich Daten geändert haben, es verbirgt die Eingabe jedoch nicht und sollte nicht allein als Methode zum Speichern von Passwörtern verwendet werden."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Text in den Eingabe-Editor eingeben oder einfügen.",
-      "Auf <strong>Generieren</strong> klicken.",
-      "Der 128-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
-      "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      "Geben Sie Ihren Text ein oder fügen Sie ihn in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Generieren</strong>, um den Hashwert zu erstellen.",
+      "Der 128 Zeichen lange hexadezimale Hash wird im Ausgabeeditor angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um beide Editoren zurückzusetzen."
     ],
     "whatIs": "Was ist SHA-512?",
     "whatIsParas": [
-      "SHA-512 (Secure Hash Algorithm 512-bit) ist eine kryptografische Hash-Funktion der SHA-2-Familie. Sie erzeugt einen festen 512-Bit (64-Byte) Hash-Wert als 128-stellige hexadezimale Zeichenkette.",
-      "SHA-512 wird in hochsicheren Anwendungen verwendet, einschließlich digitaler Signaturen, Zertifizierungsstellen, Passwort-Hashing und Blockchain-Systemen. Es gilt als eine der stärksten verfügbaren Hash-Funktionen."
+      "<strong>SHA-512</strong> ist eine kryptografische Hash-Funktion SHA-2, die Eingabetext oder -bytes einem festen 512-Bit-Hashwert zuordnet. Die Ausgabe wird üblicherweise als 128-stellige Hexadezimalzeichenfolge angezeigt.",
+      "Dies ist angemessen, wenn ein Protokoll oder ein Prüfsummenformat nach SHA-512 fragt. Verwenden Sie für die Nachrichtenauthentizität eine HMAC-Konstruktion und für menschliche Passwörter einen langsamen, gesalzenen Passwort-Hashing-Algorithmus anstelle eines einfachen SHA-512-Hashwerte."
     ],
     "inputNotes": "Hinweise zur Eingabe",
-    "inputNotesPara": "Das Tool akzeptiert jeden Text, einschließlich Unicode, Emojis und mehrzeiliger Inhalte. Selbst eine kleine Änderung erzeugt einen völlig anderen Hash (Lawineneffekt).",
+    "inputNotesPara": "Die Ausgabe hängt vom genauen Eingabetext ab. Überprüfen Sie Zeilenenden, führende oder nachgestellte Leerzeichen, kopierte Eingabeaufforderungen und Unicode-Zeichen, wenn Sie einen SHA-512-Wert aus einem anderen System vergleichen.",
     "example": "Beispiel",
-    "examplePara": "Das Hashen eines kurzen Satzes erzeugt einen 128-stelligen Digest:",
+    "examplePara": "Das Hashing einer kurzen Phrase erzeugt einen festen Hashwert mit 128 Zeichen:",
     "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "es": {
-    "title": "Generador SHA-512 — Coding.Tools",
-    "description": "Genere hashes SHA-512 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+    "title": "Generador SHA-512 - Coding.Tools",
+    "description": "Genere un hash SHA-512 de 128 caracteres a partir de texto para realizar comprobaciones de integridad y compatibilidad SHA-2 de alta precisión.",
     "toolTitle": "Generador SHA-512",
-    "toolDescription": "Genere un hash SHA-512 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+    "toolDescription": "Cree resúmenes SHA-512 para flujos de trabajo que requieren un hash SHA-2 de 512 bits.",
     "categoryName": "Hash y criptografía",
     "inputPlaceholder": "Ingrese texto para generar el hash SHA-512...",
     "outputPlaceholder": "El hash SHA-512 aparecerá aquí...",
     "hashLength": 128,
-    "descTitle": "Generador SHA-512",
+    "descTitle": "Genere hashes SHA-512 con salida de 512 bits",
     "descParas": [
-      "Esta herramienta genera un hash SHA-512 a partir de cualquier texto. SHA-512 pertenece a la familia SHA-2 y produce un resumen fijo de 512 bits (128 caracteres hexadecimales) independientemente de la longitud de la entrada.",
-      "El hash se calcula localmente en su navegador usando la API Web Crypto."
+      "<strong>Este generador SHA-512 crea un resumen determinista de 512 bits y lo muestra como 128 caracteres hexadecimales.</strong> Úselo para metadatos de lanzamiento, notas de verificación, accesorios, firmas y sistemas que requieren explícitamente una salida SHA-512.",
+      "SHA-512 es un hash SHA-2, no cifrado. Puede probar que dos entradas exactas coinciden o que los datos han cambiado, pero no oculta la entrada y no debe usarse solo como método de almacenamiento de contraseñas."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue su texto en el editor de entrada.",
-      "Haga clic en <strong>Generar</strong> para producir el resumen.",
-      "El hash hexadecimal de 128 caracteres aparece en el editor de salida.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Haga clic en <strong>Generar</strong> para generar el resumen hash.",
+      "El hash hexadecimal de 128 caracteres aparece en el editor de resultados.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer ambos editores."
     ],
     "whatIs": "¿Qué es SHA-512?",
     "whatIsParas": [
-      "SHA-512 (Secure Hash Algorithm 512-bit) es una función hash criptográfica de la familia SHA-2. Produce un valor hash fijo de 512 bits (64 bytes) representado como una cadena hexadecimal de 128 caracteres.",
-      "SHA-512 se usa en aplicaciones de alta seguridad, incluyendo firmas digitales, autoridades de certificación, hashing de contraseñas y sistemas blockchain. Se considera una de las funciones hash más robustas disponibles."
+      "<strong>SHA-512</strong> es una función hash criptográfica SHA-2 que asigna texto o bytes de entrada a un resumen fijo de 512 bits. La salida suele mostrarse como una cadena hexadecimal de 128 caracteres.",
+      "Es apropiado cuando un protocolo o formato de suma de comprobación solicita SHA-512. Para la autenticidad del mensaje, utilice una construcción HMAC y, para contraseñas humanas, utilice un algoritmo de hash de contraseña lento y salado en lugar de un simple resumen SHA-512."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier texto, incluyendo caracteres Unicode, emojis y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+    "inputNotesPara": "La salida depende del texto de entrada exacto. Verifique los finales de línea, los espacios iniciales o finales, las indicaciones copiadas y los caracteres Unicode al comparar un valor SHA-512 de otro sistema.",
     "example": "Ejemplo",
-    "examplePara": "Hashear una frase corta produce un resumen de 128 caracteres:",
+    "examplePara": "El hash de una frase corta produce un resumen fijo de 128 caracteres:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   },
   "pt": {
-    "title": "Gerador SHA-512 — Coding.Tools",
-    "description": "Gere hashes SHA-512 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+    "title": "Gerador SHA-512 - Coding.Tools",
+    "description": "Gere um hash SHA-512 de 128 caracteres a partir do texto para verificações de integridade e compatibilidade SHA-2 de alta resistência.",
     "toolTitle": "Gerador SHA-512",
-    "toolDescription": "Gere um hash SHA-512 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+    "toolDescription": "Crie resumos SHA-512 para fluxos de trabalho que exigem um hash SHA-2 de 512 bits.",
     "categoryName": "Hash e criptografia",
     "inputPlaceholder": "Digite o texto para gerar o hash SHA-512...",
     "outputPlaceholder": "O hash SHA-512 aparecerá aqui...",
     "hashLength": 128,
-    "descTitle": "Gerador SHA-512",
+    "descTitle": "Gere hashes SHA-512 com saída de 512 bits",
     "descParas": [
-      "Esta ferramenta gera um hash SHA-512 a partir de qualquer texto. SHA-512 pertence à família SHA-2 e produz um resumo fixo de 512 bits (128 caracteres hexadecimais) independentemente do tamanho da entrada.",
-      "O hash é calculado localmente no seu navegador usando a API Web Crypto."
+      "<strong>Este gerador SHA-512 cria um resumo determinístico de 512 bits e o exibe como 128 caracteres hexadecimais.</strong> Use-o para metadados de versão, notas de verificação, dados de teste, assinaturas e sistemas que exigem explicitamente saída SHA-512.",
+      "SHA-512 é um hash SHA-2, não criptografia. Ele pode provar que duas entradas exatas correspondem ou que os dados foram alterados, mas não oculta a entrada e não deve ser usado sozinho como método de armazenamento de senha."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Digite ou cole seu texto no editor de entrada.",
-      "Clique em <strong>Gerar</strong> para produzir o resumo.",
+      "Clique em <strong>Gerar</strong> para produzir o resumo de hash.",
       "O hash hexadecimal de 128 caracteres aparece no editor de saída.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
     ],
     "whatIs": "O que é SHA-512?",
     "whatIsParas": [
-      "SHA-512 (Secure Hash Algorithm 512-bit) é uma função hash criptográfica da família SHA-2. Produz um valor hash fixo de 512 bits (64 bytes) representado como uma string hexadecimal de 128 caracteres.",
-      "SHA-512 é utilizado em aplicações de alta segurança, incluindo assinaturas digitais, autoridades certificadoras, hashing de senhas e sistemas blockchain. É considerado uma das funções hash mais robustas disponíveis."
+      "<strong>SHA-512</strong> é uma função hash criptográfica SHA-2 que mapeia texto ou bytes de entrada para um resumo fixo de 512 bits. A saída é normalmente mostrada como uma sequência hexadecimal de 128 caracteres.",
+      "É apropriado quando um protocolo ou formato de soma de verificação solicita SHA-512. Para autenticidade da mensagem, use uma construção HMAC e, para senhas humanas, use um algoritmo de hashing de senha lento e salgado, em vez de um resumo SHA-512 simples."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer texto, incluindo caracteres Unicode, emojis e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+    "inputNotesPara": "A saída depende do texto de entrada exato. Verifique finais de linha, espaços iniciais ou finais, prompts copiados e caracteres Unicode ao comparar um valor SHA-512 de outro sistema.",
     "example": "Exemplo",
-    "examplePara": "Hashear uma frase curta produz um resumo de 128 caracteres:",
+    "examplePara": "O hash de uma frase curta produz um resumo fixo de 128 caracteres:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
   }
 }

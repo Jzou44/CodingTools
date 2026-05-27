@@ -1,10 +1,5 @@
 ---
-title: "SHA256 Generator — Coding.Tools"
-description: "Generate SHA-256 hash from any text input directly in your browser. Fast, private, and free to use."
-toolTitle: "SHA256 Generator"
-toolDescription: "Generate a SHA-256 hash from any text input. Copy or download the hash without sending data anywhere."
 category: "hash-cryptography"
-categoryName: "Hash & Cryptography"
 activeTool: "sha256-generator"
 permalink: "/sha256-generator.html"
 ---
@@ -31,58 +26,7 @@ permalink: "/sha256-generator.html"
 {% endblock %}
 
 {% block description %}
-  <h2>SHA256 Generator</h2>
-  <p>
-    This tool generates a SHA-256 hash from any text you provide. SHA-256 is a member of the
-    SHA-2 family of cryptographic hash functions and produces a fixed 256-bit (64 hexadecimal
-    character) digest regardless of the input length.
-  </p>
-  <p>
-    The hash is computed locally in your browser using the Web Crypto API. Your input is never
-    uploaded or stored on a server, making this tool suitable for quick verification tasks,
-    integrity checks, and development workflows.
-  </p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste your text into the input editor.</li>
-    <li>Click <strong>Generate</strong> to produce the hash digest.</li>
-    <li>The 64-character hexadecimal hash appears in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is SHA-256?</h3>
-  <p>
-    SHA-256 (Secure Hash Algorithm 256-bit) is a one-way cryptographic hash function designed
-    by the NSA and published by NIST. It takes an input of any length and produces a fixed
-    256-bit (32-byte) hash value, typically represented as a 64-character hexadecimal string.
-  </p>
-  <p>
-    SHA-256 is widely used in digital signatures, certificate verification, password storage,
-    and blockchain technology (including Bitcoin). It is considered collision-resistant, meaning
-    it is computationally infeasible to find two different inputs that produce the same hash.
-  </p>
-
-  <h3>Input notes</h3>
-  <p>
-    The tool accepts any text, including Unicode characters, emojis, and multi-line content.
-    Even a small change to the input — such as a single character — produces a completely
-    different hash, a property known as the avalanche effect.
-  </p>
-
-  <h3>Example</h3>
-  <p>Hashing a short phrase produces a fixed-length 64-character digest:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input Text ---
-Hello, World!
-
---- SHA-256 Hash ---
-dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f
-
---- Hash Length ---
-64 characters (256 bits)</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,18 +1,18 @@
 {
   "en": {
-    "title": "Image to Base64 — Coding.Tools",
-    "description": "Convert images to Base64 data URI strings online with local browser processing, no upload, and a 2MB input limit.",
+    "title": "Image to Base64 - Coding.Tools",
+    "description": "Convert a small image into a Base64 data URI for embedding in HTML, CSS, or plain-text payloads.",
     "toolTitle": "Image to Base64",
-    "toolDescription": "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS.",
+    "toolDescription": "Convert one image locally into a Base64 data URI you can copy into HTML, CSS, JSON, or text files.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag an image file here to upload",
     "dropzoneHint": "1 image · Max 2MB",
     "inputPlaceholder": "Base64 result will appear here...",
-    "descTitle": "Image to Base64",
+    "descTitle": "Turn a small image into a data URI",
     "descParas": [
-      "This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.",
-      "Base64 encoding increases the data size by approximately 33%, so it is best used for small images like icons and logos rather than large photographs.",
-      "Files are read locally in your browser. The image is not uploaded to a server, and the tool limits input to one image up to 2MB for predictable performance."
+      "<strong>Image to Base64 reads one image in your browser and returns a complete <code>data:</code> URI.</strong> Paste it into HTML, CSS, JSON, or other plain-text contexts when a separate image file would be inconvenient.",
+      "Base64 is not compression. It usually increases the encoded data by about <strong>33%</strong>, plus the MIME prefix such as <code>data:image/png;base64,</code>. Keep it for small icons, placeholders, and self-contained snippets rather than large photos.",
+      "The file is read locally and limited to one image up to 2MB for predictable performance. Embedded data URIs can avoid separate requests, but they also make HTML/CSS harder to cache and edit."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -20,253 +20,253 @@
       "The Base64 encoded data URI appears in the text editor below.",
       "Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file."
     ],
-    "whatIs": "Embedding images in HTML",
+    "whatIs": "When should you use image Base64?",
     "whatIsParas": [
-      "You can use Base64 data URIs directly in HTML img tags: &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "In CSS, you can use data URIs for background images: background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> is useful for tiny assets that must travel inside a single HTML, CSS, JSON, or text file.",
+      "Use normal image files for larger assets so browsers can cache them separately. Because Base64 expands the data and keeps any image metadata inside the encoded bytes, check size and privacy before embedding."
     ],
     "example": "Convert with Python",
-    "examplePara": "Convert an image to Base64 using Python:",
+    "examplePara": "Programmatic conversion reads the image bytes, Base64-encodes them, and adds the correct data URI prefix:",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "cn": {
-    "title": "图片转 Base64 — Coding.Tools",
-    "description": "在线将图片转换为 Base64 data URI 字符串，在浏览器本地处理，无需上传，单张图片上限 2MB。",
+    "title": "图像至 Base64 - Coding.Tools",
+    "description": "将小图像转换为 Base64 数据 URI，以便嵌入 HTML、CSS 或纯文本有效负载中。",
     "toolTitle": "图片转 Base64",
-    "toolDescription": "将任何图片转换为 Base64 编码的 data URI，可嵌入 HTML 或 CSS 中。",
+    "toolDescription": "将一张图像本地转换为 Base64 数据 URI，您可以复制到 HTML、CSS、JSON 或文本文件中。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽图片文件上传",
     "dropzoneHint": "1 张图片 · 最大 2MB",
     "inputPlaceholder": "Base64 结果将在此显示...",
-    "descTitle": "图片转 Base64",
+    "descTitle": "将小图像变成数据URI",
     "descParas": [
-      "此工具将图片文件转换为 Base64 编码的 data URI 字符串。您可以直接在 HTML 或 CSS 中嵌入此字符串，无需单独的图片文件请求。",
-      "Base64 编码会使数据大小增加约 33%，因此最适合用于小图片（如图标和徽标），而非大照片。",
-      "文件会在浏览器中本地读取。图片不会上传到服务器，工具限制一次处理 1 张、最大 2MB 的图片，以保证稳定性能。"
+      "<strong>图片转 Base64 会在浏览器中读取一张图片，并返回完整的 <code>data:</code> URI。</strong> 当单独的图片文件不方便时，可以将结果粘贴到 HTML、CSS、JSON 或其他纯文本内容中。",
+      "Base64 不是压缩。它通常将编码数据增加大约<strong>33%</strong>，加上MIME前缀，例如<code>data:image/png;base64,</code>。保留小图标、占位符和独立片段，而不是大照片。",
+      "该文件在本地读取，并限制为一张最大 2MB 的图像，以实现可预测的性能。嵌入数据 URI 可以避免单独的请求，但它们也使 HTML/CSS 更难以缓存和编辑。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将图片文件拖放到上传区域，或点击选择。",
-      "Base64 编码的 data URI 出现在下方的文本编辑器中。",
-      "使用<strong>复制</strong>复制结果或<strong>保存</strong>下载为文本文件。"
+      "将图像文件拖放到上传区域，或单击选择。",
+      "Base64 编码数据 URI 出现在下面的文本编辑器中。",
+      "使用 <strong>复制</strong> 复制结果或使用 <strong>保存</strong> 以文本文件形式下载。"
     ],
-    "whatIs": "在 HTML 中嵌入图片",
+    "whatIs": "什么时候应该使用图像 Base64？",
     "whatIsParas": [
-      "可以在 HTML img 标签中直接使用 Base64 data URI：&lt;img src=\"data:image/png;base64,...\"&gt;",
-      "在 CSS 中，可以将 data URI 用于背景图片：background: url(data:image/png;base64,...)"
+      "<strong>Image Base64</strong> 对于必须在单个 HTML、CSS、JSON 或文本文件中传输的小型资源非常有用。",
+      "对于较大的资源使用普通图像文件，以便浏览器可以单独缓存它们。由于 Base64 扩展了数据并将所有图像元数据保留在编码字节内，因此在嵌入之前请检查大小和隐私。"
     ],
     "example": "用 Python 转换",
-    "examplePara": "使用 Python 将图片转换为 Base64：",
+    "examplePara": "编程转换读取图像字节，对它们进行 Base64 编码，并添加正确的数据 URI 前缀：",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "tw": {
-    "title": "圖片轉 Base64 — Coding.Tools",
-    "description": "線上將圖片轉換為 Base64 data URI 字串，在瀏覽器本機處理，無需上傳，單張圖片上限 2MB。",
+    "title": "影像至 Base64 - Coding.Tools",
+    "description": "將小圖像轉換為 Base64 資料 URI，以便嵌入 HTML、CSS 或純文字有效負載中。",
     "toolTitle": "圖片轉Base64",
-    "toolDescription": "將任何圖像轉換為 Base64 編碼的資料 URI，以便嵌入 HTML 或 CSS 中。",
+    "toolDescription": "將圖像本地轉換為 Base64 資料 URI，您可以複製到 HTML、CSS、JSON 或文字檔案中。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "點擊或拖曳圖像檔案至此處上傳",
     "dropzoneHint": "1 張圖片 · 最大 2MB",
     "inputPlaceholder": "Base64 結果將會出現在這裡...",
-    "descTitle": "圖片轉 Base64",
+    "descTitle": "將小圖像變成資料URI",
     "descParas": [
-      "該工具將圖像檔案轉換為 Base64 編碼的資料 URI 字串。您可以將此字串直接嵌入到 HTML 或 CSS 中，從而無需單獨的圖像檔案請求。",
-      "Base64 編碼使資料大小增加約 33%，因此它最適合用於圖示和標誌等小圖像，而不是大照片。",
-      "檔案會在瀏覽器中本機讀取。圖片不會上傳到伺服器，工具限制一次處理 1 張、最大 2MB 的圖片，以維持穩定效能。"
+      "<strong>圖片轉 Base64 會在瀏覽器中讀取一張圖片，並返回完整的 <code>data:</code> URI。</strong> 當獨立圖片檔案不方便時，可將結果貼入 HTML、CSS、JSON 或其他純文字內容。",
+      "Base64 不是壓縮。它通常會將編碼資料增加約<strong>33%</strong>，加上MIME前綴，例如<code>data:image/png;base64,</code>。保留小圖示、佔位符和獨立片段，而不是大照片。",
+      "該檔案在本地讀取，並限制為一張最大 2MB 的圖像，以實現可預測的效能。嵌入資料 URI 可以避免單獨的請求，但它們也使 HTML/CSS 更難以快取和編輯。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "將圖像檔案拖曳到上傳區域，或按一下選擇。",
-      "Base64 編碼的資料 URI 將顯示在下面的文字編輯器中。",
-      "使用<strong>複製</strong>複製結果或<strong>儲存</strong>下載為文字檔。"
+      "Base64 編碼資料 URI 出現在下面的文字編輯器中。",
+      "使用 <strong>複製</strong> 複製結果或使用 <strong>儲存</strong> 以文字檔案形式下載。"
     ],
-    "whatIs": "在 HTML 中嵌入圖像",
+    "whatIs": "什麼時候該使用影像 Base64？",
     "whatIsParas": [
-      "您可以直接在 HTML img 標籤中使用 Base64 資料 URI： &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "在 CSS 中，您可以使用背景圖像的資料 URI：background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> 對於必須在單一 HTML、CSS、JSON 或文字檔案中傳輸的小型資源非常有用。",
+      "對於較大的資源使用普通圖像文件，以便瀏覽器可以單獨快取它們。由於 Base64 擴展了資料並將所有圖像元資料保留在編碼位元組內，因此在嵌入之前請檢查大小和隱私。"
     ],
     "example": "用Python轉換",
-    "examplePara": "使用 Python 將映像轉換為 Base64：",
+    "examplePara": "編程轉換讀取圖像字節，對它們進行 Base64 編碼，並添加正確的資料 URI 前綴：",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "jp": {
-    "title": "画像を Base64 に — コーディング.ツール",
-    "description": "画像を Base64 data URI 文字列に変換します。ブラウザ内でローカル処理され、アップロード不要、入力上限は 2MB です。",
+    "title": "Base64 - Coding.Tools への画像",
+    "description": "HTML、CSS、またはプレーンテキストのペイロードに埋め込むために、小さな画像を Base64 データ URI に変換します。",
     "toolTitle": "画像からBase64",
-    "toolDescription": "HTML または CSS に埋め込むために、任意の画像を Base64 でエンコードされたデータ URI に変換します。",
+    "toolDescription": "1 つの画像をローカルで Base64 データ URI に変換し、HTML、CSS、JSON、またはテキスト ファイルにコピーできます。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに画像ファイルをクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像1枚・最大2MB",
     "inputPlaceholder": "Base64 の結果がここに表示されます...",
-    "descTitle": "画像をBase64に変換",
+    "descTitle": "小さな画像をデータ化 URI",
     "descParas": [
-      "このツールは、画像ファイルを Base64 でエンコードされたデータ URI 文字列に変換します。この文字列を HTML または CSS に直接埋め込むことができるため、個別の画像ファイル リクエストの必要がなくなります。",
-      "Base64 エンコードではデータ サイズが約 33% 増加するため、大きな写真ではなく、アイコンやロゴなどの小さな画像に使用するのが最適です。",
-      "ファイルはブラウザ内でローカルに読み取られます。画像はサーバーにアップロードされず、安定した動作のため入力は 1 枚、最大 2MB に制限されています。"
+      "<strong>画像から Base64 は、ブラウザー内で 1 つの画像を読み取り、完全な <code>data:</code> URI を返します。</strong> 個別の画像ファイルを使いにくい場合に、HTML、CSS、JSON、その他のプレーンテキストへ貼り付けられます。",
+      "Base64 は圧縮ではありません。通常、エンコードされたデータが約 <strong>33%</strong> 増加し、さらに <code>data:image/png;base64,</code> などの MIME プレフィックスが増加します。大きな写真ではなく、小さなアイコン、プレースホルダー、自己完結型のスニペットとして保存してください。",
+      "ファイルはローカルで読み取られ、予測可能なパフォーマンスを実現するために最大 2MB の 1 つのイメージに制限されます。埋め込みデータ URI を使用すると、個別のリクエストを回避できますが、HTML/CSS のキャッシュと編集が難しくなります。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "画像ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックして選択します。",
-      "Base64 でエンコードされたデータ URI が以下のテキスト エディターに表示されます。",
-      "<strong>コピー</strong>を使用して結果をコピーするか、<strong>保存</strong>を使用してテキスト ファイルとしてダウンロードします。"
+      "Base64 でエンコードされたデータ URI が下のテキスト エディターに表示されます。",
+      "<strong>コピー</strong> を使用して結果をコピーするか、<strong>保存</strong> を使用してテキスト ファイルとしてダウンロードします。"
     ],
-    "whatIs": "HTMLへの画像の埋め込み",
+    "whatIs": "画像 Base64 をいつ使用する必要がありますか?",
     "whatIsParas": [
-      "Base64 データ URI を HTML img タグで直接使用できます: &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "CSS では、背景画像にデータ URI を使用できます。background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> は、単一の HTML、CSS、JSON、またはテキスト ファイル内で移動する必要がある小さなアセットに役立ちます。",
+      "ブラウザが個別にキャッシュできるように、大きなアセットには通常の画像ファイルを使用します。 Base64 はデータを拡張し、エンコードされたバイト内に画像メタデータを保持するため、埋め込む前にサイズとプライバシーを確​​認してください。"
     ],
     "example": "Pythonで変換する",
-    "examplePara": "Python を使用して画像を Base64 に変換します。",
+    "examplePara": "プログラムによる変換は画像バイトを読み取り、Base64 エンコードして、正しいデータ URI プレフィックスを追加します。",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "kr": {
-    "title": "이미지를 Base64로 — Coding.Tools",
-    "description": "이미지를 Base64 data URI 문자열로 변환합니다. 브라우저에서 로컬 처리되며 업로드가 없고 입력 한도는 2MB입니다.",
+    "title": "이미지를 Base64 - Coding.Tools로",
+    "description": "HTML, CSS 또는 일반 텍스트 페이로드에 삽입하기 위해 작은 이미지를 Base64 데이터 URI로 변환합니다.",
     "toolTitle": "이미지에서 Base64",
-    "toolDescription": "HTML 또는 CSS에 삽입하기 위해 모든 이미지를 Base64로 인코딩된 데이터 URI로 변환합니다.",
+    "toolDescription": "하나의 이미지를 로컬에서 HTML, CSS, JSON 또는 텍스트 파일로 복사할 수 있는 Base64 데이터 URI로 변환합니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 이미지 파일을 클릭하거나 드래그하세요.",
     "dropzoneHint": "이미지 1개 · 최대 2MB",
     "inputPlaceholder": "Base64 결과가 여기에 표시됩니다...",
-    "descTitle": "이미지를 Base64로",
+    "descTitle": "작은 이미지를 데이터로 변환 URI",
     "descParas": [
-      "이 도구는 이미지 파일을 Base64로 인코딩된 데이터 URI 문자열로 변환합니다. 이 문자열을 HTML이나 CSS에 직접 포함할 수 있으므로 별도의 이미지 파일 요청이 필요하지 않습니다.",
-      "Base64 인코딩을 사용하면 데이터 크기가 약 33% 증가하므로 큰 사진보다는 아이콘, 로고와 같은 작은 이미지에 사용하는 것이 가장 좋습니다.",
-      "파일은 브라우저에서 로컬로 읽습니다. 이미지는 서버에 업로드되지 않으며 안정적인 성능을 위해 한 번에 1개, 최대 2MB로 제한됩니다."
+      "<strong>이미지에서 Base64는 브라우저에서 이미지 하나를 읽고 완전한 <code>data:</code> URI를 반환합니다.</strong> 별도의 이미지 파일을 쓰기 어려운 경우 HTML, CSS, JSON 또는 기타 일반 텍스트 컨텍스트에 붙여 넣을 수 있습니다.",
+      "Base64는 압축이 아닙니다. 일반적으로 인코딩된 데이터는 약 <strong>33%</strong>에 <code>data:image/png;base64,</code>와 같은 MIME 접두사를 추가하여 증가합니다. 큰 사진보다는 작은 아이콘, 자리 표시자, 독립된 스니펫용으로 보관하세요.",
+      "파일은 로컬에서 읽혀지며 예측 가능한 성능을 위해 최대 2MB의 이미지 하나로 제한됩니다. 내장된 데이터 URI는 별도의 요청을 피할 수 있지만 HTML/CSS를 캐시하고 편집하기 어렵게 만듭니다."
     ],
     "howToUse": "사용방법",
     "steps": [
       "이미지 파일을 업로드 영역으로 끌어다 놓거나 클릭하여 선택하세요.",
-      "Base64로 인코딩된 데이터 URI는 아래 텍스트 편집기에 표시됩니다.",
-      "<strong>복사</strong>를 사용하여 결과를 복사하거나 <strong>저장</strong>을 사용하여 텍스트 파일로 다운로드하세요."
+      "Base64로 인코딩된 데이터 URI가 아래 텍스트 편집기에 나타납니다.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하고, 텍스트 파일로 다운로드하려면 <strong>저장</strong>를 사용하세요."
     ],
-    "whatIs": "HTML에 이미지 삽입",
+    "whatIs": "Base64 이미지는 언제 사용해야 합니까?",
     "whatIsParas": [
-      "HTML img 태그에서 직접 Base64 데이터 URI를 사용할 수 있습니다: &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "CSS에서는 배경 이미지에 데이터 URI를 사용할 수 있습니다: background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong>는 단일 HTML, CSS, JSON 또는 텍스트 파일 내에서 이동해야 하는 작은 자산에 유용합니다.",
+      "브라우저가 별도로 캐시할 수 있도록 더 큰 자산에는 일반 이미지 파일을 사용하십시오. Base64는 데이터를 확장하고 모든 이미지 메타데이터를 인코딩된 바이트 내에 유지하므로 삽입하기 전에 크기와 개인 정보 보호를 확인하세요."
     ],
     "example": "Python으로 변환",
-    "examplePara": "Python을 사용하여 이미지를 Base64로 변환합니다.",
+    "examplePara": "프로그래밍 방식 변환은 이미지 바이트를 읽고 Base64로 인코딩한 다음 올바른 데이터 URI 접두사를 추가합니다.",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "fr": {
-    "title": "Image vers Base64 — Codage.Tools",
-    "description": "Convertissez des images en URI de donnees Base64 avec traitement local dans le navigateur, sans upload, limite a 2 Mo.",
+    "title": "Image vers Base64 - Coding.Tools",
+    "description": "Convertissez une petite image en données Base64 URI pour l'intégrer dans des charges utiles HTML, CSS ou en texte brut.",
     "toolTitle": "Image en Base64",
-    "toolDescription": "Convertissez n'importe quelle image en un URI de données codé en Base64 pour l'intégrer en HTML ou CSS.",
+    "toolDescription": "Convertissez localement une image en données Base64 URI que vous pouvez copier dans des fichiers HTML, CSS, JSON ou texte.",
     "categoryName": "Outils d’image",
     "dropzoneMessage": "Cliquez ou faites glisser un fichier image ici pour le télécharger",
     "dropzoneHint": "1 image · 2 Mo maximum",
     "inputPlaceholder": "Le résultat Base64 apparaîtra ici...",
-    "descTitle": "Image vers Base64",
+    "descTitle": "Transformez une petite image en données URI",
     "descParas": [
-      "Cet outil convertit un fichier image en une chaîne URI de données codées en Base64. Vous pouvez intégrer cette chaîne directement dans HTML ou CSS, éliminant ainsi le besoin d'une demande de fichier image distincte.",
-      "Le codage Base64 augmente la taille des données d'environ 33 %, il est donc préférable de l'utiliser pour les petites images comme les icônes et les logos plutôt que pour les grandes photographies.",
-      "Les fichiers sont lus localement dans votre navigateur. L image n est pas envoyee a un serveur et l outil limite l entree a une image de 2 Mo maximum pour des performances previsibles."
+      "<strong>Image en Base64 lit une image dans votre navigateur et renvoie un URI <code>data:</code> complet.</strong> Collez-le dans du HTML, du CSS, du JSON ou d’autres contextes en texte brut lorsqu’un fichier image séparé serait peu pratique.",
+      "Base64 n’est pas une compression. Il augmente généralement les données codées d'environ <strong>33%</strong>, plus le préfixe MIME tel que <code>data:image/png;base64,</code>. Conservez-le pour les petites icônes, les espaces réservés et les extraits autonomes plutôt que pour les grandes photos.",
+      "Le fichier est lu localement et limité à une image jusqu'à 2 Mo pour des performances prévisibles. Les URI de données intégrés peuvent éviter des requêtes distinctes, mais ils rendent également HTML/CSS plus difficile à mettre en cache et à modifier."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Faites glisser et déposez un fichier image sur la zone de téléchargement ou cliquez pour le sélectionner.",
-      "L'URI des données codées en Base64 apparaît dans l'éditeur de texte ci-dessous.",
+      "Les données codées Base64 URI apparaissent dans l'éditeur de texte ci-dessous.",
       "Utilisez <strong>Copier</strong> pour copier le résultat ou <strong>Enregistrer</strong> pour le télécharger sous forme de fichier texte."
     ],
-    "whatIs": "Incorporation d'images en HTML",
+    "whatIs": "Quand devez-vous utiliser l’image Base64 ?",
     "whatIsParas": [
-      "Vous pouvez utiliser les URI de données Base64 directement dans les balises HTML img : &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "En CSS, vous pouvez utiliser des URI de données pour les images d'arrière-plan : background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> est utile pour les petits actifs qui doivent voyager dans un seul fichier HTML, CSS, JSON ou texte.",
+      "Utilisez des fichiers image normaux pour les ressources plus volumineuses afin que les navigateurs puissent les mettre en cache séparément. Étant donné que Base64 étend les données et conserve toutes les métadonnées d'image dans les octets codés, vérifiez la taille et la confidentialité avant l'intégration."
     ],
     "example": "Convertir avec Python",
-    "examplePara": "Convertissez une image en Base64 à l'aide de Python :",
+    "examplePara": "La conversion programmatique lit les octets de l'image, les code en Base64 et ajoute le préfixe URI de données correct :",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "de": {
-    "title": "Bild zu Base64 – Coding.Tools",
-    "description": "Bilder lokal im Browser in Base64-Daten-URIs konvertieren, ohne Upload und mit 2-MB-Eingabelimit.",
+    "title": "Bild zu Base64 - Coding.Tools",
+    "description": "Konvertieren Sie ein kleines Bild in Base64-Daten URI zum Einbetten in HTML, CSS oder Klartext-Nutzlasten.",
     "toolTitle": "Bild zu Base64",
-    "toolDescription": "Konvertieren Sie jedes Bild in einen Base64-codierten Daten-URI zum Einbetten in HTML oder CSS.",
+    "toolDescription": "Konvertieren Sie ein Bild lokal in Base64-Daten, die Sie in HTML-, CSS-, JSON- oder Textdateien kopieren können.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie eine Bilddatei hierher, um sie hochzuladen",
     "dropzoneHint": "1 Bild · Max. 2 MB",
     "inputPlaceholder": "Das Base64-Ergebnis wird hier angezeigt ...",
-    "descTitle": "Bild zu Base64",
+    "descTitle": "Verwandeln Sie ein kleines Bild in ein Daten-URI",
     "descParas": [
-      "Dieses Tool konvertiert eine Bilddatei in eine Base64-codierte Daten-URI-Zeichenfolge. Sie können diese Zeichenfolge direkt in HTML oder CSS einbetten, sodass keine separate Bilddateianforderung erforderlich ist.",
-      "Die Base64-Kodierung erhöht die Datengröße um ca. 33 % und eignet sich daher am besten für kleine Bilder wie Symbole und Logos statt für große Fotos.",
-      "Dateien werden lokal im Browser gelesen. Das Bild wird nicht an einen Server hochgeladen, und die Eingabe ist fuer stabile Leistung auf ein Bild bis 2 MB begrenzt."
+      "<strong>Bild zu Base64 liest ein Bild in Ihrem Browser und gibt einen vollständigen <code>data:</code>-URI zurück.</strong> Fügen Sie ihn in HTML, CSS, JSON oder andere reine Textkontexte ein, wenn eine separate Bilddatei unpraktisch wäre.",
+      "Base64 ist keine Komprimierung. Normalerweise werden die codierten Daten um etwa <strong>33%</strong> erhöht, zuzüglich des MIME-Präfixes wie <code>data:image/png;base64,</code>. Behalten Sie es für kleine Symbole, Platzhalter und eigenständige Ausschnitte bei, statt für große Fotos.",
+      "Die Datei wird lokal gelesen und ist für eine vorhersehbare Leistung auf ein Bild mit bis zu 2 MB beschränkt. Eingebettete Daten-URIs können separate Anfragen vermeiden, erschweren aber auch das Zwischenspeichern und Bearbeiten von HTML/CSS."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
       "Ziehen Sie eine Bilddatei per Drag-and-Drop in den Upload-Bereich oder klicken Sie, um sie auszuwählen.",
-      "Der Base64-codierte Daten-URI erscheint im Texteditor unten.",
+      "Die Base64-codierten Daten URI erscheinen im Texteditor unten.",
       "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren, oder <strong>Speichern</strong>, um es als Textdatei herunterzuladen."
     ],
-    "whatIs": "Bilder in HTML einbetten",
+    "whatIs": "Wann sollten Sie das Bild Base64 verwenden?",
     "whatIsParas": [
-      "Sie können Base64-Daten-URIs direkt in HTML-IMG-Tags verwenden: &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "In CSS können Sie Daten-URIs für Hintergrundbilder verwenden: background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> ist nützlich für kleine Assets, die in einer einzelnen HTML-, CSS-, JSON- oder Textdatei transportiert werden müssen.",
+      "Verwenden Sie für größere Assets normale Bilddateien, damit Browser diese separat zwischenspeichern können. Da Base64 die Daten erweitert und alle Bildmetadaten in den codierten Bytes behält, überprüfen Sie vor dem Einbetten Größe und Datenschutz."
     ],
     "example": "Mit Python konvertieren",
-    "examplePara": "Konvertieren Sie ein Bild mit Python in Base64:",
+    "examplePara": "Die programmgesteuerte Konvertierung liest die Bildbytes, codiert sie Base64 und fügt das korrekte Datenpräfix URI hinzu:",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "es": {
-    "title": "Imagen a Base64 — Coding.Tools",
-    "description": "Convierta imagenes a URI de datos Base64 con procesamiento local en el navegador, sin carga y con limite de 2 MB.",
+    "title": "Imagen de Base64 - Coding.Tools",
+    "description": "Convierta una imagen pequeña en un Base64 de datos URI para incrustarlo en HTML, CSS o cargas útiles de texto sin formato.",
     "toolTitle": "Imagen a Base64",
-    "toolDescription": "Convierta cualquier imagen a un URI de datos codificado en Base64 para incrustarla en HTML o CSS.",
+    "toolDescription": "Convierta una imagen localmente en un Base64 de datos URI que puede copiar en HTML, CSS, JSON o archivos de texto.",
     "categoryName": "Herramientas de imagen",
     "dropzoneMessage": "Haga clic o arrastre un archivo de imagen aquí para cargarlo.",
     "dropzoneHint": "1 imagen · Máximo 2MB",
     "inputPlaceholder": "El resultado de Base64 aparecerá aquí...",
-    "descTitle": "Imagen a Base64",
+    "descTitle": "Convierte una imagen pequeña en una de datos URI",
     "descParas": [
-      "Esta herramienta convierte un archivo de imagen en una cadena URI de datos codificada en Base64. Puede incrustar esta cadena directamente en HTML o CSS, eliminando la necesidad de solicitar un archivo de imagen por separado.",
-      "La codificación Base64 aumenta el tamaño de los datos en aproximadamente un 33 %, por lo que se utiliza mejor para imágenes pequeñas como iconos y logotipos en lugar de fotografías grandes.",
-      "Los archivos se leen localmente en el navegador. La imagen no se carga a un servidor y la herramienta limita la entrada a una imagen de hasta 2 MB para un rendimiento estable."
+      "<strong>Imagen a Base64 lee una imagen en el navegador y devuelve un URI <code>data:</code> completo.</strong> Péguelo en HTML, CSS, JSON u otros contextos de texto sin formato cuando un archivo de imagen separado resulte incómodo.",
+      "Base64 no es compresión. Por lo general, aumenta los datos codificados en aproximadamente <strong>33%</strong>, más el prefijo MIME como <code>data:image/png;base64,</code>. Guárdelo para íconos pequeños, marcadores de posición y fragmentos independientes en lugar de fotografías grandes.",
+      "El archivo se lee localmente y se limita a una imagen de hasta 2 MB para un rendimiento predecible. Los URI de datos integrados pueden evitar solicitudes separadas, pero también hacen que HTML/CSS sea más difícil de almacenar en caché y editar."
     ],
     "howToUse": "como usar",
     "steps": [
       "Arrastre y suelte un archivo de imagen en el área de carga o haga clic para seleccionar.",
-      "El URI de datos codificados en Base64 aparece en el editor de texto a continuación.",
+      "Los datos codificados Base64 URI aparecen en el editor de texto a continuación.",
       "Utilice <strong>Copiar</strong> para copiar el resultado o <strong>Guardar</strong> para descargarlo como un archivo de texto."
     ],
-    "whatIs": "Incrustar imágenes en HTML",
+    "whatIs": "¿Cuándo debería utilizar la imagen Base64?",
     "whatIsParas": [
-      "Puede utilizar URI de datos Base64 directamente en etiquetas img HTML: &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "En CSS, puede utilizar URI de datos para imágenes de fondo: background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> es útil para activos pequeños que deben viajar dentro de un único archivo de texto HTML, CSS, JSON.",
+      "Utilice archivos de imagen normales para recursos más grandes para que los navegadores puedan almacenarlos en caché por separado. Debido a que Base64 expande los datos y mantiene los metadatos de la imagen dentro de los bytes codificados, verifique el tamaño y la privacidad antes de incrustar."
     ],
     "example": "Convertir con Python",
-    "examplePara": "Convierta una imagen a Base64 usando Python:",
+    "examplePara": "La conversión programática lee los bytes de la imagen, los codifica con Base64 y agrega el prefijo URI de datos correcto:",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "pt": {
-    "title": "Imagem para Base64 — Coding.Tools",
-    "description": "Converta imagens em URIs de dados Base64 com processamento local no navegador, sem upload e com limite de 2 MB.",
+    "title": "Imagem para Base64 - Coding.Tools",
+    "description": "Converta uma imagem pequena em dados Base64 URI para incorporação em cargas úteis HTML, CSS ou de texto simples.",
     "toolTitle": "Imagem para Base64",
-    "toolDescription": "Converta qualquer imagem em um URI de dados codificados em Base64 para incorporação em HTML ou CSS.",
+    "toolDescription": "Converta uma imagem localmente em dados Base64 URI que você pode copiar em HTML, CSS, JSON ou arquivos de texto.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste um arquivo de imagem aqui para fazer upload",
     "dropzoneHint": "1 imagem · Máx. 2 MB",
     "inputPlaceholder": "O resultado Base64 aparecerá aqui...",
-    "descTitle": "Imagem para Base64",
+    "descTitle": "Transforme uma pequena imagem em dados URI",
     "descParas": [
-      "Esta ferramenta converte um arquivo de imagem em uma string URI de dados codificados em Base64. Você pode incorporar essa string diretamente em HTML ou CSS, eliminando a necessidade de uma solicitação de arquivo de imagem separada.",
-      "A codificação Base64 aumenta o tamanho dos dados em aproximadamente 33%, por isso é melhor usada para imagens pequenas, como ícones e logotipos, em vez de fotografias grandes.",
-      "Os arquivos sao lidos localmente no navegador. A imagem nao e enviada a um servidor e a ferramenta limita a entrada a uma imagem de ate 2 MB para desempenho previsivel."
+      "<strong>Imagem para Base64 lê uma imagem no navegador e retorna um URI <code>data:</code> completo.</strong> Cole-o em HTML, CSS, JSON ou outros contextos de texto simples quando um arquivo de imagem separado for inconveniente.",
+      "Base64 não é compactação. Geralmente aumenta os dados codificados em cerca de <strong>33%</strong>, mais o prefixo MIME, como <code>data:image/png;base64,</code>. Mantenha-o para ícones pequenos, espaços reservados e trechos independentes, em vez de fotos grandes.",
+      "O arquivo é lido localmente e limitado a uma imagem de até 2 MB para desempenho previsível. URIs de dados incorporados podem evitar solicitações separadas, mas também tornam HTML/CSS mais difícil de armazenar em cache e editar."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Arraste e solte um arquivo de imagem na área de upload ou clique para selecionar.",
-      "O URI de dados codificados em Base64 aparece no editor de texto abaixo.",
+      "Os dados codificados Base64 URI aparecem no editor de texto abaixo.",
       "Use <strong>Copiar</strong> para copiar o resultado ou <strong>Salvar</strong> para fazer download como um arquivo de texto."
     ],
-    "whatIs": "Incorporando imagens em HTML",
+    "whatIs": "Quando você deve usar a imagem Base64?",
     "whatIsParas": [
-      "Você pode usar URIs de dados Base64 diretamente em tags HTML img: &lt;img src=\"data:image/png;base64,...\"&gt;",
-      "Em CSS, você pode usar URIs de dados para imagens de fundo: background: url('data:image/png;base64,...')"
+      "<strong>Image Base64</strong> é útil para ativos minúsculos que devem viajar dentro de um único arquivo HTML, CSS, JSON ou de texto.",
+      "Use arquivos de imagem normais para ativos maiores para que os navegadores possam armazená-los em cache separadamente. Como Base64 expande os dados e mantém quaisquer metadados de imagem dentro dos bytes codificados, verifique o tamanho e a privacidade antes de incorporar."
     ],
     "example": "Converter com Python",
-    "examplePara": "Converta uma imagem para Base64 usando Python:",
+    "examplePara": "A conversão programática lê os bytes da imagem, codifica-os com Base64 e adiciona o prefixo URI dos dados corretos:",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   }
 }

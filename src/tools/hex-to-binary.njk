@@ -1,10 +1,5 @@
 ---
-title: "Hex to Binary Converter — Coding.Tools"
-description: "Convert hexadecimal numbers to binary, decimal, and octal instantly in your browser. Fast, private, and free to use."
-toolTitle: "Hex to Binary"
-toolDescription: "Enter a hexadecimal number and convert it to binary, decimal, and octal. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "hex-to-binary"
 permalink: "/hex-to-binary.html"
 ---
@@ -73,29 +68,7 @@ permalink: "/hex-to-binary.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Hex to Binary Converter</h2>
-  <p>This tool converts hexadecimal (base 16) numbers into their binary (base 2), decimal (base 10), and octal (base 8) equivalents. It is useful when you need to see the individual bit pattern of a hex value for debugging, hardware programming, or protocol analysis.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a hexadecimal number into the input field (e.g. <code>1A2F</code> or <code>FF</code>).</li>
-    <li>Click <strong>Convert</strong> to see the binary, decimal, and octal results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the binary result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>Hex to binary relationship</h3>
-  <p>Each hexadecimal digit maps directly to four binary digits. This makes hex a convenient shorthand for binary: <code>F</code> = <code>1111</code>, <code>A</code> = <code>1010</code>, and so on. For example, <code>1A2F</code> in hex becomes <code>1101000101111</code> in binary.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Hexadecimal: 1A2F
-Binary:      1101000101111
-Decimal:     6703
-Octal:       15057</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

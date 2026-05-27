@@ -1,272 +1,272 @@
 {
   "en": {
-    "title": "ASCII to Hex Converter — Coding.Tools",
-    "description": "Convert ASCII text to hexadecimal values directly in your browser.",
+    "title": "ASCII to Hex Converter - Coding.Tools",
+    "description": "Convert text characters into hexadecimal code values with selectable delimiters.",
     "toolTitle": "ASCII to Hex",
-    "toolDescription": "Convert text to hex-encoded strings with configurable delimiters.",
+    "toolDescription": "Encode ASCII text as hex values and choose space, comma, colon, or no delimiter output.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Type or paste text here...",
     "outputPlaceholder": "Hex values will appear here...",
-    "descTitle": "ASCII to Hex Converter",
+    "descTitle": "Encode ASCII text as hexadecimal values",
     "descParas": [
-      "This tool converts ASCII text into hexadecimal byte values with configurable delimiters.",
-      "The conversion runs locally in your browser."
+      "<strong>ASCII to Hex converts each input character into its hexadecimal character code.</strong> Use it to prepare byte examples, test fixtures, protocol notes, or readable representations of short text payloads.",
+      "For plain ASCII, each character produces a two-digit value from <code>00</code> to <code>7F</code>. Non-ASCII characters are handled as JavaScript character codes, not as UTF-8 byte sequences, so use a UTF-8 encoder when byte-accurate Unicode output matters."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a hex delimiter from the dropdown.",
-      "Click <strong>Convert</strong> to encode the text to hex.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Type or paste the text you want to encode.",
+      "Choose the delimiter style: space, none, comma, or colon.",
+      "Click <strong>Convert</strong> to generate the hex output.",
+      "Copy or download the result for your documentation, tests, or debugging notes."
     ],
-    "whatIs": "What is ASCII to Hex?",
+    "whatIs": "What is ASCII to hex conversion?",
     "whatIsParas": [
-      "ASCII to hex conversion maps each character to its hexadecimal byte value. For example, 'H' = hex 48."
+      "<strong>ASCII to hex conversion</strong> rewrites each character code in base 16. The letter <code>H</code>, for example, is decimal 72, which is <code>48</code> in hexadecimal."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any text. Choose from delimiters: None, Space, 0x, 0X, \\x, \\X.",
+    "inputNotesPara": "Use plain ASCII text when you need one byte per character. Tabs, line breaks, and other control characters also have hex values, so review copied text for hidden whitespace before relying on the output.",
     "example": "Example",
-    "examplePara": "Converting ASCII text to hex:",
+    "examplePara": "The text <code>Hello, World!</code> becomes a sequence of hex character codes:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "cn": {
-    "title": "ASCII 转十六进制转换器 — Coding.Tools",
-    "description": "在浏览器中直接将 ASCII 文本转换为十六进制值。",
+    "title": "ASCII 到十六进制转换器 - Coding.Tools",
+    "description": "将文本字符转换为带有可选分隔符的十六进制代码值。",
     "toolTitle": "ASCII转十六进制",
-    "toolDescription": "将文本转换为十六进制编码字符串，并支持自定义分隔符。",
+    "toolDescription": "将 ASCII 文本编码为十六进制值，并选择空格、逗号、冒号或无分隔符输出。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入或粘贴文本...",
     "outputPlaceholder": "十六进制值将显示在这里...",
-    "descTitle": "ASCII 转十六进制转换器",
+    "descTitle": "将 ASCII 文本编码为十六进制值",
     "descParas": [
-      "此工具将 ASCII 文本转换为带可配置分隔符的十六进制字节值。",
-      "转换在浏览器本地运行。"
+      "<strong>ASCII 到十六进制将每个输入字符转换为其十六进制字符代码。</strong> 使用它来准备字节示例、测试数据、协议注释或短文本有效负载的可读表示。",
+      "对于普通 ASCII，每个字符生成一个从 <code>00</code> 到 <code>7F</code> 的两位数值。非 ASCII 字符被处理为 JavaScript 字符代码，而不是 UTF-8 字节序列，因此当字节精确的 Unicode 输出很重要时，请使用 UTF-8 编码器。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中输入或粘贴文本。",
-      "从下拉菜单中选择十六进制分隔符。",
-      "点击<strong>转换</strong>将文本编码为十六进制。",
-      "使用<strong>复制</strong>复制结果。"
+      "输入或粘贴要编码的文本。",
+      "选择分隔符样式：空格、无、逗号或冒号。",
+      "单击 <strong>转换</strong> 以生成十六进制输出。",
+      "复制或下载文档、测试或调试说明的结果。"
     ],
-    "whatIs": "什么是 ASCII 转十六进制？",
+    "whatIs": "ASCII 到十六进制的转换是什么？",
     "whatIsParas": [
-      "ASCII 转十六进制会将每个字符映射为对应的十六进制字节值。例如，'H' = 十六进制 48。"
+      "<strong>ASCII 到十六进制转换</strong> 以基数 16 重写每个字符代码。例如，字母 <code>H</code> 是十进制 72，十六进制是 <code>48</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "支持任意文本。可选择的分隔符包括：空格、无、逗号、冒号。",
+    "inputNotesPara": "当每个字符需要一个字节时，请使用纯 ASCII 文本。制表符、换行符和其他控制字符也具有十六进制值，因此在依赖输出之前检查复制的文本是否有隐藏的空格。",
     "example": "示例",
-    "examplePara": "将 ASCII 文本转换为十六进制：",
+    "examplePara": "文本 <code>Hello, World!</code> 变为十六进制字符代码序列：",
     "exampleCode": "--- ASCII 输入 ---\nHello, World!\n\n--- 十六进制输出（空格分隔） ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "tw": {
-    "title": "ASCII 到十六進位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將 ASCII 文字轉換為十六進位值。",
+    "title": "ASCII 到十六進位轉換器 - Coding.Tools",
+    "description": "將文字字元轉換為帶有可選分隔符的十六進位代碼值。",
     "toolTitle": "ASCII轉十六進位",
-    "toolDescription": "將文字轉換為具有可配置分隔符號的十六進位編碼字串。",
+    "toolDescription": "將 ASCII 文字編碼為十六進位值，並選擇空格、逗號、冒號或無分隔符號輸出。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此輸入或貼上文字...",
     "outputPlaceholder": "十六進制值將出現在這裡...",
-    "descTitle": "ASCII 到十六進位轉換器",
+    "descTitle": "將 ASCII 文字編碼為十六進位值",
     "descParas": [
-      "該工具將 ASCII 文字轉換為具有可配置分隔符號的十六進位位元組值。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>ASCII 到十六進位將每個輸入字元轉換為其十六進位字元代碼。</strong> 使用它來準備位元組範例、測試資料、協定註釋或短文字有效負載的可讀表示。",
+      "對於普通 ASCII，每個字元產生一個從 <code>00</code> 到 <code>7F</code> 的兩位數值。非 ASCII 字元被處理為 JavaScript 字元代碼，而不是 UTF-8 位元組序列，因此當位元組精確的 Unicode 輸出很重要時，請使用 UTF-8 編碼器。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入編輯器中鍵入或貼上文字。",
-      "從下拉清單中選擇十六進位分隔符號。",
-      "點選<strong>轉換</strong>將文字編碼為十六進位。",
-      "使用<strong>複製</strong>複製結果。"
+      "輸入或貼上要編碼的文字。",
+      "選擇分隔符號樣式：空格、無、逗號或冒號。",
+      "按一下 <strong>轉換</strong> 以產生十六進位輸出。",
+      "複製或下載文件、測試或調試說明的結果。"
     ],
-    "whatIs": "什麼是 ASCII 到 Hex？",
+    "whatIs": "ASCII 到十六進位的轉換是什麼？",
     "whatIsParas": [
-      "ASCII 到十六進位的轉換將每個字元對應到其十六進位位元組值。例如，“H”= 十六進位 48。"
+      "<strong>ASCII 到十六進位轉換</strong> 以基數 16 重寫每個字元代碼。例如，字母 <code>H</code> 是十進位 72，十六進位是 <code>48</code>。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "支援任何文字。從分隔符號中選擇：無、空格、0x、0X、\\x、\\X。",
+    "inputNotesPara": "當每個字元需要一個位元組時，請使用純 ASCII 文字。製表符、換行符和其他控製字元也具有十六進位值，因此在依賴輸出之前檢查複製的文字是否有隱藏的空格。",
     "example": "例子",
-    "examplePara": "將 ASCII 文字轉換為十六進位：",
+    "examplePara": "文字 <code>Hello, World!</code> 變成十六進位字元代碼序列：",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "jp": {
-    "title": "ASCII から 16 進数へのコンバーター —coding.tools",
-    "description": "ブラウザで ASCII テキストを 16 進値に直接変換します。",
+    "title": "ASCII から 16 進数へのコンバーター - Coding.Tools",
+    "description": "テキスト文字を、選択可能な区切り文字を使用して 16 進コード値に変換します。",
     "toolTitle": "ASCIIから16進数",
-    "toolDescription": "構成可能な区切り文字を使用して、テキストを 16 進数でエンコードされた文字列に変換します。",
+    "toolDescription": "ASCII テキストを 16 進値としてエンコードし、スペース、カンマ、コロン、または区切り文字なしの出力を選択します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "ここにテキストを入力するか貼り付けます...",
     "outputPlaceholder": "ここに 16 進数の値が表示されます...",
-    "descTitle": "ASCII から 16 進数へのコンバーター",
+    "descTitle": "ASCII テキストを 16 進値としてエンコードする",
     "descParas": [
-      "このツールは、ASCII テキストを構成可能な区切り文字を使用して 16 進バイト値に変換します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>ASCIIから16進数 は、各入力文字を 16 進数の文字コードに変換します。</strong> これを使用して、バイト例、テストデータ、プロトコル ノート、または短いテキスト ペイロードの可読表現を準備します。",
+      "プレーン ASCII の場合、各文字は <code>00</code> から <code>7F</code> までの 2 桁の値を生成します。 ASCII 以外の文字は、UTF-8 バイト シーケンスではなく JavaScript 文字コードとして処理されるため、バイト精度の Unicode 出力が重要な場合は UTF-8 エンコーダを使用します。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "入力エディターにテキストを入力または貼り付けます。",
-      "ドロップダウンから 16 進区切り文字を選択します。",
-      "[<strong>変換</strong>] をクリックしてテキストを 16 進数にエンコードします。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "エンコードするテキストを入力または貼り付けます。",
+      "区切り文字のスタイルを選択します: スペース、なし、カンマ、またはコロン。",
+      "<strong>変換</strong> をクリックして 16 進出力を生成します。",
+      "結果をコピーまたはダウンロードして、ドキュメント、テスト、またはデバッグ メモとして使用します。"
     ],
     "whatIs": "ASCII から 16 進数への変換とは何ですか?",
     "whatIsParas": [
-      "ASCII から 16 進数への変換では、各文字が 16 進数のバイト値にマップされます。たとえば、「H」= 16 進数 48。"
+      "<strong>ASCII から 16 進数への変換</strong> は、各文字コードを基数 16 に書き換えます。たとえば、文字 <code>H</code> は 10 進数の 72 で、16 進数では <code>48</code> になります。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "あらゆるテキストをサポートします。区切り文字は、なし、スペース、0x、0X、\\x、\\X から選択します。",
+    "inputNotesPara": "1 文字あたり 1 バイトが必要な場合は、プレーン ASCII テキストを使用してください。タブ、改行、その他の制御文字にも 16 進値があるため、出力に依存する前に、コピーしたテキストに隠れた空白がないか確認してください。",
     "example": "例",
-    "examplePara": "ASCII テキストを 16 進数に変換します。",
+    "examplePara": "テキスト <code>Hello, World!</code> は、16 進文字コードのシーケンスになります。",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "kr": {
-    "title": "ASCII-16진수 변환기 — Coding.Tools",
-    "description": "브라우저에서 직접 ASCII 텍스트를 16진수 값으로 변환합니다.",
+    "title": "ASCII - 16진수 변환기 - Coding.Tools",
+    "description": "선택 가능한 구분 기호를 사용하여 텍스트 문자를 16진수 코드 값으로 변환합니다.",
     "toolTitle": "ASCII에서 16진수",
-    "toolDescription": "구성 가능한 구분 기호를 사용하여 텍스트를 16진수로 인코딩된 문자열로 변환합니다.",
+    "toolDescription": "ASCII 텍스트를 16진수 값으로 인코딩하고 공백, 쉼표, 콜론 또는 구분 기호 없음 출력을 선택합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "여기에 텍스트를 입력하거나 붙여넣으세요...",
     "outputPlaceholder": "16진수 값이 여기에 표시됩니다...",
-    "descTitle": "ASCII-16진수 변환기",
+    "descTitle": "ASCII 텍스트를 16진수 값으로 인코딩",
     "descParas": [
-      "이 도구는 구성 가능한 구분 기호를 사용하여 ASCII 텍스트를 16진수 바이트 값으로 변환합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>ASCII에서 16진수는 각 입력 문자를 16진수 문자 코드로 변환합니다.</strong> 이를 사용하여 바이트 예제, 테스트 데이터, 프로토콜 참고 또는 짧은 텍스트 페이로드의 판독 가능한 표현을 준비합니다.",
+      "일반 ASCII의 경우 각 문자는 <code>00</code>에서 <code>7F</code>까지 두 자리 값을 생성합니다. ASCII가 아닌 문자는 UTF-8 바이트 시퀀스가 ​​아닌 JavaScript 문자 코드로 처리되므로 바이트 단위의 정확한 유니코드 출력이 중요한 경우 UTF-8 인코더를 사용하세요."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "드롭다운에서 16진수 구분 기호를 선택하세요.",
-      "텍스트를 16진수로 인코딩하려면 <strong>변환</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "인코딩하려는 텍스트를 입력하거나 붙여넣습니다.",
+      "구분 기호 스타일(공백, 없음, 쉼표 또는 콜론)을 선택합니다.",
+      "<strong>변환</strong>를 클릭하여 16진수 출력을 생성합니다.",
+      "문서, 테스트 또는 디버깅 메모의 결과를 복사하거나 다운로드하세요."
     ],
     "whatIs": "ASCII를 16진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "ASCII에서 16진수로의 변환은 각 문자를 16진수 바이트 값으로 매핑합니다. 예를 들어 'H' = 16진수 48입니다."
+      "<strong>ASCII를 16진수로 변환</strong>는 각 문자 코드를 16진수로 다시 씁니다. 예를 들어 문자 <code>H</code>는 10진수 72이고 16진수로는 <code>48</code>입니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "모든 텍스트를 지원합니다. 구분 기호(없음, 공백, 0x, 0X, \\x, \\X) 중에서 선택합니다.",
+    "inputNotesPara": "문자당 1바이트가 필요한 경우 일반 ASCII 텍스트를 사용하세요. 탭, 줄 바꿈 및 기타 제어 문자에도 16진수 값이 있으므로 출력에 의존하기 전에 복사된 텍스트에서 숨겨진 공백이 있는지 검토하세요.",
     "example": "예",
-    "examplePara": "ASCII 텍스트를 16진수로 변환:",
+    "examplePara": "<code>Hello, World!</code> 텍스트는 일련의 16진수 문자 코드가 됩니다.",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "fr": {
-    "title": "Convertisseur ASCII en Hex — Coding.Tools",
-    "description": "Convertissez le texte ASCII en valeurs hexadécimales directement dans votre navigateur.",
+    "title": "Convertisseur ASCII en hexadécimal - Coding.Tools",
+    "description": "Convertissez les caractères de texte en valeurs de code hexadécimal avec des délimiteurs sélectionnables.",
     "toolTitle": "ASCII en Hexadécimal",
-    "toolDescription": "Convertissez le texte en chaînes codées en hexadécimal avec des délimiteurs configurables.",
+    "toolDescription": "Encodez le texte ASCII sous forme de valeurs hexadécimales et choisissez une sortie espace, virgule, deux points ou aucun délimiteur.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Tapez ou collez le texte ici...",
     "outputPlaceholder": "Les valeurs hexadécimales apparaîtront ici...",
-    "descTitle": "Convertisseur ASCII en Hex",
+    "descTitle": "Encoder le texte ASCII sous forme de valeurs hexadécimales",
     "descParas": [
-      "Cet outil convertit le texte ASCII en valeurs d'octets hexadécimaux avec des délimiteurs configurables.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>ASCII en Hexadécimal convertit chaque caractère saisi en son code de caractère hexadécimal.</strong> Utilisez-le pour préparer des exemples d'octets, des données de test, des notes de protocole ou des représentations lisibles de charges utiles de texte court.",
+      "Pour ASCII simple, chaque caractère produit une valeur à deux chiffres de <code>00</code> à <code>7F</code>. Les caractères non ASCII sont traités comme des codes de caractères JavaScript, et non comme des séquences d'octets UTF-8. Utilisez donc un encodeur UTF-8 lorsque la sortie Unicode précise en octets est importante."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez du texte dans l'éditeur de saisie.",
-      "Choisissez un délimiteur hexadécimal dans la liste déroulante.",
-      "Cliquez sur <strong>Convertir</strong> pour encoder le texte en hexadécimal.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Tapez ou collez le texte que vous souhaitez encoder.",
+      "Choisissez le style de délimiteur : espace, aucun, virgule ou deux-points.",
+      "Cliquez sur <strong>Convertir</strong> pour générer la sortie hexadécimale.",
+      "Copiez ou téléchargez le résultat pour votre documentation, vos tests ou vos notes de débogage."
     ],
-    "whatIs": "Qu’est-ce que l’ASCII en Hex ?",
+    "whatIs": "Qu'est-ce que la conversion ASCII en hexadécimal ?",
     "whatIsParas": [
-      "La conversion ASCII en hexadécimal mappe chaque caractère à sa valeur d'octet hexadécimal. Par exemple, « H » = hexadécimal 48."
+      "Conversion de <strong>ASCII en hexadécimal</strong> réécrit chaque code de caractère en base 16. La lettre <code>H</code>, par exemple, est en décimal 72, ce qui est <code>48</code> en hexadécimal."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Prend en charge n’importe quel texte. Choisissez parmi les délimiteurs : Aucun, Espace, 0x, 0X, \\x, \\X.",
+    "inputNotesPara": "Utilisez du texte brut ASCII lorsque vous avez besoin d'un octet par caractère. Les tabulations, les sauts de ligne et autres caractères de contrôle ont également des valeurs hexadécimales, alors vérifiez le texte copié pour les espaces masqués avant de vous fier au résultat.",
     "example": "Exemple",
-    "examplePara": "Conversion du texte ASCII en hexadécimal :",
+    "examplePara": "Le texte <code>Hello, World!</code> devient une séquence de codes de caractères hexadécimaux :",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "de": {
-    "title": "ASCII-zu-Hex-Konverter – Coding.Tools",
-    "description": "Konvertieren Sie ASCII-Text direkt in Ihrem Browser in Hexadezimalwerte.",
+    "title": "ASCII-zu-Hex-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie Textzeichen in hexadezimale Codewerte mit wählbaren Trennzeichen.",
     "toolTitle": "ASCII zu Hexadezimal",
-    "toolDescription": "Konvertieren Sie Text in hexadezimal kodierte Zeichenfolgen mit konfigurierbaren Trennzeichen.",
+    "toolDescription": "Kodieren Sie ASCII-Text als Hexadezimalwerte und wählen Sie die Ausgabe mit Leerzeichen, Komma, Doppelpunkt oder ohne Trennzeichen.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie hier Text ein oder fügen Sie ihn ein...",
     "outputPlaceholder": "Hier werden Hex-Werte angezeigt...",
-    "descTitle": "ASCII-zu-Hex-Konverter",
+    "descTitle": "Codieren Sie ASCII-Text als Hexadezimalwerte",
     "descParas": [
-      "Dieses Tool konvertiert ASCII-Text in hexadezimale Bytewerte mit konfigurierbaren Trennzeichen.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>ASCII zu Hexadezimal wandelt jedes Eingabezeichen in seinen hexadezimalen Zeichencode um.</strong> Verwenden Sie es, um Bytebeispiele, Testdaten, Protokollnotizen oder lesbare Darstellungen kurzer Textnutzlasten vorzubereiten.",
+      "Für einfaches ASCII erzeugt jedes Zeichen einen zweistelligen Wert von <code>00</code> bis <code>7F</code>. Nicht-ASCII-Zeichen werden als JavaScript-Zeichencodes und nicht als UTF-8-Bytesequenzen behandelt. Verwenden Sie daher einen UTF-8-Encoder, wenn eine bytegenaue Unicode-Ausgabe wichtig ist."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben Sie Text in den Eingabeeditor ein oder fügen Sie ihn ein.",
-      "Wählen Sie im Dropdown-Menü ein Hex-Trennzeichen aus.",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um den Text in Hex zu kodieren.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben oder fügen Sie den Text ein, den Sie kodieren möchten.",
+      "Wählen Sie den Trennzeichenstil: Leerzeichen, Kein, Komma oder Doppelpunkt.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um die Hex-Ausgabe zu generieren.",
+      "Kopieren Sie das Ergebnis oder laden Sie es für Ihre Dokumentation, Tests oder Debugging-Notizen herunter."
     ],
-    "whatIs": "Was ist ASCII zu Hex?",
+    "whatIs": "Was ist die Konvertierung von ASCII in Hex?",
     "whatIsParas": [
-      "Die ASCII-zu-Hex-Konvertierung ordnet jedes Zeichen seinem hexadezimalen Bytewert zu. Beispiel: „H“ = Hex 48."
+      "Konvertierung von <strong>ASCII in Hexadezimal</strong> schreibt jeden Zeichencode in Basis 16 um. Der Buchstabe <code>H</code> ist beispielsweise dezimal 72, was im Hexadezimalformat <code>48</code> ist."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Unterstützt jeden Text. Wählen Sie aus den Trennzeichen: Keine, Leerzeichen, 0x, 0X, \\x, \\X.",
+    "inputNotesPara": "Verwenden Sie einfachen ASCII-Text, wenn Sie ein Byte pro Zeichen benötigen. Tabulatoren, Zeilenumbrüche und andere Steuerzeichen haben ebenfalls Hexadezimalwerte. Überprüfen Sie daher den kopierten Text auf versteckte Leerzeichen, bevor Sie sich auf die Ausgabe verlassen.",
     "example": "Beispiel",
-    "examplePara": "ASCII-Text in Hex umwandeln:",
+    "examplePara": "Der Text <code>Hello, World!</code> wird zu einer Folge von Hex-Zeichencodes:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "es": {
-    "title": "Convertidor de ASCII a hexadecimal — Coding.Tools",
-    "description": "Convierta texto ASCII a valores hexadecimales directamente en su navegador.",
+    "title": "Convertidor ASCII a hexadecimal - Coding.Tools",
+    "description": "Convierta caracteres de texto en valores de código hexadecimal con delimitadores seleccionables.",
     "toolTitle": "ASCII a Hexadecimal",
-    "toolDescription": "Convierta texto en cadenas codificadas en hexadecimal con delimitadores configurables.",
+    "toolDescription": "Codifique el texto ASCII como valores hexadecimales y elija salida con espacio, coma, dos puntos o sin delimitador.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Escriba o pegue texto aquí...",
     "outputPlaceholder": "Los valores hexadecimales aparecerán aquí...",
-    "descTitle": "Convertidor de ASCII a hexadecimal",
+    "descTitle": "Codificar texto ASCII como valores hexadecimales",
     "descParas": [
-      "Esta herramienta convierte texto ASCII en valores de bytes hexadecimales con delimitadores configurables.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>ASCII a Hex convierte cada carácter de entrada en su código de carácter hexadecimal.</strong> Úselo para preparar ejemplos de bytes, datos de prueba, notas de protocolo o representaciones legibles de cargas útiles de texto breve.",
+      "Para ASCII simple, cada carácter produce un valor de dos dígitos de <code>00</code> a <code>7F</code>. Los caracteres que no son ASCII se manejan como códigos de caracteres JavaScript, no como secuencias de bytes UTF-8, por lo tanto, utilice un codificador UTF-8 cuando la salida Unicode con precisión de bytes sea importante."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue texto en el editor de entrada.",
-      "Elija un delimitador hexadecimal en el menú desplegable.",
-      "Haga clic en <strong>Convertir</strong> para codificar el texto a hexadecimal.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Escriba o pegue el texto que desea codificar.",
+      "Elija el estilo del delimitador: espacio, ninguno, coma o dos puntos.",
+      "Haga clic en <strong>Convertir</strong> para generar la salida hexadecimal.",
+      "Copie o descargue el resultado para su documentación, pruebas o notas de depuración."
     ],
-    "whatIs": "¿Qué es ASCII a hexadecimal?",
+    "whatIs": "¿Qué es la conversión de ASCII a hexadecimal?",
     "whatIsParas": [
-      "La conversión de ASCII a hexadecimal asigna cada carácter a su valor de byte hexadecimal. Por ejemplo, 'H' = hexadecimal 48."
+      "La conversión de <strong>ASCII a hexadecimal</strong> reescribe cada código de carácter en base 16. La letra <code>H</code>, por ejemplo, es el decimal 72, que es <code>48</code> en hexadecimal."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Soporta cualquier texto. Elija entre delimitadores: Ninguno, Espacio, 0x, 0X, \\x, \\X.",
+    "inputNotesPara": "Utilice texto sin formato ASCII cuando necesite un byte por carácter. Las tabulaciones, los saltos de línea y otros caracteres de control también tienen valores hexadecimales, así que revise el texto copiado en busca de espacios en blanco ocultos antes de confiar en el resultado.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de texto ASCII a hexadecimal:",
+    "examplePara": "El texto <code>Hello, World!</code> se convierte en una secuencia de códigos de caracteres hexadecimales:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "pt": {
-    "title": "Conversor ASCII para Hex — Coding.Tools",
-    "description": "Converta texto ASCII em valores hexadecimais diretamente no seu navegador.",
+    "title": "Conversor ASCII para Hexadecimal - Coding.Tools",
+    "description": "Converta caracteres de texto em valores de código hexadecimal com delimitadores selecionáveis.",
     "toolTitle": "ASCII para hexadecimal",
-    "toolDescription": "Converta texto em strings codificadas em hexadecimal com delimitadores configuráveis.",
+    "toolDescription": "Codifique o texto ASCII como valores hexadecimais e escolha espaço, vírgula, dois pontos ou nenhuma saída de delimitador.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Digite ou cole o texto aqui...",
     "outputPlaceholder": "Valores hexadecimais aparecerão aqui...",
-    "descTitle": "Conversor ASCII para Hexadecimal",
+    "descTitle": "Codifique o texto ASCII como valores hexadecimais",
     "descParas": [
-      "Esta ferramenta converte texto ASCII em valores de bytes hexadecimais com delimitadores configuráveis.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>ASCII para Hex converte cada caractere de entrada em seu código de caractere hexadecimal.</strong> Use-o para preparar exemplos de bytes, dados de teste, notas de protocolo ou representações legíveis de cargas de texto curtas.",
+      "Para ASCII simples, cada caractere produz um valor de dois dígitos de <code>00</code> a <code>7F</code>. Caracteres não ASCII são tratados como códigos de caracteres JavaScript, não como sequências de bytes UTF-8, portanto, use um codificador UTF-8 quando a saída Unicode com precisão de bytes for importante."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole o texto no editor de entrada.",
-      "Escolha um delimitador hexadecimal no menu suspenso.",
-      "Clique em <strong>Converter</strong> para codificar o texto em hexadecimal.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Digite ou cole o texto que deseja codificar.",
+      "Escolha o estilo do delimitador: espaço, nenhum, vírgula ou dois pontos.",
+      "Clique em <strong>Converter</strong> para gerar a saída hexadecimal.",
+      "Copie ou baixe o resultado para sua documentação, testes ou notas de depuração."
     ],
-    "whatIs": "O que é ASCII para hexadecimal?",
+    "whatIs": "O que é conversão de ASCII para hexadecimal?",
     "whatIsParas": [
-      "A conversão de ASCII para hexadecimal mapeia cada caractere para seu valor de byte hexadecimal. Por exemplo, 'H' = hexadecimal 48."
+      "Conversão de <strong>ASCII para hexadecimal</strong> reescreve cada código de caractere na base 16. A letra <code>H</code>, por exemplo, é decimal 72, que é <code>48</code> em hexadecimal."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Suporta qualquer texto. Escolha entre delimitadores: Nenhum, Espaço, 0x, 0X, \\x, \\X.",
+    "inputNotesPara": "Use texto simples ASCII quando precisar de um byte por caractere. Tabulações, quebras de linha e outros caracteres de controle também têm valores hexadecimais, portanto, revise o texto copiado em busca de espaços em branco ocultos antes de confiar na saída.",
     "example": "Exemplo",
-    "examplePara": "Convertendo texto ASCII em hexadecimal:",
+    "examplePara": "O texto <code>Hello, World!</code> torna-se uma sequência de códigos de caracteres hexadecimais:",
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   }
 }

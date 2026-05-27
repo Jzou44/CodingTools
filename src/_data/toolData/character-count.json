@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Character Count — Coding.Tools",
-    "description": "Count characters, words, lines, and bytes instantly. Free online character counter with Twitter limit tracker.",
+    "title": "Character Count - Coding.Tools",
+    "description": "Count characters, words, lines, UTF-8 bytes, and remaining X/Twitter characters for pasted text.",
     "toolTitle": "Character Count",
-    "toolDescription": "Count characters, words, lines, and UTF-8 bytes. Includes a Twitter 280-character limit tracker.",
+    "toolDescription": "Measure text locally with live character totals, no-space counts, word and line counts, UTF-8 bytes, and a 280-character remaining counter.",
     "categoryName": "String & Text Utilities",
     "inputPlaceholder": "Paste or type your text here to count characters, words, lines, and bytes...",
     "statsTitle": "Statistics",
@@ -14,10 +14,10 @@
     "statsBytes": "UTF-8-Bytes",
     "statsTwitter": "Twitter remaining",
     "statusUpdated": "Statistics updated",
-    "descTitle": "Character Count Online",
+    "descTitle": "Measure characters, lines, and UTF-8 bytes",
     "descParas": [
-      "This character counter tool counts total characters, characters without spaces, words, lines, and UTF-8 bytes in real time. It also tracks how many characters you have left before hitting the Twitter 280-character limit, making it ideal for social media managers, writers, and developers.",
-      "All counting happens locally in your browser. Your text is never uploaded, stored, or sent to a server, so the tool is fast, private, and free to use without any restrictions."
+      "<strong>Character Count helps you check text against hard length limits for posts, SMS-style messages, database fields, API payloads, titles, descriptions, and validation rules.</strong> It reports total characters, characters without spaces, words, lines, UTF-8 bytes, and remaining characters against a 280-character reference limit.",
+      "Character counts and byte counts are not the same. ASCII usually uses 1 UTF-8 byte per character, while accented letters, CJK characters, emoji, and many symbols can use multiple bytes. Some platforms also count grapheme clusters, links, or emoji sequences with their own rules."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -26,22 +26,22 @@
       "Check the <strong>Twitter remaining</strong> counter to see how many characters you have left for a tweet. It turns red when you exceed 280 characters.",
       "Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset everything."
     ],
-    "whatIs": "What is a character counter?",
+    "whatIs": "What is Character Count?",
     "whatIsParas": [
-      "A character counter is a tool that analyzes text and reports the number of characters it contains. Unlike a word counter, which groups text by spaces, a character counter measures every individual letter, number, symbol, and whitespace character. This is especially important for platforms with strict character limits, such as Twitter (280 characters), SMS messages (160 characters), and meta descriptions for SEO (around 155 characters).",
-      "This tool also displays the UTF-8 byte count, which is useful for developers working with APIs, databases, or systems that enforce byte-level size limits on text fields."
+      "<strong>Character Count</strong> is a local measurement tool for checking visible length and encoded size before you paste text into a form, API request, database column, or social post.",
+      "The UTF-8 byte total is useful when systems limit storage by bytes instead of characters. Newlines, spaces, tabs, combining marks, and emoji can affect counts, so test with the exact text you will send."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool handles any text input, including Unicode characters such as emojis, accented letters, and CJK characters. Note that multi-byte Unicode characters count as 1 character but may take 2-4 bytes in UTF-8 encoding, which is why the byte count may be higher than the character count.",
+    "inputNotesPara": "Use this counter for a close local estimate, then confirm in the target platform when limits are strict. X/Twitter, SMS gateways, search snippets, databases, and APIs may apply their own counting or normalization rules.",
     "example": "Example",
-    "examplePara": "Paste a sample text and watch the statistics update live:",
+    "examplePara": "Emoji can make the UTF-8 byte total larger than the visible character count:",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "cn": {
-    "title": "字符计数 — Coding.Tools",
-    "description": "即时统计字符、单词、行数和字节数。免费在线字符计数器，带 Twitter 限制追踪。",
+    "title": "字符数 - Coding.Tools",
+    "description": "计算粘贴文本的字符数、单词数、行数、UTF-8 字节以及剩余的 X/Twitter 字符数。",
     "toolTitle": "字符计数",
-    "toolDescription": "统计字符、单词、行数和 UTF-8 字节数。包含 Twitter 280 字符限制追踪。",
+    "toolDescription": "在本地测量文本，包括实时字符总数、无空格计数、字数和行数、UTF-8 字节以及 280 个字符的剩余计数器。",
     "categoryName": "字符串与文本",
     "inputPlaceholder": "在此粘贴或输入文本，统计字符、单词、行数和字节数...",
     "statsTitle": "统计数据",
@@ -52,34 +52,34 @@
     "statsBytes": "字节数（UTF-8）",
     "statsTwitter": "Twitter 剩余",
     "statusUpdated": "统计数据已更新",
-    "descTitle": "在线字符计数",
+    "descTitle": "测量字符、行和 UTF-8 字节",
     "descParas": [
-      "这个字符计数工具实时统计总字符数、不含空格的字符数、单词数、行数和 UTF-8 字节数。它还追踪您在达到 Twitter 280 字符限制之前剩余的字符数。",
-      "所有统计都在浏览器中本地完成。您的文本不会被上传、存储或发送到服务器。"
+      "<strong>字符计数可帮助您检查文本是否符合帖子、短信样式消息、数据库字段、API 有效负载、标题、描述和验证规则的硬长度限制。</strong> 它报告总字符数、不含空格的字符数、单词、行、UTF-8 字节以及针对 280 个字符参考限制的剩余字符数。",
+      "字符数和字节数不一样。 ASCII 通常每个字符使用 1 UTF-8 字节，而重音字母、CJK 字符、表情符号和许多符号可以使用多个字节。一些平台还使用自己的规则来计算字素簇、链接或表情符号序列。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中粘贴或输入文本。",
-      "查看编辑器下方的实时统计数据。所有指标在输入时即时更新。",
-      "查看<strong>Twitter 剩余</strong>计数器，了解推文剩余字符数。超过 280 字符时会变红。",
-      "使用<strong>复制</strong>复制文本到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置。"
+      "将文本粘贴或键入到输入编辑器中。",
+      "在编辑器下方的面板中查看实时统计数据。所有指标都会在您键入时立即更新。",
+      "检查 <strong>Twitter 剩余</strong> 计数器，了解您还剩多少个推文字符。当超过 280 个字符时，它会变成红色。",
+      "使用 <strong>复制</strong> 将文本复制到剪贴板，使用 <strong>下载</strong> 将其另存为文本文件，或使用 <strong>清除</strong> 重置所有内容。"
     ],
-    "whatIs": "什么是字符计数器？",
+    "whatIs": "什么是字符数？",
     "whatIsParas": [
-      "字符计数器是分析文本并报告其中字符数量的工具。与按空格分组的单词计数器不同，字符计数器测量每个字母、数字、符号和空白字符。这对于有严格字符限制的平台尤为重要，如 Twitter（280 字符）、短信（160 字符）和 SEO 元描述（约 155 字符）。",
-      "此工具还显示 UTF-8 字节数，这对处理 API、数据库或对文本字段有字节级大小限制的系统的开发者很有用。"
+      "<strong>字符计数</strong> 是一种本地测量工具，用于在将文本粘贴到表单、API 请求、数据库列或社交帖子之前检查可见长度和编码大小。",
+      "当系统按字节而不是字符限制存储时，UTF-8 字节总数非常有用。换行符、空格、制表符、组合标记和表情符号可能会影响计数，因此请使用您将发送的确切文本进行测试。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具处理任何文本输入，包括 Unicode 字符如表情符号、带重音的字母和 CJK 字符。注意多字节 Unicode 字符计为 1 个字符，但在 UTF-8 编码中可能占 2-4 个字节。",
+    "inputNotesPara": "使用此计数器进行接近的本地估计，然后在限制严格时在目标平台中进行确认。 X/Twitter、SMS 网关、搜索片段、数据库和 API 可以应用自己的计数或标准化规则。",
     "example": "示例",
-    "examplePara": "粘贴示例文本，查看实时统计数据：",
+    "examplePara": "Emoji 可以使 UTF-8 字节总数大于可见字符数：",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "tw": {
-    "title": "字元計數 — Coding.Tools",
-    "description": "即時統計字元、單詞、行數和位元組數。免費線上字元計數器，帶 Twitter 限制追蹤。",
+    "title": "字元數 - Coding.Tools",
+    "description": "計算貼上文字的字元數、單字數、行數、UTF-8 位元組以及剩餘的 X/Twitter 字元數。",
     "toolTitle": "字元計數",
-    "toolDescription": "統計字元、單詞、行數和 UTF-8 位元組數。包含 Twitter 280 字元限制追蹤。",
+    "toolDescription": "在本地測量文本，包括實時字元總數、無空格計數、字數和行數、UTF-8 位元組以及 280 個字元的剩餘計數器。",
     "categoryName": "字串與文字",
     "inputPlaceholder": "在此貼上或輸入文字，統計字元、單詞、行數和位元組數...",
     "statsTitle": "統計資料",
@@ -90,34 +90,34 @@
     "statsBytes": "位元組數（UTF-8）",
     "statsTwitter": "Twitter 剩餘",
     "statusUpdated": "統計資料已更新",
-    "descTitle": "線上字元計數",
+    "descTitle": "測量字元、行和 UTF-8 位元組",
     "descParas": [
-      "這個字元計數工具即時統計總字元數、不含空格的字元數、單詞數、行數和 UTF-8 位元組數。它還追蹤您在達到 Twitter 280 字元限制之前剩餘的字元數。",
-      "所有統計都在瀏覽器中本地完成。您的文字不會被上傳、儲存或傳送到伺服器。"
+      "<strong>字元計數可協助您檢查文字是否符合貼文、簡訊樣式訊息、資料庫欄位、API 有效負載、標題、描述和驗證規則的硬長度限制。</strong> 它報告總字元數、不含空格的字元數、單字、行、UTF-8 位元組以及針對 280 個字元參考限制的剩餘字元數。",
+      "字元數和位元組數不一樣。 ASCII 通常每個字元使用 1 UTF-8 字節，而重音字母、CJK 字元、表情符號和許多符號可以使用多個位元組。有些平台也會使用自己的規則來計算字素簇、連結或表情符號序列。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中貼上或輸入文字。",
-      "查看編輯器下方的即時統計資料。所有指標在輸入時即時更新。",
-      "查看<strong>Twitter 剩餘</strong>計數器，了解推文剩餘字元數。超過 280 字元時會變紅。",
-      "使用<strong>複製</strong>複製文字到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設。"
+      "將文字貼上或鍵入到輸入編輯器中。",
+      "在編輯器下方的面板中查看即時統計資料。所有指標都會在您鍵入時立即更新。",
+      "檢查 <strong>Twitter 剩餘</strong> 計數器，以了解您還剩多少個推文字元。當超過 280 個字元時，它會變成紅色。",
+      "使用 <strong>複製</strong> 將文字複製到剪貼簿，使用 <strong>下載</strong> 將其另存為文字文件，或使用 <strong>清除</strong> 重設所有內容。"
     ],
-    "whatIs": "什麼是字元計數器？",
+    "whatIs": "什麼是字元數？",
     "whatIsParas": [
-      "字元計數器是分析文字並報告其中字元數量的工具。與按空格分組的單詞計數器不同，字元計數器測量每個字母、數字、符號和空白字元。",
-      "此工具還顯示 UTF-8 位元組數，這對處理 API、資料庫或對文字欄位有位元組級大小限制的系統的開發者很有用。"
+      "<strong>字元計數</strong> 是一種本地測量工具，用於在將文字貼上到表單、API 請求、資料庫列或社交貼文之前檢查可見長度和編碼大小。",
+      "當系統按位元組而不是字元限制儲存時，UTF-8 位元組總數非常有用。換行符、空格、製表符、組合標記和表情符號可能會影響計數，因此請使用您將發送的確切文字進行測試。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具處理任何文字輸入，包括 Unicode 字元如表情符號、帶重音的字母和 CJK 字元。",
+    "inputNotesPara": "使用此計數器進行接近的本地估計，然後在限制嚴格時在目標平台中進行確認。 X/Twitter、SMS 閘道、搜尋片段、資料庫和 API 可以套用自己的計數或標準化規則。",
     "example": "範例",
-    "examplePara": "貼上範例文字，查看即時統計資料：",
+    "examplePara": "Emoji 可以使 UTF-8 位元組總數大於可見字元數：",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "jp": {
-    "title": "文字カウント — Coding.Tools",
-    "description": "文字、単語、行、バイト数を即座にカウント。Twitter制限トラッカー付き無料ツール。",
+    "title": "文字数 - Coding.Tools",
+    "description": "貼り付けたテキストの文字、単語、行、UTF-8 バイト、および残りの X/Twitter 文字をカウントします。",
     "toolTitle": "文字カウント",
-    "toolDescription": "文字、単語、行、UTF-8バイト数をカウント。Twitter 280文字制限トラッカー付き。",
+    "toolDescription": "ライブ文字の合計、スペースなしのカウント、単語と行のカウント、UTF-8 バイト、および 280 文字の残りのカウンターを使用して、テキストをローカルで測定します。",
     "categoryName": "文字列とテキスト",
     "inputPlaceholder": "ここにテキストを貼り付けて文字、単語、行、バイト数をカウント...",
     "statsTitle": "統計",
@@ -128,34 +128,34 @@
     "statsBytes": "バイト数（UTF-8）",
     "statsTwitter": "Twitter残り",
     "statusUpdated": "統計を更新しました",
-    "descTitle": "オンライン文字カウンター",
+    "descTitle": "文字、行、UTF-8 バイトを測定します",
     "descParas": [
-      "この文字カウンターツールは、総文字数、スペースなし文字数、単語数、行数、UTF-8バイト数をリアルタイムでカウントします。",
-      "すべてのカウントはブラウザ内でローカルに行われます。"
+      "<strong>文字数は、投稿、SMS スタイルのメッセージ、データベース フィールド、API ペイロード、タイトル、説明、および検証ルールの厳密な長さ制限に対してテキストをチェックするのに役立ちます。</strong> 合計文字数、スペースを含まない文字、単語、行数、UTF-8 バイト、および 280 文字の参照制限に対する残りの文字をレポートします。",
+      "文字数とバイト数は同じではありません。 ASCII は通常、1 文字あたり 1 UTF-8 バイトを使用しますが、アクセント付き文字、CJK 文字、絵文字、および多くの記号は複数バイトを使用できます。一部のプラットフォームでは、独自のルールで書記素クラスター、リンク、または絵文字シーケンスもカウントします。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを貼り付けるか入力します。",
-      "エディタ下部の統計パネルを確認。すべての指標が入力時に即座に更新されます。",
-      "<strong>Twitter残り</strong>カウンターを確認。280文字を超えると赤くなります。",
-      "<strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>クリア</strong>で操作します。"
+      "テキストを入力エディタに貼り付けるか入力します。",
+      "エディターの下のパネルでライブ統計を表示します。すべての指標は入力するとすぐに更新されます。",
+      "<strong>Twitter 残り</strong> カウンターをチェックして、ツイートの残り文字数を確認します。 280文字を超えると赤色になります。",
+      "<strong>コピー</strong> を使用してテキストをクリップボードにコピーするか、<strong>ダウンロード</strong> を使用してテキスト ファイルとして保存するか、<strong>クリア</strong> を使用してすべてをリセットします。"
     ],
-    "whatIs": "文字カウンターとは？",
+    "whatIs": "文字数とは何ですか?",
     "whatIsParas": [
-      "文字カウンターはテキストを分析し、文字数を報告するツールです。Twitter（280文字）やSMS（160文字）など、文字数制限があるプラットフォームに特に重要です。",
-      "UTF-8バイト数も表示され、APIやデータベースでバイト単位の制限がある開発者に便利です。"
+      "<strong>文字数</strong> は、テキストをフォーム、API リクエスト、データベース列、またはソーシャル投稿に貼り付ける前に、表示される長さとエンコードされたサイズをチェックするためのローカル測定ツールです。",
+      "UTF-8 バイト合計は、システムが文字ではなくバイトでストレージを制限する場合に役立ちます。改行、スペース、タブ、結合マーク、絵文字はカウントに影響を与える可能性があるため、送信する正確なテキストでテストしてください。"
     ],
     "inputNotes": "入力について",
-    "inputNotesPara": "絵文字、アクセント付き文字、CJK文字など、あらゆるUnicode入力に対応。",
+    "inputNotesPara": "このカウンターを使用してローカルな概算を推定し、制限が厳しい場合はターゲット プラットフォームで確認します。 X/Twitter、SMS ゲートウェイ、検索スニペット、データベース、および API は、独自のカウントまたは正規化ルールを適用する場合があります。",
     "example": "例",
-    "examplePara": "サンプルテキストを貼り付けて統計を確認：",
+    "examplePara": "絵文字では、UTF-8 バイトの合計が表示される文字数よりも大きくなる場合があります。",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "kr": {
-    "title": "문자 수 세기 — Coding.Tools",
-    "description": "문자, 단어, 줄, 바이트를 즉시 카운트. Twitter 제한 추적기 포함 무료 도구.",
+    "title": "문자 수 - Coding.Tools",
+    "description": "붙여넣은 텍스트의 문자, 단어, 줄, UTF-8 바이트 및 나머지 X/Twitter 문자를 계산합니다.",
     "toolTitle": "문자 수 세기",
-    "toolDescription": "문자, 단어, 줄, UTF-8 바이트를 카운트. Twitter 280자 제한 추적기 포함.",
+    "toolDescription": "실시간 문자 총계, 공백 없는 개수, 단어 및 줄 개수, UTF-8 바이트, 남은 280자 카운터를 사용하여 로컬에서 텍스트를 측정합니다.",
     "categoryName": "문자열 및 텍스트",
     "inputPlaceholder": "여기에 텍스트를 붙여넣어 문자, 단어, 줄, 바이트를 세세요...",
     "statsTitle": "통계",
@@ -166,34 +166,34 @@
     "statsBytes": "바이트 (UTF-8)",
     "statsTwitter": "Twitter 남은 글자",
     "statusUpdated": "통계 업데이트됨",
-    "descTitle": "온라인 문자 카운터",
+    "descTitle": "문자, 줄, UTF-8 바이트 측정",
     "descParas": [
-      "이 문자 카운터 도구는 총 문자 수, 공백 제외 문자 수, 단어 수, 줄 수, UTF-8 바이트를 실시간으로 카운트합니다.",
-      "모든 카운팅은 브라우저에서 로컬로 이루어집니다."
+      "<strong>문자 수는 게시물, SMS 스타일 메시지, 데이터베이스 필드, API 페이로드, 제목, 설명 및 유효성 검사 규칙에 대한 엄격한 길이 제한을 기준으로 텍스트를 확인하는 데 도움이 됩니다.</strong> 총 문자, 공백이 없는 문자, 단어, 줄, UTF-8 바이트 및 나머지 문자를 280자 참조 제한에 대해 보고합니다.",
+      "문자 수와 바이트 수는 동일하지 않습니다. ASCII는 일반적으로 문자당 1 UTF-8 바이트를 사용하는 반면, 악센트 문자, CJK 문자, 이모티콘 및 많은 기호는 여러 바이트를 사용할 수 있습니다. 일부 플랫폼에서는 자체 규칙에 따라 자소 클러스터, 링크 또는 이모티콘 시퀀스도 계산합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
-      "편집기 아래의 통계 패널을 확인. 모든 지표가 입력 시 즉시 업데이트됩니다.",
-      "<strong>Twitter 남은 글자</strong> 카운터를 확인하세요. 280자를 초과하면 빨간색으로 변합니다.",
-      "<strong>복사</strong>, <strong>다운로드</strong>, <strong>지우기</strong>로 작업하세요."
+      "입력 편집기에 텍스트를 붙여넣거나 입력합니다.",
+      "편집기 아래 패널에서 실시간 통계를 확인하세요. 입력하는 즉시 모든 측정항목이 업데이트됩니다.",
+      "<strong>Twitter 남은</strong> 카운터를 확인하여 트윗에 남은 문자 수를 확인하세요. 280자를 초과하면 빨간색으로 변합니다.",
+      "<strong>복사</strong>를 사용하여 텍스트를 클립보드에 복사하고, <strong>다운로드</strong>를 사용하여 텍스트 파일로 저장하거나, <strong>지우기</strong>를 사용하여 모든 것을 재설정하세요."
     ],
-    "whatIs": "문자 카운터란?",
+    "whatIs": "문자 수란 무엇입니까?",
     "whatIsParas": [
-      "문자 카운터는 텍스트를 분석하여 문자 수를 보고하는 도구입니다. Twitter(280자)나 SMS(160자) 같은 문자 제한이 있는 플랫폼에 특히 중요합니다.",
-      "UTF-8 바이트 수도 표시되어 API나 데이터베이스에서 바이트 단위 제한이 있는 개발자에게 유용합니다."
+      "<strong>문자 수 세기</strong>는 양식, API 요청, 데이터베이스 열 또는 소셜 게시물에 텍스트를 붙여넣기 전에 표시되는 길이와 인코딩된 크기를 확인하기 위한 로컬 측정 도구입니다.",
+      "UTF-8 총 바이트는 시스템이 문자 대신 바이트로 저장을 제한하는 경우 유용합니다. 줄 바꿈, 공백, 탭, 결합 표시 및 이모티콘은 개수에 영향을 미칠 수 있으므로 보낼 정확한 텍스트로 테스트하세요."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "이모지, 악센트 문자, CJK 문자 등 모든 유니코드 입력을 처리합니다.",
+    "inputNotesPara": "가까운 지역 추정을 위해 이 카운터를 사용한 다음 제한이 엄격한 경우 대상 플랫폼에서 확인하십시오. X/Twitter, SMS 게이트웨이, 검색 스니펫, 데이터베이스 및 API는 자체 계산 또는 정규화 규칙을 적용할 수 있습니다.",
     "example": "예시",
-    "examplePara": "샘플 텍스트를 붙여넣어 통계를 확인하세요:",
+    "examplePara": "Emoji는 총 UTF-8 바이트를 표시되는 문자 수보다 크게 만들 수 있습니다.",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "fr": {
-    "title": "Compteur de caractères — Coding.Tools",
-    "description": "Comptez les caractères, mots, lignes et octets instantanément. Outil gratuit avec suivi Twitter.",
+    "title": "Nombre de caractères - Coding.Tools",
+    "description": "Comptez les caractères, les mots, les lignes, les octets UTF-8 et les caractères X/Twitter restants pour le texte collé.",
     "toolTitle": "Compteur de caractères",
-    "toolDescription": "Comptez les caractères, mots, lignes et octets UTF-8. Inclut un suivi de la limite Twitter de 280 caractères.",
+    "toolDescription": "Mesurez le texte localement avec des totaux de caractères en direct, le nombre de caractères sans espace, le nombre de mots et de lignes, les octets UTF-8 et un compteur de 280 caractères restants.",
     "categoryName": "Chaînes et texte",
     "inputPlaceholder": "Collez ou tapez votre texte ici pour compter...",
     "statsTitle": "Statistiques",
@@ -204,34 +204,34 @@
     "statsBytes": "Octets (UTF-8)",
     "statsTwitter": "Twitter restant",
     "statusUpdated": "Statistiques mises à jour",
-    "descTitle": "Compteur de caractères en ligne",
+    "descTitle": "Mesurer les caractères, les lignes et les octets UTF-8",
     "descParas": [
-      "Cet outil comptent les caractères totaux, sans espaces, mots, lignes et octets UTF-8 en temps réel.",
-      "Tout le comptage se fait localement dans votre navigateur."
+      "<strong>Compteur de caractères vous aide à vérifier le texte par rapport aux limites de longueur strictes pour les publications, les messages de style SMS, les champs de base de données, les charges utiles de l'API, les titres, les descriptions et les règles de validation.</strong> Il rapporte le nombre total de caractères, les caractères sans espaces, les mots, les lignes, les octets UTF-8 et les caractères restants par rapport à une limite de référence de 280 caractères.",
+      "Le nombre de caractères et le nombre d’octets ne sont pas les mêmes. ASCII utilise généralement 1 octet UTF-8 par caractère, tandis que les lettres accentuées, les caractères CJK, les emoji et de nombreux symboles peuvent utiliser plusieurs octets. Certaines plateformes comptent également des clusters de graphèmes, des liens ou des séquences d'emoji avec leurs propres règles."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez ou tapez votre texte dans l'éditeur.",
-      "Consultez les statistiques en direct dans le panneau ci-dessous. Toutes les métriques se mettent à jour instantanément.",
-      "Vérifiez le compteur <strong>Twitter restant</strong> pour voir combien de caractères il vous reste. Il devient rouge au-delà de 280 caractères.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Collez ou saisissez votre texte dans l'éditeur de saisie.",
+      "Affichez les statistiques en direct dans le panneau situé sous l'éditeur. Toutes les mesures sont mises à jour instantanément au fur et à mesure que vous tapez.",
+      "Vérifiez le compteur <strong>Twitter restant</strong> pour voir combien de caractères il vous reste pour un tweet. Il devient rouge lorsque vous dépassez 280 caractères.",
+      "Utilisez <strong>Copier</strong> pour copier le texte dans votre presse-papiers, <strong>Télécharger</strong> pour l'enregistrer sous forme de fichier texte ou <strong>Effacer</strong> pour tout réinitialiser."
     ],
-    "whatIs": "Qu'est-ce qu'un compteur de caractères ?",
+    "whatIs": "Qu'est-ce que le nombre de caractères ?",
     "whatIsParas": [
-      "Un compteur de caractères analyse le texte et rapporte le nombre de caractères. Important pour les plateformes avec limites strictes comme Twitter (280 caractères).",
-      "L'outil affiche également le comptage d'octets UTF-8."
+      "<strong>Compteur de caractères</strong> est un outil de mesure local permettant de vérifier la longueur visible et la taille encodée avant de coller du texte dans un formulaire, une requête API, une colonne de base de données ou une publication sociale.",
+      "Le total d'octets UTF-8 est utile lorsque les systèmes limitent le stockage en octets plutôt qu'en caractères. Les nouvelles lignes, les espaces, les tabulations, les marques de combinaison et les emoji peuvent affecter les décomptes, alors testez avec le texte exact que vous enverrez."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Gère toute saisie de texte, y compris les caractères Unicode multi-octets.",
+    "inputNotesPara": "Utilisez ce compteur pour une estimation locale proche, puis confirmez dans la plateforme cible lorsque les limites sont strictes. X/Twitter, les passerelles SMS, les extraits de recherche, les bases de données et les API peuvent appliquer leurs propres règles de comptage ou de normalisation.",
     "example": "Exemple",
-    "examplePara": "Collez un texte exemple et voyez les statistiques :",
+    "examplePara": "Emoji peut rendre le total d'octets UTF-8 supérieur au nombre de caractères visibles :",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "de": {
-    "title": "Zeichenzähler — Coding.Tools",
-    "description": "Zeichen, Wörter, Zeilen und Bytes sofort zählen. Kostenloses Online-Tool mit Twitter-Tracking.",
+    "title": "Zeichenanzahl - Coding.Tools",
+    "description": "Zählen Sie Zeichen, Wörter, Zeilen, UTF-8 Bytes und verbleibende X/Twitter-Zeichen für eingefügten Text.",
     "toolTitle": "Zeichenzähler",
-    "toolDescription": "Zählen Sie Zeichen, Wörter, Zeilen und UTF-8-Bytes. Enthält Twitter 280-Zeichen-Limit-Tracking.",
+    "toolDescription": "Messen Sie Text lokal mit Live-Zeichengesamtzahlen, Leerzeichenzählungen, Wort- und Zeilenzahlen, UTF-8-Bytes und einem Zähler für verbleibende 280 Zeichen.",
     "categoryName": "Zeichenketten & Text",
     "inputPlaceholder": "Text hier einfügen oder tippen zum Zählen...",
     "statsTitle": "Statistik",
@@ -242,34 +242,34 @@
     "statsBytes": "Bytes UTF-8",
     "statsTwitter": "Twitter verbleibend",
     "statusUpdated": "Statistik aktualisiert",
-    "descTitle": "Online-Zeichenzähler",
+    "descTitle": "Messen Sie Zeichen, Zeilen und UTF-8 Bytes",
     "descParas": [
-      "Dieses Werkzeug zählt Gesamtzeichen, Zeichen ohne Leerzeichen, Wörter, Zeilen und UTF-8-Bytes in Echtzeit.",
-      "Alle Zählungen erfolgen lokal im Browser."
+      "<strong>Mit dem Zeichenzähler können Sie Text anhand fester Längenbeschränkungen für Beiträge, SMS-ähnliche Nachrichten, Datenbankfelder, API-Nutzlasten, Titel, Beschreibungen und Validierungsregeln prüfen.</strong> Er meldet Gesamtzeichen, Zeichen ohne Leerzeichen, Wörter, Zeilen, UTF-8-Bytes und verbleibende Zeichen anhand eines Referenzlimits von 280 Zeichen.",
+      "Zeichenanzahl und Byteanzahl sind nicht dasselbe. ASCII verwendet normalerweise 1 UTF-8-Byte pro Zeichen, während Buchstaben mit Akzent, CJK-Zeichen, Emoji und viele Symbole mehrere Bytes verwenden können. Einige Plattformen zählen auch Graphem-Cluster, Links oder Emoji-Sequenzen mit eigenen Regeln."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Fügen Sie Text in den Editor ein oder tippen Sie ihn.",
-      "Prüfen Sie die Live-Statistiken im Panel unten. Alle Metriken werden sofort aktualisiert.",
-      "Prüfen Sie den <strong>Twitter verbleibend</strong> Zähler. Er wird rot, wenn Sie 280 Zeichen überschreiten.",
-      "Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong>."
+      "Fügen Sie Ihren Text ein oder geben Sie ihn in den Eingabeeditor ein.",
+      "Sehen Sie sich Live-Statistiken im Bereich unter dem Editor an. Alle Messwerte werden während der Eingabe sofort aktualisiert.",
+      "Überprüfen Sie den <strong>Twitter-Restzähler</strong>, um zu sehen, wie viele Zeichen Sie noch für einen Tweet haben. Es wird rot, wenn Sie mehr als 280 Zeichen haben.",
+      "Verwenden Sie <strong>Kopieren</strong>, um den Text in Ihre Zwischenablage zu kopieren, <strong>Herunterladen</strong>, um ihn als Textdatei zu speichern, oder <strong>Leeren</strong>, um alles zurückzusetzen."
     ],
-    "whatIs": "Was ist ein Zeichenzähler ?",
+    "whatIs": "Was ist die Zeichenanzahl?",
     "whatIsParas": [
-      "Ein Zeichenzähler analysiert Text und meldet die Zeichenanzahl. Wichtig für Plattformen mit strikten Zeichenlimits wie Twitter (280 Zeichen).",
-      "Das Tool zeigt auch die UTF-8-Byte-Anzahl an."
+      "<strong>Zeichenzähler</strong> ist ein lokales Messtool zum Überprüfen der sichtbaren Länge und der codierten Größe, bevor Sie Text in ein Formular, eine API-Anfrage, eine Datenbankspalte oder einen Social-Media-Beitrag einfügen.",
+      "Die UTF-8-Byte-Gesamtzahl ist nützlich, wenn Systeme die Speicherung auf Bytes statt auf Zeichen beschränken. Zeilenumbrüche, Leerzeichen, Tabulatoren, Kombinationszeichen und Emojis können sich auf die Anzahl auswirken. Testen Sie daher mit dem genauen Text, den Sie senden möchten."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Verarbeitet jede Texteingabe, einschließlich mehrbyteiger Unicode-Zeichen.",
+    "inputNotesPara": "Verwenden Sie diesen Zähler für eine genaue lokale Schätzung und bestätigen Sie ihn dann auf der Zielplattform, wenn die Grenzwerte streng sind. X/Twitter, SMS-Gateways, Such-Snippets, Datenbanken und APIs wenden möglicherweise ihre eigenen Zähl- oder Normalisierungsregeln an.",
     "example": "Beispiel",
-    "examplePara": "Beispieltext einfügen und Statistiken ansehen:",
+    "examplePara": "Emoji kann die UTF-8-Byte-Gesamtzahl größer machen als die Anzahl der sichtbaren Zeichen:",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "es": {
-    "title": "Contador de caracteres — Coding.Tools",
-    "description": "Cuente caracteres, palabras, líneas y bytes al instante. Herramienta gratuita con seguimiento de Twitter.",
+    "title": "Recuento de caracteres: Coding.Tools",
+    "description": "Cuente caracteres, palabras, líneas, bytes UTF-8 y caracteres X/Twitter restantes para el texto pegado.",
     "toolTitle": "Contador de caracteres",
-    "toolDescription": "Cuente caracteres, palabras, líneas y bytes UTF-8. Incluye seguimiento del límite de 280 caracteres de Twitter.",
+    "toolDescription": "Mida el texto localmente con totales de caracteres activos, recuentos sin espacios, recuentos de palabras y líneas, bytes UTF-8 y un contador restante de 280 caracteres.",
     "categoryName": "Cadenas y texto",
     "inputPlaceholder": "Pegue o escriba su texto aquí para contar...",
     "statsTitle": "Estadísticas",
@@ -280,34 +280,34 @@
     "statsBytes": "Bytes UTF-8",
     "statsTwitter": "Twitter restante",
     "statusUpdated": "Estadísticas actualizadas",
-    "descTitle": "Contador de caracteres en línea",
+    "descTitle": "Medir caracteres, líneas y bytes UTF-8",
     "descParas": [
-      "Esta herramienta cuenta caracteres totales, sin espacios, palabras, líneas y bytes UTF-8 en tiempo real.",
-      "Todo el conteo ocurre localmente en su navegador."
+      "<strong>Contador de caracteres le ayuda a comparar el texto con límites estrictos de longitud para publicaciones, mensajes estilo SMS, campos de bases de datos, cargas útiles de API, títulos, descripciones y reglas de validación.</strong> Informa el total de caracteres, caracteres sin espacios, palabras, líneas, UTF-8 bytes y caracteres restantes frente a un límite de referencia de 280 caracteres.",
+      "El número de caracteres y el número de bytes no son lo mismo. ASCII suele utilizar 1 byte UTF-8 por carácter, mientras que las letras acentuadas, los caracteres CJK, los emoji y muchos símbolos pueden utilizar varios bytes. Algunas plataformas también cuentan grupos de grafemas, enlaces o secuencias de emojis con sus propias reglas."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Pegue o escriba su texto en el editor.",
-      "Vea las estadísticas en vivo en el panel inferior. Todas las métricas se actualizan al instante.",
-      "Consulte el contador de <strong>Twitter restante</strong> para ver cuántos caracteres le quedan. Se pone rojo al superar los 280 caracteres.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Pega o escribe tu texto en el editor de entrada.",
+      "Vea estadísticas en vivo en el panel debajo del editor. Todas las métricas se actualizan instantáneamente a medida que escribe.",
+      "Verifique el contador <strong>Twitter restante</strong> para ver cuántos caracteres le quedan para un tweet. Se vuelve rojo cuando superas los 280 caracteres.",
+      "Utilice <strong>Copiar</strong> para copiar el texto a su portapapeles, <strong>Descargar</strong> para guardarlo como un archivo de texto o <strong>Limpiar</strong> para restablecer todo."
     ],
-    "whatIs": "¿Qué es un contador de caracteres?",
+    "whatIs": "¿Qué es el recuento de caracteres?",
     "whatIsParas": [
-      "Un contador de caracteres analiza el texto y reporta el número de caracteres. Importante para plataformas con límites estrictos como Twitter (280 caracteres).",
-      "La herramienta también muestra el conteo de bytes UTF-8."
+      "<strong>Recuento de caracteres</strong> es una herramienta de medición local para verificar la longitud visible y el tamaño codificado antes de pegar texto en un formulario, solicitud de API, columna de base de datos o publicación social.",
+      "El total de bytes UTF-8 es útil cuando los sistemas limitan el almacenamiento por bytes en lugar de caracteres. Las nuevas líneas, los espacios, las tabulaciones, las marcas combinadas y los emoji pueden afectar los recuentos, así que prueba con el texto exacto que enviarás."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Maneja cualquier entrada de texto, incluyendo caracteres Unicode multibyte.",
+    "inputNotesPara": "Utilice este contador para obtener una estimación local cercana y luego confirme en la plataforma de destino cuando los límites sean estrictos. X/Twitter, puertas de enlace de SMS, fragmentos de búsqueda, bases de datos y API pueden aplicar sus propias reglas de conteo o normalización.",
     "example": "Ejemplo",
-    "examplePara": "Pegue un texto de ejemplo y vea las estadísticas:",
+    "examplePara": "Emoji puede hacer que el total de bytes UTF-8 sea mayor que el recuento de caracteres visibles:",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "pt": {
-    "title": "Contador de caracteres — Coding.Tools",
-    "description": "Conte caracteres, palavras, linhas e bytes instantaneamente. Ferramenta gratuita com rastreamento do Twitter.",
+    "title": "Contagem de caracteres - Coding.Tools",
+    "description": "Conte caracteres, palavras, linhas, bytes UTF-8 e caracteres X/Twitter restantes para texto colado.",
     "toolTitle": "Contador de caracteres",
-    "toolDescription": "Conte caracteres, palavras, linhas e bytes UTF-8. Inclui rastreamento do limite de 280 caracteres do Twitter.",
+    "toolDescription": "Meça o texto localmente com totais de caracteres ativos, contagens sem espaço, contagens de palavras e linhas, bytes UTF-8 e um contador restante de 280 caracteres.",
     "categoryName": "Strings e texto",
     "inputPlaceholder": "Cole ou digite seu texto aqui para contar...",
     "statsTitle": "Estatísticas",
@@ -318,27 +318,27 @@
     "statsBytes": "Bytes (UTF-8)",
     "statsTwitter": "Twitter restante",
     "statusUpdated": "Estatísticas atualizadas",
-    "descTitle": "Contador de caracteres online",
+    "descTitle": "Medir caracteres, linhas e bytes UTF-8",
     "descParas": [
-      "Esta ferramenta conta caracteres totais, sem espaços, palavras, linhas e bytes UTF-8 em tempo real.",
-      "Toda a contagem é feita localmente no navegador."
+      "<strong>Contador de caracteres ajuda a verificar o texto em relação aos limites rígidos de comprimento para postagens, mensagens estilo SMS, campos de banco de dados, cargas de API, títulos, descrições e regras de validação.</strong> Ele relata o total de caracteres, caracteres sem espaços, palavras, linhas, bytes UTF-8 e caracteres restantes em relação a um limite de referência de 280 caracteres.",
+      "As contagens de caracteres e de bytes não são iguais. ASCII geralmente usa 1 byte UTF-8 por caractere, enquanto letras acentuadas, caracteres CJK, emoji e muitos símbolos podem usar vários bytes. Algumas plataformas também contam clusters de grafemas, links ou sequências de emojis com suas próprias regras."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Cole ou digite seu texto no editor.",
-      "Veja as estatísticas ao vivo no painel abaixo. Todas as métricas são atualizadas instantaneamente.",
-      "Verifique o contador de <strong>Twitter restante</strong> para ver quantos caracteres restam. Fica vermelho ao ultrapassar 280 caracteres.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Cole ou digite seu texto no editor de entrada.",
+      "Veja estatísticas ao vivo no painel abaixo do editor. Todas as métricas são atualizadas instantaneamente conforme você digita.",
+      "Verifique o contador <strong>Twitter</strong> restante para ver quantos caracteres restam para um tweet. Fica vermelho quando você excede 280 caracteres.",
+      "Use <strong>Copiar</strong> para copiar o texto para sua área de transferência, <strong>Baixar</strong> para salvá-lo como um arquivo de texto ou <strong>Limpar</strong> para redefinir tudo."
     ],
-    "whatIs": "O que é um contador de caracteres?",
+    "whatIs": "O que é contagem de caracteres?",
     "whatIsParas": [
-      "Um contador de caracteres analisa o texto e relata o número de caracteres. Importante para plataformas com limites rígidos como Twitter (280 caracteres).",
-      "A ferramenta também exibe a contagem de bytes UTF-8."
+      "<strong>Contagem de caracteres</strong> é uma ferramenta de medição local para verificar o comprimento visível e o tamanho codificado antes de colar o texto em um formulário, solicitação de API, coluna de banco de dados ou postagem social.",
+      "O total de bytes UTF-8 é útil quando os sistemas limitam o armazenamento por bytes em vez de caracteres. Novas linhas, espaços, tabulações, marcas de combinação e emojis podem afetar as contagens, então teste com o texto exato que você enviará."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Lida com qualquer entrada de texto, incluindo caracteres Unicode multibyte.",
+    "inputNotesPara": "Use este contador para obter uma estimativa local aproximada e, em seguida, confirme na plataforma de destino quando os limites forem rigorosos. X/Twitter, gateways SMS, snippets de pesquisa, bancos de dados e APIs podem aplicar suas próprias regras de contagem ou normalização.",
     "example": "Exemplo",
-    "examplePara": "Cole um texto de exemplo e veja as estatísticas:",
+    "examplePara": "Emoji pode tornar o total de bytes UTF-8 maior do que a contagem de caracteres visíveis:",
     "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   }
 }

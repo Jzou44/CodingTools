@@ -1,10 +1,5 @@
 ---
-title: "Text to Binary Converter — Coding.Tools"
-description: "Convert ASCII text to binary byte values directly in your browser. Fast, private, and free to use."
-toolTitle: "Text to Binary"
-toolDescription: "Convert ASCII text to binary byte values with configurable delimiter. Runs entirely in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "text-to-binary"
 permalink: "/text-to-binary.html"
 ---
@@ -206,33 +201,7 @@ permalink: "/text-to-binary.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Text to Binary Converter</h2>
-  <p>This tool converts ASCII text into binary byte values (8-bit groups). It is useful for learning how text is represented in binary, creating binary-encoded data, or preparing data for systems that work with binary input.</p>
-  <p>The conversion runs locally in your browser. You can choose a delimiter (space or none) for the output format.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter ASCII text in the input editor.</li>
-    <li>Choose a delimiter from the dropdown (space or none).</li>
-    <li>Click <strong>Convert</strong> to encode the text as binary values.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>Each character in the ASCII table has a unique number from 0 to 127. The tool looks up the number for each character in your input, converts that number to an 8-bit binary representation, and displays the result. For example, the letter <code>A</code> is 65 in decimal, which is <code>01000001</code> in binary.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Text Input ---
-Hello
-
---- Binary Output (space delimiter) ---
-01001000 01100101 01101100 01101100 01101111
-
---- Binary Output (no delimiter) ---
-0100100001100101011011000110110001101111</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

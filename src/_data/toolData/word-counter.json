@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Word Counter — Coding.Tools",
-    "description": "Count words, characters, sentences, and paragraphs instantly. Free online word counter tool.",
+    "title": "Word Counter - Coding.Tools",
+    "description": "Count words, characters, sentences, paragraphs, lines, and estimated reading and speaking time in your browser.",
     "toolTitle": "Word Counter",
-    "toolDescription": "Count words, characters, sentences, paragraphs, and estimate reading and speaking time.",
+    "toolDescription": "Measure pasted text locally with live word, character, sentence, paragraph, line, reading-time, and speaking-time statistics.",
     "categoryName": "String & Text Utilities",
     "inputPlaceholder": "Paste or type your text here to count words, characters, sentences, and paragraphs...",
     "statsTitle": "Statistics",
@@ -17,10 +17,10 @@
     "statsSpeakingTime": "Speaking time",
     "timeZero": "env. 0 min",
     "statusUpdated": "Statistics updated",
-    "descTitle": "Word Counter Online",
+    "descTitle": "Count words and reading time from pasted text",
     "descParas": [
-      "This word counter tool counts words, characters, sentences, and paragraphs in real time as you type or paste text. It also estimates reading and speaking time based on standard rates, making it useful for writers, students, and content creators who need quick text statistics.",
-      "All counting happens locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so your content stays private and the tool works instantly without any delay."
+      "<strong>Word Counter gives live length metrics for drafts, posts, abstracts, product copy, essays, transcripts, and documentation.</strong> It reports words, characters with and without spaces, sentences, paragraphs, lines, and rough reading and speaking time.",
+      "Word counts depend on tokenization rules. Hyphenated terms, contractions, URLs, emoji, CJK text, code, and punctuation-heavy strings may be counted differently by other editors, CMS platforms, or school submission systems. Treat the result as a practical browser count, not a legal standard."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -28,22 +28,22 @@
       "View live statistics in the panel below the editor. Every metric updates instantly as you type.",
       "Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset the editor and all statistics."
     ],
-    "whatIs": "What is a word counter?",
+    "whatIs": "What is Word Counter?",
     "whatIsParas": [
-      "A word counter is a tool that analyzes a piece of text and reports how many words, characters, sentences, and paragraphs it contains. Word counters are commonly used by writers, bloggers, students, and professionals who need to meet specific length requirements for essays, articles, reports, or social media posts.",
-      "This tool goes beyond basic counting by also calculating reading time (based on an average of 200 words per minute) and speaking time (based on an average of 130 words per minute), which are helpful for planning presentations, speeches, and content pacing."
+      "<strong>Word Counter</strong> is a local text measurement tool for checking whether copy fits a word limit, estimating how long a script will take to read aloud, or comparing the length of two drafts.",
+      "Reading and speaking times are estimates based on average rates, so technical material, lists, names, and non-English text may take more or less time. Paragraphs are usually separated by blank lines, while line counts follow the line breaks in the pasted text."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool handles any text input, including Unicode characters and multi-line content. Words are counted by splitting on whitespace, sentences are detected by punctuation marks followed by whitespace or end of text, and paragraphs are counted as blocks of non-empty lines separated by blank lines.",
+    "inputNotesPara": "Paste the exact text you plan to submit or publish. Remove navigation labels, copied UI chrome, quoted email headers, or Markdown metadata if those should not count toward the final length.",
     "example": "Example",
-    "examplePara": "Paste a sample text and watch the statistics update live:",
+    "examplePara": "A short multi-paragraph sample produces word, sentence, paragraph, and time estimates at once:",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "cn": {
-    "title": "字数统计 — Coding.Tools",
-    "description": "即时统计单词、字符、句子和段落数量。免费在线字数统计工具。",
+    "title": "字计数器 - Coding.Tools",
+    "description": "计算浏览器中的单词、字符、句子、段落、行数以及估计的阅读和口语时间。",
     "toolTitle": "字数统计",
-    "toolDescription": "统计单词、字符、句子、段落数量，并估算阅读和朗读时间。",
+    "toolDescription": "使用实时单词、字符、句子、段落、行、阅读时间和说话时间统计数据来测量本地粘贴的文本。",
     "categoryName": "字符串与文本",
     "inputPlaceholder": "在此粘贴或输入文本，统计单词、字符、句子和段落数...",
     "statsTitle": "统计数据",
@@ -57,33 +57,33 @@
     "statsSpeakingTime": "朗读时间",
     "timeZero": "约0分钟",
     "statusUpdated": "统计数据已更新",
-    "descTitle": "在线字数统计",
+    "descTitle": "计算粘贴文本的字数和阅读时间",
     "descParas": [
-      "这个字数统计工具在您输入或粘贴文本时实时统计单词、字符、句子和段落数量。它还基于标准速度估算阅读和朗读时间。",
-      "所有统计都在浏览器中本地完成。您输入的文本不会被上传、存储或发送到服务器。"
+      "<strong>字数统计 提供草稿、帖子、摘要、产品副本、论文、成绩单和文档的实时长度指标。</strong> 它报告单词、带空格和不带空格的字符、句子、段落、行以及粗略的阅读和说话时间。",
+      "字数取决于标记化规则。其他编辑器、CMS 平台或学校提交系统可能会对带连字符的术语、缩写词、URL、表情符号、CJK 文本、代码和标点符号较多的字符串进行不同的计数。将结果视为实际的浏览器计数，而不是法律标准。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中粘贴或输入文本。",
-      "查看编辑器下方的实时统计数据。每个指标在输入时即时更新。",
-      "使用<strong>复制</strong>复制文本到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置编辑器和所有统计数据。"
+      "将文本粘贴或键入到输入编辑器中。",
+      "在编辑器下方的面板中查看实时统计数据。每个指标都会在您键入时立即更新。",
+      "使用 <strong>复制</strong> 将文本复制到剪贴板，使用 <strong>下载</strong> 将其另存为文本文件，或使用 <strong>清除</strong> 重置编辑器和所有统计数据。"
     ],
-    "whatIs": "什么是字数统计？",
+    "whatIs": "什么是字计数器？",
     "whatIsParas": [
-      "字数统计工具分析文本并报告其中包含的单词、字符、句子和段落数量。字数统计工具通常被作家、博主、学生和需要满足特定长度要求的专业人士使用。",
-      "此工具不仅进行基本统计，还计算阅读时间（基于平均每分钟200个单词）和朗读时间（基于平均每分钟130个单词）。"
+      "<strong>字数统计</strong> 是一款本地文本测量工具，用于检查文案是否符合字数限制、估计朗读脚本需要多长时间，或比较两个草稿的长度。",
+      "阅读和口语时间是根据平均速率估算的，因此技术材料、列表、名称和非英语文本可能需要或多或少的时间。段落通常由空行分隔，而行数则遵循粘贴文本中的换行符。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具处理任何文本输入，包括 Unicode 字符和多行内容。单词通过空格分割计算，句子通过标点符号后跟空格或文本结尾来检测，段落通过空行分隔的非空行块来计算。",
+    "inputNotesPara": "粘贴您计划提交或发布的确切文本。如果导航标签、复制来的界面元素、引用的邮件头或 Markdown 元数据不应计入最终长度，请先删除它们。",
     "example": "示例",
-    "examplePara": "粘贴示例文本，查看实时统计数据：",
+    "examplePara": "一个简短的多段落样本会立即生成单词、句子、段落和时间估计：",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "tw": {
-    "title": "字數統計 — Coding.Tools",
-    "description": "即時統計單詞、字元、句子和段落數量。免費線上字數統計工具。",
+    "title": "字計數器 - Coding.Tools",
+    "description": "計算瀏覽器中的單字、字元、句子、段落、行數以及估計的閱讀和口語時間。",
     "toolTitle": "字數統計",
-    "toolDescription": "統計單詞、字元、句子、段落數量，並估算閱讀和朗讀時間。",
+    "toolDescription": "使用即時單字、字元、句子、段落、行、閱讀時間和說話時間統計資料來測量本地貼上的文字。",
     "categoryName": "字串與文字",
     "inputPlaceholder": "在此貼上或輸入文字，統計單詞、字元、句子和段落數...",
     "statsTitle": "統計資料",
@@ -97,33 +97,33 @@
     "statsSpeakingTime": "朗讀時間",
     "timeZero": "約0分鐘",
     "statusUpdated": "統計資料已更新",
-    "descTitle": "線上字數統計",
+    "descTitle": "計算貼上文字的字數和閱讀時間",
     "descParas": [
-      "這個字數統計工具在您輸入或貼上文字時即時統計單詞、字元、句子和段落數量。它還基於標準速度估算閱讀和朗讀時間。",
-      "所有統計都在瀏覽器中本地完成。您輸入的文字不會被上傳、儲存或傳送到伺服器。"
+      "<strong>字數統計 提供草稿、貼文、摘要、產品副本、論文、成績單和文件的即時長度指標。</strong> 它報告單字、帶空格和不帶空格的字元、句子、段落、行以及粗略的閱讀和說話時間。",
+      "字數取決於標記化規則。其他編輯器、CMS 平台或學校提交系統可能會對帶連字符的術語、縮寫詞、URL、表情符號、CJK 文字、代碼和標點符號較多的字串進行不同的計數。將結果視為實際的瀏覽器計數，而不是法律標準。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中貼上或輸入文字。",
-      "查看編輯器下方的即時統計資料。每個指標在輸入時即時更新。",
-      "使用<strong>複製</strong>複製文字到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設編輯器和所有統計資料。"
+      "將文字貼上或鍵入到輸入編輯器中。",
+      "在編輯器下方的面板中查看即時統計資料。每個指標都會在您鍵入時立即更新。",
+      "使用 <strong>複製</strong> 將文字複製到剪貼簿，使用 <strong>下載</strong> 將其另存為文字檔案，或使用 <strong>清除</strong> 重設編輯器和所有統計資料。"
     ],
-    "whatIs": "什麼是字數統計？",
+    "whatIs": "什麼是字計數器？",
     "whatIsParas": [
-      "字數統計工具分析文字並報告其中包含的單詞、字元、句子和段落數量。",
-      "此工具不僅進行基本統計，還計算閱讀時間（基於平均每分鐘200個單詞）和朗讀時間（基於平均每分鐘130個單詞）。"
+      "<strong>字數統計</strong> 是一款本地文字測量工具，用於檢查文案是否符合字數限制、估計朗讀腳本需要多長時間，或比較兩個草稿的長度。",
+      "閱讀和口語時間是根據平均速率估算的，因此技術材料、列表、名稱和非英語文本可能需要更多或更少的時間。段落通常由空白行分隔，而行數則遵循貼上文字中的換行符。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具處理任何文字輸入，包括 Unicode 字元和多行內容。",
+    "inputNotesPara": "貼上您計劃提交或發布的確切文字。如果導航標籤、複製來的介面元素、引用的郵件標頭或 Markdown 元資料不應計入最終長度，請先刪除它們。",
     "example": "範例",
-    "examplePara": "貼上範例文字，查看即時統計資料：",
+    "examplePara": "一個簡短的多段落樣本會立即產生單字、句子、段落和時間估計：",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "jp": {
-    "title": "単語カウンター — Coding.Tools",
-    "description": "単語、文字、文、段落を即座にカウント。無料オンライン単語カウンター。",
+    "title": "ワードカウンター - Coding.Tools",
+    "description": "ブラウザでの単語、文字、文、段落、行数、および推定の読み上げおよび発話時間をカウントします。",
     "toolTitle": "単語カウンター",
-    "toolDescription": "単語、文字、文、段落をカウントし、読了・発話時間を推定。",
+    "toolDescription": "ライブの単語、文字、文、段落、行、読書時間、および発話時間の統計を使用して、貼り付けられたテキストをローカルで測定します。",
     "categoryName": "文字列とテキスト",
     "inputPlaceholder": "ここにテキストを貼り付けて単語、文字、文、段落をカウント...",
     "statsTitle": "統計",
@@ -137,33 +137,33 @@
     "statsSpeakingTime": "発話時間",
     "timeZero": "約0分",
     "statusUpdated": "統計を更新しました",
-    "descTitle": "オンライン単語カウンター",
+    "descTitle": "貼り付けたテキストから単語数と読書時間をカウントします。",
     "descParas": [
-      "この単語カウンターツールは、テキストの入力中に単語、文字、文、段落をリアルタイムでカウントします。",
-      "すべてのカウントはブラウザ内でローカルに行われます。"
+      "<strong>単語カウンター は、下書き、投稿、要約、製品コピー、エッセイ、トランスクリプト、ドキュメントのライブ長のメトリクスを提供します。</strong> 単語、スペースの有無にかかわらず文字、文、段落、行、および大まかな読み上げ時間とスピーキング時間をレポートします。",
+      "単語数はトークン化ルールによって異なります。ハイフンでつながれた用語、短縮形、URL、絵文字、CJK テキスト、コード、および句読点の多い文字列は、他のエディター、CMS プラットフォーム、または学校提出システムによって異なる方法でカウントされる場合があります。結果は法的な標準ではなく、実際のブラウザ数として扱います。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを貼り付けるか入力します。",
-      "エディタ下部の統計パネルでリアルタイムの統計を確認します。",
-      "<strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>クリア</strong>で操作します。"
+      "テキストを入力エディタに貼り付けるか入力します。",
+      "エディターの下のパネルでライブ統計を表示します。すべてのメトリクスは、入力するとすぐに更新されます。",
+      "<strong>コピー</strong> を使用してテキストをクリップボードにコピーするか、<strong>ダウンロード</strong> を使用してテキスト ファイルとして保存するか、<strong>クリア</strong> を使用してエディターとすべての統計をリセットします。"
     ],
-    "whatIs": "単語カウンターとは？",
+    "whatIs": "ワードカウンターとは何ですか？",
     "whatIsParas": [
-      "単語カウンターはテキストを分析し、単語、文字、文、段落の数を報告するツールです。",
-      "このツールは基本的なカウントに加え、読了時間（1分間約200単語）と発話時間（1分間約130単語）も計算します。"
+      "<strong>単語カウンター</strong> は、コピーが文字数制限に適合しているかどうかを確認したり、スクリプトを読み上げるのにかかる時間を見積もったり、2 つの下書きの長さを比較したりするためのローカル テキスト測定ツールです。",
+      "リーディングとスピーキングの時間は平均速度に基づいた推定値であるため、技術資料、リスト、名前、および英語以外のテキストには多少の時間がかかる場合があります。通常、段落は空行で区切られますが、行数は貼り付けられたテキストの改行に従います。"
     ],
     "inputNotes": "入力について",
-    "inputNotesPara": "Unicode文字や複数行のテキストを含む、あらゆる入力に対応しています。",
+    "inputNotesPara": "送信または公開する予定のテキストを正確に貼り付けます。ナビゲーション ラベル、コピーされた UI クロム、引用符で囲まれた電子メール ヘッダー、またはマークダウン メタデータが最終的な長さにカウントされない場合は、それらを削除します。",
     "example": "例",
-    "examplePara": "サンプルテキストを貼り付けて統計を確認：",
+    "examplePara": "短い複数段落のサンプルでは、単語、文、段落、および時間の見積もりが一度に生成されます。",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "kr": {
-    "title": "단어 수 세기 — Coding.Tools",
-    "description": "단어, 문자, 문장, 문단을 즉시 카운트. 무료 온라인 단어 카운터.",
+    "title": "단어 카운터 - Coding.Tools",
+    "description": "브라우저에서 단어, 문자, 문장, 단락, 행, 예상 읽기 및 말하기 시간을 계산합니다.",
     "toolTitle": "단어 수 세기",
-    "toolDescription": "단어, 문자, 문장, 문단을 카운트하고 읽기 및 말하기 시간을 추정합니다.",
+    "toolDescription": "붙여넣은 텍스트를 실시간 단어, 문자, 문장, 단락, 줄, 읽기 시간, 말하기 시간 통계를 통해 로컬에서 측정합니다.",
     "categoryName": "문자열 및 텍스트",
     "inputPlaceholder": "여기에 텍스트를 붙여넣어 단어, 문자, 문장, 문단을 세세요...",
     "statsTitle": "통계",
@@ -177,33 +177,33 @@
     "statsSpeakingTime": "말하기 시간",
     "timeZero": "~0분",
     "statusUpdated": "통계 업데이트됨",
-    "descTitle": "온라인 단어 카운터",
+    "descTitle": "붙여넣은 텍스트에서 단어 수 및 읽는 시간 계산",
     "descParas": [
-      "이 단어 카운터 도구는 텍스트를 입력하거나 붙여넣을 때 단어, 문자, 문장, 문단을 실시간으로 카운트합니다.",
-      "모든 카운팅은 브라우저에서 로컬로 이루어집니다."
+      "<strong>단어 수 세기는 초안, 게시물, 초록, 제품 카피, 에세이, 성적표 및 문서에 대한 실시간 길이 측정항목을 제공합니다.</strong> 단어, 공백이 있거나 없는 문자, 문장, 단락, 줄, 대략적인 읽기 및 말하기 시간을 보고합니다.",
+      "단어 수는 토큰화 규칙에 따라 달라집니다. 하이픈으로 연결된 용어, 약어, URL, 이모티콘, CJK 텍스트, 코드 및 구두점이 많은 문자열은 다른 편집자, CMS 플랫폼 또는 학교 제출 시스템에 따라 다르게 계산될 수 있습니다. 결과를 법적 표준이 아닌 실제 브라우저 수로 처리하십시오."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
-      "편집기 아래의 통계 패널에서 실시간 통계를 확인하세요.",
-      "<strong>복사</strong>, <strong>다운로드</strong>, <strong>지우기</strong>로 작업하세요."
+      "입력 편집기에 텍스트를 붙여넣거나 입력합니다.",
+      "편집기 아래 패널에서 실시간 통계를 확인하세요. 모든 지표는 입력하는 즉시 업데이트됩니다.",
+      "텍스트를 클립보드에 복사하려면 <strong>복사</strong>를 사용하고, 텍스트 파일로 저장하려면 <strong>다운로드</strong>를 사용하고, 편집기와 모든 통계를 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "단어 카운터란?",
+    "whatIs": "단어 카운터란 무엇입니까?",
     "whatIsParas": [
-      "단어 카운터는 텍스트를 분석하여 단어, 문자, 문장, 문단 수를 보고하는 도구입니다.",
-      "이 도구는 기본 카운팅 외에도 읽기 시간(분당 약 200단어)과 말하기 시간(분당 약 130단어)도 계산합니다."
+      "<strong>단어 수 세기</strong>는 사본이 단어 제한에 맞는지 확인하고, 스크립트를 소리내어 읽는 데 걸리는 시간을 추정하거나, 두 초안의 길이를 비교하기 위한 로컬 텍스트 측정 도구입니다.",
+      "읽기 및 말하기 시간은 평균 속도를 기준으로 한 추정치이므로 기술 자료, 목록, 이름 및 영어가 아닌 텍스트는 시간이 다소 걸릴 수 있습니다. 단락은 일반적으로 빈 줄로 구분되며 줄 개수는 붙여넣은 텍스트의 줄 바꿈을 따릅니다."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "유니코드 문자와 여러 줄 텍스트를 포함한 모든 텍스트 입력을 처리합니다.",
+    "inputNotesPara": "제출하거나 게시하려는 정확한 텍스트를 붙여넣으세요. 탐색 라벨, 복사된 UI 크롬, 인용된 이메일 헤더, 마크다운 메타데이터 등이 최종 길이에 포함되지 않는 경우 삭제하세요.",
     "example": "예시",
-    "examplePara": "샘플 텍스트를 붙여넣어 통계를 확인하세요:",
+    "examplePara": "짧은 여러 단락 샘플은 단어, 문장, 단락 및 시간 추정치를 한 번에 생성합니다.",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "fr": {
-    "title": "Compteur de mots — Coding.Tools",
-    "description": "Comptez les mots, caractères, phrases et paragraphes instantanément. Outil gratuit.",
+    "title": "Compteur de mots - Coding.Tools",
+    "description": "Comptez les mots, les caractères, les phrases, les paragraphes, les lignes et le temps de lecture et de parole estimé dans votre navigateur.",
     "toolTitle": "Compteur de mots",
-    "toolDescription": "Comptez les mots, caractères, phrases, paragraphes et estimez les temps de lecture et d'élocution.",
+    "toolDescription": "Mesurez le texte collé localement avec des statistiques en direct sur les mots, les caractères, les phrases, les paragraphes, les lignes, le temps de lecture et le temps de parole.",
     "categoryName": "Chaînes et texte",
     "inputPlaceholder": "Collez ou tapez votre texte ici pour compter...",
     "statsTitle": "Statistiques",
@@ -217,33 +217,33 @@
     "statsSpeakingTime": "Temps d'élocution",
     "timeZero": "cerca de 0 min",
     "statusUpdated": "Statistiques mises à jour",
-    "descTitle": "Compteur de mots en ligne",
+    "descTitle": "Compter les mots et le temps de lecture à partir du texte collé",
     "descParas": [
-      "Cet outil de comptage de mots comptent les mots, caractères, phrases et paragraphes en temps réel.",
-      "Tout le comptage se fait localement dans votre navigateur."
+      "<strong>Compteur de mots donne des mesures de longueur en direct pour les brouillons, les articles, les résumés, les copies de produits, les essais, les transcriptions et la documentation.</strong> Il rapporte les mots, les caractères avec et sans espaces, les phrases, les paragraphes, les lignes et le temps de lecture et de parole approximatif.",
+      "Le nombre de mots dépend des règles de tokenisation. Les termes avec trait d'union, contractions, URL, emoji, texte CJK, code et chaînes contenant beaucoup de ponctuation peuvent être comptés différemment par d'autres éditeurs, plates-formes CMS ou systèmes de soumission scolaires. Traitez le résultat comme un décompte pratique du navigateur, et non comme une norme juridique."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez ou tapez votre texte dans l'éditeur.",
-      "Consultez les statistiques en direct ci-dessous.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Collez ou saisissez votre texte dans l'éditeur de saisie.",
+      "Affichez les statistiques en direct dans le panneau situé sous l'éditeur. Chaque métrique est mise à jour instantanément au fur et à mesure que vous tapez.",
+      "Utilisez <strong>Copier</strong> pour copier le texte dans votre presse-papiers, <strong>Télécharger</strong> pour l'enregistrer sous forme de fichier texte ou <strong>Effacer</strong> pour réinitialiser l'éditeur et toutes les statistiques."
     ],
-    "whatIs": "Qu'est-ce qu'un compteur de mots ?",
+    "whatIs": "Qu'est-ce que le compteur de mots ?",
     "whatIsParas": [
-      "Un compteur de mots analyse un texte et rapporte le nombre de mots, caractères, phrases et paragraphes.",
-      "Cet outil calcule également le temps de lecture (200 mots/min) et d'élocution (130 mots/min)."
+      "<strong>Compteur de mots</strong> est un outil local de mesure de texte permettant de vérifier si la copie correspond à une limite de mots, d'estimer le temps qu'il faudra à un script pour être lu à haute voix ou de comparer la longueur de deux brouillons.",
+      "Les temps de lecture et de parole sont des estimations basées sur des tarifs moyens, de sorte que le matériel technique, les listes, les noms et les textes non anglais peuvent prendre plus ou moins de temps. Les paragraphes sont généralement séparés par des lignes vides, tandis que le nombre de lignes suit les sauts de ligne dans le texte collé."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "L'outil gère toute saisie de texte, y compris les caractères Unicode.",
+    "inputNotesPara": "Collez le texte exact que vous envisagez de soumettre ou de publier. Supprimez les libellés de navigation, les éléments d'interface copiés, les en-têtes d'e-mail cités ou les métadonnées Markdown s'ils ne doivent pas compter dans la longueur finale.",
     "example": "Exemple",
-    "examplePara": "Collez un texte exemple et voyez les statistiques :",
+    "examplePara": "Un court échantillon de plusieurs paragraphes produit simultanément des estimations de mots, de phrases, de paragraphes et de temps :",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "de": {
-    "title": "Wortzähler — Coding.Tools",
-    "description": "Wörter, Zeichen, Sätze und Absätze sofort zählen. Kostenloses Online-Tool.",
+    "title": "Wortzähler - Coding.Tools",
+    "description": "Zählen Sie Wörter, Zeichen, Sätze, Absätze, Zeilen und die geschätzte Lese- und Sprechzeit in Ihrem Browser.",
     "toolTitle": "Wortzähler",
-    "toolDescription": "Zählen Sie Wörter, Zeichen, Sätze, Absätze und schätzen Sie Lese- und Sprechzeit.",
+    "toolDescription": "Messen Sie eingefügten Text lokal mit Live-Wort-, Zeichen-, Satz-, Absatz-, Zeilen-, Lesezeit- und Sprechzeitstatistiken.",
     "categoryName": "Zeichenketten & Text",
     "inputPlaceholder": "Text hier einfügen oder tippen zum Zählen...",
     "statsTitle": "Statistik",
@@ -257,33 +257,33 @@
     "statsSpeakingTime": "Sprechzeit",
     "timeZero": "~0 Min",
     "statusUpdated": "Statistik aktualisiert",
-    "descTitle": "Online-Wortzähler",
+    "descTitle": "Zählen Sie Wörter und Lesezeit aus eingefügtem Text",
     "descParas": [
-      "Dieses Werkzeug zählt Wörter, Zeichen, Sätze und Absätze in Echtzeit.",
-      "Alle Zählungen erfolgen lokal im Browser."
+      "<strong>Wortzähler liefert Live-Längenmetriken für Entwürfe, Beiträge, Abstracts, Produkttexte, Essays, Transkripte und Dokumentation.</strong> Es meldet Wörter, Zeichen mit und ohne Leerzeichen, Sätze, Absätze, Zeilen sowie grobe Lese- und Sprechzeit.",
+      "Die Anzahl der Wörter hängt von den Tokenisierungsregeln ab. Getrennte Begriffe, Abkürzungen, URLs, Emojis, CJK-Text, Code und Zeichenfolgen mit vielen Satzzeichen werden von anderen Editoren, CMS-Plattformen oder Schulübermittlungssystemen möglicherweise anders gezählt. Betrachten Sie das Ergebnis als praktische Browserzählung und nicht als rechtlichen Standard."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Text in den Editor einfügen oder tippen.",
-      "Live-Statistiken unten anzeigen lassen.",
-      "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      "Fügen Sie Ihren Text ein oder geben Sie ihn in den Eingabeeditor ein.",
+      "Sehen Sie sich Live-Statistiken im Bereich unter dem Editor an. Jede Metrik wird während der Eingabe sofort aktualisiert.",
+      "Verwenden Sie <strong>Kopieren</strong>, um den Text in Ihre Zwischenablage zu kopieren, <strong>Herunterladen</strong>, um ihn als Textdatei zu speichern, oder <strong>Leeren</strong>, um den Editor und alle Statistiken zurückzusetzen."
     ],
-    "whatIs": "Was ist ein Wortzähler ?",
+    "whatIs": "Was ist Wortzähler?",
     "whatIsParas": [
-      "Ein Wortzähler analysiert Text und meldet die Anzahl der Wörter, Zeichen, Sätze und Absätze.",
-      "Dieses Tool berechnet auch Lesezeit (200 Wörter/Min) und Sprechzeit (130 Wörter/Min)."
+      "<strong>Wortzähler</strong> ist ein lokales Textmesswerkzeug, mit dem Sie prüfen können, ob ein Text in ein Wortlimit passt, abschätzen können, wie lange ein Skript zum Vorlesen dauert, oder die Länge zweier Entwürfe vergleichen können.",
+      "Die Lese- und Sprechzeiten sind Schätzungen, die auf Durchschnittssätzen basieren, sodass technisches Material, Listen, Namen und nicht-englische Texte mehr oder weniger Zeit in Anspruch nehmen können. Absätze werden normalerweise durch Leerzeilen getrennt, während die Zeilenanzahl den Zeilenumbrüchen im eingefügten Text folgt."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool verarbeitet jede Texteingabe, einschließlich Unicode-Zeichen.",
+    "inputNotesPara": "Fügen Sie den genauen Text ein, den Sie einreichen oder veröffentlichen möchten. Entfernen Sie Navigationsbeschriftungen, kopierte UI-Chrome, zitierte E-Mail-Header oder Markdown-Metadaten, wenn diese nicht auf die endgültige Länge angerechnet werden sollen.",
     "example": "Beispiel",
-    "examplePara": "Beispieltext einfügen und Statistiken ansehen:",
+    "examplePara": "Ein kurzes Beispiel mit mehreren Absätzen liefert Wort-, Satz-, Absatz- und Zeitschätzungen gleichzeitig:",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "es": {
-    "title": "Contador de palabras — Coding.Tools",
-    "description": "Cuente palabras, caracteres, oraciones y párrafos al instante. Herramienta gratuita.",
+    "title": "Contador de palabras - Coding.Tools",
+    "description": "Cuente palabras, caracteres, oraciones, párrafos, líneas y tiempo estimado de lectura y conversación en su navegador.",
     "toolTitle": "Contador de palabras",
-    "toolDescription": "Cuente palabras, caracteres, oraciones, párrafos y estime tiempos de lectura y habla.",
+    "toolDescription": "Mida el texto pegado localmente con estadísticas activas de palabras, caracteres, oraciones, párrafos, líneas, tiempos de lectura y tiempos de conversación.",
     "categoryName": "Cadenas y texto",
     "inputPlaceholder": "Pegue o escriba su texto aquí para contar...",
     "statsTitle": "Estadísticas",
@@ -297,33 +297,33 @@
     "statsSpeakingTime": "Tiempo de habla",
     "timeZero": "~0 minutos",
     "statusUpdated": "Estadísticas actualizadas",
-    "descTitle": "Contador de palabras en línea",
+    "descTitle": "Cuente palabras y tiempo de lectura del texto pegado",
     "descParas": [
-      "Esta herramienta cuenta palabras, caracteres, oraciones y párrafos en tiempo real.",
-      "Todo el conteo ocurre localmente en su navegador."
+      "<strong>Contador de palabras proporciona métricas de longitud en vivo para borradores, publicaciones, resúmenes, copias de productos, ensayos, transcripciones y documentación.</strong> Informa palabras, caracteres con y sin espacios, oraciones, párrafos, líneas y tiempo aproximado de lectura y conversación.",
+      "El recuento de palabras depende de las reglas de tokenización. Otros editores, plataformas CMS o sistemas de envío escolar pueden contar de forma diferente los términos con guiones, contracciones, URL, emoji, texto CJK, códigos y cadenas con mucha puntuación. Trate el resultado como un recuento práctico del navegador, no como un estándar legal."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Pegue o escriba su texto en el editor.",
-      "Vea las estadísticas en vivo abajo.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Pega o escribe tu texto en el editor de entrada.",
+      "Vea estadísticas en vivo en el panel debajo del editor. Cada métrica se actualiza instantáneamente a medida que escribe.",
+      "Utilice <strong>Copiar</strong> para copiar el texto a su portapapeles, <strong>Descargar</strong> para guardarlo como un archivo de texto o <strong>Limpiar</strong> para restablecer el editor y todas las estadísticas."
     ],
-    "whatIs": "¿Qué es un contador de palabras?",
+    "whatIs": "¿Qué es el contador de palabras?",
     "whatIsParas": [
-      "Un contador de palabras analiza un texto y reporta el número de palabras, caracteres, oraciones y párrafos.",
-      "Esta herramienta también calcula el tiempo de lectura (200 palabras/min) y habla (130 palabras/min)."
+      "<strong>Contador de palabras</strong> es una herramienta local de medición de texto para comprobar si el texto se ajusta a un límite de palabras, estimar cuánto tiempo llevará leer un guión en voz alta o comparar la longitud de dos borradores.",
+      "Los tiempos de lectura y conversación son estimaciones basadas en tarifas promedio, por lo que el material técnico, listas, nombres y textos que no estén en inglés pueden tardar más o menos tiempo. Los párrafos suelen estar separados por líneas en blanco, mientras que el recuento de líneas sigue los saltos de línea en el texto pegado."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta maneja cualquier entrada de texto, incluyendo caracteres Unicode.",
+    "inputNotesPara": "Pegue el texto exacto que planea enviar o publicar. Elimine las etiquetas de navegación, los elementos de interfaz copiados, los encabezados de correo citados o los metadatos de Markdown si no deben contar para la longitud final.",
     "example": "Ejemplo",
-    "examplePara": "Pegue un texto de ejemplo y vea las estadísticas:",
+    "examplePara": "Una muestra breve de varios párrafos produce estimaciones de palabras, oraciones, párrafos y tiempo a la vez:",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "pt": {
-    "title": "Contador de palavras — Coding.Tools",
-    "description": "Conte palavras, caracteres, frases e parágrafos instantaneamente. Ferramenta gratuita.",
+    "title": "Contador de palavras - Coding.Tools",
+    "description": "Conte palavras, caracteres, frases, parágrafos, linhas e tempo estimado de leitura e fala em seu navegador.",
     "toolTitle": "Contador de palavras",
-    "toolDescription": "Conte palavras, caracteres, frases, parágrafos e estime tempos de leitura e fala.",
+    "toolDescription": "Meça o texto colado localmente com estatísticas ao vivo de palavras, caracteres, frases, parágrafos, linhas, tempo de leitura e tempo de fala.",
     "categoryName": "Strings e texto",
     "inputPlaceholder": "Cole ou digite seu texto aqui para contar...",
     "statsTitle": "Estatísticas",
@@ -337,26 +337,26 @@
     "statsSpeakingTime": "Tempo de fala",
     "timeZero": "~0 min",
     "statusUpdated": "Estatísticas atualizadas",
-    "descTitle": "Contador de palavras online",
+    "descTitle": "Conte palavras e tempo de leitura do texto colado",
     "descParas": [
-      "Esta ferramenta conta palavras, caracteres, frases e parágrafos em tempo real.",
-      "Toda a contagem é feita localmente no navegador."
+      "<strong>Contador de palavras fornece métricas de comprimento ao vivo para rascunhos, postagens, resumos, cópias de produtos, ensaios, transcrições e documentação.</strong> Ele relata palavras, caracteres com e sem espaços, frases, parágrafos, linhas e leitura aproximada e tempo de fala.",
+      "A contagem de palavras depende das regras de tokenização. Termos hifenizados, contrações, URLs, emoji, texto CJK, código e strings com muita pontuação podem ser contados de forma diferente por outros editores, plataformas CMS ou sistemas de envio escolar. Trate o resultado como uma contagem prática do navegador, não como um padrão legal."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Cole ou digite seu texto no editor.",
-      "Veja as estatísticas ao vivo abaixo.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Cole ou digite seu texto no editor de entrada.",
+      "Veja estatísticas ao vivo no painel abaixo do editor. Cada métrica é atualizada instantaneamente conforme você digita.",
+      "Use <strong>Copiar</strong> para copiar o texto para sua área de transferência, <strong>Baixar</strong> para salvá-lo como um arquivo de texto ou <strong>Limpar</strong> para redefinir o editor e todas as estatísticas."
     ],
-    "whatIs": "O que é um contador de palavras?",
+    "whatIs": "O que é contador de palavras?",
     "whatIsParas": [
-      "Um contador de palavras analisa um texto e relata o número de palavras, caracteres, frases e parágrafos.",
-      "Esta ferramenta também calcula o tempo de leitura (200 palavras/min) e fala (130 palavras/min)."
+      "<strong>Contador de palavras</strong> é uma ferramenta de medição de texto local para verificar se a cópia se enquadra no limite de palavras, estimar quanto tempo um script levará para ser lido em voz alta ou comparar o comprimento de dois rascunhos.",
+      "Os tempos de leitura e conversação são estimativas baseadas em taxas médias, portanto, materiais técnicos, listas, nomes e textos que não sejam em inglês podem levar mais ou menos tempo. Os parágrafos geralmente são separados por linhas em branco, enquanto a contagem de linhas segue as quebras de linha no texto colado."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta lida com qualquer entrada de texto, incluindo caracteres Unicode.",
+    "inputNotesPara": "Cole o texto exato que você planeja enviar ou publicar. Remova rótulos de navegação, elementos de interface copiados, cabeçalhos de e-mail citados ou metadados Markdown se eles não devem contar para o comprimento final.",
     "example": "Exemplo",
-    "examplePara": "Cole um texto de exemplo e veja as estatísticas:",
+    "examplePara": "Uma pequena amostra de vários parágrafos produz estimativas de palavras, frases, parágrafos e tempo de uma só vez:",
     "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   }
 }

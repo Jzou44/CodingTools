@@ -1,0 +1,58 @@
+{% set ascii = asciiTable[lang] or asciiTable.en %}
+{% set labels = ascii.labels %}
+
+<h3>{{ labels.printableTitle }}</h3>
+<div class="table-responsive">
+  <table class="ascii-table">
+    <thead>
+      <tr>
+        <th>{{ labels.dec }}</th>
+        <th>{{ labels.hex }}</th>
+        <th>{{ labels.oct }}</th>
+        <th>{{ labels.bin }}</th>
+        <th>{{ labels.char }}</th>
+        <th>{{ labels.description }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in ascii.printableRows %}
+      <tr>
+        <td>{{ row.dec }}</td>
+        <td>{{ row.hex }}</td>
+        <td>{{ row.oct }}</td>
+        <td>{{ row.bin }}</td>
+        <td><code{% if row.isSpace %} class="space-char"{% endif %}>{{ row.display }}</code></td>
+        <td>{{ row.description }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<h3>{{ labels.controlTitle }}</h3>
+<div class="table-responsive">
+  <table class="ascii-table">
+    <thead>
+      <tr>
+        <th>{{ labels.dec }}</th>
+        <th>{{ labels.hex }}</th>
+        <th>{{ labels.oct }}</th>
+        <th>{{ labels.bin }}</th>
+        <th>{{ labels.abbr }}</th>
+        <th>{{ labels.description }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in ascii.controlRows %}
+      <tr>
+        <td>{{ row.dec }}</td>
+        <td>{{ row.hex }}</td>
+        <td>{{ row.oct }}</td>
+        <td>{{ row.bin }}</td>
+        <td><abbr>{{ row.abbr }}</abbr></td>
+        <td>{{ row.description }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

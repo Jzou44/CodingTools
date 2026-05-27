@@ -1,272 +1,272 @@
 {
   "en": {
-    "title": "Text to Binary Converter — Coding.Tools",
-    "description": "Convert text to binary code representation directly in your browser.",
+    "title": "Text to Binary Converter - Coding.Tools",
+    "description": "Convert text into binary character-code notation with optional spacing.",
     "toolTitle": "Text to Binary",
-    "toolDescription": "Convert ASCII text to binary byte sequences.",
+    "toolDescription": "Encode text characters as binary values for inspection, examples, and teaching.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Type or paste text here...",
     "outputPlaceholder": "Binary code will appear here...",
-    "descTitle": "Text to Binary Converter",
+    "descTitle": "Encode text characters as binary values",
     "descParas": [
-      "This tool converts ASCII text into binary (base 2) byte representation. Each character is encoded as an 8-bit binary number.",
-      "The conversion runs locally in your browser."
+      "<strong>Text to Binary converts each input character into binary character-code notation.</strong> Use it for small examples, teaching materials, debugging notes, and showing how text maps to numeric codes.",
+      "For plain ASCII, each output group is eight bits. Non-ASCII characters may produce longer JavaScript code-unit values rather than UTF-8 bytes, so use a UTF-8 encoder when exact encoded bytes are required."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Choose a binary delimiter (None or Space).",
-      "Click <strong>Convert</strong> to encode the text to binary.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Type or paste the text you want to encode.",
+      "Choose whether binary groups should be separated by spaces or joined together.",
+      "Click <strong>Convert</strong> to generate the binary output.",
+      "Copy or download the result after confirming the grouping matches your target format."
     ],
-    "whatIs": "What is Text to Binary?",
+    "whatIs": "What is text to binary conversion?",
     "whatIsParas": [
-      "Text to binary conversion maps each character to its 8-bit binary representation."
+      "<strong>Text to binary conversion</strong> rewrites character codes using base-2 digits. The ASCII letter <code>H</code> has decimal code 72, which is <code>01001000</code> in 8-bit binary."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Supports any ASCII text. Each character is converted to its 8-bit binary code.",
+    "inputNotesPara": "Review hidden whitespace, line breaks, and non-ASCII characters before using the output in tests or documentation. Byte-oriented protocols may require a specific encoding such as UTF-8.",
     "example": "Example",
-    "examplePara": "Converting text to binary:",
+    "examplePara": "The word <code>Hello</code> becomes five 8-bit ASCII groups:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "cn": {
-    "title": "文本转二进制转换器 — Coding.Tools",
-    "description": "在浏览器中直接将文本转换为二进制数字。",
+    "title": "文本到二进制转换器 - Coding.Tools",
+    "description": "将文本转换为具有可选间距的二进制字符代码表示法。",
     "toolTitle": "文本转二进制",
-    "toolDescription": "将文本字符转换为二进制数字表示。",
+    "toolDescription": "将文本字符编码为二进制值以供检查、示例和教学。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入文本（如 Hello）...",
     "outputPlaceholder": "二进制结果将显示在这里...",
-    "descTitle": "文本转二进制转换器",
+    "descTitle": "将文本字符编码为二进制值",
     "descParas": [
-      "此工具将文本字符转换为二进制编码。",
-      "转换在浏览器本地运行。"
+      "<strong>文本转二进制 将每个输入字符转换为二进制字符代码表示法。</strong> 将其用于小示例、教材、调试说明以及显示文本如何映射到数字代码。",
+      "对于普通 ASCII，每个输出组是八位。非 ASCII 字符可能会生成更长的 JavaScript 代码单元值，而不是 UTF-8 字节，因此当需要精确编码的字节时，请使用 UTF-8 编码器。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入或粘贴文本。",
-      "选择二进制分隔符（无或空格）。",
-      "点击<strong>转换</strong>将文本编码为二进制。",
-      "使用<strong>复制</strong>复制结果。"
+      "输入或粘贴要编码的文本。",
+      "选择二进制组是用空格分隔还是连接在一起。",
+      "单击 <strong>转换</strong> 以生成二进制输出。",
+      "确认分组符合您的目标格式后，复制或下载结果。"
     ],
-    "whatIs": "什么是文本转二进制？",
+    "whatIs": "什么是文本到二进制的转换？",
     "whatIsParas": [
-      "每个ASCII字符可以用8位二进制数字表示。此工具将文本编码为二进制序列。"
+      "<strong>文本到二进制转换</strong> 使用 2 进制数字重写字符代码。 ASCII字母<code>H</code>的十进制代码为72，8位二进制为<code>01001000</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入任意文本字符串。",
+    "inputNotesPara": "在测试或文档中使用输出之前，请检查隐藏的空格、换行符和非 ASCII 字符。面向字节的协议可能需要特定的编码，例如 UTF-8。",
     "example": "示例",
-    "examplePara": "将文本转换为二进制：",
+    "examplePara": "字 <code>Hello</code> 变为 5 个 8 位 ASCII 组：",
     "exampleCode": "--- 文本输入 ---\nHello\n\n--- 二进制 ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "tw": {
-    "title": "文字到二進位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將文字轉換為二進位代碼表示形式。",
+    "title": "文字到二進位轉換器 - Coding.Tools",
+    "description": "將文字轉換為具有可選間距的二進位字元代碼表示法。",
     "toolTitle": "文字轉二進位",
-    "toolDescription": "將 ASCII 文字轉換為二進位位元組序列。",
+    "toolDescription": "將文字字元編碼為二進位值以供檢查、範例和教學。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此輸入或貼上文字...",
     "outputPlaceholder": "二進位代碼將出現在這裡...",
-    "descTitle": "文字到二進制轉換器",
+    "descTitle": "將文字字元編碼為二進位值",
     "descParas": [
-      "該工具將 ASCII 文字轉換為二進位（基數 2）位元組表示形式。每個字元都編碼為 8 位元二進位數。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>文字轉二進位 將每個輸入字元轉換為二進位字元代碼表示法。</strong> 將其用於小範例、教材、偵錯說明以及顯示文字如何對應到數字程式碼。",
+      "對於普通 ASCII，每個輸出組是八位元。非 ASCII 字元可能會產生更長的 JavaScript 代碼單元值，而不是 UTF-8 位元組，因此當需要精確編碼的位元組時，請使用 UTF-8 編碼器。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入編輯器中鍵入或貼上文字。",
-      "選擇二進位分隔符號（無或空格）。",
-      "點選<strong>轉換</strong>將文字編碼為二進位。",
-      "使用<strong>複製</strong>複製結果。"
+      "輸入或貼上要編碼的文字。",
+      "選擇二進位組是用空格分隔還是連接在一起。",
+      "按一下 <strong>轉換</strong> 以產生二進位輸出。",
+      "確認分組符合您的目標格式後，複製或下載結果。"
     ],
-    "whatIs": "什麼是文字到二進位？",
+    "whatIs": "什麼是文字到二進制的轉換？",
     "whatIsParas": [
-      "文字到二進位轉換將每個字元對應為其 8 位元二進位表示形式。"
+      "<strong>文字到二進位轉換</strong> 使用 2 進位數字重寫字元代碼。 ASCII字母<code>H</code>的十進位代碼為72，8位元二進位為<code>01001000</code>。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "支援任何 ASCII 文字。每個字元都會轉換為其 8 位元二進位代碼。",
+    "inputNotesPara": "在測試或文件中使用輸出之前，請檢查隱藏的空格、換行符和非 ASCII 字元。面向位元組的協定可能需要特定的編碼，例如 UTF-8。",
     "example": "例子",
-    "examplePara": "將文字轉換為二進位：",
+    "examplePara": "字 <code>Hello</code> 變成 5 個 8 位元 ASCII 組：",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "jp": {
-    "title": "テキストからバイナリへのコンバーター —coding.tools",
-    "description": "ブラウザでテキストをバイナリ コード表現に直接変換します。",
+    "title": "テキストからバイナリへのコンバータ - Coding.Tools",
+    "description": "テキストをオプションのスペースを使用してバイナリ文字コード表記に変換します。",
     "toolTitle": "テキストから2進数",
-    "toolDescription": "ASCII テキストをバイナリ バイト シーケンスに変換します。",
+    "toolDescription": "検査、例、教育のためにテキスト文字をバイナリ値としてエンコードします。",
     "categoryName": "数値変換",
     "inputPlaceholder": "ここにテキストを入力するか貼り付けます...",
     "outputPlaceholder": "ここにバイナリコードが表示されます...",
-    "descTitle": "テキストからバイナリへのコンバーター",
+    "descTitle": "テキスト文字をバイナリ値としてエンコードする",
     "descParas": [
-      "このツールは、ASCII テキストをバイナリ (base 2) バイト表現に変換します。各文字は 8 ビットの 2 進数としてエンコードされます。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>テキストから2進数 は、各入力文字をバイナリ文字コード表記に変換します。</strong> 小さな例、教材、デバッグ メモ、およびテキストが数値コードにどのようにマッピングされるかを示すために使用します。",
+      "プレーン ASCII の場合、各出力グループは 8 ビットです。 ASCII 以外の文字は、UTF-8 バイトではなく、より長い JavaScript コード単位の値を生成する可能性があるため、正確にエンコードされたバイトが必要な場合は、UTF-8 エンコーダを使用します。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "入力エディターにテキストを入力または貼り付けます。",
-      "バイナリ区切り文字 (なしまたはスペース) を選択します。",
-      "[<strong>変換</strong>] をクリックしてテキストをバイナリにエンコードします。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "エンコードするテキストを入力または貼り付けます。",
+      "バイナリ グループをスペースで区切るか、結合するかを選択します。",
+      "<strong>変換</strong> をクリックしてバイナリ出力を生成します。",
+      "グループ化がターゲット形式と一致することを確認した後、結果をコピーまたはダウンロードします。"
     ],
     "whatIs": "テキストからバイナリへの変換とは何ですか?",
     "whatIsParas": [
-      "テキストからバイナリへの変換では、各文字が 8 ビットのバイナリ表現にマップされます。"
+      "<strong>テキストからバイナリへの変換</strong> は、文字コードを基数 2 の数字に書き換えます。 ASCII 文字 <code>H</code> の 10 進コード 72 は、8 ビット 2 進数の <code>01001000</code> です。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "あらゆる ASCII テキストをサポートします。各文字は 8 ビットのバイナリ コードに変換されます。",
+    "inputNotesPara": "出力をテストまたはドキュメントで使用する前に、非表示の空白、改行、および非 ASCII 文字を確認してください。バイト指向のプロトコルでは、UTF-8 などの特定のエンコードが必要になる場合があります。",
     "example": "例",
-    "examplePara": "テキストをバイナリに変換します。",
+    "examplePara": "ワード <code>Hello</code> は、5 つの 8 ビット ASCII グループになります。",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "kr": {
-    "title": "텍스트를 이진 변환기로 — Coding.Tools",
-    "description": "브라우저에서 텍스트를 바이너리 코드 표현으로 직접 변환하세요.",
+    "title": "텍스트를 이진 변환기로 - Coding.Tools",
+    "description": "선택적 간격을 사용하여 텍스트를 이진 문자 코드 표기법으로 변환합니다.",
     "toolTitle": "텍스트에서 2진수",
-    "toolDescription": "ASCII 텍스트를 이진 바이트 시퀀스로 변환합니다.",
+    "toolDescription": "검사, 예제 및 교육을 위해 텍스트 문자를 이진 값으로 인코딩합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "여기에 텍스트를 입력하거나 붙여넣으세요...",
     "outputPlaceholder": "여기에 바이너리 코드가 나타납니다...",
-    "descTitle": "텍스트를 바이너리 변환기로",
+    "descTitle": "텍스트 문자를 이진 값으로 인코딩",
     "descParas": [
-      "이 도구는 ASCII 텍스트를 이진(기본 2) 바이트 표현으로 변환합니다. 각 문자는 8비트 이진수로 인코딩됩니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>텍스트에서 2진수는 각 입력 문자를 이진 문자 코드 표기법으로 변환합니다.</strong> 작은 예, 교육 자료, 디버깅 노트 및 텍스트가 숫자 코드에 매핑되는 방법을 보여주는 데 사용합니다.",
+      "일반 ASCII의 경우 각 출력 그룹은 8비트입니다. ASCII가 아닌 문자는 UTF-8 바이트보다 더 긴 JavaScript 코드 단위 값을 생성할 수 있으므로 정확한 인코딩된 바이트가 필요한 경우 UTF-8 인코더를 사용하세요."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "이진 구분 기호(없음 또는 공백)를 선택합니다.",
-      "텍스트를 바이너리로 인코딩하려면 <strong>변환</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "인코딩하려는 텍스트를 입력하거나 붙여넣습니다.",
+      "바이너리 그룹을 공백으로 구분할지 아니면 함께 결합할지 선택합니다.",
+      "<strong>변환</strong>를 클릭하여 이진 출력을 생성합니다.",
+      "그룹화가 대상 형식과 일치하는지 확인한 후 결과를 복사하거나 다운로드하세요."
     ],
     "whatIs": "텍스트를 바이너리로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "텍스트를 이진으로 변환하면 각 문자가 8비트 이진 표현으로 매핑됩니다."
+      "<strong>텍스트를 이진수로 변환</strong>는 2진수를 사용하여 문자 코드를 다시 씁니다. ASCII 문자 <code>H</code>에는 10진수 코드 72가 있으며 이는 8비트 이진수로 <code>01001000</code>입니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "모든 ASCII 텍스트를 지원합니다. 각 문자는 8비트 이진 코드로 변환됩니다.",
+    "inputNotesPara": "테스트 또는 문서에서 출력을 사용하기 전에 숨겨진 공백, 줄바꿈 및 ASCII가 아닌 문자를 검토하세요. 바이트 지향 프로토콜에는 UTF-8와 같은 특정 인코딩이 필요할 수 있습니다.",
     "example": "예",
-    "examplePara": "텍스트를 바이너리로 변환:",
+    "examplePara": "<code>Hello</code>라는 단어는 5개의 8비트 ASCII 그룹이 됩니다.",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "fr": {
-    "title": "Convertisseur de texte en binaire — Coding.Tools",
-    "description": "Convertissez le texte en représentation de code binaire directement dans votre navigateur.",
+    "title": "Convertisseur texte en binaire - Coding.Tools",
+    "description": "Convertissez le texte en notation de code de caractères binaire avec un espacement facultatif.",
     "toolTitle": "Texte en Binaire",
-    "toolDescription": "Convertissez le texte ASCII en séquences d'octets binaires.",
+    "toolDescription": "Encodez les caractères du texte sous forme de valeurs binaires pour l'inspection, les exemples et l'enseignement.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Tapez ou collez le texte ici...",
     "outputPlaceholder": "Le code binaire apparaîtra ici...",
-    "descTitle": "Convertisseur de texte en binaire",
+    "descTitle": "Encoder les caractères du texte sous forme de valeurs binaires",
     "descParas": [
-      "Cet outil convertit le texte ASCII en représentation binaire (base 2) d'octets. Chaque caractère est codé sous forme de nombre binaire de 8 bits.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Texte en Binaire convertit chaque caractère d'entrée en notation de code de caractères binaire.</strong> Utilisez-le pour de petits exemples, du matériel pédagogique, des notes de débogage et pour montrer comment le texte est mappé aux codes numériques.",
+      "Pour le ASCII simple, chaque groupe de sortie comporte huit bits. Les caractères non ASCII peuvent produire des valeurs d'unité de code JavaScript plus longues plutôt que des octets UTF-8, utilisez donc un encodeur UTF-8 lorsque des octets codés exactement sont requis."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez du texte dans l'éditeur de saisie.",
-      "Choisissez un délimiteur binaire (Aucun ou Espace).",
-      "Cliquez sur <strong>Convertir</strong> pour encoder le texte en binaire.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Tapez ou collez le texte que vous souhaitez encoder.",
+      "Choisissez si les groupes binaires doivent être séparés par des espaces ou réunis.",
+      "Cliquez sur <strong>Convertir</strong> pour générer la sortie binaire.",
+      "Copiez ou téléchargez le résultat après avoir confirmé que le regroupement correspond à votre format cible."
     ],
-    "whatIs": "Qu’est-ce que le texte en binaire ?",
+    "whatIs": "Qu’est-ce que la conversion texte en binaire ?",
     "whatIsParas": [
-      "La conversion texte en binaire mappe chaque caractère à sa représentation binaire 8 bits."
+      "<strong>Conversion de texte en binaire</strong> réécrit les codes de caractères en utilisant des chiffres en base 2. La lettre ASCII <code>H</code> a le code décimal 72, qui est <code>01001000</code> en binaire 8 bits."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Prend en charge n'importe quel texte ASCII. Chaque caractère est converti en son code binaire de 8 bits.",
+    "inputNotesPara": "Examinez les espaces masqués, les sauts de ligne et les caractères non ASCII avant d'utiliser la sortie dans des tests ou dans la documentation. Les protocoles orientés octets peuvent nécessiter un codage spécifique tel que UTF-8.",
     "example": "Exemple",
-    "examplePara": "Conversion de texte en binaire :",
+    "examplePara": "Le mot <code>Hello</code> devient cinq groupes ASCII de 8 bits :",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "de": {
-    "title": "Text-zu-Binär-Konverter – Coding.Tools",
-    "description": "Konvertieren Sie Text direkt in Ihrem Browser in eine binäre Codedarstellung.",
+    "title": "Text-zu-Binär-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie Text in binäre Zeichencode-Notation mit optionalem Abstand.",
     "toolTitle": "Text zu Binär",
-    "toolDescription": "Konvertieren Sie ASCII-Text in binäre Bytesequenzen.",
+    "toolDescription": "Kodieren Sie Textzeichen als Binärwerte für Inspektion, Beispiele und Unterricht.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie hier Text ein oder fügen Sie ihn ein...",
     "outputPlaceholder": "Hier erscheint Binärcode...",
-    "descTitle": "Text-zu-Binär-Konverter",
+    "descTitle": "Kodieren Sie Textzeichen als Binärwerte",
     "descParas": [
-      "Dieses Tool konvertiert ASCII-Text in eine binäre (Basis 2) Byte-Darstellung. Jedes Zeichen ist als 8-Bit-Binärzahl kodiert.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>Text zu Binär wandelt jedes Eingabezeichen in die binäre Zeichencode-Notation um.</strong> Verwenden Sie es für kleine Beispiele, Lehrmaterialien, Debugging-Notizen und um zu zeigen, wie Text numerischen Codes zugeordnet wird.",
+      "Für einfaches ASCII besteht jede Ausgabegruppe aus acht Bits. Nicht-ASCII-Zeichen erzeugen möglicherweise längere JavaScript-Codeeinheitswerte anstelle von UTF-8-Bytes. Verwenden Sie daher einen UTF-8-Encoder, wenn exakt codierte Bytes erforderlich sind."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben Sie Text in den Eingabeeditor ein oder fügen Sie ihn ein.",
-      "Wählen Sie ein binäres Trennzeichen (Kein oder Leerzeichen).",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um den Text in eine Binärdatei zu kodieren.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben oder fügen Sie den Text ein, den Sie kodieren möchten.",
+      "Wählen Sie, ob Binärgruppen durch Leerzeichen getrennt oder miteinander verbunden werden sollen.",
+      "Klicken Sie auf <strong>Konvertieren</strong>, um die Binärausgabe zu generieren.",
+      "Kopieren oder laden Sie das Ergebnis herunter, nachdem Sie bestätigt haben, dass die Gruppierung Ihrem Zielformat entspricht."
     ],
-    "whatIs": "Was ist Text to Binary?",
+    "whatIs": "Was ist die Text-zu-Binär-Konvertierung?",
     "whatIsParas": [
-      "Die Text-zu-Binär-Konvertierung ordnet jedes Zeichen seiner 8-Bit-Binärdarstellung zu."
+      "<strong>Text-zu-Binär-Konvertierung</strong> schreibt Zeichencodes mit Basis-2-Ziffern neu. Der ASCII-Buchstabe <code>H</code> hat den Dezimalcode 72, was im 8-Bit-Binärformat <code>01001000</code> ist."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Unterstützt jeden ASCII-Text. Jedes Zeichen wird in seinen 8-Bit-Binärcode umgewandelt.",
+    "inputNotesPara": "Überprüfen Sie versteckte Leerzeichen, Zeilenumbrüche und Nicht-ASCII-Zeichen, bevor Sie die Ausgabe in Tests oder Dokumentation verwenden. Byteorientierte Protokolle erfordern möglicherweise eine bestimmte Codierung wie UTF-8.",
     "example": "Beispiel",
-    "examplePara": "Text in Binär umwandeln:",
+    "examplePara": "Das Wort <code>Hello</code> wird zu fünf 8-Bit-ASCII-Gruppen:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "es": {
     "title": "Convertidor de texto a binario - Coding.Tools",
-    "description": "Convierta texto a representación de código binario directamente en su navegador.",
+    "description": "Convierta texto en notación de código de caracteres binarios con espaciado opcional.",
     "toolTitle": "Texto a Binario",
-    "toolDescription": "Convierta texto ASCII en secuencias de bytes binarios.",
+    "toolDescription": "Codifique caracteres de texto como valores binarios para inspección, ejemplos y enseñanza.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Escriba o pegue texto aquí...",
     "outputPlaceholder": "El código binario aparecerá aquí...",
-    "descTitle": "Convertidor de texto a binario",
+    "descTitle": "Codificar caracteres de texto como valores binarios",
     "descParas": [
-      "Esta herramienta convierte texto ASCII en representación de bytes binarios (base 2). Cada carácter está codificado como un número binario de 8 bits.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Texto a Binario convierte cada carácter de entrada en notación de código de caracteres binarios.</strong> Úselo para pequeños ejemplos, materiales didácticos, notas de depuración y para mostrar cómo el texto se asigna a códigos numéricos.",
+      "Para ASCII simple, cada grupo de salida tiene ocho bits. Los caracteres que no son ASCII pueden producir valores de unidad de código JavaScript más largos en lugar de bytes UTF-8, por lo tanto, utilice un codificador UTF-8 cuando se requieran bytes codificados exactos."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue texto en el editor de entrada.",
-      "Elija un delimitador binario (Ninguno o Espacio).",
-      "Haga clic en <strong>Convertir</strong> para codificar el texto a binario.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Escriba o pegue el texto que desea codificar.",
+      "Elija si los grupos binarios deben estar separados por espacios o unidos.",
+      "Haga clic en <strong>Convertir</strong> para generar la salida binaria.",
+      "Copie o descargue el resultado después de confirmar que la agrupación coincide con su formato de destino."
     ],
-    "whatIs": "¿Qué es Texto a Binario?",
+    "whatIs": "¿Qué es la conversión de texto a binario?",
     "whatIsParas": [
-      "La conversión de texto a binario asigna cada carácter a su representación binaria de 8 bits."
+      "<strong>Conversión de texto a binario</strong> reescribe códigos de caracteres utilizando dígitos de base 2. La letra ASCII <code>H</code> tiene el código decimal 72, que es <code>01001000</code> en binario de 8 bits."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Admite cualquier texto ASCII. Cada carácter se convierte a su código binario de 8 bits.",
+    "inputNotesPara": "Revise los espacios en blanco ocultos, los saltos de línea y los caracteres que no sean ASCII antes de utilizar el resultado en pruebas o documentación. Los protocolos orientados a bytes pueden requerir una codificación específica como UTF-8.",
     "example": "Ejemplo",
-    "examplePara": "Convirtiendo texto a binario:",
+    "examplePara": "La palabra <code>Hello</code> se convierte en cinco grupos ASCII de 8 bits:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   },
   "pt": {
-    "title": "Conversor de texto para binário — Coding.Tools",
-    "description": "Converta texto em representação de código binário diretamente em seu navegador.",
+    "title": "Conversor de texto para binário - Coding.Tools",
+    "description": "Converta texto em notação de código de caracteres binários com espaçamento opcional.",
     "toolTitle": "Texto para binário",
-    "toolDescription": "Converta texto ASCII em sequências de bytes binários.",
+    "toolDescription": "Codifique caracteres de texto como valores binários para inspeção, exemplos e ensino.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Digite ou cole o texto aqui...",
     "outputPlaceholder": "O código binário aparecerá aqui...",
-    "descTitle": "Conversor de texto para binário",
+    "descTitle": "Codifique caracteres de texto como valores binários",
     "descParas": [
-      "Esta ferramenta converte texto ASCII em representação de bytes binários (base 2). Cada caractere é codificado como um número binário de 8 bits.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Texto para binário converte cada caractere de entrada em notação de código de caractere binário.</strong> Use-o para pequenos exemplos, materiais de ensino, notas de depuração e mostrando como o texto é mapeado para códigos numéricos.",
+      "Para ASCII simples, cada grupo de saída tem oito bits. Caracteres não ASCII podem produzir valores de unidade de código JavaScript mais longos em vez de bytes UTF-8, portanto, use um codificador UTF-8 quando bytes codificados exatos forem necessários."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole o texto no editor de entrada.",
-      "Escolha um delimitador binário (Nenhum ou Espaço).",
-      "Clique em <strong>Converter</strong> para codificar o texto em binário.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Digite ou cole o texto que deseja codificar.",
+      "Escolha se os grupos binários devem ser separados por espaços ou unidos.",
+      "Clique em <strong>Converter</strong> para gerar a saída binária.",
+      "Copie ou baixe o resultado após confirmar que o agrupamento corresponde ao formato de destino."
     ],
-    "whatIs": "O que é texto para binário?",
+    "whatIs": "O que é conversão de texto em binário?",
     "whatIsParas": [
-      "A conversão de texto em binário mapeia cada caractere para sua representação binária de 8 bits."
+      "<strong>Conversão de texto para binário</strong> reescreve códigos de caracteres usando dígitos de base 2. A letra ASCII <code>H</code> possui o código decimal 72, que é <code>01001000</code> em binário de 8 bits."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Suporta qualquer texto ASCII. Cada caractere é convertido em seu código binário de 8 bits.",
+    "inputNotesPara": "Revise espaços em branco ocultos, quebras de linha e caracteres não ASCII antes de usar a saída em testes ou documentação. Os protocolos orientados a bytes podem exigir uma codificação específica, como UTF-8.",
     "example": "Exemplo",
-    "examplePara": "Convertendo texto em binário:",
+    "examplePara": "A palavra <code>Hello</code> torna-se cinco grupos ASCII de 8 bits:",
     "exampleCode": "--- Text Input ---\nHello\n\n--- Binary Output ---\n01001000 01100101 01101100 01101100 01101111"
   }
 }

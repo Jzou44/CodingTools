@@ -1,272 +1,272 @@
 {
   "en": {
-    "title": "RGBA to Hex Converter — Coding.Tools",
-    "description": "Convert RGBA color values to hex color codes with opacity.",
+    "title": "RGBA to Hex Converter - Coding.Tools",
+    "description": "Convert RGBA channel values to CSS hex color notation with opacity shown separately.",
     "toolTitle": "RGBA to Hex",
-    "toolDescription": "Convert RGBA colors to hex codes with opacity display.",
+    "toolDescription": "Turn red, green, blue, and opacity values into a hex color plus opacity label.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter RGBA color (e.g. rgba(255,87,51,0.5))...",
     "outputPlaceholder": "Hex color will appear here...",
-    "descTitle": "RGBA to Hex Converter",
+    "descTitle": "Convert RGBA channels to hex plus opacity",
     "descParas": [
-      "This tool converts RGBA color values to hexadecimal color codes, extracting the opacity as a separate value.",
-      "The conversion runs locally in your browser."
+      "<strong>RGBA to Hex converts red, green, and blue channel values into a CSS <code>#RRGGBB</code> color and keeps opacity visible as a percent.</strong> Use it when moving transparent colors into token files, style guides, or systems that store alpha separately.",
+      "RGB channels must be integers from <code>0</code> to <code>255</code>. The alpha field uses <code>0-100</code> percent in this tool, so <code>50</code> means 50% opacity, equivalent to alpha <code>0.5</code> in CSS <code>rgba()</code> notation."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste an RGBA color value into the input field.",
-      "The hex code and opacity update automatically.",
-      "Click <strong>Pick a Random Color</strong> for a random color.",
-      "Use <strong>Copy</strong> to copy the hex value."
+      "Enter red, green, and blue values from 0 to 255.",
+      "Enter alpha as an opacity percentage from 0 to 100.",
+      "Review the hex color, opacity badge, and checkerboard preview.",
+      "Copy the output, which includes the hex value and opacity note."
     ],
-    "whatIs": "What is RGBA to Hex?",
+    "whatIs": "What is RGBA to hex conversion?",
     "whatIsParas": [
-      "Converting RGBA to hex extracts the RGB portion as a hex code and displays the alpha channel as a percentage."
+      "<strong>RGBA to hex conversion</strong> transforms the RGB part of an RGBA color into <code>#RRGGBB</code>. Opacity is a separate alpha value, and this tool reports it as a percentage instead of folding it into an 8-digit hex color."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter RGBA values as rgba(R,G,B,A). R/G/B are 0-255, A is 0-1.",
+    "inputNotesPara": "Use whole-number RGB channels and an opacity percent. If your target expects 8-digit CSS hex such as <code>#RRGGBBAA</code>, convert the alpha percent to a separate two-digit hex byte before using it.",
     "example": "Example",
-    "examplePara": "Converting RGBA to hex:",
+    "examplePara": "RGB 255, 87, 51 with 50% opacity becomes the hex color <code>#FF5733</code> plus an opacity note:",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "cn": {
-    "title": "RGBA 转十六进制转换器 — Coding.Tools",
-    "description": "将 RGBA 颜色值转换为带透明度的十六进制颜色代码。",
+    "title": "RGBA 到十六进制转换器 - Coding.Tools",
+    "description": "将 RGBA 通道值转换为 CSS 十六进制颜色表示法，并单独显示不透明度。",
     "toolTitle": "RGBA转十六进制",
-    "toolDescription": "将 RGBA 颜色转换为十六进制代码，并显示透明度。",
+    "toolDescription": "将红色、绿色、蓝色和不透明度值转换为十六进制颜色加不透明度标签。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入 RGBA 颜色（如 rgba(255,87,51,0.5)）...",
     "outputPlaceholder": "十六进制颜色将显示在这里...",
-    "descTitle": "RGBA 转十六进制转换器",
+    "descTitle": "将 RGBA 通道转换为十六进制加不透明度",
     "descParas": [
-      "此工具将 RGBA 颜色值转换为十六进制颜色代码，并将透明度作为单独的值提取出来。",
-      "转换在浏览器本地运行。"
+      "<strong>RGBA 到十六进制将红色、绿色和蓝色通道值转换为 CSS <code>#RRGGBB</code> 颜色，并保持不透明度以百分比形式可见。</strong> 将透明颜色移动到令牌文件、样式指南或单独存储 Alpha 的系统中时使用它。",
+      "RGB 通道必须是从 <code>0</code> 到 <code>255</code> 的整数。在此工具中，alpha 字段使用 <code>0-100</code> 百分比，因此 <code>50</code> 表示 50% 不透明度，相当于 CSS <code>rgba()</code> 表示法中的 alpha <code>0.5</code>。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入字段中输入或粘贴 RGBA 颜色值。",
-      "十六进制代码和透明度会自动更新。",
-      "点击<strong>随机颜色</strong>获取随机颜色。",
-      "使用<strong>复制</strong>复制十六进制值。"
+      "输入 0 到 255 之间的红色、绿色和蓝色值。",
+      "输入 alpha 作为不透明度百分比，范围从 0 到 100。",
+      "查看十六进制颜色、不透明度徽章和棋盘预览。",
+      "复制输出，其中包括十六进制值和不透明度注释。"
     ],
-    "whatIs": "什么是 RGBA 转十六进制？",
+    "whatIs": "RGBA 到十六进制的转换是什么？",
     "whatIsParas": [
-      "RGBA 转十六进制会将 RGB 部分提取为十六进制代码，并将 Alpha 通道显示为百分比。"
+      "<strong>RGBA 到十六进制转换</strong> 将 RGBA 颜色的 RGB 部分转换为 <code>#RRGGBB</code>。不透明度是一个单独的 Alpha 值，该工具将其报告为百分比，而不是将其折叠为 8 位十六进制颜色。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "以 rgba(R,G,B,A) 格式输入 RGBA 值。R/G/B 范围为 0-255，A 范围为 0-1。",
+    "inputNotesPara": "使用整数 RGB 通道和不透明度百分比。如果您的目标需要 8 位 CSS 十六进制（例如 <code>#RRGGBBAA</code>），请在使用之前将 alpha 百分比转换为单独的两位数十六进制字节。",
     "example": "示例",
-    "examplePara": "将 RGBA 转换为十六进制：",
+    "examplePara": "不透明度为 50% 的 RGB 255、87、51 变为十六进制颜色 <code>#FF5733</code> 加上不透明度注释：",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "tw": {
-    "title": "RGBA 轉十六進位色彩 — Coding.Tools",
-    "description": "將 RGBA 色彩值轉換為十六進位色彩代碼並顯示透明度。",
+    "title": "RGBA 到十六進位轉換器 - Coding.Tools",
+    "description": "將 RGBA 通道值轉換為 CSS 十六進位顏色表示法，並單獨顯示不透明度。",
     "toolTitle": "RGBA轉十六進位",
-    "toolDescription": "將 RGBA 色彩轉換為十六進位代碼並顯示透明度。",
+    "toolDescription": "將紅色、綠色、藍色和不透明度值轉換為十六進位顏色加不透明標籤。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入 RGBA 色彩（例如 rgba(255,87,51,0.5)）...",
     "outputPlaceholder": "十六進位色彩將顯示在這裡...",
-    "descTitle": "RGBA 轉十六進位轉換器",
+    "descTitle": "將 RGBA 頻道轉換為十六進位加不透明度",
     "descParas": [
-      "此工具將 RGBA 色彩值轉換為十六進位色彩代碼，並將透明度分離顯示。",
-      "轉換過程在您的瀏覽器中本地執行。"
+      "<strong>RGBA 到十六進位將紅色、綠色和藍色通道值轉換為 CSS <code>#RRGGBB</code> 顏色，並保持不透明度以百分比形式可見。</strong> 將透明顏色移到令牌檔案、樣式指南或單獨儲存 Alpha 的系統時使用它。",
+      "RGB 頻道必須是從 <code>0</code> 到 <code>255</code> 的整數。在此工具中，alpha 欄位使用 <code>0-100</code> 百分比，因此 <code>50</code> 表示 50% 不透明度，相當於 CSS <code>rgba()</code> 表示法中的 alpha <code>0.5</code>。"
     ],
     "howToUse": "使用方式",
     "steps": [
-      "在輸入欄位中輸入或貼上 RGBA 色彩值。",
-      "十六進位代碼和透明度會自動更新。",
-      "點擊<strong>隨機選擇色彩</strong>來選擇隨機色彩。",
-      "使用<strong>複製</strong>來複製十六進位值。"
+      "輸入 0 到 255 之間的紅色、綠色和藍色值。",
+      "輸入 alpha 作為不透明度百分比，範圍從 0 到 100。",
+      "查看十六進制顏色、不透明度徽章和棋盤預覽。",
+      "複製輸出，其中包括十六進制值和不透明度註釋。"
     ],
-    "whatIs": "什麼是 RGBA 轉十六進位？",
+    "whatIs": "RGBA 到十六進位的轉換是什麼？",
     "whatIsParas": [
-      "將 RGBA 轉換為十六進位時，會將 RGB 部分提取為十六進位代碼，並將 Alpha 通道顯示為百分比。"
+      "<strong>RGBA 到十六進位轉換</strong> 將 RGBA 顏色的 RGB 部分轉換為 <code>#RRGGBB</code>。不透明度是一個單獨的 Alpha 值，該工具將其報告為百分比，而不是將其折疊為 8 位元十六進位顏色。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "以 rgba(R,G,B,A) 格式輸入 RGBA 值。R/G/B 範圍為 0-255，A 範圍為 0-1。",
+    "inputNotesPara": "使用整數 RGB 通道和不透明度百分比。如果您的目標需要 8 位元 CSS 十六進位（例如 <code>#RRGGBBAA</code>），請在使用之前將 alpha 百分比轉換為單獨的兩位數十六進位位元組。",
     "example": "範例",
-    "examplePara": "將 RGBA 轉換為十六進位：",
+    "examplePara": "不透明度為 50% 的 RGB 255、87、51 變成十六進位顏色 <code>#FF5733</code> 加上不透明度註解：",
     "exampleCode": "--- RGBA 輸入 ---\nrgba(255, 87, 51, 0.5)\n\n--- 十六進位輸出 ---\n#FF5733\n透明度: 50%"
   },
   "jp": {
-    "title": "RGBA から 16 進数へのコンバーター —coding.tools",
-    "description": "RGBA カラー値を不透明度のある 16 進カラー コードに変換します。",
+    "title": "RGBA から 16 進数へのコンバーター - Coding.Tools",
+    "description": "RGBA チャネル値を CSS 16 進カラー表記に変換し、不透明度を別途表示します。",
     "toolTitle": "RGBAから16進数",
-    "toolDescription": "不透明表示を使用して RGBA カラーを 16 進コードに変換します。",
+    "toolDescription": "赤、緑、青、不透明度の値を 16 進数のカラーと不透明度のラベルに変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "RGBA カラーを入力してください (例: rgba(255,87,51,0.5))...",
     "outputPlaceholder": "ここに16進カラーが表示されます...",
-    "descTitle": "RGBA から 16 進数へのコンバーター",
+    "descTitle": "RGBA チャネルを 16 進数と不透明度に変換します",
     "descParas": [
-      "このツールは、RGBA カラー値を 16 進数のカラー コードに変換し、不透明度を別の値として抽出します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>RGBA を 16 進数に変換すると、赤、緑、青のチャンネル値が CSS <code>#RRGGBB</code> カラーに変換され、不透明度がパーセントで表示されます。</strong> 透明カラーをトークン ファイル、スタイル ガイド、またはアルファを個別に保存するシステムに移動するときに使用します。",
+      "RGB チャネルは <code>0</code> から <code>255</code> までの整数でなければなりません。このツールではアルファ フィールドは <code>0-100</code> パーセントを使用するため、<code>50</code> は 50% の不透明度を意味し、CSS <code>rgba()</code> 表記のアルファ <code>0.5</code> に相当します。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "RGBA カラー値を入力フィールドに入力または貼り付けます。",
-      "16 進コードと不透明度は自動的に更新されます。",
-      "ランダムな色を選択するには、[<strong>ランダムな色を選択</strong>] をクリックします。",
-      "<strong>コピー</strong>を使用して 16 進数値をコピーします。"
+      "赤、緑、青の値を 0 ～ 255 の範囲で入力します。",
+      "アルファを 0 ～ 100 の不透明度のパーセンテージとして入力します。",
+      "16 進数の色、不透明度バッジ、およびチェッカーボードのプレビューを確認します。",
+      "16 進値と不透明度のメモを含む出力をコピーします。"
     ],
     "whatIs": "RGBA から 16 進数への変換とは何ですか?",
     "whatIsParas": [
-      "RGBA を 16 進数に変換すると、RGB 部分が 16 進コードとして抽出され、アルファ チャネルがパーセンテージで表示されます。"
+      "<strong>RGBA から 16 進数への変換</strong> は、RGBA カラーの RGB 部分を <code>#RRGGBB</code> に変換します。不透明度は個別のアルファ値であり、このツールは不透明度を 8 桁の 16 進数の色に変換するのではなく、パーセントとして報告します。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "RGBA 値を rgba(R,G,B,A) として入力します。 R/G/Bは0～255、Aは0～1です。",
+    "inputNotesPara": "整数の RGB チャネルと不透明度パーセントを使用します。ターゲットが <code>#RRGGBBAA</code> などの 8 桁の CSS 16 進数を予期している場合は、アルファ パーセントを別の 2 桁の 16 進数バイトに変換してから使用してください。",
     "example": "例",
-    "examplePara": "RGBA を 16 進数に変換する:",
+    "examplePara": "不透明度 50% の RGB 255、87、51 は、16 進カラー <code>#FF5733</code> に不透明度のメモを加えたものになります。",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "kr": {
-    "title": "RGBA-16진수 변환기 — Coding.Tools",
-    "description": "RGBA 색상 값을 불투명도가 있는 16진수 색상 코드로 변환합니다.",
+    "title": "RGBA - 16진수 변환기 - Coding.Tools",
+    "description": "불투명도가 별도로 표시되는 RGBA 채널 ​​값을 CSS 16진수 색상 표기법으로 변환합니다.",
     "toolTitle": "RGBA에서 16진수",
-    "toolDescription": "불투명도 표시를 통해 RGBA 색상을 16진수 코드로 변환합니다.",
+    "toolDescription": "빨간색, 녹색, 파란색 및 불투명도 값을 16진수 색상과 불투명도 레이블로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "RGBA 색상 입력(예: rgba(255,87,51,0.5))...",
     "outputPlaceholder": "여기에 16진수 색상이 표시됩니다...",
-    "descTitle": "RGBA-16진수 변환기",
+    "descTitle": "RGBA 채널을 16진수와 불투명도로 변환",
     "descParas": [
-      "이 도구는 RGBA 색상 값을 16진수 색상 코드로 변환하여 불투명도를 별도의 값으로 추출합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>RGBA에서 16진수는 빨간색, 녹색 및 파란색 채널 값을 CSS <code>#RRGGBB</code> 색상으로 변환하고 불투명도를 백분율로 표시합니다.</strong> 투명한 색상을 토큰 파일, 스타일 가이드 또는 알파를 별도로 저장하는 시스템으로 이동할 때 사용합니다.",
+      "RGB 채널은 <code>0</code>부터 <code>255</code>까지의 정수여야 합니다. 이 도구에서 알파 필드는 <code>0-100</code> 퍼센트를 사용하므로 <code>50</code>는 50% 불투명도를 의미하며 이는 CSS <code>rgba()</code> 표기법의 알파 <code>0.5</code>와 동일합니다."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 필드에 RGBA 색상 값을 입력하거나 붙여넣습니다.",
-      "16진수 코드와 불투명도가 자동으로 업데이트됩니다.",
-      "임의의 색상을 선택하려면 <strong>임의의 색상 선택</strong>을 클릭하세요.",
-      "16진수 값을 복사하려면 <strong>복사</strong>를 사용하세요."
+      "0~255 사이의 빨간색, 녹색, 파란색 값을 입력합니다.",
+      "0에서 100 사이의 불투명도 비율로 알파를 입력합니다.",
+      "16진수 색상, 불투명도 배지, 체커보드 미리보기를 검토하세요.",
+      "16진수 값과 불투명도 메모가 포함된 출력을 복사합니다."
     ],
-    "whatIs": "RGBA를 16진수로 변환하는 것은 무엇입니까?",
+    "whatIs": "RGBA를 16진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "RGBA를 16진수로 변환하면 RGB 부분이 16진수 코드로 추출되고 알파 채널이 백분율로 표시됩니다."
+      "<strong>RGBA를 16진수로 변환</strong>는 RGBA 색상의 RGB 부분을 <code>#RRGGBB</code>로 변환합니다. 불투명도는 별도의 알파 값이며 이 도구는 이를 8자리 16진수 색상으로 접는 대신 백분율로 보고합니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "RGBA 값을 rgba(R,G,B,A)로 입력합니다. R/G/B는 0-255이고 A는 0-1입니다.",
+    "inputNotesPara": "정수 RGB 채널과 불투명도 백분율을 사용합니다. 대상이 <code>#RRGGBBAA</code>와 같은 8자리 CSS 16진수를 예상하는 경우 이를 사용하기 전에 알파 퍼센트를 별도의 2자리 16진수 바이트로 변환하세요.",
     "example": "예",
-    "examplePara": "RGBA를 16진수로 변환:",
+    "examplePara": "불투명도가 50%인 RGB 255, 87, 51은 16진수 색상 <code>#FF5733</code>에 불투명도 메모가 추가됩니다.",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "fr": {
-    "title": "Convertisseur RGBA en Hex — Coding.Tools",
-    "description": "Convertissez les valeurs de couleur RGBA en codes de couleur hexadécimaux avec opacité.",
+    "title": "Convertisseur RGBA en hexadécimal - Coding.Tools",
+    "description": "Convertissez les valeurs de canal RGBA en notation de couleur hexadécimale CSS avec l'opacité affichée séparément.",
     "toolTitle": "RGBA en Hexadécimal",
-    "toolDescription": "Convertissez les couleurs RGBA en codes hexadécimaux avec affichage de l'opacité.",
+    "toolDescription": "Transformez les valeurs de rouge, de vert, de bleu et d'opacité en une couleur hexadécimale plus une étiquette d'opacité.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez la couleur RGBA (par exemple rgba(255,87,51,0.5))...",
     "outputPlaceholder": "La couleur hexadécimale apparaîtra ici...",
-    "descTitle": "Convertisseur RGBA en Hex",
+    "descTitle": "Convertir les canaux RGBA en hexadécimal plus opacité",
     "descParas": [
-      "Cet outil convertit les valeurs de couleur RGBA en codes de couleur hexadécimaux, en extrayant l'opacité en tant que valeur distincte.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>RGBA en Hexadécimal convertit les valeurs des canaux rouge, vert et bleu en une couleur CSS <code>#RRGGBB</code> et maintient l'opacité visible en pourcentage.</strong> Utilisez-le lors du déplacement de couleurs transparentes dans des fichiers de jetons, des guides de style ou des systèmes qui stockent l'alpha séparément.",
+      "Les canaux RGB doivent être des nombres entiers compris entre <code>0</code> et <code>255</code>. Le champ alpha utilise le pourcentage <code>0-100</code> dans cet outil, donc <code>50</code> signifie une opacité de 50 %, équivalent à alpha <code>0.5</code> en notation CSS <code>rgba()</code>."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez une valeur de couleur RGBA dans le champ de saisie.",
-      "Le code hexadécimal et l'opacité sont mis à jour automatiquement.",
-      "Cliquez sur <strong>Choisir une couleur aléatoire</strong> pour obtenir une couleur aléatoire.",
-      "Utilisez <strong>Copier</strong> pour copier la valeur hexadécimale."
+      "Entrez les valeurs rouge, vert et bleu de 0 à 255.",
+      "Saisissez alpha comme pourcentage d'opacité compris entre 0 et 100.",
+      "Vérifiez la couleur hexadécimale, le badge d’opacité et l’aperçu du damier.",
+      "Copiez le résultat, qui inclut la valeur hexadécimale et la note d'opacité."
     ],
-    "whatIs": "Qu’est-ce que RGBA en Hex ?",
+    "whatIs": "Qu'est-ce que la conversion RGBA en hexadécimal ?",
     "whatIsParas": [
-      "La conversion RGBA en hexadécimal extrait la partie RVB sous forme de code hexadécimal et affiche le canal alpha sous forme de pourcentage."
+      "Conversion de <strong>RGBA en hexadécimal</strong> transforme la partie RGB d'une couleur RGBA en <code>#RRGGBB</code>. L'opacité est une valeur alpha distincte, et cet outil la rapporte sous forme de pourcentage au lieu de la plier dans une couleur hexadécimale à 8 chiffres."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez les valeurs RGBA sous la forme rgba(R,G,B,A). R/G/B sont 0-255, A est 0-1.",
+    "inputNotesPara": "Utilisez des canaux RGB entiers et un pourcentage d'opacité. Si votre cible attend un CSS hexadécimal à 8 chiffres tel que <code>#RRGGBBAA</code>, convertissez le pourcentage alpha en un octet hexadécimal distinct à deux chiffres avant de l'utiliser.",
     "example": "Exemple",
-    "examplePara": "Conversion de RGBA en hexadécimal :",
+    "examplePara": "RGB 255, 87, 51 avec une opacité de 50 % devient la couleur hexadécimale <code>#FF5733</code> plus une note d'opacité :",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "de": {
-    "title": "RGBA-zu-Hex-Konverter – Coding.Tools",
-    "description": "Konvertieren Sie RGBA-Farbwerte mit Deckkraft in Hex-Farbcodes.",
+    "title": "RGBA-zu-Hex-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie RGBA-Kanalwerte in die hexadezimale Farbnotation CSS mit separat angezeigter Deckkraft.",
     "toolTitle": "RGBA zu Hexadezimal",
-    "toolDescription": "Konvertieren Sie RGBA-Farben in Hex-Codes mit Opazitätsanzeige.",
+    "toolDescription": "Wandeln Sie die Werte für Rot, Grün, Blau und die Deckkraft in eine Beschriftung mit Hexadezimalfarbe und Deckkraft um.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie die RGBA-Farbe ein (z. B. rgba(255,87,51,0.5)) ...",
     "outputPlaceholder": "Hier wird die Hex-Farbe angezeigt ...",
-    "descTitle": "RGBA-zu-Hex-Konverter",
+    "descTitle": "Konvertieren Sie RGBA-Kanäle in Hex plus Deckkraft",
     "descParas": [
-      "Dieses Tool konvertiert RGBA-Farbwerte in hexadezimale Farbcodes und extrahiert die Deckkraft als separaten Wert.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>RGBA zu Hexadezimal konvertiert rote, grüne und blaue Kanalwerte in eine CSS <code>#RRGGBB</code> Farbe und hält die Deckkraft in Prozent sichtbar.</strong> Verwenden Sie es, wenn Sie transparente Farben in Tokendateien, Styleguides oder Systeme verschieben, die Alpha separat speichern.",
+      "RGB-Kanäle müssen ganze Zahlen von <code>0</code> bis <code>255</code> sein. Das Alpha-Feld verwendet in diesem Tool den Prozentsatz <code>0-100</code>, sodass <code>50</code> eine Deckkraft von 50 % bedeutet, was Alpha <code>0.5</code> in der Notation CSS <code>rgba()</code> entspricht."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben oder fügen Sie einen RGBA-Farbwert in das Eingabefeld ein.",
-      "Der Hex-Code und die Deckkraft werden automatisch aktualisiert.",
-      "Klicken Sie für eine zufällige Farbe auf <strong>Zufällige Farbe auswählen</strong>.",
-      "Verwenden Sie <strong>Kopieren</strong>, um den Hexadezimalwert zu kopieren."
+      "Geben Sie Rot-, Grün- und Blauwerte von 0 bis 255 ein.",
+      "Geben Sie Alpha als Deckkraftprozentsatz zwischen 0 und 100 ein.",
+      "Sehen Sie sich die Vorschau der Hexadezimalfarbe, der Deckkraft und des Schachbrettmusters an.",
+      "Kopieren Sie die Ausgabe, die den Hexadezimalwert und den Hinweis zur Deckkraft enthält."
     ],
-    "whatIs": "Was ist RGBA zu Hex?",
+    "whatIs": "Was ist die Konvertierung von RGBA in Hex?",
     "whatIsParas": [
-      "Durch die Konvertierung von RGBA in Hex wird der RGB-Anteil als Hex-Code extrahiert und der Alphakanal als Prozentsatz angezeigt."
+      "<strong>RGBA in Hex-Konvertierung</strong> wandelt den RGB-Teil einer RGBA-Farbe in <code>#RRGGBB</code> um. Die Deckkraft ist ein separater Alphawert, und dieses Tool gibt ihn als Prozentsatz an, anstatt ihn in eine 8-stellige Hexadezimalfarbe umzuwandeln."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie RGBA-Werte als rgba(R,G,B,A) ein. R/G/B sind 0-255, A ist 0-1.",
+    "inputNotesPara": "Verwenden Sie ganzzahlige RGB-Kanäle und einen Deckkraftprozentsatz. Wenn Ihr Ziel ein achtstelliges Hexadezimalzeichen CSS wie <code>#RRGGBBAA</code> erwartet, wandeln Sie das Alpha-Prozent in ein separates zweistelliges Hexadezimalbyte um, bevor Sie es verwenden.",
     "example": "Beispiel",
-    "examplePara": "RGBA in Hex umwandeln:",
+    "examplePara": "RGB 255, 87, 51 mit 50 % Deckkraft wird zur Hex-Farbe <code>#FF5733</code> plus einem Hinweis zur Deckkraft:",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "es": {
-    "title": "Convertidor RGBA a Hexadecimal — Coding.Tools",
-    "description": "Convierta valores de color RGBA a códigos de color hexadecimales con opacidad.",
+    "title": "Convertidor RGBA a hexadecimal - Coding.Tools",
+    "description": "Convierta los valores del canal RGBA a la notación de color hexadecimal CSS con la opacidad que se muestra por separado.",
     "toolTitle": "RGBA a Hexadecimal",
-    "toolDescription": "Convierta colores RGBA a códigos hexadecimales con visualización de opacidad.",
+    "toolDescription": "Convierta los valores de rojo, verde, azul y opacidad en una etiqueta de color hexadecimal más opacidad.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Introduzca el color RGBA (por ejemplo, rgba(255,87,51,0.5))...",
     "outputPlaceholder": "El color hexadecimal aparecerá aquí...",
-    "descTitle": "Convertidor RGBA a hexadecimal",
+    "descTitle": "Convierta canales RGBA a hexadecimal más opacidad",
     "descParas": [
-      "Esta herramienta convierte valores de color RGBA a códigos de color hexadecimales, extrayendo la opacidad como un valor separado.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>RGBA a Hex convierte los valores de los canales rojo, verde y azul en un color CSS <code>#RRGGBB</code> y mantiene la opacidad visible como porcentaje.</strong> Úselo al mover colores transparentes a archivos token, guías de estilo o sistemas que almacenan alfa por separado.",
+      "Los canales RGB deben ser números enteros desde <code>0</code> a <code>255</code>. El campo alfa utiliza el porcentaje <code>0-100</code> en esta herramienta, por lo que <code>50</code> significa 50% de opacidad, equivalente a alfa <code>0.5</code> en notación CSS <code>rgba()</code>."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue un valor de color RGBA en el campo de entrada.",
-      "El código hexadecimal y la opacidad se actualizan automáticamente.",
-      "Haga clic en <strong>Elegir un color aleatorio</strong> para obtener un color aleatorio.",
-      "Utilice <strong>Copiar</strong> para copiar el valor hexadecimal."
+      "Introduzca valores de rojo, verde y azul de 0 a 255.",
+      "Ingrese alfa como un porcentaje de opacidad de 0 a 100.",
+      "Revise el color hexadecimal, la insignia de opacidad y la vista previa del tablero de ajedrez.",
+      "Copie el resultado, que incluye el valor hexadecimal y la nota de opacidad."
     ],
-    "whatIs": "¿Qué es RGBA a hexadecimal?",
+    "whatIs": "¿Qué es la conversión de RGBA a hexadecimal?",
     "whatIsParas": [
-      "La conversión de RGBA a hexadecimal extrae la porción RGB como un código hexadecimal y muestra el canal alfa como un porcentaje."
+      "La conversión de <strong>RGBA a hexadecimal</strong> transforma la parte RGB de un color RGBA en <code>#RRGGBB</code>. La opacidad es un valor alfa independiente y esta herramienta lo informa como un porcentaje en lugar de doblarlo en un color hexadecimal de 8 dígitos."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Introduzca los valores RGBA como rgba(R,G,B,A). R/G/B son 0-255, A es 0-1.",
+    "inputNotesPara": "Utilice canales RGB de números enteros y un porcentaje de opacidad. Si su objetivo espera un CSS hexadecimal de 8 dígitos como <code>#RRGGBBAA</code>, convierta el porcentaje alfa en un byte hexadecimal de dos dígitos separado antes de usarlo.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de RGBA a hexadecimal:",
+    "examplePara": "RGB 255, 87, 51 con 50% de opacidad se convierte en el color hexadecimal <code>#FF5733</code> más una nota de opacidad:",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   },
   "pt": {
-    "title": "Conversor RGBA para Hex — Coding.Tools",
-    "description": "Converta valores de cores RGBA em códigos de cores hexadecimais com opacidade.",
+    "title": "Conversor RGBA para Hexadecimal - Coding.Tools",
+    "description": "Converta os valores do canal RGBA em notação de cor hexadecimal CSS com a opacidade mostrada separadamente.",
     "toolTitle": "RGBA para hexadecimal",
-    "toolDescription": "Converta cores RGBA em códigos hexadecimais com exibição de opacidade.",
+    "toolDescription": "Transforme os valores de vermelho, verde, azul e opacidade em uma cor hexadecimal mais um rótulo de opacidade.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira a cor RGBA (por exemplo, rgba(255,87,51,0.5))...",
     "outputPlaceholder": "A cor hexadecimal aparecerá aqui...",
-    "descTitle": "Conversor RGBA para Hexadecimal",
+    "descTitle": "Converter canais RGBA em hexadecimal mais opacidade",
     "descParas": [
-      "Esta ferramenta converte valores de cores RGBA em códigos de cores hexadecimais, extraindo a opacidade como um valor separado.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>RGBA para Hex converte valores de canal vermelho, verde e azul em uma cor CSS <code>#RRGGBB</code> e mantém a opacidade visível como uma porcentagem.</strong> Use-o ao mover cores transparentes em arquivos de token, guias de estilo ou sistemas que armazenam alfa separadamente.",
+      "Os canais RGB devem ser números inteiros de <code>0</code> a <code>255</code>. O campo alfa usa a porcentagem <code>0-100</code> nesta ferramenta, então <code>50</code> significa 50% de opacidade, equivalente a alfa <code>0.5</code> na notação CSS <code>rgba()</code>."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um valor de cor RGBA no campo de entrada.",
-      "O código hexadecimal e a opacidade são atualizados automaticamente.",
-      "Clique em <strong>Escolher uma cor aleatória</strong> para obter uma cor aleatória.",
-      "Use <strong>Copiar</strong> para copiar o valor hexadecimal."
+      "Insira valores de vermelho, verde e azul de 0 a 255.",
+      "Insira alfa como uma porcentagem de opacidade de 0 a 100.",
+      "Revise a cor hexadecimal, o emblema de opacidade e a visualização do tabuleiro de xadrez.",
+      "Copie a saída, que inclui o valor hexadecimal e a nota de opacidade."
     ],
-    "whatIs": "O que é RGBA para Hex?",
+    "whatIs": "O que é conversão de RGBA para hexadecimal?",
     "whatIsParas": [
-      "A conversão de RGBA em hexadecimal extrai a parte RGB como um código hexadecimal e exibe o canal alfa como uma porcentagem."
+      "Conversão de <strong>RGBA para hexadecimal</strong> transforma a parte RGB de uma cor RGBA em <code>#RRGGBB</code>. A opacidade é um valor alfa separado e esta ferramenta o reporta como uma porcentagem, em vez de dobrá-lo em uma cor hexadecimal de 8 dígitos."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira os valores RGBA como rgba(R,G,B,A). R/G/B são 0-255, A é 0-1.",
+    "inputNotesPara": "Use canais RGB de números inteiros e uma porcentagem de opacidade. Se o seu destino espera hexadecimal CSS de 8 dígitos, como <code>#RRGGBBAA</code>, converta a porcentagem alfa em um byte hexadecimal separado de dois dígitos antes de usá-lo.",
     "example": "Exemplo",
-    "examplePara": "Convertendo RGBA em hexadecimal:",
+    "examplePara": "RGB 255, 87, 51 com 50% de opacidade torna-se a cor hexadecimal <code>#FF5733</code> mais uma nota de opacidade:",
     "exampleCode": "--- RGBA Input ---\nrgba(255, 87, 51, 0.5)\n\n--- Hex Output ---\n#FF5733\nOpacity: 50%"
   }
 }

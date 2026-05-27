@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "Convert photos to pixel art online with browser-based ONNX processing. Free, private, and runs locally in your browser.",
+    "title": "Photo2Pixel - Local Photo to Pixel Art Converter",
+    "description": "Convert photos into pixel art in your browser with ONNX/WASM processing, adjustable pixel size, edge density, and three style modes.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "Turn photos into 8-bit pixel art with adjustable style, pixel size, and edge density.",
+    "toolDescription": "Turn photos into pixel art locally in your browser with adjustable style mode, pixel size, and edge density.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag an image here",
     "dropzoneHint": "PNG, JPEG, WebP · Max 10MB",
@@ -25,29 +25,29 @@
     "resultPlaceholder": "Result will appear here",
     "viewOriginal": "View original",
     "viewResult": "View pixel art",
-    "demoAlt": "Photo2Pixel demo showing a mountain photo converted into 8-bit pixel art",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "Photo2Pixel demo showing a landscape photo transformed into blocky pixel art",
+    "descTitle": "Convert photos into pixel art locally",
     "descParas": [
-      "Photo2Pixel converts photos into pixel art in the browser using the same ONNX model workflow as the reference project. Images stay local and are processed with WebAssembly.",
-      "Choose edge enhancement for crisp boundaries, isolated pixels for a grid-like look, or raw pixels for a simpler blocky conversion."
+      "<strong>Photo2Pixel turns PNG, JPEG, and WebP photos into pixel-art-style PNG output directly in your browser.</strong> The conversion uses an ONNX model through WebAssembly, so your image stays on the page instead of being uploaded to a server.",
+      "Use Enhance Edge for sharper outlines, Isolate Pixel for a visible grid effect, or Raw Pixel for a cleaner blocky conversion. Pixel size controls how chunky the result looks, while edge density changes how much outline detail is preserved."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Upload a PNG, JPEG, or WebP image.",
-      "Choose the style, pixel size, and edge density options.",
-      "Download the generated pixel art as a PNG."
+      "Upload a PNG, JPEG, or WebP photo; files up to 10MB are processed locally in the browser.",
+      "Pick Enhance Edge, Isolate Pixel, or Raw Pixel, then adjust pixel size and edge density until the preview matches the style you want.",
+      "Switch between the original and pixel-art preview, then download the generated PNG for avatars, thumbnails, mockups, or game-art references."
     ],
-    "whatIs": "Pixel art conversion",
+    "whatIs": "What is Photo2Pixel?",
     "whatIsParas": [
-      "The converter downsamples visual regions into blocky color areas and can enhance boundaries so the result reads like hand-tuned 8-bit art.",
-      "Processing runs locally in the browser; the image is not uploaded to a server."
+      "<strong>Photo2Pixel</strong> is a browser-based photo to pixel art converter for quick visual experiments, social images, UI mockups, and game-asset concepts. It reduces continuous photo detail into deliberate color blocks while preserving enough structure for the image to stay recognizable.",
+      "The output is a stylized conversion, not a hand-authored sprite sheet. For production art, inspect the edges, contrast, dimensions, and final PNG size before using it in an app, game, or published asset pack."
     ]
   },
   "cn": {
-    "title": "图片转体素风格化 — Coding.Tools",
-    "description": "在线将照片转换为像素艺术。基于浏览器 ONNX 处理，免费且本地运行。",
+    "title": "Photo2Pixel - 本地照片到像素艺术转换器",
+    "description": "通过 ONNX/WASM 处理、可调节像素大小、边缘密度和三种样式模式，将照片在浏览器中转换为像素艺术。",
     "toolTitle": "图片转体素风格化",
-    "toolDescription": "将照片转换为 8-bit 像素艺术，可调整风格、像素大小和边缘密度。",
+    "toolDescription": "通过可调整的样式模式、像素大小和边缘密度，在浏览器中将照片本地转换为像素艺术。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽图片到这里",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
@@ -69,29 +69,29 @@
     "resultPlaceholder": "结果将在此显示",
     "viewOriginal": "查看原图",
     "viewResult": "查看像素图",
-    "demoAlt": "Photo2Pixel 示例，展示山景照片转换成 8-bit 像素艺术",
-    "descTitle": "图片转体素风格化",
+    "demoAlt": "Photo2Pixel 演示，展示将风景照片转变成块状像素艺术",
+    "descTitle": "将照片本地转换为像素艺术",
     "descParas": [
-      "Photo2Pixel 使用参考项目相同的 ONNX 模型流程，在浏览器中将照片转换为像素艺术。图片保留在本地，并通过 WebAssembly 处理。",
-      "你可以选择边缘增强、隔离像素或原始像素模式，并调整像素块大小来获得不同风格。"
+      "<strong>Photo2Pixel 将 PNG、JPEG 和 WebP 照片直接在浏览器中转换为像素艺术风格的 PNG 输出。</strong> 转换通过 WebAssembly 使用 ONNX 模型，因此您的图像保留在页面上，而不是上传到服务器。",
+      "使用“增强边缘”获得更清晰的轮廓，使用“隔离像素”获得可见的网格效果，或使用“原始像素”获得更清晰的块状转换。像素大小控制结果看起来的粗细程度，而边缘密度则改变保留多少轮廓细节。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "上传 PNG、JPEG 或 WebP 图片。",
-      "选择风格、像素大小和边缘密度。",
-      "将生成的像素艺术下载为 PNG。"
+      "上传PNG、JPEG或WebP照片；最大 10MB 的文件在浏览器中本地处理。",
+      "选择“增强边缘”、“隔离像素”或“原始像素”，然后调整像素大小和边缘密度，直到预览符合您想要的样式。",
+      "在原始预览和像素艺术预览之间切换，然后下载生成的 PNG 以获取头像、缩略图、模型或游戏艺术参考。"
     ],
-    "whatIs": "像素艺术转换",
+    "whatIs": "Photo2Pixel是什么？",
     "whatIsParas": [
-      "转换器会将图像区域变成块状色彩，并可增强边界，让结果更接近 8-bit 像素艺术。",
-      "处理完全在浏览器本地运行，图片不会上传到服务器。"
+      "<strong>Photo2Pixel</strong> 是一个基于浏览器的照片到像素艺术转换器，用于快速视觉实验、社交图像、UI 模型和游戏资产概念。它将连续的照片细节减少为有意的色块，同时保留足够的结构以使图像保持可识别性。",
+      "输出是程式化的转换，而不是手工创作的精灵表。对于艺术作品，在应用程序、游戏或已发布的资源包中使用之前，请检查边缘、对比度、尺寸和最终 PNG 尺寸。"
     ]
   },
   "tw": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "線上將照片轉換為像素藝術。基於瀏覽器 ONNX 處理，免費且本機執行。",
+    "title": "Photo2Pixel - 本地照片到像素藝術轉換器",
+    "description": "透過 ONNX/WASM 處理、可調整像素大小、邊緣密度和三種樣式模式，將照片在瀏覽器中轉換為像素藝術。",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "將照片轉換為 8-bit 像素藝術，可調整風格、像素大小和邊緣密度。",
+    "toolDescription": "透過可調整的樣式模式、像素大小和邊緣密度，在瀏覽器中將照片本地轉換為像素藝術。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "點擊或拖曳圖片到這裡",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
@@ -113,29 +113,29 @@
     "resultPlaceholder": "結果將在此顯示",
     "viewOriginal": "查看原圖",
     "viewResult": "查看像素圖",
-    "demoAlt": "Photo2Pixel 範例，展示山景照片轉換成 8-bit 像素藝術",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "Photo2Pixel 演示，展示將風景照片轉變成塊狀像素藝術",
+    "descTitle": "將照片本地轉換為像素藝術",
     "descParas": [
-      "Photo2Pixel 使用參考專案相同的 ONNX 模型流程，在瀏覽器中將照片轉換為像素藝術。圖片保留在本機，並透過 WebAssembly 處理。",
-      "你可以選擇邊緣增強、隔離像素或原始像素模式，並調整像素塊大小來獲得不同風格。"
+      "<strong>Photo2Pixel 將 PNG、JPEG 和 WebP 照片直接在瀏覽器中轉換為像素藝術風格的 PNG 輸出。</strong> 轉換透過 WebAssembly 使用 ONNX 模型，因此您的映像保留在頁面上，而不是上傳到伺服器。",
+      "使用“增強邊緣”獲得更清晰的輪廓，使用“隔離像素”獲得可見的網格效果，或使用“原始像素”獲得更清晰的塊狀轉換。像素大小控制結果看起來的粗細程度，而邊緣密度則改變保留多少輪廓細節。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "上傳 PNG、JPEG 或 WebP 圖片。",
-      "選擇風格、像素大小和邊緣密度。",
-      "將生成的像素藝術下載為 PNG。"
+      "上傳PNG、JPEG或WebP照片；最大 10MB 的檔案在瀏覽器中本地處理。",
+      "選擇“增強邊緣”、“隔離像素”或“原始像素”，然後調整像素大小和邊緣密度，直到預覽符合您想要的樣式。",
+      "在原始預覽和像素藝術預覽之間切換，然後下載生成的 PNG 以獲取頭像、縮圖、模型或遊戲藝術參考。"
     ],
-    "whatIs": "像素藝術轉換",
+    "whatIs": "Photo2Pixel是什麼？",
     "whatIsParas": [
-      "轉換器會將圖像區域變成塊狀色彩，並可增強邊界，讓結果更接近 8-bit 像素藝術。",
-      "處理完全在瀏覽器本機執行，圖片不會上傳到伺服器。"
+      "<strong>Photo2Pixel</strong> 是一個基於瀏覽器的照片到像素藝術轉換器，用於快速視覺實驗、社交圖像、UI 模型和遊戲資產概念。它將連續的照片細節減少為有意的色塊，同時保留足夠的結構以使影像保持可識別性。",
+      "輸出是程式化的轉換，而不是手工創作的精靈表。對於藝術作品，在應用程式、遊戲或已發布的資源包中使用之前，請檢查邊緣、對比度、尺寸和最終 PNG 尺寸。"
     ]
   },
   "jp": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "写真をブラウザ上でピクセルアートに変換します。ONNX 処理を使い、無料でローカル実行されます。",
+    "title": "Photo2Pixel - ローカル写真からピクセル アートへのコンバーター",
+    "description": "ONNX/WASM 処理、調整可能なピクセル サイズ、エッジ密度、3 つのスタイル モードを使用して、ブラウザーで写真をピクセル アートに変換します。",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "写真を 8-bit 風ピクセルアートへ変換し、スタイル、ピクセルサイズ、エッジ密度を調整できます。",
+    "toolDescription": "調整可能なスタイル モード、ピクセル サイズ、エッジ密度を使用して、ブラウザーでローカルに写真をピクセル アートに変換します。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "画像をクリックまたはドラッグ",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
@@ -157,29 +157,29 @@
     "resultPlaceholder": "結果がここに表示されます",
     "viewOriginal": "元画像を見る",
     "viewResult": "ピクセルアートを見る",
-    "demoAlt": "山の写真を 8-bit ピクセルアートに変換した Photo2Pixel のデモ",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "風景写真をブロック状のピクセル アートに変換する Photo2Pixel デモ",
+    "descTitle": "写真をローカルでピクセル アートに変換する",
     "descParas": [
-      "Photo2Pixel は参照プロジェクトと同じ ONNX モデルの流れで、ブラウザ上で写真をピクセルアートに変換します。画像はローカルに残り、WebAssembly で処理されます。",
-      "境界を強めるエッジ強調、グリッド感のあるピクセル分離、シンプルな生ピクセル変換を選べます。"
+      "<strong>Photo2Pixel は、PNG、JPEG、および WebP の写真をピクセル アート スタイルの PNG 出力にブラウザーで直接変換します。</strong> 変換では、WebAssembly を介した ONNX モデルが使用されるため、画像はサーバーにアップロードされずにページ上に残ります。",
+      "輪郭をよりシャープにするにはエッジを強化し、グリッド効果を表示するにはピクセルを分離し、ブロック状の変換をよりきれいにするには生ピクセルを使用します。ピクセル サイズは結果がどの程度分厚く見えるかを制御し、エッジ密度は輪郭の詳細がどの程度保持されるかを変更します。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "PNG、JPEG、WebP 画像をアップロードします。",
-      "スタイル、ピクセルサイズ、エッジ密度を選びます。",
-      "生成されたピクセルアートを PNG としてダウンロードします。"
+      "PNG、JPEG、または WebP の写真をアップロードします。最大 10MB のファイルはブラウザでローカルに処理されます。",
+      "[エッジを強化]、[ピクセルを分離]、または [生のピクセル] を選択し、プレビューが希望のスタイルと一致するまでピクセル サイズとエッジ密度を調整します。",
+      "オリジナルとピクセルアートのプレビューを切り替えて、アバター、サムネイル、モックアップ、またはゲームアートのリファレンス用に生成された PNG をダウンロードします。"
     ],
-    "whatIs": "ピクセルアート変換",
+    "whatIs": "Photo2Pixelとは何ですか?",
     "whatIsParas": [
-      "この変換器は画像領域をブロック状の色に変え、境界を強調して 8-bit アートらしい見た目にします。",
-      "処理はブラウザ内でローカル実行され、画像はサーバーへアップロードされません。"
+      "<strong>Photo2Pixel</strong> は、素早い視覚実験、ソーシャル イメージ、UI モックアップ、およびゲーム アセット コンセプトを実現する、ブラウザー ベースの写真からピクセル アートへのコンバーターです。画像を認識可能な状態に保つのに十分な構造を維持しながら、連続した写真の詳細を意図的なカラーブロックに削減します。",
+      "出力は様式化された変換であり、手書きのスプライト シートではありません。プロダクション アートの場合は、アプリ、ゲーム、または公開されたアセット パックで使用する前に、エッジ、コントラスト、寸法、最終的な PNG サイズを検査してください。"
     ]
   },
   "kr": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "브라우저 기반 ONNX 처리로 사진을 픽셀 아트로 변환합니다. 무료이며 로컬에서 실행됩니다.",
+    "title": "Photo2Pixel - 로컬 사진을 픽셀 아트로 변환하는 변환기",
+    "description": "ONNX/WASM 처리, 조정 가능한 픽셀 크기, 가장자리 밀도 및 세 가지 스타일 모드를 사용하여 브라우저에서 사진을 픽셀 아트로 변환합니다.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "사진을 8-bit 픽셀 아트로 변환하고 스타일, 픽셀 크기, 가장자리 밀도를 조정합니다.",
+    "toolDescription": "조정 가능한 스타일 모드, 픽셀 크기 및 가장자리 밀도를 사용하여 브라우저에서 로컬로 사진을 픽셀 아트로 변환할 수 있습니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "이미지를 클릭하거나 끌어오세요",
     "dropzoneHint": "PNG, JPEG, WebP · 최대 10MB",
@@ -201,29 +201,29 @@
     "resultPlaceholder": "결과가 여기에 표시됩니다",
     "viewOriginal": "원본 보기",
     "viewResult": "픽셀 아트 보기",
-    "demoAlt": "산 사진을 8-bit 픽셀 아트로 변환한 Photo2Pixel 데모",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "풍경 사진이 블록 픽셀 아트로 변환된 모습을 보여주는 Photo2Pixel 데모",
+    "descTitle": "사진을 로컬에서 픽셀 아트로 변환",
     "descParas": [
-      "Photo2Pixel은 참조 프로젝트와 같은 ONNX 모델 흐름을 사용해 브라우저에서 사진을 픽셀 아트로 변환합니다. 이미지는 로컬에 남고 WebAssembly로 처리됩니다.",
-      "선명한 경계를 위한 가장자리 강화, 격자 느낌의 픽셀 분리, 단순한 원본 픽셀 변환을 선택할 수 있습니다."
+      "<strong>Photo2Pixel는 PNG, JPEG 및 WebP 사진을 브라우저에서 직접 픽셀 아트 스타일 PNG 출력으로 변환합니다.</strong> 변환에서는 WebAssembly를 통해 ONNX 모델을 사용하므로 이미지가 서버에 업로드되는 대신 페이지에 유지됩니다.",
+      "윤곽선을 더 선명하게 하려면 가장자리 강화를 사용하고, 눈에 띄는 그리드 효과를 위해서는 픽셀 분리를 사용하고, 더 깔끔한 블록 변환을 위해서는 원시 픽셀을 사용하세요. 픽셀 크기는 결과가 얼마나 두꺼워 보이는지 제어하고 가장자리 밀도는 윤곽선 세부 사항이 유지되는 정도를 변경합니다."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "PNG, JPEG 또는 WebP 이미지를 업로드합니다.",
-      "스타일, 픽셀 크기, 가장자리 밀도를 선택합니다.",
-      "생성된 픽셀 아트를 PNG로 다운로드합니다."
+      "PNG, JPEG 또는 WebP 사진을 업로드하세요. 최대 10MB의 파일은 브라우저에서 로컬로 처리됩니다.",
+      "가장자리 강화, 픽셀 분리 또는 원시 픽셀을 선택한 다음 미리 보기가 원하는 스타일과 일치할 때까지 픽셀 크기와 가장자리 밀도를 조정합니다.",
+      "원본과 픽셀 아트 미리 보기 사이를 전환한 다음 아바타, 썸네일, 모형 또는 게임 아트 참조용으로 생성된 PNG를 다운로드하세요."
     ],
-    "whatIs": "픽셀 아트 변환",
+    "whatIs": "Photo2Pixel란 무엇입니까?",
     "whatIsParas": [
-      "변환기는 이미지 영역을 블록 색상으로 줄이고 경계를 강화해 8-bit 아트처럼 보이게 합니다.",
-      "처리는 브라우저에서 로컬로 실행되며 이미지는 서버로 업로드되지 않습니다."
+      "<strong>Photo2Pixel</strong>는 빠른 시각적 실험, 소셜 이미지, UI 모형 및 게임 자산 개념을 위한 브라우저 기반 사진-픽셀 아트 변환기입니다. 이미지를 인식할 수 있을 만큼 충분한 구조를 유지하면서 연속적인 사진 세부 사항을 의도적인 색상 블록으로 줄입니다.",
+      "출력은 손으로 작성한 스프라이트 시트가 아닌 양식화된 변환입니다. 프로덕션 아트의 경우 앱, 게임 또는 게시된 자산 팩에서 사용하기 전에 가장자리, 대비, 크기 및 최종 PNG 크기를 검사하세요."
     ]
   },
   "fr": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "Convertissez des photos en pixel art avec un traitement ONNX dans le navigateur. Gratuit et local.",
+    "title": "Photo2Pixel - Convertisseur de photo locale en Pixel Art",
+    "description": "Convertissez des photos en pixel art dans votre navigateur avec le traitement ONNX/WASM, la taille de pixel réglable, la densité des bords et trois modes de style.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "Transformez des photos en pixel art 8-bit avec style, taille de pixel et densité des contours réglables.",
+    "toolDescription": "Transformez vos photos en pixel art localement dans votre navigateur grâce au mode de style, à la taille des pixels et à la densité des bords réglables.",
     "categoryName": "Outils d'image",
     "dropzoneMessage": "Cliquez ou glissez une image ici",
     "dropzoneHint": "PNG, JPEG, WebP · 10 Mo max",
@@ -245,29 +245,29 @@
     "resultPlaceholder": "Le résultat apparaîtra ici",
     "viewOriginal": "Voir l’original",
     "viewResult": "Voir le pixel art",
-    "demoAlt": "Démo Photo2Pixel montrant une photo de montagne convertie en pixel art 8-bit",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "Démo Photo2Pixel montrant une photo de paysage transformée en pixel art en blocs",
+    "descTitle": "Convertissez des photos en pixel art localement",
     "descParas": [
-      "Photo2Pixel convertit les photos en pixel art dans le navigateur avec le même flux de modèle ONNX que le projet de référence. Les images restent locales et sont traitées avec WebAssembly.",
-      "Choisissez des contours renforcés, des pixels isolés ou une conversion brute pour obtenir différents rendus."
+      "<strong>Photo2Pixel transforme les photos PNG, JPEG et WebP en sortie PNG de style pixel art directement dans votre navigateur.</strong> La conversion utilise un modèle ONNX via WebAssembly, de sorte que votre image reste sur la page au lieu d'être téléchargée sur un serveur.",
+      "Utilisez Enhance Edge pour des contours plus nets, Isolate Pixel pour un effet de grille visible ou Raw Pixel pour une conversion en blocs plus nette. La taille des pixels contrôle l'apparence du résultat, tandis que la densité des bords modifie la quantité de détails du contour préservés."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Téléversez une image PNG, JPEG ou WebP.",
-      "Choisissez le style, la taille de pixel et la densité des contours.",
-      "Téléchargez le pixel art généré au format PNG."
+      "Téléchargez une photo PNG, JPEG ou WebP ; les fichiers jusqu'à 10 Mo sont traités localement dans le navigateur.",
+      "Choisissez Améliorer les bords, Isoler les pixels ou Pixel brut, puis ajustez la taille des pixels et la densité des bords jusqu'à ce que l'aperçu corresponde au style souhaité.",
+      "Basculez entre l'aperçu original et l'aperçu pixel-art, puis téléchargez le PNG généré pour les avatars, les miniatures, les maquettes ou les références artistiques du jeu."
     ],
-    "whatIs": "Conversion en pixel art",
+    "whatIs": "Qu'est-ce que Photo2Pixel ?",
     "whatIsParas": [
-      "Le convertisseur transforme les régions visuelles en blocs de couleur et peut renforcer les contours pour produire un rendu 8-bit.",
-      "Le traitement s'exécute localement dans le navigateur; l'image n'est pas envoyée à un serveur."
+      "<strong>Photo2Pixel</strong> est un convertisseur de photo en pixel art basé sur un navigateur pour des expériences visuelles rapides, des images sociales, des maquettes d'interface utilisateur et des concepts d'actifs de jeu. Il réduit les détails continus de la photo en blocs de couleurs délibérés tout en préservant suffisamment de structure pour que l'image reste reconnaissable.",
+      "Le résultat est une conversion stylisée, et non une feuille de sprite créée à la main. Pour les illustrations de production, inspectez les bords, le contraste, les dimensions et la taille finale du PNG avant de l'utiliser dans une application, un jeu ou un pack de ressources publié."
     ]
   },
   "de": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "Konvertieren Sie Fotos mit browserbasierter ONNX-Verarbeitung in Pixel Art. Kostenlos und lokal.",
+    "title": "Photo2Pixel – Lokaler Foto-zu-Pixel-Art-Konverter",
+    "description": "Konvertieren Sie Fotos in Ihrem Browser in Pixelkunst mit ONNX/WASM-Verarbeitung, einstellbarer Pixelgröße, Kantendichte und drei Stilmodi.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "Verwandeln Sie Fotos in 8-Bit-Pixel-Art mit einstellbarem Stil, Pixelgröße und Kantendichte.",
+    "toolDescription": "Verwandeln Sie Fotos lokal in Ihrem Browser in Pixelkunst mit anpassbarem Stilmodus, Pixelgröße und Kantendichte.",
     "categoryName": "Bild-Tools",
     "dropzoneMessage": "Bild hier anklicken oder hineinziehen",
     "dropzoneHint": "PNG, JPEG, WebP · max. 10 MB",
@@ -289,29 +289,29 @@
     "resultPlaceholder": "Ergebnis erscheint hier",
     "viewOriginal": "Original anzeigen",
     "viewResult": "Pixel Art anzeigen",
-    "demoAlt": "Photo2Pixel-Demo mit einem Bergfoto, das in 8-Bit-Pixel-Art umgewandelt wurde",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "Photo2Pixel-Demo, die ein Landschaftsfoto zeigt, das in blockige Pixelkunst umgewandelt wurde",
+    "descTitle": "Konvertieren Sie Fotos lokal in Pixelkunst",
     "descParas": [
-      "Photo2Pixel konvertiert Fotos im Browser mit demselben ONNX-Modellablauf wie das Referenzprojekt in Pixel Art. Bilder bleiben lokal und werden mit WebAssembly verarbeitet.",
-      "Wählen Sie verstärkte Kanten, isolierte Pixel oder rohe Pixel für unterschiedliche Bildstile."
+      "<strong>Photo2Pixel wandelt PNG-, JPEG- und WebP-Fotos direkt in Ihrem Browser in eine PNG-Ausgabe im Pixel-Art-Stil um.</strong> Die Konvertierung verwendet ein ONNX-Modell über WebAssembly, sodass Ihr Bild auf der Seite bleibt, anstatt auf einen Server hochgeladen zu werden.",
+      "Verwenden Sie „Kante verbessern“ für schärfere Konturen, „Pixel isolieren“ für einen sichtbaren Rastereffekt oder „Rohpixel“ für eine sauberere Blockkonvertierung. Die Pixelgröße steuert, wie klobig das Ergebnis aussieht, während die Kantendichte bestimmt, wie viele Umrissdetails erhalten bleiben."
     ],
     "howToUse": "Anwendung",
     "steps": [
-      "Laden Sie ein PNG-, JPEG- oder WebP-Bild hoch.",
-      "Wählen Sie Stil, Pixelgröße und Kantendichte.",
-      "Laden Sie die erzeugte Pixel Art als PNG herunter."
+      "Laden Sie ein PNG-, JPEG- oder WebP-Foto hoch. Dateien bis zu 10 MB werden lokal im Browser verarbeitet.",
+      "Wählen Sie „Kante verbessern“, „Pixel isolieren“ oder „Rohpixel“ und passen Sie dann die Pixelgröße und Kantendichte an, bis die Vorschau dem gewünschten Stil entspricht.",
+      "Wechseln Sie zwischen der Original- und der Pixel-Art-Vorschau und laden Sie dann das generierte PNG herunter, um Avatare, Miniaturansichten, Modelle oder Game-Art-Referenzen zu erhalten."
     ],
-    "whatIs": "Pixel-Art-Konvertierung",
+    "whatIs": "Was ist Photo2Pixel?",
     "whatIsParas": [
-      "Der Konverter reduziert Bildbereiche zu blockigen Farbflächen und kann Kanten verstärken, damit das Ergebnis wie 8-Bit-Art wirkt.",
-      "Die Verarbeitung läuft lokal im Browser; das Bild wird nicht an einen Server gesendet."
+      "<strong>Photo2Pixel</strong> ist ein browserbasierter Foto-zu-Pixel-Art-Konverter für schnelle visuelle Experimente, soziale Bilder, UI-Modelle und Spiel-Asset-Konzepte. Es reduziert kontinuierliche Fotodetails in bewusste Farbblöcke und bewahrt gleichzeitig genügend Struktur, damit das Bild erkennbar bleibt.",
+      "Die Ausgabe ist eine stilisierte Konvertierung, kein handverfasstes Sprite-Sheet. Überprüfen Sie bei Produktionsgrafiken die Kanten, den Kontrast, die Abmessungen und die endgültige PNG-Größe, bevor Sie sie in einer App, einem Spiel oder einem veröffentlichten Asset-Paket verwenden."
     ]
   },
   "es": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "Convierte fotos en pixel art con procesamiento ONNX en el navegador. Gratis y local.",
+    "title": "Photo2Pixel - Convertidor de foto local a pixel art",
+    "description": "Convierta fotografías en pixel art en su navegador con el procesamiento ONNX/WASM, tamaño de píxel ajustable, densidad de bordes y tres modos de estilo.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "Convierte fotos en pixel art de 8 bits con estilo, tamaño de píxel y densidad de bordes ajustables.",
+    "toolDescription": "Convierta fotografías en pixel art localmente en su navegador con modo de estilo, tamaño de píxel y densidad de bordes ajustables.",
     "categoryName": "Utilidades de imagen",
     "dropzoneMessage": "Haz clic o arrastra una imagen aquí",
     "dropzoneHint": "PNG, JPEG, WebP · máximo 10MB",
@@ -333,29 +333,29 @@
     "resultPlaceholder": "El resultado aparecerá aquí",
     "viewOriginal": "Ver original",
     "viewResult": "Ver pixel art",
-    "demoAlt": "Demo de Photo2Pixel con una foto de montaña convertida en pixel art de 8 bits",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "Demostración de Photo2Pixel que muestra una fotografía de paisaje transformada en pixel art en bloques",
+    "descTitle": "Convierte fotos en pixel art localmente",
     "descParas": [
-      "Photo2Pixel convierte fotos en pixel art dentro del navegador usando el mismo flujo de modelo ONNX del proyecto de referencia. Las imágenes permanecen locales y se procesan con WebAssembly.",
-      "Elige bordes mejorados, píxeles aislados o píxeles brutos para obtener distintos estilos."
+      "<strong>Photo2Pixel convierte las fotos PNG, JPEG y WebP en una salida PNG con estilo pixel art directamente en su navegador.</strong> La conversión utiliza un modelo ONNX a través de WebAssembly, por lo que su imagen permanece en la página en lugar de cargarse en un servidor.",
+      "Utilice Mejorar borde para obtener contornos más nítidos, Aislar píxel para obtener un efecto de cuadrícula visible o Píxel sin formato para una conversión de bloques más limpia. El tamaño de píxel controla qué tan grueso se ve el resultado, mientras que la densidad de los bordes cambia la cantidad de detalles del contorno que se conservan."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Sube una imagen PNG, JPEG o WebP.",
-      "Elige el estilo, el tamaño de píxel y la densidad de bordes.",
-      "Descarga el pixel art generado como PNG."
+      "Cargue una foto PNG, JPEG o WebP; Los archivos de hasta 10 MB se procesan localmente en el navegador.",
+      "Elija Mejorar borde, Aislar píxel o Píxel sin formato, luego ajuste el tamaño de píxel y la densidad del borde hasta que la vista previa coincida con el estilo que desea.",
+      "Cambie entre la vista previa original y la de pixel art, luego descargue el PNG generado para avatares, miniaturas, maquetas o referencias de arte de juegos."
     ],
-    "whatIs": "Conversión a pixel art",
+    "whatIs": "¿Qué es Photo2Pixel?",
     "whatIsParas": [
-      "El convertidor reduce regiones visuales a bloques de color y puede reforzar los bordes para lograr un aspecto de 8 bits.",
-      "El procesamiento se ejecuta localmente en el navegador; la imagen no se sube a un servidor."
+      "<strong>Photo2Pixel</strong> es un conversor de fotos a pixel art basado en navegador para experimentos visuales rápidos, imágenes sociales, maquetas de interfaz de usuario y conceptos de activos de juegos. Reduce los detalles continuos de la fotografía en bloques de color deliberados y al mismo tiempo conserva suficiente estructura para que la imagen siga siendo reconocible.",
+      "El resultado es una conversión estilizada, no una hoja de sprites escrita a mano. Para el arte de producción, inspeccione los bordes, el contraste, las dimensiones y el tamaño PNG final antes de usarlo en una aplicación, juego o paquete de recursos publicado."
     ]
   },
   "pt": {
-    "title": "Photo2Pixel — Coding.Tools",
-    "description": "Converta fotos em pixel art com processamento ONNX no navegador. Gratuito e local.",
+    "title": "Photo2Pixel - Conversor local de foto para Pixel Art",
+    "description": "Converta fotos em pixel art em seu navegador com processamento ONNX/WASM, tamanho de pixel ajustável, densidade de borda e três modos de estilo.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "Transforme fotos em pixel art 8-bit com estilo, tamanho de pixel e densidade de bordas ajustáveis.",
+    "toolDescription": "Transforme fotos em pixel art localmente em seu navegador com modo de estilo, tamanho de pixel e densidade de borda ajustáveis.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste uma imagem aqui",
     "dropzoneHint": "PNG, JPEG, WebP · máximo 10MB",
@@ -377,22 +377,22 @@
     "resultPlaceholder": "O resultado aparecerá aqui",
     "viewOriginal": "Ver original",
     "viewResult": "Ver pixel art",
-    "demoAlt": "Demonstração do Photo2Pixel com uma foto de montanha convertida em pixel art 8-bit",
-    "descTitle": "Photo2Pixel",
+    "demoAlt": "Demonstração Photo2Pixel mostrando uma foto de paisagem transformada em pixel art em blocos",
+    "descTitle": "Converta fotos em pixel art localmente",
     "descParas": [
-      "Photo2Pixel converte fotos em pixel art no navegador usando o mesmo fluxo de modelo ONNX do projeto de referência. As imagens ficam locais e são processadas com WebAssembly.",
-      "Escolha bordas realçadas, pixels isolados ou pixels brutos para obter estilos diferentes."
+      "<strong>Photo2Pixel transforma fotos PNG, JPEG e WebP em saída PNG estilo pixel art diretamente em seu navegador.</strong> A conversão usa um modelo ONNX por meio de WebAssembly, para que sua imagem permaneça na página em vez de ser carregada em um servidor.",
+      "Use Enhance Edge para contornos mais nítidos, Isolate Pixel para um efeito de grade visível ou Raw Pixel para uma conversão em blocos mais limpa. O tamanho do pixel controla a aparência do resultado, enquanto a densidade da borda altera a quantidade de detalhes do contorno preservados."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Envie uma imagem PNG, JPEG ou WebP.",
-      "Escolha o estilo, o tamanho de pixel e a densidade de bordas.",
-      "Baixe o pixel art gerado como PNG."
+      "Carregue uma foto PNG, JPEG ou WebP; arquivos de até 10 MB são processados ​​localmente no navegador.",
+      "Escolha Melhorar borda, Isolar pixel ou Pixel bruto e ajuste o tamanho do pixel e a densidade da borda até que a visualização corresponda ao estilo desejado.",
+      "Alterne entre a visualização original e a pixel art e, em seguida, baixe o PNG gerado para avatares, miniaturas, maquetes ou referências de arte de jogos."
     ],
-    "whatIs": "Conversão para pixel art",
+    "whatIs": "O que é Photo2Pixel?",
     "whatIsParas": [
-      "O conversor reduz regiões visuais a blocos de cor e pode reforçar as bordas para criar uma aparência 8-bit.",
-      "O processamento roda localmente no navegador; a imagem não é enviada a um servidor."
+      "<strong>Photo2Pixel</strong> é um conversor de foto em pixel art baseado em navegador para experimentos visuais rápidos, imagens sociais, maquetes de interface do usuário e conceitos de ativos de jogos. Ele reduz os detalhes contínuos da foto em blocos de cores deliberados, preservando estrutura suficiente para que a imagem permaneça reconhecível.",
+      "A saída é uma conversão estilizada, não uma sprite sheet de autoria manual. Para arte de produção, inspecione as bordas, o contraste, as dimensões e o tamanho final do PNG antes de usá-lo em um aplicativo, jogo ou pacote de recursos publicados."
     ]
   }
 }

@@ -1,10 +1,5 @@
 ---
-title: "Decimal to Hex Converter — Coding.Tools"
-description: "Convert decimal numbers to hexadecimal, octal, and binary instantly in your browser. Fast, private, and free to use."
-toolTitle: "Decimal to Hex"
-toolDescription: "Enter a decimal number and convert it to hexadecimal, octal, and binary. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "decimal-to-hex"
 permalink: "/decimal-to-hex.html"
 ---
@@ -226,29 +221,7 @@ permalink: "/decimal-to-hex.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Decimal to Hex Converter</h2>
-  <p>This tool converts decimal (base 10) numbers into their hexadecimal (base 16), octal (base 8), and binary (base 2) equivalents. It is helpful when you need to represent decimal values in different number systems for programming, networking, or digital electronics.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision, so large numbers are handled correctly.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a decimal number into the input field (e.g. <code>255</code> or <code>4096</code>).</li>
-    <li>Click <strong>Convert</strong> to see the hexadecimal, octal, and binary results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the hex result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>What is decimal?</h3>
-  <p>Decimal is the standard base 10 number system that uses the digits 0 through 9. It is the most common system for everyday counting and arithmetic. In computing, decimal values are often converted to hexadecimal or binary for low-level operations.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Decimal:     255
-Hexadecimal: FF
-Octal:       377
-Binary:      11111111</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

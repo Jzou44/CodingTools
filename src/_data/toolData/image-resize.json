@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Image Resize — Coding.Tools",
-    "description": "Resize PNG, JPEG, and WebP images online with precise dimensions, aspect ratio locking, quality control, and local browser processing.",
+    "title": "Image Resize - Coding.Tools",
+    "description": "Resize PNG, JPEG, and WebP images in your browser with exact dimensions, aspect-ratio locking, presets, and quality control.",
     "toolTitle": "Image Resize",
-    "toolDescription": "Resize one image precisely in your browser with live preview, presets, and format-aware export.",
+    "toolDescription": "Resize one image locally with exact pixel dimensions, scale presets, aspect-ratio locking, and JPEG/WebP quality control.",
     "categoryName": "Image Utilities",
     "labels": {
       "clickOrDrop": "Click or drag an image file here",
@@ -47,11 +47,11 @@
     },
     "dropzoneMessage": "Click or drag an image file here",
     "dropzoneHint": "PNG, JPEG, WebP · Max 10MB",
-    "descTitle": "Image Resize",
+    "descTitle": "Resize images to exact dimensions",
     "descParas": [
-      "This tool resizes a single PNG, JPEG, or WebP image directly in your browser. Set exact dimensions, scale by percentage, or use common presets while previewing the output before download.",
-      "The original file stays on your device. Canvas export preserves PNG, JPEG, or WebP when the browser supports that output format, and falls back to PNG if needed.",
-      "Use the quality slider for JPEG and WebP output to balance visual quality and file size."
+      "<strong>Image Resize changes the pixel width and height of a PNG, JPEG, or WebP image without uploading it.</strong> Use it to prepare thumbnails, app assets, screenshots, profile images, and web images that need a specific size.",
+      "Lock the aspect ratio when the image should keep its original proportions, or unlock it when you intentionally need a different shape. Reducing both width and height by <strong>50%</strong> removes <strong>75%</strong> of the pixels, which often makes files much smaller.",
+      "Processing uses the browser canvas. JPEG and WebP output can be re-encoded with a quality setting; PNG keeps transparency but may not shrink as much as photographic formats. Check the preview because resizing can soften fine detail."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -59,20 +59,20 @@
       "Enter a target width and height, lock the aspect ratio if needed, or choose a preset.",
       "Adjust JPEG/WebP quality, preview the result, then download the resized image."
     ],
-    "whatIs": "When to resize images",
+    "whatIs": "When should you resize an image?",
     "whatIsParas": [
-      "Resize images for websites, app assets, email attachments, profile pictures, thumbnails, and documentation screenshots.",
-      "For transparent graphics, PNG keeps transparency. For photos, JPEG or WebP quality settings usually produce smaller files."
+      "<strong>Image Resize</strong> is for changing dimensions, not just file size. It is useful when a layout, CMS, email, avatar, or documentation image requires an exact pixel width and height.",
+      "The original file stays on your device while the browser creates a new output image. Large downscales usually look best; upscaling can make an image blurry because it invents pixels that were not in the original."
     ],
     "example": "Resize with Canvas",
-    "examplePara": "The browser workflow uses Canvas drawImage with a target width and height:",
+    "examplePara": "Canvas resizing draws the source image into a canvas set to the target dimensions:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "cn": {
-    "title": "图片尺寸调整 — Coding.Tools",
-    "description": "在线精确调整 PNG、JPEG 和 WebP 图片尺寸，支持锁定宽高比、质量控制，并在浏览器本地处理。",
+    "title": "图像调整大小 - Coding.Tools",
+    "description": "在浏览器中调整 PNG、JPEG 和 WebP 图像的大小，具有精确尺寸、宽高比锁定、预设和质量控制。",
     "toolTitle": "图片尺寸调整",
-    "toolDescription": "在浏览器中精确调整单张图片尺寸，支持实时预览、常用预设和按原格式导出。",
+    "toolDescription": "使用精确的像素尺寸、比例预设、宽高比锁定和 JPEG/WebP 质量控制在本地调整一张图像的大小。",
     "categoryName": "图片工具",
     "labels": {
       "clickOrDrop": "点击或拖拽图片文件到此处",
@@ -116,32 +116,32 @@
     },
     "dropzoneMessage": "点击或拖拽图片文件到此处",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
-    "descTitle": "图片尺寸调整",
+    "descTitle": "将图像大小调整为精确尺寸",
     "descParas": [
-      "此工具可直接在浏览器中调整单张 PNG、JPEG 或 WebP 图片的尺寸。您可以设置精确宽高、按百分比缩放，或使用常用预设，并在下载前预览输出结果。",
-      "原始文件会保留在您的设备上。浏览器支持时，Canvas 导出会保留 PNG、JPEG 或 WebP 格式；如不支持，则回退为 PNG。",
-      "JPEG 和 WebP 输出可使用质量滑块，在视觉质量与文件大小之间取得平衡。"
+      "<strong>图片尺寸调整 无需上传即可更改 PNG、JPEG 或 WebP 图像的像素宽度和高度。</strong> 使用它来准备需要特定尺寸的缩略图、应用程序资源、屏幕截图、个人资料图像和 Web 图像。",
+      "当图像应保持其原始比例时锁定纵横比，或者当您有意需要不同的形状时解锁它。将宽度和高度减小 <strong>50%</strong> 会删除 <strong>75%</strong> 像素，这通常会使文件变得更小。",
+      "处理使用浏览器画布。 JPEG 和 WebP 输出可以通过质量设置重新编码； PNG 保持透明度，但可能不会像照片格式那样缩小那么多。检查预览，因为调整大小可以柔化精细细节。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "上传一张 PNG、JPEG 或 WebP 图片。",
-      "输入目标宽度和高度，按需锁定宽高比，或选择一个预设。",
-      "调整 JPEG/WebP 质量，预览结果，然后下载调整尺寸后的图片。"
+      "上传一张 PNG、JPEG 或 WebP 图像。",
+      "输入目标宽度和高度，根据需要锁定纵横比，或选择预设。",
+      "调整 JPEG/WebP 质量，预览结果，然后下载调整大小的图像。"
     ],
-    "whatIs": "何时调整图片尺寸",
+    "whatIs": "什么时候应该调整图像大小？",
     "whatIsParas": [
-      "可将图片调整为适合网站、应用素材、邮件附件、头像、缩略图和文档截图的尺寸。",
-      "透明图形适合使用 PNG 以保留透明度；照片通常可通过 JPEG 或 WebP 的质量设置获得更小文件。"
+      "<strong>图片尺寸调整</strong> 用于更改尺寸，而不仅仅是文件大小。当布局、CMS、电子邮件、头像或文档图像需要精确的像素宽度和高度时，它非常有用。",
+      "当浏览器创建新的输出图像时，原始文件保留在您的设备上。较大的缩小尺寸通常看起来最好；放大会使图像变得模糊，因为它产生了原始图像中没有的像素。"
     ],
     "example": "使用 Canvas 调整尺寸",
-    "examplePara": "浏览器流程使用 Canvas drawImage 设置目标宽度和高度：",
+    "examplePara": "画布调整大小将源图像绘制到设置为目标尺寸的画布中：",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "tw": {
-    "title": "圖片尺寸調整 — Coding.Tools",
-    "description": "線上精確調整 PNG、JPEG 和 WebP 圖片尺寸，支援鎖定長寬比、品質控制，並在瀏覽器本機處理。",
+    "title": "影像調整大小 - Coding.Tools",
+    "description": "在瀏覽器中調整 PNG、JPEG 和 WebP 影像的大小，具有精確尺寸、寬高比鎖定、預設和品質控制。",
     "toolTitle": "圖片尺寸調整",
-    "toolDescription": "在瀏覽器中精確調整單張圖片尺寸，支援即時預覽、常用預設和依原格式匯出。",
+    "toolDescription": "使用精確的像素尺寸、比例預設、寬高比鎖定和 JPEG/WebP 品質控制在本地調整一張影像的大小。",
     "categoryName": "圖片工具",
     "labels": {
       "clickOrDrop": "點擊或拖曳圖片檔案到此處",
@@ -185,32 +185,32 @@
     },
     "dropzoneMessage": "點擊或拖曳圖片檔案到此處",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
-    "descTitle": "圖片尺寸調整",
+    "descTitle": "將影像大小調整為精確尺寸",
     "descParas": [
-      "此工具可直接在瀏覽器中調整單張 PNG、JPEG 或 WebP 圖片的尺寸。您可以設定精確寬高、依百分比縮放，或使用常用預設，並在下載前預覽輸出結果。",
-      "原始檔案會保留在您的裝置上。瀏覽器支援時，Canvas 匯出會保留 PNG、JPEG 或 WebP 格式；若不支援，則改用 PNG。",
-      "JPEG 和 WebP 輸出可使用品質滑桿，在視覺品質與檔案大小之間取得平衡。"
+      "<strong>圖片尺寸調整 無需上傳即可變更 PNG、JPEG 或 WebP 影像的像素寬度和高度。</strong> 使用它來準備需要特定尺寸的縮圖、應用程式資源、螢幕截圖、個人資料圖像和 Web 圖像。",
+      "當圖像應保持其原始比例時鎖定縱橫比，或者當您有意需要不同的形狀時解鎖它。將寬度和高度減少 <strong>50%</strong> 會刪除 <strong>75%</strong> 像素，這通常會使檔案變得更小。",
+      "處理使用瀏覽器畫布。 JPEG 和 WebP 輸出可以透過品質設定重新編碼； PNG 保持透明度，但可能不會像照片格式那樣縮小那麼多。檢查預覽，因為調整大小可以柔化精細細節。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "上傳一張 PNG、JPEG 或 WebP 圖片。",
-      "輸入目標寬度和高度，視需要鎖定長寬比，或選擇一個預設。",
-      "調整 JPEG/WebP 品質，預覽結果，然後下載調整尺寸後的圖片。"
+      "上傳一張 PNG、JPEG 或 WebP 影像。",
+      "輸入目標寬度和高度，根據需要鎖定縱橫比，或選擇預設。",
+      "調整 JPEG/WebP 質量，預覽結果，然後下載調整大小的影像。"
     ],
-    "whatIs": "何時調整圖片尺寸",
+    "whatIs": "什麼時候該調整影像大小？",
     "whatIsParas": [
-      "可將圖片調整為適合網站、應用素材、電子郵件附件、頭像、縮圖和文件截圖的尺寸。",
-      "透明圖形適合使用 PNG 以保留透明度；照片通常可透過 JPEG 或 WebP 的品質設定取得較小檔案。"
+      "<strong>圖片尺寸調整</strong> 用於更改尺寸，而不僅僅是檔案大小。當佈局、CMS、電子郵件、頭像或文件影像需要精確的像素寬度和高度時，它非常有用。",
+      "當瀏覽器建立新的輸出影像時，原始檔案保留在您的裝置上。較大的縮小尺寸通常看起來最好；放大會使影像變得模糊，因為它產生了原始影像中沒有的像素。"
     ],
     "example": "使用 Canvas 調整尺寸",
-    "examplePara": "瀏覽器流程使用 Canvas drawImage 設定目標寬度和高度：",
+    "examplePara": "畫布調整大小將來源影像繪製到設定為目標尺寸的畫布中：",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "jp": {
-    "title": "画像リサイズ — Coding.Tools",
-    "description": "PNG、JPEG、WebP 画像をオンラインで正確にリサイズします。縦横比固定、品質調整、ブラウザ内ローカル処理に対応します。",
+    "title": "画像リサイズ - Coding.Tools",
+    "description": "正確なサイズ、アスペクト比のロック、プリセット、および品質管理を使用して、ブラウザーで PNG、JPEG、および WebP 画像のサイズを変更します。",
     "toolTitle": "画像リサイズ",
-    "toolDescription": "ブラウザ内で画像1枚を正確にリサイズし、ライブプレビュー、プリセット、形式に応じた書き出しを利用できます。",
+    "toolDescription": "正確なピクセル寸法、スケールプリセット、アスペクト比ロック、JPEG/WebP 品質管理を使用して、1 つの画像のサイズをローカルに変更します。",
     "categoryName": "画像ツール",
     "labels": {
       "clickOrDrop": "画像ファイルをクリックまたはドラッグ",
@@ -254,32 +254,32 @@
     },
     "dropzoneMessage": "画像ファイルをクリックまたはドラッグ",
     "dropzoneHint": "PNG、JPEG、WebP · 最大10MB",
-    "descTitle": "画像リサイズ",
+    "descTitle": "画像のサイズを正確な寸法に変更する",
     "descParas": [
-      "このツールは、PNG、JPEG、WebP 画像1枚をブラウザ内で直接リサイズします。正確な幅と高さ、パーセント指定、一般的なプリセットを使い、ダウンロード前に出力を確認できます。",
-      "元のファイルは端末上に残ります。Canvas の書き出しは、ブラウザが対応している場合 PNG、JPEG、WebP を維持し、必要に応じて PNG にフォールバックします。",
-      "JPEG と WebP の出力では、品質スライダーで画質とファイルサイズのバランスを調整できます。"
+      "<strong>画像のサイズ変更は、PNG、JPEG、または WebP 画像をアップロードせずに、ピクセルの幅と高さを変更します。</strong> 特定のサイズが必要なサムネイル、アプリ アセット、スクリーンショット、プロフィール画像、Web 画像を準備するために使用します。",
+      "画像が元の比率を維持する必要がある場合はアスペクト比をロックし、意図的に別の形状が必要な場合はロックを解除します。幅と高さの両方を <strong>50%</strong> だけ縮小すると、<strong>75%</strong> のピクセルが削除され、多くの場合、ファイルが大幅に小さくなります。",
+      "処理にはブラウザのキャンバスを使用します。 JPEG および WebP 出力は、品質設定を使用して再エンコードできます。 PNG は透明度を保ちますが、写真形式ほど縮小しない可能性があります。サイズを変更すると細かい部分がぼやける可能性があるため、プレビューを確認してください。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "PNG、JPEG、WebP 画像を1枚アップロードします。",
-      "目標の幅と高さを入力し、必要に応じて縦横比を固定するか、プリセットを選びます。",
-      "JPEG/WebP の品質を調整し、結果を確認してからリサイズ後の画像をダウンロードします。"
+      "PNG、JPEG、または WebP 画像を 1 つアップロードします。",
+      "ターゲットの幅と高さを入力し、必要に応じてアスペクト比をロックするか、プリセットを選択します。",
+      "JPEG/WebP の品質を調整し、結果をプレビューして、サイズ変更した画像をダウンロードします。"
     ],
-    "whatIs": "画像リサイズの用途",
+    "whatIs": "画像のサイズを変更する必要があるのはどのような場合ですか?",
     "whatIsParas": [
-      "Web サイト、アプリ素材、メール添付、プロフィール画像、サムネイル、ドキュメント用スクリーンショットに合わせて画像サイズを調整できます。",
-      "透過グラフィックは PNG で透明度を維持できます。写真では JPEG または WebP の品質設定で小さいファイルにしやすくなります。"
+      "<strong>画像のサイズ変更</strong> は、ファイル サイズだけでなく、サイズを変更するためのものです。これは、レイアウト、CMS、電子メール、アバター、またはドキュメント画像で正確なピクセルの幅と高さが必要な場合に便利です。",
+      "ブラウザが新しい出力画像を作成している間、元のファイルはデバイス上に残ります。通常、大規模なダウンスケールが最適に見えます。アップスケーリングすると、元の画像にはなかったピクセルが作成されるため、画像がぼやける可能性があります。"
     ],
     "example": "Canvas でリサイズ",
-    "examplePara": "ブラウザでは Canvas drawImage に目標の幅と高さを指定します：",
+    "examplePara": "キャンバスのサイズ変更では、ターゲットのサイズに設定されたキャンバスにソース イメージが描画されます。",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "kr": {
-    "title": "이미지 크기 조정 — Coding.Tools",
-    "description": "PNG, JPEG, WebP 이미지 크기를 온라인에서 정확하게 조정합니다. 비율 고정, 품질 제어, 브라우저 로컬 처리를 지원합니다.",
+    "title": "이미지 크기 조정 - Coding.Tools",
+    "description": "정확한 치수, 종횡비 잠금, 사전 설정 및 품질 제어를 통해 브라우저에서 PNG, JPEG 및 WebP 이미지 크기를 조정하세요.",
     "toolTitle": "이미지 크기 조정",
-    "toolDescription": "브라우저에서 이미지 한 장을 정밀하게 조정하고 실시간 미리보기, 프리셋, 형식별 내보내기를 사용할 수 있습니다.",
+    "toolDescription": "정확한 픽셀 치수, 배율 사전 설정, 종횡비 잠금 및 JPEG/WebP 품질 관리를 통해 하나의 이미지 크기를 로컬에서 조정합니다.",
     "categoryName": "이미지 도구",
     "labels": {
       "clickOrDrop": "이미지 파일을 클릭하거나 드래그하세요",
@@ -323,32 +323,32 @@
     },
     "dropzoneMessage": "이미지 파일을 클릭하거나 드래그하세요",
     "dropzoneHint": "PNG, JPEG, WebP · 최대 10MB",
-    "descTitle": "이미지 크기 조정",
+    "descTitle": "정확한 크기로 이미지 크기 조정",
     "descParas": [
-      "이 도구는 PNG, JPEG 또는 WebP 이미지 한 장의 크기를 브라우저에서 직접 조정합니다. 정확한 너비와 높이를 입력하거나, 퍼센트로 조정하거나, 일반 프리셋을 사용하고 다운로드 전에 결과를 확인할 수 있습니다.",
-      "원본 파일은 사용자의 기기에 남아 있습니다. Canvas 내보내기는 브라우저가 지원하면 PNG, JPEG 또는 WebP 형식을 유지하고, 필요하면 PNG로 대체합니다.",
-      "JPEG와 WebP 출력은 품질 슬라이더로 시각 품질과 파일 크기의 균형을 조절할 수 있습니다."
+      "<strong>이미지 크기 조정은 PNG, JPEG 또는 WebP 이미지를 업로드하지 않고 픽셀 너비와 높이를 변경합니다.</strong> 특정 크기가 필요한 썸네일, 앱 자산, 스크린샷, 프로필 이미지, 웹 이미지를 준비하는 데 사용합니다.",
+      "이미지가 원래 비율을 유지해야 할 경우 가로 세로 비율을 잠그고, 의도적으로 다른 모양이 필요할 경우 잠금을 해제하세요. 너비와 높이를 모두 <strong>50%</strong>만큼 줄이면 픽셀의 <strong>75%</strong>가 제거되어 파일이 훨씬 작아지는 경우가 많습니다.",
+      "처리에는 브라우저 캔버스가 사용됩니다. JPEG 및 WebP 출력은 품질 설정으로 다시 인코딩될 수 있습니다. PNG는 투명성을 유지하지만 사진 형식만큼 줄어들지는 않습니다. 크기를 조정하면 미세한 디테일이 부드러워질 수 있으므로 미리보기를 확인하세요."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "PNG, JPEG 또는 WebP 이미지 한 장을 업로드합니다.",
-      "목표 너비와 높이를 입력하고 필요하면 비율을 고정하거나 프리셋을 선택합니다.",
-      "JPEG/WebP 품질을 조정하고 결과를 미리 본 뒤 크기 조정된 이미지를 다운로드합니다."
+      "PNG, JPEG 또는 WebP 이미지 하나를 업로드하세요.",
+      "대상 너비와 높이를 입력하고, 필요한 경우 종횡비를 잠그거나 사전 설정을 선택하세요.",
+      "JPEG/WebP 품질을 조정하고 결과를 미리 본 다음 크기가 조정된 이미지를 다운로드하세요."
     ],
-    "whatIs": "이미지 크기 조정이 필요한 경우",
+    "whatIs": "언제 이미지 크기를 조정해야 합니까?",
     "whatIsParas": [
-      "웹사이트, 앱 자산, 이메일 첨부, 프로필 이미지, 썸네일, 문서 스크린샷에 맞게 이미지 크기를 조정할 수 있습니다.",
-      "투명 그래픽은 PNG로 투명도를 유지할 수 있습니다. 사진은 JPEG 또는 WebP 품질 설정으로 더 작은 파일을 만들기 쉽습니다."
+      "<strong>이미지 크기 조정</strong>는 파일 크기뿐만 아니라 치수 변경에도 사용됩니다. 레이아웃, CMS, 이메일, 아바타 또는 문서 이미지에 정확한 픽셀 너비와 높이가 필요한 경우 유용합니다.",
+      "브라우저가 새 출력 이미지를 생성하는 동안 원본 파일은 장치에 유지됩니다. 일반적으로 규모를 축소하는 것이 가장 좋습니다. 업스케일링은 원본에 없던 픽셀을 생성하기 때문에 이미지를 흐릿하게 만들 수 있습니다."
     ],
     "example": "Canvas로 크기 조정",
-    "examplePara": "브라우저 흐름은 Canvas drawImage에 목표 너비와 높이를 전달합니다:",
+    "examplePara": "캔버스 크기 조정은 소스 이미지를 대상 크기로 설정된 캔버스에 그립니다.",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "fr": {
-    "title": "Redimensionner une image — Coding.Tools",
-    "description": "Redimensionnez des images PNG, JPEG et WebP en ligne avec dimensions précises, ratio verrouillé, qualité réglable et traitement local dans le navigateur.",
+    "title": "Redimensionnement d'image - Coding.Tools",
+    "description": "Redimensionnez les images PNG, JPEG et WebP dans votre navigateur avec des dimensions exactes, un verrouillage des proportions, des préréglages et un contrôle qualité.",
     "toolTitle": "Redimensionner une image",
-    "toolDescription": "Redimensionnez une image dans le navigateur avec aperçu en direct, préréglages et export adapté au format.",
+    "toolDescription": "Redimensionnez une image localement avec des dimensions exactes en pixels, des préréglages d'échelle, un verrouillage des proportions et un contrôle qualité JPEG/WebP.",
     "categoryName": "Outils image",
     "labels": {
       "clickOrDrop": "Cliquez ou déposez une image ici",
@@ -392,32 +392,32 @@
     },
     "dropzoneMessage": "Cliquez ou déposez une image ici",
     "dropzoneHint": "PNG, JPEG, WebP · 10 Mo max",
-    "descTitle": "Redimensionner une image",
+    "descTitle": "Redimensionner les images aux dimensions exactes",
     "descParas": [
-      "Cet outil redimensionne une image PNG, JPEG ou WebP directement dans votre navigateur. Définissez des dimensions exactes, redimensionnez en pourcentage ou utilisez des préréglages, puis vérifiez le résultat avant le téléchargement.",
-      "Le fichier original reste sur votre appareil. L export Canvas conserve PNG, JPEG ou WebP lorsque le navigateur prend en charge ce format, avec repli en PNG si nécessaire.",
-      "Le curseur de qualité pour JPEG et WebP permet d équilibrer la qualité visuelle et la taille du fichier."
+      "<strong>Redimensionner une image modifie la largeur et la hauteur des pixels d'une image PNG, JPEG ou WebP sans la télécharger.</strong> Utilisez-le pour préparer des vignettes, des ressources d'application, des captures d'écran, des images de profil et des images Web nécessitant une taille spécifique.",
+      "Verrouillez le rapport hauteur/largeur lorsque l'image doit conserver ses proportions d'origine, ou déverrouillez-le lorsque vous avez intentionnellement besoin d'une forme différente. La réduction de la largeur et de la hauteur de <strong>50%</strong> supprime <strong>75%</strong> des pixels, ce qui rend souvent les fichiers beaucoup plus petits.",
+      "Le traitement utilise le canevas du navigateur. Les sorties JPEG et WebP peuvent être réencodées avec un paramètre de qualité ; PNG conserve la transparence mais ne peut pas rétrécir autant que les formats photographiques. Vérifiez l'aperçu car le redimensionnement peut adoucir les détails fins."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Importez une image PNG, JPEG ou WebP.",
-      "Saisissez la largeur et la hauteur cibles, verrouillez le ratio si nécessaire ou choisissez un préréglage.",
-      "Réglez la qualité JPEG/WebP, vérifiez l aperçu, puis téléchargez l image redimensionnée."
+      "Téléchargez une image PNG, JPEG ou WebP.",
+      "Entrez une largeur et une hauteur cibles, verrouillez le rapport hauteur/largeur si nécessaire ou choisissez un préréglage.",
+      "Ajustez la qualité JPEG/WebP, prévisualisez le résultat, puis téléchargez l'image redimensionnée."
     ],
-    "whatIs": "Quand redimensionner une image",
+    "whatIs": "Quand faut-il redimensionner une image ?",
     "whatIsParas": [
-      "Redimensionnez des images pour les sites web, ressources d application, pièces jointes, photos de profil, miniatures et captures de documentation.",
-      "Pour les graphiques transparents, PNG conserve la transparence. Pour les photos, JPEG ou WebP avec qualité réglable produit souvent des fichiers plus légers."
+      "<strong>Redimensionner une image</strong> permet de modifier les dimensions, pas seulement la taille du fichier. Ceci est utile lorsqu'une mise en page, un CMS, un e-mail, un avatar ou une image de documentation nécessite une largeur et une hauteur exactes en pixels.",
+      "Le fichier d'origine reste sur votre appareil pendant que le navigateur crée une nouvelle image de sortie. Les grandes échelles inférieures sont généralement plus belles ; la mise à l'échelle peut rendre une image floue car elle invente des pixels qui n'étaient pas dans l'original."
     ],
     "example": "Redimensionner avec Canvas",
-    "examplePara": "Le navigateur utilise Canvas drawImage avec une largeur et une hauteur cibles :",
+    "examplePara": "Le redimensionnement du canevas dessine l'image source dans un canevas défini aux dimensions cibles :",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "de": {
-    "title": "Bildgröße ändern — Coding.Tools",
-    "description": "Ändern Sie PNG-, JPEG- und WebP-Bilder online mit präzisen Maßen, gesperrtem Seitenverhältnis, Qualitätsregler und lokaler Browser-Verarbeitung.",
+    "title": "Bildgröße ändern - Coding.Tools",
+    "description": "Ändern Sie die Größe von PNG-, JPEG- und WebP-Bildern in Ihrem Browser mit genauen Abmessungen, Seitenverhältnissperre, Voreinstellungen und Qualitätskontrolle.",
     "toolTitle": "Bildgröße ändern",
-    "toolDescription": "Ändern Sie ein Bild präzise im Browser mit Live-Vorschau, Vorgaben und formatbewusstem Export.",
+    "toolDescription": "Ändern Sie die Größe eines Bildes lokal mit exakten Pixelabmessungen, Skalierungsvoreinstellungen, Seitenverhältnissperre und JPEG/WebP-Qualitätskontrolle.",
     "categoryName": "Bild-Tools",
     "labels": {
       "clickOrDrop": "Bilddatei hier klicken oder ziehen",
@@ -461,32 +461,32 @@
     },
     "dropzoneMessage": "Bilddatei hier klicken oder ziehen",
     "dropzoneHint": "PNG, JPEG, WebP · Max. 10 MB",
-    "descTitle": "Bildgröße ändern",
+    "descTitle": "Passen Sie die Größe von Bildern auf exakte Abmessungen an",
     "descParas": [
-      "Dieses Tool skaliert ein einzelnes PNG-, JPEG- oder WebP-Bild direkt im Browser. Legen Sie exakte Maße fest, skalieren Sie prozentual oder nutzen Sie gängige Vorgaben und prüfen Sie die Ausgabe vor dem Download.",
-      "Die Originaldatei bleibt auf Ihrem Gerät. Der Canvas-Export behält PNG, JPEG oder WebP bei, wenn der Browser das Ausgabeformat unterstützt, andernfalls wird PNG verwendet.",
-      "Mit dem Qualitätsregler für JPEG und WebP steuern Sie das Verhältnis aus Bildqualität und Dateigröße."
+      "<strong>Bildgröße ändern ändert die Pixelbreite und -höhe eines PNG-, JPEG- oder WebP-Bildes, ohne es hochzuladen.</strong> Verwenden Sie es, um Miniaturansichten, App-Assets, Screenshots, Profilbilder und Webbilder vorzubereiten, die eine bestimmte Größe benötigen.",
+      "Sperren Sie das Seitenverhältnis, wenn das Bild seine ursprünglichen Proportionen beibehalten soll, oder entsperren Sie es, wenn Sie absichtlich eine andere Form benötigen. Durch die Reduzierung von Breite und Höhe um <strong>50 %</strong> werden <strong>75 %</strong> der Pixel entfernt, wodurch Dateien oft viel kleiner werden.",
+      "Die Verarbeitung erfolgt über den Browser-Canvas. Die Ausgabe von JPEG und WebP kann mit einer Qualitätseinstellung neu kodiert werden; PNG behält die Transparenz bei, schrumpft jedoch möglicherweise nicht so stark wie Fotoformate. Überprüfen Sie die Vorschau, da durch eine Größenänderung feine Details weicher werden können."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
       "Laden Sie ein PNG-, JPEG- oder WebP-Bild hoch.",
-      "Geben Sie Zielbreite und Zielhöhe ein, sperren Sie bei Bedarf das Seitenverhältnis oder wählen Sie eine Vorgabe.",
-      "Passen Sie die JPEG/WebP-Qualität an, prüfen Sie die Vorschau und laden Sie das skalierte Bild herunter."
+      "Geben Sie eine Zielbreite und -höhe ein, sperren Sie bei Bedarf das Seitenverhältnis oder wählen Sie eine Voreinstellung.",
+      "Passen Sie die Qualität von JPEG/WebP an, zeigen Sie eine Vorschau des Ergebnisses an und laden Sie dann das in der Größe geänderte Bild herunter."
     ],
-    "whatIs": "Wann Bilder skaliert werden",
+    "whatIs": "Wann sollten Sie die Größe eines Bildes ändern?",
     "whatIsParas": [
-      "Skalieren Sie Bilder für Websites, App-Assets, E-Mail-Anhänge, Profilbilder, Thumbnails und Dokumentations-Screenshots.",
-      "Bei transparenten Grafiken erhält PNG die Transparenz. Für Fotos erzeugen JPEG oder WebP mit Qualitätsregler meist kleinere Dateien."
+      "<strong>Bildgröße ändern</strong> dient zum Ändern von Abmessungen, nicht nur der Dateigröße. Dies ist nützlich, wenn ein Layout, ein CMS, eine E-Mail, ein Avatar oder ein Dokumentationsbild eine genaue Pixelbreite und -höhe erfordert.",
+      "Die Originaldatei verbleibt auf Ihrem Gerät, während der Browser ein neues Ausgabebild erstellt. Große Verkleinerungen sehen normalerweise am besten aus; Durch die Hochskalierung kann ein Bild unscharf werden, da dadurch Pixel entstehen, die im Original nicht vorhanden waren."
     ],
     "example": "Mit Canvas skalieren",
-    "examplePara": "Der Browser nutzt Canvas drawImage mit Zielbreite und Zielhöhe:",
+    "examplePara": "Durch die Größenänderung der Leinwand wird das Quellbild auf eine Leinwand gezeichnet, die auf die Zielabmessungen eingestellt ist:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "es": {
-    "title": "Redimensionar imagen — Coding.Tools",
-    "description": "Redimensione imágenes PNG, JPEG y WebP en línea con dimensiones precisas, proporción bloqueada, control de calidad y procesamiento local en el navegador.",
+    "title": "Cambiar tamaño de imagen - Coding.Tools",
+    "description": "Cambie el tamaño de las imágenes PNG, JPEG y WebP en su navegador con dimensiones exactas, bloqueo de relación de aspecto, ajustes preestablecidos y control de calidad.",
     "toolTitle": "Redimensionar imagen",
-    "toolDescription": "Redimensione una imagen en el navegador con vista previa en vivo, preajustes y exportación según el formato.",
+    "toolDescription": "Cambie el tamaño de una imagen localmente con dimensiones exactas en píxeles, ajustes preestablecidos de escala, bloqueo de relación de aspecto y control de calidad JPEG/WebP.",
     "categoryName": "Utilidades de imagen",
     "labels": {
       "clickOrDrop": "Haga clic o arrastre una imagen aquí",
@@ -530,32 +530,32 @@
     },
     "dropzoneMessage": "Haga clic o arrastre una imagen aquí",
     "dropzoneHint": "PNG, JPEG, WebP · Máx. 10MB",
-    "descTitle": "Redimensionar imagen",
+    "descTitle": "Cambiar el tamaño de las imágenes a las dimensiones exactas",
     "descParas": [
-      "Esta herramienta redimensiona una imagen PNG, JPEG o WebP directamente en el navegador. Defina dimensiones exactas, escale por porcentaje o use preajustes comunes mientras revisa la salida antes de descargar.",
-      "El archivo original permanece en su dispositivo. La exportación de Canvas conserva PNG, JPEG o WebP cuando el navegador admite ese formato, y usa PNG como alternativa si es necesario.",
-      "Use el control de calidad para JPEG y WebP para equilibrar la calidad visual y el tamaño del archivo."
+      "<strong>Redimensionar imagen cambia el ancho y alto en píxeles de una imagen PNG, JPEG o WebP sin cargarla.</strong> Úselo para preparar miniaturas, recursos de aplicaciones, capturas de pantalla, imágenes de perfil e imágenes web que necesitan un tamaño específico.",
+      "Bloquee la relación de aspecto cuando la imagen deba mantener sus proporciones originales o desbloquéela cuando necesite intencionalmente una forma diferente. Reducir el ancho y el alto en <strong>50%</strong> elimina <strong>75%</strong> de los píxeles, lo que a menudo hace que los archivos sean mucho más pequeños.",
+      "El procesamiento utiliza el lienzo del navegador. La salida JPEG y WebP se puede volver a codificar con una configuración de calidad; PNG mantiene la transparencia pero es posible que no se reduzca tanto como los formatos fotográficos. Consulte la vista previa porque cambiar el tamaño puede suavizar los detalles finos."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Suba una imagen PNG, JPEG o WebP.",
-      "Ingrese el ancho y alto de destino, bloquee la proporción si lo necesita o elija un preajuste.",
-      "Ajuste la calidad JPEG/WebP, revise la vista previa y descargue la imagen redimensionada."
+      "Cargue una imagen PNG, JPEG o WebP.",
+      "Ingrese un ancho y alto objetivo, bloquee la relación de aspecto si es necesario o elija un ajuste preestablecido.",
+      "Ajuste la calidad de JPEG/WebP, obtenga una vista previa del resultado y luego descargue la imagen redimensionada."
     ],
-    "whatIs": "Cuándo redimensionar imágenes",
+    "whatIs": "¿Cuándo deberías cambiar el tamaño de una imagen?",
     "whatIsParas": [
-      "Redimensione imágenes para sitios web, recursos de aplicaciones, adjuntos de correo, fotos de perfil, miniaturas y capturas de documentación.",
-      "Para gráficos con transparencia, PNG conserva la transparencia. Para fotos, JPEG o WebP con calidad ajustable suele producir archivos más pequeños."
+      "<strong>Redimensionar imagen</strong> es para cambiar dimensiones, no solo el tamaño del archivo. Es útil cuando un diseño, CMS, correo electrónico, avatar o imagen de documentación requiere un ancho y alto de píxel exactos.",
+      "El archivo original permanece en su dispositivo mientras el navegador crea una nueva imagen de salida. Las rebajas grandes suelen tener mejor aspecto; La ampliación de escala puede hacer que una imagen sea borrosa porque inventa píxeles que no estaban en el original."
     ],
     "example": "Redimensionar con Canvas",
-    "examplePara": "El navegador usa Canvas drawImage con un ancho y alto de destino:",
+    "examplePara": "El cambio de tamaño del lienzo dibuja la imagen de origen en un lienzo configurado con las dimensiones de destino:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "pt": {
-    "title": "Redimensionar imagem — Coding.Tools",
-    "description": "Redimensione imagens PNG, JPEG e WebP online com dimensões precisas, proporção bloqueada, controle de qualidade e processamento local no navegador.",
+    "title": "Redimensionamento de imagem - Coding.Tools",
+    "description": "Redimensione imagens PNG, JPEG e WebP em seu navegador com dimensões exatas, bloqueio de proporção de aspecto, predefinições e controle de qualidade.",
     "toolTitle": "Redimensionar imagem",
-    "toolDescription": "Redimensione uma imagem no navegador com prévia ao vivo, predefinições e exportação conforme o formato.",
+    "toolDescription": "Redimensione uma imagem localmente com dimensões exatas em pixels, predefinições de escala, bloqueio de proporção e controle de qualidade JPEG/WebP.",
     "categoryName": "Ferramentas de imagem",
     "labels": {
       "clickOrDrop": "Clique ou arraste uma imagem aqui",
@@ -599,25 +599,25 @@
     },
     "dropzoneMessage": "Clique ou arraste uma imagem aqui",
     "dropzoneHint": "PNG, JPEG, WebP · Máx. 10MB",
-    "descTitle": "Redimensionar imagem",
+    "descTitle": "Redimensione imagens para dimensões exatas",
     "descParas": [
-      "Esta ferramenta redimensiona uma imagem PNG, JPEG ou WebP diretamente no navegador. Defina dimensões exatas, escale por porcentagem ou use predefinições comuns enquanto visualiza a saída antes de baixar.",
-      "O arquivo original permanece no seu dispositivo. A exportação via Canvas preserva PNG, JPEG ou WebP quando o navegador suporta esse formato, com fallback para PNG se necessário.",
-      "Use o controle de qualidade para JPEG e WebP para equilibrar qualidade visual e tamanho do arquivo."
+      "<strong>O redimensionador de imagem altera a largura e a altura em pixels de uma imagem PNG, JPEG ou WebP sem carregá-la.</strong> Use-o para preparar miniaturas, ativos de aplicativos, imagens de produtos, anexos de e-mail ou variantes sociais que precisam ter dimensões exatas.",
+      "Bloqueie a proporção quando a imagem deve manter suas proporções originais ou desbloqueie-a quando você precisar intencionalmente de um formato diferente. Reduzir a largura e a altura em <strong>50%</strong> remove <strong>75%</strong> dos pixels, o que geralmente torna os arquivos muito menores.",
+      "O processamento usa a tela do navegador. As saídas JPEG e WebP podem ser recodificadas com uma configuração de qualidade; PNG mantém a transparência, mas pode não encolher tanto quanto os formatos fotográficos. Verifique a visualização porque o redimensionamento pode suavizar detalhes finos."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Envie uma imagem PNG, JPEG ou WebP.",
-      "Informe a largura e altura de destino, bloqueie a proporção se necessário ou escolha uma predefinição.",
-      "Ajuste a qualidade JPEG/WebP, confira a prévia e baixe a imagem redimensionada."
+      "Carregue uma imagem PNG, JPEG ou WebP.",
+      "Insira uma largura e altura alvo, bloqueie a proporção, se necessário, ou escolha uma predefinição.",
+      "Ajuste a qualidade JPEG/WebP, visualize o resultado e baixe a imagem redimensionada."
     ],
-    "whatIs": "Quando redimensionar imagens",
+    "whatIs": "Quando você deve redimensionar uma imagem?",
     "whatIsParas": [
-      "Redimensione imagens para sites, recursos de aplicativos, anexos de e-mail, fotos de perfil, miniaturas e capturas de documentação.",
-      "Para gráficos transparentes, PNG preserva a transparência. Para fotos, JPEG ou WebP com qualidade ajustável geralmente gera arquivos menores."
+      "<strong>Redimensionar imagem</strong> serve para alterar dimensões, não apenas o tamanho do arquivo. É útil quando um layout, CMS, e-mail, avatar ou imagem de documentação requer largura e altura exatas em pixels.",
+      "O arquivo original permanece no seu dispositivo enquanto o navegador cria uma nova imagem de saída. Grandes reduções geralmente ficam melhores; o upscaling pode deixar uma imagem embaçada porque inventa pixels que não estavam no original."
     ],
     "example": "Redimensionar com Canvas",
-    "examplePara": "O navegador usa Canvas drawImage com largura e altura de destino:",
+    "examplePara": "O redimensionamento da tela desenha a imagem de origem em uma tela definida com as dimensões de destino:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   }
 }

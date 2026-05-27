@@ -1,10 +1,5 @@
 ---
-title: "JSON Formatter — Coding.Tools"
-description: "Beautify and format JSON data with proper indentation and structure. Runs locally in your browser, fast and free."
-toolTitle: "JSON Formatter"
-toolDescription: "Beautify and format JSON data with proper indentation. Copy or download the formatted result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "json-formatter"
 permalink: "/json-formatter.html"
 ---
@@ -36,43 +31,7 @@ permalink: "/json-formatter.html"
 {% endblock %}
 
 {% block description %}
-  <h2>JSON Formatter</h2>
-  <p>This JSON Formatter tool takes raw, minified, or poorly indented JSON and reformats it with consistent indentation and proper structure. It makes dense JSON readable by adding line breaks and spaces according to standard formatting conventions.</p>
-  <p>The formatting runs entirely in your browser using the js-beautify library. Your JSON data never leaves your device, making this tool ideal for quickly inspecting API responses, configuration files, or any JSON payload.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your raw or minified JSON into the input editor.</li>
-    <li>Click <strong>Format JSON</strong> to apply indentation and structure.</li>
-    <li>View the beautified JSON in the output editor with proper formatting.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .json file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is JSON?</h3>
-  <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is based on a subset of JavaScript and uses key-value pairs and ordered lists to represent structured data.</p>
-  <p>JSON has become the de facto standard for data exchange on the web, used extensively in REST APIs, configuration files, and document databases. Well-formatted JSON is essential for debugging, code reviews, and maintaining readable configuration files.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any valid JSON input, whether it is a single line of minified data or already partially formatted. If the input contains invalid JSON syntax, the tool will report an error so you can fix the structure before formatting.</p>
-
-  <h3>Example</h3>
-  <p>Minified JSON becomes readable after formatting:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (minified) ---
-{"name":"Alice","age":30,"skills":["JavaScript","Python","Go"]}
-
---- Output (formatted) ---
-{
-  "name": "Alice",
-  "age": 30,
-  "skills": [
-    "JavaScript",
-    "Python",
-    "Go"
-  ]
-}</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,15 +1,15 @@
 {
   "en": {
-    "title": "Reverse Text — Coding.Tools",
-    "description": "Reverse text online character by character, including Unicode and multi-line input. Runs locally in your browser for private string testing.",
+    "title": "Reverse Text - Coding.Tools",
+    "description": "Reverse text locally for string experiments, mirror text, test cases, and simple obfuscation.",
     "toolTitle": "Reverse Text",
-    "toolDescription": "Reverse text character by character, useful for obfuscation, testing, and fun.",
+    "toolDescription": "Reverse pasted text in your browser for quick string tests, mirror-style output, obfuscation, and debugging examples.",
     "categoryName": "String & Text Utilities",
     "inputPlaceholder": "Enter or paste text to reverse...",
-    "descTitle": "Reverse Text",
+    "descTitle": "Reverse a string directly in the browser",
     "descParas": [
-      "This tool reverses any text string character by character. It is useful for obfuscation, testing string handling in applications, creating mirror text, or simply having fun with words and sentences.",
-      "The reversal runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool privately and instantly."
+      "<strong>Reverse Text flips the order of pasted text so the last character becomes first.</strong> Use it for quick string-processing tests, mirror-text experiments, simple obfuscation, puzzle text, sample data, or checking how an app handles reversed input.",
+      "Unicode can make reversal more complicated than it looks. Combining accents, emoji skin tones, flags, zero-width joiner emoji, and other grapheme clusters may be made from multiple code points, so a character-by-character reversal can split something that appears as one visible symbol."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -17,246 +17,246 @@
       "Click <strong>Reverse Text</strong> to reverse the entire string character by character.",
       "The reversed text replaces the input in the editor. Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset the editor."
     ],
-    "whatIs": "What is text reversal?",
+    "whatIs": "What is Reverse Text?",
     "whatIsParas": [
-      "Text reversal is the process of rearranging the characters in a string so that the last character becomes the first, the second-to-last becomes the second, and so on. For example, \"hello\" becomes \"olleh\". This is sometimes called a string reverse or mirror text operation."
+      "<strong>Reverse Text</strong> is a local string utility that reverses the editor contents and replaces the input with the reversed result. It is meant for plain text experiments and lightweight transformations, not encryption or secure data hiding."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool works with any text, including Unicode characters, emojis, and multi-line content. Each line is preserved in the output; only the order of characters within the full text is reversed.",
+    "inputNotesPara": "Review the output when using emoji, accented characters, right-to-left scripts, or multi-line text. Newlines and spaces are part of the string, so their positions are reversed along with visible letters.",
     "example": "Example",
-    "examplePara": "See how text looks before and after reversal:",
+    "examplePara": "A simple ASCII string reverses predictably from end to start:",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "Reverse Text"
   },
   "cn": {
-    "title": "文本反转 — Coding.Tools",
-    "description": "在线逐字符反转文本，支持 Unicode 和多行输入。工具在浏览器本地运行，适合私密字符串测试。",
+    "title": "反向文本 - Coding.Tools",
+    "description": "在本地反转文本以进行字符串实验、镜像文本、测试用例和简单混淆。",
     "toolTitle": "文本反转",
-    "toolDescription": "逐字符反转文本，可用于混淆、测试和娱乐。",
+    "toolDescription": "在浏览器中反转粘贴的文本，以进行快速字符串测试、镜像式输出、混淆和调试示例。",
     "categoryName": "字符串与文本",
     "inputPlaceholder": "输入或粘贴要反转的文本...",
-    "descTitle": "文本反转",
+    "descTitle": "直接在浏览器中反转字符串",
     "descParas": [
-      "此工具逐字符反转任何文本字符串。它可用于混淆、测试应用程序中的字符串处理、创建镜像文本，或简单地玩文字游戏。",
-      "反转在浏览器中本地运行。您粘贴到编辑器中的文本不会被上传、存储或发送到服务器。"
+      "<strong>反向文本翻转粘贴文本的顺序，使最后一个字符成为第一个。</strong> 使用它进行快速字符串处理测试、镜像文本实验、简单混淆、拼图文本、示例数据或检查应用程序如何处理反向输入。",
+      "Unicode 可以使反转比看起来更复杂。组合重音、表情符号肤色、旗帜、零宽度连接表情符号和其他字素簇可以由多个代码点组成，因此逐个字符的反转可以分割显示为一个可见符号的内容。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中粘贴或输入文本。",
-      "点击<strong>文本反转</strong>逐字符反转整个字符串。",
-      "反转后的文本替换编辑器中的输入。使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置编辑器。"
+      "将文本粘贴或键入到输入编辑器中。",
+      "单击 <strong>文本反转</strong> 可逐个字符反转整个字符串。",
+      "反转的文本将替换编辑器中的输入。使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置编辑器。"
     ],
-    "whatIs": "什么是文本反转？",
+    "whatIs": "什么是反向文本？",
     "whatIsParas": [
-      "文本反转是重新排列字符串中字符的过程，使最后一个字符成为第一个，倒数第二个成为第二个，依此类推。例如，\"hello\" 变成 \"olleh\"。这有时被称为字符串反转或镜像文本操作。"
+      "<strong>文本反转</strong> 是一个本地字符串实用程序，可反转编辑器内容并用反转结果替换输入。它适用于纯文本实验和轻量级转换，而不是加密或安全数据隐藏。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具适用于任何文本，包括 Unicode 字符、表情符号和多行内容。输出中保留每行；只有整个文本中字符的顺序被反转。",
+    "inputNotesPara": "使用表情符号、重音字符、从右到左的脚本或多行文本时查看输出。换行符和空格是字符串的一部分，因此它们的位置与可见字母一起颠倒。",
     "example": "示例",
-    "examplePara": "查看文本反转前后的效果：",
+    "examplePara": "一个简单的 ASCII 字符串从头到尾按预期反转：",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "文本反转"
   },
   "tw": {
-    "title": "文字反轉 — Coding.Tools",
-    "description": "線上逐字元反轉文字，支援 Unicode 與多行輸入。工具在瀏覽器本機執行，適合私密字串測試。",
+    "title": "反向文字 - Coding.Tools",
+    "description": "在本地反轉文字以進行字串實驗、鏡像文字、測試案例和簡單混淆。",
     "toolTitle": "文字反轉",
-    "toolDescription": "逐字元反轉文字，可用於混淆、測試和娛樂。",
+    "toolDescription": "在瀏覽器中反轉貼上的文本，以進行快速字串測試、鏡像式輸出、混淆和偵錯範例。",
     "categoryName": "字串與文字",
     "inputPlaceholder": "輸入或貼上要反轉的文字...",
-    "descTitle": "文字反轉",
+    "descTitle": "直接在瀏覽器中反轉字串",
     "descParas": [
-      "此工具逐字元反轉任何文字字串。它可用於混淆、測試應用程式中的字串處理、建立鏡像文字。",
-      "反轉在瀏覽器中本地運行。您貼到編輯器中的文字不會被上傳、儲存或傳送到伺服器。"
+      "<strong>反向文字翻轉貼上文字的順序，使最後一個字元成為第一個。</strong> 使用它進行快速字串處理測試、鏡像文字實驗、簡單混淆、拼圖文字、範例資料或檢查應用程式如何處理反向輸入。",
+      "Unicode 可以讓反轉比看起來更複雜。組合重音、表情符號膚色、旗幟、零寬度連接表情符號和其他字素簇可以由多個代碼點組成，因此逐個字元的反轉可以分割顯示為一個可見符號的內容。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中貼上或輸入文字。",
-      "點擊<strong>文字反轉</strong>逐字元反轉整個字串。",
-      "反轉後的文字替換編輯器中的輸入。使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔案，或<strong>清除</strong>重設編輯器。"
+      "將文字貼上或鍵入到輸入編輯器中。",
+      "點選 <strong>文字反轉</strong> 可逐一字元反轉整個字串。",
+      "反轉的文字將替換編輯器中的輸入。使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置編輯器。"
     ],
-    "whatIs": "什麼是文字反轉？",
+    "whatIs": "什麼是反向文字？",
     "whatIsParas": [
-      "文字反轉是重新排列字串中字元的過程，使最後一個字元成為第一個，依此類推。例如，\"hello\" 變成 \"olleh\"。"
+      "<strong>文字反轉</strong> 是一個本地字串實用程序，可反轉編輯器內容並用反轉結果替換輸入。它適用於純文字實驗和輕量級轉換，而不是加密或安全資料隱藏。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具適用於任何文字，包括 Unicode 字元、表情符號和多行內容。",
+    "inputNotesPara": "使用表情符號、重音字元、從右到左的腳本或多行文字時查看輸出。換行符和空格是字串的一部分，因此它們的位置與可見字母一起顛倒。",
     "example": "範例",
-    "examplePara": "查看文字反轉前後的效果：",
+    "examplePara": "一個簡單的 ASCII 字串從頭到尾按預期反轉：",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "文字反轉"
   },
   "jp": {
-    "title": "テキスト反転 — Coding.Tools",
-    "description": "Unicode や複数行入力を含むテキストを文字単位で反転します。ブラウザ内でローカル実行される文字列テスト用ツールです。",
+    "title": "テキストを反転 - Coding.Tools",
+    "description": "文字列実験、ミラーテキスト、テストケース、単純な難読化のためにローカルでテキストを反転します。",
     "toolTitle": "テキスト反転",
-    "toolDescription": "文字ごとにテキストを反転。難読化、テスト、遊びに便利。",
+    "toolDescription": "ブラウザーに貼り付けたテキストを反転して、文字列テスト、ミラー形式の出力、難読化、およびデバッグの例を簡単に実行できます。",
     "categoryName": "文字列とテキスト",
     "inputPlaceholder": "反転するテキストを入力または貼り付け...",
-    "descTitle": "テキスト反転",
+    "descTitle": "ブラウザ内で文字列を直接反転する",
     "descParas": [
-      "このツールは任意のテキスト文字列を文字ごとに反転します。難読化、アプリケーションの文字列処理テスト、ミラーテキスト作成に便利です。",
-      "反転はブラウザ内でローカルに実行されます。"
+      "<strong>テキスト反転 は、貼り付けられたテキストの順序を反転して、最後の文字が最初になります。</strong> 簡単な文字列処理テスト、ミラー テキストの実験、単純な難読化、パズル テキスト、サンプル データ、またはアプリが反転入力をどのように処理するかを確認するために使用します。",
+      "Unicode は、反転を見た目よりも複雑にする可能性があります。アクセント、絵文字の肌のトーン、旗、ゼロ幅結合絵文字、その他の書記素クラスターの組み合わせは、複数のコード ポイントから作成される場合があるため、文字ごとに反転すると、1 つの目に見えるシンボルとして表示されるものを分割することができます。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを貼り付けるか入力します。",
-      "<strong>テキスト反転</strong>をクリックして文字列全体を反転。",
-      "反転されたテキストが入力を置き換えます。"
+      "テキストを入力エディタに貼り付けるか入力します。",
+      "<strong>テキストを反転</strong> をクリックして、文字列全体を 1 文字ずつ反転します。",
+      "反転されたテキストがエディターの入力を置き換えます。クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、エディタをリセットするには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "テキスト反転とは？",
+    "whatIs": "逆文字とは何ですか?",
     "whatIsParas": [
-      "テキスト反転は、文字列の文字を最後の文字が最初になるよう並べ替える処理です。例えば「hello」は「olleh」になります。"
+      "<strong>テキスト反転</strong> は、エディターの内容を反転し、入力を反転した結果で置き換えるローカル文字列ユーティリティです。これは、暗号化や安全なデータ隠蔽ではなく、プレーン テキストの実験と軽量の変換を目的としています。"
     ],
     "inputNotes": "入力について",
-    "inputNotesPara": "Unicode文字、絵文字、複数行のテキストを含むあらゆる入力に対応。",
+    "inputNotesPara": "絵文字、アクセント付き文字、右から左へ書くスクリプト、または複数行のテキストを使用する場合は、出力を確認してください。改行とスペースは文字列の一部であるため、表示される文字とともに位置が逆になります。",
     "example": "例",
-    "examplePara": "反転前後のテキストを確認：",
+    "examplePara": "単純な ASCII 文字列は、予想通り、終端から始端まで反転します。",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "テキスト反転"
   },
   "kr": {
-    "title": "텍스트 반전 — Coding.Tools",
-    "description": "유니코드와 여러 줄 입력을 포함해 텍스트를 문자 단위로 반전합니다. 브라우저에서 로컬로 실행되는 문자열 테스트 도구입니다.",
+    "title": "역방향 텍스트 - Coding.Tools",
+    "description": "문자열 실험, 미러 텍스트, 테스트 사례 및 단순 난독화를 위해 로컬에서 텍스트를 반전합니다.",
     "toolTitle": "텍스트 반전",
-    "toolDescription": "문자별로 텍스트를 반전. 난독화, 테스트, 재미에 유용.",
+    "toolDescription": "빠른 문자열 테스트, 미러 스타일 출력, 난독화 및 디버깅 예제를 위해 브라우저에서 붙여넣은 텍스트를 역방향으로 실행하세요.",
     "categoryName": "문자열 및 텍스트",
     "inputPlaceholder": "반전할 텍스트를 입력하거나 붙여넣으세요...",
-    "descTitle": "텍스트 반전",
+    "descTitle": "브라우저에서 직접 문자열 반전",
     "descParas": [
-      "이 도구는 텍스트 문자열을 문자별로 반전합니다. 난독화, 문자열 처리 테스트, 미러 텍스트 생성에 유용합니다.",
-      "반전은 브라우저에서 로컬로 실행됩니다."
+      "<strong>텍스트 반전는 붙여넣은 텍스트의 순서를 뒤집어 마지막 문자가 첫 번째가 되도록 합니다.</strong> 빠른 문자열 처리 테스트, 미러 텍스트 실험, 간단한 난독화, 퍼즐 텍스트, 샘플 데이터 또는 앱이 역방향 입력을 처리하는 방법을 확인하는 데 사용합니다.",
+      "유니코드는 보기보다 반전을 더 복잡하게 만들 수 있습니다. 악센트, 이모티콘 피부색, 플래그, 너비가 0인 조이너 이모티콘 및 기타 문자소 클러스터를 결합하면 여러 코드 포인트에서 만들어질 수 있으므로 문자별 반전을 통해 하나의 표시 기호로 나타나는 항목을 분할할 수 있습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 편집기에 텍스트를 붙여넣거나 입력하세요.",
-      "<strong>텍스트 반전</strong>을 클릭하여 전체 문자열을 반전합니다.",
-      "반전된 텍스트가 입력을 대체합니다."
+      "입력 편집기에 텍스트를 붙여넣거나 입력합니다.",
+      "전체 문자열을 문자별로 반전하려면 <strong>텍스트 반전</strong>를 클릭합니다.",
+      "반전된 텍스트가 편집기의 입력을 대체합니다. 클립보드의 경우 <strong>복사</strong>를 사용하고, 텍스트 파일의 경우 <strong>다운로드</strong>를 사용하고, 편집기를 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "텍스트 반전이란?",
+    "whatIs": "역방향 텍스트란 무엇입니까?",
     "whatIsParas": [
-      "텍스트 반전은 문자열의 문자 순서를 뒤집는 처리입니다. 예를 들어 \"hello\"는 \"olleh\"가 됩니다."
+      "<strong>텍스트 반전</strong>는 편집기 내용을 반전시키고 입력을 반전된 결과로 바꾸는 로컬 문자열 유틸리티입니다. 이는 암호화나 보안 데이터 숨기기가 아닌 일반 텍스트 실험과 가벼운 변환을 위한 것입니다."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "유니코드 문자, 이모지, 여러 줄 텍스트를 포함한 모든 입력에 작동합니다.",
+    "inputNotesPara": "이모티콘, 악센트 문자, 오른쪽에서 왼쪽으로 쓰는 스크립트 또는 여러 줄 텍스트를 사용할 때 출력을 검토하세요. 줄 바꿈과 공백은 문자열의 일부이므로 해당 위치는 보이는 문자와 함께 반전됩니다.",
     "example": "예시",
-    "examplePara": "반전 전후의 텍스트를 확인:",
+    "examplePara": "간단한 ASCII 문자열은 끝에서 시작까지 예상대로 반전됩니다.",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "텍스트 반전"
   },
   "fr": {
-    "title": "Inverser le texte — Coding.Tools",
-    "description": "Inversez le texte caractère par caractère, avec Unicode et contenu multiligne. Loutil fonctionne localement dans le navigateur pour tester des chaînes en privé.",
+    "title": "Texte inversé - Coding.Tools",
+    "description": "Inversez le texte localement pour les expériences sur les chaînes, le texte miroir, les cas de test et l'obscurcissement simple.",
     "toolTitle": "Inverser le texte",
-    "toolDescription": "Inversez le texte caractère par caractère, utile pour l'obfuscation, les tests et le divertissement.",
+    "toolDescription": "Inversez le texte collé dans votre navigateur pour des tests de chaîne rapides, une sortie de style miroir, des exemples d'obscurcissement et de débogage.",
     "categoryName": "Chaînes et texte",
     "inputPlaceholder": "Entrez ou collez le texte à inverser...",
-    "descTitle": "Inverser le texte",
+    "descTitle": "Inverser une chaîne directement dans le navigateur",
     "descParas": [
-      "Cet outil inverse n'importe quelle chaîne caractère par caractère.",
-      "L'inversion s'exécute localement dans votre navigateur."
+      "<strong>Inverser le texte inverse l'ordre du texte collé afin que le dernier caractère devienne le premier.</strong> Utilisez-le pour des tests rapides de traitement de chaînes, des expériences de texte miroir, une obscurcissement simple, du texte de puzzle, des exemples de données ou pour vérifier comment une application gère la saisie inversée.",
+      "Unicode peut rendre l'inversion plus compliquée qu'il n'y paraît. La combinaison d'accents, de tons chair emoji, de drapeaux, d'emoji de jointure de largeur nulle et d'autres groupes de graphèmes peut être créée à partir de plusieurs points de code, de sorte qu'une inversion caractère par caractère peut diviser quelque chose qui apparaît comme un symbole visible."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez ou tapez votre texte dans l'éditeur.",
-      "Cliquez <strong>Inverser le texte</strong>.",
-      "Le texte inversé remplace l'entrée."
+      "Collez ou saisissez votre texte dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Inverser le texte</strong> pour inverser la chaîne entière caractère par caractère.",
+      "Le texte inversé remplace la saisie dans l'éditeur. Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser l'éditeur."
     ],
-    "whatIs": "Qu'est-ce que l'inversion de texte ?",
+    "whatIs": "Qu'est-ce que le texte inversé ?",
     "whatIsParas": [
-      "L'inversion de texte réarrange les caractères d'une chaîne. Par exemple, \"hello\" devient \"olleh\"."
+      "<strong>Inverser le texte</strong> est un utilitaire de chaîne local qui inverse le contenu de l'éditeur et remplace l'entrée par le résultat inversé. Il est destiné aux expériences en texte brut et aux transformations légères, et non au chiffrement ou à la dissimulation sécurisée des données."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Fonctionne avec tout texte, y compris les caractères Unicode et les émojis.",
+    "inputNotesPara": "Examinez le résultat lorsque vous utilisez des emoji, des caractères accentués, des scripts de droite à gauche ou du texte multiligne. Les nouvelles lignes et les espaces font partie de la chaîne, leurs positions sont donc inversées avec les lettres visibles.",
     "example": "Exemple",
-    "examplePara": "Voyez le texte avant et après inversion :",
+    "examplePara": "Une simple chaîne ASCII s'inverse de manière prévisible de la fin au début :",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "Inverser le texte"
   },
   "de": {
-    "title": "Text umkehren — Coding.Tools",
-    "description": "Text zeichenweise online umkehren, inklusive Unicode und mehrzeiliger Eingaben. Läuft lokal im Browser für private String-Tests.",
+    "title": "Umgekehrter Text - Coding.Tools",
+    "description": "Lokale Textumkehr für String-Experimente, Spiegeltext, Testfälle und einfache Verschleierung.",
     "toolTitle": "Text umkehren",
-    "toolDescription": "Text zeichenweise umkehren, nützlich zur Verschleierung, zum Testen und zum Spaß.",
+    "toolDescription": "Rückwärts eingefügten Text in Ihrem Browser für schnelle String-Tests, Spiegelausgabe, Verschleierung und Debugging-Beispiele.",
     "categoryName": "Zeichenketten & Text",
     "inputPlaceholder": "Text zum Umkehren eingeben oder einfügen...",
-    "descTitle": "Text umkehren",
+    "descTitle": "Kehren Sie eine Zeichenfolge direkt im Browser um",
     "descParas": [
-      "Dieses Tool kehrt beliebige Textzeichenfolgen zeichenweise um.",
-      "Die Umkehrung läuft lokal im Browser."
+      "<strong>Text umkehren dreht die Reihenfolge des eingefügten Texts um, sodass das letzte Zeichen an erster Stelle steht.</strong> Verwenden Sie es für schnelle String-Verarbeitungstests, Spiegeltextexperimente, einfache Verschleierung, Rätseltext, Beispieldaten oder um zu überprüfen, wie eine App mit umgekehrten Eingaben umgeht.",
+      "Unicode kann die Umkehrung komplizierter machen, als es aussieht. Das Kombinieren von Akzenten, Emoji-Hauttönen, Flaggen, Joiner-Emojis mit Nullbreite und anderen Graphem-Clustern kann aus mehreren Codepunkten erstellt werden, sodass eine Zeichen-für-Zeichen-Umkehr etwas aufteilen kann, das als ein sichtbares Symbol erscheint."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Text in den Editor eingeben oder einfügen.",
-      "<strong>Text umkehren</strong> klicken.",
-      "Der umgekehrte Text ersetzt die Eingabe."
+      "Fügen Sie Ihren Text ein oder geben Sie ihn in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Text umkehren</strong>, um die gesamte Zeichenfolge Zeichen für Zeichen umzukehren.",
+      "Der umgekehrte Text ersetzt die Eingabe im Editor. Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um den Editor zurückzusetzen."
     ],
-    "whatIs": "Was ist Textumkehrung ?",
+    "whatIs": "Was ist Reverse-Text?",
     "whatIsParas": [
-      "Textumkehrung ordnet die Zeichen einer Zeichenfolge um. Aus \"hello\" wird \"olleh\"."
+      "<strong>Text umkehren</strong> ist ein lokales String-Dienstprogramm, das den Editorinhalt umkehrt und die Eingabe durch das umgekehrte Ergebnis ersetzt. Es ist für Klartextexperimente und einfache Transformationen gedacht, nicht für Verschlüsselung oder sicheres Verstecken von Daten."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Funktioniert mit jedem Text, einschließlich Unicode-Zeichen und Emojis.",
+    "inputNotesPara": "Überprüfen Sie die Ausgabe, wenn Sie Emojis, Akzentzeichen, Rechts-nach-Links-Skripte oder mehrzeiligen Text verwenden. Zeilenumbrüche und Leerzeichen sind Teil der Zeichenfolge, daher werden ihre Positionen zusammen mit den sichtbaren Buchstaben umgekehrt.",
     "example": "Beispiel",
-    "examplePara": "Text vor und nach der Umkehrung:",
+    "examplePara": "Eine einfache ASCII-Zeichenfolge kehrt sich vorhersehbar vom Ende zum Anfang um:",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "Text umkehren"
   },
   "es": {
-    "title": "Invertir texto — Coding.Tools",
-    "description": "Invierta texto carácter por carácter, incluyendo Unicode y entradas de varias líneas. Se ejecuta localmente en el navegador para pruebas privadas de cadenas.",
+    "title": "Texto inverso - Coding.Tools",
+    "description": "Invierta el texto localmente para experimentos de cadenas, texto reflejado, casos de prueba y ofuscación simple.",
     "toolTitle": "Invertir texto",
-    "toolDescription": "Invierta texto carácter por carácter, útil para ofuscación, pruebas y diversión.",
+    "toolDescription": "Invierta el texto pegado en su navegador para realizar pruebas rápidas de cadenas, resultados en espejo, ofuscación y ejemplos de depuración.",
     "categoryName": "Cadenas y texto",
     "inputPlaceholder": "Ingrese o pegue texto para invertir...",
-    "descTitle": "Invertir texto",
+    "descTitle": "Invertir una cadena directamente en el navegador",
     "descParas": [
-      "Esta herramienta invierte cualquier cadena carácter por carácter.",
-      "La inversión se ejecuta localmente en su navegador."
+      "<strong>Invertir texto invierte el orden del texto pegado para que el último carácter pase a ser el primero.</strong> Úselo para pruebas rápidas de procesamiento de cadenas, experimentos de texto reflejado, ofuscación simple, texto de rompecabezas, datos de muestra o para verificar cómo una aplicación maneja la entrada invertida.",
+      "Unicode puede hacer que la reversión sea más complicada de lo que parece. Se pueden combinar acentos, tonos de piel de emoji, banderas, emoji de unión de ancho cero y otros grupos de grafemas a partir de múltiples puntos de código, por lo que una inversión carácter por carácter puede dividir algo que aparece como un símbolo visible."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Pegue o escriba su texto en el editor.",
-      "Haga clic en <strong>Invertir texto</strong>.",
-      "El texto invertido reemplaza la entrada."
+      "Pega o escribe tu texto en el editor de entrada.",
+      "Haga clic en <strong>Invertir texto</strong> para invertir toda la cadena carácter por carácter.",
+      "El texto invertido reemplaza la entrada en el editor. Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer el editor."
     ],
-    "whatIs": "¿Qué es la inversión de texto?",
+    "whatIs": "¿Qué es el texto inverso?",
     "whatIsParas": [
-      "La inversión de texto reorganiza los caracteres de una cadena. Por ejemplo, \"hello\" se convierte en \"olleh\"."
+      "<strong>Invertir texto</strong> es una utilidad de cadena local que invierte el contenido del editor y reemplaza la entrada con el resultado invertido. Está destinado a experimentos de texto sin formato y transformaciones ligeras, no a cifrado ni a ocultación segura de datos."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Funciona con cualquier texto, incluyendo caracteres Unicode y emojis.",
+    "inputNotesPara": "Revise el resultado cuando utilice emoji, caracteres acentuados, guiones de derecha a izquierda o texto de varias líneas. Las nuevas líneas y los espacios son parte de la cadena, por lo que sus posiciones se invierten junto con las letras visibles.",
     "example": "Ejemplo",
-    "examplePara": "Vea el texto antes y después de la inversión:",
+    "examplePara": "Una cadena ASCII simple se invierte de forma predecible desde el final hasta el principio:",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "Invertir texto"
   },
   "pt": {
-    "title": "Inverter texto — Coding.Tools",
-    "description": "Inverta texto caractere por caractere, incluindo Unicode e entradas de várias linhas. Roda localmente no navegador para testes privados de strings.",
+    "title": "Texto reverso - Coding.Tools",
+    "description": "Reverta o texto localmente para experimentos de string, texto espelhado, casos de teste e ofuscação simples.",
     "toolTitle": "Inverter texto",
-    "toolDescription": "Inverta texto caractere por caractere, útil para ofuscação, testes e diversão.",
+    "toolDescription": "Texto colado reversamente em seu navegador para testes rápidos de string, saída em estilo espelho, ofuscação e exemplos de depuração.",
     "categoryName": "Strings e texto",
     "inputPlaceholder": "Insira ou cole texto para inverter...",
-    "descTitle": "Inverter texto",
+    "descTitle": "Reverter uma string diretamente no navegador",
     "descParas": [
-      "Esta ferramenta inverte qualquer string caractere por caractere.",
-      "A inversão é executada localmente no navegador."
+      "<strong>Inverter texto inverte a ordem do texto colado para que o último caractere seja o primeiro.</strong> Use-o para testes rápidos de processamento de strings, experimentos de texto espelhado, ofuscação simples, texto de quebra-cabeça, dados de amostra ou para verificar como um aplicativo lida com entrada invertida.",
+      "O Unicode pode tornar a reversão mais complicada do que parece. A combinação de acentos, tons de pele de emoji, bandeiras, emoji de junção de largura zero e outros agrupamentos de grafemas pode ser feita a partir de vários pontos de código, de modo que uma reversão caractere por caractere pode dividir algo que aparece como um símbolo visível."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Cole ou digite seu texto no editor.",
-      "Clique em <strong>Inverter texto</strong>.",
-      "O texto invertido substitui a entrada."
+      "Cole ou digite seu texto no editor de entrada.",
+      "Clique em <strong>Inverter texto</strong> para reverter toda a string caractere por caractere.",
+      "O texto invertido substitui a entrada no editor. Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir o editor."
     ],
-    "whatIs": "O que é inversão de texto?",
+    "whatIs": "O que é texto reverso?",
     "whatIsParas": [
-      "A inversão de texto reorganiza os caracteres de uma string. Por exemplo, \"hello\" se torna \"olleh\"."
+      "<strong>Inverter texto</strong> é um utilitário de string local que inverte o conteúdo do editor e substitui a entrada pelo resultado revertido. Ele se destina a experimentos de texto simples e transformações leves, não a criptografia ou ocultação segura de dados."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Funciona com qualquer texto, incluindo caracteres Unicode e emojis.",
+    "inputNotesPara": "Revise a saída ao usar emoji, caracteres acentuados, scripts da direita para a esquerda ou texto com várias linhas. Novas linhas e espaços fazem parte da string, portanto suas posições são invertidas junto com as letras visíveis.",
     "example": "Exemplo",
-    "examplePara": "Veja o texto antes e depois da inversão:",
+    "examplePara": "Uma string ASCII simples reverte previsivelmente do início ao fim:",
     "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
     "reverseText": "Inverter texto"
   }

@@ -1,16 +1,16 @@
 {
   "en": {
-    "title": "Base64 Encode and Decode — Coding.Tools",
-    "description": "Encode text to Base64 or decode Base64 back to readable text directly in your browser. Fast, private, and free to use.",
+    "title": "Base64 Encode - Coding.Tools",
+    "description": "Encode text to Base64 or decode Base64 back to readable text. Useful for API payloads, data URIs, and text-safe transport.",
     "toolTitle": "Base64 Encode",
-    "toolDescription": "Convert text to Base64, decode Base64 back to readable text, and copy or download the result without sending data anywhere.",
+    "toolDescription": "Convert plain text to Base64, decode Base64 back to text, and copy or download the result.",
     "categoryName": "Hash & Cryptography",
     "inputPlaceholder": "Enter text to encode or paste Base64 to decode...",
     "outputPlaceholder": "Encoded or decoded result will appear here...",
-    "descTitle": "Base64 Encode and Decode",
+    "descTitle": "Encode text for Base64 transport and storage",
     "descParas": [
-      "This Base64 tool converts plain text into Base64 and turns Base64 strings back into readable text. It is useful when you need to prepare data for APIs, inspect encoded values from logs, test request payloads, or move small snippets of data through text-only systems.",
-      "The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow."
+      "<strong>This Base64 encoder turns plain text into an ASCII-safe Base64 string and can decode it again for a quick round trip.</strong> It is useful when a value must travel through JSON, HTML, environment variables, command output, email, or other systems that expect printable text.",
+      "Base64 is an encoding format, not encryption. Anyone with the string can decode it, and the encoded output is usually about one third larger because every 3 bytes become 4 Base64 characters."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -19,263 +19,263 @@
       "Check the output editor and status message. Invalid Base64 input is reported immediately when decoding fails.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
     ],
-    "whatIs": "What is Base64?",
+    "whatIs": "What is Base64 encoding?",
     "whatIsParas": [
-      "Base64 is a way to represent bytes as printable text. It uses letters, numbers, plus signs, slashes, and padding characters so binary data can travel through systems that expect ordinary text, such as JSON, HTML, email, configuration files, and command-line output.",
-      "Base64 is an encoding format, not encryption. Anyone can decode it if they have the string. It also increases the data size by roughly one third, so it is best for transport and embedding, not for compression or secrecy."
+      "<strong>Base64 encoding</strong> represents bytes with a limited alphabet of letters, numbers, <code>+</code>, <code>/</code>, and optional <code>=</code> padding. That makes binary or Unicode-derived data easier to place in text-only channels.",
+      "Use Base64 for representation and transport, not secrecy or compression. If you need confidentiality, use encryption; if you need integrity, use a hash or signature; if you need smaller files, use compression before encoding."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Encoding supports normal text, including Unicode characters. When decoding, make sure the input is a complete Base64 string and does not include unrelated headers, labels, or extra text around the encoded value.",
+    "inputNotesPara": "Encoding accepts normal text, including Unicode. When decoding, paste the complete Base64 value without labels, quotes, headers, or surrounding prose; missing padding or extra characters can make a valid payload fail.",
     "example": "Example",
-    "examplePara": "The same value can be encoded and decoded back to its original text:",
+    "examplePara": "A short message becomes an ASCII-safe Base64 value and can be decoded back to the original text:",
     "exampleCode": "--- Plain Text ---\nHello, World!\n\n--- Base64 Encoded ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decoded Back ---\nHello, World!"
   },
   "cn": {
-    "title": "Base64 编码解码 — Coding.Tools",
-    "description": "在浏览器中直接将文本编码为 Base64 或将 Base64 解码回可读文本。快速、私密、免费使用。",
+    "title": "Base64 编码 - Coding.Tools",
+    "description": "将文本编码为 Base64 或将 Base64 解码回可读文本。对于 API 有效负载、数据 URI 和文本安全传输很有用。",
     "toolTitle": "Base64 编码解码",
-    "toolDescription": "将文本转换为 Base64，将 Base64 解码回可读文本，并复制或下载结果。",
+    "toolDescription": "将纯文本转换为 Base64，将 Base64 解码回文本，然后复制或下载结果。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本进行编码或粘贴 Base64 进行解码...",
     "outputPlaceholder": "编码或解码结果将显示在此处...",
-    "descTitle": "Base64 编码解码",
+    "descTitle": "对 Base64 传输和存储的文本进行编码",
     "descParas": [
-      "此 Base64 工具将纯文本转换为 Base64，并将 Base64 字符串转换回可读文本。当您需要为 API 准备数据、从日志中检查编码值、测试请求负载或通过纯文本系统传输小段数据时，它非常有用。",
-      "转换在您的浏览器中本地运行。您粘贴到编辑器中的文本不会被上传、存储或发送到服务器，因此您可以在不改变工作流程的情况下快速使用此工具。"
+      "<strong>此 Base64 编码器将纯文本转换为 ASCII 安全的 Base64 字符串，并可以再次对其进行解码以进行快速往返。</strong> 当值必须通过 JSON、HTML、环境变量、命令输出、电子邮件或其他需要可打印文本的系统时，它非常有用。",
+      "Base64是一种编码格式，而不是加密。任何拥有该字符串的人都可以对其进行解码，并且编码后的输出通常会大三分之一左右，因为每 3 个字节变成 4 个 Base64 字符。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将纯文本或 Base64 值粘贴到输入编辑器中。",
-      "选择<strong>编码</strong>创建 Base64 字符串，或<strong>解码</strong>读取现有的 Base64 字符串。",
-      "检查输出编辑器和状态消息。当解码失败时，无效的 Base64 输入会立即报告。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      "选择 <strong>编码</strong> 创建 Base64 字符串，或选择 <strong>解码</strong> 读取现有 Base64 字符串。",
+      "检查输出编辑器和状态消息。解码失败立即报告无效的Base64输入。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置两个编辑器。"
     ],
-    "whatIs": "什么是 Base64？",
+    "whatIs": "Base64 编码是什么？",
     "whatIsParas": [
-      "Base64 是一种将字节表示为可打印文本的方式。它使用字母、数字、加号、斜杠和填充字符，使二进制数据能够通过期望普通文本的系统传输，如 JSON、HTML、电子邮件、配置文件和命令行输出。",
-      "Base64 是一种编码格式，不是加密。任何人都可以在获得字符串的情况下解码它。它还会将数据大小增加大约三分之一，因此最适合传输和嵌入，而非压缩或保密。"
+      "<strong>Base64 编码</strong> 表示具有有限字母表、数字、<code>+</code>、<code>/</code> 和可选 <code>=</code> 填充的字节。这使得二进制或 Unicode 派生数据更容易放置在纯文本通道中。",
+      "使用 Base64 进行表示和传输，而不是保密或压缩。如果需要保密，请使用加密；如果需要完整性，请使用散列或签名；如果您需要较小的文件，请在编码之前使用压缩。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "编码支持普通文本，包括 Unicode 字符。解码时，请确保输入是完整的 Base64 字符串，不包含不相关的标题、标签或编码值周围的额外文本。",
+    "inputNotesPara": "编码接受普通文本，包括 Unicode。解码时，请粘贴完整的 Base64 值，不要带上标签、引号、标题或周围说明文字；缺少填充或包含额外字符都可能导致载荷解码失败。",
     "example": "示例",
-    "examplePara": "相同的值可以被编码并解码回原始文本：",
+    "examplePara": "一条短消息会变成一个 ASCII 安全的 Base64 值，并且可以被解码回原始文本：",
     "exampleCode": "--- 纯文本 ---\nHello, World!\n\n--- Base64 编码 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 解码还原 ---\nHello, World!"
   },
   "tw": {
-    "title": "Base64 編碼解碼 — Coding.Tools",
-    "description": "在瀏覽器中直接將文字編碼為 Base64 或將 Base64 解碼回可讀文字。快速、私密、免費使用。",
+    "title": "Base64 編碼 - Coding.Tools",
+    "description": "將文字編碼為 Base64 或將 Base64 解碼回可讀文字。對於 API 有效負載、資料 URI 和文字安全傳輸很有用。",
     "toolTitle": "Base64 編碼",
-    "toolDescription": "將文字轉換為 Base64，將 Base64 解碼回可讀文字，並複製或下載結果。",
+    "toolDescription": "將純文本轉換為 Base64，將 Base64 解碼回文本，然後複製或下載結果。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字進行編碼或貼上 Base64 進行解碼...",
     "outputPlaceholder": "編碼或解碼結果將顯示在此處...",
-    "descTitle": "Base64 編碼解碼",
+    "descTitle": "對 Base64 傳輸和儲存的文字進行編碼",
     "descParas": [
-      "此 Base64 工具將純文字轉換為 Base64，並將 Base64 字串轉換回可讀文字。當您需要為 API 準備資料、從日誌中檢查編碼值、測試請求負載或透過純文字系統傳輸小段資料時，它非常有用。",
-      "轉換在您的瀏覽器中本機執行。您貼上到編輯器中的文字不會被上傳、儲存或傳送到伺服器，因此您可以在不改變工作流程的情況下快速使用此工具。"
+      "<strong>此 Base64 編碼器將純文字轉換為 ASCII 安全的 Base64 字串，並可以再次解碼以進行快速往返。</strong> 當值必須通過 JSON、HTML、環境變數、命令輸出、電子郵件或其他需要可列印文字的系統時，它非常有用。",
+      "Base64是一種編碼格式，而不是加密。任何擁有該字串的人都可以對其進行解碼，並且編碼後的輸出通常會大三分之一左右，因為每 3 個位元組變成 4 個 Base64 字元。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將純文字或 Base64 值貼上到輸入編輯器中。",
-      "選擇<strong>編碼</strong>建立 Base64 字串，或<strong>解碼</strong>讀取現有的 Base64 字串。",
-      "檢查輸出編輯器和狀態訊息。當解碼失敗時，無效的 Base64 輸入會立即報告。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      "將純文字或 Base64 值貼到輸入編輯器中。",
+      "選擇 <strong>編碼</strong> 建立 Base64 字串，或選擇 <strong>解碼</strong> 讀取現有 Base64 字串。",
+      "檢查輸出編輯器和狀態訊息。解碼失敗立即報告無效的Base64輸入。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
     ],
-    "whatIs": "什麼是 Base64？",
+    "whatIs": "Base64 編碼是什麼？",
     "whatIsParas": [
-      "Base64 是一種將位元組表示為可列印文字的方式。它使用字母、數字、加號、斜線和填充字元，使二進位資料能夠通過期望普通文字的系統傳輸，如 JSON、HTML、電子郵件、設定檔和命令列輸出。",
-      "Base64 是一種編碼格式，不是加密。任何人都可以在獲得字串的情況下解碼它。它還會將資料大小增加大約三分之一，因此最適合傳輸和嵌入，而非壓縮或保密。"
+      "<strong>Base64 編碼</strong> 表示具有有限字母、數字、<code>+</code>、<code>/</code> 和可選 <code>=</code> 填充的位元組。這使得二進位或 Unicode 派生資料更容易放置在純文字通道中。",
+      "使用 Base64 進行表示和傳輸，而不是保密或壓縮。如果需要保密，請使用加密；如果需要完整性，請使用雜湊或簽名；如果您需要較小的文件，請在編碼之前使用壓縮。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "編碼支援普通文字，包括 Unicode 字元。解碼時，請確保輸入是完整的 Base64 字串，不包含不相關的標題、標籤或編碼值周圍的額外文字。",
+    "inputNotesPara": "編碼接受一般文字，包括 Unicode。解碼時，請貼上完整的 Base64 值，不要帶上標籤、引號、標題或周圍說明文字；缺少填充或包含額外字元都可能導致載荷解碼失敗。",
     "example": "範例",
-    "examplePara": "相同的值可以被編碼並解碼回原始文字：",
+    "examplePara": "一條短訊息會變成一個 ASCII 安全的 Base64 值，並且可以被解碼回原始文字：",
     "exampleCode": "--- 純文字 ---\nHello, World!\n\n--- Base64 編碼 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 解碼還原 ---\nHello, World!"
   },
   "jp": {
-    "title": "Base64 エンコード・デコード — Coding.Tools",
-    "description": "ブラウザでテキストをBase64にエンコード、またはBase64を可読テキストに直接デコード。高速・プライベート・無料。",
+    "title": "Base64 エンコード - Coding.Tools",
+    "description": "テキストを Base64 にエンコードするか、Base64 をデコードして読み取り可能なテキストに戻します。 API ペイロード、データ URI、テキストセーフなトランスポートに役立ちます。",
     "toolTitle": "Base64 エンコード",
-    "toolDescription": "テキストをBase64に変換し、Base64を可読テキストにデコードし、結果をコピーまたはダウンロード。",
+    "toolDescription": "プレーン テキストを Base64 に変換し、Base64 をデコードしてテキストに戻し、結果をコピーまたはダウンロードします。",
     "categoryName": "ハッシュと暗号",
     "inputPlaceholder": "エンコードするテキストを入力するか、デコードするBase64を貼り付け...",
     "outputPlaceholder": "エンコードまたはデコード結果がここに表示されます...",
-    "descTitle": "Base64 エンコード・デコード",
+    "descTitle": "Base64 の転送および保存用にテキストをエンコードする",
     "descParas": [
-      "このBase64ツールはプレーンテキストをBase64に変換し、Base64文字列を可読テキストに戻します。API用のデータ準備、ログからのエンコード値の確認、リクエストペイロードのテスト、テキストのみのシステムでのデータ転送に便利です。",
-      "変換はブラウザ内でローカルに実行されます。エディタに貼り付けたテキストはアップロード、保存、サーバー送信されないため、ワークフローを変更せずに素早く利用できます。"
+      "<strong>この Base64 エンコーダは、プレーン テキストを ASCII で安全な Base64 文字列に変換し、素早いラウンド トリップで再度デコードできます。</strong> 値が JSON、HTML、環境変数、コマンド出力、電子メール、または印刷可能なテキストを必要とするその他のシステムを通過する必要がある場合に便利です。",
+      "Base64 は暗号化ではなくエンコード形式です。文字列を持っている人は誰でもそれをデコードできますが、3 バイトごとに 4 つの Base64 文字になるため、エンコードされた出力は通常約 3 分の 1 大きくなります。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "プレーンテキストまたはBase64値を入力エディタに貼り付けます。",
-      "<strong>エンコード</strong>でBase64文字列を作成するか、<strong>デコード</strong>で既存のBase64文字列を読み取ります。",
-      "出力エディタとステータスメッセージを確認します。デコード失敗時に無効なBase64入力は即座に報告されます。",
-      "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      "プレーン テキストまたは Base64 値を入力エディターに貼り付けます。",
+      "<strong>エンコード</strong> を選択して Base64 文字列を作成するか、<strong>デコード</strong> を選択して既存の Base64 文字列を読み取ります。",
+      "出力エディターとステータス メッセージを確認してください。無効な Base64 入力は、デコードが失敗するとすぐに報告されます。",
+      "クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、両方のエディタをリセットするには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "Base64とは？",
+    "whatIs": "Base64エンコードとは何ですか?",
     "whatIsParas": [
-      "Base64はバイト列を印刷可能なテキストとして表現する方法です。文字、数字、プラス記号、スラッシュ、パディング文字を使用して、バイナリデータをJSON、HTML、メール、設定ファイル、コマンドライン出力などの通常のテキストを期待するシステム間で転送できるようにします。",
-      "Base64はエンコード形式であり、暗号化ではありません。文字列を持てば誰でもデコードできます。データサイズが約3分の1増加するため、圧縮や秘匿ではなく、転送や埋め込みに最適です。"
+      "<strong>Base64 エンコード</strong> は、限られたアルファベットの文字、数字、<code>+</code>、<code>/</code>、およびオプションの <code>=</code> パディングを含むバイトを表します。これにより、バイナリまたは Unicode 由来のデータをテキストのみのチャネルに配置しやすくなります。",
+      "Base64 は、機密性や圧縮ではなく、表現と転送に使用します。機密性が必要な場合は、暗号化を使用してください。整合性が必要な場合は、ハッシュまたは署名を使用します。より小さいファイルが必要な場合は、エンコードの前に圧縮を使用してください。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "エンコードはUnicode文字を含む通常のテキストをサポートします。デコード時は、入力が完全なBase64文字列であり、エンコード値の周囲に無関係なヘッダーやラベル、余分なテキストが含まれていないことを確認してください。",
+    "inputNotesPara": "エンコードでは、Unicode を含む通常のテキストを受け付けます。デコードするときは、ラベル、引用符、ヘッダー、周囲の説明文を含めず、完全な Base64 値だけを貼り付けてください。パディング不足や余分な文字があると、ペイロードのデコードに失敗することがあります。",
     "example": "例",
-    "examplePara": "同じ値をエンコードして元のテキストにデコードできます：",
+    "examplePara": "短いメッセージは ASCII セーフな Base64 値になり、元のテキストにデコードできます。",
     "exampleCode": "--- プレーンテキスト ---\nHello, World!\n\n--- Base64 エンコード ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- デコード復元 ---\nHello, World!"
   },
   "kr": {
-    "title": "Base64 인코딩 및 디코딩 — Coding.Tools",
-    "description": "브라우저에서 직접 텍스트를 Base64로 인코딩하거나 Base64를 읽을 수 있는 텍스트로 디코딩합니다. 빠르고 안전하며 무료입니다.",
+    "title": "Base64 인코딩 - Coding.Tools",
+    "description": "텍스트를 Base64로 인코딩하거나 Base64를 다시 읽을 수 있는 텍스트로 디코딩합니다. API 페이로드, 데이터 URI 및 텍스트 안전 전송에 유용합니다.",
     "toolTitle": "Base64 인코딩",
-    "toolDescription": "텍스트를 Base64로 변환하고, Base64를 읽을 수 있는 텍스트로 디코딩하며, 결과를 복사하거나 다운로드합니다.",
+    "toolDescription": "일반 텍스트를 Base64로 변환하고 Base64를 다시 텍스트로 디코딩한 후 결과를 복사하거나 다운로드합니다.",
     "categoryName": "해시 및 암호화",
     "inputPlaceholder": "인코딩할 텍스트를 입력하거나 디코딩할 Base64를 붙여넣으세요...",
     "outputPlaceholder": "인코딩 또는 디코딩 결과가 여기에 표시됩니다...",
-    "descTitle": "Base64 인코딩 및 디코딩",
+    "descTitle": "Base64 전송 및 저장을 위해 텍스트 인코딩",
     "descParas": [
-      "이 Base64 도구는 일반 텍스트를 Base64로 변환하고 Base64 문자열을 읽을 수 있는 텍스트로 다시 변환합니다. API용 데이터 준비, 로그에서 인코딩된 값 확인, 요청 페이로드 테스트 또는 텍스트 전용 시스템을 통한 소량 데이터 전송에 유용합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다. 편집기에 붙여넣은 텍스트는 업로드, 저장 또는 서버로 전송되지 않으므로 워크플로를 변경하지 않고 빠르게 사용할 수 있습니다."
+      "<strong>이 Base64 인코더는 일반 텍스트를 ASCII 안전 Base64 문자열로 변환하고 빠른 왕복을 위해 다시 디코딩할 수 있습니다.</strong> 값이 JSON, HTML, 환경 변수, 명령 출력, 이메일 또는 인쇄 가능한 텍스트가 필요한 기타 시스템을 통해 이동해야 하는 경우 유용합니다.",
+      "Base64는 암호화가 아닌 인코딩 형식입니다. 문자열이 있는 사람은 누구나 이를 디코딩할 수 있으며, 3바이트마다 4개의 Base64 문자가 되므로 인코딩된 출력은 일반적으로 약 1/3 더 큽니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "일반 텍스트 또는 Base64 값을 입력 편집기에 붙여넣습니다.",
-      "<strong>인코딩</strong>으로 Base64 문자열을 만들거나, <strong>디코딩</strong>으로 기존 Base64 문자열을 읽습니다.",
-      "출력 편집기와 상태 메시지를 확인합니다. 디코딩 실패 시 잘못된 Base64 입력이 즉시 보고됩니다.",
-      "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      "Base64 문자열을 생성하려면 <strong>인코딩</strong>를 선택하고, 기존 Base64 문자열을 읽으려면 <strong>디코딩</strong>를 선택하세요.",
+      "출력 편집기와 상태 메시지를 확인하세요. 디코딩에 실패하면 잘못된 Base64 입력이 즉시 보고됩니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "Base64란 무엇인가요?",
+    "whatIs": "Base64 인코딩이란 무엇입니까?",
     "whatIsParas": [
-      "Base64는 바이트를 인쇄 가능한 텍스트로 표현하는 방법입니다. 문자, 숫자, 더하기 기호, 슬래시 및 패딩 문자를 사용하여 바이너리 데이터가 JSON, HTML, 이메일, 설정 파일, 명령줄 출력과 같은 일반 텍스트를 기대하는 시스템을 통해 이동할 수 있도록 합니다.",
-      "Base64는 인코딩 형식이며 암호화가 아닙니다. 문자열이 있으면 누구나 디코딩할 수 있습니다. 데이터 크기가 약 3분의 1 증가하므로 압축이나 비밀 유지보다는 전송 및 삽입에 가장 적합합니다."
+      "<strong>Base64 인코딩</strong>는 문자, 숫자, <code>+</code>, <code>/</code> 및 선택적 <code>=</code> 패딩으로 구성된 제한된 알파벳으로 바이트를 나타냅니다. 따라서 바이너리 또는 유니코드 파생 데이터를 텍스트 전용 채널에 더 쉽게 배치할 수 있습니다.",
+      "비밀성이나 압축이 아닌 표현과 전송을 위해 Base64를 사용하세요. 기밀성이 필요한 경우 암호화를 사용하세요. 무결성이 필요한 경우 해시나 서명을 사용하세요. 더 작은 파일이 필요한 경우 인코딩하기 전에 압축을 사용하십시오."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "인코딩은 Unicode 문자를 포함한 일반 텍스트를 지원합니다. 디코딩 시 입력이 완전한 Base64 문자열이며 인코딩된 값 주위에 관련 없는 헤더, 라벨 또는 추가 텍스트가 포함되지 않았는지 확인하세요.",
+    "inputNotesPara": "인코딩은 Unicode를 포함한 일반 텍스트를 허용합니다. 디코딩할 때는 레이블, 따옴표, 헤더 또는 주변 설명 문구 없이 완전한 Base64 값만 붙여 넣으세요. 패딩이 없거나 불필요한 문자가 있으면 페이로드 디코딩이 실패할 수 있습니다.",
     "example": "예제",
-    "examplePara": "같은 값을 인코딩하고 원래 텍스트로 디코딩할 수 있습니다:",
+    "examplePara": "짧은 메시지는 ASCII 안전 Base64 값이 되며 원래 텍스트로 다시 디코딩될 수 있습니다.",
     "exampleCode": "--- 일반 텍스트 ---\nHello, World!\n\n--- Base64 인코딩 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- 디코딩 복원 ---\nHello, World!"
   },
   "fr": {
-    "title": "Encodage et Décodage Base64 — Coding.Tools",
-    "description": "Encodez du texte en Base64 ou décodez du Base64 en texte lisible directement dans votre navigateur. Rapide, privé et gratuit.",
+    "title": "Encodage Base64 - Coding.Tools",
+    "description": "Encodez le texte en Base64 ou décodez Base64 en texte lisible. Utile pour les charges utiles d'API, les URI de données et le transport sécurisé du texte.",
     "toolTitle": "Encodage Base64",
-    "toolDescription": "Convertissez du texte en Base64, décodez du Base64 en texte lisible, et copiez ou téléchargez le résultat.",
+    "toolDescription": "Convertissez le texte brut en Base64, décodez Base64 en texte et copiez ou téléchargez le résultat.",
     "categoryName": "Hachage et cryptographie",
     "inputPlaceholder": "Entrez le texte à encoder ou collez du Base64 à décoder...",
     "outputPlaceholder": "Le résultat encodé ou décodé apparaîtra ici...",
-    "descTitle": "Encodage et Décodage Base64",
+    "descTitle": "Encoder le texte pour le transport et le stockage Base64",
     "descParas": [
-      "Cet outil Base64 convertit du texte brut en Base64 et retransforme les chaînes Base64 en texte lisible. Il est utile pour préparer des données pour les API, inspecter des valeurs encodées dans les journaux, tester des charges utiles ou transférer de petits extraits de données via des systèmes texte.",
-      "La conversion s'exécute localement dans votre navigateur. Le texte n'est pas téléchargé, stocké ni envoyé à un serveur."
+      "<strong>Cet encodeur Base64 transforme le texte brut en une chaîne Base64 sécurisée pour ASCII et peut le décoder à nouveau pour un aller-retour rapide.</strong> Il est utile lorsqu'une valeur doit voyager via JSON, HTML, des variables d'environnement, une sortie de commande, un courrier électronique ou d'autres systèmes qui attendent un texte imprimable.",
+      "Base64 est un format de codage et non de cryptage. Toute personne possédant la chaîne peut la décoder, et la sortie codée est généralement environ un tiers plus grande, car tous les 3 octets deviennent 4 caractères Base64."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez du texte brut ou une valeur Base64 dans l'éditeur d'entrée.",
-      "Choisissez <strong>Encoder</strong> pour créer une chaîne Base64, ou <strong>Décoder</strong> pour lire une chaîne existante.",
-      "Vérifiez l'éditeur de sortie et le message d'état.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Choisissez <strong>Encoder</strong> pour créer une chaîne Base64 ou <strong>Décoder</strong> pour lire une chaîne Base64 existante.",
+      "Vérifiez l'éditeur de sortie et le message d'état. Une entrée Base64 non valide est immédiatement signalée en cas d'échec du décodage.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
     ],
-    "whatIs": "Qu'est-ce que le Base64 ?",
+    "whatIs": "Qu’est-ce que le codage Base64 ?",
     "whatIsParas": [
-      "Le Base64 est un moyen de représenter des octets sous forme de texte imprimable. Il utilise des lettres, chiffres, signes plus, barres obliques et caractères de remplissage pour que les données binaires puissent traverser des systèmes qui attendent du texte ordinaire.",
-      "Le Base64 est un format d'encodage, pas un chiffrement. N'importe qui peut le décoder s'il a la chaîne. Il augmente également la taille des données d'environ un tiers."
+      "L'encodage <strong>Base64</strong> représente des octets avec un alphabet limité de lettres, de chiffres, <code>+</code>, <code>/</code> et un remplissage <code>=</code> en option. Cela facilite le placement des données binaires ou dérivées d'Unicode dans des canaux texte uniquement.",
+      "Utilisez Base64 pour la représentation et le transport, pas pour le secret ou la compression. Si vous avez besoin de confidentialité, utilisez le cryptage ; si vous avez besoin d'intégrité, utilisez un hachage ou une signature ; si vous avez besoin de fichiers plus petits, utilisez la compression avant l'encodage."
     ],
     "inputNotes": "Notes sur l'entrée",
-    "inputNotesPara": "L'encodage prend en charge le texte normal, y compris les caractères Unicode. Lors du décodage, assurez-vous que l'entrée est une chaîne Base64 complète sans en-têtes ni texte supplémentaire.",
+    "inputNotesPara": "L'encodage accepte le texte normal, y compris Unicode. Lors du décodage, collez la valeur Base64 complète sans étiquettes, guillemets, en-têtes ou prose environnante ; un remplissage manquant ou des caractères supplémentaires peuvent faire échouer une charge utile valide.",
     "example": "Exemple",
-    "examplePara": "La même valeur peut être encodée puis décodée :",
+    "examplePara": "Un message court devient une valeur Base64 sûre pour ASCII et peut être décodé jusqu'au texte original :",
     "exampleCode": "--- Texte brut ---\nHello, World!\n\n--- Encodé en Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Décodé ---\nHello, World!"
   },
   "de": {
-    "title": "Base64 Kodierung & Dekodierung — Coding.Tools",
-    "description": "Kodieren Sie Text zu Base64 oder dekodieren Sie Base64 direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+    "title": "Base64-Kodierung - Coding.Tools",
+    "description": "Kodieren Sie Text in Base64 oder dekodieren Sie Base64 zurück in lesbaren Text. Nützlich für API-Nutzlasten, Daten-URIs und textsicheren Transport.",
     "toolTitle": "Base64 Kodierung",
-    "toolDescription": "Konvertieren Sie Text zu Base64, dekodieren Sie Base64 zu lesbarem Text, und kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Konvertieren Sie Klartext in Base64, dekodieren Sie Base64 wieder in Text und kopieren oder laden Sie das Ergebnis herunter.",
     "categoryName": "Hash & Kryptographie",
     "inputPlaceholder": "Text zum Kodieren eingeben oder Base64 zum Dekodieren einfügen...",
     "outputPlaceholder": "Kodiertes oder dekodiertes Ergebnis wird hier angezeigt...",
-    "descTitle": "Base64 Kodierung & Dekodierung",
+    "descTitle": "Kodieren Sie Text für Base64 Transport und Speicherung",
     "descParas": [
-      "Dieses Base64-Tool konvertiert Klartext in Base64 und wandelt Base64-Zeichenketten in lesbaren Text zurück. Es ist nützlich zur Datenvorbereitung für APIs, zum Inspektieren kodierter Werte in Logs oder zum Testen von Anfragedaten.",
-      "Die Konvertierung erfolgt lokal in Ihrem Browser. Der eingegebene Text wird nicht hochgeladen, gespeichert oder an einen Server gesendet."
+      "<strong>Dieser Base64-Codierer wandelt Klartext in eine ASCII-sichere Base64-Zeichenfolge um und kann sie für eine schnelle Gegenprüfung wieder decodieren.</strong> Das ist nützlich, wenn ein Wert durch JSON, HTML, Umgebungsvariablen, Befehlsausgaben, E-Mail oder andere Systeme übertragen werden muss, die druckbaren Text erwarten.",
+      "Base64 ist ein Kodierungsformat, keine Verschlüsselung. Jeder, der über die Zeichenfolge verfügt, kann sie entschlüsseln, und die codierte Ausgabe ist normalerweise etwa ein Drittel größer, da alle 3 Bytes zu 4 Base64-Zeichen werden."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Klartext oder einen Base64-Wert in den Eingabe-Editor einfügen.",
-      "<strong>Kodieren</strong> wählen, um eine Base64-Zeichenkette zu erstellen, oder <strong>Dekodieren</strong> zum Lesen.",
-      "Ausgabe-Editor und Statusmeldung prüfen.",
-      "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      "Fügen Sie einfachen Text oder einen Base64-Wert in den Eingabeeditor ein.",
+      "Wählen Sie <strong>Codieren</strong>, um eine Base64-Zeichenfolge zu erstellen, oder <strong>Dekodieren</strong>, um eine vorhandene Base64-Zeichenfolge zu lesen.",
+      "Überprüfen Sie den Ausgabeeditor und die Statusmeldung. Eine ungültige Base64-Eingabe wird sofort gemeldet, wenn die Dekodierung fehlschlägt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um beide Editoren zurückzusetzen."
     ],
-    "whatIs": "Was ist Base64?",
+    "whatIs": "Was ist die Base64-Kodierung?",
     "whatIsParas": [
-      "Base64 ist eine Methode, Bytes als druckbaren Text darzustellen. Es verwendet Buchstaben, Zahlen, Pluszeichen, Schrägstriche und Füllzeichen, damit Binärdaten durch Systeme übertragen werden können, die normalen Text erwarten.",
-      "Base64 ist ein Kodierungsformat, keine Verschlüsselung. Jeder kann es dekodieren, wenn er die Zeichenkette hat. Es vergrößert die Daten um etwa ein Drittel."
+      "<strong>Base64-Kodierung</strong> stellt Bytes mit einem begrenzten Alphabet aus Buchstaben, Zahlen, <code>+</code>, <code>/</code> und optionalem <code>=</code>-Auffüllen dar. Dadurch lassen sich binäre oder von Unicode abgeleitete Daten einfacher in Nur-Text-Kanälen platzieren.",
+      "Verwenden Sie Base64 zur Darstellung und zum Transport, nicht zur Geheimhaltung oder Komprimierung. Wenn Sie Vertraulichkeit benötigen, verwenden Sie Verschlüsselung; Wenn Sie Integrität benötigen, verwenden Sie einen Hash oder eine Signatur. Wenn Sie kleinere Dateien benötigen, verwenden Sie vor der Kodierung die Komprimierung."
     ],
     "inputNotes": "Hinweise zur Eingabe",
-    "inputNotesPara": "Die Kodierung unterstützt normalen Text einschließlich Unicode-Zeichen. Beim Dekodieren muss die Eingabe eine vollständige Base64-Zeichenkette ohne zusätzliche Header oder Text sein.",
+    "inputNotesPara": "Die Kodierung akzeptiert normalen Text, einschließlich Unicode. Fügen Sie beim Dekodieren den vollständigen Base64-Wert ohne Beschriftungen, Anführungszeichen, Überschriften oder umgebende Prosa ein. Fehlende Auffüllungen oder zusätzliche Zeichen können dazu führen, dass eine gültige Nutzlast fehlschlägt.",
     "example": "Beispiel",
-    "examplePara": "Derselbe Wert kann kodiert und wieder dekodiert werden:",
+    "examplePara": "Eine Kurznachricht wird zu einem ASCII-sicheren Base64-Wert und kann wieder in den Originaltext dekodiert werden:",
     "exampleCode": "--- Klartext ---\nHello, World!\n\n--- Base64 kodiert ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Dekodiert ---\nHello, World!"
   },
   "es": {
-    "title": "Codificación y Decodificación Base64 — Coding.Tools",
-    "description": "Codifique texto a Base64 o decodifique Base64 a texto legible directamente en su navegador. Rápido, privado y gratuito.",
+    "title": "Codificación Base64 - Coding.Tools",
+    "description": "Codifique texto a Base64 o decodifique Base64 nuevamente a texto legible. Útil para cargas útiles de API, URI de datos y transporte seguro de texto.",
     "toolTitle": "Codificación Base64",
-    "toolDescription": "Convierta texto a Base64, decodifique Base64 a texto legible, y copie o descargue el resultado.",
+    "toolDescription": "Convierta texto sin formato a Base64, decodifique Base64 nuevamente a texto y copie o descargue el resultado.",
     "categoryName": "Hash y criptografía",
     "inputPlaceholder": "Ingrese texto para codificar o pegue Base64 para decodificar...",
     "outputPlaceholder": "El resultado codificado o decodificado aparecerá aquí...",
-    "descTitle": "Codificación y Decodificación Base64",
+    "descTitle": "Codificar texto para transporte y almacenamiento Base64",
     "descParas": [
-      "Esta herramienta Base64 convierte texto plano en Base64 y transforma cadenas Base64 de vuelta a texto legible. Es útil para preparar datos para APIs, inspeccionar valores codificados en registros o probar cargas de solicitud.",
-      "La conversión se ejecuta localmente en su navegador. El texto no se sube, almacena ni envía a un servidor."
+      "<strong>Este codificador Base64 convierte texto sin formato en una cadena Base64 segura para ASCII y puede decodificarlo nuevamente para un viaje rápido de ida y vuelta.</strong> Es útil cuando un valor debe viajar a través de JSON, HTML, variables de entorno, salida de comando, correo electrónico u otros sistemas que esperan texto imprimible.",
+      "Base64 es un formato de codificación, no cifrado. Cualquiera que tenga la cadena puede decodificarla y la salida codificada suele ser aproximadamente un tercio más grande porque cada 3 bytes se convierten en 4 caracteres Base64."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Pegue texto plano o un valor Base64 en el editor de entrada.",
-      "Elija <strong>Codificar</strong> para crear una cadena Base64, o <strong>Decodificar</strong> para leer una existente.",
-      "Verifique el editor de salida y el mensaje de estado.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Pegue texto sin formato o un valor Base64 en el editor de entrada.",
+      "Elija <strong>Codificar</strong> para crear una cadena Base64 o <strong>Decodificar</strong> para leer una cadena Base64 existente.",
+      "Verifique el editor de salida y el mensaje de estado. La entrada Base64 no válida se informa inmediatamente cuando falla la decodificación.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer ambos editores."
     ],
-    "whatIs": "¿Qué es Base64?",
+    "whatIs": "¿Qué es la codificación Base64?",
     "whatIsParas": [
-      "Base64 es una forma de representar bytes como texto imprimible. Usa letras, números, signos más, barras diagonales y caracteres de relleno para que los datos binarios puedan viajar a través de sistemas que esperan texto ordinario.",
-      "Base64 es un formato de codificación, no cifrado. Cualquiera puede decodificarlo si tiene la cadena. También aumenta el tamaño de los datos aproximadamente un tercio."
+      "La codificación <strong>Base64</strong> representa bytes con un alfabeto limitado de letras, números, <code>+</code>, <code>/</code> y relleno <code>=</code> opcional. Eso hace que los datos binarios o derivados de Unicode sean más fáciles de colocar en canales de solo texto.",
+      "Utilice Base64 para representación y transporte, no para secreto ni compresión. Si necesita confidencialidad, utilice cifrado; si necesita integridad, utilice un hash o una firma; Si necesita archivos más pequeños, utilice la compresión antes de codificar."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La codificación soporta texto normal, incluyendo caracteres Unicode. Al decodificar, asegúrese de que la entrada sea una cadena Base64 completa sin encabezados ni texto adicional.",
+    "inputNotesPara": "La codificación acepta texto normal, incluido Unicode. Al decodificar, pegue el valor Base64 completo sin etiquetas, comillas, encabezados ni prosa circundante; La falta de relleno o caracteres adicionales pueden hacer que falle una carga útil válida.",
     "example": "Ejemplo",
-    "examplePara": "El mismo valor puede ser codificado y decodificado de vuelta:",
+    "examplePara": "Un mensaje corto se convierte en un valor Base64 seguro para ASCII y se puede decodificar al texto original:",
     "exampleCode": "--- Texto plano ---\nHello, World!\n\n--- Codificado en Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decodificado ---\nHello, World!"
   },
   "pt": {
-    "title": "Codificação e Decodificação Base64 — Coding.Tools",
-    "description": "Codifique texto para Base64 ou decodifique Base64 de volta para texto legível diretamente no seu navegador. Rápido, privado e gratuito.",
+    "title": "Codificação Base64 - Coding.Tools",
+    "description": "Codifique o texto para Base64 ou decodifique Base64 de volta para texto legível. Útil para cargas úteis de API, URIs de dados e transporte seguro de texto.",
     "toolTitle": "Codificação Base64",
-    "toolDescription": "Converta texto para Base64, decodifique Base64 para texto legível, e copie ou baixe o resultado.",
+    "toolDescription": "Converta texto simples em Base64, decodifique Base64 de volta em texto e copie ou baixe o resultado.",
     "categoryName": "Hash e criptografia",
     "inputPlaceholder": "Digite o texto para codificar ou cole Base64 para decodificar...",
     "outputPlaceholder": "O resultado codificado ou decodificado aparecerá aqui...",
-    "descTitle": "Codificação e Decodificação Base64",
+    "descTitle": "Codificar texto para transporte e armazenamento Base64",
     "descParas": [
-      "Esta ferramenta Base64 converte texto simples em Base64 e transforma strings Base64 de volta em texto legível. É útil para preparar dados para APIs, inspecionar valores codificados em logs ou testar cargas de requisição.",
-      "A conversão é executada localmente no seu navegador. O texto não é enviado, armazenado ou transmitido a um servidor."
+      "<strong>Este codificador Base64 transforma texto simples em uma string Base64 segura para ASCII e pode decodificá-lo novamente para uma rápida viagem de ida e volta.</strong> É útil quando um valor deve viajar por JSON, HTML, variáveis de ambiente, saída de comando, e-mail ou outros sistemas que esperam texto imprimível.",
+      "Base64 é um formato de codificação, não de criptografia. Qualquer pessoa com a string pode decodificá-la, e a saída codificada geralmente é cerca de um terço maior porque cada 3 bytes se transformam em 4 caracteres Base64."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole texto simples ou um valor Base64 no editor de entrada.",
-      "Escolha <strong>Codificar</strong> para criar uma string Base64, ou <strong>Decodificar</strong> para ler uma existente.",
-      "Verifique o editor de saída e a mensagem de status.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Escolha <strong>Codificar</strong> para criar uma sequência Base64 ou <strong>Decodificar</strong> para ler uma sequência Base64 existente.",
+      "Verifique o editor de saída e a mensagem de status. A entrada Base64 inválida é reportada imediatamente quando a decodificação falha.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
     ],
-    "whatIs": "O que é Base64?",
+    "whatIs": "O que é codificação Base64?",
     "whatIsParas": [
-      "Base64 é uma forma de representar bytes como texto imprimível. Usa letras, números, sinais de mais, barras diagonais e caracteres de preenchimento para que dados binários possam viajar através de sistemas que esperam texto comum.",
-      "Base64 é um formato de codificação, não criptografia. Qualquer pessoa pode decodificá-lo se tiver a string. Também aumenta o tamanho dos dados em aproximadamente um terço."
+      "Codificação <strong>Base64</strong> representa bytes com um alfabeto limitado de letras, números, <code>+</code>, <code>/</code> e preenchimento <code>=</code> opcional. Isso torna mais fácil colocar dados binários ou derivados de Unicode em canais somente de texto.",
+      "Use Base64 para representação e transporte, não para sigilo ou compactação. Se precisar de confidencialidade, use criptografia; se precisar de integridade, use um hash ou assinatura; se precisar de arquivos menores, use a compactação antes da codificação."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A codificação suporta texto comum, incluindo caracteres Unicode. Ao decodificar, certifique-se de que a entrada seja uma string Base64 completa sem cabeçalhos ou texto adicional.",
+    "inputNotesPara": "A codificação aceita texto normal, incluindo Unicode. Ao decodificar, cole o valor Base64 completo sem rótulos, aspas, cabeçalhos ou prosa envolvente; falta de preenchimento ou caracteres extras podem fazer com que uma carga válida falhe.",
     "example": "Exemplo",
-    "examplePara": "O mesmo valor pode ser codificado e decodificado de volta:",
+    "examplePara": "Uma mensagem curta torna-se um valor Base64 seguro para ASCII e pode ser decodificada de volta ao texto original:",
     "exampleCode": "--- Texto simples ---\nHello, World!\n\n--- Codificado em Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Decodificado ---\nHello, World!"
   }
 }

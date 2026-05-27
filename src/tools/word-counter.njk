@@ -1,10 +1,5 @@
 ---
-title: "Word Counter Online — Coding.Tools"
-description: "Count words, characters, sentences, and paragraphs instantly. Free online word counter tool."
-toolTitle: "Word Counter"
-toolDescription: "Count words, characters, sentences, paragraphs, and estimate reading and speaking time."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "word-counter"
 permalink: "/word-counter.html"
 ---
@@ -64,43 +59,7 @@ permalink: "/word-counter.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Word Counter Online</h2>
-  <p>This word counter tool counts words, characters, sentences, and paragraphs in real time as you type or paste text. It also estimates reading and speaking time based on standard rates, making it useful for writers, students, and content creators who need quick text statistics.</p>
-  <p>All counting happens locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so your content stays private and the tool works instantly without any delay.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste or type your text into the input editor.</li>
-    <li>View live statistics in the panel below the editor. Every metric updates instantly as you type.</li>
-    <li>Use <strong>Copy</strong> to copy the text to your clipboard, <strong>Download</strong> to save it as a text file, or <strong>Clear</strong> to reset the editor and all statistics.</li>
-  </ol>
-
-  <h3>What is a word counter?</h3>
-  <p>A word counter is a tool that analyzes a piece of text and reports how many words, characters, sentences, and paragraphs it contains. Word counters are commonly used by writers, bloggers, students, and professionals who need to meet specific length requirements for essays, articles, reports, or social media posts.</p>
-  <p>This tool goes beyond basic counting by also calculating reading time (based on an average of 200 words per minute) and speaking time (based on an average of 130 words per minute), which are helpful for planning presentations, speeches, and content pacing.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool handles any text input, including Unicode characters and multi-line content. Words are counted by splitting on whitespace, sentences are detected by punctuation marks followed by whitespace or end of text, and paragraphs are counted as blocks of non-empty lines separated by blank lines.</p>
-
-  <h3>Example</h3>
-  <p>Paste a sample text and watch the statistics update live:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Sample Text ---
-The quick brown fox jumps over the lazy dog. This is a simple sentence used for testing word counters and typography tools.
-
-It contains multiple paragraphs, sentences, and words to demonstrate how the statistics panel works in real time.
-
---- Expected Statistics ---
-Words: 30
-Characters (with spaces): 176
-Characters (no spaces): 145
-Sentences: 3
-Paragraphs: 3
-Lines: 4
-Reading time: ~1 min
-Speaking time: ~1 min</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

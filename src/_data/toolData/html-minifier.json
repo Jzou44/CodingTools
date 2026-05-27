@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "HTML Minifier — Coding.Tools",
-    "description": "Minify HTML by removing whitespace, comments, and unnecessary characters directly in your browser.",
+    "title": "HTML Minifier - Coding.Tools",
+    "description": "Minify HTML by removing comments and unnecessary whitespace while preserving rendering intent.",
     "toolTitle": "HTML Minifier",
-    "toolDescription": "Compress HTML by stripping whitespace, comments, and optional tags. Copy or download the minified result.",
+    "toolDescription": "Compress HTML snippets or documents into smaller markup in your browser.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste HTML to minify...",
     "outputPlaceholder": "Minified HTML will appear here...",
-    "descTitle": "HTML Minifier",
+    "descTitle": "Reduce HTML size without breaking layout",
     "descParas": [
-      "This tool minifies HTML by removing unnecessary whitespace, comments, and optional characters. The result is compact HTML that loads faster while preserving functionality.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>HTML Minifier removes avoidable whitespace and comments so markup is more compact.</strong> It is useful for snippets, static pages, email templates, examples, and generated HTML that needs a smaller text footprint.",
+      "HTML whitespace can affect inline layout, text rendering, <code>&lt;pre&gt;</code> content, and template syntax. Comments may also be meaningful for some frameworks or conditional markup, so verify output before shipping it."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your HTML code into the input editor.",
-      "Click <strong>Minify HTML</strong> to compress the code.",
-      "The minified HTML appears in the output editor with unnecessary characters removed.",
+      "Click <strong>Minify HTML</strong> to remove avoidable formatting and comments.",
+      "Review the minified output for preserved text, inline spacing, and template markers.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is HTML minification?",
+    "whatIs": "What is HTML Minifier?",
     "whatIsParas": [
-      "HTML minification removes unnecessary characters from HTML code — whitespace, comments, and optional tags — without changing how the page renders. This reduces file size and improves page load times.",
-      "Minifying HTML is a standard practice for production websites, improving performance and reducing bandwidth usage."
+      "<strong>HTML Minifier</strong> is a browser-based utility for producing compact HTML. It reduces transfer or storage size by trimming characters that usually do not affect how the document is parsed.",
+      "Minification is not the same as validating HTML. If the source is malformed, browser error recovery may still apply, and the safest check is to render or test the minified result in the target environment."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any HTML input. The minifier removes comments, extra whitespace, and optional tags while preserving the page structure and functionality.",
+    "inputNotesPara": "Avoid minifying markup where exact whitespace is required, such as preformatted text, text-only email sections, or framework comments. Keep a readable source copy for future edits.",
     "example": "Example",
-    "examplePara": "Formatted HTML becomes compact after minification:",
-    "exampleCode": "--- Formatted Input ---\n&lt;!-- Page title --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minified Output ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "Comments and indentation are removed from a simple document:",
+    "exampleCode": "--- Formatted Input ---\n&lt;!-- Page title --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minified Output ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "Minify HTML"
   },
   "cn": {
-    "title": "HTML 压缩 — Coding.Tools",
-    "description": "在浏览器中压缩 HTML，移除空白、注释和不必要的字符。",
+    "title": "HTML 压缩器 - Coding.Tools",
+    "description": "通过删除注释和不必要的空白同时保留渲染意图来缩小 HTML。",
     "toolTitle": "HTML 压缩",
-    "toolDescription": "通过去除空白、注释和可选标签来压缩 HTML。复制或下载压缩结果。",
+    "toolDescription": "在浏览器中将 HTML 片段或文档压缩为更小的标记。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要压缩的 HTML...",
     "outputPlaceholder": "压缩后的 HTML 将在此显示...",
-    "descTitle": "HTML 压缩",
+    "descTitle": "在不破坏布局的情况下减小 HTML 尺寸",
     "descParas": [
-      "该工具压缩 HTML，移除不必要的空白、注释和可选字符。结果是紧凑的 HTML，加载更快同时保留功能。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>HTML 压缩器删除了可避免的空格和注释，使标记更加紧凑。</strong> 对于需要较小文本占用空间的片段、静态页面、电子邮件模板、示例和生成的 HTML 非常有用。",
+      "HTML 空格可以影响内联布局、文本渲染、<code>&lt;pre&gt;</code> 内容和模板语法。注释对于某些框架或条件标记也可能有意义，因此在发布之前验证输出。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 HTML 代码粘贴到输入编辑器中。",
-      "点击<strong>压缩 HTML</strong>来压缩代码。",
-      "压缩后的 HTML 将移除不必要的字符后显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>压缩 HTML</strong> 以删除可避免的格式和注释。",
+      "查看缩小输出中保留的文本、行内间距和模板标记。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 HTML 压缩？",
+    "whatIs": "HTML 压缩器是什么？",
     "whatIsParas": [
-      "HTML 压缩移除 HTML 代码中不必要的字符——空白、注释和可选标签——而不改变页面渲染。这减小了文件大小，提高了页面加载速度。",
-      "压缩 HTML 是生产网站的标准做法，可提高性能并减少带宽使用。"
+      "<strong>HTML 压缩</strong> 是一个基于浏览器的实用程序，用于生成紧凑的 HTML。它通过修剪通常不影响文档解析方式的字符来减少传输或存储大小。",
+      "缩小与验证 HTML 不同。如果源格式错误，浏览器错误恢复可能仍然适用，最安全的检查是在目标环境中渲染或测试缩小的结果。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何 HTML 输入。压缩器移除注释、多余空白和可选标签，同时保留页面结构和功能。",
+    "inputNotesPara": "避免在需要精确空格的地方缩小标记，例如预格式化文本、纯文本电子邮件部分或框架注释。保留可读的源副本以供将来编辑。",
     "example": "示例",
-    "examplePara": "格式化后的 HTML 压缩后变得紧凑：",
-    "exampleCode": "--- 格式化输入 ---\n&lt;!-- 页面标题 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 压缩输出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "注释和缩进已从简单文档中删除：",
+    "exampleCode": "--- 格式化输入 ---\n&lt;!-- 页面标题 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 压缩输出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "压缩 HTML"
   },
   "tw": {
-    "title": "HTML 壓縮 — Coding.Tools",
-    "description": "在瀏覽器中壓縮 HTML，移除空白、註解和不必要的字元。",
+    "title": "HTML 壓縮器 - Coding.Tools",
+    "description": "透過刪除註釋和不必要的空白同時保留渲染意圖來縮小 HTML。",
     "toolTitle": "HTML 壓縮",
-    "toolDescription": "透過去除空白、註解和可選標籤來壓縮 HTML。複製或下載壓縮結果。",
+    "toolDescription": "在瀏覽器中將 HTML 片段或文件壓縮為更小的標記。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要壓縮的 HTML...",
     "outputPlaceholder": "壓縮後的 HTML 將在此顯示...",
-    "descTitle": "HTML 壓縮",
+    "descTitle": "在不破壞版面的情況下縮小 HTML 尺寸",
     "descParas": [
-      "該工具壓縮 HTML，移除不必要的空白、註解和可選字元。結果是緊湊的 HTML，載入更快同時保留功能。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>HTML 壓縮器刪除了可避免的空格和註釋，使標記更加緊湊。</strong> 對於需要較小文字佔用空間的片段、靜態頁面、電子郵件範本、範例和產生的 HTML 非常有用。",
+      "HTML 空格可以影響內嵌版面、文字渲染、<code>&lt;pre&gt;</code> 內容和範本語法。註釋對於某些框架或條件標記也可能有意義，因此在發布之前驗證輸出。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 HTML 程式碼貼上到輸入編輯器中。",
-      "點擊<strong>壓縮 HTML</strong>來壓縮程式碼。",
-      "壓縮後的 HTML 將移除不必要的字元後顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 HTML 程式碼貼到輸入編輯器中。",
+      "按一下 <strong>壓縮 HTML</strong> 以刪除可避免的格式和註解。",
+      "查看縮小輸出中保留的文字、行內間距和範本標記。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 HTML 壓縮？",
+    "whatIs": "HTML 壓縮器是什麼？",
     "whatIsParas": [
-      "HTML 壓縮移除 HTML 程式碼中不必要的字元——空白、註解和可選標籤——而不改變頁面渲染。這減小了檔案大小，提高了頁面載入速度。",
-      "壓縮 HTML 是生產網站的標準做法，可提高效能並減少頻寬使用。"
+      "<strong>HTML 壓縮</strong> 是一個基於瀏覽器的實用程序，用於產生緊湊的 HTML。它透過修剪通常不影響文件解析方式的字元來減少傳輸或儲存大小。",
+      "縮小與驗證 HTML 不同。如果來源格式錯誤，瀏覽器錯誤復原可能仍然適用，最安全的檢查是在目標環境中渲染或測試縮小的結果。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何 HTML 輸入。壓縮器移除註解、多餘空白和可選標籤，同時保留頁面結構和功能。",
+    "inputNotesPara": "避免在需要精確空格的地方縮小標記，例如預先格式化文字、純文字電子郵件部分或框架註解。保留可讀的來源副本以供將來編輯。",
     "example": "範例",
-    "examplePara": "格式化後的 HTML 壓縮後變得緊湊：",
-    "exampleCode": "--- 格式化輸入 ---\n&lt;!-- 頁面標題 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 壓縮輸出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "註釋和縮排已從簡單文件中刪除：",
+    "exampleCode": "--- 格式化輸入 ---\n&lt;!-- 頁面標題 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 壓縮輸出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "壓縮 HTML"
   },
   "jp": {
-    "title": "HTML ミニファイア — Coding.Tools",
-    "description": "ブラウザで HTML から空白、コメント、不要な文字を削除してミニファイします。",
+    "title": "HTML ミニファイヤー - Coding.Tools",
+    "description": "レンダリングの意図を維持しながら、コメントと不要な空白を削除して、HTML を縮小します。",
     "toolTitle": "HTML ミニファイア",
-    "toolDescription": "空白、コメント、オプションタグを削除して HTML を圧縮します。コピーまたはダウンロード。",
+    "toolDescription": "HTML スニペットまたはドキュメントをブラウザーで小さなマークアップに圧縮します。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "ミニファイする HTML を貼り付け...",
     "outputPlaceholder": "ミニファイされた HTML がここに表示されます...",
-    "descTitle": "HTML ミニファイア",
+    "descTitle": "レイアウトを壊すことなく HTML サイズを縮小します",
     "descParas": [
-      "このツールは HTML から不要な空白、コメント、オプション文字を削除してミニファイします。機能を保持しながら、より速く読み込まれるコンパクトな HTML が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>HTML ミニファイア は回避可能な空白とコメントを削除するため、マークアップがよりコンパクトになります。</strong> スニペット、静的ページ、電子メール テンプレート、サンプル、およびより小さなテキスト フットプリントを必要とする生成された HTML に役立ちます。",
+      "HTML 空白は、インライン レイアウト、テキスト レンダリング、<code>&lt;pre&gt;</code> コンテンツ、およびテンプレート構文に影響を与える可能性があります。コメントは一部のフレームワークや条件付きマークアップにとっても意味があるため、出力を出荷する前に確認してください。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "HTML コードを入力エディタに貼り付けます。",
-      "<strong>HTML ミニファイ</strong>をクリックしてコードを圧縮します。",
-      "ミニファイされた HTML が不要な文字が除去された状態で出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "HTML コードを入力エディターに貼り付けます。",
+      "<strong>HTML</strong> を縮小をクリックして、回避可能な書式設定とコメントを削除します。",
+      "縮小された出力で、保存されたテキスト、行間、およびテンプレート マーカーを確認します。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "HTML ミニファイとは？",
+    "whatIs": "HTML ミニファイヤーとは何ですか?",
     "whatIsParas": [
-      "HTML ミニファイは HTML コードから不要な文字——空白、コメント、オプションタグ——を削除し、ページのレンダリング方法を変えません。これによりファイルサイズが小さくなり、ページ読み込みが高速化されます。",
-      "HTML のミニファイは本番ウェブサイトの標準的な慣行で、パフォーマンスを向上させ、帯域幅の使用を削減します。"
+      "<strong>HTML ミニファイア</strong> は、コンパクトな HTML を生成するためのブラウザベースのユーティリティです。通常は文書の解析方法に影響を与えない文字をトリミングすることで、転送または保存のサイズを削減します。",
+      "縮小化は HTML を検証することと同じではありません。ソースの形式が正しくない場合でも、ブラウザーのエラー回復が適用される可能性があります。最も安全なチェックは、ターゲット環境で縮小された結果をレンダリングまたはテストすることです。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは任意の HTML 入力を受け付けます。ミニファイアはコメント、余分な空白、オプションタグを削除しつつ、ページ構造と機能を保持します。",
+    "inputNotesPara": "書式設定されたテキスト、テキストのみの電子メール セクション、フレームワークのコメントなど、正確な空白が必要な場所ではマークアップを縮小しないでください。将来の編集に備えて、読み取り可能なソース コピーを保存してください。",
     "example": "例",
-    "examplePara": "フォーマットされた HTML はミニファイ後にコンパクトになります：",
-    "exampleCode": "--- フォーマット入力 ---\n&lt;!-- ページタイトル --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- ミニファイ出力 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "単純なドキュメントからコメントとインデントが削除されます。",
+    "exampleCode": "--- フォーマット入力 ---\n&lt;!-- ページタイトル --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- ミニファイ出力 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "HTML をミニファイ"
   },
   "kr": {
-    "title": "HTML 미니파이어 — Coding.Tools",
-    "description": "브라우저에서 HTML에서 공백, 주석, 불필요한 문자를 제거하여 미니파이합니다.",
+    "title": "HTML 축소기 - Coding.Tools",
+    "description": "렌더링 의도를 유지하면서 주석과 불필요한 공백을 제거하여 HTML를 최소화합니다.",
     "toolTitle": "HTML 미니파이어",
-    "toolDescription": "공백, 주석, 선택적 태그를 제거하여 HTML을 압축합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "브라우저에서 HTML 조각이나 문서를 더 작은 마크업으로 압축하세요.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "미니파이할 HTML을 붙여넣으세요...",
     "outputPlaceholder": "미니파이된 HTML이 여기에 표시됩니다...",
-    "descTitle": "HTML 미니파이어",
+    "descTitle": "레이아웃을 깨지 않고 HTML 크기 줄이기",
     "descParas": [
-      "이 도구는 HTML에서 불필요한 공백, 주석, 선택적 문자를 제거하여 미니파이합니다. 기능을 유지하면서 더 빠르게 로드되는 컴팩트한 HTML을 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>HTML 미니파이어는 피할 수 있는 공백과 주석을 제거하여 마크업을 더욱 간결하게 만듭니다.</strong> 더 작은 텍스트 공간이 필요한 스니펫, 정적 페이지, 이메일 템플릿, 예제 및 생성된 HTML에 유용합니다.",
+      "HTML 공백은 인라인 레이아웃, 텍스트 렌더링, <code>&lt;pre&gt;</code> 콘텐츠 및 템플릿 구문에 영향을 미칠 수 있습니다. 주석은 일부 프레임워크나 조건부 마크업에 의미가 있을 수도 있으므로 전달하기 전에 출력을 확인하십시오."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "HTML 코드를 입력 편집기에 붙여넣으세요.",
-      "<strong>HTML 미니파이</strong>를 클릭하여 코드를 압축합니다.",
-      "미니파이된 HTML이 불필요한 문자가 제거된 상태로 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "HTML 코드를 입력 편집기에 붙여넣습니다.",
+      "<strong>HTML 미니파이</strong>를 클릭하여 피할 수 있는 서식과 주석을 제거하세요.",
+      "보존된 텍스트, 인라인 간격 및 템플릿 마커에 대한 축소된 출력을 검토합니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "HTML 미니파이란?",
+    "whatIs": "HTML 축소기는 무엇입니까?",
     "whatIsParas": [
-      "HTML 미니파이는 HTML 코드에서 불필요한 문자——공백, 주석, 선택적 태그——를 제거하지만 페이지 렌더링 방식은 변경하지 않습니다. 이를 통해 파일 크기가 줄어들고 페이지 로드 시간이 향상됩니다.",
-      "HTML 미니파이는 프로덕션 웹사이트의 표준 관행으로, 성능을 향상시키고 대역폭 사용을 줄입니다."
+      "<strong>HTML 미니파이어</strong>는 컴팩트한 HTML를 생성하기 위한 브라우저 기반 유틸리티입니다. 일반적으로 문서 구문 분석 방법에 영향을 주지 않는 문자를 잘라서 전송 또는 저장 크기를 줄입니다.",
+      "축소는 HTML 검증과 동일하지 않습니다. 소스가 잘못된 경우에도 브라우저 오류 복구가 적용될 수 있으며, 가장 안전한 검사는 대상 환경에서 축소된 결과를 렌더링하거나 테스트하는 것입니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 모든 HTML 입력을 허용합니다. 미니파이어는 주석, 여분의 공백, 선택적 태그를 제거하면서 페이지 구조와 기능을 보존합니다.",
+    "inputNotesPara": "미리 서식이 지정된 텍스트, 텍스트 전용 이메일 섹션 또는 프레임워크 주석과 같이 정확한 공백이 필요한 경우 마크업을 축소하지 마세요. 향후 편집을 위해 읽을 수 있는 소스 사본을 보관하세요.",
     "example": "예시",
-    "examplePara": "포맷된 HTML은 미니파이 후 컴팩트해집니다:",
-    "exampleCode": "--- 포맷 입력 ---\n&lt;!-- 페이지 제목 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 미니파이 출력 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "간단한 문서에서는 주석과 들여쓰기가 제거됩니다.",
+    "exampleCode": "--- 포맷 입력 ---\n&lt;!-- 페이지 제목 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 미니파이 출력 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "HTML 미니파이"
   },
   "fr": {
-    "title": "Minifieur HTML — Coding.Tools",
-    "description": "Minifiez le HTML en supprimant les espaces, commentaires et caractères inutiles directement dans votre navigateur.",
+    "title": "Minificateur HTML - Coding.Tools",
+    "description": "Réduisez HTML en supprimant les commentaires et les espaces inutiles tout en préservant l’intention de rendu.",
     "toolTitle": "Minifieur HTML",
-    "toolDescription": "Compressez le HTML en supprimant les espaces, commentaires et balises optionnelles. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Compressez les extraits ou les documents HTML dans un balisage plus petit dans votre navigateur.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le HTML à minifier...",
     "outputPlaceholder": "Le HTML minifié apparaîtra ici...",
-    "descTitle": "Minifieur HTML",
+    "descTitle": "Réduisez la taille de HTML sans casser la disposition",
     "descParas": [
-      "Cet outil minifie le HTML en supprimant les espaces, commentaires et caractères inutiles. Le résultat est un HTML compact qui se charge plus rapidement tout en préservant la fonctionnalité.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Minifieur HTML supprime les espaces et les commentaires évitables afin que le balisage soit plus compact.</strong> Il est utile pour les extraits de code, les pages statiques, les modèles d'e-mails, les exemples et le HTML généré qui nécessite une empreinte de texte plus petite.",
+      "Les espaces HTML peuvent affecter la mise en page en ligne, le rendu du texte, le contenu <code>&lt;pre&gt;</code> et la syntaxe du modèle. Comments may also be meaningful for some frameworks or conditional markup, so verify output before shipping it."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez votre code HTML dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Minifier HTML</strong> pour compresser le code.",
-      "Le HTML minifié apparaît dans l'éditeur de sortie avec les caractères inutiles supprimés.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Collez votre code HTML dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Minifier HTML</strong> pour supprimer le formatage et les commentaires évitables.",
+      "Examinez la sortie réduite pour le texte préservé, l'espacement en ligne et les marqueurs de modèle.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que la minification HTML ?",
+    "whatIs": "Qu'est-ce que le miniificateur HTML ?",
     "whatIsParas": [
-      "La minification HTML supprime les caractères inutiles du code HTML — espaces, commentaires et balises optionnelles — sans changer le rendu de la page. Cela réduit la taille du fichier et améliore les temps de chargement.",
-      "La minification HTML est une pratique standard pour les sites web en production, améliorant les performances et réduisant l'utilisation de la bande passante."
+      "<strong>Minifieur HTML</strong> est un utilitaire dans le navigateur qui produit du HTML compact. Il réduit la taille de transfert ou de stockage en supprimant les caractères qui n'affectent généralement pas l'analyse du document.",
+      "Minification is not the same as validating HTML. Si la source est mal formée, la récupération après erreur du navigateur peut toujours s'appliquer et la vérification la plus sûre consiste à restituer ou à tester le résultat réduit dans l'environnement cible."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte toute entrée HTML. Le minifieur supprime les commentaires, les espaces supplémentaires et les balises optionnelles tout en préservant la structure et la fonctionnalité de la page.",
+    "inputNotesPara": "Avoid minifying markup where exact whitespace is required, such as preformatted text, text-only email sections, or framework comments. Conservez une copie source lisible pour les modifications futures.",
     "example": "Exemple",
-    "examplePara": "Le HTML formaté devient compact après minification :",
-    "exampleCode": "--- Entrée formatée ---\n&lt;!-- Titre de la page --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Sortie minifiée ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "Les commentaires et l'indentation sont supprimés d'un document simple :",
+    "exampleCode": "--- Entrée formatée ---\n&lt;!-- Titre de la page --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Sortie minifiée ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "Minifier HTML"
   },
   "de": {
-    "title": "HTML-Minifizierer — Coding.Tools",
-    "description": "Minifizieren Sie HTML, indem Sie Leerzeichen, Kommentare und unnötige Zeichen direkt in Ihrem Browser entfernen.",
+    "title": "HTML-Minifizierer - Coding.Tools",
+    "description": "Minimieren Sie HTML, indem Sie Kommentare und unnötige Leerzeichen entfernen und gleichzeitig die Wiedergabeabsicht beibehalten.",
     "toolTitle": "HTML-Minifizierer",
-    "toolDescription": "Komprimieren Sie HTML durch Entfernen von Leerzeichen, Kommentaren und optionalen Tags. Kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Komprimieren Sie HTML-Snippets oder Dokumente in kleinere Markups in Ihrem Browser.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "HTML zum Minifizieren einfügen...",
     "outputPlaceholder": "Minifiziertes HTML wird hier angezeigt...",
-    "descTitle": "HTML-Minifizierer",
+    "descTitle": "Reduzieren Sie die Größe von HTML, ohne das Layout zu beschädigen",
     "descParas": [
-      "Dieses Tool minifiziert HTML, indem es unnötige Leerzeichen, Kommentare und optionale Zeichen entfernt. Das Ergebnis ist kompaktes HTML, das schneller lädt und die Funktionalität bewahrt.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>HTML-Minifizierer entfernt vermeidbare Leerzeichen und Kommentare, sodass das Markup kompakter ist.</strong> Es ist nützlich für Snippets, statische Seiten, E-Mail-Vorlagen, Beispiele und generiertes HTML, das eine kleinere Textfläche benötigt.",
+      "HTML-Leerzeichen können sich auf das Inline-Layout, die Textwiedergabe, den <code>&lt;pre&gt;</code>-Inhalt und die Vorlagensyntax auswirken. Kommentare können für einige Frameworks oder bedingtes Markup auch von Bedeutung sein. Überprüfen Sie daher die Ausgabe, bevor Sie sie versenden."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihren HTML-Code in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>HTML minifizieren</strong>, um den Code zu komprimieren.",
-      "Das minifizierte HTML wird im Ausgabe-Editor mit entfernten unnötigen Zeichen angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihren HTML-Code in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Minifizieren HTML</strong>, um vermeidbare Formatierungen und Kommentare zu entfernen.",
+      "Überprüfen Sie die minimierte Ausgabe auf erhaltenen Text, Inline-Abstände und Vorlagenmarkierungen.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist HTML-Minifizierung?",
+    "whatIs": "Was ist HTML-Minifizierer?",
     "whatIsParas": [
-      "HTML-Minifizierung entfernt unnötige Zeichen aus HTML-Code — Leerzeichen, Kommentare und optionale Tags — ohne die Seitendarstellung zu ändern. Dies reduziert die Dateigröße und verbessert die Ladezeiten.",
-      "Die Minifizierung von HTML ist eine Standardpraxis für Produktionswebsites, die die Leistung verbessert und die Bandbreitennutzung reduziert."
+      "<strong>HTML-Minifizierer</strong> ist ein browserbasiertes Dienstprogramm zur Erstellung kompakter HTML. Es reduziert die Übertragungs- oder Speichergröße, indem Zeichen gekürzt werden, die sich normalerweise nicht auf die Analyse des Dokuments auswirken.",
+      "Die Minimierung ist nicht dasselbe wie die Validierung von HTML. Wenn die Quelle fehlerhaft ist, kann die Wiederherstellung nach Browserfehlern dennoch angewendet werden. Die sicherste Prüfung besteht darin, das minimierte Ergebnis in der Zielumgebung zu rendern oder zu testen."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert jede HTML-Eingabe. Der Minifizierer entfernt Kommentare, zusätzliche Leerzeichen und optionale Tags, bewahrt aber die Seitenstruktur und Funktionalität.",
+    "inputNotesPara": "Vermeiden Sie die Minimierung des Markups, wenn exakter Leerraum erforderlich ist, z. B. bei vorformatiertem Text, reinen Text-E-Mail-Abschnitten oder Framework-Kommentaren. Bewahren Sie eine lesbare Quellkopie für zukünftige Änderungen auf.",
     "example": "Beispiel",
-    "examplePara": "Formatiertes HTML wird nach der Minifizierung kompakt:",
-    "exampleCode": "--- Formatierte Eingabe ---\n&lt;!-- Seitentitel --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minifizierte Ausgabe ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "Kommentare und Einrückungen werden aus einem einfachen Dokument entfernt:",
+    "exampleCode": "--- Formatierte Eingabe ---\n&lt;!-- Seitentitel --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minifizierte Ausgabe ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "Minifizieren HTML"
   },
   "es": {
-    "title": "Minificador HTML — Coding.Tools",
-    "description": "Minifique HTML eliminando espacios, comentarios y caracteres innecesarios directamente en su navegador.",
+    "title": "Minificador HTML - Coding.Tools",
+    "description": "Minimice HTML eliminando comentarios y espacios en blanco innecesarios y preservando al mismo tiempo la intención de representación.",
     "toolTitle": "Minificador HTML",
-    "toolDescription": "Comprima HTML eliminando espacios, comentarios y etiquetas opcionales. Copie o descargue el resultado.",
+    "toolDescription": "Comprima fragmentos o documentos HTML en marcas más pequeñas en su navegador.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue HTML para minificar...",
     "outputPlaceholder": "El HTML minificado aparecerá aquí...",
-    "descTitle": "Minificador HTML",
+    "descTitle": "Reduzca el tamaño de HTML sin alterar el diseño",
     "descParas": [
-      "Esta herramienta minifica HTML eliminando espacios, comentarios y caracteres innecesarios. El resultado es un HTML compacto que se carga más rápido mientras preserva la funcionalidad.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>Minificador HTML elimina los espacios en blanco y los comentarios evitables para que el marcado sea más compacto.</strong> Es útil para fragmentos, páginas estáticas, plantillas de correo electrónico, ejemplos y HTML generados que necesitan un espacio de texto más pequeño.",
+      "Los espacios en blanco HTML pueden afectar el diseño en línea, la representación de texto, el contenido <code>&lt;pre&gt;</code> y la sintaxis de la plantilla. Los comentarios también pueden ser significativos para algunos marcos o marcado condicional, así que verifique el resultado antes de enviarlo."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue su código HTML en el editor de entrada.",
-      "Haga clic en <strong>Minificar HTML</strong> para comprimir el código.",
-      "El HTML minificado aparece en el editor de salida con caracteres innecesarios eliminados.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Minificar HTML</strong> para eliminar el formato y los comentarios evitables.",
+      "Revise la salida minimizada para ver el texto conservado, el espaciado entre líneas y los marcadores de plantilla.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es la minificación HTML?",
+    "whatIs": "¿Qué es el minificador HTML?",
     "whatIsParas": [
-      "La minificación HTML elimina caracteres innecesarios del código HTML — espacios, comentarios y etiquetas opcionales — sin cambiar cómo se renderiza la página. Esto reduce el tamaño del archivo y mejora los tiempos de carga.",
-      "La minificación HTML es una práctica estándar para sitios web en producción, mejorando el rendimiento y reduciendo el uso de ancho de banda."
+      "<strong>Minificador HTML</strong> es una utilidad basada en navegador para producir HTML compacto. Reduce el tamaño de transferencia o almacenamiento recortando caracteres que normalmente no afectan la forma en que se analiza el documento.",
+      "Minificar no es lo mismo que validar HTML. Si la fuente tiene un formato incorrecto, es posible que aún se aplique la recuperación de errores del navegador y la verificación más segura es representar o probar el resultado minimizado en el entorno de destino."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier entrada HTML. El minificador elimina comentarios, espacios adicionales y etiquetas opcionales mientras preserva la estructura y funcionalidad de la página.",
+    "inputNotesPara": "Evite minimizar el marcado donde se requieren espacios en blanco exactos, como texto preformateado, secciones de correo electrónico de solo texto o comentarios de marco. Guarde una copia fuente legible para futuras ediciones.",
     "example": "Ejemplo",
-    "examplePara": "El HTML formateado se vuelve compacto después de la minificación:",
-    "exampleCode": "--- Entrada formateada ---\n&lt;!-- Título de la página --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Salida minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "Los comentarios y la sangría se eliminan de un documento simple:",
+    "exampleCode": "--- Entrada formateada ---\n&lt;!-- Título de la página --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Salida minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "Minificar HTML"
   },
   "pt": {
-    "title": "Minificador HTML — Coding.Tools",
-    "description": "Minifique HTML removendo espaços, comentários e caracteres desnecessários diretamente no seu navegador.",
+    "title": "Minimificador HTML - Coding.Tools",
+    "description": "Minimize HTML removendo comentários e espaços em branco desnecessários enquanto preserva a intenção de renderização.",
     "toolTitle": "Minificador HTML",
-    "toolDescription": "Comprima HTML removendo espaços, comentários e tags opcionais. Copie ou baixe o resultado.",
+    "toolDescription": "Compacte trechos ou documentos HTML em marcações menores em seu navegador.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole HTML para minificar...",
     "outputPlaceholder": "O HTML minificado aparecerá aqui...",
-    "descTitle": "Minificador HTML",
+    "descTitle": "Reduza o tamanho HTML sem quebrar o layout",
     "descParas": [
-      "Esta ferramenta minifica HTML removendo espaços, comentários e caracteres desnecessários. O resultado é um HTML compacto que carrega mais rápido enquanto preserva a funcionalidade.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>O minificador de HTML remove espaços em branco e comentários evitáveis para deixar a marcação mais compacta.</strong> É útil para trechos, páginas estáticas, modelos de e-mail, exemplos e HTML gerado que precisa ocupar menos espaço como texto.",
+      "O espaço em branco HTML pode afetar o layout embutido, a renderização de texto, o conteúdo <code>&lt;pre&gt;</code> e a sintaxe do modelo. Os comentários também podem ser significativos para algumas estruturas ou marcações condicionais, portanto, verifique a saída antes de enviá-la."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seu código HTML no editor de entrada.",
-      "Clique em <strong>Minificar HTML</strong> para comprimir o código.",
-      "O HTML minificado aparece no editor de saída com caracteres desnecessários removidos.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Minificar HTML</strong> para remover formatação e comentários evitáveis.",
+      "Revise a saída reduzida para texto preservado, espaçamento embutido e marcadores de modelo.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é minificação HTML?",
+    "whatIs": "O que é o minificador HTML?",
     "whatIsParas": [
-      "A minificação HTML remove caracteres desnecessários do código HTML — espaços, comentários e tags opcionais — sem alterar como a página é renderizada. Isso reduz o tamanho do arquivo e melhora os tempos de carregamento.",
-      "A minificação HTML é uma prática padrão para sites em produção, melhorando o desempenho e reduzindo o uso de largura de banda."
+      "<strong>Minificador HTML</strong> é um utilitário baseado em navegador para produzir HTML compacto. Reduz o tamanho de transferência ou armazenamento cortando caracteres que geralmente não afetam a forma como o documento é analisado.",
+      "Minificação não é o mesmo que validação de HTML. Se a fonte estiver malformada, a recuperação de erros do navegador ainda poderá ser aplicada, e a verificação mais segura é renderizar ou testar o resultado minificado no ambiente de destino."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer entrada HTML. O minificador remove comentários, espaços extras e tags opcionais enquanto preserva a estrutura e funcionalidade da página.",
+    "inputNotesPara": "Evite reduzir a marcação onde são necessários espaços em branco exatos, como texto pré-formatado, seções de e-mail somente texto ou comentários de estrutura. Mantenha uma cópia de origem legível para edições futuras.",
     "example": "Exemplo",
-    "examplePara": "O HTML formatado se torna compacto após a minificação:",
-    "exampleCode": "--- Entrada formatada ---\n&lt;!-- Título da página --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Saída minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;"
+    "examplePara": "Comentários e recuos são removidos de um documento simples:",
+    "exampleCode": "--- Entrada formatada ---\n&lt;!-- Título da página --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Saída minificada ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "Minificar HTML"
   }
 }

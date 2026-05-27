@@ -1,272 +1,272 @@
 {
   "en": {
-    "title": "Hex to Decimal Converter — Coding.Tools",
-    "description": "Convert hexadecimal numbers to decimal format directly in your browser. Fast, private, and free to use.",
+    "title": "Hex to Decimal Converter - Coding.Tools",
+    "description": "Convert hexadecimal numbers to decimal, with octal and binary equivalents, directly in your browser.",
     "toolTitle": "Hex to Decimal",
-    "toolDescription": "Convert hex numbers to decimal, octal, and binary. Copy or download the result without sending data anywhere.",
+    "toolDescription": "Convert base-16 values into decimal numbers and compare the matching octal and binary forms.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter hex number (e.g. FF, 1A3F)...",
     "outputPlaceholder": "Decimal result will appear here...",
-    "descTitle": "Hex to Decimal Converter",
+    "descTitle": "Convert hexadecimal values to decimal integers",
     "descParas": [
-      "This tool converts hexadecimal (base 16) numbers to decimal (base 10), and also shows the octal (base 8) and binary (base 2) equivalents. It is useful for programmers, network engineers, and anyone working with color codes, memory addresses, or encoded data.",
-      "The conversion runs locally in your browser using the BigNumber library. Your input is never uploaded or stored on a server."
+      "<strong>Hex to Decimal turns base-16 input into base-10 output and also shows the equivalent octal and binary values.</strong> Use it to check memory addresses, byte values, protocol fields, color components, or values copied from logs and documentation.",
+      "Enter hexadecimal digits <code>0-9</code> and <code>A-F</code>; letter case does not matter, and whitespace is ignored. If your source includes a prefix such as <code>0x</code>, remove it unless you have confirmed the converter accepts that prefix."
     ],
     "howToUse": "How to use",
     "steps": [
       "Type or paste a hexadecimal number into the input field.",
-      "Click <strong>Convert</strong> to see the decimal, octal, and binary results.",
-      "Use <strong>Copy</strong> to copy the decimal result to clipboard, or <strong>Clear</strong> to reset."
+      "Review the decimal result, plus the octal and binary equivalents shown for cross-checking.",
+      "Use <strong>Copy</strong> for the decimal value, or <strong>Clear</strong> before checking another number."
     ],
-    "whatIs": "What is Hexadecimal?",
+    "whatIs": "What is hexadecimal to decimal conversion?",
     "whatIsParas": [
-      "Hexadecimal (hex) is a base-16 number system that uses digits 0-9 and letters A-F. It is widely used in computing because it provides a compact representation of binary data. Each hex digit represents exactly 4 binary digits (bits).",
-      "Common uses include HTML color codes (e.g. #FF5733), MAC addresses, memory addresses, and cryptographic hashes."
+      "<strong>Hexadecimal</strong> is base 16, using <code>0-9</code> for values zero through nine and <code>A-F</code> for values ten through fifteen. Decimal is base 10, the everyday number system used for counts and measurements.",
+      "Each hex digit represents four binary bits, which is why hex is common in programming and binary data. Leading zeros may matter for fixed-width values such as bytes or addresses, even when the numeric decimal value is unchanged."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid hexadecimal number using digits 0-9 and letters A-F (case insensitive). Spaces are automatically removed.",
+    "inputNotesPara": "Use only hexadecimal digits and remove labels, separators, or prefixes that are not part of the number. For fixed-width data, keep a note of any leading zeros because numeric conversion may not preserve display width.",
     "example": "Example",
-    "examplePara": "Converting a hex number to its decimal equivalent:",
+    "examplePara": "The hex byte <code>FF</code> converts to decimal 255 and can also be checked as octal and binary:",
     "exampleCode": "--- Hex Input ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binary ---\n11111111"
   },
   "cn": {
-    "title": "十六进制转十进制转换器 — Coding.Tools",
-    "description": "在浏览器中直接将十六进制数字转换为十进制格式。快速、私密、免费使用。",
+    "title": "十六进制到十进制转换器 - Coding.Tools",
+    "description": "直接在浏览器中将十六进制数转换为十进制数，以及八进制和二进制等价物。",
     "toolTitle": "十六进制转十进制",
-    "toolDescription": "将十六进制数字转换为十进制、八进制和二进制。",
+    "toolDescription": "将 16 进制值转换为十进制数并比较匹配的八进制和二进制形式。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入十六进制数（如 FF, 1A3F）...",
     "outputPlaceholder": "十进制结果将显示在这里...",
-    "descTitle": "十六进制转十进制转换器",
+    "descTitle": "将十六进制值转换为十进制整数",
     "descParas": [
-      "此工具将十六进制（基数16）数字转换为十进制（基数10），同时显示八进制（基数8）和二进制（基数2）等价值。",
-      "转换在浏览器本地运行，使用 BigNumber 库。"
+      "<strong>Hex 转十进制将 16 进制输入转换为 10 进制输出，并显示等效的八进制和二进制值。</strong> 使用它来检查内存地址、字节值、协议字段、颜色组件或从日志和文档复制的值。",
+      "输入十六进制数字<code>0-9</code>和<code>A-F</code>；字母大小写无关紧要，并且忽略空格。如果您的源包含 <code>0x</code> 等前缀，请将其删除，除非您已确认转换器接受该前缀。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入框中输入或粘贴十六进制数字。",
-      "点击<strong>转换</strong>查看十进制、八进制和二进制结果。",
-      "使用<strong>复制</strong>将十进制结果复制到剪贴板。"
+      "在输入字段中键入或粘贴十六进制数字。",
+      "查看十进制结果，以及显示的八进制和二进制等效值以进行交叉检查。",
+      "在检查另一个数字之前，使用 <strong>复制</strong> 作为十进制值，或使用 <strong>清除</strong>。"
     ],
-    "whatIs": "什么是十六进制？",
+    "whatIs": "什么是十六进制到十进制的转换？",
     "whatIsParas": [
-      "十六进制（hex）是一种基数为16的数字系统，使用数字0-9和字母A-F。",
-      "常见用途包括HTML颜色代码、MAC地址、内存地址和加密哈希。"
+      "<strong>十六进制</strong> 是以 16 为基数，使用 <code>0-9</code> 表示值 0 到 9，使用 <code>A-F</code> 表示值 10 到 15。十进制以 10 为基数，是用于计数和测量的日常数字系统。",
+      "每个十六进制数字代表四个二进制位，这就是十六进制在编程和二进制数据中常见的原因。前导零对于固定宽度值（例如字节或地址）可能很重要，即使十进制数字值未更改也是如此。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "使用数字0-9和字母A-F输入有效的十六进制数字。",
+    "inputNotesPara": "仅使用十六进制数字并删除不属于数字的标签、分隔符或前缀。对于固定宽度数据，请记下所有前导零，因为数字转换可能不会保留显示宽度。",
     "example": "示例",
-    "examplePara": "将十六进制数转换为十进制：",
+    "examplePara": "十六进制字节 <code>FF</code> 转换为十进制 255，也可以检查为八进制和二进制：",
     "exampleCode": "--- 十六进制输入 ---\nFF\n\n--- 十进制 ---\n255\n\n--- 八进制 ---\n377\n\n--- 二进制 ---\n11111111"
   },
   "tw": {
-    "title": "十六進位轉十進位轉換器 — Coding.Tools",
-    "description": "在瀏覽器中直接將十六進位數字轉換為十進位格式。",
+    "title": "十六進位到十進制轉換器 - Coding.Tools",
+    "description": "直接在瀏覽器中將十六進制數轉換為十進制數，以及八進制和二進制等價物。",
     "toolTitle": "十六進位轉十進位",
-    "toolDescription": "將十六進位數字轉換為十進位、八進位和二進位。",
+    "toolDescription": "將 16 進制值轉換為十進制數並比較匹配的八進制和二進制形式。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入十六進位數（如 FF, 1A3F）...",
     "outputPlaceholder": "十進位結果將顯示在這裡...",
-    "descTitle": "十六進位轉十進位轉換器",
+    "descTitle": "將十六進位值轉換為十進制整數",
     "descParas": [
-      "此工具將十六進位數字轉換為十進位，同時顯示八進位和二進位等價值。",
-      "轉換在瀏覽器本地執行。"
+      "<strong>Hex 轉十進位將 16 進位輸入轉換為 10 進位輸出，並顯示等效的八進位和二進位值。</strong> 使用它來檢查記憶體位址、位元組值、協定欄位、顏色元件或從日誌和文件複製的值。",
+      "輸入十六進位數字<code>0-9</code>和<code>A-F</code>；字母大小寫無關緊要，並且忽略空格。如果您的來源包含 <code>0x</code> 等前綴，請將其刪除，除非您已確認轉換器接受該前綴。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "輸入或貼上十六進位數字。",
-      "點擊<strong>轉換</strong>查看結果。",
-      "使用<strong>複製</strong>複製結果。"
+      "在輸入欄位中鍵入或貼上十六進位數字。",
+      "查看十進制結果，以及顯示的八進制和二進制等效值以進行交叉檢查。",
+      "在檢查另一個數字之前，使用 <strong>複製</strong> 作為十進位值，或使用 <strong>清除</strong>。"
     ],
-    "whatIs": "什麼是十六進位？",
+    "whatIs": "什麼是十六進位到十進制的轉換？",
     "whatIsParas": [
-      "十六進位（hex）是一種基數為16的數字系統，使用數字0-9和字母A-F。",
-      "常見用途包括 HTML 顏色代碼（如 #FF5733）、MAC 位址、記憶體位址和加密雜湊。"
+      "<strong>十六進位</strong> 是以 16 為基數，使用 <code>0-9</code> 表示值 0 到 9，使用 <code>A-F</code> 表示值 10 到 15。十進制以 10 為基數，是用於計數和測量的日常數字系統。",
+      "每個十六進位數字代表四個二進位位，這就是為什麼十六進位在程式設計和二進位資料中常見的原因。前導零對於固定寬度值（例如位元組或位址）可能很重要，即使十進制數字值未更改也是如此。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "使用數字0-9和字母A-F輸入有效的十六進位數字。",
+    "inputNotesPara": "僅使用十六進位數字並刪除不屬於數字的標籤、分隔符號或前綴。對於固定寬度數據，請記下所有前導零，因為數字轉換可能無法保留顯示寬度。",
     "example": "範例",
-    "examplePara": "將十六進位數轉換為十進位：",
+    "examplePara": "十六進位位元組 <code>FF</code> 轉換為十進位 255，也可以檢查為八進位和二進位：",
     "exampleCode": "--- 十六進位輸入 ---\nFF\n\n--- 十進位 ---\n255\n\n--- 八進位 ---\n377\n\n--- 二進位 ---\n11111111"
   },
   "jp": {
-    "title": "16進数→10進数変換器 — Coding.Tools",
-    "description": "ブラウザで16進数を10進数に直接変換。",
+    "title": "16 進数から 10 進数へのコンバーター - Coding.Tools",
+    "description": "ブラウザで直接、8 進数および 2 進数に相当する 16 進数を 10 進数に変換します。",
     "toolTitle": "16進数→10進数",
-    "toolDescription": "16進数を10進数、8進数、2進数に変換。",
+    "toolDescription": "基数 16 の値を 10 進数に変換し、一致する 8 進数形式と 2 進数形式を比較します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "16進数を入力（例: FF, 1A3F）...",
     "outputPlaceholder": "10進数の結果がここに表示されます...",
-    "descTitle": "16進数→10進数変換器",
+    "descTitle": "16 進値を 10 進整数に変換します",
     "descParas": [
-      "このツールは16進数を10進数に変換します。",
-      "変換はブラウザ内でローカル実行されます。"
+      "<strong>16 進数を 10 進数に変換すると、基数 16 の入力が基数 10 の出力に変換され、同等の 8 進値とバイナリ値も表示されます。</strong> これを使用して、メモリ アドレス、バイト値、プロトコル フィールド、カラー コンポーネント、またはログやドキュメントからコピーされた値を確認します。",
+      "16 進数 <code>0-9</code> および <code>A-F</code> を入力します。大文字と小文字は関係なく、空白は無視されます。ソースに <code>0x</code> などのプレフィックスが含まれている場合は、コンバータがそのプレフィックスを受け入れることを確認しない限り、プレフィックスを削除してください。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力欄に16進数を入力または貼り付けます。",
-      "<strong>変換</strong>をクリックして10進数、8進数、2進数の結果を確認します。",
-      "<strong>コピー</strong>で10進数の結果をクリップボードにコピーするか、<strong>クリア</strong>でリセットします。"
+      "入力フィールドに 16 進数を入力するか貼り付けます。",
+      "10 進数の結果と、クロスチェックのために示された 8 進数および 2 進数の等価物を確認します。",
+      "10 進数値には <strong>コピー</strong> を使用するか、別の数値を確認する前に <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "16進数とは？",
+    "whatIs": "16進数から10進数への変換とは何ですか?",
     "whatIsParas": [
-      "16進数は0-9とA-Fを使用する基数16の数値システムです。",
-      "一般的な用途には、HTMLカラーコード（例：#FF5733）、MACアドレス、メモリアドレス、暗号化ハッシュがあります。"
+      "<strong>16 進数の</strong> は基数 16 で、値 0 ～ 9 には <code>0-9</code> を、値 10 ～ 15 には <code>A-F</code> を使用します。 10 進数は 10 を底とする、数えたり測定したりするために使用される日常的な数体系です。",
+      "16 進数の各桁は 4 つのバイナリ ビットを表すため、プログラミングやバイナリ データでは 16 進数が一般的です。バイトやアドレスなどの固定幅の値では、10 進数値が変更されていない場合でも、先頭のゼロが重要になる場合があります。"
     ],
     "inputNotes": "入力について",
-    "inputNotesPara": "数字0-9と文字A-Fで有効な16進数を入力してください。",
+    "inputNotesPara": "16 進数のみを使用し、数値の一部ではないラベル、区切り文字、またはプレフィックスを削除します。固定幅データの場合は、数値変換によって表示幅が維持されない可能性があるため、先頭のゼロをメモしておきます。",
     "example": "例",
-    "examplePara": "16進数を10進数に変換:",
+    "examplePara": "16 進バイト <code>FF</code> は 10 進数の 255 に変換され、8 進数および 2 進数としてチェックすることもできます。",
     "exampleCode": "--- 16進数入力 ---\nFF\n\n--- 10進数 ---\n255\n\n--- 8進数 ---\n377\n\n--- 2進数 ---\n11111111"
   },
   "kr": {
-    "title": "16진수→10진수 변환기 — Coding.Tools",
-    "description": "브라우저에서 16진수를 10진수로 바로 변환합니다.",
+    "title": "16진수를 10진수로 변환하는 변환기 - Coding.Tools",
+    "description": "브라우저에서 직접 8진수와 2진수를 사용하여 16진수를 10진수로 변환하세요.",
     "toolTitle": "16진수→10진수",
-    "toolDescription": "16진수를 10진수, 8진수, 2진수로 변환합니다.",
+    "toolDescription": "16진법 값을 10진수로 변환하고 일치하는 8진수와 2진수 형식을 비교합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "16진수 입력 (예: FF, 1A3F)...",
     "outputPlaceholder": "10진수 결과가 여기에 표시됩니다...",
-    "descTitle": "16진수→10진수 변환기",
+    "descTitle": "16진수 값을 10진수 정수로 변환",
     "descParas": [
-      "이 도구는 16진수를 10진수로 변환하고 8진수와 2진수도 표시합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>16진수→10진수은 16진수 입력을 10진수 출력으로 변환하고 동등한 8진수 및 2진수 값도 표시합니다.</strong> 이를 사용하여 메모리 주소, 바이트 값, 프로토콜 필드, 색상 구성 요소 또는 로그 및 문서에서 복사된 값을 확인합니다.",
+      "16진수 <code>0-9</code> 및 <code>A-F</code>를 입력하세요. 대소문자는 중요하지 않으며 공백은 무시됩니다. 소스에 <code>0x</code>와 같은 접두사가 포함된 경우 변환기가 해당 접두사를 허용하는지 확인하지 않는 한 이를 제거하세요."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "입력 필드에 16진수를 입력하거나 붙여넣습니다.",
-      "<strong>변환</strong>을 클릭하여 10진수, 8진수, 2진수 결과를 확인합니다.",
-      "<strong>복사</strong>로 10진수 결과를 클립보드에 복사하거나 <strong>지우기</strong>로 초기화합니다."
+      "교차 확인을 위해 표시된 10진수 결과와 8진수 및 2진수 결과를 검토합니다.",
+      "다른 숫자를 확인하기 전에 십진수 값으로 <strong>복사</strong>를 사용하거나 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "16진수란?",
+    "whatIs": "16진수를 10진수로 변환하는 것이 무엇인가요?",
     "whatIsParas": [
-      "16진수는 0-9와 A-F를 사용하는 기수 16의 숫자 시스템입니다.",
-      "일반적인 용도에는 HTML 색상 코드(예: #FF5733), MAC 주소, 메모리 주소, 암호화 해시가 포함됩니다."
+      "<strong>16진수</strong>는 0부터 9까지는 <code>0-9</code>, 10부터 15까지는 <code>A-F</code>를 사용하는 기수 16 표기법입니다. 십진수는 수량과 측정에 일상적으로 쓰이는 기수 10 숫자 체계입니다.",
+      "각 16진수는 4개의 이진수 비트를 나타내므로 프로그래밍 및 이진수 데이터에서 16진수가 일반적입니다. 숫자 10진수 값이 변경되지 않은 경우에도 바이트 또는 주소와 같은 고정 너비 값에 선행 0이 중요할 수 있습니다."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "숫자 0-9와 문자 A-F로 유효한 16진수를 입력하세요.",
+    "inputNotesPara": "16진수만 사용하고 숫자에 포함되지 않은 레이블, 구분 기호 또는 접두어를 제거하세요. 고정 너비 데이터의 경우 숫자 변환으로 인해 표시 너비가 유지되지 않을 수 있으므로 앞에 오는 0을 기록해 두십시오.",
     "example": "예시",
-    "examplePara": "16진수를 10진수로 변환:",
+    "examplePara": "16진수 바이트 <code>FF</code>는 10진수 255로 변환되며 8진수 및 2진수로도 확인할 수 있습니다.",
     "exampleCode": "--- 16진수 입력 ---\nFF\n\n--- 10진수 ---\n255\n\n--- 8진수 ---\n377\n\n--- 2진수 ---\n11111111"
   },
   "fr": {
-    "title": "Convertisseur Hexadécimal en Décimal — Coding.Tools",
-    "description": "Convertissez les nombres hexadécimaux en format décimal directement dans votre navigateur.",
+    "title": "Convertisseur hexadécimal en décimal - Coding.Tools",
+    "description": "Convertissez des nombres hexadécimaux en décimal, avec les équivalents octaux et binaires, directement dans votre navigateur.",
     "toolTitle": "Hexadécimal en Décimal",
-    "toolDescription": "Convertissez les nombres hexadécimaux en décimal, octal et binaire.",
+    "toolDescription": "Convertissez les valeurs de base 16 en nombres décimaux et comparez les formes octales et binaires correspondantes.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez un nombre hexadécimal (ex: FF, 1A3F)...",
     "outputPlaceholder": "Le résultat décimal apparaîtra ici...",
-    "descTitle": "Convertisseur Hexadécimal en Décimal",
+    "descTitle": "Convertir des valeurs hexadécimales en entiers décimaux",
     "descParas": [
-      "Cet outil convertit les nombres hexadécimaux en décimal, et affiche également les équivalents octal et binaire.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Hexadécimal en Décimal transforme l'entrée base 16 en sortie base 10 et affiche également les valeurs octales et binaires équivalentes.</strong> Utilisez-le pour vérifier les adresses mémoire, les valeurs d'octets, les champs de protocole, les composants de couleur ou les valeurs copiées à partir des journaux et de la documentation.",
+      "Entrez les chiffres hexadécimaux <code>0-9</code> et <code>A-F</code> ; la casse des lettres n'a pas d'importance et les espaces sont ignorés. Si votre source inclut un préfixe tel que <code>0x</code>, supprimez-le sauf si vous avez confirmé que le convertisseur accepte ce préfixe."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un nombre hexadécimal.",
-      "Cliquez sur <strong>Convertir</strong> pour voir les résultats.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Tapez ou collez un nombre hexadécimal dans le champ de saisie.",
+      "Examinez le résultat décimal, ainsi que les équivalents octaux et binaires indiqués pour la vérification croisée.",
+      "Utilisez <strong>Copier</strong> pour la valeur décimale ou <strong>Effacer</strong> avant de vérifier un autre nombre."
     ],
-    "whatIs": "Qu'est-ce que l'hexadécimal?",
+    "whatIs": "Qu’est-ce que la conversion hexadécimale en décimal ?",
     "whatIsParas": [
-      "L'hexadécimal est un système numérique en base 16 utilisant les chiffres 0-9 et les lettres A-F.",
-      "Les usages courants incluent les codes couleur HTML (par ex. #FF5733), les adresses MAC, les adresses mémoire et les hachages cryptographiques."
+      "<strong>L'hexadécimal</strong> est en base 16 : il utilise <code>0-9</code> pour les valeurs de zéro à neuf et <code>A-F</code> pour les valeurs de dix à quinze. Le décimal est en base 10, le système numérique courant pour compter et mesurer.",
+      "Chaque chiffre hexadécimal représente quatre bits binaires, c'est pourquoi l'hexadécimal est courant dans la programmation et les données binaires. Les zéros non significatifs peuvent être importants pour les valeurs à largeur fixe telles que les octets ou les adresses, même lorsque la valeur décimale numérique reste définie."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez un nombre hexadécimal valide.",
+    "inputNotesPara": "Utilisez uniquement des chiffres hexadécimaux et supprimez les étiquettes, les séparateurs ou les préfixes qui ne font pas partie du numéro. Pour les données à largeur fixe, notez tous les zéros non significatifs, car la conversion numérique peut ne pas préserver la largeur d'affichage.",
     "example": "Exemple",
-    "examplePara": "Conversion d'un nombre hexadécimal en décimal:",
+    "examplePara": "L'octet hexadécimal <code>FF</code> est converti en décimal 255 et peut également être vérifié comme octal et binaire :",
     "exampleCode": "--- Entrée Hexadécimale ---\nFF\n\n--- Décimal ---\n255\n\n--- Octal ---\n377\n\n--- Binaire ---\n11111111"
   },
   "de": {
-    "title": "Hexadezimal-zu-Dezimal-Konverter — Coding.Tools",
-    "description": "Konvertieren Sie Hexadezimalzahlen direkt in Ihrem Browser ins Dezimalformat.",
+    "title": "Hex-zu-Dezimal-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie Hexadezimalzahlen direkt in Ihrem Browser in Dezimalzahlen mit oktalen und binären Äquivalenten.",
     "toolTitle": "Hexadezimal zu Dezimal",
-    "toolDescription": "Konvertieren Sie Hexadezimalzahlen in Dezimal, Oktal und Binär.",
+    "toolDescription": "Wandeln Sie Basis-16-Werte in Dezimalzahlen um und vergleichen Sie die passenden oktalen und binären Formen.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Hexadezimalzahl eingeben (z.B. FF, 1A3F)...",
     "outputPlaceholder": "Dezimalergebnis wird hier angezeigt...",
-    "descTitle": "Hexadezimal-zu-Dezimal-Konverter",
+    "descTitle": "Konvertieren Sie hexadezimale Werte in dezimale Ganzzahlen",
     "descParas": [
-      "Dieses Tool konvertiert Hexadezimalzahlen in Dezimal und zeigt auch Oktal- und Binär-Äquivalente an.",
-      "Die Konvertierung erfolgt lokal in Ihrem Browser."
+      "<strong>Hexadezimal zu Dezimal wandelt Basis-16-Eingaben in Basis-10-Ausgaben um und zeigt auch die entsprechenden Oktal- und Binärwerte an.</strong> Verwenden Sie es, um Speicheradressen, Bytewerte, Protokollfelder, Farbkomponenten oder aus Protokollen und Dokumentation kopierte Werte zu überprüfen.",
+      "Geben Sie die hexadezimalen Ziffern <code>0-9</code> und <code>A-F</code> ein; Die Groß-/Kleinschreibung spielt keine Rolle und Leerzeichen werden ignoriert. Wenn Ihre Quelle ein Präfix wie <code>0x</code> enthält, entfernen Sie es, es sei denn, Sie haben bestätigt, dass der Konverter dieses Präfix akzeptiert."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Geben Sie eine Hexadezimalzahl ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong>.",
-      "Verwenden Sie <strong>Kopieren</strong> um das Ergebnis zu kopieren."
+      "Geben oder fügen Sie eine Hexadezimalzahl in das Eingabefeld ein.",
+      "Überprüfen Sie das Dezimalergebnis sowie die angezeigten Oktal- und Binäräquivalente zur Gegenprüfung.",
+      "Verwenden Sie <strong>Kopieren</strong> für den Dezimalwert oder <strong>Leeren</strong>, bevor Sie eine andere Zahl prüfen."
     ],
-    "whatIs": "Was ist Hexadezimal?",
+    "whatIs": "Was ist die Umwandlung von Hexadezimal in Dezimalzahl?",
     "whatIsParas": [
-      "Hexadezimal ist ein Zahlensystem zur Basis 16, das die Ziffern 0-9 und die Buchstaben A-F verwendet.",
-      "Häufige Verwendungen sind HTML-Farbcodes (z. B. #FF5733), MAC-Adressen, Speicheradressen und kryptografische Hashes."
+      "<strong>Hexadezimal</strong> ist die Basis 16, wobei <code>0-9</code> für die Werte null bis neun und <code>A-F</code> für die Werte zehn bis fünfzehn verwendet wird. Dezimal ist die Basis 10, das alltägliche Zahlensystem für Zählungen und Messungen.",
+      "Jede Hexadezimalzahl stellt vier Binärbits dar, weshalb Hexadezimalwerte in der Programmierung und bei Binärdaten üblich sind. Führende Nullen können für Werte mit fester Breite wie Bytes oder Adressen von Bedeutung sein, selbst wenn der numerische Dezimalwert unverändert bleibt."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Geben Sie eine gültige Hexadezimalzahl ein.",
+    "inputNotesPara": "Verwenden Sie nur hexadezimale Ziffern und entfernen Sie Beschriftungen, Trennzeichen oder Präfixe, die nicht Teil der Zahl sind. Notieren Sie sich bei Daten mit fester Breite alle führenden Nullen, da bei der numerischen Konvertierung die Anzeigebreite möglicherweise nicht erhalten bleibt.",
     "example": "Beispiel",
-    "examplePara": "Konvertierung einer Hexadezimalzahl:",
+    "examplePara": "Das Hex-Byte <code>FF</code> wird in die Dezimalzahl 255 konvertiert und kann auch als Oktal- und Binärbyte überprüft werden:",
     "exampleCode": "--- Hex-Eingabe ---\nFF\n\n--- Dezimal ---\n255\n\n--- Oktal ---\n377\n\n--- Binär ---\n11111111"
   },
   "es": {
-    "title": "Convertidor Hexadecimal a Decimal — Coding.Tools",
-    "description": "Convierta números hexadecimales a formato decimal en su navegador.",
+    "title": "Convertidor de hexadecimal a decimal - Coding.Tools",
+    "description": "Convierta números hexadecimales a decimales, con equivalentes octales y binarios, directamente en su navegador.",
     "toolTitle": "Hexadecimal a Decimal",
-    "toolDescription": "Convierta números hexadecimales a decimal, octal y binario.",
+    "toolDescription": "Convierta valores de base 16 en números decimales y compare las formas octal y binaria coincidentes.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Ingrese número hexadecimal (ej: FF, 1A3F)...",
     "outputPlaceholder": "El resultado decimal aparecerá aquí...",
-    "descTitle": "Convertidor Hexadecimal a Decimal",
+    "descTitle": "Convertir valores hexadecimales a enteros decimales",
     "descParas": [
-      "Esta herramienta convierte números hexadecimales a decimal, octal y binario.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Hexadecimal a Decimal convierte la entrada en base 16 en salida en base 10 y también muestra los valores octales y binarios equivalentes.</strong> Úselo para verificar direcciones de memoria, valores de bytes, campos de protocolo, componentes de color o valores copiados de registros y documentación.",
+      "Ingrese los dígitos hexadecimales <code>0-9</code> y <code>A-F</code>; Las mayúsculas y minúsculas no importan y los espacios en blanco se ignoran. Si su fuente incluye un prefijo como <code>0x</code>, elimínelo a menos que haya confirmado que el convertidor acepta ese prefijo."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue un número hexadecimal.",
-      "Haga clic en <strong>Convertir</strong>.",
-      "Use <strong>Copiar</strong> para copiar el resultado."
+      "Escriba o pegue un número hexadecimal en el campo de entrada.",
+      "Revise el resultado decimal, además de los equivalentes octales y binarios que se muestran para realizar una verificación cruzada.",
+      "Utilice <strong>Copiar</strong> para el valor decimal, o <strong>Limpiar</strong> antes de verificar otro número."
     ],
-    "whatIs": "Qué es Hexadecimal?",
+    "whatIs": "¿Qué es la conversión de hexadecimal a decimal?",
     "whatIsParas": [
-      "Hexadecimal es un sistema numérico en base 16 que usa los dígitos 0-9 y las letras A-F.",
-      "Los usos comunes incluyen códigos de color HTML (p. ej., #FF5733), direcciones MAC, direcciones de memoria y hashes criptográficos."
+      "<strong>Hexadecimal</strong> es base 16, usando <code>0-9</code> para valores del cero al nueve y <code>A-F</code> para valores del diez al quince. El decimal es base 10, el sistema numérico cotidiano que se utiliza para contar y medir.",
+      "Cada dígito hexadecimal representa cuatro bits binarios, razón por la cual el hexadecimal es común en programación y datos binarios. Los ceros a la izquierda pueden ser importantes para valores de ancho fijo, como bytes o direcciones, incluso cuando el valor decimal numérico no cambia."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un número hexadecimal válido.",
+    "inputNotesPara": "Utilice sólo dígitos hexadecimales y elimine etiquetas, separadores o prefijos que no formen parte del número. Para datos de ancho fijo, tome nota de los ceros iniciales porque es posible que la conversión numérica no preserve el ancho de visualización.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de hexadecimal a decimal:",
+    "examplePara": "El byte hexadecimal <code>FF</code> se convierte al decimal 255 y también se puede comprobar como octal y binario:",
     "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binario ---\n11111111"
   },
   "pt": {
-    "title": "Conversor Hexadecimal para Decimal — Coding.Tools",
-    "description": "Converta números hexadecimais para formato decimal no seu navegador.",
+    "title": "Conversor hexadecimal para decimal - Coding.Tools",
+    "description": "Converta números hexadecimais em decimais, com equivalentes octais e binários, diretamente no seu navegador.",
     "toolTitle": "Hexadecimal para Decimal",
-    "toolDescription": "Converta números hexadecimais para decimal, octal e binário.",
+    "toolDescription": "Converta valores de base 16 em números decimais e compare as formas octal e binária correspondentes.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Digite o número hexadecimal (ex: FF, 1A3F)...",
     "outputPlaceholder": "O resultado decimal aparecerá aqui...",
-    "descTitle": "Conversor Hexadecimal para Decimal",
+    "descTitle": "Converter valores hexadecimais em inteiros decimais",
     "descParas": [
-      "Esta ferramenta converte números hexadecimais para decimal, octal e binário.",
-      "A conversão é executada localmente no navegador."
+      "<strong>Hex para Decimal transforma a entrada de base 16 em saída de base 10 e também mostra os valores octais e binários equivalentes.</strong> Use-o para verificar endereços de memória, valores de bytes, campos de protocolo, componentes de cores ou valores copiados de logs e documentação.",
+      "Insira os dígitos hexadecimais <code>0-9</code> e <code>A-F</code>; maiúsculas e minúsculas não importam e os espaços em branco são ignorados. Se sua fonte incluir um prefixo como <code>0x</code>, remova-o, a menos que você tenha confirmado que o conversor aceita esse prefixo."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um número hexadecimal.",
-      "Clique em <strong>Converter</strong>.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Digite ou cole um número hexadecimal no campo de entrada.",
+      "Revise o resultado decimal, além dos equivalentes octais e binários mostrados para verificação cruzada.",
+      "Use <strong>Copiar</strong> para o valor decimal ou <strong>Limpar</strong> antes de verificar outro número."
     ],
-    "whatIs": "O que é Hexadecimal?",
+    "whatIs": "O que é conversão de hexadecimal para decimal?",
     "whatIsParas": [
-      "Hexadecimal é um sistema numérico na base 16 que usa os dígitos 0-9 e as letras A-F.",
-      "Usos comuns incluem códigos de cor HTML (ex.: #FF5733), endereços MAC, endereços de memória e hashes criptográficos."
+      "<strong>Hexadecimal</strong> é base 16, usando <code>0-9</code> para valores de zero a nove e <code>A-F</code> para valores de dez a quinze. Decimal é a base 10, o sistema numérico diário usado para contagens e medições.",
+      "Cada dígito hexadecimal representa quatro bits binários, razão pela qual hexadecimal é comum em programação e dados binários. Zeros à esquerda podem ser importantes para valores de largura fixa, como bytes ou endereços, mesmo quando o valor decimal numérico permanece inalterado."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Digite um número hexadecimal válido.",
+    "inputNotesPara": "Use apenas dígitos hexadecimais e remova rótulos, separadores ou prefixos que não fazem parte do número. Para dados de largura fixa, anote quaisquer zeros à esquerda, pois a conversão numérica pode não preservar a largura de exibição.",
     "example": "Exemplo",
-    "examplePara": "Convertendo hexadecimal para decimal:",
+    "examplePara": "O byte hexadecimal <code>FF</code> é convertido para decimal 255 e também pode ser verificado como octal e binário:",
     "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binário ---\n11111111"
   }
 }

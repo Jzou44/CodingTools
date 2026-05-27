@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "JSON Formatter — Coding.Tools",
-    "description": "Format and beautify JSON code with proper indentation directly in your browser.",
+    "title": "JSON Formatter - Coding.Tools",
+    "description": "Format valid JSON with readable indentation while preserving objects, arrays, values, and key names.",
     "toolTitle": "JSON Formatter",
-    "toolDescription": "Beautify minified JSON with proper indentation and structure. Copy or download the formatted result.",
+    "toolDescription": "Format valid JSON into readable, consistently indented output in your browser.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste your JSON here...",
     "outputPlaceholder": "Formatted JSON will appear here...",
-    "descTitle": "JSON Formatter",
+    "descTitle": "Format JSON without changing its data",
     "descParas": [
-      "This tool formats and beautifies JSON data with proper indentation and structure. Paste minified or poorly formatted JSON and get clean, readable output instantly.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>JSON Formatter parses your input and prints it with predictable indentation.</strong> It is useful for inspecting API responses, config files, package metadata, logs, and copied payloads that arrive as one long line.",
+      "The input must be valid JSON: quoted property names, no trailing commas, no comments, and valid strings. Formatting changes whitespace only; object keys, array order, numbers, booleans, null values, and string content are preserved."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your JSON data into the input editor.",
-      "Click <strong>Format JSON</strong> to beautify the code.",
-      "The formatted JSON appears in the output editor with proper indentation.",
+      "Click <strong>Format JSON</strong> to parse and indent it.",
+      "Review the formatted output to confirm the structure, nesting, and arrays are what you expect.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is JSON formatting?",
+    "whatIs": "What is JSON Formatter?",
     "whatIsParas": [
-      "JSON formatting adds indentation and line breaks to JSON data, making it human-readable. Minified JSON has all whitespace removed to reduce file size, but is difficult to read and debug.",
-      "Formatting JSON is essential for debugging API responses, reviewing configuration files, and sharing data structures with colleagues."
+      "<strong>JSON Formatter</strong> is a browser-based utility for turning compact JSON into a human-readable document. It makes nested objects and arrays easier to scan during debugging, reviews, and documentation work.",
+      "Because JSON is a strict data format, the formatter also acts as a quick validity check. If the input cannot be parsed, fix the syntax first rather than relying on indentation to repair the payload."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts valid JSON input. If the input contains JSON syntax errors, the tool will report the error. The formatter preserves all data — it only changes whitespace and indentation.",
+    "inputNotesPara": "Paste only the JSON document, not HTTP headers, variable assignments, Markdown fences, or surrounding quotes from another UI. Whitespace inside quoted strings is data and will be preserved.",
     "example": "Example",
-    "examplePara": "Minified JSON becomes readable after formatting:",
-    "exampleCode": "--- Minified Input ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Formatted Output ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "A compact payload becomes easier to review once objects and values are placed on separate lines:",
+    "exampleCode": "--- Minified Input ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Formatted Output ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "Format JSON"
   },
   "cn": {
-    "title": "JSON 格式化 — Coding.Tools",
-    "description": "在浏览器中直接格式化和美化 JSON 代码。",
+    "title": "JSON 格式化程序 - Coding.Tools",
+    "description": "使用可读缩进格式化有效的 JSON，同时保留对象、数组、值和键名称。",
     "toolTitle": "JSON 格式化",
-    "toolDescription": "美化压缩的 JSON，添加适当的缩进和结构。复制或下载格式化结果。",
+    "toolDescription": "将有效的 JSON 格式化为浏览器中可读的、一致缩进的输出。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴 JSON...",
     "outputPlaceholder": "格式化后的 JSON 将在此显示...",
-    "descTitle": "JSON 格式化",
+    "descTitle": "格式化JSON而不改变其数据",
     "descParas": [
-      "该工具格式化和美化 JSON 数据，添加适当的缩进和结构。粘贴压缩或格式不佳的 JSON，即可获取干净、可读的输出。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>JSON 格式化程序解析您的输入并使用可预测的缩进打印它。</strong> 它对于检查作为一长行到达的 API 响应、配置文件、包元数据、日志和复制的有效负载非常有用。",
+      "输入必须是有效的 JSON：带引号的属性名称、无尾随逗号、无注释和有效字符串。格式化仅更改空白；保留对象键、数组顺序、数字、布尔值、空值和字符串内容。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 JSON 数据粘贴到输入编辑器中。",
-      "点击<strong>格式化 JSON</strong>来美化代码。",
-      "格式化后的 JSON 将以适当的缩进显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>格式化 JSON</strong> 进行解析和缩进。",
+      "检查格式化输出以确认结构、嵌套和数组符合您的预期。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 JSON 格式化？",
+    "whatIs": "什么是 JSON 格式化程序？",
     "whatIsParas": [
-      "JSON 格式化为 JSON 数据添加缩进和换行，使其易于阅读。压缩的 JSON 移除了所有空白字符以减小文件大小，但难以阅读和调试。",
-      "格式化 JSON 对于调试 API 响应、查看配置文件和与同事共享数据结构至关重要。"
+      "<strong>JSON 格式化</strong> 是一个基于浏览器的实用程序，用于将紧凑的 JSON 转换为人类可读的文档。它使嵌套对象和数组在调试、审查和文档工作期间更容易扫描。",
+      "由于 JSON 是严格的数据格式，因此格式化程序还充当快速有效性检查的作用。如果无法解析输入，请先修复语法，而不是依靠缩进来修复有效负载。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受有效的 JSON 输入。如果输入包含 JSON 语法错误，工具将报告错误。格式化器保留所有数据——只改变空白和缩进。",
+    "inputNotesPara": "仅粘贴 JSON 文档，而不粘贴 HTTP 标头、变量赋值、Markdown 栅栏或来自其他 UI 的周围引号。带引号的字符串内的空格是数据，将被保留。",
     "example": "示例",
-    "examplePara": "压缩的 JSON 格式化后变得可读：",
-    "exampleCode": "--- 压缩输入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化输出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "一旦对象和值放置在单独的行上，紧凑的有效负载就变得更容易查看：",
+    "exampleCode": "--- 压缩输入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化输出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "格式化 JSON"
   },
   "tw": {
-    "title": "JSON 格式化 — Coding.Tools",
-    "description": "在瀏覽器中直接格式化和美化 JSON 程式碼。",
+    "title": "JSON 格式化程式 - Coding.Tools",
+    "description": "使用可讀縮排格式化有效的 JSON，同時保留物件、陣列、值和鍵名稱。",
     "toolTitle": "JSON 格式化",
-    "toolDescription": "美化壓縮的 JSON，添加適當的縮排和結構。複製或下載格式化結果。",
+    "toolDescription": "將有效的 JSON 格式化為瀏覽器中可讀取的、一致縮排的輸出。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上 JSON...",
     "outputPlaceholder": "格式化後的 JSON 將在此顯示...",
-    "descTitle": "JSON 格式化",
+    "descTitle": "格式化JSON而不改變其數據",
     "descParas": [
-      "該工具格式化和美化 JSON 資料，添加適當的縮排和結構。貼上壓縮或格式不佳的 JSON，即可取得乾淨、可讀的輸出。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>JSON 格式化程式解析您的輸入並使用可預測的縮排列印它。</strong> 它對於檢查作為一長行到達的 API 回應、設定檔、包元資料、日誌和複製的有效負載非常有用。",
+      "輸入必須是有效的 JSON：帶引號的屬性名稱、無尾隨逗號、無註解和有效字串。格式化僅更改空白；保留物件鍵、陣列順序、數字、布林值、空值和字串內容。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 JSON 資料貼上到輸入編輯器中。",
-      "點擊<strong>格式化 JSON</strong>來美化程式碼。",
-      "格式化後的 JSON 將以適當的縮排顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 JSON 資料貼到輸入編輯器中。",
+      "按一下 <strong>格式化 JSON</strong> 進行解析和縮排。",
+      "檢查格式化輸出以確認結構、巢狀和陣列符合您的預期。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 JSON 格式化？",
+    "whatIs": "什麼是 JSON 格式化程式？",
     "whatIsParas": [
-      "JSON 格式化為 JSON 資料添加縮排和換行，使其易於閱讀。壓縮的 JSON 移除了所有空白字元以減小檔案大小，但難以閱讀和除錯。",
-      "格式化 JSON 對於除錯 API 回應、檢視設定檔和與同事分享資料結構至關重要。"
+      "<strong>JSON 格式化</strong> 是一個基於瀏覽器的實用程序，用於將緊湊的 JSON 轉換為人類可讀的文檔。它使嵌套物件和陣列在調試、審查和文件工作期間更容易掃描。",
+      "由於 JSON 是嚴格的資料格式，因此格式化程式也充當快速有效性檢查的作用。如果無法解析輸入，請先修復語法，而不是依賴縮排來修復有效負載。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受有效的 JSON 輸入。如果輸入包含 JSON 語法錯誤，工具將報告錯誤。格式化器保留所有資料——只改變空白和縮排。",
+    "inputNotesPara": "僅貼上 JSON 文檔，而不貼上 HTTP 標頭、變數賦值、Markdown 柵欄或來自其他 UI 的周圍引號。帶引號的字串內的空格是數據，將被保留。",
     "example": "範例",
-    "examplePara": "壓縮的 JSON 格式化後變得可讀：",
-    "exampleCode": "--- 壓縮輸入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化輸出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "一旦物件和值放置在單獨的行上，緊湊的有效負載就變得更容易查看：",
+    "exampleCode": "--- 壓縮輸入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化輸出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "格式化 JSON"
   },
   "jp": {
-    "title": "JSON フォーマッター — Coding.Tools",
-    "description": "ブラウザで JSON コードをフォーマットして美しく整形します。",
+    "title": "JSON フォーマッター - Coding.Tools",
+    "description": "オブジェクト、配列、値、キー名を保持しながら、読み取り可能なインデントを使用して有効な JSON をフォーマットします。",
     "toolTitle": "JSON フォーマッター",
-    "toolDescription": "圧縮された JSON に適切なインデントと構造を追加します。コピーまたはダウンロード。",
+    "toolDescription": "有効な JSON を、ブラウザで読みやすく、一貫してインデントされた出力にフォーマットします。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "JSON を貼り付け...",
     "outputPlaceholder": "フォーマットされた JSON がここに表示されます...",
-    "descTitle": "JSON フォーマッター",
+    "descTitle": "JSON のデータを変更せずにフォーマットします",
     "descParas": [
-      "このツールは JSON データに適切なインデントと構造を追加してフォーマットします。圧縮またはフォーマットが不正な JSON を貼り付けると、きれいな読みやすい出力が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>JSON フォーマッタは入力を解析し、予測可能なインデントで出力します。</strong> これは、API 応答、構成ファイル、パッケージ メタデータ、ログ、および 1 つの長い行として到着するコピーされたペイロードを検査するのに役立ちます。",
+      "入力は有効な JSON (引用符で囲まれたプロパティ名、末尾のカンマ、コメントなし、および有効な文字列) である必要があります。書式設定では空白のみが変更されます。オブジェクトのキー、配列の順序、数値、ブール値、NULL 値、文字列の内容は保持されます。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "JSON データを入力エディタに貼り付けます。",
-      "<strong>JSON フォーマット</strong>をクリックしてコードを整形します。",
-      "フォーマットされた JSON が適切なインデントで出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "JSON データを入力エディターに貼り付けます。",
+      "<strong>JSON を整形</strong> をクリックして解析し、インデントします。",
+      "フォーマットされた出力を確認して、構造、ネスト、配列が期待どおりであることを確認します。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "JSON フォーマットとは？",
+    "whatIs": "JSON フォーマッターとは何ですか?",
     "whatIsParas": [
-      "JSON フォーマットは JSON データにインデントと改行を追加し、人間が読めるようにします。圧縮された JSON はファイルサイズを小さくするためにすべての空白が除去されていますが、読むのは困難です。",
-      "JSON のフォーマットは API レスポンスのデバッグ、設定ファイルの確認、データ構造の共有に不可欠です。"
+      "<strong>JSON フォーマッター</strong> は、コンパクトな JSON を人間が読める文書に変換するためのブラウザベースのユーティリティです。これにより、デバッグ、レビュー、文書化作業中にネストされたオブジェクトと配列をスキャンしやすくなります。",
+      "JSON は厳密なデータ形式であるため、フォーマッタは迅速な有効性チェックとしても機能します。入力を解析できない場合は、インデントに頼ってペイロードを修復するのではなく、まず構文を修正してください。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは有効な JSON 入力を受け付けます。入力に JSON 構文エラーがある場合、エラーが報告されます。フォーマッターはすべてのデータを保持し、空白とインデントのみを変更します。",
+    "inputNotesPara": "HTTP ヘッダー、変数の割り当て、マークダウン フェンス、または別の UI からの周囲の引用符ではなく、JSON ドキュメントのみを貼り付けます。引用符で囲まれた文字列内の空白はデータであり、保持されます。",
     "example": "例",
-    "examplePara": "圧縮された JSON はフォーマット後に読みやすくなります：",
-    "exampleCode": "--- 圧縮入力 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- フォーマット出力 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "オブジェクトと値を別の行に配置すると、コンパクトなペイロードのレビューが容易になります。",
+    "exampleCode": "--- 圧縮入力 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- フォーマット出力 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "JSON をフォーマット"
   },
   "kr": {
-    "title": "JSON 포맷터 — Coding.Tools",
-    "description": "브라우저에서 JSON 코드를 포맷하고 아름답게 정리합니다.",
+    "title": "JSON 포맷터 - Coding.Tools",
+    "description": "객체, 배열, 값 및 키 이름을 유지하면서 읽을 수 있는 들여쓰기로 유효한 JSON 형식을 지정합니다.",
     "toolTitle": "JSON 포맷터",
-    "toolDescription": "압축된 JSON에 적절한 들여쓰기와 구조를 추가합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "브라우저에서 유효한 JSON를 읽을 수 있고 일관되게 들여쓰기된 출력으로 형식화하십시오.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "JSON을 붙여넣으세요...",
     "outputPlaceholder": "포맷된 JSON이 여기에 표시됩니다...",
-    "descTitle": "JSON 포맷터",
+    "descTitle": "데이터를 변경하지 않고 JSON 형식을 지정합니다.",
     "descParas": [
-      "이 도구는 JSON 데이터에 적절한 들여쓰기와 구조를 추가하여 포맷합니다. 압축되었거나 잘못 포맷된 JSON을 붙여넣으면 깔끔하고 읽기 쉬운 출력을 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>JSON 포맷터는 입력을 구문 분석하고 예측 가능한 들여쓰기로 인쇄합니다.</strong> API 응답, 구성 파일, 패키지 메타데이터, 로그 및 하나의 긴 줄로 도착하는 복사된 페이로드를 검사하는 데 유용합니다.",
+      "입력은 유효한 JSON여야 합니다(따옴표로 묶인 특성 이름, 후행 쉼표 없음, 주석 없음, 유효한 문자열). 서식은 공백만 변경합니다. 객체 키, 배열 순서, 숫자, 부울, Null 값 및 문자열 내용이 유지됩니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "JSON 데이터를 입력 편집기에 붙여넣으세요.",
-      "<strong>JSON 포맷</strong>을 클릭하여 코드를 정리합니다.",
-      "포맷된 JSON이 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "JSON 데이터를 입력 편집기에 붙여넣습니다.",
+      "<strong>JSON 형식 지정</strong>를 클릭하여 구문 분석하고 들여쓰기합니다.",
+      "형식화된 출력을 검토하여 구조, 중첩 및 배열이 예상한 대로인지 확인하세요.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JSON 포맷팅이란?",
+    "whatIs": "JSON 포맷터란 무엇입니까?",
     "whatIsParas": [
-      "JSON 포맷팅은 JSON 데이터에 들여쓰기와 줄 바꿈을 추가하여 사람이 읽을 수 있게 합니다. 압축된 JSON은 파일 크기를 줄이기 위해 모든 공백이 제거되어 읽기 어렵습니다.",
-      "JSON 포맷팅은 API 응답 디버깅, 설정 파일 검토, 데이터 구조 공유에 필수적입니다."
+      "<strong>JSON 포맷터</strong>는 컴팩트 JSON를 사람이 읽을 수 있는 문서로 변환하는 브라우저 기반 유틸리티입니다. 디버깅, 검토, 문서화 작업 중에 중첩된 개체와 배열을 더 쉽게 검색할 수 있습니다.",
+      "JSON는 엄격한 데이터 형식이므로 포맷터는 빠른 유효성 검사 역할도 합니다. 입력을 구문 분석할 수 없는 경우 들여쓰기에 의존하여 페이로드를 복구하는 대신 먼저 구문을 수정하세요."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 유효한 JSON 입력을 허용합니다. 입력에 JSON 구문 오류가 있으면 오류가 보고됩니다. 포맷터는 모든 데이터를 보존하고 공백과 들여쓰기만 변경합니다.",
+    "inputNotesPara": "HTTP 헤더, 변수 할당, 마크다운 펜스 또는 다른 UI의 주변 인용문이 아닌 JSON 문서만 붙여넣으세요. 인용된 문자열 안의 공백은 데이터이며 보존됩니다.",
     "example": "예시",
-    "examplePara": "압축된 JSON은 포맷 후 읽기 쉬워집니다:",
-    "exampleCode": "--- 압축 입력 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 포맷 출력 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "객체와 값이 별도의 줄에 배치되면 압축 페이로드를 검토하기가 더 쉬워집니다.",
+    "exampleCode": "--- 압축 입력 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 포맷 출력 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "JSON 포맷"
   },
   "fr": {
-    "title": "Formateur JSON — Coding.Tools",
-    "description": "Formatez et embellissez le code JSON avec une indentation correcte directement dans votre navigateur.",
+    "title": "Formateur JSON - Coding.Tools",
+    "description": "Formatez un JSON valide avec une indentation lisible tout en préservant les objets, les tableaux, les valeurs et les noms de clés.",
     "toolTitle": "Formateur JSON",
-    "toolDescription": "Embellissez le JSON minifié avec une indentation et une structure correctes. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Formatez un JSON valide en une sortie lisible et constamment en retrait dans votre navigateur.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez votre JSON ici...",
     "outputPlaceholder": "Le JSON formaté apparaîtra ici...",
-    "descTitle": "Formateur JSON",
+    "descTitle": "Formater JSON sans modifier ses données",
     "descParas": [
-      "Cet outil formate et embellit les données JSON avec une indentation et une structure correctes. Collez du JSON minifié ou mal formaté pour obtenir une sortie propre et lisible instantanément.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Formateur JSON analyse votre entrée et l'imprime avec une indentation prévisible.</strong> Il est utile pour inspecter les réponses de l'API, les fichiers de configuration, les métadonnées du package, les journaux et les charges utiles copiées qui arrivent sous la forme d'une longue ligne.",
+      "L'entrée doit être un JSON valide : noms de propriétés entre guillemets, pas de virgules de fin, pas de commentaires et des chaînes valides. Le formatage modifie uniquement les espaces ; les clés d'objet, l'ordre du tableau, les nombres, les booléens, les valeurs nulles et le contenu des chaînes sont conservés."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez vos données JSON dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Formater JSON</strong> pour embellir le code.",
-      "Le JSON formaté apparaît dans l'éditeur de sortie avec une indentation correcte.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Cliquez sur <strong>Formater JSON</strong> pour l'analyser et l'indenter.",
+      "Examinez la sortie formatée pour confirmer que la structure, l’imbrication et les tableaux correspondent à vos attentes.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le formatage JSON ?",
+    "whatIs": "Qu’est-ce que le formateur JSON ?",
     "whatIsParas": [
-      "Le formatage JSON ajoute des retours à la ligne et de l'indentation aux données JSON, les rendant lisibles par l'homme. Le JSON minifié a tous les espaces supprimés pour réduire la taille du fichier, mais est difficile à lire et à déboguer.",
-      "Le formatage JSON est essentiel pour le débogage des réponses API, l'examen des fichiers de configuration et le partage de structures de données avec des collègues."
+      "<strong>Formateur JSON</strong> est un utilitaire basé sur un navigateur permettant de transformer le JSON compact en un document lisible par l'homme. Il facilite l'analyse des objets et des tableaux imbriqués lors des travaux de débogage, de révision et de documentation.",
+      "JSON étant un format de données strict, le formateur agit également comme un contrôle de validité rapide. Si l'entrée ne peut pas être analysée, corrigez d'abord la syntaxe plutôt que de vous fier à l'indentation pour réparer la charge utile."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte une entrée JSON valide. Si l'entrée contient des erreurs de syntaxe JSON, l'outil les signalera. Le formateur préserve toutes les données — il ne modifie que les espaces et l'indentation.",
+    "inputNotesPara": "Collez uniquement le document JSON, pas les en-têtes HTTP, les affectations de variables, les clôtures Markdown ou les guillemets environnants d'une autre interface utilisateur. Les espaces à l’intérieur des chaînes entre guillemets sont des données et seront conservés.",
     "example": "Exemple",
-    "examplePara": "Le JSON minifié devient lisible après formatage :",
-    "exampleCode": "--- Entrée minifiée ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Sortie formatée ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "Une charge utile compacte devient plus facile à examiner une fois que les objets et les valeurs sont placés sur des lignes distinctes :",
+    "exampleCode": "--- Entrée minifiée ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Sortie formatée ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "Formater JSON"
   },
   "de": {
-    "title": "JSON-Formatierer — Coding.Tools",
-    "description": "Formatieren und verschönern Sie JSON-Code mit korrekter Einrückung direkt in Ihrem Browser.",
+    "title": "JSON Formatierer - Coding.Tools",
+    "description": "Formatieren Sie gültiges JSON mit lesbarem Einzug und behalten Sie dabei Objekte, Arrays, Werte und Schlüsselnamen bei.",
     "toolTitle": "JSON-Formatierer",
-    "toolDescription": "Verschönern Sie minifiziertes JSON mit korrekter Einrückung und Struktur. Kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Formatieren Sie gültiges JSON in eine lesbare, konsistent eingerückte Ausgabe in Ihrem Browser.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "JSON hier einfügen...",
     "outputPlaceholder": "Formatiertes JSON wird hier angezeigt...",
-    "descTitle": "JSON-Formatierer",
+    "descTitle": "Formatieren Sie JSON, ohne seine Daten zu ändern",
     "descParas": [
-      "Dieses Tool formatiert und verschönert JSON-Daten mit korrekter Einrückung und Struktur. Fügen Sie minifiziertes oder schlecht formatiertes JSON ein und erhalten Sie sofort saubere, lesbare Ausgabe.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>JSON-Formatierer analysiert Ihre Eingaben und gibt sie mit vorhersehbarer Einrückung aus.</strong> Es ist nützlich für die Überprüfung von API-Antworten, Konfigurationsdateien, Paketmetadaten, Protokollen und kopierten Nutzlasten, die als eine lange Zeile ankommen.",
+      "Die Eingabe muss gültig sein (JSON): Eigenschaftsnamen in Anführungszeichen, keine abschließenden Kommas, keine Kommentare und gültige Zeichenfolgen. Durch die Formatierung werden nur Leerzeichen geändert. Objektschlüssel, Array-Reihenfolge, Zahlen, boolesche Werte, Nullwerte und Zeichenfolgeninhalt bleiben erhalten."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihre JSON-Daten in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>JSON formatieren</strong>, um den Code zu verschönern.",
-      "Das formatierte JSON wird im Ausgabe-Editor mit korrekter Einrückung angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihre JSON-Daten in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>JSON formatieren</strong>, um es zu analysieren und einzurücken.",
+      "Überprüfen Sie die formatierte Ausgabe, um sicherzustellen, dass Struktur, Verschachtelung und Arrays Ihren Erwartungen entsprechen.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist JSON-Formatierung?",
+    "whatIs": "Was ist der JSON-Formatierer?",
     "whatIsParas": [
-      "JSON-Formatierung fügt Einrückungen und Zeilenumbrüche zu JSON-Daten hinzu und macht sie lesbar. Minifiziertes JSON hat alle Leerzeichen entfernt, um die Dateigröße zu reduzieren, ist aber schwer zu lesen.",
-      "Die Formatierung von JSON ist unerlässlich für das Debugging von API-Antworten, die Überprüfung von Konfigurationsdateien und den Austausch von Datenstrukturen."
+      "<strong>JSON-Formatierer</strong> ist ein browserbasiertes Dienstprogramm zum Umwandeln kompakter JSON in ein für Menschen lesbares Dokument. Es erleichtert das Scannen verschachtelter Objekte und Arrays bei Debugging-, Überprüfungs- und Dokumentationsarbeiten.",
+      "Da es sich bei JSON um ein striktes Datenformat handelt, fungiert der Formatierer auch als schnelle Gültigkeitsprüfung. Wenn die Eingabe nicht geparst werden kann, korrigieren Sie zuerst die Syntax, anstatt sich auf die Einrückung zu verlassen, um die Nutzlast zu reparieren."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert gültige JSON-Eingaben. Wenn die Eingabe JSON-Syntaxfehler enthält, meldet das Tool den Fehler. Der Formatierer bewahrt alle Daten auf — er ändert nur Leerzeichen und Einrückung.",
+    "inputNotesPara": "Fügen Sie nur das JSON-Dokument ein, keine HTTP-Header, Variablenzuweisungen, Markdown-Zäune oder umgebende Anführungszeichen aus einer anderen Benutzeroberfläche. Leerzeichen in Zeichenfolgen in Anführungszeichen sind Daten und bleiben erhalten.",
     "example": "Beispiel",
-    "examplePara": "Minifiziertes JSON wird nach der Formatierung lesbar:",
-    "exampleCode": "--- Minifizierte Eingabe ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Formatierte Ausgabe ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "Eine kompakte Nutzlast lässt sich einfacher überprüfen, wenn Objekte und Werte in separaten Zeilen platziert werden:",
+    "exampleCode": "--- Minifizierte Eingabe ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Formatierte Ausgabe ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "Formatieren JSON"
   },
   "es": {
-    "title": "Formateador JSON — Coding.Tools",
-    "description": "Formatee y embellezca el código JSON con indentación correcta directamente en su navegador.",
+    "title": "Formateador JSON - Coding.Tools",
+    "description": "Formatee JSON válido con sangría legible y al mismo tiempo conserva objetos, matrices, valores y nombres de claves.",
     "toolTitle": "Formateador JSON",
-    "toolDescription": "Embellezca JSON minificado con indentación y estructura correctas. Copie o descargue el resultado.",
+    "toolDescription": "Formatee JSON válido en una salida legible y con sangría consistente en su navegador.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue su JSON aquí...",
     "outputPlaceholder": "El JSON formateado aparecerá aquí...",
-    "descTitle": "Formateador JSON",
+    "descTitle": "Formatee JSON sin cambiar sus datos.",
     "descParas": [
-      "Esta herramienta formatea y embellece los datos JSON con indentación y estructura correctas. Pegue JSON minificado o mal formateado y obtenga una salida limpia y legible al instante.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>JSON El formateador analiza su entrada y la imprime con una sangría predecible.</strong> Es útil para inspeccionar respuestas de API, archivos de configuración, metadatos de paquetes, registros y cargas útiles copiadas que llegan como una línea larga.",
+      "La entrada debe ser JSON válida: nombres de propiedad entre comillas, sin comas finales, sin comentarios y cadenas válidas. El formato cambia sólo los espacios en blanco; Se conservan las claves de los objetos, el orden de la matriz, los números, los valores booleanos, los valores nulos y el contenido de las cadenas."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue sus datos JSON en el editor de entrada.",
-      "Haga clic en <strong>Formatear JSON</strong> para embellecer el código.",
-      "El JSON formateado aparece en el editor de salida con indentación correcta.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Formatear JSON</strong> para analizarlo y aplicarle sangría.",
+      "Revise la salida formateada para confirmar que la estructura, el anidamiento y las matrices son lo que espera.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es el formateo JSON?",
+    "whatIs": "¿Qué es el formateador JSON?",
     "whatIsParas": [
-      "El formateo JSON agrega indentación y saltos de línea a los datos JSON, haciéndolos legibles. El JSON minificado tiene todos los espacios eliminados para reducir el tamaño del archivo, pero es difícil de leer y depurar.",
-      "El formateo JSON es esencial para depurar respuestas de API, revisar archivos de configuración y compartir estructuras de datos con colegas."
+      "<strong>Formateador JSON</strong> es una utilidad basada en navegador para convertir el JSON compacto en un documento legible por humanos. Hace que los objetos y matrices anidados sean más fáciles de escanear durante el trabajo de depuración, revisión y documentación.",
+      "Debido a que JSON es un formato de datos estricto, el formateador también actúa como una verificación rápida de validez. Si la entrada no se puede analizar, primero corrija la sintaxis en lugar de depender de la sangría para reparar la carga útil."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta entrada JSON válida. Si la entrada contiene errores de sintaxis JSON, la herramienta los reportará. El formateador preserva todos los datos — solo cambia espacios e indentación.",
+    "inputNotesPara": "Pegue solo el documento JSON, no encabezados HTTP, asignaciones de variables, vallas de Markdown ni comillas circundantes de otra interfaz de usuario. Los espacios en blanco dentro de las cadenas entre comillas son datos y se conservarán.",
     "example": "Ejemplo",
-    "examplePara": "El JSON minificado se vuelve legible después del formateo:",
-    "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Salida formateada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "Una carga útil compacta se vuelve más fácil de revisar una vez que los objetos y valores se colocan en líneas separadas:",
+    "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Salida formateada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "Formatear JSON"
   },
   "pt": {
-    "title": "Formatador JSON — Coding.Tools",
-    "description": "Formate e embeleze o código JSON com indentação correta diretamente no seu navegador.",
+    "title": "Formatador JSON - Coding.Tools",
+    "description": "Formate JSON válido com recuo legível enquanto preserva objetos, matrizes, valores e nomes de chaves.",
     "toolTitle": "Formatador JSON",
-    "toolDescription": "Embeleze JSON minificado com indentação e estrutura corretas. Copie ou baixe o resultado.",
+    "toolDescription": "Formate JSON válido em uma saída legível e indentada de forma consistente em seu navegador.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole seu JSON aqui...",
     "outputPlaceholder": "O JSON formatado aparecerá aqui...",
-    "descTitle": "Formatador JSON",
+    "descTitle": "Formate JSON sem alterar seus dados",
     "descParas": [
-      "Esta ferramenta formatea e embeleze dados JSON com indentação e estrutura corretas. Cole JSON minificado ou mal formatado e obtenha uma saída limpa e legível instantaneamente.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>JSON O formatador analisa sua entrada e a imprime com recuo previsível.</strong> É útil para inspecionar respostas de API, arquivos de configuração, metadados de pacotes, logs e cargas úteis copiadas que chegam como uma longa linha.",
+      "A entrada deve ser JSON válida: nomes de propriedades entre aspas, sem vírgulas finais, sem comentários e sequências válidas. A formatação altera apenas os espaços em branco; chaves de objeto, ordem de array, números, booleanos, valores nulos e conteúdo de string são preservados."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seus dados JSON no editor de entrada.",
-      "Clique em <strong>Formatar JSON</strong> para embelezar o código.",
-      "O JSON formatado aparece no editor de saída com indentação correta.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Formatar JSON</strong> para analisá-lo e recuá-lo.",
+      "Revise a saída formatada para confirmar se a estrutura, o aninhamento e as matrizes estão conforme o esperado.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é formatação JSON?",
+    "whatIs": "O que é o formatador JSON?",
     "whatIsParas": [
-      "A formatação JSON adiciona indentação e quebras de linha aos dados JSON, tornando-os legíveis. O JSON minificado tem todos os espaços removidos para reduzir o tamanho do arquivo, mas é difícil de ler e depurar.",
-      "A formatação JSON é essencial para depurar respostas de API, revisar arquivos de configuração e compartilhar estruturas de dados com colegas."
+      "Formatador <strong>JSON</strong> é um utilitário baseado em navegador para transformar JSON compacto em um documento legível por humanos. Ele facilita a verificação de objetos e matrizes aninhados durante o trabalho de depuração, revisão e documentação.",
+      "Como JSON é um formato de dados estrito, o formatador também atua como uma verificação rápida de validade. Se a entrada não puder ser analisada, corrija a sintaxe primeiro, em vez de confiar no recuo para reparar a carga útil."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita entrada JSON válida. Se a entrada contiver erros de sintaxe JSON, a ferramenta os reportará. O formatador preserva todos os dados — ele apenas altera espaços e indentação.",
+    "inputNotesPara": "Cole apenas o documento JSON, não cabeçalhos HTTP, atribuições de variáveis, limites de Markdown ou citações adjacentes de outra UI. Os espaços em branco dentro das strings entre aspas são dados e serão preservados.",
     "example": "Exemplo",
-    "examplePara": "O JSON minificado se torna legível após a formatação:",
-    "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Saída formatada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+    "examplePara": "Uma carga compacta torna-se mais fácil de revisar quando os objetos e valores são colocados em linhas separadas:",
+    "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Saída formatada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
+    "buttonLabel": "Formatar JSON"
   }
 }

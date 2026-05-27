@@ -1,23 +1,23 @@
 {
   "en": {
-    "title": "Roman Numerals Chart — Coding.Tools",
-    "description": "View a complete Roman numerals reference chart from 1 to 1000.",
+    "title": "Roman Numerals Chart - Coding.Tools",
+    "description": "Reference Roman numeral symbols, subtractive pairs, and common decimal conversions.",
     "toolTitle": "Roman Numerals Chart",
-    "toolDescription": "Browse the complete Roman numerals chart from 1 to 1000.",
+    "toolDescription": "Browse a Roman numeral reference chart for symbols, subtractive notation, and common values.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Roman Numerals Chart",
+    "descTitle": "Reference Roman numeral values and patterns",
     "descParas": [
-      "This page displays a complete reference chart of Roman numerals from 1 to 1000.",
-      "The chart is organized in groups of 100 for easy reference."
+      "<strong>The Roman Numerals Chart provides a quick reference for reading and writing common Roman numeral values.</strong> Use it to check chapter numbers, outlines, dates, clock faces, sequels, and examples before converting manually.",
+      "Standard Roman numerals use <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code>, and <code>M</code>. Subtractive pairs such as <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code>, and <code>CM</code> keep values compact and canonical."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "What are Roman Numerals?",
+    "whatIs": "What is a Roman numerals chart?",
     "whatIsParas": [
-      "Roman numerals are a numeral system originating in ancient Rome, using letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Roman numerals are still used today in clock faces, book chapters, movie sequels, and formal documents."
+      "<strong>A Roman numerals chart</strong> maps decimal values to Roman notation so you can recognize symbols and subtractive patterns at a glance.",
+      "Modern converters usually support standard values from <code>1</code> to <code>3999</code> because larger numbers need overlines or other conventions that are not represented in plain ASCII text."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -26,24 +26,24 @@
     "exampleCode": ""
   },
   "cn": {
-    "title": "罗马数字表 — Coding.Tools",
-    "description": "在浏览器中查看罗马数字对照表。",
+    "title": "罗马数字表 - Coding.Tools",
+    "description": "参考罗马数字符号、减法对和常见的十进制转换。",
     "toolTitle": "罗马数字表",
-    "toolDescription": "罗马数字与阿拉伯数字对照表。",
+    "toolDescription": "浏览罗马数字参考表以了解符号、减法表示法和常用值。",
     "categoryName": "数字转换",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "罗马数字表",
+    "descTitle": "参考罗马数字值和模式",
     "descParas": [
-      "此工具显示罗马数字与阿拉伯数字的对照表。",
-      "所有计算在浏览器本地运行。"
+      "<strong>罗马数字图表为读写常见罗马数字值提供了快速参考。</strong> 在手动转换之前使用它来检查章节编号、大纲、日期、钟面、续集和示例。",
+      "标准罗马数字使用 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code> 和 <code>M</code>。 <code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code> 和 <code>CM</code> 等减法对使值保持紧凑和规范。"
     ],
     "howToUse": "使用方法",
     "steps": [],
-    "whatIs": "什么是罗马数字？",
+    "whatIs": "什么是罗马数字表？",
     "whatIsParas": [
-      "罗马数字是古罗马使用的数字系统，使用字母 I、V、X、L、C、D、M 来表示数字。",
-      "罗马数字今天仍用于钟表表盘、书籍章节、电影续集和正式文件。"
+      "<strong>A 罗马数字图表</strong> 将十进制值映射为罗马表示法，以便您一目了然地识别符号和减法模式。",
+      "现代转换器通常支持从 <code>1</code> 到 <code>3999</code> 的标准值，因为较大的数字需要上划线或其他未以纯 ASCII 文本表示的约定。"
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "此工具为参考表，无需输入。",
@@ -52,24 +52,24 @@
     "exampleCode": "I = 1\nV = 5\nX = 10\nL = 50\nC = 100\nD = 500\nM = 1000"
   },
   "tw": {
-    "title": "羅馬數字表 — Coding.Tools",
-    "description": "查看從 1 到 1000 的完整羅馬數字參考表。",
+    "title": "羅馬數字表 - Coding.Tools",
+    "description": "參考羅馬數字符號、減法對和常見的十進制轉換。",
     "toolTitle": "羅馬數字表",
-    "toolDescription": "瀏覽從 1 到 1000 的完整羅馬數字表。",
+    "toolDescription": "瀏覽羅馬數字參考表以了解符號、減法表示法和常用值。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "羅馬數字表",
+    "descTitle": "參考羅馬數字值和模式",
     "descParas": [
-      "本頁顯示了從 1 到 1000 的羅馬數字的完整參考表。",
-      "此圖表以 100 個為一組進行組織，以便於參考。"
+      "<strong>羅馬數字圖表為讀寫常見羅馬數字值提供了快速參考。</strong> 在手動轉換之前使用它來檢查章節編號、大綱、日期、鐘面、續集和範例。",
+      "標準羅馬數字使用 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code> 和 <code>M</code>。 <code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code> 和 <code>CM</code> 等減法對使值保持緊湊和規範。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "什麼是羅馬數字？",
+    "whatIs": "什麼是羅馬數字表？",
     "whatIsParas": [
-      "羅馬數字是起源於古羅馬的數字系統，使用字母：I(1)、V(5)、X(10)、L(50)、C(100)、D(500)、M(1000)。",
-      "羅馬數字至今仍在鐘面、書籍章節、電影續集和正式文件中使用。"
+      "<strong>A 羅馬數字圖表</strong> 將十進位值對應為羅馬表示法，以便您一目了然地識別符號和減法模式。",
+      "現代轉換器通常支援從 <code>1</code> 到 <code>3999</code> 的標準值，因為較大的數字需要上劃線或其他未以純 ASCII 文字表示的約定。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -78,24 +78,24 @@
     "exampleCode": ""
   },
   "jp": {
-    "title": "ローマ数字チャート —coding.tools",
-    "description": "1 から 1000 までの完全なローマ数字の参照表をご覧ください。",
+    "title": "ローマ数字チャート - Coding.Tools",
+    "description": "ローマ数字記号、減算ペア、および一般的な 10 進数の変換を参照します。",
     "toolTitle": "ローマ数字表",
-    "toolDescription": "1 から 1000 までの完全なローマ数字表を参照してください。",
+    "toolDescription": "記号、減法表記、および一般的な値については、ローマ数字の参照表を参照してください。",
     "categoryName": "数値変換",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "ローマ数字チャート",
+    "descTitle": "参考ローマ数字とパターン",
     "descParas": [
-      "このページには、1 から 1000 までのローマ数字の完全な参照表が表示されます。",
-      "このグラフは、参照しやすいように 100 個のグループにまとめられています。"
+      "<strong>ローマ数字チャートは、一般的なローマ数字の読み書きのためのクイック リファレンスを提供します。</strong> 手動で変換する前に、章番号、概要、日付、文字盤、続編、および例を確認するために使用します。",
+      "標準ローマ数字は、<code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>、および <code>M</code> を使用します。 <code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code>、<code>CM</code> などの減算ペアは、値をコンパクトかつ正規に保ちます。"
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "ローマ数字とは何ですか?",
+    "whatIs": "ローマ数字表とは何ですか?",
     "whatIsParas": [
-      "ローマ数字は古代ローマで生まれた数字体系で、I(1)、V(5)、X(10)、L(50)、C(100)、D(500)、M(1000)の文字を使用します。",
-      "ローマ数字は現在でも時計の文字盤、本の章、映画の続編、正式な文書などで使用されています。"
+      "<strong>A ローマ数字チャート</strong> は、10 進数値をローマ表記にマッピングするので、記号と減法パターンを一目で認識できます。",
+      "最新のコンバータは通常、<code>1</code> から <code>3999</code> までの標準値をサポートします。これは、これより大きな数値には上線や、ASCII プレーン テキストでは表現されないその他の規則が必要になるためです。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -104,24 +104,24 @@
     "exampleCode": ""
   },
   "kr": {
-    "title": "로마 숫자 차트 — Coding.Tools",
-    "description": "1부터 1000까지의 전체 로마 숫자 참조 차트를 확인하세요.",
+    "title": "로마 숫자 차트 - Coding.Tools",
+    "description": "로마 숫자 기호, 빼기 쌍 및 일반적인 십진수 변환을 참조하세요.",
     "toolTitle": "로마 숫자표",
-    "toolDescription": "1부터 1000까지 전체 로마 숫자 차트를 찾아보세요.",
+    "toolDescription": "기호, 빼기 표기법 및 공통 값에 대한 로마 숫자 참조 차트를 찾아보세요.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "로마 숫자 차트",
+    "descTitle": "참조 로마 숫자 값 및 패턴",
     "descParas": [
-      "이 페이지에는 1부터 1000까지의 로마 숫자에 대한 전체 참조 차트가 표시됩니다.",
-      "차트는 쉽게 참조할 수 있도록 100개의 그룹으로 구성되어 있습니다."
+      "<strong>로마 숫자 차트는 일반적인 로마 숫자 값을 읽고 쓰기 위한 빠른 참조를 제공합니다.</strong> 수동으로 변환하기 전에 장 번호, 개요, 날짜, 시계 문자판, 속편 및 예를 확인하는 데 사용합니다.",
+      "표준 로마 숫자는 <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> 및 <code>M</code>를 사용합니다. <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> 및 <code>CM</code>와 같은 빼기 쌍은 값을 간결하고 표준적으로 유지합니다."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "로마 숫자란 무엇입니까?",
+    "whatIs": "로마 숫자 차트란 무엇입니까?",
     "whatIsParas": [
-      "로마 숫자는 고대 로마에서 유래한 숫자 체계로 I(1), V(5), X(10), L(50), C(100), D(500), M(1000) 문자를 사용합니다.",
-      "로마 숫자는 오늘날에도 여전히 시계 문자판, 책의 장, 영화 속편, 공식 문서에 사용되고 있습니다."
+      "<strong>A 로마 숫자 차트</strong>는 소수 값을 로마 표기법으로 매핑하므로 기호와 빼기 패턴을 한눈에 인식할 수 있습니다.",
+      "최신 변환기는 일반적으로 <code>1</code>에서 <code>3999</code>까지의 표준 값을 지원합니다. 더 큰 숫자에는 일반 ASCII 텍스트로 표시되지 않는 윗줄이나 기타 규칙이 필요하기 때문입니다."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -130,24 +130,24 @@
     "exampleCode": ""
   },
   "fr": {
-    "title": "Tableau des chiffres romains — Coding.Tools",
-    "description": "Consultez un tableau complet de référence des chiffres romains de 1 à 1000.",
+    "title": "Tableau des chiffres romains - Coding.Tools",
+    "description": "Référencez les symboles de chiffres romains, les paires soustractives et les conversions décimales courantes.",
     "toolTitle": "Table des chiffres romains",
-    "toolDescription": "Parcourez le tableau complet des chiffres romains de 1 à 1000.",
+    "toolDescription": "Parcourez un tableau de référence en chiffres romains pour les symboles, la notation soustractive et les valeurs communes.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Tableau des chiffres romains",
+    "descTitle": "Valeurs et modèles de chiffres romains de référence",
     "descParas": [
-      "Cette page affiche un tableau de référence complet des chiffres romains de 1 à 1000.",
-      "Le tableau est organisé en groupes de 100 pour une référence facile."
+      "<strong>Le tableau des chiffres romains fournit une référence rapide pour lire et écrire des valeurs courantes en chiffres romains.</strong> Utilisez-le pour vérifier les numéros de chapitre, les plans, les dates, les cadrans d'horloge, les suites et les exemples avant de les convertir manuellement.",
+      "Les chiffres romains standard utilisent <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> et <code>M</code>. Les paires soustractives telles que <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> et <code>CM</code> conservent les valeurs compactes et canoniques."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "Que sont les chiffres romains ?",
+    "whatIs": "Qu'est-ce qu'un tableau en chiffres romains ?",
     "whatIsParas": [
-      "Les chiffres romains sont un système numérique originaire de la Rome antique, utilisant les lettres : I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Les chiffres romains sont encore utilisés aujourd’hui dans les cadrans d’horloge, les chapitres de livres, les suites de films et les documents officiels."
+      "<strong>A Tableau de chiffres romains</strong> mappe les valeurs décimales à la notation romaine afin que vous puissiez reconnaître les symboles et les motifs soustractifs en un coup d'œil.",
+      "Les convertisseurs modernes prennent généralement en charge les valeurs standard de <code>1</code> à <code>3999</code>, car les nombres plus grands nécessitent des surlignages ou d'autres conventions qui ne sont pas représentées dans le texte brut ASCII."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -156,24 +156,24 @@
     "exampleCode": ""
   },
   "de": {
-    "title": "Römisches Zahlendiagramm – Coding.Tools",
-    "description": "Sehen Sie sich eine vollständige Referenztabelle für römische Ziffern von 1 bis 1000 an.",
+    "title": "Römische Zahlentabelle - Coding.Tools",
+    "description": "Referenzieren Sie römische Ziffernsymbole, subtraktive Paare und gängige Dezimalumrechnungen.",
     "toolTitle": "Römische Zifferntabelle",
-    "toolDescription": "Durchsuchen Sie die vollständige Tabelle der römischen Ziffern von 1 bis 1000.",
+    "toolDescription": "Durchsuchen Sie eine Referenztabelle mit römischen Zahlen nach Symbolen, subtraktiver Notation und gebräuchlichen Werten.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Römische Zahlentabelle",
+    "descTitle": "Referenzwerte und Muster römischer Zahlen",
     "descParas": [
-      "Diese Seite zeigt eine vollständige Referenztabelle der römischen Ziffern von 1 bis 1000.",
-      "Zur leichteren Orientierung ist das Diagramm in 100er-Gruppen gegliedert."
+      "<strong>Die Tabelle der römischen Zahlen bietet eine schnelle Referenz zum Lesen und Schreiben gängiger römischer Zahlen.</strong> Verwenden Sie sie, um Kapitelnummern, Gliederungen, Datumsangaben, Zifferblätter, Fortsetzungen und Beispiele zu prüfen, bevor Sie manuell konvertieren.",
+      "Standardmäßige römische Ziffern verwenden <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> und <code>M</code>. Subtraktive Paare wie <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> und <code>CM</code> halten Werte kompakt und kanonisch."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "Was sind römische Ziffern?",
+    "whatIs": "Was ist ein römisches Zahlendiagramm?",
     "whatIsParas": [
-      "Römische Ziffern sind ein Zahlensystem, das seinen Ursprung im antiken Rom hat und die folgenden Buchstaben verwendet: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Römische Ziffern werden auch heute noch in Zifferblättern, Buchkapiteln, Filmsequenzen und formellen Dokumenten verwendet."
+      "<strong>A Römische Zahlentabelle</strong> ordnet Dezimalwerte der römischen Notation zu, sodass Sie Symbole und subtraktive Muster auf einen Blick erkennen können.",
+      "Moderne Konverter unterstützen normalerweise Standardwerte von <code>1</code> bis <code>3999</code>, da größere Zahlen Überstriche oder andere Konventionen erfordern, die im einfachen ASCII-Text nicht dargestellt werden."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -182,24 +182,24 @@
     "exampleCode": ""
   },
   "es": {
-    "title": "Tabla de números romanos — Coding.Tools",
-    "description": "Vea una tabla de referencia completa de números romanos del 1 al 1000.",
+    "title": "Gráfico de números romanos - Coding.Tools",
+    "description": "Haga referencia a símbolos de números romanos, pares sustractivos y conversiones decimales comunes.",
     "toolTitle": "Tabla de números romanos",
-    "toolDescription": "Explore la tabla completa de números romanos del 1 al 1000.",
+    "toolDescription": "Explore una tabla de referencia de números romanos en busca de símbolos, notación sustractiva y valores comunes.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Tabla de números romanos",
+    "descTitle": "Valores y patrones de números romanos de referencia",
     "descParas": [
-      "Esta página muestra una tabla de referencia completa de números romanos del 1 al 1000.",
-      "El cuadro está organizado en grupos de 100 para facilitar su consulta."
+      "<strong>La tabla de números romanos proporciona una referencia rápida para leer y escribir valores de números romanos comunes.</strong> Úselo para verificar números de capítulos, esquemas, fechas, formatos de reloj, secuelas y ejemplos antes de realizar la conversión manualmente.",
+      "Los números romanos estándar utilizan <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> y <code>M</code>. Los pares sustractivos como <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> y <code>CM</code> mantienen los valores compactos y canónicos."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "¿Qué son los números romanos?",
+    "whatIs": "¿Qué es una tabla de números romanos?",
     "whatIsParas": [
-      "Los números romanos son un sistema de numeración originado en la antigua Roma, que utiliza las letras: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Los números romanos todavía se utilizan hoy en día en esferas de relojes, capítulos de libros, secuelas de películas y documentos formales."
+      "<strong>A Tabla de números romanos</strong> asigna valores decimales a notación romana para que pueda reconocer símbolos y patrones sustractivos de un vistazo.",
+      "Los convertidores modernos generalmente admiten valores estándar de <code>1</code> a <code>3999</code> porque los números más grandes necesitan líneas superpuestas u otras convenciones que no están representadas en el texto sin formato ASCII."
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -209,23 +209,23 @@
   },
   "pt": {
     "title": "Gráfico de algarismos romanos - Coding.Tools",
-    "description": "Veja um gráfico de referência completo em algarismos romanos de 1 a 1000.",
+    "description": "Consulte símbolos de algarismos romanos, pares subtrativos e conversões decimais comuns.",
     "toolTitle": "Gráfico de algarismos romanos",
-    "toolDescription": "Navegue pelo gráfico completo de algarismos romanos de 1 a 1000.",
+    "toolDescription": "Procure um gráfico de referência de algarismos romanos para símbolos, notação subtrativa e valores comuns.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Gráfico de algarismos romanos",
+    "descTitle": "Valores e padrões de algarismos romanos de referência",
     "descParas": [
-      "Esta página exibe um gráfico de referência completo de algarismos romanos de 1 a 1000.",
-      "O gráfico está organizado em grupos de 100 para fácil referência."
+      "<strong>O gráfico de algarismos romanos fornece uma referência rápida para ler e escrever valores comuns de algarismos romanos.</strong> Use-o para verificar números de capítulos, contornos, datas, mostradores de relógio, sequências e exemplos antes de converter manualmente.",
+      "Os algarismos romanos padrão usam <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> e <code>M</code>. Pares subtrativos como <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> e <code>CM</code> mantêm os valores compactos e canônicos."
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "O que são algarismos romanos?",
+    "whatIs": "O que é um gráfico de algarismos romanos?",
     "whatIsParas": [
-      "Os algarismos romanos são um sistema numeral originado na Roma antiga, usando letras: I(1), V(5), X(10), L(50), C(100), D(500), M(1000).",
-      "Os algarismos romanos ainda são usados ​​hoje em mostradores de relógio, capítulos de livros, sequências de filmes e documentos formais."
+      "<strong>A gráfico de algarismos romanos</strong> mapeia valores decimais para notação romana para que você possa reconhecer símbolos e padrões subtrativos rapidamente.",
+      "Os conversores modernos geralmente suportam valores padrão de <code>1</code> a <code>3999</code> porque números maiores precisam de linhas sobrepostas ou outras convenções que não são representadas em texto simples ASCII."
     ],
     "inputNotes": "",
     "inputNotesPara": "",

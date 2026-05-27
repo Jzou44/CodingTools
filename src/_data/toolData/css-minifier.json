@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "CSS Minifier — Coding.Tools",
-    "description": "Minify CSS by removing whitespace, comments, and unnecessary characters directly in your browser.",
+    "title": "CSS Minifier - Coding.Tools",
+    "description": "Minify CSS by removing comments and whitespace while preserving cascade behavior.",
     "toolTitle": "CSS Minifier",
-    "toolDescription": "Compress CSS by stripping whitespace, comments, and redundant code. Copy or download the minified result.",
+    "toolDescription": "Compress CSS into compact stylesheets without reordering rules.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste CSS to minify...",
     "outputPlaceholder": "Minified CSS will appear here...",
-    "descTitle": "CSS Minifier",
+    "descTitle": "Shrink CSS while preserving the cascade",
     "descParas": [
-      "This tool minifies CSS by removing unnecessary whitespace, comments, and optional characters. The result is compact CSS that loads faster while preserving styling.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>CSS Minifier removes avoidable whitespace, comments, and formatting so stylesheets take less space.</strong> It is useful for quick snippets, embedded styles, examples, and static assets that do not need a full build pipeline.",
+      "CSS minification must preserve selector order, declaration order, specificity, cascade layers, custom properties, and at-rule structure. Reordering or merging rules can change computed styles, so this tool focuses on compact text rather than risky optimization."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your CSS code into the input editor.",
-      "Click <strong>Minify CSS</strong> to compress the code.",
-      "The minified CSS appears in the output editor with unnecessary characters removed.",
+      "Click <strong>Minify CSS</strong> to remove avoidable formatting and comments.",
+      "Review the output to confirm rule order, at-rules, and custom properties are preserved.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is CSS minification?",
+    "whatIs": "What is CSS Minifier?",
     "whatIsParas": [
-      "CSS minification removes unnecessary characters from CSS code — whitespace, comments, and redundant syntax — without changing how styles are applied. This reduces file size and improves page load times.",
-      "Minifying CSS is a standard practice for production websites, improving performance and reducing bandwidth usage."
+      "<strong>CSS Minifier</strong> is a browser-based utility for turning readable CSS into a smaller stylesheet. It keeps the same rules and declarations while removing formatting characters that browsers do not need.",
+      "Some comments are meaningful, such as license banners or build-tool annotations. Keep a readable source file and verify minified CSS visually in the pages that use it."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any CSS input. The minifier removes comments, extra whitespace, and unnecessary characters while preserving all styling rules.",
+    "inputNotesPara": "Paste CSS only. If your project needs autoprefixing, source maps, unused CSS removal, or advanced merging, run the output through your normal build and browser test process.",
     "example": "Example",
-    "examplePara": "Formatted CSS becomes compact after minification:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "A short stylesheet is compacted by removing the comment and formatting whitespace:",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "Minify CSS"
   },
   "cn": {
-    "title": "CSS 压缩 — Coding.Tools",
-    "description": "在浏览器中压缩 CSS，移除空白、注释和不必要的字符。",
+    "title": "CSS 压缩器 - Coding.Tools",
+    "description": "通过删除注释和空格同时保留级联行为来缩小 CSS。",
     "toolTitle": "CSS 压缩",
-    "toolDescription": "通过去除空白、注释和冗余代码来压缩 CSS。复制或下载压缩结果。",
+    "toolDescription": "将 CSS 压缩为紧凑的样式表，无需重新排序规则。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要压缩的 CSS...",
     "outputPlaceholder": "压缩后的 CSS 将在此显示...",
-    "descTitle": "CSS 压缩",
+    "descTitle": "缩小 CSS，同时保留级联",
     "descParas": [
-      "该工具压缩 CSS，移除不必要的空白、注释和可选字符。结果是紧凑的 CSS，加载更快同时保留样式。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>CSS 压缩 删除了可避免的空格、注释和格式，因此样式表占用的空间更少。</strong> 它对于不需要完整构建管道的快速片段、嵌入样式、示例和静态资源非常有用。",
+      "CSS 缩小必须保留选择器顺序、声明顺序、特异性、级联层、自定义属性和 at 规则结构。重新排序或合并规则可以更改计算样式，因此该工具专注于紧凑文本而不是有风险的优化。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 CSS 代码粘贴到输入编辑器中。",
-      "点击<strong>压缩 CSS</strong>来压缩代码。",
-      "压缩后的 CSS 将移除不必要的字符后显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>压缩 CSS</strong> 以删除可避免的格式和注释。",
+      "检查输出以确认保留规则顺序、at 规则和自定义属性。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 CSS 压缩？",
+    "whatIs": "CSS 压缩器是什么？",
     "whatIsParas": [
-      "CSS 压缩移除 CSS 代码中不必要的字符——空白、注释和冗余语法——而不改变样式的应用。这减小了文件大小，提高了页面加载速度。",
-      "压缩 CSS 是生产网站的标准做法，可提高性能并减少带宽使用。"
+      "<strong>CSS 压缩</strong> 是一个基于浏览器的实用程序，用于将可读的 CSS 转换为较小的样式表。它保留相同的规则和声明，同时删除浏览器不需要的格式字符。",
+      "有些注释是有意义的，例如许可证横幅或构建工具注释。保留一个可读的源文件，并在使用它的页面中直观地验证缩小的 CSS。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何 CSS 输入。压缩器移除注释、多余空白和不必要的字符，同时保留所有样式规则。",
+    "inputNotesPara": "仅粘贴 CSS。如果您的项目需要自动前缀、源映射、未使用的 CSS 删除或高级合并，请通过正常的构建和浏览器测试过程运行输出。",
     "example": "示例",
-    "examplePara": "格式化后的 CSS 压缩后变得紧凑：",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "通过删除注释和格式化空白来压缩短样式表：",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "压缩 CSS"
   },
   "tw": {
-    "title": "CSS 壓縮 — Coding.Tools",
-    "description": "在瀏覽器中壓縮 CSS，移除空白、註解和不必要的字元。",
+    "title": "CSS 壓縮器 - Coding.Tools",
+    "description": "透過刪除註解和空格同時保留級聯行為來縮小 CSS。",
     "toolTitle": "CSS 壓縮",
-    "toolDescription": "透過去除空白、註解和冗餘程式碼來壓縮 CSS。複製或下載壓縮結果。",
+    "toolDescription": "將 CSS 壓縮為緊湊的樣式表，無需重新排序規則。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要壓縮的 CSS...",
     "outputPlaceholder": "壓縮後的 CSS 將在此顯示...",
-    "descTitle": "CSS 壓縮",
+    "descTitle": "縮小 CSS，同時保留級聯",
     "descParas": [
-      "該工具壓縮 CSS，移除不必要的空白、註解和可選字元。結果是緊湊的 CSS，載入更快同時保留樣式。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>CSS 壓縮 刪除了可避免的空格、註解和格式，因此樣式表佔用的空間較少。</strong> 它對於不需要完整建置管道的快速片段、嵌入樣式、範例和靜態資源非常有用。",
+      "CSS 縮小必須保留選擇器順序、宣告順序、特異性、級聯層、自訂屬性和 at 規則結構。重新排序或合併規則可以更改計算樣式，因此該工具專注於緊湊文字而不是有風險的最佳化。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 CSS 程式碼貼上到輸入編輯器中。",
-      "點擊<strong>壓縮 CSS</strong>來壓縮程式碼。",
-      "壓縮後的 CSS 將移除不必要的字元後顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 CSS 程式碼貼到輸入編輯器中。",
+      "按一下 <strong>壓縮 CSS</strong> 以刪除可避免的格式和註解。",
+      "檢查輸出以確認保留規則順序、at 規則和自訂屬性。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 CSS 壓縮？",
+    "whatIs": "CSS 壓縮器是什麼？",
     "whatIsParas": [
-      "CSS 壓縮移除 CSS 程式碼中不必要的字元——空白、註解和冗餘語法——而不改變樣式的套用。這減小了檔案大小，提高了頁面載入速度。",
-      "壓縮 CSS 是生產網站的標準做法，可提高效能並減少頻寬使用。"
+      "<strong>CSS 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將可讀的 CSS 轉換為較小的樣式表。它保留相同的規則和聲明，同時刪除瀏覽器不需要的格式字元。",
+      "有些註釋是有意義的，例如許可證橫幅或建立工具註釋。保留一個可讀的來源文件，並在使用它的頁面中直觀地驗證縮小的 CSS。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何 CSS 輸入。壓縮器移除註解、多餘空白和不必要的字元，同時保留所有樣式規則。",
+    "inputNotesPara": "僅貼上 CSS。如果您的專案需要自動前綴、來源對應、未使用的 CSS 刪除或進階合併，請透過正常的建置和瀏覽器測試流程執行輸出。",
     "example": "範例",
-    "examplePara": "格式化後的 CSS 壓縮後變得緊湊：",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "透過刪除註解和格式化空白來壓縮短樣式表：",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "壓縮 CSS"
   },
   "jp": {
-    "title": "CSS ミニファイア — Coding.Tools",
-    "description": "ブラウザで CSS から空白、コメント、不要な文字を削除してミニファイします。",
+    "title": "CSS ミニファイヤー - Coding.Tools",
+    "description": "カスケード動作を維持しながらコメントと空白を削除して、CSS を縮小します。",
     "toolTitle": "CSS ミニファイア",
-    "toolDescription": "空白、コメント、冗長なコードを削除して CSS を圧縮します。コピーまたはダウンロード。",
+    "toolDescription": "ルールを並べ替えることなく、CSS をコンパクトなスタイルシートに圧縮します。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "ミニファイする CSS を貼り付け...",
     "outputPlaceholder": "ミニファイされた CSS がここに表示されます...",
-    "descTitle": "CSS ミニファイア",
+    "descTitle": "カスケードを維持しながら CSS を縮小します",
     "descParas": [
-      "このツールは CSS から不要な空白、コメント、オプション文字を削除してミニファイします。スタイルを保持しながら、より速く読み込まれるコンパクトな CSS が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>CSS ミニファイア は、回避可能な空白、コメント、書式設定を削除するため、スタイルシートの占有スペースが少なくなります。</strong> これは、完全なビルド パイプラインを必要としないクイック スニペット、埋め込みスタイル、サンプル、静的アセットに役立ちます。",
+      "CSS 縮小化では、セレクターの順序、宣言の順序、特異性、カスケード レイヤー、カスタム プロパティ、および at-rule 構造を保持する必要があります。ルールの並べ替えや結合によって計算されたスタイルが変更される可能性があるため、このツールは危険な最適化ではなく、コンパクトなテキストに重点を置いています。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "CSS コードを入力エディタに貼り付けます。",
-      "<strong>CSS ミニファイ</strong>をクリックしてコードを圧縮します。",
-      "ミニファイされた CSS が不要な文字が除去された状態で出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "CSS コードを入力エディターに貼り付けます。",
+      "<strong>CSS</strong> を縮小をクリックして、回避可能な書式設定とコメントを削除します。",
+      "出力を確認して、ルールの順序、アットルール、およびカスタム プロパティが保持されていることを確認します。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "CSS ミニファイとは？",
+    "whatIs": "CSS ミニファイヤーとは何ですか?",
     "whatIsParas": [
-      "CSS ミニファイは CSS コードから不要な文字——空白、コメント、冗長な構文——を削除し、スタイルの適用方法を変えません。これによりファイルサイズが小さくなり、ページ読み込みが高速化されます。",
-      "CSS のミニファイは本番ウェブサイトの標準的な慣行です。"
+      "<strong>CSS ミニファイア</strong> は、読み取り可能な CSS をより小さいスタイルシートに変換するためのブラウザベースのユーティリティです。同じルールと宣言を維持しながら、ブラウザーに必要のない書式設定文字を削除します。",
+      "ライセンス バナーやビルド ツールの注釈など、一部のコメントは意味があります。読み取り可能なソース ファイルを保存し、それを使用するページで縮小された CSS を視覚的に確認します。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは任意の CSS 入力を受け付けます。ミニファイアはすべてのスタイルルールを保持します。",
+    "inputNotesPara": "CSSのみを貼り付けてください。プロジェクトに自動プレフィックス、ソース マップ、未使用の CSS の削除、または高度なマージが必要な場合は、通常のビルドおよびブラウザー テスト プロセスを通じて出力を実行します。",
     "example": "例",
-    "examplePara": "フォーマットされた CSS はミニファイ後にコンパクトになります：",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "短いスタイルシートは、コメントを削除して空白をフォーマットすることで圧縮されます。",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "CSS をミニファイ"
   },
   "kr": {
-    "title": "CSS 미니파이어 — Coding.Tools",
-    "description": "브라우저에서 CSS에서 공백, 주석, 불필요한 문자를 제거하여 미니파이합니다.",
+    "title": "CSS 축소기 - Coding.Tools",
+    "description": "계단식 동작을 유지하면서 주석과 공백을 제거하여 CSS를 축소합니다.",
     "toolTitle": "CSS 미니파이어",
-    "toolDescription": "공백, 주석, 중복 코드를 제거하여 CSS를 압축합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "규칙을 재정렬하지 않고 CSS를 컴팩트 스타일시트로 압축합니다.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "미니파이할 CSS를 붙여넣으세요...",
     "outputPlaceholder": "미니파이된 CSS가 여기에 표시됩니다...",
-    "descTitle": "CSS 미니파이어",
+    "descTitle": "캐스케이드를 유지하면서 CSS 축소",
     "descParas": [
-      "이 도구는 CSS에서 불필요한 공백, 주석, 선택적 문자를 제거하여 미니파이합니다. 스타일을 유지하면서 더 빠르게 로드되는 컴팩트한 CSS를 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>CSS 미니파이어는 피할 수 있는 공백, 주석 및 서식을 제거하여 스타일시트가 공간을 덜 차지하도록 합니다.</strong> 전체 빌드 파이프라인이 필요하지 않은 빠른 코드 조각, 포함된 스타일, 예제 및 정적 자산에 유용합니다.",
+      "CSS 축소는 선택기 순서, 선언 순서, 특이성, 계단식 레이어, 사용자 정의 속성 및 at-rule 구조를 보존해야 합니다. 규칙을 재정렬하거나 병합하면 계산된 스타일이 변경될 수 있으므로 이 도구는 위험한 최적화보다는 간결한 텍스트에 중점을 둡니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "CSS 코드를 입력 편집기에 붙여넣으세요.",
-      "<strong>CSS 미니파이</strong>를 클릭하여 코드를 압축합니다.",
-      "미니파이된 CSS가 불필요한 문자가 제거된 상태로 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "CSS 코드를 입력 편집기에 붙여넣습니다.",
+      "<strong>CSS 미니파이</strong>를 클릭하여 피할 수 있는 서식과 주석을 제거하세요.",
+      "출력을 검토하여 규칙 순서, at-규칙 및 사용자 정의 속성이 유지되는지 확인하세요.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "CSS 미니파이란?",
+    "whatIs": "CSS 축소기는 무엇입니까?",
     "whatIsParas": [
-      "CSS 미니파이는 CSS 코드에서 불필요한 문자——공백, 주석, 중복 구문——를 제거하지만 스타일 적용 방식은 변경하지 않습니다.",
-      "CSS 미니파이는 프로덕션 웹사이트의 표준 관행입니다."
+      "<strong>CSS 미니파이어</strong>는 읽을 수 있는 CSS를 더 작은 스타일시트로 변환하는 브라우저 기반 유틸리티입니다. 브라우저에 필요하지 않은 서식 지정 문자를 제거하면서 동일한 규칙과 선언을 유지합니다.",
+      "라이센스 배너나 빌드 도구 주석과 같은 일부 주석은 의미가 있습니다. 읽을 수 있는 소스 파일을 유지하고 이를 사용하는 페이지에서 축소된 CSS를 시각적으로 확인하세요."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 모든 CSS 입력을 허용합니다. 미니파이어는 모든 스타일 규칙을 보존합니다.",
+    "inputNotesPara": "CSS만 붙여넣으세요. 프로젝트에 자동 접두사, 소스 맵, 사용되지 않은 CSS 제거 또는 고급 병합이 필요한 경우 일반 빌드 및 브라우저 테스트 프로세스를 통해 출력을 실행하세요.",
     "example": "예시",
-    "examplePara": "포맷된 CSS는 미니파이 후 컴팩트해집니다:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "짧은 스타일시트는 주석을 제거하고 공백 형식을 지정하여 압축됩니다.",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "CSS 미니파이"
   },
   "fr": {
-    "title": "Minifieur CSS — Coding.Tools",
-    "description": "Minifiez le CSS en supprimant les espaces, commentaires et caractères inutiles directement dans votre navigateur.",
+    "title": "Minificateur CSS - Coding.Tools",
+    "description": "Réduisez CSS en supprimant les commentaires et les espaces tout en préservant le comportement en cascade.",
     "toolTitle": "Minifieur CSS",
-    "toolDescription": "Compressez le CSS en supprimant les espaces, commentaires et le code redondant.",
+    "toolDescription": "Compressez CSS dans des feuilles de style compactes sans réorganiser les règles.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le CSS à minifier...",
     "outputPlaceholder": "Le CSS minifié apparaîtra ici...",
-    "descTitle": "Minifieur CSS",
+    "descTitle": "Réduire CSS tout en préservant la cascade",
     "descParas": [
-      "Cet outil minifie le CSS en supprimant les espaces, commentaires et caractères inutiles.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Minifieur CSS supprime les espaces, les commentaires et le formatage évitables afin que les feuilles de style prennent moins de place.</strong> Il est utile pour les extraits rapides, les styles intégrés, les exemples et les ressources statiques qui ne nécessitent pas un pipeline de construction complet.",
+      "La minification CSS doit préserver l'ordre des sélecteurs, l'ordre de déclaration, la spécificité, les couches en cascade, les propriétés personnalisées et la structure des règles at. La réorganisation ou la fusion des règles peuvent modifier les styles calculés, c'est pourquoi cet outil se concentre sur un texte compact plutôt que sur une optimisation risquée."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez votre code CSS dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Minifier CSS</strong>.",
-      "Le CSS minifié apparaît avec les caractères inutiles supprimés.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Collez votre code CSS dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Minifier CSS</strong> pour supprimer le formatage et les commentaires évitables.",
+      "Examinez le résultat pour confirmer que l’ordre des règles, les règles at et les propriétés personnalisées sont préservées.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que la minification CSS ?",
+    "whatIs": "Qu'est-ce que le miniificateur CSS ?",
     "whatIsParas": [
-      "La minification CSS supprime les caractères inutiles sans changer l'application des styles.",
-      "La minification CSS est une pratique standard pour les sites en production."
+      "<strong>Minifieur CSS</strong> est un utilitaire basé sur un navigateur permettant de transformer CSS lisible en une feuille de style plus petite. Il conserve les mêmes règles et déclarations tout en supprimant les caractères de formatage dont les navigateurs n'ont pas besoin.",
+      "Certains commentaires sont significatifs, comme les bannières de licence ou les annotations de l'outil de construction. Conservez un fichier source lisible et vérifiez visuellement CSS minifié dans les pages qui l'utilisent."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte toute entrée CSS.",
+    "inputNotesPara": "Collez uniquement CSS. Si votre projet nécessite un préfixe automatique, des mappages de sources, une suppression de CSS inutilisée ou une fusion avancée, exécutez la sortie via votre processus normal de construction et de test de navigateur.",
     "example": "Exemple",
-    "examplePara": "Le CSS formaté devient compact après minification :",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "Une courte feuille de style est compactée en supprimant le commentaire et en formatant les espaces :",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "Minifier CSS"
   },
   "de": {
-    "title": "CSS-Minifizierer — Coding.Tools",
-    "description": "Minifizieren Sie CSS, indem Sie Leerzeichen, Kommentare und unnötige Zeichen entfernen.",
+    "title": "CSS-Minifizierer - Coding.Tools",
+    "description": "Minimieren Sie CSS, indem Sie Kommentare und Leerzeichen entfernen und gleichzeitig das Kaskadenverhalten beibehalten.",
     "toolTitle": "CSS-Minifizierer",
-    "toolDescription": "Komprimieren Sie CSS durch Entfernen von Leerzeichen, Kommentaren und redundantem Code.",
+    "toolDescription": "Komprimieren Sie CSS in kompakte Stylesheets, ohne die Regeln neu anzuordnen.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "CSS zum Minifizieren einfügen...",
     "outputPlaceholder": "Minifiziertes CSS wird hier angezeigt...",
-    "descTitle": "CSS-Minifizierer",
+    "descTitle": "Verkleinern Sie CSS unter Beibehaltung der Kaskade",
     "descParas": [
-      "Dieses Tool minifiziert CSS durch Entfernen unnötiger Leerzeichen, Kommentare und optionaler Zeichen.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>CSS-Minifizierer entfernt vermeidbare Leerzeichen, Kommentare und Formatierungen, sodass Stylesheets weniger Platz beanspruchen.</strong> Es ist nützlich für schnelle Snippets, eingebettete Stile, Beispiele und statische Assets, die keine vollständige Build-Pipeline benötigen.",
+      "Bei der CSS-Minimierung müssen Selektorreihenfolge, Deklarationsreihenfolge, Spezifität, Kaskadenebenen, benutzerdefinierte Eigenschaften und die Regelstruktur erhalten bleiben. Das Neuordnen oder Zusammenführen von Regeln kann berechnete Stile verändern, daher konzentriert sich dieses Tool auf kompakten Text und nicht auf riskante Optimierung."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihren CSS-Code in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>CSS minifizieren</strong>.",
-      "Das minifizierte CSS wird mit entfernten unnötigen Zeichen angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihren CSS-Code in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Minifizieren CSS</strong>, um vermeidbare Formatierungen und Kommentare zu entfernen.",
+      "Überprüfen Sie die Ausgabe, um zu bestätigen, dass die Regelreihenfolge, die At-Regeln und die benutzerdefinierten Eigenschaften erhalten bleiben.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist CSS-Minifizierung?",
+    "whatIs": "Was ist CSS-Minifizierer?",
     "whatIsParas": [
-      "CSS-Minifizierung entfernt unnötige Zeichen ohne die Stilanwendung zu ändern.",
-      "CSS-Minifizierung ist eine Standardpraxis für Produktionswebsites."
+      "<strong>CSS-Minifizierer</strong> ist ein browserbasiertes Dienstprogramm zum Umwandeln von lesbarem CSS in ein kleineres Stylesheet. Es behält die gleichen Regeln und Deklarationen bei und entfernt gleichzeitig Formatierungszeichen, die Browser nicht benötigen.",
+      "Einige Kommentare sind aussagekräftig, beispielsweise Lizenzbanner oder Build-Tool-Anmerkungen. Behalten Sie eine lesbare Quelldatei bei und überprüfen Sie das minimierte CSS visuell auf den Seiten, die es verwenden."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert jede CSS-Eingabe.",
+    "inputNotesPara": "Nur CSS einfügen. Wenn Ihr Projekt eine automatische Präfixierung, Quellzuordnungen, die Entfernung nicht verwendeter CSS oder eine erweiterte Zusammenführung benötigt, führen Sie die Ausgabe über Ihren normalen Build- und Browsertestprozess aus.",
     "example": "Beispiel",
-    "examplePara": "Formatiertes CSS wird nach der Minifizierung kompakt:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "Ein kurzes Stylesheet wird komprimiert, indem der Kommentar entfernt und Leerzeichen formatiert werden:",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "Minifizieren CSS"
   },
   "es": {
-    "title": "Minificador CSS — Coding.Tools",
-    "description": "Minifique CSS eliminando espacios, comentarios y caracteres innecesarios.",
+    "title": "Minificador CSS - Coding.Tools",
+    "description": "Minimice CSS eliminando comentarios y espacios en blanco mientras preserva el comportamiento en cascada.",
     "toolTitle": "Minificador CSS",
-    "toolDescription": "Comprima CSS eliminando espacios, comentarios y código redundante.",
+    "toolDescription": "Comprima CSS en hojas de estilo compactas sin reordenar reglas.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue CSS para minificar...",
     "outputPlaceholder": "El CSS minificado aparecerá aquí...",
-    "descTitle": "Minificador CSS",
+    "descTitle": "Reducir CSS conservando la cascada",
     "descParas": [
-      "Esta herramienta minifica CSS eliminando espacios, comentarios y caracteres innecesarios.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>Minificador CSS elimina espacios en blanco, comentarios y formatos evitables para que las hojas de estilo ocupen menos espacio.</strong> Es útil para fragmentos rápidos, estilos incrustados, ejemplos y activos estáticos que no necesitan una canalización de compilación completa.",
+      "La minificación CSS debe preservar el orden del selector, el orden de declaración, la especificidad, las capas en cascada, las propiedades personalizadas y la estructura de reglas. Reordenar o fusionar reglas puede cambiar los estilos calculados, por lo que esta herramienta se centra en texto compacto en lugar de optimización arriesgada."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue su código CSS en el editor de entrada.",
-      "Haga clic en <strong>Minificar CSS</strong>.",
-      "El CSS minificado aparece con caracteres innecesarios eliminados.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Minificar CSS</strong> para eliminar el formato y los comentarios evitables.",
+      "Revise el resultado para confirmar que se conservan el orden de las reglas, las reglas at y las propiedades personalizadas.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es la minificación CSS?",
+    "whatIs": "¿Qué es el minificador CSS?",
     "whatIsParas": [
-      "La minificación CSS elimina caracteres innecesarios sin cambiar la aplicación de estilos.",
-      "La minificación CSS es una práctica estándar para sitios en producción."
+      "<strong>Minificador CSS</strong> es una utilidad basada en navegador para convertir CSS legible en una hoja de estilo más pequeña. Mantiene las mismas reglas y declaraciones al tiempo que elimina los caracteres de formato que los navegadores no necesitan.",
+      "Algunos comentarios son significativos, como los carteles de licencia o las anotaciones de herramientas de compilación. Mantenga un archivo fuente legible y verifique visualmente el CSS minimizado en las páginas que lo utilizan."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier entrada CSS.",
+    "inputNotesPara": "Pegue solo CSS. Si su proyecto necesita prefijos automáticos, mapas de origen, eliminación de CSS no utilizado o fusión avanzada, ejecute el resultado a través de su proceso normal de compilación y prueba del navegador.",
     "example": "Ejemplo",
-    "examplePara": "El CSS formateado se vuelve compacto después de la minificación:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "Una hoja de estilo corta se compacta eliminando el comentario y formateando los espacios en blanco:",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "Minificar CSS"
   },
   "pt": {
-    "title": "Minificador CSS — Coding.Tools",
-    "description": "Minifique CSS removendo espaços, comentários e caracteres desnecessários.",
+    "title": "Minimificador CSS - Coding.Tools",
+    "description": "Minimize CSS removendo comentários e espaços em branco enquanto preserva o comportamento em cascata.",
     "toolTitle": "Minificador CSS",
-    "toolDescription": "Comprima CSS removendo espaços, comentários e código redundante.",
+    "toolDescription": "Compacte CSS em folhas de estilo compactas sem reordenar regras.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole CSS para minificar...",
     "outputPlaceholder": "O CSS minificado aparecerá aqui...",
-    "descTitle": "Minificador CSS",
+    "descTitle": "Reduza CSS enquanto preserva a cascata",
     "descParas": [
-      "Esta ferramenta minifica CSS removendo espaços, comentários e caracteres desnecessários.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>O minificador de CSS remove espaços em branco, comentários e formatação evitáveis para que as folhas de estilo ocupem menos espaço.</strong> É útil para trechos rápidos, estilos incorporados, exemplos e ativos estáticos que não precisam de um pipeline de construção completo.",
+      "A minificação CSS deve preservar a ordem do seletor, a ordem da declaração, a especificidade, as camadas em cascata, as propriedades personalizadas e a estrutura da regra. Reordenar ou mesclar regras pode alterar estilos computados, portanto, esta ferramenta se concentra em texto compacto em vez de otimização arriscada."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seu código CSS no editor de entrada.",
-      "Clique em <strong>Minificar CSS</strong>.",
-      "O CSS minificado aparece com caracteres desnecessários removidos.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Minificar CSS</strong> para remover formatação e comentários evitáveis.",
+      "Revise a saída para confirmar se a ordem das regras, as regras e as propriedades personalizadas são preservadas.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é minificação CSS?",
+    "whatIs": "O que é o minificador CSS?",
     "whatIsParas": [
-      "A minificação CSS remove caracteres desnecessários sem alterar a aplicação de estilos.",
-      "A minificação CSS é uma prática padrão para sites em produção."
+      "<strong>Minificador CSS</strong> é um utilitário baseado em navegador para transformar CSS legível em uma folha de estilo menor. Ele mantém as mesmas regras e declarações enquanto remove caracteres de formatação que os navegadores não precisam.",
+      "Alguns comentários são significativos, como banners de licença ou anotações de ferramentas de construção. Mantenha um arquivo de origem legível e verifique CSS minificado visualmente nas páginas que o utilizam."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer entrada CSS.",
+    "inputNotesPara": "Cole apenas CSS. Se o seu projeto precisar de autoprefixação, mapas de origem, remoção de CSS não utilizado ou mesclagem avançada, execute a saída por meio do processo normal de construção e teste do navegador.",
     "example": "Exemplo",
-    "examplePara": "O CSS formatado se torna compacto após a minificação:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}"
+    "examplePara": "Uma pequena folha de estilo é compactada removendo o comentário e formatando o espaço em branco:",
+    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "Minificar CSS"
   }
 }

@@ -1,10 +1,5 @@
 ---
-title: "XML to JSON Converter — Coding.Tools"
-description: "Convert XML data to JSON format with proper formatting. Runs locally in your browser, fast and free."
-toolTitle: "XML to JSON Converter"
-toolDescription: "Convert XML data to well-formatted JSON. Copy or download the JSON result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "xml-to-json"
 permalink: "/xml-to-json.html"
 ---
@@ -36,43 +31,7 @@ permalink: "/xml-to-json.html"
 {% endblock %}
 
 {% block description %}
-  <h2>XML to JSON Converter</h2>
-  <p>This tool converts XML data into well-formatted JSON. It parses the XML structure, maps elements to JSON keys, and produces indented, readable JSON output that preserves the hierarchy of the original document.</p>
-  <p>The conversion runs entirely in your browser using the JXON and js-beautify libraries. Your data never leaves your device, making it ideal for quick data format migration or interoperability tasks between XML and JSON systems.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your XML data into the input editor.</li>
-    <li>Click <strong>Convert to JSON</strong> to transform the data.</li>
-    <li>View the formatted JSON in the output editor with proper indentation.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .json file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is XML to JSON conversion?</h3>
-  <p>XML to JSON conversion transforms data from eXtensible Markup Language format into JavaScript Object Notation format. XML elements become JSON keys, text content becomes values, and nested elements become nested objects. Attributes are typically merged into the resulting object.</p>
-  <p>This conversion is useful when integrating systems that use different data formats, consuming XML APIs in JavaScript applications, or migrating data from XML-based databases to JSON-based document stores like MongoDB.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any well-formed XML input. It strips the XML declaration if present, wraps the content in a root element for parsing, and converts the resulting tree to JSON. The output is formatted with consistent indentation for readability.</p>
-
-  <h3>Example</h3>
-  <p>XML data is converted to a structured JSON object:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (XML) ---
-&lt;user&gt;
-  &lt;name&gt;Alice&lt;/name&gt;
-  &lt;age&gt;30&lt;/age&gt;
-&lt;/user&gt;
-
---- Output (JSON) ---
-{
-  "user": {
-    "name": "Alice",
-    "age": "30"
-  }
-}</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

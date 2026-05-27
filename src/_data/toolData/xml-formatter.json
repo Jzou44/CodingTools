@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "XML Formatter — Coding.Tools",
-    "description": "Format and beautify XML code with proper indentation directly in your browser.",
+    "title": "XML Formatter - Coding.Tools",
+    "description": "Format XML with readable indentation while preserving elements, attributes, and text nodes.",
     "toolTitle": "XML Formatter",
-    "toolDescription": "Beautify minified XML with proper indentation and structure. Copy or download the formatted result.",
+    "toolDescription": "Format XML markup into readable nested output in your browser.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste your XML here...",
     "outputPlaceholder": "Formatted XML will appear here...",
-    "descTitle": "XML Formatter",
+    "descTitle": "Indent XML while preserving markup structure",
     "descParas": [
-      "This tool formats and beautifies XML data with proper indentation and structure. Paste minified or poorly formatted XML and get clean, readable output instantly.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>XML Formatter makes compact XML easier to inspect by adding line breaks and indentation around nested elements.</strong> It is useful for SOAP payloads, feeds, configuration files, sitemap fragments, and exported data.",
+      "XML is more whitespace-sensitive than JSON: attributes, text nodes, CDATA, processing instructions, and mixed content can all matter. Use the formatted output as a readability aid and verify documents that rely on exact text spacing."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your XML data into the input editor.",
-      "Click <strong>Format XML</strong> to beautify the code.",
-      "The formatted XML appears in the output editor with proper indentation.",
+      "Click <strong>Format XML</strong> to indent the markup.",
+      "Review the formatted XML for the expected root element, attributes, and nested text.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is XML formatting?",
+    "whatIs": "What is XML Formatter?",
     "whatIsParas": [
-      "XML formatting adds indentation and line breaks to XML data, making it human-readable. Minified XML has all whitespace removed to reduce file size, but is difficult to read and debug.",
-      "Formatting XML is essential for debugging configuration files, reviewing SOAP responses, and sharing data structures with colleagues."
+      "<strong>XML Formatter</strong> is a browser-based utility for making XML documents easier to read without manually reflowing tags. It highlights hierarchy by placing child elements under their parent elements.",
+      "A well-formed XML document normally has one root element and correctly nested tags. Formatting cannot safely guess missing closing tags or repair invalid markup, so syntax errors should be fixed at the source."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts valid XML input. If the input contains XML syntax errors, the tool will report the error. The formatter preserves all data — it only changes whitespace and indentation.",
+    "inputNotesPara": "Paste only XML content. Remove transport wrappers, log prefixes, or Markdown fences first. Be careful with mixed-content XML, where added line breaks between text and child elements may be meaningful.",
     "example": "Example",
-    "examplePara": "Minified XML becomes readable after formatting:",
-    "exampleCode": "--- Minified Input ---\n<root><name>John</name><age>30</age></root>\n\n--- Formatted Output ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "A compact XML fragment becomes easier to read when each child element is placed on its own line:",
+    "exampleCode": "--- Minified Input ---\n<root><name>John</name><age>30</age></root>\n\n--- Formatted Output ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "Format XML"
   },
   "cn": {
-    "title": "XML 格式化 — Coding.Tools",
-    "description": "在浏览器中直接格式化和美化 XML 代码。",
+    "title": "XML 格式化程序 - Coding.Tools",
+    "description": "使用可读缩进格式化 XML，同时保留元素、属性和文本节点。",
     "toolTitle": "XML 格式化",
-    "toolDescription": "美化压缩的 XML，添加适当的缩进和结构。复制或下载格式化结果。",
+    "toolDescription": "将 XML 标记格式化为浏览器中可读的嵌套输出。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴 XML...",
     "outputPlaceholder": "格式化后的 XML 将在此显示...",
-    "descTitle": "XML 格式化",
+    "descTitle": "缩进 XML 同时保留标记结构",
     "descParas": [
-      "该工具格式化和美化 XML 数据，添加适当的缩进和结构。粘贴压缩或格式不佳的 XML，即可获取干净、可读的输出。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>XML 格式化程序通过在嵌套元素周围添加换行符和缩进，使紧凑的 XML 更易于检查。</strong> 它对于 SOAP 有效负载、提要、配置文件、站点地图片段和导出的数据非常有用。",
+      "XML 比 JSON 对空格更加敏感：属性、文本节点、CDATA、处理指令和混合内容都很重要。使用格式化输出作为可读性辅助工具并验证依赖于精确文本间距的文档。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 XML 数据粘贴到输入编辑器中。",
-      "点击<strong>格式化 XML</strong>来美化代码。",
-      "格式化后的 XML 将以适当的缩进显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>格式化 XML</strong> 以缩进标记。",
+      "查看格式化的 XML 中预期的根元素、属性和嵌套文本。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 XML 格式化？",
+    "whatIs": "什么是 XML 格式化程序？",
     "whatIsParas": [
-      "XML 格式化为 XML 数据添加缩进和换行，使其易于阅读。压缩的 XML 移除了所有空白字符以减小文件大小，但难以阅读和调试。",
-      "格式化 XML 对于调试配置文件、查看 SOAP 响应和与同事共享数据结构至关重要。"
+      "<strong>XML 格式化</strong> 是一个基于浏览器的实用程序，用于使 XML 文档更易于阅读，而无需手动重排标签。它通过将子元素放置在其父元素下来突出显示层次结构。",
+      "格式良好的 XML 文档通常具有一个根元素和正确嵌套的标签。格式化无法安全地猜测丢失的结束标记或修复无效的标记，因此应从源头上修复语法错误。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受有效的 XML 输入。如果输入包含 XML 语法错误，工具将报告错误。格式化器保留所有数据——只改变空白和缩进。",
+    "inputNotesPara": "仅粘贴 XML 内容。请先移除传输封装、日志前缀或 Markdown 代码围栏。处理混合内容 XML 时要小心，因为在文本和子元素之间添加换行可能会改变含义。",
     "example": "示例",
-    "examplePara": "压缩的 XML 格式化后变得可读：",
-    "exampleCode": "--- 压缩输入 ---\n<root><name>John</name><age>30</age></root>\n\n--- 格式化输出 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "当每个子元素放在自己的行上时，紧凑的 XML 片段变得更容易阅读：",
+    "exampleCode": "--- 压缩输入 ---\n<root><name>John</name><age>30</age></root>\n\n--- 格式化输出 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "格式化 XML"
   },
   "tw": {
-    "title": "XML 格式化 — Coding.Tools",
-    "description": "在瀏覽器中直接格式化和美化 XML 程式碼。",
+    "title": "XML 格式化程式 - Coding.Tools",
+    "description": "使用可讀縮排格式化 XML，同時保留元素、屬性和文字節點。",
     "toolTitle": "XML 格式化",
-    "toolDescription": "美化壓縮的 XML，添加適當的縮排和結構。複製或下載格式化結果。",
+    "toolDescription": "將 XML 標記格式化為瀏覽器中可讀取的巢狀輸出。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上 XML...",
     "outputPlaceholder": "格式化後的 XML 將在此顯示...",
-    "descTitle": "XML 格式化",
+    "descTitle": "縮排 XML 同時保留標記結構",
     "descParas": [
-      "該工具格式化和美化 XML 資料，添加適當的縮排和結構。貼上壓縮或格式不佳的 XML，即可取得乾淨、可讀的輸出。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>XML 格式化程式透過在巢狀元素周圍新增換行符號和縮排，讓緊湊的 XML 更易於檢查。</strong> 它對於 SOAP 有效負載、提要、設定檔、網站地圖片段和匯出的資料非常有用。",
+      "XML 比 JSON 對空格更敏感：屬性、文字節點、CDATA、處理指令和混合內容都很重要。使用格式化輸出作為可讀性輔助工具並驗證依賴精確文字間距的文件。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 XML 資料貼上到輸入編輯器中。",
-      "點擊<strong>格式化 XML</strong>來美化程式碼。",
-      "格式化後的 XML 將以適當的縮排顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 XML 資料貼到輸入編輯器中。",
+      "按一下 <strong>格式化 XML</strong> 以縮排標記。",
+      "查看格式化的 XML 中預期的根元素、屬性和巢狀文字。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 XML 格式化？",
+    "whatIs": "什麼是 XML 格式化程式？",
     "whatIsParas": [
-      "XML 格式化為 XML 資料添加縮排和換行，使其易於閱讀。壓縮的 XML 移除了所有空白字元以減小檔案大小，但難以閱讀和除錯。",
-      "格式化 XML 對於除錯設定檔、檢視 SOAP 回應和與同事分享資料結構至關重要。"
+      "<strong>XML 格式化</strong> 是一個基於瀏覽器的實用程序，用於使 XML 文件更易於閱讀，而無需手動重排標籤。它透過將子元素放置在其父元素下來來突出顯示層次結構。",
+      "格式良好的 XML 文件通常具有一個根元素和正確嵌套的標籤。格式化無法安全地猜測遺失的結束標記或修復無效的標記，因此應從來源修復語法錯誤。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受有效的 XML 輸入。如果輸入包含 XML 語法錯誤，工具將報告錯誤。格式化器保留所有資料——只改變空白和縮排。",
+    "inputNotesPara": "僅貼上 XML 內容。請先移除傳輸封裝、日誌前綴或 Markdown 程式碼圍欄。處理混合內容 XML 時要小心，因為在文字和子元素之間新增換行可能會改變含義。",
     "example": "範例",
-    "examplePara": "壓縮的 XML 格式化後變得可讀：",
-    "exampleCode": "--- 壓縮輸入 ---\n<root><name>John</name><age>30</age></root>\n\n--- 格式化輸出 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "當每個子元素放在自己的行上時，緊湊的 XML 片段變得更容易閱讀：",
+    "exampleCode": "--- 壓縮輸入 ---\n<root><name>John</name><age>30</age></root>\n\n--- 格式化輸出 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "格式化 XML"
   },
   "jp": {
-    "title": "XML フォーマッター — Coding.Tools",
-    "description": "ブラウザで XML コードをフォーマットして美しく整形します。",
+    "title": "XML フォーマッター - Coding.Tools",
+    "description": "要素、属性、テキスト ノードを保持しながら、読みやすいインデントを使用して XML をフォーマットします。",
     "toolTitle": "XML フォーマッター",
-    "toolDescription": "圧縮された XML に適切なインデントと構造を追加します。コピーまたはダウンロード。",
+    "toolDescription": "XML マークアップをブラウザーで読み取り可能なネストされた出力にフォーマットします。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "XML を貼り付け...",
     "outputPlaceholder": "フォーマットされた XML がここに表示されます...",
-    "descTitle": "XML フォーマッター",
+    "descTitle": "マークアップ構造を維持しながら XML をインデントします",
     "descParas": [
-      "このツールは XML データに適切なインデントと構造を追加してフォーマットします。圧縮またはフォーマットが不正な XML を貼り付けると、きれいな読みやすい出力が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>XML フォーマッタは、ネストされた要素の周囲に改行とインデントを追加することで、コンパクトな XML を検査しやすくします。</strong> これは、SOAP ペイロード、フィード、構成ファイル、サイトマップ フラグメント、およびエクスポートされたデータに役立ちます。",
+      "XML は JSON よりも空白に敏感です。属性、テキスト ノード、CDATA、処理命令、混合コンテンツはすべて重要です。書式設定された出力を読みやすさの補助として使用し、正確なテキスト間隔に依存する文書を検証します。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "XML データを入力エディタに貼り付けます。",
-      "<strong>XML フォーマット</strong>をクリックしてコードを整形します。",
-      "フォーマットされた XML が適切なインデントで出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "XML データを入力エディターに貼り付けます。",
+      "<strong>XML を整形</strong> をクリックしてマークアップをインデントします。",
+      "予期されるルート要素、属性、およびネストされたテキストについては、フォーマットされた XML を確認してください。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "XML フォーマットとは？",
+    "whatIs": "XML フォーマッターとは何ですか?",
     "whatIsParas": [
-      "XML フォーマットは XML データにインデントと改行を追加し、人間が読めるようにします。圧縮された XML はファイルサイズを小さくするためにすべての空白が除去されていますが、読むのは困難です。",
-      "XML のフォーマットは設定ファイルのデバッグ、SOAP レスポンスの確認、データ構造の共有に不可欠です。"
+      "<strong>XML フォーマッター</strong> は、手動でタグをリフローすることなく XML ドキュメントを読みやすくするためのブラウザベースのユーティリティです。子要素を親要素の下に配置することで階層を強調表示します。",
+      "整形式の XML ドキュメントには通常、1 つのルート要素と正しくネストされたタグが含まれます。書式設定では、欠落している終了タグを安全に推測したり、無効なマークアップを修復したりできないため、構文エラーはソースで修正する必要があります。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは有効な XML 入力を受け付けます。入力に XML 構文エラーがある場合、エラーが報告されます。フォーマッターはすべてのデータを保持し、空白とインデントのみを変更します。",
+    "inputNotesPara": "XML コンテンツのみを貼り付けます。最初にトランスポート ラッパー、ログ プレフィックス、または Markdown フェンスを削除します。混合コンテンツ XML には注意してください。テキスト要素と子要素の間に追加された改行が意味を持つ可能性があります。",
     "example": "例",
-    "examplePara": "圧縮された XML はフォーマット後に読みやすくなります：",
-    "exampleCode": "--- 圧縮入力 ---\n<root><name>John</name><age>30</age></root>\n\n--- フォーマット出力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "各子要素を独自の行に配置すると、コンパクトな XML フラグメントが読みやすくなります。",
+    "exampleCode": "--- 圧縮入力 ---\n<root><name>John</name><age>30</age></root>\n\n--- フォーマット出力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "XML をフォーマット"
   },
   "kr": {
-    "title": "XML 포맷터 — Coding.Tools",
-    "description": "브라우저에서 XML 코드를 포맷하고 아름답게 정리합니다.",
+    "title": "XML 포맷터 - Coding.Tools",
+    "description": "요소, 속성 및 텍스트 노드를 유지하면서 읽을 수 있는 들여쓰기로 XML 형식을 지정합니다.",
     "toolTitle": "XML 포맷터",
-    "toolDescription": "압축된 XML에 적절한 들여쓰기와 구조를 추가합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "브라우저에서 XML 마크업을 읽을 수 있는 중첩 출력으로 형식화합니다.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "XML을 붙여넣으세요...",
     "outputPlaceholder": "포맷된 XML이 여기에 표시됩니다...",
-    "descTitle": "XML 포맷터",
+    "descTitle": "마크업 구조를 유지하면서 XML 들여쓰기",
     "descParas": [
-      "이 도구는 XML 데이터에 적절한 들여쓰기와 구조를 추가하여 포맷합니다. 압축되었거나 잘못 포맷된 XML을 붙여넣으면 깔끔하고 읽기 쉬운 출력을 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>XML 포맷터를 사용하면 중첩된 요소 주위에 줄바꿈과 들여쓰기를 추가하여 컴팩트한 XML를 더 쉽게 검사할 수 있습니다.</strong> SOAP 페이로드, 피드, 구성 파일, 사이트맵 조각 및 내보낸 데이터에 유용합니다.",
+      "XML는 JSON보다 공백에 더 민감합니다. 속성, 텍스트 노드, CDATA, 처리 지침 및 혼합 콘텐츠가 모두 중요할 수 있습니다. 가독성 보조 자료로 형식화된 출력을 사용하고 정확한 텍스트 간격에 의존하는 문서를 확인하십시오."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "XML 데이터를 입력 편집기에 붙여넣으세요.",
-      "<strong>XML 포맷</strong>을 클릭하여 코드를 정리합니다.",
-      "포맷된 XML이 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "XML 데이터를 입력 편집기에 붙여넣습니다.",
+      "마크업을 들여쓰려면 <strong>XML 형식 지정</strong>를 클릭합니다.",
+      "예상되는 루트 요소, 속성 및 중첩 텍스트에 대해 형식화된 XML를 검토하십시오.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "XML 포맷팅이란?",
+    "whatIs": "XML 포맷터란 무엇입니까?",
     "whatIsParas": [
-      "XML 포맷팅은 XML 데이터에 들여쓰기와 줄 바꿈을 추가하여 사람이 읽을 수 있게 합니다. 압축된 XML은 파일 크기를 줄이기 위해 모든 공백이 제거되어 읽기 어렵습니다.",
-      "XML 포맷팅은 설정 파일 디버깅, SOAP 응답 검토, 데이터 구조 공유에 필수적입니다."
+      "<strong>XML 포맷터</strong>는 태그를 수동으로 리플로우하지 않고도 XML 문서를 더 쉽게 읽을 수 있도록 해주는 브라우저 기반 유틸리티입니다. 상위 요소 아래에 하위 요소를 배치하여 계층 구조를 강조 표시합니다.",
+      "올바른 형식의 XML 문서에는 일반적으로 하나의 루트 요소와 올바르게 중첩된 태그가 있습니다. 서식 지정 시 누락된 닫는 태그를 추측하거나 잘못된 마크업을 복구할 수 없으므로 구문 오류는 소스에서 수정해야 합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 유효한 XML 입력을 허용합니다. 입력에 XML 구문 오류가 있으면 오류가 보고됩니다. 포맷터는 모든 데이터를 보존하고 공백과 들여쓰기만 변경합니다.",
+    "inputNotesPara": "XML 내용만 붙여넣으세요. 전송 래퍼, 로그 접두사 또는 마크다운 펜스를 먼저 제거하세요. 텍스트와 하위 요소 사이에 추가된 줄 바꿈이 의미가 있을 수 있는 혼합 콘텐츠 XML에 주의하세요.",
     "example": "예시",
-    "examplePara": "압축된 XML은 포맷 후 읽기 쉬워집니다:",
-    "exampleCode": "--- 압축 입력 ---\n<root><name>John</name><age>30</age></root>\n\n--- 포맷 출력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "각 하위 요소가 자체 줄에 배치되면 압축된 XML 조각을 더 쉽게 읽을 수 있습니다.",
+    "exampleCode": "--- 압축 입력 ---\n<root><name>John</name><age>30</age></root>\n\n--- 포맷 출력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "XML 포맷"
   },
   "fr": {
-    "title": "Formateur XML — Coding.Tools",
-    "description": "Formatez et embellissez le code XML avec une indentation correcte directement dans votre navigateur.",
+    "title": "Formateur XML - Coding.Tools",
+    "description": "Formatez XML avec une indentation lisible tout en préservant les éléments, les attributs et les nœuds de texte.",
     "toolTitle": "Formateur XML",
-    "toolDescription": "Embellissez le XML minifié avec une indentation et une structure correctes. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Formatez le balisage XML en sortie imbriquée lisible dans votre navigateur.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez votre XML ici...",
     "outputPlaceholder": "Le XML formaté apparaîtra ici...",
-    "descTitle": "Formateur XML",
+    "descTitle": "Indenter XML tout en préservant la structure du balisage",
     "descParas": [
-      "Cet outil formate et embellit les données XML avec une indentation et une structure correctes. Collez du XML minifié ou mal formaté pour obtenir une sortie propre et lisible instantanément.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Formateur XML facilite l'inspection du XML compact en ajoutant des sauts de ligne et une indentation autour des éléments imbriqués.</strong> Il est utile pour les charges utiles SOAP, les flux, les fichiers de configuration, les fragments de plan de site et les données exportées.",
+      "XML est plus sensible aux espaces que JSON : les attributs, les nœuds de texte, les CDATA, les instructions de traitement et le contenu mixte peuvent tous avoir de l'importance. Utilisez la sortie formatée comme aide à la lisibilité et vérifiez les documents qui reposent sur un espacement exact du texte."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez vos données XML dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Formater XML</strong> pour embellir le code.",
-      "Le XML formaté apparaît dans l'éditeur de sortie avec une indentation correcte.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Cliquez sur <strong>Formater XML</strong> pour mettre le balisage en retrait.",
+      "Examinez le XML formaté pour l'élément racine, les attributs et le texte imbriqué attendus.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le formatage XML ?",
+    "whatIs": "Qu’est-ce que le formateur XML ?",
     "whatIsParas": [
-      "Le formatage XML ajoute des retours à la ligne et de l'indentation aux données XML, les rendant lisibles par l'homme. Le XML minifié a tous les espaces supprimés pour réduire la taille du fichier, mais est difficile à lire et à déboguer.",
-      "Le formatage XML est essentiel pour le débogage des fichiers de configuration, l'examen des réponses SOAP et le partage de structures de données."
+      "<strong>Formateur XML</strong> est un utilitaire basé sur un navigateur permettant de rendre les documents XML plus faciles à lire sans redistribuer manuellement les balises. Il met en évidence la hiérarchie en plaçant les éléments enfants sous leurs éléments parents.",
+      "Un document XML bien formé comporte normalement un élément racine et des balises correctement imbriquées. Le formatage ne peut pas deviner en toute sécurité les balises de fermeture manquantes ou réparer un balisage invalide, les erreurs de syntaxe doivent donc être corrigées à la source."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte une entrée XML valide. Si l'entrée contient des erreurs de syntaxe XML, l'outil les signalera. Le formateur préserve toutes les données — il ne modifie que les espaces et l'indentation.",
+    "inputNotesPara": "Collez uniquement le contenu XML. Supprimez d'abord les enveloppes de transport, les préfixes de journal ou les blocs de code Markdown. Soyez prudent avec le XML à contenu mixte, car les sauts de ligne ajoutés entre le texte et les éléments enfants peuvent être significatifs.",
     "example": "Exemple",
-    "examplePara": "Le XML minifié devient lisible après formatage :",
-    "exampleCode": "--- Entrée minifiée ---\n<root><name>John</name><age>30</age></root>\n\n--- Sortie formatée ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "Un fragment XML compact devient plus facile à lire lorsque chaque élément enfant est placé sur sa propre ligne :",
+    "exampleCode": "--- Entrée minifiée ---\n<root><name>John</name><age>30</age></root>\n\n--- Sortie formatée ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "Formater XML"
   },
   "de": {
-    "title": "XML-Formatierer — Coding.Tools",
-    "description": "Formatieren und verschönern Sie XML-Code mit korrekter Einrückung direkt in Ihrem Browser.",
+    "title": "XML Formatierer - Coding.Tools",
+    "description": "Formatieren Sie XML mit lesbarer Einrückung und behalten Sie dabei Elemente, Attribute und Textknoten bei.",
     "toolTitle": "XML-Formatierer",
-    "toolDescription": "Verschönern Sie minifiziertes XML mit korrekter Einrückung und Struktur. Kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Formatieren Sie das XML-Markup in eine lesbare verschachtelte Ausgabe in Ihrem Browser.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "XML hier einfügen...",
     "outputPlaceholder": "Formatiertes XML wird hier angezeigt...",
-    "descTitle": "XML-Formatierer",
+    "descTitle": "XML einrücken und dabei die Markup-Struktur beibehalten",
     "descParas": [
-      "Dieses Tool formatiert und verschönert XML-Daten mit korrekter Einrückung und Struktur. Fügen Sie minifiziertes oder schlecht formatiertes XML ein und erhalten Sie sofort saubere, lesbare Ausgabe.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>XML-Formatierer erleichtert die Überprüfung kompakter XML-Daten, indem er Zeilenumbrüche und Einrückungen um verschachtelte Elemente hinzufügt.</strong> Er ist nützlich für SOAP-Nutzlasten, Feeds, Konfigurationsdateien, Sitemap-Fragmente und exportierte Daten.",
+      "XML reagiert stärker auf Leerzeichen als JSON: Attribute, Textknoten, CDATA, Verarbeitungsanweisungen und gemischte Inhalte können alle von Bedeutung sein. Nutzen Sie die formatierte Ausgabe als Lesbarkeitshilfe und überprüfen Sie Dokumente, die auf exakte Textabstände angewiesen sind."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihre XML-Daten in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>XML formatieren</strong>, um den Code zu verschönern.",
-      "Das formatierte XML wird im Ausgabe-Editor mit korrekter Einrückung angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihre XML-Daten in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>XML formatieren</strong>, um das Markup einzurücken.",
+      "Überprüfen Sie das formatierte XML auf das erwartete Stammelement, die erwarteten Attribute und den verschachtelten Text.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist XML-Formatierung?",
+    "whatIs": "Was ist der XML-Formatierer?",
     "whatIsParas": [
-      "XML-Formatierung fügt Einrückungen und Zeilenumbrüche zu XML-Daten hinzu und macht sie lesbar. Minifiziertes XML hat alle Leerzeichen entfernt, um die Dateigröße zu reduzieren, ist aber schwer zu lesen.",
-      "Die Formatierung von XML ist unerlässlich für das Debugging von Konfigurationsdateien, die Überprüfung von SOAP-Antworten und den Austausch von Datenstrukturen."
+      "<strong>XML-Formatierer</strong> ist ein browserbasiertes Dienstprogramm, das das Lesen von XML-Dokumenten erleichtert, ohne Tags manuell umzufließen. Es hebt die Hierarchie hervor, indem untergeordnete Elemente unter ihren übergeordneten Elementen platziert werden.",
+      "Ein wohlgeformtes XML-Dokument verfügt normalerweise über ein Stammelement und korrekt verschachtelte Tags. Die Formatierung kann fehlende schließende Tags nicht sicher erraten oder ungültiges Markup reparieren, daher sollten Syntaxfehler an der Quelle behoben werden."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert gültige XML-Eingaben. Wenn die Eingabe XML-Syntaxfehler enthält, meldet das Tool den Fehler. Der Formatierer bewahrt alle Daten auf — er ändert nur Leerzeichen und Einrückung.",
+    "inputNotesPara": "Fügen Sie nur XML-Inhalte ein. Entfernen Sie zuerst Transport-Wrapper, Protokollpräfixe oder Markdown-Codeblöcke. Seien Sie vorsichtig bei XML mit gemischtem Inhalt, da hinzugefügte Zeilenumbrüche zwischen Text und untergeordneten Elementen eine Bedeutung haben können.",
     "example": "Beispiel",
-    "examplePara": "Minifiziertes XML wird nach der Formatierung lesbar:",
-    "exampleCode": "--- Minifizierte Eingabe ---\n<root><name>John</name><age>30</age></root>\n\n--- Formatierte Ausgabe ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "Ein kompaktes XML-Fragment wird leichter lesbar, wenn jedes untergeordnete Element in einer eigenen Zeile platziert wird:",
+    "exampleCode": "--- Minifizierte Eingabe ---\n<root><name>John</name><age>30</age></root>\n\n--- Formatierte Ausgabe ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "Formatieren XML"
   },
   "es": {
-    "title": "Formateador XML — Coding.Tools",
-    "description": "Formatee y embellezca el código XML con indentación correcta directamente en su navegador.",
+    "title": "Formateador XML - Coding.Tools",
+    "description": "Formatee XML con sangría legible mientras conserva elementos, atributos y nodos de texto.",
     "toolTitle": "Formateador XML",
-    "toolDescription": "Embellezca XML minificado con indentación y estructura correctas. Copie o descargue el resultado.",
+    "toolDescription": "Formatee el marcado XML en una salida anidada legible en su navegador.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue su XML aquí...",
     "outputPlaceholder": "El XML formateado aparecerá aquí...",
-    "descTitle": "Formateador XML",
+    "descTitle": "Sangrar XML conservando la estructura de marcado",
     "descParas": [
-      "Esta herramienta formatea y embellece los datos XML con indentación y estructura correctas. Pegue XML minificado o mal formateado y obtenga una salida limpia y legible al instante.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>XML El formateador hace que el XML compacto sea más fácil de inspeccionar agregando saltos de línea y sangrías alrededor de elementos anidados.</strong> Es útil para cargas útiles SOAP, feeds, archivos de configuración, fragmentos de mapas de sitio y datos exportados.",
+      "XML es más sensible a los espacios en blanco que JSON: los atributos, los nodos de texto, CDATA, las instrucciones de procesamiento y el contenido mixto pueden ser importantes. Utilice la salida formateada como ayuda para la legibilidad y verifique los documentos que dependen del espaciado exacto del texto."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue sus datos XML en el editor de entrada.",
-      "Haga clic en <strong>Formatear XML</strong> para embellecer el código.",
-      "El XML formateado aparece en el editor de salida con indentación correcta.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Formato XML</strong> para sangrar el marcado.",
+      "Revise el XML formateado para conocer el elemento raíz, los atributos y el texto anidado esperados.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es el formateo XML?",
+    "whatIs": "¿Qué es el formateador XML?",
     "whatIsParas": [
-      "El formateo XML agrega indentación y saltos de línea a los datos XML, haciéndolos legibles. El XML minificado tiene todos los espacios eliminados para reducir el tamaño del archivo, pero es difícil de leer y depurar.",
-      "El formateo XML es esencial para depurar archivos de configuración, revisar respuestas SOAP y compartir estructuras de datos con colegas."
+      "<strong>Formateador XML</strong> es una utilidad basada en navegador para hacer que los documentos XML sean más fáciles de leer sin cambiar las etiquetas manualmente. Resalta la jerarquía colocando elementos secundarios debajo de sus elementos principales.",
+      "Un documento XML bien formado normalmente tiene un elemento raíz y etiquetas anidadas correctamente. El formateo no puede adivinar con seguridad las etiquetas de cierre que faltan ni reparar el marcado no válido, por lo que los errores de sintaxis deben corregirse en el origen."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta entrada XML válida. Si la entrada contiene errores de sintaxis XML, la herramienta los reportará. El formateador preserva todos los datos — solo cambia espacios e indentación.",
+    "inputNotesPara": "Pegue solo el contenido XML. Elimine primero los contenedores de transporte, los prefijos de registro o los bloques de código Markdown. Tenga cuidado con el XML de contenido mixto, donde los saltos de línea agregados entre texto y elementos secundarios pueden ser significativos.",
     "example": "Ejemplo",
-    "examplePara": "El XML minificado se vuelve legible después del formateo:",
-    "exampleCode": "--- Entrada minificada ---\n<root><name>John</name><age>30</age></root>\n\n--- Salida formateada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "Un fragmento XML compacto se vuelve más fácil de leer cuando cada elemento secundario se coloca en su propia línea:",
+    "exampleCode": "--- Entrada minificada ---\n<root><name>John</name><age>30</age></root>\n\n--- Salida formateada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "Formatear XML"
   },
   "pt": {
-    "title": "Formatador XML — Coding.Tools",
-    "description": "Formate e embeleze o código XML com indentação correta diretamente no seu navegador.",
+    "title": "Formatador XML - Coding.Tools",
+    "description": "Formate XML com recuo legível enquanto preserva elementos, atributos e nós de texto.",
     "toolTitle": "Formatador XML",
-    "toolDescription": "Embeleze XML minificado com indentação e estrutura corretas. Copie ou baixe o resultado.",
+    "toolDescription": "Formate a marcação XML em uma saída aninhada legível em seu navegador.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole seu XML aqui...",
     "outputPlaceholder": "O XML formatado aparecerá aqui...",
-    "descTitle": "Formatador XML",
+    "descTitle": "Recue XML preservando a estrutura de marcação",
     "descParas": [
-      "Esta ferramenta formatea e embeleze dados XML com indentação e estrutura corretas. Cole XML minificado ou mal formatado e obtenha uma saída limpa e legível instantaneamente.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>O formatador XML torna XML compacto mais fácil de inspecionar ao adicionar quebras de linha e recuo em torno de elementos aninhados.</strong> É útil para cargas úteis SOAP, feeds, arquivos de configuração, fragmentos de mapa de site e dados exportados.",
+      "XML é mais sensível a espaços em branco do que JSON: atributos, nós de texto, CDATA, instruções de processamento e conteúdo misto podem ser importantes. Use a saída formatada como auxílio à legibilidade e verifique documentos que dependem do espaçamento exato do texto."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seus dados XML no editor de entrada.",
-      "Clique em <strong>Formatar XML</strong> para embelezar o código.",
-      "O XML formatado aparece no editor de saída com indentação correta.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Formatar XML</strong> para recuar a marcação.",
+      "Revise o XML formatado para o elemento raiz, atributos e texto aninhado esperados.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é formatação XML?",
+    "whatIs": "O que é o formatador XML?",
     "whatIsParas": [
-      "A formatação XML adiciona indentação e quebras de linha aos dados XML, tornando-os legíveis. O XML minificado tem todos os espaços removidos para reduzir o tamanho do arquivo, mas é difícil de ler e depurar.",
-      "A formatação XML é essencial para depurar arquivos de configuração, revisar respostas SOAP e compartilhar estruturas de dados com colegas."
+      "Formatador <strong>XML</strong> é um utilitário baseado em navegador para tornar os documentos XML mais fáceis de ler sem o refluxo manual de tags. Ele destaca a hierarquia colocando os elementos filhos sob seus elementos pais.",
+      "Um documento XML bem formado normalmente possui um elemento raiz e tags aninhadas corretamente. A formatação não pode adivinhar com segurança as tags de fechamento ausentes ou reparar marcações inválidas, portanto, os erros de sintaxe devem ser corrigidos na origem."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita entrada XML válida. Se a entrada contiver erros de sintaxe XML, a ferramenta os reportará. O formatador preserva todos os dados — ele apenas altera espaços e indentação.",
+    "inputNotesPara": "Cole apenas conteúdo XML. Remova primeiro os wrappers de transporte, os prefixos de log ou os blocos de código Markdown. Tenha cuidado com XML de conteúdo misto, onde quebras de linha adicionadas entre texto e elementos filhos podem ser significativas.",
     "example": "Exemplo",
-    "examplePara": "O XML minificado se torna legível após a formatação:",
-    "exampleCode": "--- Entrada minificada ---\n<root><name>John</name><age>30</age></root>\n\n--- Saída formatada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>"
+    "examplePara": "Um fragmento compacto XML torna-se mais fácil de ler quando cada elemento filho é colocado em sua própria linha:",
+    "exampleCode": "--- Entrada minificada ---\n<root><name>John</name><age>30</age></root>\n\n--- Saída formatada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>",
+    "buttonLabel": "Formatar XML"
   }
 }

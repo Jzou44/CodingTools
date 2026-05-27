@@ -1,15 +1,15 @@
 {
   "en": {
-    "title": "Text Compare — Coding.Tools",
-    "description": "Compare two blocks of text line by line and produce a readable diff.",
+    "title": "Text Compare - Coding.Tools",
+    "description": "Compare two text blocks line by line and highlight added, removed, changed, and unchanged lines.",
     "toolTitle": "Text Compare",
-    "toolDescription": "Find added, removed, and changed lines with optional whitespace and case-insensitive matching.",
+    "toolDescription": "Compare original and changed text locally with line-based diffs, whitespace and case options, and a compact summary.",
     "categoryName": "String & Text Utilities",
     "buttonLabel": "Compare Text",
-    "descTitle": "Text Compare",
+    "descTitle": "Compare two text versions line by line",
     "descParas": [
-      "Text Compare compares two text blocks line by line and produces a compact diff for reviews, documentation edits, logs, and configuration snippets.",
-      "The comparison runs locally in the browser and can ignore whitespace or casing when you only care about meaningful content changes."
+      "<strong>Text Compare shows what changed between an original text block and a revised version.</strong> It marks added, removed, changed, and unchanged lines, making it useful for release notes, config edits, translated copy, SQL snippets, logs, and before-and-after content checks.",
+      "The diff is line-based, similar to many code review tools. It is best for text where each line has meaning; it will not show character-level edits inside a line unless the whole line is classified as changed. Whitespace and case options can hide noise when exact formatting is not important."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -18,15 +18,15 @@
       "Choose whether to ignore whitespace, ignore case, or include unchanged lines.",
       "Click <strong>Compare Text</strong>, then copy or download the generated diff."
     ],
-    "whatIs": "What is this tool?",
+    "whatIs": "What is Text Compare?",
     "whatIsParas": [
-      "A text diff shows which lines were added, removed, changed, or left unchanged between two versions of text.",
-      "Line-based comparison is a practical fit for logs, prose, environment files, SQL snippets, and any plain text that needs a quick before-and-after review."
+      "<strong>Text Compare</strong> is a browser-based diff tool for plain text. It helps you verify whether a generated file, edited paragraph, copied setting, or rewritten message still contains the lines you expect.",
+      "Line endings, trailing spaces, indentation, and capitalization can all affect results unless you enable the ignore options. For structured formats such as JSON or HTML, format both sides consistently before comparing for a cleaner diff."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool compares by line. Very large inputs work in the browser, but extremely large files may take longer because the diff uses a dynamic-programming line matcher.",
+    "inputNotesPara": "Put the baseline text on the left and the revised text on the right. Enable <strong>Show unchanged lines</strong> when you need context, or disable it for a shorter change-only report.",
     "example": "Example",
-    "examplePara": "A changed line is shown with old and new content:",
+    "examplePara": "A changed status line is reported with the removed version and the added version:",
     "exampleCode": "Original\nstatus: draft\nowner: alice\n\nChanged\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Original Text",
@@ -52,33 +52,33 @@
     "outputPlaceholder": "Text diff output will appear here..."
   },
   "cn": {
-    "title": "文本对比 — Coding.Tools",
-    "description": "逐行比较两段文本并生成可读差异。",
+    "title": "文本比较 - Coding.Tools",
+    "description": "逐行比较两个文本块并突出显示添加、删除、更改和未更改的行。",
     "toolTitle": "文本对比",
-    "toolDescription": "查找新增、删除和变更行，支持忽略空白和大小写。",
+    "toolDescription": "通过基于行的差异、空格和大小写选项以及紧凑的摘要在本地比较原始文本和更改后的文本。",
     "categoryName": "字符串与文本工具",
     "buttonLabel": "比较文本",
-    "descTitle": "文本对比",
+    "descTitle": "逐行比较两个文本版本",
     "descParas": [
-      "文本对比会逐行比较两段文本，并为评审、文档编辑、日志和配置片段生成紧凑差异。",
-      "比较在浏览器本地运行，可在只关注内容变化时忽略空白或大小写。"
+      "<strong>文本比较会显示原始文本块和修订版本之间的更改。</strong> 它标记新增、删除、修改和未变更的行，适合检查发行说明、配置编辑、翻译文案、SQL 片段、日志以及修改前后的内容。",
+      "差异是基于行的，类似于许多代码审查工具。最适合每行都有含义的文本；除非整行被归类为已更改，否则它不会显示行内的字符级编辑。当精确的格式不重要时，空格和大小写选项可以隐藏噪音。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将原始文本粘贴到左侧编辑器。",
-      "将变更后的文本粘贴到右侧编辑器。",
-      "选择是否忽略空白、忽略大小写或包含未变更行。",
-      "点击<strong>比较文本</strong>，然后复制或下载生成的差异。"
+      "将原始文本粘贴到左侧编辑器中。",
+      "将更改后的文本粘贴到正确的编辑器中。",
+      "选择是否忽略空格、忽略大小写或包含未更改的行。",
+      "单击 <strong>比较文本</strong>，然后复制或下载生成的差异。"
     ],
-    "whatIs": "这个工具是什么？",
+    "whatIs": "什么是文本比较？",
     "whatIsParas": [
-      "文本差异会显示两个版本之间哪些行被新增、删除、变更或保持不变。",
-      "行级比较适合日志、文案、环境文件、SQL 片段以及任何需要快速前后对比的纯文本。"
+      "<strong>文本对比</strong> 是一个基于浏览器的纯文本比较工具。它可以帮助您验证生成的文件、编辑的段落、复制的设置或重写的消息是否仍然包含您期望的行。",
+      "除非启用忽略选项，否则行结尾、尾随空格、缩进和大写都会影响结果。对于 JSON 或 HTML 等结构化格式，请在比较更清晰的差异之前一致地格式化两侧。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "工具按行比较。非常大的输入也可在浏览器中处理，但超大文件可能较慢，因为差异算法会匹配文本行。",
+    "inputNotesPara": "将基线文本放在左侧，将修订后的文本放在右侧。当您需要上下文时，启用 <strong>显示未更改的行</strong>，或禁用它以获得较短的仅更改报告。",
     "example": "示例",
-    "examplePara": "变更的行会显示旧内容和新内容：",
+    "examplePara": "报告已更改的状态行以及已删除的版本和已添加的版本：",
     "exampleCode": "原始\nstatus: draft\nowner: alice\n\n变更\nstatus: published\nowner: alice\n\n差异\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "原始文本",
@@ -104,33 +104,33 @@
     "outputPlaceholder": "文本差异结果将在此显示..."
   },
   "tw": {
-    "title": "文字比對 — Coding.Tools",
-    "description": "逐行比對兩段文字並產生可讀差異。",
+    "title": "文本比較 - Coding.Tools",
+    "description": "逐行比較兩個文字區塊並反白顯示新增、刪除、變更和未變更的行。",
     "toolTitle": "文字比對",
-    "toolDescription": "找出新增、移除與變更行，支援忽略空白和大小寫。",
+    "toolDescription": "透過基於行的差異、空格和大小寫選項以及緊湊的摘要在本地比較原始文字和更改後的文字。",
     "categoryName": "字串與文字工具",
     "buttonLabel": "比對文字",
-    "descTitle": "文字比對",
+    "descTitle": "逐行比較兩個文本版本",
     "descParas": [
-      "文字比對會逐行比較兩段文字，並為審查、文件編輯、日誌和設定片段產生精簡差異。",
-      "比較在瀏覽器本機執行，可在只關注內容變化時忽略空白或大小寫。"
+      "<strong>文字比對會顯示原始文字區塊和修訂版本之間的變更。</strong> 它標記新增、刪除、修改和未變更的行，適合檢查發行說明、設定編輯、翻譯文案、SQL 片段、日誌以及修改前後的內容。",
+      "差異是基於行的，類似於許多程式碼審查工具。最適合每行都有含義的文字；除非整行被歸類為已更改，否則它不會顯示行內的字元級編輯。當精確的格式不重要時，空格和大小寫選項可以隱藏雜訊。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將原始文字貼到左側編輯器。",
-      "將變更後的文字貼到右側編輯器。",
-      "選擇是否忽略空白、忽略大小寫或包含未變更行。",
-      "點擊<strong>比對文字</strong>，然後複製或下載產生的差異。"
+      "將原始文字貼到左側編輯器中。",
+      "將更改後的文字貼到正確的編輯器中。",
+      "選擇是否忽略空格、忽略大小寫或包含未更改的行。",
+      "按一下 <strong>比較文字</strong>，然後複製或下載產生的差異。"
     ],
-    "whatIs": "這個工具是什麼？",
+    "whatIs": "什麼是文本比較？",
     "whatIsParas": [
-      "文字差異會顯示兩個版本之間哪些行被新增、移除、變更或保持不變。",
-      "行級比較適合日誌、文案、環境檔、SQL 片段以及任何需要快速前後比對的純文字。"
+      "<strong>文字比對</strong> 是基於瀏覽器的純文字比較工具。它可以幫助您驗證生成的文件、編輯的段落、複製的設定或重寫的訊息是否仍然包含您期望的行。",
+      "除非啟用忽略選項，否則行結尾、尾隨空格、縮排和大寫都會影響結果。對於 JSON 或 HTML 等結構化格式，請在比較更清晰的差異之前一致地格式化兩側。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "工具依行比較。非常大的輸入也可在瀏覽器中處理，但超大檔案可能較慢，因為差異演算法會匹配文字行。",
+    "inputNotesPara": "將基線文字放在左側，將修訂後的文字放在右側。當您需要上下文時，啟用 <strong>顯示未更改的行</strong>，或停用它以獲得較短的僅更改報告。",
     "example": "範例",
-    "examplePara": "變更的行會顯示舊內容和新內容：",
+    "examplePara": "報告已更改的狀態行以及已刪除的版本和已新增的版本：",
     "exampleCode": "原始\nstatus: draft\nowner: alice\n\n變更\nstatus: published\nowner: alice\n\n差異\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "原始文字",
@@ -156,33 +156,33 @@
     "outputPlaceholder": "文字差異結果會顯示於此..."
   },
   "jp": {
-    "title": "テキスト比較 — Coding.Tools",
-    "description": "2 つのテキストを行単位で比較し、読みやすい差分を生成します。",
+    "title": "テキスト比較 - Coding.Tools",
+    "description": "2 つのテキスト ブロックを 1 行ずつ比較し、追加、削除、変更、および変更されていない行を強調表示します。",
     "toolTitle": "テキスト比較",
-    "toolDescription": "追加、削除、変更された行を見つけ、空白や大文字小文字の無視にも対応します。",
+    "toolDescription": "行ベースの差分、空白文字と大文字小文字のオプション、およびコンパクトな概要を使用して、元のテキストと変更されたテキストをローカルで比較します。",
     "categoryName": "文字列・テキストツール",
     "buttonLabel": "テキストを比較",
-    "descTitle": "テキスト比較",
+    "descTitle": "2 つのテキスト バージョンを行ごとに比較する",
     "descParas": [
-      "テキスト比較は 2 つのテキストを行単位で比較し、レビュー、文書編集、ログ、設定片に使いやすい差分を作成します。",
-      "比較はブラウザ内で行われ、内容の変化だけを見たい場合は空白や大文字小文字を無視できます。"
+      "<strong>テキスト比較 は、元のテキスト ブロックと改訂版の間で何が変更されたかを示します。</strong> 追加、削除、変更、および変更されていない行をマークし、リリース ノート、構成編集、翻訳されたコピー、SQL スニペット、ログ、および前後のコンテンツ チェックに役立ちます。",
+      "差分は行ベースであり、多くのコード レビュー ツールと同様です。各行に意味があるテキストに最適です。行全体が変更済みとして分類されない限り、行内の文字レベルの編集は表示されません。正確な書式設定が重要ではない場合、空白文字と大文字小文字のオプションはノイズを隠すことができます。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "元のテキストを左側エディタに貼り付けます。",
-      "変更後のテキストを右側エディタに貼り付けます。",
-      "空白を無視するか、大文字小文字を無視するか、未変更行を含めるかを選びます。",
-      "<strong>テキストを比較</strong>をクリックし、生成された差分をコピーまたはダウンロードします。"
+      "元のテキストを左側のエディタに貼り付けます。",
+      "変更したテキストを右のエディタに貼り付けます。",
+      "空白を無視するか、大文字と小文字を区別するか、変更されていない行を含めるかを選択します。",
+      "「<strong>テキストを比較</strong> をクリックし、生成された差分をコピーまたはダウンロードします。"
     ],
-    "whatIs": "このツールとは？",
+    "whatIs": "テキスト比較とは何ですか?",
     "whatIsParas": [
-      "テキスト差分は、2 つの版の間で追加、削除、変更、未変更の行を示します。",
-      "行単位の比較はログ、文章、環境ファイル、SQL 片、前後比較が必要なプレーンテキストに向いています。"
+      "<strong>テキスト比較</strong> は、プレーン テキスト用のブラウザベースの差分ツールです。これは、生成されたファイル、編集された段落、コピーされた設定、または書き換えられたメッセージに予期した行がまだ含まれているかどうかを確認するのに役立ちます。",
+      "無視オプションを有効にしない限り、行末、末尾のスペース、インデント、および大文字の使用はすべて結果に影響を与える可能性があります。 JSON や HTML などの構造化フォーマットの場合、よりクリーンな差分を得るために比較する前に、両面を一貫してフォーマットします。"
     ],
     "inputNotes": "入力メモ",
-    "inputNotesPara": "このツールは行単位で比較します。大きな入力もブラウザで処理できますが、非常に大きなファイルでは行照合のため時間がかかる場合があります。",
+    "inputNotesPara": "ベースラインのテキストを左側に、修正後のテキストを右側に配置します。コンテキストが必要な場合は <strong>変更されていない行を表示</strong> を有効にし、短い変更のみのレポートの場合は無効にします。",
     "example": "例",
-    "examplePara": "変更された行は古い内容と新しい内容で表示されます：",
+    "examplePara": "変更されたステータス行には、削除されたバージョンと追加されたバージョンが報告されます。",
     "exampleCode": "元\nstatus: draft\nowner: alice\n\n変更後\nstatus: published\nowner: alice\n\n差分\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "元のテキスト",
@@ -208,33 +208,33 @@
     "outputPlaceholder": "テキスト差分結果がここに表示されます..."
   },
   "kr": {
-    "title": "텍스트 비교 — Coding.Tools",
-    "description": "두 텍스트 블록을 줄 단위로 비교하고 읽기 쉬운 diff를 생성합니다.",
+    "title": "텍스트 비교 - Coding.Tools",
+    "description": "두 개의 텍스트 블록을 한 줄씩 비교하고 추가, 제거, 변경 및 변경되지 않은 줄을 강조 표시합니다.",
     "toolTitle": "텍스트 비교",
-    "toolDescription": "추가, 삭제, 변경된 줄을 찾고 공백과 대소문자 무시 옵션을 지원합니다.",
+    "toolDescription": "줄 기반 차이점, 공백 및 대소문자 옵션, 간략한 요약을 통해 원본 텍스트와 변경된 텍스트를 로컬에서 비교하세요.",
     "categoryName": "문자열 및 텍스트 도구",
     "buttonLabel": "텍스트 비교",
-    "descTitle": "텍스트 비교",
+    "descTitle": "두 개의 텍스트 버전을 한 줄씩 비교합니다.",
     "descParas": [
-      "텍스트 비교는 두 텍스트 블록을 줄 단위로 비교해 리뷰, 문서 편집, 로그, 설정 조각에 적합한 간결한 diff를 만듭니다.",
-      "비교는 브라우저에서 로컬로 실행되며 내용 변화만 보고 싶을 때 공백이나 대소문자를 무시할 수 있습니다."
+      "<strong>Text 비교는 원본 텍스트 블록과 수정된 버전 사이의 변경 사항을 보여줍니다.</strong> 추가, 제거, 변경 및 변경되지 않은 행을 표시하여 릴리스 노트, 구성 편집, 번역된 사본, SQL 조각, 로그 및 전후 내용 확인에 유용합니다.",
+      "차이점은 많은 코드 검토 도구와 유사하게 라인 기반입니다. 각 줄에 의미가 있는 텍스트에 가장 적합합니다. 전체 줄이 변경된 것으로 분류되지 않는 한 줄 내부에 문자 수준 편집 내용이 표시되지 않습니다. 공백 및 대소문자 옵션은 정확한 형식이 중요하지 않은 경우 노이즈를 숨길 수 있습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "원본 텍스트를 왼쪽 편집기에 붙여넣습니다.",
       "변경된 텍스트를 오른쪽 편집기에 붙여넣습니다.",
-      "공백 무시, 대소문자 무시, 변경 없는 줄 포함 여부를 선택합니다.",
-      "<strong>텍스트 비교</strong>를 클릭한 뒤 생성된 diff를 복사하거나 다운로드합니다."
+      "공백을 무시할지, 대소문자를 무시할지, 변경되지 않은 줄을 포함할지 선택합니다.",
+      "<strong>텍스트</strong> 비교를 클릭한 다음 생성된 diff를 복사하거나 다운로드합니다."
     ],
-    "whatIs": "이 도구란?",
+    "whatIs": "텍스트 비교란 무엇입니까?",
     "whatIsParas": [
-      "텍스트 diff는 두 버전 사이에서 어떤 줄이 추가, 삭제, 변경 또는 유지되었는지 보여줍니다.",
-      "줄 기반 비교는 로그, 문서, 환경 파일, SQL 조각, 빠른 전후 비교가 필요한 일반 텍스트에 적합합니다."
+      "<strong>텍스트 비교</strong>는 일반 텍스트용 브라우저 기반 비교 도구입니다. 생성된 파일, 편집된 단락, 복사된 설정 또는 다시 작성된 메시지에 예상한 줄이 여전히 포함되어 있는지 확인하는 데 도움이 됩니다.",
+      "무시 옵션을 활성화하지 않으면 줄 끝, 후행 ​​공백, 들여쓰기 및 대문자 사용이 모두 결과에 영향을 미칠 수 있습니다. JSON 또는 HTML와 같은 구조화된 형식의 경우 더 명확한 차이를 비교하기 전에 양쪽을 일관되게 형식화하십시오."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 줄 단위로 비교합니다. 큰 입력도 브라우저에서 처리할 수 있지만 매우 큰 파일은 줄 매칭 때문에 느릴 수 있습니다.",
+    "inputNotesPara": "기본 텍스트를 왼쪽에 배치하고 수정된 텍스트를 오른쪽에 배치합니다. <strong>컨텍스트가 필요할 때 변경되지 않은 행 표시</strong>를 활성화하거나 더 짧은 변경 전용 보고서를 위해 비활성화합니다.",
     "example": "예시",
-    "examplePara": "변경된 줄은 이전 내용과 새 내용으로 표시됩니다:",
+    "examplePara": "변경된 상태 줄은 제거된 버전과 추가된 버전으로 보고됩니다.",
     "exampleCode": "원본\nstatus: draft\nowner: alice\n\n변경\nstatus: published\nowner: alice\n\n차이\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "원본 텍스트",
@@ -260,42 +260,42 @@
     "outputPlaceholder": "텍스트 차이 결과가 여기에 표시됩니다..."
   },
   "fr": {
-    "title": "Comparaison de texte — Coding.Tools",
-    "description": "Compare deux blocs de texte ligne par ligne et produit un diff lisible.",
+    "title": "Comparaison de texte - Coding.Tools",
+    "description": "Comparez deux blocs de texte ligne par ligne et mettez en surbrillance les lignes ajoutées, supprimées, modifiées et inchangées.",
     "toolTitle": "Comparaison de texte",
-    "toolDescription": "Trouve les lignes ajoutees, supprimees et modifiees avec options d’espaces et de casse.",
-    "categoryName": "Outils de chaine et texte",
+    "toolDescription": "Comparez localement le texte original et modifié avec des différences basées sur les lignes, des options d'espacement et de casse, ainsi qu'un résumé compact.",
+    "categoryName": "Outils de chaîne et texte",
     "buttonLabel": "Comparer le texte",
-    "descTitle": "Comparaison de texte",
+    "descTitle": "Comparez deux versions de texte ligne par ligne",
     "descParas": [
-      "La comparaison de texte compare deux blocs ligne par ligne et produit un diff compact pour revues, documentation, journaux et configurations.",
-      "La comparaison se fait localement dans le navigateur et peut ignorer espaces ou casse si seul le contenu compte."
+      "<strong>Comparaison de texte montre ce qui a changé entre un bloc de texte original et une version révisée.</strong> Il marque les lignes ajoutées, supprimées, modifiées et inchangées, ce qui le rend utile pour les notes de version, les modifications de configuration, la copie traduite, les extraits de code SQL, les journaux et les vérifications de contenu avant et après.",
+      "La différence est basée sur des lignes, comme de nombreux outils de révision de code. Il est préférable d'utiliser un texte où chaque ligne a une signification ; il n'affichera pas les modifications au niveau des caractères à l'intérieur d'une ligne à moins que la ligne entière ne soit classée comme modifiée. Les options d’espacement et de casse peuvent masquer le bruit lorsque le formatage exact n’est pas important."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez le texte source dans l’editeur de gauche.",
-      "Collez le texte modifie dans l’editeur de droite.",
-      "Choisissez d’ignorer les espaces, la casse ou d’inclure les lignes inchangees.",
-      "Cliquez sur <strong>Comparer le texte</strong>, puis copiez ou telechargez le diff."
+      "Collez le texte original dans l'éditeur de gauche.",
+      "Collez le texte modifié dans l'éditeur de droite.",
+      "Choisissez si vous souhaitez ignorer les espaces, ignorer la casse ou inclure les lignes inchangées.",
+      "Cliquez sur <strong>Comparer le texte</strong>, puis copiez ou téléchargez le diff généré."
     ],
-    "whatIs": "A quoi sert cet outil ?",
+    "whatIs": "Qu'est-ce que la comparaison de texte ?",
     "whatIsParas": [
-      "Un diff texte montre quelles lignes ont ete ajoutees, supprimees, modifiees ou conservees entre deux versions.",
-      "La comparaison par ligne convient aux journaux, textes, fichiers d’environnement, fragments SQL et tout texte brut a verifier rapidement."
+      "<strong>Comparaison de texte</strong> est un outil de comparaison basé sur un navigateur pour le texte brut. Il vous aide à vérifier si un fichier généré, un paragraphe modifié, un paramètre copié ou un message réécrit contient toujours les lignes que vous attendez.",
+      "Les fins de ligne, les espaces de fin, l'indentation et les majuscules peuvent tous affecter les résultats, sauf si vous activez les options Ignorer. Pour les formats structurés tels que JSON ou HTML, formatez les deux côtés de manière cohérente avant de comparer pour obtenir une différence plus nette."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "L’outil compare par ligne. Les grandes entrees fonctionnent dans le navigateur, mais les fichiers tres volumineux peuvent prendre plus de temps.",
+    "inputNotesPara": "Placez le texte de base à gauche et le texte révisé à droite. Activez <strong>Afficher les lignes inchangées</strong> lorsque vous avez besoin de contexte, ou désactivez-le pour un rapport de modification uniquement plus court.",
     "example": "Exemple",
-    "examplePara": "Une ligne modifiee affiche l’ancien et le nouveau contenu :",
+    "examplePara": "Une ligne de statut modifié est signalée avec la version supprimée et la version ajoutée :",
     "exampleCode": "Source\nstatus: draft\nowner: alice\n\nModifie\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Texte source",
-      "rightInput": "Texte modifie",
-      "output": "Resultat du diff",
+      "rightInput": "Texte modifié",
+      "output": "Résultat du diff",
       "ignoreWhitespace": "Ignorer les espaces",
       "ignoreCase": "Ignorer la casse",
-      "showUnchanged": "Afficher les lignes inchangees",
-      "summary": "Resume",
+      "showUnchanged": "Afficher les lignes inchangées",
+      "summary": "Résumé",
       "added": "Ajoute",
       "removed": "Supprime",
       "changed": "Modifie",
@@ -304,41 +304,41 @@
     },
     "messages": {
       "empty": "Saisissez d’abord une valeur.",
-      "success": "Comparaison de texte terminee",
-      "failed": "Echec de l’operation : "
+      "success": "Comparaison de texte terminée",
+      "failed": "Échec de l’opération : "
     },
     "leftPlaceholder": "Collez le texte source...",
-    "rightPlaceholder": "Collez le texte modifie...",
-    "outputPlaceholder": "Le diff de texte apparaitra ici..."
+    "rightPlaceholder": "Collez le texte modifié...",
+    "outputPlaceholder": "Le diff de texte apparaîtra ici..."
   },
   "de": {
-    "title": "Textvergleich — Coding.Tools",
-    "description": "Vergleicht zwei Textbloecke zeilenweise und erzeugt einen lesbaren Diff.",
+    "title": "Textvergleich - Coding.Tools",
+    "description": "Vergleichen Sie zwei Textblöcke Zeile für Zeile und markieren Sie hinzugefügte, entfernte, geänderte und unveränderte Zeilen.",
     "toolTitle": "Textvergleich",
-    "toolDescription": "Findet hinzugefuegte, entfernte und geaenderte Zeilen mit Optionen fuer Leerraum und Grossschreibung.",
+    "toolDescription": "Vergleichen Sie ursprünglichen und geänderten Text lokal mit zeilenbasierten Unterschieden, Leerraum- und Groß-/Kleinschreibungsoptionen und einer kompakten Zusammenfassung.",
     "categoryName": "String- & Textwerkzeuge",
     "buttonLabel": "Text vergleichen",
-    "descTitle": "Textvergleich",
+    "descTitle": "Vergleichen Sie zwei Textversionen Zeile für Zeile",
     "descParas": [
-      "Der Textvergleich vergleicht zwei Textbloecke zeilenweise und erzeugt einen kompakten Diff fuer Reviews, Dokumentation, Logs und Konfigurationen.",
-      "Der Vergleich laeuft lokal im Browser und kann Leerraum oder Grossschreibung ignorieren."
+      "<strong>Textvergleich zeigt, was sich zwischen einem ursprünglichen Textblock und einer überarbeiteten Version geändert hat.</strong> Es markiert hinzugefügte, entfernte, geänderte und unveränderte Zeilen und ist somit nützlich für Versionshinweise, Konfigurationsänderungen, übersetzte Kopien, SQL Snippets, Protokolle und Vorher-Nachher-Inhaltsprüfungen.",
+      "Der Diff ist zeilenbasiert, ähnlich wie viele Code-Review-Tools. Dies eignet sich am besten für Texte, bei denen jede Zeile eine Bedeutung hat. Es werden keine Änderungen auf Zeichenebene innerhalb einer Zeile angezeigt, es sei denn, die gesamte Zeile wird als geändert klassifiziert. Leerzeichen- und Groß-/Kleinschreibungsoptionen können Rauschen verbergen, wenn eine genaue Formatierung nicht wichtig ist."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fuegen Sie den Ausgangstext links ein.",
-      "Fuegen Sie den geaenderten Text rechts ein.",
-      "Waehlen Sie, ob Leerraum, Grossschreibung oder unveraenderte Zeilen beruecksichtigt werden.",
-      "Klicken Sie auf <strong>Text vergleichen</strong> und kopieren oder laden Sie den Diff herunter."
+      "Fügen Sie den Originaltext in den linken Editor ein.",
+      "Fügen Sie den geänderten Text in den richtigen Editor ein.",
+      "Wählen Sie aus, ob Leerzeichen, Groß- und Kleinschreibung ignoriert oder unveränderte Zeilen einbezogen werden sollen.",
+      "Klicken Sie auf <strong>Text vergleichen</strong> und kopieren Sie dann das generierte Diff oder laden Sie es herunter."
     ],
-    "whatIs": "Was macht dieses Tool?",
+    "whatIs": "Was ist Textvergleich?",
     "whatIsParas": [
-      "Ein Text-Diff zeigt, welche Zeilen zwischen zwei Versionen hinzugefuegt, entfernt, geaendert oder unveraendert sind.",
-      "Zeilenvergleich passt fuer Logs, Prosa, Umgebungsdateien, SQL-Snippets und jeden Klartext mit schnellem Vorher-Nachher-Vergleich."
+      "<strong>Textvergleich</strong> ist ein browserbasiertes Diff-Tool für einfachen Text. Damit können Sie überprüfen, ob eine generierte Datei, ein bearbeiteter Absatz, eine kopierte Einstellung oder eine neu geschriebene Nachricht immer noch die erwarteten Zeilen enthält.",
+      "Zeilenenden, nachgestellte Leerzeichen, Einrückungen und Großschreibung können sich auf die Ergebnisse auswirken, es sei denn, Sie aktivieren die Optionen zum Ignorieren. Formatieren Sie bei strukturierten Formaten wie JSON oder HTML beide Seiten konsistent, bevor Sie sie vergleichen, um einen saubereren Unterschied zu erzielen."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool vergleicht zeilenweise. Grosse Eingaben funktionieren im Browser, sehr grosse Dateien koennen wegen des Zeilenabgleichs laenger dauern.",
+    "inputNotesPara": "Platzieren Sie den Grundtext links und den überarbeiteten Text rechts. Aktivieren Sie <strong>Unveränderte Zeilen anzeigen</strong>, wenn Sie Kontext benötigen, oder deaktivieren Sie es für einen kürzeren Bericht nur mit Änderungen.",
     "example": "Beispiel",
-    "examplePara": "Eine geaenderte Zeile zeigt alten und neuen Inhalt:",
+    "examplePara": "Eine geänderte Statuszeile wird mit der entfernten Version und der hinzugefügten Version gemeldet:",
     "exampleCode": "Ausgang\nstatus: draft\nowner: alice\n\nGeaendert\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Ausgangstext",
@@ -364,33 +364,33 @@
     "outputPlaceholder": "Der Text-Diff erscheint hier..."
   },
   "es": {
-    "title": "Comparar texto — Coding.Tools",
-    "description": "Compara dos bloques de texto linea por linea y genera un diff legible.",
+    "title": "Comparación de texto - Coding.Tools",
+    "description": "Compare dos bloques de texto línea por línea y resalte las líneas agregadas, eliminadas, modificadas y sin cambios.",
     "toolTitle": "Comparar texto",
-    "toolDescription": "Encuentra lineas anadidas, eliminadas y cambiadas con opciones de espacios y mayusculas.",
+    "toolDescription": "Compare el texto original y modificado localmente con diferencias basadas en líneas, opciones de espacios en blanco y mayúsculas y minúsculas, y un resumen compacto.",
     "categoryName": "Utilidades de cadenas y texto",
     "buttonLabel": "Comparar texto",
-    "descTitle": "Comparar texto",
+    "descTitle": "Compara dos versiones de texto línea por línea",
     "descParas": [
-      "La comparacion de texto compara dos bloques linea por linea y produce un diff compacto para revisiones, documentacion, registros y configuraciones.",
-      "La comparacion se ejecuta localmente en el navegador y puede ignorar espacios o mayusculas si solo importa el contenido."
+      "<strong>La comparación de texto muestra lo que cambió entre un bloque de texto original y una versión revisada.</strong> Marca líneas agregadas, eliminadas, cambiadas y sin cambios, lo que lo hace útil para notas de la versión, ediciones de configuración, copias traducidas, fragmentos de SQL, registros y verificaciones de contenido antes y después.",
+      "La diferencia está basada en líneas, similar a muchas herramientas de revisión de código. Es mejor para textos donde cada línea tiene significado; no mostrará ediciones a nivel de carácter dentro de una línea a menos que toda la línea esté clasificada como modificada. Las opciones de espacios en blanco y mayúsculas y minúsculas pueden ocultar ruido cuando el formato exacto no es importante."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Pega el texto original en el editor izquierdo.",
-      "Pega el texto cambiado en el editor derecho.",
-      "Elige si quieres ignorar espacios, mayusculas o incluir lineas sin cambios.",
-      "Haz clic en <strong>Comparar texto</strong> y copia o descarga el diff generado."
+      "Pegue el texto original en el editor izquierdo.",
+      "Pegue el texto modificado en el editor derecho.",
+      "Elija si desea ignorar los espacios en blanco, ignorar mayúsculas y minúsculas o incluir líneas sin cambios.",
+      "Haga clic en <strong>Comparar texto</strong>, luego copie o descargue la diferencia generada."
     ],
-    "whatIs": "Que hace esta herramienta?",
+    "whatIs": "¿Qué es la comparación de texto?",
     "whatIsParas": [
-      "Un diff de texto muestra que lineas se anadieron, eliminaron, cambiaron o quedaron iguales entre dos versiones.",
-      "La comparacion por lineas sirve para registros, textos, archivos de entorno, fragmentos SQL y texto plano que requiere revision rapida."
+      "<strong>Comparar texto</strong> es una herramienta de comparación basada en navegador para texto sin formato. Le ayuda a verificar si un archivo generado, un párrafo editado, una configuración copiada o un mensaje reescrito todavía contiene las líneas que espera.",
+      "Los finales de línea, los espacios finales, la sangría y las mayúsculas pueden afectar los resultados a menos que habilite las opciones de ignorar. Para formatos estructurados como JSON o HTML, formatee ambos lados de manera consistente antes de comparar para obtener una diferencia más limpia."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta compara por lineas. Entradas grandes funcionan en el navegador, pero archivos muy grandes pueden tardar mas por el emparejamiento de lineas.",
+    "inputNotesPara": "Coloque el texto de referencia a la izquierda y el texto revisado a la derecha. Habilite <strong>Mostrar líneas sin cambios</strong> cuando necesite contexto, o deshabilítelo para obtener un informe más corto de solo cambios.",
     "example": "Ejemplo",
-    "examplePara": "Una linea cambiada muestra el contenido anterior y nuevo:",
+    "examplePara": "Se informa una línea de estado modificada con la versión eliminada y la versión agregada:",
     "exampleCode": "Original\nstatus: draft\nowner: alice\n\nCambiado\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Texto original",
@@ -398,73 +398,73 @@
       "output": "Resultado de diferencias",
       "ignoreWhitespace": "Ignorar espacios",
       "ignoreCase": "Ignorar mayusculas",
-      "showUnchanged": "Mostrar lineas sin cambios",
+      "showUnchanged": "Mostrar líneas sin cambios",
       "summary": "Resumen",
       "added": "Anadido",
       "removed": "Eliminado",
       "changed": "Cambiado",
       "unchanged": "Sin cambios",
-      "noDiff": "Aun no hay diferencias de texto para mostrar."
+      "noDiff": "Aún no hay diferencias de texto para mostrar."
     },
     "messages": {
       "empty": "Introduce contenido primero.",
-      "success": "Comparacion de texto completada",
-      "failed": "Error en la operacion: "
+      "success": "Comparación de texto completada",
+      "failed": "Error en la operación: "
     },
     "leftPlaceholder": "Pega el texto original...",
     "rightPlaceholder": "Pega el texto cambiado...",
-    "outputPlaceholder": "El diff de texto aparecera aqui..."
+    "outputPlaceholder": "El diff de texto aparecerá aquí..."
   },
   "pt": {
-    "title": "Comparar texto — Coding.Tools",
-    "description": "Compara dois blocos de texto linha por linha e gera um diff legivel.",
+    "title": "Comparação de texto - Coding.Tools",
+    "description": "Compare dois blocos de texto linha por linha e destaque as linhas adicionadas, removidas, alteradas e inalteradas.",
     "toolTitle": "Comparar texto",
-    "toolDescription": "Encontra linhas adicionadas, removidas e alteradas com opcoes de espacos e maiusculas.",
+    "toolDescription": "Compare o texto original e alterado localmente com diferenças baseadas em linhas, opções de espaços em branco e maiúsculas e um resumo compacto.",
     "categoryName": "Utilitarios de strings e texto",
     "buttonLabel": "Comparar texto",
-    "descTitle": "Comparar texto",
+    "descTitle": "Compare duas versões de texto linha por linha",
     "descParas": [
-      "A comparacao de texto compara dois blocos linha por linha e produz um diff compacto para revisoes, documentacao, logs e configuracoes.",
-      "A comparacao roda localmente no navegador e pode ignorar espacos ou maiusculas se apenas o conteudo importar."
+      "<strong>Comparar texto mostra o que mudou entre um bloco de texto original e uma versão revisada.</strong> Ele marca linhas adicionadas, removidas, alteradas e inalteradas, tornando-o útil para notas de versão, edições de configuração, cópia traduzida, trechos SQL, logs e verificações de conteúdo antes e depois.",
+      "A comparação é baseada em linhas, semelhante a muitas ferramentas de revisão de código. É melhor para textos onde cada linha tenha significado; ele não mostrará edições em nível de caractere dentro de uma linha, a menos que toda a linha seja classificada como alterada. As opções de espaço em branco e maiúsculas e minúsculas podem ocultar o ruído quando a formatação exata não é importante."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Cole o texto original no editor da esquerda.",
-      "Cole o texto alterado no editor da direita.",
-      "Escolha se deseja ignorar espacos, maiusculas ou incluir linhas sem alteracao.",
-      "Clique em <strong>Comparar texto</strong> e copie ou baixe o diff gerado."
+      "Cole o texto original no editor esquerdo.",
+      "Cole o texto alterado no editor correto.",
+      "Escolha se deseja ignorar espaços em branco, ignorar maiúsculas e minúsculas ou incluir linhas inalteradas.",
+      "Clique em <strong>Comparar texto</strong> e copie ou baixe a comparação gerada."
     ],
-    "whatIs": "Para que serve esta ferramenta?",
+    "whatIs": "O que é comparação de texto?",
     "whatIsParas": [
-      "Um diff de texto mostra quais linhas foram adicionadas, removidas, alteradas ou mantidas entre duas versoes.",
-      "A comparacao por linha serve para logs, textos, arquivos de ambiente, trechos SQL e texto simples que precisa de revisao rapida."
+      "<strong>Comparar texto</strong> é uma ferramenta de comparação baseada em navegador para texto simples. Ele ajuda a verificar se um arquivo gerado, um parágrafo editado, uma configuração copiada ou uma mensagem reescrita ainda contém as linhas esperadas.",
+      "Finais de linha, espaços à direita, recuo e letras maiúsculas podem afetar os resultados, a menos que você ative as opções de ignorar. Para formatos estruturados como JSON ou HTML, formate ambos os lados de forma consistente antes de comparar para obter uma diferença mais limpa."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta compara por linha. Entradas grandes funcionam no navegador, mas arquivos muito grandes podem demorar por causa do pareamento de linhas.",
+    "inputNotesPara": "Coloque o texto de base à esquerda e o texto revisado à direita. Ative <strong>Mostrar linhas inalteradas</strong> quando precisar de contexto ou desative-o para um relatório mais curto somente de alterações.",
     "example": "Exemplo",
-    "examplePara": "Uma linha alterada mostra o conteudo antigo e novo:",
+    "examplePara": "Uma linha de status alterada é relatada com a versão removida e a versão adicionada:",
     "exampleCode": "Original\nstatus: draft\nowner: alice\n\nAlterado\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Texto original",
       "rightInput": "Texto alterado",
       "output": "Resultado do diff",
-      "ignoreWhitespace": "Ignorar espacos",
-      "ignoreCase": "Ignorar maiusculas",
-      "showUnchanged": "Mostrar linhas sem alteracao",
+      "ignoreWhitespace": "Ignorar espaços",
+      "ignoreCase": "Ignorar maiúsculas",
+      "showUnchanged": "Mostrar linhas sem alteração",
       "summary": "Resumo",
       "added": "Adicionado",
       "removed": "Removido",
       "changed": "Alterado",
-      "unchanged": "Sem alteracao",
-      "noDiff": "Ainda nao ha diferencas de texto para mostrar."
+      "unchanged": "Sem alteração",
+      "noDiff": "Ainda não há diferenças de texto para mostrar."
     },
     "messages": {
       "empty": "Insira conteudo primeiro.",
-      "success": "Comparacao de texto concluida",
-      "failed": "Falha na operacao: "
+      "success": "Comparação de texto concluída",
+      "failed": "Falha na operação: "
     },
     "leftPlaceholder": "Cole o texto original...",
     "rightPlaceholder": "Cole o texto alterado...",
-    "outputPlaceholder": "O diff de texto aparecera aqui..."
+    "outputPlaceholder": "O diff de texto aparecerá aqui..."
   }
 }

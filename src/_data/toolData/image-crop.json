@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Image Crop — Coding.Tools",
-    "description": "Crop PNG, JPEG, and WebP images online with a draggable crop box, ratio presets, quality control, and local browser processing.",
+    "title": "Image Crop - Coding.Tools",
+    "description": "Crop PNG, JPEG, and WebP images locally with a draggable crop box, ratio presets, exact coordinates, and previewed export.",
     "toolTitle": "Image Crop",
-    "toolDescription": "Crop one image in your browser with a draggable crop box, numeric fields, ratio presets, and format-aware export.",
+    "toolDescription": "Crop one image in the browser with a draggable selection, ratio presets, exact pixel coordinates, and JPEG/WebP quality control.",
     "categoryName": "Image Utilities",
     "labels": {
       "clickOrDrop": "Click or drag an image file here",
@@ -47,11 +47,11 @@
     },
     "dropzoneMessage": "Click or drag an image file here",
     "dropzoneHint": "PNG, JPEG, WebP · Max 10MB",
-    "descTitle": "Image Crop",
+    "descTitle": "Crop to the exact frame you need",
     "descParas": [
-      "This tool crops a single PNG, JPEG, or WebP image directly in your browser. Drag or resize the crop box, choose a ratio preset, or type exact pixel coordinates.",
-      "The original file stays on your device. Canvas export preserves PNG, JPEG, or WebP when the browser supports that output format, and falls back to PNG if needed.",
-      "Use freeform crop for arbitrary selections or ratio presets such as 1:1, 4:3, and 16:9 for predictable social, thumbnail, and document sizes."
+      "<strong>Image Crop cuts out a selected rectangular area from a PNG, JPEG, or WebP image without uploading it.</strong> Use it to remove edges, center a subject, or match fixed card, thumbnail, avatar, and social preview ratios.",
+      "The crop box uses pixel coordinates: X and Y mark the top-left corner, while width and height define the selected area. Cropping changes composition and output dimensions; the selected pixels are exported at their chosen crop size.",
+      "Processing runs through the browser canvas. Free crop is best for arbitrary framing, while 1:1, 4:3, and 16:9 presets help when the destination requires a stable aspect ratio. Review the output because metadata and orientation handling can differ after re-encoding."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -59,20 +59,20 @@
       "Drag the crop box, resize it from the handles, choose a ratio preset, or type exact crop values.",
       "Adjust JPEG/WebP quality, preview the output, then download the cropped image."
     ],
-    "whatIs": "When to crop images",
+    "whatIs": "When should you crop an image?",
     "whatIsParas": [
-      "Crop images to remove unwanted edges, focus on the subject, or fit fixed aspect ratios for cards, thumbnails, and social previews.",
-      "Use exact numeric fields when a design or CMS requires a specific pixel crop."
+      "<strong>Image Crop</strong> is for changing the frame of an image: remove empty margins, focus on the important subject, or fit an image into a fixed-ratio slot.",
+      "Use exact X, Y, width, and height values when a design spec or CMS asks for a precise pixel crop. JPEG/WebP exports can be quality-adjusted, while PNG is the safer choice when transparency must remain intact."
     ],
     "example": "Crop with Canvas",
-    "examplePara": "The browser workflow uses source coordinates in Canvas drawImage:",
+    "examplePara": "Canvas cropping uses source coordinates and draws only the selected rectangle into the output canvas:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "cn": {
-    "title": "图片裁剪 — Coding.Tools",
-    "description": "在线裁剪 PNG、JPEG 和 WebP 图片，支持可拖拽裁剪框、比例预设、质量控制，并在浏览器本地处理。",
+    "title": "图像裁剪 - Coding.Tools",
+    "description": "使用可拖动的裁剪框、比例预设、精确坐标和预览导出在本地裁剪 PNG、JPEG 和 WebP 图像。",
     "toolTitle": "图片裁剪",
-    "toolDescription": "在浏览器中裁剪单张图片，支持可拖拽裁剪框、数值输入、比例预设和按原格式导出。",
+    "toolDescription": "通过可拖动的选择、比例预设、精确的像素坐标和 JPEG/WebP 质量控制在浏览器中裁剪一张图像。",
     "categoryName": "图片工具",
     "labels": {
       "clickOrDrop": "点击或拖拽图片文件到此处",
@@ -116,32 +116,32 @@
     },
     "dropzoneMessage": "点击或拖拽图片文件到此处",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
-    "descTitle": "图片裁剪",
+    "descTitle": "裁剪到您需要的确切框架",
     "descParas": [
-      "此工具可直接在浏览器中裁剪单张 PNG、JPEG 或 WebP 图片。您可以拖动或调整裁剪框，选择比例预设，或输入精确的像素坐标。",
-      "原始文件会保留在您的设备上。浏览器支持时，Canvas 导出会保留 PNG、JPEG 或 WebP 格式；如不支持，则回退为 PNG。",
-      "自由裁剪适合任意选区；1:1、4:3、16:9 等比例预设适合社交预览、缩略图和文档尺寸。"
+      "<strong>图像裁剪从 PNG、JPEG 或 WebP 图像中剪切选定的矩形区域，无需上传。</strong> 使用它来删除边缘、居中主题或匹配固定卡片、缩略图、头像和社交预览比例。",
+      "裁剪框使用像素坐标：X 和 Y 标记左上角，而宽度和高度定义所选区域。裁剪会改变成分和输出尺寸；所选像素以其选择的裁剪尺寸导出。",
+      "处理通过浏览器画布进行。自由裁剪最适合任意取景，而当目的地需要稳定的宽高比时，1:1、4:3 和 16:9 预设会有所帮助。检查输出，因为重新编码后元数据和方向处理可能会有所不同。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "上传一张 PNG、JPEG 或 WebP 图片。",
-      "拖动裁剪框、通过控制点调整大小、选择比例预设，或输入精确裁剪值。",
-      "调整 JPEG/WebP 质量，预览输出，然后下载裁剪后的图片。"
+      "上传一张 PNG、JPEG 或 WebP 图像。",
+      "拖动裁剪框，通过手柄调整其大小，选择比例预设，或输入精确的裁剪值。",
+      "调整 JPEG/WebP 质量，预览输出，然后下载裁剪后的图像。"
     ],
-    "whatIs": "何时裁剪图片",
+    "whatIs": "什么时候应该裁剪图像？",
     "whatIsParas": [
-      "裁剪图片可去除多余边缘、突出主体，或适配卡片、缩略图和社交预览所需的固定比例。",
-      "当设计稿或 CMS 需要特定像素裁剪区域时，可以使用精确的数值字段。"
+      "<strong>图片裁剪</strong> 用于更改图像的框架：删除空白边距、聚焦于重要主题或将图像放入固定比例的槽中。",
+      "当设计规范或 CMS 要求精确的像素裁剪时，请使用精确的 X、Y、宽度和高度值。 JPEG/WebP 导出可以进行质量调整，而当必须保持透明度不变时，PNG 是更安全的选择。"
     ],
     "example": "使用 Canvas 裁剪",
-    "examplePara": "浏览器流程使用 Canvas drawImage 的源坐标：",
+    "examplePara": "画布裁剪使用源坐标并仅将选定的矩形绘制到输出画布中：",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "tw": {
-    "title": "圖片裁切 — Coding.Tools",
-    "description": "線上裁切 PNG、JPEG 和 WebP 圖片，支援可拖曳裁切框、比例預設、品質控制，並在瀏覽器本機處理。",
+    "title": "影像裁切 - Coding.Tools",
+    "description": "使用可拖曳的裁切框、比例預設、精確座標和預覽導出在本地裁剪 PNG、JPEG 和 WebP 影像。",
     "toolTitle": "圖片裁切",
-    "toolDescription": "在瀏覽器中裁切單張圖片，支援可拖曳裁切框、數值欄位、比例預設和依原格式匯出。",
+    "toolDescription": "透過可拖曳的選擇、比例預設、精確的像素座標和 JPEG/WebP 品質控制在瀏覽器中裁剪一張影像。",
     "categoryName": "圖片工具",
     "labels": {
       "clickOrDrop": "點擊或拖曳圖片檔案到此處",
@@ -185,32 +185,32 @@
     },
     "dropzoneMessage": "點擊或拖曳圖片檔案到此處",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
-    "descTitle": "圖片裁切",
+    "descTitle": "裁剪到您需要的確切框架",
     "descParas": [
-      "此工具可直接在瀏覽器中裁切單張 PNG、JPEG 或 WebP 圖片。您可以拖曳或調整裁切框，選擇比例預設，或輸入精確的像素座標。",
-      "原始檔案會保留在您的裝置上。瀏覽器支援時，Canvas 匯出會保留 PNG、JPEG 或 WebP 格式；若不支援，則改用 PNG。",
-      "自由裁切適合任意選區；1:1、4:3、16:9 等比例預設適合社群預覽、縮圖和文件尺寸。"
+      "<strong>影像裁切從 PNG、JPEG 或 WebP 影像中剪下選定的矩形區域，無需上傳。</strong> 使用它來刪除邊緣、居中主題或匹配固定卡片、縮圖、個人資料和社交預覽比例。",
+      "裁切框使用像素座標：X 和 Y 標記左上角，而寬度和高度定義所選區域。裁剪會改變成分和輸出尺寸；所選像素以其選擇的裁剪尺寸導出。",
+      "處理透過瀏覽器畫布進行。自由裁切最適合任意取景，而當目的地需要穩定的寬高比時，1:1、4:3 和 16:9 預設會有所幫助。檢查輸出，因為重新編碼後元資料和方向處理可能會有所不同。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "上傳一張 PNG、JPEG 或 WebP 圖片。",
-      "拖曳裁切框、透過控制點調整大小、選擇比例預設，或輸入精確裁切值。",
-      "調整 JPEG/WebP 品質，預覽輸出，然後下載裁切後的圖片。"
+      "上傳一張 PNG、JPEG 或 WebP 影像。",
+      "拖曳裁剪框，透過手把調整其大小，選擇比例預設，或輸入精確的裁切值。",
+      "調整 JPEG/WebP 質量，預覽輸出，然後下載裁剪後的影像。"
     ],
-    "whatIs": "何時裁切圖片",
+    "whatIs": "什麼時候該裁剪圖像？",
     "whatIsParas": [
-      "裁切圖片可去除多餘邊緣、突出主體，或符合卡片、縮圖和社群預覽所需的固定比例。",
-      "當設計稿或 CMS 需要特定像素裁切區域時，可以使用精確的數值欄位。"
+      "<strong>圖片裁切</strong> 用於更改影像的框架：刪除空白邊距、聚焦於重要主題或將影像放入固定比例的槽中。",
+      "當設計規格或 CMS 要求精確的像素裁剪時，請使用精確的 X、Y、寬度和高度值。 JPEG/WebP 匯出可以進行品質調整，而當必須保持透明度不變時，PNG 是更安全的選擇。"
     ],
     "example": "使用 Canvas 裁切",
-    "examplePara": "瀏覽器流程使用 Canvas drawImage 的來源座標：",
+    "examplePara": "畫布裁剪使用來源座標並僅將選定的矩形繪製到輸出畫布中：",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "jp": {
-    "title": "画像トリミング — Coding.Tools",
-    "description": "PNG、JPEG、WebP 画像をオンラインでトリミングします。ドラッグ可能な範囲、比率プリセット、品質調整、ブラウザ内ローカル処理に対応します。",
+    "title": "画像のトリミング - Coding.Tools",
+    "description": "ドラッグ可能なクロップ ボックス、比率プリセット、正確な座標、プレビューされたエクスポートを使用して、PNG、JPEG、および WebP 画像をローカルでクロップします。",
     "toolTitle": "画像トリミング",
-    "toolDescription": "ブラウザ内で画像1枚をトリミングし、ドラッグ可能な範囲、数値入力、比率プリセット、形式に応じた書き出しを利用できます。",
+    "toolDescription": "ドラッグ可能な選択、比率プリセット、正確なピクセル座標、JPEG/WebP 品質管理を使用して、ブラウザーで 1 つの画像をトリミングします。",
     "categoryName": "画像ツール",
     "labels": {
       "clickOrDrop": "画像ファイルをクリックまたはドラッグ",
@@ -254,32 +254,32 @@
     },
     "dropzoneMessage": "画像ファイルをクリックまたはドラッグ",
     "dropzoneHint": "PNG、JPEG、WebP · 最大10MB",
-    "descTitle": "画像トリミング",
+    "descTitle": "必要なフレームに合わせてトリミングします",
     "descParas": [
-      "このツールは、PNG、JPEG、WebP 画像1枚をブラウザ内で直接トリミングします。切り抜き範囲をドラッグまたはリサイズし、比率プリセットを選ぶか、正確なピクセル座標を入力できます。",
-      "元のファイルは端末上に残ります。Canvas の書き出しは、ブラウザが対応している場合 PNG、JPEG、WebP を維持し、必要に応じて PNG にフォールバックします。",
-      "自由切り抜きは任意の範囲に、1:1、4:3、16:9 などの比率プリセットは SNS プレビュー、サムネイル、ドキュメント用サイズに便利です。"
+      "<strong>画像トリミングは、アップロードせずに、PNG、JPEG、または WebP 画像から選択した長方形の領域を切り出します。</strong> エッジを削除したり、被写体を中央に配置したり、固定カード、サムネイル、アバター、ソーシャル プレビューの比率を一致させるために使用します。",
+      "クロップ ボックスはピクセル座標を使用します。X と Y は左上隅をマークし、幅と高さは選択した領域を定義します。クロップすると、構成と出力サイズが変更されます。選択したピクセルは、選択したトリミング サイズでエクスポートされます。",
+      "処理はブラウザのキャンバスを通じて実行されます。フリー クロップは任意のフレーミングに最適ですが、1:1、4:3、および 16:9 のプリセットは、目的地で安定したアスペクト比が必要な場合に役立ちます。再エンコード後はメタデータと方向の処理が異なる可能性があるため、出力を確認してください。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "PNG、JPEG、WebP 画像を1枚アップロードします。",
-      "切り抜き範囲をドラッグし、ハンドルでサイズ変更し、比率プリセットまたは正確な値を指定します。",
-      "JPEG/WebP の品質を調整し、出力を確認してからトリミング後の画像をダウンロードします。"
+      "PNG、JPEG、または WebP 画像を 1 つアップロードします。",
+      "クロップ ボックスをドラッグし、ハンドルからサイズを変更し、比率プリセットを選択するか、正確なクロップ値を入力します。",
+      "JPEG/WebP の品質を調整し、出力をプレビューして、トリミングされた画像をダウンロードします。"
     ],
-    "whatIs": "画像トリミングの用途",
+    "whatIs": "画像をトリミングする必要があるのはどのような場合ですか?",
     "whatIsParas": [
-      "不要な端を取り除き、被写体を強調し、カード、サムネイル、SNS プレビュー用の固定比率に合わせられます。",
-      "デザインや CMS が特定ピクセルの切り抜き範囲を要求する場合は、正確な数値入力を使えます。"
+      "<strong>画像クロップ</strong> は、画像のフレームを変更するためのものです。空白の余白を削除したり、重要な被写体に焦点を合わせたり、画像を固定比率のスロットに収めたりすることができます。",
+      "デザイン仕様または CMS で正確なピクセルのトリミングが必要な場合は、正確な X、Y、幅、高さの値を使用します。 JPEG/WebP エクスポートは品質を調整できますが、透明度を維持する必要がある場合は PNG がより安全な選択です。"
     ],
     "example": "Canvas でトリミング",
-    "examplePara": "ブラウザでは Canvas drawImage の元座標を使用します：",
+    "examplePara": "キャンバスのトリミングでは、ソース座標が使用され、選択された四角形のみが出力キャンバスに描画されます。",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "kr": {
-    "title": "이미지 자르기 — Coding.Tools",
-    "description": "PNG, JPEG, WebP 이미지를 온라인에서 자릅니다. 드래그 가능한 자르기 영역, 비율 프리셋, 품질 제어, 브라우저 로컬 처리를 지원합니다.",
+    "title": "이미지 자르기 - Coding.Tools",
+    "description": "드래그 가능한 자르기 상자, 비율 사전 설정, 정확한 좌표 및 미리보기 내보내기를 사용하여 PNG, JPEG 및 WebP 이미지를 로컬에서 자릅니다.",
     "toolTitle": "이미지 자르기",
-    "toolDescription": "브라우저에서 이미지 한 장을 자르고 드래그 가능한 영역, 숫자 입력, 비율 프리셋, 형식별 내보내기를 사용할 수 있습니다.",
+    "toolDescription": "드래그 가능한 선택, 비율 사전 설정, 정확한 픽셀 좌표 및 JPEG/WebP 품질 관리를 통해 브라우저에서 하나의 이미지를 자릅니다.",
     "categoryName": "이미지 도구",
     "labels": {
       "clickOrDrop": "이미지 파일을 클릭하거나 드래그하세요",
@@ -323,32 +323,32 @@
     },
     "dropzoneMessage": "이미지 파일을 클릭하거나 드래그하세요",
     "dropzoneHint": "PNG, JPEG, WebP · 최대 10MB",
-    "descTitle": "이미지 자르기",
+    "descTitle": "필요한 정확한 프레임으로 자르기",
     "descParas": [
-      "이 도구는 PNG, JPEG 또는 WebP 이미지 한 장을 브라우저에서 직접 자릅니다. 자르기 영역을 드래그하거나 크기를 조정하고, 비율 프리셋을 선택하거나 정확한 픽셀 좌표를 입력할 수 있습니다.",
-      "원본 파일은 사용자의 기기에 남아 있습니다. Canvas 내보내기는 브라우저가 지원하면 PNG, JPEG 또는 WebP 형식을 유지하고, 필요하면 PNG로 대체합니다.",
-      "자유 자르기는 임의 선택에 적합하고, 1:1, 4:3, 16:9 같은 비율 프리셋은 소셜 미리보기, 썸네일, 문서 크기에 유용합니다."
+      "<strong>이미지 자르기는 업로드하지 않고 PNG, JPEG 또는 WebP 이미지에서 선택한 직사각형 영역을 잘라냅니다.</strong> 이를 사용하여 가장자리를 제거하거나 피사체를 중앙에 배치하거나 고정된 카드, 썸네일, 아바타 및 소셜 미리보기 비율을 일치시킵니다.",
+      "자르기 상자는 픽셀 좌표를 사용합니다. X와 Y는 왼쪽 위 모서리를 표시하고 너비와 높이는 선택한 영역을 정의합니다. 자르기는 구성과 출력 크기를 변경합니다. 선택한 픽셀은 선택한 자르기 크기로 내보내집니다.",
+      "처리는 브라우저 캔버스를 통해 실행됩니다. 무료 자르기는 임의 프레임에 가장 적합하며, 1:1, 4:3 및 16:9 사전 설정은 대상에 안정적인 종횡비가 필요할 때 도움이 됩니다. 다시 인코딩한 후에는 메타데이터와 방향 처리가 다를 수 있으므로 출력을 검토하세요."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "PNG, JPEG 또는 WebP 이미지 한 장을 업로드합니다.",
-      "자르기 영역을 드래그하고 핸들로 크기를 조정하거나, 비율 프리셋 또는 정확한 자르기 값을 입력합니다.",
-      "JPEG/WebP 품질을 조정하고 출력을 미리 본 뒤 자른 이미지를 다운로드합니다."
+      "PNG, JPEG 또는 WebP 이미지 하나를 업로드하세요.",
+      "자르기 상자를 드래그하고, 핸들에서 크기를 조정하고, 비율 사전 설정을 선택하거나, 정확한 자르기 값을 입력하세요.",
+      "JPEG/WebP 품질을 조정하고 출력을 미리 본 다음 잘린 이미지를 다운로드하세요."
     ],
-    "whatIs": "이미지 자르기가 필요한 경우",
+    "whatIs": "언제 이미지를 잘라야 합니까?",
     "whatIsParas": [
-      "이미지를 잘라 불필요한 가장자리를 제거하고, 주제를 강조하거나 카드, 썸네일, 소셜 미리보기에 필요한 고정 비율에 맞출 수 있습니다.",
-      "디자인이나 CMS가 특정 픽셀 자르기 영역을 요구할 때는 정확한 숫자 필드를 사용할 수 있습니다."
+      "<strong>이미지 자르기</strong>는 이미지의 프레임을 변경하는 데 사용됩니다. 빈 여백을 제거하고 중요한 피사체에 초점을 맞추거나 이미지를 고정 비율 슬롯에 맞춥니다.",
+      "디자인 사양이나 CMS에서 정확한 픽셀 자르기를 요구하는 경우 정확한 X, Y, 너비 및 높이 값을 사용하세요. JPEG/WebP 내보내기는 품질 조정이 가능한 반면, 투명도를 그대로 유지해야 하는 경우 PNG가 더 안전한 선택입니다."
     ],
     "example": "Canvas로 자르기",
-    "examplePara": "브라우저 흐름은 Canvas drawImage의 원본 좌표를 사용합니다:",
+    "examplePara": "캔버스 자르기는 소스 좌표를 사용하고 선택한 사각형만 출력 캔버스에 그립니다.",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "fr": {
-    "title": "Recadrer une image — Coding.Tools",
-    "description": "Recadrez des images PNG, JPEG et WebP en ligne avec zone déplaçable, ratios prédéfinis, qualité réglable et traitement local dans le navigateur.",
+    "title": "Recadrage d'image - Coding.Tools",
+    "description": "Recadrez les images PNG, JPEG et WebP localement avec une zone de recadrage déplaçable, des préréglages de ratio, des coordonnées exactes et un aperçu de l'exportation.",
     "toolTitle": "Recadrer une image",
-    "toolDescription": "Recadrez une image dans le navigateur avec zone déplaçable, champs numériques, ratios prédéfinis et export adapté au format.",
+    "toolDescription": "Recadrez une image dans le navigateur avec une sélection déplaçable, des préréglages de ratio, des coordonnées exactes des pixels et un contrôle de qualité JPEG/WebP.",
     "categoryName": "Outils image",
     "labels": {
       "clickOrDrop": "Cliquez ou déposez une image ici",
@@ -392,32 +392,32 @@
     },
     "dropzoneMessage": "Cliquez ou déposez une image ici",
     "dropzoneHint": "PNG, JPEG, WebP · 10 Mo max",
-    "descTitle": "Recadrer une image",
+    "descTitle": "Recadrez selon le cadre exact dont vous avez besoin",
     "descParas": [
-      "Cet outil recadre une image PNG, JPEG ou WebP directement dans votre navigateur. Déplacez ou redimensionnez la zone de recadrage, choisissez un ratio prédéfini ou saisissez des coordonnées exactes en pixels.",
-      "Le fichier original reste sur votre appareil. L export Canvas conserve PNG, JPEG ou WebP lorsque le navigateur prend en charge ce format, avec repli en PNG si nécessaire.",
-      "Le recadrage libre convient aux sélections arbitraires ; les ratios 1:1, 4:3 et 16:9 aident pour les aperçus sociaux, miniatures et documents."
+      "<strong>Recadrer une image coupe une zone rectangulaire sélectionnée à partir d'une image PNG, JPEG ou WebP sans la télécharger.</strong> Utilisez-le pour supprimer les bords, centrer un sujet ou faire correspondre les ratios fixes de carte, de vignette, d'avatar et de prévisualisation sociale.",
+      "The crop box uses pixel coordinates: X and Y mark the top-left corner, while width and height define the selected area. Cropping changes composition and output dimensions; les pixels sélectionnés sont exportés à la taille de recadrage choisie.",
+      "Le traitement s'exécute via la toile du navigateur. Le recadrage gratuit est idéal pour un cadrage arbitraire, tandis que les préréglages 1:1, 4:3 et 16:9 sont utiles lorsque la destination nécessite un rapport hauteur/largeur stable. Examinez le résultat, car la gestion des métadonnées et de l’orientation peut différer après le réencodage."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Importez une image PNG, JPEG ou WebP.",
-      "Déplacez la zone de recadrage, redimensionnez-la avec les poignées, choisissez un ratio ou saisissez des valeurs exactes.",
-      "Réglez la qualité JPEG/WebP, vérifiez la sortie, puis téléchargez l image recadrée."
+      "Téléchargez une image PNG, JPEG ou WebP.",
+      "Faites glisser la zone de recadrage, redimensionnez-la à partir des poignées, choisissez un rapport prédéfini ou saisissez des valeurs de recadrage exactes.",
+      "Ajustez la qualité JPEG/WebP, prévisualisez la sortie, puis téléchargez l'image recadrée."
     ],
-    "whatIs": "Quand recadrer une image",
+    "whatIs": "Quand faut-il recadrer une image ?",
     "whatIsParas": [
-      "Recadrez des images pour retirer les bords inutiles, mettre le sujet en valeur ou respecter des ratios fixes pour les cartes, miniatures et aperçus sociaux.",
-      "Utilisez les champs numériques lorsqu un design ou un CMS exige une zone de recadrage précise en pixels."
+      "<strong>Recadrer une image</strong> permet de modifier le cadre d'une image : supprimez les marges vides, faites la mise au point sur le sujet important ou placez une image dans un emplacement à rapport fixe.",
+      "Utilisez des valeurs exactes de X, Y, de largeur et de hauteur lorsqu'une spécification de conception ou un CMS demande un recadrage précis des pixels. Les exportations JPEG/WebP peuvent être ajustées en termes de qualité, tandis que PNG constitue le choix le plus sûr lorsque la transparence doit rester intacte."
     ],
     "example": "Recadrer avec Canvas",
-    "examplePara": "Le navigateur utilise les coordonnées source dans Canvas drawImage :",
+    "examplePara": "Le recadrage du canevas utilise les coordonnées source et dessine uniquement le rectangle sélectionné dans le canevas de sortie :",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "de": {
-    "title": "Bild zuschneiden — Coding.Tools",
-    "description": "Schneiden Sie PNG-, JPEG- und WebP-Bilder online mit ziehbarem Zuschnittfeld, Verhältnisvorgaben, Qualitätsregler und lokaler Browser-Verarbeitung zu.",
+    "title": "Bildzuschnitt - Coding.Tools",
+    "description": "Beschneiden Sie PNG-, JPEG- und WebP-Bilder lokal mit einem ziehbaren Zuschneiderahmen, Verhältnisvoreinstellungen, genauen Koordinaten und einer Exportvorschau.",
     "toolTitle": "Bild zuschneiden",
-    "toolDescription": "Schneiden Sie ein Bild im Browser mit ziehbarem Feld, Zahlenwerten, Verhältnisvorgaben und formatbewusstem Export zu.",
+    "toolDescription": "Beschneiden Sie ein Bild im Browser mit einer ziehbaren Auswahl, Verhältnisvoreinstellungen, genauen Pixelkoordinaten und JPEG/WebP-Qualitätskontrolle.",
     "categoryName": "Bild-Tools",
     "labels": {
       "clickOrDrop": "Bilddatei hier klicken oder ziehen",
@@ -461,32 +461,32 @@
     },
     "dropzoneMessage": "Bilddatei hier klicken oder ziehen",
     "dropzoneHint": "PNG, JPEG, WebP · Max. 10 MB",
-    "descTitle": "Bild zuschneiden",
+    "descTitle": "Schneiden Sie es genau auf den Rahmen zu, den Sie benötigen",
     "descParas": [
-      "Dieses Tool schneidet ein einzelnes PNG-, JPEG- oder WebP-Bild direkt im Browser zu. Ziehen oder skalieren Sie das Zuschnittfeld, wählen Sie eine Verhältnisvorgabe oder geben Sie exakte Pixelkoordinaten ein.",
-      "Die Originaldatei bleibt auf Ihrem Gerät. Der Canvas-Export behält PNG, JPEG oder WebP bei, wenn der Browser das Ausgabeformat unterstützt, andernfalls wird PNG verwendet.",
-      "Freier Zuschnitt eignet sich für beliebige Bereiche; Vorgaben wie 1:1, 4:3 und 16:9 helfen bei Social Previews, Thumbnails und Dokumentgrößen."
+      "<strong>Bild zuschneiden schneidet einen ausgewählten rechteckigen Bereich aus einem PNG-, JPEG- oder WebP-Bild aus, ohne es hochzuladen.</strong> Verwenden Sie es, um Kanten zu entfernen, ein Motiv zu zentrieren oder feste Karten-, Miniaturbild-, Avatar- und Social-Preview-Verhältnisse anzupassen.",
+      "Der Zuschneiderahmen verwendet Pixelkoordinaten: X und Y markieren die obere linke Ecke, während Breite und Höhe den ausgewählten Bereich definieren. Durch Zuschneiden ändern sich die Zusammensetzung und die Ausgabeabmessungen. Die ausgewählten Pixel werden in der gewählten Zuschnittgröße exportiert.",
+      "Die Verarbeitung erfolgt über den Browser-Canvas. Der freie Zuschnitt eignet sich am besten für beliebige Bildausschnitte, während die Voreinstellungen 1:1, 4:3 und 16:9 hilfreich sind, wenn das Ziel ein stabiles Seitenverhältnis erfordert. Überprüfen Sie die Ausgabe, da die Handhabung von Metadaten und Ausrichtung nach der Neucodierung unterschiedlich sein kann."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
       "Laden Sie ein PNG-, JPEG- oder WebP-Bild hoch.",
-      "Ziehen Sie das Zuschnittfeld, ändern Sie die Größe an den Griffen, wählen Sie ein Verhältnis oder geben Sie genaue Werte ein.",
-      "Passen Sie die JPEG/WebP-Qualität an, prüfen Sie die Ausgabe und laden Sie das zugeschnittene Bild herunter."
+      "Ziehen Sie das Zuschneidefeld, ändern Sie seine Größe über die Ziehpunkte, wählen Sie eine Verhältnisvoreinstellung oder geben Sie genaue Zuschneidewerte ein.",
+      "Passen Sie die Qualität von JPEG/WebP an, zeigen Sie eine Vorschau der Ausgabe an und laden Sie dann das zugeschnittene Bild herunter."
     ],
-    "whatIs": "Wann Bilder zugeschnitten werden",
+    "whatIs": "Wann sollte man ein Bild zuschneiden?",
     "whatIsParas": [
-      "Schneiden Sie Bilder zu, um unerwünschte Ränder zu entfernen, das Motiv zu fokussieren oder feste Seitenverhältnisse für Karten, Thumbnails und Social Previews einzuhalten.",
-      "Nutzen Sie exakte Zahlenfelder, wenn ein Design oder CMS einen bestimmten Pixelzuschnitt verlangt."
+      "<strong>Bild zuschneiden</strong> dient zum Ändern des Rahmens eines Bildes: Entfernen Sie leere Ränder, fokussieren Sie sich auf das wichtige Motiv oder passen Sie ein Bild in einen Slot mit festem Seitenverhältnis ein.",
+      "Verwenden Sie exakte X-, Y-, Breiten- und Höhenwerte, wenn eine Designspezifikation oder ein CMS einen präzisen Pixelzuschnitt verlangt. JPEG/WebP-Exporte können qualitätsangepasst werden, während PNG die sicherere Wahl ist, wenn die Transparenz erhalten bleiben muss."
     ],
     "example": "Mit Canvas zuschneiden",
-    "examplePara": "Der Browser nutzt Quellkoordinaten in Canvas drawImage:",
+    "examplePara": "Beim Zuschneiden der Leinwand werden Quellkoordinaten verwendet und nur das ausgewählte Rechteck in die Ausgabe-Leinwand gezeichnet:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "es": {
-    "title": "Recortar imagen — Coding.Tools",
-    "description": "Recorte imágenes PNG, JPEG y WebP en línea con área arrastrable, proporciones predefinidas, control de calidad y procesamiento local en el navegador.",
+    "title": "Recorte de imagen - Coding.Tools",
+    "description": "Recorte imágenes PNG, JPEG y WebP localmente con un cuadro de recorte que se puede arrastrar, ajustes preestablecidos de proporciones, coordenadas exactas y exportación con vista previa.",
     "toolTitle": "Recortar imagen",
-    "toolDescription": "Recorte una imagen en el navegador con área arrastrable, campos numéricos, proporciones predefinidas y exportación según el formato.",
+    "toolDescription": "Recorte una imagen en el navegador con una selección que se puede arrastrar, ajustes preestablecidos de proporción, coordenadas exactas de píxeles y control de calidad JPEG/WebP.",
     "categoryName": "Utilidades de imagen",
     "labels": {
       "clickOrDrop": "Haga clic o arrastre una imagen aquí",
@@ -530,32 +530,32 @@
     },
     "dropzoneMessage": "Haga clic o arrastre una imagen aquí",
     "dropzoneHint": "PNG, JPEG, WebP · Máx. 10MB",
-    "descTitle": "Recortar imagen",
+    "descTitle": "Recorta hasta el marco exacto que necesitas",
     "descParas": [
-      "Esta herramienta recorta una imagen PNG, JPEG o WebP directamente en el navegador. Arrastre o cambie el tamaño del área de recorte, elija una proporción predefinida o escriba coordenadas exactas en píxeles.",
-      "El archivo original permanece en su dispositivo. La exportación de Canvas conserva PNG, JPEG o WebP cuando el navegador admite ese formato, y usa PNG como alternativa si es necesario.",
-      "El recorte libre sirve para selecciones arbitrarias; las proporciones 1:1, 4:3 y 16:9 ayudan con vistas sociales, miniaturas y tamaños de documentos."
+      "<strong>Recortar imagen recorta un área rectangular seleccionada de una imagen PNG, JPEG o WebP sin cargarla.</strong> Úselo para eliminar bordes, centrar un sujeto o igualar proporciones fijas de tarjeta, miniatura, avatar y vista previa social.",
+      "El cuadro de recorte utiliza coordenadas de píxeles: X e Y marcan la esquina superior izquierda, mientras que el ancho y el alto definen el área seleccionada. El cultivo cambia la composición y las dimensiones de la producción; los píxeles seleccionados se exportan con el tamaño de recorte elegido.",
+      "El procesamiento se ejecuta a través del lienzo del navegador. El recorte libre es mejor para encuadres arbitrarios, mientras que los ajustes preestablecidos 1:1, 4:3 y 16:9 ayudan cuando el destino requiere una relación de aspecto estable. Revise el resultado porque el manejo de metadatos y orientación puede diferir después de volver a codificar."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Suba una imagen PNG, JPEG o WebP.",
-      "Arrastre el área de recorte, cambie su tamaño desde los controles, elija una proporción o escriba valores exactos.",
-      "Ajuste la calidad JPEG/WebP, revise la salida y descargue la imagen recortada."
+      "Cargue una imagen PNG, JPEG o WebP.",
+      "Arrastre el cuadro de recorte, cambie su tamaño desde los controladores, elija una proporción preestablecida o escriba valores de recorte exactos.",
+      "Ajuste la calidad de JPEG/WebP, obtenga una vista previa del resultado y luego descargue la imagen recortada."
     ],
-    "whatIs": "Cuándo recortar imágenes",
+    "whatIs": "¿Cuándo deberías recortar una imagen?",
     "whatIsParas": [
-      "Recorte imágenes para quitar bordes no deseados, enfocar el sujeto o encajar proporciones fijas para tarjetas, miniaturas y vistas sociales.",
-      "Use campos numéricos exactos cuando un diseño o CMS requiera un recorte específico en píxeles."
+      "<strong>Recortar imagen</strong> sirve para cambiar el marco de una imagen: eliminar márgenes vacíos, enfocar el sujeto importante o ajustar una imagen en una ranura de proporción fija.",
+      "Utilice valores exactos de X, Y, ancho y alto cuando una especificación de diseño o CMS solicite un recorte de píxeles preciso. Las exportaciones JPEG/WebP se pueden ajustar en función de la calidad, mientras que PNG es la opción más segura cuando la transparencia debe permanecer intacta."
     ],
     "example": "Recortar con Canvas",
-    "examplePara": "El navegador usa coordenadas de origen en Canvas drawImage:",
+    "examplePara": "El recorte del lienzo utiliza las coordenadas de origen y dibuja solo el rectángulo seleccionado en el lienzo de salida:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   },
   "pt": {
-    "title": "Cortar imagem — Coding.Tools",
-    "description": "Corte imagens PNG, JPEG e WebP online com área arrastável, proporções predefinidas, controle de qualidade e processamento local no navegador.",
+    "title": "Corte de imagem - Coding.Tools",
+    "description": "Corte imagens PNG, JPEG e WebP localmente com uma caixa de corte arrastável, predefinições de proporção, coordenadas exatas e exportação visualizada.",
     "toolTitle": "Cortar imagem",
-    "toolDescription": "Corte uma imagem no navegador com área arrastável, campos numéricos, proporções predefinidas e exportação conforme o formato.",
+    "toolDescription": "Corte uma imagem no navegador com seleção arrastável, predefinições de proporção, coordenadas exatas de pixels e controle de qualidade JPEG/WebP.",
     "categoryName": "Ferramentas de imagem",
     "labels": {
       "clickOrDrop": "Clique ou arraste uma imagem aqui",
@@ -599,25 +599,25 @@
     },
     "dropzoneMessage": "Clique ou arraste uma imagem aqui",
     "dropzoneHint": "PNG, JPEG, WebP · Máx. 10MB",
-    "descTitle": "Cortar imagem",
+    "descTitle": "Corte no quadro exato que você precisa",
     "descParas": [
-      "Esta ferramenta corta uma imagem PNG, JPEG ou WebP diretamente no navegador. Arraste ou redimensione a área de corte, escolha uma proporção predefinida ou digite coordenadas exatas em pixels.",
-      "O arquivo original permanece no seu dispositivo. A exportação via Canvas preserva PNG, JPEG ou WebP quando o navegador suporta esse formato, com fallback para PNG se necessário.",
-      "O corte livre serve para seleções arbitrárias; proporções como 1:1, 4:3 e 16:9 ajudam em prévias sociais, miniaturas e tamanhos de documentos."
+      "<strong>Cortar imagem corta uma área retangular selecionada de uma imagem PNG, JPEG ou WebP sem carregá-la.</strong> Use-o para remover bordas, centralizar um assunto ou combinar cartões fixos, miniaturas, avatares e proporções de visualização social.",
+      "A caixa de corte usa coordenadas de pixel: X e Y marcam o canto superior esquerdo, enquanto a largura e a altura definem a área selecionada. O corte altera a composição e as dimensões de saída; os pixels selecionados são exportados no tamanho de corte escolhido.",
+      "O processamento é executado na tela do navegador. O corte livre é melhor para enquadramentos arbitrários, enquanto as predefinições 1:1, 4:3 e 16:9 ajudam quando o destino requer uma proporção estável. Revise a saída porque o tratamento de metadados e orientação pode diferir após a recodificação."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Envie uma imagem PNG, JPEG ou WebP.",
-      "Arraste a área de corte, redimensione pelos controles, escolha uma proporção ou digite valores exatos.",
-      "Ajuste a qualidade JPEG/WebP, confira a saída e baixe a imagem cortada."
+      "Carregue uma imagem PNG, JPEG ou WebP.",
+      "Arraste a caixa de corte, redimensione-a a partir das alças, escolha uma predefinição de proporção ou digite valores exatos de corte.",
+      "Ajuste a qualidade JPEG/WebP, visualize a saída e baixe a imagem recortada."
     ],
-    "whatIs": "Quando cortar imagens",
+    "whatIs": "Quando você deve cortar uma imagem?",
     "whatIsParas": [
-      "Corte imagens para remover bordas indesejadas, focar no assunto ou encaixar proporções fixas para cards, miniaturas e prévias sociais.",
-      "Use campos numéricos exatos quando um design ou CMS exigir um corte específico em pixels."
+      "<strong>Cortar imagem</strong> serve para alterar o quadro de uma imagem: remover margens vazias, focar no assunto importante ou ajustar uma imagem em um slot de proporção fixa.",
+      "Use valores exatos de X, Y, largura e altura quando uma especificação de design ou CMS solicitar um corte preciso de pixels. As exportações JPEG/WebP podem ser ajustadas em termos de qualidade, enquanto PNG é a escolha mais segura quando a transparência deve permanecer intacta."
     ],
     "example": "Cortar com Canvas",
-    "examplePara": "O navegador usa coordenadas de origem em Canvas drawImage:",
+    "examplePara": "O recorte da tela usa coordenadas de origem e desenha apenas o retângulo selecionado na tela de saída:",
     "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = crop.width;\ncanvas.height = crop.height;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, crop.x, crop.y, crop.width, crop.height, 0, 0, crop.width, crop.height);\ncanvas.toBlob(saveBlob, outputMime, quality);"
   }
 }

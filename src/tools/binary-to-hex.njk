@@ -1,10 +1,5 @@
 ---
-title: "Binary to Hex Converter — Coding.Tools"
-description: "Convert binary numbers to hexadecimal, decimal, and octal instantly in your browser. Fast, private, and free to use."
-toolTitle: "Binary to Hex"
-toolDescription: "Enter a binary number and convert it to hexadecimal, decimal, and octal. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "binary-to-hex"
 permalink: "/binary-to-hex.html"
 ---
@@ -73,29 +68,7 @@ permalink: "/binary-to-hex.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Binary to Hex Converter</h2>
-  <p>This tool converts binary (base 2) numbers into their hexadecimal (base 16), decimal (base 10), and octal (base 8) equivalents. Since each hex digit maps to exactly four binary digits, this conversion is especially common when working with memory addresses, machine code, or network protocols.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a binary number into the input field (e.g. <code>11111111</code> or <code>10101100</code>).</li>
-    <li>Click <strong>Convert</strong> to see the hexadecimal, decimal, and octal results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the hex result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>Binary to hex relationship</h3>
-  <p>Each hexadecimal digit represents exactly four binary digits (bits). This makes the conversion straightforward: group the binary digits into sets of four from right to left, then convert each group to its hex equivalent. For example, <code>10101100</code> becomes <code>AC</code> in hexadecimal.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Binary:      10101100
-Hexadecimal: AC
-Decimal:     172
-Octal:       254</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

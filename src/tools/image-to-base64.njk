@@ -1,10 +1,5 @@
 ---
-title: "Image to Base64 — Coding.Tools"
-description: "Convert images to Base64 data URI strings online with local browser processing, no upload, and a 2MB input limit."
-toolTitle: "Image to Base64"
-toolDescription: "Convert any image to a Base64 encoded data URI for embedding in HTML or CSS."
 category: "image-utilities"
-categoryName: "Image Utilities"
 activeTool: "image-to-base64"
 permalink: "/image-to-base64.html"
 ---
@@ -199,40 +194,7 @@ permalink: "/image-to-base64.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Image to Base64</h2>
-  <p>This tool converts an image file into a Base64 encoded data URI string. You can embed this string directly in HTML or CSS, eliminating the need for a separate image file request.</p>
-  <p>Base64 encoding increases the data size by approximately 33%, so it's best used for small images like icons and logos rather than large photographs.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Drag and drop an image file onto the upload area, or click to select.</li>
-    <li>The Base64 encoded data URI appears in the text editor below.</li>
-    <li>Use <strong>Copy</strong> to copy the result or <strong>Save</strong> to download as a text file.</li>
-  </ol>
-
-  <h3>Embedding images in HTML</h3>
-  <p>You can use Base64 data URIs directly in HTML img tags:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">&lt;img src="data:image/png;base64,ivborw0kggo..." width="300" height="100" alt="base64 image"/&gt;
-
-/* In CSS */
-.logo {
-  background: url('data:image/png;base64,ivborw0kggo...');
-}</pre>
-  </div>
-
-  <h3>Convert with Python</h3>
-  <p>Convert an image to Base64 using Python:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy-2" type="button">Copy</button>
-    <pre class="code-block" id="example-code-2">import base64
-
-with open('image.png', 'rb') as f:
-    encoded = base64.b64encode(f.read())
-
-data_uri = 'data:image/png;base64,' + encoded.decode()</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

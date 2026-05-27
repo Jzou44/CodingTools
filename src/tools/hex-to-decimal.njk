@@ -1,10 +1,5 @@
 ---
-title: "Hex to Decimal Converter — Coding.Tools"
-description: "Convert hexadecimal numbers to decimal, octal, and binary instantly in your browser. Fast, private, and free to use."
-toolTitle: "Hex to Decimal"
-toolDescription: "Enter a hexadecimal number and convert it to decimal, octal, and binary. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "hex-to-decimal"
 permalink: "/hex-to-decimal.html"
 ---
@@ -232,29 +227,7 @@ permalink: "/hex-to-decimal.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Hex to Decimal Converter</h2>
-  <p>This tool converts hexadecimal (base 16) numbers into their decimal (base 10), octal (base 8), and binary (base 2) equivalents. It is useful when working with memory addresses, color codes, low-level programming, or any system that uses hexadecimal notation.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision, so large numbers are handled correctly without rounding errors.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a hexadecimal number into the input field (e.g. <code>1A2F</code> or <code>FF</code>).</li>
-    <li>Click <strong>Convert</strong> to see the decimal, octal, and binary results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the decimal result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>What is hexadecimal?</h3>
-  <p>Hexadecimal is a base 16 number system that uses the digits 0–9 and the letters A–F (where A = 10, B = 11, C = 12, D = 13, E = 14, F = 15). It is widely used in computing because each hex digit maps directly to four binary digits (bits), making it a compact way to represent binary data.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Hex:      1A2F
-Decimal:  6703
-Octal:    15057
-Binary:   1101000101111</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

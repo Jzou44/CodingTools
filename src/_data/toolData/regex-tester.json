@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Regex Tester — Coding.Tools",
-    "description": "Test regular expressions live with match highlighting and flag controls. Free browser-based regex testing tool.",
+    "title": "Regex Tester - Coding.Tools",
+    "description": "Test JavaScript regular expressions against sample text with live matches, match counts, and selectable regex flags.",
     "toolTitle": "Regex Tester",
-    "toolDescription": "Test regex patterns in real time with live match highlighting. No data leaves your browser.",
+    "toolDescription": "Test JavaScript regex patterns locally with live highlighting and flags for global, case-insensitive, multiline, dotAll, unicode, and sticky matching.",
     "categoryName": "String & Text Utilities",
     "regexPattern": "Regex Pattern",
     "regexPlaceholder": "Enter regex pattern, e.g. \\b\\w+@\\w+\\.\\w+\\b",
@@ -22,10 +22,10 @@
     "flagDotAll": "dotAll",
     "flagUnicode": "unicode",
     "flagSticky": "sticky",
-    "descTitle": "Regex Tester",
+    "descTitle": "Test JavaScript regex patterns against real text",
     "descParas": [
-      "This regular expression tester lets you write and validate regex patterns against sample text directly in your browser. All six standard JavaScript regex flags are available: global, case-insensitive, multiline, dotAll, unicode, and sticky. Matches are highlighted in real time so you can see exactly what your pattern captures.",
-      "The regex runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can test patterns privately and quickly without changing your workflow."
+      "<strong>Regex Tester lets you try a JavaScript regular expression against sample input before using it in code, validation, log parsing, or search workflows.</strong> Matches are highlighted as you edit the pattern or text, so it is easier to see what the expression actually captures.",
+      "Patterns use the browser's JavaScript regex engine. Enter the pattern without leading and trailing slashes, then choose flags such as <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code>, and <code>y</code>. Escaping, Unicode mode, line endings, and greedy matching can all change results."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -35,22 +35,22 @@
       "Matches are highlighted automatically. The match count appears in the status bar.",
       "Use <strong>Copy</strong> to copy the test text to the clipboard, <strong>Download</strong> to save it as a file, or <strong>Clear</strong> to reset everything."
     ],
-    "whatIs": "What are regular expressions?",
+    "whatIs": "What is Regex Tester?",
     "whatIsParas": [
-      "A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.",
-      "JavaScript implements regex natively via the RegExp object. The same syntax works in most programming languages with minor variations. Learning regex is a core skill for text processing, data cleaning, log parsing, and input validation."
+      "<strong>Regex Tester</strong> is a browser-based pattern sandbox for checking whether a JavaScript regular expression matches the text you expect. It is useful for email-like strings, IDs, delimiters, config values, URLs, and log fields.",
+      "Regex results are engine-specific. A pattern that works here follows JavaScript behavior, which may differ from PCRE, Python, Java, grep, or database regex dialects. Re-test important expressions in the runtime where they will be used."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter the regex pattern without delimiters (no /pattern/flags syntax). The flags are controlled by the checkboxes. Invalid patterns are caught and an error message is shown instead of crashing the tool.",
+    "inputNotesPara": "Paste representative text, including blank lines and punctuation that appear in production. Use <code>g</code> when you need all matches, <code>m</code> when <code>^</code> and <code>$</code> should apply per line, and <code>u</code> when Unicode handling matters.",
     "example": "Example",
-    "examplePara": "A simple pattern to find email-like strings in text:",
+    "examplePara": "A simple email-like pattern with the global flag finds two addresses and ignores malformed fragments:",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "cn": {
-    "title": "正则表达式测试 — Coding.Tools",
-    "description": "在线测试正则表达式，支持匹配高亮和标志控制。免费的浏览器正则测试工具。",
+    "title": "正则表达式测试器 - Coding.Tools",
+    "description": "使用实时匹配、匹配计数和可选择的正则表达式标志，针对示例文本测试 JavaScript 正则表达式。",
     "toolTitle": "正则表达式测试",
-    "toolDescription": "实时测试正则表达式，支持匹配高亮。数据不会离开您的浏览器。",
+    "toolDescription": "使用实时突出显示和全局、不区分大小写、多行、dotAll、unicode 和粘性匹配的标志在本地测试 JavaScript 正则表达式模式。",
     "categoryName": "字符串与文本",
     "regexPattern": "正则表达式",
     "regexPlaceholder": "输入正则表达式，例如 \\b\\w+@\\w+\\.\\w+\\b",
@@ -69,35 +69,35 @@
     "flagDotAll": "dotAll（匹配换行）",
     "flagUnicode": "Unicode",
     "flagSticky": "粘性",
-    "descTitle": "正则表达式测试",
+    "descTitle": "针对真实文本测试 JavaScript 正则表达式模式",
     "descParas": [
-      "这个正则表达式测试工具让您可以直接在浏览器中编写和验证正则表达式。支持所有六种标准 JavaScript 正则标志。匹配结果实时高亮显示。",
-      "正则表达式在浏览器中本地运行。您输入的文本不会被上传、存储或发送到服务器。"
+      "<strong>正则表达式测试 允许您在代码、验证、日志解析或搜索工作流程中使用 JavaScript 正则表达式之前，先针对示例输入尝试 JavaScript 正则表达式。当您编辑模式或文本时，</strong> 匹配会突出显示，因此可以更轻松地查看表达式实际捕获的内容。",
+      "模式使用浏览器的 JavaScript 正则表达式引擎。输入不带前导斜杠和尾随斜杠的模式，然后选择 <code>g</code>、<code>i</code>、<code>m</code>、<code>s</code>、<code>u</code> 和 <code>y</code> 等标志。转义、Unicode 模式、行结尾和贪婪匹配都可以改变结果。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在<strong>正则表达式</strong>输入框中输入或粘贴正则表达式。不需要包含前后的斜杠。",
-      "选择需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）或 <strong>y</strong>（粘性）。",
-      "在下方的编辑器中输入或粘贴测试文本。",
-      "匹配结果会自动高亮显示。匹配计数显示在状态栏中。",
-      "使用<strong>复制</strong>复制测试文本，<strong>下载</strong>保存为文件，或<strong>清除</strong>重置。"
+      "将正则表达式模式键入或粘贴到 <strong>Regex Pattern</strong> 输入字段中。您不需要包含前导斜杠和尾随斜杠。",
+      "选择您需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（粘性）。",
+      "在下面的编辑器中输入或粘贴您的测试文本。",
+      "匹配项会自动突出显示。匹配计数显示在状态栏中。",
+      "使用 <strong>复制</strong> 将测试文本复制到剪贴板，使用 <strong>下载</strong> 将其另存为文件，或使用 <strong>清除</strong> 重置所有内容。"
     ],
-    "whatIs": "什么是正则表达式？",
+    "whatIs": "什么是正则表达式测试器？",
     "whatIsParas": [
-      "正则表达式（regex）是定义搜索模式的字符序列。它用于在字符串中进行模式匹配，如查找特定单词、验证电子邮件或电话号码格式，或按复杂分隔符拆分文本。",
-      "JavaScript 通过 RegExp 对象原生实现正则表达式。学习正则表达式是文本处理、数据清洗、日志解析和输入验证的核心技能。"
+      "<strong>正则表达式测试</strong> 是一个基于浏览器的模式沙箱，用于检查 JavaScript 正则表达式是否与您期望的文本匹配。它对于类似电子邮件的字符串、ID、分隔符、配置值、URL 和日志字段非常有用。",
+      "正则表达式结果是特定于引擎的。此处适用的模式遵循 JavaScript 行为，这可能与 PCRE、Python、Java、grep 或数据库正则表达式方言不同。在运行时重新测试将要使用的重要表达式。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入正则表达式时不需要分隔符。标志由复选框控制。无效的模式会被捕获并显示错误消息。",
+    "inputNotesPara": "粘贴代表性文本，包括生产中出现的空行和标点符号。当您需要所有匹配时，使用 <code>g</code>；当 <code>^</code> 和 <code>$</code> 应每行应用时，使用 <code>m</code>；当 Unicode 处理很重要时，使用 <code>u</code>。",
     "example": "示例",
-    "examplePara": "一个简单的模式，用于查找文本中的电子邮件格式字符串：",
+    "examplePara": "带有全局标志的简单的类似电子邮件的模式会找到两个地址并忽略格式错误的片段：",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "tw": {
-    "title": "正規表達式測試 — Coding.Tools",
-    "description": "線上測試正規表達式，支援匹配高亮和標誌控制。免費的瀏覽器正規測試工具。",
+    "title": "正規表示式測試器 - Coding.Tools",
+    "description": "使用即時匹配、匹配計數和可選擇的正規表示式標誌，針對範例文字測試 JavaScript 正規表示式。",
     "toolTitle": "正規表達式測試",
-    "toolDescription": "即時測試正規表達式，支援匹配高亮。資料不會離開您的瀏覽器。",
+    "toolDescription": "使用即時反白和全域、不區分大小寫、多行、dotAll、unicode 和黏性比對的標誌在本機測試 JavaScript 正規表示式模式。",
     "categoryName": "字串與文字",
     "regexPattern": "正規表達式",
     "regexPlaceholder": "輸入正規表示式模式，例如\\b\\w+@\\w+\\.\\w+\\b",
@@ -116,35 +116,35 @@
     "flagDotAll": "點全",
     "flagUnicode": "Unicode",
     "flagSticky": "粘性",
-    "descTitle": "正規表達式測試",
+    "descTitle": "針對真實文字測試 JavaScript 正規表示式模式",
     "descParas": [
-      "這個正規表達式測試工具讓您可以直接在瀏覽器中編寫和驗證正規表達式。支援所有六種標準 JavaScript 正規標誌。匹配結果即時高亮顯示。",
-      "正規表達式在瀏覽器中本地運行。您輸入的文字不會被上傳、儲存或傳送到伺服器。"
+      "<strong>正規表達式測試 讓您在程式碼、驗證、日誌解析或搜尋工作流程中使用 JavaScript 正規表示式之前，先針對範例輸入嘗試 JavaScript 正規表示式。當您編輯模式或文字時，</strong> 匹配會突出顯示，因此可以更輕鬆地查看表達式實際捕獲的內容。",
+      "模式使用瀏覽器的 JavaScript 正規表示式引擎。輸入不含前導斜線和尾隨斜線的模式，然後選擇 <code>g</code>、<code>i</code>、<code>m</code>、<code>s</code>、<code>u</code> 和 <code>y</code> 等標誌。轉義、Unicode 模式、行結尾和貪婪匹配都可以改變結果。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在<strong>正規表達式</strong>輸入框中輸入或貼上正規表達式。不需要包含前後的斜線。",
-      "選擇需要的標誌：<strong>g</strong>（全域）、<strong>i</strong>（不分大小寫）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）或 <strong>y</strong>（粘性）。",
-      "在下方的編輯器中輸入或貼上測試文字。",
-      "匹配結果會自動高亮顯示。匹配計數顯示在狀態列中。",
-      "使用<strong>複製</strong>複製測試文字，<strong>下載</strong>儲存為檔案，或<strong>清除</strong>重設。"
+      "將正規表示式模式鍵入或貼上到 <strong>Regex Pattern</strong> 輸入欄位中。您不需要包含前導斜線和尾隨斜線。",
+      "選擇您需要的標誌：<strong>g</strong>（全域）、<strong>i</strong>（不區分大小寫）、<strong>m</strong>（多行） 、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（黏性）。",
+      "在下面的編輯器中輸入或貼上您的測試文字。",
+      "匹配項會自動突出顯示。匹配計數顯示在狀態列中。",
+      "使用 <strong>複製</strong> 將測試文字複製到剪貼簿，使用 <strong>下載</strong> 將其另存為文件，或使用 <strong>清除</strong> 重設所有內容。"
     ],
-    "whatIs": "什麼是正規表達式？",
+    "whatIs": "什麼是正規表示式測試器？",
     "whatIsParas": [
-      "正規表達式（regex）是定義搜尋模式的字元序列。它用於在字串中進行模式匹配。",
-      "JavaScript 透過 RegExp 物件原生實作正規表達式。學習正規表達式是文字處理、資料清理、日誌解析和輸入驗證的核心技能。"
+      "<strong>正規表達式測試</strong> 是一個基於瀏覽器的模式沙箱，用於檢查 JavaScript 正規表示式是否與您期望的文字相符。它對於類似電子郵件的字串、ID、分隔符號、配置值、URL 和日誌欄位非常有用。",
+      "正規表示式結果是特定於引擎的。此處適用的模式遵循 JavaScript 行為，這可能與 PCRE、Python、Java、grep 或資料庫正規表示式方言不同。在運行時重新測試將要使用的重要表達式。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "輸入正規表達式時不需要分隔符號。標誌由複選框控制。無效的模式會被捕獲並顯示錯誤訊息。",
+    "inputNotesPara": "貼上代表性文本，包括生產中出現的空白行和標點符號。當您需要所有匹配時，使用 <code>g</code>；當 <code>^</code> 和 <code>$</code> 應每行應用時，使用 <code>m</code>；當 Unicode 處理很重要時，請使用 <code>u</code>。",
     "example": "範例",
-    "examplePara": "一個簡單的模式，用於尋找文字中的電子郵件格式字串：",
+    "examplePara": "具有全域標誌的簡單的類似電子郵件的模式會找到兩個位址並忽略格式錯誤的片段：",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "jp": {
-    "title": "正規表現テスター — Coding.Tools",
-    "description": "マッチハイライトとフラグ制御付きのオンライン正規表現テスト。無料のブラウザベースツール。",
+    "title": "正規表現テスター - Coding.Tools",
+    "description": "ライブ一致、一致数、および選択可能な正規表現フラグを使用して、サンプル テキストに対して JavaScript 正規表現をテストします。",
     "toolTitle": "正規表現テスター",
-    "toolDescription": "リアルタイムでマッチハイライト付きの正規表現パターンをテスト。データはブラウザから送信されません。",
+    "toolDescription": "グローバル、大文字と小文字を区別しない、複数行、dotAll、Unicode、およびスティッキー マッチングのライブ ハイライトとフラグを使用して、JavaScript 正規表現パターンをローカルでテストします。",
     "categoryName": "文字列とテキスト",
     "regexPattern": "正規表現",
     "regexPlaceholder": "正規表現パターンを入力します。例: \\b\\w+@\\w+\\.\\w+\\b",
@@ -163,35 +163,35 @@
     "flagDotAll": "ドットオール",
     "flagUnicode": "Unicode",
     "flagSticky": "スティッキー",
-    "descTitle": "正規表現テスター",
+    "descTitle": "JavaScript 正規表現パターンを実際のテキストに対してテストする",
     "descParas": [
-      "この正規表現テスターは、ブラウザで正規表現パターンを作成・検証できます。6つの標準JavaScript正規表現フラグすべてに対応しています。",
-      "正規表現はブラウザ内でローカルに実行されます。"
+      "<strong>正規表現テスター を使用すると、コード、検証、ログ解析、または検索ワークフローで使用する前に、サンプル入力に対して JavaScript 正規表現を試すことができます。</strong> パターンまたはテキストを編集すると一致が強調表示されるため、式が実際に何をキャプチャしているのかを確認しやすくなります。",
+      "パターンはブラウザの JavaScript 正規表現エンジンを使用します。先頭と末尾のスラッシュを付けずにパターンを入力し、<code>g</code>、<code>i</code>、<code>m</code>、<code>s</code>、<code>u</code>、<code>y</code> などのフラグを選択します。エスケープ、Unicode モード、行末、貪欲一致はすべて結果を変える可能性があります。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "<strong>正規表現</strong>入力欄にパターンを入力または貼り付けます。",
-      "フラグを選択：<strong>g</strong>（グローバル）、<strong>i</strong>（大文字小文字を区別しない）、<strong>m</strong>（複数行）等。",
-      "下のエディタにテストテキストを入力または貼り付けます。",
-      "マッチが自動的にハイライトされます。",
-      "<strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>クリア</strong>で操作します。"
+      "「<strong>Regex Pattern</strong>」入力フィールドに正規表現パターンを入力するか貼り付けます。先頭と末尾のスラッシュを含める必要はありません。",
+      "必要なフラグを選択します: <strong>g</strong> (グローバル)、<strong>i</strong> (大文字と小文字を区別しない)、<strong>m</strong> (複数行)、<strong>s</strong> (ドットオール)、<strong>u</strong> (ユニコード)、または <strong>y</strong> （ベタベタ）。",
+      "以下のエディターにテスト テキストを入力または貼り付けます。",
+      "一致するものは自動的に強調表示されます。一致数がステータス バーに表示されます。",
+      "<strong>コピー</strong> を使用してテスト テキストをクリップボードにコピーするか、<strong>ダウンロード</strong> を使用してファイルとして保存するか、<strong>クリア</strong> を使用してすべてをリセットします。"
     ],
-    "whatIs": "正規表現とは？",
+    "whatIs": "正規表現テスターとは何ですか?",
     "whatIsParas": [
-      "正規表現（regex）は検索パターンを定義する文字列です。文字列内のパターンマッチングに使用されます。",
-      "JavaScriptはRegExpオブジェクトで正規表現をネイティブに実装しています。"
+      "<strong>正規表現テスター</strong> は、JavaScript 正規表現が期待するテキストと一致するかどうかをチェックするためのブラウザベースのパターン サンドボックスです。これは、電子メールのような文字列、ID、区切り文字、構成値、URL、ログ フィールドに役立ちます。",
+      "正規表現の結果はエンジン固有です。ここで機能するパターンは JavaScript の動作に従いますが、PCRE、Python、Java、grep、またはデータベース正規表現の方言とは異なる場合があります。重要な式が使用されるランタイムで再テストします。"
     ],
     "inputNotes": "入力について",
-    "inputNotesPara": "正規表現パターンを区切り文字なしで入力してください。フラグはチェックボックスで制御します。",
+    "inputNotesPara": "本番環境で使用される空白行や句読点など、代表的なテキストを貼り付けます。すべての一致が必要な場合は <code>g</code> を使用し、<code>^</code> および <code>$</code> を行ごとに適用する必要がある場合は <code>m</code> を、Unicode 処理が重要な場合は <code>u</code> を使用します。",
     "example": "例",
-    "examplePara": "メールアドレスのような文字列を見つける簡単なパターン：",
+    "examplePara": "グローバル フラグを使用した単純な電子メールのようなパターンでは、2 つのアドレスが検出され、不正な形式のフラグメントが無視されます。",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "kr": {
-    "title": "정규식 테스터 — Coding.Tools",
-    "description": "매치 하이라이트와 플래그 제어가 가능한 온라인 정규식 테스트. 무료 브라우저 도구.",
+    "title": "정규식 테스터 - Coding.Tools",
+    "description": "실시간 일치, 일치 횟수 및 선택 가능한 정규식 플래그를 사용하여 샘플 텍스트에 대해 JavaScript 정규식을 테스트합니다.",
     "toolTitle": "정규식 테스터",
-    "toolDescription": "실시간 매치 하이라이트로 정규식 패턴을 테스트하세요. 데이터가 브라우저를 떠나지 않습니다.",
+    "toolDescription": "전역, 대소문자 구분, 여러 줄, dotAll, 유니코드 및 고정 일치를 위한 실시간 강조 표시 및 플래그를 사용하여 JavaScript 정규식 패턴을 로컬에서 테스트합니다.",
     "categoryName": "문자열 및 텍스트",
     "regexPattern": "정규식",
     "regexPlaceholder": "정규식 패턴을 입력하세요. \\b\\w+@\\w+\\.\\w+\\b",
@@ -210,35 +210,35 @@
     "flagDotAll": "도트올",
     "flagUnicode": "유니코드",
     "flagSticky": "스티키",
-    "descTitle": "정규식 테스터",
+    "descTitle": "실제 텍스트에 대해 JavaScript 정규식 패턴 테스트",
     "descParas": [
-      "이 정규식 테스터를 사용하면 브라우저에서 직접 정규식 패턴을 작성하고 검증할 수 있습니다. 6가지 표준 JavaScript 정규식 플래그를 모두 지원합니다.",
-      "정규식은 브라우저에서 로컬로 실행됩니다."
+      "<strong>Regex 테스터를 사용하면 코드, 검증, 로그 구문 분석 또는 검색 워크플로에서 사용하기 전에 샘플 입력에 대해 JavaScript 정규식을 시험해 볼 수 있습니다. 패턴이나 텍스트를 편집할 때</strong> 일치 항목이 강조 표시되므로 표현식이 실제로 캡처하는 내용을 더 쉽게 확인할 수 있습니다.",
+      "패턴은 브라우저의 JavaScript 정규식 엔진을 사용합니다. 앞뒤 슬래시 없이 패턴을 입력한 다음 <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code> 및 <code>y</code>와 같은 플래그를 선택합니다. 이스케이프, 유니코드 모드, 줄 끝 및 욕심 많은 일치는 모두 결과를 변경할 수 있습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "<strong>정규식</strong> 입력란에 패턴을 입력하거나 붙여넣으세요.",
-      "플래그를 선택하세요: <strong>g</strong>(전역), <strong>i</strong>(대소문자 무시), <strong>m</strong>(여러 줄) 등.",
+      "<strong>Regex Pattern</strong> 입력 필드에 정규식 패턴을 입력하거나 붙여넣습니다. 선행 및 후행 슬래시를 포함할 필요는 없습니다.",
+      "필요한 플래그를 선택하십시오: <strong>g</strong>(전역), <strong>i</strong>(대소문자 구분 안 함), <strong>m</strong>(여러 줄), <strong>s</strong>(dotAll), <strong>u</strong>(유니코드) 또는 <strong>y</strong>(끈적).",
       "아래 편집기에 테스트 텍스트를 입력하거나 붙여넣으세요.",
-      "매치가 자동으로 하이라이트됩니다.",
-      "<strong>복사</strong>, <strong>다운로드</strong>, <strong>지우기</strong>로 작업하세요."
+      "일치하는 항목이 자동으로 강조 표시됩니다. 상태 표시줄에 일치 횟수가 나타납니다.",
+      "<strong>복사</strong>를 사용하여 테스트 텍스트를 클립보드에 복사하고, <strong>다운로드</strong>를 사용하여 파일로 저장하거나, <strong>지우기</strong>를 사용하여 모든 것을 재설정합니다."
     ],
-    "whatIs": "정규식이란?",
+    "whatIs": "정규식 테스터란 무엇입니까?",
     "whatIsParas": [
-      "정규식(regex)은 검색 패턴을 정의하는 문자 시퀀스입니다. 문자열 내 패턴 매칭에 사용됩니다.",
-      "JavaScript는 RegExp 객체로 정규식을 네이티브로 구현합니다."
+      "<strong>정규식 테스터</strong>는 JavaScript 정규 표현식이 예상한 텍스트와 일치하는지 확인하기 위한 브라우저 기반 패턴 샌드박스입니다. 이메일과 같은 문자열, ID, 구분 기호, 구성 값, URL 및 로그 필드에 유용합니다.",
+      "정규식 결과는 엔진마다 다릅니다. 여기서 작동하는 패턴은 PCRE, Python, Java, grep 또는 데이터베이스 정규식 방언과 다를 수 있는 JavaScript 동작을 따릅니다. 중요한 표현식이 사용될 런타임에서 다시 테스트하세요."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "정규식 패턴을 구분자 없이 입력하세요. 플래그는 체크박스로 제어합니다.",
+    "inputNotesPara": "제작 시 나타나는 빈줄, 구두점 등 대표 텍스트를 붙여넣습니다. 모든 일치 항목이 필요한 경우 <code>g</code>를 사용하고, <code>^</code> 및 <code>$</code>가 한 줄에 적용되어야 하는 경우 <code>m</code>를 사용하고, 유니코드 처리가 중요한 경우 <code>u</code>를 사용합니다.",
     "example": "예시",
-    "examplePara": "이메일과 같은 문자열을 찾는 간단한 패턴:",
+    "examplePara": "전역 플래그가 있는 간단한 이메일과 유사한 패턴은 두 개의 주소를 찾고 잘못된 형식의 조각을 무시합니다.",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "fr": {
-    "title": "Testeur Regex — Coding.Tools",
-    "description": "Testez les expressions régulières en direct avec mise en surbrillance et contrôles de drapeaux. Outil gratuit.",
+    "title": "Testeur d'expression régulière - Coding.Tools",
+    "description": "Testez les expressions régulières JavaScript par rapport à un exemple de texte avec des correspondances en direct, le nombre de correspondances et des indicateurs d'expression régulière sélectionnables.",
     "toolTitle": "Testeur Regex",
-    "toolDescription": "Testez les motifs regex en temps réel avec mise en surbrillance. Aucune donnée ne quitte votre navigateur.",
+    "toolDescription": "Testez les modèles d'expression régulière JavaScript localement avec une mise en évidence en direct et des indicateurs pour les correspondances globales, insensibles à la casse, multilignes, dotAll, Unicode et collantes.",
     "categoryName": "Chaînes et texte",
     "regexPattern": "Motif Regex",
     "regexPlaceholder": "Entrez le modèle d'expression régulière, par exemple. \\b\\w+@\\w+\\.\\w+\\b",
@@ -257,35 +257,35 @@
     "flagDotAll": "pointTout",
     "flagUnicode": "Unicode",
     "flagSticky": "collant",
-    "descTitle": "Testeur Regex",
+    "descTitle": "Testez les modèles d'expression régulière JavaScript par rapport au texte réel",
     "descParas": [
-      "Ce testeur d'expressions régulières vous permet d'écrire et valider des motifs regex directement dans votre navigateur. Les six drapeaux JavaScript standard sont disponibles.",
-      "Le regex s'exécute localement dans votre navigateur."
+      "<strong>Testeur Regex vous permet d'essayer une expression régulière JavaScript sur un exemple d'entrée avant de l'utiliser dans le code, la validation, l'analyse de journaux ou les flux de recherche.</strong> Les correspondances sont mises en surbrillance lorsque vous modifiez le modèle ou le texte, ce qui permet de voir plus facilement ce que l'expression capture réellement.",
+      "Les modèles utilisent le moteur d'expression régulière JavaScript du navigateur. Entrez le modèle sans barres obliques de début et de fin, puis choisissez des indicateurs tels que <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code> et <code>y</code>. L'échappement, le mode Unicode, les fins de ligne et la correspondance gourmande peuvent tous modifier les résultats."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un motif dans le champ <strong>Motif Regex</strong>. Pas besoin de barres obliques.",
-      "Sélectionnez les drapeaux : <strong>g</strong> (global), <strong>i</strong> (insensible à la casse), <strong>m</strong> (multiligne), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
-      "Entrez ou collez votre texte de test dans l'éditeur ci-dessous.",
-      "Les correspondances sont mises en surbrillance automatiquement. Le nombre de correspondances apparaît dans la barre d'état.",
-      "Utilisez <strong>Copier</strong> pour copier le texte, <strong>Télécharger</strong> pour sauvegarder, ou <strong>Effacer</strong> pour réinitialiser."
+      "Tapez ou collez un modèle d'expression régulière dans le champ de saisie <strong>Regex Pattern</strong>. Vous n'avez pas besoin d'inclure les barres obliques de début et de fin.",
+      "Sélectionnez les indicateurs dont vous avez besoin : <strong>g</strong> (global), <strong>i</strong> (insensible à la casse), <strong>m</strong> (multiligne), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (collant).",
+      "Saisissez ou collez votre texte de test dans l'éditeur ci-dessous.",
+      "Les correspondances sont automatiquement mises en surbrillance. Le nombre de correspondances apparaît dans la barre d'état.",
+      "Utilisez <strong>Copier</strong> pour copier le texte du test dans le presse-papiers, <strong>Télécharger</strong> pour l'enregistrer sous forme de fichier ou <strong>Effacer</strong> pour tout réinitialiser."
     ],
-    "whatIs": "Qu'est-ce qu'une expression régulière ?",
+    "whatIs": "Qu’est-ce que le testeur Regex ?",
     "whatIsParas": [
-      "Une expression régulière (regex) est une séquence de caractères définissant un modèle de recherche.",
-      "JavaScript implémente les regex nativement via l'objet RegExp."
+      "<strong>Testeur Regex</strong> est un bac à sable de modèles basé sur un navigateur permettant de vérifier si une expression régulière JavaScript correspond au texte que vous attendez. Il est utile pour les chaînes de type courrier électronique, les identifiants, les délimiteurs, les valeurs de configuration, les URL et les champs de journal.",
+      "Les résultats Regex sont spécifiques au moteur. Un modèle qui fonctionne ici suit le comportement de JavaScript, qui peut différer des dialectes PCRE, Python, Java, grep ou regex de base de données. Testez à nouveau les expressions importantes dans le runtime où elles seront utilisées."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez le motif regex sans délimiteurs. Les drapeaux sont contrôlés par les cases à cocher.",
+    "inputNotesPara": "Collez le texte représentatif, y compris les lignes vides et les signes de ponctuation qui apparaissent en production. Utilisez <code>g</code> lorsque vous avez besoin de toutes les correspondances, <code>m</code> lorsque <code>^</code> et <code>$</code> doivent s'appliquer par ligne, et <code>u</code> lorsque la gestion Unicode est importante.",
     "example": "Exemple",
-    "examplePara": "Un motif simple pour trouver des chaînes de type email :",
+    "examplePara": "Un simple modèle de type courrier électronique avec l'indicateur global trouve deux adresses et ignore les fragments mal formés :",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "de": {
-    "title": "Regex-Tester – Coding.Tools",
-    "description": "Testen Sie reguläre Ausdrücke live mit Match-Highlighting und Flag-Steuerung. Kostenloses Browser-Tool.",
+    "title": "Regex-Tester - Coding.Tools",
+    "description": "Testen Sie reguläre JavaScript-Ausdrücke anhand von Beispieltext mit Live-Übereinstimmungen, Übereinstimmungsanzahlen und auswählbaren Regex-Flags.",
     "toolTitle": "Regex-Tester",
-    "toolDescription": "Testen Sie Regex-Muster in Echtzeit mit Live-Match-Highlighting. Keine Daten verlassen Ihren Browser.",
+    "toolDescription": "Testen Sie JavaScript-Regex-Muster lokal mit Live-Hervorhebung und Flags für globales, Groß-/Kleinschreibung ignorierendes, mehrzeiliges, dotAll-, Unicode- und Sticky-Matching.",
     "categoryName": "Zeichenketten & Text",
     "regexPattern": "Regex-Muster",
     "regexPlaceholder": "Geben Sie ein Regex-Muster ein, z. B. \\b\\w+@\\w+\\.\\w+\\b",
@@ -304,35 +304,35 @@
     "flagDotAll": "Punkt für alle",
     "flagUnicode": "Unicode",
     "flagSticky": "klebrig",
-    "descTitle": "Regex-Tester",
+    "descTitle": "Testen Sie JavaScript-Regex-Muster anhand von echtem Text",
     "descParas": [
-      "Dieser Regex-Tester ermöglicht das Schreiben und Validieren von Regex-Mustern direkt im Browser. Alle sechs JavaScript-Regex-Flags sind verfügbar.",
-      "Der Regex wird lokal im Browser ausgeführt."
+      "<strong>Mit dem Regex-Tester können Sie einen regulären JavaScript-Ausdruck anhand einer Beispieleingabe testen, bevor Sie ihn in Code, Validierung, Protokollanalyse oder Suchabläufe verwenden.</strong> Übereinstimmungen werden hervorgehoben, während Sie Muster oder Text bearbeiten, damit leichter erkennbar ist, was der Ausdruck tatsächlich erfasst.",
+      "Muster verwenden die JavaScript-Regex-Engine des Browsers. Geben Sie das Muster ohne führende und abschließende Schrägstriche ein und wählen Sie dann Flags wie <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code> und <code>y</code> aus. Escaping, Unicode-Modus, Zeilenenden und Greedy-Matching können die Ergebnisse verändern."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Geben Sie ein Regex-Muster in das <strong>Regex-Muster</strong> Eingabefeld ein. Schrägstriche sind nicht nötig.",
-      "Wählen Sie die Flags: <strong>g</strong> (global), <strong>i</strong> (Groß-/Kleinschreibung ignorieren), <strong>m</strong> (mehrzeilig), <strong>s</strong> (dotAll), <strong>u</strong> (Unicode) oder <strong>y</strong> (sticky).",
-      "Geben Sie Ihren Testtext in den Editor unten ein.",
-      "Treffer werden automatisch hervorgehoben. Die Anzahl erscheint in der Statusleiste.",
-      "Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong>."
+      "Geben Sie ein Regex-Muster ein oder fügen Sie es in das Eingabefeld <strong>Regex Pattern</strong> ein. Sie müssen die führenden und abschließenden Schrägstriche nicht einfügen.",
+      "Wählen Sie die Flags aus, die Sie benötigen: <strong>g</strong> (global), <strong>i</strong> (Groß-/Kleinschreibung nicht beachtet), <strong>m</strong> (mehrzeilig), <strong>s</strong> (dotAll), <strong>u</strong> (Unicode) oder <strong>y</strong> (klebrig).",
+      "Geben Sie Ihren Testtext ein oder fügen Sie ihn in den unten stehenden Editor ein.",
+      "Übereinstimmungen werden automatisch hervorgehoben. Die Übereinstimmungsanzahl wird in der Statusleiste angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong>, um den Testtext in die Zwischenablage zu kopieren, <strong>Herunterladen</strong>, um ihn als Datei zu speichern, oder <strong>Leeren</strong>, um alles zurückzusetzen."
     ],
-    "whatIs": "Was sind reguläre Ausdrücke ?",
+    "whatIs": "Was ist ein Regex-Tester?",
     "whatIsParas": [
-      "Ein regulärer Ausdruck (Regex) ist eine Zeichenfolge, die ein Suchmuster definiert.",
-      "JavaScript implementiert Regex nativ über das RegExp-Objekt."
+      "<strong>Regex-Tester</strong> ist eine browserbasierte Muster-Sandbox zum Überprüfen, ob ein regulärer JavaScript-Ausdruck mit dem erwarteten Text übereinstimmt. Es ist nützlich für E-Mail-ähnliche Zeichenfolgen, IDs, Trennzeichen, Konfigurationswerte, URLs und Protokollfelder.",
+      "Regex-Ergebnisse sind motorspezifisch. Ein hier funktionierendes Muster folgt dem JavaScript-Verhalten, das sich von PCRE-, Python-, Java-, grep- oder Datenbank-Regex-Dialekten unterscheiden kann. Testen Sie wichtige Ausdrücke in der Laufzeit erneut, wo sie verwendet werden sollen."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Geben Sie das Regex-Muster ohne Trennzeichen ein. Die Flags werden über die Kontrollkästchen gesteuert.",
+    "inputNotesPara": "Fügen Sie repräsentativen Text ein, einschließlich Leerzeilen und Satzzeichen, die in der Produktion vorkommen. Verwenden Sie <code>g</code>, wenn Sie alle Übereinstimmungen benötigen, <code>m</code>, wenn <code>^</code> und <code>$</code> pro Zeile gelten sollen, und <code>u</code>, wenn es auf die Unicode-Verarbeitung ankommt.",
     "example": "Beispiel",
-    "examplePara": "Ein einfaches Muster zum Finden von E-Mail-ähnlichen Zeichenfolgen:",
+    "examplePara": "Ein einfaches E-Mail-ähnliches Muster mit der globalen Flagge findet zwei Adressen und ignoriert fehlerhafte Fragmente:",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "es": {
-    "title": "Probador Regex — Coding.Tools",
-    "description": "Pruebe expresiones regulares en vivo con resaltado de coincidencias y controles de banderas. Herramienta gratuita.",
+    "title": "Probador de expresiones regulares - Coding.Tools",
+    "description": "Pruebe las expresiones regulares JavaScript con texto de muestra con coincidencias en vivo, recuentos de coincidencias y indicadores de expresiones regulares seleccionables.",
     "toolTitle": "Probador Regex",
-    "toolDescription": "Pruebe patrones regex en tiempo real con resaltado de coincidencias. Ningún dato sale de su navegador.",
+    "toolDescription": "Pruebe los patrones de expresiones regulares JavaScript localmente con resaltado en vivo y marcas para coincidencias globales, que no distinguen entre mayúsculas y minúsculas, multilínea, dotAll, Unicode y fijas.",
     "categoryName": "Cadenas y texto",
     "regexPattern": "Patrón Regex",
     "regexPlaceholder": "Ingrese el patrón de expresiones regulares, p. \\b\\w+@\\w+\\.\\w+\\b",
@@ -351,35 +351,35 @@
     "flagDotAll": "puntoTodos",
     "flagUnicode": "Unicode",
     "flagSticky": "pegajoso",
-    "descTitle": "Probador Regex",
+    "descTitle": "Pruebe los patrones de expresiones regulares JavaScript con texto real",
     "descParas": [
-      "Este probador de expresiones regulares le permite escribir y validar patrones regex directamente en su navegador.",
-      "El regex se ejecuta localmente en su navegador."
+      "<strong>Probador Regex le permite probar una expresión regular JavaScript con una entrada de muestra antes de usarla en código, validación, análisis de registros o flujos de trabajo de búsqueda.</strong> Las coincidencias se resaltan a medida que edita el patrón o el texto, por lo que es más fácil ver qué captura realmente la expresión.",
+      "Los patrones utilizan el motor de expresiones regulares JavaScript del navegador. Ingrese el patrón sin barras diagonales iniciales ni finales, luego elija indicadores como <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code> y <code>y</code>. El escape, el modo Unicode, los finales de línea y las coincidencias codiciosas pueden cambiar los resultados."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue un patrón en el campo <strong>Patrón Regex</strong>. No necesita barras.",
-      "Seleccione las banderas: <strong>g</strong> (global), <strong>i</strong> (insensible a mayúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), o <strong>y</strong> (sticky).",
-      "Ingrese o pegue su texto de prueba en el editor de abajo.",
-      "Las coincidencias se resaltan automáticamente. El conteo aparece en la barra de estado.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Escriba o pegue un patrón de expresiones regulares en el campo de entrada <strong>Regex Pattern</strong>. No es necesario incluir las barras diagonales iniciales y finales.",
+      "Seleccione las banderas que necesita: <strong>g</strong> (global), <strong>i</strong> (no distingue entre mayúsculas y minúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) o <strong>y</strong> (pegajoso).",
+      "Ingrese o pegue su texto de prueba en el editor a continuación.",
+      "Las coincidencias se resaltan automáticamente. El recuento de coincidencias aparece en la barra de estado.",
+      "Utilice <strong>Copiar</strong> para copiar el texto de prueba al portapapeles, <strong>Descargar</strong> para guardarlo como un archivo o <strong>Limpiar</strong> para restablecer todo."
     ],
-    "whatIs": "¿Qué son las expresiones regulares?",
+    "whatIs": "¿Qué es el probador de expresiones regulares?",
     "whatIsParas": [
-      "Una expresión regular (regex) es una secuencia de caracteres que define un patrón de búsqueda.",
-      "JavaScript implementa regex nativamente a través del objeto RegExp."
+      "<strong>Probador Regex</strong> es un entorno limitado de patrones basado en navegador para comprobar si una expresión regular JavaScript coincide con el texto esperado. Es útil para cadenas, ID, delimitadores, valores de configuración, URL y campos de registro similares a los de correo electrónico.",
+      "Los resultados de expresiones regulares son específicos del motor. Un patrón que funciona aquí sigue el comportamiento JavaScript, que puede diferir de los dialectos PCRE, Python, Java, grep o expresiones regulares de bases de datos. Vuelva a probar expresiones importantes en el tiempo de ejecución donde se utilizarán."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese el patrón regex sin delimitadores. Las banderas se controlan con las casillas.",
+    "inputNotesPara": "Pegue texto representativo, incluidas líneas en blanco y puntuación que aparecen en producción. Utilice <code>g</code> cuando necesite todas las coincidencias, <code>m</code> cuando <code>^</code> y <code>$</code> deban aplicarse por línea, y <code>u</code> cuando el manejo de Unicode sea importante.",
     "example": "Ejemplo",
-    "examplePara": "Un patrón simple para encontrar cadenas tipo email:",
+    "examplePara": "Un patrón simple similar a un correo electrónico con la bandera global encuentra dos direcciones e ignora los fragmentos con formato incorrecto:",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "pt": {
-    "title": "Testador Regex — Coding.Tools",
-    "description": "Teste expressões regulares ao vivo com destaque de correspondências e controles de bandeiras. Ferramenta gratuita.",
+    "title": "Testador Regex - Coding.Tools",
+    "description": "Teste expressões regulares JavaScript em relação a texto de amostra com correspondências ao vivo, contagens de correspondências e sinalizadores de regex selecionáveis.",
     "toolTitle": "Testador Regex",
-    "toolDescription": "Teste padrões regex em tempo real com destaque de correspondências. Nenhum dado sai do navegador.",
+    "toolDescription": "Teste padrões de regex JavaScript localmente com realce e sinalizadores ao vivo para correspondência global, sem distinção entre maiúsculas e minúsculas, multilinhas, dotAll, unicode e fixa.",
     "categoryName": "Strings e texto",
     "regexPattern": "Padrão Regex",
     "regexPlaceholder": "Insira o padrão regex, por exemplo. \\b\\w+@\\w+\\.\\w+\\b",
@@ -398,28 +398,28 @@
     "flagDotAll": "pontoTodos",
     "flagUnicode": "Unicode",
     "flagSticky": "pegajoso",
-    "descTitle": "Testador Regex",
+    "descTitle": "Teste padrões de regex JavaScript em texto real",
     "descParas": [
-      "Este testador de expressões regulares permite escrever e validar padrões regex diretamente no navegador.",
-      "O regex é executado localmente no navegador."
+      "<strong>O Testador Regex permite experimentar uma expressão regular JavaScript com uma entrada de exemplo antes de usá-la em código, validação, análise de logs ou fluxos de pesquisa.</strong> As correspondências são destacadas conforme você edita o padrão ou o texto, facilitando ver o que a expressão realmente captura.",
+      "Os padrões usam o mecanismo regex JavaScript do navegador. Insira o padrão sem barras iniciais e finais e escolha sinalizadores como <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code> e <code>y</code>. Escape, modo Unicode, finais de linha e correspondência gananciosa podem alterar os resultados."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um padrão no campo <strong>Padrão Regex</strong>. Não precisa de barras.",
-      "Selecione as bandeiras: <strong>g</strong> (global), <strong>i</strong> (ignorar maiúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
+      "Digite ou cole um padrão regex no campo de entrada <strong>Regex Pattern</strong>. Você não precisa incluir as barras iniciais e finais.",
+      "Selecione os sinalizadores necessários: <strong>g</strong> (global), <strong>i</strong> (sem distinção entre maiúsculas e minúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (pegajoso).",
       "Insira ou cole seu texto de teste no editor abaixo.",
-      "As correspondências são destacadas automaticamente. A contagem aparece na barra de status.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "As correspondências são destacadas automaticamente. A contagem de correspondências aparece na barra de status.",
+      "Use <strong>Copiar</strong> para copiar o texto de teste para a área de transferência, <strong>Baixar</strong> para salvá-lo como um arquivo ou <strong>Limpar</strong> para redefinir tudo."
     ],
-    "whatIs": "O que são expressões regulares?",
+    "whatIs": "O que é o testador Regex?",
     "whatIsParas": [
-      "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca.",
-      "JavaScript implementa regex nativamente através do objeto RegExp."
+      "<strong>Testador Regex</strong> é uma sandbox de padrão baseada em navegador para verificar se uma expressão regular JavaScript corresponde ao texto esperado. É útil para strings, IDs, delimitadores, valores de configuração, URLs e campos de log semelhantes a e-mail.",
+      "Os resultados Regex são específicos do mecanismo. Um padrão que funciona aqui segue o comportamento JavaScript, que pode diferir dos dialetos PCRE, Python, Java, grep ou regex de banco de dados. Teste novamente expressões importantes no tempo de execução onde elas serão usadas."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira o padrão regex sem delimitadores. As bandeiras são controladas pelas caixas de seleção.",
+    "inputNotesPara": "Cole texto representativo, incluindo linhas em branco e pontuação que aparecem na produção. Use <code>g</code> quando precisar de todas as correspondências, <code>m</code> quando <code>^</code> e <code>$</code> devem ser aplicados por linha e <code>u</code> quando o manuseio de Unicode for importante.",
     "example": "Exemplo",
-    "examplePara": "Um padrão simples para encontrar strings tipo email:",
+    "examplePara": "Um padrão simples semelhante a um e-mail com o sinalizador global encontra dois endereços e ignora fragmentos malformados:",
     "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   }
 }

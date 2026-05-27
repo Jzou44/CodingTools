@@ -1,10 +1,5 @@
 ---
-title: "HTML Beautifier — Coding.Tools"
-description: "Beautify and format HTML code with proper indentation and structure. Runs locally in your browser, fast and free."
-toolTitle: "HTML Beautifier"
-toolDescription: "Beautify HTML code with consistent indentation and proper nesting. Copy or download the formatted result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "html-beautifier"
 permalink: "/html-beautifier.html"
 ---
@@ -36,39 +31,7 @@ permalink: "/html-beautifier.html"
 {% endblock %}
 
 {% block description %}
-  <h2>HTML Beautifier</h2>
-  <p>This HTML Beautifier takes raw, minified, or poorly indented HTML and reformats it with consistent indentation, proper nesting, and clean line breaks. It makes dense HTML markup readable and easier to debug.</p>
-  <p>The beautification runs entirely in your browser using the js-beautify library. Your HTML code never leaves your device, making it ideal for formatting templates, email HTML, scraped content, or any markup that needs cleanup.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your raw or minified HTML into the input editor.</li>
-    <li>Click <strong>Beautify HTML</strong> to apply indentation and structure.</li>
-    <li>View the formatted HTML in the output editor with proper nesting.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .html file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is HTML beautification?</h3>
-  <p>HTML beautification is the process of reformatting HTML markup to follow consistent indentation and line-break rules. It takes compressed or messy HTML and adds proper spacing so the document structure is visually clear through nesting levels.</p>
-  <p>Well-formatted HTML is essential for debugging layout issues, code reviews, and maintaining templates over time. Beautified HTML also helps developers understand the DOM hierarchy at a glance without relying on browser developer tools.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any HTML input, whether it is a full document or a fragment. It preserves all tags, attributes, and content while reformatting the structure. Self-closing tags and void elements are handled correctly.</p>
-
-  <h3>Example</h3>
-  <p>Minified HTML becomes readable after beautification:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (minified) ---
-&lt;div class="card"&gt;&lt;h2&gt;Title&lt;/h2&gt;&lt;p&gt;Description text&lt;/p&gt;&lt;a href="/link"&gt;Read more&lt;/a&gt;&lt;/div&gt;
-
---- Output (beautified) ---
-&lt;div class="card"&gt;
-  &lt;h2&gt;Title&lt;/h2&gt;
-  &lt;p&gt;Description text&lt;/p&gt;
-  &lt;a href="/link"&gt;Read more&lt;/a&gt;
-&lt;/div&gt;</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

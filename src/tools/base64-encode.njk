@@ -1,10 +1,5 @@
 ---
-title: "Base64 Encode and Decode — Coding.Tools"
-description: "Encode text to Base64 or decode Base64 back to readable text directly in your browser. Fast, private, and free to use."
-toolTitle: "Base64 Encode"
-toolDescription: "Convert text to Base64, decode Base64 back to readable text, and copy or download the result without sending data anywhere."
 category: "hash-cryptography"
-categoryName: "Hash & Cryptography"
 activeTool: "base64-encode"
 permalink: "/base64-encode.html"
 ---
@@ -41,38 +36,7 @@ permalink: "/base64-encode.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Base64 Encode and Decode</h2>
-  <p>This Base64 tool converts plain text into Base64 and turns Base64 strings back into readable text. It is useful when you need to prepare data for APIs, inspect encoded values from logs, test request payloads, or move small snippets of data through text-only systems.</p>
-  <p>The conversion runs locally in your browser. The text you paste into the editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste plain text or a Base64 value into the input editor.</li>
-    <li>Choose <strong>Encode</strong> to create a Base64 string, or <strong>Decode</strong> to read an existing Base64 string.</li>
-    <li>Check the output editor and status message. Invalid Base64 input is reported immediately when decoding fails.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is Base64?</h3>
-  <p>Base64 is a way to represent bytes as printable text. It uses letters, numbers, plus signs, slashes, and padding characters so binary data can travel through systems that expect ordinary text, such as JSON, HTML, email, configuration files, and command-line output.</p>
-  <p>Base64 is an encoding format, not encryption. Anyone can decode it if they have the string. It also increases the data size by roughly one third, so it is best for transport and embedding, not for compression or secrecy.</p>
-
-  <h3>Input notes</h3>
-  <p>Encoding supports normal text, including Unicode characters. When decoding, make sure the input is a complete Base64 string and does not include unrelated headers, labels, or extra text around the encoded value.</p>
-
-  <h3>Example</h3>
-  <p>The same value can be encoded and decoded back to its original text:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Plain Text ---
-Hello, World!
-
---- Base64 Encoded ---
-SGVsbG8sIFdvcmxkIQ==
-
---- Decoded Back ---
-Hello, World!</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

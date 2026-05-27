@@ -1,10 +1,5 @@
 ---
-title: "Compress PNG — Coding.Tools"
-description: "Compress PNG images online to reduce file size. Free, fast, and runs in your browser."
-toolTitle: "Compress PNG"
-toolDescription: "Reduce PNG file size by converting to palette mode with optimization. Drag and drop multiple images."
 category: "image-utilities"
-categoryName: "Image Utilities"
 activeTool: "compress-png"
 permalink: "/compress-png.html"
 ---
@@ -48,32 +43,7 @@ permalink: "/compress-png.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Compress PNG</h2>
-  <p>This tool compresses PNG images by converting them to palette mode and applying optimization. The compression runs entirely in your browser — no file upload to a server.</p>
-  <p>PNG format uses RGBA color for each pixel. The 'A' stands for opacity, allowing transparent backgrounds. When compressing, we convert to palette mode which reduces the number of colors while maintaining visual quality.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Drag and drop PNG files onto the upload area, or click to select files.</li>
-    <li>Each file is compressed automatically and the compression rate is displayed.</li>
-    <li>Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive.</li>
-  </ol>
-
-  <h3>PNG vs JPEG comparison</h3>
-  <p><strong>Compression:</strong> PNG is lossless, JPEG is lossy. PNG preserves all original data; JPEG discards some for smaller files.</p>
-  <p><strong>Transparency:</strong> PNG supports transparency (alpha channel), JPEG does not.</p>
-  <p><strong>Best for:</strong> PNG is best for graphics, icons, and images with transparency. JPEG is best for photographs.</p>
-
-  <h3>Compress with Python</h3>
-  <p>You can compress PNG images programmatically using Python with the Pillow library:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">from PIL import Image
-
-original = Image.open('input.png')
-original.convert('P')
-original.save('compressed.png', optimize=True, quality=80)</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

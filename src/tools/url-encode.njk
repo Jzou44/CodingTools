@@ -13,7 +13,7 @@ permalink: "/url-encode.html"
 {% endblock %}
 
 {% block description %}
-  {{ advanced.translatedDescription(toolData, t) }}
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

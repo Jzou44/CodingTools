@@ -1,10 +1,5 @@
 ---
-title: "Octal to Decimal Converter — Coding.Tools"
-description: "Convert octal numbers to decimal, hexadecimal, and binary instantly in your browser. Fast, private, and free to use."
-toolTitle: "Octal to Decimal"
-toolDescription: "Enter an octal number and convert it to decimal, hexadecimal, and binary. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "octal-to-decimal"
 permalink: "/octal-to-decimal.html"
 ---
@@ -226,29 +221,7 @@ permalink: "/octal-to-decimal.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Octal to Decimal Converter</h2>
-  <p>This tool converts octal (base 8) numbers into their decimal (base 10), hexadecimal (base 16), and binary (base 2) equivalents. It is useful for working with Unix file permissions, legacy systems, or any context where octal notation is used.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste an octal number into the input field (e.g. <code>377</code> or <code>755</code>).</li>
-    <li>Click <strong>Convert</strong> to see the decimal, hexadecimal, and binary results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the decimal result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>What is octal?</h3>
-  <p>Octal is a base 8 number system that uses the digits 0 through 7. Each octal digit represents exactly three binary digits, making it a convenient shorthand for binary values. It is commonly seen in Unix file permissions (e.g. <code>chmod 755</code>) and some legacy computing contexts.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Octal:       377
-Decimal:     255
-Hexadecimal: FF
-Binary:      11111111</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

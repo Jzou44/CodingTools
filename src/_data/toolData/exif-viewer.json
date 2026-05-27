@@ -1,16 +1,16 @@
 {
   "en": {
-    "title": "EXIF Viewer — Coding.Tools",
-    "description": "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser.",
+    "title": "EXIF Viewer - Coding.Tools",
+    "description": "Read photo EXIF metadata locally, including camera settings, timestamps, orientation, lens data, and GPS when present.",
     "toolTitle": "EXIF Viewer",
-    "toolDescription": "Extract and display EXIF metadata from photos including GPS location, camera settings, and date.",
+    "toolDescription": "Inspect EXIF metadata in a photo without uploading it, including camera, date, lens, orientation, and GPS fields.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag a photo here to upload",
     "dropzoneHint": "1 image · Max 10MB",
-    "descTitle": "EXIF Viewer",
+    "descTitle": "Inspect the hidden metadata in a photo",
     "descParas": [
-      "EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.",
-      "This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed."
+      "<strong>EXIF Viewer reads metadata embedded by cameras and phones without uploading the photo.</strong> It can reveal camera model, capture time, exposure settings, focal length, orientation, software, and GPS coordinates when those tags exist.",
+      "EXIF data is useful for debugging image orientation, checking camera settings, or reviewing privacy risk before sharing. Some platforms strip metadata and some edited images contain none, so missing fields usually mean the data was removed or never written."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -18,55 +18,55 @@
       "All EXIF metadata tags are displayed in a table.",
       "If GPS coordinates are found, a map showing the photo location is displayed."
     ],
-    "whatIs": "What is EXIF data?",
+    "whatIs": "What is EXIF metadata?",
     "whatIsParas": [
-      "EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.",
-      "Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information."
+      "<strong>EXIF</strong> metadata is stored inside formats such as JPEG and TIFF to describe how and where an image was captured. Orientation tags can affect how an image displays, and GPS tags can identify the capture location.",
+      "Use this viewer as a privacy and diagnostics check before publishing original photos. If GPS or personal metadata appears, remove it before sharing the file publicly."
     ],
     "example": "Read EXIF with Python",
-    "examplePara": "Extract EXIF data using Python with the exifread library:",
+    "examplePara": "A script can read the same type of tags from a JPEG file with an EXIF parser:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "cn": {
-    "title": "EXIF 查看器 — Coding.Tools",
-    "description": "在线查看照片中的 EXIF 元数据。查看 GPS、相机信息等。免费，在浏览器中运行。",
+    "title": "EXIF 查看器 - Coding.Tools",
+    "description": "本地读取照片 EXIF 元数据，包括相机设置、时间戳、方向、镜头数据和 GPS（如果存在）。",
     "toolTitle": "EXIF 查看器",
-    "toolDescription": "提取并显示照片中的 EXIF 元数据，包括 GPS 位置、相机设置和日期。",
+    "toolDescription": "在不上传照片的情况下检查照片中的 EXIF 元数据，包括相机、日期、镜头、方向和 GPS 字段。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽照片上传",
     "dropzoneHint": "1 张图片 · 最大 10MB",
-    "descTitle": "EXIF 查看器",
+    "descTitle": "检查照片中隐藏的元数据",
     "descParas": [
-      "EXIF（可交换图像文件格式）是相机和智能手机嵌入照片中的元数据。它包括 GPS 坐标、相机型号、光圈、快门速度、ISO 和拍摄日期等信息。",
-      "此工具读取并显示照片中的所有 EXIF 标签。如果存在 GPS 数据，将显示位置地图。"
+      "<strong>EXIF 查看器读取相机和手机嵌入的元数据，而无需上传照​​片。</strong> 它可以显示相机型号、拍摄时间、曝光设置、焦距、方向、软件和 GPS 坐标（当这些标签存在时）。",
+      "EXIF 数据可用于调试图像方向、检查相机设置或在共享之前检查隐私风险。某些平台会删除元数据，而某些编辑后的图像则不包含任何元数据，因此缺少字段通常意味着数据已被删除或从未写入。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将照片拖放到上传区域，或点击选择。",
-      "所有 EXIF 元数据标签以表格形式显示。",
-      "如果找到 GPS 坐标，将显示照片位置的地图。"
+      "将照片拖放到上传区域，或单击进行选择。",
+      "所有 EXIF 元数据标签都显示在表格中。",
+      "如果找到 GPS 坐标，则会显示显示照片位置的地图。"
     ],
-    "whatIs": "什么是 EXIF 数据？",
+    "whatIs": "EXIF 元数据是什么？",
     "whatIsParas": [
-      "EXIF 数据由数码相机和智能手机嵌入 JPEG 和 TIFF 图像中。它记录相机设置（光圈、快门速度、ISO、焦距）、日期/时间，以及可选的 GPS 坐标。",
-      "社交媒体平台在上传时通常会剥离 EXIF 数据，但相机的原始文件仍包含这些信息。"
+      "<strong>EXIF</strong> 元数据存储在 JPEG 和 TIFF 等格式中，用于描述图像的捕获方式和位置。方向标签可以影响图像的显示方式，GPS 标签可以识别捕获位置。",
+      "在发布原始照片之前，使用此查看器作为隐私和诊断检查。如果出现 GPS 或个人元数据，请在公开共享文件之前将其删除。"
     ],
     "example": "用 Python 读取 EXIF",
-    "examplePara": "使用 Python 的 exifread 库提取 EXIF 数据：",
+    "examplePara": "脚本可以使用 EXIF 解析器从 JPEG 文件中读取相同类型的标签：",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "tw": {
-    "title": "EXIF 檢視器 — Coding.Tools",
-    "description": "線上查看照片的 EXIF 元資料。查看 GPS、相機資訊等。免費並在您的瀏覽器中運行。",
+    "title": "EXIF 檢視器 - Coding.Tools",
+    "description": "本地讀取照片 EXIF 元數據，包括相機設定、時間戳、方向、鏡頭數據和 GPS（如果存在）。",
     "toolTitle": "EXIF檢視器",
-    "toolDescription": "從照片中提取並顯示 EXIF 元數據，包括 GPS 位置、相機設定和日期。",
+    "toolDescription": "在不上傳照片的情況下檢查照片中的 EXIF 元數據，包括相機、日期、鏡頭、方向和 GPS 欄位。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "點擊或拖曳照片至此處上傳",
     "dropzoneHint": "1 張圖片 · 最大 10MB",
-    "descTitle": "EXIF 檢視器",
+    "descTitle": "檢查照片中隱藏的元數據",
     "descParas": [
-      "EXIF（可交換影像檔案格式）是相機和智慧型手機嵌入照片中的元資料。它包括 GPS 座標、相機型號、光圈、快門速度、ISO 和照片拍攝日期等資訊。",
-      "此工具讀取並顯示照片中的所有 EXIF 標籤。如果存在 GPS 數據，則會顯示顯示該位置的地圖。"
+      "<strong>EXIF 檢視器可讀取相機和手機嵌入的元數據，而無需上傳照片。</strong> 它可以顯示相機型號、拍攝時間、曝光設定、焦距、方向、軟體和 GPS 座標（當這些標籤存在時）。",
+      "EXIF 資料可用於偵錯影像方向、檢查相機設定或在共享之前檢查隱私風險。某些平台會刪除元數據，而某些編輯後的圖像則不包含任何元數據，因此缺少欄位通常意味著數據已被刪除或從未寫入。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -74,27 +74,27 @@
       "所有 EXIF 元資料標籤都顯示在表格中。",
       "如果找到 GPS 座標，則會顯示顯示照片位置的地圖。"
     ],
-    "whatIs": "什麼是 EXIF 資料？",
+    "whatIs": "EXIF 元資料是什麼？",
     "whatIsParas": [
-      "EXIF 資料透過數位相機和智慧型手機嵌入 JPEG 和 TIFF 影像中。它記錄相機設定（光圈、快門速度、ISO、焦距）、日期/時間以及可選的 GPS 座標。",
-      "社群媒體平台通常在上傳時刪除 EXIF 數據，但相機中的原始檔案仍包含此資訊。"
+      "<strong>EXIF</strong> 元資料儲存在 JPEG 和 TIFF 等格式中，用於描述影像的擷取方式和位置。方向標籤可以影響影像的顯示方式，GPS 標籤可以辨識捕捉位置。",
+      "在發布原始照片之前，請使用此檢視器作為隱私和診斷檢查。如果出現 GPS 或個人元數據，請在公開分享文件之前將其刪除。"
     ],
     "example": "使用Python讀取EXIF",
-    "examplePara": "使用 Python 和 exifread 庫提取 EXIF 資料：",
+    "examplePara": "腳本可以使用 EXIF 解析器從 JPEG 檔案中讀取相同類型的標籤：",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "jp": {
-    "title": "EXIF ビューア — コーディング.ツール",
-    "description": "オンラインで写真の EXIF メタデータを表示します。 GPS、カメラ情報などを確認します。無料でブラウザ上で実行できます。",
+    "title": "EXIF ビューア - Coding.Tools",
+    "description": "カメラ設定、タイムスタンプ、向き、レンズデータ、GPS (存在する場合) などの写真 EXIF メタデータをローカルで読み取ります。",
     "toolTitle": "EXIFビューア",
-    "toolDescription": "GPS 位置、カメラ設定、日付などの EXIF メタデータを写真から抽出して表示します。",
+    "toolDescription": "カメラ、日付、レンズ、向き、GPS フィールドなど、写真内の EXIF メタデータをアップロードせずに検査します。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに写真をクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像1枚・最大10MB",
-    "descTitle": "EXIFビューア",
+    "descTitle": "写真内の非表示のメタデータを検査する",
     "descParas": [
-      "EXIF (Exchangeable Image File Format) は、カメラやスマートフォンによって写真に埋め込まれるメタデータです。これには、GPS 座標、カメラのモデル、絞り、シャッター スピード、ISO、写真の撮影日などの情報が含まれます。",
-      "このツールは、写真からすべての EXIF タグを読み取り、表示します。 GPS データが存在する場合は、その位置を示す地図が表示されます。"
+      "<strong>EXIF ビューアは、写真をアップロードせずに、カメラや携帯電話に埋め込まれたメタデータを読み取ります。</strong> タグが存在する場合、カメラのモデル、キャプチャ時間、露出設定、焦点距離、向き、ソフトウェア、および GPS 座標を明らかにできます。",
+      "EXIF データは、画像の向きのデバッグ、カメラ設定の確認、共有前のプライバシー リスクの確認に役立ちます。一部のプラットフォームではメタデータが削除され、一部の編集画像にはメタデータが含まれていないため、フィールドが欠落している場合は、通常、データが削除されたか、書き込まれなかったことを意味します。"
     ],
     "howToUse": "使用方法",
     "steps": [
@@ -102,83 +102,83 @@
       "すべての EXIF メタデータ タグがテーブルに表示されます。",
       "GPS 座標が見つかると、写真の位置を示す地図が表示されます。"
     ],
-    "whatIs": "EXIFデータとは何ですか?",
+    "whatIs": "EXIF メタデータとは何ですか?",
     "whatIsParas": [
-      "EXIF データは、デジタル カメラやスマートフォンによって JPEG および TIFF 画像に埋め込まれます。カメラの設定 (絞り、シャッター スピード、ISO、焦点距離)、日付/時刻、およびオプションで GPS 座標を記録します。",
-      "ソーシャル メディア プラットフォームではアップロード時に EXIF データが削除されることがよくありますが、カメラの元のファイルにはこの情報がまだ含まれています。"
+      "<strong>EXIF</strong> メタデータは、画像がどこでどのようにキャプチャされたかを説明するために、JPEG や TIFF などの形式内に保存されます。方向タグは画像の表示方法に影響を与えることができ、GPS タグはキャプチャ位置を識別できます。",
+      "このビューアは、元の写真を公開する前に、プライバシーと診断チェックとして使用します。 GPS または個人のメタデータが表示された場合は、ファイルを公開する前に削除してください。"
     ],
     "example": "PythonでEXIFを読む",
-    "examplePara": "Python と exifread ライブラリを使用して EXIF データを抽出します。",
+    "examplePara": "スクリプトは、EXIF パーサーを使用して JPEG ファイルから同じタイプのタグを読み取ることができます。",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "kr": {
-    "title": "EXIF 뷰어 — Coding.Tools",
-    "description": "온라인으로 사진의 EXIF ​​메타데이터를 봅니다. GPS, 카메라 정보 등을 확인하세요. 무료이며 브라우저에서 실행됩니다.",
+    "title": "EXIF 뷰어 - Coding.Tools",
+    "description": "카메라 설정, 타임스탬프, 방향, 렌즈 데이터 및 GPS가 있는 경우 이를 포함하여 사진 EXIF 메타데이터를 로컬에서 읽습니다.",
     "toolTitle": "EXIF 뷰어",
-    "toolDescription": "GPS 위치, 카메라 설정, 날짜 등 사진에서 EXIF ​​메타데이터를 추출하고 표시합니다.",
+    "toolDescription": "사진을 업로드하지 않고도 카메라, 날짜, 렌즈, 방향, GPS 필드 등 EXIF 메타데이터를 사진에서 검사할 수 있습니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 사진을 클릭하거나 드래그하세요.",
     "dropzoneHint": "이미지 1개 · 최대 10MB",
-    "descTitle": "EXIF 뷰어",
+    "descTitle": "사진에 숨겨진 메타데이터를 검사하세요",
     "descParas": [
-      "EXIF(Exchangeable Image File Format)는 카메라와 스마트폰이 촬영한 사진에 포함된 메타데이터입니다. 여기에는 GPS 좌표, 카메라 모델, 조리개, 셔터 속도, ISO 및 사진 촬영 날짜와 같은 정보가 포함됩니다.",
-      "이 도구는 사진의 모든 EXIF ​​태그를 읽고 표시합니다. GPS 데이터가 있으면 위치를 보여주는 지도가 표시됩니다."
+      "<strong>EXIF 뷰어는 사진을 업로드하지 않고도 카메라와 휴대폰에 내장된 메타데이터를 읽습니다.</strong> 해당 태그가 있는 경우 카메라 모델, 촬영 시간, 노출 설정, 초점 거리, 방향, 소프트웨어 및 GPS 좌표를 표시할 수 있습니다.",
+      "EXIF 데이터는 이미지 방향 디버깅, 카메라 설정 확인, 공유 전 개인 정보 보호 위험 검토에 유용합니다. 일부 플랫폼은 메타데이터를 제거하고 일부 편집된 이미지에는 아무것도 포함되어 있지 않으므로 필드가 누락되면 일반적으로 데이터가 제거되었거나 전혀 기록되지 않았음을 의미합니다."
     ],
     "howToUse": "사용방법",
     "steps": [
       "사진을 업로드 영역으로 끌어다 놓거나 클릭하여 선택하세요.",
-      "모든 EXIF ​​메타데이터 태그가 테이블에 표시됩니다.",
+      "모든 EXIF 메타데이터 태그가 테이블에 표시됩니다.",
       "GPS 좌표가 검색되면 사진 위치를 나타내는 지도가 표시됩니다."
     ],
-    "whatIs": "EXIF 데이터란 무엇입니까?",
+    "whatIs": "EXIF 메타데이터란 무엇입니까?",
     "whatIsParas": [
-      "EXIF 데이터는 디지털 카메라와 스마트폰의 JPEG 및 TIFF 이미지에 포함됩니다. 카메라 설정(조리개, 셔터 속도, ISO, 초점 거리), 날짜/시간 및 선택적으로 GPS 좌표를 기록합니다.",
-      "소셜 미디어 플랫폼은 업로드 시 EXIF ​​데이터를 제거하는 경우가 많지만 카메라의 원본 파일에는 여전히 이 정보가 포함되어 있습니다."
+      "<strong>EXIF</strong> 메타데이터는 JPEG 및 TIFF와 같은 형식 내에 저장되어 이미지가 캡처된 방법과 위치를 설명합니다. 방향 태그는 이미지 표시 방식에 영향을 미칠 수 있으며 GPS 태그는 캡처 위치를 식별할 수 있습니다.",
+      "원본 사진을 게시하기 전에 이 뷰어를 개인 정보 보호 및 진단 확인으로 사용하세요. GPS 또는 개인 메타데이터가 나타나면 파일을 공개적으로 공유하기 전에 제거하세요."
     ],
     "example": "Python으로 EXIF ​​읽기",
-    "examplePara": "Exifread 라이브러리와 함께 Python을 사용하여 EXIF ​​데이터를 추출합니다.",
+    "examplePara": "스크립트는 EXIF 파서를 사용하여 JPEG 파일에서 동일한 유형의 태그를 읽을 수 있습니다.",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "fr": {
-    "title": "Visionneuse EXIF ​​— Codage.Tools",
-    "description": "Affichez les métadonnées EXIF ​​​​des photos en ligne. Consultez le GPS, les informations sur la caméra et bien plus encore. Gratuit et fonctionne dans votre navigateur.",
+    "title": "Visionneuse EXIF - Coding.Tools",
+    "description": "Lisez les métadonnées EXIF ​​​​des photos localement, y compris les paramètres de l'appareil photo, les horodatages, l'orientation, les données d'objectif et le GPS le cas échéant.",
     "toolTitle": "Visionneuse EXIF",
-    "toolDescription": "Extrayez et affichez les métadonnées EXIF ​​des photos, y compris la localisation GPS, les paramètres de l'appareil photo et la date.",
+    "toolDescription": "Inspectez les métadonnées EXIF d'une photo sans la télécharger, y compris les champs de l'appareil photo, de la date, de l'objectif, de l'orientation et du GPS.",
     "categoryName": "Outils d’image",
     "dropzoneMessage": "Cliquez ou faites glisser une photo ici pour la télécharger",
     "dropzoneHint": "1 image · 10 Mo maximum",
-    "descTitle": "Visionneuse EXIF",
+    "descTitle": "Inspecter les métadonnées cachées dans une photo",
     "descParas": [
-      "EXIF (Exchangeable Image File Format) sont des métadonnées intégrées dans les photos par les appareils photo et les smartphones. Il comprend des informations telles que les coordonnées GPS, le modèle d'appareil photo, l'ouverture, la vitesse d'obturation, l'ISO et la date à laquelle la photo a été prise.",
-      "Cet outil lit et affiche toutes les balises EXIF ​​​​de votre photo. Si des données GPS sont présentes, une carte indiquant l'emplacement s'affiche."
+      "<strong>Visionneuse EXIF lit les métadonnées intégrées par les appareils photo et les téléphones sans télécharger la photo.</strong> Elle peut révéler le modèle de l'appareil photo, l'heure de capture, les paramètres d'exposition, la distance focale, l'orientation, le logiciel et les coordonnées GPS lorsque ces balises existent.",
+      "Les données EXIF sont utiles pour déboguer l'orientation de l'image, vérifier les paramètres de l'appareil photo ou examiner les risques liés à la confidentialité avant le partage. Certaines plateformes suppriment les métadonnées et certaines images modifiées n'en contiennent aucune ; les champs manquants signifient donc généralement que les données ont été supprimées ou n'ont jamais été écrites."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Faites glisser et déposez une photo sur la zone de téléchargement ou cliquez pour la sélectionner.",
-      "Toutes les balises de métadonnées EXIF ​​sont affichées dans un tableau.",
+      "Toutes les balises de métadonnées EXIF sont affichées dans un tableau.",
       "Si des coordonnées GPS sont trouvées, une carte indiquant l'emplacement de la photo s'affiche."
     ],
-    "whatIs": "Que sont les données EXIF ?",
+    "whatIs": "Que sont les métadonnées EXIF ?",
     "whatIsParas": [
-      "Les données EXIF ​​sont intégrées aux images JPEG et TIFF par les appareils photo numériques et les smartphones. Il enregistre les paramètres de l'appareil photo (ouverture, vitesse d'obturation, ISO, distance focale), la date/heure et éventuellement les coordonnées GPS.",
-      "Les plateformes de réseaux sociaux suppriment souvent les données EXIF ​​lors du téléchargement, mais les fichiers originaux de votre appareil photo contiennent toujours ces informations."
+      "Les métadonnées <strong>EXIF</strong> sont stockées dans des formats tels que JPEG et TIFF pour décrire comment et où une image a été capturée. Les balises d'orientation peuvent affecter la façon dont une image s'affiche et les balises GPS peuvent identifier l'emplacement de capture.",
+      "Utilisez cette visionneuse comme vérification de confidentialité et de diagnostic avant de publier des photos originales. Si le GPS ou des métadonnées personnelles apparaissent, supprimez-les avant de partager le fichier publiquement."
     ],
     "example": "Lire EXIF ​​avec Python",
-    "examplePara": "Extrayez les données EXIF ​​à l'aide de Python avec la bibliothèque exifread :",
+    "examplePara": "Un script peut lire le même type de balises à partir d'un fichier JPEG avec un analyseur EXIF :",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "de": {
-    "title": "EXIF Viewer – Coding.Tools",
-    "description": "Sehen Sie sich EXIF-Metadaten von Fotos online an. Sehen Sie sich GPS, Kamerainformationen und mehr an. Kostenlos und läuft in Ihrem Browser.",
+    "title": "EXIF-Viewer - Coding.Tools",
+    "description": "Lesen Sie die EXIF-Metadaten des Fotos lokal, einschließlich Kameraeinstellungen, Zeitstempel, Ausrichtung, Objektivdaten und GPS, sofern vorhanden.",
     "toolTitle": "EXIF-Betrachter",
-    "toolDescription": "Extrahieren und zeigen Sie EXIF-Metadaten aus Fotos an, einschließlich GPS-Standort, Kameraeinstellungen und Datum.",
+    "toolDescription": "Überprüfen Sie EXIF-Metadaten in einem Foto, ohne es hochzuladen, einschließlich Kamera, Datum, Objektiv, Ausrichtung und GPS-Felder.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie ein Foto hierher, um es hochzuladen",
     "dropzoneHint": "1 Bild · Max. 10 MB",
-    "descTitle": "EXIF-Viewer",
+    "descTitle": "Untersuchen Sie die versteckten Metadaten in einem Foto",
     "descParas": [
-      "EXIF (Exchangeable Image File Format) sind Metadaten, die von Kameras und Smartphones in Fotos eingebettet werden. Es enthält Informationen wie GPS-Koordinaten, Kameramodell, Blende, Verschlusszeit, ISO und das Aufnahmedatum des Fotos.",
-      "Dieses Tool liest alle EXIF-Tags Ihres Fotos und zeigt sie an. Wenn GPS-Daten vorhanden sind, wird eine Karte mit dem Standort angezeigt."
+      "<strong>EXIF Der Viewer liest von Kameras und Telefonen eingebettete Metadaten, ohne das Foto hochzuladen.</strong> Er kann Kameramodell, Aufnahmezeit, Belichtungseinstellungen, Brennweite, Ausrichtung, Software und GPS-Koordinaten anzeigen, wenn diese Tags vorhanden sind.",
+      "EXIF-Daten sind nützlich, um die Bildausrichtung zu debuggen, Kameraeinstellungen zu überprüfen oder das Datenschutzrisiko vor der Freigabe zu prüfen. Einige Plattformen entfernen Metadaten und einige bearbeitete Bilder enthalten keine, sodass fehlende Felder normalerweise bedeuten, dass die Daten entfernt oder nie geschrieben wurden."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
@@ -186,69 +186,69 @@
       "Alle EXIF-Metadaten-Tags werden in einer Tabelle angezeigt.",
       "Wenn GPS-Koordinaten gefunden werden, wird eine Karte mit dem Fotostandort angezeigt."
     ],
-    "whatIs": "Was sind EXIF-Daten?",
+    "whatIs": "Was sind EXIF-Metadaten?",
     "whatIsParas": [
-      "EXIF-Daten werden von Digitalkameras und Smartphones in JPEG- und TIFF-Bilder eingebettet. Es zeichnet Kameraeinstellungen (Blende, Verschlusszeit, ISO, Brennweite), Datum/Uhrzeit und optional GPS-Koordinaten auf.",
-      "Social-Media-Plattformen entfernen beim Hochladen häufig EXIF-Daten, Originaldateien Ihrer Kamera enthalten diese Informationen jedoch weiterhin."
+      "<strong>EXIF</strong>-Metadaten werden in Formaten wie JPEG und TIFF gespeichert, um zu beschreiben, wie und wo ein Bild aufgenommen wurde. Orientierungs-Tags können beeinflussen, wie ein Bild angezeigt wird, und GPS-Tags können den Aufnahmeort identifizieren.",
+      "Verwenden Sie diesen Viewer als Datenschutz- und Diagnoseprüfung, bevor Sie Originalfotos veröffentlichen. Wenn GPS- oder persönliche Metadaten angezeigt werden, entfernen Sie diese, bevor Sie die Datei öffentlich freigeben."
     ],
     "example": "Lesen Sie EXIF ​​mit Python",
-    "examplePara": "Extrahieren Sie EXIF-Daten mit Python mit der exifread-Bibliothek:",
+    "examplePara": "Ein Skript kann mit einem EXIF-Parser denselben Typ von Tags aus einer JPEG-Datei lesen:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "es": {
-    "title": "Visor EXIF ​​- Coding.Tools",
-    "description": "Vea metadatos EXIF ​​de fotos en línea. Vea GPS, información de la cámara y más. Gratis y se ejecuta en tu navegador.",
+    "title": "Visor EXIF - Coding.Tools",
+    "description": "Lea los metadatos de la foto EXIF localmente, incluida la configuración de la cámara, marcas de tiempo, orientación, datos de la lente y GPS cuando esté presente.",
     "toolTitle": "Visor EXIF",
-    "toolDescription": "Extraiga y muestre metadatos EXIF ​​de fotografías, incluida la ubicación GPS, la configuración de la cámara y la fecha.",
+    "toolDescription": "Inspeccione los metadatos EXIF en una foto sin cargarla, incluidos los campos de cámara, fecha, lente, orientación y GPS.",
     "categoryName": "Herramientas de imagen",
     "dropzoneMessage": "Haga clic o arrastre una foto aquí para cargarla.",
     "dropzoneHint": "1 imagen · Máximo 10 MB",
-    "descTitle": "Visor EXIF",
+    "descTitle": "Inspeccionar los metadatos ocultos en una foto.",
     "descParas": [
-      "EXIF (formato de archivo de imagen intercambiable) son metadatos integrados en fotografías de cámaras y teléfonos inteligentes. Incluye información como coordenadas GPS, modelo de cámara, apertura, velocidad de obturación, ISO y la fecha en que se tomó la foto.",
-      "Esta herramienta lee y muestra todas las etiquetas EXIF ​​de tu foto. Si hay datos de GPS presentes, se muestra un mapa que muestra la ubicación."
+      "<strong>Visor EXIF lee metadatos incrustados en cámaras y teléfonos sin cargar la foto.</strong> Puede revelar el modelo de la cámara, el tiempo de captura, la configuración de exposición, la distancia focal, la orientación, el software y las coordenadas GPS cuando existen esas etiquetas.",
+      "Los datos EXIF son útiles para depurar la orientación de la imagen, verificar la configuración de la cámara o revisar el riesgo de privacidad antes de compartirla. Algunas plataformas eliminan los metadatos y algunas imágenes editadas no contienen ninguno, por lo que los campos faltantes generalmente significan que los datos se eliminaron o nunca se escribieron."
     ],
     "howToUse": "como usar",
     "steps": [
       "Arrastra y suelta una foto en el área de carga o haz clic para seleccionarla.",
-      "Todas las etiquetas de metadatos EXIF ​​se muestran en una tabla.",
+      "Todas las etiquetas de metadatos EXIF se muestran en una tabla.",
       "Si se encuentran coordenadas GPS, se muestra un mapa que muestra la ubicación de la foto."
     ],
-    "whatIs": "¿Qué son los datos EXIF?",
+    "whatIs": "¿Qué son los metadatos EXIF?",
     "whatIsParas": [
-      "Los datos EXIF ​​se incrustan en imágenes JPEG y TIFF mediante cámaras digitales y teléfonos inteligentes. Registra la configuración de la cámara (apertura, velocidad de obturación, ISO, distancia focal), fecha/hora y, opcionalmente, coordenadas GPS.",
-      "Las plataformas de redes sociales a menudo eliminan los datos EXIF ​​al cargarlos, pero los archivos originales de su cámara aún contienen esta información."
+      "Los metadatos <strong>EXIF</strong> se almacenan en formatos como JPEG y TIFF para describir cómo y dónde se capturó una imagen. Las etiquetas de orientación pueden afectar la forma en que se muestra una imagen y las etiquetas de GPS pueden identificar la ubicación de captura.",
+      "Utilice este visor como verificación de privacidad y diagnóstico antes de publicar fotografías originales. Si aparece GPS o metadatos personales, elimínelos antes de compartir el archivo públicamente."
     ],
     "example": "Leer EXIF ​​con Python",
-    "examplePara": "Extraiga datos EXIF ​​usando Python con la biblioteca exifread:",
+    "examplePara": "Un script puede leer el mismo tipo de etiquetas de un archivo JPEG con un analizador EXIF:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "pt": {
-    "title": "Visualizador EXIF ​​– Ferramentas de codificação",
-    "description": "Visualize metadados EXIF ​​de fotos online. Veja GPS, informações da câmera e muito mais. Gratuito e roda no seu navegador.",
+    "title": "Visualizador EXIF - Coding.Tools",
+    "description": "Leia os metadados EXIF da foto localmente, incluindo configurações da câmera, carimbos de data e hora, orientação, dados da lente e GPS, quando presente.",
     "toolTitle": "Visualizador EXIF",
-    "toolDescription": "Extraia e exiba metadados EXIF ​​de fotos, incluindo localização GPS, configurações da câmera e data.",
+    "toolDescription": "Inspecione os metadados EXIF em uma foto sem carregá-la, incluindo câmera, data, lente, orientação e campos de GPS.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste uma foto aqui para fazer upload",
     "dropzoneHint": "1 imagem · Máx. 10 MB",
-    "descTitle": "Visualizador EXIF",
+    "descTitle": "Inspecione os metadados ocultos em uma foto",
     "descParas": [
-      "EXIF (Exchangeable Image File Format) são metadados incorporados em fotos por câmeras e smartphones. Inclui informações como coordenadas GPS, modelo da câmera, abertura, velocidade do obturador, ISO e data em que a foto foi tirada.",
-      "Esta ferramenta lê e exibe todas as tags EXIF ​​​​da sua foto. Se houver dados de GPS, um mapa mostrando a localização será exibido."
+      "<strong>EXIF O visualizador lê metadados incorporados por câmeras e telefones sem carregar a foto.</strong> Ele pode revelar o modelo da câmera, tempo de captura, configurações de exposição, distância focal, orientação, software e coordenadas GPS quando essas tags existem.",
+      "Os dados EXIF são úteis para depurar a orientação da imagem, verificar as configurações da câmera ou revisar o risco de privacidade antes de compartilhar. Algumas plataformas removem metadados e algumas imagens editadas não contêm nenhum, portanto, campos ausentes geralmente significam que os dados foram removidos ou nunca foram gravados."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Arraste e solte uma foto na área de upload ou clique para selecionar.",
-      "Todas as tags de metadados EXIF ​​são exibidas em uma tabela.",
+      "Todas as tags de metadados EXIF são exibidas em uma tabela.",
       "Se as coordenadas GPS forem encontradas, um mapa mostrando a localização da foto será exibido."
     ],
-    "whatIs": "O que são dados EXIF?",
+    "whatIs": "O que são metadados EXIF?",
     "whatIsParas": [
-      "Os dados EXIF ​​são incorporados em imagens JPEG e TIFF por câmeras digitais e smartphones. Ele registra as configurações da câmera (abertura, velocidade do obturador, ISO, distância focal), data/hora e, opcionalmente, coordenadas GPS.",
-      "As plataformas de mídia social geralmente removem os dados EXIF ​​durante o upload, mas os arquivos originais da sua câmera ainda contêm essas informações."
+      "Os metadados <strong>EXIF</strong> são armazenados em formatos como JPEG e TIFF para descrever como e onde uma imagem foi capturada. As tags de orientação podem afetar a forma como uma imagem é exibida, e as tags GPS podem identificar o local de captura.",
+      "Use este visualizador como uma verificação de privacidade e diagnóstico antes de publicar fotos originais. Se GPS ou metadados pessoais aparecerem, remova-os antes de compartilhar o arquivo publicamente."
     ],
     "example": "Leia EXIF ​​​​com Python",
-    "examplePara": "Extraia dados EXIF ​​​​usando Python com a biblioteca exifread:",
+    "examplePara": "Um script pode ler o mesmo tipo de tags de um arquivo JPEG com um analisador EXIF:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   }
 }

@@ -1,10 +1,5 @@
 ---
-title: "SQL Formatter — Coding.Tools"
-description: "Beautify and format SQL queries with proper indentation and keyword casing. Runs locally in your browser, fast and free."
-toolTitle: "SQL Formatter"
-toolDescription: "Format SQL queries with consistent indentation and readable structure. Copy or download the formatted result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "sql-formatter"
 permalink: "/sql-formatter.html"
 ---
@@ -36,47 +31,7 @@ permalink: "/sql-formatter.html"
 {% endblock %}
 
 {% block description %}
-  <h2>SQL Formatter</h2>
-  <p>This SQL Formatter takes raw, minified, or poorly indented SQL queries and reformats them with proper indentation, keyword alignment, and clean line breaks. It makes complex queries readable by organizing clauses into a clear structure.</p>
-  <p>The formatting runs entirely in your browser using the sql-formatter library. Your SQL queries never leave your device, making it ideal for formatting stored procedures, complex joins, subqueries, or any SQL that needs cleanup before code review.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your raw or minified SQL query into the input editor.</li>
-    <li>Click <strong>Format SQL</strong> to apply indentation and keyword formatting.</li>
-    <li>View the formatted query in the output editor with aligned clauses.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .sql file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is SQL formatting?</h3>
-  <p>SQL formatting is the process of reformatting Structured Query Language statements to follow consistent style rules. It places each major clause (SELECT, FROM, WHERE, JOIN, GROUP BY, ORDER BY) on its own line and adds proper indentation for subqueries and nested conditions.</p>
-  <p>Well-formatted SQL is essential for debugging query logic, understanding join relationships, and maintaining database code over time. Most database teams enforce SQL formatting standards to ensure consistency across codebases and reduce cognitive load during reviews.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts SQL queries of any complexity, including SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, and other DDL/DML statements. It handles subqueries, CTEs (Common Table Expressions), window functions, and vendor-specific syntax. Keywords are formatted in uppercase by default.</p>
-
-  <h3>Example</h3>
-  <p>A compressed SQL query becomes readable after formatting:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (unformatted) ---
-SELECT u.name, u.email, COUNT(o.id) AS order_count FROM users u LEFT JOIN orders o ON u.id = o.user_id WHERE u.active = 1 GROUP BY u.id ORDER BY order_count DESC;
-
---- Output (formatted) ---
-SELECT
-    u.name,
-    u.email,
-    COUNT(o.id) AS order_count
-FROM
-    users u
-    LEFT JOIN orders o ON u.id = o.user_id
-WHERE
-    u.active = 1
-GROUP BY
-    u.id
-ORDER BY
-    order_count DESC;</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

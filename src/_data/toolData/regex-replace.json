@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Regex Replace — Coding.Tools",
-    "description": "Find and replace text using regular expressions with live match highlighting and backreference support. Free browser-based tool.",
+    "title": "Regex Replace - Coding.Tools",
+    "description": "Find and replace text with JavaScript regular expressions, capture groups, backreferences, and live match preview.",
     "toolTitle": "Regex Replace",
-    "toolDescription": "Find and replace text with regex patterns in real time. Supports backreferences like $1, $2. No data leaves your browser.",
+    "toolDescription": "Rewrite structured text locally with JavaScript regex patterns, flags, capture groups, and replacement backreferences.",
     "categoryName": "String & Text Utilities",
     "regexPattern": "Regex Pattern",
     "regexPlaceholder": "Enter regex pattern, e.g. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -27,10 +27,10 @@
     "flagDotAll": "dotAll",
     "flagUnicode": "unicode",
     "flagSticky": "sticky",
-    "descTitle": "Regex Replace",
+    "descTitle": "Rewrite structured text with regex backreferences",
     "descParas": [
-      "This regex find-and-replace tool lets you search for patterns and replace them with new text in real time. All six JavaScript regex flags are supported, and the replacement string understands backreferences like $1, $2, so you can rearrange captured groups. Matches are highlighted before you commit the replacement.",
-      "The search and replace runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can transform content privately and quickly."
+      "<strong>Regex Replace searches text with a JavaScript regular expression and replaces each match with a replacement string.</strong> It is useful for reformatting dates, normalizing IDs, trimming repeated labels, reshaping CSV-like text, and testing cleanup rules before using them in scripts.",
+      "Capture groups can be reused in the replacement with backreferences such as <code>$1</code>, <code>$2</code>, and <code>$&</code> for the whole match. The selected flags affect how many matches are found and how anchors, case, dots, and Unicode are interpreted."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -41,22 +41,22 @@
       "Click <strong>Replace All</strong> to apply the replacement to the entire text.",
       "Use <strong>Copy</strong> to copy the result, <strong>Download</strong> to save it, or <strong>Clear</strong> to reset everything."
     ],
-    "whatIs": "What are regular expressions?",
+    "whatIs": "What is Regex Replace?",
     "whatIsParas": [
-      "A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.",
-      "JavaScript implements regex natively via the RegExp object. Regex find-and-replace is one of the most powerful text transformation techniques available to developers."
+      "<strong>Regex Replace</strong> is a local find-and-replace sandbox for JavaScript regular expressions. It shows matching text before you apply the replacement, which helps catch overbroad patterns before they rewrite too much.",
+      "Replacement syntax is JavaScript syntax. If you are moving the expression to another language or editor, verify group numbering, named-group support, escaping, newline handling, and whether replacement backreferences use <code>$1</code>, <code>\\1</code>, or another form."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter the regex pattern without delimiters. The flags are controlled by the checkboxes. The replacement string supports standard backreferences: $1 through $9 for captured groups, and $& for the entire match.",
+    "inputNotesPara": "Test on a small representative sample before pasting large text. Use capture groups only around the parts you need later, escape literal characters such as dots and parentheses, and review the preview before clicking <strong>Replace All</strong>.",
     "example": "Example",
-    "examplePara": "Reformatting dates from MM/DD/YYYY to YYYY-MM-DD using backreferences:",
+    "examplePara": "Capture groups can rearrange dates from MM/DD/YYYY into ISO-style YYYY-MM-DD output:",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "cn": {
-    "title": "正则表达式替换 — Coding.Tools",
-    "description": "使用正则表达式查找和替换文本，支持匹配高亮和反向引用。免费浏览器工具。",
+    "title": "正则表达式替换 - Coding.Tools",
+    "description": "使用 JavaScript 正则表达式、捕获组、反向引用和实时匹配预览查找和替换文本。",
     "toolTitle": "正则表达式替换",
-    "toolDescription": "使用正则表达式实时查找和替换文本。支持 $1、$2 等反向引用。数据不会离开您的浏览器。",
+    "toolDescription": "使用 JavaScript 正则表达式模式、标志、捕获组和替换反向引用在本地重写结构化文本。",
     "categoryName": "字符串与文本",
     "regexPattern": "正则表达式",
     "regexPlaceholder": "输入正则表达式，例如 (\\d{2})/(\\d{2})/(\\d{4})",
@@ -80,36 +80,36 @@
     "flagDotAll": "dotAll（匹配换行）",
     "flagUnicode": "Unicode",
     "flagSticky": "粘性",
-    "descTitle": "正则表达式替换",
+    "descTitle": "使用正则表达式反向引用重写结构化文本",
     "descParas": [
-      "这个正则表达式查找替换工具让您可以实时搜索模式并替换为新文本。支持所有六种 JavaScript 正则标志，替换字符串支持 $1、$2 等反向引用。",
-      "搜索和替换在浏览器中本地运行。您输入的文本不会被上传、存储或发送到服务器。"
+      "<strong>正则表达式替换 使用 JavaScript 正则表达式搜索文本，并用替换字符串替换每个匹配项。</strong> 它对于重新格式化日期、规范化 ID、修剪重复标签、重塑类似 CSV 的文本以及在脚本中使用清理规则之前测试清理规则非常有用。",
+      "捕获组可以在整个匹配的反向引用（例如 <code>$1</code>、<code>$2</code> 和 <code>$&</code>）的替换中重复使用。所选标志会影响找到的匹配项数量以及锚点、大小写、点和 Unicode 的解释方式。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在<strong>正则表达式</strong>字段中输入或粘贴正则表达式。不需要分隔符。",
-      "选择需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）或 <strong>y</strong>（粘性）。",
-      "在<strong>替换为</strong>字段中输入替换字符串。使用 $1、$2 引用捕获的分组。",
-      "在下方的编辑器中粘贴或输入测试文本。匹配会在输入时高亮显示。",
-      "点击<strong>全部替换</strong>对整个文本执行替换。",
-      "使用<strong>复制</strong>复制结果，<strong>下载</strong>保存，或<strong>清除</strong>重置。"
+      "将正则表达式模式键入或粘贴到 <strong>Regex Pattern</strong> 字段中。不需要分隔符。",
+      "选择您需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（粘性）。",
+      "在 <strong>替换为</strong> 字段中输入替换字符串。使用 $1, $2 来反向引用捕获的组。",
+      "将测试文本粘贴或输入到下面的编辑器中。当您键入时，匹配项会突出显示。",
+      "单击 <strong>全部替换</strong> 将替换应用到整个文本。",
+      "使用 <strong>复制</strong> 复制结果，使用 <strong>下载</strong> 保存结果，或使用 <strong>清除</strong> 重置所有内容。"
     ],
-    "whatIs": "什么是正则表达式？",
+    "whatIs": "什么是正则表达式替换？",
     "whatIsParas": [
-      "正则表达式（regex）是定义搜索模式的字符序列。它用于在字符串中进行模式匹配。",
-      "JavaScript 通过 RegExp 对象原生实现正则表达式。正则查找替换是开发者最强大的文本转换技术之一。"
+      "<strong>正则表达式替换</strong> 是 JavaScript 正则表达式的本地查找和替换沙箱。它会在应用替换之前显示匹配的文本，这有助于在重写过多之前捕获过于宽泛的模式。",
+      "替换语法是JavaScript语法。如果要将表达式移至其他语言或编辑器，请验证组编号、命名组支持、转义、换行符处理以及替换反向引用是否使用 <code>$1</code>、<code>\\1</code> 或其他形式。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入正则表达式时不需要分隔符。标志由复选框控制。替换字符串支持标准反向引用：$1 到 $9 引用捕获的分组，$& 引用整个匹配。",
+    "inputNotesPara": "在粘贴大文本之前，先对具有代表性的小样本进行测试。仅在稍后需要的部分周围使用捕获组，转义点和括号等文字字符，并在单击 <strong>全部替换</strong> 之前查看预览。",
     "example": "示例",
-    "examplePara": "使用反向引用将日期从 MM/DD/YYYY 格式转换为 YYYY-MM-DD 格式：",
+    "examplePara": "捕获组可以将日期从 MM/DD/YYYY 重新排列为 ISO 样式的 YYYY-MM-DD 输出：",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "tw": {
-    "title": "正規表達式替換 — Coding.Tools",
-    "description": "使用正規表達式尋找和替換文字，支援匹配高亮和反向參照。免費瀏覽器工具。",
+    "title": "正規表示式替換 - Coding.Tools",
+    "description": "使用 JavaScript 正規表示式、捕獲群組、反向引用和即時匹配預覽查找和取代文字。",
     "toolTitle": "正規表達式替換",
-    "toolDescription": "使用正規表達式即時尋找和替換文字。支援 $1、$2 等反向參照。資料不會離開您的瀏覽器。",
+    "toolDescription": "使用 JavaScript 正規表示式模式、標誌、擷取群組和替換反向引用在本地重寫結構化文字。",
     "categoryName": "字串與文字",
     "regexPattern": "正規表達式",
     "regexPlaceholder": "輸入正規表示式模式，例如(\\d{2})/(\\d{2})/(\\d{4})",
@@ -133,36 +133,36 @@
     "flagDotAll": "點全",
     "flagUnicode": "Unicode",
     "flagSticky": "粘性",
-    "descTitle": "正規表達式替換",
+    "descTitle": "使用正規表達式反向引用重寫結構化文本",
     "descParas": [
-      "這個正規表達式尋找替換工具讓您可以即時搜尋模式並替換為新文字。支援所有六種 JavaScript 正規標誌，替換字串支援 $1、$2 等反向參照。",
-      "搜尋和替換在瀏覽器中本地運行。您輸入的文字不會被上傳、儲存或傳送到伺服器。"
+      "<strong>正規表達式替換 使用 JavaScript 正規表示式搜尋文本，並用替換字串取代每個匹配項。</strong> 它對於重新格式化日期、規範化 ID、修剪重複標籤、重塑類似 CSV 的文字以及在腳本中使用清理規則之前測試清理規則非常有用。",
+      "捕獲組可以在整個匹配的反向引用（例如 <code>$1</code>、<code>$2</code> 和 <code>$&</code>）的替換中重複使用。所選標誌會影響找到的匹配項數量以及錨點、大小寫、點和 Unicode 的解釋方式。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在<strong>正規表達式</strong>欄位中輸入或貼上正規表達式。不需要分隔符號。",
-      "選擇需要的標誌。<strong>g</strong>（全域）、<strong>i</strong>（不分大小寫）、<strong>m</strong>（多行）等。",
-      "在<strong>替換為</strong>欄位中輸入替換字串。使用 $1、$2 引用捕獲的分組。",
-      "在下方的編輯器中貼上或輸入測試文字。匹配會在輸入時高亮顯示。",
-      "點擊<strong>全部替換</strong>對整個文字執行替換。",
-      "使用<strong>複製</strong>複製結果，<strong>下載</strong>儲存，或<strong>清除</strong>重設。"
+      "將正規表示式模式鍵入或貼上到 <strong>Regex Pattern</strong> 欄位中。不需要分隔符號。",
+      "選擇您需要的標誌：<strong>g</strong>（全域）、<strong>i</strong>（不區分大小寫）、<strong>m</strong>（多行） 、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（黏性）。",
+      "在 <strong>替換為</strong> 欄位中輸入替換字串。使用 $1, $2 來反向引用捕獲的群組。",
+      "將測試文字貼上或輸入到下面的編輯器中。當您鍵入時，匹配項會反白顯示。",
+      "點擊 <strong>全部替換</strong> 將替換應用到整個文字。",
+      "使用 <strong>複製</strong> 複製結果，使用 <strong>下載</strong> 儲存結果，或使用 <strong>清除</strong> 重設所有內容。"
     ],
-    "whatIs": "什麼是正規表達式？",
+    "whatIs": "什麼是正規表示式替換？",
     "whatIsParas": [
-      "正規表達式（regex）是定義搜尋模式的字元序列。它用於在字串中進行模式匹配。",
-      "JavaScript 透過 RegExp 物件原生實作正規表達式。正規尋找替換是開發者最強大的文字轉換技術之一。"
+      "<strong>正規表達式替換</strong> 是 JavaScript 正規表示式的本地查找和取代沙箱。它會在應用替換之前顯示匹配的文本，這有助於在重寫過多之前捕獲過於寬泛的模式。",
+      "替換語法是JavaScript語法。如果您要將表達式移至其他語言或編輯器，請驗證群組編號、命名群組支援、轉義、換行符處理以及取代反向引用是否使用 <code>$1</code>、<code>\\1</code> 或其他形式。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "輸入正規表達式時不需要分隔符號。標誌由複選框控制。替換字串支援標準反向參照：$1 到 $9 引用捕獲的分組，$& 引用整個匹配。",
+    "inputNotesPara": "在貼上大文本之前，先對具有代表性的小樣本進行測試。僅在稍後需要的部分周圍使用捕獲組，轉義點和括號等文字字符，並在單擊 <strong>全部替換</strong> 之前查看預覽。",
     "example": "範例",
-    "examplePara": "使用反向參照將日期從 MM/DD/YYYY 格式轉換為 YYYY-MM-DD 格式：",
+    "examplePara": "捕獲組可以將日期從 MM/DD/YYYY 重新排列為 ISO 樣式的 YYYY-MM-DD 輸出：",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "jp": {
-    "title": "正規表現置換 — Coding.Tools",
-    "description": "正規表現を使ったテキスト検索・置換。マッチハイライトと後方参照対応。無料ブラウザツール。",
+    "title": "正規表現置換 - Coding.Tools",
+    "description": "JavaScript 正規表現、キャプチャ グループ、後方参照、ライブ マッチ プレビューを使用してテキストを検索して置換します。",
     "toolTitle": "正規表現置換",
-    "toolDescription": "正規表現パターンでリアルタイムにテキストを検索・置換。$1、$2などの後方参照に対応。",
+    "toolDescription": "JavaScript 正規表現パターン、フラグ、キャプチャ グループ、置換後方参照を使用して構造化テキストをローカルに書き換えます。",
     "categoryName": "文字列とテキスト",
     "regexPattern": "正規表現",
     "regexPlaceholder": "正規表現パターンを入力します。例: (\\d{2})/(\\d{2})/(\\d{4})",
@@ -186,36 +186,36 @@
     "flagDotAll": "ドットオール",
     "flagUnicode": "Unicode",
     "flagSticky": "スティッキー",
-    "descTitle": "正規表現置換",
+    "descTitle": "正規表現後方参照を使用して構造化テキストを書き換える",
     "descParas": [
-      "この正規表現検索・置換ツールは、パターンを検索して新しいテキストにリアルタイムで置換できます。6つのJavaScript正規表現フラグすべてに対応し、$1、$2などの後方参照が使えます。",
-      "検索・置換はブラウザ内でローカルに実行されます。"
+      "<strong>Regex 検索テキストを JavaScript 正規表現で置換し、各一致を置換文字列で置換します。</strong> 日付の再フォーマット、ID の正規化、繰り返しラベルのトリミング、CSV のようなテキストの再形成、スクリプトで使用する前のクリーンアップ ルールのテストに役立ちます。",
+      "キャプチャ グループは、一致全体に対して <code>$1</code>、<code>$2</code>、<code>$&</code> などの後方参照を使用した置換で再利用できます。選択したフラグは、見つかった一致の数と、アンカー、大文字と小文字、ドット、および Unicode がどのように解釈されるかに影響します。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "<strong>正規表現</strong>欄にパターンを入力または貼り付けます。区切り文字は不要です。",
-      "フラグを選択します：<strong>g</strong>（グローバル）、<strong>i</strong>（大文字小文字を区別しない）、<strong>m</strong>（複数行）、<strong>s</strong>（dotAll）、<strong>u</strong>（Unicode）、<strong>y</strong>（スティッキー）。",
-      "<strong>置換文字列</strong>フィールドに置換文字列を入力します。$1、$2 でキャプチャグループを参照できます。",
-      "テストテキストを貼り付けまたは入力。マッチが入力時にハイライトされます。",
-      "<strong>すべて置換</strong>をクリックしてテキスト全体に置換を適用。",
-      "<strong>コピー</strong>で結果をコピー、<strong>ダウンロード</strong>で保存、<strong>クリア</strong>でリセット。"
+      "正規表現パターンを「<strong>Regex Pattern</strong>」フィールドに入力または貼り付けます。区切り文字は必要ありません。",
+      "必要なフラグを選択します: <strong>g</strong> (グローバル)、<strong>i</strong> (大文字と小文字を区別しない)、<strong>m</strong> (複数行)、<strong>s</strong> (ドットオール)、<strong>u</strong> (ユニコード)、または <strong>y</strong> （ベタベタ）。",
+      "「<strong>置換後</strong>」フィールドに置換文字列を入力します。キャプチャされたグループへの後方参照には $1、$2 を使用します。",
+      "テスト テキストを下のエディタに貼り付けるか入力します。入力すると、一致する部分が強調表示されます。",
+      "「<strong>すべて置換」</strong> をクリックして、テキスト全体に置換を適用します。",
+      "結果をコピーするには <strong>コピー</strong> を、保存するには <strong>ダウンロード</strong> を、すべてをリセットするには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "正規表現とは？",
+    "whatIs": "正規表現置換とは何ですか?",
     "whatIsParas": [
-      "正規表現（regex）は検索パターンを定義する文字列です。",
-      "JavaScriptはRegExpオブジェクトで正規表現をネイティブに実装しています。正規表現の検索・置換は最も強力なテキスト変換技術の一つです。"
+      "<strong>正規表現置換</strong> は、JavaScript 正規表現のローカル検索および置換サンドボックスです。置換を適用する前に一致するテキストが表示されるため、過度に書き換えられる前に広範すぎるパターンを検出するのに役立ちます。",
+      "置換構文は JavaScript 構文です。式を別の言語またはエディタに移動する場合は、グループの番号付け、名前付きグループのサポート、エスケープ、改行処理、および置換後方参照で <code>$1</code>、<code>\\1</code>、または別の形式を使用するかどうかを確認してください。"
     ],
     "inputNotes": "入力について",
-    "inputNotesPara": "正規表現パターンを区切り文字なしで入力。置換文字列は$1〜$9の後方参照と$&で全体マッチをサポート。",
+    "inputNotesPara": "大きなテキストを貼り付ける前に、小さな代表的なサンプルでテストしてください。後で必要になる部分の周囲にのみキャプチャ グループを使用し、ドットや括弧などのリテラル文字をエスケープし、[<strong>すべて置換]</strong> をクリックする前にプレビューを確認してください。",
     "example": "例",
-    "examplePara": "後方参照を使って日付をMM/DD/YYYYからYYYY-MM-DDに変換：",
+    "examplePara": "キャプチャ グループは、日付を MM/DD/YYYY から ISO スタイルの YYYY-MM-DD 出力に再配置できます。",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "kr": {
-    "title": "정규식 치환 — Coding.Tools",
-    "description": "정규식으로 텍스트를 찾고 바꾸기. 매치 하이라이트와 역참조 지원. 무료 브라우저 도구.",
+    "title": "정규식 바꾸기 - Coding.Tools",
+    "description": "JavaScript 정규식, 캡처 그룹, 역참조 및 실시간 일치 미리보기로 텍스트를 찾고 바꿉니다.",
     "toolTitle": "정규식 치환",
-    "toolDescription": "정규식 패턴으로 실시간 텍스트 검색 및 치환. $1, $2 등 역참조 지원.",
+    "toolDescription": "JavaScript 정규식 패턴, 플래그, 캡처 그룹 및 대체 역참조를 사용하여 구조화된 텍스트를 로컬에서 다시 작성합니다.",
     "categoryName": "문자열 및 텍스트",
     "regexPattern": "정규식",
     "regexPlaceholder": "정규식 패턴을 입력하세요. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -239,36 +239,36 @@
     "flagDotAll": "도트올",
     "flagUnicode": "유니코드",
     "flagSticky": "스티키",
-    "descTitle": "정규식 치환",
+    "descTitle": "정규식 역참조를 사용하여 구조화된 텍스트 다시 작성",
     "descParas": [
-      "이 정규식 찾기 및 바꾸기 도구는 패턴을 검색하고 새 텍스트로 실시간 치환할 수 있습니다.",
-      "검색 및 치환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>Regex 검색 텍스트를 JavaScript 정규식으로 바꾸고 일치하는 각 항목을 대체 문자열로 바꿉니다.</strong> 날짜 형식 변경, ID 정규화, 반복 레이블 자르기, CSV와 같은 텍스트 모양 변경, 스크립트에서 사용하기 전에 정리 규칙 테스트에 유용합니다.",
+      "캡처 그룹은 전체 일치에 대해 <code>$1</code>, <code>$2</code> 및 <code>$&</code>와 같은 역참조로 대체하여 재사용할 수 있습니다. 선택한 플래그는 발견된 일치 항목 수와 앵커, 대소문자, 점 및 유니코드가 해석되는 방식에 영향을 줍니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "<strong>정규식</strong> 필드에 패턴을 입력하거나 붙여넣으세요. 구분자는 필요 없습니다.",
-      "플래그를 선택하세요: <strong>g</strong>(전역), <strong>i</strong>(대소문자 무시), <strong>m</strong>(여러 줄), <strong>s</strong>(dotAll), <strong>u</strong>(유니코드), <strong>y</strong>(스티키).",
-      "<strong>치환 문자열</strong>에 치환 문자열을 입력하세요. 캡처 그룹은 $1, $2로 참조합니다.",
-      "테스트 텍스트를 붙여넣거나 입력하세요. 입력 시 매치가 하이라이트됩니다.",
-      "<strong>모두 치환</strong>을 클릭하여 전체 텍스트에 치환을 적용합니다.",
-      "<strong>복사</strong>로 결과를 복사, <strong>다운로드</strong>로 저장, <strong>지우기</strong>로 초기화하세요."
+      "<strong>Regex Pattern</strong> 필드에 정규식 패턴을 입력하거나 붙여넣습니다. 구분 기호가 필요하지 않습니다.",
+      "필요한 플래그를 선택하십시오: <strong>g</strong>(전역), <strong>i</strong>(대소문자 구분 안 함), <strong>m</strong>(여러 줄), <strong>s</strong>(dotAll), <strong>u</strong>(유니코드) 또는 <strong>y</strong>(끈적).",
+      "<strong>바꿀 내용</strong> 필드에 대체 문자열을 입력합니다. 캡처된 그룹에 대한 역참조에는 $1, $2를 사용합니다.",
+      "아래 편집기에 테스트 텍스트를 붙여넣거나 입력하세요. 입력하는 동안 일치하는 항목이 강조 표시됩니다.",
+      "전체 텍스트에 대체를 적용하려면 <strong>모두 치환</strong>를 클릭합니다.",
+      "결과를 복사하려면 <strong>복사</strong>를 사용하고, 결과를 저장하려면 <strong>다운로드</strong>를 사용하고, 모든 것을 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "정규식이란?",
+    "whatIs": "정규식 바꾸기란 무엇입니까?",
     "whatIsParas": [
-      "정규식(regex)은 검색 패턴을 정의하는 문자 시퀀스입니다.",
-      "JavaScript는 RegExp 객체로 정규식을 네이티브로 구현합니다. 정규식 찾기 및 바꾸기는 가장 강력한 텍스트 변환 기술 중 하나입니다."
+      "<strong>Regex 바꾸기</strong>는 JavaScript 정규 표현식을 위한 로컬 찾기 및 바꾸기 샌드박스입니다. 교체를 적용하기 전에 일치하는 텍스트를 표시하므로 너무 많이 다시 작성하기 전에 광범위한 패턴을 파악하는 데 도움이 됩니다.",
+      "대체 구문은 JavaScript 구문입니다. 표현식을 다른 언어나 편집기로 이동하는 경우 그룹 번호 지정, 명명된 그룹 지원, 이스케이프, 줄 바꿈 처리 및 대체 역참조가 <code>$1</code>, <code>\\1</code> 또는 다른 형식을 사용하는지 여부를 확인하세요."
     ],
     "inputNotes": "입력 참고",
-    "inputNotesPara": "정규식 패턴을 구분자 없이 입력. 치환 문자열은 $1~$9 역참조와 $&로 전체 매치를 지원.",
+    "inputNotesPara": "큰 텍스트를 붙여넣기 전에 작은 대표 샘플로 테스트하세요. 나중에 필요한 부분 주위에만 캡처 그룹을 사용하고, 점 및 괄호와 같은 리터럴 문자를 이스케이프 처리하고, <strong>모두 치환</strong>를 클릭하기 전에 미리보기를 검토하세요.",
     "example": "예시",
-    "examplePara": "역참조를 사용하여 날짜를 MM/DD/YYYY에서 YYYY-MM-DD로 변환:",
+    "examplePara": "캡처 그룹은 MM/DD/YYYY의 날짜를 ISO 스타일 YYYY-MM-DD 출력으로 다시 정렬할 수 있습니다.",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "fr": {
-    "title": "Remplacement Regex — Coding.Tools",
-    "description": "Recherchez et remplacez du texte avec des expressions régulières. Supporte les références arrières. Outil gratuit.",
+    "title": "Remplacement d'expression régulière - Coding.Tools",
+    "description": "Recherchez et remplacez du texte par des expressions régulières JavaScript, capturez des groupes, des références arrière et un aperçu des correspondances en direct.",
     "toolTitle": "Remplacement Regex",
-    "toolDescription": "Recherchez et remplacez du texte avec des motifs regex en temps réel. Supporte $1, $2.",
+    "toolDescription": "Réécrivez le texte structuré localement avec des modèles d'expression régulière, des indicateurs, des groupes de capture et des références arrière de remplacement JavaScript.",
     "categoryName": "Chaînes et texte",
     "regexPattern": "Motif Regex",
     "regexPlaceholder": "Entrez le modèle d'expression régulière, par exemple. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -292,36 +292,36 @@
     "flagDotAll": "pointTout",
     "flagUnicode": "Unicode",
     "flagSticky": "collant",
-    "descTitle": "Remplacement Regex",
+    "descTitle": "Réécrire le texte structuré avec des références regex",
     "descParas": [
-      "Cet outil de recherche et remplacement regex vous permet de rechercher des motifs et les remplacer en temps réal.",
-      "La recherche et le remplacement s'exécutent localement dans votre navigateur."
+      "<strong>Regex Remplace le texte recherché par une expression régulière JavaScript et remplace chaque correspondance par une chaîne de remplacement.</strong> Il est utile pour reformater les dates, normaliser les identifiants, couper les étiquettes répétées, remodeler le texte de type CSV et tester les règles de nettoyage avant de les utiliser dans des scripts.",
+      "Les groupes de capture peuvent être réutilisés lors du remplacement avec des références arrière telles que <code>$1</code>, <code>$2</code> et <code>$&</code> pour l'ensemble de la correspondance. Les indicateurs sélectionnés affectent le nombre de correspondances trouvées et la manière dont les ancres, la casse, les points et Unicode sont interprétés."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un motif dans le champ <strong>Motif Regex</strong>. Pas besoin de délimiteurs.",
-      "Sélectionnez les drapeaux : <strong>g</strong> (global), <strong>i</strong> (insensible à la casse), <strong>m</strong> (multiligne), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
-      "Entrez une chaîne de remplacement dans le champ <strong>Remplacer par</strong>. Utilisez $1, $2 pour les références arrières.",
-      "Collez ou tapez votre texte de test ci-dessous. Les correspondances sont mises en surbrillance.",
-      "Cliquez <strong>Tout remplacer</strong> pour appliquer le remplacement à tout le texte.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Tapez ou collez un modèle d'expression régulière dans le champ <strong>Regex Pattern</strong>. Aucun délimiteur n'est nécessaire.",
+      "Sélectionnez les indicateurs dont vous avez besoin : <strong>g</strong> (global), <strong>i</strong> (insensible à la casse), <strong>m</strong> (multiligne), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (collant).",
+      "Entrez une chaîne de remplacement dans le champ <strong>Remplacer par</strong>. Utilisez $1, $2 pour les références arrière aux groupes capturés.",
+      "Collez ou saisissez votre texte de test dans l'éditeur ci-dessous. Les correspondances sont mises en surbrillance au fur et à mesure que vous tapez.",
+      "Cliquez sur <strong>Tout remplacer</strong> pour appliquer le remplacement à l'intégralité du texte.",
+      "Utilisez <strong>Copier</strong> pour copier le résultat, <strong>Télécharger</strong> pour l'enregistrer ou <strong>Effacer</strong> pour tout réinitialiser."
     ],
-    "whatIs": "Qu'est-ce qu'une expression régulière ?",
+    "whatIs": "Qu’est-ce que Regex Remplacer ?",
     "whatIsParas": [
-      "Une expression régulière (regex) est une séquence de caractères définissant un modèle de recherche.",
-      "Le remplacement regex est l'une des techniques de transformation de texte les plus puissantes."
+      "<strong>Remplacement Regex</strong> est un bac à sable local de recherche et de remplacement pour les expressions régulières JavaScript. Il affiche le texte correspondant avant d'appliquer le remplacement, ce qui permet de détecter les modèles trop larges avant qu'ils ne soient trop réécrits.",
+      "La syntaxe de remplacement est la syntaxe JavaScript. Si vous déplacez l'expression vers une autre langue ou un autre éditeur, vérifiez la numérotation des groupes, la prise en charge des groupes nommés, l'échappement, la gestion des nouvelles lignes et si les références arrière de remplacement utilisent <code>$1</code>, <code>\\1</code> ou une autre forme."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez le motif sans délimiteurs. La chaîne de remplacement supporte $1 à $9 et $& pour la correspondance complète.",
+    "inputNotesPara": "Testez sur un petit échantillon représentatif avant de coller un texte volumineux. Utilisez des groupes de capture uniquement autour des pièces dont vous aurez besoin ultérieurement, échappez les caractères littéraux tels que les points et les parenthèses et examinez l'aperçu avant de cliquer sur <strong>Tout remplacer</strong>.",
     "example": "Exemple",
-    "examplePara": "Reformater des dates de MM/DD/YYYY en YYYY-MM-DD :",
+    "examplePara": "Les groupes de capture peuvent réorganiser les dates de MM/JJ/AAAA dans une sortie AAAA-MM-JJ de style ISO :",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "de": {
-    "title": "Regex Ersetzen — Coding.Tools",
-    "description": "Text mit regulären Ausdrücken suchen und ersetzen. Unterstützt Rückreferenzen. Kostenloses Browser-Tool.",
+    "title": "Regex ersetzen – Coding.Tools",
+    "description": "Suchen und ersetzen Sie Text mit regulären JavaScript-Ausdrücken, erfassen Sie Gruppen, Rückverweise und Live-Übereinstimmungsvorschau.",
     "toolTitle": "Regex Ersetzen",
-    "toolDescription": "Text mit Regex-Mustern in Echtzeit suchen und ersetzen. Unterstützt $1, $2 Rückreferenzen.",
+    "toolDescription": "Schreiben Sie strukturierten Text lokal mit JavaScript-Regex-Mustern, Flags, Capture-Gruppen und Ersatz-Rückverweisen um.",
     "categoryName": "Zeichenketten & Text",
     "regexPattern": "Regex-Muster",
     "regexPlaceholder": "Geben Sie ein Regex-Muster ein, z. B. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -345,36 +345,36 @@
     "flagDotAll": "Punkt für alle",
     "flagUnicode": "Unicode",
     "flagSticky": "klebrig",
-    "descTitle": "Regex Ersetzen",
+    "descTitle": "Schreiben Sie strukturierten Text mit Regex-Rückverweisen neu",
     "descParas": [
-      "Dieses Regex-Such-und-Ersetz-Tool ermöglicht das Suchen nach Mustern und Ersetzen in Echtzeit.",
-      "Suchen und Ersetzen läuft lokal im Browser."
+      "<strong>Regex Ersetzen durchsucht Text mit einem regulären JavaScript-Ausdruck und ersetzt jede Übereinstimmung durch eine Ersatzzeichenfolge.</strong> Es ist nützlich, um Datumsangaben neu zu formatieren, IDs zu normalisieren, wiederholte Beschriftungen zu kürzen, CSV-ähnlichen Text umzuformen und Bereinigungsregeln zu testen, bevor sie in Skripts verwendet werden.",
+      "Erfassungsgruppen können beim Ersetzen mit Rückverweisen wie <code>$1</code>, <code>$2</code> und <code>$&</code> für das gesamte Spiel wiederverwendet werden. Die ausgewählten Flags wirken sich darauf aus, wie viele Übereinstimmungen gefunden werden und wie Anker, Groß-/Kleinschreibung, Punkte und Unicode interpretiert werden."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Geben Sie ein Regex-Muster in das <strong>Regex-Muster</strong> Feld ein. Keine Trennzeichen nötig.",
-      "Wählen Sie die Flags: <strong>g</strong> (global), <strong>i</strong> (Groß-/Kleinschreibung ignorieren), <strong>m</strong> (mehrzeilig), <strong>s</strong> (dotAll), <strong>u</strong> (Unicode) oder <strong>y</strong> (sticky).",
-      "Geben Sie eine Ersetzungszeichenkette in das Feld <strong>Ersetzen durch</strong> ein. Verwenden Sie $1, $2 für Rückreferenzen.",
-      "Fügen Sie Ihren Testtext ein oder tippen Sie ihn. Treffer werden bei der Eingabe hervorgehoben.",
-      "Klicken Sie <strong>Alle ersetzen</strong>, um die Ersetzung auf den gesamten Text anzuwenden.",
-      "Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong>."
+      "Geben Sie ein Regex-Muster ein oder fügen Sie es in das Feld <strong>Regex Pattern</strong> ein. Keine Trennzeichen erforderlich.",
+      "Wählen Sie die Flags aus, die Sie benötigen: <strong>g</strong> (global), <strong>i</strong> (Groß-/Kleinschreibung nicht beachtet), <strong>m</strong> (mehrzeilig), <strong>s</strong> (dotAll), <strong>u</strong> (Unicode) oder <strong>y</strong> (klebrig).",
+      "Geben Sie eine Ersatzzeichenfolge in das Feld <strong>Ersetzen durch</strong> ein. Verwenden Sie $1, $2 für Rückverweise auf erfasste Gruppen.",
+      "Fügen Sie Ihren Testtext in den unten stehenden Editor ein oder geben Sie ihn ein. Übereinstimmungen werden während der Eingabe hervorgehoben.",
+      "Klicken Sie auf <strong>Alle ersetzen</strong>, um die Ersetzung auf den gesamten Text anzuwenden.",
+      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren, <strong>Herunterladen</strong>, um es zu speichern, oder <strong>Leeren</strong>, um alles zurückzusetzen."
     ],
-    "whatIs": "Was sind reguläre Ausdrücke ?",
+    "whatIs": "Was ist Regex-Ersatz?",
     "whatIsParas": [
-      "Ein regulärer Ausdruck (Regex) ist eine Zeichenfolge, die ein Suchmuster definiert.",
-      "Regex-Suchen und -Ersetzen ist eine der mächtigsten Texttransformationstechniken."
+      "<strong>Regex Ersetzenment</strong> ist eine lokale Sandbox zum Suchen und Ersetzen für reguläre JavaScript-Ausdrücke. Es zeigt übereinstimmenden Text an, bevor Sie die Ersetzung anwenden, was hilft, zu weit gefasste Muster zu erkennen, bevor sie zu viel umschreiben.",
+      "Die Ersatzsyntax ist die JavaScript-Syntax. Wenn Sie den Ausdruck in eine andere Sprache oder einen anderen Editor verschieben, überprüfen Sie die Gruppennummerierung, die Unterstützung benannter Gruppen, Escapezeichen, die Behandlung von Zeilenumbrüchen und ob Ersatz-Rückverweise <code>$1</code>, <code>\\1</code> oder eine andere Form verwenden."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Geben Sie das Muster ohne Trennzeichen ein. Die Ersetzungszeichenkette unterstützt $1 bis $9 und $&.",
+    "inputNotesPara": "Testen Sie es an einer kleinen repräsentativen Stichprobe, bevor Sie großen Text einfügen. Verwenden Sie Erfassungsgruppen nur um die Teile herum, die Sie später benötigen, maskieren Sie Literalzeichen wie Punkte und Klammern und überprüfen Sie die Vorschau, bevor Sie auf <strong>Alle ersetzen</strong> klicken.",
     "example": "Beispiel",
-    "examplePara": "Datumsformat von MM/DD/YYYY auf YYYY-MM-DD ändern:",
+    "examplePara": "Erfassungsgruppen können Datumsangaben von MM/TT/JJJJ in die ISO-Ausgabe JJJJ-MM-TT umordnen:",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "es": {
-    "title": "Reemplazo Regex — Coding.Tools",
-    "description": "Busque y reemplace texto con expresiones regulares. Soporta referencias cruzadas. Herramienta gratuita.",
+    "title": "Reemplazo de expresiones regulares: Coding.Tools",
+    "description": "Busque y reemplace texto con expresiones regulares JavaScript, grupos de captura, referencias anteriores y vista previa de partidos en vivo.",
     "toolTitle": "Reemplazo Regex",
-    "toolDescription": "Busque y reemplace texto con patrones regex en tiempo real. Soporta $1, $2.",
+    "toolDescription": "Reescriba texto estructurado localmente con patrones de expresiones regulares, indicadores, grupos de captura y referencias de reemplazo JavaScript.",
     "categoryName": "Cadenas y texto",
     "regexPattern": "Patrón Regex",
     "regexPlaceholder": "Ingrese el patrón de expresiones regulares, p. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -398,36 +398,36 @@
     "flagDotAll": "puntoTodos",
     "flagUnicode": "Unicode",
     "flagSticky": "pegajoso",
-    "descTitle": "Reemplazo Regex",
+    "descTitle": "Reescribir texto estructurado con referencias inversas de expresiones regulares",
     "descParas": [
-      "Esta herramienta de búsqueda y reemplazo regex le permite buscar patrones y reemplazarlos en tiempo real.",
-      "La búsqueda y reemplazo se ejecuta localmente en su navegador."
+      "<strong>Regex Reemplazar busca texto con una expresión regular JavaScript y reemplaza cada coincidencia con una cadena de reemplazo.</strong> Es útil para reformatear fechas, normalizar ID, recortar etiquetas repetidas, remodelar texto tipo CSV y probar reglas de limpieza antes de usarlas en scripts.",
+      "Los grupos de captura se pueden reutilizar en el reemplazo con referencias anteriores como <code>$1</code>, <code>$2</code> y <code>$&</code> para toda la partida. Las banderas seleccionadas afectan la cantidad de coincidencias que se encuentran y cómo se interpretan los anclajes, mayúsculas y minúsculas, puntos y Unicode."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue un patrón en el campo <strong>Patrón Regex</strong>. No se necesitan delimitadores.",
-      "Seleccione las banderas: <strong>g</strong> (global), <strong>i</strong> (insensible a mayúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), o <strong>y</strong> (sticky).",
-      "Ingrese una cadena de reemplazo en el campo <strong>Reemplazar con</strong>. Use $1, $2 para referencias de grupos capturados.",
-      "Pegue o escriba su texto de prueba. Las coincidencias se resaltan al escribir.",
+      "Escriba o pegue un patrón de expresiones regulares en el campo <strong>Regex Pattern</strong>. No se necesitan delimitadores.",
+      "Seleccione las banderas que necesita: <strong>g</strong> (global), <strong>i</strong> (no distingue entre mayúsculas y minúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) o <strong>y</strong> (pegajoso).",
+      "Ingrese una cadena de reemplazo en el campo <strong>Reemplazar con</strong>. Utilice $1, $2 para referencias a grupos capturados.",
+      "Pega o escribe tu texto de prueba en el editor a continuación. Las coincidencias se resaltan a medida que escribe.",
       "Haga clic en <strong>Reemplazar todo</strong> para aplicar el reemplazo a todo el texto.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Utilice <strong>Copiar</strong> para copiar el resultado, <strong>Descargar</strong> para guardarlo o <strong>Limpiar</strong> para restablecer todo."
     ],
-    "whatIs": "¿Qué son las expresiones regulares?",
+    "whatIs": "¿Qué es el reemplazo de expresiones regulares?",
     "whatIsParas": [
-      "Una expresión regular (regex) es una secuencia de caracteres que define un patrón de búsqueda.",
-      "La búsqueda y reemplazo regex es una de las técnicas de transformación de texto más poderosas."
+      "<strong>Regex Reemplazo</strong> es un entorno limitado local de búsqueda y reemplazo para expresiones regulares JavaScript. Muestra texto coincidente antes de aplicar el reemplazo, lo que ayuda a detectar patrones demasiado amplios antes de que se reescriban demasiado.",
+      "La sintaxis de reemplazo es la sintaxis JavaScript. Si está moviendo la expresión a otro idioma o editor, verifique la numeración de grupos, la compatibilidad con grupos con nombre, el escape, el manejo de nuevas líneas y si las referencias retrospectivas de reemplazo usan <code>$1</code>, <code>\\1</code> u otra forma."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese el patrón sin delimitadores. La cadena de reemplazo soporta $1 a $9 y $&.",
+    "inputNotesPara": "Pruebe con una pequeña muestra representativa antes de pegar texto grande. Utilice grupos de captura solo alrededor de las partes que necesitará más adelante, escape caracteres literales como puntos y paréntesis y revise la vista previa antes de hacer clic en <strong>Reemplazar todo</strong>.",
     "example": "Ejemplo",
-    "examplePara": "Reformatear fechas de MM/DD/YYYY a YYYY-MM-DD:",
+    "examplePara": "Los grupos de captura pueden reorganizar las fechas de MM/DD/AAAA a una salida de estilo ISO AAAA-MM-DD:",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "pt": {
-    "title": "Substituição Regex — Coding.Tools",
-    "description": "Busque e substitua texto com expressões regulares. Suporta referências cruzadas. Ferramenta gratuita.",
+    "title": "Substituição de Regex - Coding.Tools",
+    "description": "Encontre e substitua texto por expressões regulares JavaScript, grupos de captura, referências anteriores e visualização de correspondência ao vivo.",
     "toolTitle": "Substituição Regex",
-    "toolDescription": "Busque e substitua texto com padrões regex em tempo real. Suporta $1, $2.",
+    "toolDescription": "Reescreva o texto estruturado localmente com padrões de regex JavaScript, sinalizadores, grupos de captura e referências anteriores de substituição.",
     "categoryName": "Strings e texto",
     "regexPattern": "Padrão Regex",
     "regexPlaceholder": "Insira o padrão regex, por exemplo. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -451,29 +451,29 @@
     "flagDotAll": "pontoTodos",
     "flagUnicode": "Unicode",
     "flagSticky": "pegajoso",
-    "descTitle": "Substituição Regex",
+    "descTitle": "Reescrever texto estruturado com referências anteriores de regex",
     "descParas": [
-      "Esta ferramenta de busca e substituição regex permite buscar padrões e substituí-los em tempo real.",
-      "A busca e substituição é executada localmente no navegador."
+      "<strong>Regex Substitua o texto de pesquisa por uma expressão regular JavaScript e substitua cada correspondência por uma string de substituição.</strong> É útil para reformatar datas, normalizar IDs, cortar rótulos repetidos, remodelar texto semelhante a CSV e testar regras de limpeza antes de usá-los em scripts.",
+      "Os grupos de captura podem ser reutilizados na substituição com referências anteriores como <code>$1</code>, <code>$2</code> e <code>$&</code> para toda a partida. Os sinalizadores selecionados afetam quantas correspondências são encontradas e como as âncoras, maiúsculas e minúsculas, pontos e Unicode são interpretados."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um padrão no campo <strong>Padrão Regex</strong>. Não precisa de delimitadores.",
-      "Selecione as bandeiras: <strong>g</strong> (global), <strong>i</strong> (ignorar maiúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), ou <strong>y</strong> (sticky).",
-      "Insira uma string de substituição no campo <strong>Substituir por</strong>. Use $1, $2 para referências a grupos capturados.",
-      "Cole ou digite seu texto de teste. As correspondências são destacadas ao digitar.",
-      "Clique em <strong>Substituir tudo</strong> para aplicar a substituição a todo o texto.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Digite ou cole um padrão regex no campo <strong>Regex Pattern</strong>. Não são necessários delimitadores.",
+      "Selecione os sinalizadores necessários: <strong>g</strong> (global), <strong>i</strong> (sem distinção entre maiúsculas e minúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (pegajoso).",
+      "Insira uma sequência de substituição no campo <strong>Substituir por</strong>. Use $1, $2 para referências anteriores a grupos capturados.",
+      "Cole ou digite seu texto de teste no editor abaixo. As correspondências são destacadas conforme você digita.",
+      "Clique em <strong>Substituir tudo</strong> para aplicar a substituição ao texto inteiro.",
+      "Use <strong>Copiar</strong> para copiar o resultado, <strong>Baixar</strong> para salvá-lo ou <strong>Limpar</strong> para redefinir tudo."
     ],
-    "whatIs": "O que são expressões regulares?",
+    "whatIs": "O que é substituição de Regex?",
     "whatIsParas": [
-      "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca.",
-      "A busca e substituição regex é uma das técnicas de transformação de texto mais poderosas."
+      "<strong>Substituição Regex</strong> é uma sandbox local de localização e substituição para expressões regulares JavaScript. Ele mostra o texto correspondente antes de você aplicar a substituição, o que ajuda a detectar padrões muito amplos antes que eles sejam reescritos demais.",
+      "A sintaxe de substituição é a sintaxe JavaScript. Se você estiver movendo a expressão para outro idioma ou editor, verifique a numeração do grupo, o suporte ao grupo nomeado, o escape, a manipulação de nova linha e se as referências anteriores de substituição usam <code>$1</code>, <code>\\1</code> ou outro formato."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira o padrão sem delimitadores. A string de substituição suporta $1 a $9 e $&.",
+    "inputNotesPara": "Teste em uma pequena amostra representativa antes de colar um texto grande. Use grupos de captura apenas em torno das partes necessárias posteriormente, escape de caracteres literais, como pontos e parênteses, e revise a visualização antes de clicar em <strong>Substituir tudo</strong>.",
     "example": "Exemplo",
-    "examplePara": "Reformatar datas de MM/DD/YYYY para YYYY-MM-DD:",
+    "examplePara": "Os grupos de captura podem reorganizar datas de MM/DD/AAAA na saída AAAA-MM-DD no estilo ISO:",
     "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   }
 }

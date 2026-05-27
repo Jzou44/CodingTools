@@ -1,10 +1,5 @@
 ---
-title: "HTML Minifier — Coding.Tools"
-description: "Minify and compress HTML by removing whitespace, comments, and unnecessary characters. Runs locally in your browser, fast and free."
-toolTitle: "HTML Minifier"
-toolDescription: "Minify HTML by stripping whitespace, comments, and unnecessary formatting. Copy or download the result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "html-minifier"
 permalink: "/html-minifier.html"
 ---
@@ -35,39 +30,7 @@ permalink: "/html-minifier.html"
 {% endblock %}
 
 {% block description %}
-  <h2>HTML Minifier</h2>
-  <p>This HTML Minifier removes unnecessary whitespace, comments, optional tags, and redundant attributes from HTML documents to produce the most compact representation. It reduces page weight for faster load times and lower bandwidth usage.</p>
-  <p>The minification runs entirely in your browser using the html-minifier library. Your HTML code never leaves your device, making it safe for processing production templates, email HTML, or any markup containing sensitive content.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your formatted or pretty-printed HTML into the input editor.</li>
-    <li>Click <strong>Minify HTML</strong> to strip whitespace and comments.</li>
-    <li>View the compact HTML in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .html file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is HTML minification?</h3>
-  <p>HTML minification is the process of removing all characters from an HTML document that are not required for correct rendering. This includes stripping whitespace between tags, removing HTML comments, collapsing redundant whitespace in attributes, and optionally removing optional closing tags.</p>
-  <p>Minified HTML is a standard practice in web performance optimization. Search engines and browsers do not require formatted HTML, so minifying production markup can reduce page size by 10-20% or more, leading to faster downloads and improved page speed scores.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any HTML input. It collapses whitespace between tags, removes comments, and applies safe minification options that preserve correct rendering. Inline JavaScript and CSS within the HTML are also minified.</p>
-
-  <h3>Example</h3>
-  <p>Formatted HTML is compressed by removing whitespace and comments:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (formatted) ---
-&lt;div class="card"&gt;
-  &lt;!-- Card content --&gt;
-  &lt;h2&gt;Title&lt;/h2&gt;
-  &lt;p&gt;Description&lt;/p&gt;
-&lt;/div&gt;
-
---- Output (minified) ---
-&lt;div class="card"&gt;&lt;h2&gt;Title&lt;/h2&gt;&lt;p&gt;Description&lt;/p&gt;&lt;/div&gt;</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

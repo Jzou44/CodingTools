@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "JSON to XML Converter — Coding.Tools",
-    "description": "Convert JSON data to XML format directly in your browser.",
+    "title": "JSON to XML Converter - Coding.Tools",
+    "description": "Convert valid JSON into XML markup using predictable element and repeated-item mappings.",
     "toolTitle": "JSON to XML Converter",
-    "toolDescription": "Transform JSON objects and arrays into well-formed XML. Copy or download the converted result.",
+    "toolDescription": "Convert JSON objects, arrays, and primitive values into readable XML.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste JSON to convert...",
     "outputPlaceholder": "XML output will appear here...",
-    "descTitle": "JSON to XML Converter",
+    "descTitle": "Convert JSON data into XML elements",
     "descParas": [
-      "This tool converts JSON data into XML format. It handles nested objects, arrays, and primitive values, producing clean, well-formed XML output.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>JSON to XML Converter transforms parsed JSON into XML markup for systems, examples, and integrations that expect XML.</strong> It is useful when prototyping SOAP-style payloads, legacy imports, XML fixtures, or documentation samples.",
+      "JSON and XML do not map one-to-one. JSON object keys become element names, arrays usually become repeated elements, and primitive values become text content; attributes, namespaces, and mixed text require explicit conventions outside plain JSON."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your JSON data into the input editor.",
-      "Click <strong>Convert to XML</strong> to transform the data.",
-      "The XML output appears in the output editor with proper formatting.",
+      "Click <strong>Convert to XML</strong> to transform the parsed data.",
+      "Review the generated XML for the expected root element, repeated items, and text values.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is JSON to XML conversion?",
+    "whatIs": "What is JSON to XML Converter?",
     "whatIsParas": [
-      "JSON to XML conversion transforms JavaScript Object Notation (JSON) into Extensible Markup Language (XML). Both are widely used data interchange formats, and converting between them is common when integrating different systems.",
-      "This conversion is useful when working with SOAP APIs, XML-based configuration, or legacy systems that expect XML input."
+      "<strong>JSON to XML Converter</strong> is a browser-based utility for reshaping JSON data into an XML document. It gives you a quick starting point when a tool or API accepts XML but your source data is JSON.",
+      "The conversion is structural, not semantic. If the target schema requires attributes, namespaces, specific root names, or typed values, adjust and validate the XML against that schema before use."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts valid JSON input. JSON objects become XML elements, arrays become repeated elements, and primitive values become text content.",
+    "inputNotesPara": "Use valid JSON only. Property names should be suitable as XML element names, or you may need to rename them after conversion. Arrays, null values, and booleans may need target-specific handling.",
     "example": "Example",
-    "examplePara": "A JSON object converts to structured XML:",
-    "exampleCode": "--- JSON Input ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML Output ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "A nested JSON object becomes a matching XML element tree:",
+    "exampleCode": "--- JSON Input ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML Output ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "Convert to XML"
   },
   "cn": {
-    "title": "JSON 转 XML — Coding.Tools",
-    "description": "在浏览器中直接将 JSON 数据转换为 XML 格式。",
+    "title": "JSON 到 XML 转换器 - Coding.Tools",
+    "description": "使用可预测元素和重复项映射将有效 JSON 转换为 XML 标记。",
     "toolTitle": "JSON 转 XML",
-    "toolDescription": "将 JSON 对象和数组转换为格式良好的 XML。复制或下载转换结果。",
+    "toolDescription": "将 JSON 对象、数组和原始值转换为可读的 XML。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要转换的 JSON...",
     "outputPlaceholder": "XML 输出将在此显示...",
-    "descTitle": "JSON 转 XML",
+    "descTitle": "将 JSON 数据转换为 XML 元素",
     "descParas": [
-      "该工具将 JSON 数据转换为 XML 格式。它处理嵌套对象、数组和基本值，产生干净、格式良好的 XML 输出。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>JSON 转 XML 会把解析后的 JSON 转成 XML 标记，供需要 XML 的系统、示例和集成使用。</strong> 适合用于 SOAP 风格载荷、旧系统导入、XML 测试数据或文档示例的原型。",
+      "JSON 和 XML 不一对一映射。 JSON 对象键成为元素名称，数组通常成为重复元素，原始值成为文本内容；属性、命名空间和混合文本需要普通 JSON 之外的显式约定。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 JSON 数据粘贴到输入编辑器中。",
-      "点击<strong>转换为 XML</strong>来转换数据。",
-      "XML 输出将以适当的格式显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击“<strong>转换为 XML</strong>”以转换解析的数据。",
+      "查看生成的 XML 中的预期根元素、重复项和文本值。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 JSON 转 XML？",
+    "whatIs": "什么是 JSON 到 XML 转换器？",
     "whatIsParas": [
-      "JSON 转 XML 将 JavaScript 对象表示法 (JSON) 转换为可扩展标记语言 (XML)。两者都是广泛使用的数据交换格式，集成不同系统时经常需要相互转换。",
-      "此转换在使用 SOAP API、基于 XML 的配置或需要 XML 输入的旧系统时很有用。"
+      "<strong>JSON 到 XML 转换器</strong> 是一个基于浏览器的实用程序，用于将 JSON 数据重塑为 XML 文档。当工具或 API 接受 XML 但您的源数据是 JSON 时，它可以为您提供快速起点。",
+      "这种转换是结构性的，而不是语义性的。如果目标模式需要属性、命名空间、特定根名称或键入的值，请在使用前根据该模式调整和验证 XML。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受有效的 JSON 输入。JSON 对象变为 XML 元素，数组变为重复元素，基本值变为文本内容。",
+    "inputNotesPara": "仅使用有效的 JSON。属性名称应适合作为 XML 元素名称，否则您可能需要在转换后重命名它们。数组、空值和布尔值可能需要特定于目标的处理。",
     "example": "示例",
-    "examplePara": "JSON 对象转换为结构化的 XML：",
-    "exampleCode": "--- JSON 输入 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 输出 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "嵌套的 JSON 对象成为匹配的 XML 元素树：",
+    "exampleCode": "--- JSON 输入 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 输出 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "转换为 XML"
   },
   "tw": {
-    "title": "JSON 轉 XML — Coding.Tools",
-    "description": "在瀏覽器中直接將 JSON 資料轉換為 XML 格式。",
+    "title": "JSON 到 XML 轉換器 - Coding.Tools",
+    "description": "使用可預測元素和重複項對應將有效 JSON 轉換為 XML 標記。",
     "toolTitle": "JSON 轉 XML",
-    "toolDescription": "將 JSON 物件和陣列轉換為格式良好的 XML。複製或下載轉換結果。",
+    "toolDescription": "將 JSON 物件、陣列和原始值轉換為可讀的 XML。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要轉換的 JSON...",
     "outputPlaceholder": "XML 輸出將在此顯示...",
-    "descTitle": "JSON 轉 XML",
+    "descTitle": "將 JSON 資料轉換為 XML 元素",
     "descParas": [
-      "該工具將 JSON 資料轉換為 XML 格式。它處理嵌套物件、陣列和基本值，產生乾淨、格式良好的 XML 輸出。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>JSON 轉 XML 會把解析後的 JSON 轉成 XML 標記，供需要 XML 的系統、範例和整合使用。</strong> 適合用於 SOAP 風格負載、舊系統匯入、XML 測試資料或文件範例的原型。",
+      "JSON 和 XML 不一對一映射。 JSON 物件鍵成為元素名稱，陣列通常成為重複元素，原始值成為文字內容；屬性、命名空間和混合文字需要普通 JSON 以外的明確約定。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 JSON 資料貼上到輸入編輯器中。",
-      "點擊<strong>轉換為 XML</strong>來轉換資料。",
-      "XML 輸出將以適當的格式顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 JSON 資料貼到輸入編輯器中。",
+      "按一下「<strong>轉換為 XML</strong>」以轉換解析的資料。",
+      "查看產生的 XML 中的預期根元素、重複項和文字值。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 JSON 轉 XML？",
+    "whatIs": "什麼是 JSON 到 XML 轉換器？",
     "whatIsParas": [
-      "JSON 轉 XML 將 JavaScript 物件表示法 (JSON) 轉換為可延伸標記語言 (XML)。兩者都是廣泛使用的資料交換格式，整合不同系統時經常需要相互轉換。",
-      "此轉換在使用 SOAP API、基於 XML 的設定或需要 XML 輸入的舊系統時很有用。"
+      "<strong>JSON 到 XML 轉換器</strong> 是一個基於瀏覽器的實用程序，用於將 JSON 資料重塑為 XML 文件。當工具或 API 接受 XML 但您的來源資料是 JSON 時，它可以為您提供快速起點。",
+      "這種轉換是結構性的，而不是語意性的。如果目標模式需要屬性、命名空間、特定根名稱或鍵入的值，請在使用前根據該模式調整和驗證 XML。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受有效的 JSON 輸入。JSON 物件變為 XML 元素，陣列變為重複元素，基本值變為文字內容。",
+    "inputNotesPara": "僅使用有效的 JSON。屬性名稱應適合作為 XML 元素名稱，否則您可能需要在轉換後重新命名它們。陣列、空值和布林值可能需要特定於目標的處理。",
     "example": "範例",
-    "examplePara": "JSON 物件轉換為結構化的 XML：",
-    "exampleCode": "--- JSON 輸入 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 輸出 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "嵌套的 JSON 物件成為匹配的 XML 元素樹：",
+    "exampleCode": "--- JSON 輸入 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 輸出 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "轉換為 XML"
   },
   "jp": {
-    "title": "JSON → XML 変換 — Coding.Tools",
-    "description": "ブラウザで JSON データを XML 形式に直接変換します。",
+    "title": "JSONからXMLへのコンバーター - Coding.Tools",
+    "description": "予測可能な要素と繰り返し項目のマッピングを使用して、有効な JSON を XML マークアップに変換します。",
     "toolTitle": "JSON → XML 変換",
-    "toolDescription": "JSON オブジェクトと配列を整形式の XML に変換します。コピーまたはダウンロード。",
+    "toolDescription": "JSON オブジェクト、配列、プリミティブ値を読み取り可能な XML に変換します。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "変換する JSON を貼り付け...",
     "outputPlaceholder": "XML 出力がここに表示されます...",
-    "descTitle": "JSON → XML 変換",
+    "descTitle": "JSON データを XML 要素に変換する",
     "descParas": [
-      "このツールは JSON データを XML 形式に変換します。ネストされたオブジェクト、配列、基本値を処理し、きれいな整形式の XML 出力を生成します。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>JSON から XML は、解析済みの JSON を XML マークアップへ変換し、XML を必要とするシステム、サンプル、連携で使える形にします。</strong> SOAP 形式のペイロード、レガシーインポート、XML テストデータ、ドキュメント例のプロトタイプ作成に役立ちます。",
+      "JSON と XML は 1 対 1 にマッピングされません。 JSON オブジェクトのキーは要素名になり、配列は通常繰り返し要素になり、プリミティブ値はテキスト コンテンツになります。属性、名前空間、および混合テキストには、プレーン JSON の外側で明示的な規則が必要です。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "JSON データを入力エディタに貼り付けます。",
-      "<strong>XML に変換</strong>をクリックしてデータを変換します。",
-      "XML 出力が適切なフォーマットで出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "JSON データを入力エディターに貼り付けます。",
+      "「<strong>XML</strong> に変換」をクリックして、解析されたデータを変換します。",
+      "生成された XML で、予想されるルート要素、繰り返し項目、およびテキスト値を確認します。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "JSON → XML 変換とは？",
+    "whatIs": "JSONからXMLへのコンバーターとは何ですか?",
     "whatIsParas": [
-      "JSON → XML 変換は JavaScript Object Notation (JSON) を Extensible Markup Language (XML) に変換します。両方とも広く使用されるデータ交換フォーマットで、異なるシステムを統合する際に相互変換が必要です。",
-      "この変換は SOAP API、XML ベースの設定、XML 入力を期待するレガシーシステムで作業する際に役立ちます。"
+      "<strong>JSON → XML 変換</strong> は、JSON データを XML ドキュメントに再形成するブラウザベースのユーティリティです。これにより、ツールまたは API が XML を受け入れても、ソース データが JSON である場合に、迅速な開始点が得られます。",
+      "変換は構造的なものであり、意味的なものではありません。ターゲット スキーマに属性、名前空間、特定のルート名、または型指定された値が必要な場合は、使用する前にそのスキーマに対して XML を調整および検証してください。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは有効な JSON 入力を受け付けます。JSON オブジェクトは XML 要素に、配列は繰り返し要素に、基本値はテキストコンテンツになります。",
+    "inputNotesPara": "有効な JSON のみを使用してください。プロパティ名は XML 要素名として適切である必要があります。そうでない場合は、変換後に名前を変更する必要がある場合があります。配列、null 値、およびブール値は、ターゲット固有の処理が必要な場合があります。",
     "example": "例",
-    "examplePara": "JSON オブジェクトは構造化された XML に変換されます：",
-    "exampleCode": "--- JSON 入力 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 出力 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "ネストされた JSON オブジェクトは、一致する XML 要素ツリーになります。",
+    "exampleCode": "--- JSON 入力 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 出力 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "XML に変換"
   },
   "kr": {
-    "title": "JSON → XML 변환 — Coding.Tools",
-    "description": "브라우저에서 JSON 데이터를 XML 형식으로 직접 변환합니다.",
+    "title": "JSON에서 XML로 변환기 - Coding.Tools",
+    "description": "예측 가능한 요소와 반복 항목 매핑을 사용하여 유효한 JSON를 XML 마크업으로 변환합니다.",
     "toolTitle": "JSON → XML 변환",
-    "toolDescription": "JSON 객체와 배열을 적절한 XML로 변환합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "JSON 객체, 배열 및 기본 값을 읽을 수 있는 XML로 변환합니다.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "변환할 JSON을 붙여넣으세요...",
     "outputPlaceholder": "XML 출력이 여기에 표시됩니다...",
-    "descTitle": "JSON → XML 변환",
+    "descTitle": "JSON 데이터를 XML 요소로 변환",
     "descParas": [
-      "이 도구는 JSON 데이터를 XML 형식으로 변환합니다. 중첩된 객체, 배열, 기본 값을 처리하여 깔끔하고 적절한 XML 출력을 생성합니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>JSON to XML 변환기는 구문 분석된 JSON을 XML 마크업으로 변환하여 XML이 필요한 시스템, 예제, 통합에서 사용할 수 있게 합니다.</strong> SOAP 스타일 페이로드, 레거시 가져오기, XML 테스트 데이터, 문서 샘플의 프로토타입을 만들 때 유용합니다.",
+      "JSON 및 XML는 일대일로 매핑되지 않습니다. JSON 객체 키는 요소 이름이 되고, 배열은 일반적으로 반복 요소가 되며, 기본 값은 텍스트 콘텐츠가 됩니다. 속성, 네임스페이스 및 혼합 텍스트에는 일반 JSON 이외의 명시적인 규칙이 필요합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "JSON 데이터를 입력 편집기에 붙여넣으세요.",
-      "<strong>XML로 변환</strong>을 클릭하여 데이터를 변환합니다.",
-      "XML 출력이 적절한 형식으로 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "JSON 데이터를 입력 편집기에 붙여넣습니다.",
+      "<strong>XML로 변환</strong>를 클릭하여 구문 분석된 데이터를 변환합니다.",
+      "예상되는 루트 요소, 반복 항목 및 텍스트 값에 대해 생성된 XML를 검토하십시오.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JSON → XML 변환이란?",
+    "whatIs": "JSON-XML 변환기는 무엇입니까?",
     "whatIsParas": [
-      "JSON → XML 변환은 JavaScript Object Notation (JSON)을 Extensible Markup Language (XML)로 변환합니다. 둘 다 널리 사용되는 데이터 교환 형식이며, 서로 다른 시스템을 통합할 때 상호 변환이 필요합니다.",
-      "이 변환은 SOAP API, XML 기반 설정 또는 XML 입력을 기대하는 레거시 시스템에서 작업할 때 유용합니다."
+      "<strong>JSON에서 XML로 변환기</strong>는 JSON 데이터를 XML 문서로 재구성하기 위한 브라우저 기반 유틸리티입니다. 도구나 API가 XML를 허용하지만 소스 데이터가 JSON인 경우 빠른 시작점을 제공합니다.",
+      "변환은 의미론적이 아니라 구조적입니다. 대상 스키마에 속성, 네임스페이스, 특정 루트 이름 또는 입력된 값이 필요한 경우 사용하기 전에 해당 스키마에 대해 XML를 조정하고 유효성을 검사하십시오."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 유효한 JSON 입력을 허용합니다. JSON 객체는 XML 요소로, 배열은 반복 요소로, 기본 값은 텍스트 내용으로 변환됩니다.",
+    "inputNotesPara": "유효한 JSON만 사용하세요. 속성 이름은 XML 요소 이름으로 적합해야 합니다. 그렇지 않으면 변환 후 이름을 바꿔야 할 수도 있습니다. 배열, null 값 및 부울은 대상별 처리가 필요할 수 있습니다.",
     "example": "예시",
-    "examplePara": "JSON 객체는 구조화된 XML로 변환됩니다:",
-    "exampleCode": "--- JSON 입력 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 출력 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "중첩된 JSON 객체는 일치하는 XML 요소 트리가 됩니다.",
+    "exampleCode": "--- JSON 입력 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 출력 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "XML로 변환"
   },
   "fr": {
-    "title": "Convertisseur JSON vers XML — Coding.Tools",
-    "description": "Convertissez les données JSON en format XML directement dans votre navigateur.",
+    "title": "Convertisseur JSON en XML - Coding.Tools",
+    "description": "Convertissez un JSON valide en balisage XML à l'aide de mappages d'éléments prévisibles et d'éléments répétés.",
     "toolTitle": "Convertisseur JSON vers XML",
-    "toolDescription": "Transformez les objets et tableaux JSON en XML bien formé. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Convertissez les objets, tableaux et valeurs primitives JSON en XML lisible.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le JSON à convertir...",
     "outputPlaceholder": "La sortie XML apparaîtra ici...",
-    "descTitle": "Convertisseur JSON vers XML",
+    "descTitle": "Convertir les données JSON en éléments XML",
     "descParas": [
-      "Cet outil convertit les données JSON en format XML. Il gère les objets imbriqués, les tableaux et les valeurs primitives, produisant une sortie XML propre et bien formée.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Le convertisseur JSON en XML transforme du JSON analysé en balisage XML pour les systèmes, exemples et intégrations qui attendent du XML.</strong> Il est utile pour prototyper des charges utiles de type SOAP, des imports hérités, des données de test XML ou des exemples de documentation.",
+      "JSON et XML ne sont pas mappés un à un. Les clés d'objet JSON deviennent des noms d'éléments, les tableaux deviennent généralement des éléments répétés et les valeurs primitives deviennent du contenu textuel ; les attributs, les espaces de noms et le texte mixte nécessitent des conventions explicites en dehors du simple JSON."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez vos données JSON dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Convertir en XML</strong> pour transformer les données.",
-      "La sortie XML apparaît dans l'éditeur de sortie avec un formatage correct.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Cliquez sur <strong>Convertir en XML</strong> pour transformer les données analysées.",
+      "Examinez le XML généré pour l'élément racine attendu, les éléments répétés et les valeurs de texte.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que la conversion JSON vers XML ?",
+    "whatIs": "Qu'est-ce que le convertisseur JSON en XML ?",
     "whatIsParas": [
-      "La conversion JSON vers XML transforme JavaScript Object Notation (JSON) en Extensible Markup Language (XML). Les deux sont des formats d'échange de données largement utilisés, et la conversion entre eux est courante lors de l'intégration de systèmes différents.",
-      "Cette conversion est utile pour travailler avec des API SOAP, des configurations XML ou des systèmes hérités qui attendent une entrée XML."
+      "<strong>Convertisseur JSON vers XML</strong> est un utilitaire basé sur un navigateur permettant de remodeler les données JSON en un document XML. Il vous donne un point de départ rapide lorsqu'un outil ou une API accepte XML mais que vos données sources sont JSON.",
+      "La conversion est structurelle et non sémantique. Si le schéma cible nécessite des attributs, des espaces de noms, des noms racine spécifiques ou des valeurs saisies, ajustez et validez le XML par rapport à ce schéma avant utilisation."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte une entrée JSON valide. Les objets JSON deviennent des éléments XML, les tableaux deviennent des éléments répétés et les valeurs primitives deviennent du contenu texte.",
+    "inputNotesPara": "Utilisez uniquement un JSON valide. Les noms de propriété doivent convenir aux noms d'éléments XML, ou vous devrez peut-être les renommer après la conversion. Les tableaux, les valeurs nulles et les booléens peuvent nécessiter une gestion spécifique à la cible.",
     "example": "Exemple",
-    "examplePara": "Un objet JSON se convertit en XML structuré :",
-    "exampleCode": "--- Entrée JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- Sortie XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "Un objet JSON imbriqué devient une arborescence d'éléments XML correspondante :",
+    "exampleCode": "--- Entrée JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- Sortie XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "Convertir en XML"
   },
   "de": {
-    "title": "JSON-zu-XML-Konverter — Coding.Tools",
-    "description": "Konvertieren Sie JSON-Daten direkt in Ihrem Browser in das XML-Format.",
+    "title": "JSON zu XML Konverter - Coding.Tools",
+    "description": "Konvertieren Sie gültiges JSON in XML-Markup mithilfe vorhersagbarer Element- und Wiederholungselementzuordnungen.",
     "toolTitle": "JSON-zu-XML-Konverter",
-    "toolDescription": "Transformieren Sie JSON-Objekte und Arrays in wohlgeformtes XML. Kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Konvertieren Sie JSON-Objekte, Arrays und Grundwerte in lesbare XML.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "JSON zum Konvertieren einfügen...",
     "outputPlaceholder": "XML-Ausgabe wird hier angezeigt...",
-    "descTitle": "JSON-zu-XML-Konverter",
+    "descTitle": "Konvertieren Sie JSON-Daten in XML-Elemente",
     "descParas": [
-      "Dieses Tool konvertiert JSON-Daten in das XML-Format. Es verarbeitet verschachtelte Objekte, Arrays und primitive Werte und erzeugt saubere, wohlgeformte XML-Ausgabe.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>Der JSON-zu-XML-Konverter wandelt geparstes JSON in XML-Markup für Systeme, Beispiele und Integrationen um, die XML erwarten.</strong> Dies ist nützlich beim Prototyping von Nutzlasten im SOAP-Stil, Altimporten, XML-Testdaten oder Dokumentationsbeispielen.",
+      "JSON und XML lassen sich nicht eins zu eins abbilden. JSON-Objektschlüssel werden zu Elementnamen, Arrays werden normalerweise zu wiederholten Elementen und primitive Werte werden zu Textinhalten. Attribute, Namespaces und gemischter Text erfordern explizite Konventionen außerhalb des einfachen JSON."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihre JSON-Daten in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>In XML konvertieren</strong>, um die Daten zu transformieren.",
-      "Die XML-Ausgabe wird im Ausgabe-Editor mit korrekter Formatierung angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihre JSON-Daten in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>In XML konvertieren</strong>, um die analysierten Daten umzuwandeln.",
+      "Überprüfen Sie das generierte XML auf das erwartete Stammelement, wiederholte Elemente und Textwerte.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist JSON-zu-XML-Konvertierung?",
+    "whatIs": "Was ist der JSON-zu-XML-Konverter?",
     "whatIsParas": [
-      "Die JSON-zu-XML-Konvertierung transformiert JavaScript Object Notation (JSON) in Extensible Markup Language (XML). Beide sind weit verbreitete Datenaustauschformate, und die Konvertierung zwischen ihnen ist üblich bei der Integration verschiedener Systeme.",
-      "Diese Konvertierung ist nützlich bei der Arbeit mit SOAP-APIs, XML-basierten Konfigurationen oder Legacy-Systemen, die XML-Eingaben erwarten."
+      "<strong>JSON-zu-XML-Konverter</strong> ist ein browserbasiertes Dienstprogramm zum Umformen von JSON-Daten in ein XML-Dokument. Es bietet Ihnen einen schnellen Ausgangspunkt, wenn ein Tool oder eine API XML akzeptiert, Ihre Quelldaten jedoch JSON sind.",
+      "Die Konvertierung ist strukturell und nicht semantisch. Wenn das Zielschema Attribute, Namespaces, bestimmte Stammnamen oder typisierte Werte erfordert, passen Sie XML vor der Verwendung an und validieren Sie es anhand dieses Schemas."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert gültige JSON-Eingaben. JSON-Objekte werden zu XML-Elementen, Arrays zu wiederholten Elementen und primitive Werte zu Textinhalten.",
+    "inputNotesPara": "Verwenden Sie nur gültiges JSON. Eigenschaftsnamen sollten als XML-Elementnamen geeignet sein, andernfalls müssen Sie sie nach der Konvertierung möglicherweise umbenennen. Arrays, Nullwerte und boolesche Werte erfordern möglicherweise eine zielspezifische Behandlung.",
     "example": "Beispiel",
-    "examplePara": "Ein JSON-Objekt wird in strukturiertes XML konvertiert:",
-    "exampleCode": "--- JSON-Eingabe ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML-Ausgabe ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "Ein verschachteltes JSON-Objekt wird zu einem passenden XML-Elementbaum:",
+    "exampleCode": "--- JSON-Eingabe ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML-Ausgabe ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "In XML konvertieren"
   },
   "es": {
-    "title": "Convertidor JSON a XML — Coding.Tools",
-    "description": "Convierta datos JSON a formato XML directamente en su navegador.",
+    "title": "Convertidor de JSON a XML - Coding.Tools",
+    "description": "Convierta el marcado JSON válido en XML utilizando elementos predecibles y asignaciones de elementos repetidos.",
     "toolTitle": "Convertidor JSON a XML",
-    "toolDescription": "Transforme objetos y arrays JSON en XML bien formado. Copie o descargue el resultado.",
+    "toolDescription": "Convierta objetos, matrices y valores primitivos JSON en XML legible.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue JSON para convertir...",
     "outputPlaceholder": "La salida XML aparecerá aquí...",
-    "descTitle": "Convertidor JSON a XML",
+    "descTitle": "Convierta datos JSON en elementos XML",
     "descParas": [
-      "Esta herramienta convierte datos JSON a formato XML. Maneja objetos anidados, arrays y valores primitivos, produciendo una salida XML limpia y bien formada.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>El convertidor JSON a XML transforma JSON analizado en marcado XML para sistemas, ejemplos e integraciones que esperan XML.</strong> Es útil al crear prototipos de cargas útiles de estilo SOAP, importaciones heredadas, datos de prueba XML o muestras de documentación.",
+      "JSON y XML no se asignan uno a uno. Las claves de objeto JSON se convierten en nombres de elementos, las matrices generalmente se convierten en elementos repetidos y los valores primitivos se convierten en contenido de texto; Los atributos, espacios de nombres y texto mixto requieren convenciones explícitas fuera del JSON simple."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue sus datos JSON en el editor de entrada.",
-      "Haga clic en <strong>Convertir a XML</strong> para transformar los datos.",
-      "La salida XML aparece en el editor de salida con formato correcto.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Convertir a XML</strong> para transformar los datos analizados.",
+      "Revise el XML generado para conocer el elemento raíz esperado, los elementos repetidos y los valores de texto.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es la conversión JSON a XML?",
+    "whatIs": "¿Qué es el convertidor JSON a XML?",
     "whatIsParas": [
-      "La conversión JSON a XML transforma JavaScript Object Notation (JSON) a Extensible Markup Language (XML). Ambos son formatos de intercambio de datos ampliamente utilizados, y la conversión entre ellos es común al integrar diferentes sistemas.",
-      "Esta conversión es útil al trabajar con APIs SOAP, configuraciones basadas en XML o sistemas heredados que esperan entrada XML."
+      "<strong>Convertidor JSON a XML</strong> es una utilidad basada en navegador para remodelar datos JSON en un documento XML. Le brinda un punto de partida rápido cuando una herramienta o API acepta XML pero sus datos de origen son JSON.",
+      "La conversión es estructural, no semántica. Si el esquema de destino requiere atributos, espacios de nombres, nombres raíz específicos o valores escritos, ajuste y valide el XML con ese esquema antes de usarlo."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta entrada JSON válida. Los objetos JSON se convierten en elementos XML, los arrays en elementos repetidos y los valores primitivos en contenido de texto.",
+    "inputNotesPara": "Utilice únicamente JSON válido. Los nombres de las propiedades deben ser adecuados como nombres de elementos XML, o es posible que deba cambiarles el nombre después de la conversión. Es posible que las matrices, los valores nulos y los valores booleanos necesiten un manejo específico del objetivo.",
     "example": "Ejemplo",
-    "examplePara": "Un objeto JSON se convierte en XML estructurado:",
-    "exampleCode": "--- Entrada JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- Salida XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "Un objeto JSON anidado se convierte en un árbol de elementos XML coincidente:",
+    "exampleCode": "--- Entrada JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- Salida XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "Convertir a XML"
   },
   "pt": {
-    "title": "Conversor JSON para XML — Coding.Tools",
-    "description": "Converta dados JSON para formato XML diretamente no seu navegador.",
+    "title": "Conversor JSON para XML - Coding.Tools",
+    "description": "Converta JSON válido em marcação XML usando elementos previsíveis e mapeamentos de itens repetidos.",
     "toolTitle": "Conversor JSON para XML",
-    "toolDescription": "Transforme objetos e arrays JSON em XML bem formado. Copie ou baixe o resultado.",
+    "toolDescription": "Converta objetos JSON, matrizes e valores primitivos em XML legível.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole JSON para converter...",
     "outputPlaceholder": "A saída XML aparecerá aqui...",
-    "descTitle": "Conversor JSON para XML",
+    "descTitle": "Converter dados JSON em elementos XML",
     "descParas": [
-      "Esta ferramenta converte dados JSON para formato XML. Ela lida com objetos aninhados, arrays e valores primitivos, produzindo uma saída XML limpa e bem formada.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>O conversor JSON para XML transforma JSON analisado em marcação XML para sistemas, exemplos e integrações que esperam XML.</strong> É útil ao criar protótipos de cargas úteis no estilo SOAP, importações legadas, dados de teste XML ou amostras de documentação.",
+      "JSON e XML não mapeiam um a um. As chaves do objeto JSON tornam-se nomes de elementos, as matrizes geralmente tornam-se elementos repetidos e os valores primitivos tornam-se conteúdo de texto; atributos, namespaces e texto misto exigem convenções explícitas fora do JSON simples."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seus dados JSON no editor de entrada.",
-      "Clique em <strong>Converter para XML</strong> para transformar os dados.",
-      "A saída XML aparece no editor de saída com formatação correta.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Converter para XML</strong> para transformar os dados analisados.",
+      "Revise o XML gerado para o elemento raiz esperado, itens repetidos e valores de texto.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é conversão JSON para XML?",
+    "whatIs": "O que é o conversor JSON para XML?",
     "whatIsParas": [
-      "A conversão JSON para XML transforma JavaScript Object Notation (JSON) em Extensible Markup Language (XML). Ambos são formatos de troca de dados amplamente utilizados, e a conversão entre eles é comum ao integrar diferentes sistemas.",
-      "Esta conversão é útil ao trabalhar com APIs SOAP, configurações baseadas em XML ou sistemas legados que esperam entrada XML."
+      "Conversor <strong>JSON para XML</strong> é um utilitário baseado em navegador para remodelar dados JSON em um documento XML. Fornece um ponto de partida rápido quando uma ferramenta ou API aceita XML, mas seus dados de origem são JSON.",
+      "A conversão é estrutural, não semântica. Se o esquema de destino exigir atributos, namespaces, nomes de raiz específicos ou valores digitados, ajuste e valide o XML com relação a esse esquema antes de usar."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita entrada JSON válida. Objetos JSON se tornam elementos XML, arrays se tornam elementos repetidos e valores primitivos se tornam conteúdo de texto.",
+    "inputNotesPara": "Use apenas JSON válido. Os nomes de propriedades devem ser adequados como nomes de elementos XML ou pode ser necessário renomeá-los após a conversão. Matrizes, valores nulos e booleanos podem precisar de tratamento específico do destino.",
     "example": "Exemplo",
-    "examplePara": "Um objeto JSON é convertido em XML estruturado:",
-    "exampleCode": "--- Entrada JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- Saída XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>"
+    "examplePara": "Um objeto JSON aninhado torna-se uma árvore de elementos XML correspondente:",
+    "exampleCode": "--- Entrada JSON ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- Saída XML ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
+    "buttonLabel": "Converter para XML"
   }
 }

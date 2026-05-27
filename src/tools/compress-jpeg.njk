@@ -1,10 +1,5 @@
 ---
-title: "Compress JPEG — Coding.Tools"
-description: "Compress JPEG images online to reduce file size. Free, fast, and runs in your browser."
-toolTitle: "Compress JPEG"
-toolDescription: "Reduce JPEG file size by re-encoding with quality optimization. Drag and drop multiple images."
 category: "image-utilities"
-categoryName: "Image Utilities"
 activeTool: "compress-jpeg"
 permalink: "/compress-jpeg.html"
 ---
@@ -48,31 +43,7 @@ permalink: "/compress-jpeg.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Compress JPEG</h2>
-  <p>This tool compresses JPEG images by re-encoding them with optimized quality settings. The compression runs entirely in your browser — no file upload to a server.</p>
-  <p>JPEG is a lossy compression format, meaning some image data is discarded to achieve smaller file sizes. This tool re-encodes at 80% quality, which provides an excellent balance between file size and visual quality.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Drag and drop JPEG files onto the upload area, or click to select files.</li>
-    <li>Each file is compressed automatically and the compression rate is displayed.</li>
-    <li>Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive.</li>
-  </ol>
-
-  <h3>JPEG compression explained</h3>
-  <p><strong>Lossy compression:</strong> JPEG reduces file size by discarding image data that is less noticeable to the human eye. Higher quality means less data discarded.</p>
-  <p><strong>Quality levels:</strong> Quality 80% is typically the sweet spot — visually nearly identical to the original but significantly smaller.</p>
-  <p><strong>Best for:</strong> JPEG is ideal for photographs and complex images with many colors and gradients.</p>
-
-  <h3>Compress with Python</h3>
-  <p>You can compress JPEG images programmatically using Python with the Pillow library:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">from PIL import Image
-
-original = Image.open('input.jpg')
-original.save('compressed.jpg', optimize=True, quality=80)</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

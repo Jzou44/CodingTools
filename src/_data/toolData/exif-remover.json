@@ -1,16 +1,16 @@
 {
   "en": {
-    "title": "EXIF Remover — Coding.Tools",
-    "description": "Remove EXIF metadata from images online to protect your privacy. Free and runs in your browser.",
+    "title": "EXIF Remover - Coding.Tools",
+    "description": "Strip EXIF metadata from images locally to reduce GPS, camera, timestamp, and orientation privacy leaks before sharing.",
     "toolTitle": "EXIF Remover",
-    "toolDescription": "Strip all EXIF metadata from your images including GPS location, camera info, and personal data.",
+    "toolDescription": "Remove embedded EXIF metadata in the browser so cleaned images are safer to share.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag images here to upload",
     "dropzoneHint": "Up to 20 images · Max 10MB each",
-    "descTitle": "EXIF Remover",
+    "descTitle": "Remove private photo metadata before sharing",
     "descParas": [
-      "This tool removes all EXIF metadata from your images by re-encoding them through the Canvas API. GPS coordinates, camera information, timestamps, and all other metadata are stripped.",
-      "The tool processes images entirely in your browser. No files are uploaded to a server."
+      "<strong>EXIF Remover re-encodes images in your browser to strip embedded metadata such as GPS coordinates, camera details, timestamps, software tags, and orientation fields.</strong> Use it before posting or sending original photos that may reveal private context.",
+      "The pixels are preserved as a new output image, but metadata-dependent behavior can change: an orientation tag may be baked into pixels or removed, and re-encoding can affect file size or quality. Processing is local; no upload is needed."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -20,81 +20,81 @@
     ],
     "whatIs": "Why remove EXIF data?",
     "whatIsParas": [
-      "Photos taken with smartphones often contain GPS coordinates that reveal exactly where the photo was taken. Sharing such photos publicly can expose your home, workplace, or other sensitive locations.",
-      "Removing EXIF data before sharing photos protects your privacy. It also slightly reduces file size since the metadata is no longer included."
+      "<strong>EXIF removal</strong> reduces privacy leakage by deleting metadata that can identify where, when, and how a photo was taken.",
+      "It is a practical step before public sharing, but it is not a full forensic scrub for every possible hidden payload. Review the cleaned file if strict privacy or evidence handling matters."
     ],
     "example": "Remove EXIF with Python",
-    "examplePara": "Strip EXIF data by re-saving with Pillow:",
+    "examplePara": "Re-saving a photo without passing EXIF metadata is the same basic idea used by many cleanup workflows:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "cn": {
-    "title": "EXIF 移除器 — Coding.Tools",
-    "description": "在线移除图片中的 EXIF 元数据以保护隐私。免费，在浏览器中运行。",
+    "title": "EXIF 移除器 - Coding.Tools",
+    "description": "在共享之前从本地图像中剥离 EXIF 元数据，以减少 GPS、相机、时间戳和方向隐私泄露。",
     "toolTitle": "EXIF 移除器",
-    "toolDescription": "从图片中剥离所有 EXIF 元数据，包括 GPS 位置、相机信息和个人数据。",
+    "toolDescription": "删除浏览器中嵌入的 EXIF 元数据，以便更安全地共享干净的图像。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽图片上传",
     "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
-    "descTitle": "EXIF 移除器",
+    "descTitle": "共享前删除私人照片元数据",
     "descParas": [
-      "此工具通过 Canvas API 重新编码图片来移除所有 EXIF 元数据。GPS 坐标、相机信息、时间戳和所有其他元数据都被剥离。",
-      "工具完全在浏览器中处理图片，不会将文件上传到服务器。"
+      "<strong>EXIF 删除程序会在浏览器中重新编码图像，以去除嵌入的元数据，例如 GPS 坐标、相机详细信息、时间戳、软件标签和方向字段。</strong> 在发布或发送可能泄露私人背景的原始照片之前使用它。",
+      "像素会保留为新的输出图像，但依赖元数据的行为可能会变化：方向标签可能会被应用到像素方向中或被移除，重新编码也可能影响文件大小或质量。处理在本地完成；无需上传。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将图片拖放到上传区域，或点击选择文件。",
-      "每张图片被处理，所有 EXIF 元数据被移除。",
-      "下载单个清理后的图片或使用<strong>下载全部</strong>获取 ZIP 压缩包。"
+      "将图像拖放到上传区域，或单击选择文件。",
+      "每个图像都会被处理，所有 EXIF 元数据都会被删除。",
+      "下载单独的已清理图像或使用 <strong>下载全部</strong> 获取 ZIP 存档。"
     ],
-    "whatIs": "为什么要移除 EXIF 数据？",
+    "whatIs": "为什么要删除EXIF数据？",
     "whatIsParas": [
-      "用智能手机拍摄的照片通常包含 GPS 坐标，可以精确显示照片拍摄位置。公开分享此类照片可能暴露您的家、工作场所或其他敏感位置。",
-      "在分享照片前移除 EXIF 数据可以保护您的隐私。由于不再包含元数据，文件大小也会略有减小。"
+      "<strong>EXIF 删除</strong> 通过删除可以识别照片拍摄地点、时间和方式的元数据来减少隐私泄露。",
+      "这是公开共享之前的一个实际步骤，但它并不是对每个可能的隐藏有效负载的完整取证清理。如果严格的隐私或证据处理很重要，请查看已清理的文件。"
     ],
     "example": "用 Python 移除 EXIF",
-    "examplePara": "通过重新保存来剥离 EXIF 数据：",
+    "examplePara": "重新保存照片而不传递 EXIF 元数据与许多清理工作流程使用的基本思想相同：",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # 默认不保留 EXIF"
   },
   "tw": {
-    "title": "EXIF 去除器 — Coding.Tools",
-    "description": "在線上刪除影像中的 EXIF 元資料以保護您的隱私。免費並在您的瀏覽器中運行。",
+    "title": "EXIF 移除器 - Coding.Tools",
+    "description": "在共享之前從本地圖像中剝離 EXIF 元數據，以減少 GPS、相機、時間戳和方向隱私洩露。",
     "toolTitle": "EXIF移除器",
-    "toolDescription": "從影像中刪除所有 EXIF 元數據，包括 GPS 位置、相機資訊和個人資料。",
+    "toolDescription": "刪除瀏覽器中嵌入的 EXIF 元數據，以便更安全地共享乾淨的映像。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "點擊或拖曳圖像至此處上傳",
     "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
-    "descTitle": "EXIF 去除器",
+    "descTitle": "共享前刪除私人照片元數據",
     "descParas": [
-      "該工具透過 Canvas API 重新編碼圖像，從而刪除圖像中的所有 EXIF 元資料。 GPS 座標、相機資訊、時間戳記和所有其他元資料都被刪除。",
-      "該工具完全在瀏覽器中處理圖像。沒有文件上傳到伺服器。"
+      "<strong>EXIF 刪除程式會在瀏覽器中重新編碼影像，以移除嵌入的元數據，例如 GPS 座標、相機詳細資料、時間戳記、軟體標籤和方向欄位。</strong> 在發布或發送可能洩露私人背景的原始照片之前使用它。",
+      "像素會保留為新的輸出影像，但依賴元資料的行為可能會變化：方向標籤可能會被套用到像素方向中或被移除，重新編碼也可能影響檔案大小或品質。處理在本機完成；無需上傳。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "將圖像拖曳到上傳區域，或按一下選擇檔案。",
-      "每個影像都會經過處理，所有 EXIF 元資料都會被刪除。",
-      "下載單一已清理的映像檔或使用<strong>全部下載</strong>來取得 ZIP 檔案。"
+      "每個影像都會被處理，所有 EXIF 元資料都會被刪除。",
+      "下載單獨的已清理影像或使用 <strong>下載全部</strong> 取得 ZIP 檔案。"
     ],
-    "whatIs": "為什麼要刪除 EXIF 資料？",
+    "whatIs": "為什麼要刪除EXIF資料？",
     "whatIsParas": [
-      "使用智慧型手機拍攝的照片通常包含 GPS 座標，可準確顯示照片的拍攝地點。公開分享此類照片可能會暴露您的家庭、工作場所或其他敏感地點。",
-      "在共享照片之前刪除 EXIF 資料可以保護您的隱私。由於不再包含元數據，它也稍微減少了檔案大小。"
+      "<strong>EXIF 刪除</strong> 透過刪除可以識別照片拍攝地點、時間和方式的元資料來減少隱私洩露。",
+      "這是公開共享之前的一個實際步驟，但它並不是對每個可能的隱藏有效負載的完整取證清理。如果嚴格的隱私或證據處理很重要，請查看已清理的文件。"
     ],
     "example": "使用 Python 刪除 EXIF",
-    "examplePara": "透過使用 Pillow 重新儲存來去除 EXIF 資料：",
+    "examplePara": "重新保存照片而不傳遞 EXIF 元資料與許多清理工作流程使用的基本想法相同：",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "jp": {
-    "title": "EXIF リムーバー —coding.tools",
-    "description": "プライバシーを保護するために、オンラインで画像から EXIF メタデータを削除します。無料でブラウザ上で実行できます。",
+    "title": "EXIF リムーバー - Coding.Tools",
+    "description": "共有する前に、画像から EXIF メタデータをローカルに削除して、GPS、カメラ、タイムスタンプ、方向のプライバシーの漏洩を軽減します。",
     "toolTitle": "EXIF除去ツール",
-    "toolDescription": "GPS 位置情報、カメラ情報、個人データを含むすべての EXIF メタデータを画像から削除します。",
+    "toolDescription": "ブラウザーに埋め込まれた EXIF メタデータを削除して、クリーンな画像をより安全に共有できるようにします。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに画像をクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像最大20枚・各最大10MB",
-    "descTitle": "EXIFリムーバー",
+    "descTitle": "共有する前にプライベート写真のメタデータを削除する",
     "descParas": [
-      "このツールは、Canvas API を通じて画像を再エンコードすることにより、画像からすべての EXIF メタデータを削除します。 GPS 座標、カメラ情報、タイムスタンプ、その他すべてのメタデータが削除されます。",
-      "このツールは画像を完全にブラウザ内で処理します。ファイルはサーバーにアップロードされません。"
+      "<strong>EXIF リムーバーは、ブラウザ内の画像を再エンコードして、GPS 座標、カメラの詳細、タイムスタンプ、ソフトウェア タグ、方向フィールドなどの埋め込みメタデータを削除します。</strong> プライベートなコンテキストを明らかにする可能性のある元の写真を投稿または送信する前に使用してください。",
+      "ピクセルは新しい出力イメージとして保存されますが、メタデータに依存する動作は変更される可能性があります。方向タグがピクセルに焼き付けられたり、削除されたりする可能性があり、再エンコードはファイル サイズや品質に影響を与える可能性があります。処理はローカルで行われます。アップロードは必要ありません。"
     ],
     "howToUse": "使用方法",
     "steps": [
@@ -102,83 +102,83 @@
       "各画像が処理され、すべての EXIF メタデータが削除されます。",
       "クリーンアップされたイメージを個別にダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
     ],
-    "whatIs": "EXIF データを削除する理由",
+    "whatIs": "なぜ EXIF データを削除するのですか?",
     "whatIsParas": [
-      "スマートフォンで撮影した写真には、写真が撮影された場所を正確に示す GPS 座標が含まれていることがよくあります。このような写真を公開すると、自宅、職場、その他の機密性の高い場所が公開される可能性があります。",
-      "写真を共有する前に EXIF データを削除すると、プライバシーが保護されます。また、メタデータが含まれなくなるため、ファイル サイズもわずかに小さくなります。"
+      "<strong>EXIF 削除</strong> は、写真がどこで、いつ、どのように撮影されたかを特定できるメタデータを削除することで、プライバシーの漏洩を軽減します。",
+      "これは公開共有の前の実用的なステップですが、考えられるすべての隠されたペイロードを完全にフォレンジック スクラブするわけではありません。厳密なプライバシーまたは証拠の取り扱いが重要な場合は、クリーンアップされたファイルを確認してください。"
     ],
     "example": "PythonでEXIFを削除する",
-    "examplePara": "Pillow で再保存して EXIF データを削除します。",
+    "examplePara": "EXIF メタデータを渡さずに写真を再保存することは、多くのクリーンアップ ワークフローで使用される基本的な考え方と同じです。",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "kr": {
-    "title": "EXIF 리무버 — Coding.Tools",
-    "description": "개인 정보를 보호하려면 온라인 이미지에서 EXIF ​​메타데이터를 제거하세요. 무료이며 브라우저에서 실행됩니다.",
+    "title": "EXIF 리무버 - Coding.Tools",
+    "description": "공유하기 전에 GPS, 카메라, 타임스탬프 및 방향 개인정보 유출을 줄이기 위해 이미지에서 EXIF 메타데이터를 로컬로 제거합니다.",
     "toolTitle": "EXIF 제거기",
-    "toolDescription": "GPS 위치, 카메라 정보, 개인 데이터 등 이미지에서 모든 EXIF ​​메타데이터를 제거합니다.",
+    "toolDescription": "브라우저에 포함된 EXIF 메타데이터를 제거하면 정리된 이미지를 더 안전하게 공유할 수 있습니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 이미지를 클릭하거나 드래그하세요.",
     "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
-    "descTitle": "EXIF 리무버",
+    "descTitle": "공유하기 전에 비공개 사진 메타데이터를 삭제하세요.",
     "descParas": [
-      "이 도구는 Canvas API를 통해 이미지를 다시 인코딩하여 이미지에서 모든 EXIF ​​메타데이터를 제거합니다. GPS 좌표, 카메라 정보, 타임스탬프 및 기타 모든 메타데이터가 제거됩니다.",
-      "이 도구는 브라우저에서 이미지를 완전히 처리합니다. 서버에 파일이 업로드되지 않습니다."
+      "<strong>EXIF 리무버는 브라우저의 이미지를 다시 인코딩하여 GPS 좌표, 카메라 세부정보, 타임스탬프, 소프트웨어 태그 및 방향 필드와 같은 내장된 메타데이터를 제거합니다.</strong> 비공개 컨텍스트를 노출할 수 있는 원본 사진을 게시하거나 보내기 전에 이 리무버를 사용하세요.",
+      "픽셀은 새 출력 이미지로 유지되지만 메타데이터 종속 동작은 변경될 수 있습니다. 즉, 방향 태그가 픽셀로 구워지거나 제거될 수 있으며 다시 인코딩하면 파일 크기나 품질에 영향을 미칠 수 있습니다. 처리는 로컬입니다. 업로드가 필요하지 않습니다."
     ],
     "howToUse": "사용방법",
     "steps": [
       "이미지를 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택하세요.",
-      "각 이미지가 처리되고 모든 EXIF ​​메타데이터가 제거됩니다.",
+      "각 이미지가 처리되고 모든 EXIF 메타데이터가 제거됩니다.",
       "정리된 개별 이미지를 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
     ],
     "whatIs": "EXIF 데이터를 제거하는 이유는 무엇입니까?",
     "whatIsParas": [
-      "스마트폰으로 찍은 사진에는 사진이 촬영된 위치를 정확히 알려주는 GPS 좌표가 포함되어 있는 경우가 많습니다. 이러한 사진을 공개적으로 공유하면 집, 직장 또는 기타 민감한 장소가 노출될 수 있습니다.",
-      "사진을 공유하기 전에 EXIF ​​데이터를 제거하면 개인정보가 보호됩니다. 또한 메타데이터가 더 이상 포함되지 않으므로 파일 크기가 약간 줄어듭니다."
+      "<strong>EXIF 제거</strong>는 사진이 어디서, 언제, 어떻게 촬영되었는지 식별할 수 있는 메타데이터를 삭제하여 개인 정보 유출을 줄입니다.",
+      "이는 공개 공유 전의 실용적인 단계이지만 가능한 모든 숨겨진 페이로드에 대한 완전한 포렌식 스크럽은 아닙니다. 엄격한 개인정보 보호 또는 증거 처리가 중요한 경우 정리된 파일을 검토하세요."
     ],
     "example": "Python으로 EXIF ​​제거",
-    "examplePara": "Pillow로 다시 저장하여 EXIF ​​데이터를 제거합니다.",
+    "examplePara": "EXIF 메타데이터를 전달하지 않고 사진을 다시 저장하는 것은 많은 정리 작업 흐름에서 사용되는 것과 동일한 기본 아이디어입니다.",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "fr": {
-    "title": "EXIF Remover – Codage.Outils",
-    "description": "Supprimez les métadonnées EXIF ​​des images en ligne pour protéger votre vie privée. Gratuit et fonctionne dans votre navigateur.",
+    "title": "Dissolvant EXIF - Coding.Tools",
+    "description": "Supprimez localement les métadonnées EXIF ​​des images pour réduire les fuites de confidentialité du GPS, de l’appareil photo, de l’horodatage et de l’orientation avant le partage.",
     "toolTitle": "Suppresseur EXIF",
-    "toolDescription": "Supprimez toutes les métadonnées EXIF ​​de vos images, y compris la localisation GPS, les informations sur l'appareil photo et les données personnelles.",
+    "toolDescription": "Supprimez les métadonnées EXIF intégrées dans le navigateur afin de partager des images nettoyées plus sereinement.",
     "categoryName": "Outils d’image",
     "dropzoneMessage": "Cliquez ou faites glisser les images ici pour les télécharger",
     "dropzoneHint": "Jusqu'à 20 images · Max 10 Mo chacune",
-    "descTitle": "Suppresseur EXIF",
+    "descTitle": "Supprimez les métadonnées des photos privées avant de les partager",
     "descParas": [
-      "Cet outil supprime toutes les métadonnées EXIF ​​de vos images en les réencodant via l'API Canvas. Les coordonnées GPS, les informations sur la caméra, les horodatages et toutes les autres métadonnées sont supprimés.",
-      "L'outil traite les images entièrement dans votre navigateur. Aucun fichier n'est téléchargé sur un serveur."
+      "<strong>Suppresseur EXIF réencode les images dans votre navigateur pour supprimer les métadonnées intégrées telles que les coordonnées GPS, les détails de l'appareil photo, les horodatages, les balises logicielles et les champs d'orientation.</strong> Utilisez-le avant de publier ou d'envoyer des photos originales susceptibles de révéler un contexte privé.",
+      "Les pixels sont conservés en tant que nouvelle image de sortie, mais le comportement dépendant des métadonnées peut changer : une balise d'orientation peut être intégrée en pixels ou supprimée, et le réencodage peut affecter la taille ou la qualité du fichier. Le traitement est local ; aucun téléchargement n'est nécessaire."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Faites glisser et déposez les images sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
-      "Chaque image est traitée et toutes les métadonnées EXIF ​​​​sont supprimées.",
-      "Téléchargez des images nettoyées individuellement ou utilisez <strong>Télécharger tout</strong> pour obtenir une archive ZIP."
+      "Chaque image est traitée et toutes les métadonnées EXIF ​​sont supprimées.",
+      "Téléchargez des images nettoyées individuellement ou utilisez <strong>Tout télécharger</strong> pour obtenir une archive ZIP."
     ],
     "whatIs": "Pourquoi supprimer les données EXIF ?",
     "whatIsParas": [
-      "Les photos prises avec des smartphones contiennent souvent des coordonnées GPS qui révèlent exactement où la photo a été prise. Le partage public de telles photos peut exposer votre maison, votre lieu de travail ou d’autres lieux sensibles.",
-      "La suppression des données EXIF ​​avant de partager des photos protège votre vie privée. Cela réduit également légèrement la taille du fichier puisque les métadonnées ne sont plus incluses."
+      "La <strong>suppression des EXIF</strong> réduit les fuites de confidentialité en supprimant les métadonnées permettant d'identifier où, quand et comment une photo a été prise.",
+      "Il s’agit d’une étape pratique avant le partage public, mais il ne s’agit pas d’un nettoyage médico-légal complet de chaque charge utile cachée possible. Examinez le fichier nettoyé si le strict respect de la confidentialité ou le traitement des preuves est important."
     ],
     "example": "Supprimer EXIF ​​avec Python",
-    "examplePara": "Supprimez les données EXIF ​​en les réenregistrant avec Pillow :",
+    "examplePara": "Réenregistrer une photo sans transmettre les métadonnées EXIF est la même idée de base utilisée par de nombreux flux de travail de nettoyage :",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "de": {
-    "title": "EXIF-Entferner – Coding.Tools",
-    "description": "Entfernen Sie EXIF-Metadaten online aus Bildern, um Ihre Privatsphäre zu schützen. Kostenlos und läuft in Ihrem Browser.",
+    "title": "EXIF-Entferner - Coding.Tools",
+    "description": "Entfernen Sie EXIF-Metadaten lokal aus Bildern, um Datenschutzlecks bei GPS, Kamera, Zeitstempel und Ausrichtung vor dem Teilen zu reduzieren.",
     "toolTitle": "EXIF-Entferner",
-    "toolDescription": "Entfernen Sie alle EXIF-Metadaten aus Ihren Bildern, einschließlich GPS-Standort, Kamerainformationen und persönlichen Daten.",
+    "toolDescription": "Entfernen Sie eingebettete EXIF-Metadaten im Browser, damit bereinigte Bilder sicherer geteilt werden können.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie Bilder hierher, um sie hochzuladen",
     "dropzoneHint": "Bis zu 20 Bilder · Maximal jeweils 10 MB",
-    "descTitle": "EXIF-Entferner",
+    "descTitle": "Entfernen Sie private Fotometadaten, bevor Sie sie teilen",
     "descParas": [
-      "Dieses Tool entfernt alle EXIF-Metadaten aus Ihren Bildern, indem es sie über die Canvas-API neu kodiert. GPS-Koordinaten, Kamerainformationen, Zeitstempel und alle anderen Metadaten werden entfernt.",
-      "Das Tool verarbeitet Bilder vollständig in Ihrem Browser. Es werden keine Dateien auf einen Server hochgeladen."
+      "<strong>EXIF-Entferner kodiert Bilder in Ihrem Browser neu, um eingebettete Metadaten wie GPS-Koordinaten, Kameradetails, Zeitstempel, Software-Tags und Orientierungsfelder zu entfernen.</strong> Verwenden Sie es, bevor Sie Originalfotos veröffentlichen oder senden, die möglicherweise privaten Kontext preisgeben.",
+      "Die Pixel bleiben als neues Ausgabebild erhalten, aber das metadatenabhängige Verhalten kann sich ändern: Ein Ausrichtungs-Tag kann in Pixel eingebrannt oder entfernt werden, und eine Neukodierung kann sich auf die Dateigröße oder -qualität auswirken. Die Verarbeitung erfolgt lokal; Es ist kein Upload erforderlich."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
@@ -188,67 +188,67 @@
     ],
     "whatIs": "Warum EXIF-Daten entfernen?",
     "whatIsParas": [
-      "Mit Smartphones aufgenommene Fotos enthalten oft GPS-Koordinaten, die genau verraten, wo das Foto aufgenommen wurde. Durch die öffentliche Weitergabe solcher Fotos können Ihr Zuhause, Ihr Arbeitsplatz oder andere sensible Orte offengelegt werden.",
-      "Das Entfernen von EXIF-Daten vor dem Teilen von Fotos schützt Ihre Privatsphäre. Dadurch wird auch die Dateigröße leicht reduziert, da die Metadaten nicht mehr enthalten sind."
+      "<strong>EXIF Entfernung</strong> reduziert Datenschutzverluste durch das Löschen von Metadaten, die erkennen lassen, wo, wann und wie ein Foto aufgenommen wurde.",
+      "Dies ist ein praktischer Schritt vor der öffentlichen Weitergabe, aber es handelt sich nicht um eine vollständige forensische Untersuchung aller möglichen versteckten Nutzlasten. Überprüfen Sie die bereinigte Datei, wenn strenger Datenschutz oder die Handhabung von Beweismitteln wichtig sind."
     ],
     "example": "EXIF mit Python entfernen",
-    "examplePara": "Entfernen Sie EXIF-Daten durch erneutes Speichern mit Pillow:",
+    "examplePara": "Das erneute Speichern eines Fotos ohne Übergabe von EXIF-Metadaten ist die gleiche Grundidee, die von vielen Bereinigungsabläufen verwendet wird:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "es": {
-    "title": "Eliminador EXIF ​​— Coding.Tools",
-    "description": "Elimine los metadatos EXIF ​​de las imágenes en línea para proteger su privacidad. Gratis y se ejecuta en tu navegador.",
+    "title": "Removedor EXIF - Coding.Tools",
+    "description": "Elimine los metadatos EXIF de las imágenes localmente para reducir las fugas de privacidad del GPS, la cámara, la marca de tiempo y la orientación antes de compartirlas.",
     "toolTitle": "Removedor EXIF",
-    "toolDescription": "Elimina todos los metadatos EXIF ​​de tus imágenes, incluida la ubicación GPS, la información de la cámara y los datos personales.",
+    "toolDescription": "Elimine los metadatos EXIF incrustados en el navegador para que sea más seguro compartir las imágenes limpias.",
     "categoryName": "Herramientas de imagen",
     "dropzoneMessage": "Haga clic o arrastre las imágenes aquí para cargarlas.",
     "dropzoneHint": "Hasta 20 imágenes · Máximo 10 MB cada una",
-    "descTitle": "Eliminador EXIF",
+    "descTitle": "Eliminar metadatos de fotos privadas antes de compartirlas",
     "descParas": [
-      "Esta herramienta elimina todos los metadatos EXIF ​​de sus imágenes al volver a codificarlas a través de la API de Canvas. Se eliminan las coordenadas GPS, la información de la cámara, las marcas de tiempo y todos los demás metadatos.",
-      "La herramienta procesa imágenes completamente en su navegador. No se cargan archivos a un servidor."
+      "<strong>Removedor EXIF vuelve a codificar imágenes en su navegador para eliminar metadatos incrustados, como coordenadas GPS, detalles de la cámara, marcas de tiempo, etiquetas de software y campos de orientación.</strong> Úselo antes de publicar o enviar fotos originales que puedan revelar un contexto privado.",
+      "Los píxeles se conservan como una nueva imagen de salida, pero el comportamiento dependiente de los metadatos puede cambiar: una etiqueta de orientación puede incorporarse a los píxeles o eliminarse, y la recodificación puede afectar el tamaño o la calidad del archivo. El procesamiento es local; no es necesario cargarlo."
     ],
     "howToUse": "como usar",
     "steps": [
       "Arrastre y suelte imágenes en el área de carga o haga clic para seleccionar archivos.",
       "Cada imagen se procesa y se eliminan todos los metadatos EXIF.",
-      "Descargue imágenes limpias individuales o utilice <strong>Descargar todo</strong> para obtener un archivo ZIP."
+      "Descargue imágenes limpias individuales o use <strong>Descargar todo</strong> para obtener un archivo ZIP."
     ],
     "whatIs": "¿Por qué eliminar datos EXIF?",
     "whatIsParas": [
-      "Las fotografías tomadas con teléfonos inteligentes suelen contener coordenadas GPS que revelan exactamente dónde se tomó la foto. Compartir dichas fotografías públicamente puede exponer su hogar, lugar de trabajo u otros lugares sensibles.",
-      "Eliminar datos EXIF ​​antes de compartir fotos protege su privacidad. También reduce ligeramente el tamaño del archivo ya que los metadatos ya no están incluidos."
+      "Eliminación de <strong>EXIF</strong> reduce la fuga de privacidad al eliminar metadatos que pueden identificar dónde, cuándo y cómo se tomó una foto.",
+      "Es un paso práctico antes de compartirlo públicamente, pero no es una limpieza forense completa para cada posible carga útil oculta. Revise el archivo limpio si es importante la privacidad estricta o el manejo de pruebas."
     ],
     "example": "Eliminar EXIF ​​con Python",
-    "examplePara": "Elimina los datos EXIF ​​volviendo a guardarlos con Pillow:",
+    "examplePara": "Volver a guardar una foto sin pasar los metadatos EXIF es la misma idea básica utilizada por muchos flujos de trabajo de limpieza:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "pt": {
-    "title": "Removedor EXIF ​​– Coding.Tools",
-    "description": "Remova metadados EXIF ​​de imagens online para proteger sua privacidade. Gratuito e roda no seu navegador.",
+    "title": "Removedor EXIF - Coding.Tools",
+    "description": "Remova metadados EXIF de imagens localmente para reduzir vazamentos de privacidade de GPS, câmera, carimbo de data/hora e orientação antes de compartilhar.",
     "toolTitle": "Removedor EXIF",
-    "toolDescription": "Remova todos os metadados EXIF ​​de suas imagens, incluindo localização GPS, informações da câmera e dados pessoais.",
+    "toolDescription": "Remova os metadados EXIF incorporados no navegador para que as imagens limpas sejam mais seguras para compartilhar.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste as imagens aqui para fazer upload",
     "dropzoneHint": "Até 20 imagens · Máximo de 10 MB cada",
-    "descTitle": "Removedor EXIF",
+    "descTitle": "Remova metadados de fotos privadas antes de compartilhar",
     "descParas": [
-      "Esta ferramenta remove todos os metadados EXIF ​​​​de suas imagens, recodificando-as por meio da API Canvas. Coordenadas GPS, informações da câmera, carimbos de data/hora e todos os outros metadados são removidos.",
-      "A ferramenta processa imagens inteiramente no seu navegador. Nenhum arquivo é carregado em um servidor."
+      "<strong>EXIF Removedor recodifica imagens em seu navegador para remover metadados incorporados, como coordenadas GPS, detalhes da câmera, carimbos de data e hora, tags de software e campos de orientação.</strong> Use-o antes de postar ou enviar fotos originais que possam revelar contexto privado.",
+      "Os pixels são preservados como uma nova imagem de saída, mas o comportamento dependente dos metadados pode mudar: uma tag de orientação pode ser incorporada em pixels ou removida, e a recodificação pode afetar o tamanho ou a qualidade do arquivo. O processamento é local; nenhum upload é necessário."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Arraste e solte imagens na área de upload ou clique para selecionar os arquivos.",
-      "Cada imagem é processada e todos os metadados EXIF ​​são removidos.",
+      "Cada imagem é processada e todos os metadados EXIF são removidos.",
       "Baixe imagens limpas individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
     ],
     "whatIs": "Por que remover dados EXIF?",
     "whatIsParas": [
-      "As fotos tiradas com smartphones geralmente contêm coordenadas GPS que revelam exatamente onde a foto foi tirada. Compartilhar essas fotos publicamente pode expor sua casa, local de trabalho ou outros locais confidenciais.",
-      "A remoção de dados EXIF ​​antes de compartilhar fotos protege sua privacidade. Também reduz ligeiramente o tamanho do arquivo, uma vez que os metadados não estão mais incluídos."
+      "Remoção <strong>EXIF</strong> reduz o vazamento de privacidade excluindo metadados que podem identificar onde, quando e como uma foto foi tirada.",
+      "É um passo prático antes do compartilhamento público, mas não é uma análise forense completa para todas as possíveis cargas ocultas. Revise o arquivo limpo se a privacidade estrita ou o tratamento de evidências forem importantes."
     ],
     "example": "Remover EXIF ​​com Python",
-    "examplePara": "Remova os dados EXIF ​​salvando novamente com o Pillow:",
+    "examplePara": "Salvar novamente uma foto sem passar os metadados EXIF é a mesma ideia básica usada por muitos fluxos de trabalho de limpeza:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   }
 }

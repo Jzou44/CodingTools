@@ -1,10 +1,5 @@
 ---
-title: "CSS Beautifier — Coding.Tools"
-description: "Beautify and format CSS code with proper indentation and structure. Runs locally in your browser, fast and free."
-toolTitle: "CSS Beautifier"
-toolDescription: "Beautify CSS code with consistent indentation and proper formatting. Copy or download the result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "css-beautifier"
 permalink: "/css-beautifier.html"
 ---
@@ -36,45 +31,7 @@ permalink: "/css-beautifier.html"
 {% endblock %}
 
 {% block description %}
-  <h2>CSS Beautifier</h2>
-  <p>This CSS Beautifier takes minified, compressed, or poorly indented CSS and reformats it with consistent indentation, proper spacing, and clean line breaks. It makes dense stylesheets readable and easier to maintain.</p>
-  <p>The beautification runs entirely in your browser using the js-beautify library. Your CSS code never leaves your device, making it ideal for formatting minified stylesheets, inspecting framework CSS, or cleaning up generated styles.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your minified or messy CSS into the input editor.</li>
-    <li>Click <strong>Beautify CSS</strong> to apply indentation and formatting.</li>
-    <li>View the formatted CSS in the output editor with proper structure.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .css file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is CSS beautification?</h3>
-  <p>CSS beautification (also called prettifying or formatting) is the process of reformatting Cascading Style Sheets to follow consistent indentation and spacing rules. It places each property on its own line, adds proper indentation for nested selectors, and ensures braces and semicolons are clearly visible.</p>
-  <p>Well-formatted CSS is essential for debugging layout issues, understanding specificity conflicts, and maintaining design systems. Beautified CSS makes it easy to scan selectors, spot duplicate rules, and trace the cascade order.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any valid CSS input, including modern features like CSS variables, grid and flexbox layouts, media queries, and keyframe animations. It handles nested selectors, pseudo-classes, and vendor prefixes correctly.</p>
-
-  <h3>Example</h3>
-  <p>Minified CSS becomes readable after beautification:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (minified) ---
-.card{background:#fff;border:1px solid #ddd;padding:16px;border-radius:8px}.card h2{font-size:1.5rem;margin-bottom:8px}
-
---- Output (beautified) ---
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 16px;
-  border-radius: 8px;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Binary to Decimal Converter — Coding.Tools",
-    "description": "Convert binary numbers to decimal format directly in your browser.",
+    "title": "Binary to Decimal Converter - Coding.Tools",
+    "description": "Convert binary numbers to decimal, with hexadecimal and octal equivalents for checking.",
     "toolTitle": "Binary to Decimal",
-    "toolDescription": "Convert binary numbers to decimal, hex, and octal.",
+    "toolDescription": "Convert base-2 values into decimal numbers and compare the matching hex and octal forms.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter binary number (e.g. 11111111, 1010)...",
     "outputPlaceholder": "Decimal result will appear here...",
-    "descTitle": "Binary to Decimal Converter",
+    "descTitle": "Convert binary values to decimal numbers",
     "descParas": [
-      "This tool converts binary (base 2) numbers to decimal (base 10), and also shows hex and octal equivalents.",
-      "The conversion runs locally in your browser."
+      "<strong>Binary to Decimal turns base-2 input into base-10 output and also shows the equivalent hexadecimal and octal values.</strong> Use it to inspect bit masks, flags, byte values, teaching examples, or low-level values copied from logs.",
+      "Binary input should contain only <code>0</code> and <code>1</code>; whitespace is ignored. Prefixes such as <code>0b</code> are format markers, not binary digits, so remove them unless the converter explicitly accepts them."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste a binary number into the input field.",
-      "Click <strong>Convert</strong> to see the decimal, hex, and octal results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Type or paste a binary value into the input field.",
+      "Review the decimal result and the matching hex and octal outputs.",
+      "Copy the decimal value, or clear the form before checking another binary number."
     ],
-    "whatIs": "What is Binary?",
+    "whatIs": "What is binary to decimal conversion?",
     "whatIsParas": [
-      "Binary is the base-2 number system using only digits 0 and 1. It is the fundamental language of computers."
+      "<strong>Binary</strong> is base 2, using only <code>0</code> and <code>1</code>. Converting binary to decimal rewrites the same bit pattern as a base-10 number so it is easier to read, compare, or use in calculations."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid binary number using only digits 0 and 1.",
+    "inputNotesPara": "Use only binary digits. Keep track of leading zeros separately when the input represents a fixed-width byte, word, or bit field because numeric conversion may not preserve that visual width.",
     "example": "Example",
-    "examplePara": "Converting binary to decimal:",
+    "examplePara": "The byte <code>11111111</code> converts to decimal 255 and hex <code>FF</code>:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "cn": {
-    "title": "二进制转十进制转换器 — Coding.Tools",
-    "description": "在浏览器中直接将二进制数字转换为十进制格式。",
+    "title": "二进制到十进制转换器 - Coding.Tools",
+    "description": "将二进制数转换为十进制数，并使用十六进制和八进制等效值进行检查。",
     "toolTitle": "二进制转十进制",
-    "toolDescription": "将二进制数字转换为十进制、十六进制和八进制。",
+    "toolDescription": "将以 2 为基数的值转换为十进制数并比较匹配的十六进制和八进制形式。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入二进制数字（如 11111111、1010）...",
     "outputPlaceholder": "十进制结果将显示在这里...",
-    "descTitle": "二进制转十进制转换器",
+    "descTitle": "将二进制值转换为十进制数",
     "descParas": [
-      "此工具将二进制（基数2）数字转换为十进制（基数10），同时显示十六进制和八进制等价值。",
-      "转换在浏览器本地运行。"
+      "<strong>二进制转十进制 将 2 进制输入转换为 10 进制输出，并显示等效的十六进制和八进制值。</strong> 使用它来检查位掩码、标志、字节值、教学示例或从日志复制的低级值。",
+      "二进制输入应仅包含 <code>0</code> 和 <code>1</code>；空白被忽略。 <code>0b</code> 等前缀是格式标记，而不是二进制数字，因此请删除它们，除非转换器明确接受它们。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入或粘贴二进制数字。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "在输入字段中键入或粘贴二进制值。",
+      "查看十进制结果以及匹配的十六进制和八进制输出。",
+      "复制十进制值，或在检查另一个二进制数之前清除表格。"
     ],
-    "whatIs": "什么是二进制转十进制？",
+    "whatIs": "什么是二进制到十进制的转换？",
     "whatIsParas": [
-      "二进制是计算机使用的基数为2的数字系统。将二进制转换为十进制是理解计算机数据表示的基础。"
+      "<strong>Binary</strong> 为基数 2，仅使用 <code>0</code> 和 <code>1</code>。将二进制转换为十进制会重写与以 10 为基数的数字相同的位模式，因此更容易读取、比较或在计算中使用。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的二进制数字（仅使用数字0和1）。",
+    "inputNotesPara": "仅使用二进制数字。当输入表示固定宽度的字节、字或位字段时，请单独跟踪前导零，因为数字转换可能不会保留该视觉宽度。",
     "example": "示例",
-    "examplePara": "将二进制转换为十进制：",
+    "examplePara": "字节 <code>11111111</code> 转换为十进制 255 和十六进制 <code>FF</code>：",
     "exampleCode": "--- 二进制输入 ---\n11111111\n\n--- 十进制 ---\n255\n\n--- 十六进制 ---\nFF\n\n--- 八进制 ---\n377"
   },
   "tw": {
-    "title": "二進位到十進位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將二進制數轉換為十進位格式。",
+    "title": "二進位到十進位轉換器 - Coding.Tools",
+    "description": "將二進制數轉換為十進制數，並使用十六進制和八進制等值進行檢查。",
     "toolTitle": "二進位轉十進位",
-    "toolDescription": "將二進制數轉換為十進制、十六進制和八進制。",
+    "toolDescription": "將以 2 為基數的值轉換為十進制數並比較匹配的十六進制和八進制形式。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入二進位數（例如 11111111、1010）...",
     "outputPlaceholder": "小數結果將會出現在這裡...",
-    "descTitle": "二進位到十進制轉換器",
+    "descTitle": "將二進制值轉換為十進制數",
     "descParas": [
-      "此工具可將二進位（以 2 為基數）數字轉換為十進位（以 10 為基數），並顯示十六進位和八進位等值。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>二進位轉十進位 將 2 進位輸入轉換為 10 進位輸出，並顯示等效的十六進位和八進位值。</strong> 使用它來檢查位元遮罩、標誌、位元組值、教學範例或從日誌複製的低階值。",
+      "二進位輸入應僅包含 <code>0</code> 和 <code>1</code>；空白被忽略。 <code>0b</code> 等前綴是格式標記，而不是二進位數字，因此請刪除它們，除非轉換器明確接受它們。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入欄位中鍵入或貼上二進制數。",
-      "點選<strong>轉換</strong>查看十進制、十六進制和八進制結果。",
-      "使用<strong>複製</strong>複製結果。"
+      "在輸入欄位中鍵入或貼上二進位值。",
+      "查看十進制結果以及匹配的十六進制和八進制輸出。",
+      "複製十進制值，或在檢查另一個二進制數之前清除表格。"
     ],
-    "whatIs": "什麼是二進制？",
+    "whatIs": "什麼是二進位到十進制的轉換？",
     "whatIsParas": [
-      "二進位是僅使用數字 0 和 1 的以 2 為基數的數字系統。它是計算機的基本語言。"
+      "<strong>Binary</strong> 為基數 2，僅使用 <code>0</code> 和 <code>1</code>。將二進制轉換為十進制會重寫與以 10 為基數的數字相同的位元模式，因此更容易讀取、比較或在計算中使用。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "僅使用數字 0 和 1 輸入有效的二進位數。",
+    "inputNotesPara": "僅使用二進制數字。當輸入表示固定寬度的位元組、字或位元欄位時，請單獨追蹤前導零，因為數字轉換可能不會保留該視覺寬度。",
     "example": "例子",
-    "examplePara": "將二進制轉換為十進制：",
+    "examplePara": "位元組 <code>11111111</code> 轉換為十進位 255 和十六進位 <code>FF</code>：",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "jp": {
-    "title": "2 進数から 10 進数へのコンバーター —coding.Tools",
-    "description": "ブラウザで直接 2 進数を 10 進数形式に変換します。",
+    "title": "2進数から10進数へのコンバーター - Coding.Tools",
+    "description": "2 進数を 10 進数に変換し、同等の 16 進数と 8 進数を使用してチェックします。",
     "toolTitle": "2進数から10進数",
-    "toolDescription": "2 進数を 10 進数、16 進数、および 8 進数に変換します。",
+    "toolDescription": "基数 2 の値を 10 進数に変換し、一致する 16 進形式と 8 進形式を比較します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "2 進数を入力してください (例: 11111111、1010)...",
     "outputPlaceholder": "ここに小数の結果が表示されます...",
-    "descTitle": "2進数から10進数へのコンバーター",
+    "descTitle": "2 進数を 10 進数に変換する",
     "descParas": [
-      "このツールは、2 進数 (基数 2) を 10 進数 (基数 10) に変換し、同等の 16 進数と 8 進数も表示します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>2進数から10進数 は、2 進数の入力を 10 進数の出力に変換し、同等の 16 進数と 8 進数の値も表示します。</strong> これを使用して、ビット マスク、フラグ、バイト値、教育例、またはログからコピーされた低レベルの値を検査します。",
+      "バイナリ入力には <code>0</code> と <code>1</code> のみを含める必要があります。空白は無視されます。 <code>0b</code> などのプレフィックスは、バイナリ数字ではなくフォーマット マーカーであるため、コンバータが明示的に受け入れない限り、プレフィックスを削除してください。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "入力フィールドに 2 進数を入力するか貼り付けます。",
-      "[<strong>変換</strong>] をクリックして、10 進数、16 進数、および 8 進数の結果を確認します。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "入力フィールドにバイナリ値を入力するか貼り付けます。",
+      "10 進数の結果と、対応する 16 進数および 8 進数の出力を確認します。",
+      "10 進数値をコピーするか、別の 2 進数をチェックする前にフォームをクリアしてください。"
     ],
-    "whatIs": "バイナリとは何ですか?",
+    "whatIs": "2進数から10進数への変換とは何ですか?",
     "whatIsParas": [
-      "2 進数は、0 と 1 の数字のみを使用する 2 進数の数値体系であり、コンピューターの基本言語です。"
+      "<strong>Binary</strong> は基数 2 で、<code>0</code> と <code>1</code> のみを使用します。 2 進数を 10 進数に変換すると、同じビット パターンが 10 進数の数値として書き換えられるため、読み取り、比較、または計算での使用が容易になります。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "数字 0 と 1 のみを使用して有効な 2 進数を入力してください。",
+    "inputNotesPara": "2 進数のみを使用してください。数値変換では視覚的な幅が維持されない可能性があるため、入力が固定幅のバイト、ワード、またはビット フィールドを表す場合は、先行ゼロを個別に追跡してください。",
     "example": "例",
-    "examplePara": "2 進数を 10 進数に変換すると、次のようになります。",
+    "examplePara": "バイト <code>11111111</code> は、10 進数の 255 と 16 進数の <code>FF</code> に変換されます。",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "kr": {
-    "title": "이진수를 십진수로 변환하는 변환기 — Coding.Tools",
-    "description": "브라우저에서 이진수를 십진수 형식으로 직접 변환하세요.",
+    "title": "2진수를 10진수로 변환기 - Coding.Tools",
+    "description": "확인을 위해 16진수와 8진수를 사용하여 2진수를 10진수로 변환합니다.",
     "toolTitle": "2진수에서 10진수",
-    "toolDescription": "2진수를 10진수, 16진수, 8진수로 변환합니다.",
+    "toolDescription": "2진수 값을 10진수로 변환하고 일치하는 16진수와 8진수 형식을 비교합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "이진수를 입력하세요(예: 11111111, 1010)...",
     "outputPlaceholder": "여기에 소수점 결과가 표시됩니다...",
-    "descTitle": "2진수를 10진수로 변환하는 변환기",
+    "descTitle": "이진수 값을 십진수로 변환",
     "descParas": [
-      "이 도구는 2진수(2진수)를 10진수(10진수)로 변환하고 16진수와 8진수를 표시합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>2진수에서 10진수은 2진수 입력을 10진수 출력으로 변환하고 동등한 16진수 및 8진수 값도 표시합니다.</strong> 이를 사용하여 비트 마스크, 플래그, 바이트 값, 교육 예제 또는 로그에서 복사된 하위 수준 값을 검사합니다.",
+      "바이너리 입력에는 <code>0</code> 및 <code>1</code>만 포함되어야 합니다. 공백은 무시됩니다. <code>0b</code>와 같은 접두사는 이진수가 아닌 형식 표시이므로 변환기에서 명시적으로 허용하지 않는 한 제거하세요."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 필드에 이진수를 입력하거나 붙여넣습니다.",
-      "10진수, 16진수, 8진수 결과를 보려면 <strong>변환</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "입력 필드에 이진 값을 입력하거나 붙여넣습니다.",
+      "10진수 결과와 일치하는 16진수 및 8진수 출력을 검토합니다.",
+      "십진수 값을 복사하거나 다른 이진수를 확인하기 전에 양식을 지우십시오."
     ],
-    "whatIs": "바이너리란 무엇입니까?",
+    "whatIs": "이진수를 십진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "2진법은 숫자 0과 1만을 사용하는 2진수 체계입니다. 컴퓨터의 기본 언어입니다."
+      "<strong>Binary</strong>는 <code>0</code> 및 <code>1</code>만 사용하는 2진법입니다. 이진수를 십진수로 변환하면 동일한 비트 패턴이 10진법 숫자와 다시 쓰여지므로 읽기, 비교 또는 계산에 사용하기가 더 쉽습니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "숫자 0과 1만 사용하여 유효한 이진수를 입력하세요.",
+    "inputNotesPara": "이진수만 사용하세요. 입력이 고정 너비 바이트, 단어 또는 비트 필드를 나타내는 경우 숫자 변환이 해당 시각적 너비를 유지하지 못할 수 있으므로 선행 0을 별도로 추적하십시오.",
     "example": "예",
-    "examplePara": "이진수를 십진수로 변환:",
+    "examplePara": "바이트 <code>11111111</code>는 10진수 255 및 16진수 <code>FF</code>로 변환됩니다.",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "fr": {
     "title": "Convertisseur binaire en décimal - Coding.Tools",
-    "description": "Convertissez les nombres binaires au format décimal directement dans votre navigateur.",
+    "description": "Convertissez les nombres binaires en décimaux, avec des équivalents hexadécimaux et octaux pour la vérification.",
     "toolTitle": "Binaire en Décimal",
-    "toolDescription": "Convertissez les nombres binaires en décimaux, hexadécimaux et octaux.",
+    "toolDescription": "Convertissez les valeurs de base 2 en nombres décimaux et comparez les formes hexadécimales et octales correspondantes.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez un nombre binaire (par exemple 11111111, 1010)...",
     "outputPlaceholder": "Le résultat décimal apparaîtra ici...",
-    "descTitle": "Convertisseur binaire en décimal",
+    "descTitle": "Convertir des valeurs binaires en nombres décimaux",
     "descParas": [
-      "Cet outil convertit les nombres binaires (base 2) en nombres décimaux (base 10) et affiche également les équivalents hexadécimaux et octaux.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Binaire en Décimal transforme l'entrée base 2 en sortie base 10 et affiche également les valeurs hexadécimales et octales équivalentes.</strong> Utilisez-le pour inspecter les masques de bits, les indicateurs, les valeurs d'octets, les exemples pédagogiques ou les valeurs de bas niveau copiées à partir des journaux.",
+      "L'entrée binaire doit contenir uniquement <code>0</code> et <code>1</code> ; les espaces sont ignorés. Les préfixes tels que <code>0b</code> sont des marqueurs de format, pas des chiffres binaires, donc supprimez-les à moins que le convertisseur ne les accepte explicitement."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un nombre binaire dans le champ de saisie.",
-      "Cliquez sur <strong>Convertir</strong> pour voir les résultats décimaux, hexadécimaux et octaux.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Tapez ou collez une valeur binaire dans le champ de saisie.",
+      "Examinez le résultat décimal et les sorties hexadécimales et octales correspondantes.",
+      "Copiez la valeur décimale ou effacez le formulaire avant de vérifier un autre nombre binaire."
     ],
-    "whatIs": "Qu’est-ce que le binaire ?",
+    "whatIs": "Qu’est-ce que la conversion binaire en décimal ?",
     "whatIsParas": [
-      "Le binaire est le système numérique en base 2 utilisant uniquement les chiffres 0 et 1. C'est le langage fondamental des ordinateurs."
+      "<strong>Binary</strong> est en base 2, utilisant uniquement <code>0</code> et <code>1</code>. La conversion binaire en décimal réécrit le même modèle de bits qu'un nombre en base 10 afin qu'il soit plus facile à lire, à comparer ou à utiliser dans les calculs."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez un nombre binaire valide en utilisant uniquement les chiffres 0 et 1.",
+    "inputNotesPara": "Utilisez uniquement des chiffres binaires. Gardez une trace des zéros non significatifs séparément lorsque l'entrée représente un champ d'octets, de mots ou de bits de largeur fixe, car la conversion numérique peut ne pas préserver cette largeur visuelle.",
     "example": "Exemple",
-    "examplePara": "Conversion de binaire en décimal :",
+    "examplePara": "L'octet <code>11111111</code> est converti en décimal 255 et en hexadécimal <code>FF</code> :",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "de": {
-    "title": "Binär-Dezimal-Konverter – Coding.Tools",
-    "description": "Konvertieren Sie Binärzahlen direkt in Ihrem Browser in das Dezimalformat.",
+    "title": "Binär-Dezimal-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie Binärzahlen in Dezimalzahlen, mit hexadezimalen und oktalen Äquivalenten zur Überprüfung.",
     "toolTitle": "Binär zu Dezimal",
-    "toolDescription": "Konvertieren Sie Binärzahlen in Dezimal-, Hexadezimal- und Oktalzahlen.",
+    "toolDescription": "Konvertieren Sie Basis-2-Werte in Dezimalzahlen und vergleichen Sie die entsprechenden Hex- und Oktalformen.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie eine Binärzahl ein (z. B. 11111111, 1010)...",
     "outputPlaceholder": "Hier wird das Dezimalergebnis angezeigt...",
-    "descTitle": "Binär-Dezimal-Konverter",
+    "descTitle": "Konvertieren Sie Binärwerte in Dezimalzahlen",
     "descParas": [
-      "Dieses Tool wandelt Binärzahlen (Basis 2) in Dezimalzahlen (Basis 10) um und zeigt auch Hex- und Oktaläquivalente an.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>Binär zu Dezimal wandelt Basis-2-Eingaben in Basis-10-Ausgaben um und zeigt auch die entsprechenden Hexadezimal- und Oktalwerte an.</strong> Verwenden Sie es, um Bitmasken, Flags, Bytewerte, Lehrbeispiele oder aus Protokollen kopierte Low-Level-Werte zu überprüfen.",
+      "Die Binäreingabe sollte nur <code>0</code> und <code>1</code> enthalten; Leerzeichen werden ignoriert. Präfixe wie <code>0b</code> sind Formatmarkierungen und keine Binärziffern. Entfernen Sie sie daher, es sei denn, der Konverter akzeptiert sie ausdrücklich."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben oder fügen Sie eine Binärzahl in das Eingabefeld ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um die dezimalen, hexadezimalen und oktalen Ergebnisse anzuzeigen.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben oder fügen Sie einen Binärwert in das Eingabefeld ein.",
+      "Überprüfen Sie das Dezimalergebnis und die passenden Hex- und Oktalausgaben.",
+      "Kopieren Sie den Dezimalwert oder löschen Sie das Formular, bevor Sie eine andere Binärzahl prüfen."
     ],
-    "whatIs": "Was ist Binär?",
+    "whatIs": "Was ist die Binär-Dezimal-Konvertierung?",
     "whatIsParas": [
-      "Binär ist das Zahlensystem zur Basis 2, das nur die Ziffern 0 und 1 verwendet. Es ist die grundlegende Sprache der Computer."
+      "<strong>Binary</strong> ist Basis 2 und verwendet nur <code>0</code> und <code>1</code>. Beim Konvertieren von Binärzahlen in Dezimalzahlen wird das gleiche Bitmuster wie bei einer Zahl zur Basis 10 neu geschrieben, sodass es einfacher zu lesen, zu vergleichen oder in Berechnungen zu verwenden ist."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie eine gültige Binärzahl ein, die nur die Ziffern 0 und 1 enthält.",
+    "inputNotesPara": "Verwenden Sie nur Binärziffern. Verfolgen Sie führende Nullen separat, wenn die Eingabe ein Byte-, Wort- oder Bitfeld mit fester Breite darstellt, da bei der numerischen Konvertierung diese visuelle Breite möglicherweise nicht erhalten bleibt.",
     "example": "Beispiel",
-    "examplePara": "Binär in Dezimal umwandeln:",
+    "examplePara": "Das Byte <code>11111111</code> wird in dezimal 255 und hexadezimal <code>FF</code> konvertiert:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "es": {
-    "title": "Convertidor de binario a decimal: Coding.Tools",
-    "description": "Convierta números binarios a formato decimal directamente en su navegador.",
+    "title": "Convertidor de binario a decimal - Coding.Tools",
+    "description": "Convierte números binarios a decimales, con equivalentes hexadecimales y octales para comprobar.",
     "toolTitle": "Binario a Decimal",
-    "toolDescription": "Convierte números binarios a decimal, hexadecimal y octal.",
+    "toolDescription": "Convierta valores de base 2 en números decimales y compare las formas hexadecimales y octales correspondientes.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Ingrese el número binario (por ejemplo, 11111111, 1010)...",
     "outputPlaceholder": "El resultado decimal aparecerá aquí...",
-    "descTitle": "Convertidor de binario a decimal",
+    "descTitle": "Convertir valores binarios a números decimales",
     "descParas": [
-      "Esta herramienta convierte números binarios (base 2) a decimales (base 10) y también muestra equivalentes hexadecimales y octales.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Binario a decimal convierte la entrada de base 2 en salida de base 10 y también muestra los valores hexadecimales y octales equivalentes.</strong> Úselo para inspeccionar máscaras de bits, indicadores, valores de bytes, ejemplos de enseñanza o valores de bajo nivel copiados de registros.",
+      "La entrada binaria debe contener sólo <code>0</code> y <code>1</code>; los espacios en blanco se ignoran. Los prefijos como <code>0b</code> son marcadores de formato, no dígitos binarios, así que elimínelos a menos que el convertidor los acepte explícitamente."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue un número binario en el campo de entrada.",
-      "Haga clic en <strong>Convertir</strong> para ver los resultados decimales, hexadecimales y octales.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Escriba o pegue un valor binario en el campo de entrada.",
+      "Revise el resultado decimal y las salidas hexadecimales y octales coincidentes.",
+      "Copie el valor decimal o borre el formulario antes de verificar otro número binario."
     ],
-    "whatIs": "¿Qué es binario?",
+    "whatIs": "¿Qué es la conversión de binario a decimal?",
     "whatIsParas": [
-      "El binario es el sistema numérico de base 2 que utiliza únicamente los dígitos 0 y 1. Es el lenguaje fundamental de las computadoras."
+      "<strong>Binary</strong> es base 2, usando solo <code>0</code> y <code>1</code>. La conversión de binario a decimal reescribe el mismo patrón de bits que un número de base 10, por lo que es más fácil de leer, comparar o utilizar en los cálculos."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un número binario válido usando solo los dígitos 0 y 1.",
+    "inputNotesPara": "Utilice sólo dígitos binarios. Realice un seguimiento de los ceros iniciales por separado cuando la entrada represente un campo de bytes, palabras o bits de ancho fijo porque es posible que la conversión numérica no preserve ese ancho visual.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de binario a decimal:",
+    "examplePara": "El byte <code>11111111</code> se convierte a decimal 255 y hexadecimal <code>FF</code>:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   },
   "pt": {
-    "title": "Conversor binário para decimal — Coding.Tools",
-    "description": "Converta números binários para o formato decimal diretamente no seu navegador.",
+    "title": "Conversor binário para decimal - Coding.Tools",
+    "description": "Converta números binários em decimais, com equivalentes hexadecimais e octais para verificação.",
     "toolTitle": "Binário para Decimal",
-    "toolDescription": "Converta números binários em decimais, hexadecimais e octais.",
+    "toolDescription": "Converta valores de base 2 em números decimais e compare as formas hexadecimais e octais correspondentes.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira o número binário (por exemplo, 11111111, 1010)...",
     "outputPlaceholder": "O resultado decimal aparecerá aqui...",
-    "descTitle": "Conversor binário para decimal",
+    "descTitle": "Converter valores binários em números decimais",
     "descParas": [
-      "Esta ferramenta converte números binários (base 2) em decimais (base 10) e também mostra equivalentes hexadecimais e octais.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Binário para Decimal transforma a entrada de base 2 em saída de base 10 e também mostra os valores hexadecimais e octais equivalentes.</strong> Use-o para inspecionar máscaras de bits, sinalizadores, valores de bytes, exemplos de ensino ou valores de baixo nível copiados de logs.",
+      "A entrada binária deve conter apenas <code>0</code> e <code>1</code>; o espaço em branco é ignorado. Prefixos como <code>0b</code> são marcadores de formato, não dígitos binários, portanto, remova-os, a menos que o conversor os aceite explicitamente."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um número binário no campo de entrada.",
-      "Clique em <strong>Converter</strong> para ver os resultados decimais, hexadecimais e octais.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Digite ou cole um valor binário no campo de entrada.",
+      "Revise o resultado decimal e as saídas hexadecimais e octais correspondentes.",
+      "Copie o valor decimal ou limpe o formulário antes de verificar outro número binário."
     ],
-    "whatIs": "O que é binário?",
+    "whatIs": "O que é conversão de binário para decimal?",
     "whatIsParas": [
-      "Binário é o sistema numérico de base 2 que usa apenas os dígitos 0 e 1. É a linguagem fundamental dos computadores."
+      "<strong>Binary</strong> é base 2, usando apenas <code>0</code> e <code>1</code>. A conversão de binário em decimal reescreve o mesmo padrão de bits de um número de base 10, tornando-o mais fácil de ler, comparar ou usar em cálculos."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira um número binário válido usando apenas os dígitos 0 e 1.",
+    "inputNotesPara": "Use apenas dígitos binários. Acompanhe os zeros à esquerda separadamente quando a entrada representa um campo de byte, palavra ou bit de largura fixa, pois a conversão numérica pode não preservar essa largura visual.",
     "example": "Exemplo",
-    "examplePara": "Convertendo binário em decimal:",
+    "examplePara": "O byte <code>11111111</code> é convertido em decimal 255 e hexadecimal <code>FF</code>:",
     "exampleCode": "--- Binary Input ---\n11111111\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
   }
 }

@@ -1,10 +1,5 @@
 ---
-title: "EXIF Remover — Coding.Tools"
-description: "Remove EXIF metadata from photos online. Protect your privacy. Free and runs in your browser."
-toolTitle: "EXIF Remover"
-toolDescription: "Strip EXIF metadata from images to protect your privacy. Drag and drop multiple images."
 category: "image-utilities"
-categoryName: "Image Utilities"
 activeTool: "exif-remover"
 permalink: "/exif-remover.html"
 ---
@@ -48,31 +43,7 @@ permalink: "/exif-remover.html"
 {% endblock %}
 
 {% block description %}
-  <h2>EXIF Remover</h2>
-  <p>This tool removes EXIF metadata from images by re-encoding them through the Canvas API. All metadata including GPS coordinates, camera information, and timestamps is stripped. The process runs entirely in your browser — no file upload to a server.</p>
-  <p>When you share photos online, EXIF data can reveal where and when the photo was taken, what device you used, and more. Removing this data protects your privacy before sharing.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Drag and drop image files onto the upload area, or click to select files.</li>
-    <li>Each file is processed automatically and the EXIF data is stripped.</li>
-    <li>Download individual cleaned files or use <strong>Download All</strong> to get a ZIP archive.</li>
-  </ol>
-
-  <h3>Why remove EXIF data?</h3>
-  <p><strong>Privacy:</strong> GPS coordinates in photos can reveal your exact location. Removing EXIF data prevents others from tracking where photos were taken.</p>
-  <p><strong>Security:</strong> Camera serial numbers and device info can be used to identify you or your equipment.</p>
-  <p><strong>File size:</strong> Removing metadata slightly reduces file size, especially for photos with embedded thumbnails.</p>
-
-  <h3>Remove EXIF with Python</h3>
-  <p>Remove EXIF data using Python with the Pillow library (Pillow drops EXIF by default when saving):</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">from PIL import Image
-
-original = Image.open('photo.jpg')
-original.save('clean.jpg')</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,10 +1,5 @@
 ---
-title: "Hex to ASCII Converter — Coding.Tools"
-description: "Convert hexadecimal byte values to ASCII text directly in your browser. Fast, private, and free to use."
-toolTitle: "Hex to ASCII"
-toolDescription: "Convert hexadecimal byte values to readable ASCII text. Runs entirely in your browser — nothing is sent to a server."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "hex-to-ascii"
 permalink: "/hex-to-ascii.html"
 ---
@@ -167,30 +162,7 @@ permalink: "/hex-to-ascii.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Hex to ASCII Converter</h2>
-  <p>This tool converts hexadecimal byte values into their corresponding ASCII characters. It is useful when you need to read hex-encoded data from logs, network packets, memory dumps, or protocol traces.</p>
-  <p>The conversion runs locally in your browser. You can enter hex values separated by spaces (e.g. <code>48 65 6C 6C 6F</code>) or as a continuous string (e.g. <code>48656C6C6F</code>).</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter hexadecimal byte values in the input editor. You can use spaces between bytes or write them as a continuous string.</li>
-    <li>Click <strong>Convert</strong> to decode the hex values to ASCII text.</li>
-    <li>The ASCII result appears in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>Input format</h3>
-  <p>Each byte is represented by two hex digits (0–9, A–F). The tool accepts both uppercase and lowercase hex letters. Bytes can be separated by spaces, commas, colons, or dashes, or written as one continuous string.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Hex Input ---
-48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21
-
---- ASCII Output ---
-Hello, World!</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

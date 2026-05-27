@@ -1,10 +1,5 @@
 ---
-title: "Fraction to Percent Converter — Coding.Tools"
-description: "Convert fractions to percentage values instantly in your browser. Fast, private, and free to use."
-toolTitle: "Fraction to Percent"
-toolDescription: "Enter a fraction (integer, numerator, denominator) and convert it to a percentage. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "fraction-to-percent"
 permalink: "/fraction-to-percent.html"
 ---
@@ -275,34 +270,7 @@ permalink: "/fraction-to-percent.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Fraction to Percent Converter</h2>
-  <p>This tool converts a mixed fraction (integer + numerator/denominator) into its percentage equivalent. It is useful for math homework, financial calculations, or any situation where you need to express fractions as percentages.</p>
-  <p>The conversion runs entirely in your browser. Enter the integer part (optional), the numerator, and the denominator, then click Calculate to see the percentage result.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter the integer part (leave empty or 0 if the fraction is less than 1).</li>
-    <li>Enter the numerator (top number of the fraction).</li>
-    <li>Enter the denominator (bottom number of the fraction).</li>
-    <li>Click <strong>Calculate</strong> to see the percentage result.</li>
-    <li>Use <strong>Copy</strong> to copy the result to your clipboard, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>The percentage is calculated as: <code>percent = (integer + numerator / denominator) * 100</code>. For example, <code>3/4</code> becomes <code>(3 / 4) * 100 = 75%</code>.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Fraction:  3/4
-Percent:   75%
-
-Fraction:  1/2
-Percent:   50%
-
-Fraction:  1 1/4
-Percent:   125%</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

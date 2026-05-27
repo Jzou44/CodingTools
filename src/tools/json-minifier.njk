@@ -1,10 +1,5 @@
 ---
-title: "JSON Minifier — Coding.Tools"
-description: "Minify and compress JSON data by removing whitespace and formatting. Runs locally in your browser, fast and free."
-toolTitle: "JSON Minifier"
-toolDescription: "Minify JSON data by stripping whitespace and formatting to produce compact output. Copy or download the result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "json-minifier"
 permalink: "/json-minifier.html"
 ---
@@ -35,42 +30,7 @@ permalink: "/json-minifier.html"
 {% endblock %}
 
 {% block description %}
-  <h2>JSON Minifier</h2>
-  <p>This JSON Minifier strips unnecessary whitespace, indentation, and line breaks from your JSON data to produce the most compact representation possible. It reduces file size for faster transmission over networks and lower storage costs.</p>
-  <p>The minification runs locally in your browser. No data is uploaded to a server, so you can safely minify sensitive configuration files, API payloads, or any JSON content with complete privacy.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your formatted or pretty-printed JSON into the input editor.</li>
-    <li>Click <strong>Minify JSON</strong> to remove all unnecessary whitespace.</li>
-    <li>View the compact, single-line JSON in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .json file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is JSON minification?</h3>
-  <p>JSON minification is the process of removing all unnecessary characters from JSON data without changing its meaning. This includes stripping whitespace, newlines, and indentation. The result is a single-line string that machines can parse just as easily but takes up less space.</p>
-  <p>Minified JSON is commonly used in production environments where bandwidth matters, such as API responses, embedded configuration in mobile apps, and stored documents in databases like MongoDB or Elasticsearch.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any valid JSON input. It collapses all whitespace between tokens to produce the smallest valid JSON string. String values containing spaces or special characters are preserved as-is.</p>
-
-  <h3>Example</h3>
-  <p>Formatted JSON is compressed to a single line:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (formatted) ---
-{
-  "name": "Alice",
-  "age": 30,
-  "skills": [
-    "JavaScript",
-    "Python"
-  ]
-}
-
---- Output (minified) ---
-{"name":"Alice","age":30,"skills":["JavaScript","Python"]}</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,10 +1,5 @@
 ---
-title: "ASCII to Hex Converter — Coding.Tools"
-description: "Convert ASCII text to hexadecimal byte values directly in your browser. Fast, private, and free to use."
-toolTitle: "ASCII to Hex"
-toolDescription: "Convert ASCII text to hexadecimal byte values with configurable delimiter. Runs entirely in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "ascii-to-hex"
 permalink: "/ascii-to-hex.html"
 ---
@@ -208,33 +203,7 @@ permalink: "/ascii-to-hex.html"
 {% endblock %}
 
 {% block description %}
-  <h2>ASCII to Hex Converter</h2>
-  <p>This tool converts ASCII text into hexadecimal byte values. It is useful when you need to create hex-encoded payloads, debug network protocols, or prepare data for systems that expect hex input.</p>
-  <p>The conversion runs locally in your browser. You can choose a delimiter (space, comma, colon, or none) for the output format.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter ASCII text in the input editor.</li>
-    <li>Choose a delimiter from the dropdown (space, comma, colon, or none).</li>
-    <li>Click <strong>Convert</strong> to encode the text as hex values.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>What is hex encoding?</h3>
-  <p>Hex encoding represents each byte of data as two hexadecimal digits (0–9, A–F). It is a common way to represent binary data in text form, used in networking (MAC addresses, packet dumps), programming (escape sequences), and data analysis.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- ASCII Input ---
-Hello, World!
-
---- Hex Output (space delimiter) ---
-48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21
-
---- Hex Output (no delimiter) ---
-48656C6C6F2C20576F726C6421</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

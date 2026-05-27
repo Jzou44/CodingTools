@@ -1,10 +1,5 @@
 ---
-title: "Decimal to Binary Converter — Coding.Tools"
-description: "Convert decimal numbers to binary, hexadecimal, and octal instantly in your browser. Fast, private, and free to use."
-toolTitle: "Decimal to Binary"
-toolDescription: "Enter a decimal number and convert it to binary, hexadecimal, and octal. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "decimal-to-binary"
 permalink: "/decimal-to-binary.html"
 ---
@@ -227,29 +222,7 @@ permalink: "/decimal-to-binary.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Decimal to Binary Converter</h2>
-  <p>This tool converts decimal (base 10) numbers into their binary (base 2), hexadecimal (base 16), and octal (base 8) equivalents. It is useful when you need to understand how a number is represented in binary for programming, networking, or digital electronics.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a decimal number into the input field (e.g. <code>255</code> or <code>1024</code>).</li>
-    <li>Click <strong>Convert</strong> to see the binary, hexadecimal, and octal results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the binary result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>What is binary?</h3>
-  <p>Binary is a base 2 number system that uses only the digits 0 and 1. It is the native language of digital computers, where each bit represents one of two states. Converting decimal to binary helps you see the underlying bit pattern of a number, which is essential for bitwise operations, subnet masks, flag values, and understanding how data is stored.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Decimal:     255
-Binary:      11111111
-Hexadecimal: FF
-Octal:       377</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

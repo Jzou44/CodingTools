@@ -1,10 +1,5 @@
 ---
-title: "Hex to RGB Converter — Coding.Tools"
-description: "Convert hex color codes to RGB values with live color preview. Fast, private, and free to use."
-toolTitle: "Hex to RGB"
-toolDescription: "Enter a hex color code and convert it to RGB values. See a live color preview and generate random colors."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "hex-to-rgb"
 permalink: "/hex-to-rgb.html"
 ---
@@ -220,33 +215,7 @@ permalink: "/hex-to-rgb.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Hex to RGB Converter</h2>
-  <p>This tool converts hexadecimal color codes into their RGB (Red, Green, Blue) decimal equivalents. It includes a live color preview so you can see exactly what the color looks like. The random color button generates a new color each time.</p>
-  <p>The conversion runs entirely in your browser. Enter a hex code with or without the <code>#</code> prefix.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter a hex color code in the input field (e.g. <code>#FF5733</code> or <code>FF5733</code>).</li>
-    <li>Click <strong>Convert</strong> to see the RGB values and color preview.</li>
-    <li>Click <strong>Random</strong> to generate a random color.</li>
-    <li>Use <strong>Copy</strong> to copy the RGB value to your clipboard.</li>
-  </ol>
-
-  <h3>What is hex color?</h3>
-  <p>A hex color code is a 6-digit hexadecimal number that represents the red, green, and blue components of a color. The first two digits are red, the middle two are green, and the last two are blue. For example, <code>#FF0000</code> is pure red (R=255, G=0, B=0).</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Hex: #FF5733
-RGB: rgb(255, 87, 51)
-
-Hex: #00FF00
-RGB: rgb(0, 255, 0)
-
-Hex: #3366CC
-RGB: rgb(51, 102, 204)</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

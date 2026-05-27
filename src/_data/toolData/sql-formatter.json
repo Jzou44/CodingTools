@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "SQL Formatter — Coding.Tools",
-    "description": "Format and beautify SQL queries with proper indentation directly in your browser.",
+    "title": "SQL Formatter - Coding.Tools",
+    "description": "Format SQL queries with readable keyword layout, indentation, joins, and clauses.",
     "toolTitle": "SQL Formatter",
-    "toolDescription": "Beautify messy SQL with proper indentation, keyword casing, and structure. Copy or download the formatted result.",
+    "toolDescription": "Make SQL queries easier to read, review, and debug in your browser.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste SQL to format...",
     "outputPlaceholder": "Formatted SQL will appear here...",
-    "descTitle": "SQL Formatter",
+    "descTitle": "Make SQL logic easier to follow",
     "descParas": [
-      "This tool formats and beautifies SQL queries with proper indentation, keyword alignment, and consistent structure. Paste poorly formatted SQL and get clean, readable output instantly.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>SQL Formatter rewrites query layout so clauses, joins, selected columns, predicates, and ordering are easier to scan.</strong> It is useful for debugging reports, reviewing migrations, documenting examples, and untangling one-line queries from logs.",
+      "Formatting should preserve SQL logic, but dialects differ. Vendor-specific syntax, procedural blocks, quoted identifiers, comments, and unusual operators should be checked in the database engine you actually use."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your SQL query into the input editor.",
-      "Click <strong>Format SQL</strong> to beautify the query.",
-      "The formatted SQL appears in the output editor with proper indentation.",
+      "Click <strong>Format SQL</strong> to arrange clauses and indentation.",
+      "Review the formatted SQL for preserved predicates, joins, aliases, comments, and literals.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is SQL formatting?",
+    "whatIs": "What is SQL Formatter?",
     "whatIsParas": [
-      "SQL formatting adds indentation, line breaks, and consistent keyword casing to SQL queries, making them human-readable. Poorly formatted SQL is difficult to read, debug, and maintain.",
-      "Formatting SQL is essential for debugging queries, code reviews, and maintaining database scripts."
+      "<strong>SQL Formatter</strong> is a browser-based utility for improving SQL readability. It separates major clauses such as <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, and <code>ORDER BY</code> so query intent is clearer.",
+      "SQL is executed by a database, not by the formatter. Always run important formatted queries against the target database or test suite before committing them."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any SQL input including SELECT, INSERT, UPDATE, DELETE, CREATE, and other statements. The formatter preserves all logic — it only changes whitespace and indentation.",
+    "inputNotesPara": "Paste SQL text only. Remove log prefixes, timing output, shell prompts, or application string escapes first. Keep dialect-specific syntax in mind when copying formatted SQL back into code.",
     "example": "Example",
-    "examplePara": "Messy SQL becomes readable after formatting:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "A one-line query becomes easier to review when columns, joins, and filters are separated:",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "Format SQL"
   },
   "cn": {
-    "title": "SQL 格式化 — Coding.Tools",
-    "description": "在浏览器中格式化和美化 SQL 查询。",
+    "title": "SQL 格式化程序 - Coding.Tools",
+    "description": "使用可读的关键字布局、缩进、连接和子句格式化 SQL 查询。",
     "toolTitle": "SQL 格式化",
-    "toolDescription": "美化杂乱的 SQL，添加适当的缩进、关键字大小写和结构。复制或下载格式化结果。",
+    "toolDescription": "使 SQL 查询更易于在浏览器中阅读、查看和调试。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要格式化的 SQL...",
     "outputPlaceholder": "格式化后的 SQL 将在此显示...",
-    "descTitle": "SQL 格式化",
+    "descTitle": "使 SQL 逻辑更容易理解",
     "descParas": [
-      "该工具格式化和美化 SQL 查询，添加适当的缩进、关键字对齐和一致的结构。粘贴格式不佳的 SQL，即可获取干净、可读的输出。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>SQL 格式化程序重写查询布局，使子句、联接、选定列、谓词和排序更易于扫描。</strong> 它对于调试报告、审查迁移、记录示例以及从日志中理清单行查询非常有用。",
+      "格式化应保留 SQL 逻辑，但方言有所不同。应在您实际使用的数据库引擎中检查特定于供应商的语法、过程块、带引号的标识符、注释和异常运算符。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 SQL 查询粘贴到输入编辑器中。",
-      "点击<strong>格式化 SQL</strong>来美化查询。",
-      "格式化后的 SQL 将以适当的缩进显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>格式化 SQL</strong> 来排列子句和缩进。",
+      "查看格式化的 SQL 中保留的谓词、连接、别名、注释和文字。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 SQL 格式化？",
+    "whatIs": "什么是 SQL 格式化程序？",
     "whatIsParas": [
-      "SQL 格式化为 SQL 查询添加缩进、换行和一致的关键字大小写，使其易于阅读。格式不佳的 SQL 难以阅读、调试和维护。",
-      "格式化 SQL 对于调试查询、代码审查和维护数据库脚本至关重要。"
+      "<strong>SQL 格式化</strong> 是一个基于浏览器的实用程序，用于提高 SQL 的可读性。它将 <code>SELECT</code>、<code>FROM</code>、<code>JOIN</code>、<code>WHERE</code>、<code>GROUP BY</code> 和 <code>ORDER BY</code> 等主要子句分开，因此查询意图更清晰。",
+      "SQL 由数据库执行，而不是由格式化程序执行。在提交之前，始终对目标数据库或测试套件运行重要的格式化查询。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何 SQL 输入，包括 SELECT、INSERT、UPDATE、DELETE、CREATE 和其他语句。格式化器保留所有逻辑——只改变空白和缩进。",
+    "inputNotesPara": "仅粘贴 SQL 文本。首先删除日志前缀、计时输出、shell 提示或应用程序字符串转义。将格式化的 SQL 复制回代码时，请记住特定于方言的语法。",
     "example": "示例",
-    "examplePara": "杂乱的 SQL 格式化后变得可读：",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "当列、连接和过滤器分开时，单行查询变得更容易查看：",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "格式化 SQL"
   },
   "tw": {
-    "title": "SQL 格式化 — Coding.Tools",
-    "description": "在瀏覽器中格式化和美化 SQL 查詢。",
+    "title": "SQL 格式化程式 - Coding.Tools",
+    "description": "使用可讀的關鍵字佈局、縮排、連接和子句格式化 SQL 查詢。",
     "toolTitle": "SQL 格式化",
-    "toolDescription": "美化雜亂的 SQL，添加適當的縮排、關鍵字大小寫和結構。複製或下載格式化結果。",
+    "toolDescription": "讓 SQL 查詢更易於在瀏覽器中閱讀、檢視和除錯。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要格式化的 SQL...",
     "outputPlaceholder": "格式化後的 SQL 將在此顯示...",
-    "descTitle": "SQL 格式化",
+    "descTitle": "讓 SQL 邏輯更容易理解",
     "descParas": [
-      "該工具格式化和美化 SQL 查詢，添加適當的縮排、關鍵字對齊和一致的結構。貼上格式不佳的 SQL，即可取得乾淨、可讀的輸出。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>SQL 格式化程式重寫查詢版面，讓子句、連接、選取資料列、謂詞和排序更易於掃描。</strong> 它對於偵錯報告、審查遷移、記錄範例以及從日誌中理清單行查詢非常有用。",
+      "格式化應保留 SQL 邏輯，但方言有所不同。應在您實際使用的資料庫引擎中檢查特定於供應商的語法、流程區塊、帶有引號的識別碼、註解和異常運算子。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 SQL 查詢貼上到輸入編輯器中。",
-      "點擊<strong>格式化 SQL</strong>來美化查詢。",
-      "格式化後的 SQL 將以適當的縮排顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 SQL 查詢貼到輸入編輯器中。",
+      "點選 <strong>格式化 SQL</strong> 來排列子句和縮排。",
+      "查看格式化的 SQL 中保留的謂詞、連接、別名、註解和文字。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 SQL 格式化？",
+    "whatIs": "什麼是 SQL 格式化程式？",
     "whatIsParas": [
-      "SQL 格式化為 SQL 查詢添加縮排、換行和一致的關鍵字大小寫，使其易於閱讀。",
-      "格式化 SQL 對於除錯查詢、程式碼審查和維護資料庫腳本至關重要。"
+      "<strong>SQL 格式化</strong> 是一個基於瀏覽器的實用程序，用於提高 SQL 的可讀性。它將 <code>SELECT</code>、<code>FROM</code>、<code>JOIN</code>、<code>WHERE</code>、<code>GROUP BY</code> 和 <code>ORDER BY</code> 等主要子句分開，因此查詢意圖更清晰。",
+      "SQL 由資料庫執行，而不是由格式化程式執行。在提交之前，請始終對目標資料庫或測試套件執行重要的格式化查詢。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何 SQL 輸入。格式化器保留所有邏輯——只改變空白和縮排。",
+    "inputNotesPara": "僅貼上 SQL 文字。首先刪除日誌前綴、計時輸出、shell 提示或應用程式字串轉義。將格式化的 SQL 複製回程式碼時，請記住特定於方言的語法。",
     "example": "範例",
-    "examplePara": "雜亂的 SQL 格式化後變得可讀：",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "當列、連接和過濾器分開時，單行查詢變得更容易查看：",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "格式化 SQL"
   },
   "jp": {
-    "title": "SQL フォーマッター — Coding.Tools",
-    "description": "ブラウザで SQL クエリをフォーマットして美しく整形します。",
+    "title": "SQL フォーマッター - Coding.Tools",
+    "description": "読みやすいキーワード レイアウト、インデント、結合、句を使用して SQL クエリをフォーマットします。",
     "toolTitle": "SQL フォーマッター",
-    "toolDescription": "適切なインデント、キーワードの大文字小文字、構造で SQL を美しく整形します。",
+    "toolDescription": "ブラウザーで SQL クエリを読みやすく、確認し、デバッグしやすくします。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "フォーマットする SQL を貼り付け...",
     "outputPlaceholder": "フォーマットされた SQL がここに表示されます...",
-    "descTitle": "SQL フォーマッター",
+    "descTitle": "SQL ロジックを理解しやすくする",
     "descParas": [
-      "このツールは SQL クエリに適切なインデント、キーワードの配置、一貫した構造を追加してフォーマットします。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>SQL フォーマッタはクエリ レイアウトを書き換えるので、句、結合、選択した列、述語、および順序付けをスキャンしやすくします。</strong> レポートのデバッグ、移行のレビュー、例の文書化、ログからの 1 行クエリの解明に役立ちます。",
+      "フォーマットでは SQL ロジックが維持される必要がありますが、方言は異なります。ベンダー固有の構文、手続きブロック、引用符で囲まれた識別子、コメント、および特殊な演算子は、実際に使用するデータベース エンジンで確認する必要があります。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "SQL クエリを入力エディタに貼り付けます。",
-      "<strong>SQL フォーマット</strong>をクリックしてクエリを整形します。",
-      "フォーマットされた SQL が適切なインデントで出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "SQL クエリを入力エディターに貼り付けます。",
+      "「<strong>SQL</strong> をフォーマット」をクリックして、句とインデントを調整します。",
+      "保存された述語、結合、別名、コメント、およびリテラルについては、フォーマットされた SQL を確認してください。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "SQL フォーマットとは？",
+    "whatIs": "SQL フォーマッターとは何ですか?",
     "whatIsParas": [
-      "SQL フォーマットは SQL クエリにインデント、改行、一貫したキーワードの大文字小文字を追加し、人間が読めるようにします。",
-      "SQL のフォーマットはクエリのデバッグ、コードレビュー、データベーススクリプトの保守に不可欠です。"
+      "<strong>SQL フォーマッター</strong> は、SQL の読みやすさを向上させるためのブラウザベースのユーティリティです。 <code>SELECT</code>、<code>FROM</code>、<code>JOIN</code>、<code>WHERE</code>、<code>GROUP BY</code>、<code>ORDER BY</code> などの主要な句が分離されているため、クエリの意図がより明確になります。",
+      "SQL は、フォーマッタではなくデータベースによって実行されます。重要な書式設定されたクエリは、コミットする前に必ずターゲット データベースまたはテスト スイートに対して実行してください。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは SELECT、INSERT、UPDATE、DELETE、CREATE などのすべての SQL 入力を受け付けます。",
+    "inputNotesPara": "SQL テキストのみを貼り付けます。まず、ログ接頭辞、タイミング出力、シェルプロンプト、またはアプリケーション文字列エスケープを削除してください。フォーマットされた SQL をコードにコピーするときは、方言固有の構文に留意してください。",
     "example": "例",
-    "examplePara": "乱れた SQL はフォーマット後に読みやすくなります：",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "列、結合、フィルターを分離すると、1 行のクエリを確認しやすくなります。",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "SQL をフォーマット"
   },
   "kr": {
-    "title": "SQL 포맷터 — Coding.Tools",
-    "description": "브라우저에서 SQL 쿼리를 포맷하고 아름답게 정리합니다.",
+    "title": "SQL 포맷터 - Coding.Tools",
+    "description": "읽을 수 있는 키워드 레이아웃, 들여쓰기, 조인 및 절을 사용하여 SQL 쿼리 형식을 지정합니다.",
     "toolTitle": "SQL 포맷터",
-    "toolDescription": "적절한 들여쓰기, 키워드 대소문자, 구조로 SQL을 아름답게 정리합니다.",
+    "toolDescription": "SQL 쿼리를 브라우저에서 더 쉽게 읽고, 검토하고, 디버그할 수 있도록 만드세요.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "포맷할 SQL을 붙여넣으세요...",
     "outputPlaceholder": "포맷된 SQL이 여기에 표시됩니다...",
-    "descTitle": "SQL 포맷터",
+    "descTitle": "SQL 논리를 더 쉽게 따르도록 만들기",
     "descParas": [
-      "이 도구는 SQL 쿼리에 적절한 들여쓰기, 키워드 정렬, 일관된 구조를 추가하여 포맷합니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>SQL 포맷터는 쿼리 레이아웃을 다시 작성하므로 절, 조인, 선택한 열, 조건자 및 순서를 더 쉽게 검색할 수 있습니다.</strong> 보고서 디버깅, 마이그레이션 검토, 예제 문서화 및 로그에서 한 줄 쿼리를 푸는 데 유용합니다.",
+      "형식화에서는 SQL 논리를 유지해야 하지만 방언은 다릅니다. 벤더별 구문, 절차적 블록, 인용된 식별자, 주석, 특이한 연산자는 실제로 사용하는 데이터베이스 엔진에서 확인해야 합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "SQL 쿼리를 입력 편집기에 붙여넣으세요.",
-      "<strong>SQL 포맷</strong>을 클릭하여 쿼리를 정리합니다.",
-      "포맷된 SQL이 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "SQL 쿼리를 입력 편집기에 붙여넣습니다.",
+      "절과 들여쓰기를 정렬하려면 <strong>형식 SQL</strong>를 클릭하세요.",
+      "보존된 술어, 조인, 별명, 주석 및 리터럴에 대해 형식화된 SQL를 검토하십시오.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SQL 포맷팅이란?",
+    "whatIs": "SQL 포맷터란 무엇입니까?",
     "whatIsParas": [
-      "SQL 포맷팅은 SQL 쿼리에 들여쓰기, 줄 바꿈, 일관된 키워드 대소문자를 추가하여 사람이 읽을 수 있게 합니다.",
-      "SQL 포맷팅은 쿼리 디버깅, 코드 리뷰, 데이터베이스 스크립트 유지보수에 필수적입니다."
+      "<strong>SQL 포맷터</strong>는 SQL 가독성을 향상시키기 위한 브라우저 기반 유틸리티입니다. <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code> 등의 주요 절을 구분하여 쿼리 의도를 더욱 명확하게 합니다.",
+      "SQL는 포맷터가 아닌 데이터베이스에 의해 실행됩니다. 커밋하기 전에 항상 대상 데이터베이스 또는 테스트 모음에 대해 중요한 형식의 쿼리를 실행하세요."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 SELECT, INSERT, UPDATE, DELETE, CREATE 등 모든 SQL 입력을 허용합니다.",
+    "inputNotesPara": "SQL 텍스트만 붙여넣습니다. 로그 접두사, 타이밍 출력, 쉘 프롬프트 또는 응용 프로그램 문자열 이스케이프를 먼저 제거하십시오. 형식화된 SQL를 코드에 다시 복사할 때 방언별 구문을 염두에 두세요.",
     "example": "예시",
-    "examplePara": "混乱된 SQL은 포맷 후 읽기 쉬워집니다:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "열, 조인 및 필터를 분리하면 한 줄 쿼리를 더 쉽게 검토할 수 있습니다.",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "SQL 포맷"
   },
   "fr": {
-    "title": "Formateur SQL — Coding.Tools",
-    "description": "Formatez et embellissez les requêtes SQL avec une indentation correcte directement dans votre navigateur.",
+    "title": "Formateur SQL - Coding.Tools",
+    "description": "Formatez les requêtes SQL avec une disposition lisible des mots clés, une indentation, des jointures et des clauses.",
     "toolTitle": "Formateur SQL",
-    "toolDescription": "Embellissez le SQL désordonné avec une indentation correcte et une structure cohérente.",
+    "toolDescription": "Facilitez la lecture, la révision et le débogage des requêtes SQL dans votre navigateur.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le SQL à formater...",
     "outputPlaceholder": "Le SQL formaté apparaîtra ici...",
-    "descTitle": "Formateur SQL",
+    "descTitle": "Rendre la logique SQL plus facile à suivre",
     "descParas": [
-      "Cet outil formate et embellit les requêtes SQL avec une indentation, un alignement des mots-clés et une structure cohérente.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Formateur SQL réécrit la présentation des requêtes afin que les clauses, les jointures, les colonnes sélectionnées, les prédicats et l'ordre soient plus faciles à analyser.</strong> Il est utile pour déboguer les rapports, examiner les migrations, documenter des exemples et démêler les requêtes sur une ligne des journaux.",
+      "Le formatage doit préserver la logique SQL, mais les dialectes diffèrent. La syntaxe spécifique au fournisseur, les blocs procéduraux, les identifiants cités, les commentaires et les opérateurs inhabituels doivent être vérifiés dans le moteur de base de données que vous utilisez réellement."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez votre requête SQL dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Formater SQL</strong>.",
-      "Le SQL formaté apparaît avec une indentation correcte.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Cliquez sur <strong>Formater SQL</strong> pour organiser les clauses et l'indentation.",
+      "Examinez le SQL formaté pour les prédicats, jointures, alias, commentaires et littéraux préservés.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le formatage SQL ?",
+    "whatIs": "Qu’est-ce que le formateur SQL ?",
     "whatIsParas": [
-      "Le formatage SQL ajoute de l'indentation, des retours à la ligne et une casse cohérente aux requêtes SQL.",
-      "Le formatage SQL est essentiel pour le débogage, les revues de code et la maintenance."
+      "<strong>Formateur SQL</strong> est un utilitaire basé sur un navigateur pour améliorer la lisibilité de SQL. Il sépare les clauses principales telles que <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code> et <code>ORDER BY</code> afin que l'intention de la requête soit plus claire.",
+      "SQL est exécuté par une base de données et non par le formateur. Exécutez toujours des requêtes formatées importantes sur la base de données cible ou la suite de tests avant de les valider."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte toute entrée SQL.",
+    "inputNotesPara": "Collez uniquement le texte SQL. Supprimez d'abord les préfixes de journal, la sortie de synchronisation, les invites du shell ou les échappements de chaîne d'application. Gardez à l’esprit la syntaxe spécifique au dialecte lors de la copie du SQL formaté dans le code.",
     "example": "Exemple",
-    "examplePara": "Le SQL désordonné devient lisible après formatage :",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "Une requête sur une seule ligne devient plus facile à examiner lorsque les colonnes, les jointures et les filtres sont séparés :",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "Formater SQL"
   },
   "de": {
-    "title": "SQL-Formatierer — Coding.Tools",
-    "description": "Formatieren und verschönern Sie SQL-Abfragen mit korrekter Einrückung direkt in Ihrem Browser.",
+    "title": "SQL Formatierer - Coding.Tools",
+    "description": "Formatieren Sie SQL-Abfragen mit lesbarem Schlüsselwortlayout, Einrückungen, Verknüpfungen und Klauseln.",
     "toolTitle": "SQL-Formatierer",
-    "toolDescription": "Verschönern Sie unordentliches SQL mit korrekter Einrückung und Struktur.",
+    "toolDescription": "Erleichtern Sie das Lesen, Überprüfen und Debuggen von SQL-Abfragen in Ihrem Browser.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "SQL zum Formatieren einfügen...",
     "outputPlaceholder": "Formatiertes SQL wird hier angezeigt...",
-    "descTitle": "SQL-Formatierer",
+    "descTitle": "Machen Sie die SQL-Logik leichter verständlich",
     "descParas": [
-      "Dieses Tool formatiert SQL-Abfragen mit korrekter Einrückung und konsistenter Struktur.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>SQL-Formatierer schreibt das Abfragelayout neu, sodass Klauseln, Verknüpfungen, ausgewählte Spalten, Prädikate und Reihenfolge einfacher zu scannen sind.</strong> Es ist nützlich zum Debuggen von Berichten, Überprüfen von Migrationen, Dokumentieren von Beispielen und Entwirren einzeiliger Abfragen aus Protokollen.",
+      "Bei der Formatierung sollte die SQL-Logik erhalten bleiben, die Dialekte unterscheiden sich jedoch. Herstellerspezifische Syntax, prozedurale Blöcke, Bezeichner in Anführungszeichen, Kommentare und ungewöhnliche Operatoren sollten in der Datenbank-Engine überprüft werden, die Sie tatsächlich verwenden."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihre SQL-Abfrage in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>SQL formatieren</strong>.",
-      "Das formatierte SQL wird mit korrekter Einrückung angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihre SQL-Abfrage in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>SQL formatieren</strong>, um Klauseln und Einrückungen anzuordnen.",
+      "Überprüfen Sie das formatierte SQL auf erhaltene Prädikate, Verknüpfungen, Aliase, Kommentare und Literale.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist SQL-Formatierung?",
+    "whatIs": "Was ist der SQL-Formatierer?",
     "whatIsParas": [
-      "SQL-Formatierung fügt Einrückungen und Zeilenumbrüche zu SQL-Abfragen hinzu.",
-      "SQL-Formatierung ist unerlässlich für Debugging und Code-Reviews."
+      "<strong>SQL-Formatierer</strong> ist ein browserbasiertes Dienstprogramm zur Verbesserung der Lesbarkeit von SQL. Es trennt Hauptklauseln wie <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code> und <code>ORDER BY</code>, sodass die Abfrageabsicht klarer ist.",
+      "SQL wird von einer Datenbank ausgeführt, nicht vom Formatierer. Führen Sie immer wichtige formatierte Abfragen für die Zieldatenbank oder Testsuite aus, bevor Sie sie festschreiben."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert jede SQL-Eingabe.",
+    "inputNotesPara": "Nur SQL-Text einfügen. Entfernen Sie zuerst Protokollpräfixe, Zeitausgabe, Shell-Eingabeaufforderungen oder Anwendungszeichenfolgen-Escapezeichen. Beachten Sie die dialektspezifische Syntax, wenn Sie formatiertes SQL zurück in Code kopieren.",
     "example": "Beispiel",
-    "examplePara": "Unordentliches SQL wird nach der Formatierung lesbar:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "Eine einzeilige Abfrage lässt sich einfacher überprüfen, wenn Spalten, Verknüpfungen und Filter getrennt sind:",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "Formatieren SQL"
   },
   "es": {
-    "title": "Formateador SQL — Coding.Tools",
-    "description": "Formatee y embellezca las consultas SQL con indentación correcta directamente en su navegador.",
+    "title": "Formateador SQL - Coding.Tools",
+    "description": "Formatee consultas SQL con diseño de palabras clave legibles, sangría, uniones y cláusulas.",
     "toolTitle": "Formateador SQL",
-    "toolDescription": "Embellezca SQL desordenado con indentación y estructura correctas.",
+    "toolDescription": "Haga que las consultas SQL sean más fáciles de leer, revisar y depurar en su navegador.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue SQL para formatear...",
     "outputPlaceholder": "El SQL formateado aparecerá aquí...",
-    "descTitle": "Formateador SQL",
+    "descTitle": "Haga que la lógica SQL sea más fácil de seguir",
     "descParas": [
-      "Esta herramienta formatea y embellece consultas SQL con indentación y estructura consistente.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>SQL El formateador reescribe el diseño de la consulta para que las cláusulas, uniones, columnas seleccionadas, predicados y ordenamiento sean más fáciles de escanear.</strong> Es útil para depurar informes, revisar migraciones, documentar ejemplos y desenredar consultas de una línea de los registros.",
+      "El formateo debe preservar la lógica SQL, pero los dialectos difieren. La sintaxis específica del proveedor, los bloques de procedimiento, los identificadores entrecomillados, los comentarios y los operadores inusuales deben verificarse en el motor de base de datos que realmente utiliza."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue su consulta SQL en el editor de entrada.",
-      "Haga clic en <strong>Formatear SQL</strong>.",
-      "El SQL formateado aparece con indentación correcta.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Formato SQL</strong> para organizar cláusulas y sangría.",
+      "Revise el SQL formateado para ver predicados, uniones, alias, comentarios y literales conservados.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es el formateo SQL?",
+    "whatIs": "¿Qué es el formateador SQL?",
     "whatIsParas": [
-      "El formateo SQL agrega indentación y saltos de línea a las consultas SQL.",
-      "El formateo SQL es esencial para depurar y revisar código."
+      "<strong>Formateador SQL</strong> es una utilidad basada en navegador para mejorar la legibilidad de SQL. Separa cláusulas principales como <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code> y <code>ORDER BY</code> para que la intención de la consulta sea más clara.",
+      "SQL lo ejecuta una base de datos, no el formateador. Ejecute siempre consultas formateadas importantes en la base de datos de destino o el conjunto de pruebas antes de confirmarlas."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier entrada SQL.",
+    "inputNotesPara": "Pegue solo el texto SQL. Primero elimine los prefijos de registro, la salida de tiempo, los mensajes de shell o los escapes de cadenas de aplicaciones. Tenga en cuenta la sintaxis específica del dialecto al copiar SQL formateado nuevamente en el código.",
     "example": "Ejemplo",
-    "examplePara": "El SQL desordenado se vuelve legible después del formateo:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "Una consulta de una línea resulta más fácil de revisar cuando las columnas, uniones y filtros están separados:",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "Formatear SQL"
   },
   "pt": {
-    "title": "Formatador SQL — Coding.Tools",
-    "description": "Formate e embeleze consultas SQL com indentação correta diretamente no seu navegador.",
+    "title": "Formatador SQL - Coding.Tools",
+    "description": "Formate consultas SQL com layout de palavras-chave legíveis, recuo, junções e cláusulas.",
     "toolTitle": "Formatador SQL",
-    "toolDescription": "Embeleze SQL desordenado com indentação e estrutura corretas.",
+    "toolDescription": "Torne as consultas SQL mais fáceis de ler, revisar e depurar em seu navegador.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole SQL para formatar...",
     "outputPlaceholder": "O SQL formatado aparecerá aqui...",
-    "descTitle": "Formatador SQL",
+    "descTitle": "Torne a lógica SQL mais fácil de seguir",
     "descParas": [
-      "Esta ferramenta formatea e embeleze consultas SQL com indentação e estrutura consistente.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>SQL O formatador reescreve o layout da consulta para que cláusulas, junções, colunas selecionadas, predicados e ordenação sejam mais fáceis de verificar.</strong> É útil para depurar relatórios, revisar migrações, documentar exemplos e desembaraçar consultas de uma linha de logs.",
+      "A formatação deve preservar a lógica SQL, mas os dialetos são diferentes. Sintaxe específica do fornecedor, blocos procedurais, identificadores entre aspas, comentários e operadores incomuns devem ser verificados no mecanismo de banco de dados que você realmente usa."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole sua consulta SQL no editor de entrada.",
-      "Clique em <strong>Formatar SQL</strong>.",
-      "O SQL formatado aparece com indentação correta.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Formatar SQL</strong> para organizar cláusulas e recuo.",
+      "Revise o SQL formatado para predicados, junções, aliases, comentários e literais preservados.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é formatação SQL?",
+    "whatIs": "O que é o formatador SQL?",
     "whatIsParas": [
-      "A formatação SQL adiciona indentação e quebras de linha às consultas SQL.",
-      "A formatação SQL é essencial para depurar e revisar código."
+      "Formatador <strong>SQL</strong> é um utilitário baseado em navegador para melhorar a legibilidade do SQL. Ele separa cláusulas principais como <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code> e <code>ORDER BY</code> para que a intenção da consulta seja mais clara.",
+      "SQL é executado por um banco de dados, não pelo formatador. Sempre execute consultas formatadas importantes no banco de dados de destino ou conjunto de testes antes de confirmá-las."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer entrada SQL.",
+    "inputNotesPara": "Cole apenas texto SQL. Remova primeiro os prefixos de log, a saída de tempo, os prompts do shell ou os escapes de string do aplicativo. Tenha em mente a sintaxe específica do dialeto ao copiar SQL formatado de volta para o código.",
     "example": "Exemplo",
-    "examplePara": "O SQL desordenado se torna legível após a formatação:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;"
+    "examplePara": "Uma consulta de uma linha fica mais fácil de revisar quando colunas, junções e filtros são separados:",
+    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "buttonLabel": "Formatar SQL"
   }
 }

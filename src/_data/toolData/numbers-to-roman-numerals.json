@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Numbers to Roman Numerals Converter — Coding.Tools",
-    "description": "Convert decimal numbers to Roman numerals directly in your browser.",
+    "title": "Numbers to Roman Numerals - Coding.Tools",
+    "description": "Convert decimal numbers from 1 to 3999 into standard Roman numerals.",
     "toolTitle": "Numbers to Roman",
-    "toolDescription": "Convert decimal numbers to Roman numeral strings.",
+    "toolDescription": "Convert decimal numbers into standard Roman numeral notation with subtractive pairs.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter number (e.g. 2024, 99)...",
     "outputPlaceholder": "Roman numeral will appear here...",
-    "descTitle": "Numbers to Roman Numerals Converter",
+    "descTitle": "Convert numbers to standard Roman numerals",
     "descParas": [
-      "This tool converts decimal numbers to Roman numeral representation. Supports numbers from 1 to 99,999.",
-      "The conversion runs locally in your browser."
+      "<strong>Numbers to Roman converts decimal integers into standard Roman numeral notation.</strong> Use it for dates, outlines, chapter labels, event names, clock-face references, and examples where Roman numerals are expected.",
+      "The supported modern range is <code>1</code> through <code>3999</code>. Values above 3999 normally need overlines or extended notation, while zero, negatives, and decimals do not have standard Roman numeral forms in this converter."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste a number into the input field.",
-      "Click <strong>Convert</strong> to get the Roman numeral.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Enter a whole number from 1 to 3999.",
+      "Review the Roman numeral output and the quick reference symbols.",
+      "Copy the Roman numeral, or clear the field before converting another number."
     ],
-    "whatIs": "What is Numbers to Roman?",
+    "whatIs": "What is number to Roman numeral conversion?",
     "whatIsParas": [
-      "The converter uses a greedy algorithm, repeatedly subtracting the largest possible Roman numeral value."
+      "<strong>Number to Roman numeral conversion</strong> rewrites a decimal integer with the symbols <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code>, and <code>M</code>. Standard notation uses subtractive pairs such as <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code>, and <code>CM</code>."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a positive integer between 1 and 99,999.",
+    "inputNotesPara": "Enter whole numbers only. If a date, page number, or label is outside <code>1-3999</code>, confirm the publication style because extended Roman numeral notation is not universally written the same way.",
     "example": "Example",
-    "examplePara": "Converting numbers to Roman numerals:",
+    "examplePara": "The number 2024 converts to <code>MMXXIV</code>:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "cn": {
-    "title": "数字转罗马数字转换器 — Coding.Tools",
-    "description": "在浏览器中直接将阿拉伯数字转换为罗马数字。",
+    "title": "数字转罗马数字 - Coding.Tools",
+    "description": "将 1 到 3999 之间的十进制数字转换为标准罗马数字。",
     "toolTitle": "数字转罗马数字",
-    "toolDescription": "将阿拉伯数字转换为罗马数字。",
+    "toolDescription": "使用减法对将十进制数字转换为标准罗马数字表示法。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入数字（如 14、2024）...",
     "outputPlaceholder": "罗马数字结果将显示在这里...",
-    "descTitle": "数字转罗马数字转换器",
+    "descTitle": "将数字转换为标准罗马数字",
     "descParas": [
-      "此工具将阿拉伯数字转换为罗马数字。",
-      "转换在浏览器本地运行。"
+      "<strong>数字转罗马数字 将十进制整数转换为标准罗马数字表示法。</strong> 将其用于日期、大纲、章节标签、事件名称、钟面参考以及需要罗马数字的示例。",
+      "支持的现代范围是 <code>1</code> 到 <code>3999</code>。 3999 以上的值通常需要上划线或扩展符号，而零、负数和小数在此转换器中没有标准罗马数字形式。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入阿拉伯数字。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "输入 1 到 3999 之间的整数。",
+      "查看罗马数字输出和快速参考符号。",
+      "复制罗马数字，或在转换另一个数字之前清除该字段。"
     ],
-    "whatIs": "什么是数字转罗马数字？",
+    "whatIs": "什么是数字到罗马数字的转换？",
     "whatIsParas": [
-      "此工具将现代阿拉伯数字转换为古罗马数字表示。"
+      "<strong>数字到罗马数字的转换</strong>用符号<code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>和<code>M</code>重写十进制整数。标准表示法使用减法对，例如 <code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code> 和 <code>CM</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的正整数（1-3999）。",
+    "inputNotesPara": "仅输入整数。如果日期、页码或标签超出 <code>1-3999</code>，请确认出版样式，因为扩展罗马数字表示法并非普遍采用相同的书写方式。",
     "example": "示例",
-    "examplePara": "将数字转换为罗马数字：",
+    "examplePara": "数字 2024 转换为 <code>MMXXIV</code>：",
     "exampleCode": "--- 数字输入 ---\n14\n\n--- 罗马数字 ---\nXIV"
   },
   "tw": {
-    "title": "數位到羅馬數位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將十進制數字轉換為羅馬數字。",
+    "title": "數字轉羅馬數字 - Coding.Tools",
+    "description": "將 1 到 3999 之間的十進制數字轉換為標準羅馬數字。",
     "toolTitle": "數字轉羅馬數字",
-    "toolDescription": "將十進制數字轉換為羅馬數字字串。",
+    "toolDescription": "使用減法對將十進制數字轉換為標準羅馬數字表示法。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入數字（例如 2024、99）...",
     "outputPlaceholder": "羅馬數字將出現在這裡...",
-    "descTitle": "數位到羅馬數位轉換器",
+    "descTitle": "將數字轉換為標準羅馬數字",
     "descParas": [
-      "該工具將十進制數字轉換為羅馬數字表示形式。支持從 1 到 99,999 的數字。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>數字轉羅馬數字 將十進位整數轉換為標準羅馬數字表示法。</strong> 將其用於日期、大綱、章節標籤、事件名稱、鐘面參考以及需要羅馬數字的範例。",
+      "支援的現代範圍是 <code>1</code> 到 <code>3999</code>。 3999 以上的值通常需要上劃線或擴展符號，而零、負數和小數在此轉換器中沒有標準羅馬數字形式。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入欄位中鍵入或貼上數字。",
-      "點擊<strong>轉換</strong>即可取得羅馬數字。",
-      "使用<strong>複製</strong>複製結果。"
+      "輸入 1 到 3999 之間的整數。",
+      "查看羅馬數字輸出和快速參考符號。",
+      "複製羅馬數字，或在轉換另一個數字之前清除該字段。"
     ],
-    "whatIs": "數字轉羅馬是什麼？",
+    "whatIs": "什麼是數字到羅馬數字的轉換？",
     "whatIsParas": [
-      "該轉換器使用貪心演算法，反覆減去可能的最大羅馬數字值。"
+      "<strong>數字到羅馬數字的轉換</strong>用符號<code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>和<code>M</code>重寫十進位整數。標準表示法使用減法對，例如 <code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code> 和 <code>CM</code>。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "輸入 1 到 99,999 之間的正整數。",
+    "inputNotesPara": "僅輸入整數。如果日期、頁碼或標籤超出 <code>1-3999</code>，請確認出版樣式，因為擴展羅馬數字表示法並非普遍採用相同的書寫方式。",
     "example": "例子",
-    "examplePara": "將數字轉換為羅馬數字：",
+    "examplePara": "數字 2024 轉換為 <code>MMXXIV</code>：",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "jp": {
-    "title": "数字からローマ数字へのコンバーター —coding.Tools",
-    "description": "ブラウザで 10 進数をローマ数字に直接変換します。",
+    "title": "数字からローマ数字へ - Coding.Tools",
+    "description": "1 から 3999 までの 10 進数を標準のローマ数字に変換します。",
     "toolTitle": "数字からローマ数字",
-    "toolDescription": "10 進数をローマ数字列に変換します。",
+    "toolDescription": "減算ペアを使用して、10 進数を標準のローマ数字表記に変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "数字を入力してください (例: 2024、99)...",
     "outputPlaceholder": "ここにローマ数字が表示されます...",
-    "descTitle": "数字からローマ数字へのコンバーター",
+    "descTitle": "数値を標準ローマ数字に変換する",
     "descParas": [
-      "このツールは、10 進数をローマ数字表現に変換します。 1 ～ 99,999 の数値をサポートします。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>数字からローマ数字 は、10 進整数を標準のローマ数字表記に変換します。</strong> 日付、概要、章のラベル、イベント名、文字盤の参照、およびローマ数字が必要な例に使用します。",
+      "サポートされている最新の範囲は <code>1</code> から <code>3999</code> です。 3999 を超える値には通常、上線または拡張表記が必要ですが、このコンバータでは、ゼロ、負数、および小数には標準のローマ数字形式がありません。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "入力フィールドに数値を入力するか貼り付けます。",
-      "[<strong>変換</strong>] をクリックしてローマ数字を取得します。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "1 ～ 3999 の整数を入力します。",
+      "ローマ数字の出力とクイック リファレンス記号を確認します。",
+      "ローマ数字をコピーするか、別の数字を変換する前にフィールドをクリアしてください。"
     ],
-    "whatIs": "ローマ数字への変換とは何ですか?",
+    "whatIs": "数字からローマ数字への変換とは何ですか?",
     "whatIsParas": [
-      "コンバーターは貪欲なアルゴリズムを使用し、可能な限り最大のローマ数字を繰り返し減算します。"
+      "<strong>数値からローマ数字への変換</strong> は、10 進整数を記号 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>、および <code>M</code> に書き換えます。標準表記では、<code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code>、<code>CM</code> などの減算ペアが使用されます。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "1 ～ 99,999 の正の整数を入力します。",
+    "inputNotesPara": "整数のみを入力してください。日付、ページ番号、またはラベルが <code>1-3999</code> の範囲外にある場合は、拡張ローマ数字表記が世界共通で同じ方法で書かれているわけではないため、出版スタイルを確認してください。",
     "example": "例",
-    "examplePara": "数値をローマ数字に変換するには:",
+    "examplePara": "数値 2024 は <code>MMXXIV</code> に変換されます。",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "kr": {
-    "title": "숫자를 로마 숫자로 변환하는 변환기 — Coding.Tools",
-    "description": "브라우저에서 직접 십진수를 로마 숫자로 변환하세요.",
+    "title": "숫자를 로마 숫자로 - Coding.Tools",
+    "description": "1에서 3999까지의 10진수를 표준 로마 숫자로 변환합니다.",
     "toolTitle": "숫자에서 로마 숫자",
-    "toolDescription": "십진수를 로마 숫자 문자열로 변환합니다.",
+    "toolDescription": "뺄셈 쌍을 사용하여 십진수를 표준 로마 숫자 표기법으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "숫자 입력(예: 2024, 99)...",
     "outputPlaceholder": "여기에 로마 숫자가 나타납니다...",
-    "descTitle": "숫자를 로마 숫자로 변환기",
+    "descTitle": "숫자를 표준 로마 숫자로 변환",
     "descParas": [
-      "이 도구는 십진수를 로마 숫자 표현으로 변환합니다. 1부터 99,999까지의 숫자를 지원합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>숫자에서 로마 숫자은 십진수를 표준 로마 숫자 표기법으로 변환합니다.</strong> 날짜, 개요, 장 레이블, 이벤트 이름, 시계 문자판 참조 및 로마 숫자가 필요한 예에 사용합니다.",
+      "지원되는 최신 범위는 <code>1</code>부터 <code>3999</code>까지입니다. 3999 이상의 값에는 일반적으로 윗줄이나 확장 표기가 필요하지만, 0, 음수 및 소수는 이 변환기에 표준 로마 숫자 형식이 없습니다."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 필드에 숫자를 입력하거나 붙여넣습니다.",
-      "로마 숫자를 얻으려면 <strong>변환</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "1부터 3999까지의 정수를 입력하세요.",
+      "로마 숫자 출력과 빠른 참조 기호를 검토합니다.",
+      "로마 숫자를 복사하거나 다른 숫자를 변환하기 전에 필드를 지우십시오."
     ],
-    "whatIs": "숫자는 로마자에게 무엇입니까?",
+    "whatIs": "숫자를 로마숫자로 변환하는 것이 무엇인가요?",
     "whatIsParas": [
-      "변환기는 그리디 알고리즘을 사용하여 가능한 가장 큰 로마 숫자 값을 반복적으로 뺍니다."
+      "<strong>Number를 로마 숫자로 변환</strong>는 <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> 및 <code>M</code> 기호를 사용하여 10진수 정수를 다시 씁니다. 표준 표기법에서는 <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> 및 <code>CM</code>와 같은 빼기 쌍을 사용합니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "1~99,999 사이의 양의 정수를 입력하세요.",
+    "inputNotesPara": "정수만 입력하세요. 날짜, 페이지 번호 또는 라벨이 <code>1-3999</code>를 벗어나는 경우 확장 로마 숫자 표기법이 보편적으로 동일한 방식으로 작성되지 않으므로 출판 스타일을 확인하십시오.",
     "example": "예",
-    "examplePara": "숫자를 로마 숫자로 변환:",
+    "examplePara": "숫자 2024는 <code>MMXXIV</code>로 변환됩니다.",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "fr": {
-    "title": "Convertisseur de nombres en chiffres romains — Coding.Tools",
-    "description": "Convertissez les nombres décimaux en chiffres romains directement dans votre navigateur.",
+    "title": "Nombres en chiffres romains - Coding.Tools",
+    "description": "Convertissez les nombres décimaux de 1 à 3999 en chiffres romains standard.",
     "toolTitle": "Nombres en chiffres romains",
-    "toolDescription": "Convertissez les nombres décimaux en chaînes de chiffres romains.",
+    "toolDescription": "Convertissez les nombres décimaux en notation numérique standard avec des paires soustractives.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez le numéro (par exemple 2024, 99)...",
     "outputPlaceholder": "Le chiffre romain apparaîtra ici...",
-    "descTitle": "Convertisseur de chiffres en chiffres romains",
+    "descTitle": "Convertir des nombres en chiffres romains standard",
     "descParas": [
-      "Cet outil convertit les nombres décimaux en représentation en chiffres romains. Prend en charge les nombres de 1 à 99 999.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Nombres en chiffres romains convertit les entiers décimaux en notation standard en chiffres romains.</strong> Utilisez-le pour les dates, les plans, les étiquettes de chapitre, les noms d'événements, les références de cadran d'horloge et les exemples où des chiffres romains sont attendus.",
+      "La gamme moderne prise en charge va de <code>1</code> à <code>3999</code>. Les valeurs supérieures à 3999 nécessitent normalement des surlignages ou une notation étendue, tandis que les zéros, les négatifs et les décimales n'ont pas de formes de chiffres romains standard dans ce convertisseur."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un nombre dans le champ de saisie.",
-      "Cliquez sur <strong>Convertir</strong> pour obtenir le chiffre romain.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Entrez un nombre entier de 1 à 3999.",
+      "Passez en revue la sortie des chiffres romains et les symboles de référence rapide.",
+      "Copiez le chiffre romain ou effacez le champ avant de convertir un autre nombre."
     ],
-    "whatIs": "Qu'est-ce que les nombres en romain ?",
+    "whatIs": "Qu'est-ce que la conversion d'un nombre en chiffres romains ?",
     "whatIsParas": [
-      "Le convertisseur utilise un algorithme glouton, soustrayant à plusieurs reprises la plus grande valeur en chiffres romains possible."
+      "<strong>Conversion de nombres en chiffres romains</strong> réécrit un entier décimal avec les symboles <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> et <code>M</code>. La notation standard utilise des paires soustractives telles que <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> et <code>CM</code>."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Saisissez un entier positif compris entre 1 et 99 999.",
+    "inputNotesPara": "Entrez uniquement des nombres entiers. Si une date, un numéro de page ou une étiquette se trouve en dehors de <code>1-3999</code>, confirmez le style de publication, car la notation en chiffres romains étendus n'est pas universellement écrite de la même manière.",
     "example": "Exemple",
-    "examplePara": "Conversion de nombres en chiffres romains :",
+    "examplePara": "Le nombre 2024 se convertit en <code>MMXXIV</code> :",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "de": {
-    "title": "Konverter von Zahlen in römische Ziffern – Coding.Tools",
-    "description": "Konvertieren Sie Dezimalzahlen direkt in Ihrem Browser in römische Ziffern.",
+    "title": "Zahlen zu römischen Ziffern - Coding.Tools",
+    "description": "Konvertieren Sie Dezimalzahlen von 1 bis 3999 in römische Standardziffern.",
     "toolTitle": "Zahlen zu römischen Ziffern",
-    "toolDescription": "Konvertieren Sie Dezimalzahlen in römische Ziffernfolgen.",
+    "toolDescription": "Konvertieren Sie Dezimalzahlen mit subtraktiven Paaren in die Standardschrift römischer Zahlen.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Nummer eingeben (z. B. 2024, 99)...",
     "outputPlaceholder": "Hier erscheinen römische Ziffern...",
-    "descTitle": "Konverter von Zahlen in römische Ziffern",
+    "descTitle": "Konvertieren Sie Zahlen in römische Standardziffern",
     "descParas": [
-      "Dieses Tool wandelt Dezimalzahlen in die Darstellung römischer Zahlen um. Unterstützt Zahlen von 1 bis 99.999.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>Zahlen zu römischen Ziffern wandelt dezimale Ganzzahlen in die standardmäßige römische Ziffernschreibweise um.</strong> Verwenden Sie es für Datumsangaben, Gliederungen, Kapitelbeschriftungen, Ereignisnamen, Ziffernblattverweise und Beispiele, bei denen römische Ziffern erwartet werden.",
+      "Der unterstützte moderne Bereich ist <code>1</code> bis <code>3999</code>. Werte über 3999 erfordern normalerweise Überstriche oder eine erweiterte Notation, während Nullen, Negative und Dezimalzahlen in diesem Konverter keine Standardform für römische Zahlen haben."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben oder fügen Sie eine Zahl in das Eingabefeld ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um die römische Zahl zu erhalten.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben Sie eine ganze Zahl von 1 bis 3999 ein.",
+      "Sehen Sie sich die Ausgabe der römischen Ziffern und die Kurzreferenzsymbole an.",
+      "Kopieren Sie die römische Zahl oder leeren Sie das Feld, bevor Sie eine andere Zahl konvertieren."
     ],
-    "whatIs": "Was ist das Zahlen-zu-Römische?",
+    "whatIs": "Was ist die Umrechnung von Zahlen in römische Zahlen?",
     "whatIsParas": [
-      "Der Konverter verwendet einen Greedy-Algorithmus, der wiederholt den größtmöglichen römischen Zahlenwert subtrahiert."
+      "<strong>Konvertierung von Zahlen in römische Zahlen</strong> schreibt eine dezimale Ganzzahl mit den Symbolen <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> und <code>M</code> um. Die Standardnotation verwendet subtraktive Paare wie <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> und <code>CM</code>."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie eine positive Ganzzahl zwischen 1 und 99.999 ein.",
+    "inputNotesPara": "Geben Sie nur ganze Zahlen ein. Wenn ein Datum, eine Seitenzahl oder eine Beschriftung außerhalb von <code>1-3999</code> liegt, bestätigen Sie den Veröffentlichungsstil, da die erweiterte römische Ziffernschreibweise nicht überall auf die gleiche Weise geschrieben wird.",
     "example": "Beispiel",
-    "examplePara": "Zahlen in römische Zahlen umwandeln:",
+    "examplePara": "Die Zahl 2024 wird in <code>MMXXIV</code> umgewandelt:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "es": {
-    "title": "Convertidor de números a números romanos — Coding.Tools",
-    "description": "Convierta números decimales a números romanos directamente en su navegador.",
+    "title": "Números a números romanos - Coding.Tools",
+    "description": "Convierta números decimales del 1 al 3999 en números romanos estándar.",
     "toolTitle": "Números a romanos",
-    "toolDescription": "Convierte números decimales en cadenas de números romanos.",
+    "toolDescription": "Convierta números decimales en notación de números romanos estándar con pares sustractivos.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Introduzca el número (por ejemplo, 2024, 99)...",
     "outputPlaceholder": "El número romano aparecerá aquí...",
-    "descTitle": "Convertidor de números a números romanos",
+    "descTitle": "Convertir números a números romanos estándar",
     "descParas": [
-      "Esta herramienta convierte números decimales a representación de números romanos. Admite números del 1 al 99.999.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Números a romanos convierte números enteros decimales en notación de números romanos estándar.</strong> Úselo para fechas, esquemas, etiquetas de capítulos, nombres de eventos, referencias de esferas de reloj y ejemplos donde se esperan números romanos.",
+      "El rango moderno admitido es <code>1</code> a <code>3999</code>. Los valores superiores a 3999 normalmente necesitan líneas superpuestas o notación extendida, mientras que cero, negativos y decimales no tienen formas de números romanos estándar en este conversor."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue un número en el campo de entrada.",
-      "Haga clic en <strong>Convertir</strong> para obtener el número romano.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Ingrese un número entero del 1 al 3999.",
+      "Revise la salida de números romanos y los símbolos de referencia rápida.",
+      "Copie el número romano o borre el campo antes de convertir otro número."
     ],
-    "whatIs": "¿Qué son los números romanos?",
+    "whatIs": "¿Qué es la conversión de números a números romanos?",
     "whatIsParas": [
-      "El convertidor utiliza un algoritmo codicioso, restando repetidamente el mayor valor de número romano posible."
+      "<strong>Conversión de números a números romanos</strong> reescribe un número entero decimal con los símbolos <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> y <code>M</code>. La notación estándar utiliza pares sustractivos como <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> y <code>CM</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un número entero positivo entre 1 y 99,999.",
+    "inputNotesPara": "Introduzca sólo números enteros. Si una fecha, número de página o etiqueta está fuera de <code>1-3999</code>, confirme el estilo de publicación porque la notación de números romanos extendidos no se escribe universalmente de la misma manera.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de números a números romanos:",
+    "examplePara": "El número 2024 se convierte en <code>MMXXIV</code>:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   },
   "pt": {
-    "title": "Conversor de números para algarismos romanos — Coding.Tools",
-    "description": "Converta números decimais em algarismos romanos diretamente no seu navegador.",
+    "title": "Números em algarismos romanos - Coding.Tools",
+    "description": "Converta números decimais de 1 a 3999 em algarismos romanos padrão.",
     "toolTitle": "Números para romano",
-    "toolDescription": "Converta números decimais em sequências de algarismos romanos.",
+    "toolDescription": "Converta números decimais em notação numérica romana padrão com pares subtrativos.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira o número (por exemplo, 2024, 99)...",
     "outputPlaceholder": "O algarismo romano aparecerá aqui...",
-    "descTitle": "Conversor de números para algarismos romanos",
+    "descTitle": "Converter números em algarismos romanos padrão",
     "descParas": [
-      "Esta ferramenta converte números decimais em representação de algarismos romanos. Suporta números de 1 a 99.999.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Números para romano converte inteiros decimais em notação de numeral romano padrão.</strong> Use-o para datas, contornos, rótulos de capítulos, nomes de eventos, referências de relógio e exemplos onde numerais romanos são esperados.",
+      "A faixa moderna suportada é de <code>1</code> a <code>3999</code>. Valores acima de 3999 normalmente precisam de linhas sobrepostas ou notação estendida, enquanto zero, negativos e decimais não possuem formas de algarismos romanos padrão neste conversor."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um número no campo de entrada.",
-      "Clique em <strong>Converter</strong> para obter o algarismo romano.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Insira um número inteiro de 1 a 3999.",
+      "Revise a saída em algarismos romanos e os símbolos de referência rápida.",
+      "Copie o algarismo romano ou limpe o campo antes de converter outro número."
     ],
-    "whatIs": "O que são números para romanos?",
+    "whatIs": "O que é a conversão de número em algarismo romano?",
     "whatIsParas": [
-      "O conversor usa um algoritmo ganancioso, subtraindo repetidamente o maior valor de algarismo romano possível."
+      "<strong>Conversão de número em numeral romano</strong> reescreve um número inteiro decimal com os símbolos <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> e <code>M</code>. A notação padrão usa pares subtrativos como <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> e <code>CM</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira um número inteiro positivo entre 1 e 99.999.",
+    "inputNotesPara": "Insira apenas números inteiros. Se uma data, número de página ou rótulo estiver fora de <code>1-3999</code>, confirme o estilo de publicação porque a notação de algarismos romanos estendidos não é universalmente escrita da mesma maneira.",
     "example": "Exemplo",
-    "examplePara": "Convertendo números em algarismos romanos:",
+    "examplePara": "O número 2024 é convertido para <code>MMXXIV</code>:",
     "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
   }
 }

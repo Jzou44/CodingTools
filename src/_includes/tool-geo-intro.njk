@@ -1,0 +1,43 @@
+{% set introLang = toolGeoIntro[lang] or toolGeoIntro.en %}
+{% set intro = introLang[activeTool or toolId] %}
+{% if intro %}
+  <section class="geo-intro" aria-label="Quick answer">
+    <h2>{{ intro.question }}</h2>
+    <p class="geo-intro-answer">{{ intro.answer | safe }}</p>
+
+    <ul class="description-list geo-intro-list">
+      {% for item in intro.bullets %}
+      <li>{{ item | safe }}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="table-responsive geo-intro-table">
+      <table class="description-table">
+        <thead>
+          <tr>
+            <th>{{ intro.headers.topic }}</th>
+            <th>{{ intro.headers.directAnswer }}</th>
+            <th>{{ intro.headers.source }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in intro.rows %}
+          <tr>
+            <td>{{ row.label }}</td>
+            <td>{{ row.value | safe }}</td>
+            <td>
+              {% if row.source and row.source.url %}
+              <a href="{{ row.source.url }}" target="_blank" rel="noopener">{{ row.source.name }}</a>
+              {% elif row.source and row.source.name %}
+              {{ row.source.name }}
+              {% else %}
+              Coding.Tools
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endif %}

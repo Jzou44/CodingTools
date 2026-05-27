@@ -1,17 +1,17 @@
 {
   "en": {
-    "title": "SHA-256 Generator — Coding.Tools",
-    "description": "Generate SHA-256 hash from any text input directly in your browser. Fast, private, and free to use.",
+    "title": "SHA-256 Generator - Coding.Tools",
+    "description": "Generate a 64-character SHA-256 hash from text for integrity checks, signatures, manifests, and modern hash workflows.",
     "toolTitle": "SHA-256 Generator",
-    "toolDescription": "Generate a SHA-256 hash from any text input. Copy or download the hash without sending data anywhere.",
+    "toolDescription": "Create SHA-256 digests for repeatable integrity checks and modern hash comparisons.",
     "categoryName": "Hash & Cryptography",
     "inputPlaceholder": "Enter text to generate SHA-256 hash...",
     "outputPlaceholder": "SHA-256 hash will appear here...",
     "hashLength": 64,
-    "descTitle": "SHA-256 Generator",
+    "descTitle": "Generate SHA-256 hashes for integrity checks",
     "descParas": [
-      "This tool generates a SHA-256 hash from any text you provide. SHA-256 is a member of the SHA-2 family of cryptographic hash functions and produces a fixed 256-bit (64 hexadecimal character) digest regardless of the input length.",
-      "The hash is computed locally in your browser using the Web Crypto API. Your input is never uploaded or stored on a server, making this tool suitable for quick verification tasks, integrity checks, and development workflows."
+      "<strong>This SHA-256 generator creates a deterministic 256-bit digest and displays it as 64 hexadecimal characters.</strong> Use it for integrity checks, release manifests, API signing inputs, blockchain-related examples, fixture data, and any workflow that expects a SHA-2 hash.",
+      "SHA-256 is a hash, not encryption. It is useful for comparing exact inputs and detecting accidental or malicious changes, but it does not hide the input and it is not a complete password-storage scheme by itself."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -22,269 +22,269 @@
     ],
     "whatIs": "What is SHA-256?",
     "whatIsParas": [
-      "SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function from the SHA-2 family, designed by the NSA and published by NIST. It produces a fixed 256-bit (32-byte) hash value, represented as a 64-character hexadecimal string.",
-      "SHA-256 is widely used in blockchain technology (Bitcoin), digital signatures, TLS/SSL certificates, and data integrity verification. It is considered secure for most cryptographic applications and is one of the most trusted hash functions available."
+      "<strong>SHA-256</strong> is a member of the SHA-2 family of cryptographic hash functions. It turns an input of any practical length into a fixed 256-bit digest, usually shown as a 64-character hexadecimal string.",
+      "The same input always produces the same digest, while small changes should produce very different output. For keyed authenticity use HMAC-SHA-256; for passwords use a dedicated password hashing function such as Argon2, bcrypt, scrypt, or PBKDF2."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any text, including Unicode characters, emojis, and multi-line content. Even a small change to the input — such as a single character — produces a completely different hash, a property known as the avalanche effect.",
+    "inputNotesPara": "Hash the exact bytes you intend to compare. Extra spaces, different line endings, Unicode normalization differences, or copied labels will produce a different SHA-256 value.",
     "example": "Example",
-    "examplePara": "Hashing a short phrase produces a fixed-length 64-character digest:",
+    "examplePara": "Hashing a short phrase produces a fixed 64-character digest:",
     "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-256 Hash ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "cn": {
-    "title": "SHA-256 生成器 — Coding.Tools",
-    "description": "在浏览器中直接生成任意文本的 SHA-256 哈希值。快速、私密、免费使用。",
+    "title": "SHA-256 生成器 - Coding.Tools",
+    "description": "从文本生成 64 字符 SHA-256 哈希，用于完整性检查、签名、清单和现代哈希工作流程。",
     "toolTitle": "SHA-256 生成器",
-    "toolDescription": "从任意文本输入生成 SHA-256 哈希值。复制或下载哈希值，无需发送数据。",
+    "toolDescription": "创建 SHA-256 摘要以进行可重复的完整性检查和现代哈希比较。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本以生成 SHA-256 哈希...",
     "outputPlaceholder": "SHA-256 哈希值将显示在此处...",
     "hashLength": 64,
-    "descTitle": "SHA-256 生成器",
+    "descTitle": "生成 SHA-256 哈希值以进行完整性检查",
     "descParas": [
-      "此工具根据您提供的任意文本生成 SHA-256 哈希值。SHA-256 是 SHA-2 系列加密哈希函数的成员，无论输入长度如何，都会产生固定的 256 位（64 个十六进制字符）摘要。",
-      "哈希在您的浏览器中使用 Web Crypto API 本地计算。您的输入不会被上传或存储在服务器上，使此工具适用于快速验证任务、完整性检查和开发工作流程。"
+      "<strong>此 SHA-256 生成器创建确定性 256 位摘要并将其显示为 64 个十六进制字符。</strong> 将其用于完整性检查、发布清单、API 签名输入、区块链相关示例、固定数据以及任何需要 SHA-2 哈希的工作流程。",
+      "SHA-256 是哈希，而不是加密。它对于比较精确的输入和检测意外或恶意更改很有用，但它不会隐藏输入，而且它本身并不是一个完整的密码存储方案。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中输入或粘贴文本。",
-      "点击<strong>生成</strong>以产生哈希摘要。",
-      "64 个字符的十六进制哈希值将显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      "将文本键入或粘贴到输入编辑器中。",
+      "单击 <strong>生成</strong> 以生成哈希摘要。",
+      "64 字符的十六进制哈希值将显示在输出编辑器中。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置两个编辑器。"
     ],
-    "whatIs": "什么是 SHA-256？",
+    "whatIs": "SHA-256是什么？",
     "whatIsParas": [
-      "SHA-256（安全哈希算法 256 位）是 SHA-2 系列的加密哈希函数，由 NSA 设计，NIST 发布。它产生固定的 256 位（32 字节）哈希值，表示为 64 个字符的十六进制字符串。",
-      "SHA-256 广泛应用于区块链技术（比特币）、数字签名、TLS/SSL 证书和数据完整性验证。它被认为对大多数加密应用是安全的，是最受信任的哈希函数之一。"
+      "<strong>SHA-256</strong> 是 SHA-2 加密哈希函数系列的成员。它将任何实际长度的输入转换为固定的 256 位摘要，通常显示为 64 个字符的十六进制字符串。",
+      "相同的输入总是产生相同的摘要，而微小的变化应该会产生非常不同的输出。对于密钥真实性，请使用 HMAC-SHA-256；对于密码，请使用专用的密码哈希函数，例如 Argon2、bcrypt、scrypt 或 PBKDF2。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何文本，包括 Unicode 字符、表情符号和多行内容。即使对输入的微小更改（如单个字符）也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+    "inputNotesPara": "对您想要比较的确切字节进行哈希处理。额外的空格、不同的行结尾、Unicode 规范化差异或复制的标签将产生不同的 SHA-256 值。",
     "example": "示例",
-    "examplePara": "对短语进行哈希会产生固定长度的 64 个字符摘要：",
+    "examplePara": "对一个短语进行哈希处理会产生一个固定的 64 个字符的摘要：",
     "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-256 哈希 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "tw": {
-    "title": "SHA-256 產生器 — Coding.Tools",
-    "description": "在瀏覽器中直接產生任意文字的 SHA-256 雜湊值。快速、私密、免費使用。",
+    "title": "SHA-256 產生器 - Coding.Tools",
+    "description": "從文字產生 64 字元 SHA-256 哈希，用於完整性檢查、簽名、清單和現代哈希工作流程。",
     "toolTitle": "SHA-256 產生器",
-    "toolDescription": "從任意文字輸入產生 SHA-256 雜湊值。複製或下載雜湊值，無需傳送資料。",
+    "toolDescription": "建立 SHA-256 摘要以進行可重複的完整性檢查和現代雜湊比較。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字以產生 SHA-256 雜湊...",
     "outputPlaceholder": "SHA-256 雜湊值將顯示在此處...",
     "hashLength": 64,
-    "descTitle": "SHA-256 產生器",
+    "descTitle": "產生 SHA-256 雜湊值以進行完整性檢查",
     "descParas": [
-      "此工具根據您提供的任意文字產生 SHA-256 雜湊值。SHA-256 是 SHA-2 系列加密雜湊函數的成員，無論輸入長度如何，都會產生固定的 256 位元（64 個十六進位字元）摘要。",
-      "雜湊在您的瀏覽器中使用 Web Crypto API 本機計算。您的輸入不會被上傳或儲存在伺服器上，使此工具適用於快速驗證任務、完整性檢查和開發工作流程。"
+      "<strong>此 SHA-256 產生器建立確定性 256 位元摘要並將其顯示為 64 個十六進位字元。</strong> 將其用於完整性檢查、發布清單、API 簽章輸入、區塊鏈相關範例、固定資料以及任何需要 SHA-2 雜湊的工作流程。",
+      "SHA-256 是哈希，而不是加密。它對於比較精確的輸入和偵測意外或惡意變更很有用，但它不會隱藏輸入，而且它本身並不是一個完整的密碼儲存方案。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中輸入或貼上文字。",
-      "點擊<strong>產生</strong>以產生雜湊摘要。",
-      "64 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      "將文字鍵入或貼上到輸入編輯器中。",
+      "按一下 <strong>生成</strong> 以產生雜湊摘要。",
+      "64 字元的十六進位雜湊值將顯示在輸出編輯器中。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
     ],
-    "whatIs": "什麼是 SHA-256？",
+    "whatIs": "SHA-256是什麼？",
     "whatIsParas": [
-      "SHA-256（安全雜湊演算法 256 位元）是 SHA-2 系列的加密雜湊函數，由 NSA 設計，NIST 發布。它產生固定的 256 位元（32 位元組）雜湊值，表示為 64 個字元的十六進位字串。",
-      "SHA-256 廣泛應用於區塊鏈技術（比特幣）、數位簽章、TLS/SSL 憑證和資料完整性驗證。它被認為對大多數加密應用是安全的，是最受信任的雜湊函數之一。"
+      "<strong>SHA-256</strong> 是 SHA-2 加密雜湊函數系列的成員。它將任何實際長度的輸入轉換為固定的 256 位元摘要，通常顯示為 64 個字元的十六進位字串。",
+      "相同的輸入總是產生相同的摘要，而微小的變化應該會產生非常不同的輸出。對於金鑰真實性，請使用 HMAC-SHA-256；對於密碼，請使用專用的密碼雜湊函數，例如 Argon2、bcrypt、scrypt 或 PBKDF2。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何文字，包括 Unicode 字元、表情符號和多行內容。即使對輸入的微小更改（如單個字元）也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+    "inputNotesPara": "對您想要比較的確切位元組進行雜湊處理。額外的空格、不同的行結尾、Unicode 規範化差異或複製的標籤將產生不同的 SHA-256 值。",
     "example": "範例",
-    "examplePara": "對詞組進行雜湊會產生固定長度的 64 個字元摘要：",
+    "examplePara": "對一個短語進行哈希處理會產生一個固定的 64 個字元的摘要：",
     "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-256 雜湊 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "jp": {
-    "title": "SHA-256 ジェネレーター — Coding.Tools",
-    "description": "ブラウザで任意のテキストからSHA-256ハッシュを直接生成。高速・プライベート・無料。",
+    "title": "SHA-256 ジェネレーター - Coding.Tools",
+    "description": "整合性チェック、署名、マニフェスト、最新のハッシュ ワークフローのために、テキストから 64 文字の SHA-256 ハッシュを生成します。",
     "toolTitle": "SHA-256 ジェネレーター",
-    "toolDescription": "任意のテキスト入力からSHA-256ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+    "toolDescription": "反復可能な整合性チェックと最新のハッシュ比較のために SHA-256 ダイジェストを作成します。",
     "categoryName": "ハッシュと暗号",
     "inputPlaceholder": "SHA-256ハッシュを生成するテキストを入力...",
     "outputPlaceholder": "SHA-256ハッシュがここに表示されます...",
     "hashLength": 64,
-    "descTitle": "SHA-256 ジェネレーター",
+    "descTitle": "整合性チェック用に SHA-256 ハッシュを生成する",
     "descParas": [
-      "このツールは入力したテキストからSHA-256ハッシュを生成します。SHA-256はSHA-2ファミリーの暗号化ハッシュ関数で、入力の長さに関係なく固定256ビット（64文字の16進数）のダイジェストを生成します。",
-      "ハッシュはブラウザのWeb Crypto APIを使用してローカルで計算されます。入力はサーバーにアップロードや保存されないため、迅速な検証、整合性チェック、開発ワークフローに適しています。"
+      "<strong>この SHA-256 ジェネレーターは、確定的な 256 ビット ダイジェストを作成し、64 個の 16 進数文字として表示します。</strong> 整合性チェック、リリース マニフェスト、API 署名入力、ブロックチェーン関連のサンプル、テストデータ データ、および SHA-2 ハッシュを必要とするあらゆるワークフローに使用します。",
+      "SHA-256 は暗号化ではなくハッシュです。これは、正確な入力を比較し、偶発的または悪意のある変更を検出するのに役立ちますが、入力を隠蔽するわけではなく、それ自体では完全なパスワード保存スキームではありません。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを入力または貼り付けます。",
-      "<strong>生成</strong>をクリックしてハッシュダイジェストを生成します。",
-      "64文字の16進数ハッシュが出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      "テキストを入力エディターに入力または貼り付けます。",
+      "<strong>生成</strong> をクリックしてハッシュ ダイジェストを生成します。",
+      "64 文字の 16 進数のハッシュが出力エディターに表示されます。",
+      "クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、両方のエディタをリセットするには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "SHA-256とは？",
+    "whatIs": "SHA-256とは何ですか?",
     "whatIsParas": [
-      "SHA-256（Secure Hash Algorithm 256-bit）は、NSAが設計しNISTが公開したSHA-2ファミリーの暗号化ハッシュ関数です。固定256ビット（32バイト）のハッシュ値を生成し、64文字の16進数文字列として表現されます。",
-      "SHA-256はブロックチェーン技術（ビットコイン）、デジタル署名、TLS/SSL証明書、データ整合性検証に広く使用されています。ほとんどの暗号化アプリケーションで安全と見なされ、最も信頼されているハッシュ関数の一つです。"
+      "<strong>SHA-256</strong> は、暗号化ハッシュ関数の SHA-2 ファミリのメンバーです。これは、実用的な長さの入力を固定の 256 ビットのダイジェストに変換し、通常は 64 文字の 16 進文字列として表示されます。",
+      "同じ入力は常に同じダイジェストを生成しますが、小さな変更を加えると非常に異なる出力が生成されます。キー付きの信頼性を得るには、HMAC-SHA-256 を使用します。パスワードには、Argon2、bcrypt、scrypt、または PBKDF2 などの専用のパスワード ハッシュ関数を使用します。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールはUnicode文字、絵文字、複数行コンテンツを含む任意のテキストを受け付けます。入力への小さな変更（1文字の変更など）でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+    "inputNotesPara": "比較する正確なバイトをハッシュします。余分なスペース、異なる行末、Unicode 正規化の違い、またはコピーされたラベルにより、異なる SHA-256 値が生成されます。",
     "example": "例",
-    "examplePara": "短いフレーズをハッシュすると固定長64文字のダイジェストが生成されます：",
+    "examplePara": "短いフレーズをハッシュすると、固定の 64 文字のダイジェストが生成されます。",
     "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-256ハッシュ ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "kr": {
-    "title": "SHA-256 생성기 — Coding.Tools",
-    "description": "브라우저에서 직접 텍스트의 SHA-256 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+    "title": "SHA-256 생성기 - Coding.Tools",
+    "description": "무결성 검사, 서명, 매니페스트 및 최신 해시 워크플로를 위해 텍스트에서 64자 SHA-256 해시를 생성합니다.",
     "toolTitle": "SHA-256 생성기",
-    "toolDescription": "텍스트 입력에서 SHA-256 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+    "toolDescription": "반복 가능한 무결성 검사 및 최신 해시 비교를 위해 SHA-256 다이제스트를 만듭니다.",
     "categoryName": "해시 및 암호화",
     "inputPlaceholder": "SHA-256 해시를 생성할 텍스트를 입력하세요...",
     "outputPlaceholder": "SHA-256 해시가 여기에 표시됩니다...",
     "hashLength": 64,
-    "descTitle": "SHA-256 생성기",
+    "descTitle": "무결성 검사를 위해 SHA-256 해시 생성",
     "descParas": [
-      "이 도구는 입력한 텍스트에서 SHA-256 해시를 생성합니다. SHA-256은 SHA-2 계열의 암호화 해시 함수로, 입력 길이에 관계없이 고정 256비트(64자리 16진수) 다이제스트를 생성합니다.",
-      "해시는 브라우저의 Web Crypto API를 사용하여 로컬로 계산됩니다. 입력은 서버에 업로드되거나 저장되지 않으므로 빠른 검증, 무결성 확인 및 개발 워크플로에 적합합니다."
+      "<strong>이 SHA-256 생성기는 결정적 256비트 다이제스트를 생성하고 이를 64개의 16진수 문자로 표시합니다.</strong> 무결성 검사, 릴리스 매니페스트, API 서명 입력, 블록체인 관련 예제, 고정 데이터 및 SHA-2 해시가 필요한 모든 워크플로에 사용합니다.",
+      "SHA-256는 암호화가 아닌 해시입니다. 정확한 입력을 비교하고 우발적이거나 악의적인 변경 사항을 감지하는 데 유용하지만 입력을 숨기지 않으며 그 자체로 완전한 비밀번호 저장 체계가 아닙니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "<strong>생성</strong>을 클릭하여 해시 다이제스트를 생성합니다.",
-      "64자리 16진수 해시가 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      "해시 다이제스트를 생성하려면 <strong>생성</strong>를 클릭하세요.",
+      "64자 16진수 해시가 출력 편집기에 나타납니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-256이란 무엇인가요?",
+    "whatIs": "SHA-256란 무엇입니까?",
     "whatIsParas": [
-      "SHA-256(보안 해시 알고리즘 256비트)은 NSA가 설계하고 NIST가 발표한 SHA-2 계열의 암호화 해시 함수입니다. 고정 256비트(32바이트) 해시 값을 생성하며 64자리 16진수 문자열로 표현됩니다.",
-      "SHA-256은 블록체인 기술(비트코인), 디지털 서명, TLS/SSL 인증서 및 데이터 무결성 검증에 널리 사용됩니다. 대부분의 암호화 애플리케이션에 안전한 것으로 간주되며 가장 신뢰할 수 있는 해시 함수 중 하나입니다."
+      "<strong>SHA-256</strong>는 SHA-2 암호화 해시 함수 제품군의 구성원입니다. 실제 길이의 입력을 고정된 256비트 다이제스트(보통 64자 16진수 문자열로 표시)로 변환합니다.",
+      "동일한 입력은 항상 동일한 다이제스트를 생성하지만 작은 변경은 매우 다른 출력을 생성합니다. 키 인증을 위해서는 HMAC-SHA-256를 사용하세요. 비밀번호의 경우 Argon2, bcrypt, scrypt 또는 PBKDF2와 같은 전용 비밀번호 해싱 기능을 사용하십시오."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 Unicode 문자, 이모티콘, 여러 줄 콘텐츠를 포함한 모든 텍스트를 허용합니다. 입력의 작은 변경(예: 단일 문자)도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+    "inputNotesPara": "비교하려는 정확한 바이트를 해시합니다. 추가 공백, 다른 줄 끝, 유니코드 정규화 차이 또는 복사된 레이블은 다른 SHA-256 값을 생성합니다.",
     "example": "예제",
-    "examplePara": "짧은 구문을 해시하면 고정 길이 64자 다이제스트가 생성됩니다:",
+    "examplePara": "짧은 구문을 해싱하면 고정된 64자 다이제스트가 생성됩니다.",
     "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-256 해시 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "fr": {
-    "title": "Générateur SHA-256 — Coding.Tools",
-    "description": "Générez un hash SHA-256 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+    "title": "Générateur SHA-256 - Coding.Tools",
+    "description": "Générez un hachage SHA-256 de 64 caractères à partir du texte pour les contrôles d'intégrité, les signatures, les manifestes et les flux de travail de hachage modernes.",
     "toolTitle": "Générateur SHA-256",
-    "toolDescription": "Générez un hash SHA-256 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+    "toolDescription": "Créez des résumés SHA-256 pour des contrôles d'intégrité reproductibles et des comparaisons de hachage modernes.",
     "categoryName": "Hachage et cryptographie",
     "inputPlaceholder": "Entrez le texte pour générer le hash SHA-256...",
     "outputPlaceholder": "Le hash SHA-256 apparaîtra ici...",
     "hashLength": 64,
-    "descTitle": "Générateur SHA-256",
+    "descTitle": "Générer des hachages SHA-256 pour les contrôles d'intégrité",
     "descParas": [
-      "Cet outil génère un hash SHA-256 à partir de n'importe quel texte. SHA-256 est un membre de la famille SHA-2 de fonctions de hachage cryptographiques et produit un condensé fixe de 256 bits (64 caractères hexadécimaux) quelle que soit la longueur de l'entrée.",
-      "Le hash est calculé localement dans votre navigateur via l'API Web Crypto. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      "<strong>Ce générateur SHA-256 crée un résumé déterministe de 256 bits et l'affiche sous forme de 64 caractères hexadécimaux.</strong> Utilisez-le pour les contrôles d'intégrité, les manifestes de version, les entrées de signature d'API, les exemples liés à la blockchain, les données de test et tout flux de travail qui attend un hachage SHA-2.",
+      "SHA-256 est un hachage, pas un cryptage. Il est utile pour comparer des entrées exactes et détecter des modifications accidentelles ou malveillantes, mais il ne masque pas l'entrée et ne constitue pas en soi un système complet de stockage de mots de passe."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez votre texte dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Générer</strong> pour produire le condensé.",
-      "Le hash hexadécimal de 64 caractères apparaît dans l'éditeur de sortie.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Tapez ou collez votre texte dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Générer</strong> pour produire le résumé de hachage.",
+      "Le hachage hexadécimal de 64 caractères apparaît dans l'éditeur de sortie.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
     ],
-    "whatIs": "Qu'est-ce que SHA-256 ?",
+    "whatIs": "Qu'est-ce que SHA-256 ?",
     "whatIsParas": [
-      "SHA-256 (Secure Hash Algorithm 256-bit) est une fonction de hachage cryptographique de la famille SHA-2, conçue par la NSA et publiée par le NIST. Elle produit une valeur de hachage fixe de 256 bits (32 octets), représentée par une chaîne hexadécimale de 64 caractères.",
-      "SHA-256 est largement utilisé dans la technologie blockchain (Bitcoin), les signatures numériques, les certificats TLS/SSL et la vérification d'intégrité des données. Il est considéré comme sûr pour la plupart des applications cryptographiques."
+      "<strong>SHA-256</strong> est membre de la famille SHA-2 de fonctions de hachage cryptographique. Il transforme une entrée de n'importe quelle longueur pratique en un résumé fixe de 256 bits, généralement affiché sous la forme d'une chaîne hexadécimale de 64 caractères.",
+      "La même entrée produit toujours le même résumé, tandis que de petits changements devraient produire un résultat très différent. Pour l'authenticité de la clé, utilisez HMAC-SHA-256 ; pour les mots de passe, utilisez une fonction de hachage de mot de passe dédiée telle que Argon2, bcrypt, scrypt ou PBKDF2."
     ],
     "inputNotes": "Notes sur l'entrée",
-    "inputNotesPara": "L'outil accepte tout texte, y compris les caractères Unicode, les émojis et le contenu multiligne. Même un petit changement produit un hash complètement différent (effet avalanche).",
+    "inputNotesPara": "Hachez les octets exacts que vous souhaitez comparer. Des espaces supplémentaires, des fins de ligne différentes, des différences de normalisation Unicode ou des étiquettes copiées produiront une valeur SHA-256 différente.",
     "example": "Exemple",
-    "examplePara": "Hacher une courte phrase produit un condensé de 64 caractères :",
+    "examplePara": "Le hachage d'une phrase courte produit un résumé fixe de 64 caractères :",
     "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-256 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "de": {
-    "title": "SHA-256-Generator – Coding.Tools",
-    "description": "Erstellen Sie SHA-256-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+    "title": "SHA-256-Generator - Coding.Tools",
+    "description": "Generieren Sie einen 64-stelligen SHA-256-Hash aus Text für Integritätsprüfungen, Signaturen, Manifeste und moderne Hash-Abläufe.",
     "toolTitle": "SHA-256-Generator",
-    "toolDescription": "Erzeugen Sie einen SHA-256-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+    "toolDescription": "Erstellen Sie SHA-256-Hashwerte für wiederholbare Integritätsprüfungen und moderne Hash-Vergleiche.",
     "categoryName": "Hash & Kryptographie",
     "inputPlaceholder": "Text eingeben, um SHA-256-Hash zu erzeugen...",
     "outputPlaceholder": "SHA-256-Hash wird hier angezeigt...",
     "hashLength": 64,
-    "descTitle": "SHA-256-Generator",
+    "descTitle": "Generieren Sie SHA-256-Hashes für Integritätsprüfungen",
     "descParas": [
-      "Dieses Tool erzeugt einen SHA-256-Hash aus beliebigem Text. SHA-256 gehört zur SHA-2-Familie kryptografischer Hash-Funktionen und erzeugt einen festen 256-Bit (64 hexadezimale Zeichen) Digest unabhängig von der Eingabelänge.",
-      "Der Hash wird lokal in Ihrem Browser über die Web Crypto API berechnet. Ihre Eingabe wird nie hochgeladen oder gespeichert."
+      "<strong>Dieser SHA-256-Generator erstellt einen deterministischen 256-Bit-Hashwert und zeigt ihn als 64 Hexadezimalzeichen an.</strong> Verwenden Sie ihn für Integritätsprüfungen, Release-Manifeste, API-Signatureingaben, Blockchain-bezogene Beispiele, Testdaten und jeden Ablauf, der einen SHA-2-Hash erwartet.",
+      "SHA-256 ist ein Hash, keine Verschlüsselung. Es ist nützlich, um genaue Eingaben zu vergleichen und versehentliche oder böswillige Änderungen zu erkennen, verbirgt die Eingabe jedoch nicht und ist kein vollständiges Kennwortspeicherschema für sich."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Text in den Eingabe-Editor eingeben oder einfügen.",
-      "Auf <strong>Generieren</strong> klicken.",
-      "Der 64-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
-      "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      "Geben Sie Ihren Text ein oder fügen Sie ihn in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Generieren</strong>, um den Hashwert zu erstellen.",
+      "Der 64 Zeichen lange hexadezimale Hash wird im Ausgabeeditor angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um beide Editoren zurückzusetzen."
     ],
     "whatIs": "Was ist SHA-256?",
     "whatIsParas": [
-      "SHA-256 (Secure Hash Algorithm 256-bit) ist eine kryptografische Hash-Funktion der SHA-2-Familie, entworfen von der NSA und veröffentlicht vom NIST. Sie erzeugt einen festen 256-Bit (32-Byte) Hash-Wert als 64-stellige hexadezimale Zeichenkette.",
-      "SHA-256 wird weit verbreitet in der Blockchain-Technologie (Bitcoin), bei digitalen Signaturen, TLS/SSL-Zertifikaten und Datenintegritätsprüfungen eingesetzt."
+      "<strong>SHA-256</strong> ist ein Mitglied der SHA-2-Familie kryptografischer Hash-Funktionen. Es wandelt eine Eingabe beliebiger praktischer Länge in einen festen 256-Bit-Hashwert um, der normalerweise als hexadezimale Zeichenfolge mit 64 Zeichen angezeigt wird.",
+      "Die gleiche Eingabe erzeugt immer den gleichen Hashwert, während kleine Änderungen zu sehr unterschiedlichen Ausgaben führen sollten. Für verschlüsselte Authentizität verwenden Sie HMAC-SHA-256; Verwenden Sie für Passwörter eine spezielle Passwort-Hashing-Funktion wie Argon2, bcrypt, scrypt oder PBKDF2."
     ],
     "inputNotes": "Hinweise zur Eingabe",
-    "inputNotesPara": "Das Tool akzeptiert jeden Text, einschließlich Unicode, Emojis und mehrzeiliger Inhalte. Selbst eine kleine Änderung erzeugt einen völlig anderen Hash (Lawineneffekt).",
+    "inputNotesPara": "Hashen Sie genau die Bytes, die Sie vergleichen möchten. Zusätzliche Leerzeichen, unterschiedliche Zeilenenden, Unicode-Normalisierungsunterschiede oder kopierte Beschriftungen führen zu einem anderen SHA-256-Wert.",
     "example": "Beispiel",
-    "examplePara": "Das Hashen eines kurzen Satzes erzeugt einen 64-stelligen Digest:",
+    "examplePara": "Das Hashing einer kurzen Phrase erzeugt einen festen Hashwert mit 64 Zeichen:",
     "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-256 Hash ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "es": {
-    "title": "Generador SHA-256 — Coding.Tools",
-    "description": "Genere hashes SHA-256 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+    "title": "Generador SHA-256 - Coding.Tools",
+    "description": "Genere un hash SHA-256 de 64 caracteres a partir de texto para realizar comprobaciones de integridad, firmas, manifiestos y flujos de trabajo de hash modernos.",
     "toolTitle": "Generador SHA-256",
-    "toolDescription": "Genere un hash SHA-256 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+    "toolDescription": "Cree resúmenes SHA-256 para realizar comprobaciones de integridad repetibles y comparaciones de hash modernas.",
     "categoryName": "Hash y criptografía",
     "inputPlaceholder": "Ingrese texto para generar el hash SHA-256...",
     "outputPlaceholder": "El hash SHA-256 aparecerá aquí...",
     "hashLength": 64,
-    "descTitle": "Generador SHA-256",
+    "descTitle": "Genere hashes SHA-256 para comprobaciones de integridad",
     "descParas": [
-      "Esta herramienta genera un hash SHA-256 a partir de cualquier texto. SHA-256 pertenece a la familia SHA-2 de funciones hash criptográficas y produce un resumen fijo de 256 bits (64 caracteres hexadecimales) independientemente de la longitud de la entrada.",
-      "El hash se calcula localmente en su navegador usando la API Web Crypto. Su entrada nunca se sube ni almacena en un servidor."
+      "<strong>Este generador SHA-256 crea un resumen determinista de 256 bits y lo muestra como 64 caracteres hexadecimales.</strong> Úselo para comprobaciones de integridad, manifiestos de lanzamiento, entradas de firma de API, ejemplos relacionados con blockchain, datos de accesorios y cualquier flujo de trabajo que espere un hash SHA-2.",
+      "SHA-256 es un hash, no un cifrado. Es útil para comparar entradas exactas y detectar cambios accidentales o maliciosos, pero no oculta la entrada y no es un esquema completo de almacenamiento de contraseñas en sí mismo."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue su texto en el editor de entrada.",
-      "Haga clic en <strong>Generar</strong> para producir el resumen.",
-      "El hash hexadecimal de 64 caracteres aparece en el editor de salida.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Haga clic en <strong>Generar</strong> para generar el resumen hash.",
+      "El hash hexadecimal de 64 caracteres aparece en el editor de resultados.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer ambos editores."
     ],
     "whatIs": "¿Qué es SHA-256?",
     "whatIsParas": [
-      "SHA-256 (Secure Hash Algorithm 256-bit) es una función hash criptográfica de la familia SHA-2, diseñada por la NSA y publicada por NIST. Produce un valor hash fijo de 256 bits (32 bytes) representado como una cadena hexadecimal de 64 caracteres.",
-      "SHA-256 se usa ampliamente en tecnología blockchain (Bitcoin), firmas digitales, certificados TLS/SSL y verificación de integridad de datos."
+      "<strong>SHA-256</strong> es miembro de la familia SHA-2 de funciones hash criptográficas. Convierte una entrada de cualquier longitud práctica en un resumen fijo de 256 bits, generalmente mostrado como una cadena hexadecimal de 64 caracteres.",
+      "La misma entrada siempre produce el mismo resumen, mientras que pequeños cambios deberían producir resultados muy diferentes. Para autenticidad con clave, utilice HMAC-SHA-256; para las contraseñas, utilice una función de hash de contraseñas dedicada, como Argon2, bcrypt, scrypt o PBKDF2."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier texto, incluyendo caracteres Unicode, emojis y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+    "inputNotesPara": "Hash los bytes exactos que desea comparar. Los espacios adicionales, diferentes finales de línea, diferencias de normalización Unicode o etiquetas copiadas producirán un valor SHA-256 diferente.",
     "example": "Ejemplo",
-    "examplePara": "Hashear una frase corta produce un resumen de 64 caracteres:",
+    "examplePara": "El hash de una frase corta produce un resumen fijo de 64 caracteres:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-256 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   },
   "pt": {
-    "title": "Gerador SHA-256 — Coding.Tools",
-    "description": "Gere hashes SHA-256 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+    "title": "Gerador SHA-256 - Coding.Tools",
+    "description": "Gere um hash SHA-256 de 64 caracteres a partir de texto para verificações de integridade, assinaturas, manifestos e fluxos de trabalho de hash modernos.",
     "toolTitle": "Gerador SHA-256",
-    "toolDescription": "Gere um hash SHA-256 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+    "toolDescription": "Crie resumos SHA-256 para verificações de integridade repetíveis e comparações modernas de hash.",
     "categoryName": "Hash e criptografia",
     "inputPlaceholder": "Digite o texto para gerar o hash SHA-256...",
     "outputPlaceholder": "O hash SHA-256 aparecerá aqui...",
     "hashLength": 64,
-    "descTitle": "Gerador SHA-256",
+    "descTitle": "Gere hashes SHA-256 para verificações de integridade",
     "descParas": [
-      "Esta ferramenta gera um hash SHA-256 a partir de qualquer texto. SHA-256 pertence à família SHA-2 de funções hash criptográficas e produz um resumo fixo de 256 bits (64 caracteres hexadecimais) independentemente do tamanho da entrada.",
-      "O hash é calculado localmente no seu navegador usando a API Web Crypto. Sua entrada nunca é enviada ou armazenada em um servidor."
+      "<strong>Este gerador SHA-256 cria um resumo determinístico de 256 bits e o exibe como 64 caracteres hexadecimais.</strong> Use-o para verificações de integridade, manifestos de lançamento, entradas de assinatura de API, exemplos relacionados a blockchain, dados de teste e qualquer fluxo de trabalho que espere um hash SHA-2.",
+      "SHA-256 é um hash, não uma criptografia. É útil para comparar entradas exatas e detectar alterações acidentais ou maliciosas, mas não oculta a entrada e não é um esquema completo de armazenamento de senha por si só."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Digite ou cole seu texto no editor de entrada.",
-      "Clique em <strong>Gerar</strong> para produzir o resumo.",
+      "Clique em <strong>Gerar</strong> para produzir o resumo de hash.",
       "O hash hexadecimal de 64 caracteres aparece no editor de saída.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
     ],
     "whatIs": "O que é SHA-256?",
     "whatIsParas": [
-      "SHA-256 (Secure Hash Algorithm 256-bit) é uma função hash criptográfica da família SHA-2, projetada pela NSA e publicada pelo NIST. Produz um valor hash fixo de 256 bits (32 bytes) representado como uma string hexadecimal de 64 caracteres.",
-      "SHA-256 é amplamente utilizado em tecnologia blockchain (Bitcoin), assinaturas digitais, certificados TLS/SSL e verificação de integridade de dados."
+      "<strong>SHA-256</strong> é um membro da família SHA-2 de funções hash criptográficas. Ele transforma uma entrada de qualquer comprimento prático em um resumo fixo de 256 bits, geralmente mostrado como uma sequência hexadecimal de 64 caracteres.",
+      "A mesma entrada sempre produz o mesmo resumo, enquanto pequenas alterações devem produzir resultados muito diferentes. Para autenticidade codificada, use HMAC-SHA-256; para senhas, use uma função de hashing de senha dedicada, como Argon2, bcrypt, scrypt ou PBKDF2."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer texto, incluindo caracteres Unicode, emojis e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+    "inputNotesPara": "Faça hash dos bytes exatos que você pretende comparar. Espaços extras, finais de linha diferentes, diferenças de normalização Unicode ou rótulos copiados produzirão um valor SHA-256 diferente.",
     "example": "Exemplo",
-    "examplePara": "Hashear uma frase curta produz um resumo de 64 caracteres:",
+    "examplePara": "O hash de uma frase curta produz um resumo fixo de 64 caracteres:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-256 ---\ndffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f"
   }
 }

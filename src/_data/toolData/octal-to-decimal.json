@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Octal to Decimal Converter — Coding.Tools",
-    "description": "Convert octal numbers to decimal format directly in your browser.",
+    "title": "Octal to Decimal Converter - Coding.Tools",
+    "description": "Convert octal numbers to decimal, with hexadecimal and binary equivalents for comparison.",
     "toolTitle": "Octal to Decimal",
-    "toolDescription": "Convert octal numbers to decimal, hex, and binary.",
+    "toolDescription": "Convert base-8 values into decimal numbers and compare the matching hex and binary forms.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter octal number (e.g. 377, 755)...",
     "outputPlaceholder": "Decimal result will appear here...",
-    "descTitle": "Octal to Decimal Converter",
+    "descTitle": "Convert octal values to decimal numbers",
     "descParas": [
-      "This tool converts octal (base 8) numbers to decimal (base 10), and also shows hex and binary equivalents.",
-      "The conversion runs locally in your browser."
+      "<strong>Octal to Decimal turns base-8 input into base-10 output and also shows the equivalent hexadecimal and binary values.</strong> It is useful for checking Unix-style permissions, legacy data formats, and compact representations of binary groups.",
+      "Octal uses only digits <code>0</code> through <code>7</code>. Digits <code>8</code> and <code>9</code> are invalid, and prefixes such as a leading <code>0</code> or <code>0o</code> should match the notation used by your source system."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste an octal number into the input field.",
-      "Click <strong>Convert</strong> to see the decimal, hex, and binary results.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Type or paste an octal value into the input field.",
+      "Review the decimal result and the matching hex and binary outputs.",
+      "Copy the decimal value, or clear the form before checking another octal number."
     ],
-    "whatIs": "What is Octal?",
+    "whatIs": "What is octal to decimal conversion?",
     "whatIsParas": [
-      "Octal is a base-8 number system using digits 0-7. It is commonly used in Unix file permissions."
+      "<strong>Octal</strong> is base 8, so each digit represents a power of eight and maps neatly to three binary bits. Converting to decimal rewrites the same quantity in base 10 for easier reading, arithmetic, or documentation."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a valid octal number using digits 0-7 only.",
+    "inputNotesPara": "Use digits <code>0-7</code> only. Preserve leading zeros separately if they are meaningful in the source, such as permission notation, because numeric conversion focuses on value rather than display width.",
     "example": "Example",
-    "examplePara": "Converting octal to decimal:",
+    "examplePara": "The octal value <code>377</code> is decimal 255, the same byte value shown as <code>FF</code> in hex:",
     "exampleCode": "--- Octal Input ---\n377\n\n--- Decimal ---\n255\n\n--- Hex ---\nFF\n\n--- Binary ---\n11111111"
   },
   "cn": {
-    "title": "八进制转十进制转换器 — Coding.Tools",
-    "description": "在浏览器中直接将八进制数字转换为十进制格式。",
+    "title": "八进制到十进制转换器 - Coding.Tools",
+    "description": "将八进制数转换为十进制数，并与十六进制和二进制等效值进行比较。",
     "toolTitle": "八进制转十进制",
-    "toolDescription": "将八进制数字转换为十进制、十六进制和二进制。",
+    "toolDescription": "将 8 进制值转换为十进制数并比较匹配的十六进制和二进制形式。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入八进制数字（如 377、1750）...",
     "outputPlaceholder": "十进制结果将显示在这里...",
-    "descTitle": "八进制转十进制转换器",
+    "descTitle": "将八进制值转换为十进制数",
     "descParas": [
-      "此工具将八进制（基数8）数字转换为十进制（基数10），同时显示十六进制和二进制等价值。",
-      "转换在浏览器本地运行。"
+      "<strong>八进制到十进制将基数 8 输入转换为基数 10 输出，并显示等效的十六进制和二进制值。</strong> 它对于检查 Unix 样式权限、旧数据格式和二进制组的紧凑表示很有用。",
+      "八进制仅使用数字 <code>0</code> 到 <code>7</code>。数字 <code>8</code> 和 <code>9</code> 无效，并且前缀（例如前导 <code>0</code> 或 <code>0o</code>）应与源系统使用的表示法匹配。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入或粘贴八进制数字。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "在输入字段中键入或粘贴八进制值。",
+      "查看十进制结果以及匹配的十六进制和二进制输出。",
+      "复制十进制值，或在检查另一个八进制数之前清除表单。"
     ],
-    "whatIs": "什么是八进制转十进制？",
+    "whatIs": "什么是八进制到十进制的转换？",
     "whatIsParas": [
-      "八进制是基数为8的数字系统，使用数字0到7。在计算机科学中，八进制常用于表示二进制数据的简写形式。"
+      "<strong>Octal</strong> 是以 8 为基数的，因此每个数字代表 8 的幂并巧妙地映射到三个二进制位。转换为十进制会以 10 为基数重写相同的数量，以便于阅读、算术或记录。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的八进制数字（仅使用数字0-7）。",
+    "inputNotesPara": "仅使用数字 <code>0-7</code>。如果前导零在源中有意义（例如权限表示法），请单独保留前导零，因为数字转换侧重于值而不是显示宽度。",
     "example": "示例",
-    "examplePara": "将八进制转换为十进制：",
+    "examplePara": "八进制值 <code>377</code> 是十进制 255，与十六进制 <code>FF</code> 显示的字节值相同：",
     "exampleCode": "--- 八进制输入 ---\n377\n\n--- 十进制 ---\n255\n\n--- 十六进制 ---\nFF\n\n--- 二进制 ---\n11111111"
   },
   "tw": {
-    "title": "八進位到十進位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將八進制數轉換為十進位格式。",
+    "title": "八進位到十進制轉換器 - Coding.Tools",
+    "description": "將八進制數轉換為十進制數，並與十六進制和二進制等值進行比較。",
     "toolTitle": "八進位轉十進位",
-    "toolDescription": "將八進位數轉換為十進位、十六進位和二進位。",
+    "toolDescription": "將 8 進制值轉換為十進制數並比較匹配的十六進制和二進制形式。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入八進制數（例如 377、755）...",
     "outputPlaceholder": "小數結果將會出現在這裡...",
-    "descTitle": "八進位轉十進位轉換器",
+    "descTitle": "將八進制值轉換為十進制數",
     "descParas": [
-      "此工具將八進位（基數8）數轉換為十進位（基數10），並顯示十六進位和二進位等效值。",
-      "轉換在瀏覽器本地運行。"
+      "<strong>八進位到十進位將基數 8 輸入轉換為基數 10 輸出，並顯示等效的十六進位和二進位值。</strong> 它對於檢查 Unix 樣式權限、舊資料格式和二進位群組的緊湊表示很有用。",
+      "八進位僅使用數字 <code>0</code> 到 <code>7</code>。數字 <code>8</code> 和 <code>9</code> 無效，且前綴（例如前導 <code>0</code> 或 <code>0o</code>）應與來源系統使用的表示法相符。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入欄位中輸入或貼上八進位數。",
-      "點擊<strong>轉換</strong>查看十進位、十六進位和二進位結果。",
-      "使用<strong>複製</strong>複製結果。"
+      "在輸入欄位中鍵入或貼上八進位值。",
+      "查看十進制結果以及匹配的十六進制和二進制輸出。",
+      "複製十進制值，或在檢查另一個八進制數之前清除表單。"
     ],
-    "whatIs": "什麼是八進位？",
+    "whatIs": "什麼是八進位到十進制的轉換？",
     "whatIsParas": [
-      "八進位是使用數字0-7的基數8數字系統。它常用於Unix檔案權限。"
+      "<strong>Octal</strong> 是以 8 為基數的，因此每個數字代表 8 的冪並巧妙地映射到三個二進位位元。轉換為十進制會以 10 為基數重寫相同的數量，以便於閱讀、算術或記錄。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "僅使用數字0-7輸入有效的八進位數。",
+    "inputNotesPara": "僅使用數字 <code>0-7</code>。如果前導零在來源中有意義（例如權限表示法），請單獨保留前導零，因為數字轉換專注於值而不是顯示寬度。",
     "example": "範例",
-    "examplePara": "將八進位轉換為十進位：",
+    "examplePara": "八進位值 <code>377</code> 是十進位 255，與十六進位 <code>FF</code> 顯示的位元組值相同：",
     "exampleCode": "--- 八進位輸入 ---\n377\n\n--- 十進位 ---\n255\n\n--- 十六進位 ---\nFF\n\n--- 二進位 ---\n11111111"
   },
   "jp": {
-    "title": "8 進数から 10 進数へのコンバーター —coding.Tools",
-    "description": "ブラウザで 8 進数を 10 進数形式に直接変換します。",
+    "title": "8 進数から 10 進数へのコンバータ - Coding.Tools",
+    "description": "8 進数を 10 進数に変換し、同等の 16 進数と 2 進数を比較します。",
     "toolTitle": "8進数から10進数",
-    "toolDescription": "8進数を10進数、16進数、2進数に変換します。",
+    "toolDescription": "基数 8 の値を 10 進数に変換し、一致する 16 進形式とバイナリ形式を比較します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "8 進数を入力してください (例: 377、755)...",
     "outputPlaceholder": "ここに小数の結果が表示されます...",
-    "descTitle": "8進数から10進数変換",
+    "descTitle": "8 進数値を 10 進数値に変換します",
     "descParas": [
-      "このツールは8進数（基数8）を10進数（基数10）に変換し、16進数と2進数の等価値も表示します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>8進数から10進数 は、8 進数の入力を 10 進数の出力に変換し、同等の 16 進数とバイナリ値も表示します。</strong> Unix スタイルのアクセス許可、従来のデータ形式、バイナリ グループのコンパクトな表現をチェックするのに役立ちます。",
+      "8 進数では、<code>0</code> から <code>7</code> までの数字のみが使用されます。数字 <code>8</code> および <code>9</code> は無効です。先頭の <code>0</code> または <code>0o</code> などのプレフィックスは、ソース システムで使用されている表記法と一致する必要があります。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力欄に8進数を入力または貼り付けます。",
-      "<strong>変換</strong>をクリックして10進数、16進数、2進数の結果を表示します。",
-      "<strong>コピー</strong>で結果をコピーします。"
+      "入力フィールドに 8 進数値を入力するか貼り付けます。",
+      "10 進数の結果と、対応する 16 進数およびバイナリの出力を確認します。",
+      "10 進数値をコピーするか、別の 8 進数値をチェックする前にフォームをクリアしてください。"
     ],
-    "whatIs": "8進数とは？",
+    "whatIs": "8 進数から 10 進数への変換とは何ですか?",
     "whatIsParas": [
-      "8進数は数字0-7を使用する基数8の数値システムです。Unixのファイル権限で一般的に使用されます。"
+      "<strong>Octal</strong> は基数 8 であるため、各桁は 8 のべき乗を表し、3 つの 2 進数ビットに適切にマップされます。 10 進数に変換すると、読みやすく、算術演算や文書化が容易になるように、同じ量が 10 進数で書き直されます。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "数字0-7のみを使用して有効な8進数を入力してください。",
+    "inputNotesPara": "<code>0-7</code> の数字のみを使用してください。数値変換では表示幅ではなく値に重点が置かれるため、許可表記など、ソース内で意味がある場合は先頭のゼロを個別に保持します。",
     "example": "例",
-    "examplePara": "8進数を10進数に変換：",
+    "examplePara": "8 進値 <code>377</code> は 10 進数の 255 で、16 進数の <code>FF</code> と同じバイト値です。",
     "exampleCode": "--- 8進数入力 ---\n377\n\n--- 10進数 ---\n255\n\n--- 16進数 ---\nFF\n\n--- 2進数 ---\n11111111"
   },
   "kr": {
-    "title": "8진수-10진수 변환기 — Coding.Tools",
-    "description": "브라우저에서 직접 8진수를 10진수 형식으로 변환하세요.",
+    "title": "8진수를 10진수로 변환하는 변환기 - Coding.Tools",
+    "description": "비교를 위해 16진수와 2진수를 사용하여 8진수를 10진수로 변환합니다.",
     "toolTitle": "8진수에서 10진수",
-    "toolDescription": "8진수를 10진수, 16진수, 2진수로 변환합니다.",
+    "toolDescription": "8진법 값을 10진수로 변환하고 일치하는 16진수와 2진수 형식을 비교합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "8진수를 입력하세요(예: 377, 755)...",
     "outputPlaceholder": "여기에 소수점 결과가 표시됩니다...",
-    "descTitle": "8진수에서 10진수 변환",
+    "descTitle": "8진수 값을 10진수로 변환",
     "descParas": [
-      "이 도구는 8진수(基数8)를 10진수(基数10)로 변환하고 16진수와 2진수 등가값도 표시합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>8진수에서 10진수은 8진수 입력을 10진수 출력으로 변환하고 동등한 16진수 및 2진수 값도 표시합니다.</strong> Unix 스타일 권한, 레거시 데이터 형식 및 2진수 그룹의 압축 표현을 확인하는 데 유용합니다.",
+      "8진수는 <code>0</code>부터 <code>7</code>까지의 숫자만 사용합니다. 숫자 <code>8</code> 및 <code>9</code>는 유효하지 않으며 선행 <code>0</code> 또는 <code>0o</code>와 같은 접두사는 소스 시스템에서 사용하는 표기법과 일치해야 합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 필드에 8진수를 입력하거나 붙여넣습니다.",
-      "<strong>변환</strong>을 클릭하여 10진수, 16진수, 2진수 결과를 확인합니다.",
-      "<strong>복사</strong>로 결과를 복사합니다."
+      "입력 필드에 8진수 값을 입력하거나 붙여넣습니다.",
+      "10진수 결과와 일치하는 16진수 및 2진수 출력을 검토합니다.",
+      "10진수 값을 복사하거나 다른 8진수를 확인하기 전에 양식을 지우십시오."
     ],
-    "whatIs": "8진수란?",
+    "whatIs": "8진수를 10진수로 변환하는 것이 무엇인가요?",
     "whatIsParas": [
-      "8진수는 숫자 0-7을 사용하는基数8 숫자 시스템입니다. Unix 파일 권限에서 일반적으로 사용됩니다."
+      "<strong>Octal</strong>는 기본 8이므로 각 숫자는 8의 거듭제곱을 나타내며 3개의 이진 비트로 깔끔하게 매핑됩니다. 십진수로 변환하면 읽기, 산술 또는 문서화를 더 쉽게 하기 위해 동일한 양을 10진수로 다시 씁니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "숫자 0-7만 사용하여 유효한 8진수를 입력하세요.",
+    "inputNotesPara": "숫자 <code>0-7</code>만 사용하세요. 숫자 변환은 표시 너비보다는 값에 중점을 두기 때문에 권한 표기와 같이 소스에서 의미가 있는 경우 선행 0을 별도로 유지합니다.",
     "example": "예시",
-    "examplePara": "8진수를 10진수로 변환:",
+    "examplePara": "8진수 값 <code>377</code>는 10진수 255이며, 16진수로 <code>FF</code>로 표시된 것과 동일한 바이트 값입니다.",
     "exampleCode": "--- 8진수 입력 ---\n377\n\n--- 10진수 ---\n255\n\n--- 16진수 ---\nFF\n\n--- 2진수 ---\n11111111"
   },
   "fr": {
-    "title": "Convertisseur octal en décimal — Coding.Tools",
-    "description": "Convertissez les nombres octaux au format décimal directement dans votre navigateur.",
+    "title": "Convertisseur octal en décimal - Coding.Tools",
+    "description": "Convertissez les nombres octaux en décimaux, avec leurs équivalents hexadécimaux et binaires à des fins de comparaison.",
     "toolTitle": "Octal en Décimal",
-    "toolDescription": "Convertissez les nombres octaux en décimal, hexadécimal et binaire.",
+    "toolDescription": "Convertissez les valeurs de base 8 en nombres décimaux et comparez les formes hexadécimales et binaires correspondantes.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez le nombre octal (par exemple 377, 755)...",
     "outputPlaceholder": "Le résultat décimal apparaîtra ici...",
-    "descTitle": "Convertisseur Octal vers Décimal",
+    "descTitle": "Convertir des valeurs octales en nombres décimaux",
     "descParas": [
-      "Cet outil convertit les nombres octaux (base 8) en décimal (base 10), et affiche également les équivalents hexadécimaux et binaires.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Octal en Décimal transforme l'entrée base 8 en sortie base 10 et affiche également les valeurs hexadécimales et binaires équivalentes.</strong> Il est utile pour vérifier les autorisations de style Unix, les formats de données hérités et les représentations compactes des groupes binaires.",
+      "Octal utilise uniquement les chiffres <code>0</code> à <code>7</code>. Les chiffres <code>8</code> et <code>9</code> ne sont pas valides et les préfixes tels que <code>0</code> ou <code>0o</code> doivent correspondre à la notation utilisée par votre système source."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un nombre octal dans le champ de saisie.",
-      "Cliquez sur <strong>Convertir</strong> pour voir les résultats décimal, hexadécimal et binaire.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Tapez ou collez une valeur octale dans le champ de saisie.",
+      "Examinez le résultat décimal et les sorties hexadécimales et binaires correspondantes.",
+      "Copiez la valeur décimale ou effacez le formulaire avant de vérifier un autre nombre octal."
     ],
-    "whatIs": "Qu'est-ce que l'octal ?",
+    "whatIs": "Qu’est-ce que la conversion octal en décimal ?",
     "whatIsParas": [
-      "L'octal est un système de numération en base 8 utilisant les chiffres 0-7. Il est couramment utilisé dans les permissions de fichiers Unix."
+      "<strong>Octal</strong> est en base 8, donc chaque chiffre représente une puissance de huit et correspond parfaitement à trois bits binaires. La conversion en décimal réécrit la même quantité en base 10 pour faciliter la lecture, l'arithmétique ou la documentation."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez un nombre octal valide en utilisant uniquement les chiffres 0-7.",
+    "inputNotesPara": "Utilisez uniquement les chiffres <code>0-7</code>. Conservez les zéros non significatifs séparément s'ils sont significatifs dans la source, comme la notation d'autorisation, car la conversion numérique se concentre sur la valeur plutôt que sur la largeur d'affichage.",
     "example": "Exemple",
-    "examplePara": "Conversion d'octal en décimal :",
+    "examplePara": "La valeur octale <code>377</code> est décimale 255, la même valeur d'octet affichée que <code>FF</code> en hexadécimal :",
     "exampleCode": "--- Entrée octale ---\n377\n\n--- Décimal ---\n255\n\n--- Hexadécimal ---\nFF\n\n--- Binaire ---\n11111111"
   },
   "de": {
-    "title": "Oktal-Dezimal-Konverter – Coding.Tools",
-    "description": "Konvertieren Sie Oktalzahlen direkt in Ihrem Browser in das Dezimalformat.",
+    "title": "Oktal-Dezimal-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie Oktalzahlen in Dezimalzahlen mit hexadezimalen und binären Äquivalenten zum Vergleich.",
     "toolTitle": "Oktal zu Dezimal",
-    "toolDescription": "Konvertieren Sie Oktalzahlen in Dezimal, Hexadezimal und Binär.",
+    "toolDescription": "Wandeln Sie Basis-8-Werte in Dezimalzahlen um und vergleichen Sie die passenden Hex- und Binärformen.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Oktalzahl eingeben (z. B. 377, 755)...",
     "outputPlaceholder": "Hier wird das Dezimalergebnis angezeigt...",
-    "descTitle": "Oktal zu Dezimal Konverter",
+    "descTitle": "Konvertieren Sie Oktalwerte in Dezimalzahlen",
     "descParas": [
-      "Dieses Tool konvertiert Oktalzahlen (Basis 8) in Dezimal (Basis 10) und zeigt auch Hexadezimal- und Binärequivalente an.",
-      "Die Konvertierung erfolgt lokal in Ihrem Browser."
+      "<strong>Oktal zu Dezimal wandelt Basis-8-Eingaben in Basis-10-Ausgaben um und zeigt auch die entsprechenden Hexadezimal- und Binärwerte an.</strong> Es ist nützlich für die Überprüfung von Berechtigungen im Unix-Stil, älteren Datenformaten und kompakten Darstellungen von Binärgruppen.",
+      "Oktal verwendet nur die Ziffern <code>0</code> bis <code>7</code>. Die Ziffern <code>8</code> und <code>9</code> sind ungültig und Präfixe wie ein führendes <code>0</code> oder <code>0o</code> sollten mit der von Ihrem Quellsystem verwendeten Notation übereinstimmen."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Geben Sie eine Oktalzahl in das Eingabefeld ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong> um die Dezimal-, Hexadezimal- und Binärergebnisse anzuzeigen.",
-      "Verwenden Sie <strong>Kopieren</strong> um das Ergebnis zu kopieren."
+      "Geben oder fügen Sie einen Oktalwert in das Eingabefeld ein.",
+      "Überprüfen Sie das Dezimalergebnis und die passenden hexadezimalen und binären Ausgaben.",
+      "Kopieren Sie den Dezimalwert oder löschen Sie das Formular, bevor Sie eine andere Oktalzahl prüfen."
     ],
-    "whatIs": "Was ist Oktal?",
+    "whatIs": "Was ist die Umwandlung von Oktal in Dezimalzahl?",
     "whatIsParas": [
-      "Oktal ist ein Zahlensystem mit Basis 8, das die Ziffern 0-7 verwendet. Es wird häufig bei Unix-Dateiberechtigungen verwendet."
+      "<strong>Octal</strong> hat die Basis 8, daher stellt jede Ziffer eine Achterpotenz dar und lässt sich sauber auf drei Binärbits abbilden. Bei der Konvertierung in eine Dezimalzahl wird die gleiche Menge zur einfacheren Lesbarkeit, Arithmetik oder Dokumentation in die Basis 10 umgeschrieben."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Geben Sie eine gültige Oktalzahl nur mit den Ziffern 0-7 ein.",
+    "inputNotesPara": "Verwenden Sie nur die Ziffern <code>0-7</code>. Behalten Sie führende Nullen separat bei, wenn sie in der Quelle von Bedeutung sind, z. B. in der Berechtigungsnotation, da sich die numerische Konvertierung auf den Wert und nicht auf die Anzeigebreite konzentriert.",
     "example": "Beispiel",
-    "examplePara": "Oktal in Dezimal konvertieren:",
+    "examplePara": "Der Oktalwert <code>377</code> ist dezimal 255, derselbe Bytewert, der als <code>FF</code> in Hex angezeigt wird:",
     "exampleCode": "--- Oktaleingabe ---\n377\n\n--- Dezimal ---\n255\n\n--- Hexadezimal ---\nFF\n\n--- Binär ---\n11111111"
   },
   "es": {
     "title": "Convertidor de octal a decimal - Coding.Tools",
-    "description": "Convierta números octales a formato decimal directamente en su navegador.",
+    "description": "Convierta números octales a decimales, con equivalentes hexadecimales y binarios para comparar.",
     "toolTitle": "Octal a Decimal",
-    "toolDescription": "Convierte números octales a decimal, hexadecimal y binario.",
+    "toolDescription": "Convierta valores de base 8 en números decimales y compare las formas hexadecimales y binarias coincidentes.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Introduzca el número octal (por ejemplo, 377, 755)...",
     "outputPlaceholder": "El resultado decimal aparecerá aquí...",
-    "descTitle": "Conversor de Octal a Decimal",
+    "descTitle": "Convertir valores octales a números decimales",
     "descParas": [
-      "Esta herramienta convierte números octales (base 8) a decimal (base 10), y también muestra equivalentes hexadecimales y binarios.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Octal a Decimal convierte la entrada de base 8 en salida de base 10 y también muestra los valores hexadecimales y binarios equivalentes.</strong> Es útil para verificar permisos de estilo Unix, formatos de datos heredados y representaciones compactas de grupos binarios.",
+      "Octal usa solo los dígitos <code>0</code> a <code>7</code>. Los dígitos <code>8</code> y <code>9</code> no son válidos y los prefijos como <code>0</code> o <code>0o</code> iniciales deben coincidir con la notación utilizada por su sistema fuente."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue un número octal en el campo de entrada.",
-      "Haga clic en <strong>Convertir</strong> para ver los resultados decimal, hexadecimal y binario.",
-      "Use <strong>Copiar</strong> para copiar el resultado."
+      "Escriba o pegue un valor octal en el campo de entrada.",
+      "Revise el resultado decimal y las salidas hexadecimales y binarias coincidentes.",
+      "Copie el valor decimal o borre el formulario antes de verificar otro número octal."
     ],
-    "whatIs": "¿Qué es el octal?",
+    "whatIs": "¿Qué es la conversión de octal a decimal?",
     "whatIsParas": [
-      "El octal es un sistema numérico en base 8 que usa los dígitos 0-7. Se usa comúnmente en permisos de archivos Unix."
+      "<strong>Octal</strong> es de base 8, por lo que cada dígito representa una potencia de ocho y se asigna claramente a tres bits binarios. La conversión a decimal reescribe la misma cantidad en base 10 para facilitar la lectura, la aritmética o la documentación."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un número octal válido usando solo los dígitos 0-7.",
+    "inputNotesPara": "Utilice únicamente los dígitos <code>0-7</code>. Conserve los ceros iniciales por separado si son significativos en la fuente, como la notación de permisos, porque la conversión numérica se centra en el valor en lugar del ancho de visualización.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de octal a decimal:",
+    "examplePara": "El valor octal <code>377</code> es decimal 255, el mismo valor de byte que se muestra como <code>FF</code> en hexadecimal:",
     "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binario ---\n11111111"
   },
   "pt": {
-    "title": "Conversor de octal para decimal — Coding.Tools",
-    "description": "Converta números octais em formato decimal diretamente no seu navegador.",
+    "title": "Conversor Octal para Decimal - Coding.Tools",
+    "description": "Converta números octais em decimais, com equivalentes hexadecimais e binários para comparação.",
     "toolTitle": "Octal para Decimal",
-    "toolDescription": "Converta números octais para decimal, hexadecimal e binário.",
+    "toolDescription": "Converta valores de base 8 em números decimais e compare as formas hexadecimais e binárias correspondentes.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira o número octal (por exemplo, 377, 755)...",
     "outputPlaceholder": "O resultado decimal aparecerá aqui...",
-    "descTitle": "Conversor de Octal para Decimal",
+    "descTitle": "Converter valores octais em números decimais",
     "descParas": [
-      "Esta ferramenta converte números octais (base 8) em decimal (base 10), e também mostra equivalentes hexadecimais e binários.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Octal para Decimal transforma a entrada de base 8 em saída de base 10 e também mostra os valores hexadecimais e binários equivalentes.</strong> É útil para verificar permissões no estilo Unix, formatos de dados legados e representações compactas de grupos binários.",
+      "Octal usa apenas dígitos <code>0</code> a <code>7</code>. Os dígitos <code>8</code> e <code>9</code> são inválidos e prefixos como <code>0</code> ou <code>0o</code> iniciais devem corresponder à notação usada pelo seu sistema de origem."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um número octal no campo de entrada.",
-      "Clique em <strong>Converter</strong> para ver os resultados decimal, hexadecimal e binário.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Digite ou cole um valor octal no campo de entrada.",
+      "Revise o resultado decimal e as saídas hexadecimais e binárias correspondentes.",
+      "Copie o valor decimal ou limpe o formulário antes de verificar outro número octal."
     ],
-    "whatIs": "O que é octal?",
+    "whatIs": "O que é conversão de octal para decimal?",
     "whatIsParas": [
-      "Octal é um sistema numérico na base 8 usando os dígitos 0-7. É comumente usado em permissões de arquivos Unix."
+      "<strong>Octal</strong> tem base 8, então cada dígito representa uma potência de oito e mapeia perfeitamente para três bits binários. A conversão para decimal reescreve a mesma quantidade na base 10 para facilitar a leitura, aritmética ou documentação."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira um número octal válido usando apenas os dígitos 0-7.",
+    "inputNotesPara": "Use apenas os dígitos <code>0-7</code>. Preserve os zeros à esquerda separadamente se eles forem significativos na origem, como a notação de permissão, porque a conversão numérica se concentra no valor e não na largura de exibição.",
     "example": "Exemplo",
-    "examplePara": "Conversão de octal para decimal:",
+    "examplePara": "O valor octal <code>377</code> é decimal 255, o mesmo valor de byte mostrado como <code>FF</code> em hexadecimal:",
     "exampleCode": "--- Entrada octal ---\n377\n\n--- Decimal ---\n255\n\n--- Hexadecimal ---\nFF\n\n--- Binário ---\n11111111"
   }
 }

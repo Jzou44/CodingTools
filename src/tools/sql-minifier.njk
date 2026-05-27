@@ -1,10 +1,5 @@
 ---
-title: "SQL Minifier — Coding.Tools"
-description: "Minify and compress SQL queries by removing whitespace and comments. Runs locally in your browser, fast and free."
-toolTitle: "SQL Minifier"
-toolDescription: "Minify SQL by stripping whitespace, comments, and unnecessary formatting. Copy or download the result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "sql-minifier"
 permalink: "/sql-minifier.html"
 ---
@@ -35,46 +30,7 @@ permalink: "/sql-minifier.html"
 {% endblock %}
 
 {% block description %}
-  <h2>SQL Minifier</h2>
-  <p>This SQL Minifier removes unnecessary whitespace, line breaks, and comments from SQL queries to produce the most compact representation. It reduces query size for embedding in application code, URLs, or storage in configuration files.</p>
-  <p>The minification runs locally in your browser. Your SQL queries never leave your device, making it safe for processing proprietary database code, stored procedures, or queries that may contain business logic.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your formatted SQL query into the input editor.</li>
-    <li>Click <strong>Minify SQL</strong> to strip whitespace and comments.</li>
-    <li>View the compact query in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .sql file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is SQL minification?</h3>
-  <p>SQL minification is the process of removing all characters from a SQL query that are not required for correct execution. This includes stripping whitespace between tokens, removing line breaks, collapsing indentation, and removing SQL comments (-- and /* */).</p>
-  <p>Minified SQL is useful when queries need to be embedded as strings in application code, sent as URL parameters, stored in compact configuration fields, or transmitted over APIs where payload size matters.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any SQL query. It collapses all whitespace between tokens into single spaces, removes line breaks, and strips both single-line (--) and multi-line (/* */) comments. String literals and quoted identifiers are preserved as-is.</p>
-
-  <h3>Example</h3>
-  <p>A formatted SQL query is compressed to a single line:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (formatted) ---
--- Get active users with order counts
-SELECT
-    u.name,
-    u.email,
-    COUNT(o.id) AS order_count
-FROM
-    users u
-    LEFT JOIN orders o ON u.id = o.user_id
-WHERE
-    u.active = 1
-GROUP BY
-    u.id;
-
---- Output (minified) ---
-SELECT u.name, u.email, COUNT(o.id) AS order_count FROM users u LEFT JOIN orders o ON u.id = o.user_id WHERE u.active = 1 GROUP BY u.id;</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -18,7 +18,7 @@ permalink: "/image-crop.html"
 {% endblock %}
 
 {% block description %}
-  {{ imageTool.description(toolData, t) }}
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -22,6 +22,8 @@ permalink: "/jp/ascii-table.html"
   <p>{{ para | safe }}</p>
   {% endfor %}
 
+  {% include "ascii-table-reference.njk" %}
+
   {% if toolData.howToUse and toolData.steps and toolData.steps.length %}
   <h3>{{ toolData.howToUse }}</h3>
   <ol class="steps-list">

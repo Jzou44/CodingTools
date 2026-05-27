@@ -1,10 +1,5 @@
 ---
-title: "Binary to Decimal Converter — Coding.Tools"
-description: "Convert binary numbers to decimal, hexadecimal, and octal instantly in your browser. Fast, private, and free to use."
-toolTitle: "Binary to Decimal"
-toolDescription: "Enter a binary number and convert it to decimal, hexadecimal, and octal. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "binary-to-decimal"
 permalink: "/binary-to-decimal.html"
 ---
@@ -228,29 +223,7 @@ permalink: "/binary-to-decimal.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Binary to Decimal Converter</h2>
-  <p>This tool converts binary (base 2) numbers into their decimal (base 10), hexadecimal (base 16), and octal (base 8) equivalents. It is useful for understanding binary data, working with bitwise operations, or converting values from digital systems.</p>
-  <p>The conversion runs entirely in your browser using JavaScript's BigNumber library for precision.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a binary number into the input field (e.g. <code>11111111</code> or <code>1010</code>).</li>
-    <li>Click <strong>Convert</strong> to see the decimal, hexadecimal, and octal results.</li>
-    <li>Use the <strong>Copy</strong> button to copy the decimal result to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset all fields.</li>
-  </ol>
-
-  <h3>What is binary?</h3>
-  <p>Binary is a base 2 number system that uses only two digits: 0 and 1. It is the fundamental language of computers, where each binary digit (bit) represents an off or on state. All data in a computer — text, images, programs — is ultimately stored as binary numbers.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Binary:      11111111
-Decimal:     255
-Hexadecimal: FF
-Octal:       377</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

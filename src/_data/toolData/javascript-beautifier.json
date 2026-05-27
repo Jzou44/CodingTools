@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "JavaScript Beautifier — Coding.Tools",
-    "description": "Beautify and format JavaScript code with proper indentation directly in your browser.",
+    "title": "JavaScript Beautifier - Coding.Tools",
+    "description": "Beautify JavaScript source with readable indentation, spacing, and block structure.",
     "toolTitle": "JavaScript Beautifier",
-    "toolDescription": "Clean up messy or minified JavaScript with consistent indentation and structure. Copy or download the beautified result.",
+    "toolDescription": "Format compact JavaScript into readable source code in your browser.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste JavaScript to beautify...",
     "outputPlaceholder": "Beautified JavaScript will appear here...",
-    "descTitle": "JavaScript Beautifier",
+    "descTitle": "Make JavaScript readable without rewriting logic",
     "descParas": [
-      "This tool beautifies JavaScript code by adding proper indentation, line breaks, and consistent formatting. Paste minified or poorly formatted JS and get clean, readable output instantly.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>JavaScript Beautifier expands compact or messy JavaScript into readable blocks, statements, and expressions.</strong> It helps when inspecting minified snippets, debugging copied code, reviewing generated scripts, or preparing examples.",
+      "Beautifying changes whitespace and line breaks; it does not deobfuscate renamed variables, restore original comments, infer TypeScript types, or guarantee that already-broken code becomes valid."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your JavaScript code into the input editor.",
-      "Click <strong>Beautify JavaScript</strong> to clean up the code.",
-      "The beautified JavaScript appears in the output editor with proper indentation.",
+      "Click <strong>Beautify JavaScript</strong> to reflow statements and blocks.",
+      "Review the output for preserved strings, comments, and runtime-sensitive syntax.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is JavaScript beautification?",
+    "whatIs": "What is JavaScript Beautifier?",
     "whatIsParas": [
-      "JavaScript beautification adds indentation and line breaks to JS code, making it human-readable. Minified JavaScript has all whitespace removed to reduce file size, but is difficult to read and debug.",
-      "Beautifying JavaScript is essential for debugging minified code, reviewing libraries, and understanding unfamiliar code."
+      "<strong>JavaScript Beautifier</strong> is a browser-based utility for reformatting JavaScript so control flow, functions, objects, arrays, and chained calls are easier to read.",
+      "Formatting is intended to preserve behavior, but JavaScript has edge cases around automatic semicolon insertion, directives, regular expressions, and template literals. Test important code after reformatting."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any JavaScript input. The beautifier preserves all logic and functionality — it only changes whitespace and indentation for readability.",
+    "inputNotesPara": "Paste plain JavaScript, not HTML <code>&lt;script&gt;</code> tags unless the tool is meant to process them as text. For JSX, TypeScript, or framework templates, confirm the output with your normal parser.",
     "example": "Example",
-    "examplePara": "Minified JavaScript becomes readable after beautification:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "A compact function is reflowed into a more readable block:",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "Beautify JavaScript"
   },
   "cn": {
-    "title": "JavaScript 美化 — Coding.Tools",
-    "description": "在浏览器中美化和格式化 JavaScript 代码。",
+    "title": "JavaScript 美化器 - Coding.Tools",
+    "description": "使用可读的缩进、间距和块结构美化 JavaScript 源代码。",
     "toolTitle": "JavaScript 美化",
-    "toolDescription": "清理杂乱或压缩的 JavaScript，添加一致的缩进和结构。复制或下载美化结果。",
+    "toolDescription": "将紧凑的 JavaScript 格式化为浏览器中可读的源代码。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要美化的 JavaScript...",
     "outputPlaceholder": "美化后的 JavaScript 将在此显示...",
-    "descTitle": "JavaScript 美化",
+    "descTitle": "使 JavaScript 可读，无需重写逻辑",
     "descParas": [
-      "该工具美化 JavaScript 代码，添加适当的缩进、换行和一致的格式。粘贴压缩或格式不佳的 JS，即可获取干净、可读的输出。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>JavaScript 美化 将紧凑或混乱的 JavaScript 扩展为可读的块、语句和表达式。</strong> 它有助于检查缩小的代码片段、调试复制的代码、检查生成的脚本或准备示例。",
+      "美化改变空白和换行符；它不会对重命名的变量进行反混淆、恢复原始注释、推断 TypeScript 类型或保证已损坏的代码变得有效。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 JavaScript 代码粘贴到输入编辑器中。",
-      "点击<strong>美化 JavaScript</strong>来清理代码。",
-      "美化后的 JavaScript 将以适当的缩进显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>美化 JavaScript</strong> 来重排语句和块。",
+      "检查输出中保留的字符串、注释和运行时敏感语法。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 JavaScript 美化？",
+    "whatIs": "什么是JavaScript美容仪？",
     "whatIsParas": [
-      "JavaScript 美化为 JS 代码添加缩进和换行，使其易于阅读。压缩的 JavaScript 移除了所有空白字符以减小文件大小，但难以阅读和调试。",
-      "美化 JavaScript 对于调试压缩代码、查看库和理解不熟悉的代码至关重要。"
+      "<strong>JavaScript 美化</strong> 是一个基于浏览器的实用程序，用于重新格式化 JavaScript，以便控制流、函数、对象、数组和链式调用更易于阅读。",
+      "格式化的目的是保留行为，但 JavaScript 在自动分号插入、指令、正则表达式和模板文字方面存在边缘情况。重新格式化后测试重要代码。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何 JavaScript 输入。美化器保留所有逻辑和功能——只改变空白和缩进以提高可读性。",
+    "inputNotesPara": "粘贴普通 JavaScript，而不是 HTML <code>&lt;script&gt;</code> 标签，除非该工具旨在将它们作为文本处理。对于 JSX、TypeScript 或框架模板，请使用普通解析器确认输出。",
     "example": "示例",
-    "examplePara": "压缩的 JavaScript 美化后变得可读：",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "紧凑的函数被重排为更具可读性的块：",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "美化 JavaScript"
   },
   "tw": {
-    "title": "JavaScript 美化 — Coding.Tools",
-    "description": "在瀏覽器中美化和格式化 JavaScript 程式碼。",
+    "title": "JavaScript 美化器 - Coding.Tools",
+    "description": "使用可讀的縮排、間距和區塊結構來美化 JavaScript 原始碼。",
     "toolTitle": "JavaScript 美化",
-    "toolDescription": "清理雜亂或壓縮的 JavaScript，添加一致的縮排和結構。複製或下載美化結果。",
+    "toolDescription": "將緊湊的 JavaScript 格式化為瀏覽器中可讀取的原始程式碼。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要美化的 JavaScript...",
     "outputPlaceholder": "美化後的 JavaScript 將在此顯示...",
-    "descTitle": "JavaScript 美化",
+    "descTitle": "使 JavaScript 可讀，無需重寫邏輯",
     "descParas": [
-      "該工具美化 JavaScript 程式碼，添加適當的縮排、換行和一致的格式。貼上壓縮或格式不佳的 JS，即可取得乾淨、可讀的輸出。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>JavaScript 美化 將緊湊或混亂的 JavaScript 擴展為可讀的區塊、語句和表達式。</strong> 它有助於檢查縮小的程式碼片段、偵錯複製的程式碼、檢查產生的腳本或準備範例。",
+      "美化改變空白和換行符；它不會對重新命名的變數進行反混淆、恢復原始註解、推斷 TypeScript 類型或保證已損壞的程式碼變得有效。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 JavaScript 程式碼貼上到輸入編輯器中。",
-      "點擊<strong>美化 JavaScript</strong>來清理程式碼。",
-      "美化後的 JavaScript 將以適當的縮排顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 JavaScript 程式碼貼到輸入編輯器中。",
+      "點選 <strong>美化 JavaScript</strong> 來重排語句和區塊。",
+      "檢查輸出中保留的字串、註解和運行時敏感語法。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 JavaScript 美化？",
+    "whatIs": "什麼是JavaScript美容儀？",
     "whatIsParas": [
-      "JavaScript 美化為 JS 程式碼添加縮排和換行，使其易於閱讀。壓縮的 JavaScript 移除了所有空白字元以減小檔案大小，但難以閱讀和除錯。",
-      "美化 JavaScript 對於除錯壓縮程式碼、檢視程式庫和理解不熟悉的程式碼至關重要。"
+      "<strong>JavaScript 美化</strong> 是一個基於瀏覽器的實用程序，用於重新格式化 JavaScript，以便控制流程、函數、物件、陣列和鍊式呼叫更易於閱讀。",
+      "格式化的目的是保留行為，但 JavaScript 在自動分號插入、指令、正規表示式和範本文字方面存在邊緣情況。重新格式化後測試重要程式碼。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何 JavaScript 輸入。美化器保留所有邏輯和功能——只改變空白和縮排以提高可讀性。",
+    "inputNotesPara": "貼上普通 JavaScript，而不是 HTML <code>&lt;script&gt;</code> 標籤，除非該工具旨在將它們作為文字處理。對於 JSX、TypeScript 或框架模板，請使用普通解析器確認輸出。",
     "example": "範例",
-    "examplePara": "壓縮的 JavaScript 美化後變得可讀：",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "緊湊的函數被重排為更具可讀性的區塊：",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "美化 JavaScript"
   },
   "jp": {
-    "title": "JavaScript 整形 — Coding.Tools",
-    "description": "ブラウザで JavaScript コードを整形して美しくします。",
+    "title": "JavaScript 美容器 - Coding.Tools",
+    "description": "JavaScript ソースを読みやすいインデント、間隔、ブロック構造で美しくします。",
     "toolTitle": "JavaScript 整形",
-    "toolDescription": "乱れたまたは圧縮された JavaScript を一貫したインデントと構造で整理します。コピーまたはダウンロード。",
+    "toolDescription": "コンパクトな JavaScript をブラウザで読み取り可能なソース コードにフォーマットします。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "整形する JavaScript を貼り付け...",
     "outputPlaceholder": "整形された JavaScript がここに表示されます...",
-    "descTitle": "JavaScript 整形",
+    "descTitle": "ロジックを書き換えずに JavaScript を読み取れるようにする",
     "descParas": [
-      "このツールは JavaScript コードに適切なインデント、改行、一貫したフォーマットを追加して美しく整形します。圧縮またはフォーマットが不正な JS を貼り付けると、きれいな読みやすい出力が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>JavaScript 整形 は、コンパクトまたは乱雑な JavaScript を読み取り可能なブロック、ステートメント、および式に拡張します。</strong> 縮小されたスニペットの検査、コピーされたコードのデバッグ、生成されたスクリプトのレビュー、またはサンプルの準備に役立ちます。",
+      "空白と改行を美しく変更します。名前変更された変数の難読化を解除したり、元のコメントを復元したり、TypeScript の型を推測したり、すでに壊れたコードが有効になることを保証したりするものではありません。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "JavaScript コードを入力エディタに貼り付けます。",
-      "<strong>JavaScript 整形</strong>をクリックしてコードを整理します。",
-      "整形された JavaScript が適切なインデントで出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "JavaScript コードを入力エディターに貼り付けます。",
+      "「<strong>JavaScript を整形</strong>」をクリックしてステートメントとブロックをリフローします。",
+      "保存された文字列、コメント、実行時依存の構文の出力を確認します。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "JavaScript 整形とは？",
+    "whatIs": "JavaScript ビューティファイヤーとは何ですか?",
     "whatIsParas": [
-      "JavaScript 整形は JS コードにインデントと改行を追加し、人間が読めるようにします。圧縮された JavaScript はファイルサイズを小さくするためにすべての空白が除去されていますが、読むのは困難です。",
-      "JavaScript の整形は圧縮コードのデバッグ、ライブラリの確認、不慣れなコードの理解に不可欠です。"
+      "<strong>JavaScript 整形</strong> は、制御フロー、関数、オブジェクト、配列、および連鎖呼び出しが読みやすくなるように、JavaScript を再フォーマットするためのブラウザー ベースのユーティリティです。",
+      "書式設定は動作を維持することを目的としていますが、JavaScript には自動セミコロン挿入、ディレクティブ、正規表現、およびテンプレート リテラルに関する特殊なケースがあります。再フォーマット後に重要なコードをテストします。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは任意の JavaScript 入力を受け付けます。整形ツールはすべてのロジックと機能を保持し、可読性のために空白とインデントのみを変更します。",
+    "inputNotesPara": "ツールがテキストとして処理することを意図していない限り、HTML <code>&lt;script&gt;</code> タグではなく、プレーンな JavaScript を貼り付けます。 JSX、TypeScript、またはフレームワーク テンプレートの場合は、通常のパーサーで出力を確認します。",
     "example": "例",
-    "examplePara": "圧縮された JavaScript は整形後に読みやすくなります：",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "コンパクトな関数は、より読みやすいブロックにリフローされます。",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "JavaScript を整形"
   },
   "kr": {
-    "title": "JavaScript 포맷터 — Coding.Tools",
-    "description": "브라우저에서 JavaScript 코드를 포맷하고 아름답게 정리합니다.",
+    "title": "JavaScript 뷰티파이어 - Coding.Tools",
+    "description": "읽기 쉬운 들여쓰기, 간격 및 블록 구조로 JavaScript 소스를 아름답게 만듭니다.",
     "toolTitle": "JavaScript 포맷터",
-    "toolDescription": "混乱되거나 압축된 JavaScript를 일관된 들여쓰기와 구조로 정리합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "브라우저에서 컴팩트 JavaScript를 읽을 수 있는 소스 코드로 포맷하세요.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "포맷할 JavaScript를 붙여넣으세요...",
     "outputPlaceholder": "포맷된 JavaScript가 여기에 표시됩니다...",
-    "descTitle": "JavaScript 포맷터",
+    "descTitle": "로직을 다시 작성하지 않고도 JavaScript를 읽을 수 있도록 설정",
     "descParas": [
-      "이 도구는 JavaScript 코드에 적절한 들여쓰기, 줄 바꿈, 일관된 포맷을 추가하여 아름답게 정리합니다. 압축되었거나 잘못 포맷된 JS를 붙여넣으면 깔끔하고 읽기 쉬운 출력을 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>JavaScript 포맷터는 간결하거나 지저분한 JavaScript를 읽을 수 있는 블록, 명령문 및 표현식으로 확장합니다.</strong> 축소된 스니펫 검사, 복사된 코드 디버깅, 생성된 스크립트 검토 또는 예제 준비 시 도움이 됩니다.",
+      "공백과 줄 바꿈을 아름답게 변경합니다. 이름이 바뀐 변수를 난독 해제하고, 원래 주석을 복원하고, TypeScript 유형을 추론하거나, 이미 손상된 코드가 유효하다는 것을 보장하지 않습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "JavaScript 코드를 입력 편집기에 붙여넣으세요.",
-      "<strong>JavaScript 포맷</strong>을 클릭하여 코드를 정리합니다.",
-      "포맷된 JavaScript가 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "JavaScript 코드를 입력 편집기에 붙여넣습니다.",
+      "문과 블록을 리플로우하려면 <strong>JavaScript 포맷</strong>를 클릭하세요.",
+      "보존된 문자열, 주석 및 런타임에 민감한 구문에 대한 출력을 검토합니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JavaScript 포맷팅이란?",
+    "whatIs": "JavaScript 뷰티파이어란 무엇인가요?",
     "whatIsParas": [
-      "JavaScript 포맷팅은 JS 코드에 들여쓰기와 줄 바꿈을 추가하여 사람이 읽을 수 있게 합니다. 압축된 JavaScript는 파일 크기를 줄이기 위해 모든 공백이 제거되어 읽기 어렵습니다.",
-      "JavaScript 포맷팅은 압축 코드 디버깅, 라이브러리 검토, 익숙하지 않은 코드 이해에 필수적입니다."
+      "<strong>JavaScript 포맷터</strong>는 제어 흐름, 함수, 객체, 배열 및 연결된 호출을 더 쉽게 읽을 수 있도록 JavaScript를 다시 포맷하기 위한 브라우저 기반 유틸리티입니다.",
+      "형식 지정은 동작을 보존하기 위한 것이지만 JavaScript에는 자동 세미콜론 삽입, 지시어, 정규식 및 템플릿 리터럴과 관련된 극단적인 경우가 있습니다. 다시 포맷한 후 중요한 코드를 테스트하세요."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 모든 JavaScript 입력을 허용합니다. 포맷터는 모든 로직과 기능을 보존하고 가독성을 위해 공백과 들여쓰기만 변경합니다.",
+    "inputNotesPara": "도구가 태그를 텍스트로 처리하도록 의도되지 않은 경우 HTML <code>&lt;script&gt;</code> 태그가 아닌 일반 JavaScript를 붙여넣습니다. JSX, TypeScript 또는 프레임워크 템플릿의 경우 일반 파서로 출력을 확인하세요.",
     "example": "예시",
-    "examplePara": "압축된 JavaScript는 포맷 후 읽기 쉬워집니다:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "간결한 기능이 더 읽기 쉬운 블록으로 리플로우되었습니다.",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "JavaScript 포맷"
   },
   "fr": {
-    "title": "Formateur JavaScript — Coding.Tools",
-    "description": "Embellissez et formatez le code JavaScript avec une indentation correcte directement dans votre navigateur.",
+    "title": "JavaScript Embellisseur - Coding.Tools",
+    "description": "Embellissez la source JavaScript avec une indentation, un espacement et une structure de bloc lisibles.",
     "toolTitle": "Formateur JavaScript",
-    "toolDescription": "Nettoyez le JavaScript désordonné ou minifié avec une indentation et une structure cohérentes. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Formatez le JavaScript compact en code source lisible dans votre navigateur.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le JavaScript à embellir...",
     "outputPlaceholder": "Le JavaScript embell apparaîtra ici...",
-    "descTitle": "Formateur JavaScript",
+    "descTitle": "Rendre JavaScript lisible sans réécrire la logique",
     "descParas": [
-      "Cet outil embellit le code JavaScript en ajoutant une indentation correcte, des retours à la ligne et un formatage cohérent. Collez du JS minifié ou mal formaté pour obtenir une sortie propre et lisible instantanément.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Formateur JavaScript étend JavaScript compact ou désordonné en blocs, instructions et expressions lisibles.</strong> Il est utile lors de l'inspection d'extraits minifiés, du débogage du code copié, de la révision des scripts générés ou de la préparation d'exemples.",
+      "Embellir les changements d'espaces et de sauts de ligne ; il ne désobstrue pas les variables renommées, ne restaure pas les commentaires d'origine, ne déduit pas les types TypeScript et ne garantit pas que le code déjà brisé devient valide."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez votre code JavaScript dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Embellir JavaScript</strong> pour nettoyer le code.",
-      "Le JavaScript embell apparaît dans l'éditeur de sortie avec une indentation correcte.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Collez votre code JavaScript dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Embellir JavaScript</strong> pour redistribuer les instructions et les blocs.",
+      "Vérifiez la sortie pour les chaînes préservées, les commentaires et la syntaxe sensible à l'exécution.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que l'embellissement JavaScript ?",
+    "whatIs": "Qu'est-ce que l'embellisseur JavaScript ?",
     "whatIsParas": [
-      "L'embellissement JavaScript ajoute de l'indentation et des retours à la ligne au code JS, le rendant lisible par l'homme. Le JS minifié a tous les espaces supprimés pour réduire la taille du fichier, mais est difficile à lire et à déboguer.",
-      "L'embellissement JavaScript est essentiel pour le débogage de code minifié, l'examen de bibliothèques et la compréhension de code inconnu."
+      "<strong>Formateur JavaScript</strong> est un utilitaire basé sur un navigateur permettant de reformater JavaScript afin que le flux de contrôle, les fonctions, les objets, les tableaux et les appels chaînés soient plus faciles à lire.",
+      "Le formatage est destiné à préserver le comportement, mais JavaScript présente des cas extrêmes autour de l'insertion automatique de points-virgules, de directives, d'expressions régulières et de littéraux de modèles. Testez le code important après le reformatage."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte toute entrée JavaScript. L'embellisseur préserve toute la logique et la fonctionnalité — il ne modifie que les espaces et l'indentation pour la lisibilité.",
+    "inputNotesPara": "Collez les balises JavaScript simples, et non les balises HTML <code>&lt;script&gt;</code>, à moins que l'outil ne soit destiné à les traiter sous forme de texte. Pour les modèles JSX, TypeScript ou framework, confirmez la sortie avec votre analyseur normal.",
     "example": "Exemple",
-    "examplePara": "Le JS minifié devient lisible après embellissement :",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "Une fonction compacte est redistribuée dans un bloc plus lisible :",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "Embellir JavaScript"
   },
   "de": {
-    "title": "JavaScript-Formatierer — Coding.Tools",
-    "description": "Verschönern und formatieren Sie JavaScript-Code mit korrekter Einrückung direkt in Ihrem Browser.",
+    "title": "JavaScript Verschönerer - Coding.Tools",
+    "description": "Verschönern Sie die JavaScript-Quelle mit lesbarer Einrückung, Abständen und Blockstruktur.",
     "toolTitle": "JavaScript-Formatierer",
-    "toolDescription": "Bereinigen Sie unordentliches oder minifiziertes JavaScript mit konsistenter Einrückung und Struktur. Kopieren oder laden Sie das Ergebnis herunter.",
+    "toolDescription": "Formatieren Sie das kompakte JavaScript in lesbaren Quellcode in Ihrem Browser.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "JavaScript zum Verschönern einfügen...",
     "outputPlaceholder": "Verschönertes JavaScript wird hier angezeigt...",
-    "descTitle": "JavaScript-Formatierer",
+    "descTitle": "Machen Sie JavaScript lesbar, ohne die Logik neu zu schreiben",
     "descParas": [
-      "Dieses Tool verschönert JavaScript-Code, indem es korrekte Einrückung, Zeilenumbrüche und konsistente Formatierung hinzufügt. Fügen Sie minifiziertes oder schlecht formatiertes JS ein und erhalten Sie sofort saubere, lesbare Ausgabe.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>JavaScript-Formatierer erweitert kompakte oder unübersichtliche JavaScript in lesbare Blöcke, Anweisungen und Ausdrücke.</strong> Es hilft beim Untersuchen minimierter Snippets, beim Debuggen von kopiertem Code, beim Überprüfen generierter Skripte oder beim Vorbereiten von Beispielen.",
+      "Durch die Verschönerung werden Leerzeichen und Zeilenumbrüche geändert. Es entschlüsselt umbenannte Variablen nicht, stellt keine Originalkommentare wieder her, leitet keine TypeScript-Typen ab und garantiert nicht, dass bereits fehlerhafter Code gültig wird."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihren JavaScript-Code in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>JavaScript verschönern</strong>, um den Code zu bereinigen.",
-      "Das verschönerte JavaScript wird im Ausgabe-Editor mit korrekter Einrückung angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihren JavaScript-Code in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Verschönern JavaScript</strong>, um Anweisungen und Blöcke umzufließen.",
+      "Überprüfen Sie die Ausgabe auf beibehaltene Zeichenfolgen, Kommentare und laufzeitabhängige Syntax.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist JavaScript-Verschönerung?",
+    "whatIs": "Was ist JavaScript-Formatierer?",
     "whatIsParas": [
-      "JavaScript-Verschönerung fügt Einrückungen und Zeilenumbrüche zum JS-Code hinzu und macht ihn lesbar. Minifiziertes JavaScript hat alle Leerzeichen entfernt, um die Dateigröße zu reduzieren, ist aber schwer zu lesen.",
-      "Die Verschönerung von JavaScript ist unerlässlich für das Debuggen von minifiziertem Code, die Überprüfung von Bibliotheken und das Verständnis von unbekanntem Code."
+      "<strong>JavaScript-Formatierer</strong> ist ein browserbasiertes Dienstprogramm zur Neuformatierung von JavaScript, damit Kontrollfluss, Funktionen, Objekte, Arrays und verkettete Aufrufe leichter lesbar sind.",
+      "Durch die Formatierung soll das Verhalten erhalten bleiben, aber JavaScript hat Randfälle rund um das automatische Einfügen von Semikolons, Anweisungen, reguläre Ausdrücke und Vorlagenliterale. Testen Sie wichtigen Code nach der Neuformatierung."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert jede JavaScript-Eingabe. Der Verschönerer bewahrt die gesamte Logik und Funktionalität auf — er ändert nur Leerzeichen und Einrückung für die Lesbarkeit.",
+    "inputNotesPara": "Fügen Sie einfache JavaScript-Tags ein, nicht HTML <code>&lt;script&gt;</code>-Tags, es sei denn, das Tool soll sie als Text verarbeiten. Bestätigen Sie bei JSX-, TypeScript- oder Framework-Vorlagen die Ausgabe mit Ihrem normalen Parser.",
     "example": "Beispiel",
-    "examplePara": "Minifiziertes JavaScript wird nach der Verschönerung lesbar:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "Eine kompakte Funktion wird in einen besser lesbaren Block umgeformt:",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "Verschönern JavaScript"
   },
   "es": {
-    "title": "Formateador JavaScript — Coding.Tools",
-    "description": "Embellezca y formatee el código JavaScript con indentación correcta directamente en su navegador.",
+    "title": "Embellecedor JavaScript - Coding.Tools",
+    "description": "Embellezca la fuente JavaScript con sangría, espaciado y estructura de bloques legibles.",
     "toolTitle": "Formateador JavaScript",
-    "toolDescription": "Limpie JavaScript desordenado o minificado con indentación y estructura consistentes. Copie o descargue el resultado.",
+    "toolDescription": "Formatee el JavaScript compacto en código fuente legible en su navegador.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue JavaScript para embellecer...",
     "outputPlaceholder": "El JavaScript embellecido aparecerá aquí...",
-    "descTitle": "Formateador JavaScript",
+    "descTitle": "Haga que JavaScript sea legible sin reescribir la lógica",
     "descParas": [
-      "Esta herramienta embellece el código JavaScript agregando indentación correcta, saltos de línea y formato consistente. Pegue JS minificado o mal formateado y obtenga una salida limpia y legible al instante.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>Formateador JavaScript expande JavaScript compacto o desordenado en bloques, declaraciones y expresiones legibles.</strong> Ayuda a inspeccionar fragmentos minificados, depurar código copiado, revisar scripts generados o preparar ejemplos.",
+      "Embellecimiento cambia espacios en blanco y saltos de línea; no desofusca variables renombradas, no restaura comentarios originales, no infiere tipos de TypeScript ni garantiza que el código ya roto se vuelva válido."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue su código JavaScript en el editor de entrada.",
-      "Haga clic en <strong>Embellecer JavaScript</strong> para limpiar el código.",
-      "El JavaScript embellecido aparece en el editor de salida con indentación correcta.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Embellecer JavaScript</strong> para redistribuir declaraciones y bloques.",
+      "Revise el resultado para ver cadenas conservadas, comentarios y sintaxis sensible al tiempo de ejecución.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es el embellecimiento JavaScript?",
+    "whatIs": "¿Qué es el embellecedor JavaScript?",
     "whatIsParas": [
-      "El embellecimiento JavaScript agrega indentación y saltos de línea al código JS, haciéndolo legible. El JS minificado tiene todos los espacios eliminados para reducir el tamaño del archivo, pero es difícil de leer y depurar.",
-      "El embellecimiento JavaScript es esencial para depurar código minificado, revisar bibliotecas y comprender código desconocido."
+      "<strong>Formateador JavaScript</strong> es una utilidad basada en navegador para reformatear JavaScript para que el flujo de control, las funciones, los objetos, las matrices y las llamadas encadenadas sean más fáciles de leer.",
+      "El formato está destinado a preservar el comportamiento, pero JavaScript tiene casos extremos relacionados con la inserción automática de punto y coma, directivas, expresiones regulares y literales de plantilla. Pruebe el código importante después de reformatearlo."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier entrada JavaScript. El embellecedor preserva toda la lógica y funcionalidad — solo cambia espacios e indentación para la legibilidad.",
+    "inputNotesPara": "Pegue etiquetas simples JavaScript, no HTML <code>&lt;script&gt;</code>, a menos que la herramienta esté destinada a procesarlas como texto. Para plantillas JSX, TypeScript o framework, confirme el resultado con su analizador normal.",
     "example": "Ejemplo",
-    "examplePara": "El JS minificado se vuelve legible después del embellecimiento:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "Una función compacta se redirige a un bloque más legible:",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "Embellecer JavaScript"
   },
   "pt": {
-    "title": "Formatador JavaScript — Coding.Tools",
-    "description": "Embeleze e formate o código JavaScript com indentação correta diretamente no seu navegador.",
+    "title": "Embelezador JavaScript - Coding.Tools",
+    "description": "Embeleze a fonte JavaScript com recuo legível, espaçamento e estrutura de bloco.",
     "toolTitle": "Formatador JavaScript",
-    "toolDescription": "Limpe JavaScript desordenado ou minificado com indentação e estrutura consistentes. Copie ou baixe o resultado.",
+    "toolDescription": "Formate JavaScript compacto em código-fonte legível em seu navegador.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole JavaScript para embelezar...",
     "outputPlaceholder": "O JavaScript embelezado aparecerá aqui...",
-    "descTitle": "Formatador JavaScript",
+    "descTitle": "Torne JavaScript legível sem reescrever a lógica",
     "descParas": [
-      "Esta ferramenta embeleze o código JavaScript adicionando indentação correta, quebras de linha e formatação consistente. Cole JS minificado ou mal formatado e obtenha uma saída limpa e legível instantaneamente.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>JavaScript O Beautifier expande JavaScript compacto ou confuso em blocos, instruções e expressões legíveis.</strong> Ajuda na inspeção de trechos minificados, na depuração de código copiado, na revisão de scripts gerados ou na preparação de exemplos.",
+      "Embelezar altera espaços em branco e quebras de linha; ele não desofusca variáveis ​​renomeadas, restaura comentários originais, infere tipos TypeScript ou garante que o código já quebrado se torne válido."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seu código JavaScript no editor de entrada.",
-      "Clique em <strong>Embelezar JavaScript</strong> para limpar o código.",
-      "O JavaScript embelezado aparece no editor de saída com indentação correta.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Embelezar JavaScript</strong> para refluir instruções e blocos.",
+      "Revise a saída para strings preservadas, comentários e sintaxe sensível ao tempo de execução.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é embelezamento JavaScript?",
+    "whatIs": "O que é o embelezador JavaScript?",
     "whatIsParas": [
-      "O embelezamento JavaScript adiciona indentação e quebras de linha ao código JS, tornando-o legível. O JS minificado tem todos os espaços removidos para reduzir o tamanho do arquivo, mas é difícil de ler e depurar.",
-      "O embelezamento JavaScript é essencial para depurar código minificado, revisar bibliotecas e compreender código desconhecido."
+      "<strong>Formatador JavaScript</strong> é um utilitário baseado em navegador para reformatar JavaScript para que o fluxo de controle, funções, objetos, matrizes e chamadas encadeadas sejam mais fáceis de ler.",
+      "A formatação destina-se a preservar o comportamento, mas JavaScript tem casos extremos em torno da inserção automática de ponto e vírgula, diretivas, expressões regulares e literais de modelo. Teste o código importante após a reformatação."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer entrada JavaScript. O embelezador preserva toda a lógica e funcionalidade — ele apenas altera espaços e indentação para legibilidade.",
+    "inputNotesPara": "Cole tags JavaScript simples, não HTML <code>&lt;script&gt;</code>, a menos que a ferramenta se destine a processá-las como texto. Para modelos JSX, TypeScript ou framework, confirme a saída com seu analisador normal.",
     "example": "Exemplo",
-    "examplePara": "O JS minificado se torna legível após o embelezamento:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}"
+    "examplePara": "Uma função compacta é refluída para um bloco mais legível:",
+    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "buttonLabel": "Embelezar JavaScript"
   }
 }

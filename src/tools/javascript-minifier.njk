@@ -1,10 +1,5 @@
 ---
-title: "JavaScript Minifier — Coding.Tools"
-description: "Minify and compress JavaScript code by removing whitespace and comments. Runs locally in your browser, fast and free."
-toolTitle: "JavaScript Minifier"
-toolDescription: "Minify JavaScript by stripping whitespace, comments, and unnecessary characters. Copy or download the result without sending data anywhere."
 category: "formatter-minifier"
-categoryName: "Formatter & Minifier"
 activeTool: "javascript-minifier"
 permalink: "/javascript-minifier.html"
 ---
@@ -35,42 +30,7 @@ permalink: "/javascript-minifier.html"
 {% endblock %}
 
 {% block description %}
-  <h2>JavaScript Minifier</h2>
-  <p>This JavaScript Minifier removes unnecessary whitespace, comments, and line breaks from JavaScript code to produce the most compact representation. It reduces file size for faster page loads and lower bandwidth consumption.</p>
-  <p>The minification runs locally in your browser using the html-minifier library. Your code never leaves your device, making it safe for processing proprietary scripts, inline JavaScript, or any code that may contain sensitive logic.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste your formatted JavaScript into the input editor.</li>
-    <li>Click <strong>Minify JavaScript</strong> to strip whitespace and comments.</li>
-    <li>View the compact code in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a .js file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is JavaScript minification?</h3>
-  <p>JavaScript minification is the process of removing all characters from source code that are not required for correct execution. This includes stripping whitespace, removing comments, collapsing line breaks, and shortening variable names in advanced minifiers.</p>
-  <p>Minified JavaScript is standard practice in web development. Build tools like Webpack, Rollup, and esbuild include minification as a production step. This browser-based tool provides a quick way to minify individual scripts without a build pipeline.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool accepts any JavaScript code. It wraps the input in script tags to leverage the html-minifier library's JS minification capabilities, then strips the wrapper tags from the output. Single-line and multi-line comments are removed.</p>
-
-  <h3>Example</h3>
-  <p>Formatted JavaScript is compressed by removing whitespace and comments:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input (formatted) ---
-// Greeting function
-function greet(name) {
-  if (name) {
-    console.log("Hello, " + name + "!");
-  } else {
-    console.log("Hello!");
-  }
-}
-
---- Output (minified) ---
-function greet(name){if(name){console.log("Hello, "+name+"!")}else{console.log("Hello!")}}</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

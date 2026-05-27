@@ -1,10 +1,5 @@
 ---
-title: "Decimal to Fraction Converter — Coding.Tools"
-description: "Convert decimal numbers to fractions instantly in your browser. Fast, private, and free to use."
-toolTitle: "Decimal to Fraction"
-toolDescription: "Enter a decimal number and convert it to a fraction (integer, numerator, denominator). Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "decimal-to-fraction"
 permalink: "/decimal-to-fraction.html"
 ---
@@ -256,33 +251,7 @@ permalink: "/decimal-to-fraction.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Decimal to Fraction Converter</h2>
-  <p>This tool converts a decimal number into its fraction equivalent, expressed as an integer part, numerator, and denominator. It is useful when you need to express decimal values as exact fractions for math, engineering, or cooking measurements.</p>
-  <p>The conversion runs entirely in your browser. The tool finds the simplest fraction representation by calculating the greatest common divisor (GCD).</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter a decimal number in the input field (e.g. <code>2.75</code> or <code>0.333</code>).</li>
-    <li>Click <strong>Convert</strong> to see the fraction result.</li>
-    <li>The integer, numerator, and denominator are displayed separately.</li>
-    <li>Use <strong>Copy</strong> to copy the fraction to your clipboard, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>The tool separates the integer part from the decimal part, then converts the decimal part to a fraction. It multiplies the decimal by powers of 10 to eliminate the decimal point, then simplifies by dividing both numerator and denominator by their greatest common divisor (GCD).</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Decimal:     2.75
-Fraction:    2 3/4
-
-Decimal:     0.5
-Fraction:    1/2
-
-Decimal:     3.125
-Fraction:    3 1/8</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

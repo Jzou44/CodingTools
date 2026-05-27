@@ -1,10 +1,5 @@
 ---
-title: "EXIF Viewer — Coding.Tools"
-description: "View EXIF metadata from photos online. See GPS, camera info, and more. Free and runs in your browser."
-toolTitle: "EXIF Viewer"
-toolDescription: "Extract and display EXIF metadata from photos including GPS location, camera settings, and date."
 category: "image-utilities"
-categoryName: "Image Utilities"
 activeTool: "exif-viewer"
 permalink: "/exif-viewer.html"
 ---
@@ -45,33 +40,7 @@ permalink: "/exif-viewer.html"
 {% endblock %}
 
 {% block description %}
-  <h2>EXIF Viewer</h2>
-  <p>EXIF (Exchangeable Image File Format) is metadata embedded in photos by cameras and smartphones. It includes information like GPS coordinates, camera model, aperture, shutter speed, ISO, and the date the photo was taken.</p>
-  <p>This tool reads and displays all EXIF tags from your photo. If GPS data is present, a map showing the location is displayed.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Drag and drop a photo onto the upload area, or click to select.</li>
-    <li>All EXIF metadata tags are displayed in a table.</li>
-    <li>If GPS coordinates are found, a map showing the photo location is displayed.</li>
-  </ol>
-
-  <h3>What is EXIF data?</h3>
-  <p>EXIF data is embedded in JPEG and TIFF images by digital cameras and smartphones. It records camera settings (aperture, shutter speed, ISO, focal length), date/time, and optionally GPS coordinates.</p>
-  <p>Social media platforms often strip EXIF data when uploading, but original files from your camera still contain this information.</p>
-
-  <h3>Read EXIF with Python</h3>
-  <p>Extract EXIF data using Python with the exifread library:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">import exifread
-
-with open('photo.jpg', 'rb') as f:
-    tags = exifread.process_file(f)
-
-for key, value in tags.items():
-    print(f'{key}: {value}')</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

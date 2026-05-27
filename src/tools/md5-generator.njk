@@ -1,10 +1,5 @@
 ---
-title: "MD5 Generator — Coding.Tools"
-description: "Generate MD5 hash from any text input directly in your browser. Fast, private, and free to use."
-toolTitle: "MD5 Generator"
-toolDescription: "Generate an MD5 hash from any text input. Copy or download the hash without sending data anywhere."
 category: "hash-cryptography"
-categoryName: "Hash & Cryptography"
 activeTool: "md5-generator"
 permalink: "/md5-generator.html"
 ---
@@ -36,41 +31,7 @@ permalink: "/md5-generator.html"
 {% endblock %}
 
 {% block description %}
-  <h2>MD5 Generator</h2>
-  <p>This MD5 tool generates a 128-bit hash digest from any text input you provide. It is useful for verifying data integrity, creating checksums, generating unique identifiers, or comparing file contents without revealing the original data.</p>
-  <p>The hash generation runs locally in your browser. The text you paste into the input editor is not uploaded, stored, or sent to a server, so you can use the tool for quick checks without changing your workflow.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Paste or type your text into the input editor.</li>
-    <li>Click <strong>Generate MD5</strong> to create the hash digest.</li>
-    <li>Check the output editor for the 32-character hexadecimal MD5 hash.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is MD5?</h3>
-  <p>MD5 (Message-Digest Algorithm 5) is a widely used cryptographic hash function that produces a 128-bit (16-byte) hash value. It is typically expressed as a 32-character hexadecimal number. MD5 was designed by Ronald Rivest in 1991 to replace an earlier hash function, MD4.</p>
-  <p>While MD5 is no longer considered secure for cryptographic purposes due to known vulnerabilities, it remains useful for checksums, file verification, and non-security applications where speed and simplicity are more important than collision resistance.</p>
-
-  <h3>Input notes</h3>
-  <p>The tool supports any text input, including Unicode characters. The same input will always produce the same MD5 hash, making it deterministic. Even a small change in the input text will produce a completely different hash (avalanche effect).</p>
-
-  <h3>Example</h3>
-  <p>The same value can be hashed to produce a consistent MD5 digest:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input Text ---
-Hello, World!
-
---- MD5 Hash ---
-65a8e27d8879283831b664bd8b7f0ad4
-
---- Another Example ---
-Coding.Tools
-
---- MD5 Hash ---
-a1b2c3d4e5f67890123456789abcdef0</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

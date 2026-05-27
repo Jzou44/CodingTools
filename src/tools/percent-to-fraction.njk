@@ -1,10 +1,5 @@
 ---
-title: "Percent to Fraction Converter — Coding.Tools"
-description: "Convert percentage values to fractions instantly in your browser. Fast, private, and free to use."
-toolTitle: "Percent to Fraction"
-toolDescription: "Enter a percentage value and convert it to a fraction (integer, numerator, denominator). Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "percent-to-fraction"
 permalink: "/percent-to-fraction.html"
 ---
@@ -260,33 +255,7 @@ permalink: "/percent-to-fraction.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Percent to Fraction Converter</h2>
-  <p>This tool converts a percentage value into its fraction equivalent, expressed as an integer part, numerator, and denominator. It is useful for math homework, cooking measurements, or any situation where you need to express percentages as simplified fractions.</p>
-  <p>The conversion runs entirely in your browser. The tool finds the simplest fraction representation.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter a percentage value in the input field (e.g. <code>75</code> or <code>33.33</code>).</li>
-    <li>Click <strong>Convert</strong> to see the fraction result.</li>
-    <li>The integer, numerator, and denominator are displayed separately.</li>
-    <li>Use <strong>Copy</strong> to copy the fraction to your clipboard, or <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>A percentage is a fraction out of 100. The tool converts the percent to a fraction over 100, then simplifies by dividing both numerator and denominator by their greatest common divisor (GCD). For example, <code>75%</code> = <code>75/100</code> = <code>3/4</code>.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Percent:    75%
-Fraction:   3/4
-
-Percent:    50%
-Fraction:   1/2
-
-Percent:    125%
-Fraction:   1 1/4</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

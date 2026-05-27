@@ -1,17 +1,17 @@
 {
   "en": {
-    "title": "SHA384 Generator — Coding.Tools",
-    "description": "Generate SHA-384 hash from any text input directly in your browser. Fast, private, and free to use.",
-    "toolTitle": "SHA384 Generator",
-    "toolDescription": "Generate a SHA-384 hash from any text input. Copy or download the hash without sending data anywhere.",
+    "title": "SHA-384 Generator - Coding.Tools",
+    "description": "Generate a 96-character SHA-384 hash from text for SHA-2 integrity checks, signatures, and compatibility workflows.",
+    "toolTitle": "SHA-384 Generator",
+    "toolDescription": "Create SHA-384 digests when a 384-bit SHA-2 output is required.",
     "categoryName": "Hash & Cryptography",
     "inputPlaceholder": "Enter text to generate SHA-384 hash...",
     "outputPlaceholder": "SHA-384 hash will appear here...",
     "hashLength": 96,
-    "descTitle": "SHA384 Generator",
+    "descTitle": "Generate SHA-384 hashes with 384-bit output",
     "descParas": [
-      "This tool generates a SHA-384 hash from any text you provide. SHA-384 is a member of the SHA-2 family of cryptographic hash functions and produces a fixed 384-bit (96 hexadecimal character) digest regardless of the input length.",
-      "The hash is computed locally in your browser using the Web Crypto API. Your input is never uploaded or stored on a server, making this tool suitable for quick verification tasks, integrity checks, and development workflows."
+      "<strong>This SHA-384 generator creates a deterministic 384-bit digest and displays it as 96 hexadecimal characters.</strong> It fits protocols, signatures, manifests, and test data that specify SHA-384 rather than SHA-256 or SHA-512.",
+      "SHA-384 is part of the SHA-2 family and is derived from the SHA-512 design with a shorter output. It is a hash, not encryption: it supports comparison and integrity checks, but it does not make the original input secret."
     ],
     "howToUse": "How to use",
     "steps": [
@@ -22,269 +22,269 @@
     ],
     "whatIs": "What is SHA-384?",
     "whatIsParas": [
-      "SHA-384 (Secure Hash Algorithm 384-bit) is a cryptographic hash function from the SHA-2 family, designed by the NSA and published by NIST. It is closely related to SHA-512 — it uses the same algorithm but produces a truncated 384-bit (48-byte) hash value, represented as a 96-character hexadecimal string.",
-      "SHA-384 is used in TLS/SSL certificates, digital signatures, and security protocols where a strong hash is needed but a slightly shorter output than SHA-512 is preferred. It offers a good balance between security strength and performance on 64-bit processors."
+      "<strong>SHA-384</strong> is a SHA-2 cryptographic hash function that produces a fixed 384-bit digest from input text or bytes. The digest is commonly represented as a 96-character hexadecimal string.",
+      "Use SHA-384 when your standard, partner system, certificate profile, or signature format calls for it. For keyed message authentication use HMAC with the required SHA-2 variant, and for passwords use a purpose-built password hashing algorithm."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any text, including Unicode characters, emojis, and multi-line content. Even a small change to the input — such as a single character — produces a completely different hash, a property known as the avalanche effect.",
+    "inputNotesPara": "SHA-384 is deterministic and exact. A trailing newline, different casing, or a copied label becomes part of the input and changes the 96-character result.",
     "example": "Example",
-    "examplePara": "Hashing a short phrase produces a fixed-length 96-character digest:",
-    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "examplePara": "Hashing a short phrase produces a fixed 96-character digest:",
+    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "cn": {
-    "title": "SHA384 生成器 — Coding.Tools",
-    "description": "在浏览器中直接生成任意文本的 SHA-384 哈希值。快速、私密、免费使用。",
+    "title": "SHA-384 生成器 - Coding.Tools",
+    "description": "从文本生成 96 个字符的 SHA-384 哈希，用于 SHA-2 完整性检查、签名和兼容性工作流程。",
     "toolTitle": "SHA384 生成器",
-    "toolDescription": "从任意文本输入生成 SHA-384 哈希值。复制或下载哈希值，无需发送数据。",
+    "toolDescription": "当需要 384 位 SHA-2 输出时，创建 SHA-384 摘要。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本以生成 SHA-384 哈希...",
     "outputPlaceholder": "SHA-384 哈希值将显示在此处...",
     "hashLength": 96,
-    "descTitle": "SHA384 生成器",
+    "descTitle": "生成具有 384 位输出的 SHA-384 哈希值",
     "descParas": [
-      "此工具根据您提供的任意文本生成 SHA-384 哈希值。SHA-384 是 SHA-2 系列加密哈希函数的成员，无论输入长度如何，都会产生固定的 384 位（96 个十六进制字符）摘要。",
-      "哈希在您的浏览器中使用 Web Crypto API 本地计算。您的输入不会被上传或存储在服务器上，使此工具适用于快速验证任务、完整性检查和开发工作流程。"
+      "<strong>此 SHA-384 生成器创建确定性 384 位摘要并将其显示为 96 个十六进制字符。</strong> 它适合指定 SHA-384 而不是 SHA-256 或 SHA-512 的协议、签名、清单和测试数据。",
+      "SHA-384 是 SHA-2 系列的一部分，源自具有更短输出的 SHA-512 设计。它是一个散列，而不是加密：它支持比较和完整性检查，但它不会使原始输入保密。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中输入或粘贴文本。",
-      "点击<strong>生成</strong>以产生哈希摘要。",
+      "将文本键入或粘贴到输入编辑器中。",
+      "单击 <strong>生成</strong> 以生成哈希摘要。",
       "96 个字符的十六进制哈希值将显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存为文本文件，或<strong>清除</strong>重置两个编辑器。"
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置两个编辑器。"
     ],
-    "whatIs": "什么是 SHA-384？",
+    "whatIs": "SHA-384是什么？",
     "whatIsParas": [
-      "SHA-384（安全哈希算法 384 位）是 SHA-2 系列的加密哈希函数，由 NSA 设计，NIST 发布。它与 SHA-512 密切相关——使用相同的算法，但产生截断的 384 位（48 字节）哈希值，表示为 96 个字符的十六进制字符串。",
-      "SHA-384 用于 TLS/SSL 证书、数字签名和安全协议，这些场景需要强哈希但偏好比 SHA-512 稍短的输出。它在安全强度和 64 位处理器性能之间提供了良好的平衡。"
+      "<strong>SHA-384</strong> 是 SHA-2 加密哈希函数，可从输入文本或字节生成固定的 384 位摘要。摘要通常表示为 96 个字符的十六进制字符串。",
+      "当您的标准、合作伙伴系统、证书配置文件或签名格式需要时，请使用 SHA-384。对于密钥消息身份验证，请使用具有所需 SHA-2 变体的 HMAC；对于密码，请使用专门构建的密码哈希算法。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何文本，包括 Unicode 字符、表情符号和多行内容。即使对输入的微小更改（如单个字符）也会产生完全不同的哈希值，这种特性称为雪崩效应。",
+    "inputNotesPara": "SHA-384 是确定性且精确的。尾随换行符、不同的大小写或复制的标签成为输入的一部分并更改 96 个字符的结果。",
     "example": "示例",
-    "examplePara": "对短语进行哈希会产生固定长度的 96 个字符摘要：",
+    "examplePara": "对一个短语进行哈希处理会产生一个固定的 96 个字符的摘要：",
     "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-384 哈希 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "tw": {
-    "title": "SHA384 產生器 — Coding.Tools",
-    "description": "在瀏覽器中直接產生任意文字的 SHA-384 雜湊值。快速、私密、免費使用。",
+    "title": "SHA-384 產生器 - Coding.Tools",
+    "description": "從文字產生 96 個字元的 SHA-384 哈希，用於 SHA-2 完整性檢查、簽章和相容性工作流程。",
     "toolTitle": "SHA384 產生器",
-    "toolDescription": "從任意文字輸入產生 SHA-384 雜湊值。複製或下載雜湊值，無需傳送資料。",
+    "toolDescription": "當需要 384 位元 SHA-2 輸出時，建立 SHA-384 摘要。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字以產生 SHA-384 雜湊...",
     "outputPlaceholder": "SHA-384 雜湊值將顯示在此處...",
     "hashLength": 96,
-    "descTitle": "SHA384 產生器",
+    "descTitle": "產生具有 384 位元輸出的 SHA-384 雜湊值",
     "descParas": [
-      "此工具根據您提供的任意文字產生 SHA-384 雜湊值。SHA-384 是 SHA-2 系列加密雜湊函數的成員，無論輸入長度如何，都會產生固定的 384 位元（96 個十六進位字元）摘要。",
-      "雜湊在您的瀏覽器中使用 Web Crypto API 本機計算。您的輸入不會被上傳或儲存在伺服器上，使此工具適用於快速驗證任務、完整性檢查和開發工作流程。"
+      "<strong>此 SHA-384 產生器建立確定性 384 位元摘要並將其顯示為 96 個十六進位字元。</strong> 它適合指定 SHA-384 而不是 SHA-256 或 SHA-512 的協定、簽章、清單和測試資料。",
+      "SHA-384 是 SHA-2 系列的一部分，源自於具有更短輸出的 SHA-512 設計。它是一個雜湊，而不是加密：它支援比較和完整性檢查，但它不會使原始輸入保密。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中輸入或貼上文字。",
-      "點擊<strong>產生</strong>以產生雜湊摘要。",
+      "將文字鍵入或貼上到輸入編輯器中。",
+      "按一下 <strong>生成</strong> 以產生雜湊摘要。",
       "96 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存為文字檔，或<strong>清除</strong>重設兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
     ],
-    "whatIs": "什麼是 SHA-384？",
+    "whatIs": "SHA-384是什麼？",
     "whatIsParas": [
-      "SHA-384（安全雜湊演算法 384 位元）是 SHA-2 系列的加密雜湊函數，由 NSA 設計，NIST 發布。它與 SHA-512 密切相關——使用相同的演算法，但產生截斷的 384 位元（48 位元組）雜湊值，表示為 96 個字元的十六進位字串。",
-      "SHA-384 用於 TLS/SSL 憑證、數位簽章和安全協定，這些場景需要強雜湊但偏好比 SHA-512 稍短的輸出。它在安全強度和 64 位元處理器效能之間提供了良好的平衡。"
+      "<strong>SHA-384</strong> 是 SHA-2 加密雜湊函數，可從輸入文字或位元組產生固定的 384 位元摘要。摘要通常表示為 96 個字元的十六進位字串。",
+      "當您的標準、合作夥伴系統、憑證設定檔或簽章格式需要時，請使用 SHA-384。對於金鑰訊息身份驗證，請使用具有所需 SHA-2 變體的 HMAC；對於密碼，請使用專門建立的密碼雜湊演算法。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何文字，包括 Unicode 字元、表情符號和多行內容。即使對輸入的微小更改（如單個字元）也會產生完全不同的雜湊值，這種特性稱為雪崩效應。",
+    "inputNotesPara": "SHA-384 是確定性且精確的。尾隨換行符、不同的大小寫或複製的標籤成為輸入的一部分並更改 96 個字元的結果。",
     "example": "範例",
-    "examplePara": "對詞組進行雜湊會產生固定長度的 96 個字元摘要：",
+    "examplePara": "對一個短語進行哈希處理會產生一個固定的 96 個字元的摘要：",
     "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-384 雜湊 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "jp": {
-    "title": "SHA384 ジェネレーター — Coding.Tools",
-    "description": "ブラウザで任意のテキストからSHA-384ハッシュを直接生成。高速・プライベート・無料。",
+    "title": "SHA-384 ジェネレーター - Coding.Tools",
+    "description": "SHA-2 整合性チェック、署名、互換性ワークフロー用にテキストから 96 文字の SHA-384 ハッシュを生成します。",
     "toolTitle": "SHA384 ジェネレーター",
-    "toolDescription": "任意のテキスト入力からSHA-384ハッシュを生成。データを送信せずにコピーまたはダウンロード。",
+    "toolDescription": "384 ビット SHA-2 出力が必要な場合は、SHA-384 ダイジェストを作成します。",
     "categoryName": "ハッシュと暗号",
     "inputPlaceholder": "SHA-384ハッシュを生成するテキストを入力...",
     "outputPlaceholder": "SHA-384ハッシュがここに表示されます...",
     "hashLength": 96,
-    "descTitle": "SHA384 ジェネレーター",
+    "descTitle": "384 ビット出力で SHA-384 ハッシュを生成",
     "descParas": [
-      "このツールは入力したテキストからSHA-384ハッシュを生成します。SHA-384はSHA-2ファミリーの暗号化ハッシュ関数で、入力の長さに関係なく固定384ビット（96文字の16進数）のダイジェストを生成します。",
-      "ハッシュはブラウザのWeb Crypto APIを使用してローカルで計算されます。入力はサーバーにアップロードや保存されないため、迅速な検証、整合性チェック、開発ワークフローに適しています。"
+      "<strong>この SHA-384 ジェネレーターは、確定的な 384 ビット ダイジェストを作成し、それを 96 個の 16 進数文字として表示します。</strong> SHA-256 や SHA-512 ではなく SHA-384 を指定するプロトコル、署名、マニフェスト、およびテスト データに適合します。",
+      "SHA-384 は SHA-2 ファミリの一部であり、出力が短い SHA-512 設計から派生したものです。これは暗号化ではなくハッシュです。比較と整合性チェックはサポートされますが、元の入力が秘密になるわけではありません。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを入力または貼り付けます。",
-      "<strong>生成</strong>をクリックしてハッシュダイジェストを生成します。",
-      "96文字の16進数ハッシュが出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードに、<strong>ダウンロード</strong>でテキストファイルとして保存、<strong>クリア</strong>で両方のエディタをリセットできます。"
+      "テキストを入力エディターに入力または貼り付けます。",
+      "<strong>生成</strong> をクリックしてハッシュ ダイジェストを生成します。",
+      "96 文字の 16 進数のハッシュが出力エディターに表示されます。",
+      "クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、両方のエディタをリセットするには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "SHA-384とは？",
+    "whatIs": "SHA-384とは何ですか?",
     "whatIsParas": [
-      "SHA-384（Secure Hash Algorithm 384-bit）は、NSAが設計しNISTが公開したSHA-2ファミリーの暗号化ハッシュ関数です。SHA-512と密接に関連しており、同じアルゴリズムを使用しますが、切り詰められた384ビット（48バイト）のハッシュ値を生成し、96文字の16進数文字列として表現されます。",
-      "SHA-384はTLS/SSL証明書、デジタル署名、SHA-512よりやや短い出力を好むセキュリティプロトコルで使用されます。セキュリティ強度と64ビットプロセッサのパフォーマンスのバランスが取れています。"
+      "<strong>SHA-384</strong> は、入力テキストまたはバイトから固定の 384 ビット ダイジェストを生成する SHA-2 暗号化ハッシュ関数です。ダイジェストは通常​​、96 文字の 16 進文字列として表されます。",
+      "標準、パートナー システム、証明書プロファイル、または署名形式で必要な場合は、SHA-384 を使用します。キー付きメッセージ認証には、必須の SHA-2 バリアントを持つ HMAC を使用し、パスワードには専用のパスワード ハッシュ アルゴリズムを使用します。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールはUnicode文字、絵文字、複数行コンテンツを含む任意のテキストを受け付けます。入力への小さな変更（1文字の変更など）でも完全に異なるハッシュが生成されます。この特性は雪崩効果と呼ばれます。",
+    "inputNotesPara": "SHA-384 は決定的で正確です。末尾の改行、大文字と小文字の違い、またはコピーされたラベルは入力の一部となり、96 文字の結果が変更されます。",
     "example": "例",
-    "examplePara": "短いフレーズをハッシュすると固定長96文字のダイジェストが生成されます：",
+    "examplePara": "短いフレーズをハッシュすると、固定の 96 文字のダイジェストが生成されます。",
     "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-384ハッシュ ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "kr": {
-    "title": "SHA384 생성기 — Coding.Tools",
-    "description": "브라우저에서 직접 텍스트의 SHA-384 해시를 생성합니다. 빠르고 안전하며 무료입니다.",
+    "title": "SHA-384 생성기 - Coding.Tools",
+    "description": "SHA-2 무결성 검사, 서명 및 호환성 워크플로를 위해 텍스트에서 96자 SHA-384 해시를 생성합니다.",
     "toolTitle": "SHA384 생성기",
-    "toolDescription": "텍스트 입력에서 SHA-384 해시를 생성합니다. 데이터를 전송하지 않고 복사하거나 다운로드하세요.",
+    "toolDescription": "384비트 SHA-2 출력이 필요한 경우 SHA-384 다이제스트를 생성합니다.",
     "categoryName": "해시 및 암호화",
     "inputPlaceholder": "SHA-384 해시를 생성할 텍스트를 입력하세요...",
     "outputPlaceholder": "SHA-384 해시가 여기에 표시됩니다...",
     "hashLength": 96,
-    "descTitle": "SHA384 생성기",
+    "descTitle": "384비트 출력으로 SHA-384 해시 생성",
     "descParas": [
-      "이 도구는 입력한 텍스트에서 SHA-384 해시를 생성합니다. SHA-384는 SHA-2 계열의 암호화 해시 함수로, 입력 길이에 관계없이 고정 384비트(96자리 16진수) 다이제스트를 생성합니다.",
-      "해시는 브라우저의 Web Crypto API를 사용하여 로컬로 계산됩니다. 입력은 서버에 업로드되거나 저장되지 않으므로 빠른 검증, 무결성 확인 및 개발 워크플로에 적합합니다."
+      "<strong>이 SHA-384 생성기는 결정적 384비트 다이제스트를 생성하고 이를 96개의 16진수 문자로 표시합니다.</strong> SHA-256 또는 SHA-512 대신 SHA-384를 지정하는 프로토콜, 서명, 매니페스트 및 테스트 데이터에 적합합니다.",
+      "SHA-384는 SHA-2 제품군의 일부이며 출력이 더 짧은 SHA-512 설계에서 파생되었습니다. 암호화가 아닌 해시입니다. 비교 및 ​​무결성 검사를 지원하지만 원래 입력을 비밀로 만들지는 않습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "<strong>생성</strong>을 클릭하여 해시 다이제스트를 생성합니다.",
-      "96자리 16진수 해시가 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에, <strong>다운로드</strong>로 텍스트 파일로 저장, <strong>지우기</strong>로 두 편집기를 초기화합니다."
+      "해시 다이제스트를 생성하려면 <strong>생성</strong>를 클릭하세요.",
+      "96자의 16진수 해시가 출력 편집기에 나타납니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-384란 무엇인가요?",
+    "whatIs": "SHA-384란 무엇입니까?",
     "whatIsParas": [
-      "SHA-384(보안 해시 알고리즘 384비트)는 NSA가 설계하고 NIST가 발표한 SHA-2 계열의 암호화 해시 함수입니다. SHA-512와 밀접하게 관련되어 있으며 동일한 알고리즘을 사용하지만 잘린 384비트(48바이트) 해시 값을 생성하고 96자리 16진수 문자열로 표현됩니다.",
-      "SHA-384는 TLS/SSL 인증서, 디지털 서명 및 SHA-512보다 약간 짧은 출력을 선호하는 보안 프로토콜에 사용됩니다. 보안 강도와 64비트 프로세서 성능 사이의 좋은 균형을 제공합니다."
+      "<strong>SHA-384</strong>는 입력 텍스트 또는 바이트에서 고정 384비트 다이제스트를 생성하는 SHA-2 암호화 해시 함수입니다. 다이제스트는 일반적으로 96자의 16진수 문자열로 표시됩니다.",
+      "표준, 파트너 시스템, 인증서 프로필 또는 서명 형식이 필요한 경우 SHA-384를 사용하세요. 키 메시지 인증의 경우 필수 SHA-2 변형과 함께 HMAC를 사용하고, 비밀번호의 경우 특별히 구축된 비밀번호 해싱 알고리즘을 사용합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 Unicode 문자, 이모티콘, 여러 줄 콘텐츠를 포함한 모든 텍스트를 허용합니다. 입력의 작은 변경(예: 단일 문자)도 완전히 다른 해시를 생성합니다. 이 속성은 눈사태 효과라고 합니다.",
+    "inputNotesPara": "SHA-384는 결정적이고 정확합니다. 후행 개행, 다른 대/소문자 지정 또는 복사된 레이블은 입력의 일부가 되어 96자 결과를 변경합니다.",
     "example": "예제",
-    "examplePara": "짧은 구문을 해시하면 고정 길이 96자 다이제스트가 생성됩니다:",
+    "examplePara": "짧은 구문을 해싱하면 고정된 96자 다이제스트가 생성됩니다.",
     "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-384 해시 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "fr": {
-    "title": "Générateur SHA384 — Coding.Tools",
-    "description": "Générez un hash SHA-384 à partir de n'importe quel texte directement dans votre navigateur. Rapide, privé et gratuit.",
+    "title": "Générateur SHA-384 - Coding.Tools",
+    "description": "Générez un hachage SHA-384 de 96 caractères à partir du texte pour les contrôles d'intégrité, les signatures et les flux de compatibilité SHA-2.",
     "toolTitle": "Générateur SHA384",
-    "toolDescription": "Générez un hash SHA-384 à partir de n'importe quel texte. Copiez ou téléchargez le hash sans envoyer de données.",
+    "toolDescription": "Créez des résumés SHA-384 lorsqu'une sortie SHA-2 384 bits est requise.",
     "categoryName": "Hachage et cryptographie",
     "inputPlaceholder": "Entrez le texte pour générer le hash SHA-384...",
     "outputPlaceholder": "Le hash SHA-384 apparaîtra ici...",
     "hashLength": 96,
-    "descTitle": "Générateur SHA384",
+    "descTitle": "Générer des hachages SHA-384 avec une sortie 384 bits",
     "descParas": [
-      "Cet outil génère un hash SHA-384 à partir de n'importe quel texte. SHA-384 est un membre de la famille SHA-2 et produit un condensé fixe de 384 bits (96 caractères hexadécimaux) quelle que soit la longueur de l'entrée.",
-      "Le hash est calculé localement dans votre navigateur via l'API Web Crypto. Votre entrée n'est jamais téléchargée ni stockée sur un serveur."
+      "<strong>Ce générateur SHA-384 crée un résumé déterministe de 384 bits et l'affiche sous forme de 96 caractères hexadécimaux.</strong> Il s'adapte aux protocoles, signatures, manifestes et données de test qui spécifient SHA-384 plutôt que SHA-256 ou SHA-512.",
+      "SHA-384 fait partie de la famille SHA-2 et est dérivé de la conception SHA-512 avec une sortie plus courte. Il s'agit d'un hachage, pas d'un cryptage : il prend en charge les comparaisons et les contrôles d'intégrité, mais il ne rend pas secrète l'entrée d'origine."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez votre texte dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Générer</strong> pour produire le condensé.",
-      "Le hash hexadécimal de 96 caractères apparaît dans l'éditeur de sortie.",
-      "Utilisez <strong>Copier</strong>, <strong>Télécharger</strong> ou <strong>Effacer</strong>."
+      "Tapez ou collez votre texte dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Générer</strong> pour produire le résumé de hachage.",
+      "Le hachage hexadécimal de 96 caractères apparaît dans l'éditeur de sortie.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
     ],
-    "whatIs": "Qu'est-ce que SHA-384 ?",
+    "whatIs": "Qu'est-ce que SHA-384 ?",
     "whatIsParas": [
-      "SHA-384 (Secure Hash Algorithm 384-bit) est une fonction de hachage cryptographique de la famille SHA-2, conçue par la NSA et publiée par le NIST. Elle est étroitement liée à SHA-512 — elle utilise le même algorithme mais produit une valeur de hachage tronquée de 384 bits (48 octets), représentée par une chaîne hexadécimale de 96 caractères.",
-      "SHA-384 est utilisé dans les certificats TLS/SSL, les signatures numériques et les protocoles de sécurité nécessitant un hash fort mais une sortie légèrement plus courte que SHA-512."
+      "<strong>SHA-384</strong> est une fonction de hachage cryptographique SHA-2 qui produit un résumé fixe de 384 bits à partir du texte ou des octets saisis. Le résumé est généralement représenté sous la forme d'une chaîne hexadécimale de 96 caractères.",
+      "Utilisez SHA-384 lorsque votre norme, votre système partenaire, votre profil de certificat ou votre format de signature l'exige. Pour l'authentification des messages par clé, utilisez HMAC avec la variante SHA-2 requise, et pour les mots de passe, utilisez un algorithme de hachage de mot de passe spécialement conçu."
     ],
     "inputNotes": "Notes sur l'entrée",
-    "inputNotesPara": "L'outil accepte tout texte, y compris les caractères Unicode, les émojis et le contenu multiligne. Même un petit changement produit un hash complètement différent (effet avalanche).",
+    "inputNotesPara": "SHA-384 est déterministe et exact. Une nouvelle ligne de fin, une casse différente ou une étiquette copiée fait partie de l'entrée et modifie le résultat de 96 caractères.",
     "example": "Exemple",
-    "examplePara": "Hacher une courte phrase produit un condensé de 96 caractères :",
+    "examplePara": "Le hachage d'une phrase courte produit un résumé fixe de 96 caractères :",
     "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "de": {
-    "title": "SHA384-Generator – Coding.Tools",
-    "description": "Erstellen Sie SHA-384-Hashes aus beliebigem Text direkt in Ihrem Browser. Schnell, privat und kostenlos.",
+    "title": "SHA384-Generator - Coding.Tools",
+    "description": "Generieren Sie einen 96-stelligen SHA-384-Hash aus Text für SHA-2-Integritätsprüfungen, Signaturen und Kompatibilitätsabläufe.",
     "toolTitle": "SHA384-Generator",
-    "toolDescription": "Erzeugen Sie einen SHA-384-Hash aus beliebigem Text. Kopieren oder laden Sie den Hash herunter, ohne Daten zu senden.",
+    "toolDescription": "Erstellen Sie SHA-384-Hashwerte, wenn eine 384-Bit-SHA-2-Ausgabe erforderlich ist.",
     "categoryName": "Hash & Kryptographie",
     "inputPlaceholder": "Text eingeben, um SHA-384-Hash zu erzeugen...",
     "outputPlaceholder": "SHA-384-Hash wird hier angezeigt...",
     "hashLength": 96,
-    "descTitle": "SHA384-Generator",
+    "descTitle": "Generieren Sie SHA-384-Hashes mit 384-Bit-Ausgabe",
     "descParas": [
-      "Dieses Tool erzeugt einen SHA-384-Hash aus beliebigem Text. SHA-384 gehört zur SHA-2-Familie und erzeugt einen festen 384-Bit (96 hexadezimale Zeichen) Digest unabhängig von der Eingabelänge.",
-      "Der Hash wird lokal in Ihrem Browser über die Web Crypto API berechnet."
+      "<strong>Dieser SHA-384-Generator erstellt einen deterministischen 384-Bit-Hashwert und zeigt ihn als 96 Hexadezimalzeichen an.</strong> Er passt zu Protokollen, Signaturen, Manifesten und Testdaten, die SHA-384 anstelle von SHA-256 oder SHA-512 angeben.",
+      "SHA-384 ist Teil der SHA-2-Familie und leitet sich vom SHA-512-Design mit kürzerem Ausgang ab. Es handelt sich um einen Hash, nicht um eine Verschlüsselung: Er unterstützt Vergleiche und Integritätsprüfungen, macht die ursprüngliche Eingabe jedoch nicht geheim."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Text in den Eingabe-Editor eingeben oder einfügen.",
-      "Auf <strong>Generieren</strong> klicken.",
-      "Der 96-stellige hexadezimale Hash erscheint im Ausgabe-Editor.",
-      "<strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Löschen</strong> verwenden."
+      "Geben Sie Ihren Text ein oder fügen Sie ihn in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Generieren</strong>, um den Hashwert zu erstellen.",
+      "Der 96 Zeichen lange hexadezimale Hash wird im Ausgabeeditor angezeigt.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um beide Editoren zurückzusetzen."
     ],
     "whatIs": "Was ist SHA-384?",
     "whatIsParas": [
-      "SHA-384 (Secure Hash Algorithm 384-bit) ist eine kryptografische Hash-Funktion der SHA-2-Familie. Sie ist eng mit SHA-512 verwandt — verwendet denselben Algorithmus, erzeugt aber einen gekürzten 384-Bit (48-Byte) Hash-Wert als 96-stellige hexadezimale Zeichenkette.",
-      "SHA-384 wird in TLS/SSL-Zertifikaten, digitalen Signaturen und Sicherheitsprotokollen verwendet, die einen starken Hash mit etwas kürzerer Ausgabe als SHA-512 benötigen."
+      "<strong>SHA-384</strong> ist eine kryptografische Hash-Funktion SHA-2, die einen festen 384-Bit-Hashwert aus Eingabetext oder Bytes erzeugt. Der Hashwert wird üblicherweise als 96-stellige Hexadezimalzeichenfolge dargestellt.",
+      "Verwenden Sie SHA-384, wenn Ihr Standard, Partnersystem, Zertifikatprofil oder Signaturformat dies erfordert. Verwenden Sie für die Authentifizierung verschlüsselter Nachrichten HMAC mit der erforderlichen Variante SHA-2 und für Passwörter einen speziell entwickelten Passwort-Hashing-Algorithmus."
     ],
     "inputNotes": "Hinweise zur Eingabe",
-    "inputNotesPara": "Das Tool akzeptiert jeden Text, einschließlich Unicode, Emojis und mehrzeiliger Inhalte. Selbst eine kleine Änderung erzeugt einen völlig anderen Hash (Lawineneffekt).",
+    "inputNotesPara": "SHA-384 ist deterministisch und exakt. Ein abschließender Zeilenumbruch, eine andere Groß-/Kleinschreibung oder eine kopierte Bezeichnung werden Teil der Eingabe und ändern das 96-Zeichen-Ergebnis.",
     "example": "Beispiel",
-    "examplePara": "Das Hashen eines kurzen Satzes erzeugt einen 96-stelligen Digest:",
+    "examplePara": "Das Hashing einer kurzen Phrase erzeugt einen festen Hashwert mit 96 Zeichen:",
     "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "es": {
-    "title": "Generador SHA384 — Coding.Tools",
-    "description": "Genere hashes SHA-384 a partir de cualquier texto directamente en su navegador. Rápido, privado y gratuito.",
+    "title": "Generador SHA-384 - Coding.Tools",
+    "description": "Genere un hash SHA-384 de 96 caracteres a partir de texto para comprobaciones de integridad, firmas y flujos de trabajo de compatibilidad SHA-2.",
     "toolTitle": "Generador SHA384",
-    "toolDescription": "Genere un hash SHA-384 a partir de cualquier texto. Copie o descargue el hash sin enviar datos.",
+    "toolDescription": "Cree resúmenes SHA-384 cuando se requiera una salida SHA-2 de 384 bits.",
     "categoryName": "Hash y criptografía",
     "inputPlaceholder": "Ingrese texto para generar el hash SHA-384...",
     "outputPlaceholder": "El hash SHA-384 aparecerá aquí...",
     "hashLength": 96,
-    "descTitle": "Generador SHA384",
+    "descTitle": "Genere hashes SHA-384 con salida de 384 bits",
     "descParas": [
-      "Esta herramienta genera un hash SHA-384 a partir de cualquier texto. SHA-384 pertenece a la familia SHA-2 y produce un resumen fijo de 384 bits (96 caracteres hexadecimales) independientemente de la longitud de la entrada.",
-      "El hash se calcula localmente en su navegador usando la API Web Crypto."
+      "<strong>Este generador SHA-384 crea un resumen determinista de 384 bits y lo muestra como 96 caracteres hexadecimales.</strong> Se ajusta a protocolos, firmas, manifiestos y datos de prueba que especifican SHA-384 en lugar de SHA-256 o SHA-512.",
+      "SHA-384 es parte de la familia SHA-2 y se deriva del diseño SHA-512 con una salida más corta. Es un hash, no un cifrado: admite comparaciones y comprobaciones de integridad, pero no convierte la entrada original en secreta."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue su texto en el editor de entrada.",
-      "Haga clic en <strong>Generar</strong> para producir el resumen.",
-      "El hash hexadecimal de 96 caracteres aparece en el editor de salida.",
-      "Use <strong>Copiar</strong>, <strong>Descargar</strong> o <strong>Limpiar</strong>."
+      "Haga clic en <strong>Generar</strong> para generar el resumen hash.",
+      "El hash hexadecimal de 96 caracteres aparece en el editor de resultados.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer ambos editores."
     ],
     "whatIs": "¿Qué es SHA-384?",
     "whatIsParas": [
-      "SHA-384 (Secure Hash Algorithm 384-bit) es una función hash criptográfica de la familia SHA-2. Está estrechamente relacionada con SHA-512 — usa el mismo algoritmo pero produce un valor hash truncado de 384 bits (48 bytes) representado como una cadena hexadecimal de 96 caracteres.",
-      "SHA-384 se usa en certificados TLS/SSL, firmas digitales y protocolos de seguridad que requieren un hash fuerte pero una salida ligeramente más corta que SHA-512."
+      "<strong>SHA-384</strong> es una función hash criptográfica SHA-2 que produce un resumen fijo de 384 bits a partir de texto o bytes de entrada. El resumen suele representarse como una cadena hexadecimal de 96 caracteres.",
+      "Utilice SHA-384 cuando su estándar, sistema asociado, perfil de certificado o formato de firma lo requiera. Para la autenticación de mensajes con clave, utilice HMAC con la variante SHA-2 requerida y, para contraseñas, utilice un algoritmo de hash de contraseñas especialmente diseñado."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier texto, incluyendo caracteres Unicode, emojis y contenido multilínea. Incluso un pequeño cambio produce un hash completamente diferente (efecto avalancha).",
+    "inputNotesPara": "SHA-384 es determinista y exacto. Una nueva línea final, una mayúscula diferente o una etiqueta copiada se convierten en parte de la entrada y cambian el resultado de 96 caracteres.",
     "example": "Ejemplo",
-    "examplePara": "Hashear una frase corta produce un resumen de 96 caracteres:",
+    "examplePara": "El hash de una frase corta produce un resumen fijo de 96 caracteres:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   },
   "pt": {
-    "title": "Gerador SHA384 — Coding.Tools",
-    "description": "Gere hashes SHA-384 a partir de qualquer texto diretamente no seu navegador. Rápido, privado e gratuito.",
+    "title": "Gerador SHA-384 - Coding.Tools",
+    "description": "Gere um hash SHA-384 de 96 caracteres a partir de texto para verificações de integridade, assinaturas e fluxos de trabalho de compatibilidade SHA-2.",
     "toolTitle": "Gerador SHA384",
-    "toolDescription": "Gere um hash SHA-384 a partir de qualquer texto. Copie ou baixe o hash sem enviar dados.",
+    "toolDescription": "Crie resumos SHA-384 quando uma saída SHA-2 de 384 bits for necessária.",
     "categoryName": "Hash e criptografia",
     "inputPlaceholder": "Digite o texto para gerar o hash SHA-384...",
     "outputPlaceholder": "O hash SHA-384 aparecerá aqui...",
     "hashLength": 96,
-    "descTitle": "Gerador SHA384",
+    "descTitle": "Gere hashes SHA-384 com saída de 384 bits",
     "descParas": [
-      "Esta ferramenta gera um hash SHA-384 a partir de qualquer texto. SHA-384 pertence à família SHA-2 e produz um resumo fixo de 384 bits (96 caracteres hexadecimais) independentemente do tamanho da entrada.",
-      "O hash é calculado localmente no seu navegador usando a API Web Crypto."
+      "<strong>Este gerador SHA-384 cria um resumo determinístico de 384 bits e o exibe como 96 caracteres hexadecimais.</strong> Ele se ajusta a protocolos, assinaturas, manifestos e dados de teste que especificam SHA-384 em vez de SHA-256 ou SHA-512.",
+      "SHA-384 faz parte da família SHA-2 e é derivado do design SHA-512 com uma saída mais curta. É um hash, não uma criptografia: suporta comparações e verificações de integridade, mas não torna a entrada original secreta."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Digite ou cole seu texto no editor de entrada.",
-      "Clique em <strong>Gerar</strong> para produzir o resumo.",
+      "Clique em <strong>Gerar</strong> para produzir o resumo de hash.",
       "O hash hexadecimal de 96 caracteres aparece no editor de saída.",
-      "Use <strong>Copiar</strong>, <strong>Baixar</strong> ou <strong>Limpar</strong>."
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
     ],
     "whatIs": "O que é SHA-384?",
     "whatIsParas": [
-      "SHA-384 (Secure Hash Algorithm 384-bit) é uma função hash criptográfica da família SHA-2. Está intimamente relacionada com SHA-512 — usa o mesmo algoritmo, mas produz um valor hash truncado de 384 bits (48 bytes) representado como uma string hexadecimal de 96 caracteres.",
-      "SHA-384 é utilizado em certificados TLS/SSL, assinaturas digitais e protocolos de segurança que exigem um hash forte mas uma saída ligeiramente mais curta que SHA-512."
+      "<strong>SHA-384</strong> é uma função hash criptográfica SHA-2 que produz um resumo fixo de 384 bits a partir de texto ou bytes de entrada. O resumo é comumente representado como uma sequência hexadecimal de 96 caracteres.",
+      "Use SHA-384 quando seu padrão, sistema parceiro, perfil de certificado ou formato de assinatura exigir isso. Para autenticação de mensagem com chave, use HMAC com a variante SHA-2 necessária e, para senhas, use um algoritmo de hash de senha criado especificamente."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer texto, incluindo caracteres Unicode, emojis e conteúdo multilinha. Mesmo uma pequena alteração produz um hash completamente diferente (efeito avalanche).",
+    "inputNotesPara": "SHA-384 é determinístico e exato. Uma nova linha final, letras maiúsculas diferentes ou um rótulo copiado tornam-se parte da entrada e alteram o resultado de 96 caracteres.",
     "example": "Exemplo",
-    "examplePara": "Hashear uma frase curta produz um resumo de 96 caracteres:",
+    "examplePara": "O hash de uma frase curta produz um resumo fixo de 96 caracteres:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
   }
 }

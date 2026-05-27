@@ -1,10 +1,5 @@
 ---
-title: "Text Editor Online — Coding.Tools"
-description: "Edit text online with line numbers, word wrap, and instant character and line counts. Free, fast, and private."
-toolTitle: "Text Editor Online"
-toolDescription: "Write and edit plain text directly in your browser with line numbers, copy, download, and character counting."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "text-editor"
 permalink: "/text-editor.html"
 ---
@@ -155,34 +150,7 @@ permalink: "/text-editor.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Text Editor Online</h2>
-  <p>This online text editor lets you write and edit plain text directly in your browser with line numbers, character counting, and line counting. It is useful for drafting notes, formatting snippets, cleaning up text, or quickly editing content without opening a desktop application.</p>
-  <p>The editor runs entirely in your browser. The text you type or paste is not uploaded, stored, or sent to a server, so your content stays private and you can use the tool instantly without any setup.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste your text into the editor area.</li>
-    <li>The status bar below updates in real time with the <strong>character count</strong> and <strong>line count</strong>.</li>
-    <li>Use <strong>Save</strong> to trigger the save action, <strong>Copy</strong> to copy the entire text to your clipboard, or <strong>Download</strong> to save as a <code>.txt</code> file.</li>
-    <li>Use <strong>Clear</strong> to reset the editor.</li>
-  </ol>
-
-  <h3>Features</h3>
-  <ul class="steps-list">
-    <li><strong>Line numbers</strong> &mdash; visible on the left side of the editor.</li>
-    <li><strong>Tab key support</strong> &mdash; pressing Tab inserts two spaces instead of moving focus.</li>
-    <li><strong>Instant counts</strong> &mdash; character and line counts update as you type, with no button press required.</li>
-  </ul>
-
-  <h3>Example</h3>
-  <p>Paste the following text into the editor to see the line numbers and character count in action:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Hello, World!
-This is a sample text.
-Line numbers appear on the left.
-Characters and lines are counted automatically.</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

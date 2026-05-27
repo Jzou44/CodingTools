@@ -1,10 +1,5 @@
 ---
-title: "RGBA to Hex Converter — Coding.Tools"
-description: "Convert RGBA color values to hex color codes with opacity. Fast, private, and free to use."
-toolTitle: "RGBA to Hex"
-toolDescription: "Enter RGBA color values and convert them to a hex color code with opacity. See a live color preview and generate random colors."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "rgba-to-hex"
 permalink: "/rgba-to-hex.html"
 ---
@@ -256,34 +251,7 @@ permalink: "/rgba-to-hex.html"
 {% endblock %}
 
 {% block description %}
-  <h2>RGBA to Hex Converter</h2>
-  <p>This tool converts RGBA (Red, Green, Blue, Alpha) color values into a hexadecimal color code with an opacity percentage. It helps when you need to represent an RGBA color as a hex code for use in design tools or systems that only accept hex input.</p>
-  <p>The conversion runs entirely in your browser. Enter values from 0 to 255 for each RGB channel and 0 to 100% for alpha.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter values from 0 to 255 for Red, Green, and Blue.</li>
-    <li>Set the Alpha value from 0 to 100%.</li>
-    <li>Click <strong>Convert</strong> to see the hex code, opacity, and color preview.</li>
-    <li>Click <strong>Random</strong> to generate a random color.</li>
-    <li>Use <strong>Copy</strong> to copy the hex value to your clipboard.</li>
-  </ol>
-
-  <h3>What is RGBA?</h3>
-  <p>RGBA extends the RGB color model with an alpha channel for transparency. The alpha value ranges from 0 (fully transparent) to 1 (fully opaque). When converting to hex, the alpha is preserved as a separate opacity percentage since standard hex codes do not include transparency (8-digit hex codes with alpha are not universally supported).</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">RGBA: rgba(255, 87, 51, 1)
-Hex: #FF5733, Opacity: 100%
-
-RGBA: rgba(0, 255, 0, 0.5)
-Hex: #00FF00, Opacity: 50%
-
-RGBA: rgba(51, 102, 204, 0.75)
-Hex: #3366CC, Opacity: 75%</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

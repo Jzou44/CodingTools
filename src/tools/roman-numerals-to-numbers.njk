@@ -1,10 +1,5 @@
 ---
-title: "Roman Numerals to Numbers Converter — Coding.Tools"
-description: "Convert Roman numerals to standard numbers instantly in your browser. Fast, private, and free to use."
-toolTitle: "Roman Numerals to Numbers"
-toolDescription: "Enter a Roman numeral and convert it to a standard number. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "roman-numerals-to-numbers"
 permalink: "/roman-numerals-to-numbers.html"
 ---
@@ -189,33 +184,7 @@ permalink: "/roman-numerals-to-numbers.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Roman Numerals to Numbers Converter</h2>
-  <p>This tool converts Roman numeral strings into their standard number (integer) equivalents. It validates the input and reports errors for invalid Roman numeral sequences.</p>
-  <p>The conversion runs entirely in your browser. Enter a valid Roman numeral using the letters I, V, X, L, C, D, and M.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a Roman numeral into the input field (e.g. <code>XIV</code> or <code>MCMXCIX</code>).</li>
-    <li>Click <strong>Convert</strong> to see the number result.</li>
-    <li>Use <strong>Copy</strong> to copy the number to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>The tool reads the Roman numeral from left to right. It maps each letter to its value (I=1, V=5, X=10, L=50, C=100, D=500, M=1000). If a smaller value appears before a larger value, it is subtracted (e.g. IV = 4, IX = 9). Otherwise, values are added together.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Roman: XIV
-Number: 14
-
-Roman: MCMXCIX
-Number: 1999
-
-Roman: MMXXVI
-Number: 2026</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

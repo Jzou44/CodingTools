@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Fraction to Decimal Converter — Coding.Tools",
-    "description": "Convert fractions to decimal numbers directly in your browser.",
+    "title": "Fraction to Decimal Converter - Coding.Tools",
+    "description": "Convert proper, improper, or mixed fractions into decimal values in your browser.",
     "toolTitle": "Fraction to Decimal",
-    "toolDescription": "Convert fractions (with integer, numerator, denominator) to decimal numbers.",
+    "toolDescription": "Convert integer, numerator, and denominator fields into a decimal result.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "",
     "outputPlaceholder": "Decimal result will appear here...",
-    "descTitle": "Fraction to Decimal Converter",
+    "descTitle": "Convert fractions and mixed numbers to decimals",
     "descParas": [
-      "This tool converts fractions to decimal numbers. Enter the integer part (optional), numerator, and denominator.",
-      "The conversion runs locally in your browser using the BigNumber library."
+      "<strong>Fraction to Decimal divides the numerator by the denominator and adds any whole-number part to produce a decimal value.</strong> Use it for measurements, ratios, recipes, classroom work, and quick checks before entering values into spreadsheets or code.",
+      "The denominator cannot be zero. Some fractions terminate cleanly, such as <code>3/4 = 0.75</code>, while others repeat, such as <code>1/3</code>; long repeating decimals may be rounded or limited by browser number formatting."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Enter the integer part (default is 0), numerator, and denominator.",
-      "Click <strong>Calculate</strong> to convert the fraction to decimal.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Enter the optional integer part, then the numerator and denominator.",
+      "Review the decimal result that updates from the fraction fields.",
+      "Copy the decimal value, or clear the fields before converting another fraction."
     ],
-    "whatIs": "What is a Fraction?",
+    "whatIs": "What is fraction to decimal conversion?",
     "whatIsParas": [
-      "A fraction represents a part of a whole, expressed as a numerator over a denominator. For example, 3/4 = 0.75 in decimal."
+      "<strong>Fraction to decimal conversion</strong> rewrites a ratio as a base-10 number by dividing numerator by denominator. Mixed numbers first add the integer part, so <code>1 3/4</code> becomes <code>1.75</code>."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter integer (optional, defaults to 0), numerator, and denominator as numbers.",
+    "inputNotesPara": "Use numeric numerator and denominator values, and do not use zero as the denominator. For repeating decimals, decide how many digits are appropriate before copying the value into production data.",
     "example": "Example",
-    "examplePara": "Converting a fraction to decimal:",
+    "examplePara": "A mixed number with integer 1 and fraction 3/4 converts to decimal 1.75:",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "cn": {
-    "title": "分数转小数转换器 — Coding.Tools",
-    "description": "在浏览器中直接将分数转换为小数。",
+    "title": "分数到小数转换器 - Coding.Tools",
+    "description": "在浏览器中将真分数、假分数或带分数转换为小数值。",
     "toolTitle": "分数转小数",
-    "toolDescription": "将分数转换为小数表示。",
+    "toolDescription": "将整数、分子和分母字段转换为十进制结果。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入分数（如 3/4、1/2）...",
     "outputPlaceholder": "小数结果将显示在这里...",
-    "descTitle": "分数转小数转换器",
+    "descTitle": "将分数和带分数转换为小数",
     "descParas": [
-      "此工具将分数转换为小数表示。",
-      "转换在浏览器本地运行。"
+      "<strong>分数转小数将分子除以分母并添加任何整数部分以生成小数值。</strong> 将其用于测量、比率、食谱、课堂作业以及在将值输入电子表格或代码之前进行快速检查。",
+      "分母不能为零。有些分数干净地终止，例如 <code>3/4 = 0.75</code>，而另一些则重复，例如 <code>1/3</code>；长重复小数可能会被四舍五入或受到浏览器数字格式的限制。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入分数（格式：分子/分母）。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "输入可选的整数部分，然后输入分子和分母。",
+      "查看从分数字段更新的小数结果。",
+      "复制小数值，或在转换另一个分数之前清除字段。"
     ],
-    "whatIs": "什么是分数转小数？",
+    "whatIs": "什么是分数到小数的转换？",
     "whatIsParas": [
-      "分数转小数是将分数表示转换为等值的小数表示。"
+      "<strong>分数到十进制转换</strong> 通过分子除以分母将比率重写为以 10 为基数的数字。混合数首先加上整数部分，因此 <code>1 3/4</code> 变为 <code>1.75</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的分数，格式为分子/分母（如 3/4）。",
+    "inputNotesPara": "使用数字分子和分母值，并且不要使用零作为分母。对于重复小数，在将值复制到生产数据之前确定合适的位数。",
     "example": "示例",
-    "examplePara": "将分数转换为小数：",
+    "examplePara": "整数 1 和小数 3/4 的混合数转换为小数 1.75：",
     "exampleCode": "--- 分数输入 ---\n3/4\n\n--- 小数 ---\n0.75\n\n--- 百分比 ---\n75%"
   },
   "tw": {
-    "title": "分數到小數位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將分數轉換為小數。",
+    "title": "分數到小數位轉換器 - Coding.Tools",
+    "description": "在瀏覽器中將真分數、假分數或帶分數轉換為小數值。",
     "toolTitle": "分數轉小數",
-    "toolDescription": "將分數（包含整數、分子、分母）轉換為小數。",
+    "toolDescription": "將整數、分子和分母欄位轉換為十進位結果。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "",
     "outputPlaceholder": "小數結果將會出現在這裡...",
-    "descTitle": "分數到小數位轉換器",
+    "descTitle": "將分數和帶分數轉換為小數",
     "descParas": [
-      "該工具將分數轉換為小數。輸入整數部分（可選）、分子和分母。",
-      "轉換使用 BigNumber 庫在瀏覽器本地運行。"
+      "<strong>分數轉小數將分子除以分母並添加任何整數部分以產生小數值。</strong> 將其用於測量、比率、食譜、課堂作業以及在將值輸入電子表格或代碼之前進行快速檢查。",
+      "分母不能為零。有些分數乾淨地終止，例如 <code>3/4 = 0.75</code>，而有些則重複，例如 <code>1/3</code>；長重複小數可能會被四捨五入或受到瀏覽器數字格式的限制。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "輸入整數部分（預設為 0）、分子和分母。",
-      "點選<strong>計算</strong>將分數轉換為小數。",
-      "使用<strong>複製</strong>複製結果。"
+      "輸入可選的整數部分，然後輸入分子和分母。",
+      "查看從分數欄位更新的小數結果。",
+      "複製小數值，或在轉換另一個分數之前清除欄位。"
     ],
-    "whatIs": "什麼是分數？",
+    "whatIs": "什麼是分數到小數的轉換？",
     "whatIsParas": [
-      "分數代表整體的一部分，表示為分子除以分母。例如，3/4 = 十進制的 0.75。"
+      "<strong>分數到十進位轉換</strong> 透過分子除以分母將比率重寫為以 10 為基數的數字。混合數首先加上整數部分，因此 <code>1 3/4</code> 變成 <code>1.75</code>。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "輸入整數（可選，預設為 0）、分子和分母作為數字。",
+    "inputNotesPara": "使用數字分子和分母值，並且不要使用零作為分母。對於重複小數，在將值複製到生產資料之前確定合適的位數。",
     "example": "例子",
-    "examplePara": "將分數轉換為小數：",
+    "examplePara": "整數 1 和小數 3/4 的混合數轉換為小數 1.75：",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "jp": {
-    "title": "分数から小数へのコンバーター —coding.Tools",
-    "description": "ブラウザで直接分数を 10 進数に変換します。",
+    "title": "分数から小数へのコンバータ - Coding.Tools",
+    "description": "ブラウザで正分数、不当分数、または帯分数を 10 進数値に変換します。",
     "toolTitle": "分数から小数",
-    "toolDescription": "分数 (整数、分子、分母を含む) を 10 進数に変換します。",
+    "toolDescription": "整数、分子、分母フィールドを 10 進数の結果に変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "",
     "outputPlaceholder": "ここに小数の結果が表示されます...",
-    "descTitle": "分数から小数へのコンバーター",
+    "descTitle": "分数と帯分数を小数に変換する",
     "descParas": [
-      "このツールは分数を 10 進数に変換します。整数部分 (オプション)、分子、分母を入力します。",
-      "変換は、BigNumber ライブラリを使用してブラウザ内でローカルに実行されます。"
+      "<strong>分数から小数へは、分子を分母で割り、任意の整数部分を加算して小数値を生成します。</strong> 測定、比率、レシピ、教室での作業、およびスプレッドシートやコードに値を入力する前の簡単なチェックに使用します。",
+      "分母をゼロにすることはできません。 <code>3/4 = 0.75</code> のように、きれいに終了する分数もあれば、<code>1/3</code> のように繰り返す分数もあります。長く繰り返される小数は、ブラウザの数値形式によって四捨五入されたり、制限されたりする場合があります。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "整数部分 (デフォルトは 0)、分子、分母を入力します。",
-      "[<strong>計算</strong>] をクリックして分数を小数に変換します。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "オプションの整数部分を入力し、次に分子と分母を入力します。",
+      "小数フィールドから更新される 10 進数の結果を確認します。",
+      "10 進数値をコピーするか、別の分数を変換する前にフィールドをクリアしてください。"
     ],
-    "whatIs": "分数とは何ですか?",
+    "whatIs": "分数から小数への変換とは何ですか?",
     "whatIsParas": [
-      "分数は全体の一部を表し、分母の上の分子として表されます。たとえば、10 進数では 3/4 = 0.75 となります。"
+      "<strong>分数から 10 進数への変換</strong> は、分子を分母で割ることにより、比率を 10 進数に書き換えます。帯分数はまず整数部分を加算するので、<code>1 3/4</code> は <code>1.75</code> になります。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "整数 (オプション、デフォルトは 0)、分子、分母を数値として入力します。",
+    "inputNotesPara": "分子と分母の数値を使用し、分母としてゼロを使用しないでください。小数を繰り返す場合は、実稼働データに値をコピーする前に、適切な桁数を決定してください。",
     "example": "例",
-    "examplePara": "分数を小数に変換するには:",
+    "examplePara": "整数 1 と分数 3/4 を含む混合数は、10 進数の 1.75 に変換されます。",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "kr": {
-    "title": "분수를 소수로 변환하는 변환기 — Coding.Tools",
-    "description": "브라우저에서 분수를 십진수로 직접 변환하세요.",
+    "title": "분수를 소수로 변환하는 변환기 - Coding.Tools",
+    "description": "브라우저에서 진분수, 가분수, 대분수를 소수 값으로 변환하세요.",
     "toolTitle": "분수에서 소수",
-    "toolDescription": "분수(정수, 분자, 분모 포함)를 십진수로 변환합니다.",
+    "toolDescription": "정수, 분자, 분모 필드를 소수 결과로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "",
     "outputPlaceholder": "여기에 소수점 결과가 표시됩니다...",
-    "descTitle": "분수를 소수로 변환하는 변환기",
+    "descTitle": "분수와 대분수를 소수로 변환",
     "descParas": [
-      "이 도구는 분수를 십진수로 변환합니다. 정수부(선택사항), 분자, 분모를 입력합니다.",
-      "변환은 BigNumber 라이브러리를 사용하여 브라우저에서 로컬로 실행됩니다."
+      "<strong>분수에서 소수은 분자를 분모로 나누고 정수 부분을 더하여 소수 값을 생성합니다.</strong> 스프레드시트나 코드에 값을 입력하기 전에 측정, 비율, 레시피, 강의실 작업 및 빠른 확인에 사용합니다.",
+      "분모는 0이 될 수 없습니다. <code>3/4 = 0.75</code>와 같이 일부 분수는 깔끔하게 끝나는 반면, <code>1/3</code>와 같이 다른 분수는 반복됩니다. 길게 반복되는 소수는 브라우저 숫자 형식에 따라 반올림되거나 제한될 수 있습니다."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "정수부(기본값은 0), 분자, 분모를 입력합니다.",
-      "분수를 소수로 변환하려면 <strong>계산</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "선택적 정수 부분을 입력한 다음 분자와 분모를 입력합니다.",
+      "분수 필드에서 업데이트되는 소수 결과를 검토합니다.",
+      "소수 값을 복사하거나 다른 분수를 변환하기 전에 필드를 지우십시오."
     ],
-    "whatIs": "분수란 무엇입니까?",
+    "whatIs": "분수를 십진수로 변환이란 무엇입니까?",
     "whatIsParas": [
-      "분수는 전체의 일부를 나타내며 분모 위에 분자로 표시됩니다. 예를 들어 3/4 = 10진수로 0.75입니다."
+      "<strong>분수를 십진수로 변환</strong>는 분자를 분모로 나누어 비율을 10진수로 다시 씁니다. 대분수는 먼저 정수 부분을 더하므로 <code>1 3/4</code>는 <code>1.75</code>가 됩니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "정수(선택, 기본값은 0), 분자, 분모를 숫자로 입력합니다.",
+    "inputNotesPara": "숫자형 분자 및 분모 값을 사용하고 0을 분모로 사용하지 마십시오. 반복 소수점의 경우 값을 생산 데이터에 복사하기 전에 적절한 자릿수를 결정하십시오.",
     "example": "예",
-    "examplePara": "분수를 소수로 변환:",
+    "examplePara": "정수 1과 분수 3/4가 있는 혼합 숫자는 십진수 1.75로 변환됩니다.",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "fr": {
-    "title": "Convertisseur de fractions en décimales — Coding.Tools",
-    "description": "Convertissez des fractions en nombres décimaux directement dans votre navigateur.",
+    "title": "Convertisseur de fractions en décimales - Coding.Tools",
+    "description": "Convertissez des fractions appropriées, impropres ou mixtes en valeurs décimales dans votre navigateur.",
     "toolTitle": "Fraction en Décimal",
-    "toolDescription": "Convertissez des fractions (avec entier, numérateur, dénominateur) en nombres décimaux.",
+    "toolDescription": "Convertissez les champs entiers, numérateurs et dénominateurs en un résultat décimal.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "",
     "outputPlaceholder": "Le résultat décimal apparaîtra ici...",
-    "descTitle": "Convertisseur de fraction en décimal",
+    "descTitle": "Convertir des fractions et des nombres fractionnaires en décimales",
     "descParas": [
-      "Cet outil convertit les fractions en nombres décimaux. Entrez la partie entière (facultatif), le numérateur et le dénominateur.",
-      "La conversion s'exécute localement dans votre navigateur à l'aide de la bibliothèque BigNumber."
+      "<strong>Fraction en Décimal divise le numérateur par le dénominateur et ajoute n'importe quelle partie de nombre entier pour produire une valeur décimale.</strong> Utilisez-le pour les mesures, les ratios, les recettes, le travail en classe et les vérifications rapides avant de saisir des valeurs dans des feuilles de calcul ou du code.",
+      "Le dénominateur ne peut pas être nul. Certaines fractions se terminent proprement, comme <code>3/4 = 0.75</code>, tandis que d'autres se répètent, comme <code>1/3</code> ; les décimales longues et répétitives peuvent être arrondies ou limitées par le formatage du numéro du navigateur."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Entrez la partie entière (la valeur par défaut est 0), le numérateur et le dénominateur.",
-      "Cliquez sur <strong>Calculer</strong> pour convertir la fraction en décimale.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Saisissez la partie entière facultative, puis le numérateur et le dénominateur.",
+      "Examinez le résultat décimal mis à jour à partir des champs de fraction.",
+      "Copiez la valeur décimale ou effacez les champs avant de convertir une autre fraction."
     ],
-    "whatIs": "Qu'est-ce qu'une fraction ?",
+    "whatIs": "Qu’est-ce que la conversion d’une fraction en décimal ?",
     "whatIsParas": [
-      "Une fraction représente une partie d'un tout, exprimée sous la forme d'un numérateur sur un dénominateur. Par exemple, 3/4 = 0,75 en décimal."
+      "<strong>Conversion de fraction en décimal</strong> réécrit un rapport sous forme de nombre en base 10 en divisant le numérateur par le dénominateur. Les nombres mixtes ajoutent d'abord la partie entière, donc <code>1 3/4</code> devient <code>1.75</code>."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Saisissez un nombre entier (facultatif, 0 par défaut), un numérateur et un dénominateur sous forme de nombres.",
+    "inputNotesPara": "Utilisez des valeurs numériques au numérateur et au dénominateur et n’utilisez pas zéro comme dénominateur. Pour répéter des décimales, décidez du nombre de chiffres appropriés avant de copier la valeur dans les données de production.",
     "example": "Exemple",
-    "examplePara": "Conversion d'une fraction en décimal :",
+    "examplePara": "Un nombre fractionnaire avec l'entier 1 et la fraction 3/4 est converti en décimal 1,75 :",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "de": {
-    "title": "Bruch-Dezimal-Konverter – Coding.Tools",
-    "description": "Wandeln Sie Brüche direkt in Ihrem Browser in Dezimalzahlen um.",
+    "title": "Bruch-Dezimal-Konverter - Coding.Tools",
+    "description": "Konvertieren Sie echte, unechte oder gemischte Brüche in Ihrem Browser in Dezimalwerte.",
     "toolTitle": "Bruch zu Dezimal",
-    "toolDescription": "Wandeln Sie Brüche (mit Ganzzahl, Zähler, Nenner) in Dezimalzahlen um.",
+    "toolDescription": "Konvertieren Sie Ganzzahl-, Zähler- und Nennerfelder in ein Dezimalergebnis.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "",
     "outputPlaceholder": "Hier wird das Dezimalergebnis angezeigt...",
-    "descTitle": "Bruch-Dezimal-Konverter",
+    "descTitle": "Wandeln Sie Brüche und gemischte Zahlen in Dezimalzahlen um",
     "descParas": [
-      "Dieses Tool wandelt Brüche in Dezimalzahlen um. Geben Sie den ganzzahligen Teil (optional), den Zähler und den Nenner ein.",
-      "Die Konvertierung erfolgt lokal in Ihrem Browser mithilfe der BigNumber-Bibliothek."
+      "<strong>Bruch zu Dezimal dividiert den Zähler durch den Nenner und addiert einen beliebigen ganzzahligen Teil, um einen Dezimalwert zu erzeugen.</strong> Verwenden Sie es für Messungen, Verhältnisse, Rezepte, Unterrichtsarbeiten und schnelle Überprüfungen, bevor Sie Werte in Tabellenkalkulationen oder Code eingeben.",
+      "Der Nenner darf nicht Null sein. Einige Brüche enden sauber, wie zum Beispiel <code>3/4 = 0.75</code>, während andere sich wiederholen, wie zum Beispiel <code>1/3</code>; Lange, sich wiederholende Dezimalzahlen können durch die Zahlenformatierung des Browsers gerundet oder eingeschränkt werden."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben Sie den ganzzahligen Teil (Standard ist 0), den Zähler und den Nenner ein.",
-      "Klicken Sie auf <strong>Berechnen</strong>, um den Bruch in eine Dezimalzahl umzuwandeln.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben Sie den optionalen ganzzahligen Teil ein, dann den Zähler und den Nenner.",
+      "Überprüfen Sie das Dezimalergebnis, das aus den Bruchfeldern aktualisiert wird.",
+      "Kopieren Sie den Dezimalwert oder leeren Sie die Felder, bevor Sie einen anderen Bruch konvertieren."
     ],
-    "whatIs": "Was ist ein Bruch?",
+    "whatIs": "Was ist die Umrechnung von Brüchen in Dezimalzahlen?",
     "whatIsParas": [
-      "Ein Bruch stellt einen Teil eines Ganzen dar, ausgedrückt als Zähler über einem Nenner. Beispiel: 3/4 = 0,75 in Dezimalzahl."
+      "<strong>Konvertierung von Brüchen in Dezimalzahlen</strong> schreibt ein Verhältnis als Zahl zur Basis 10 um, indem Zähler durch Nenner dividiert wird. Gemischte Zahlen addieren zuerst den ganzzahligen Teil, sodass <code>1 3/4</code> zu <code>1.75</code> wird."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie die Ganzzahl (optional, standardmäßig 0), den Zähler und den Nenner als Zahlen ein.",
+    "inputNotesPara": "Verwenden Sie numerische Zähler- und Nennerwerte und nicht Null als Nenner. Entscheiden Sie bei sich wiederholenden Dezimalstellen, wie viele Stellen angemessen sind, bevor Sie den Wert in die Produktionsdaten kopieren.",
     "example": "Beispiel",
-    "examplePara": "Einen Bruch in eine Dezimalzahl umwandeln:",
+    "examplePara": "Eine gemischte Zahl mit der Ganzzahl 1 und dem Bruch 3/4 wird in die Dezimalzahl 1,75 umgewandelt:",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "es": {
     "title": "Convertidor de fracción a decimal - Coding.Tools",
-    "description": "Convierte fracciones a números decimales directamente en tu navegador.",
+    "description": "Convierta fracciones propias, impropias o mixtas a valores decimales en su navegador.",
     "toolTitle": "Fracción a Decimal",
-    "toolDescription": "Convierte fracciones (con número entero, numerador, denominador) a números decimales.",
+    "toolDescription": "Convierta campos de números enteros, numeradores y denominadores en un resultado decimal.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "El resultado decimal aparecerá aquí...",
-    "descTitle": "Convertidor de fracción a decimal",
+    "descTitle": "Convertir fracciones y números mixtos a decimales",
     "descParas": [
-      "Esta herramienta convierte fracciones a números decimales. Ingrese la parte entera (opcional), el numerador y el denominador.",
-      "La conversión se ejecuta localmente en su navegador utilizando la biblioteca BigNumber."
+      "<strong>Fracción a Decimal divide el numerador por el denominador y suma cualquier parte de un número entero para producir un valor decimal.</strong> Úselo para mediciones, proporciones, recetas, trabajo en el aula y comprobaciones rápidas antes de ingresar valores en hojas de cálculo o código.",
+      "El denominador no puede ser cero. Algunas fracciones terminan limpiamente, como <code>3/4 = 0.75</code>, mientras que otras se repiten, como <code>1/3</code>; Los decimales repetidos largos pueden redondearse o limitarse según el formato del número del navegador."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Ingrese la parte entera (el valor predeterminado es 0), el numerador y el denominador.",
-      "Haga clic en <strong>Calcular</strong> para convertir la fracción a decimal.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Ingrese la parte entera opcional, luego el numerador y el denominador.",
+      "Revise el resultado decimal que se actualiza desde los campos de fracción.",
+      "Copie el valor decimal o borre los campos antes de convertir otra fracción."
     ],
-    "whatIs": "¿Qué es una fracción?",
+    "whatIs": "¿Qué es la conversión de fracción a decimal?",
     "whatIsParas": [
-      "Una fracción representa una parte de un todo, expresada como numerador sobre denominador. Por ejemplo, 3/4 = 0,75 en decimal."
+      "<strong>Conversión de fracción a decimal</strong> reescribe una proporción como un número de base 10 dividiendo el numerador por el denominador. Los números mixtos primero suman la parte entera, por lo que <code>1 3/4</code> se convierte en <code>1.75</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un número entero (opcional, el valor predeterminado es 0), numerador y denominador como números.",
+    "inputNotesPara": "Utilice valores numéricos de numerador y denominador, y no utilice cero como denominador. Para decimales periódicos, decida cuántos dígitos son apropiados antes de copiar el valor en los datos de producción.",
     "example": "Ejemplo",
-    "examplePara": "Convertir una fracción a decimal:",
+    "examplePara": "Un número mixto con entero 1 y fracción 3/4 se convierte a decimal 1,75:",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   },
   "pt": {
-    "title": "Conversor de fração para decimal — Coding.Tools",
-    "description": "Converta frações em números decimais diretamente no seu navegador.",
+    "title": "Conversor de fração para decimal - Coding.Tools",
+    "description": "Converta frações próprias, impróprias ou mistas em valores decimais em seu navegador.",
     "toolTitle": "Fração para Decimal",
-    "toolDescription": "Converta frações (com número inteiro, numerador, denominador) em números decimais.",
+    "toolDescription": "Converta campos inteiros, numeradores e denominadores em um resultado decimal.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "O resultado decimal aparecerá aqui...",
-    "descTitle": "Conversor de fração para decimal",
+    "descTitle": "Converta frações e números mistos em decimais",
     "descParas": [
-      "Esta ferramenta converte frações em números decimais. Insira a parte inteira (opcional), numerador e denominador.",
-      "A conversão é executada localmente no seu navegador usando a biblioteca BigNumber."
+      "<strong>Fração para Decimal divide o numerador pelo denominador e adiciona qualquer parte de número inteiro para produzir um valor decimal.</strong> Use-o para medições, proporções, receitas, trabalhos em sala de aula e verificações rápidas antes de inserir valores em planilhas ou código.",
+      "O denominador não pode ser zero. Algumas frações terminam de forma limpa, como <code>3/4 = 0.75</code>, enquanto outras se repetem, como <code>1/3</code>; decimais longos e repetidos podem ser arredondados ou limitados pela formatação de números do navegador."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Insira a parte inteira (o padrão é 0), o numerador e o denominador.",
-      "Clique em <strong>Calcular</strong> para converter a fração em decimal.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Insira a parte inteira opcional, depois o numerador e o denominador.",
+      "Revise o resultado decimal atualizado a partir dos campos de fração.",
+      "Copie o valor decimal ou limpe os campos antes de converter outra fração."
     ],
-    "whatIs": "O que é uma fração?",
+    "whatIs": "O que é conversão de fração em decimal?",
     "whatIsParas": [
-      "Uma fração representa uma parte de um todo, expressa como um numerador sobre um denominador. Por exemplo, 3/4 = 0,75 em decimal."
+      "<strong>Conversão de fração para decimal</strong> reescreve uma proporção como um número de base 10 dividindo o numerador pelo denominador. Os números mistos primeiro adicionam a parte inteira, então <code>1 3/4</code> se torna <code>1.75</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira o número inteiro (opcional, o padrão é 0), o numerador e o denominador como números.",
+    "inputNotesPara": "Use valores numéricos de numerador e denominador e não use zero como denominador. Para números decimais repetidos, decida quantos dígitos são apropriados antes de copiar o valor nos dados de produção.",
     "example": "Exemplo",
-    "examplePara": "Convertendo uma fração em decimal:",
+    "examplePara": "Um número misto com inteiro 1 e fração 3/4 é convertido para decimal 1,75:",
     "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
   }
 }

@@ -1,10 +1,5 @@
 ---
-title: "Regex Tester Online — Coding.Tools"
-description: "Test regular expressions live with match highlighting and flag controls. Free browser-based regex testing tool."
-toolTitle: "Regex Tester"
-toolDescription: "Test regex patterns in real time with live match highlighting. No data leaves your browser."
 category: "string-text-utilities"
-categoryName: "String & Text Utilities"
 activeTool: "regex-tester"
 permalink: "/regex-tester.html"
 ---
@@ -242,45 +237,7 @@ permalink: "/regex-tester.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Regex Tester</h2>
-  <p>This regular expression tester lets you write and validate regex patterns against sample text directly in your browser. All six standard JavaScript regex flags are available: global, case-insensitive, multiline, dotAll, unicode, and sticky. Matches are highlighted in real time so you can see exactly what your pattern captures.</p>
-  <p>The regex runs locally in your browser. The text you enter is not uploaded, stored, or sent to a server, so you can test patterns privately and quickly without changing your workflow.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a regex pattern into the <strong>Regex Pattern</strong> input field. You do not need to include the leading and trailing slashes.</li>
-    <li>Select the flags you need: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline), <strong>s</strong> (dotAll), <strong>u</strong> (unicode), or <strong>y</strong> (sticky).</li>
-    <li>Enter or paste your test text into the editor below.</li>
-    <li>Matches are highlighted automatically. The match count appears in the status bar.</li>
-    <li>Use <strong>Copy</strong> to copy the test text to the clipboard, <strong>Download</strong> to save it as a file, or <strong>Clear</strong> to reset everything.</li>
-  </ol>
-
-  <h3>What are regular expressions?</h3>
-  <p>A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, such as finding specific words, validating formats like emails or phone numbers, or splitting text by complex delimiters.</p>
-  <p>JavaScript implements regex natively via the <code>RegExp</code> object. The same syntax works in most programming languages with minor variations. Learning regex is a core skill for text processing, data cleaning, log parsing, and input validation.</p>
-
-  <h3>Input notes</h3>
-  <p>Enter the regex pattern without delimiters (no <code>/pattern/flags</code> syntax). The flags are controlled by the checkboxes. Invalid patterns are caught and an error message is shown instead of crashing the tool.</p>
-
-  <h3>Example</h3>
-  <p>A simple pattern to find email-like strings in text:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy example</button>
-    <pre class="code-block" id="example-code">--- Pattern ---
-\b\w+@\w+\.\w+\b
-
---- Flags ---
-g (global)
-
---- Test Text ---
-Contact us at support@example.com or sales@company.org.
-Invalid: @missing.com or user@
-
---- Matches Found ---
-2 matches:
-  1. support@example.com
-  2. sales@company.org</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

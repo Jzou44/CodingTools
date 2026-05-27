@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Roman Numerals to Numbers Converter — Coding.Tools",
-    "description": "Convert Roman numerals to decimal numbers directly in your browser.",
+    "title": "Roman Numerals to Numbers - Coding.Tools",
+    "description": "Convert Roman numerals into decimal numbers using standard symbol values.",
     "toolTitle": "Roman to Numbers",
-    "toolDescription": "Convert Roman numeral strings to decimal numbers.",
+    "toolDescription": "Convert Roman numeral strings into decimal numbers and review common symbol values.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter Roman numeral (e.g. XIV, MMXXIV)...",
     "outputPlaceholder": "Number will appear here...",
-    "descTitle": "Roman Numerals to Numbers Converter",
+    "descTitle": "Convert Roman numerals to decimal numbers",
     "descParas": [
-      "This tool converts Roman numeral strings to their decimal number equivalents. It handles subtractive notation (IV=4, IX=9, XL=40, etc.).",
-      "The conversion runs locally in your browser."
+      "<strong>Roman Numerals to Numbers reads Roman numeral symbols and returns the matching decimal value.</strong> Use it for dates, outlines, book chapters, movie sequels, clock faces, and historical references.",
+      "Standard symbols are <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code>, and <code>M</code>. Subtractive notation places a smaller value before a larger one, as in <code>IV</code> for 4 and <code>CM</code> for 900."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste a Roman numeral into the input field.",
-      "Click <strong>Convert</strong> to get the decimal number.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Type or paste the Roman numeral into the input field.",
+      "Review the decimal number result and the quick reference symbols.",
+      "Copy the number, or clear the field before converting another Roman numeral."
     ],
-    "whatIs": "What is Roman to Numbers?",
+    "whatIs": "What is Roman numeral conversion?",
     "whatIsParas": [
-      "The converter reads the Roman numeral string from left to right, adding values. When a smaller value precedes a larger one, it uses subtractive notation."
+      "<strong>Roman numeral conversion</strong> adds symbol values from left to right, subtracting a symbol when it appears before a larger symbol. For canonical modern notation, review unusual sequences because not every arrangement of valid symbols is standard."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter valid Roman numerals using letters I, V, X, L, C, D, M (case insensitive).",
+    "inputNotesPara": "Use Roman numeral letters only. Typical modern notation represents values from <code>1</code> to <code>3999</code>; larger values require overlines or other conventions that plain text tools may not support.",
     "example": "Example",
-    "examplePara": "Converting Roman numerals to numbers:",
+    "examplePara": "<code>MMXXIV</code> combines 2000, 20, and 4 to produce 2024:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "cn": {
-    "title": "罗马数字转数字转换器 — Coding.Tools",
-    "description": "在浏览器中直接将罗马数字转换为阿拉伯数字。",
+    "title": "罗马数字转数字 - Coding.Tools",
+    "description": "使用标准符号值将罗马数字转换为十进制数字。",
     "toolTitle": "罗马数字转数字",
-    "toolDescription": "将罗马数字转换为阿拉伯数字。",
+    "toolDescription": "将罗马数字字符串转换为十进制数字并查看常见符号值。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入罗马数字（如 XIV、MMXXIV）...",
     "outputPlaceholder": "阿拉伯数字结果将显示在这里...",
-    "descTitle": "罗马数字转数字转换器",
+    "descTitle": "将罗马数字转换为十进制数字",
     "descParas": [
-      "此工具将罗马数字转换为阿拉伯数字。",
-      "转换在浏览器本地运行。"
+      "<strong>罗马数字转数字读取罗马数字符号并返回匹配的十进制值。</strong> 将其用于日期、大纲、书籍章节、电影续集、钟面和历史参考文献。",
+      "标准符号为 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code> 和 <code>M</code>。减法表示法将较小的值放在较大的值之前，例如 <code>IV</code> 表示 4，<code>CM</code> 表示 900。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入罗马数字。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "在输入字段中键入或粘贴罗马数字。",
+      "查看十进制结果和快速参考符号。",
+      "复制该数字，或在转换另一个罗马数字之前清除该字段。"
     ],
-    "whatIs": "什么是罗马数字转数字？",
+    "whatIs": "什么是罗马数字转换？",
     "whatIsParas": [
-      "此工具将罗马数字表示转换为现代阿拉伯数字表示。"
+      "<strong>罗马数字转换</strong>从左到右添加符号值，当符号出现在较大符号之前时减去该符号。对于规范的现代表示法，请检查不寻常的序列，因为并非有效符号的每种排列都是标准的。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的罗马数字（使用字母I、V、X、L、C、D、M）。",
+    "inputNotesPara": "仅使用罗马数字字母。典型的现代符号表示从 <code>1</code> 到 <code>3999</code> 的值；较大的值需要纯文本工具可能不支持的上划线或其他约定。",
     "example": "示例",
-    "examplePara": "将罗马数字转换为数字：",
+    "examplePara": "<code>MMXXIV</code> 将 2000、20 和 4 组合起来得到 2024：",
     "exampleCode": "--- 罗马数字输入 ---\nXIV\n\n--- 阿拉伯数字 ---\n14"
   },
   "tw": {
-    "title": "羅馬數字到數位轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將羅馬數字轉換為十進制數字。",
+    "title": "羅馬數字轉數字 - Coding.Tools",
+    "description": "使用標準符號值將羅馬數字轉換為十進制數字。",
     "toolTitle": "羅馬數字轉數字",
-    "toolDescription": "將羅馬數字字串轉換為十進制數字。",
+    "toolDescription": "將羅馬數字字串轉換為十進制數字並查看常見符號值。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入羅馬數字（例如 XIV、MMXXIV）...",
     "outputPlaceholder": "號碼將會出現在這裡...",
-    "descTitle": "羅馬數字到數位轉換器",
+    "descTitle": "將羅馬數字轉換為十進制數字",
     "descParas": [
-      "該工具將羅馬數字字串轉換為其等效的十進制數字。它處理減法表示法（IV=4、IX=9、XL=40 等）。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>羅馬數字轉數字讀取羅馬數字符號並傳回匹配的十進制值。</strong> 將其用於日期、大綱、書籍章節、電影續集、鐘面和歷史參考文獻。",
+      "標準符號為 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code> 和 <code>M</code>。減法表示法將較小的值放在較大的值之前，例如 <code>IV</code> 表示 4，<code>CM</code> 表示 900。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "在輸入欄位中鍵入或貼上羅馬數字。",
-      "點選<strong>轉換</strong>即可取得十進制數。",
-      "使用<strong>複製</strong>複製結果。"
+      "查看十進制結果和快速參考符號。",
+      "複製該數字，或在轉換另一個羅馬數字之前清除該欄位。"
     ],
-    "whatIs": "羅馬數字是什麼？",
+    "whatIs": "什麼是羅馬數字轉換？",
     "whatIsParas": [
-      "轉換器從左到右讀取羅馬數字字串，並添加值。當較小的值在較大的值之前時，它使用減法表示法。"
+      "<strong>羅馬數字轉換</strong>從左到右添加符號值，當符號出現在較大符號之前時減去該符號。對於規範的現代表示法，請檢查不尋常的序列，因為並非有效符號的每種排列都是標準的。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "使用字母 I、V、X、L、C、D、M（不區分大小寫）輸入有效的羅馬數字。",
+    "inputNotesPara": "僅使用羅馬數字字母。典型的現代符號表示從 <code>1</code> 到 <code>3999</code> 的值；較大的值需要純文字工具可能不支援的上劃線或其他約定。",
     "example": "例子",
-    "examplePara": "將羅馬數字轉換為數字：",
+    "examplePara": "<code>MMXXIV</code> 將 2000、20 和 4 組合起來得到 2024：",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "jp": {
-    "title": "ローマ数字から数字へのコンバーター —coding.Tools",
-    "description": "ブラウザでローマ数字を 10 進数に直接変換します。",
+    "title": "ローマ数字から数字へ - Coding.Tools",
+    "description": "標準の記号値を使用して、ローマ数字を 10 進数に変換します。",
     "toolTitle": "ローマ数字から数字",
-    "toolDescription": "ローマ数字列を 10 進数に変換します。",
+    "toolDescription": "ローマ数字列を 10 進数に変換し、一般的な記号の値を確認します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "ローマ数字を入力してください (例: XIV、MMXXIV)...",
     "outputPlaceholder": "ここに数字が表示されます...",
-    "descTitle": "ローマ数字から数字へのコンバーター",
+    "descTitle": "ローマ数字を 10 進数に変換する",
     "descParas": [
-      "このツールは、ローマ数字の文字列を等価な 10 進数に変換します。減算表記 (IV=4、IX=9、XL=40 など) を処理します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>ローマ数字から数字へは、ローマ数字記号を読み取り、一致する 10 進数値を返します。</strong> 日付、概要、本の章、映画の続編、時計の文字盤、および歴史的参照に使用します。",
+      "標準記号は<code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>、<code>M</code>です。減算表記では、4 の場合は <code>IV</code>、900 の場合は <code>CM</code> のように、小さい値が大きい値の前に配置されます。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "入力フィールドにローマ数字を入力するか貼り付けます。",
-      "[<strong>変換</strong>] をクリックして 10 進数を取得します。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "10 進数の結果とクイック リファレンス記号を確認します。",
+      "別のローマ数字を変換する前に、番号をコピーするか、フィールドをクリアしてください。"
     ],
-    "whatIs": "ローマ字と数字とは何ですか?",
+    "whatIs": "ローマ数字変換とは何ですか？",
     "whatIsParas": [
-      "コンバーターはローマ数字の文字列を左から右に読み取り、値を加算します。小さい値が大きい値の前にある場合は、減算表記が使用されます。"
+      "<strong>ローマ数字変換</strong> は、記号の値を左から右に加算し、大きい記号の前に記号が表示される場合はその記号を減算します。正規の現代表記法については、有効な記号のすべての配置が標準であるわけではないため、異常なシーケンスを確認してください。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "I、V、X、L、C、D、M の文字を使用して有効なローマ数字を入力します (大文字と小文字は区別されません)。",
+    "inputNotesPara": "ローマ数字のみを使用してください。典型的な現代の表記法は、<code>1</code> から <code>3999</code> までの値を表します。より大きな値には、プレーン テキスト ツールがサポートしていない可能性がある上線やその他の規則が必要です。",
     "example": "例",
-    "examplePara": "ローマ数字を数値に変換するには:",
+    "examplePara": "<code>MMXXIV</code> は 2000、20、4 を組み合わせて 2024 を生成します。",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "kr": {
-    "title": "로마 숫자를 숫자로 변환하는 변환기 — Coding.Tools",
-    "description": "브라우저에서 로마 숫자를 십진수로 직접 변환하세요.",
+    "title": "로마 숫자를 숫자로 - Coding.Tools",
+    "description": "표준 기호 값을 사용하여 로마 숫자를 십진수로 변환합니다.",
     "toolTitle": "로마 숫자에서 숫자",
-    "toolDescription": "로마 숫자 문자열을 십진수로 변환합니다.",
+    "toolDescription": "로마 숫자 문자열을 십진수로 변환하고 일반적인 기호 값을 검토합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "로마 숫자를 입력하세요(예: XIV, MMXXIV)...",
     "outputPlaceholder": "여기에 번호가 표시됩니다...",
-    "descTitle": "로마 숫자를 숫자로 변환하는 변환기",
+    "descTitle": "로마 숫자를 십진수로 변환",
     "descParas": [
-      "이 도구는 로마 숫자 문자열을 해당하는 십진수로 변환합니다. 빼기 표기법(IV=4, IX=9, XL=40 등)을 처리합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>로마 숫자에서 숫자로 변환은 로마 숫자 기호를 읽고 해당하는 십진수 값을 반환합니다.</strong> 날짜, 개요, 책의 장 번호, 영화 속편, 시계 문자판 및 역사적 참고 자료에 사용합니다.",
+      "표준 기호는 <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> 및 <code>M</code>입니다. 빼기 표기법은 4의 경우 <code>IV</code>, 900의 경우 <code>CM</code>와 같이 큰 값 앞에 작은 값을 배치합니다."
     ],
     "howToUse": "사용방법",
     "steps": [
       "입력 필드에 로마 숫자를 입력하거나 붙여넣습니다.",
-      "십진수를 얻으려면 <strong>변환</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "십진수 결과와 빠른 참조 기호를 검토합니다.",
+      "다른 로마 숫자를 변환하기 전에 숫자를 복사하거나 필드를 지우십시오."
     ],
-    "whatIs": "로마 숫자를 숫자로 변환하는 것은 무엇입니까?",
+    "whatIs": "로마숫자 변환이란 무엇인가요?",
     "whatIsParas": [
-      "변환기는 로마 숫자 문자열을 왼쪽에서 오른쪽으로 읽어 값을 추가합니다. 작은 값이 큰 값 앞에 오면 빼기 표기법을 사용합니다."
+      "<strong>로마 숫자 변환</strong>는 왼쪽에서 오른쪽으로 기호 값을 더하고 더 큰 기호 앞에 나타날 때 기호를 뺍니다. 정식 현대 표기법의 경우 유효한 기호의 모든 배열이 표준은 아니기 때문에 특이한 순서를 검토하세요."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "I, V, X, L, C, D, M 문자를 사용하여 유효한 로마 숫자를 입력하세요(대소문자 구분 안 함).",
+    "inputNotesPara": "로마 숫자만 사용하세요. 일반적인 현대 표기법은 <code>1</code>에서 <code>3999</code>까지의 값을 나타냅니다. 더 큰 값에는 일반 텍스트 도구가 지원하지 않는 윗줄이나 기타 규칙이 필요합니다.",
     "example": "예",
-    "examplePara": "로마 숫자를 숫자로 변환:",
+    "examplePara": "<code>MMXXIV</code>는 2000, 20, 4를 결합하여 2024를 생성합니다.",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "fr": {
-    "title": "Convertisseur de chiffres romains en nombres — Coding.Tools",
-    "description": "Convertissez des chiffres romains en nombres décimaux directement dans votre navigateur.",
+    "title": "Chiffres romains en chiffres - Coding.Tools",
+    "description": "Convertissez des chiffres romains en nombres décimaux à l'aide de valeurs de symboles standard.",
     "toolTitle": "Chiffres romains en nombres",
-    "toolDescription": "Convertissez les chaînes de chiffres romains en nombres décimaux.",
+    "toolDescription": "Convertissez les chaînes de chiffres romains en nombres décimaux et examinez les valeurs de symboles courantes.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez le chiffre romain (par exemple XIV, MMXXIV)...",
     "outputPlaceholder": "Le numéro apparaîtra ici...",
-    "descTitle": "Convertisseur de chiffres romains en chiffres",
+    "descTitle": "Convertir des chiffres romains en nombres décimaux",
     "descParas": [
-      "Cet outil convertit les chaînes de chiffres romains en leurs équivalents décimaux. Il gère la notation soustractive (IV=4, IX=9, XL=40, etc.).",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Le convertisseur de chiffres romains en nombres lit les symboles romains et renvoie la valeur décimale correspondante.</strong> Utilisez-le pour les dates, les plans, les chapitres de livres, les suites de films, les cadrans d'horloge et les références historiques.",
+      "Les symboles standards sont <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> et <code>M</code>. La notation soustractive place une valeur plus petite avant une valeur plus grande, comme dans <code>IV</code> pour 4 et <code>CM</code> pour 900."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un chiffre romain dans le champ de saisie.",
-      "Cliquez sur <strong>Convertir</strong> pour obtenir le nombre décimal.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Tapez ou collez le chiffre romain dans le champ de saisie.",
+      "Examinez le résultat du nombre décimal et les symboles de référence rapide.",
+      "Copiez le numéro ou effacez le champ avant de convertir un autre chiffre romain."
     ],
-    "whatIs": "Qu'est-ce que le roman des nombres ?",
+    "whatIs": "Qu’est-ce que la conversion de chiffres romains ?",
     "whatIsParas": [
-      "Le convertisseur lit la chaîne de chiffres romains de gauche à droite, en ajoutant des valeurs. Lorsqu’une valeur plus petite précède une valeur plus grande, la notation soustractive est utilisée."
+      "<strong>Conversion de chiffres romains</strong> ajoute des valeurs de symbole de gauche à droite, en soustrayant un symbole lorsqu'il apparaît avant un symbole plus grand. Pour la notation canonique moderne, examinez les séquences inhabituelles, car tous les arrangements de symboles valides ne sont pas standard."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Saisissez des chiffres romains valides en utilisant les lettres I, V, X, L, C, D, M (insensible à la casse).",
+    "inputNotesPara": "Utilisez uniquement des lettres en chiffres romains. La notation moderne typique représente les valeurs de <code>1</code> à <code>3999</code> ; des valeurs plus élevées nécessitent des surlignages ou d'autres conventions que les outils de texte brut peuvent ne pas prendre en charge.",
     "example": "Exemple",
-    "examplePara": "Conversion de chiffres romains en nombres :",
+    "examplePara": "<code>MMXXIV</code> combine 2000, 20 et 4 pour produire 2024 :",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "de": {
-    "title": "Konverter römischer Ziffern in Zahlen – Coding.Tools",
-    "description": "Konvertieren Sie römische Ziffern direkt in Ihrem Browser in Dezimalzahlen.",
+    "title": "Römische Ziffern zu Zahlen - Coding.Tools",
+    "description": "Konvertieren Sie römische Ziffern mithilfe von Standardsymbolwerten in Dezimalzahlen.",
     "toolTitle": "Römische Ziffern zu Zahlen",
-    "toolDescription": "Konvertieren Sie römische Ziffernfolgen in Dezimalzahlen.",
+    "toolDescription": "Konvertieren Sie römische Ziffernfolgen in Dezimalzahlen und überprüfen Sie gängige Symbolwerte.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie eine römische Zahl ein (z. B. XIV, MMXXIV)...",
     "outputPlaceholder": "Die Nummer erscheint hier...",
-    "descTitle": "Konverter römischer Ziffern in Zahlen",
+    "descTitle": "Wandeln Sie römische Ziffern in Dezimalzahlen um",
     "descParas": [
-      "Dieses Tool konvertiert römische Ziffernfolgen in ihre dezimalen Zahlenäquivalente. Es beherrscht die subtraktive Notation (IV=4, IX=9, XL=40 usw.).",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>Der Umrechner von römischen Zahlen in Dezimalzahlen liest römische Zahlzeichen und gibt den passenden Dezimalwert zurück.</strong> Verwenden Sie ihn für Datumsangaben, Gliederungen, Buchkapitel, Filmfortsetzungen, Zifferblätter und historische Referenzen.",
+      "Standardsymbole sind <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> und <code>M</code>. Bei der subtraktiven Schreibweise wird ein kleinerer Wert vor einen größeren gesetzt, wie in <code>IV</code> für 4 und <code>CM</code> für 900."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben oder fügen Sie eine römische Zahl in das Eingabefeld ein.",
-      "Klicken Sie auf <strong>Konvertieren</strong>, um die Dezimalzahl zu erhalten.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben oder fügen Sie die römische Zahl in das Eingabefeld ein.",
+      "Überprüfen Sie das Ergebnis der Dezimalzahl und die Kurzreferenzsymbole.",
+      "Kopieren Sie die Zahl oder leeren Sie das Feld, bevor Sie eine andere römische Zahl konvertieren."
     ],
-    "whatIs": "Was bedeutet Roman to Numbers?",
+    "whatIs": "Was ist die Umrechnung römischer Zahlen?",
     "whatIsParas": [
-      "Der Konverter liest die römische Ziffernfolge von links nach rechts und addiert Werte. Wenn ein kleinerer Wert vor einem größeren Wert steht, wird die subtraktive Schreibweise verwendet."
+      "<strong>Konvertierung römischer Zahlen</strong> addiert Symbolwerte von links nach rechts und subtrahiert ein Symbol, wenn es vor einem größeren Symbol erscheint. Überprüfen Sie für die kanonische moderne Notation ungewöhnliche Sequenzen, da nicht jede Anordnung gültiger Symbole Standard ist."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie gültige römische Ziffern mit den Buchstaben I, V, X, L, C, D, M ein (Groß- und Kleinschreibung wird nicht beachtet).",
+    "inputNotesPara": "Verwenden Sie nur römische Ziffern. Die typische moderne Notation stellt Werte von <code>1</code> bis <code>3999</code> dar; Größere Werte erfordern Überstreichungen oder andere Konventionen, die von Nur-Text-Tools möglicherweise nicht unterstützt werden.",
     "example": "Beispiel",
-    "examplePara": "Römische Ziffern in Zahlen umwandeln:",
+    "examplePara": "<code>MMXXIV</code> kombiniert 2000, 20 und 4, um 2024 zu ergeben:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "es": {
-    "title": "Convertidor de números romanos a números — Coding.Tools",
-    "description": "Convierta números romanos a números decimales directamente en su navegador.",
+    "title": "Números romanos a números - Coding.Tools",
+    "description": "Convierta números romanos en números decimales utilizando valores de símbolos estándar.",
     "toolTitle": "Números romanos a números",
-    "toolDescription": "Convierta cadenas de números romanos a números decimales.",
+    "toolDescription": "Convierta cadenas de números romanos en números decimales y revise los valores de símbolos comunes.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Introduzca el número romano (por ejemplo, XIV, MMXXIV)...",
     "outputPlaceholder": "El número aparecerá aquí...",
-    "descTitle": "Convertidor de números romanos a números",
+    "descTitle": "Convertir números romanos a números decimales",
     "descParas": [
-      "Esta herramienta convierte cadenas de números romanos a sus equivalentes en números decimales. Maneja notación sustractiva (IV=4, IX=9, XL=40, etc.).",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>El conversor de números romanos a números lee símbolos romanos y devuelve el valor decimal correspondiente.</strong> Úselo para fechas, esquemas, capítulos de libros, secuelas de películas, esferas de reloj y referencias históricas.",
+      "Los símbolos estándar son <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> y <code>M</code>. La notación sustractiva coloca un valor menor antes de uno mayor, como en <code>IV</code> para 4 y <code>CM</code> para 900."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue un número romano en el campo de entrada.",
-      "Haga clic en <strong>Convertir</strong> para obtener el número decimal.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Escriba o pegue el número romano en el campo de entrada.",
+      "Revise el resultado del número decimal y los símbolos de referencia rápida.",
+      "Copie el número o borre el campo antes de convertir otro número romano."
     ],
-    "whatIs": "¿Qué es el romano con números?",
+    "whatIs": "¿Qué es la conversión de números romanos?",
     "whatIsParas": [
-      "El convertidor lee la cadena de números romanos de izquierda a derecha, sumando valores. Cuando un valor menor precede a uno mayor, se utiliza notación sustractiva."
+      "<strong>Conversión de números romanos</strong> suma valores de símbolos de izquierda a derecha, restando un símbolo cuando aparece antes de un símbolo más grande. Para la notación canónica moderna, revise las secuencias inusuales porque no todas las disposiciones de símbolos válidos son estándar."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese números romanos válidos usando las letras I, V, X, L, C, D, M (no distingue entre mayúsculas y minúsculas).",
+    "inputNotesPara": "Utilice únicamente letras de números romanos. La notación moderna típica representa valores de <code>1</code> a <code>3999</code>; los valores más grandes requieren líneas superpuestas u otras convenciones que las herramientas de texto sin formato pueden no admitir.",
     "example": "Ejemplo",
-    "examplePara": "Convertir números romanos a números:",
+    "examplePara": "<code>MMXXIV</code> combina 2000, 20 y 4 para producir 2024:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   },
   "pt": {
-    "title": "Conversor de algarismos romanos para números — Coding.Tools",
-    "description": "Converta algarismos romanos em números decimais diretamente no seu navegador.",
+    "title": "Algarismos Romanos em Números - Coding.Tools",
+    "description": "Converta algarismos romanos em números decimais usando valores de símbolos padrão.",
     "toolTitle": "Romano para Números",
-    "toolDescription": "Converta sequências de algarismos romanos em números decimais.",
+    "toolDescription": "Converta sequências de algarismos romanos em números decimais e revise os valores dos símbolos comuns.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Digite o algarismo romano (por exemplo, XIV, MMXXIV)...",
     "outputPlaceholder": "O número aparecerá aqui...",
-    "descTitle": "Conversor de algarismos romanos para números",
+    "descTitle": "Converter algarismos romanos em números decimais",
     "descParas": [
-      "Esta ferramenta converte strings de algarismos romanos em seus equivalentes de números decimais. Ele lida com notação subtrativa (IV=4, IX=9, XL=40, etc.).",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Números Romanos para Números lê símbolos numéricos romanos e retorna o valor decimal correspondente.</strong> Use-o para datas, esboços, capítulos de livros, sequências de filmes, mostradores de relógio e referências históricas.",
+      "Os símbolos padrão são <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> e <code>M</code>. A notação subtrativa coloca um valor menor antes de um valor maior, como em <code>IV</code> para 4 e <code>CM</code> para 900."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um algarismo romano no campo de entrada.",
-      "Clique em <strong>Converter</strong> para obter o número decimal.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Digite ou cole o algarismo romano no campo de entrada.",
+      "Revise o resultado do número decimal e os símbolos de referência rápida.",
+      "Copie o número ou limpe o campo antes de converter outro algarismo romano."
     ],
-    "whatIs": "O que é romano para números?",
+    "whatIs": "O que é conversão de algarismos romanos?",
     "whatIsParas": [
-      "O conversor lê a sequência de algarismos romanos da esquerda para a direita, adicionando valores. Quando um valor menor precede um valor maior, utiliza-se a notação subtrativa."
+      "<strong>Conversão de numerais romanos</strong> adiciona valores de símbolos da esquerda para a direita, subtraindo um símbolo quando ele aparece antes de um símbolo maior. Para notação canônica moderna, revise sequências incomuns porque nem todo arranjo de símbolos válidos é padrão."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira algarismos romanos válidos usando as letras I, V, X, L, C, D, M (sem distinção entre maiúsculas e minúsculas).",
+    "inputNotesPara": "Use apenas letras numéricas romanas. A notação moderna típica representa valores de <code>1</code> a <code>3999</code>; valores maiores exigem linhas sobrepostas ou outras convenções que as ferramentas de texto simples podem não suportar.",
     "example": "Exemplo",
-    "examplePara": "Convertendo algarismos romanos em números:",
+    "examplePara": "<code>MMXXIV</code> combina 2.000, 20 e 4 para produzir 2.024:",
     "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
   }
 }

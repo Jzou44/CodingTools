@@ -1,272 +1,272 @@
 {
   "en": {
-    "title": "Hex to RGB Converter — Coding.Tools",
-    "description": "Convert hex color codes to RGB format with live preview. Fast, private, and free.",
+    "title": "Hex to RGB Converter - Coding.Tools",
+    "description": "Convert CSS hex color codes to RGB channel values with a live color preview.",
     "toolTitle": "Hex to RGB",
-    "toolDescription": "Convert hex color codes to RGB values with a live color preview.",
+    "toolDescription": "Turn 3- or 6-digit hex colors into red, green, and blue channel values.",
     "categoryName": "Number Conversion",
     "inputPlaceholder": "Enter hex color (e.g. #FF5733, 3498db)...",
     "outputPlaceholder": "RGB color will appear here...",
-    "descTitle": "Hex to RGB Converter",
+    "descTitle": "Convert CSS hex colors to RGB channels",
     "descParas": [
-      "This tool converts hexadecimal color codes to RGB format with a live color preview. Supports 3-digit and 6-digit hex codes.",
-      "The conversion runs locally in your browser."
+      "<strong>Hex to RGB converts a CSS-style hex color into red, green, and blue channel values.</strong> Use it when translating design tokens, stylesheet colors, screenshots, or palette values into <code>rgb(r, g, b)</code> notation.",
+      "The tool accepts 3-digit shorthand such as <code>#F53</code> and 6-digit values such as <code>#FF5733</code>, with or without the leading <code>#</code>. Each channel is a number from <code>0</code> to <code>255</code>."
     ],
     "howToUse": "How to use",
     "steps": [
       "Type or paste a hex color code into the input field.",
-      "The RGB value and color preview update automatically.",
-      "Click <strong>Pick a Random Color</strong> for a random hex color.",
+      "Watch the RGB value and color preview update automatically.",
+      "Click <strong>Pick a Random Color</strong> if you want a generated sample color.",
       "Use <strong>Copy</strong> to copy the RGB value."
     ],
-    "whatIs": "What is Hex to RGB?",
+    "whatIs": "What is hex to RGB conversion?",
     "whatIsParas": [
-      "Hex color codes use hexadecimal numbers to represent colors. #FF5733 means Red=FF(255), Green=57(87), Blue=33(51)."
+      "<strong>Hex to RGB conversion</strong> splits a color like <code>#FF5733</code> into three byte-sized hex pairs: <code>FF</code> for red, <code>57</code> for green, and <code>33</code> for blue. Those pairs become decimal channel values <code>255</code>, <code>87</code>, and <code>51</code>."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a hex color with or without the # prefix. Both 3-digit and 6-digit formats are supported.",
+    "inputNotesPara": "Use valid hex digits <code>0-9</code> and <code>A-F</code>. This converter outputs RGB only; alpha or opacity values belong in RGBA workflows.",
     "example": "Example",
-    "examplePara": "Converting hex color to RGB:",
+    "examplePara": "The hex color <code>#FF5733</code> maps to red 255, green 87, and blue 51:",
     "exampleCode": "--- Hex Input ---\n#FF5733\n\n--- RGB Output ---\nrgb(255, 87, 51)"
   },
   "cn": {
-    "title": "十六进制转RGB转换器 — Coding.Tools",
-    "description": "在浏览器中直接将十六进制颜色代码转换为RGB值。",
+    "title": "十六进制到 RGB 转换器 - Coding.Tools",
+    "description": "通过实时颜色预览将 CSS 十六进制颜色代码转换为 RGB 通道值。",
     "toolTitle": "十六进制转RGB",
-    "toolDescription": "将十六进制颜色代码转换为RGB颜色值。",
+    "toolDescription": "将 3 位或 6 位十六进制颜色转换为红色、绿色和蓝色通道值。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入十六进制颜色（如 #FF5733、FF5733）...",
     "outputPlaceholder": "RGB结果将显示在这里...",
-    "descTitle": "十六进制转RGB转换器",
+    "descTitle": "将 CSS 十六进制颜色转换为 RGB 通道",
     "descParas": [
-      "此工具将十六进制颜色代码转换为RGB（红绿蓝）颜色值。",
-      "转换在浏览器本地运行。"
+      "<strong>Hex 到 RGB 将 CSS 样式的十六进制颜色转换为红色、绿色和蓝色通道值。</strong> 将设计标记、样式表颜色、屏幕截图或调色板值转换为 <code>rgb(r, g, b)</code> 表示法时使用它。",
+      "该工具接受 3 位数速记（例如 <code>#F53</code>）和 6 位数值（例如 <code>#FF5733</code>），带或不带前导 <code>#</code>。每个通道都是从 <code>0</code> 到 <code>255</code> 的数字。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入十六进制颜色代码。",
-      "RGB 值和颜色预览会自动更新。",
-      "点击<strong>随机颜色</strong>获取随机十六进制颜色。",
-      "使用<strong>复制</strong>复制 RGB 值。"
+      "在输入字段中键入或粘贴十六进制颜色代码。",
+      "观看 RGB 值和颜色预览自动更新。",
+      "如果您想要生成的样本颜色，请单击 <strong>选择随机颜色</strong>。",
+      "使用 <strong>复制</strong> 复制 RGB 值。"
     ],
-    "whatIs": "什么是十六进制转RGB？",
+    "whatIs": "什么是十六进制到 RGB 的转换？",
     "whatIsParas": [
-      "十六进制颜色代码是Web开发中表示颜色的常用格式，RGB表示红、绿、蓝三个颜色通道的值。"
+      "<strong>Hex 到 RGB 的转换</strong> 将像 <code>#FF5733</code> 这样的颜色拆分为三个字节大小的十六进制对：<code>FF</code> 表示红色，<code>57</code> 表示绿色，<code>33</code> 表示蓝色。这些对成为十进制通道值 <code>255</code>、<code>87</code> 和 <code>51</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入有效的十六进制颜色代码（3位或6位，可带#前缀）。",
+    "inputNotesPara": "使用有效的十六进制数字 <code>0-9</code> 和 <code>A-F</code>。该转换器仅输出RGB； alpha 或不透明度值属于 RGBA 工作流程。",
     "example": "示例",
-    "examplePara": "将十六进制转换为RGB：",
+    "examplePara": "十六进制颜色 <code>#FF5733</code> 映射到红色 255、绿色 87 和蓝色 51：",
     "exampleCode": "--- 十六进制输入 ---\n#FF5733\n\n--- RGB ---\nrgb(255, 87, 51)"
   },
   "tw": {
-    "title": "十六進位到 RGB 轉換器 — Coding.Tools",
-    "description": "透過即時預覽將十六進位顏色代碼轉換為 RGB 格式。快速、私密且免費。",
+    "title": "十六進位到 RGB 轉換器 - Coding.Tools",
+    "description": "透過即時色彩預覽將 CSS 十六進位顏色代碼轉換為 RGB 頻道值。",
     "toolTitle": "十六進位轉RGB",
-    "toolDescription": "將十六進位顏色代碼轉換為RGB顏色值。",
+    "toolDescription": "將 3 位元或 6 位元十六進位顏色轉換為紅色、綠色和藍色通道值。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入十六進位顏色（例如#FF5733、3498db）...",
     "outputPlaceholder": "RGB顏色將會出現在這裡...",
-    "descTitle": "十六進位轉RGB轉換器",
+    "descTitle": "將 CSS 十六進位顏色轉換為 RGB 頻道",
     "descParas": [
-      "此工具將十六進位顏色代碼轉換為RGB（紅綠藍）顏色值，並提供即時顏色預覽。",
-      "轉換在瀏覽器本地運行。"
+      "<strong>Hex 到 RGB 將 CSS 樣式的十六進位顏色轉換為紅色、綠色和藍色通道值。</strong> 將設計標記、樣式表顏色、螢幕截圖或調色盤值轉換為 <code>rgb(r, g, b)</code> 表示法時使用它。",
+      "此工具接受 3 位數速記（例如 <code>#F53</code>）和 6 位數值（例如 <code>#FF5733</code>），有或沒有前導 <code>#</code>。每個通道都是從 <code>0</code> 到 <code>255</code> 的數字。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入欄位中輸入或貼上十六進位顏色代碼。",
-      "RGB値和顏色預覽會自動更新。",
-      "點擊<strong>隨機顏色</strong>獲取隨機的十六進位顏色。",
-      "使用<strong>複製</strong>複製RGB値。"
+      "在輸入欄位中鍵入或貼上十六進位顏色代碼。",
+      "觀看 RGB 值和色彩預覽自動更新。",
+      "如果您想要產生的樣本顏色，請點選 <strong>選擇隨機顏色</strong>。",
+      "使用 <strong>複製</strong> 複製 RGB 值。"
     ],
-    "whatIs": "什麼是十六進位轉RGB？",
+    "whatIs": "什麼是十六進位到 RGB 的轉換？",
     "whatIsParas": [
-      "十六進位顏色代碼使用十六進位數字來表示顏色。#FF5733 表示紅色=FF(255)、綠色=57(87)、藍色=33(51)。"
+      "<strong>Hex 到 RGB 的轉換</strong> 將像 <code>#FF5733</code> 這樣的顏色拆分為三個位元組大小的十六進位對：<code>FF</code> 表示紅色，<code>57</code> 表示綠色，<code>33</code> 表示藍色。這些對成為十進制通道值 <code>255</code>、<code>87</code> 和 <code>51</code>。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "輸入帶或不帶 # 前綴的十六進位顏色。支援3位和6位格式。",
+    "inputNotesPara": "使用有效的十六進位數字 <code>0-9</code> 和 <code>A-F</code>。此轉換器僅輸出RGB； alpha 或不透明度值屬於 RGBA 工作流程。",
     "example": "範例",
-    "examplePara": "將十六進位顏色轉換為RGB：",
+    "examplePara": "十六進位顏色 <code>#FF5733</code> 映射到紅色 255、綠色 87 和藍色 51：",
     "exampleCode": "--- 十六進位輸入 ---\n#FF5733\n\n--- RGB 輸出 ---\nrgb(255, 87, 51)"
   },
   "jp": {
-    "title": "16 進数から RGB へのコンバーター —coding.tools",
-    "description": "ライブ プレビューを使用して 16 進カラー コードを RGB 形式に変換します。高速、プライベート、そして無料。",
+    "title": "16 進数から RGB へのコンバーター - Coding.Tools",
+    "description": "ライブ カラー プレビューを使用して、CSS 16 進カラー コードを RGB チャネル値に変換します。",
     "toolTitle": "16進数からRGB",
-    "toolDescription": "16進数カラーコードをRGB値に変換します。",
+    "toolDescription": "3 桁または 6 桁の 16 進カラーを赤、緑、青のチャネル値に変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "16 進数の色を入力してください (例: #FF5733、3498db)...",
     "outputPlaceholder": "ここにRGBカラーが表示されます...",
-    "descTitle": "16進数からRGB変換",
+    "descTitle": "CSS 16 進カラーを RGB チャネルに変換",
     "descParas": [
-      "このツールは16進数カラーコードをRGB（赤・緑・青）カラー值に変換し、ライブプレビューを提供します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>Hex から RGB は、CSS スタイルの 16 進数カラーを赤、緑、青のチャネル値に変換します。</strong> デザイン トークン、スタイルシート カラー、スクリーンショット、またはパレット値を <code>rgb(r, g, b)</code> 表記に変換するときに使用します。",
+      "このツールは、先頭の <code>#</code> の有無にかかわらず、<code>#F53</code> などの 3 桁の短縮表記と、<code>#FF5733</code> などの 6 桁の値を受け入れます。各チャンネルは <code>0</code> から <code>255</code> までの番号です。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力欄に16進数カラーコードを入力または貼り付けます。",
-      "RGB値とカラープレビューが自動的に更新されます。",
-      "<strong>ランダムな色</strong>をクリックしてランダムな16進数カラーを取得します。",
-      "<strong>コピー</strong>でRGB値をコピーします。"
+      "入力フィールドに 16 進数のカラー コードを入力するか貼り付けます。",
+      "RGB 値と色のプレビューが自動的に更新されるのを確認してください。",
+      "生成されたサンプル カラーが必要な場合は、<strong>ランダム カラーを選択</strong> をクリックします。",
+      "<strong>コピー</strong> を使用して RGB 値をコピーします。"
     ],
-    "whatIs": "16進数からRGBとは？",
+    "whatIs": "16 進数から RGB への変換とは何ですか?",
     "whatIsParas": [
-      "16進数カラーコードは16進数を使って色を表现する方法です。#FF5733 は赤=FF(255)、緑=57(87)、青=33(51)を意味します。"
+      "<strong>16 進数から RGB への変換</strong> は、<code>#FF5733</code> のような色を 3 バイト サイズの 16 進数ペアに分割します。赤は <code>FF</code>、緑は <code>57</code>、青は <code>33</code> です。これらのペアは、10 進数のチャネル値 <code>255</code>、<code>87</code>、および <code>51</code> になります。"
     ],
     "inputNotes": "入力についての注意",
-    "inputNotesPara": "#プレフィックスの有無は問いません。3桂と6桂の形式に対応しています。",
+    "inputNotesPara": "有効な 16 進数 <code>0-9</code> および <code>A-F</code> を使用してください。このコンバータは RGB のみを出力します。アルファまたは不透明度の値は RGBA ワークフローに属します。",
     "example": "例",
-    "examplePara": "16進数カラーをRGBに変換：",
+    "examplePara": "16 進カラー <code>#FF5733</code> は、赤 255、緑 87、青 51 にマッピングされます。",
     "exampleCode": "--- 16進数入力 ---\n#FF5733\n\n--- RGB出力 ---\nrgb(255, 87, 51)"
   },
   "kr": {
-    "title": "16진수-RGB 변환기 — Coding.Tools",
-    "description": "실시간 미리보기를 통해 16진수 색상 코드를 RGB 형식으로 변환하세요. 빠르고 비공개이며 무료입니다.",
+    "title": "16진수 - RGB 변환기 - Coding.Tools",
+    "description": "실시간 색상 미리보기를 사용하여 CSS 16진수 색상 코드를 RGB 채널 ​​값으로 변환하세요.",
     "toolTitle": "16진수에서 RGB",
-    "toolDescription": "16진수색상 코드를 RGB 값으로 변환합니다.",
+    "toolDescription": "3자리 또는 6자리 16진수 색상을 빨간색, 녹색 및 파란색 채널 값으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "16진수 색상을 입력하세요(예: #FF5733, 3498db)...",
     "outputPlaceholder": "RGB 색상이 여기에 표시됩니다...",
-    "descTitle": "16진수에서 RGB 변환",
+    "descTitle": "CSS 16진수 색상을 RGB 채널로 변환",
     "descParas": [
-      "이 도구는 16진수색상 코드를 RGB(빨간색 · 초록색 · 파란색) 색상 값으로 변환하고 실시간 미리보기를 제공합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>Hex - RGB는 CSS 스타일의 16진수 색상을 빨간색, 녹색 및 파란색 채널 값으로 변환합니다.</strong> 디자인 토큰, 스타일시트 색상, 스크린샷 또는 팔레트 값을 <code>rgb(r, g, b)</code> 표기법으로 변환할 때 사용합니다.",
+      "이 도구는 앞에 <code>#</code>가 있거나 없이 <code>#F53</code>와 같은 3자리 약어 및 <code>#FF5733</code>와 같은 6자리 값을 허용합니다. 각 채널은 <code>0</code>부터 <code>255</code>까지의 숫자입니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 필드에 16진수색상 코드를 입력하거나 붙여넣습니다.",
-      "RGB 값과 색상 미리보기가 자동으로 업데이트됩니다.",
-      "<strong>랜덤 색상</strong>을 클릭하여 무작위 16진수색상을 가져옵니다.",
-      "<strong>복사</strong>로 RGB 값을 복사합니다."
+      "입력 필드에 16진수 색상 코드를 입력하거나 붙여넣습니다.",
+      "RGB 값과 색상 미리보기 업데이트를 자동으로 확인하세요.",
+      "생성된 샘플 색상을 원하면 <strong>임의의 색상을 선택하세요.</strong>를 클릭하세요.",
+      "<strong>복사</strong>를 사용하여 RGB 값을 복사합니다."
     ],
-    "whatIs": "16진수에서 RGB란?",
+    "whatIs": "16진수에서 RGB로의 변환이란 무엇입니까?",
     "whatIsParas": [
-      "16진수색상 코드는 16진수를 사용하여 색상을 표현하는 방법입니다. #FF5733은 빨간=FF(255), 초록=57(87), 파란=33(51)을 의미합니다."
+      "<strong>Hex에서 RGB로 변환</strong>는 <code>#FF5733</code>와 같은 색상을 3바이트 크기의 16진수 쌍(빨간색의 경우 <code>FF</code>, 녹색의 경우 <code>57</code>, 파란색의 경우 <code>33</code>)으로 나눕니다. 이러한 쌍은 10진수 채널 값 <code>255</code>, <code>87</code> 및 <code>51</code>가 됩니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "# 접두사 포함 똔 미포함 상태로 16진수색상을 입력하세요. 3자리 및 6자리 형식을 지원합니다.",
+    "inputNotesPara": "유효한 16진수 <code>0-9</code> 및 <code>A-F</code>를 사용하세요. 이 변환기는 RGB만 출력합니다. 알파 또는 불투명도 값은 RGBA 작업 흐름에 속합니다.",
     "example": "예시",
-    "examplePara": "16진수색상을 RGB로 변환:",
+    "examplePara": "16진수 색상 <code>#FF5733</code>는 빨간색 255, 녹색 87 및 파란색 51에 매핑됩니다.",
     "exampleCode": "--- 16진수 입력 ---\n#FF5733\n\n--- RGB 출력 ---\nrgb(255, 87, 51)"
   },
   "fr": {
-    "title": "Convertisseur Hex vers RVB — Coding.Tools",
-    "description": "Convertissez les codes de couleur hexadécimaux au format RVB avec aperçu en direct. Rapide, privé et gratuit.",
+    "title": "Convertisseur hexadécimal en RGB - Coding.Tools",
+    "description": "Convertissez les codes de couleur hexadécimaux CSS en valeurs de canal RGB avec un aperçu des couleurs en direct.",
     "toolTitle": "Hexadécimal en RGB",
-    "toolDescription": "Convertissez les codes couleur hexadécimaux en valeurs RGB.",
+    "toolDescription": "Transformez les couleurs hexadécimales à 3 ou 6 chiffres en valeurs de canal rouge, vert et bleu.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez la couleur hexadécimale (par exemple #FF5733, 3498db)...",
     "outputPlaceholder": "La couleur RVB apparaîtra ici...",
-    "descTitle": "Convertisseur Hex vers RGB",
+    "descTitle": "Convertir les couleurs hexadécimales CSS en canaux RGB",
     "descParas": [
-      "Cet outil convertit les codes couleur hexadécimaux en valeurs RGB (rouge, vert, bleu) avec un aperçu en direct.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Hex vers RVB convertit une couleur hexadécimale de style CSS en valeurs de canal rouge, vert et bleu.</strong> Utilisez-le lors de la traduction de jetons de conception, de couleurs de feuille de style, de captures d'écran ou de valeurs de palette en notation <code>rgb(r, g, b)</code>.",
+      "L'outil accepte des raccourcis à 3 chiffres tels que <code>#F53</code> et des valeurs à 6 chiffres telles que <code>#FF5733</code>, avec ou sans le début <code>#</code>. Chaque canal est un numéro de <code>0</code> à <code>255</code>."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez un code couleur hexadécimal dans le champ de saisie.",
-      "La valeur RGB et l'aperçu de couleur se mettent à jour automatiquement.",
-      "Cliquez sur <strong>Couleur aléatoire</strong> pour obtenir une couleur hexadécimale aléatoire.",
-      "Utilisez <strong>Copier</strong> pour copier la valeur RGB."
+      "Tapez ou collez un code de couleur hexadécimal dans le champ de saisie.",
+      "Regardez la valeur RGB et l'aperçu des couleurs se mettre à jour automatiquement.",
+      "Cliquez sur <strong>Choisir une couleur aléatoire</strong> si vous souhaitez générer un échantillon de couleur.",
+      "Utilisez <strong>Copier</strong> pour copier la valeur RVB."
     ],
-    "whatIs": "Qu'est-ce que Hex vers RGB ?",
+    "whatIs": "Qu'est-ce que la conversion hexadécimal en RGB ?",
     "whatIsParas": [
-      "Les codes couleur hexadécimaux utilisent des nombres hexadécimaux pour représenter les couleurs. #FF5733 signifie Rouge=FF(255), Vert=57(87), Bleu=33(51)."
+      "La <strong>conversion Hex vers RVB</strong> divise une couleur telle que <code>#FF5733</code> en trois paires hexadécimales de la taille d'un octet : <code>FF</code> pour le rouge, <code>57</code> pour le vert et <code>33</code> pour le bleu. Ces paires deviennent des valeurs de canal décimales <code>255</code>, <code>87</code> et <code>51</code>."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez une couleur hexadécimale avec ou sans le préfixe #. Les formats 3 et 6 chiffres sont supportés.",
+    "inputNotesPara": "Utilisez les chiffres hexadécimaux valides <code>0-9</code> et <code>A-F</code>. Ce convertisseur produit uniquement RGB ; les valeurs alpha ou d'opacité appartiennent aux flux de travail RGBA.",
     "example": "Exemple",
-    "examplePara": "Conversion d'une couleur hexadécimale en RGB :",
+    "examplePara": "La couleur hexadécimale <code>#FF5733</code> correspond au rouge 255, au vert 87 et au bleu 51 :",
     "exampleCode": "--- Entrée hexadécimale ---\n#FF5733\n\n--- Sortie RGB ---\nrgb(255, 87, 51)"
   },
   "de": {
     "title": "Hex-zu-RGB-Konverter – Coding.Tools",
-    "description": "Konvertieren Sie Hex-Farbcodes mit Live-Vorschau in das RGB-Format. Schnell, privat und kostenlos.",
+    "description": "Konvertieren Sie CSS-Hex-Farbcodes in RGB-Kanalwerte mit einer Live-Farbvorschau.",
     "toolTitle": "Hexadezimal zu RGB",
-    "toolDescription": "Konvertieren Sie Hex-Farbcodes in RGB-Werte.",
+    "toolDescription": "Wandeln Sie 3- oder 6-stellige Hex-Farben in rote, grüne und blaue Kanalwerte um.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie die Hex-Farbe ein (z. B. #FF5733, 3498db) ...",
     "outputPlaceholder": "Hier erscheint die RGB-Farbe...",
-    "descTitle": "Hex zu RGB Konverter",
+    "descTitle": "Konvertieren Sie CSS-Hex-Farben in RGB-Kanäle",
     "descParas": [
-      "Dieses Tool konvertiert Hex-Farbcodes in RGB (Rot, Grün, Blau) Farbwerte mit einer Live-Vorschau.",
-      "Die Konvertierung erfolgt lokal in Ihrem Browser."
+      "<strong>Hex zu RGB konvertiert eine Hex-Farbe im CSS-Stil in rote, grüne und blaue Kanalwerte.</strong> Verwenden Sie es, wenn Sie Design-Tokens, Stylesheet-Farben, Screenshots oder Palettenwerte in die <code>rgb(r, g, b)</code>-Notation übersetzen.",
+      "Das Tool akzeptiert dreistellige Abkürzungen wie <code>#F53</code> und sechsstellige Werte wie <code>#FF5733</code>, mit oder ohne das führende <code>#</code>. Jeder Kanal ist eine Nummer von <code>0</code> bis <code>255</code>."
     ],
     "howToUse": "Verwendung",
     "steps": [
-      "Geben Sie einen Hex-Farbcode in das Eingabefeld ein.",
-      "Der RGB-Wert und die Farbvorschau werden automatisch aktualisiert.",
-      "Klicken Sie auf <strong>Zufällige Farbe</strong> für einen zufälligen Hex-Farbcode.",
-      "Verwenden Sie <strong>Kopieren</strong> um den RGB-Wert zu kopieren."
+      "Geben oder fügen Sie einen Hex-Farbcode in das Eingabefeld ein.",
+      "Beobachten Sie, wie der RGB-Wert und die Farbvorschau automatisch aktualisiert werden.",
+      "Klicken Sie auf <strong>Wählen Sie eine zufällige Farbe aus</strong>, wenn Sie eine generierte Beispielfarbe wünschen.",
+      "Verwenden Sie <strong>Kopieren</strong>, um den RGB-Wert zu kopieren."
     ],
-    "whatIs": "Was ist Hex zu RGB?",
+    "whatIs": "Was ist die Konvertierung von Hex in RGB?",
     "whatIsParas": [
-      "Hex-Farbcodes verwenden Hexadezimalzahlen um Farben darzustellen. #FF5733 bedeutet Rot=FF(255), Grün=57(87), Blau=33(51)."
+      "Die Konvertierung von <strong>Hex zu RGB</strong> teilt eine Farbe wie <code>#FF5733</code> in drei Byte-große Hex-Paare auf: <code>FF</code> für Rot, <code>57</code> für Grün und <code>33</code> für Blau. Diese Paare werden zu den Dezimalkanalwerten <code>255</code>, <code>87</code> und <code>51</code>."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Geben Sie eine Hex-Farbe mit oder ohne #-Präfix ein. 3-stellige und 6-stellige Formate werden unterstützt.",
+    "inputNotesPara": "Verwenden Sie gültige Hexadezimalzahlen <code>0-9</code> und <code>A-F</code>. Dieser Konverter gibt nur RGB aus; Alpha- oder Deckkraftwerte gehören in RGBA-Arbeitsabläufe.",
     "example": "Beispiel",
-    "examplePara": "Hex-Farbe in RGB konvertieren:",
+    "examplePara": "Die Hex-Farbe <code>#FF5733</code> wird Rot 255, Grün 87 und Blau 51 zugeordnet:",
     "exampleCode": "--- Hex-Eingabe ---\n#FF5733\n\n--- RGB-Ausgabe ---\nrgb(255, 87, 51)"
   },
   "es": {
-    "title": "Convertidor de hexadecimal a RGB - Coding.Tools",
-    "description": "Convierta códigos de color hexadecimales al formato RGB con vista previa en vivo. Rápido, privado y gratuito.",
+    "title": "Convertidor hexadecimal a RGB - Coding.Tools",
+    "description": "Convierta códigos de color hexadecimales CSS a valores de canal RGB con una vista previa de color en vivo.",
     "toolTitle": "Hexadecimal a RGB",
-    "toolDescription": "Convierte códigos de color hexadecimal a valores RGB.",
+    "toolDescription": "Convierta colores hexadecimales de 3 o 6 dígitos en valores de canal rojo, verde y azul.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Ingrese el color hexadecimal (por ejemplo, #FF5733, 3498db)...",
     "outputPlaceholder": "El color RGB aparecerá aquí...",
-    "descTitle": "Conversor de Hex a RGB",
+    "descTitle": "Convierta colores hexadecimales CSS a canales RGB",
     "descParas": [
-      "Esta herramienta convierte códigos de color hexadecimal a valores RGB (rojo, verde, azul) con una vista previa en directo.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Hex a RGB convierte un color hexadecimal de estilo CSS en valores de canal rojo, verde y azul.</strong> Úselo al traducir tokens de diseño, colores de hojas de estilo, capturas de pantalla o valores de paleta a notación <code>rgb(r, g, b)</code>.",
+      "La herramienta acepta taquigrafía de 3 dígitos, como <code>#F53</code>, y valores de 6 dígitos, como <code>#FF5733</code>, con o sin el <code>#</code> inicial. Cada canal es un número de <code>0</code> a <code>255</code>."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue un código de color hexadecimal en el campo de entrada.",
-      "El valor RGB y la vista previa del color se actualizan automáticamente.",
-      "Haga clic en <strong>Color aleatorio</strong> para obtener un color hexadecimal aleatorio.",
-      "Use <strong>Copiar</strong> para copiar el valor RGB."
+      "Observe la actualización automática del valor RGB y de la vista previa del color.",
+      "Haga clic en <strong>Seleccione un color aleatorio</strong> si desea generar un color de muestra.",
+      "Utilice <strong>Copiar</strong> para copiar el valor RGB."
     ],
-    "whatIs": "¿Qué es Hex a RGB?",
+    "whatIs": "¿Qué es la conversión de hexadecimal a RGB?",
     "whatIsParas": [
-      "Los códigos de color hexadecimal utilizan números hexadecimales para representar colores. #FF5733 significa Rojo=FF(255), Verde=57(87), Azul=33(51)."
+      "<strong>Conversión de hexadecimal a RGB</strong> divide un color como <code>#FF5733</code> en tres pares hexadecimales de tamaño de byte: <code>FF</code> para rojo, <code>57</code> para verde y <code>33</code> para azul. Esos pares se convierten en valores de canal decimal <code>255</code>, <code>87</code> y <code>51</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un color hexadecimal con o sin el prefijo #. Se admiten formatos de 3 y 6 dígitos.",
+    "inputNotesPara": "Utilice dígitos hexadecimales válidos <code>0-9</code> y <code>A-F</code>. Este convertidor sólo genera RGB; Los valores alfa u opacidad pertenecen a los flujos de trabajo RGBA.",
     "example": "Ejemplo",
-    "examplePara": "Conversión de color hexadecimal a RGB:",
+    "examplePara": "El color hexadecimal <code>#FF5733</code> se asigna al rojo 255, al verde 87 y al azul 51:",
     "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Salida RGB ---\nrgb(255, 87, 51)"
   },
   "pt": {
-    "title": "Conversor Hex para RGB — Coding.Tools",
-    "description": "Converta códigos de cores hexadecimais para o formato RGB com visualização ao vivo. Rápido, privado e gratuito.",
+    "title": "Conversor hexadecimal para RGB - Coding.Tools",
+    "description": "Converta códigos de cores hexadecimais CSS em valores de canal RGB com uma visualização de cores ao vivo.",
     "toolTitle": "Hexadecimal para RGB",
-    "toolDescription": "Converta códigos de cor hexadecimal em valores RGB.",
+    "toolDescription": "Transforme cores hexadecimais de 3 ou 6 dígitos em valores de canal vermelho, verde e azul.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira a cor hexadecimal (por exemplo, #FF5733, 3498db)...",
     "outputPlaceholder": "A cor RGB aparecerá aqui...",
-    "descTitle": "Conversor de Hex para RGB",
+    "descTitle": "Converter cores hexadecimais CSS em canais RGB",
     "descParas": [
-      "Esta ferramenta converte códigos de cor hexadecimal em valores RGB (vermelho, verde, azul) com visualização ao vivo.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Hex para RGB converte uma cor hexadecimal de estilo CSS em valores de canal vermelho, verde e azul.</strong> Use-o ao traduzir tokens de design, cores de folhas de estilo, capturas de tela ou valores de paleta em notação <code>rgb(r, g, b)</code>.",
+      "A ferramenta aceita abreviações de 3 dígitos, como <code>#F53</code>, e valores de 6 dígitos, como <code>#FF5733</code>, com ou sem o <code>#</code> inicial. Cada canal é um número de <code>0</code> a <code>255</code>."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Digite ou cole um código de cor hexadecimal no campo de entrada.",
-      "O valor RGB e a visualização da cor são atualizados automaticamente.",
-      "Clique em <strong>Cor aleatória</strong> para obter uma cor hexadecimal aleatória.",
+      "Observe o valor RGB e a atualização da visualização de cores automaticamente.",
+      "Clique em <strong>Escolher uma cor aleatória</strong> se desejar uma cor de amostra gerada.",
       "Use <strong>Copiar</strong> para copiar o valor RGB."
     ],
-    "whatIs": "O que é Hex para RGB?",
+    "whatIs": "O que é conversão de hexadecimal para RGB?",
     "whatIsParas": [
-      "Os códigos de cor hexadecimal usam números hexadecimais para representar cores. #FF5733 significa Vermelho=FF(255), Verde=57(87), Azul=33(51)."
+      "Conversão <strong>Hex para RGB</strong> divide uma cor como <code>#FF5733</code> em três pares hexadecimais de tamanho de byte: <code>FF</code> para vermelho, <code>57</code> para verde e <code>33</code> para azul. Esses pares tornam-se valores de canais decimais <code>255</code>, <code>87</code> e <code>51</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira uma cor hexadecimal com ou sem o prefixo #. Formatos de 3 e 6 dígitos são suportados.",
+    "inputNotesPara": "Use dígitos hexadecimais válidos <code>0-9</code> e <code>A-F</code>. Este conversor produz apenas RGB; os valores de alfa ou opacidade pertencem aos fluxos de trabalho RGBA.",
     "example": "Exemplo",
-    "examplePara": "Conversão de cor hexadecimal para RGB:",
+    "examplePara": "A cor hexadecimal <code>#FF5733</code> mapeia para vermelho 255, verde 87 e azul 51:",
     "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Saída RGB ---\nrgb(255, 87, 51)"
   }
 }

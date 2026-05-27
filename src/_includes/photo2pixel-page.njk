@@ -275,42 +275,7 @@
 {% endblock %}
 
 {% block description %}
-  <h2>{{ toolData.descTitle or "Photo2Pixel" }}</h2>
-  <p>
-    <a class="p2p-reference-link" href="https://github.com/Jzou44/photo2pixel" target="_blank" rel="noopener noreferrer">https://github.com/Jzou44/photo2pixel</a>
-  </p>
-  {% if toolData.descParas %}
-    {% for para in toolData.descParas %}
-    <p>{{ para | safe }}</p>
-    {% endfor %}
-  {% else %}
-    <p>Photo2Pixel converts photos into pixel art in the browser using the same ONNX model workflow as the reference project. Images stay local and are processed with WebAssembly.</p>
-  {% endif %}
-  <figure class="p2p-demo-figure">
-    <img src="/assets/img/photo2pixel-demo.png" alt="{{ toolData.demoAlt or 'Photo2Pixel 8-bit mountain pixel art demo' }}" loading="lazy">
-  </figure>
-
-  <h3>{{ toolData.howToUse or "How to use" }}</h3>
-  <ol class="steps-list">
-    {% if toolData.steps %}
-      {% for step in toolData.steps %}
-      <li>{{ step | safe }}</li>
-      {% endfor %}
-    {% else %}
-      <li>Upload a PNG, JPEG, or WebP image.</li>
-      <li>Choose the style, pixel size, and edge density options.</li>
-      <li>Download the generated pixel art as a PNG.</li>
-    {% endif %}
-  </ol>
-
-  <h3>{{ toolData.whatIs or "Pixel art conversion" }}</h3>
-  {% if toolData.whatIsParas %}
-    {% for para in toolData.whatIsParas %}
-    <p>{{ para | safe }}</p>
-    {% endfor %}
-  {% else %}
-    <p>The converter downsamples visual regions into blocky color areas and can enhance boundaries so the result reads like hand-tuned 8-bit art.</p>
-  {% endif %}
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

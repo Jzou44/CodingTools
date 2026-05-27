@@ -1,10 +1,5 @@
 ---
-title: "SHA512 Generator — Coding.Tools"
-description: "Generate SHA-512 hash from any text input directly in your browser. Fast, private, and free to use."
-toolTitle: "SHA512 Generator"
-toolDescription: "Generate a SHA-512 hash from any text input. Copy or download the hash without sending data anywhere."
 category: "hash-cryptography"
-categoryName: "Hash & Cryptography"
 activeTool: "sha512-generator"
 permalink: "/sha512-generator.html"
 ---
@@ -31,54 +26,7 @@ permalink: "/sha512-generator.html"
 {% endblock %}
 
 {% block description %}
-  <h2>SHA512 Generator</h2>
-  <p>
-    This tool generates a SHA-512 hash digest from any text you enter. SHA-512 produces a 128-character
-    hexadecimal string that uniquely represents the input. It is commonly used for verifying data integrity,
-    storing password digests, and creating digital signatures.
-  </p>
-  <p>
-    The hashing runs locally in your browser using the Web Crypto API. Your input is never uploaded or
-    sent to a server, so you can generate hashes for any text with complete privacy.
-  </p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste text into the input editor.</li>
-    <li>Click <strong>Generate</strong> to compute the hash digest.</li>
-    <li>The 128-character hexadecimal SHA-512 hash appears in the output editor.</li>
-    <li>Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors.</li>
-  </ol>
-
-  <h3>What is SHA-512?</h3>
-  <p>
-    SHA-512 (Secure Hash Algorithm 512-bit) is part of the SHA-2 family of cryptographic hash functions
-    designed by the NSA. It takes an input of any length and produces a fixed 512-bit (64-byte) hash
-    value, represented as 128 hexadecimal characters.
-  </p>
-  <p>
-    SHA-512 is a one-way function. The same input always produces the same hash, but the original text
-    cannot be recovered from the hash alone. Even a small change in the input produces a completely
-    different hash, a property known as the avalanche effect.
-  </p>
-
-  <h3>Input notes</h3>
-  <p>
-    The tool accepts any text input, including Unicode characters. The hash output is always the same
-    length regardless of input size. SHA-512 is not encryption &mdash; it is a one-way digest, so
-    the original text cannot be reversed from the hash.
-  </p>
-
-  <h3>Example</h3>
-  <p>Here is how a short text maps to its SHA-512 hash:</p>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">--- Input Text ---
-Hello, World!
-
---- SHA-512 Hash ---
-374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

@@ -1,10 +1,5 @@
 ---
-title: "Numbers to Roman Numerals Converter — Coding.Tools"
-description: "Convert standard numbers to Roman numerals instantly in your browser. Fast, private, and free to use."
-toolTitle: "Numbers to Roman Numerals"
-toolDescription: "Enter a number and convert it to Roman numerals. Results appear instantly in your browser."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "numbers-to-roman-numerals"
 permalink: "/numbers-to-roman-numerals.html"
 ---
@@ -184,39 +179,7 @@ permalink: "/numbers-to-roman-numerals.html"
 {% endblock %}
 
 {% block description %}
-  <h2>Numbers to Roman Numerals Converter</h2>
-  <p>This tool converts standard numbers (integers) into their Roman numeral equivalents. It supports numbers from 1 to 3999, which is the standard range for Roman numerals.</p>
-  <p>The conversion runs entirely in your browser. Enter any integer between 1 and 3999 to see its Roman numeral representation.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Type or paste a number into the input field (e.g. <code>1999</code> or <code>2026</code>).</li>
-    <li>Click <strong>Convert</strong> to see the Roman numeral result.</li>
-    <li>Use <strong>Copy</strong> to copy the Roman numeral to your clipboard.</li>
-    <li>Click <strong>Clear</strong> to reset.</li>
-  </ol>
-
-  <h3>How it works</h3>
-  <p>The tool breaks the number into its place values (thousands, hundreds, tens, ones) and maps each to the appropriate Roman numeral symbols. It uses the subtractive notation for 4s and 9s (e.g., IV for 4, IX for 9, XL for 40, XC for 90, CD for 400, CM for 900).</p>
-
-  <h3>Valid range</h3>
-  <p>Roman numerals traditionally represent numbers from 1 to 3999. Numbers outside this range are not supported because the standard Roman numeral system does not have a widely accepted notation for values of 4000 and above (some extensions use overlines or parentheses, but these are non-standard).</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">Number: 14
-Roman: XIV
-
-Number: 1999
-Roman: MCMXCIX
-
-Number: 2026
-Roman: MMXXVI
-
-Number: 3999
-Roman: MMMCMXCIX</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

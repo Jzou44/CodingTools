@@ -1,10 +1,5 @@
 ---
-title: "RGB to Hex Converter — Coding.Tools"
-description: "Convert RGB color values to hex color codes with live color preview. Fast, private, and free to use."
-toolTitle: "RGB to Hex"
-toolDescription: "Enter RGB color values and convert them to a hex color code. See a live color preview and generate random colors."
 category: "number-conversion"
-categoryName: "Number Conversion"
 activeTool: "rgb-to-hex"
 permalink: "/rgb-to-hex.html"
 ---
@@ -230,33 +225,7 @@ permalink: "/rgb-to-hex.html"
 {% endblock %}
 
 {% block description %}
-  <h2>RGB to Hex Converter</h2>
-  <p>This tool converts RGB (Red, Green, Blue) color values into their hexadecimal color code equivalent. It includes a live color preview so you can see exactly what the color looks like. The random color button generates a new color each time.</p>
-  <p>The conversion runs entirely in your browser. Enter values from 0 to 255 for each color channel.</p>
-
-  <h3>How to use</h3>
-  <ol class="steps-list">
-    <li>Enter values from 0 to 255 for Red, Green, and Blue.</li>
-    <li>Click <strong>Convert</strong> to see the hex color code and preview.</li>
-    <li>Click <strong>Random</strong> to generate a random color.</li>
-    <li>Use <strong>Copy</strong> to copy the hex value to your clipboard.</li>
-  </ol>
-
-  <h3>What is RGB?</h3>
-  <p>RGB is a color model that represents colors by combining red, green, and blue light. Each channel has a value from 0 (no intensity) to 255 (full intensity). By mixing different amounts of each primary color, you can create any visible color on a screen.</p>
-
-  <h3>Example</h3>
-  <div class="code-block-wrapper">
-    <button class="code-block-copy" id="example-copy" type="button">Copy</button>
-    <pre class="code-block" id="example-code">RGB: rgb(255, 87, 51)
-Hex: #FF5733
-
-RGB: rgb(0, 255, 0)
-Hex: #00FF00
-
-RGB: rgb(51, 102, 204)
-Hex: #3366CC</pre>
-  </div>
+  {% include "tool-description.njk" %}
 {% endblock %}
 
 {% block tool_script %}

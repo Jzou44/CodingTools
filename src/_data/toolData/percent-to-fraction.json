@@ -1,263 +1,263 @@
 {
   "en": {
-    "title": "Percent to Fraction Converter — Coding.Tools",
-    "description": "Convert percentages to fractions directly in your browser.",
+    "title": "Percent to Fraction Converter - Coding.Tools",
+    "description": "Convert percentage values into simplified fractions or mixed numbers.",
     "toolTitle": "Percent to Fraction",
-    "toolDescription": "Convert percentage values to fraction form.",
+    "toolDescription": "Turn percentages into simplified fraction form for ratios, measurements, and math work.",
     "categoryName": "Number Conversion",
-    "inputPlaceholder": "Enter percent (e.g. 75%, 50)...",
+    "inputPlaceholder": "Enter percent number (e.g. 75, 12.5)...",
     "outputPlaceholder": "Fraction result will appear here...",
-    "descTitle": "Percent to Fraction Converter",
+    "descTitle": "Convert percentages to simplified fractions",
     "descParas": [
-      "This tool converts percentages to their fraction representation.",
-      "The conversion runs locally in your browser."
+      "<strong>Percent to Fraction converts a percent into a fraction over 100 and simplifies the result.</strong> Use it for ratios, classroom examples, recipes, measurement conversions, and quick checks of common percentages.",
+      "A percent is a value per hundred, so <code>75%</code> starts as <code>75/100</code> and simplifies to <code>3/4</code>. Decimal percentages such as <code>12.5%</code> require extra denominator places before simplification."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste a percentage value into the input field.",
-      "Click <strong>Calculate</strong> to convert to fraction form.",
-      "Use <strong>Copy</strong> to copy the result."
+      "Enter the percentage value you want to convert.",
+      "Review the simplified fraction or mixed-number result.",
+      "Copy the fraction, or clear the field before converting another percentage."
     ],
-    "whatIs": "What is Percent to Fraction?",
+    "whatIs": "What is percent to fraction conversion?",
     "whatIsParas": [
-      "Converting percent to fraction divides by 100 and simplifies. For example, 75% = 3/4."
+      "<strong>Percent to fraction conversion</strong> rewrites parts per hundred as a numerator and denominator. The fraction is then reduced by the greatest common divisor so the copied result is easier to read and reuse."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Enter a number with or without the % sign.",
+    "inputNotesPara": "If an input containing <code>%</code> is rejected, enter the numeric part only. For rounded percentages, remember that the simplified fraction represents the rounded input, not necessarily the exact original ratio.",
     "example": "Example",
-    "examplePara": "Converting percent to fraction:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "examplePara": "A numeric percent value of 75 simplifies from 75/100 to 3/4:",
+    "exampleCode": "--- Percent Input ---\n75\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "cn": {
-    "title": "百分比转分数转换器 — Coding.Tools",
-    "description": "在浏览器中直接将百分比转换为分数。",
+    "title": "百分比到分数转换器 - Coding.Tools",
+    "description": "将百分比值转换为简化分数或带分数。",
     "toolTitle": "百分比转分数",
-    "toolDescription": "将百分比转换为分数表示。",
+    "toolDescription": "将百分比转换为简化的分数形式，用于比率、测量和数学工作。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入百分比（如 75%、50）...",
     "outputPlaceholder": "分数结果将显示在这里...",
-    "descTitle": "百分比转分数转换器",
+    "descTitle": "将百分比转换为简化分数",
     "descParas": [
-      "此工具将百分比转换为分数表示。",
-      "转换在浏览器本地运行。"
+      "<strong>百分比到分数将百分比转换为 100 以上的分数并简化结果。</strong> 将其用于比率、课堂示例、食谱、测量转换和常见百分比的快速检查。",
+      "百分比是百分之一的值，因此 <code>75%</code> 以 <code>75/100</code> 开头，并简化为 <code>3/4</code>。小数百分比（例如 <code>12.5%</code>）在简化之前需要额外的分母位置。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "输入百分比值。",
-      "点击<strong>转换</strong>查看结果。",
-      "使用<strong>复制</strong>复制结果。"
+      "输入您要转换的百分比值。",
+      "查看简化分数或带分数结果。",
+      "复制分数，或在转换另一个百分比之前清除该字段。"
     ],
-    "whatIs": "什么是百分比转分数？",
+    "whatIs": "什么是百分比到分数的转换？",
     "whatIsParas": [
-      "百分比转分数是将百分比值转换为等值的分数。"
+      "<strong>百分比到分数的转换</strong> 将百分之几重写为分子和分母。然后将该分数除以最大公约数，以便复制的结果更易于读取和重用。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "输入百分比值（可带或不带%符号）。",
+    "inputNotesPara": "如果包含 <code>%</code> 的输入被拒绝，则仅输入数字部分。对于四舍五入的百分比，请记住，简化分数代表四舍五入的输入，不一定是确切的原始比率。",
     "example": "示例",
-    "examplePara": "将百分比转换为分数：",
+    "examplePara": "数字百分比值 75 从 75/100 简化为 3/4：",
     "exampleCode": "--- 百分比输入 ---\n75%\n\n--- 分数 ---\n3/4\n\n--- 小数 ---\n0.75"
   },
   "tw": {
-    "title": "百分比到分數轉換器 — Coding.Tools",
-    "description": "直接在瀏覽器中將百分比轉換為分數。",
+    "title": "百分比到分數轉換器 - Coding.Tools",
+    "description": "將百分比值轉換為簡化分數或帶分數。",
     "toolTitle": "百分比轉分數",
-    "toolDescription": "將百分比值轉換為分數形式。",
+    "toolDescription": "將百分比轉換為簡化的分數形式，用於比率、測量和數學工作。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入百分比（例如 75%、50）...",
     "outputPlaceholder": "分數結果將出現在這裡...",
-    "descTitle": "百分比到分數轉換器",
+    "descTitle": "將百分比轉換為簡化分數",
     "descParas": [
-      "該工具將百分比轉換為其分數表示形式。",
-      "轉換在您的瀏覽器本地運行。"
+      "<strong>百分比到分數將百分比轉換為 100 以上的分數並簡化結果。</strong> 將其用於比率、課堂範例、食譜、測量轉換和常見百分比的快速檢查。",
+      "百分比是百分之一的值，因此 <code>75%</code> 以 <code>75/100</code> 開頭，並簡化為 <code>3/4</code>。小數百分比（例如 <code>12.5%</code>）在簡化之前需要額外的分母位置。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入欄位中鍵入或貼上百分比值。",
-      "點選<strong>計算</strong>即可轉換為分數形式。",
-      "使用<strong>複製</strong>複製結果。"
+      "輸入您要轉換的百分比值。",
+      "查看簡化分數或帶分數結果。",
+      "複製分數，或在轉換另一個百分比之前清除該欄位。"
     ],
-    "whatIs": "什麼是百分比到分數？",
+    "whatIs": "什麼是百分比到分數的轉換？",
     "whatIsParas": [
-      "將百分比轉換為分數除以 100 並化簡。例如，75% = 3/4。"
+      "<strong>百分比到分數的轉換</strong> 將百分之幾重寫為分子和分母。然後將該分數除以最大公約數，以便複製的結果更易於讀取和重複使用。"
     ],
     "inputNotes": "輸入註釋",
-    "inputNotesPara": "輸入有或沒有% 符號的數字。",
+    "inputNotesPara": "如果包含 <code>%</code> 的輸入被拒絕，則僅輸入數字部分。對於四捨五入的百分比，請記住，簡化分數代表四捨五入的輸入，不一定是確切的原始比率。",
     "example": "例子",
-    "examplePara": "將百分比轉換為分數：",
+    "examplePara": "數字百分比值 75 從 75/100 簡化為 3/4：",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "jp": {
-    "title": "パーセントから分数へのコンバーター —coding.Tools",
-    "description": "ブラウザでパーセンテージを分数に直接変換します。",
+    "title": "パーセントから分数へのコンバーター - Coding.Tools",
+    "description": "パーセント値を簡略化された分数または帯分数に変換します。",
     "toolTitle": "パーセントから分数",
-    "toolDescription": "パーセント値を分数形式に変換します。",
+    "toolDescription": "比率、測定、および数学作業のためにパーセンテージを簡略化された分数形式に変換します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "パーセントを入力してください (例: 75%、50)...",
     "outputPlaceholder": "分数の結果がここに表示されます...",
-    "descTitle": "パーセントから分数へのコンバーター",
+    "descTitle": "パーセンテージを簡略化された分数に変換する",
     "descParas": [
-      "このツールは、パーセンテージを分数表現に変換します。",
-      "変換はブラウザ内でローカルに実行されます。"
+      "<strong>パーセントを分数に変換すると、パーセントを 100 を超える分数に変換し、結果を簡素化します。</strong> 比率、教室での例、レシピ、測定値の変換、および一般的なパーセントの簡単なチェックに使用します。",
+      "パーセントは 100 あたりの値であるため、<code>75%</code> は <code>75/100</code> として始まり、<code>3/4</code> に簡略化されます。 <code>12.5%</code> などの小数パーセンテージでは、簡略化する前に追加の分母の桁が必要です。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "入力フィールドにパーセント値を入力するか貼り付けます。",
-      "[<strong>計算</strong>] をクリックして分数形式に変換します。",
-      "<strong>コピー</strong>を使用して結果をコピーします。"
+      "変換したいパーセンテージ値を入力します。",
+      "簡略化された分数または帯分数の結果を確認します。",
+      "分数をコピーするか、別のパーセンテージを変換する前にフィールドをクリアしてください。"
     ],
-    "whatIs": "パーセントから分数とは何ですか?",
+    "whatIs": "パーセントから分数への変換とは何ですか?",
     "whatIsParas": [
-      "パーセントを分数に変換すると、100 で除算され、簡略化されます。たとえば、75% = 3/4 となります。"
+      "<strong>パーセントから分数への変換</strong> は、100 分の 1 を分子と分母として書き換えます。次に、分数が最大公約数で減算されるため、コピーされた結果が読みやすく、再利用しやすくなります。"
     ],
     "inputNotes": "メモを入力する",
-    "inputNotesPara": "% 記号の有無にかかわらず、数値を入力します。",
+    "inputNotesPara": "<code>%</code> を含む入力が拒否される場合は、数字部分のみを入力してください。四捨五入されたパーセンテージの場合、単純化された分数は四捨五入された入力を表し、必ずしも正確な元の比率ではないことに注意してください。",
     "example": "例",
-    "examplePara": "パーセントを分数に変換する:",
+    "examplePara": "パーセント値 75 は、75/100 から 3/4 に簡略化されます。",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "kr": {
-    "title": "백분율을 분수로 변환하는 변환기 — Coding.Tools",
-    "description": "브라우저에서 백분율을 분수로 직접 변환하세요.",
+    "title": "백분율을 분수로 변환하는 변환기 - Coding.Tools",
+    "description": "백분율 값을 단순화된 분수나 대분수로 변환합니다.",
     "toolTitle": "퍼센트에서 분수",
-    "toolDescription": "백분율 값을 분수 형식으로 변환합니다.",
+    "toolDescription": "비율, 측정 및 수학 작업을 위해 백분율을 단순화된 분수 형식으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "백분율을 입력하세요(예: 75%, 50)...",
     "outputPlaceholder": "분수 결과가 여기에 표시됩니다...",
-    "descTitle": "백분율을 분수로 변환",
+    "descTitle": "백분율을 단순화된 분수로 변환",
     "descParas": [
-      "이 도구는 백분율을 분수 표현으로 변환합니다.",
-      "변환은 브라우저에서 로컬로 실행됩니다."
+      "<strong>퍼센트에서 분수은 백분율을 100이 넘는 분수로 변환하고 결과를 단순화합니다.</strong> 비율, 교실 예제, 조리법, 측정 변환 및 일반적인 백분율의 빠른 확인에 사용합니다.",
+      "퍼센트는 100당 값이므로 <code>75%</code>는 <code>75/100</code>로 시작하여 <code>3/4</code>로 단순화됩니다. <code>12.5%</code>와 같은 소수 백분율은 단순화하기 전에 추가 분모 자리가 필요합니다."
     ],
     "howToUse": "사용방법",
     "steps": [
-      "입력 필드에 백분율 값을 입력하거나 붙여넣습니다.",
-      "분수 형식으로 변환하려면 <strong>계산</strong>을 클릭하세요.",
-      "결과를 복사하려면 <strong>복사</strong>를 사용하세요."
+      "변환하려는 백분율 값을 입력하세요.",
+      "단순화된 분수 또는 대분수 결과를 검토합니다.",
+      "분수를 복사하거나 다른 백분율을 변환하기 전에 필드를 지우십시오."
     ],
-    "whatIs": "백분율은 분수로 무엇입니까?",
+    "whatIs": "백분율을 분수로 변환하면 무엇인가요?",
     "whatIsParas": [
-      "백분율을 분수로 변환하면 100으로 나누어 단순화됩니다. 예를 들어 75% = 3/4입니다."
+      "<strong>Percent를 분수로 변환</strong>는 100분의 1을 분자와 분모로 다시 씁니다. 그런 다음 복사된 결과를 더 쉽게 읽고 재사용할 수 있도록 분수가 최대 공약수로 감소됩니다."
     ],
     "inputNotes": "메모 입력",
-    "inputNotesPara": "% 기호를 포함하거나 포함하지 않고 숫자를 입력하세요.",
+    "inputNotesPara": "<code>%</code>가 포함된 입력이 거부되면 숫자 부분만 입력하세요. 반올림된 백분율의 경우 단순화된 분수는 반올림된 입력을 나타내며 반드시 정확한 원래 비율은 아니라는 점을 기억하십시오.",
     "example": "예",
-    "examplePara": "백분율을 분수로 변환:",
+    "examplePara": "숫자 백분율 값 75는 75/100에서 3/4로 단순화됩니다.",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "fr": {
     "title": "Convertisseur de pourcentage en fraction - Coding.Tools",
-    "description": "Convertissez des pourcentages en fractions directement dans votre navigateur.",
+    "description": "Convertissez les valeurs de pourcentage en fractions simplifiées ou en nombres fractionnaires.",
     "toolTitle": "Pourcentage en Fraction",
-    "toolDescription": "Convertissez les valeurs en pourcentage sous forme de fraction.",
+    "toolDescription": "Transformez les pourcentages en fractions simplifiées pour les ratios, les mesures et les travaux mathématiques.",
     "categoryName": "Conversion de nombres",
     "inputPlaceholder": "Entrez un pourcentage (par exemple 75 %, 50)...",
     "outputPlaceholder": "Le résultat de la fraction apparaîtra ici...",
-    "descTitle": "Convertisseur de pourcentage en fraction",
+    "descTitle": "Convertir des pourcentages en fractions simplifiées",
     "descParas": [
-      "Cet outil convertit les pourcentages en leur représentation fractionnaire.",
-      "La conversion s'exécute localement dans votre navigateur."
+      "<strong>Pourcentage en Fraction convertit un pourcentage en fraction supérieure à 100 et simplifie le résultat.</strong> Utilisez-le pour les ratios, les exemples en classe, les recettes, les conversions de mesures et les vérifications rapides des pourcentages courants.",
+      "Un pourcentage est une valeur pour cent, donc <code>75%</code> commence par <code>75/100</code> et se simplifie en <code>3/4</code>. Les pourcentages décimaux tels que <code>12.5%</code> nécessitent des places de dénominateur supplémentaires avant la simplification."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez une valeur en pourcentage dans le champ de saisie.",
-      "Cliquez sur <strong>Calculer</strong> pour convertir en fraction.",
-      "Utilisez <strong>Copier</strong> pour copier le résultat."
+      "Entrez la valeur en pourcentage que vous souhaitez convertir.",
+      "Passez en revue le résultat de la fraction simplifiée ou du nombre fractionnaire.",
+      "Copiez la fraction ou effacez le champ avant de convertir un autre pourcentage."
     ],
-    "whatIs": "Qu’est-ce que le pourcentage en fraction ?",
+    "whatIs": "Qu’est-ce que la conversion de pourcentage en fraction ?",
     "whatIsParas": [
-      "La conversion d'un pourcentage en fraction divise par 100 et simplifie. Par exemple, 75 % = 3/4."
+      "<strong>Conversion de pourcentage en fraction</strong> réécrit les parties pour cent en tant que numérateur et dénominateur. La fraction est ensuite réduite du plus grand diviseur commun afin que le résultat copié soit plus facile à lire et à réutiliser."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Entrez un nombre avec ou sans le signe %.",
+    "inputNotesPara": "Si une entrée contenant <code>%</code> est rejetée, saisissez uniquement la partie numérique. Pour les pourcentages arrondis, n'oubliez pas que la fraction simplifiée représente l'entrée arrondie, pas nécessairement le rapport d'origine exact.",
     "example": "Exemple",
-    "examplePara": "Conversion d'un pourcentage en fraction :",
+    "examplePara": "Une valeur de pourcentage numérique de 75 simplifie de 75/100 à 3/4 :",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "de": {
-    "title": "Prozent-zu-Bruch-Konverter – Coding.Tools",
-    "description": "Wandeln Sie Prozentsätze direkt in Ihrem Browser in Brüche um.",
+    "title": "Prozent-zu-Bruch-Konverter - Coding.Tools",
+    "description": "Wandeln Sie Prozentwerte in vereinfachte Brüche oder gemischte Zahlen um.",
     "toolTitle": "Prozent zu Bruch",
-    "toolDescription": "Prozentwerte in Bruchform umwandeln.",
+    "toolDescription": "Wandeln Sie Prozentsätze für Verhältnisse, Messungen und mathematische Arbeiten in eine vereinfachte Bruchform um.",
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "Geben Sie Prozent ein (z. B. 75 %, 50) ...",
     "outputPlaceholder": "Das Bruchergebnis erscheint hier...",
-    "descTitle": "Prozent-zu-Bruch-Konverter",
+    "descTitle": "Wandeln Sie Prozentsätze in vereinfachte Brüche um",
     "descParas": [
-      "Dieses Tool wandelt Prozentsätze in ihre Bruchdarstellung um.",
-      "Die Konvertierung läuft lokal in Ihrem Browser."
+      "<strong>Prozent zu Bruch wandelt ein Prozent in einen Bruch über 100 um und vereinfacht das Ergebnis.</strong> Verwenden Sie es für Verhältnisse, Unterrichtsbeispiele, Rezepte, Maßumrechnungen und schnelle Überprüfungen gängiger Prozentsätze.",
+      "Ein Prozent ist ein Wert pro Hundert, daher beginnt <code>75%</code> als <code>75/100</code> und vereinfacht sich zu <code>3/4</code>. Dezimalprozentsätze wie <code>12.5%</code> erfordern vor der Vereinfachung zusätzliche Nennerstellen."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
-      "Geben oder fügen Sie einen Prozentwert in das Eingabefeld ein.",
-      "Klicken Sie auf <strong>Berechnen</strong>, um die Berechnung in die Bruchform umzuwandeln.",
-      "Verwenden Sie <strong>Kopieren</strong>, um das Ergebnis zu kopieren."
+      "Geben Sie den Prozentwert ein, den Sie umrechnen möchten.",
+      "Überprüfen Sie das Ergebnis des vereinfachten Bruchs oder der gemischten Zahl.",
+      "Kopieren Sie den Bruch oder leeren Sie das Feld, bevor Sie einen anderen Prozentsatz konvertieren."
     ],
-    "whatIs": "Was ist Prozent in Bruch?",
+    "whatIs": "Was ist die Umrechnung von Prozent in Bruchzahlen?",
     "whatIsParas": [
-      "Die Umwandlung von Prozent in einen Bruch dividiert durch 100 und vereinfacht. Beispiel: 75 % = 3/4."
+      "<strong>Umrechnung von Prozent in Bruch</strong> schreibt Teile pro Hundert als Zähler und Nenner um. Der Bruch wird dann um den größten gemeinsamen Teiler reduziert, damit das kopierte Ergebnis leichter zu lesen und wiederzuverwenden ist."
     ],
     "inputNotes": "Eingabenotizen",
-    "inputNotesPara": "Geben Sie eine Zahl mit oder ohne %-Zeichen ein.",
+    "inputNotesPara": "Wenn eine Eingabe mit <code>%</code> abgelehnt wird, geben Sie nur den numerischen Teil ein. Denken Sie bei gerundeten Prozentsätzen daran, dass der vereinfachte Bruch die gerundete Eingabe darstellt und nicht unbedingt das exakte Originalverhältnis.",
     "example": "Beispiel",
-    "examplePara": "Prozent in Bruch umwandeln:",
+    "examplePara": "Ein numerischer Prozentwert von 75 vereinfacht von 75/100 auf 3/4:",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "es": {
-    "title": "Convertidor de porcentaje a fracción: Coding.Tools",
-    "description": "Convierte porcentajes a fracciones directamente en tu navegador.",
+    "title": "Convertidor de porcentaje a fracción - Coding.Tools",
+    "description": "Convierta valores porcentuales en fracciones simplificadas o números mixtos.",
     "toolTitle": "Porcentaje a Fracción",
-    "toolDescription": "Convierta valores porcentuales a forma de fracción.",
+    "toolDescription": "Convierta porcentajes en forma de fracción simplificada para proporciones, medidas y trabajos matemáticos.",
     "categoryName": "Conversión de números",
     "inputPlaceholder": "Introduzca el porcentaje (por ejemplo, 75%, 50)...",
     "outputPlaceholder": "El resultado de la fracción aparecerá aquí...",
-    "descTitle": "Convertidor de porcentaje a fracción",
+    "descTitle": "Convertir porcentajes a fracciones simplificadas",
     "descParas": [
-      "Esta herramienta convierte porcentajes a su representación fraccionaria.",
-      "La conversión se ejecuta localmente en su navegador."
+      "<strong>Porcentaje a fracción convierte un porcentaje en una fracción superior a 100 y simplifica el resultado.</strong> Úselo para proporciones, ejemplos de clase, recetas, conversiones de medidas y comprobaciones rápidas de porcentajes comunes.",
+      "Un porcentaje es un valor por cien, por lo que <code>75%</code> comienza como <code>75/100</code> y se simplifica a <code>3/4</code>. Los porcentajes decimales como <code>12.5%</code> requieren lugares adicionales en el denominador antes de la simplificación."
     ],
     "howToUse": "como usar",
     "steps": [
-      "Escriba o pegue un valor porcentual en el campo de entrada.",
-      "Haga clic en <strong>Calcular</strong> para convertir a forma de fracción.",
-      "Utilice <strong>Copiar</strong> para copiar el resultado."
+      "Ingrese el valor porcentual que desea convertir.",
+      "Revisa el resultado de la fracción simplificada o del número mixto.",
+      "Copie la fracción o borre el campo antes de convertir otro porcentaje."
     ],
-    "whatIs": "¿Qué es porcentaje a fracción?",
+    "whatIs": "¿Qué es la conversión de porcentaje a fracción?",
     "whatIsParas": [
-      "Convertir porcentaje a fracción divide por 100 y simplifica. Por ejemplo, 75% = 3/4."
+      "<strong>Conversión de porcentaje a fracción</strong> reescribe partes por cien como numerador y denominador. Luego, la fracción se reduce por el máximo común divisor para que el resultado copiado sea más fácil de leer y reutilizar."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ingrese un número con o sin el signo %.",
+    "inputNotesPara": "Si se rechaza una entrada que contiene <code>%</code>, ingrese solo la parte numérica. Para porcentajes redondeados, recuerde que la fracción simplificada representa la entrada redondeada, no necesariamente la proporción original exacta.",
     "example": "Ejemplo",
-    "examplePara": "Convertir porcentaje a fracción:",
+    "examplePara": "Un valor porcentual numérico de 75 se simplifica de 75/100 a 3/4:",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "pt": {
-    "title": "Conversor de porcentagem para fração — Coding.Tools",
-    "description": "Converta porcentagens em frações diretamente no seu navegador.",
+    "title": "Conversor de porcentagem para fração - Coding.Tools",
+    "description": "Converta valores percentuais em frações simplificadas ou números mistos.",
     "toolTitle": "Porcentagem para fração",
-    "toolDescription": "Converta valores percentuais em forma de fração.",
+    "toolDescription": "Transforme porcentagens em frações simplificadas para proporções, medidas e trabalhos matemáticos.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "Insira a porcentagem (por exemplo, 75%, 50)...",
     "outputPlaceholder": "O resultado da fração aparecerá aqui...",
-    "descTitle": "Conversor de porcentagem para fração",
+    "descTitle": "Converter porcentagens em frações simplificadas",
     "descParas": [
-      "Esta ferramenta converte porcentagens em sua representação fracionária.",
-      "A conversão é executada localmente no seu navegador."
+      "<strong>Porcentagem para fração converte uma porcentagem em uma fração acima de 100 e simplifica o resultado.</strong> Use-o para proporções, exemplos de sala de aula, receitas, conversões de medidas e verificações rápidas de porcentagens comuns.",
+      "Uma porcentagem é um valor por cem, então <code>75%</code> começa como <code>75/100</code> e simplifica para <code>3/4</code>. Porcentagens decimais como <code>12.5%</code> exigem casas extras no denominador antes da simplificação."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um valor percentual no campo de entrada.",
-      "Clique em <strong>Calcular</strong> para converter para a forma de fração.",
-      "Use <strong>Copiar</strong> para copiar o resultado."
+      "Insira o valor percentual que deseja converter.",
+      "Revise o resultado da fração simplificada ou do número misto.",
+      "Copie a fração ou limpe o campo antes de converter outra porcentagem."
     ],
-    "whatIs": "O que é porcentagem em fração?",
+    "whatIs": "O que é conversão de porcentagem em fração?",
     "whatIsParas": [
-      "Converter porcentagem em fração divide por 100 e simplifica. Por exemplo, 75% = 3/4."
+      "<strong>Conversão de porcentagem em fração</strong> reescreve partes por cem como numerador e denominador. A fração é então reduzida pelo máximo divisor comum para que o resultado copiado seja mais fácil de ler e reutilizar."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Insira um número com ou sem o sinal %.",
+    "inputNotesPara": "Se uma entrada contendo <code>%</code> for rejeitada, insira apenas a parte numérica. Para porcentagens arredondadas, lembre-se de que a fração simplificada representa a entrada arredondada, não necessariamente a proporção original exata.",
     "example": "Exemplo",
-    "examplePara": "Convertendo porcentagem em fração:",
+    "examplePara": "Um valor percentual numérico de 75 simplifica de 75/100 para 3/4:",
     "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   }
 }

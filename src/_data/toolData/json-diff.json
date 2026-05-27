@@ -1,32 +1,32 @@
 {
   "en": {
-    "title": "JSON Diff — Coding.Tools",
-    "description": "Compare two JSON documents and list added, removed, changed, and unchanged paths.",
+    "title": "JSON Diff - Coding.Tools",
+    "description": "Compare two valid JSON documents and report added, removed, changed, and unchanged paths.",
     "toolTitle": "JSON Diff",
-    "toolDescription": "Paste two JSON payloads to find structural differences by object path, array index, and value.",
+    "toolDescription": "Compare two JSON payloads by object path, array index, and value.",
     "categoryName": "Formatter & Minifier",
     "buttonLabel": "Compare JSON",
-    "descTitle": "JSON Diff",
+    "descTitle": "Find structural changes between JSON payloads",
     "descParas": [
-      "JSON Diff compares two JSON documents and reports differences at precise object paths and array indexes.",
-      "The parser validates both inputs before comparing, then shows a plain-text diff and a compact visual summary that can be copied into reviews or issue comments."
+      "<strong>JSON Diff compares two parsed JSON documents and reports differences at the exact path where they occur.</strong> Use it to review API response changes, config updates, test fixtures, feature flag payloads, and saved snapshots.",
+      "Objects are compared by key, while arrays are compared by index because array order is meaningful in JSON. Sorting object keys can reduce noise, but it does not make reordered arrays equivalent."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste the original JSON into the left editor.",
       "Paste the changed JSON into the right editor.",
-      "Optionally include unchanged paths for a complete audit trail.",
-      "Click <strong>Compare JSON</strong> to generate the path-by-path diff."
+      "Choose whether to include unchanged paths or sort object keys before comparing.",
+      "Click <strong>Compare JSON</strong> to generate the path-by-path structural diff."
     ],
-    "whatIs": "What is this tool?",
+    "whatIs": "What is JSON Diff?",
     "whatIsParas": [
-      "A JSON diff highlights structural changes between two payloads, including added keys, removed keys, changed primitive values, and array index differences.",
-      "It is useful for API response reviews, configuration changes, test fixtures, and debugging unexpected payload changes."
+      "<strong>JSON Diff</strong> is a browser-based comparison tool for structured JSON data. It identifies added keys, removed keys, changed primitive values, object changes, and array index differences.",
+      "Both sides must be valid JSON before comparison. The diff is structural rather than textual, so whitespace and object key order are not useful signals unless they affect the parsed data."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "Both inputs must be valid JSON. Object key order does not affect equality, while array order is compared by index because array order is meaningful in JSON.",
+    "inputNotesPara": "Paste complete JSON documents on both sides. For line-oriented log entries, extract the JSON portion first. When arrays differ, check whether a shifted item caused many index-level changes.",
     "example": "Example",
-    "examplePara": "A changed role is reported at its JSON path:",
+    "examplePara": "A changed value is reported at its JSONPath-style location:",
     "exampleCode": "Original\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nChanged\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[changed] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "Original JSON",
@@ -51,33 +51,33 @@
     "outputPlaceholder": "JSON diff output will appear here..."
   },
   "cn": {
-    "title": "JSON 差异对比 — Coding.Tools",
-    "description": "比较两个 JSON 文档并突出显示结构差异。",
+    "title": "JSON 差异 - Coding.Tools",
+    "description": "比较两个有效的 JSON 文档并报告添加、删除、更改和未更改的路径。",
     "toolTitle": "JSON 差异对比",
-    "toolDescription": "粘贴两个 JSON 负载，按对象路径、数组索引和值查找差异。",
+    "toolDescription": "按对象路径、数组索引和值比较两个 JSON 有效负载。",
     "categoryName": "格式化与压缩",
     "buttonLabel": "比较 JSON",
-    "descTitle": "JSON 差异对比",
+    "descTitle": "查找 JSON 有效负载之间的结构变化",
     "descParas": [
-      "JSON 差异对比会比较两个 JSON 文档，并在精确的对象路径和数组索引上报告差异。",
-      "工具会先验证两个输入，再生成可复制到评审或问题单中的文本差异和可视汇总。"
+      "<strong>JSON 差异对比 比较两个已解析的 JSON 文档并报告差异发生的确切路径。</strong> 使用它来查看 API 响应更改、配置更新、测试数据、功能标志有效负载和保存的快照。",
+      "对象通过键进行比较，而数组通过索引进行比较，因为数组顺序在 JSON 中是有意义的。对对象键进行排序可以减少噪音，但不会使重新排序的数组等效。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将原始 JSON 粘贴到左侧编辑器。",
-      "将变更后的 JSON 粘贴到右侧编辑器。",
-      "需要完整审计时，可选择包含未变更路径。",
-      "点击<strong>比较 JSON</strong>生成逐路径差异。"
+      "将原始 JSON 粘贴到左侧编辑器中。",
+      "将更改后的 JSON 粘贴到右侧编辑器中。",
+      "选择在比较之前是否包含未更改的路径或对对象键进行排序。",
+      "单击 <strong>比较 JSON</strong> 以生成逐路径结构差异。"
     ],
-    "whatIs": "这个工具是什么？",
+    "whatIs": "JSON 差异是什么？",
     "whatIsParas": [
-      "JSON 差异会突出显示两个负载之间的结构变化，包括新增键、删除键、变更的基础值和数组索引差异。",
-      "它适合审查 API 响应、配置变更、测试夹具和排查意外的负载变化。"
+      "<strong>JSON 差异对比</strong> 是一个基于浏览器的结构化 JSON 数据比较工具。它标识添加的键、删除的键、更改的原始值、对象更改和数组索引差异。",
+      "比较前双方都必须是有效的 JSON。差异是结构性的而不是文本性的，因此空格和对象键顺序不是有用的信号，除非它们影响解析的数据。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "两个输入都必须是有效 JSON。对象键顺序默认不影响相等性；数组顺序会按索引比较，因为 JSON 数组顺序有意义。",
+    "inputNotesPara": "将完整的 JSON 文件双面粘贴。对于面向行的日志条目，首先提取 JSON 部分。当数组不同时，检查移位的项是否导致许多索引级别的更改。",
     "example": "示例",
-    "examplePara": "角色字段的变化会显示在对应 JSON 路径上：",
+    "examplePara": "更改后的值会在其 JSONPath 样式位置报告：",
     "exampleCode": "原始\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\n变更\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\n差异\n[变更] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "原始 JSON",
@@ -102,33 +102,33 @@
     "outputPlaceholder": "JSON 差异结果将在此显示..."
   },
   "tw": {
-    "title": "JSON 差異比對 — Coding.Tools",
-    "description": "比較兩個 JSON 文件並標示結構差異。",
+    "title": "JSON 差異 - Coding.Tools",
+    "description": "比較兩個有效的 JSON 文件並報告新增、刪除、變更和未變更的路徑。",
     "toolTitle": "JSON 差異比對",
-    "toolDescription": "貼上兩個 JSON 負載，依物件路徑、陣列索引和值找出差異。",
+    "toolDescription": "依物件路徑、陣列索引和值比較兩個 JSON 有效負載。",
     "categoryName": "格式化與壓縮",
     "buttonLabel": "比對 JSON",
-    "descTitle": "JSON 差異比對",
+    "descTitle": "求 JSON 有效負載之間的結構變化",
     "descParas": [
-      "JSON 差異比對會比較兩個 JSON 文件，並在精確的物件路徑與陣列索引上回報差異。",
-      "工具會先驗證兩個輸入，再產生可複製到審查或問題單中的文字差異和視覺摘要。"
+      "<strong>JSON 差異比對 比較兩個已解析的 JSON 文件並報告差異發生的確切路徑。</strong> 使用它來查看 API 回應變更、設定更新、測試資料、功能標誌有效負載和保存的快照。",
+      "物件透過鍵進行比較，而陣列透過索引進行比較，因為陣列順序在 JSON 中是有意義的。對物件鍵進行排序可以減少噪音，但不會使重新排序的陣列等效。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將原始 JSON 貼到左側編輯器。",
-      "將變更後的 JSON 貼到右側編輯器。",
-      "需要完整稽核時，可選擇包含未變更路徑。",
-      "點擊<strong>比對 JSON</strong>產生逐路徑差異。"
+      "將原始 JSON 貼到左側編輯器中。",
+      "將更改後的 JSON 貼到右側編輯器中。",
+      "選擇在比較之前是否包含未變更的路徑或對物件鍵進行排序。",
+      "按一下 <strong>比對 JSON</strong> 以產生逐路徑結構差異。"
     ],
-    "whatIs": "這個工具是什麼？",
+    "whatIs": "JSON 差異是什麼？",
     "whatIsParas": [
-      "JSON 差異會標示兩個負載之間的結構變化，包括新增鍵、移除鍵、變更的基本值和陣列索引差異。",
-      "它適合審查 API 回應、設定變更、測試資料和排查意外的負載變化。"
+      "<strong>JSON 差異比對</strong> 是一個基於瀏覽器的結構化 JSON 資料比較工具。它標識添加的鍵、刪除的鍵、更改的原始值、物件更改和數組索引差異。",
+      "比較前雙方都必須是有效的 JSON。差異是結構性的而不是文本性的，因此空格和物件鍵順序不是有用的訊號，除非它們影響解析的資料。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "兩個輸入都必須是有效 JSON。物件鍵順序預設不影響相等性；陣列順序會依索引比較，因為 JSON 陣列順序有意義。",
+    "inputNotesPara": "將完整的 JSON 檔案雙面貼上。對於面向行的日誌條目，首先提取 JSON 部分。當陣列不同時，檢查移位的項目是否導致許多索引層級的變更。",
     "example": "範例",
-    "examplePara": "角色欄位的變化會顯示在對應 JSON 路徑上：",
+    "examplePara": "更改後的值會在其 JSONPath 樣式位置報告：",
     "exampleCode": "原始\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\n變更\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\n差異\n[變更] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "原始 JSON",
@@ -153,33 +153,33 @@
     "outputPlaceholder": "JSON 差異結果會顯示於此..."
   },
   "jp": {
-    "title": "JSON 差分 — Coding.Tools",
-    "description": "2 つの JSON ドキュメントを比較し、構造上の差分を表示します。",
+    "title": "JSON 差分 - Coding.Tools",
+    "description": "2 つの有効な JSON ドキュメントを比較し、追加、削除、変更、および変更されていないパスをレポートします。",
     "toolTitle": "JSON 差分",
-    "toolDescription": "2 つの JSON を貼り付け、オブジェクトパス、配列インデックス、値の差分を確認します。",
+    "toolDescription": "2 つの JSON ペイロードをオブジェクト パス、配列インデックス、値によって比較します。",
     "categoryName": "整形と圧縮",
     "buttonLabel": "JSON を比較",
-    "descTitle": "JSON 差分",
+    "descTitle": "JSON ペイロード間の構造的変更を見つける",
     "descParas": [
-      "JSON 差分は 2 つの JSON ドキュメントを比較し、正確なオブジェクトパスと配列インデックスで差分を示します。",
-      "両方の入力を検証してから、レビューやチケットに貼り付けやすいテキスト差分と要約を生成します。"
+      "<strong>JSON 差分 は、解析された 2 つの JSON ドキュメントを比較し、差異が発生する正確なパスで差異をレポートします。</strong> これを使用して、API 応答の変更、構成の更新、テストデータ、機能フラグ ペイロード、および保存されたスナップショットを確認します。",
+      "JSON では配列の順序が重要であるため、オブジェクトはキーによって比較されますが、配列はインデックスによって比較されます。オブジェクトのキーを並べ替えるとノイズを減らすことができますが、並べ替えられた配列が等価になるわけではありません。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "元の JSON を左側エディタに貼り付けます。",
-      "変更後の JSON を右側エディタに貼り付けます。",
-      "完全な確認が必要な場合は未変更パスも含めます。",
-      "<strong>JSON を比較</strong>をクリックしてパスごとの差分を生成します。"
+      "元の JSON を左側のエディタに貼り付けます。",
+      "変更した JSON を右のエディタに貼り付けます。",
+      "比較する前に、変更されていないパスを含めるか、オブジェクト キーを並べ替えるかを選択します。",
+      "「<strong>JSON</strong> を比較」をクリックして、パスごとの構造差分を生成します。"
     ],
-    "whatIs": "このツールとは？",
+    "whatIs": "JSON 差分とは何ですか?",
     "whatIsParas": [
-      "JSON 差分は、追加キー、削除キー、変更された値、配列インデックスの差など、2 つのペイロード間の構造変化を示します。",
-      "API レスポンス、設定変更、テストデータ、予期しないペイロード変更の確認に役立ちます。"
+      "<strong>JSON 差分</strong> は、構造化された JSON データのブラウザベースの比較ツールです。追加されたキー、削除されたキー、変更されたプリミティブ値、オブジェクトの変更、および配列インデックスの違いを識別します。",
+      "比較する前に、両側が有効な JSON である必要があります。 diff はテキストではなく構造的なものであるため、空白文字とオブジェクト キーの順序は、解析されたデータに影響を与えない限り、有用な信号ではありません。"
     ],
     "inputNotes": "入力メモ",
-    "inputNotesPara": "両方の入力は有効な JSON である必要があります。オブジェクトキーの順序は既定で等価性に影響しませんが、配列は順序に意味があるためインデックスで比較します。",
+    "inputNotesPara": "完全な JSON 文書を両面に貼り付けます。行指向のログ エントリの場合は、最初に JSON 部分を抽出します。配列が異なる場合は、シフトされた項目によって多くのインデックスレベルの変更が発生したかどうかを確認してください。",
     "example": "例",
-    "examplePara": "role フィールドの変更は対応する JSON パスに表示されます：",
+    "examplePara": "変更された値は、JSONPath スタイルの場所で報告されます。",
     "exampleCode": "元\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\n変更後\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\n差分\n[変更] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "元の JSON",
@@ -204,33 +204,33 @@
     "outputPlaceholder": "JSON 差分結果がここに表示されます..."
   },
   "kr": {
-    "title": "JSON 차이 비교 — Coding.Tools",
-    "description": "두 JSON 문서를 비교하고 구조적 차이를 표시합니다.",
+    "title": "JSON 차이 - Coding.Tools",
+    "description": "두 개의 유효한 JSON 문서를 비교하고 추가, 제거, 변경 및 변경되지 않은 경로를 보고합니다.",
     "toolTitle": "JSON 차이 비교",
-    "toolDescription": "두 JSON 페이로드를 붙여넣어 객체 경로, 배열 인덱스, 값의 차이를 찾습니다.",
+    "toolDescription": "두 개의 JSON 페이로드를 개체 경로, 배열 인덱스 및 값별로 비교합니다.",
     "categoryName": "포맷 및 압축",
     "buttonLabel": "JSON 비교",
-    "descTitle": "JSON 차이 비교",
+    "descTitle": "JSON 페이로드 간의 구조적 변화 찾기",
     "descParas": [
-      "JSON 차이 비교는 두 JSON 문서를 비교하고 정확한 객체 경로와 배열 인덱스에서 차이를 보여줍니다.",
-      "두 입력을 먼저 검증한 뒤 리뷰나 이슈에 붙여넣기 쉬운 텍스트 diff와 요약을 생성합니다."
+      "<strong>JSON 차이 비교는 구문 분석된 두 개의 JSON 문서를 비교하고 차이점이 발생한 정확한 경로에서 차이점을 보고합니다.</strong> 이를 사용하여 API 응답 변경 사항, 구성 업데이트, 테스트 데이터, 기능 플래그 페이로드 및 저장된 스냅샷을 검토합니다.",
+      "JSON에서는 배열 순서가 의미가 있으므로 객체는 키로 비교되는 반면 배열은 인덱스로 비교됩니다. 객체 키를 정렬하면 노이즈를 줄일 수 있지만 재정렬된 배열을 동일하게 만들지는 않습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "원본 JSON을 왼쪽 편집기에 붙여넣습니다.",
-      "변경된 JSON을 오른쪽 편집기에 붙여넣습니다.",
-      "전체 검토가 필요하면 변경 없는 경로도 포함합니다.",
-      "<strong>JSON 비교</strong>를 클릭해 경로별 차이를 생성합니다."
+      "원본 JSON를 왼쪽 편집기에 붙여넣습니다.",
+      "변경된 JSON를 오른쪽 편집기에 붙여넣습니다.",
+      "비교하기 전에 변경되지 않은 경로를 포함할지 또는 개체 키를 정렬할지 선택합니다.",
+      "<strong>JSON 비교</strong>를 클릭하여 경로별 구조적 차이를 생성합니다."
     ],
-    "whatIs": "이 도구란?",
+    "whatIs": "JSON 차이점은 무엇입니까?",
     "whatIsParas": [
-      "JSON diff는 추가된 키, 삭제된 키, 변경된 기본값, 배열 인덱스 차이 등 두 페이로드의 구조 변화를 보여줍니다.",
-      "API 응답, 설정 변경, 테스트 데이터, 예상치 못한 페이로드 변화 검토에 유용합니다."
+      "<strong>JSON 차이 비교</strong>는 구조화된 JSON 데이터를 위한 브라우저 기반 비교 도구입니다. 추가된 키, 제거된 키, 변경된 기본 값, 객체 변경 및 배열 인덱스 차이를 식별합니다.",
+      "비교하기 전에 양쪽 모두 유효한 JSON여야 합니다. 차이점은 텍스트가 아닌 구조적이므로 공백 및 객체 키 순서는 구문 분석된 데이터에 영향을 주지 않는 한 유용한 신호가 아닙니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "두 입력은 모두 유효한 JSON이어야 합니다. 객체 키 순서는 기본적으로 동일성에 영향을 주지 않지만, 배열 순서는 의미가 있으므로 인덱스로 비교합니다.",
+    "inputNotesPara": "전체 JSON 문서를 양면에 붙여넣습니다. 라인 기반 로그 항목의 경우 먼저 JSON 부분을 추출하세요. 배열이 다른 경우 이동된 항목으로 인해 인덱스 수준이 많이 변경되었는지 확인하세요.",
     "example": "예시",
-    "examplePara": "role 필드 변경은 해당 JSON 경로에 표시됩니다:",
+    "examplePara": "변경된 값은 JSONPath 스타일 위치에 보고됩니다.",
     "exampleCode": "원본\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\n변경\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\n차이\n[변경] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "원본 JSON",
@@ -255,41 +255,41 @@
     "outputPlaceholder": "JSON 차이 결과가 여기에 표시됩니다..."
   },
   "fr": {
-    "title": "Diff JSON — Coding.Tools",
-    "description": "Compare deux documents JSON et met en evidence les differences de structure.",
+    "title": "JSON Différent - Coding.Tools",
+    "description": "Comparez deux documents JSON valides et signalez les chemins ajoutés, supprimés, modifiés et inchangés.",
     "toolTitle": "Diff JSON",
-    "toolDescription": "Collez deux charges JSON pour trouver les ecarts par chemin, index de tableau et valeur.",
+    "toolDescription": "Comparez deux charges utiles JSON par chemin d'objet, index de tableau et valeur.",
     "categoryName": "Formatage et minification",
     "buttonLabel": "Comparer JSON",
-    "descTitle": "Diff JSON",
+    "descTitle": "Rechercher des changements structurels entre les charges utiles JSON",
     "descParas": [
-      "Le diff JSON compare deux documents JSON et signale les ecarts sur des chemins d’objet et index de tableau precis.",
-      "Les deux entrees sont validees avant de produire un diff texte et un resume visuel faciles a copier dans une revue ou un ticket."
+      "<strong>Diff JSON compare deux documents JSON analysés et signale les différences au chemin exact où elles se produisent.</strong> Utilisez-le pour examiner les modifications de réponse de l'API, les mises à jour de configuration, les données de test, les charges utiles des indicateurs de fonctionnalités et les instantanés enregistrés.",
+      "Les objets sont comparés par clé, tandis que les tableaux sont comparés par index car l'ordre des tableaux est significatif dans JSON. Le tri des clés d'objet peut réduire le bruit, mais cela ne rend pas les tableaux réorganisés équivalents."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez le JSON source dans l’editeur de gauche.",
-      "Collez le JSON modifie dans l’editeur de droite.",
-      "Incluez les chemins inchanges si vous voulez une trace complete.",
-      "Cliquez sur <strong>Comparer JSON</strong> pour generer le diff par chemin."
+      "Collez le JSON original dans l'éditeur de gauche.",
+      "Collez le JSON modifié dans l'éditeur de droite.",
+      "Choisissez si vous souhaitez inclure des chemins inchangés ou trier les clés d'objet avant de comparer.",
+      "Cliquez sur <strong>Comparer JSON</strong> pour générer la différence structurelle chemin par chemin."
     ],
-    "whatIs": "A quoi sert cet outil ?",
+    "whatIs": "Qu'est-ce que la différence JSON ?",
     "whatIsParas": [
-      "Un diff JSON met en evidence les changements de structure entre deux charges, comme cles ajoutees, supprimees, valeurs modifiees et ecarts d’index de tableau.",
-      "Il sert aux revues de reponses API, changements de configuration, fixtures de test et debogage de charges inattendues."
+      "<strong>Diff JSON</strong> est un outil de comparaison basé sur un navigateur pour les données structurées JSON. Il identifie les clés ajoutées, les clés supprimées, les valeurs primitives modifiées, les modifications d'objet et les différences d'index de tableau.",
+      "Les deux côtés doivent être JSON valides avant la comparaison. La différence est structurelle plutôt que textuelle, donc les espaces et l'ordre des touches d'objet ne sont pas des signaux utiles à moins qu'ils n'affectent les données analysées."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Les deux entrees doivent etre du JSON valide. Par defaut l’ordre des cles d’objet n’affecte pas l’egalite, tandis que les tableaux sont compares par index.",
+    "inputNotesPara": "Collez les documents JSON complets recto verso. Pour les entrées de journal orientées ligne, extrayez d'abord la partie JSON. Lorsque les tableaux diffèrent, vérifiez si un élément décalé a provoqué de nombreux changements au niveau de l'index.",
     "example": "Exemple",
-    "examplePara": "Un changement de role apparait sur son chemin JSON :",
-    "exampleCode": "Source\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nModifie\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[modifie] $.user.role\n- \"admin\"\n+ \"editor\"",
+    "examplePara": "Une valeur modifiée est signalée à son emplacement de style JSONPath :",
+    "exampleCode": "Source\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nModifié\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[modifié] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "JSON source",
-      "rightInput": "JSON modifie",
-      "output": "Resultat du diff",
-      "showUnchanged": "Inclure les chemins inchanges",
+      "rightInput": "JSON modifié",
+      "output": "Résultat du diff",
+      "showUnchanged": "Inclure les chemins inchangés",
       "sortKeys": "Trier les cles avant comparaison",
-      "summary": "Resume",
+      "summary": "Résumé",
       "added": "Ajoute",
       "removed": "Supprime",
       "changed": "Modifie",
@@ -298,41 +298,41 @@
     },
     "messages": {
       "empty": "Saisissez d’abord une valeur.",
-      "success": "Comparaison JSON terminee",
-      "failed": "Echec de l’operation : "
+      "success": "Comparaison JSON terminée",
+      "failed": "Échec de l’opération : "
     },
     "leftPlaceholder": "{\n  \"name\": \"Alice\",\n  \"role\": \"admin\"\n}",
     "rightPlaceholder": "{\n  \"name\": \"Alice\",\n  \"role\": \"editor\"\n}",
-    "outputPlaceholder": "Le diff JSON apparaitra ici..."
+    "outputPlaceholder": "Le diff JSON apparaîtra ici..."
   },
   "de": {
-    "title": "JSON-Diff — Coding.Tools",
-    "description": "Vergleicht zwei JSON-Dokumente und zeigt strukturelle Unterschiede.",
+    "title": "JSON-Diff - Coding.Tools",
+    "description": "Vergleichen Sie zwei gültige JSON-Dokumente und melden Sie hinzugefügte, entfernte, geänderte und unveränderte Pfade.",
     "toolTitle": "JSON-Diff",
-    "toolDescription": "Fuegen Sie zwei JSON-Nutzlasten ein und finden Sie Unterschiede nach Pfad, Array-Index und Wert.",
+    "toolDescription": "Vergleichen Sie zwei JSON-Nutzlasten nach Objektpfad, Array-Index und Wert.",
     "categoryName": "Formatierung & Minimierung",
     "buttonLabel": "JSON vergleichen",
-    "descTitle": "JSON-Diff",
+    "descTitle": "Finden Sie strukturelle Änderungen zwischen JSON-Nutzlasten",
     "descParas": [
-      "JSON-Diff vergleicht zwei JSON-Dokumente und meldet Unterschiede an genauen Objektpfaden und Array-Indizes.",
-      "Beide Eingaben werden validiert, danach entstehen Text-Diff und Zusammenfassung fuer Reviews oder Tickets."
+      "<strong>JSON-Diff vergleicht zwei geparste JSON-Dokumente und meldet Unterschiede am genauen Pfad, an dem sie auftreten.</strong> Verwenden Sie es, um Änderungen an API-Antworten, Konfigurationsupdates, Test-Testdaten, Feature-Flag-Nutzlasten und gespeicherten Snapshots zu prüfen.",
+      "Objekte werden nach Schlüssel verglichen, während Arrays nach Index verglichen werden, da die Array-Reihenfolge in JSON von Bedeutung ist. Das Sortieren von Objektschlüsseln kann das Rauschen reduzieren, aber neu angeordnete Arrays werden dadurch nicht gleichwertig."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fuegen Sie das Ausgangs-JSON links ein.",
-      "Fuegen Sie das geaenderte JSON rechts ein.",
-      "Optional koennen unveraenderte Pfade fuer ein vollstaendiges Audit einbezogen werden.",
-      "Klicken Sie auf <strong>JSON vergleichen</strong>, um den Pfad-Diff zu erzeugen."
+      "Fügen Sie das Original JSON in den linken Editor ein.",
+      "Fügen Sie das geänderte JSON in den richtigen Editor ein.",
+      "Wählen Sie vor dem Vergleich, ob unveränderte Pfade einbezogen oder Objektschlüssel sortiert werden sollen.",
+      "Klicken Sie auf <strong>JSON vergleichen</strong>, um den pfadweisen Strukturunterschied zu generieren."
     ],
-    "whatIs": "Was macht dieses Tool?",
+    "whatIs": "Was ist der JSON-Diff?",
     "whatIsParas": [
-      "Ein JSON-Diff zeigt Strukturveraenderungen zwischen zwei Nutzlasten: hinzugefuegte oder entfernte Keys, geaenderte Werte und Array-Index-Unterschiede.",
-      "Das hilft bei API-Reviews, Konfigurationsaenderungen, Testdaten und unerwarteten Payload-Aenderungen."
+      "<strong>JSON-Diff</strong> ist ein browserbasiertes Vergleichstool für strukturierte JSON-Daten. Es identifiziert hinzugefügte Schlüssel, entfernte Schlüssel, geänderte Grundwerte, Objektänderungen und Array-Indexunterschiede.",
+      "Vor dem Vergleich müssen beide Seiten gültiges JSON sein. Der Unterschied ist eher strukturell als textuell, daher sind Leerzeichen und Objektschlüsselreihenfolge keine nützlichen Signale, es sei denn, sie wirken sich auf die analysierten Daten aus."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Beide Eingaben muessen gueltiges JSON sein. Die Reihenfolge von Objekt-Keys beeinflusst standardmaessig nicht die Gleichheit; Arrays werden nach Index verglichen.",
+    "inputNotesPara": "Fügen Sie auf beiden Seiten vollständige JSON-Dokumente ein. Extrahieren Sie für zeilenorientierte Protokolleinträge zuerst den Teil JSON. Wenn sich Arrays unterscheiden, prüfen Sie, ob ein verschobenes Element viele Änderungen auf Indexebene verursacht hat.",
     "example": "Beispiel",
-    "examplePara": "Eine geaenderte Rolle erscheint am passenden JSON-Pfad:",
+    "examplePara": "Ein geänderter Wert wird an seinem Speicherort im JSONPath-Stil gemeldet:",
     "exampleCode": "Ausgang\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nGeaendert\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[geaendert] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "Ausgangs-JSON",
@@ -357,33 +357,33 @@
     "outputPlaceholder": "Das JSON-Diff erscheint hier..."
   },
   "es": {
-    "title": "Diferencias JSON — Coding.Tools",
-    "description": "Compara dos documentos JSON y resalta diferencias estructurales.",
+    "title": "Diferencia JSON - Coding.Tools",
+    "description": "Compare dos documentos JSON válidos e informe las rutas agregadas, eliminadas, modificadas y sin cambios.",
     "toolTitle": "Diferencias JSON",
-    "toolDescription": "Pega dos JSON para encontrar diferencias por ruta, indice de arreglo y valor.",
+    "toolDescription": "Compare dos cargas útiles JSON por ruta de objeto, índice de matriz y valor.",
     "categoryName": "Formato y minificacion",
     "buttonLabel": "Comparar JSON",
-    "descTitle": "Diferencias JSON",
+    "descTitle": "Encuentre cambios estructurales entre las cargas útiles JSON",
     "descParas": [
-      "El diff JSON compara dos documentos JSON y muestra diferencias en rutas de objeto e indices de arreglo precisos.",
-      "Primero valida ambas entradas y luego genera un diff de texto y un resumen facil de copiar en revisiones o incidencias."
+      "<strong>Diferencias JSON compara dos documentos JSON analizados e informa las diferencias en la ruta exacta donde ocurren.</strong> Úselo para revisar cambios de respuesta de API, actualizaciones de configuración, datos de prueba, cargas útiles de indicadores de funciones e instantáneas guardadas.",
+      "Los objetos se comparan por clave, mientras que las matrices se comparan por índice porque el orden de las matrices es significativo en JSON. Ordenar las claves de los objetos puede reducir el ruido, pero no hace que las matrices reordenadas sean equivalentes."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Pega el JSON original en el editor izquierdo.",
-      "Pega el JSON cambiado en el editor derecho.",
-      "Incluye rutas sin cambios si necesitas una auditoria completa.",
-      "Haz clic en <strong>Comparar JSON</strong> para generar el diff por ruta."
+      "Pegue el JSON original en el editor de la izquierda.",
+      "Pegue el JSON modificado en el editor correcto.",
+      "Elija si desea incluir rutas sin cambios u ordenar claves de objetos antes de comparar.",
+      "Haga clic en <strong>Comparar JSON</strong> para generar la diferencia estructural ruta por ruta."
     ],
-    "whatIs": "Que hace esta herramienta?",
+    "whatIs": "¿Qué es la diferencia JSON?",
     "whatIsParas": [
-      "Un diff JSON muestra cambios estructurales entre dos cargas, como claves anadidas o eliminadas, valores cambiados e indices de arreglo distintos.",
-      "Es util para revisar respuestas API, cambios de configuracion, datos de prueba y cargas inesperadas."
+      "<strong>Diferencias JSON</strong> es una herramienta de comparación basada en navegador para datos estructurados JSON. Identifica claves agregadas, claves eliminadas, valores primitivos modificados, cambios de objetos y diferencias de índice de matriz.",
+      "Ambos lados deben ser JSON válidos antes de la comparación. La diferencia es estructural más que textual, por lo que los espacios en blanco y el orden de las claves de los objetos no son señales útiles a menos que afecten los datos analizados."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Ambas entradas deben ser JSON valido. El orden de claves de objeto no afecta la igualdad por defecto; los arreglos se comparan por indice.",
+    "inputNotesPara": "Pegue los documentos JSON completos por ambas caras. Para entradas de registro orientadas a líneas, extraiga primero la parte JSON. Cuando las matrices difieren, verifique si un elemento desplazado provocó muchos cambios a nivel de índice.",
     "example": "Ejemplo",
-    "examplePara": "Un cambio de rol aparece en su ruta JSON:",
+    "examplePara": "Un valor modificado se informa en su ubicación de estilo JSONPath:",
     "exampleCode": "Original\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nCambiado\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[cambiado] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "JSON original",
@@ -396,66 +396,66 @@
       "removed": "Eliminado",
       "changed": "Cambiado",
       "unchanged": "Sin cambios",
-      "noDiff": "Aun no hay diferencias JSON para mostrar."
+      "noDiff": "Aún no hay diferencias JSON para mostrar."
     },
     "messages": {
       "empty": "Introduce contenido primero.",
-      "success": "Comparacion JSON completada",
-      "failed": "Error en la operacion: "
+      "success": "Comparación JSON completada",
+      "failed": "Error en la operación: "
     },
     "leftPlaceholder": "{\n  \"name\": \"Alice\",\n  \"role\": \"admin\"\n}",
     "rightPlaceholder": "{\n  \"name\": \"Alice\",\n  \"role\": \"editor\"\n}",
-    "outputPlaceholder": "El diff JSON aparecera aqui..."
+    "outputPlaceholder": "El diff JSON aparecerá aquí..."
   },
   "pt": {
-    "title": "Diff JSON — Coding.Tools",
-    "description": "Compara dois documentos JSON e destaca diferencas estruturais.",
+    "title": "Diferença JSON - Coding.Tools",
+    "description": "Compare dois documentos JSON válidos e relate caminhos adicionados, removidos, alterados e inalterados.",
     "toolTitle": "Diff JSON",
-    "toolDescription": "Cole dois JSON para encontrar diferencas por caminho, indice de array e valor.",
+    "toolDescription": "Compare duas cargas JSON por caminho do objeto, índice de matriz e valor.",
     "categoryName": "Formatacao e minificacao",
     "buttonLabel": "Comparar JSON",
-    "descTitle": "Diff JSON",
+    "descTitle": "Encontre mudanças estruturais entre cargas úteis JSON",
     "descParas": [
-      "O diff JSON compara dois documentos JSON e mostra diferencas em caminhos de objeto e indices de array precisos.",
-      "Primeiro valida as duas entradas e depois gera um diff em texto e um resumo facil de copiar em revisoes ou tickets."
+      "<strong>Diff JSON compara dois documentos JSON analisados e relata diferenças no caminho exato onde elas ocorrem.</strong> Use-o para revisar alterações de resposta de API, atualizações de configuração, dados de teste, cargas úteis de sinalizadores de recursos e instantâneos salvos.",
+      "Os objetos são comparados por chave, enquanto os arrays são comparados por índice porque a ordem dos arrays é significativa em JSON. A classificação de chaves de objeto pode reduzir o ruído, mas não torna equivalentes as matrizes reordenadas."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Cole o JSON original no editor da esquerda.",
-      "Cole o JSON alterado no editor da direita.",
-      "Inclua caminhos sem alteracao se precisar de auditoria completa.",
-      "Clique em <strong>Comparar JSON</strong> para gerar o diff por caminho."
+      "Cole o JSON original no editor esquerdo.",
+      "Cole o JSON alterado no editor correto.",
+      "Escolha se deseja incluir caminhos inalterados ou classificar chaves de objeto antes de comparar.",
+      "Clique em <strong>Comparar JSON</strong> para gerar a diferença estrutural caminho por caminho."
     ],
-    "whatIs": "Para que serve esta ferramenta?",
+    "whatIs": "O que é a diferença JSON?",
     "whatIsParas": [
-      "Um diff JSON mostra mudancas estruturais entre duas cargas, como chaves adicionadas ou removidas, valores alterados e diferencas de indice em arrays.",
-      "E util para revisar respostas API, mudancas de configuracao, dados de teste e cargas inesperadas."
+      "<strong>Diff JSON</strong> é uma ferramenta de comparação baseada em navegador para dados JSON estruturados. Ele identifica chaves adicionadas, chaves removidas, valores primitivos alterados, alterações de objetos e diferenças de índice de array.",
+      "Ambos os lados devem ser JSON válidos antes da comparação. A diferença é estrutural e não textual, portanto, os espaços em branco e a ordem das chaves dos objetos não são sinais úteis, a menos que afetem os dados analisados."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "As duas entradas devem ser JSON valido. A ordem das chaves do objeto nao afeta a igualdade por padrao; arrays sao comparados por indice.",
+    "inputNotesPara": "Cole documentos JSON completos em ambos os lados. Para entradas de log orientadas por linha, extraia primeiro a parte JSON. Quando as matrizes diferem, verifique se um item deslocado causou muitas alterações no nível do índice.",
     "example": "Exemplo",
-    "examplePara": "Uma mudanca de papel aparece no caminho JSON:",
+    "examplePara": "Um valor alterado é relatado em seu local no estilo JSONPath:",
     "exampleCode": "Original\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nAlterado\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[alterado] $.user.role\n- \"admin\"\n+ \"editor\"",
     "labels": {
       "leftInput": "JSON original",
       "rightInput": "JSON alterado",
       "output": "Resultado do diff",
-      "showUnchanged": "Incluir caminhos sem alteracao",
+      "showUnchanged": "Incluir caminhos sem alteração",
       "sortKeys": "Ordenar chaves antes de comparar",
       "summary": "Resumo",
       "added": "Adicionado",
       "removed": "Removido",
       "changed": "Alterado",
-      "unchanged": "Sem alteracao",
-      "noDiff": "Ainda nao ha diferencas JSON para mostrar."
+      "unchanged": "Sem alteração",
+      "noDiff": "Ainda não há diferenças JSON para mostrar."
     },
     "messages": {
       "empty": "Insira conteudo primeiro.",
-      "success": "Comparacao JSON concluida",
-      "failed": "Falha na operacao: "
+      "success": "Comparação JSON concluída",
+      "failed": "Falha na operação: "
     },
     "leftPlaceholder": "{\n  \"name\": \"Alice\",\n  \"role\": \"admin\"\n}",
     "rightPlaceholder": "{\n  \"name\": \"Alice\",\n  \"role\": \"editor\"\n}",
-    "outputPlaceholder": "O diff JSON aparecera aqui..."
+    "outputPlaceholder": "O diff JSON aparecerá aqui..."
   }
 }

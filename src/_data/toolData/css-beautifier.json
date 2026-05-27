@@ -1,281 +1,290 @@
 {
   "en": {
-    "title": "CSS Beautifier — Coding.Tools",
-    "description": "Beautify and format CSS code with proper indentation directly in your browser.",
+    "title": "CSS Beautifier - Coding.Tools",
+    "description": "Beautify CSS rules with readable selectors, declarations, blocks, and spacing.",
     "toolTitle": "CSS Beautifier",
-    "toolDescription": "Clean up messy or minified CSS with consistent indentation and structure. Copy or download the beautified result.",
+    "toolDescription": "Format compact CSS into readable rules, selectors, and declarations.",
     "categoryName": "Formatter & Minifier",
     "inputPlaceholder": "Paste CSS to beautify...",
     "outputPlaceholder": "Beautified CSS will appear here...",
-    "descTitle": "CSS Beautifier",
+    "descTitle": "Make stylesheets easier to read and review",
     "descParas": [
-      "This tool beautifies CSS code by adding proper indentation, line breaks, and consistent formatting. Paste minified or poorly formatted CSS and get clean, readable output instantly.",
-      "The operation runs locally in your browser. Your data is never uploaded or stored on a server."
+      "<strong>CSS Beautifier expands compact CSS into readable selectors, declaration blocks, properties, and values.</strong> It helps when debugging copied styles, reviewing generated CSS, inspecting framework output, or preparing examples.",
+      "Beautifying changes layout, not cascade semantics. Selector order, duplicate declarations, custom properties, comments, media queries, and layer order should remain intact because those details can affect final styles."
     ],
     "howToUse": "How to use",
     "steps": [
       "Paste your CSS code into the input editor.",
-      "Click <strong>Beautify CSS</strong> to clean up the code.",
-      "The beautified CSS appears in the output editor with proper indentation.",
+      "Click <strong>Beautify CSS</strong> to reflow rules and declarations.",
+      "Review the output for preserved selector order, comments, and at-rules.",
       "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a file, or <strong>Clear</strong> to reset."
     ],
-    "whatIs": "What is CSS beautification?",
+    "whatIs": "What is CSS Beautifier?",
     "whatIsParas": [
-      "CSS beautification adds indentation and line breaks to CSS code, making it human-readable. Minified CSS has all whitespace removed to reduce file size, but is difficult to read and debug.",
-      "Beautifying CSS is essential for debugging styles, reviewing frameworks, and collaborating with other developers."
+      "<strong>CSS Beautifier</strong> is a browser-based utility for making stylesheets easier to scan. It separates rule blocks and declarations so you can inspect selectors, properties, values, and at-rules without reading a dense one-line file.",
+      "CSS behavior depends on cascade order, specificity, inheritance, layers, and custom property resolution. Formatting should not reorder rules or declarations; verify important stylesheet changes in the browser."
     ],
     "inputNotes": "Input notes",
-    "inputNotesPara": "The tool accepts any CSS input. The beautifier preserves all styles and selectors — it only changes whitespace and indentation for readability.",
+    "inputNotesPara": "Paste CSS only, including at-rules such as <code>@media</code>, <code>@supports</code>, and <code>@layer</code>. Keep selector and declaration order unchanged when copying the output back into a project.",
     "example": "Example",
-    "examplePara": "Minified CSS becomes readable after beautification:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "Dense CSS becomes easier to scan once each declaration is placed on its own line:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "Beautify CSS"
   },
   "cn": {
-    "title": "CSS 美化 — Coding.Tools",
-    "description": "在浏览器中美化和格式化 CSS 代码。",
+    "title": "CSS 美化器 - Coding.Tools",
+    "description": "使用可读的选择器、声明、块和间距美化 CSS 规则。",
     "toolTitle": "CSS 美化",
-    "toolDescription": "清理杂乱或压缩的 CSS，添加一致的缩进和结构。复制或下载美化结果。",
+    "toolDescription": "将紧凑的 CSS 格式化为可读的规则、选择器和声明。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要美化的 CSS...",
     "outputPlaceholder": "美化后的 CSS 将在此显示...",
-    "descTitle": "CSS 美化",
+    "descTitle": "使样式表更易于阅读和审查",
     "descParas": [
-      "该工具美化 CSS 代码，添加适当的缩进、换行和一致的格式。粘贴压缩或格式不佳的 CSS，即可获取干净、可读的输出。",
-      "操作在浏览器中本地运行。您的数据不会上传或存储在服务器上。"
+      "<strong>CSS 美化 将紧凑的 CSS 扩展为可读的选择器、声明块、属性和值。</strong> 它有助于调试复制的样式、检查生成的 CSS、检查框架输出或准备示例。",
+      "美化改变布局，而不是级联语义。选择器顺序、重复声明、自定义属性、注释、媒体查询和图层顺序应保持不变，因为这些细节可能会影响最终样式。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 CSS 代码粘贴到输入编辑器中。",
-      "点击<strong>美化 CSS</strong>来清理代码。",
-      "美化后的 CSS 将以适当的缩进显示在输出编辑器中。",
-      "使用<strong>复制</strong>复制到剪贴板，<strong>下载</strong>保存文件，或<strong>清除</strong>重置。"
+      "单击 <strong>美化 CSS</strong> 以重排规则和声明。",
+      "检查输出中保留的选择器顺序、注释和 at 规则。",
+      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
-    "whatIs": "什么是 CSS 美化？",
+    "whatIs": "什么是CSS美容仪？",
     "whatIsParas": [
-      "CSS 美化为 CSS 代码添加缩进和换行，使其易于阅读。压缩的 CSS 移除了所有空白字符以减小文件大小，但难以阅读和调试。",
-      "美化 CSS 对于调试样式、查看框架和与其他开发者协作至关重要。"
+      "<strong>CSS 美化</strong> 是一个基于浏览器的实用程序，用于使样式表更易于扫描。它将规则块和声明分开，这样您就可以检查选择器、属性、值和 at 规则，而无需读取密集的一行文件。",
+      "CSS 行为取决于级联顺序、特异性、继承、层和自定义属性解析。格式化不应重新排序规则或声明；验证浏览器中重要的样式表更改。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "该工具接受任何 CSS 输入。美化器保留所有样式和选择器——只改变空白和缩进以提高可读性。",
+    "inputNotesPara": "仅粘贴 CSS，包括 <code>@media</code>、<code>@supports</code> 和 <code>@layer</code> 等 at 规则。将输出复制回项目时，保持选择器和声明顺序不变。",
     "example": "示例",
-    "examplePara": "压缩的 CSS 美化后变得可读：",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "一旦每个声明都放在自己的行上，密集的 CSS 就变得更容易扫描：",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "美化 CSS"
   },
   "tw": {
-    "title": "CSS 美化 — Coding.Tools",
-    "description": "在瀏覽器中美化和格式化 CSS 程式碼。",
+    "title": "CSS 美化器 - Coding.Tools",
+    "description": "使用可讀的選擇器、聲明、區塊和間距來美化 CSS 規則。",
     "toolTitle": "CSS 美化",
-    "toolDescription": "清理雜亂或壓縮的 CSS，添加一致的縮排和結構。複製或下載美化結果。",
+    "toolDescription": "將緊湊的 CSS 格式化為可讀取的規則、選擇器和聲明。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要美化的 CSS...",
     "outputPlaceholder": "美化後的 CSS 將在此顯示...",
-    "descTitle": "CSS 美化",
+    "descTitle": "使樣式表更易於閱讀和審查",
     "descParas": [
-      "該工具美化 CSS 程式碼，添加適當的縮排、換行和一致的格式。貼上壓縮或格式不佳的 CSS，即可取得乾淨、可讀的輸出。",
-      "操作在瀏覽器中本地執行。您的資料不會上傳或儲存在伺服器上。"
+      "<strong>CSS 美化 將緊湊的 CSS 擴展為可讀的選擇器、聲明區塊、屬性和值。</strong> 它有助於偵錯複製的樣式、檢查產生的 CSS、檢查框架輸出或準備範例。",
+      "美化改變佈局，而不是級聯語義。選擇器順序、重複聲明、自訂屬性、註釋、媒體查詢和圖層順序應保持不變，因為這些細節可能會影響最終樣式。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將 CSS 程式碼貼上到輸入編輯器中。",
-      "點擊<strong>美化 CSS</strong>來清理程式碼。",
-      "美化後的 CSS 將以適當的縮排顯示在輸出編輯器中。",
-      "使用<strong>複製</strong>複製到剪貼簿，<strong>下載</strong>儲存檔案，或<strong>清除</strong>重置。"
+      "將 CSS 程式碼貼到輸入編輯器中。",
+      "按一下 <strong>美化 CSS</strong> 以重排規則和聲明。",
+      "檢查輸出中保留的選擇器順序、註解和 at 規則。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
     ],
-    "whatIs": "什麼是 CSS 美化？",
+    "whatIs": "什麼是CSS美容儀？",
     "whatIsParas": [
-      "CSS 美化為 CSS 程式碼添加縮排和換行，使其易於閱讀。壓縮的 CSS 移除了所有空白字元以減小檔案大小，但難以閱讀和除錯。",
-      "美化 CSS 對於除錯樣式、檢視框架和與其他開發者協作至關重要。"
+      "<strong>CSS 美化</strong> 是一個基於瀏覽器的實用程序，用於使樣式表更易於掃描。它將規則區塊和聲明分開，以便您可以檢查選擇器、屬性、值和 at 規則，而無需讀取密集的一行檔案。",
+      "CSS 行為取決於級聯順序、特異性、繼承、層和自訂屬性解析。格式化不應重新排序規則或聲明；驗證瀏覽器中重要的樣式表變更。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "該工具接受任何 CSS 輸入。美化器保留所有樣式和選擇器——只改變空白和縮排以提高可讀性。",
+    "inputNotesPara": "僅貼上 CSS，包括 <code>@media</code>、<code>@supports</code> 和 <code>@layer</code> 等 at 規則。將輸出複製回項目時，保持選擇器和宣告順序不變。",
     "example": "範例",
-    "examplePara": "壓縮的 CSS 美化後變得可讀：",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "一旦每個聲明都放在自己的行上，密集的 CSS 就變得更容易掃描：",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "美化 CSS"
   },
   "jp": {
-    "title": "CSS 整形 — Coding.Tools",
-    "description": "ブラウザで CSS コードを整形して美しくします。",
+    "title": "CSS 美容器 - Coding.Tools",
+    "description": "読みやすいセレクター、宣言、ブロック、スペースを使用して CSS ルールを美しくします。",
     "toolTitle": "CSS 整形",
-    "toolDescription": "乱れたまたは圧縮された CSS を一貫したインデントと構造で整理します。コピーまたはダウンロード。",
+    "toolDescription": "コンパクトな CSS を読みやすいルール、セレクター、宣言にフォーマットします。",
     "categoryName": "整形と圧縮",
     "inputPlaceholder": "整形する CSS を貼り付け...",
     "outputPlaceholder": "整形された CSS がここに表示されます...",
-    "descTitle": "CSS 整形",
+    "descTitle": "スタイルシートを読みやすく、レビューしやすくする",
     "descParas": [
-      "このツールは CSS コードに適切なインデント、改行、一貫したフォーマットを追加して美しく整形します。圧縮またはフォーマットが不正な CSS を貼り付けると、きれいな読みやすい出力が得られます。",
-      "操作はブラウザでローカルに実行されます。データはアップロードされず、サーバーに保存されません。"
+      "<strong>CSS 整形 は、コンパクトな CSS を読み取り可能なセレクター、宣言ブロック、プロパティ、および値に拡張します。</strong> コピーされたスタイルのデバッグ、生成された CSS のレビュー、フレームワーク出力の検査、またはサンプルの準備に役立ちます。",
+      "カスケード セマンティクスではなく、レイアウトを美しく変更します。セレクターの順序、重複した宣言、カスタム プロパティ、コメント、メディア クエリ、およびレイヤーの順序は、最終的なスタイルに影響を与える可能性があるため、そのままにしておく必要があります。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "CSS コードを入力エディタに貼り付けます。",
-      "<strong>CSS 整形</strong>をクリックしてコードを整理します。",
-      "整形された CSS が適切なインデントで出力エディタに表示されます。",
-      "<strong>コピー</strong>でクリップボードへ、<strong>ダウンロード</strong>でファイル保存、<strong>クリア</strong>でリセット。"
+      "CSS コードを入力エディターに貼り付けます。",
+      "「<strong>CSS を整形</strong>」をクリックして、ルールと宣言をリフローします。",
+      "保存されたセレクターの順序、コメント、および at-rules の出力を確認します。",
+      "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "CSS 整形とは？",
+    "whatIs": "CSS ビューティファイヤーとは何ですか?",
     "whatIsParas": [
-      "CSS 整形は CSS コードにインデントと改行を追加し、人間が読めるようにします。圧縮された CSS はファイルサイズを小さくするためにすべての空白が除去されていますが、読むのは困難です。",
-      "CSS の整形はスタイルのデバッグ、フレームワークの確認、他の開発者との協力に不可欠です。"
+      "<strong>CSS 整形</strong> は、スタイルシートをスキャンしやすくするためのブラウザベースのユーティリティです。ルール ブロックと宣言が分離されているため、高密度の 1 行ファイルを読み取らなくても、セレクター、プロパティ、値、および at-rules を検査できます。",
+      "CSS の動作は、カスケード順序、特異性、継承、レイヤー、およびカスタム プロパティの解決によって異なります。書式設定では、ルールや宣言を並べ替えてはなりません。ブラウザでの重要なスタイルシートの変更を確認します。"
     ],
     "inputNotes": "入力に関する注意",
-    "inputNotesPara": "このツールは任意の CSS 入力を受け付けます。整形ツールはすべてのスタイルとセレクタを保持し、可読性のために空白とインデントのみを変更します。",
+    "inputNotesPara": "<code>@media</code>、<code>@supports</code>、<code>@layer</code> などのアットルールを含む、CSS のみを貼り付けます。出力をプロジェクトにコピーし直すときは、セレクターと宣言の順序を変更しないでください。",
     "example": "例",
-    "examplePara": "圧縮された CSS は整形後に読みやすくなります：",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "各宣言を独自の行に配置すると、密集 CSS のスキャンが容易になります。",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "CSS を整形"
   },
   "kr": {
-    "title": "CSS 포맷터 — Coding.Tools",
-    "description": "브라우저에서 CSS 코드를 포맷하고 아름답게 정리합니다.",
+    "title": "CSS 뷰티파이어 - Coding.Tools",
+    "description": "읽기 쉬운 선택기, 선언, 블록 및 공백을 사용하여 CSS 규칙을 아름답게 만듭니다.",
     "toolTitle": "CSS 포맷터",
-    "toolDescription": "混乱되거나 압축된 CSS를 일관된 들여쓰기와 구조로 정리합니다. 복사 또는 다운로드하세요.",
+    "toolDescription": "컴팩트 CSS를 읽을 수 있는 규칙, 선택기 및 선언으로 형식화합니다.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "포맷할 CSS를 붙여넣으세요...",
     "outputPlaceholder": "포맷된 CSS가 여기에 표시됩니다...",
-    "descTitle": "CSS 포맷터",
+    "descTitle": "스타일시트를 더 쉽게 읽고 검토할 수 있도록 만들기",
     "descParas": [
-      "이 도구는 CSS 코드에 적절한 들여쓰기, 줄 바꿈, 일관된 포맷을 추가하여 아름답게 정리합니다. 압축되었거나 잘못 포맷된 CSS를 붙여넣으면 깔끔하고 읽기 쉬운 출력을 얻을 수 있습니다.",
-      "조작은 브라우저에서 로컬로 실행됩니다. 데이터는 업로드되지 않으며 서버에 저장되지 않습니다."
+      "<strong>CSS 포맷터는 컴팩트한 CSS를 읽을 수 있는 선택기, 선언 블록, 속성 및 값으로 확장합니다.</strong> 복사된 스타일을 디버깅하고, 생성된 CSS를 검토하고, 프레임워크 출력을 검사하거나 예제를 준비할 때 도움이 됩니다.",
+      "계단식 의미 체계가 아닌 레이아웃 변경을 아름답게 합니다. 선택기 순서, 중복 선언, 사용자 정의 속성, 주석, 미디어 쿼리 및 레이어 순서는 세부 사항이 최종 스타일에 영향을 미칠 수 있으므로 그대로 유지되어야 합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "CSS 코드를 입력 편집기에 붙여넣으세요.",
-      "<strong>CSS 포맷</strong>을 클릭하여 코드를 정리합니다.",
-      "포맷된 CSS가 적절한 들여쓰기와 함께 출력 편집기에 표시됩니다.",
-      "<strong>복사</strong>로 클립보드에 복사, <strong>다운로드</strong>로 파일 저장, 또는 <strong>지우기</strong>로 초기화하세요."
+      "CSS 코드를 입력 편집기에 붙여넣습니다.",
+      "리플로우 규칙 및 선언을 수행하려면 <strong>CSS 포맷</strong>를 클릭하세요.",
+      "보존된 선택기 순서, 주석 및 at-규칙에 대한 출력을 검토합니다.",
+      "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "CSS 포맷팅이란?",
+    "whatIs": "CSS 뷰티파이어란 무엇인가요?",
     "whatIsParas": [
-      "CSS 포맷팅은 CSS 코드에 들여쓰기와 줄 바꿈을 추가하여 사람이 읽을 수 있게 합니다. 압축된 CSS는 파일 크기를 줄이기 위해 모든 공백이 제거되어 읽기 어렵습니다.",
-      "CSS 포맷팅은 스타일 디버깅, 프레임워크 검토, 다른 개발자와의 협업에 필수적입니다."
+      "<strong>CSS 포맷터</strong>는 스타일시트를 더 쉽게 스캔할 수 있도록 해주는 브라우저 기반 유틸리티입니다. 규칙 블록과 선언을 분리하므로 조밀한 한 줄 파일을 읽지 않고도 선택기, 속성, 값 및 at-규칙을 검사할 수 있습니다.",
+      "CSS 동작은 계단식 순서, 특이성, 상속, 레이어 및 사용자 정의 속성 확인에 따라 달라집니다. 형식화로 인해 규칙이나 선언의 순서가 바뀌어서는 안 됩니다. 브라우저에서 중요한 스타일시트 변경 사항을 확인합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "이 도구는 모든 CSS 입력을 허용합니다. 포맷터는 모든 스타일과 선택자를 보존하고 가독성을 위해 공백과 들여쓰기만 변경합니다.",
+    "inputNotesPara": "<code>@media</code>, <code>@supports</code> 및 <code>@layer</code>와 같은 at-규칙을 포함하여 CSS만 붙여넣습니다. 출력을 프로젝트에 다시 복사할 때 선택기와 선언 순서를 변경하지 않고 유지합니다.",
     "example": "예시",
-    "examplePara": "압축된 CSS는 포맷 후 읽기 쉬워집니다:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "각 선언이 자체 라인에 배치되면 조밀한 CSS를 스캔하기가 더 쉬워집니다.",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "CSS 포맷"
   },
   "fr": {
-    "title": "Formateur CSS — Coding.Tools",
-    "description": "Embellissez et formatez le code CSS avec une indentation correcte directement dans votre navigateur.",
+    "title": "CSS Embellisseur - Coding.Tools",
+    "description": "Embellissez les règles CSS avec des sélecteurs, des déclarations, des blocs et des espacements lisibles.",
     "toolTitle": "Formateur CSS",
-    "toolDescription": "Nettoyez le CSS désordonné ou minifié avec une indentation et une structure cohérentes. Copiez ou téléchargez le résultat.",
+    "toolDescription": "Formatez CSS compact en règles, sélecteurs et déclarations lisibles.",
     "categoryName": "Formatage et minification",
     "inputPlaceholder": "Collez le CSS à embellir...",
     "outputPlaceholder": "Le CSS embell apparaîtra ici...",
-    "descTitle": "Formateur CSS",
+    "descTitle": "Rendre les feuilles de style plus faciles à lire et à réviser",
     "descParas": [
-      "Cet outil embellit le code CSS en ajoutant une indentation correcte, des retours à la ligne et un formatage cohérent. Collez du CSS minifié ou mal formaté pour obtenir une sortie propre et lisible instantanément.",
-      "L'opération s'exécute localement dans votre navigateur. Vos données ne sont jamais téléchargées ni stockées sur un serveur."
+      "<strong>Formateur CSS étend le CSS compact en sélecteurs, blocs de déclaration, propriétés et valeurs lisibles.</strong> Il est utile lors du débogage des styles copiés, de la révision du CSS généré, de l'inspection de la sortie du framework ou de la préparation d'exemples.",
+      "Embellir la mise en page des changements, pas la sémantique en cascade. L'ordre des sélecteurs, les déclarations en double, les propriétés personnalisées, les commentaires, les requêtes multimédias et l'ordre des calques doivent rester intacts, car ces détails peuvent affecter les styles finaux."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez votre code CSS dans l'éditeur d'entrée.",
-      "Cliquez sur <strong>Embellir CSS</strong> pour nettoyer le code.",
-      "Le CSS embell apparaît dans l'éditeur de sortie avec une indentation correcte.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier, ou <strong>Effacer</strong> pour réinitialiser."
+      "Collez votre code CSS dans l'éditeur de saisie.",
+      "Cliquez sur <strong>Embellir CSS</strong> pour redistribuer les règles et les déclarations.",
+      "Examinez le résultat pour connaître l’ordre des sélecteurs, les commentaires et les règles at préservés.",
+      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que l'embellissement CSS ?",
+    "whatIs": "Qu'est-ce que l'embellisseur CSS ?",
     "whatIsParas": [
-      "L'embellissement CSS ajoute de l'indentation et des retours à la ligne au code CSS, le rendant lisible par l'homme. Le CSS minifié a tous les espaces supprimés pour réduire la taille du fichier, mais est difficile à lire.",
-      "L'embellissement CSS est essentiel pour le débogage des styles, l'examen des frameworks et la collaboration."
+      "<strong>Formateur CSS</strong> est un utilitaire basé sur un navigateur permettant de faciliter la numérisation des feuilles de style. Il sépare les blocs de règles et les déclarations afin que vous puissiez inspecter les sélecteurs, les propriétés, les valeurs et les règles at sans lire un fichier dense d'une seule ligne.",
+      "Le comportement de CSS dépend de l'ordre de la cascade, de la spécificité, de l'héritage, des couches et de la résolution des propriétés personnalisées. Le formatage ne doit pas réorganiser les règles ou les déclarations ; vérifiez les modifications importantes de la feuille de style dans le navigateur."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "L'outil accepte toute entrée CSS. L'embellisseur préserve tous les styles et sélecteurs.",
+    "inputNotesPara": "Collez uniquement CSS, y compris les règles at telles que <code>@media</code>, <code>@supports</code> et <code>@layer</code>. Conservez le sélecteur et l’ordre de déclaration inchangés lors de la copie de la sortie dans un projet.",
     "example": "Exemple",
-    "examplePara": "Le CSS minifié devient lisible après embellissement :",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "Le CSS dense devient plus facile à analyser une fois que chaque déclaration est placée sur sa propre ligne :",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "Embellir CSS"
   },
   "de": {
-    "title": "CSS-Formatierer — Coding.Tools",
-    "description": "Verschönern und formatieren Sie CSS-Code mit korrekter Einrückung direkt in Ihrem Browser.",
+    "title": "CSS Verschönerer - Coding.Tools",
+    "description": "Verschönern Sie CSS-Regeln mit lesbaren Selektoren, Deklarationen, Blöcken und Abständen.",
     "toolTitle": "CSS-Formatierer",
-    "toolDescription": "Bereinigen Sie unordentliches oder minifiziertes CSS mit konsistenter Einrückung und Struktur.",
+    "toolDescription": "Formatieren Sie das kompakte CSS in lesbare Regeln, Selektoren und Deklarationen.",
     "categoryName": "Formatierung & Minimierung",
     "inputPlaceholder": "CSS zum Verschönern einfügen...",
     "outputPlaceholder": "Verschönertes CSS wird hier angezeigt...",
-    "descTitle": "CSS-Formatierer",
+    "descTitle": "Erleichtern Sie das Lesen und Überprüfen von Stylesheets",
     "descParas": [
-      "Dieses Tool verschönert CSS-Code durch korrekte Einrückung, Zeilenumbrüche und konsistente Formatierung.",
-      "Die Operation wird lokal in Ihrem Browser ausgeführt. Ihre Daten werden nie hochgeladen oder auf einem Server gespeichert."
+      "<strong>CSS-Formatierer erweitert das kompakte CSS in lesbare Selektoren, Deklarationsblöcke, Eigenschaften und Werte.</strong> Es hilft beim Debuggen kopierter Stile, beim Überprüfen des generierten CSS, beim Überprüfen der Framework-Ausgabe oder beim Vorbereiten von Beispielen.",
+      "Durch die Verschönerung ändert sich das Layout, nicht die Kaskadensemantik. Auswahlreihenfolge, doppelte Deklarationen, benutzerdefinierte Eigenschaften, Kommentare, Medienabfragen und Ebenenreihenfolge sollten erhalten bleiben, da diese Details Auswirkungen auf die endgültigen Stile haben können."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie Ihren CSS-Code in den Eingabe-Editor ein.",
-      "Klicken Sie auf <strong>CSS verschönern</strong>.",
-      "Das verschönerte CSS wird mit korrekter Einrückung angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei, oder <strong>Löschen</strong> zum Zurücksetzen."
+      "Fügen Sie Ihren CSS-Code in den Eingabeeditor ein.",
+      "Klicken Sie auf <strong>Verschönern CSS</strong>, um Regeln und Deklarationen umzufließen.",
+      "Überprüfen Sie die Ausgabe auf beibehaltene Selektorreihenfolge, Kommentare und At-Regeln.",
+      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
-    "whatIs": "Was ist CSS-Verschönerung?",
+    "whatIs": "Was ist CSS-Formatierer?",
     "whatIsParas": [
-      "CSS-Verschönerung fügt Einrückungen hinzu und macht den Code lesbar.",
-      "CSS-Verschönerung ist unerlässlich für Debugging und Zusammenarbeit."
+      "<strong>CSS-Formatierer</strong> ist ein browserbasiertes Dienstprogramm, das das Scannen von Stylesheets erleichtert. Es trennt Regelblöcke und Deklarationen, sodass Sie Selektoren, Eigenschaften, Werte und At-Regeln überprüfen können, ohne eine dichte einzeilige Datei lesen zu müssen.",
+      "Das Verhalten von CSS hängt von der Kaskadenreihenfolge, der Spezifität, der Vererbung, den Ebenen und der Auflösung benutzerdefinierter Eigenschaften ab. Durch die Formatierung sollten Regeln oder Deklarationen nicht neu angeordnet werden. Überprüfen Sie wichtige Stylesheet-Änderungen im Browser."
     ],
     "inputNotes": "Eingabehinweise",
-    "inputNotesPara": "Das Tool akzeptiert jede CSS-Eingabe.",
+    "inputNotesPara": "Fügen Sie nur CSS ein, einschließlich At-Regeln wie <code>@media</code>, <code>@supports</code> und <code>@layer</code>. Behalten Sie die Selektor- und Deklarationsreihenfolge beim Zurückkopieren der Ausgabe in ein Projekt bei.",
     "example": "Beispiel",
-    "examplePara": "Minifiziertes CSS wird nach der Verschönerung lesbar:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "Dichtes CSS lässt sich leichter scannen, sobald jede Deklaration in einer eigenen Zeile steht:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "Verschönern CSS"
   },
   "es": {
-    "title": "Formateador CSS — Coding.Tools",
-    "description": "Embellezca y formatee el código CSS con indentación correcta directamente en su navegador.",
+    "title": "Embellecedor CSS - Coding.Tools",
+    "description": "Embellezca las reglas CSS con selectores, declaraciones, bloques y espacios legibles.",
     "toolTitle": "Formateador CSS",
-    "toolDescription": "Limpie CSS desordenado o minificado con indentación y estructura consistentes.",
+    "toolDescription": "Formatee el CSS compacto en reglas, selectores y declaraciones legibles.",
     "categoryName": "Formato y minificación",
     "inputPlaceholder": "Pegue CSS para embellecer...",
     "outputPlaceholder": "El CSS embellecido aparecerá aquí...",
-    "descTitle": "Formateador CSS",
+    "descTitle": "Haga que las hojas de estilo sean más fáciles de leer y revisar",
     "descParas": [
-      "Esta herramienta embellece el código CSS con indentación correcta y formato consistente.",
-      "La operación se ejecuta localmente en su navegador. Sus datos nunca se cargan ni almacenan en un servidor."
+      "<strong>Formateador CSS expande el CSS compacto en selectores, bloques de declaración, propiedades y valores legibles.</strong> Ayuda a depurar estilos copiados, revisar el CSS generado, inspeccionar la salida del marco o preparar ejemplos.",
+      "Embellecer el diseño de los cambios, no la semántica en cascada. El orden del selector, las declaraciones duplicadas, las propiedades personalizadas, los comentarios, las consultas de medios y el orden de las capas deben permanecer intactos porque esos detalles pueden afectar los estilos finales."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Pegue su código CSS en el editor de entrada.",
-      "Haga clic en <strong>Embellecer CSS</strong>.",
-      "El CSS embellecido aparece con indentación correcta.",
-      "Use <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo, o <strong>Limpiar</strong> para reiniciar."
+      "Haga clic en <strong>Embellecer CSS</strong> para redistribuir reglas y declaraciones.",
+      "Revise el resultado para ver el orden del selector, los comentarios y las reglas at conservados.",
+      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo o <strong>Limpiar</strong> para restablecer."
     ],
-    "whatIs": "¿Qué es el embellecimiento CSS?",
+    "whatIs": "¿Qué es el embellecedor CSS?",
     "whatIsParas": [
-      "El embellecimiento CSS agrega indentación y hace el código legible.",
-      "El embellecimiento CSS es esencial para depurar y colaborar."
+      "<strong>Formateador CSS</strong> es una utilidad basada en navegador para facilitar el escaneo de hojas de estilo. Separa bloques de reglas y declaraciones para que pueda inspeccionar selectores, propiedades, valores y reglas sin leer un archivo denso de una sola línea.",
+      "El comportamiento de CSS depende del orden de la cascada, la especificidad, la herencia, las capas y la resolución de propiedades personalizadas. El formato no debe reordenar las reglas o declaraciones; verificar cambios importantes en la hoja de estilo en el navegador."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "La herramienta acepta cualquier entrada CSS.",
+    "inputNotesPara": "Pegue solo CSS, incluidas reglas como <code>@media</code>, <code>@supports</code> y <code>@layer</code>. Mantenga el orden del selector y de la declaración sin cambios al copiar el resultado nuevamente en un proyecto.",
     "example": "Ejemplo",
-    "examplePara": "El CSS minificado se vuelve legible después del embellecimiento:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "El CSS denso se vuelve más fácil de escanear una vez que cada declaración se coloca en su propia línea:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "Embellecer CSS"
   },
   "pt": {
-    "title": "Formatador CSS — Coding.Tools",
-    "description": "Embeleze e formate o código CSS com indentação correta diretamente no seu navegador.",
+    "title": "Embelezador CSS - Coding.Tools",
+    "description": "Embeleze regras CSS com seletores, declarações, blocos e espaçamentos legíveis.",
     "toolTitle": "Formatador CSS",
-    "toolDescription": "Limpe CSS desordenado ou minificado com indentação e estrutura consistentes.",
+    "toolDescription": "Formate CSS compacto em regras, seletores e declarações legíveis.",
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole CSS para embelezar...",
     "outputPlaceholder": "O CSS embelezado aparecerá aqui...",
-    "descTitle": "Formatador CSS",
+    "descTitle": "Torne as folhas de estilo mais fáceis de ler e revisar",
     "descParas": [
-      "Esta ferramenta embeleze o código CSS com indentação correta e formatação consistente.",
-      "A operação é executada localmente no seu navegador. Seus dados nunca são enviados ou armazenados em um servidor."
+      "<strong>CSS O Beautifier expande o CSS compacto em seletores legíveis, blocos de declaração, propriedades e valores.</strong> Ajuda na depuração de estilos copiados, na revisão de CSS gerado, na inspeção da saída da estrutura ou na preparação de exemplos.",
+      "O embelezamento altera o layout, não a semântica em cascata. A ordem do seletor, as declarações duplicadas, as propriedades personalizadas, os comentários, as consultas de mídia e a ordem das camadas devem permanecer intactas porque esses detalhes podem afetar os estilos finais."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole seu código CSS no editor de entrada.",
-      "Clique em <strong>Embelezar CSS</strong>.",
-      "O CSS embelezado aparece com indentação correta.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo, ou <strong>Limpar</strong> para reiniciar."
+      "Clique em <strong>Embelezar CSS</strong> para refluir regras e declarações.",
+      "Revise a saída para ordem preservada do seletor, comentários e regras at.",
+      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo ou <strong>Limpar</strong> para redefinir."
     ],
-    "whatIs": "O que é embelezamento CSS?",
+    "whatIs": "O que é o embelezador CSS?",
     "whatIsParas": [
-      "O embelezamento CSS adiciona indentação e torna o código legível.",
-      "O embelezamento CSS é essencial para depuração e colaboração."
+      "<strong>Formatador CSS</strong> é um utilitário baseado em navegador para tornar as folhas de estilo mais fáceis de digitalizar. Ele separa blocos de regras e declarações para que você possa inspecionar seletores, propriedades, valores e regras sem ler um arquivo denso de uma linha.",
+      "O comportamento de CSS depende da ordem da cascata, da especificidade, da herança, das camadas e da resolução de propriedades personalizadas. A formatação não deve reordenar regras ou declarações; verifique alterações importantes na folha de estilo no navegador."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "A ferramenta aceita qualquer entrada CSS.",
+    "inputNotesPara": "Cole apenas CSS, incluindo regras como <code>@media</code>, <code>@supports</code> e <code>@layer</code>. Mantenha a ordem do seletor e da declaração inalterada ao copiar a saída de volta para um projeto.",
     "example": "Exemplo",
-    "examplePara": "O CSS minificado se torna legível após o embelezamento:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}"
+    "examplePara": "Denso CSS torna-se mais fácil de verificar quando cada declaração é colocada em sua própria linha:",
+    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "buttonLabel": "Embelezar CSS"
   }
 }
