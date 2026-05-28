@@ -234,7 +234,7 @@
     "descTitle": "Convierta datos JSON en elementos XML",
     "descParas": [
       "<strong>El convertidor JSON a XML transforma JSON analizado en marcado XML para sistemas, ejemplos e integraciones que esperan XML.</strong> Es útil al crear prototipos de cargas útiles de estilo SOAP, importaciones heredadas, datos de prueba XML o muestras de documentación.",
-      "JSON y XML no se asignan uno a uno. Las claves de objeto JSON se convierten en nombres de elementos, las matrices generalmente se convierten en elementos repetidos y los valores primitivos se convierten en contenido de texto; los atributos, espacios de nombres y texto mixto requieren convenciones explícitas füra del JSON simple."
+      "JSON y XML no se asignan uno a uno. Las claves de objeto JSON se convierten en nombres de elementos, las matrices generalmente se convierten en elementos repetidos y los valores primitivos se convierten en contenido de texto; los atributos, espacios de nombres y texto mixto requieren convenciones explícitas fuera del JSON simple."
     ],
     "howToUse": "Cómo usar",
     "steps": [

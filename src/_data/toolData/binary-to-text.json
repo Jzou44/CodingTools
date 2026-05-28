@@ -215,7 +215,7 @@
       "<strong>Binario a Texto convierte grupos de ocho dígitos binarios en códigos de caracteres.</strong> Ayuda a decodificar ejemplos de bytes simples, ejercicios de aula, fragmentos de protocolo y pequeñas cargas de texto escritas en binario.",
       "Se ignoran los espacios en blanco, pero la cadena de bits restante debe tener una longitud múltiplo de ocho y contener solo <code>0</code> y <code>1</code>. El texto estándar ASCII utiliza valores de bytes <code>00-7F</code>; los valores de bytes más altos no son una decodificación UTF-8 completa."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Pegue grupos de bytes binarios en el campo de entrada, con o sin espacios entre bytes.",
       "Haga clic en <strong>Convertir</strong> para asignar cada grupo de 8 bits a un carácter.",

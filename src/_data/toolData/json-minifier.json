@@ -233,7 +233,7 @@
     "outputPlaceholder": "El JSON minificado aparecerá aquí...",
     "descTitle": "Haga que JSON sea compacto sin cambiar los valores",
     "descParas": [
-      "<strong>El minificador JSON analiza JSON válido y emite la representación ordinaria más pequeña eliminando espacios, tabulaciones y saltos de línea füra de las cadenas.</strong> Es útil para incrustar accesorios, reducir cargas útiles copiadas y preparar ejemplos compactos.",
+      "<strong>El minificador JSON analiza JSON válido y emite la representación ordinaria más pequeña eliminando espacios, tabulaciones y saltos de línea fuera de las cadenas.</strong> Es útil para incrustar accesorios, reducir cargas útiles copiadas y preparar ejemplos compactos.",
       "Los espacios en blanco dentro de las cadenas entre comillas son datos reales y se conservan. El minificador no elimina claves de objetos, no altera el orden de la matriz, no reescribe números para comprimirlos ni acepta JSON con comentarios."
     ],
     "howToUse": "Cómo usar",
@@ -256,7 +256,7 @@
     "buttonLabel": "Minificar JSON"
   },
   "pt": {
-    "title": "Minimificador JSON - Coding.Tools",
+    "title": "Minificador JSON - Coding.Tools",
     "description": "Minimize JSON válido removendo espaços em branco insignificantes enquanto preserva todos os valores analisados.",
     "toolTitle": "Minificador JSON",
     "toolDescription": "Compacte JSON válido em uma carga útil compacta de uma linha em seu navegador.",

@@ -136,7 +136,7 @@
     ],
     "whatIs": "이진수를 십진수로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Binary</strong>은 <code>0</code> 및 <code>1</code>만 사용하는 2진법입니다. 이진수를 십진수로 변환하면 동일한 비트 패턴이 10진법 숫자와 다시 쓰여지므로 읽기, 비교 또는 계산에 사용하기가 더 쉽습니다."
+      "<strong>이진수</strong>는 <code>0</code> 및 <code>1</code>만 사용하는 2진법입니다. 이진수를 십진수로 변환하면 동일한 비트 패턴이 10진법 숫자와 다시 쓰여지므로 읽기, 비교 또는 계산에 사용하기가 더 쉽습니다."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "이진수만 사용하세요. 입력이 고정 너비 바이트, 단어 또는 비트 필드를 나타내는 경우 숫자 변환이 해당 시각적 너비를 유지하지 못할 수 있으므로 선행 0을 별도로 추적하십시오.",
@@ -215,7 +215,7 @@
       "<strong>Binario a decimal convierte la entrada de base 2 en salida de base 10 y también muestra los valores hexadecimales y octales equivalentes.</strong> Úselo para inspeccionar máscaras de bits, indicadores, valores de bytes, ejemplos de enseñanza o valores de bajo nivel copiados de registros.",
       "La entrada binaria debe contener solo <code>0</code> y <code>1</code>; los espacios en blanco se ignoran. Los prefijos como <code>0b</code> son marcadores de formato, no dígitos binarios, así que elimínelos a menos que el convertidor los acepte explícitamente."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue un valor binario en el campo de entrada.",
       "Revise el resultado decimal y las salidas hexadecimales y octales coincidentes.",
@@ -223,7 +223,7 @@
     ],
     "whatIs": "¿Qué es la conversión de binario a decimal?",
     "whatIsParas": [
-      "<strong>Binary</strong> es base 2, usando solo <code>0</code> y <code>1</code>. La conversión de binario a decimal reescribe el mismo patrón de bits que un número de base 10, por lo que es más fácil de leer, comparar o utilizar en los cálculos."
+      "<strong>Binario</strong> es base 2, usando solo <code>0</code> y <code>1</code>. La conversión de binario a decimal reescribe el mismo patrón de bits que un número de base 10, por lo que es más fácil de leer, comparar o utilizar en los cálculos."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "Utilice solo dígitos binarios. Realice un seguimiento de los ceros iniciales por separado cuando la entrada represente un campo de bytes, palabras o bits de ancho fijo porque es posible que la conversión numérica no preserve ese ancho visual.",
@@ -252,7 +252,7 @@
     ],
     "whatIs": "O que é conversão de binário para decimal?",
     "whatIsParas": [
-      "<strong>Binary</strong> é base 2, usando apenas <code>0</code> e <code>1</code>. A conversão de binário em decimal reescreve o mesmo padrão de bits de um número de base 10, tornando-o mais fácil de ler, comparar ou usar em cálculos."
+      "<strong>Binário</strong> é base 2, usando apenas <code>0</code> e <code>1</code>. A conversão de binário em decimal reescreve o mesmo padrão de bits de um número de base 10, tornando-o mais fácil de ler, comparar ou usar em cálculos."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "Use apenas dígitos binários. Acompanhe os zeros à esquerda separadamente quando a entrada representa um campo de byte, palavra ou bit de largura fixa, pois a conversão numérica pode não preservar essa largura visual.",

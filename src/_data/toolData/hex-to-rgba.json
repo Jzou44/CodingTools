@@ -222,7 +222,7 @@
       "<strong>Hex a RGBA convierte un color hexadecimal CSS en notación roja, verde, azul y alfa.</strong> Úselo cuando necesite una superposición transparente, un token de color de interfaz de usuario, un valor CSS o un color previsualizable con opacidad.",
       "La entrada hexadecimal puede ser una taquigrafía de 3 dígitos o un color de 6 dígitos con o sin <code>#</code>. Los canales RGB son <code>0-255</code>, mientras que el control deslizante de opacidad convierte <code>0%</code> a <code>100%</code> en valores alfa de <code>0</code> a <code>1</code>."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Ingrese un código de color hexadecimal en el campo de entrada.",
       "Ajuste el control deslizante de opacidad hasta que el valor alfa coincida con la transparencia que necesita.",

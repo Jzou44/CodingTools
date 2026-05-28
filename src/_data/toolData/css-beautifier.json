@@ -221,7 +221,7 @@
     "example": "Beispiel",
     "examplePara": "Dichtes CSS lässt sich leichter scannen, sobald jede Deklaration in einer eigenen Zeile steht:",
     "exampleCode": "--- Minifizierte Eingabe ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Formatierte Ausgabe ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
-    "buttonLabel": "Verschönern CSS"
+    "buttonLabel": "CSS verschönern"
   },
   "es": {
     "title": "Embellecedor CSS - Coding.Tools",

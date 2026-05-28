@@ -215,7 +215,7 @@
       "<strong>Números a romanos convierte números enteros decimales en notación de números romanos estándar.</strong> Úselo para fechas, esquemas, etiquetas de capítulos, nombres de eventos, referencias de esferas de reloj y ejemplos donde se esperan números romanos.",
       "El rango moderno admitido es <code>1</code> a <code>3999</code>. Los valores superiores a 3999 normalmente necesitan líneas superpuestas o notación extendida, mientras que cero, negativos y decimales no tienen formas de números romanos estándar en este conversor."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Ingrese un número entero del 1 al 3999.",
       "Revise la salida de números romanos y los símbolos de referencia rápida.",
@@ -226,7 +226,7 @@
       "<strong>Conversión de números a números romanos</strong> reescribe un número entero decimal con los símbolos <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> y <code>M</code>. La notación estándar utiliza pares sustractivos como <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> y <code>CM</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Introduzca solo números enteros. Si una fecha, número de página o etiqueta está füra de <code>1-3999</code>, confirme el estilo de publicación porque la notación de números romanos extendidos no se escribe universalmente de la misma manera.",
+    "inputNotesPara": "Introduzca solo números enteros. Si una fecha, número de página o etiqueta está fuera de <code>1-3999</code>, confirme el estilo de publicación porque la notación de números romanos extendidos no se escribe universalmente de la misma manera.",
     "example": "Ejemplo",
     "examplePara": "El número 2024 se convierte en <code>MMXXIV</code>:",
     "exampleCode": "--- Entrada numérica ---\n2024\n\n--- Salida romana ---\nMMXXIV"

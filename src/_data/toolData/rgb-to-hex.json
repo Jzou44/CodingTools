@@ -248,7 +248,7 @@
       "<strong>RGB a conversión hexadecimal</strong> convierte tres canales de color decimales en tres pares hexadecimales de dos dígitos. Luego, el rojo, el verde y el azul se combinan como <code>#RRGGBB</code>, el formato de color hexadecimal común CSS."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Utilice únicamente valores de canal de números enteros. Los valores füra de <code>0-255</code>, porcentajes, valores HSL y valores alfa necesitan conversión antes de que puedan convertirse en un color hexadecimal estándar de 6 dígitos.",
+    "inputNotesPara": "Utilice únicamente valores de canal de números enteros. Los valores fuera de <code>0-255</code>, porcentajes, valores HSL y valores alfa necesitan conversión antes de que puedan convertirse en un color hexadecimal estándar de 6 dígitos.",
     "example": "Ejemplo",
     "examplePara": "RGB rojo 255, verde 87 y azul 51 se combinan en <code>#FF5733</code>:",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",

@@ -395,7 +395,7 @@
     "descTitle": "Recadrez selon le cadre exact dont vous avez besoin",
     "descParas": [
       "<strong>Recadrer une image coupe une zone rectangulaire sélectionnée à partir d'une image PNG, JPEG ou WebP sans la télécharger.</strong> Utilisez-le pour supprimer les bords, centrer un sujet ou faire correspondre les ratios fixes de carte, de vignette, d'avatar et de prévisualisation sociale.",
-      "The crop box uses pixel coordinates: X and Y mark the top-left corner, while width and height define the selected area. Cropping changes composition and output dimensions; les pixels sélectionnés sont exportés à la taille de recadrage choisie.",
+      "La zone de recadrage utilise des coordonnées en pixels : X et Y marquent le coin supérieur gauche, tandis que la largeur et la hauteur définissent la zone sélectionnée. Le recadrage modifie la composition et les dimensions de sortie ; les pixels sélectionnés sont exportés à la taille de recadrage choisie.",
       "Le traitement s'exécute via la toile du navigateur. Le recadrage gratuit est idéal pour un cadrage arbitraire, tandis que les préréglages 1:1, 4:3 et 16:9 sont utiles lorsque la destination nécessite un rapport hauteur/largeur stable. Examinez le résultat, car la gestion des métadonnées et de l’orientation peut différer après le réencodage."
     ],
     "howToUse": "Comment utiliser",
@@ -536,7 +536,7 @@
       "El cuadro de recorte utiliza coordenadas de píxeles: X e Y marcan la esquina superior izquierda, mientras que el ancho y el alto definen el área seleccionada. El cultivo cambia la composición y las dimensiones de la producción; los píxeles seleccionados se exportan con el tamaño de recorte elegido.",
       "El procesamiento se ejecuta a través del lienzo del navegador. El recorte libre es mejor para encuadres arbitrarios, mientras que los ajustes preestablecidos 1:1, 4:3 y 16:9 ayudan cuando el destino requiere una relación de aspecto estable. Revise el resultado porque el manejo de metadatos y orientación puede diferir después de volver a codificar."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Cargue una imagen PNG, JPEG o WebP.",
       "Arrastre el cuadro de recorte, cambie su tamaño desde los controladores, elija una proporción preestablecida o escriba valores de recorte exactos.",

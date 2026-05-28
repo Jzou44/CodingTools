@@ -140,7 +140,7 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "fr": {
-    "title": "Dissolvant EXIF - Coding.Tools",
+    "title": "Suppresseur EXIF - Coding.Tools",
     "description": "Supprimez localement les métadonnées EXIF des images pour réduire les fuites de confidentialité du GPS, de l’appareil photo, de l’horodatage et de l’orientation avant le partage.",
     "toolTitle": "Suppresseur EXIF",
     "toolDescription": "Supprimez les métadonnées EXIF intégrées dans le navigateur afin de partager des images nettoyées plus sereinement.",
@@ -208,7 +208,7 @@
       "<strong>Removedor EXIF vuelve a codificar imágenes en su navegador para eliminar metadatos incrustados, como coordenadas GPS, detalles de la cámara, marcas de tiempo, etiquetas de software y campos de orientación.</strong> Úselo antes de publicar o enviar fotos originales que puedan revelar un contexto privado.",
       "Los píxeles se conservan como una nueva imagen de salida, pero el comportamiento dependiente de los metadatos puede cambiar: una etiqueta de orientación puede incorporarse a los píxeles o eliminarse, y la recodificación puede afectar el tamaño o la calidad del archivo. El procesamiento es local; no es necesario cargarlo."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Arrastre y suelte imágenes en el área de carga o haga clic para seleccionar archivos.",
       "Cada imagen se procesa y se eliminan todos los metadatos EXIF.",

@@ -215,7 +215,7 @@
       "<strong>Hex a ASCII convierte pares de bytes hexadecimales en caracteres de texto.</strong> Es útil para inspeccionar volcados de bytes, cargas útiles de protocolos, datos de prueba codificados y cadenas cortas copiadas de registros o documentación.",
       "La entrada debe contener un número par de dígitos hexadecimales después de eliminar espacios, comas, dos puntos y guiones. El texto estándar ASCII está en el rango de bytes <code>00-7F</code>; Los bytes <code>80-FF</code> pueden mostrarse como códigos de caracteres extendidos en lugar de texto UTF-8 decodificado."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Pegue valores de bytes hexadecimales con o sin espacios, comas, dos puntos o guiones.",
       "Haga clic en <strong>Convertir</strong> para decodificar cada par hexadecimal de dos dígitos en un carácter.",

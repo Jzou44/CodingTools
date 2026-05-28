@@ -215,7 +215,7 @@
       "<strong>Hexadecimal a Binario convierte la entrada de base 16 en salida de base 2 y también muestra los valores decimales y octales equivalentes.</strong> Es útil para inspeccionar máscaras, bytes, indicadores empaquetados, hashes y constantes de bajo nivel.",
       "La entrada hexadecimal debe utilizar dígitos <code>0-9</code> y letras <code>A-F</code>; Las mayúsculas y minúsculas no importan y los espacios en blanco se ignoran. Cada dígito hexadecimal representa cuatro bits, pero es posible que sea necesario volver a agregar ceros a la izquierda para valores de ancho fijo."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue un valor hexadecimal en el campo de entrada.",
       "Revise el resultado binario y las salidas decimales y octales correspondientes.",

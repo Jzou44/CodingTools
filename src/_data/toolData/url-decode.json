@@ -391,7 +391,7 @@
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Pegue une URL complèteo, una ruta codificada o una cadena de consulta sin formato.",
+      "Pegue una URL completa, una ruta codificada o una cadena de consulta sin formato.",
       "Mantenga <strong>Tratar + como espacio</strong> habilitado para cadenas de consulta de estilo de formulario.",
       "Mantenga <strong>Analizar parámetros</strong> habilitado para extraer pares clave-valor.",
       "Haga clic en <strong>Decodificar</strong>, luego revise el texto decodificado y la tabla de parámetros."
@@ -478,7 +478,7 @@
       "noDiff": "Ainda não há diferenças para mostrar."
     },
     "messages": {
-      "empty": "Insira conteudo primeiro.",
+      "empty": "Insira conteúdo primeiro.",
       "success": "URL decodificada com sucesso",
       "failed": "Falha na operação: "
     },

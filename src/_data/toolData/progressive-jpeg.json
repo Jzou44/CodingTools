@@ -208,7 +208,7 @@
       "<strong>JPEG progresivo almacena datos de imágenes en múltiples escaneos en lugar de un paso de arriba a abajo.</strong> Un navegador puede mostrar una vista previa aproximada primero y refinarla a medida que llegan más bytes, lo que puede parecer más rápido en conexiones lentas.",
       "Esta herramienta procesa archivos JPEG localmente y exporta nuevos archivos JPEG progresivos. No hace que cada imagen sea más pequeña; El tamaño del archivo puede permanecer similar o incluso aumentar según la calidad de la fuente, las dimensiones y la configuración del codificador."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Arrastre y suelte los archivos JPEG en el área de carga o haga clic para seleccionar archivos.",
       "Cada archivo se recodifica automáticamente como JPEG progresivo.",

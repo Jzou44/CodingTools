@@ -222,7 +222,7 @@
       "<strong>RGBA a Hex convierte los valores de los canales rojo, verde y azul en un color CSS <code>#RRGGBB</code> y mantiene la opacidad visible como porcentaje.</strong> Úselo al mover colores transparentes a archivos token, guías de estilo o sistemas que almacenan alfa por separado.",
       "Los canales RGB deben ser números enteros desde <code>0</code> a <code>255</code>. El campo alfa utiliza el porcentaje <code>0-100</code> en esta herramienta, por lo que <code>50</code> significa 50% de opacidad, equivalente a alfa <code>0.5</code> en notación CSS <code>rgba()</code>."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Introduzca valores de rojo, verde y azul de 0 a 255.",
       "Ingrese alfa como un porcentaje de opacidad de 0 a 100.",

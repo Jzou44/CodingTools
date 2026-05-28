@@ -215,7 +215,7 @@
       "<strong>Binario a Hexadecimal convierte la entrada de base 2 en salida de base 16 y también muestra los valores decimales y octales equivalentes.</strong> Úselo para comprimir cadenas de bits largas en bytes, máscaras, constantes y valores de protocolo legibles.",
       "La entrada binaria debe contener solo <code>0</code> y <code>1</code>; los espacios en blanco se ignoran. Cada cuatro bits forman un dígito hexadecimal, por lo que debe rellenar a la izquierda cuando necesite un mordisco, un byte o un ancho de palabra específico."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Pegue o escriba el valor binario en el campo de entrada.",
       "Revise el resultado hexadecimal y los equivalentes decimal y octal.",

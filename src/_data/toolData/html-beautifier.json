@@ -181,8 +181,8 @@
     ],
     "whatIs": "Qu'est-ce que l'embellisseur HTML ?",
     "whatIsParas": [
-      "<strong>Formateur HTML</strong> est un utilitaire basé sur un navigateur permettant de transformer un balisage dense en un document que vous pouvez numériser et modifier. It helps reveal parent-child relationships, misplaced closing tags, and large blocks of generated HTML.",
-      "HTML whitespace may affect inline layout, text nodes, and preformatted content. Après avoir embelli les modèles ou le balisage de production, vérifiez que le résultat rendu correspond toujours à votre intention."
+      "<strong>Formateur HTML</strong> est un utilitaire basé sur un navigateur permettant de transformer un balisage dense en un document que vous pouvez numériser et modifier. Il aide à révéler les relations parent-enfant, les balises de fermeture mal placées et les grands blocs de HTML générés.",
+      "Les espaces HTML peuvent affecter la mise en page en ligne, les nœuds de texte et le contenu préformaté. Après avoir embelli les modèles ou le balisage de production, vérifiez que le résultat rendu correspond toujours à votre intention."
     ],
     "inputNotes": "Notes d'entrée",
     "inputNotesPara": "Collez des fragments HTML ou des documents complets. Soyez prudent avec <code>&lt;pre&gt;</code>, les éléments en ligne, la syntaxe des modèles et les commentaires sur lesquels votre système de build peut s'appuyer.",
@@ -221,7 +221,7 @@
     "example": "Beispiel",
     "examplePara": "Ein dichtes Dokument lässt sich einfacher verfolgen, wenn jedes verschachtelte Element in einer eigenen Zeile platziert wird:",
     "exampleCode": "--- Minifizierte Eingabe ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- Verschönerte Ausgabe ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;",
-    "buttonLabel": "Verschönern HTML"
+    "buttonLabel": "HTML verschönern"
   },
   "es": {
     "title": "Embellecedor HTML - Coding.Tools",

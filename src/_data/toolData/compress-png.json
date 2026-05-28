@@ -222,7 +222,7 @@
       "<strong>Comprimir PNG reduce el tamaño del archivo para los gráficos PNG mientras mantiene el flujo de trabajo local en su navegador.</strong> Es más útil para íconos, logotipos, capturas de pantalla, diagramas y recursos de interfaz de usuario transparentes donde PNG es el formato correcto.",
       "PNG no tiene pérdidas y admite transparencia alfa, pero la compresión del lado del navegador generalmente funciona reduciendo la complejidad del color y recodificando la imagen. Las fotos pueden ser más pequeñas como JPEG/WebP; compare siempre la transparencia, los bordes y el tamaño del archivo antes de reemplazar los recursos de producción."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Arrastre y suelte los archivos PNG en el área de carga o haga clic para seleccionar archivos.",
       "Cada archivo se comprime automáticamente y se muestra la tasa de compresión.",

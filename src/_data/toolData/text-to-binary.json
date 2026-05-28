@@ -222,7 +222,7 @@
       "<strong>Texto a Binario convierte cada carácter de entrada en notación de código de caracteres binarios.</strong> Úselo para pequeños ejemplos, materiales didácticos, notas de depuración y para mostrar cómo el texto se asigna a códigos numéricos.",
       "Para ASCII simple, cada grupo de salida tiene ocho bits. Los caracteres que no son ASCII pueden producir valores de unidad de código JavaScript más largos en lugar de bytes UTF-8, por lo tanto, utilice un codificador UTF-8 cuando se requieran bytes codificados exactos."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue el texto que desea codificar.",
       "Elija si los grupos binarios deben estar separados por espacios o unidos.",

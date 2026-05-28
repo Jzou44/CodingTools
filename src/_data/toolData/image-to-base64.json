@@ -210,7 +210,7 @@
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "es": {
-    "title": "Imagen de Base64 - Coding.Tools",
+    "title": "Imagen a Base64 - Coding.Tools",
     "description": "Convierta una imagen pequeña en un Base64 de datos URI para incrustarlo en HTML, CSS o cargas útiles de texto sin formato.",
     "toolTitle": "Imagen a Base64",
     "toolDescription": "Convierta una imagen localmente en un Base64 de datos URI que puede copiar en HTML, CSS, JSON o archivos de texto.",
@@ -224,7 +224,7 @@
       "Base64 no es compresión. Por lo general, aumenta los datos codificados en aproximadamente <strong>33%</strong>, más el prefijo MIME como <code>data:image/png;base64,</code>. Guárdelo para íconos pequeños, marcadores de posición y fragmentos independientes en lugar de fotografías grandes.",
       "El archivo se lee localmente y se limita a una imagen de hasta 2 MB para un rendimiento predecible. Los URI de datos integrados pueden evitar solicitudes separadas, pero también hacen que HTML/CSS sea más difícil de almacenar en caché y editar."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Arrastre y suelte un archivo de imagen en el área de carga o haga clic para seleccionar.",
       "Los datos codificados Base64 URI aparecen en el editor de texto a continuación.",

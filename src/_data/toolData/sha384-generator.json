@@ -61,7 +61,7 @@
     "inputNotesPara": "SHA-384 是确定性且精确的。尾随换行符、不同的大小写或复制的标签成为输入的一部分并更改 96 个字符的结果。",
     "example": "示例",
     "examplePara": "对一个短语进行哈希处理会产生一个固定的 96 个字符的摘要：",
-    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-384 哈希 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-384 哈希 ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "tw": {
     "title": "SHA-384 產生器 - Coding.Tools",
@@ -93,7 +93,7 @@
     "inputNotesPara": "SHA-384 是確定性且精確的。尾隨換行符、不同的大小寫或複製的標籤成為輸入的一部分並更改 96 個字元的結果。",
     "example": "範例",
     "examplePara": "對一個短語進行哈希處理會產生一個固定的 96 個字元的摘要：",
-    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-384 雜湊 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-384 雜湊 ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "jp": {
     "title": "SHA-384 ジェネレーター - Coding.Tools",
@@ -125,7 +125,7 @@
     "inputNotesPara": "SHA-384 は決定的で正確です。末尾の改行、大文字と小文字の違い、またはコピーされたラベルは入力の一部となり、96 文字の結果が変更されます。",
     "example": "例",
     "examplePara": "短いフレーズをハッシュすると、固定の 96 文字のダイジェストが生成されます。",
-    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-384ハッシュ ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-384ハッシュ ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "kr": {
     "title": "SHA-384 생성기 - Coding.Tools",
@@ -157,7 +157,7 @@
     "inputNotesPara": "SHA-384는 결정적이고 정확합니다. 후행 개행, 다른 대/소문자 지정 또는 복사된 레이블은 입력의 일부가 되어 96자 결과를 변경합니다.",
     "example": "예제",
     "examplePara": "짧은 구문을 해싱하면 고정된 96자 다이제스트가 생성됩니다.",
-    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-384 해시 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-384 해시 ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "fr": {
     "title": "Générateur SHA-384 - Coding.Tools",
@@ -189,7 +189,7 @@
     "inputNotesPara": "SHA-384 est déterministe et exact. Une nouvelle ligne de fin, une casse différente ou une étiquette copiée fait partie de l'entrée et modifie le résultat de 96 caractères.",
     "example": "Exemple",
     "examplePara": "Le hachage d'une phrase courte produit un résumé fixe de 96 caractères :",
-    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "de": {
     "title": "SHA384-Generator - Coding.Tools",
@@ -221,7 +221,7 @@
     "inputNotesPara": "SHA-384 ist deterministisch und exakt. Ein abschließender Zeilenumbruch, eine andere Groß-/Kleinschreibung oder eine kopierte Bezeichnung werden Teil der Eingabe und ändern das 96-Zeichen-Ergebnis.",
     "example": "Beispiel",
     "examplePara": "Das Hashing einer kurzen Phrase erzeugt einen festen Hashwert mit 96 Zeichen:",
-    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-384 Hash ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "es": {
     "title": "Generador SHA-384 - Coding.Tools",
@@ -253,7 +253,7 @@
     "inputNotesPara": "SHA-384 es determinista y exacto. Una nueva línea final, una mayúscula diferente o una etiqueta copiada se convierten en parte de la entrada y cambian el resultado de 96 caracteres.",
     "example": "Ejemplo",
     "examplePara": "El hash de una frase corta produce un resumen fijo de 96 caracteres:",
-    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   },
   "pt": {
     "title": "Gerador SHA-384 - Coding.Tools",
@@ -285,6 +285,6 @@
     "inputNotesPara": "SHA-384 é determinístico e exato. Uma nova linha final, letras maiúsculas diferentes ou um rótulo copiado tornam-se parte da entrada e alteram o resultado de 96 caracteres.",
     "example": "Exemplo",
     "examplePara": "O hash de uma frase curta produz um resumo fixo de 96 caracteres:",
-    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8c35e9c0e99cb7a5e8a6e0a70786e874e44c8c2b5f9312e3b64a08a0c4e0d3b9b8c0b3a4c7"
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-384 ---\n5485cc9b3365b4305dfb4e8337e0a598a574f8242bf17289e0dd6c20a3cd44a089de16ab4ab308f63e44b1170eb5f515"
   }
 }

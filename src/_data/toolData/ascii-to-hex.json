@@ -222,7 +222,7 @@
       "<strong>ASCII a Hex convierte cada carácter de entrada en su código de carácter hexadecimal.</strong> Úselo para preparar ejemplos de bytes, datos de prueba, notas de protocolo o representaciones legibles de cargas útiles de texto breve.",
       "Para ASCII simple, cada carácter produce un valor de dos dígitos de <code>00</code> a <code>7F</code>. Los caracteres que no son ASCII se manejan como códigos de caracteres JavaScript, no como secuencias de bytes UTF-8, por lo tanto, utilice un codificador UTF-8 cuando la salida Unicode con precisión de bytes sea importante."
     ],
-    "howToUse": "como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Escriba o pegue el texto que desea codificar.",
       "Elija el estilo del delimitador: espacio, ninguno, coma o dos puntos.",

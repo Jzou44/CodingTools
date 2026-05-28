@@ -255,7 +255,7 @@
     "outputPlaceholder": "JSON 차이 결과가 여기에 표시됩니다..."
   },
   "fr": {
-    "title": "JSON Différent - Coding.Tools",
+    "title": "Diff JSON - Coding.Tools",
     "description": "Comparez deux documents JSON valides et signalez les chemins ajoutés, supprimés, modifiés et inchangés.",
     "toolTitle": "Diff JSON",
     "toolDescription": "Comparez deux charges utiles JSON par chemin d'objet, index de tableau et valeur.",
@@ -288,13 +288,13 @@
       "rightInput": "JSON modifié",
       "output": "Résultat du diff",
       "showUnchanged": "Inclure les chemins inchangés",
-      "sortKeys": "Trier les cles avant comparaison",
+      "sortKeys": "Trier les clés avant comparaison",
       "summary": "Résumé",
       "added": "Ajouté",
-      "removed": "Supprime",
+      "removed": "Supprimé",
       "changed": "Modifié",
       "unchanged": "Inchangé",
-      "noDiff": "Aucune différence JSON a afficher."
+      "noDiff": "Aucune différence JSON à afficher."
     },
     "messages": {
       "empty": "Saisissez d’abord une valeur.",
@@ -339,7 +339,7 @@
       "rightInput": "Geändertes JSON",
       "output": "Diff-Ergebnis",
       "showUnchanged": "Unveränderte Pfade einbeziehen",
-      "sortKeys": "Objektschluessel vor Vergleich sortieren",
+      "sortKeys": "Objektschlüssel vor Vergleich sortieren",
       "summary": "Zusammenfassung",
       "added": "Hinzugefügt",
       "removed": "Entfernt",
