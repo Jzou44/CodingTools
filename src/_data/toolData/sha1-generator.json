@@ -82,7 +82,7 @@
       "在輸入編輯器中鍵入或貼上文字。",
       "按一下 <strong>生成</strong> 計算雜湊摘要。",
       "40 個字元的十六進位雜湊值將顯示在輸出編輯器中，並帶有確認訊息。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "SHA-1是什麼？",
     "whatIsParas": [
@@ -92,7 +92,7 @@
     "inputNotes": "輸入說明",
     "inputNotesPara": "如果空格、大寫、Unicode 規範化或行結尾發生變化，摘要也會發生變化。貼上要比較的確切值，並將註釋或標籤保留在輸入之外，除非它們也應該進行雜湊處理。",
     "example": "範例",
-    "examplePara": "一條短訊息映射到一個固定的 SHA-1 摘要：",
+    "examplePara": "一條短訊息對應到一個固定的 SHA-1 摘要：",
     "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-1 雜湊 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
   },
   "jp": {
@@ -118,13 +118,13 @@
     ],
     "whatIs": "SHA-1とは何ですか?",
     "whatIsParas": [
-      "<strong>SHA-1</strong> は、入力テキストまたはバイトから固定の 160 ビット出力を生成する暗号化ハッシュ関数です。出力は一方向で決定的です。出力は比較を目的としており、元の入力を復元するためのものではありません。",
+      "<strong>SHA-1</strong> は、入力テキストまたはバイトから固定の 160 ビット出力を生成する暗号学的ハッシュ関数です。出力は一方向で決定的です。出力は比較を目的としており、元の入力を復元するためのものではありません。",
       "SHA-1 には既知の衝突の弱点があるため、主に古いプロトコル、識別子、リポジトリ、公開されたチェックサムとの互換性のために残されています。ハッシュは暗号化ではないため、SHA-1 を秘密保持メカニズムとして扱うべきではありません。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "空白、大文字の使用、Unicode の正規化、または行末が変更されると、ダイジェストも変更されます。比較する正確な値を貼り付け、ハッシュする必要がない限り、メモやラベルを入力の外に残しておきます。",
     "example": "例",
-    "examplePara": "短いメッセージは、固定の SHA-1 ダイジェストにマップされます。",
+    "examplePara": "短いメッセージは、固定の SHA-1 ダイジェストに対応付けされます。",
     "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-1ハッシュ ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
   },
   "kr": {
@@ -148,9 +148,9 @@
       "40자의 16진수 해시가 확인 메시지와 함께 출력 편집기에 나타납니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-1란 무엇입니까?",
+    "whatIs": "SHA-1란 무엇인가요?",
     "whatIsParas": [
-      "<strong>SHA-1</strong>는 입력 텍스트 또는 바이트에서 고정 160비트 출력을 생성하는 암호화 해시 함수입니다. 출력은 단방향이며 결정적입니다. 즉, 원래 입력을 복구하기 위한 것이 아니라 비교를 위한 것입니다.",
+      "<strong>SHA-1</strong>은 입력 텍스트 또는 바이트에서 고정 160비트 출력을 생성하는 암호학적 해시 함수입니다. 출력은 단방향이며 결정적입니다. 즉, 원래 입력을 복구하기 위한 것이 아니라 비교를 위한 것입니다.",
       "SHA-1에는 알려진 충돌 약점이 있으므로 주로 이전 프로토콜, 식별자, 저장소 및 게시된 체크섬과의 호환성을 위해 유지됩니다. 해시는 암호화되지 않으며 SHA-1는 비밀 유지 메커니즘으로 취급되어서는 안 됩니다."
     ],
     "inputNotes": "입력 참고사항",
@@ -250,7 +250,7 @@
       "SHA-1 tiene debilidades de colisión conocidas, por lo que se mantiene principalmente por compatibilidad con protocolos, identificadores, repositorios y sumas de verificación publicadas más antiguos. Los hashes no son cifrado y SHA-1 no debe tratarse como un mecanismo de mantenimiento de secretos."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "El resumen cambia si cambian los espacios en blanco, las mayúsculas, la normalización Unicode o los finales de línea. Pegue el valor exacto para comparar y mantenga las notas o etiquetas fuera de la entrada a menos que también deban tener un hash.",
+    "inputNotesPara": "El resumen cambia si cambian los espacios en blanco, las mayúsculas, la normalización Unicode o los finales de línea. Pegue el valor exacto para comparar y mantenga las notas o etiquetas füra de la entrada a menos que también deban tener un hash.",
     "example": "Ejemplo",
     "examplePara": "Un mensaje corto se asigna a un resumen SHA-1 fijo:",
     "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"

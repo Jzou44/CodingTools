@@ -75,8 +75,8 @@ const labels = {
     lowercase: (value) => `소문자 ${value}`
   },
   fr: {
-    printableTitle: "Caracteres imprimables (32-126)",
-    controlTitle: "Caracteres de controle (0-31 et 127)",
+    printableTitle: "Caractères imprimables (32-126)",
+    controlTitle: "Caractères de contrôle (0-31 et 127)",
     dec: "Dec",
     hex: "Hex",
     oct: "Oct",
@@ -101,36 +101,36 @@ const labels = {
     description: "Beschreibung",
     space: "Leerzeichen",
     digit: (value) => `Ziffer ${value}`,
-    uppercase: (value) => `Grossbuchstabe ${value}`,
+    uppercase: (value) => `Großbuchstabe ${value}`,
     lowercase: (value) => `Kleinbuchstabe ${value}`
   },
   es: {
-    printableTitle: "Caracteres imprimibles (32-126)",
-    controlTitle: "Caracteres de control (0-31 y 127)",
+    printableTitle: "Caractères imprimibles (32-126)",
+    controlTitle: "Caractères de control (0-31 y 127)",
     dec: "Dec",
     hex: "Hex",
     oct: "Oct",
     bin: "Bin",
     char: "Car.",
     abbr: "Abr.",
-    description: "Descripcion",
+    description: "Descripción",
     space: "Espacio",
-    digit: (value) => `Digito ${value}`,
-    uppercase: (value) => `Letra mayuscula ${value}`,
+    digit: (value) => `Dígito ${value}`,
+    uppercase: (value) => `Letra mayúscula ${value}`,
     lowercase: (value) => `Letra minuscula ${value}`
   },
   pt: {
-    printableTitle: "Caracteres imprimiveis (32-126)",
-    controlTitle: "Caracteres de controle (0-31 e 127)",
+    printableTitle: "Caractères imprimiveis (32-126)",
+    controlTitle: "Caractères de contrôle (0-31 e 127)",
     dec: "Dec",
     hex: "Hex",
     oct: "Oct",
     bin: "Bin",
     char: "Car.",
     abbr: "Abr.",
-    description: "Descricao",
-    space: "Espaco",
-    digit: (value) => `Digito ${value}`,
+    description: "Descrição",
+    space: "Espaço",
+    digit: (value) => `Dígito ${value}`,
     uppercase: (value) => `Letra maiuscula ${value}`,
     lowercase: (value) => `Letra minuscula ${value}`
   }
@@ -164,29 +164,156 @@ const punctuation = {
     63: "問號", 64: "at 符號", 91: "左方括號", 92: "反斜線", 93: "右方括號",
     94: "插入符 / 抑揚符", 95: "底線", 96: "重音符", 123: "左大括號",
     124: "垂直線", 125: "右大括號", 126: "波浪號"
+  },
+  jp: {
+    33: "感嘆符", 34: "二重引用符", 35: "番号記号", 36: "ドル記号", 37: "パーセント記号",
+    38: "アンパサンド", 39: "単一引用符", 40: "左丸括弧", 41: "右丸括弧", 42: "アスタリスク",
+    43: "プラス記号", 44: "コンマ", 45: "ハイフン / マイナス", 46: "ピリオド / ドット", 47: "スラッシュ",
+    58: "コロン", 59: "セミコロン", 60: "小なり記号", 61: "等号", 62: "大なり記号",
+    63: "疑問符", 64: "アットマーク", 91: "左角括弧", 92: "バックスラッシュ", 93: "右角括弧",
+    94: "キャレット", 95: "アンダースコア", 96: "グレーブアクセント", 123: "左波括弧",
+    124: "縦線", 125: "右波括弧", 126: "チルダ"
+  },
+  kr: {
+    33: "느낌표", 34: "큰따옴표", 35: "번호 기호", 36: "달러 기호", 37: "퍼센트 기호",
+    38: "앰퍼샌드", 39: "작은따옴표", 40: "왼쪽 괄호", 41: "오른쪽 괄호", 42: "별표",
+    43: "더하기 기호", 44: "쉼표", 45: "하이픈 / 빼기", 46: "마침표 / 점", 47: "슬래시",
+    58: "콜론", 59: "세미콜론", 60: "보다 작음 기호", 61: "등호", 62: "보다 큼 기호",
+    63: "물음표", 64: "앳 기호", 91: "왼쪽 대괄호", 92: "백슬래시", 93: "오른쪽 대괄호",
+    94: "캐럿", 95: "밑줄", 96: "그레이브 악센트", 123: "왼쪽 중괄호",
+    124: "세로줄", 125: "오른쪽 중괄호", 126: "틸드"
+  },
+  fr: {
+    33: "Point d'exclamation", 34: "Guillemet double", 35: "Diese / signe numéro", 36: "Signe dollar",
+    37: "Signe pourcentage", 38: "Esperluette", 39: "Apostrophe", 40: "Parenthèse gauche",
+    41: "Parenthèse droite", 42: "Asterisque", 43: "Signe plus", 44: "Virgule", 45: "Trait d'union / moins",
+    46: "Point", 47: "Barre oblique", 58: "Deux-points", 59: "Point-virgule", 60: "Signe inférieur à",
+    61: "Signe egal", 62: "Signe superieur a", 63: "Point d'interrogation", 64: "Arobase",
+    91: "Crochet gauche", 92: "Barre oblique inverse", 93: "Crochet droit", 94: "Accent circonflexe",
+    95: "Trait de soulignement", 96: "Accent grave", 123: "Accolade gauche", 124: "Barre verticale",
+    125: "Accolade droite", 126: "Tilde"
+  },
+  de: {
+    33: "Ausrufezeichen", 34: "Doppeltes Anführungszeichen", 35: "Raute / Nummernzeichen", 36: "Dollarzeichen",
+    37: "Prozentzeichen", 38: "Kaufmännisches Und", 39: "Einfaches Anführungszeichen", 40: "Linke Klammer",
+    41: "Rechte Klammer", 42: "Sternchen", 43: "Pluszeichen", 44: "Komma", 45: "Bindestrich / Minus",
+    46: "Punkt", 47: "Schrägstrich", 58: "Doppelpunkt", 59: "Semikolon", 60: "Kleiner-als-Zeichen",
+    61: "Gleichheitszeichen", 62: "Groesser-als-Zeichen", 63: "Fragezeichen", 64: "At-Zeichen",
+    91: "Linke eckige Klammer", 92: "Rückwärtsschrägstrich", 93: "Rechte eckige Klammer", 94: "Zirkumflex",
+    95: "Unterstrich", 96: "Gravis", 123: "Linke geschweifte Klammer", 124: "Senkrechter Strich",
+    125: "Rechte geschweifte Klammer", 126: "Tilde"
+  },
+  es: {
+    33: "Signo de exclamación", 34: "Comillas dobles", 35: "Almohadilla / numeral", 36: "Signo de dolar",
+    37: "Signo de porcentaje", 38: "Ampersand", 39: "Comilla simple", 40: "Paréntesis izquierdo",
+    41: "Paréntesis derecho", 42: "Asterisco", 43: "Signo mas", 44: "Coma", 45: "Guion / menos",
+    46: "Punto", 47: "Barra diagonal", 58: "Dos puntos", 59: "Punto y coma", 60: "Signo menor que",
+    61: "Signo igual", 62: "Signo mayor que", 63: "Signo de interrogacion", 64: "Arroba",
+    91: "Corchete izquierdo", 92: "Barra invertida", 93: "Corchete derecho", 94: "Acento circunflejo",
+    95: "Guion bajo", 96: "Acento grave", 123: "Llave izquierda", 124: "Barra vertical",
+    125: "Llave derecha", 126: "Tilde"
+  },
+  pt: {
+    33: "Ponto de exclamacao", 34: "Aspas duplas", 35: "Cerquilha / sinal de numero", 36: "Sinal de dolar",
+    37: "Sinal de porcentagem", 38: "E comercial", 39: "Aspas simples", 40: "Parêntese esquerdo",
+    41: "Parêntese direito", 42: "Asterisco", 43: "Sinal de mais", 44: "Vírgula", 45: "Hifen / menos",
+    46: "Ponto", 47: "Barra", 58: "Dois-pontos", 59: "Ponto e virgula", 60: "Sinal de menor que",
+    61: "Sinal de igual", 62: "Sinal de maior que", 63: "Ponto de interrogacao", 64: "Arroba",
+    91: "Colchete esquerdo", 92: "Barra invertida", 93: "Colchete direito", 94: "Acento circunflexo",
+    95: "Sublinhado", 96: "Acento grave", 123: "Chave esquerda", 124: "Barra vertical",
+    125: "Chave direita", 126: "Til"
   }
 };
 
-punctuation.jp = punctuation.en;
-punctuation.kr = punctuation.en;
-punctuation.fr = punctuation.en;
-punctuation.de = punctuation.en;
-punctuation.es = punctuation.en;
-punctuation.pt = punctuation.en;
-
-const controlDescriptions = [
-  ["NUL", "Null character"], ["SOH", "Start of heading"], ["STX", "Start of text"],
-  ["ETX", "End of text"], ["EOT", "End of transmission"], ["ENQ", "Enquiry"],
-  ["ACK", "Acknowledge"], ["BEL", "Bell"], ["BS", "Backspace"],
-  ["HT", "Horizontal tab"], ["LF", "Line feed"], ["VT", "Vertical tab"],
-  ["FF", "Form feed"], ["CR", "Carriage return"], ["SO", "Shift out"],
-  ["SI", "Shift in"], ["DLE", "Data link escape"], ["DC1", "Device control 1"],
-  ["DC2", "Device control 2"], ["DC3", "Device control 3"], ["DC4", "Device control 4"],
-  ["NAK", "Negative acknowledge"], ["SYN", "Synchronous idle"], ["ETB", "End of transmission block"],
-  ["CAN", "Cancel"], ["EM", "End of medium"], ["SUB", "Substitute"],
-  ["ESC", "Escape"], ["FS", "File separator"], ["GS", "Group separator"],
-  ["RS", "Record separator"], ["US", "Unit separator"]
+const controlAbbrs = [
+  "NUL", "SOH", "STX", "ETX", "EOT", "ENQ", "ACK", "BEL",
+  "BS", "HT", "LF", "VT", "FF", "CR", "SO", "SI",
+  "DLE", "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB",
+  "CAN", "EM", "SUB", "ESC", "FS", "GS", "RS", "US"
 ];
+
+const controlDescriptions = {
+  en: [
+    "Null character", "Start of heading", "Start of text", "End of text",
+    "End of transmission", "Enquiry", "Acknowledge", "Bell", "Backspace",
+    "Horizontal tab", "Line feed", "Vertical tab", "Form feed", "Carriage return",
+    "Shift out", "Shift in", "Data link escape", "Device control 1",
+    "Device control 2", "Device control 3", "Device control 4", "Negative acknowledge",
+    "Synchronous idle", "End of transmission block", "Cancel", "End of medium",
+    "Substitute", "Escape", "File separator", "Group separator", "Record separator",
+    "Unit separator"
+  ],
+  cn: [
+    "空字符", "标题开始", "正文开始", "正文结束", "传输结束", "询问", "确认", "响铃",
+    "退格", "水平制表符", "换行", "垂直制表符", "换页", "回车", "移出", "移入",
+    "数据链路转义", "设备控制 1", "设备控制 2", "设备控制 3", "设备控制 4", "否定确认",
+    "同步空闲", "传输块结束", "取消", "介质结束", "替换", "转义", "文件分隔符",
+    "组分隔符", "记录分隔符", "单元分隔符"
+  ],
+  tw: [
+    "空字元", "標題開始", "本文開始", "本文結束", "傳輸結束", "詢問", "確認", "響鈴",
+    "退格", "水平定位字元", "換行", "垂直定位字元", "換頁", "歸位", "移出", "移入",
+    "資料鏈路跳脫", "裝置控制 1", "裝置控制 2", "裝置控制 3", "裝置控制 4", "否定確認",
+    "同步閒置", "傳輸區塊結束", "取消", "媒體結束", "替代", "跳脫", "檔案分隔符",
+    "群組分隔符", "記錄分隔符", "單元分隔符"
+  ],
+  jp: [
+    "ヌル文字", "ヘッダー開始", "テキスト開始", "テキスト終了", "転送終了", "問い合わせ",
+    "肯定応答", "ベル", "バックスペース", "水平タブ", "改行", "垂直タブ", "改ページ",
+    "キャリッジリターン", "シフトアウト", "シフトイン", "データリンクエスケープ",
+    "装置制御 1", "装置制御 2", "装置制御 3", "装置制御 4", "否定応答", "同期アイドル",
+    "転送ブロック終了", "キャンセル", "媒体終了", "置換", "エスケープ", "ファイル区切り",
+    "グループ区切り", "レコード区切り", "ユニット区切り"
+  ],
+  kr: [
+    "널 문자", "헤더 시작", "텍스트 시작", "텍스트 끝", "전송 끝", "문의", "승인", "벨",
+    "백스페이스", "수평 탭", "줄 바꿈", "수직 탭", "폼 피드", "캐리지 리턴",
+    "시프트 아웃", "시프트 인", "데이터 링크 이스케이프", "장치 제어 1", "장치 제어 2",
+    "장치 제어 3", "장치 제어 4", "부정 응답", "동기 유휴", "전송 블록 끝",
+    "취소", "매체 끝", "대체", "이스케이프", "파일 구분자", "그룹 구분자",
+    "레코드 구분자", "단위 구분자"
+  ],
+  fr: [
+    "Caractère nul", "Début d'en-tete", "Début du texte", "Fin du texte",
+    "Fin de transmission", "Demande", "Accuse de reception", "Sonnerie", "Retour arriere",
+    "Tabulation horizontale", "Saut de ligne", "Tabulation verticale", "Saut de page",
+    "Retour chariot", "Shift out", "Shift in", "Échappement de liaison de donnees",
+    "Controle de peripherique 1", "Controle de peripherique 2", "Controle de peripherique 3",
+    "Controle de peripherique 4", "Accuse negatif", "Synchronisation inactive",
+    "Fin de bloc de transmission", "Annuler", "Fin de support", "Substitution",
+    "Échappement", "Séparateur de fichier", "Séparateur de groupe", "Séparateur d'enregistrement",
+    "Séparateur d'unite"
+  ],
+  de: [
+    "Nullzeichen", "Kopfzeilenbeginn", "Textbeginn", "Textende", "Übertragungsende",
+    "Anfrage", "Bestaetigung", "Glocke", "Rueckschritt", "Horizontaler Tabulator",
+    "Zeilenvorschub", "Vertikaler Tabulator", "Seitenvorschub", "Wagenruecklauf",
+    "Shift out", "Shift in", "Datenlink-Escape", "Geraetesteuerung 1", "Geraetesteuerung 2",
+    "Geraetesteuerung 3", "Geraetesteuerung 4", "Negative Bestaetigung", "Synchroner Leerlauf",
+    "Ende des Uebertragungsblocks", "Abbrechen", "Ende des Mediums", "Ersatz",
+    "Escape", "Dateitrenner", "Gruppentrenner", "Datensatztrenner", "Einheitentrenner"
+  ],
+  es: [
+    "Carácter nulo", "Inicio de encabezado", "Inicio de texto", "Fin de texto",
+    "Fin de transmision", "Consulta", "Confirmacion", "Campana", "Retroceso",
+    "Tabulacion horizontal", "Salto de linea", "Tabulacion vertical", "Salto de pagina",
+    "Retorno de carro", "Desplazar fuera", "Desplazar dentro", "Escape de enlace de datos",
+    "Control de dispositivo 1", "Control de dispositivo 2", "Control de dispositivo 3",
+    "Control de dispositivo 4", "Confirmacion negativa", "Inactivo sincronico",
+    "Fin de bloque de transmision", "Cancelar", "Fin de medio", "Sustituto", "Escape",
+    "Separador de archivo", "Separador de grupo", "Separador de registro", "Separador de unidad"
+  ],
+  pt: [
+    "Caractère nulo", "Início do cabeçalho", "Inicio do texto", "Fim do texto",
+    "Fim da transmissao", "Consulta", "Confirmacao", "Campainha", "Backspace",
+    "Tabulacao horizontal", "Quebra de linha", "Tabulacao vertical", "Avanco de pagina",
+    "Retorno de carro", "Shift out", "Shift in", "Escape de enlace de dados",
+    "Controle de dispositivo 1", "Controle de dispositivo 2", "Controle de dispositivo 3",
+    "Controle de dispositivo 4", "Confirmacao negativa", "Ocioso sincrono",
+    "Fim do bloco de transmissao", "Cancelar", "Fim do meio", "Substituto", "Escape",
+    "Separador de arquivo", "Separador de grupo", "Separador de registro", "Separador de unidade"
+  ]
+};
 
 function numberCells(code) {
   return {
@@ -220,15 +347,19 @@ function printableRows(lang) {
   });
 }
 
-function controlRows() {
-  return controlDescriptions.map(([abbr, description], code) => ({
+function controlRows(lang) {
+  const descriptions = controlDescriptions[lang] || controlDescriptions.en;
+  return controlAbbrs.map((abbr, code) => ({
     ...numberCells(code),
     abbr,
-    description
+    description: descriptions[code]
   })).concat({
     ...numberCells(127),
     abbr: "DEL",
-    description: "Delete"
+    description: {
+      en: "Delete", cn: "删除", tw: "刪除", jp: "削除", kr: "삭제",
+      fr: "Supprimer", de: "Löschen", es: "Eliminar", pt: "Excluir"
+    }[lang] || "Delete"
   });
 }
 
@@ -236,6 +367,6 @@ module.exports = Object.fromEntries(
   Object.keys(labels).map((lang) => [lang, {
     labels: labels[lang],
     printableRows: printableRows(lang),
-    controlRows: controlRows()
+    controlRows: controlRows(lang)
   }])
 );

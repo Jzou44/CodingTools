@@ -61,18 +61,18 @@
     "title": "十六進位到 ASCII 轉換器 - Coding.Tools",
     "description": "直接在瀏覽器中將十六進位位元組值轉換為 ASCII 文字。",
     "toolTitle": "十六進位轉ASCII",
-    "toolDescription": "將十六進位位元組對解碼為可讀的 ASCII 文本，並支援常見分隔符號。",
+    "toolDescription": "將十六進位位元組對解碼為可讀的 ASCII 文字，並支援常見分隔符號。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此處貼上十六進位值（例如 48 65 6C 6C 6F）...",
     "outputPlaceholder": "ASCII 文字將會出現在這裡...",
-    "descTitle": "將十六進位位元組對解碼為 ASCII 文本",
+    "descTitle": "將十六進位位元組對解碼為 ASCII 文字",
     "descParas": [
       "<strong>Hex 到 ASCII 將十六進位位元組對轉換為文字字元。</strong> 它對於檢查位元組轉儲、協定有效負載、編碼測試資料以及從日誌或文件複製的短字串非常有用。",
       "刪除空格、逗號、冒號和連字號後，輸入必須包含偶數個十六進位數字。標準ASCII文字的位元組範圍為<code>00-7F</code>；位元組 <code>80-FF</code> 可能顯示為擴展字元代碼而不是解碼的 UTF-8 文字。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "貼上帶有或不帶有空格、逗號、冒號或連字符的十六進位位元組值。",
+      "貼上帶有或不帶有空格、逗號、冒號或連字元的十六進位位元組值。",
       "點選 <strong>轉換</strong> 將每個兩位數十六進位對解碼為一個字元。",
       "一旦解碼結果看起來正確，就複製或下載輸出文字。"
     ],
@@ -80,11 +80,11 @@
     "whatIsParas": [
       "<strong>Hex 到 ASCII 的轉換</strong> 將每兩個十六進位數字視為一個位元組，並將該位元組對應到字元代碼。例如，<code>48</code> 對應到十進位 72，即 ASCII 字元 <code>H</code>。"
     ],
-    "inputNotes": "輸入註釋",
-    "inputNotesPara": "使用有效的十六進制數字並保持位元組邊界完整。如果來源資料是 UTF-8、二進位、壓縮或加密數據，則直接 ASCII 視圖可能會顯示意外的符號或控製字元。",
-    "example": "例子",
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "使用有效的十六進位數字並保持位元組邊界完整。如果來源資料是 UTF-8、二進位、壓縮或加密資料，則直接 ASCII 視圖可能會顯示意外的符號或控制字元。",
+    "example": "範例",
     "examplePara": "此十六進位位元組序列解碼為熟悉的 ASCII 問候語：",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- 十六進位輸入 ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII 輸出 ---\nHello, World!"
   },
   "jp": {
     "title": "16 進数から ASCII へのコンバーター - Coding.Tools",
@@ -99,7 +99,7 @@
       "<strong>Hex から ASCII は、16 進数のバイト ペアをテキスト文字に変換します。</strong> これは、バイト ダンプ、プロトコル ペイロード、エンコードされたテストデータ、ログやドキュメントからコピーされた短い文字列を検査するのに役立ちます。",
       "入力には、スペース、カンマ、コロン、ハイフンを除いた偶数の 16 進数が含まれている必要があります。標準 ASCII テキストはバイト範囲 <code>00-7F</code> にあります。バイト <code>80-FF</code> は、デコードされた UTF-8 テキストではなく拡張文字コードとして表示される場合があります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "スペース、カンマ、コロン、またはハイフンを使用して、または使用せずに 16 進バイト値を貼り付けます。",
       "<strong>変換</strong> をクリックして、2 桁の 16 進ペアをそれぞれ文字にデコードします。",
@@ -107,18 +107,18 @@
     ],
     "whatIs": "16 進数から ASCII への変換とは何ですか?",
     "whatIsParas": [
-      "<strong>16 進数から ASCII への変換</strong> は、16 進数の 2 桁を 1 バイトとして扱い、そのバイトを文字コードにマップします。たとえば、<code>48</code> は 10 進数 72、つまり ASCII 文字 <code>H</code> にマップされます。"
+      "<strong>16 進数から ASCII への変換</strong> は、16 進数の 2 桁を 1 バイトとして扱い、そのバイトを文字コードに対応付けます。たとえば、<code>48</code> は 10 進数 72、つまり ASCII 文字 <code>H</code> に対応付けされます。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "有効な 16 進数を使用し、バイト境界をそのまま維持します。ソース データが UTF-8、バイナリ、圧縮、または暗号化されている場合、ASCII を直接表示すると、予期しない記号や制御文字が表示される場合があります。",
     "example": "例",
     "examplePara": "この 16 進バイト シーケンスは、おなじみの ASCII グリーティングにデコードされます。",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- 16進数入力 ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII 出力 ---\nHello, World!"
   },
   "kr": {
     "title": "16진수 - ASCII 변환기 - Coding.Tools",
     "description": "브라우저에서 직접 16진수 바이트 값을 ASCII 텍스트로 변환하세요.",
-    "toolTitle": "16진수에서 ASCII",
+    "toolTitle": "16진수 → ASCII",
     "toolDescription": "공통 구분 기호를 지원하여 16진수 바이트 쌍을 읽을 수 있는 ASCII 텍스트로 디코딩합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "여기에 16진수 값을 붙여넣으세요(예: 48 65 6C 6C 6F)...",
@@ -134,15 +134,15 @@
       "<strong>변환</strong>를 클릭하여 각 두 자리 16진수 쌍을 문자로 디코딩합니다.",
       "디코딩된 결과가 올바르게 나타나면 출력 텍스트를 복사하거나 다운로드하세요."
     ],
-    "whatIs": "16진수에서 ASCII로의 변환이란 무엇입니까?",
+    "whatIs": "16진수에서 ASCII로의 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Hex에서 ASCII로의 변환</strong>는 모든 2개의 16진수 숫자를 1바이트로 처리하고 해당 바이트를 문자 코드에 매핑합니다. 예를 들어, <code>48</code>는 ASCII 문자 <code>H</code>인 10진수 72에 매핑됩니다."
+      "<strong>Hex에서 ASCII로의 변환</strong>은 모든 2개의 16진수 숫자를 1바이트로 처리하고 해당 바이트를 문자 코드에 매핑합니다. 예를 들어, <code>48</code>는 ASCII 문자 <code>H</code>인 10진수 72에 매핑됩니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "유효한 16진수를 사용하고 바이트 경계를 그대로 유지하십시오. 소스 데이터가 UTF-8, 바이너리, 압축 또는 암호화된 경우 직접 ASCII 보기에 예기치 않은 기호나 제어 문자가 표시될 수 있습니다.",
     "example": "예",
     "examplePara": "이 16진수 바이트 시퀀스는 익숙한 ASCII 인사말로 디코딩됩니다.",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- 16진수 입력 ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII 출력 ---\nHello, World!"
   },
   "fr": {
     "title": "Convertisseur hexadécimal en ASCII - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Utilisez des chiffres hexadécimaux valides et conservez les limites d'octets intactes. Si les données source sont UTF-8, binaires, compressées ou chiffrées, une vue directe ASCII peut afficher des symboles ou des caractères de contrôle inattendus.",
     "example": "Exemple",
     "examplePara": "Cette séquence d'octets hexadécimaux décode en un message d'accueil familier ASCII :",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- Entrée hexadécimale ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- Sortie ASCII ---\nHello, World!"
   },
   "de": {
     "title": "Hex-zu-ASCII-Konverter – Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Verwenden Sie gültige Hexadezimalziffern und halten Sie die Bytegrenzen intakt. Wenn die Quelldaten UTF-8, binär, komprimiert oder verschlüsselt sind, werden in einer direkten ASCII-Ansicht möglicherweise unerwartete Symbole oder Steuerzeichen angezeigt.",
     "example": "Beispiel",
     "examplePara": "Diese Hex-Byte-Sequenz dekodiert eine bekannte ASCII-Begrüßung:",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- Hex-Eingabe ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII-Ausgabe ---\nHello, World!"
   },
   "es": {
     "title": "Convertidor hexadecimal a ASCII - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Utilice dígitos hexadecimales válidos y mantenga intactos los límites de bytes. Si los datos de origen son UTF-8, binarios, comprimidos o cifrados, una vista ASCII directa puede mostrar símbolos o caracteres de control inesperados.",
     "example": "Ejemplo",
     "examplePara": "Esta secuencia de bytes hexadecimales se decodifica en un saludo familiar ASCII:",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- Entrada hexadecimal ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- Salida ASCII ---\nHello, World!"
   },
   "pt": {
     "title": "Conversor hexadecimal para ASCII - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Use dígitos hexadecimais válidos e mantenha os limites de bytes intactos. Se os dados de origem forem UTF-8, binários, compactados ou criptografados, uma visualização ASCII direta poderá mostrar símbolos ou caracteres de controle inesperados.",
     "example": "Exemplo",
     "examplePara": "Esta sequência de bytes hexadecimais é decodificada para uma saudação ASCII familiar:",
-    "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
+    "exampleCode": "--- Entrada hexadecimal ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- Saída ASCII ---\nHello, World!"
   }
 }

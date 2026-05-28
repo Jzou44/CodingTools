@@ -44,7 +44,7 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入字段中键入或粘贴十六进制颜色代码。",
+      "在输入框中键入或粘贴十六进制颜色代码。",
       "观看 RGB 值和颜色预览自动更新。",
       "如果您想要生成的样本颜色，请单击 <strong>选择随机颜色</strong>。",
       "使用 <strong>复制</strong> 复制 RGB 值。"
@@ -81,12 +81,12 @@
     ],
     "whatIs": "什麼是十六進位到 RGB 的轉換？",
     "whatIsParas": [
-      "<strong>Hex 到 RGB 的轉換</strong> 將像 <code>#FF5733</code> 這樣的顏色拆分為三個位元組大小的十六進位對：<code>FF</code> 表示紅色，<code>57</code> 表示綠色，<code>33</code> 表示藍色。這些對成為十進制通道值 <code>255</code>、<code>87</code> 和 <code>51</code>。"
+      "<strong>Hex 到 RGB 的轉換</strong> 將像 <code>#FF5733</code> 這樣的顏色拆分為三個位元組大小的十六進位對：<code>FF</code> 表示紅色，<code>57</code> 表示綠色，<code>33</code> 表示藍色。這些對成為十進位通道值 <code>255</code>、<code>87</code> 和 <code>51</code>。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "使用有效的十六進位數字 <code>0-9</code> 和 <code>A-F</code>。此轉換器僅輸出RGB； alpha 或不透明度值屬於 RGBA 工作流程。",
     "example": "範例",
-    "examplePara": "十六進位顏色 <code>#FF5733</code> 映射到紅色 255、綠色 87 和藍色 51：",
+    "examplePara": "十六進位顏色 <code>#FF5733</code> 對應到紅色 255、綠色 87 和藍色 51：",
     "exampleCode": "--- 十六進位輸入 ---\n#FF5733\n\n--- RGB 輸出 ---\nrgb(255, 87, 51)"
   },
   "jp": {
@@ -121,8 +121,8 @@
   },
   "kr": {
     "title": "16진수 - RGB 변환기 - Coding.Tools",
-    "description": "실시간 색상 미리보기를 사용하여 CSS 16진수 색상 코드를 RGB 채널 ​​값으로 변환하세요.",
-    "toolTitle": "16진수에서 RGB",
+    "description": "실시간 색상 미리보기를 사용하여 CSS 16진수 색상 코드를 RGB 채널 값으로 변환하세요.",
+    "toolTitle": "16진수 → RGB",
     "toolDescription": "3자리 또는 6자리 16진수 색상을 빨간색, 녹색 및 파란색 채널 값으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "16진수 색상을 입력하세요(예: #FF5733, 3498db)...",
@@ -139,9 +139,9 @@
       "생성된 샘플 색상을 원하면 <strong>임의의 색상을 선택하세요.</strong>를 클릭하세요.",
       "<strong>복사</strong>를 사용하여 RGB 값을 복사합니다."
     ],
-    "whatIs": "16진수에서 RGB로의 변환이란 무엇입니까?",
+    "whatIs": "16진수에서 RGB로의 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Hex에서 RGB로 변환</strong>는 <code>#FF5733</code>와 같은 색상을 3바이트 크기의 16진수 쌍(빨간색의 경우 <code>FF</code>, 녹색의 경우 <code>57</code>, 파란색의 경우 <code>33</code>)으로 나눕니다. 이러한 쌍은 10진수 채널 값 <code>255</code>, <code>87</code> 및 <code>51</code>가 됩니다."
+      "<strong>Hex에서 RGB로 변환</strong>은 <code>#FF5733</code>와 같은 색상을 3바이트 크기의 16진수 쌍(빨간색의 경우 <code>FF</code>, 녹색의 경우 <code>57</code>, 파란색의 경우 <code>33</code>)으로 나눕니다. 이러한 쌍은 10진수 채널 값 <code>255</code>, <code>87</code> 및 <code>51</code>가 됩니다."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "유효한 16진수 <code>0-9</code> 및 <code>A-F</code>를 사용하세요. 이 변환기는 RGB만 출력합니다. 알파 또는 불투명도 값은 RGBA 작업 흐름에 속합니다.",
@@ -234,7 +234,7 @@
       "<strong>Conversión de hexadecimal a RGB</strong> divide un color como <code>#FF5733</code> en tres pares hexadecimales de tamaño de byte: <code>FF</code> para rojo, <code>57</code> para verde y <code>33</code> para azul. Esos pares se convierten en valores de canal decimal <code>255</code>, <code>87</code> y <code>51</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Utilice dígitos hexadecimales válidos <code>0-9</code> y <code>A-F</code>. Este convertidor sólo genera RGB; Los valores alfa u opacidad pertenecen a los flujos de trabajo RGBA.",
+    "inputNotesPara": "Utilice dígitos hexadecimales válidos <code>0-9</code> y <code>A-F</code>. Este convertidor solo genera RGB; Los valores alfa u opacidad pertenecen a los flujos de trabajo RGBA.",
     "example": "Ejemplo",
     "examplePara": "El color hexadecimal <code>#FF5733</code> se asigna al rojo 255, al verde 87 y al azul 51:",
     "exampleCode": "--- Entrada hexadecimal ---\n#FF5733\n\n--- Salida RGB ---\nrgb(255, 87, 51)"

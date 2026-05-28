@@ -82,7 +82,7 @@
       "將文字鍵入或貼上到輸入編輯器中。",
       "按一下 <strong>生成</strong> 以產生雜湊摘要。",
       "64 字元的十六進位雜湊值將顯示在輸出編輯器中。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "SHA-256是什麼？",
     "whatIsParas": [
@@ -118,7 +118,7 @@
     ],
     "whatIs": "SHA-256とは何ですか?",
     "whatIsParas": [
-      "<strong>SHA-256</strong> は、暗号化ハッシュ関数の SHA-2 ファミリのメンバーです。これは、実用的な長さの入力を固定の 256 ビットのダイジェストに変換し、通常は 64 文字の 16 進文字列として表示されます。",
+      "<strong>SHA-256</strong> は、暗号学的ハッシュ関数の SHA-2 ファミリのメンバーです。これは、実用的な長さの入力を固定の 256 ビットのダイジェストに変換し、通常は 64 文字の 16 進文字列として表示されます。",
       "同じ入力は常に同じダイジェストを生成しますが、小さな変更を加えると非常に異なる出力が生成されます。キー付きの信頼性を得るには、HMAC-SHA-256 を使用します。パスワードには、Argon2、bcrypt、scrypt、または PBKDF2 などの専用のパスワード ハッシュ関数を使用します。"
     ],
     "inputNotes": "入力に関する注意",
@@ -148,9 +148,9 @@
       "64자 16진수 해시가 출력 편집기에 나타납니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-256란 무엇입니까?",
+    "whatIs": "SHA-256란 무엇인가요?",
     "whatIsParas": [
-      "<strong>SHA-256</strong>는 SHA-2 암호화 해시 함수 제품군의 구성원입니다. 실제 길이의 입력을 고정된 256비트 다이제스트(보통 64자 16진수 문자열로 표시)로 변환합니다.",
+      "<strong>SHA-256</strong>은 SHA-2 암호학적 해시 함수 제품군의 구성원입니다. 실제 길이의 입력을 고정된 256비트 다이제스트(보통 64자 16진수 문자열로 표시)로 변환합니다.",
       "동일한 입력은 항상 동일한 다이제스트를 생성하지만 작은 변경은 매우 다른 출력을 생성합니다. 키 인증을 위해서는 HMAC-SHA-256를 사용하세요. 비밀번호의 경우 Argon2, bcrypt, scrypt 또는 PBKDF2와 같은 전용 비밀번호 해싱 기능을 사용하십시오."
     ],
     "inputNotes": "입력 참고사항",
@@ -171,7 +171,7 @@
     "descTitle": "Générer des hachages SHA-256 pour les contrôles d'intégrité",
     "descParas": [
       "<strong>Ce générateur SHA-256 crée un résumé déterministe de 256 bits et l'affiche sous forme de 64 caractères hexadécimaux.</strong> Utilisez-le pour les contrôles d'intégrité, les manifestes de version, les entrées de signature d'API, les exemples liés à la blockchain, les données de test et tout flux de travail qui attend un hachage SHA-2.",
-      "SHA-256 est un hachage, pas un cryptage. Il est utile pour comparer des entrées exactes et détecter des modifications accidentelles ou malveillantes, mais il ne masque pas l'entrée et ne constitue pas en soi un système complet de stockage de mots de passe."
+      "SHA-256 est un hachage, pas un chiffrement. Il est utile pour comparer des entrées exactes et détecter des modifications accidentelles ou malveillantes, mais il ne masque pas l'entrée et ne constitue pas en soi un système complet de stockage de mots de passe."
     ],
     "howToUse": "Comment utiliser",
     "steps": [

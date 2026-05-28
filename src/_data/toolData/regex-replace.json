@@ -103,13 +103,13 @@
     "inputNotesPara": "在粘贴大文本之前，先对具有代表性的小样本进行测试。仅在稍后需要的部分周围使用捕获组，转义点和括号等文字字符，并在单击 <strong>全部替换</strong> 之前查看预览。",
     "example": "示例",
     "examplePara": "捕获组可以将日期从 MM/DD/YYYY 重新排列为 ISO 样式的 YYYY-MM-DD 输出：",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- 模式 ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- 替换 ---\n$3-$1-$2\n\n--- 标志 ---\ng (global)\n\n--- 测试文本 ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- 结果 ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "tw": {
     "title": "正規表示式替換 - Coding.Tools",
-    "description": "使用 JavaScript 正規表示式、捕獲群組、反向引用和即時匹配預覽查找和取代文字。",
+    "description": "使用 JavaScript 正規表示式、捕獲群組、反向引用和即時符合預覽查找和取代文字。",
     "toolTitle": "正規表達式替換",
-    "toolDescription": "使用 JavaScript 正規表示式模式、標誌、擷取群組和替換反向引用在本地重寫結構化文字。",
+    "toolDescription": "使用 JavaScript 正規表示式模式、標誌、擷取群組和替換反向引用在本機重寫結構化文字。",
     "categoryName": "字串與文字",
     "regexPattern": "正規表達式",
     "regexPlaceholder": "輸入正規表示式模式，例如(\\d{2})/(\\d{2})/(\\d{4})",
@@ -117,14 +117,14 @@
     "replacePlaceholder": "替換字串（支援 $1、$2 反向參照）",
     "testText": "測試文字",
     "inputPlaceholder": "輸入或貼上要搜尋和替換的文字...",
-    "matchPreview": "匹配預覽",
-    "matchesAppearHere": "匹配結果將顯示在這裡...",
-    "noMatches": "0 個匹配",
-    "noMatchesFound": "未找到匹配",
-    "noMatchesToReplace": "沒有可替換的匹配",
+    "matchPreview": "符合預覽",
+    "matchesAppearHere": "符合結果將顯示在這裡...",
+    "noMatches": "0 個符合",
+    "noMatchesFound": "未找到符合",
+    "noMatchesToReplace": "沒有可替換的符合",
     "replacedSuccessfully": "替換成功",
-    "matchesSuffix": " 個匹配",
-    "matchesFoundSuffix": " 個匹配",
+    "matchesSuffix": " 個符合",
+    "matchesFoundSuffix": " 個符合",
     "invalidRegex": "無效的正規表達式",
     "replaceAll": "全部替換",
     "flagGlobal": "全域",
@@ -133,30 +133,30 @@
     "flagDotAll": "點全",
     "flagUnicode": "Unicode",
     "flagSticky": "粘性",
-    "descTitle": "使用正規表達式反向引用重寫結構化文本",
+    "descTitle": "使用正規表達式反向引用重寫結構化文字",
     "descParas": [
-      "<strong>正規表達式替換 使用 JavaScript 正規表示式搜尋文本，並用替換字串取代每個匹配項。</strong> 它對於重新格式化日期、規範化 ID、修剪重複標籤、重塑類似 CSV 的文字以及在腳本中使用清理規則之前測試清理規則非常有用。",
-      "捕獲組可以在整個匹配的反向引用（例如 <code>$1</code>、<code>$2</code> 和 <code>$&</code>）的替換中重複使用。所選標誌會影響找到的匹配項數量以及錨點、大小寫、點和 Unicode 的解釋方式。"
+      "<strong>正規表達式替換 使用 JavaScript 正規表示式搜尋文字，並用替換字串取代每個符合項。</strong> 它對於重新格式化日期、規範化 ID、修剪重複標籤、重塑類似 CSV 的文字以及在腳本中使用清理規則之前測試清理規則非常有用。",
+      "捕獲組可以在整個符合的反向引用（例如 <code>$1</code>、<code>$2</code> 和 <code>$&</code>）的替換中重複使用。所選標誌會影響找到的符合項數量以及錨點、大小寫、點和 Unicode 的解釋方式。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將正規表示式模式鍵入或貼上到 <strong>Regex Pattern</strong> 欄位中。不需要分隔符號。",
       "選擇您需要的標誌：<strong>g</strong>（全域）、<strong>i</strong>（不區分大小寫）、<strong>m</strong>（多行） 、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（黏性）。",
       "在 <strong>替換為</strong> 欄位中輸入替換字串。使用 $1, $2 來反向引用捕獲的群組。",
-      "將測試文字貼上或輸入到下面的編輯器中。當您鍵入時，匹配項會反白顯示。",
-      "點擊 <strong>全部替換</strong> 將替換應用到整個文字。",
+      "將測試文字貼上或輸入到下面的編輯器中。當您鍵入時，符合項會反白顯示。",
+      "點選 <strong>全部替換</strong> 將替換應用到整個文字。",
       "使用 <strong>複製</strong> 複製結果，使用 <strong>下載</strong> 儲存結果，或使用 <strong>清除</strong> 重設所有內容。"
     ],
     "whatIs": "什麼是正規表示式替換？",
     "whatIsParas": [
-      "<strong>正規表達式替換</strong> 是 JavaScript 正規表示式的本地查找和取代沙箱。它會在應用替換之前顯示匹配的文本，這有助於在重寫過多之前捕獲過於寬泛的模式。",
+      "<strong>正規表達式替換</strong> 是 JavaScript 正規表示式的本機查找和取代沙箱。它會在應用替換之前顯示符合的文字，這有助於在重寫過多之前捕獲過於寬泛的模式。",
       "替換語法是JavaScript語法。如果您要將表達式移至其他語言或編輯器，請驗證群組編號、命名群組支援、轉義、換行符處理以及取代反向引用是否使用 <code>$1</code>、<code>\\1</code> 或其他形式。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "在貼上大文本之前，先對具有代表性的小樣本進行測試。僅在稍後需要的部分周圍使用捕獲組，轉義點和括號等文字字符，並在單擊 <strong>全部替換</strong> 之前查看預覽。",
+    "inputNotesPara": "在貼上大文字之前，先對具有代表性的小樣本進行測試。僅在稍後需要的部分周圍使用捕獲組，轉義點和括號等文字字元，並在單擊 <strong>全部替換</strong> 之前檢視預覽。",
     "example": "範例",
     "examplePara": "捕獲組可以將日期從 MM/DD/YYYY 重新排列為 ISO 樣式的 YYYY-MM-DD 輸出：",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- 模式 ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- 替換 ---\n$3-$1-$2\n\n--- 旗標 ---\ng (global)\n\n--- 測試文字 ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- 結果 ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "jp": {
     "title": "正規表現置換 - Coding.Tools",
@@ -209,7 +209,7 @@
     "inputNotesPara": "大きなテキストを貼り付ける前に、小さな代表的なサンプルでテストしてください。後で必要になる部分の周囲にのみキャプチャ グループを使用し、ドットや括弧などのリテラル文字をエスケープし、[<strong>すべて置換]</strong> をクリックする前にプレビューを確認してください。",
     "example": "例",
     "examplePara": "キャプチャ グループは、日付を MM/DD/YYYY から ISO スタイルの YYYY-MM-DD 出力に再配置できます。",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- パターン ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- 置換 ---\n$3-$1-$2\n\n--- フラグ ---\ng (global)\n\n--- テストテキスト ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- 結果 ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "kr": {
     "title": "정규식 바꾸기 - Coding.Tools",
@@ -253,16 +253,16 @@
       "전체 텍스트에 대체를 적용하려면 <strong>모두 치환</strong>를 클릭합니다.",
       "결과를 복사하려면 <strong>복사</strong>를 사용하고, 결과를 저장하려면 <strong>다운로드</strong>를 사용하고, 모든 것을 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "정규식 바꾸기란 무엇입니까?",
+    "whatIs": "정규식 바꾸기란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Regex 바꾸기</strong>는 JavaScript 정규 표현식을 위한 로컬 찾기 및 바꾸기 샌드박스입니다. 교체를 적용하기 전에 일치하는 텍스트를 표시하므로 너무 많이 다시 작성하기 전에 광범위한 패턴을 파악하는 데 도움이 됩니다.",
+      "<strong>Regex 바꾸기</strong>은 JavaScript 정규 표현식을 위한 로컬 찾기 및 바꾸기 샌드박스입니다. 교체를 적용하기 전에 일치하는 텍스트를 표시하므로 너무 많이 다시 작성하기 전에 광범위한 패턴을 파악하는 데 도움이 됩니다.",
       "대체 구문은 JavaScript 구문입니다. 표현식을 다른 언어나 편집기로 이동하는 경우 그룹 번호 지정, 명명된 그룹 지원, 이스케이프, 줄 바꿈 처리 및 대체 역참조가 <code>$1</code>, <code>\\1</code> 또는 다른 형식을 사용하는지 여부를 확인하세요."
     ],
     "inputNotes": "입력 참고",
     "inputNotesPara": "큰 텍스트를 붙여넣기 전에 작은 대표 샘플로 테스트하세요. 나중에 필요한 부분 주위에만 캡처 그룹을 사용하고, 점 및 괄호와 같은 리터럴 문자를 이스케이프 처리하고, <strong>모두 치환</strong>를 클릭하기 전에 미리보기를 검토하세요.",
     "example": "예시",
     "examplePara": "캡처 그룹은 MM/DD/YYYY의 날짜를 ISO 스타일 YYYY-MM-DD 출력으로 다시 정렬할 수 있습니다.",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- 패턴 ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- 치환 ---\n$3-$1-$2\n\n--- 플래그 ---\ng (global)\n\n--- 테스트 텍스트 ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- 결과 ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "fr": {
     "title": "Remplacement d'expression régulière - Coding.Tools",
@@ -315,7 +315,7 @@
     "inputNotesPara": "Testez sur un petit échantillon représentatif avant de coller un texte volumineux. Utilisez des groupes de capture uniquement autour des pièces dont vous aurez besoin ultérieurement, échappez les caractères littéraux tels que les points et les parenthèses et examinez l'aperçu avant de cliquer sur <strong>Tout remplacer</strong>.",
     "example": "Exemple",
     "examplePara": "Les groupes de capture peuvent réorganiser les dates de MM/JJ/AAAA dans une sortie AAAA-MM-JJ de style ISO :",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- Motif ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Remplacement ---\n$3-$1-$2\n\n--- Indicateurs ---\ng (global)\n\n--- Texte de test ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Résultat ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "de": {
     "title": "Regex ersetzen – Coding.Tools",
@@ -368,11 +368,11 @@
     "inputNotesPara": "Testen Sie es an einer kleinen repräsentativen Stichprobe, bevor Sie großen Text einfügen. Verwenden Sie Erfassungsgruppen nur um die Teile herum, die Sie später benötigen, maskieren Sie Literalzeichen wie Punkte und Klammern und überprüfen Sie die Vorschau, bevor Sie auf <strong>Alle ersetzen</strong> klicken.",
     "example": "Beispiel",
     "examplePara": "Erfassungsgruppen können Datumsangaben von MM/TT/JJJJ in die ISO-Ausgabe JJJJ-MM-TT umordnen:",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- Muster ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Ersetzung ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Testtext ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Ergebnis ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "es": {
     "title": "Reemplazo de expresiones regulares: Coding.Tools",
-    "description": "Busque y reemplace texto con expresiones regulares JavaScript, grupos de captura, referencias anteriores y vista previa de partidos en vivo.",
+    "description": "Busque y reemplace texto con expresiones regulares JavaScript, grupos de captura, retroreferencias y vista previa de partidos en vivo.",
     "toolTitle": "Reemplazo Regex",
     "toolDescription": "Reescriba texto estructurado localmente con patrones de expresiones regulares, indicadores, grupos de captura y referencias de reemplazo JavaScript.",
     "categoryName": "Cadenas y texto",
@@ -395,18 +395,18 @@
     "flagGlobal": "global (todas)",
     "flagCaseInsensitive": "insensible a mayúsculas",
     "flagMultiline": "multilínea",
-    "flagDotAll": "puntoTodos",
+    "flagDotAll": "dotAll",
     "flagUnicode": "Unicode",
-    "flagSticky": "pegajoso",
+    "flagSticky": "sticky",
     "descTitle": "Reescribir texto estructurado con referencias inversas de expresiones regulares",
     "descParas": [
       "<strong>Regex Reemplazar busca texto con una expresión regular JavaScript y reemplaza cada coincidencia con una cadena de reemplazo.</strong> Es útil para reformatear fechas, normalizar ID, recortar etiquetas repetidas, remodelar texto tipo CSV y probar reglas de limpieza antes de usarlas en scripts.",
-      "Los grupos de captura se pueden reutilizar en el reemplazo con referencias anteriores como <code>$1</code>, <code>$2</code> y <code>$&</code> para toda la partida. Las banderas seleccionadas afectan la cantidad de coincidencias que se encuentran y cómo se interpretan los anclajes, mayúsculas y minúsculas, puntos y Unicode."
+      "Los grupos de captura se pueden reutilizar en el reemplazo con retroreferencias como <code>$1</code>, <code>$2</code> y <code>$&</code> para toda la coincidencia. Las banderas seleccionadas afectan la cantidad de coincidencias que se encuentran y cómo se interpretan los anclajes, mayúsculas y minúsculas, puntos y Unicode."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue un patrón de expresiones regulares en el campo <strong>Regex Pattern</strong>. No se necesitan delimitadores.",
-      "Seleccione las banderas que necesita: <strong>g</strong> (global), <strong>i</strong> (no distingue entre mayúsculas y minúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) o <strong>y</strong> (pegajoso).",
+      "Escriba o pegue un patrón de expresiones regulares en el campo <strong>Patrón Regex</strong>. No se necesitan delimitadores.",
+      "Seleccione las banderas que necesita: <strong>g</strong> (global), <strong>i</strong> (no distingue entre mayúsculas y minúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) o <strong>y</strong> (sticky).",
       "Ingrese una cadena de reemplazo en el campo <strong>Reemplazar con</strong>. Utilice $1, $2 para referencias a grupos capturados.",
       "Pega o escribe tu texto de prueba en el editor a continuación. Las coincidencias se resaltan a medida que escribe.",
       "Haga clic en <strong>Reemplazar todo</strong> para aplicar el reemplazo a todo el texto.",
@@ -421,13 +421,13 @@
     "inputNotesPara": "Pruebe con una pequeña muestra representativa antes de pegar texto grande. Utilice grupos de captura solo alrededor de las partes que necesitará más adelante, escape caracteres literales como puntos y paréntesis y revise la vista previa antes de hacer clic en <strong>Reemplazar todo</strong>.",
     "example": "Ejemplo",
     "examplePara": "Los grupos de captura pueden reorganizar las fechas de MM/DD/AAAA a una salida de estilo ISO AAAA-MM-DD:",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- Patrón ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Reemplazo ---\n$3-$1-$2\n\n--- Banderas ---\ng (global)\n\n--- Texto de prueba ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Resultado ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   },
   "pt": {
     "title": "Substituição de Regex - Coding.Tools",
-    "description": "Encontre e substitua texto por expressões regulares JavaScript, grupos de captura, referências anteriores e visualização de correspondência ao vivo.",
+    "description": "Encontre e substitua texto por expressões regulares JavaScript, grupos de captura, retroreferências e visualização de correspondência ao vivo.",
     "toolTitle": "Substituição Regex",
-    "toolDescription": "Reescreva o texto estruturado localmente com padrões de regex JavaScript, sinalizadores, grupos de captura e referências anteriores de substituição.",
+    "toolDescription": "Reescreva o texto estruturado localmente com padrões de regex JavaScript, sinalizadores, grupos de captura e retroreferências de substituição.",
     "categoryName": "Strings e texto",
     "regexPattern": "Padrão Regex",
     "regexPlaceholder": "Insira o padrão regex, por exemplo. (\\d{2})/(\\d{2})/(\\d{4})",
@@ -448,19 +448,19 @@
     "flagGlobal": "global (todas)",
     "flagCaseInsensitive": "ignorar maiúsculas/minúsculas",
     "flagMultiline": "multilinha",
-    "flagDotAll": "pontoTodos",
+    "flagDotAll": "dotAll",
     "flagUnicode": "Unicode",
-    "flagSticky": "pegajoso",
-    "descTitle": "Reescrever texto estruturado com referências anteriores de regex",
+    "flagSticky": "sticky",
+    "descTitle": "Reescrever texto estruturado com retroreferências de regex",
     "descParas": [
-      "<strong>Regex Substitua o texto de pesquisa por uma expressão regular JavaScript e substitua cada correspondência por uma string de substituição.</strong> É útil para reformatar datas, normalizar IDs, cortar rótulos repetidos, remodelar texto semelhante a CSV e testar regras de limpeza antes de usá-los em scripts.",
-      "Os grupos de captura podem ser reutilizados na substituição com referências anteriores como <code>$1</code>, <code>$2</code> e <code>$&</code> para toda a partida. Os sinalizadores selecionados afetam quantas correspondências são encontradas e como as âncoras, maiúsculas e minúsculas, pontos e Unicode são interpretados."
+      "<strong>A substituição por regex pesquisa texto com uma expressão regular JavaScript e substitui cada correspondência por uma string de substituição.</strong> É útil para reformatar datas, normalizar IDs, cortar rótulos repetidos, remodelar texto semelhante a CSV e testar regras de limpeza antes de usá-los em scripts.",
+      "Os grupos de captura podem ser reutilizados na substituição com retroreferências como <code>$1</code>, <code>$2</code> e <code>$&</code> para toda a correspondência. Os sinalizadores selecionados afetam quantas correspondências são encontradas e como as âncoras, maiúsculas e minúsculas, pontos e Unicode são interpretados."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um padrão regex no campo <strong>Regex Pattern</strong>. Não são necessários delimitadores.",
-      "Selecione os sinalizadores necessários: <strong>g</strong> (global), <strong>i</strong> (sem distinção entre maiúsculas e minúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (pegajoso).",
-      "Insira uma sequência de substituição no campo <strong>Substituir por</strong>. Use $1, $2 para referências anteriores a grupos capturados.",
+      "Digite ou cole um padrão regex no campo <strong>Padrão Regex</strong>. Não são necessários delimitadores.",
+      "Selecione os sinalizadores necessários: <strong>g</strong> (global), <strong>i</strong> (sem distinção entre maiúsculas e minúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (sticky).",
+      "Insira uma sequência de substituição no campo <strong>Substituir por</strong>. Use $1, $2 para retroreferências a grupos capturados.",
       "Cole ou digite seu texto de teste no editor abaixo. As correspondências são destacadas conforme você digita.",
       "Clique em <strong>Substituir tudo</strong> para aplicar a substituição ao texto inteiro.",
       "Use <strong>Copiar</strong> para copiar o resultado, <strong>Baixar</strong> para salvá-lo ou <strong>Limpar</strong> para redefinir tudo."
@@ -468,12 +468,12 @@
     "whatIs": "O que é substituição de Regex?",
     "whatIsParas": [
       "<strong>Substituição Regex</strong> é uma sandbox local de localização e substituição para expressões regulares JavaScript. Ele mostra o texto correspondente antes de você aplicar a substituição, o que ajuda a detectar padrões muito amplos antes que eles sejam reescritos demais.",
-      "A sintaxe de substituição é a sintaxe JavaScript. Se você estiver movendo a expressão para outro idioma ou editor, verifique a numeração do grupo, o suporte ao grupo nomeado, o escape, a manipulação de nova linha e se as referências anteriores de substituição usam <code>$1</code>, <code>\\1</code> ou outro formato."
+      "A sintaxe de substituição é a sintaxe JavaScript. Se você estiver movendo a expressão para outro idioma ou editor, verifique a numeração do grupo, o suporte ao grupo nomeado, o escape, a manipulação de nova linha e se as retroreferências de substituição usam <code>$1</code>, <code>\\1</code> ou outro formato."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "Teste em uma pequena amostra representativa antes de colar um texto grande. Use grupos de captura apenas em torno das partes necessárias posteriormente, escape de caracteres literais, como pontos e parênteses, e revise a visualização antes de clicar em <strong>Substituir tudo</strong>.",
     "example": "Exemplo",
     "examplePara": "Os grupos de captura podem reorganizar datas de MM/DD/AAAA na saída AAAA-MM-DD no estilo ISO:",
-    "exampleCode": "--- Pattern ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Replacement ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Result ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
+    "exampleCode": "--- Padrão ---\n(\\d{2})/(\\d{2})/(\\d{4})\n\n--- Substituição ---\n$3-$1-$2\n\n--- Flags ---\ng (global)\n\n--- Texto de teste ---\nToday is 04/29/2026 and tomorrow is 04/30/2026.\n\n--- Resultado ---\nToday is 2026-04-29 and tomorrow is 2026-04-30."
   }
 }

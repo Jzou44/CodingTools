@@ -141,10 +141,10 @@
     "title": "影像調整大小 - Coding.Tools",
     "description": "在瀏覽器中調整 PNG、JPEG 和 WebP 影像的大小，具有精確尺寸、寬高比鎖定、預設和品質控制。",
     "toolTitle": "圖片尺寸調整",
-    "toolDescription": "使用精確的像素尺寸、比例預設、寬高比鎖定和 JPEG/WebP 品質控制在本地調整一張影像的大小。",
+    "toolDescription": "使用精確的像素尺寸、比例預設、寬高比鎖定和 JPEG/WebP 品質控制在本機調整一張影像的大小。",
     "categoryName": "圖片工具",
     "labels": {
-      "clickOrDrop": "點擊或拖曳圖片檔案到此處",
+      "clickOrDrop": "點選或拖曳圖片檔案到此處",
       "hint": "PNG、JPEG、WebP · 最大 10MB",
       "ready": "選擇圖片開始",
       "loaded": "圖片已載入",
@@ -183,7 +183,7 @@
       "presetHd": "HD",
       "presetFullHd": "Full HD"
     },
-    "dropzoneMessage": "點擊或拖曳圖片檔案到此處",
+    "dropzoneMessage": "點選或拖曳圖片檔案到此處",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
     "descTitle": "將影像大小調整為精確尺寸",
     "descParas": [
@@ -260,7 +260,7 @@
       "画像が元の比率を維持する必要がある場合はアスペクト比をロックし、意図的に別の形状が必要な場合はロックを解除します。幅と高さの両方を <strong>50%</strong> だけ縮小すると、<strong>75%</strong> のピクセルが削除され、多くの場合、ファイルが大幅に小さくなります。",
       "処理にはブラウザのキャンバスを使用します。 JPEG および WebP 出力は、品質設定を使用して再エンコードできます。 PNG は透明度を保ちますが、写真形式ほど縮小しない可能性があります。サイズを変更すると細かい部分がぼやける可能性があるため、プレビューを確認してください。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "PNG、JPEG、または WebP 画像を 1 つアップロードします。",
       "ターゲットの幅と高さを入力し、必要に応じてアスペクト比をロックするか、プリセットを選択します。",
@@ -337,7 +337,7 @@
     ],
     "whatIs": "언제 이미지 크기를 조정해야 합니까?",
     "whatIsParas": [
-      "<strong>이미지 크기 조정</strong>는 파일 크기뿐만 아니라 치수 변경에도 사용됩니다. 레이아웃, CMS, 이메일, 아바타 또는 문서 이미지에 정확한 픽셀 너비와 높이가 필요한 경우 유용합니다.",
+      "<strong>이미지 크기 조정</strong>은 파일 크기뿐만 아니라 치수 변경에도 사용됩니다. 레이아웃, CMS, 이메일, 아바타 또는 문서 이미지에 정확한 픽셀 너비와 높이가 필요한 경우 유용합니다.",
       "브라우저가 새 출력 이미지를 생성하는 동안 원본 파일은 장치에 유지됩니다. 일반적으로 규모를 축소하는 것이 가장 좋습니다. 업스케일링은 원본에 없던 픽셀을 생성하기 때문에 이미지를 흐릿하게 만들 수 있습니다."
     ],
     "example": "Canvas로 크기 조정",
@@ -349,7 +349,7 @@
     "description": "Redimensionnez les images PNG, JPEG et WebP dans votre navigateur avec des dimensions exactes, un verrouillage des proportions, des préréglages et un contrôle qualité.",
     "toolTitle": "Redimensionner une image",
     "toolDescription": "Redimensionnez une image localement avec des dimensions exactes en pixels, des préréglages d'échelle, un verrouillage des proportions et un contrôle qualité JPEG/WebP.",
-    "categoryName": "Outils image",
+    "categoryName": "Outils d’image",
     "labels": {
       "clickOrDrop": "Cliquez ou déposez une image ici",
       "hint": "PNG, JPEG, WebP · 10 Mo max",

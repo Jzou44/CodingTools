@@ -43,9 +43,9 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入字段中键入或粘贴十六进制值。",
+      "在输入框中键入或粘贴十六进制值。",
       "查看二进制结果以及匹配的十进制和八进制输出。",
-      "复制二进制值，或在转换另一个十六进制值之前清除表单。"
+      "复制二进制值，或在转换另一个十六进制值之前清空输入。"
     ],
     "whatIs": "什么是十六进制到二进制的转换？",
     "whatIsParas": [
@@ -59,32 +59,32 @@
   },
   "tw": {
     "title": "十六進位到二進位轉換器 - Coding.Tools",
-    "description": "將十六進制值轉換為二進制，並使用十進制和八進制等效值進行檢查。",
+    "description": "將十六進位值轉換為二進位，並使用十進位和八進位等效值進行檢查。",
     "toolTitle": "十六進位轉二進位",
     "toolDescription": "將 16 進位值轉換為二進位並比較符合的十進位和八進位形式。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入十六進位數字（例如 FF、1A3F）...",
-    "outputPlaceholder": "二進制結果將出現在這裡...",
+    "outputPlaceholder": "二進位結果將出現在這裡...",
     "descTitle": "將十六進位值展開為二進位位",
     "descParas": [
       "<strong>Hex 轉二進位將 16 進位輸入轉換為 2 進位輸出，並顯示等效的十進位和八進位值。</strong> 它對於檢查遮罩、位元組、打包標誌、雜湊值和低階常數非常有用。",
-      "十六進位輸入應使用數字<code>0-9</code>和字母<code>A-F</code>；大小寫無關緊要，並且空白會被忽略。每個十六進制數字代表四位，但對於固定寬度值，可能需要添加前導零。"
+      "十六進位輸入應使用數字<code>0-9</code>和字母<code>A-F</code>；大小寫無關緊要，並且空白會被忽略。每個十六進位數字代表四位，但對於固定寬度值，可能需要添加前導零。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "在輸入欄位中鍵入或貼上十六進位值。",
-      "查看二進制結果以及匹配的十進制和八進制輸出。",
-      "複製二進位值，或在轉換另一個十六進位值之前清除表單。"
+      "檢視二進位結果以及符合的十進位和八進位輸出。",
+      "複製二進位值，或在轉換另一個十六進位值之前清空輸入。"
     ],
     "whatIs": "什麼是十六進位到二進位的轉換？",
     "whatIsParas": [
-      "<strong>十六進位到二進位的轉換</strong>將十六進位表示法擴展回位元。由於一個十六進制數字映射到四個二進制數字，因此十六進制是一種寫入二進制資料的緊湊方式，同時仍然允許精確的位級檢查。"
+      "<strong>十六進位到二進位的轉換</strong>將十六進位表示法擴展回位元。由於一個十六進位數字對應到四個二進位數字，因此十六進位是一種寫入二進位資料的緊湊方式，同時仍然允許精確的位級檢查。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "刪除非數位標籤和前綴，例如 <code>0x</code>，除非該工具接受。對於位元組、位址和暫存器，驗證最終二進位顯示是否需要前導零。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "十六進位位元組 <code>FF</code> 擴展為八個二進位位元組：",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "exampleCode": "--- 十六進位輸入 ---\nFF\n\n--- 二進位 ---\n11111111\n\n--- 十進位 ---\n255\n\n--- 八進位 ---\n377"
   },
   "jp": {
     "title": "16進数から2進数へのコンバーター - Coding.Tools",
@@ -93,32 +93,32 @@
     "toolDescription": "基数 16 の値をバイナリに変換し、一致する 10 進形式と 8 進形式を比較します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "16 進数を入力してください (例: FF、1A3F)...",
-    "outputPlaceholder": "バイナリ結果がここに表示されます...",
+    "outputPlaceholder": "2進数の結果がここに表示されます...",
     "descTitle": "16 進数値を 2 進ビットに展開します",
     "descParas": [
       "<strong>16進数から2進数 は、16 進数の入力を 2 進数の出力に変換し、同等の 10 進数と 8 進数の値も表示します。</strong> これは、マスク、バイト、パックされたフラグ、ハッシュ、および低レベル定数を検査するのに役立ちます。",
       "16 進数入力には、数字 <code>0-9</code> と文字 <code>A-F</code> を使用する必要があります。大文字と小文字は区別されず、空白は無視されます。各 16 進数は 4 ビットを表しますが、固定幅の値の場合は先頭のゼロを追加し直す必要がある場合があります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "入力フィールドに 16 進値を入力するか貼り付けます。",
       "バイナリの結果と、対応する 10 進数および 8 進数の出力を確認します。",
-      "バイナリ値をコピーするか、別の 16 進値を変換する前にフォームをクリアしてください。"
+      "2進値をコピーするか、別の 16 進値を変換する前にフォームをクリアしてください。"
     ],
     "whatIs": "16 進数から 2 進数への変換とは何ですか?",
     "whatIsParas": [
-      "<strong>16 進数から 2 進数への変換</strong> は、16 進数表記をビットに展開します。 1 つの 16 進数が 4 つの 2 進数にマップされるため、16 進数はバイナリ データを書き込むコンパクトな方法でありながら、正確なビット レベルの検査が可能です。"
+      "<strong>16 進数から 2 進数への変換</strong> は、16 進数表記をビットに展開します。 1 つの 16 進数が 4 つの 2 進数に対応付けされるため、16 進数はバイナリ データを書き込むコンパクトな方法でありながら、正確なビット レベルの検査が可能です。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "ツールで受け入れられない限り、<code>0x</code> などの数値以外のラベルとプレフィックスを削除します。バイト、アドレス、レジスタについては、最終的なバイナリ表示で先行ゼロが必要かどうかを確認してください。",
     "example": "例",
-    "examplePara": "16 進バイト <code>FF</code> は、8 つのバイナリ バイトに展開されます。",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "examplePara": "16 進バイト <code>FF</code> は、8 つの2進バイトに展開されます。",
+    "exampleCode": "--- 16進数入力 ---\nFF\n\n--- 2進数 ---\n11111111\n\n--- 10進数 ---\n255\n\n--- 8進数 ---\n377"
   },
   "kr": {
-    "title": "16진수를 2진수로 변환기 - Coding.Tools",
+    "title": "16진수-2진수 변환기 - Coding.Tools",
     "description": "16진수 값을 2진수로 변환하고, 확인을 위해 10진수 및 8진수 값을 사용합니다.",
-    "toolTitle": "16진수에서 2진수",
+    "toolTitle": "16진수 → 2진수",
     "toolDescription": "16진수 값을 2진수로 변환하고 일치하는 10진수와 8진수 형식을 비교합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "16진수 입력(예: FF, 1A3F)...",
@@ -132,17 +132,17 @@
     "steps": [
       "입력 필드에 16진수 값을 입력하거나 붙여넣습니다.",
       "이진수 결과와 일치하는 십진수 및 8진수 출력을 검토합니다.",
-      "이진 값을 복사하거나 다른 16진수 값을 변환하기 전에 양식을 지우십시오."
+      "이진 값을 복사하거나 다른 16진수 값을 변환하기 전에 입력란을 비우세요."
     ],
-    "whatIs": "16진수에서 이진수로의 변환이란 무엇입니까?",
+    "whatIs": "16진수에서 이진수로의 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Hex를 이진수로 변환</strong>는 16진수 표기법을 다시 비트로 확장합니다. 16진수는 4개의 이진수에 매핑되므로 16진수는 정확한 비트 수준 검사를 허용하면서 이진 데이터를 쓰는 간단한 방법입니다."
+      "<strong>Hex를 이진수로 변환</strong>은 16진수 표기법을 다시 비트로 확장합니다. 16진수는 4개의 이진수에 매핑되므로 16진수는 정확한 비트 수준 검사를 허용하면서 이진 데이터를 쓰는 간단한 방법입니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "도구에서 허용하지 않는 한 <code>0x</code>와 같은 숫자가 아닌 레이블과 접두사를 제거합니다. 바이트, 주소 및 레지스터의 경우 최종 바이너리 디스플레이에 선행 0이 필요한지 확인하십시오.",
     "example": "예",
     "examplePara": "16진수 바이트 <code>FF</code>는 8개의 이진수 바이트로 확장됩니다.",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "exampleCode": "--- 16진수 입력 ---\nFF\n\n--- 2진수 ---\n11111111\n\n--- 10진수 ---\n255\n\n--- 8진수 ---\n377"
   },
   "fr": {
     "title": "Convertisseur hexadécimal en binaire - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Supprimez les étiquettes et préfixes non numériques tels que <code>0x</code>, sauf s'ils sont acceptés par l'outil. Pour les octets, les adresses et les registres, vérifiez si des zéros non significatifs sont requis dans l'affichage binaire final.",
     "example": "Exemple",
     "examplePara": "L'octet hexadécimal <code>FF</code> se développe en huit bits binaires :",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "exampleCode": "--- Entrée hexadécimale ---\nFF\n\n--- Binaire ---\n11111111\n\n--- Décimal ---\n255\n\n--- Octal ---\n377"
   },
   "de": {
     "title": "Hex-zu-Binär-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Entfernen Sie nicht numerische Bezeichnungen und Präfixe wie <code>0x</code>, sofern sie vom Tool nicht akzeptiert werden. Überprüfen Sie für Bytes, Adressen und Register, ob in der endgültigen Binäranzeige führende Nullen erforderlich sind.",
     "example": "Beispiel",
     "examplePara": "Das Hex-Byte <code>FF</code> erweitert sich auf acht binäre Einsen:",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "exampleCode": "--- Hex-Eingabe ---\nFF\n\n--- Binär ---\n11111111\n\n--- Dezimal ---\n255\n\n--- Oktal ---\n377"
   },
   "es": {
     "title": "Convertidor de hexadecimal a binario - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Elimine etiquetas y prefijos no numéricos como <code>0x</code> a menos que la herramienta lo acepte. Para bytes, direcciones y registros, verifique si se requieren ceros a la izquierda en la visualización binaria final.",
     "example": "Ejemplo",
     "examplePara": "El byte hexadecimal <code>FF</code> se expande a ocho unos binarios:",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "exampleCode": "--- Entrada hexadecimal ---\nFF\n\n--- Binario ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   },
   "pt": {
     "title": "Conversor hexadecimal para binário - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Remova rótulos e prefixos não numéricos, como <code>0x</code>, a menos que sejam aceitos pela ferramenta. Para bytes, endereços e registradores, verifique se zeros à esquerda são necessários na exibição binária final.",
     "example": "Exemplo",
     "examplePara": "O byte hexadecimal <code>FF</code> se expande para oito binários:",
-    "exampleCode": "--- Hex Input ---\nFF\n\n--- Binary ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
+    "exampleCode": "--- Entrada hexadecimal ---\nFF\n\n--- Binário ---\n11111111\n\n--- Decimal ---\n255\n\n--- Octal ---\n377"
   }
 }

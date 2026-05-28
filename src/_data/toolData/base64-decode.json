@@ -65,13 +65,13 @@
     "title": "Base64 解碼 - Coding.Tools",
     "description": "將 Base64 字串解碼為可讀文字並檢查編碼的 API 值、資料 URI、令牌和設定片段。",
     "toolTitle": "Base64 解碼",
-    "toolDescription": "將 Base64 字串重新轉換為可讀文本，並提供可用於快速檢查的編碼。",
+    "toolDescription": "將 Base64 字串重新轉換為可讀文字，並提供可用於快速檢查的編碼。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "貼上 Base64 文字進行解碼或輸入純文字進行編碼...",
     "outputPlaceholder": "解碼或編碼結果將顯示在此處...",
-    "descTitle": "將 Base64 解碼為可讀文本",
+    "descTitle": "將 Base64 解碼為可讀文字",
     "descParas": [
-      "<strong>此 Base64 解碼器將編碼字串轉換回文本，以便您可以檢查原始值。</strong> 使用它來檢查 API 回應、電子郵件片段、資料 URI 內容、編碼設定值、JWT 區段或已包裝用於文字傳輸的複製有效負載。",
+      "<strong>此 Base64 解碼器將編碼字串轉換回文字，以便您可以檢查原始值。</strong> 使用它來檢查 API 回應、電子郵件片段、資料 URI 內容、編碼設定值、JWT 區段或已包裝用於文字傳輸的複製有效負載。",
       "Base64 輸入通常使用 <code>A-Z</code>、<code>a-z</code>、<code>0-9</code>、<code>+</code>、<code>/</code> 和可選的 <code>=</code> 填充。解碼並不能驗證信任或真實性；它僅在字串完整且格式正確時反轉表示形式。"
     ],
     "howToUse": "使用方法",
@@ -79,11 +79,11 @@
       "將 Base64 編碼字串貼到輸入編輯器中。",
       "點選 <strong>解碼</strong> 將其轉換回可讀文字。",
       "檢查輸出編輯器和狀態訊息。解碼失敗立即報告無效的Base64輸入。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "什麼是Base64解碼？",
     "whatIsParas": [
-      "<strong>Base64 解碼</strong> 透過將可列印字元對應回原始字節，然後在可能的情況下將這些位元組顯示為文字來反轉 Base64 編碼。這是一個表示步驟，而不是安全操作。",
+      "<strong>Base64 解碼</strong> 透過將可列印字元對應回原始位元組，然後在可能的情況下將這些位元組顯示為文字來反轉 Base64 編碼。這是一個表示步驟，而不是安全操作。",
       "不要因為解碼的輸出是編碼的就將其視為安全的。 Base64 可以隱藏腳本、URL、憑證或二進位位元組，因此在重複使用之前檢查意外的解碼內容。"
     ],
     "inputNotes": "輸入說明",
@@ -103,7 +103,7 @@
     "descTitle": "Base64 を読み取り可能なテキストにデコードします",
     "descParas": [
       "<strong>この Base64 デコーダは、エンコードされた文字列をテキストに変換して元の値を検査できるようにします。</strong> これを使用して、API 応答、電子メール フラグメント、データ URI コンテンツ、エンコードされた構成値、JWT セグメント、またはテキスト トランスポート用にラップされたコピーされたペイロードをチェックします。",
-      "Base64 入力は通常、<code>A-Z</code>、<code>a-z</code>、<code>0-9</code>、<code>+</code>、<code>/</code>、およびオプションの <code>=</code> パディングを使用します。デコードでは信頼性や信頼性は検証されません。文字列が完全で正しくフォーマットされている場合にのみ、表現を反転します。"
+      "Base64 入力は通常、<code>A-Z</code>、<code>a-z</code>、<code>0-9</code>、<code>+</code>、<code>/</code>、およびオプションの <code>=</code> パディングを使用します。デコードでは真正性や安全性は検証されません。文字列が完全で正しくフォーマットされている場合にのみ、表現を反転します。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -114,8 +114,8 @@
     ],
     "whatIs": "Base64 デコードとは何ですか?",
     "whatIsParas": [
-      "<strong>Base64 デコード</strong> は、印刷可能な文字を元のバイトにマッピングして戻し、可能な場合にはそれらのバイトをテキストとして表示することにより、Base64 エンコードを逆にします。これは代表的なステップであり、セキュリティ操作ではありません。",
-      "エンコードされたからといって、デコードされた出力を安全なものとして扱わないでください。 Base64 は、スクリプト、URL、資格情報、またはバイナリ バイトを目に見えないように隠すことができるため、再利用する前に予期しないデコードされたコンテンツを検査してください。"
+      "<strong>Base64 デコード</strong> は、印刷可能な文字を元のバイトにマッピングして戻し、可能な場合にはそれらのバイトをテキストとして表示することにより、Base64 エンコードを逆にします。これは表現形式を戻す処理であり、セキュリティ操作ではありません。",
+      "エンコードされたからといって、デコードされた出力を安全なものとして扱わないでください。 Base64 は、スクリプト、URL、資格情報、または2進バイトを目に見えないように隠すことができるため、再利用する前に予期しないデコードされたコンテンツを検査してください。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "可能な場合は、Base64 文字列のみを貼り付けます。 <code>data:text/plain;base64,</code> などのプレフィックス、コピーされたラベル、マークダウン フェンス、または周囲の引用符は、入力の一部として意図的にデコードする場合を除き、削除してください。",
@@ -134,7 +134,7 @@
     "descTitle": "Base64를 읽을 수 있는 텍스트로 디코딩",
     "descParas": [
       "<strong>이 Base64 디코더는 인코딩된 문자열을 다시 텍스트로 변환하므로 원래 값을 검사할 수 있습니다.</strong> 이를 사용하여 API 응답, 이메일 조각, 데이터 URI 콘텐츠, 인코딩된 구성 값, JWT 세그먼트 또는 텍스트 전송을 위해 래핑된 복사된 페이로드를 확인합니다.",
-      "Base64 입력은 일반적으로 <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>+</code>, <code>/</code> 및 선택적 <code>=</code> 패딩을 사용합니다. 디코딩은 신뢰나 신뢰성을 확인하지 않습니다. 문자열이 완전하고 형식이 올바른 경우에만 표현을 반대로 바꿉니다."
+      "Base64 입력은 일반적으로 <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>+</code>, <code>/</code> 및 선택적 <code>=</code> 패딩을 사용합니다. 디코딩은 진위성이나 안전성을 검증하지 않습니다. 문자열이 완전하고 형식이 올바른 경우에만 인코딩된 표현을 되돌릴 뿐입니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
@@ -143,10 +143,10 @@
       "출력 편집기와 상태 메시지를 확인하세요. 디코딩에 실패하면 잘못된 Base64 입력이 즉시 보고됩니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "Base64 디코딩이란 무엇입니까?",
+    "whatIs": "Base64 디코딩이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Base64 디코딩</strong>는 인쇄 가능한 문자를 원래 바이트로 다시 매핑한 다음 가능한 경우 해당 바이트를 텍스트로 표시하여 Base64 인코딩을 반전합니다. 보안 작업이 아닌 표현 단계입니다.",
-      "디코딩된 출력이 인코딩되었다는 이유만으로 안전한 것으로 취급하지 마십시오. Base64는 스크립트, URL, 자격 증명 또는 바이너리 바이트를 눈에 잘 띄도록 숨길 수 있으므로 예기치 않게 디코딩된 콘텐츠를 재사용하기 전에 검사하세요."
+      "<strong>Base64 디코딩</strong>은 인쇄 가능한 문자를 원래 바이트로 다시 매핑한 다음 가능한 경우 해당 바이트를 텍스트로 표시하여 Base64 인코딩을 반전합니다. 보안 작업이 아닌 표현 단계입니다.",
+      "디코딩된 출력이 인코딩되었다는 이유만으로 안전한 것으로 취급하지 마십시오. Base64는 스크립트, URL, 자격 증명 또는 바이너리 바이트를 눈에 띄지 않게 숨길 수 있으므로 예기치 않게 디코딩된 콘텐츠를 재사용하기 전에 검사하세요."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "가능하면 Base64 문자열만 붙여넣으세요. 의도적으로 입력의 일부로 디코딩하려는 경우가 아니면 <code>data:text/plain;base64,</code>, 복사된 레이블, 마크다운 울타리 또는 주변 따옴표와 같은 접두사를 제거하십시오.",
@@ -180,7 +180,7 @@
       "Ne considérez pas la sortie décodée comme sûre simplement parce qu’elle a été codée. Base64 peut masquer les scripts, les URL, les informations d'identification ou les octets binaires à la vue de tous, alors inspectez le contenu décodé inattendu avant de le réutiliser."
     ],
     "inputNotes": "Notes sur l'entrée",
-    "inputNotesPara": "Collez uniquement la chaîne Base64 lorsque cela est possible. Supprimez les préfixes tels que <code>data:text/plain;base64,</code>, les étiquettes copiées, les clôtures de démarque ou les guillemets environnants, sauf si vous souhaitez intentionnellement qu'ils soient décodés dans le cadre de l'entrée.",
+    "inputNotesPara": "Collez uniquement la chaîne Base64 lorsque cela est possible. Supprimez les préfixes tels que <code>data:text/plain;base64,</code>, les étiquettes copiées, les blocs de code Markdown ou les guillemets environnants, sauf si vous souhaitez intentionnellement qu'ils soient décodés dans le cadre de l'entrée.",
     "example": "Exemple",
     "examplePara": "Une valeur Base64 peut être décodée dans le message qu'elle représente :",
     "exampleCode": "--- Entrée Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Sortie décodée ---\nHello, World!"
@@ -195,7 +195,7 @@
     "outputPlaceholder": "Dekodiertes oder kodiertes Ergebnis wird hier angezeigt...",
     "descTitle": "Dekodieren Sie Base64 in lesbaren Text",
     "descParas": [
-      "<strong>Base64 Decodieren wandelt eine Base64-codierte Zeichenfolge wieder in lesbaren Text oder prüfbare Bytes im Browser um.</strong> Nutzen Sie es für API-Werte, Konfigurationsausschnitte, Daten-URI-Fragmente, Tokens und Protokolle, wenn Sie sehen müssen, was die codierte Nutzlast enthält.",
+      "<strong>Base64-Dekodierung wandelt eine Base64-codierte Zeichenfolge wieder in lesbaren Text oder prüfbare Bytes im Browser um.</strong> Nutzen Sie es für API-Werte, Konfigurationsausschnitte, Daten-URI-Fragmente, Tokens und Protokolle, wenn Sie sehen müssen, was die codierte Nutzlast enthält.",
       "Die Base64-Eingabe verwendet üblicherweise <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>+</code>, <code>/</code> und optional die Auffüllung <code>=</code>. Durch die Dekodierung wird weder Vertrauen noch Authentizität überprüft. Die Darstellung wird nur umgekehrt, wenn die Zeichenfolge vollständig und korrekt formatiert ist."
     ],
     "howToUse": "Anleitung",
@@ -239,10 +239,10 @@
     "whatIs": "¿Qué es la decodificación Base64?",
     "whatIsParas": [
       "La decodificación <strong>Base64</strong> invierte la codificación Base64 asignando caracteres imprimibles a los bytes originales y luego mostrando esos bytes como texto cuando sea posible. Es un paso de representación, no una operación de seguridad.",
-      "No trate la salida decodificada como segura sólo porque fue codificada. Base64 puede ocultar scripts, URL, credenciales o bytes binarios a simple vista, así que inspeccione el contenido decodificado inesperado antes de reutilizarlo."
+      "No trate la salida decodificada como segura solo porque fue codificada. Base64 puede ocultar scripts, URL, credenciales o bytes binarios a simple vista, así que inspeccione el contenido decodificado inesperado antes de reutilizarlo."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Pegue solo la cadena Base64 cuando sea posible. Elimine prefijos como <code>data:text/plain;base64,</code>, etiquetas copiadas, barreras de rebajas o comillas circundantes, a menos que desee decodificarlas intencionalmente como parte de la entrada.",
+    "inputNotesPara": "Pegue solo la cadena Base64 cuando sea posible. Elimine prefijos como <code>data:text/plain;base64,</code>, etiquetas copiadas, bloques de código Markdown o comillas circundantes, a menos que desee decodificarlas intencionalmente como parte de la entrada.",
     "example": "Ejemplo",
     "examplePara": "Un valor Base64 se puede decodificar nuevamente en el mensaje que representa:",
     "exampleCode": "--- Entrada Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Salida decodificada ---\nHello, World!"
@@ -258,12 +258,12 @@
     "descTitle": "Decodifique Base64 em texto legível",
     "descParas": [
       "<strong>Este decodificador Base64 converte strings codificadas de volta em texto para que você possa inspecionar o valor original.</strong> Use-o para verificar respostas de API, fragmentos de e-mail, conteúdo de dados URI, valores de configuração codificados, segmentos JWT ou cargas úteis copiadas que foram agrupadas para transporte de texto.",
-      "A entrada Base64 geralmente usa <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>+</code>, <code>/</code> e preenchimento opcional <code>=</code>. A decodificação não verifica confiança ou autenticidade; ele só inverte a representação quando a string está completa e formatada corretamente."
+      "A entrada Base64 geralmente usa <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>+</code>, <code>/</code> e preenchimento opcional <code>=</code>. A decodificação não verifica confiança ou autenticidade; o processo só inverte a representação quando a string está completa e formatada corretamente."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Cole uma sequência codificada Base64 no editor de entrada.",
-      "Clique em <strong>Decodificar</strong> para convertê-lo novamente em texto legível.",
+      "Clique em <strong>Decodificar</strong> para convertê-la novamente em texto legível.",
       "Verifique o editor de saída e a mensagem de status. A entrada Base64 inválida é reportada imediatamente quando a decodificação falha.",
       "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
     ],
@@ -273,7 +273,7 @@
       "Não trate a saída decodificada como segura apenas porque foi codificada. Base64 pode ocultar scripts, URLs, credenciais ou bytes binários à vista de todos, portanto, inspecione o conteúdo decodificado inesperado antes de reutilizá-lo."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Cole apenas a sequência Base64 quando possível. Remova prefixos como <code>data:text/plain;base64,</code>, rótulos copiados, limites de redução ou aspas circundantes, a menos que você queira intencionalmente que eles sejam decodificados como parte da entrada.",
+    "inputNotesPara": "Cole apenas a sequência Base64 quando possível. Remova prefixos como <code>data:text/plain;base64,</code>, rótulos copiados, delimitadores de código Markdown ou aspas circundantes, a menos que você queira intencionalmente que eles sejam decodificados como parte da entrada.",
     "example": "Exemplo",
     "examplePara": "Um valor Base64 pode ser decodificado de volta na mensagem que representa:",
     "exampleCode": "--- Entrada Base64 ---\nSGVsbG8sIFdvcmxkIQ==\n\n--- Saída decodificada ---\nHello, World!"

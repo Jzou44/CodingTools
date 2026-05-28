@@ -76,7 +76,7 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将正则表达式模式键入或粘贴到 <strong>Regex Pattern</strong> 输入字段中。您不需要包含前导斜杠和尾随斜杠。",
+      "将正则表达式模式键入或粘贴到 <strong>Regex Pattern</strong> 输入框中。您不需要包含前导斜杠和尾随斜杠。",
       "选择您需要的标志：<strong>g</strong>（全局）、<strong>i</strong>（不区分大小写）、<strong>m</strong>（多行）、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（粘性）。",
       "在下面的编辑器中输入或粘贴您的测试文本。",
       "匹配项会自动突出显示。匹配计数显示在状态栏中。",
@@ -91,11 +91,11 @@
     "inputNotesPara": "粘贴代表性文本，包括生产中出现的空行和标点符号。当您需要所有匹配时，使用 <code>g</code>；当 <code>^</code> 和 <code>$</code> 应每行应用时，使用 <code>m</code>；当 Unicode 处理很重要时，使用 <code>u</code>。",
     "example": "示例",
     "examplePara": "带有全局标志的简单的类似电子邮件的模式会找到两个地址并忽略格式错误的片段：",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- 模式 ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- 标志 ---\ng (global)\n\n--- 测试文本 ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- 找到的匹配 ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "tw": {
     "title": "正規表示式測試器 - Coding.Tools",
-    "description": "使用即時匹配、匹配計數和可選擇的正規表示式標誌，針對範例文字測試 JavaScript 正規表示式。",
+    "description": "使用即時符合、符合計數和可選擇的正規表示式標誌，針對範例文字測試 JavaScript 正規表示式。",
     "toolTitle": "正規表達式測試",
     "toolDescription": "使用即時反白和全域、不區分大小寫、多行、dotAll、unicode 和黏性比對的標誌在本機測試 JavaScript 正規表示式模式。",
     "categoryName": "字串與文字",
@@ -103,12 +103,12 @@
     "regexPlaceholder": "輸入正規表示式模式，例如\\b\\w+@\\w+\\.\\w+\\b",
     "testText": "測試文字",
     "inputPlaceholder": "輸入或貼上要測試的文字...",
-    "matchResults": "匹配結果",
-    "matchesAppearHere": "匹配結果將顯示在這裡...",
-    "noMatches": "0 個匹配",
-    "noMatchesFound": "未找到匹配",
-    "matchesSuffix": " 個匹配",
-    "matchesFoundSuffix": " 個匹配",
+    "matchResults": "符合結果",
+    "matchesAppearHere": "符合結果將顯示在這裡...",
+    "noMatches": "0 個符合",
+    "noMatchesFound": "未找到符合",
+    "matchesSuffix": " 個符合",
+    "matchesFoundSuffix": " 個符合",
     "invalidRegex": "無效的正規表達式",
     "flagGlobal": "全域",
     "flagCaseInsensitive": "不分大小寫",
@@ -118,15 +118,15 @@
     "flagSticky": "粘性",
     "descTitle": "針對真實文字測試 JavaScript 正規表示式模式",
     "descParas": [
-      "<strong>正規表達式測試 讓您在程式碼、驗證、日誌解析或搜尋工作流程中使用 JavaScript 正規表示式之前，先針對範例輸入嘗試 JavaScript 正規表示式。當您編輯模式或文字時，</strong> 匹配會突出顯示，因此可以更輕鬆地查看表達式實際捕獲的內容。",
-      "模式使用瀏覽器的 JavaScript 正規表示式引擎。輸入不含前導斜線和尾隨斜線的模式，然後選擇 <code>g</code>、<code>i</code>、<code>m</code>、<code>s</code>、<code>u</code> 和 <code>y</code> 等標誌。轉義、Unicode 模式、行結尾和貪婪匹配都可以改變結果。"
+      "<strong>正規表達式測試 讓您在程式碼、驗證、日誌解析或搜尋工作流程中使用 JavaScript 正規表示式之前，先針對範例輸入嘗試 JavaScript 正規表示式。當您編輯模式或文字時，</strong> 符合會突出顯示，因此可以更輕鬆地檢視表達式實際捕獲的內容。",
+      "模式使用瀏覽器的 JavaScript 正規表示式引擎。輸入不含前導斜線和尾隨斜線的模式，然後選擇 <code>g</code>、<code>i</code>、<code>m</code>、<code>s</code>、<code>u</code> 和 <code>y</code> 等標誌。轉義、Unicode 模式、行結尾和貪婪符合都可以改變結果。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將正規表示式模式鍵入或貼上到 <strong>Regex Pattern</strong> 輸入欄位中。您不需要包含前導斜線和尾隨斜線。",
       "選擇您需要的標誌：<strong>g</strong>（全域）、<strong>i</strong>（不區分大小寫）、<strong>m</strong>（多行） 、<strong>s</strong>（dotAll）、<strong>u</strong>（unicode）或<strong>y</strong>（黏性）。",
       "在下面的編輯器中輸入或貼上您的測試文字。",
-      "匹配項會自動突出顯示。匹配計數顯示在狀態列中。",
+      "符合項會自動突出顯示。符合計數顯示在狀態列中。",
       "使用 <strong>複製</strong> 將測試文字複製到剪貼簿，使用 <strong>下載</strong> 將其另存為文件，或使用 <strong>清除</strong> 重設所有內容。"
     ],
     "whatIs": "什麼是正規表示式測試器？",
@@ -135,10 +135,10 @@
       "正規表示式結果是特定於引擎的。此處適用的模式遵循 JavaScript 行為，這可能與 PCRE、Python、Java、grep 或資料庫正規表示式方言不同。在運行時重新測試將要使用的重要表達式。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "貼上代表性文本，包括生產中出現的空白行和標點符號。當您需要所有匹配時，使用 <code>g</code>；當 <code>^</code> 和 <code>$</code> 應每行應用時，使用 <code>m</code>；當 Unicode 處理很重要時，請使用 <code>u</code>。",
+    "inputNotesPara": "貼上代表性文字，包括生產中出現的空白行和標點符號。當您需要所有符合時，使用 <code>g</code>；當 <code>^</code> 和 <code>$</code> 應每行應用時，使用 <code>m</code>；當 Unicode 處理很重要時，請使用 <code>u</code>。",
     "example": "範例",
     "examplePara": "具有全域標誌的簡單的類似電子郵件的模式會找到兩個位址並忽略格式錯誤的片段：",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- 模式 ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- 旗標 ---\ng (global)\n\n--- 測試文字 ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- 找到的符合項目 ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "jp": {
     "title": "正規表現テスター - Coding.Tools",
@@ -185,7 +185,7 @@
     "inputNotesPara": "本番環境で使用される空白行や句読点など、代表的なテキストを貼り付けます。すべての一致が必要な場合は <code>g</code> を使用し、<code>^</code> および <code>$</code> を行ごとに適用する必要がある場合は <code>m</code> を、Unicode 処理が重要な場合は <code>u</code> を使用します。",
     "example": "例",
     "examplePara": "グローバル フラグを使用した単純な電子メールのようなパターンでは、2 つのアドレスが検出され、不正な形式のフラグメントが無視されます。",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- パターン ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- フラグ ---\ng (global)\n\n--- テストテキスト ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- 見つかった一致 ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "kr": {
     "title": "정규식 테스터 - Coding.Tools",
@@ -223,16 +223,16 @@
       "일치하는 항목이 자동으로 강조 표시됩니다. 상태 표시줄에 일치 횟수가 나타납니다.",
       "<strong>복사</strong>를 사용하여 테스트 텍스트를 클립보드에 복사하고, <strong>다운로드</strong>를 사용하여 파일로 저장하거나, <strong>지우기</strong>를 사용하여 모든 것을 재설정합니다."
     ],
-    "whatIs": "정규식 테스터란 무엇입니까?",
+    "whatIs": "정규식 테스터란 무엇인가요?",
     "whatIsParas": [
-      "<strong>정규식 테스터</strong>는 JavaScript 정규 표현식이 예상한 텍스트와 일치하는지 확인하기 위한 브라우저 기반 패턴 샌드박스입니다. 이메일과 같은 문자열, ID, 구분 기호, 구성 값, URL 및 로그 필드에 유용합니다.",
+      "<strong>정규식 테스터</strong>은 JavaScript 정규 표현식이 예상한 텍스트와 일치하는지 확인하기 위한 브라우저 기반 패턴 샌드박스입니다. 이메일과 같은 문자열, ID, 구분 기호, 구성 값, URL 및 로그 필드에 유용합니다.",
       "정규식 결과는 엔진마다 다릅니다. 여기서 작동하는 패턴은 PCRE, Python, Java, grep 또는 데이터베이스 정규식 방언과 다를 수 있는 JavaScript 동작을 따릅니다. 중요한 표현식이 사용될 런타임에서 다시 테스트하세요."
     ],
     "inputNotes": "입력 참고",
     "inputNotesPara": "제작 시 나타나는 빈줄, 구두점 등 대표 텍스트를 붙여넣습니다. 모든 일치 항목이 필요한 경우 <code>g</code>를 사용하고, <code>^</code> 및 <code>$</code>가 한 줄에 적용되어야 하는 경우 <code>m</code>를 사용하고, 유니코드 처리가 중요한 경우 <code>u</code>를 사용합니다.",
     "example": "예시",
     "examplePara": "전역 플래그가 있는 간단한 이메일과 유사한 패턴은 두 개의 주소를 찾고 잘못된 형식의 조각을 무시합니다.",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- 패턴 ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- 플래그 ---\ng (global)\n\n--- 테스트 텍스트 ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- 찾은 일치 항목 ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "fr": {
     "title": "Testeur d'expression régulière - Coding.Tools",
@@ -279,7 +279,7 @@
     "inputNotesPara": "Collez le texte représentatif, y compris les lignes vides et les signes de ponctuation qui apparaissent en production. Utilisez <code>g</code> lorsque vous avez besoin de toutes les correspondances, <code>m</code> lorsque <code>^</code> et <code>$</code> doivent s'appliquer par ligne, et <code>u</code> lorsque la gestion Unicode est importante.",
     "example": "Exemple",
     "examplePara": "Un simple modèle de type courrier électronique avec l'indicateur global trouve deux adresses et ignore les fragments mal formés :",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- Motif ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Indicateurs ---\ng (global)\n\n--- Texte de test ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Correspondances trouvées ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "de": {
     "title": "Regex-Tester - Coding.Tools",
@@ -326,7 +326,7 @@
     "inputNotesPara": "Fügen Sie repräsentativen Text ein, einschließlich Leerzeilen und Satzzeichen, die in der Produktion vorkommen. Verwenden Sie <code>g</code>, wenn Sie alle Übereinstimmungen benötigen, <code>m</code>, wenn <code>^</code> und <code>$</code> pro Zeile gelten sollen, und <code>u</code>, wenn es auf die Unicode-Verarbeitung ankommt.",
     "example": "Beispiel",
     "examplePara": "Ein einfaches E-Mail-ähnliches Muster mit der globalen Flagge findet zwei Adressen und ignoriert fehlerhafte Fragmente:",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- Muster ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Testtext ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Gefundene Treffer ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "es": {
     "title": "Probador de expresiones regulares - Coding.Tools",
@@ -348,9 +348,9 @@
     "flagGlobal": "global (todas)",
     "flagCaseInsensitive": "insensible a mayúsculas",
     "flagMultiline": "multilínea",
-    "flagDotAll": "puntoTodos",
+    "flagDotAll": "dotAll",
     "flagUnicode": "Unicode",
-    "flagSticky": "pegajoso",
+    "flagSticky": "sticky",
     "descTitle": "Pruebe los patrones de expresiones regulares JavaScript con texto real",
     "descParas": [
       "<strong>Probador Regex le permite probar una expresión regular JavaScript con una entrada de muestra antes de usarla en código, validación, análisis de registros o flujos de trabajo de búsqueda.</strong> Las coincidencias se resaltan a medida que edita el patrón o el texto, por lo que es más fácil ver qué captura realmente la expresión.",
@@ -358,8 +358,8 @@
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue un patrón de expresiones regulares en el campo de entrada <strong>Regex Pattern</strong>. No es necesario incluir las barras diagonales iniciales y finales.",
-      "Seleccione las banderas que necesita: <strong>g</strong> (global), <strong>i</strong> (no distingue entre mayúsculas y minúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) o <strong>y</strong> (pegajoso).",
+      "Escriba o pegue un patrón de expresiones regulares en el campo de entrada <strong>Patrón Regex</strong>. No es necesario incluir las barras diagonales iniciales y finales.",
+      "Seleccione las banderas que necesita: <strong>g</strong> (global), <strong>i</strong> (no distingue entre mayúsculas y minúsculas), <strong>m</strong> (multilínea), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) o <strong>y</strong> (sticky).",
       "Ingrese o pegue su texto de prueba en el editor a continuación.",
       "Las coincidencias se resaltan automáticamente. El recuento de coincidencias aparece en la barra de estado.",
       "Utilice <strong>Copiar</strong> para copiar el texto de prueba al portapapeles, <strong>Descargar</strong> para guardarlo como un archivo o <strong>Limpiar</strong> para restablecer todo."
@@ -373,7 +373,7 @@
     "inputNotesPara": "Pegue texto representativo, incluidas líneas en blanco y puntuación que aparecen en producción. Utilice <code>g</code> cuando necesite todas las coincidencias, <code>m</code> cuando <code>^</code> y <code>$</code> deban aplicarse por línea, y <code>u</code> cuando el manejo de Unicode sea importante.",
     "example": "Ejemplo",
     "examplePara": "Un patrón simple similar a un correo electrónico con la bandera global encuentra dos direcciones e ignora los fragmentos con formato incorrecto:",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- Patrón ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Banderas ---\ng (global)\n\n--- Texto de prueba ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Coincidencias encontradas ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   },
   "pt": {
     "title": "Testador Regex - Coding.Tools",
@@ -395,9 +395,9 @@
     "flagGlobal": "global (todas)",
     "flagCaseInsensitive": "ignorar maiúsculas/minúsculas",
     "flagMultiline": "multilinha",
-    "flagDotAll": "pontoTodos",
+    "flagDotAll": "dotAll",
     "flagUnicode": "Unicode",
-    "flagSticky": "pegajoso",
+    "flagSticky": "sticky",
     "descTitle": "Teste padrões de regex JavaScript em texto real",
     "descParas": [
       "<strong>O Testador Regex permite experimentar uma expressão regular JavaScript com uma entrada de exemplo antes de usá-la em código, validação, análise de logs ou fluxos de pesquisa.</strong> As correspondências são destacadas conforme você edita o padrão ou o texto, facilitando ver o que a expressão realmente captura.",
@@ -405,8 +405,8 @@
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole um padrão regex no campo de entrada <strong>Regex Pattern</strong>. Você não precisa incluir as barras iniciais e finais.",
-      "Selecione os sinalizadores necessários: <strong>g</strong> (global), <strong>i</strong> (sem distinção entre maiúsculas e minúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (pegajoso).",
+      "Digite ou cole um padrão regex no campo de entrada <strong>Padrão Regex</strong>. Você não precisa incluir as barras iniciais e finais.",
+      "Selecione os sinalizadores necessários: <strong>g</strong> (global), <strong>i</strong> (sem distinção entre maiúsculas e minúsculas), <strong>m</strong> (multilinha), <strong>s</strong> (dotAll), <strong>u</strong> (unicode) ou <strong>y</strong> (sticky).",
       "Insira ou cole seu texto de teste no editor abaixo.",
       "As correspondências são destacadas automaticamente. A contagem de correspondências aparece na barra de status.",
       "Use <strong>Copiar</strong> para copiar o texto de teste para a área de transferência, <strong>Baixar</strong> para salvá-lo como um arquivo ou <strong>Limpar</strong> para redefinir tudo."
@@ -420,6 +420,6 @@
     "inputNotesPara": "Cole texto representativo, incluindo linhas em branco e pontuação que aparecem na produção. Use <code>g</code> quando precisar de todas as correspondências, <code>m</code> quando <code>^</code> e <code>$</code> devem ser aplicados por linha e <code>u</code> quando o manuseio de Unicode for importante.",
     "example": "Exemplo",
     "examplePara": "Um padrão simples semelhante a um e-mail com o sinalizador global encontra dois endereços e ignora fragmentos malformados:",
-    "exampleCode": "--- Pattern ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Test Text ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Matches Found ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
+    "exampleCode": "--- Padrão ---\n\\b\\w+@\\w+\\.\\w+\\b\n\n--- Flags ---\ng (global)\n\n--- Texto de teste ---\nContact us at support@example.com or sales@company.org.\nInvalid: @missing.com or user@\n\n--- Correspondências encontradas ---\n2 matches:\n  1. support@example.com\n  2. sales@company.org"
   }
 }

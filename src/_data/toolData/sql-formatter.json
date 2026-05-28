@@ -60,7 +60,7 @@
     "inputNotesPara": "仅粘贴 SQL 文本。首先删除日志前缀、计时输出、shell 提示或应用程序字符串转义。将格式化的 SQL 复制回代码时，请记住特定于方言的语法。",
     "example": "示例",
     "examplePara": "当列、连接和过滤器分开时，单行查询变得更容易查看：",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- 未格式化输入 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 格式化输出 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "格式化 SQL"
   },
   "tw": {
@@ -80,19 +80,19 @@
     "steps": [
       "將 SQL 查詢貼到輸入編輯器中。",
       "點選 <strong>格式化 SQL</strong> 來排列子句和縮排。",
-      "查看格式化的 SQL 中保留的謂詞、連接、別名、註解和文字。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "檢視格式化的 SQL 中保留的謂詞、連接、別名、註解和文字。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是 SQL 格式化程式？",
     "whatIsParas": [
-      "<strong>SQL 格式化</strong> 是一個基於瀏覽器的實用程序，用於提高 SQL 的可讀性。它將 <code>SELECT</code>、<code>FROM</code>、<code>JOIN</code>、<code>WHERE</code>、<code>GROUP BY</code> 和 <code>ORDER BY</code> 等主要子句分開，因此查詢意圖更清晰。",
+      "<strong>SQL 格式化</strong> 是一個基於瀏覽器的實用工具，用於提高 SQL 的可讀性。它將 <code>SELECT</code>、<code>FROM</code>、<code>JOIN</code>、<code>WHERE</code>、<code>GROUP BY</code> 和 <code>ORDER BY</code> 等主要子句分開，因此查詢意圖更清晰。",
       "SQL 由資料庫執行，而不是由格式化程式執行。在提交之前，請始終對目標資料庫或測試套件執行重要的格式化查詢。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "僅貼上 SQL 文字。首先刪除日誌前綴、計時輸出、shell 提示或應用程式字串轉義。將格式化的 SQL 複製回程式碼時，請記住特定於方言的語法。",
     "example": "範例",
-    "examplePara": "當列、連接和過濾器分開時，單行查詢變得更容易查看：",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "examplePara": "當列、連接和過濾器分開時，單行查詢變得更容易檢視：",
+    "exampleCode": "--- 未格式化輸入 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 格式化輸出 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "格式化 SQL"
   },
   "jp": {
@@ -124,7 +124,7 @@
     "inputNotesPara": "SQL テキストのみを貼り付けます。まず、ログ接頭辞、タイミング出力、シェルプロンプト、またはアプリケーション文字列エスケープを削除してください。フォーマットされた SQL をコードにコピーするときは、方言固有の構文に留意してください。",
     "example": "例",
     "examplePara": "列、結合、フィルターを分離すると、1 行のクエリを確認しやすくなります。",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- 未整形入力 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 整形出力 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "SQL をフォーマット"
   },
   "kr": {
@@ -144,19 +144,19 @@
     "steps": [
       "SQL 쿼리를 입력 편집기에 붙여넣습니다.",
       "절과 들여쓰기를 정렬하려면 <strong>형식 SQL</strong>를 클릭하세요.",
-      "보존된 술어, 조인, 별명, 주석 및 리터럴에 대해 형식화된 SQL를 검토하십시오.",
+      "보존된 술어, 조인, 별명, 주석 및 리터럴에 대해 형식화된 SQL을 검토하십시오.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SQL 포맷터란 무엇입니까?",
+    "whatIs": "SQL 포맷터란 무엇인가요?",
     "whatIsParas": [
-      "<strong>SQL 포맷터</strong>는 SQL 가독성을 향상시키기 위한 브라우저 기반 유틸리티입니다. <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code> 등의 주요 절을 구분하여 쿼리 의도를 더욱 명확하게 합니다.",
+      "<strong>SQL 포맷터</strong>은 SQL 가독성을 향상시키기 위한 브라우저 기반 유틸리티입니다. <code>SELECT</code>, <code>FROM</code>, <code>JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code> 등의 주요 절을 구분하여 쿼리 의도를 더욱 명확하게 합니다.",
       "SQL는 포맷터가 아닌 데이터베이스에 의해 실행됩니다. 커밋하기 전에 항상 대상 데이터베이스 또는 테스트 모음에 대해 중요한 형식의 쿼리를 실행하세요."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "SQL 텍스트만 붙여넣습니다. 로그 접두사, 타이밍 출력, 쉘 프롬프트 또는 응용 프로그램 문자열 이스케이프를 먼저 제거하십시오. 형식화된 SQL를 코드에 다시 복사할 때 방언별 구문을 염두에 두세요.",
+    "inputNotesPara": "SQL 텍스트만 붙여넣습니다. 로그 접두사, 타이밍 출력, 쉘 프롬프트 또는 응용 프로그램 문자열 이스케이프를 먼저 제거하십시오. 형식화된 SQL을 코드에 다시 복사할 때 방언별 구문을 염두에 두세요.",
     "example": "예시",
     "examplePara": "열, 조인 및 필터를 분리하면 한 줄 쿼리를 더 쉽게 검토할 수 있습니다.",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- 포맷 전 입력 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 포맷된 출력 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "SQL 포맷"
   },
   "fr": {
@@ -188,7 +188,7 @@
     "inputNotesPara": "Collez uniquement le texte SQL. Supprimez d'abord les préfixes de journal, la sortie de synchronisation, les invites du shell ou les échappements de chaîne d'application. Gardez à l’esprit la syntaxe spécifique au dialecte lors de la copie du SQL formaté dans le code.",
     "example": "Exemple",
     "examplePara": "Une requête sur une seule ligne devient plus facile à examiner lorsque les colonnes, les jointures et les filtres sont séparés :",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- Entrée non formatée ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Sortie formatée ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "Formater SQL"
   },
   "de": {
@@ -220,7 +220,7 @@
     "inputNotesPara": "Nur SQL-Text einfügen. Entfernen Sie zuerst Protokollpräfixe, Zeitausgabe, Shell-Eingabeaufforderungen oder Anwendungszeichenfolgen-Escapezeichen. Beachten Sie die dialektspezifische Syntax, wenn Sie formatiertes SQL zurück in Code kopieren.",
     "example": "Beispiel",
     "examplePara": "Eine einzeilige Abfrage lässt sich einfacher überprüfen, wenn Spalten, Verknüpfungen und Filter getrennt sind:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- Unformatierte Eingabe ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatierte Ausgabe ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "Formatieren SQL"
   },
   "es": {
@@ -233,7 +233,7 @@
     "outputPlaceholder": "El SQL formateado aparecerá aquí...",
     "descTitle": "Haga que la lógica SQL sea más fácil de seguir",
     "descParas": [
-      "<strong>SQL El formateador reescribe el diseño de la consulta para que las cláusulas, uniones, columnas seleccionadas, predicados y ordenamiento sean más fáciles de escanear.</strong> Es útil para depurar informes, revisar migraciones, documentar ejemplos y desenredar consultas de una línea de los registros.",
+      "<strong>El formateador SQL reescribe el diseño de la consulta para que las cláusulas, uniones, columnas seleccionadas, predicados y ordenamiento sean más fáciles de escanear.</strong> Es útil para depurar informes, revisar migraciones, documentar ejemplos y desenredar consultas de una línea de los registros.",
       "El formateo debe preservar la lógica SQL, pero los dialectos difieren. La sintaxis específica del proveedor, los bloques de procedimiento, los identificadores entrecomillados, los comentarios y los operadores inusuales deben verificarse en el motor de base de datos que realmente utiliza."
     ],
     "howToUse": "Cómo usar",
@@ -252,7 +252,7 @@
     "inputNotesPara": "Pegue solo el texto SQL. Primero elimine los prefijos de registro, la salida de tiempo, los mensajes de shell o los escapes de cadenas de aplicaciones. Tenga en cuenta la sintaxis específica del dialecto al copiar SQL formateado nuevamente en el código.",
     "example": "Ejemplo",
     "examplePara": "Una consulta de una línea resulta más fácil de revisar cuando las columnas, uniones y filtros están separados:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- Entrada sin formato ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Salida formateada ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "Formatear SQL"
   },
   "pt": {
@@ -265,7 +265,7 @@
     "outputPlaceholder": "O SQL formatado aparecerá aqui...",
     "descTitle": "Torne a lógica SQL mais fácil de seguir",
     "descParas": [
-      "<strong>SQL O formatador reescreve o layout da consulta para que cláusulas, junções, colunas selecionadas, predicados e ordenação sejam mais fáceis de verificar.</strong> É útil para depurar relatórios, revisar migrações, documentar exemplos e desembaraçar consultas de uma linha de logs.",
+      "<strong>O formatador SQL reescreve o layout da consulta para que cláusulas, junções, colunas selecionadas, predicados e ordenação sejam mais fáceis de verificar.</strong> É útil para depurar relatórios, revisar migrações, documentar exemplos e desembaraçar consultas de uma linha de logs.",
       "A formatação deve preservar a lógica SQL, mas os dialetos são diferentes. Sintaxe específica do fornecedor, blocos procedurais, identificadores entre aspas, comentários e operadores incomuns devem ser verificados no mecanismo de banco de dados que você realmente usa."
     ],
     "howToUse": "Como usar",
@@ -284,7 +284,7 @@
     "inputNotesPara": "Cole apenas texto SQL. Remova primeiro os prefixos de log, a saída de tempo, os prompts do shell ou os escapes de string do aplicativo. Tenha em mente a sintaxe específica do dialeto ao copiar SQL formatado de volta para o código.",
     "example": "Exemplo",
     "examplePara": "Uma consulta de uma linha fica mais fácil de revisar quando colunas, junções e filtros são separados:",
-    "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
+    "exampleCode": "--- Entrada sem formatação ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Saída formatada ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
     "buttonLabel": "Formatar SQL"
   }
 }

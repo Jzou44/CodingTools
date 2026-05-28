@@ -45,7 +45,7 @@
     "steps": [
       "输入一个十进制值，如果需要，包括一个前导减号。",
       "查看简化分数或带分数输出。",
-      "复制分数结果，或在转换另一个小数之前清除该字段。"
+      "复制分数结果，或在转换另一个小数之前清空输入。"
     ],
     "whatIs": "什么是小数到分数的转换？",
     "whatIsParas": [
@@ -54,12 +54,12 @@
     "inputNotes": "输入说明",
     "inputNotesPara": "输入您想要解释的小数。如果小数是从重复值四舍五入而来的，则当您真正指的是分数（例如 <code>1/3</code>、<code>2/3</code> 或 <code>1/6</code>）时，请手动调整结果。",
     "example": "示例",
-    "examplePara": "小数 1.75 简化为带分数 1 3/4：",
+    "examplePara": "小数 <code>0.75</code> 可以精确写成分数 <code>3/4</code>：",
     "exampleCode": "--- 小数输入 ---\n0.75\n\n--- 分数 ---\n3/4\n\n--- 百分比 ---\n75%"
   },
   "tw": {
     "title": "小數到分數轉換器 - Coding.Tools",
-    "description": "將十進制值轉換為簡化分數或帶分數形式。",
+    "description": "將十進位值轉換為簡化分數或帶分數形式。",
     "toolTitle": "小數轉分數",
     "toolDescription": "在瀏覽器中將小數值轉換為簡化的分子和分母形式。",
     "categoryName": "數字轉換",
@@ -72,22 +72,22 @@
     ],
     "howToUse": "如何使用",
     "steps": [
-      "輸入一個十進制值，如果需要，包括一個前導減號。",
-      "查看簡化分數或帶分數輸出。",
-      "複製分數結果，或在轉換另一個小數之前清除該欄位。"
+      "輸入一個十進位值，如果需要，包括一個前導減號。",
+      "檢視簡化分數或帶分數輸出。",
+      "複製分數結果，或在轉換另一個小數之前清空輸入。"
     ],
     "whatIs": "什麼是小數到分數的轉換？",
     "whatIsParas": [
       "<strong>小數到分數的轉換</strong> 將以 10 為底的小數表示為分子除以分母。終止小數可以根據其書寫數字精確表示，而四捨五入或重複小數則需要判斷預期值。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "輸入您想要解釋的小數。如果小數是從重複值四捨五入而來的，則當您真正指的是分數（例如 <code>1/3</code>、<code>2/3</code> 或 <code>1/6</code>）時，請手動調整結果。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "小數 1.75 化為帶分數 1 3/4：",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- 十進位輸入 ---\n1.75\n\n--- 分數輸出 ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   },
   "jp": {
-    "title": "小数から分数へのコンバータ - Coding.Tools",
+    "title": "小数から分数へのコンバーター - Coding.Tools",
     "description": "10 進数値を簡略化された分数形式または帯分数形式に変換します。",
     "toolTitle": "小数から分数",
     "toolDescription": "ブラウザで 10 進数値を単純化された分子と分母の形式に変換します。",
@@ -99,7 +99,7 @@
       "<strong>小数から分数 は、10 進数値を簡略化された分数または帯分数に書き換えます。</strong> 測定、比率、算術作業、スプレッドシートのチェック、および分数として伝達しやすい値に使用します。",
       "コンバーターは、入力された数字を使用して 10 のべき乗に基づいて分母を作成し、結果を簡略化します。 <code>0.333</code> などの四捨五入された 10 進数は、繰り返し値 <code>1/3</code> ではなく、<code>333/1000</code> になります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "必要に応じて先頭にマイナス記号を付けて、10 進数値を入力します。",
       "簡略化された分数または帯分数の出力を確認します。",
@@ -109,16 +109,16 @@
     "whatIsParas": [
       "<strong>小数から分数への変換</strong> は、10 進数を分母上の分子として表します。終端小数は書かれた数字から正確に表すことができますが、四捨五入または繰り返し小数の場合は、意図した値についての判断が必要です。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "解釈したい小数を入力します。小数点が繰り返し値から四捨五入されている場合、実際に <code>1/3</code>、<code>2/3</code>、または <code>1/6</code> などの小数を意味する場合は、結果を手動で調整します。",
     "example": "例",
     "examplePara": "10 進数 1.75 は帯分数 1 3/4 に簡略化されます。",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- 10進数入力 ---\n1.75\n\n--- 分数出力 ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   },
   "kr": {
-    "title": "소수를 분수로 변환하는 변환기 - Coding.Tools",
+    "title": "소수-분수 변환기 - Coding.Tools",
     "description": "소수 값을 단순화된 분수 또는 대분수 형식으로 변환합니다.",
-    "toolTitle": "소수에서 분수",
+    "toolTitle": "소수 → 분수",
     "toolDescription": "브라우저에서 소수 값을 단순화된 분자 및 분모 형식으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "10진수를 입력하세요(예: 1.75, 3.14)...",
@@ -134,15 +134,15 @@
       "단순화된 분수 또는 대분수 출력을 검토합니다.",
       "분수 결과를 복사하거나 다른 소수를 변환하기 전에 필드를 지웁니다."
     ],
-    "whatIs": "소수를 분수로 변환이란 무엇입니까?",
+    "whatIs": "소수를 분수로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>십진수를 분수로 변환</strong>는 분모 위의 분자로 밑이 10인 십진수를 표현합니다. 종료 소수는 쓰여진 숫자로 정확하게 표현될 수 있는 반면, 반올림되거나 반복되는 소수는 의도한 값에 대한 판단이 필요합니다."
+      "<strong>십진수를 분수로 변환</strong>은 분모 위의 분자로 밑이 10인 십진수를 표현합니다. 종료 소수는 쓰여진 숫자로 정확하게 표현될 수 있는 반면, 반올림되거나 반복되는 소수는 의도한 값에 대한 판단이 필요합니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "해석하려는 소수점을 입력하세요. 반복되는 값에서 소수점을 반올림하는 경우 실제로 <code>1/3</code>, <code>2/3</code> 또는 <code>1/6</code>와 같은 분수를 의미하는 경우 결과를 수동으로 조정하세요.",
     "example": "예",
     "examplePara": "십진수 1.75는 대분수 1 3/4로 단순화됩니다.",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- 10진수 입력 ---\n1.75\n\n--- 분수 출력 ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   },
   "fr": {
     "title": "Convertisseur décimal en fraction - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Entrez la décimale telle que vous souhaitez qu'elle soit interprétée. Si la décimale est arrondie à partir d'une valeur répétitive, ajustez le résultat manuellement lorsque vous parlez réellement d'une fraction telle que <code>1/3</code>, <code>2/3</code> ou <code>1/6</code>.",
     "example": "Exemple",
     "examplePara": "Le nombre décimal 1,75 se simplifie en nombre mixte 1 3/4 :",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Entrée décimale ---\n1.75\n\n--- Sortie fraction ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   },
   "de": {
     "title": "Dezimal-Bruch-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Geben Sie die Dezimalzahl so ein, wie Sie sie interpretieren möchten. Wenn die Dezimalzahl aus einem sich wiederholenden Wert gerundet wird, passen Sie das Ergebnis manuell an, wenn Sie wirklich einen Bruch meinen, wie z. B. <code>1/3</code>, <code>2/3</code> oder <code>1/6</code>.",
     "example": "Beispiel",
     "examplePara": "Die Dezimalzahl 1,75 vereinfacht sich zur gemischten Zahl 1 3/4:",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Dezimaleingabe ---\n1.75\n\n--- Bruchausgabe ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   },
   "es": {
     "title": "Convertidor de decimal a fracción - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Ingrese el decimal como desea que se interprete. Si el decimal se redondea a partir de un valor repetido, ajuste el resultado manualmente cuando realmente se refiera a una fracción como <code>1/3</code>, <code>2/3</code> o <code>1/6</code>.",
     "example": "Ejemplo",
     "examplePara": "El decimal 1,75 se simplifica al número mixto 1 3/4:",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Entrada decimal ---\n1.75\n\n--- Salida de fracción ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   },
   "pt": {
     "title": "Conversor Decimal para Fração - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Insira o decimal como deseja que seja interpretado. Se o decimal for arredondado a partir de um valor repetido, ajuste o resultado manualmente quando você realmente se refere a uma fração como <code>1/3</code>, <code>2/3</code> ou <code>1/6</code>.",
     "example": "Exemplo",
     "examplePara": "Decimal 1,75 simplifica para o número misto 1 3/4:",
-    "exampleCode": "--- Decimal Input ---\n1.75\n\n--- Fraction Output ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Entrada decimal ---\n1.75\n\n--- Saída de fração ---\nInteger: 1\nNumerator: 3\nDenominator: 4"
   }
 }

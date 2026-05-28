@@ -33,7 +33,7 @@
   },
   "cn": {
     "title": "JavaScript 压缩器 - Coding.Tools",
-    "description": "通过删除注释和可避免的空格同时保留行为来缩小 JavaScript。",
+    "description": "通过删除注释和可避免的空格同时保留行为来压缩 JavaScript。",
     "toolTitle": "JavaScript 压缩",
     "toolDescription": "压缩 JavaScript 源代码以获得更小的片段、捆绑包和嵌入式代码。",
     "categoryName": "格式化与压缩",
@@ -42,30 +42,30 @@
     "descTitle": "减小 JavaScript 大小，然后测试行为",
     "descParas": [
       "<strong>JavaScript 压缩 删除注释、换行符、缩进和其他可避免的字符，以生成紧凑的源文本。</strong> 它对于小片段、示例、嵌入式脚本和快速减小大小非常有用。",
-      "缩小并不是完全捆绑或高级优化。它可能不会转译现代语法、解析导入、tree-shake 模块、保护公共 API 名称或保留许可证注释，除非实现明确支持这些情况。"
+      "压缩并不是完全捆绑或高级优化。它可能不会转译现代语法、解析导入、tree-shake 模块、保护公共 API 名称或保留许可证注释，除非实现明确支持这些情况。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 JavaScript 代码粘贴到输入编辑器中。",
       "单击 <strong>压缩 JavaScript</strong> 来压缩源。",
-      "在发布之前在目标浏览器或运行时测试缩小的脚本。",
+      "在发布之前在目标浏览器或运行时测试压缩的脚本。",
       "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
     "whatIs": "JavaScript 压缩器是什么？",
     "whatIsParas": [
       "<strong>JavaScript 压缩</strong> 是一个基于浏览器的实用程序，用于将可读的 JavaScript 转换为较小的文本形式。它使程序具有足够的可识别性，以便快速使用，同时减少不必要的字符。",
-      "JavaScript 可以对自动分号插入、指令序言、正则表达式、模板文字和范围敏感名称敏感。将缩小的输出视为要测试的内容，而不仅仅是要粘贴的内容。"
+      "JavaScript 可以对自动分号插入、指令序言、正则表达式、模板文字和范围敏感名称敏感。将压缩的输出视为要测试的内容，而不仅仅是要粘贴的内容。"
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "仅粘贴 JavaScript 源。保留可读的源副本，并将构建管道用于需要源映射、转译、模块解析或许可证保存的生产包。",
     "example": "示例",
     "examplePara": "带注释的函数被简化为紧凑的形式：",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "exampleCode": "--- 格式化输入 ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- 压缩输出 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
     "buttonLabel": "压缩 JavaScript"
   },
   "tw": {
     "title": "JavaScript 壓縮器 - Coding.Tools",
-    "description": "透過刪除註解和可避免的空格同時保留行為來縮小 JavaScript。",
+    "description": "透過刪除註解和可避免的空格同時保留行為來壓縮 JavaScript。",
     "toolTitle": "JavaScript 壓縮",
     "toolDescription": "壓縮 JavaScript 原始程式碼以獲得更小的片段、捆綁包和嵌入式程式碼。",
     "categoryName": "格式化與壓縮",
@@ -73,39 +73,39 @@
     "outputPlaceholder": "壓縮後的 JavaScript 將在此顯示...",
     "descTitle": "減小 JavaScript 大小，然後測試行為",
     "descParas": [
-      "<strong>JavaScript 壓縮 刪除註釋、換行符、縮排和其他可避免的字符，以產生緊湊的來源文字。</strong> 它對於小片段、範例、嵌入式腳本和快速減小大小非常有用。",
-      "縮小並不是完全捆綁或進階優化。它可能不會轉譯現代語法、解析導入、tree-shake 模組、保護公共 API 名稱或保留許可證註釋，除非實作明確支援這些情況。"
+      "<strong>JavaScript 壓縮 刪除註釋、換行符、縮排和其他可避免的字元，以產生緊湊的來源文字。</strong> 它對於小片段、範例、嵌入式腳本和快速減小大小非常有用。",
+      "壓縮並不是完全捆綁或進階優化。它可能不會轉譯現代語法、解析導入、tree-shake 模組、保護公共 API 名稱或保留許可證註釋，除非實作明確支援這些情況。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將 JavaScript 程式碼貼到輸入編輯器中。",
       "點選 <strong>壓縮 JavaScript</strong> 來壓縮來源。",
-      "在發布之前在目標瀏覽器或執行時間測試縮小的腳本。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "在發布之前在目標瀏覽器或執行時間測試壓縮的腳本。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "JavaScript 壓縮器是什麼？",
     "whatIsParas": [
-      "<strong>JavaScript 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將可讀的 JavaScript 轉換為較小的文字形式。它使程式具有足夠的可識別性，以便快速使用，同時減少不必要的字元。",
-      "JavaScript 可以對自動分號插入、指令序言、正規表示式、範本文字和範圍敏感名稱敏感。將縮小的輸出視為要測試的內容，而不僅僅是要貼上的內容。"
+      "<strong>JavaScript 壓縮</strong> 是一個基於瀏覽器的實用工具，用於將可讀的 JavaScript 轉換為較小的文字形式。它使程式具有足夠的可識別性，以便快速使用，同時減少不必要的字元。",
+      "JavaScript 可以對自動分號插入、指令序言、正規表示式、範本文字和範圍敏感名稱敏感。將壓縮的輸出視為要測試的內容，而不僅僅是要貼上的內容。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "僅貼上 JavaScript 來源。保留可讀的來源副本，並將建置管道用於需要來源映射、轉譯、模組解析或許可證保存的生產包。",
+    "inputNotesPara": "僅貼上 JavaScript 來源。保留可讀的來源副本，並將建置管道用於需要來源對應、轉譯、模組解析或許可證保存的生產包。",
     "example": "範例",
     "examplePara": "帶註解的函數被簡化為緊湊的形式：",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "exampleCode": "--- 格式化輸入 ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- 壓縮輸出 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
     "buttonLabel": "壓縮 JavaScript"
   },
   "jp": {
-    "title": "JavaScript ミニファイヤー - Coding.Tools",
+    "title": "JavaScript 圧縮 - Coding.Tools",
     "description": "動作を維持しながらコメントと回避可能な空白を削除して、JavaScript を縮小します。",
-    "toolTitle": "JavaScript ミニファイア",
+    "toolTitle": "JavaScript 圧縮",
     "toolDescription": "JavaScript ソースを圧縮して、より小さなスニペット、バンドル、埋め込みコードを作成します。",
     "categoryName": "整形と圧縮",
-    "inputPlaceholder": "ミニファイする JavaScript を貼り付け...",
-    "outputPlaceholder": "ミニファイされた JavaScript がここに表示されます...",
+    "inputPlaceholder": "圧縮する JavaScript を貼り付け...",
+    "outputPlaceholder": "圧縮された JavaScript がここに表示されます...",
     "descTitle": "JavaScript サイズを減らしてから動作をテストします",
     "descParas": [
-      "<strong>JavaScript ミニファイア は、コメント、改行、インデント、およびその他の回避可能な文字を削除して、コンパクトなソース テキストを生成します。</strong> 小さなスニペット、例、埋め込みスクリプト、および迅速なサイズ削減に役立ちます。",
+      "<strong>JavaScript 圧縮 は、コメント、改行、インデント、およびその他の回避可能な文字を削除して、コンパクトなソース テキストを生成します。</strong> 小さなスニペット、例、埋め込みスクリプト、および迅速なサイズ削減に役立ちます。",
       "縮小化は完全なバンドル化や高度な最適化ではありません。実装がこれらのケースを明示的にサポートしない限り、最新の構文のトランスパイル、インポートの解決、ツリーシェイク モジュール、パブリック API 名の保護、またはライセンス コメントの保持は行われない場合があります。"
     ],
     "howToUse": "使い方",
@@ -115,52 +115,52 @@
       "リリース前に、ターゲットのブラウザまたはランタイムで縮小されたスクリプトをテストします。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "JavaScript ミニファイヤーとは何ですか?",
+    "whatIs": "JavaScript 圧縮とは何ですか?",
     "whatIsParas": [
-      "<strong>JavaScript ミニファイア</strong> は、読みやすい JavaScript を小さなテキスト形式に変換するためのブラウザベースのユーティリティです。不要な文字を減らしながら、プログラムをすぐに使用できる程度に認識できる状態に保ちます。",
+      "<strong>JavaScript 圧縮</strong> は、読みやすい JavaScript を小さなテキスト形式に変換するためのブラウザベースのユーティリティです。不要な文字を減らしながら、プログラムをすぐに使用できる程度に認識できる状態に保ちます。",
       "JavaScript は、自動セミコロン挿入、ディレクティブ プロローグ、正規表現、テンプレート リテラル、およびスコープ依存の名前の影響を受ける可能性があります。縮小された出力は、単に貼り付けるものではなく、テストするものとして扱います。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "JavaScript ソースのみを貼り付けます。読み取り可能なソース コピーを保存し、ソース マップ、トランスパイル、モジュール解決、またはライセンスの保存が必要な運用バンドルにビルド パイプラインを使用します。",
     "example": "例",
     "examplePara": "コメント化された関数は、コンパクトな形式に縮小されます。",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
-    "buttonLabel": "JavaScript をミニファイ"
+    "exampleCode": "--- 整形入力 ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- 圧縮出力 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "buttonLabel": "JavaScript を圧縮"
   },
   "kr": {
-    "title": "JavaScript 축소기 - Coding.Tools",
+    "title": "JavaScript 압축 - Coding.Tools",
     "description": "동작을 유지하면서 주석과 피할 수 있는 공백을 제거하여 JavaScript를 축소합니다.",
-    "toolTitle": "JavaScript 미니파이어",
+    "toolTitle": "JavaScript 압축",
     "toolDescription": "더 작은 조각, 번들 및 임베디드 코드를 위해 JavaScript 소스를 압축합니다.",
     "categoryName": "포맷 및 압축",
-    "inputPlaceholder": "미니파이할 JavaScript를 붙여넣으세요...",
-    "outputPlaceholder": "미니파이된 JavaScript가 여기에 표시됩니다...",
+    "inputPlaceholder": "압축할 JavaScript를 붙여넣으세요...",
+    "outputPlaceholder": "압축된 JavaScript가 여기에 표시됩니다...",
     "descTitle": "JavaScript 크기를 줄이고 동작을 테스트하세요.",
     "descParas": [
-      "<strong>JavaScript 축소기는 주석, 줄바꿈, 들여쓰기 및 기타 피할 수 있는 문자를 제거하여 컴팩트한 소스 텍스트를 생성합니다.</strong> 작은 조각, 예제, 포함된 스크립트 및 빠른 크기 축소에 유용합니다.",
+      "<strong>JavaScript 압축 도구는 주석, 줄바꿈, 들여쓰기 및 기타 피할 수 있는 문자를 제거하여 컴팩트한 소스 텍스트를 생성합니다.</strong> 작은 조각, 예제, 포함된 스크립트 및 빠른 크기 축소에 유용합니다.",
       "축소는 전체 번들링이나 고급 최적화가 아닙니다. 구현이 명시적으로 이러한 경우를 지원하지 않는 한 최신 구문 변환, 가져오기 해결, 모듈 트리 셰이크, 공개 API 이름 보호 또는 라이센스 주석 보존을 수행할 수 없습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "JavaScript 코드를 입력 편집기에 붙여넣습니다.",
-      "소스를 압축하려면 <strong>JavaScript 미니파이</strong>를 클릭하세요.",
+      "소스를 압축하려면 <strong>JavaScript 압축</strong>를 클릭하세요.",
       "릴리스 전에 대상 브라우저 또는 런타임에서 축소된 스크립트를 테스트하십시오.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JavaScript 축소기는 무엇입니까?",
+    "whatIs": "JavaScript 압축이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>JavaScript 미니파이어</strong>는 읽을 수 있는 JavaScript를 더 작은 텍스트 형식으로 변환하는 브라우저 기반 유틸리티입니다. 불필요한 문자를 줄이면서 빠른 사용이 가능하도록 프로그램을 충분히 인식할 수 있게 유지합니다.",
+      "<strong>JavaScript 압축</strong>은 읽을 수 있는 JavaScript를 더 작은 텍스트 형식으로 변환하는 브라우저 기반 유틸리티입니다. 불필요한 문자를 줄이면서 빠른 사용이 가능하도록 프로그램을 충분히 인식할 수 있게 유지합니다.",
       "JavaScript는 자동 세미콜론 삽입, 지시어 프롤로그, 정규식, 템플릿 리터럴 및 범위 구분 이름에 민감할 수 있습니다. 축소된 출력을 단지 붙여넣을 것이 아니라 테스트할 것으로 취급하십시오."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "JavaScript 소스만 붙여넣으세요. 읽을 수 있는 소스 복사본을 유지하고 소스 맵, 변환, 모듈 확인 또는 라이선스 보존이 필요한 프로덕션 번들에 빌드 파이프라인을 사용하세요.",
     "example": "예시",
     "examplePara": "주석 처리된 함수는 간결한 형식으로 축소됩니다.",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
-    "buttonLabel": "JavaScript 미니파이"
+    "exampleCode": "--- 포맷된 입력 ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- 압축 출력 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "buttonLabel": "JavaScript 압축"
   },
   "fr": {
-    "title": "Minificateur JavaScript - Coding.Tools",
+    "title": "Minifieur JavaScript - Coding.Tools",
     "description": "Réduisez JavaScript en supprimant les commentaires et les espaces évitables tout en préservant le comportement.",
     "toolTitle": "Minifieur JavaScript",
     "toolDescription": "Compressez la source JavaScript pour obtenir des extraits de code, des bundles et du code intégré plus petits.",
@@ -179,7 +179,7 @@
       "Testez le script minifié dans le navigateur ou le runtime cible avant sa publication.",
       "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le miniificateur JavaScript ?",
+    "whatIs": "Qu'est-ce que le minifieur JavaScript ?",
     "whatIsParas": [
       "<strong>Minifieur JavaScript</strong> est un utilitaire basé sur un navigateur permettant de transformer JavaScript lisible en une forme de texte plus petite. Il maintient le programme suffisamment reconnaissable pour une utilisation rapide tout en réduisant les caractères inutiles.",
       "JavaScript peut être sensible à l'insertion automatique de points-virgules, aux prologues de directives, aux expressions régulières, aux littéraux de modèles et aux noms sensibles à la portée. Traitez la sortie minifiée comme quelque chose à tester, pas seulement comme quelque chose à coller."
@@ -188,7 +188,7 @@
     "inputNotesPara": "Collez uniquement la source JavaScript. Conservez une copie source lisible et utilisez votre pipeline de build pour les bundles de production qui nécessitent des mappages sources, une transpilation, une résolution de module ou une conservation de licence.",
     "example": "Exemple",
     "examplePara": "Une fonction commentée est réduite à une forme compacte :",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "exampleCode": "--- Entrée formatée ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Sortie minifiée ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
     "buttonLabel": "Minifier JavaScript"
   },
   "de": {
@@ -207,7 +207,7 @@
     "howToUse": "Anleitung",
     "steps": [
       "Fügen Sie Ihren JavaScript-Code in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Minifizieren JavaScript</strong>, um die Quelle zu komprimieren.",
+      "Klicken Sie auf <strong>JavaScript minifizieren</strong>, um die Quelle zu komprimieren.",
       "Testen Sie das minimierte Skript vor der Veröffentlichung im Zielbrowser oder in der Laufzeit.",
       "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
@@ -220,8 +220,8 @@
     "inputNotesPara": "Nur JavaScript-Quelle einfügen. Bewahren Sie eine lesbare Quellkopie auf und nutzen Sie Ihre Build-Pipeline für Produktionspakete, die Quellzuordnungen, Transpilierung, Modulauflösung oder Lizenzerhaltung benötigen.",
     "example": "Beispiel",
     "examplePara": "Eine kommentierte Funktion wird auf eine kompakte Form reduziert:",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
-    "buttonLabel": "Minifizieren JavaScript"
+    "exampleCode": "--- Formatierte Eingabe ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minifizierte Ausgabe ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "buttonLabel": "JavaScript minifizieren"
   },
   "es": {
     "title": "Minificador JavaScript - Coding.Tools",
@@ -246,13 +246,13 @@
     "whatIs": "¿Qué es el minificador JavaScript?",
     "whatIsParas": [
       "<strong>Minificador JavaScript</strong> es una utilidad basada en navegador para convertir JavaScript legible en un formato de texto más pequeño. Mantiene el programa lo suficientemente reconocible para un uso rápido y al mismo tiempo reduce los caracteres innecesarios.",
-      "JavaScript puede ser sensible a la inserción automática de punto y coma, prólogos de directivas, expresiones regulares, literales de plantilla y nombres sensibles al alcance. Trate la salida minimizada como algo para probar, no sólo como algo para pegar."
+      "JavaScript puede ser sensible a la inserción automática de punto y coma, prólogos de directivas, expresiones regulares, literales de plantilla y nombres sensibles al alcance. Trate la salida minimizada como algo para probar, no solo como algo para pegar."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "Pegue solo la fuente JavaScript. Mantenga una copia de origen legible y utilice su proceso de compilación para paquetes de producción que necesiten mapas de origen, transpilación, resolución de módulos o conservación de licencias.",
     "example": "Ejemplo",
     "examplePara": "Una función comentada se reduce a una forma compacta:",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "exampleCode": "--- Entrada formateada ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Salida minificada ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
     "buttonLabel": "Minificar JavaScript"
   },
   "pt": {
@@ -284,7 +284,7 @@
     "inputNotesPara": "Cole apenas a fonte JavaScript. Mantenha uma cópia de origem legível e use seu pipeline de construção para pacotes de produção que precisam de mapas de origem, transpilação, resolução de módulo ou preservação de licença.",
     "example": "Exemplo",
     "examplePara": "Uma função comentada é reduzida a uma forma compacta:",
-    "exampleCode": "--- Formatted Input ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Minified Output ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
+    "exampleCode": "--- Entrada formatada ---\n// Greeting function\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}\n\n--- Saída minificada ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}",
     "buttonLabel": "Minificar JavaScript"
   }
 }

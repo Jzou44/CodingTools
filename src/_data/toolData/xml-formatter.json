@@ -80,13 +80,13 @@
     "steps": [
       "將 XML 資料貼到輸入編輯器中。",
       "按一下 <strong>格式化 XML</strong> 以縮排標記。",
-      "查看格式化的 XML 中預期的根元素、屬性和巢狀文字。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "檢視格式化的 XML 中預期的根元素、屬性和巢狀文字。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是 XML 格式化程式？",
     "whatIsParas": [
-      "<strong>XML 格式化</strong> 是一個基於瀏覽器的實用程序，用於使 XML 文件更易於閱讀，而無需手動重排標籤。它透過將子元素放置在其父元素下來來突出顯示層次結構。",
-      "格式良好的 XML 文件通常具有一個根元素和正確嵌套的標籤。格式化無法安全地猜測遺失的結束標記或修復無效的標記，因此應從來源修復語法錯誤。"
+      "<strong>XML 格式化</strong> 是一個基於瀏覽器的實用工具，用於使 XML 文件更易於閱讀，而無需手動重排標籤。它透過將子元素放置在其父元素下來來突出顯示層次結構。",
+      "格式良好的 XML 文件通常具有一個根元素和正確巢狀的標籤。格式化無法安全地猜測遺失的結束標記或修復無效的標記，因此應從來源修復語法錯誤。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "僅貼上 XML 內容。請先移除傳輸封裝、日誌前綴或 Markdown 程式碼圍欄。處理混合內容 XML 時要小心，因為在文字和子元素之間新增換行可能會改變含義。",
@@ -137,17 +137,17 @@
     "outputPlaceholder": "포맷된 XML이 여기에 표시됩니다...",
     "descTitle": "마크업 구조를 유지하면서 XML 들여쓰기",
     "descParas": [
-      "<strong>XML 포맷터를 사용하면 중첩된 요소 주위에 줄바꿈과 들여쓰기를 추가하여 컴팩트한 XML를 더 쉽게 검사할 수 있습니다.</strong> SOAP 페이로드, 피드, 구성 파일, 사이트맵 조각 및 내보낸 데이터에 유용합니다.",
+      "<strong>XML 포맷터를 사용하면 중첩된 요소 주위에 줄바꿈과 들여쓰기를 추가하여 컴팩트한 XML을 더 쉽게 검사할 수 있습니다.</strong> SOAP 페이로드, 피드, 구성 파일, 사이트맵 조각 및 내보낸 데이터에 유용합니다.",
       "XML는 JSON보다 공백에 더 민감합니다. 속성, 텍스트 노드, CDATA, 처리 지침 및 혼합 콘텐츠가 모두 중요할 수 있습니다. 가독성 보조 자료로 형식화된 출력을 사용하고 정확한 텍스트 간격에 의존하는 문서를 확인하십시오."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "XML 데이터를 입력 편집기에 붙여넣습니다.",
       "마크업을 들여쓰려면 <strong>XML 형식 지정</strong>를 클릭합니다.",
-      "예상되는 루트 요소, 속성 및 중첩 텍스트에 대해 형식화된 XML를 검토하십시오.",
+      "예상되는 루트 요소, 속성 및 중첩 텍스트에 대해 형식화된 XML을 검토하십시오.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "XML 포맷터란 무엇입니까?",
+    "whatIs": "XML 포맷터란 무엇인가요?",
     "whatIsParas": [
       "<strong>XML 포맷터</strong>는 태그를 수동으로 리플로우하지 않고도 XML 문서를 더 쉽게 읽을 수 있도록 해주는 브라우저 기반 유틸리티입니다. 상위 요소 아래에 하위 요소를 배치하여 계층 구조를 강조 표시합니다.",
       "올바른 형식의 XML 문서에는 일반적으로 하나의 루트 요소와 올바르게 중첩된 태그가 있습니다. 서식 지정 시 누락된 닫는 태그를 추측하거나 잘못된 마크업을 복구할 수 없으므로 구문 오류는 소스에서 수정해야 합니다."
@@ -233,7 +233,7 @@
     "outputPlaceholder": "El XML formateado aparecerá aquí...",
     "descTitle": "Sangrar XML conservando la estructura de marcado",
     "descParas": [
-      "<strong>XML El formateador hace que el XML compacto sea más fácil de inspeccionar agregando saltos de línea y sangrías alrededor de elementos anidados.</strong> Es útil para cargas útiles SOAP, feeds, archivos de configuración, fragmentos de mapas de sitio y datos exportados.",
+      "<strong>El formateador XML hace que el XML compacto sea más fácil de inspeccionar agregando saltos de línea y sangrías alrededor de elementos anidados.</strong> Es útil para cargas útiles SOAP, feeds, archivos de configuración, fragmentos de mapas de sitio y datos exportados.",
       "XML es más sensible a los espacios en blanco que JSON: los atributos, los nodos de texto, CDATA, las instrucciones de procesamiento y el contenido mixto pueden ser importantes. Utilice la salida formateada como ayuda para la legibilidad y verifique los documentos que dependen del espaciado exacto del texto."
     ],
     "howToUse": "Cómo usar",
@@ -263,7 +263,7 @@
     "categoryName": "Formatação e minificação",
     "inputPlaceholder": "Cole seu XML aqui...",
     "outputPlaceholder": "O XML formatado aparecerá aqui...",
-    "descTitle": "Recue XML preservando a estrutura de marcação",
+    "descTitle": "Indente XML preservando a estrutura de marcação",
     "descParas": [
       "<strong>O formatador XML torna XML compacto mais fácil de inspecionar ao adicionar quebras de linha e recuo em torno de elementos aninhados.</strong> É útil para cargas úteis SOAP, feeds, arquivos de configuração, fragmentos de mapa de site e dados exportados.",
       "XML é mais sensível a espaços em branco do que JSON: atributos, nós de texto, CDATA, instruções de processamento e conteúdo misto podem ser importantes. Use a saída formatada como auxílio à legibilidade e verifique documentos que dependem do espaçamento exato do texto."

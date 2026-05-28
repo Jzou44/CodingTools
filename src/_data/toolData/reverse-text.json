@@ -54,14 +54,14 @@
     "inputNotesPara": "使用表情符号、重音字符、从右到左的脚本或多行文本时查看输出。换行符和空格是字符串的一部分，因此它们的位置与可见字母一起颠倒。",
     "example": "示例",
     "examplePara": "一个简单的 ASCII 字符串从头到尾按预期反转：",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- 原始文本 ---\nHello, World!\n\n--- 反转文本 ---\n!dlroW ,olleH\n\n--- 另一个示例 ---\nCoding.Tools\n\n--- 反转结果 ---\nslooT.gnidoC",
     "reverseText": "文本反转"
   },
   "tw": {
     "title": "反向文字 - Coding.Tools",
-    "description": "在本地反轉文字以進行字串實驗、鏡像文字、測試案例和簡單混淆。",
+    "description": "在本機反轉文字以進行字串實驗、鏡像文字、測試案例和簡單混淆。",
     "toolTitle": "文字反轉",
-    "toolDescription": "在瀏覽器中反轉貼上的文本，以進行快速字串測試、鏡像式輸出、混淆和偵錯範例。",
+    "toolDescription": "在瀏覽器中反轉貼上的文字，以進行快速字串測試、鏡像式輸出、混淆和偵錯範例。",
     "categoryName": "字串與文字",
     "inputPlaceholder": "輸入或貼上要反轉的文字...",
     "descTitle": "直接在瀏覽器中反轉字串",
@@ -73,17 +73,17 @@
     "steps": [
       "將文字貼上或鍵入到輸入編輯器中。",
       "點選 <strong>文字反轉</strong> 可逐一字元反轉整個字串。",
-      "反轉的文字將替換編輯器中的輸入。使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置編輯器。"
+      "反轉的文字將替換編輯器中的輸入。使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設編輯器。"
     ],
     "whatIs": "什麼是反向文字？",
     "whatIsParas": [
-      "<strong>文字反轉</strong> 是一個本地字串實用程序，可反轉編輯器內容並用反轉結果替換輸入。它適用於純文字實驗和輕量級轉換，而不是加密或安全資料隱藏。"
+      "<strong>文字反轉</strong> 是一個本機字串實用工具，可反轉編輯器內容並用反轉結果替換輸入。它適用於純文字實驗和輕量級轉換，而不是加密或安全資料隱藏。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "使用表情符號、重音字元、從右到左的腳本或多行文字時查看輸出。換行符和空格是字串的一部分，因此它們的位置與可見字母一起顛倒。",
+    "inputNotesPara": "使用表情符號、重音字元、從右到左的腳本或多行文字時檢視輸出。換行符和空格是字串的一部分，因此它們的位置與可見字母一起顛倒。",
     "example": "範例",
     "examplePara": "一個簡單的 ASCII 字串從頭到尾按預期反轉：",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- 原始文字 ---\nHello, World!\n\n--- 反轉文字 ---\n!dlroW ,olleH\n\n--- 另一個範例 ---\nCoding.Tools\n\n--- 反轉結果 ---\nslooT.gnidoC",
     "reverseText": "文字反轉"
   },
   "jp": {
@@ -112,11 +112,11 @@
     "inputNotesPara": "絵文字、アクセント付き文字、右から左へ書くスクリプト、または複数行のテキストを使用する場合は、出力を確認してください。改行とスペースは文字列の一部であるため、表示される文字とともに位置が逆になります。",
     "example": "例",
     "examplePara": "単純な ASCII 文字列は、予想通り、終端から始端まで反転します。",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- 元のテキスト ---\nHello, World!\n\n--- 反転テキスト ---\n!dlroW ,olleH\n\n--- 別の例 ---\nCoding.Tools\n\n--- 反転結果 ---\nslooT.gnidoC",
     "reverseText": "テキスト反転"
   },
   "kr": {
-    "title": "역방향 텍스트 - Coding.Tools",
+    "title": "텍스트 반전 - Coding.Tools",
     "description": "문자열 실험, 미러 텍스트, 테스트 사례 및 단순 난독화를 위해 로컬에서 텍스트를 반전합니다.",
     "toolTitle": "텍스트 반전",
     "toolDescription": "빠른 문자열 테스트, 미러 스타일 출력, 난독화 및 디버깅 예제를 위해 브라우저에서 붙여넣은 텍스트를 역방향으로 실행하세요.",
@@ -124,7 +124,7 @@
     "inputPlaceholder": "반전할 텍스트를 입력하거나 붙여넣으세요...",
     "descTitle": "브라우저에서 직접 문자열 반전",
     "descParas": [
-      "<strong>텍스트 반전는 붙여넣은 텍스트의 순서를 뒤집어 마지막 문자가 첫 번째가 되도록 합니다.</strong> 빠른 문자열 처리 테스트, 미러 텍스트 실험, 간단한 난독화, 퍼즐 텍스트, 샘플 데이터 또는 앱이 역방향 입력을 처리하는 방법을 확인하는 데 사용합니다.",
+      "<strong>텍스트 반전은 붙여넣은 텍스트의 순서를 뒤집어 마지막 문자가 첫 번째가 되도록 합니다.</strong> 빠른 문자열 처리 테스트, 미러 텍스트 실험, 간단한 난독화, 퍼즐 텍스트, 샘플 데이터 또는 앱이 역방향 입력을 처리하는 방법을 확인하는 데 사용합니다.",
       "유니코드는 보기보다 반전을 더 복잡하게 만들 수 있습니다. 악센트, 이모티콘 피부색, 플래그, 너비가 0인 조이너 이모티콘 및 기타 문자소 클러스터를 결합하면 여러 코드 포인트에서 만들어질 수 있으므로 문자별 반전을 통해 하나의 표시 기호로 나타나는 항목을 분할할 수 있습니다."
     ],
     "howToUse": "사용 방법",
@@ -133,15 +133,15 @@
       "전체 문자열을 문자별로 반전하려면 <strong>텍스트 반전</strong>를 클릭합니다.",
       "반전된 텍스트가 편집기의 입력을 대체합니다. 클립보드의 경우 <strong>복사</strong>를 사용하고, 텍스트 파일의 경우 <strong>다운로드</strong>를 사용하고, 편집기를 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "역방향 텍스트란 무엇입니까?",
+    "whatIs": "텍스트 반전란 무엇인가요?",
     "whatIsParas": [
-      "<strong>텍스트 반전</strong>는 편집기 내용을 반전시키고 입력을 반전된 결과로 바꾸는 로컬 문자열 유틸리티입니다. 이는 암호화나 보안 데이터 숨기기가 아닌 일반 텍스트 실험과 가벼운 변환을 위한 것입니다."
+      "<strong>텍스트 반전</strong>은 편집기 내용을 반전시키고 입력을 반전된 결과로 바꾸는 로컬 문자열 유틸리티입니다. 이는 암호화나 보안 데이터 숨기기가 아닌 일반 텍스트 실험과 가벼운 변환을 위한 것입니다."
     ],
     "inputNotes": "입력 참고",
     "inputNotesPara": "이모티콘, 악센트 문자, 오른쪽에서 왼쪽으로 쓰는 스크립트 또는 여러 줄 텍스트를 사용할 때 출력을 검토하세요. 줄 바꿈과 공백은 문자열의 일부이므로 해당 위치는 보이는 문자와 함께 반전됩니다.",
     "example": "예시",
     "examplePara": "간단한 ASCII 문자열은 끝에서 시작까지 예상대로 반전됩니다.",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- 원본 텍스트 ---\nHello, World!\n\n--- 반전 텍스트 ---\n!dlroW ,olleH\n\n--- 다른 예 ---\nCoding.Tools\n\n--- 반전 결과 ---\nslooT.gnidoC",
     "reverseText": "텍스트 반전"
   },
   "fr": {
@@ -170,14 +170,14 @@
     "inputNotesPara": "Examinez le résultat lorsque vous utilisez des emoji, des caractères accentués, des scripts de droite à gauche ou du texte multiligne. Les nouvelles lignes et les espaces font partie de la chaîne, leurs positions sont donc inversées avec les lettres visibles.",
     "example": "Exemple",
     "examplePara": "Une simple chaîne ASCII s'inverse de manière prévisible de la fin au début :",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- Texte original ---\nHello, World!\n\n--- Texte inversé ---\n!dlroW ,olleH\n\n--- Autre exemple ---\nCoding.Tools\n\n--- Inversé ---\nslooT.gnidoC",
     "reverseText": "Inverser le texte"
   },
   "de": {
     "title": "Umgekehrter Text - Coding.Tools",
     "description": "Lokale Textumkehr für String-Experimente, Spiegeltext, Testfälle und einfache Verschleierung.",
     "toolTitle": "Text umkehren",
-    "toolDescription": "Rückwärts eingefügten Text in Ihrem Browser für schnelle String-Tests, Spiegelausgabe, Verschleierung und Debugging-Beispiele.",
+    "toolDescription": "Kehren Sie eingefügten Text in Ihrem Browser um für schnelle String-Tests, Spiegelausgabe, Verschleierung und Debugging-Beispiele.",
     "categoryName": "Zeichenketten & Text",
     "inputPlaceholder": "Text zum Umkehren eingeben oder einfügen...",
     "descTitle": "Kehren Sie eine Zeichenfolge direkt im Browser um",
@@ -199,7 +199,7 @@
     "inputNotesPara": "Überprüfen Sie die Ausgabe, wenn Sie Emojis, Akzentzeichen, Rechts-nach-Links-Skripte oder mehrzeiligen Text verwenden. Zeilenumbrüche und Leerzeichen sind Teil der Zeichenfolge, daher werden ihre Positionen zusammen mit den sichtbaren Buchstaben umgekehrt.",
     "example": "Beispiel",
     "examplePara": "Eine einfache ASCII-Zeichenfolge kehrt sich vorhersehbar vom Ende zum Anfang um:",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- Originaltext ---\nHello, World!\n\n--- Umgekehrter Text ---\n!dlroW ,olleH\n\n--- Weiteres Beispiel ---\nCoding.Tools\n\n--- Umgekehrt ---\nslooT.gnidoC",
     "reverseText": "Text umkehren"
   },
   "es": {
@@ -228,7 +228,7 @@
     "inputNotesPara": "Revise el resultado cuando utilice emoji, caracteres acentuados, guiones de derecha a izquierda o texto de varias líneas. Las nuevas líneas y los espacios son parte de la cadena, por lo que sus posiciones se invierten junto con las letras visibles.",
     "example": "Ejemplo",
     "examplePara": "Una cadena ASCII simple se invierte de forma predecible desde el final hasta el principio:",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- Texto original ---\nHello, World!\n\n--- Texto invertido ---\n!dlroW ,olleH\n\n--- Otro ejemplo ---\nCoding.Tools\n\n--- Invertido ---\nslooT.gnidoC",
     "reverseText": "Invertir texto"
   },
   "pt": {
@@ -257,7 +257,7 @@
     "inputNotesPara": "Revise a saída ao usar emoji, caracteres acentuados, scripts da direita para a esquerda ou texto com várias linhas. Novas linhas e espaços fazem parte da string, portanto suas posições são invertidas junto com as letras visíveis.",
     "example": "Exemplo",
     "examplePara": "Uma string ASCII simples reverte previsivelmente do início ao fim:",
-    "exampleCode": "--- Original Text ---\nHello, World!\n\n--- Reversed Text ---\n!dlroW ,olleH\n\n--- Another Example ---\nCoding.Tools\n\n--- Reversed ---\nslooT.gnidoC",
+    "exampleCode": "--- Texto original ---\nHello, World!\n\n--- Texto invertido ---\n!dlroW ,olleH\n\n--- Outro exemplo ---\nCoding.Tools\n\n--- Invertido ---\nslooT.gnidoC",
     "reverseText": "Inverter texto"
   }
 }

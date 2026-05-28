@@ -43,9 +43,9 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入字段中输入一个十进制数。",
+      "在输入框中输入一个十进制数。",
       "查看二进制结果以及辅助十六进制和八进制输出。",
-      "复制二进制值，或在转换另一个数字之前清除表格。"
+      "复制二进制值，或在转换另一个数字之前清空输入。"
     ],
     "whatIs": "什么是十进制到二进制的转换？",
     "whatIsParas": [
@@ -59,32 +59,32 @@
   },
   "tw": {
     "title": "十進位到二進位轉換器 - Coding.Tools",
-    "description": "將十進制數轉換為二進位表示法，以及十六進制和八進制等值。",
+    "description": "將十進位數轉換為二進位表示法，以及十六進位和八進位等值。",
     "toolTitle": "十進位轉二進位",
-    "toolDescription": "將 10 進制數轉換為二進制並比較匹配的十六進制和八進制形式。",
+    "toolDescription": "將 10 進制數轉換為二進位並比較符合的十六進位和八進位形式。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入十進位數（例如 255、1024）...",
-    "outputPlaceholder": "二進制結果將出現在這裡...",
-    "descTitle": "將十進制數轉換為二進制數",
+    "outputPlaceholder": "二進位結果將出現在這裡...",
+    "descTitle": "將十進位數轉換為二進位數",
     "descParas": [
       "<strong>十進位轉二進位將 10 進位輸入轉換為 2 進位輸出，並顯示等效的十六進位和八進位值。</strong> 它有助於檢查位元遮罩、標誌、位元組邊界、教學範例或低階程式碼中使用的值。",
       "對於固定寬度格式，數字結果可能需要手動填入。例如，十進位 <code>5</code> 是二進位 <code>101</code>，但 8 位元位元組通常會寫為 <code>00000101</code>。"
     ],
     "howToUse": "如何使用",
     "steps": [
-      "在輸入欄位中輸入一個十進制數。",
-      "查看二進制結果以及輔助十六進制和八進制輸出。",
-      "複製二進位值，或在轉換另一個數字之前清除表格。"
+      "在輸入欄位中輸入一個十進位數。",
+      "檢視二進位結果以及輔助十六進位和八進位輸出。",
+      "複製二進位值，或在轉換另一個數字之前清空輸入。"
     ],
-    "whatIs": "什麼是十進位到二進制的轉換？",
+    "whatIs": "什麼是十進位到二進位的轉換？",
     "whatIsParas": [
-      "<strong>十进制到二进制转换</strong> 仅使用 <code>0</code> 和 <code>1</code> 重写以 10 为底的值。二進位是位元的自然表示法，因此它對於理解遮罩、位元組值、權限和打包資料很有用。"
+      "<strong>十進位到二進位轉換</strong> 僅使用 <code>0</code> 和 <code>1</code> 重寫以 10 為底的值。二進位是位元的自然表示法，因此它對於理解遮罩、位元組值、權限和打包資料很有用。"
     ],
-    "inputNotes": "輸入註釋",
-    "inputNotesPara": "使用完整的十進制數字進行正常的位元和位元組工作。當協定、暫存器或檔案格式需要固定位數時，轉換後會新增前導零。",
-    "example": "例子",
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "使用完整的十進位數字進行正常的位元和位元組工作。當協定、暫存器或檔案格式需要固定位數時，轉換後會新增前導零。",
+    "example": "範例",
     "examplePara": "十進位 255 變成八個二進位 1，符合十六進位 <code>FF</code> 和八進位 <code>377</code>：",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- 十進位輸入 ---\n255\n\n--- 二進位 ---\n11111111\n\n--- 十六進位 ---\nFF\n\n--- 八進位 ---\n377"
   },
   "jp": {
     "title": "10進数から2進数へのコンバーター - Coding.Tools",
@@ -93,32 +93,32 @@
     "toolDescription": "10 進数を 2 進数に変換し、一致する 16 進数と 8 進数の形式を比較します。",
     "categoryName": "数値変換",
     "inputPlaceholder": "10 進数を入力してください (例: 255、1024)...",
-    "outputPlaceholder": "バイナリ結果がここに表示されます...",
+    "outputPlaceholder": "2進数の結果がここに表示されます...",
     "descTitle": "10 進数を 2 進数に変換する",
     "descParas": [
       "<strong>10 進数から 2 進数に変換すると、10 進数の入力が 2 進数の出力に変換され、同等の 16 進数と 8 進数の値も表示されます。</strong> ビット マスク、フラグ、バイト境界、教育例、または低レベル コードで使用される値をチェックするときに役立ちます。",
       "固定幅形式の場合、数値結果に手動でのパディングが必要になる場合があります。たとえば、10 進数 <code>5</code> は 2 進数 <code>101</code> ですが、8 ビット バイトは通常 <code>00000101</code> として書き込まれます。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "入力フィールドに 10 進数を入力します。",
       "バイナリの結果と、2 番目の 16 進数および 8 進数の出力を確認します。",
-      "バイナリ値をコピーするか、別の数値を変換する前にフォームをクリアしてください。"
+      "2進値をコピーするか、別の数値を変換する前にフォームをクリアしてください。"
     ],
     "whatIs": "10進数から2進数への変換とは何ですか?",
     "whatIsParas": [
-      "<strong>10 進数から 2 進数への変換</strong> は、<code>0</code> と <code>1</code> のみを使用して基数 10 の値を書き換えます。バイナリはビットの自然な表記法であるため、マスク、バイト値、アクセス許可、およびパックされたデータを理解するのに役立ちます。"
+      "<strong>10 進数から 2 進数への変換</strong> は、<code>0</code> と <code>1</code> のみを使用して基數 10 の値を書き換えます。バイナリはビットの自然な表記法であるため、マスク、バイト値、アクセス許可、およびパックされたデータを理解するのに役立ちます。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "通常のビットおよびバイトの処理には、整数の 10 進数を使用します。プロトコル、レジスタ、またはファイル形式で固定ビット数が必要な場合は、変換後に先頭のゼロを追加します。",
     "example": "例",
     "examplePara": "10 進数の 255 は 8 つの 2 進数の 1 になり、16 進数の <code>FF</code> と 8 進数の <code>377</code> に一致します。",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- 10進数入力 ---\n255\n\n--- 2進数 ---\n11111111\n\n--- 16進数 ---\nFF\n\n--- 8進数 ---\n377"
   },
   "kr": {
-    "title": "10진수를 2진수로 변환기 - Coding.Tools",
+    "title": "10진수-2진수 변환기 - Coding.Tools",
     "description": "16진수 및 8진수를 사용하여 10진수를 2진수 표기법으로 변환합니다.",
-    "toolTitle": "10진수에서 2진수",
+    "toolTitle": "10진수 → 2진수",
     "toolDescription": "10진수를 이진수로 변환하고 일치하는 16진수와 8진수 형식을 비교합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "10진수(예: 255, 1024)를 입력하세요...",
@@ -132,17 +132,17 @@
     "steps": [
       "입력 필드에 10진수를 입력하세요.",
       "이진수 결과와 보조 16진수 및 8진수 출력을 검토합니다.",
-      "이진 값을 복사하거나 다른 숫자를 변환하기 전에 양식을 지우십시오."
+      "이진 값을 복사하거나 다른 숫자를 변환하기 전에 입력란을 비우세요."
     ],
-    "whatIs": "10진수를 2진수로 변환이란 무엇입니까?",
+    "whatIs": "10진수를 2진수로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>십진수를 이진수로 변환</strong>는 <code>0</code> 및 <code>1</code>만 사용하여 밑수 10 값을 다시 씁니다. 바이너리는 비트에 대한 자연스러운 표기법이므로 마스크, 바이트 값, 권한 및 압축된 데이터를 이해하는 데 유용합니다."
+      "<strong>십진수를 이진수로 변환</strong>은 <code>0</code> 및 <code>1</code>만 사용하여 밑수 10 값을 다시 씁니다. 바이너리는 비트에 대한 자연스러운 표기법이므로 마스크, 바이트 값, 권한 및 압축된 데이터를 이해하는 데 유용합니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "일반적인 비트 및 바이트 작업에는 전체 10진수를 사용하십시오. 프로토콜, 레지스터 또는 파일 형식에 고정된 비트 수가 필요한 경우 변환 후 앞에 0을 추가합니다.",
     "example": "예",
     "examplePara": "10진수 255는 16진수 <code>FF</code> 및 8진수 <code>377</code>와 일치하는 8개의 이진수 1이 됩니다.",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- 10진수 입력 ---\n255\n\n--- 2진수 ---\n11111111\n\n--- 16진수 ---\nFF\n\n--- 8진수 ---\n377"
   },
   "fr": {
     "title": "Convertisseur décimal en binaire - Coding.Tools",
@@ -168,10 +168,10 @@
       "<strong>Conversion décimale en binaire</strong> réécrit une valeur base 10 en utilisant uniquement <code>0</code> et <code>1</code>. Le binaire est la notation naturelle des bits, il est donc utile pour comprendre les masques, les valeurs d'octets, les autorisations et les données compressées."
     ],
     "inputNotes": "Notes de saisie",
-    "inputNotesPara": "Utilisez des nombres décimaux entiers pour le travail normal sur les bits et les octets. Ajoutez des zéros non significatifs après la conversion lorsqu'un protocole, un registre ou un format de fichier attend un nombre fixe de bits.",
+    "inputNotesPara": "Utilisez des nombres décimaux entiers pour le travail normal sur les bits et les octets. Ajoutéz des zéros non significatifs après la conversion lorsqu'un protocole, un registre ou un format de fichier attend un nombre fixe de bits.",
     "example": "Exemple",
     "examplePara": "Le nombre décimal 255 devient huit uns binaires, correspondant à l'hexagone <code>FF</code> et à l'octal <code>377</code> :",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- Entrée décimale ---\n255\n\n--- Binaire ---\n11111111\n\n--- Hexadécimal ---\nFF\n\n--- Octal ---\n377"
   },
   "de": {
     "title": "Dezimal-Binär-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Verwenden Sie für normale Bit- und Byte-Arbeiten ganze Dezimalzahlen. Fügen Sie nach der Konvertierung führende Nullen hinzu, wenn ein Protokoll, Register oder Dateiformat eine feste Anzahl von Bits erwartet.",
     "example": "Beispiel",
     "examplePara": "Die Dezimalzahl 255 wird zu acht binären Einsen, passend zum Hexadezimalwert <code>FF</code> und dem Oktalwert <code>377</code>:",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- Dezimaleingabe ---\n255\n\n--- Binär ---\n11111111\n\n--- Hexadezimal ---\nFF\n\n--- Oktal ---\n377"
   },
   "es": {
     "title": "Convertidor de decimal a binario - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Utilice números decimales enteros para el trabajo normal de bits y bytes. Agregue ceros a la izquierda después de la conversión cuando un protocolo, registro o formato de archivo espere una cantidad fija de bits.",
     "example": "Ejemplo",
     "examplePara": "El decimal 255 se convierte en ocho unos binarios, que coinciden con el hexadecimal <code>FF</code> y el octal <code>377</code>:",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- Entrada decimal ---\n255\n\n--- Binario ---\n11111111\n\n--- Hexadecimal ---\nFF\n\n--- Octal ---\n377"
   },
   "pt": {
     "title": "Conversor Decimal para Binário - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Use números decimais inteiros para trabalho normal de bits e bytes. Adicione zeros à esquerda após a conversão quando um protocolo, registro ou formato de arquivo espera um número fixo de bits.",
     "example": "Exemplo",
     "examplePara": "O decimal 255 torna-se oito binários, combinando hexadecimal <code>FF</code> e octal <code>377</code>:",
-    "exampleCode": "--- Decimal Input ---\n255\n\n--- Binary ---\n11111111\n\n--- Hex ---\nFF\n\n--- Octal ---\n377"
+    "exampleCode": "--- Entrada decimal ---\n255\n\n--- Binário ---\n11111111\n\n--- Hexadecimal ---\nFF\n\n--- Octal ---\n377"
   }
 }

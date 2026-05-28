@@ -46,7 +46,7 @@
   "cn": {
     "title": "Photo2Pixel - 本地照片到像素艺术转换器",
     "description": "通过 ONNX/WASM 处理、可调节像素大小、边缘密度和三种样式模式，将照片在浏览器中转换为像素艺术。",
-    "toolTitle": "图片转体素风格化",
+    "toolTitle": "图片转像素艺术",
     "toolDescription": "通过可调整的样式模式、像素大小和边缘密度，在浏览器中将照片本地转换为像素艺术。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽图片到这里",
@@ -88,12 +88,12 @@
     ]
   },
   "tw": {
-    "title": "Photo2Pixel - 本地照片到像素藝術轉換器",
+    "title": "Photo2Pixel - 本機照片到像素藝術轉換器",
     "description": "透過 ONNX/WASM 處理、可調整像素大小、邊緣密度和三種樣式模式，將照片在瀏覽器中轉換為像素藝術。",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "透過可調整的樣式模式、像素大小和邊緣密度，在瀏覽器中將照片本地轉換為像素藝術。",
+    "toolDescription": "透過可調整的樣式模式、像素大小和邊緣密度，在瀏覽器中將照片本機轉換為像素藝術。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "點擊或拖曳圖片到這裡",
+    "dropzoneMessage": "點選或拖曳圖片到這裡",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
     "styleMode": "風格模式",
     "enhanceEdge": "增強邊緣",
@@ -111,17 +111,17 @@
     "resultPreview": "像素藝術",
     "sourcePlaceholder": "上傳圖片",
     "resultPlaceholder": "結果將在此顯示",
-    "viewOriginal": "查看原圖",
-    "viewResult": "查看像素圖",
+    "viewOriginal": "檢視原圖",
+    "viewResult": "檢視像素圖",
     "demoAlt": "Photo2Pixel 演示，展示將風景照片轉變成塊狀像素藝術",
-    "descTitle": "將照片本地轉換為像素藝術",
+    "descTitle": "將照片本機轉換為像素藝術",
     "descParas": [
-      "<strong>Photo2Pixel 將 PNG、JPEG 和 WebP 照片直接在瀏覽器中轉換為像素藝術風格的 PNG 輸出。</strong> 轉換透過 WebAssembly 使用 ONNX 模型，因此您的映像保留在頁面上，而不是上傳到伺服器。",
+      "<strong>Photo2Pixel 將 PNG、JPEG 和 WebP 照片直接在瀏覽器中轉換為像素藝術風格的 PNG 輸出。</strong> 轉換透過 WebAssembly 使用 ONNX 模型，因此您的影像保留在頁面上，而不是上傳到伺服器。",
       "使用“增強邊緣”獲得更清晰的輪廓，使用“隔離像素”獲得可見的網格效果，或使用“原始像素”獲得更清晰的塊狀轉換。像素大小控制結果看起來的粗細程度，而邊緣密度則改變保留多少輪廓細節。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "上傳PNG、JPEG或WebP照片；最大 10MB 的檔案在瀏覽器中本地處理。",
+      "上傳PNG、JPEG或WebP照片；最大 10MB 的檔案在瀏覽器中本機處理。",
       "選擇“增強邊緣”、“隔離像素”或“原始像素”，然後調整像素大小和邊緣密度，直到預覽符合您想要的樣式。",
       "在原始預覽和像素藝術預覽之間切換，然後下載生成的 PNG 以獲取頭像、縮圖、模型或遊戲藝術參考。"
     ],
@@ -163,7 +163,7 @@
       "<strong>Photo2Pixel は、PNG、JPEG、および WebP の写真をピクセル アート スタイルの PNG 出力にブラウザーで直接変換します。</strong> 変換では、WebAssembly を介した ONNX モデルが使用されるため、画像はサーバーにアップロードされずにページ上に残ります。",
       "輪郭をよりシャープにするにはエッジを強化し、グリッド効果を表示するにはピクセルを分離し、ブロック状の変換をよりきれいにするには生ピクセルを使用します。ピクセル サイズは結果がどの程度分厚く見えるかを制御し、エッジ密度は輪郭の詳細がどの程度保持されるかを変更します。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "PNG、JPEG、または WebP の写真をアップロードします。最大 10MB のファイルはブラウザでローカルに処理されます。",
       "[エッジを強化]、[ピクセルを分離]、または [生のピクセル] を選択し、プレビューが希望のスタイルと一致するまでピクセル サイズとエッジ密度を調整します。",
@@ -213,9 +213,9 @@
       "가장자리 강화, 픽셀 분리 또는 원시 픽셀을 선택한 다음 미리 보기가 원하는 스타일과 일치할 때까지 픽셀 크기와 가장자리 밀도를 조정합니다.",
       "원본과 픽셀 아트 미리 보기 사이를 전환한 다음 아바타, 썸네일, 모형 또는 게임 아트 참조용으로 생성된 PNG를 다운로드하세요."
     ],
-    "whatIs": "Photo2Pixel란 무엇입니까?",
+    "whatIs": "Photo2Pixel란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Photo2Pixel</strong>는 빠른 시각적 실험, 소셜 이미지, UI 모형 및 게임 자산 개념을 위한 브라우저 기반 사진-픽셀 아트 변환기입니다. 이미지를 인식할 수 있을 만큼 충분한 구조를 유지하면서 연속적인 사진 세부 사항을 의도적인 색상 블록으로 줄입니다.",
+      "<strong>Photo2Pixel</strong>은 빠른 시각적 실험, 소셜 이미지, UI 모형 및 게임 자산 개념을 위한 브라우저 기반 사진-픽셀 아트 변환기입니다. 이미지를 인식할 수 있을 만큼 충분한 구조를 유지하면서 연속적인 사진 세부 사항을 의도적인 색상 블록으로 줄입니다.",
       "출력은 손으로 작성한 스프라이트 시트가 아닌 양식화된 변환입니다. 프로덕션 아트의 경우 앱, 게임 또는 게시된 자산 팩에서 사용하기 전에 가장자리, 대비, 크기 및 최종 PNG 크기를 검사하세요."
     ]
   },
@@ -385,7 +385,7 @@
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Carregue uma foto PNG, JPEG ou WebP; arquivos de até 10 MB são processados ​​localmente no navegador.",
+      "Carregue uma foto PNG, JPEG ou WebP; arquivos de até 10 MB são processados localmente no navegador.",
       "Escolha Melhorar borda, Isolar pixel ou Pixel bruto e ajuste o tamanho do pixel e a densidade da borda até que a visualização corresponda ao estilo desejado.",
       "Alterne entre a visualização original e a pixel art e, em seguida, baixe o PNG gerado para avatares, miniaturas, maquetes ou referências de arte de jogos."
     ],

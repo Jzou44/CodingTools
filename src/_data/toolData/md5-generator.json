@@ -82,7 +82,7 @@
       "將文字貼上或鍵入到輸入編輯器中。",
       "點選 <strong>生成</strong> 建立哈希摘要。",
       "檢查輸出編輯器中是否有 32 個字元的十六進位 MD5 雜湊值。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "MD5是什麼？",
     "whatIsParas": [
@@ -90,7 +90,7 @@
       "哈希不是加密：它無法解碼回原始文字。 MD5 現在被認為是遺留哈希，因為攻擊者可以創建衝突，因此僅當相容性需要 MD5 時而不是安全依賴它時才使用它。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "空格、行結尾、大小寫和不可見字元都會改變摘要。貼上要散列的確切文本，並避免添加標籤、引號或額外的空行，除非它們是值的一部分。",
+    "inputNotesPara": "空格、行結尾、大小寫和不可見字元都會改變摘要。貼上要散列的確切文字，並避免添加標籤、引號或額外的空行，除非它們是值的一部分。",
     "example": "範例",
     "examplePara": "相同的輸入文字將始終產生相同的 MD5 摘要：",
     "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- MD5 雜湊 ---\n65a8e27d8879283831b664bd8b7f0ad4\n\n--- 另一個範例 ---\nCoding.Tools\n\n--- MD5 雜湊 ---\na1b2c3d4e5f67890123456789abcdef0"
@@ -118,7 +118,7 @@
     ],
     "whatIs": "MD5とは何ですか?",
     "whatIsParas": [
-      "<strong>MD5</strong> は、入力データを固定サイズの 128 ビット ダイジェストにマップする暗号化ハッシュ関数です。同じ入力からは常に同じ出力が生成され、入力がわずかに変更された場合でも、まったく異なるダイジェストが生成されるはずです。",
+      "<strong>MD5</strong> は、入力データを固定サイズの 128 ビット ダイジェストに対応付けする暗号学的ハッシュ関数です。同じ入力からは常に同じ出力が生成され、入力がわずかに変更された場合でも、まったく異なるダイジェストが生成されるはずです。",
       "ハッシュは暗号化ではありません。復号して元のテキストに戻すことはできません。 MD5 は、攻撃者が衝突を引き起こす可能性があるため、レガシー ハッシュとみなされます。そのため、セキュリティが MD5 に依存する場合ではなく、互換性のために MD5 が必要な場合にのみ使用してください。"
     ],
     "inputNotes": "入力に関する注意",
@@ -148,9 +148,9 @@
       "출력 편집기에서 32자 16진수 MD5 해시를 확인하세요.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "MD5란 무엇입니까?",
+    "whatIs": "MD5란 무엇인가요?",
     "whatIsParas": [
-      "<strong>MD5</strong>는 입력 데이터를 고정 크기 128비트 다이제스트에 매핑하는 암호화 해시 함수입니다. 동일한 입력은 항상 동일한 출력을 생성하며 작은 입력 변경이라도 매우 다른 다이제스트를 생성해야 합니다.",
+      "<strong>MD5</strong>은 입력 데이터를 고정 크기 128비트 다이제스트에 매핑하는 암호학적 해시 함수입니다. 동일한 입력은 항상 동일한 출력을 생성하며 작은 입력 변경이라도 매우 다른 다이제스트를 생성해야 합니다.",
       "해시는 암호화되지 않습니다. 즉, 원래 텍스트로 다시 디코딩할 수 없습니다. 공격자가 충돌을 일으킬 수 있으므로 MD5는 이제 레거시 해시로 간주되므로 보안이 의존하는 경우가 아니라 호환성에 MD5가 필요한 경우에만 사용하십시오."
     ],
     "inputNotes": "입력 참고사항",
@@ -183,7 +183,7 @@
     "whatIs": "Qu'est-ce que MD5 ?",
     "whatIsParas": [
       "<strong>MD5</strong> est une fonction de hachage cryptographique qui mappe les données d'entrée sur un résumé de 128 bits de taille fixe. La même entrée produit toujours la même sortie, et même un petit changement d’entrée devrait produire un résumé très différent.",
-      "Un hachage n’est pas un cryptage : il ne peut pas être décodé jusqu’au texte original. MD5 est désormais considéré comme un hachage hérité car les attaquants peuvent créer des collisions. Utilisez-le donc uniquement lorsque la compatibilité nécessite MD5 plutôt que lorsque la sécurité en dépend."
+      "Un hachage n’est pas un chiffrement : il ne peut pas être décodé jusqu’au texte original. MD5 est désormais considéré comme un hachage hérité car les attaquants peuvent créer des collisions. Utilisez-le donc uniquement lorsque la compatibilité nécessite MD5 plutôt que lorsque la sécurité en dépend."
     ],
     "inputNotes": "Notes sur l'entrée",
     "inputNotesPara": "Les espaces, les fins de ligne, la casse et les caractères invisibles modifient tous le résumé. Collez le texte exact que vous souhaitez hacher et évitez d'ajouter des étiquettes, des guillemets ou des lignes vides supplémentaires à moins qu'ils ne fassent partie de la valeur.",
@@ -225,7 +225,7 @@
   },
   "es": {
     "title": "Generador MD5 - Coding.Tools",
-    "description": "Genere un hash MD5 de 32 caracteres a partir de texto para sumas de comprobación heredadas, accesorios y comparaciones no relacionadas con la seguridad.",
+    "description": "Genere un hash MD5 de 32 caracteres a partir de texto para sumas de comprobación heredadas, datos de prueba y comparaciones no relacionadas con la seguridad.",
     "toolTitle": "Generador MD5",
     "toolDescription": "Cree resúmenes MD5 deterministas para sumas de comprobación heredadas y flujos de trabajo de comparación no relacionados con la seguridad.",
     "categoryName": "Hash y criptografía",
@@ -234,7 +234,7 @@
     "hashLength": 32,
     "descTitle": "Genere sumas de comprobación MD5 para flujos de trabajo heredados",
     "descParas": [
-      "<strong>Este generador MD5 crea un resumen repetible de 128 bits a partir de texto y lo muestra como 32 caracteres hexadecimales.</strong> Es útil para hacer coincidir campos de suma de verificación heredados, producir accesorios de prueba, comparar cadenas de muestra conocidas o verificar sistemas que aún publican valores MD5.",
+      "<strong>Este generador MD5 crea un resumen repetible de 128 bits a partir de texto y lo muestra como 32 caracteres hexadecimales.</strong> Es útil para hacer coincidir campos de suma de verificación heredados, producir datos de prueba, comparar cadenas de muestra conocidas o verificar sistemas que aún publican valores MD5.",
       "MD5 no es adecuado para integridad sensible a la seguridad, firmas, almacenamiento de contraseñas o identificación resistente a colisiones. Es rápido y ampliamente compatible, pero los ataques de colisión prácticos significan que los flujos de trabajo de seguridad modernos deben utilizar SHA-256, SHA-384, SHA-512, HMAC o un algoritmo de hash de contraseñas, según corresponda."
     ],
     "howToUse": "Cómo usar",

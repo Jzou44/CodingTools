@@ -37,7 +37,7 @@
     "dropzoneHint": "1 张图片 · 最大 10MB",
     "descTitle": "检查照片中隐藏的元数据",
     "descParas": [
-      "<strong>EXIF 查看器读取相机和手机嵌入的元数据，而无需上传照​​片。</strong> 它可以显示相机型号、拍摄时间、曝光设置、焦距、方向、软件和 GPS 坐标（当这些标签存在时）。",
+      "<strong>EXIF 查看器读取相机和手机嵌入的元数据，而无需上传照片。</strong> 它可以显示相机型号、拍摄时间、曝光设置、焦距、方向、软件和 GPS 坐标（当这些标签存在时）。",
       "EXIF 数据可用于调试图像方向、检查相机设置或在共享之前检查隐私风险。某些平台会删除元数据，而某些编辑后的图像则不包含任何元数据，因此缺少字段通常意味着数据已被删除或从未写入。"
     ],
     "howToUse": "使用方法",
@@ -57,27 +57,27 @@
   },
   "tw": {
     "title": "EXIF 檢視器 - Coding.Tools",
-    "description": "本地讀取照片 EXIF 元數據，包括相機設定、時間戳、方向、鏡頭數據和 GPS（如果存在）。",
+    "description": "本機讀取照片 EXIF 中繼資料，包括相機設定、時間戳、方向、鏡頭資料和 GPS（如果存在）。",
     "toolTitle": "EXIF檢視器",
-    "toolDescription": "在不上傳照片的情況下檢查照片中的 EXIF 元數據，包括相機、日期、鏡頭、方向和 GPS 欄位。",
+    "toolDescription": "在不上傳照片的情況下檢查照片中的 EXIF 中繼資料，包括相機、日期、鏡頭、方向和 GPS 欄位。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "點擊或拖曳照片至此處上傳",
+    "dropzoneMessage": "點選或拖曳照片至此處上傳",
     "dropzoneHint": "1 張圖片 · 最大 10MB",
-    "descTitle": "檢查照片中隱藏的元數據",
+    "descTitle": "檢查照片中隱藏的中繼資料",
     "descParas": [
-      "<strong>EXIF 檢視器可讀取相機和手機嵌入的元數據，而無需上傳照片。</strong> 它可以顯示相機型號、拍攝時間、曝光設定、焦距、方向、軟體和 GPS 座標（當這些標籤存在時）。",
-      "EXIF 資料可用於偵錯影像方向、檢查相機設定或在共享之前檢查隱私風險。某些平台會刪除元數據，而某些編輯後的圖像則不包含任何元數據，因此缺少欄位通常意味著數據已被刪除或從未寫入。"
+      "<strong>EXIF 檢視器可讀取相機和手機嵌入的中繼資料，而無需上傳照片。</strong> 它可以顯示相機型號、拍攝時間、曝光設定、焦距、方向、軟體和 GPS 座標（當這些標籤存在時）。",
+      "EXIF 資料可用於偵錯影像方向、檢查相機設定或在共享之前檢查隱私風險。某些平台會刪除中繼資料，而某些編輯後的圖像則不包含任何中繼資料，因此缺少欄位通常意味著資料已被刪除或從未寫入。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "將照片拖曳到上傳區域，或按一下進行選擇。",
-      "所有 EXIF 元資料標籤都顯示在表格中。",
+      "所有 EXIF 中繼資料標籤都顯示在表格中。",
       "如果找到 GPS 座標，則會顯示顯示照片位置的地圖。"
     ],
-    "whatIs": "EXIF 元資料是什麼？",
+    "whatIs": "EXIF 中繼資料是什麼？",
     "whatIsParas": [
-      "<strong>EXIF</strong> 元資料儲存在 JPEG 和 TIFF 等格式中，用於描述影像的擷取方式和位置。方向標籤可以影響影像的顯示方式，GPS 標籤可以辨識捕捉位置。",
-      "在發布原始照片之前，請使用此檢視器作為隱私和診斷檢查。如果出現 GPS 或個人元數據，請在公開分享文件之前將其刪除。"
+      "<strong>EXIF</strong> 中繼資料儲存在 JPEG 和 TIFF 等格式中，用於描述影像的擷取方式和位置。方向標籤可以影響影像的顯示方式，GPS 標籤可以辨識捕捉位置。",
+      "在發布原始照片之前，請使用此檢視器作為隱私和診斷檢查。如果出現 GPS 或個人中繼資料，請在公開分享文件之前將其刪除。"
     ],
     "example": "使用Python讀取EXIF",
     "examplePara": "腳本可以使用 EXIF 解析器從 JPEG 檔案中讀取相同類型的標籤：",
@@ -96,7 +96,7 @@
       "<strong>EXIF ビューアは、写真をアップロードせずに、カメラや携帯電話に埋め込まれたメタデータを読み取ります。</strong> タグが存在する場合、カメラのモデル、キャプチャ時間、露出設定、焦点距離、向き、ソフトウェア、および GPS 座標を明らかにできます。",
       "EXIF データは、画像の向きのデバッグ、カメラ設定の確認、共有前のプライバシー リスクの確認に役立ちます。一部のプラットフォームではメタデータが削除され、一部の編集画像にはメタデータが含まれていないため、フィールドが欠落している場合は、通常、データが削除されたか、書き込まれなかったことを意味します。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "写真をアップロード領域にドラッグ アンド ドロップするか、クリックして選択します。",
       "すべての EXIF メタデータ タグがテーブルに表示されます。",
@@ -130,18 +130,18 @@
       "모든 EXIF 메타데이터 태그가 테이블에 표시됩니다.",
       "GPS 좌표가 검색되면 사진 위치를 나타내는 지도가 표시됩니다."
     ],
-    "whatIs": "EXIF 메타데이터란 무엇입니까?",
+    "whatIs": "EXIF 메타데이터란 무엇인가요?",
     "whatIsParas": [
       "<strong>EXIF</strong> 메타데이터는 JPEG 및 TIFF와 같은 형식 내에 저장되어 이미지가 캡처된 방법과 위치를 설명합니다. 방향 태그는 이미지 표시 방식에 영향을 미칠 수 있으며 GPS 태그는 캡처 위치를 식별할 수 있습니다.",
       "원본 사진을 게시하기 전에 이 뷰어를 개인 정보 보호 및 진단 확인으로 사용하세요. GPS 또는 개인 메타데이터가 나타나면 파일을 공개적으로 공유하기 전에 제거하세요."
     ],
-    "example": "Python으로 EXIF ​​읽기",
+    "example": "Python으로 EXIF 읽기",
     "examplePara": "스크립트는 EXIF 파서를 사용하여 JPEG 파일에서 동일한 유형의 태그를 읽을 수 있습니다.",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
   "fr": {
     "title": "Visionneuse EXIF - Coding.Tools",
-    "description": "Lisez les métadonnées EXIF ​​​​des photos localement, y compris les paramètres de l'appareil photo, les horodatages, l'orientation, les données d'objectif et le GPS le cas échéant.",
+    "description": "Lisez les métadonnées EXIF des photos localement, y compris les paramètres de l'appareil photo, les horodatages, l'orientation, les données d'objectif et le GPS le cas échéant.",
     "toolTitle": "Visionneuse EXIF",
     "toolDescription": "Inspectez les métadonnées EXIF d'une photo sans la télécharger, y compris les champs de l'appareil photo, de la date, de l'objectif, de l'orientation et du GPS.",
     "categoryName": "Outils d’image",
@@ -163,7 +163,7 @@
       "Les métadonnées <strong>EXIF</strong> sont stockées dans des formats tels que JPEG et TIFF pour décrire comment et où une image a été capturée. Les balises d'orientation peuvent affecter la façon dont une image s'affiche et les balises GPS peuvent identifier l'emplacement de capture.",
       "Utilisez cette visionneuse comme vérification de confidentialité et de diagnostic avant de publier des photos originales. Si le GPS ou des métadonnées personnelles apparaissent, supprimez-les avant de partager le fichier publiquement."
     ],
-    "example": "Lire EXIF ​​avec Python",
+    "example": "Lire EXIF avec Python",
     "examplePara": "Un script peut lire le même type de balises à partir d'un fichier JPEG avec un analyseur EXIF :",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
@@ -191,7 +191,7 @@
       "<strong>EXIF</strong>-Metadaten werden in Formaten wie JPEG und TIFF gespeichert, um zu beschreiben, wie und wo ein Bild aufgenommen wurde. Orientierungs-Tags können beeinflussen, wie ein Bild angezeigt wird, und GPS-Tags können den Aufnahmeort identifizieren.",
       "Verwenden Sie diesen Viewer als Datenschutz- und Diagnoseprüfung, bevor Sie Originalfotos veröffentlichen. Wenn GPS- oder persönliche Metadaten angezeigt werden, entfernen Sie diese, bevor Sie die Datei öffentlich freigeben."
     ],
-    "example": "Lesen Sie EXIF ​​mit Python",
+    "example": "Lesen Sie EXIF mit Python",
     "examplePara": "Ein Skript kann mit einem EXIF-Parser denselben Typ von Tags aus einer JPEG-Datei lesen:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
@@ -219,7 +219,7 @@
       "Los metadatos <strong>EXIF</strong> se almacenan en formatos como JPEG y TIFF para describir cómo y dónde se capturó una imagen. Las etiquetas de orientación pueden afectar la forma en que se muestra una imagen y las etiquetas de GPS pueden identificar la ubicación de captura.",
       "Utilice este visor como verificación de privacidad y diagnóstico antes de publicar fotografías originales. Si aparece GPS o metadatos personales, elimínelos antes de compartir el archivo públicamente."
     ],
-    "example": "Leer EXIF ​​con Python",
+    "example": "Leer EXIF con Python",
     "examplePara": "Un script puede leer el mismo tipo de etiquetas de un archivo JPEG con un analizador EXIF:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   },
@@ -247,7 +247,7 @@
       "Os metadados <strong>EXIF</strong> são armazenados em formatos como JPEG e TIFF para descrever como e onde uma imagem foi capturada. As tags de orientação podem afetar a forma como uma imagem é exibida, e as tags GPS podem identificar o local de captura.",
       "Use este visualizador como uma verificação de privacidade e diagnóstico antes de publicar fotos originais. Se GPS ou metadados pessoais aparecerem, remova-os antes de compartilhar o arquivo publicamente."
     ],
-    "example": "Leia EXIF ​​​​com Python",
+    "example": "Leia EXIF com Python",
     "examplePara": "Um script pode ler o mesmo tipo de tags de um arquivo JPEG com um analisador EXIF:",
     "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
   }

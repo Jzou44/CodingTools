@@ -33,7 +33,7 @@
   "cn": {
     "title": "Base64 编码 - Coding.Tools",
     "description": "将文本编码为 Base64 或将 Base64 解码回可读文本。对于 API 有效负载、数据 URI 和文本安全传输很有用。",
-    "toolTitle": "Base64 编码解码",
+    "toolTitle": "Base64 编码",
     "toolDescription": "将纯文本转换为 Base64，将 Base64 解码回文本，然后复制或下载结果。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本进行编码或粘贴 Base64 进行解码...",
@@ -52,7 +52,7 @@
     ],
     "whatIs": "Base64 编码是什么？",
     "whatIsParas": [
-      "<strong>Base64 编码</strong> 表示具有有限字母表、数字、<code>+</code>、<code>/</code> 和可选 <code>=</code> 填充的字节。这使得二进制或 Unicode 派生数据更容易放置在纯文本通道中。",
+      "<strong>Base64 编码</strong> 表示具有有限字符集（字母、数字、<code>+</code>、<code>/</code>，以及可选的 <code>=</code> 填充）的字节。这使得二进制或 Unicode 派生数据更容易放置在纯文本通道中。",
       "使用 Base64 进行表示和传输，而不是保密或压缩。如果需要保密，请使用加密；如果需要完整性，请使用散列或签名；如果您需要较小的文件，请在编码之前使用压缩。"
     ],
     "inputNotes": "输入说明",
@@ -65,7 +65,7 @@
     "title": "Base64 編碼 - Coding.Tools",
     "description": "將文字編碼為 Base64 或將 Base64 解碼回可讀文字。對於 API 有效負載、資料 URI 和文字安全傳輸很有用。",
     "toolTitle": "Base64 編碼",
-    "toolDescription": "將純文本轉換為 Base64，將 Base64 解碼回文本，然後複製或下載結果。",
+    "toolDescription": "將純文字轉換為 Base64，將 Base64 解碼回文字，然後複製或下載結果。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字進行編碼或貼上 Base64 進行解碼...",
     "outputPlaceholder": "編碼或解碼結果將顯示在此處...",
@@ -79,11 +79,11 @@
       "將純文字或 Base64 值貼到輸入編輯器中。",
       "選擇 <strong>編碼</strong> 建立 Base64 字串，或選擇 <strong>解碼</strong> 讀取現有 Base64 字串。",
       "檢查輸出編輯器和狀態訊息。解碼失敗立即報告無效的Base64輸入。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "Base64 編碼是什麼？",
     "whatIsParas": [
-      "<strong>Base64 編碼</strong> 表示具有有限字母、數字、<code>+</code>、<code>/</code> 和可選 <code>=</code> 填充的位元組。這使得二進位或 Unicode 派生資料更容易放置在純文字通道中。",
+      "<strong>Base64 編碼</strong> 表示具有有限字元集（字母、數字、<code>+</code>、<code>/</code>，以及可選的 <code>=</code> 填充）的位元組。這使得二進位或 Unicode 派生資料更容易放置在純文字通道中。",
       "使用 Base64 進行表示和傳輸，而不是保密或壓縮。如果需要保密，請使用加密；如果需要完整性，請使用雜湊或簽名；如果您需要較小的文件，請在編碼之前使用壓縮。"
     ],
     "inputNotes": "輸入說明",
@@ -143,9 +143,9 @@
       "출력 편집기와 상태 메시지를 확인하세요. 디코딩에 실패하면 잘못된 Base64 입력이 즉시 보고됩니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "Base64 인코딩이란 무엇입니까?",
+    "whatIs": "Base64 인코딩이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>Base64 인코딩</strong>는 문자, 숫자, <code>+</code>, <code>/</code> 및 선택적 <code>=</code> 패딩으로 구성된 제한된 알파벳으로 바이트를 나타냅니다. 따라서 바이너리 또는 유니코드 파생 데이터를 텍스트 전용 채널에 더 쉽게 배치할 수 있습니다.",
+      "<strong>Base64 인코딩</strong>은 문자, 숫자, <code>+</code>, <code>/</code> 및 선택적 <code>=</code> 패딩으로 구성된 제한된 알파벳으로 바이트를 나타냅니다. 따라서 바이너리 또는 유니코드 파생 데이터를 텍스트 전용 채널에 더 쉽게 배치할 수 있습니다.",
       "비밀성이나 압축이 아닌 표현과 전송을 위해 Base64를 사용하세요. 기밀성이 필요한 경우 암호화를 사용하세요. 무결성이 필요한 경우 해시나 서명을 사용하세요. 더 작은 파일이 필요한 경우 인코딩하기 전에 압축을 사용하십시오."
     ],
     "inputNotes": "입력 참고사항",
@@ -165,7 +165,7 @@
     "descTitle": "Encoder le texte pour le transport et le stockage Base64",
     "descParas": [
       "<strong>Cet encodeur Base64 transforme le texte brut en une chaîne Base64 sécurisée pour ASCII et peut le décoder à nouveau pour un aller-retour rapide.</strong> Il est utile lorsqu'une valeur doit voyager via JSON, HTML, des variables d'environnement, une sortie de commande, un courrier électronique ou d'autres systèmes qui attendent un texte imprimable.",
-      "Base64 est un format de codage et non de cryptage. Toute personne possédant la chaîne peut la décoder, et la sortie codée est généralement environ un tiers plus grande, car tous les 3 octets deviennent 4 caractères Base64."
+      "Base64 est un format de codage et non de chiffrement. Toute personne possédant la chaîne peut la décoder, et la sortie codée est généralement environ un tiers plus grande, car tous les 3 octets deviennent 4 caractères Base64."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
@@ -177,7 +177,7 @@
     "whatIs": "Qu’est-ce que le codage Base64 ?",
     "whatIsParas": [
       "L'encodage <strong>Base64</strong> représente des octets avec un alphabet limité de lettres, de chiffres, <code>+</code>, <code>/</code> et un remplissage <code>=</code> en option. Cela facilite le placement des données binaires ou dérivées d'Unicode dans des canaux texte uniquement.",
-      "Utilisez Base64 pour la représentation et le transport, pas pour le secret ou la compression. Si vous avez besoin de confidentialité, utilisez le cryptage ; si vous avez besoin d'intégrité, utilisez un hachage ou une signature ; si vous avez besoin de fichiers plus petits, utilisez la compression avant l'encodage."
+      "Utilisez Base64 pour la représentation et le transport, pas pour le secret ou la compression. Si vous avez besoin de confidentialité, utilisez le chiffrement ; si vous avez besoin d'intégrité, utilisez un hachage ou une signature ; si vous avez besoin de fichiers plus petits, utilisez la compression avant l'encodage."
     ],
     "inputNotes": "Notes sur l'entrée",
     "inputNotesPara": "L'encodage accepte le texte normal, y compris Unicode. Lors du décodage, collez la valeur Base64 complète sans étiquettes, guillemets, en-têtes ou prose environnante ; un remplissage manquant ou des caractères supplémentaires peuvent faire échouer une charge utile valide.",

@@ -45,7 +45,7 @@
     "steps": [
       "输入您要转换的十进制值。",
       "将值乘以 100 后查看百分比结果。",
-      "复制百分比值，或在转换另一个小数之前清除该字段。"
+      "复制百分比值，或在转换另一个小数之前清空输入。"
     ],
     "whatIs": "什么是小数到百分比的转换？",
     "whatIsParas": [
@@ -72,22 +72,22 @@
     ],
     "howToUse": "如何使用",
     "steps": [
-      "輸入您要轉換的十進制值。",
-      "將數值乘以 100 後查看百分比結果。",
-      "複製百分比值，或在轉換另一個小數之前清除該欄位。"
+      "輸入您要轉換的十進位值。",
+      "將數值乘以 100 後檢視百分比結果。",
+      "複製百分比值，或在轉換另一個小數之前清空輸入。"
     ],
     "whatIs": "什麼是小數到百分比的轉換？",
     "whatIsParas": [
       "<strong>小數到百分比的轉換</strong> 將比率重寫為百分之幾。乘以 <code>100</code> 將 <code>0.75</code> 移至 <code>75%</code>，這通常更容易在報告和 UI 標籤中閱讀。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "輸入不含百分號的純數字小數。在圖表、財務表或使用者導向的文字中使用顯示的百分比之前，確定應保留多少位小數。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "小數值 0.75 代表百分之七十五：",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- 十進位輸入 ---\n0.75\n\n--- 百分比輸出 ---\n75%"
   },
   "jp": {
-    "title": "10 進数からパーセントへのコンバータ - Coding.Tools",
+    "title": "10 進数からパーセントへのコンバーター - Coding.Tools",
     "description": "100 を乗算して、10 進数値をパーセンテージに変換します。",
     "toolTitle": "小数からパーセント",
     "toolDescription": "レポート、数式、ラベルの 10 進数値をパーセンテージ表記に変換します。",
@@ -99,7 +99,7 @@
       "<strong>小数からパーセント は、100 を掛けて小数をパーセンテージ形式に変換します。</strong> 比率、確率、レート、または数式の出力をパーセンテージとして読み取ることが期待されるラベルに変換する場合に使用します。",
       "<code>0</code> と <code>1</code> の間の値は、<code>0%</code> から <code>100%</code> までのパーセンテージになります。 <code>1</code> を超える値も有効です。<code>1.5</code> は <code>150%</code> になります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "変換したい10進数値を入力します。",
       "値を 100 倍した後のパーセントの結果を確認します。",
@@ -109,16 +109,16 @@
     "whatIsParas": [
       "<strong>10 進数からパーセントへの変換</strong> は、比率を 100 分の 1 に書き換えます。 <code>100</code> を乗算すると、<code>0.75</code> が <code>75%</code> に移動され、多くの場合、レポートや UI ラベルで読みやすくなります。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "パーセント記号を使用しない単純な小数を入力します。グラフ、財務シート、またはユーザー向けテキストで使用する前に、表示されるパーセントを小数点以下何桁まで保持するかを決定します。",
     "example": "例",
     "examplePara": "10 進数値 0.75 は 75 パーセントを表します。",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- 10進数入力 ---\n0.75\n\n--- パーセント出力 ---\n75%"
   },
   "kr": {
     "title": "소수를 퍼센트로 변환 - Coding.Tools",
     "description": "소수점 값을 100을 곱하여 백분율로 변환합니다.",
-    "toolTitle": "소수에서 퍼센트",
+    "toolTitle": "소수 → 퍼센트",
     "toolDescription": "보고, 수식 및 라벨에 대한 소수점 값을 백분율 표기법으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "10진수를 입력하세요(예: 0.75, 1.5)...",
@@ -134,15 +134,15 @@
       "값에 100을 곱한 후 백분율 결과를 검토합니다.",
       "백분율 값을 복사하거나 다른 소수점을 변환하기 전에 필드를 지우십시오."
     ],
-    "whatIs": "십진수를 백분율로 변환하는 것은 무엇입니까?",
+    "whatIs": "십진수를 백분율로 변환하는 것은 무엇인가요?",
     "whatIsParas": [
-      "<strong>십진수를 퍼센트로 변환</strong>는 비율을 백분율로 다시 씁니다. <code>100</code>를 곱하면 <code>0.75</code>가 <code>75%</code>로 이동하며 이는 보고서 및 UI 레이블에서 읽기가 더 쉬운 경우가 많습니다."
+      "<strong>십진수를 퍼센트로 변환</strong>은 비율을 백분율로 다시 씁니다. <code>100</code>를 곱하면 <code>0.75</code>가 <code>75%</code>로 이동하며 이는 보고서 및 UI 레이블에서 읽기가 더 쉬운 경우가 많습니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "백분율 기호 없이 일반 숫자 십진수를 입력하세요. 차트, 재무 시트 또는 사용자에게 표시되는 텍스트에 사용하기 전에 표시된 백분율을 소수점 이하 자릿수로 유지해야 하는지 결정하십시오.",
     "example": "예",
     "examplePara": "십진수 값 0.75는 75%를 나타냅니다.",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- 10진수 입력 ---\n0.75\n\n--- 퍼센트 출력 ---\n75%"
   },
   "fr": {
     "title": "Convertisseur décimal en pourcentage - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Entrez une décimale numérique simple sans signe de pourcentage. Décidez du nombre de décimales que le pourcentage affiché doit conserver avant de l'utiliser dans des graphiques, des feuilles financières ou du texte destiné aux utilisateurs.",
     "example": "Exemple",
     "examplePara": "La valeur décimale 0,75 représente soixante-quinze pour cent :",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- Entrée décimale ---\n0.75\n\n--- Sortie pourcentage ---\n75%"
   },
   "de": {
     "title": "Dezimal-Prozent-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Geben Sie eine einfache numerische Dezimalzahl ohne Prozentzeichen ein. Entscheiden Sie, wie viele Dezimalstellen der angezeigte Prozentsatz beibehalten soll, bevor Sie ihn in Diagrammen, Finanzblättern oder für den Benutzer sichtbaren Text verwenden.",
     "example": "Beispiel",
     "examplePara": "Der Dezimalwert 0,75 steht für fünfundsiebzig Prozent:",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- Dezimaleingabe ---\n0.75\n\n--- Prozentausgabe ---\n75%"
   },
   "es": {
     "title": "Convertidor de decimal a porcentaje - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Ingrese un decimal numérico simple sin un signo de porcentaje. Decida cuántos decimales debe conservar el porcentaje mostrado antes de usarlo en gráficos, hojas financieras o texto de cara al usuario.",
     "example": "Ejemplo",
     "examplePara": "El valor decimal 0,75 representa el setenta y cinco por ciento:",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- Entrada decimal ---\n0.75\n\n--- Salida de porcentaje ---\n75%"
   },
   "pt": {
     "title": "Conversor Decimal para Porcentagem - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Insira um decimal numérico simples sem sinal de porcentagem. Decida quantas casas decimais a porcentagem exibida deve manter antes de usá-la em gráficos, planilhas financeiras ou texto voltado ao usuário.",
     "example": "Exemplo",
     "examplePara": "O valor decimal 0,75 representa setenta e cinco por cento:",
-    "exampleCode": "--- Decimal Input ---\n0.75\n\n--- Percent Output ---\n75%"
+    "exampleCode": "--- Entrada decimal ---\n0.75\n\n--- Saída de porcentagem ---\n75%"
   }
 }

@@ -90,7 +90,7 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
   },
   "jp": {
-    "title": "PNG - Coding.Tools を圧縮します",
+    "title": "PNG 圧縮 - Coding.Tools",
     "description": "ブラウザーで PNG 画像を圧縮すると、透明なグラフィック、アイコン、スクリーンショット、UI アセットが小さくなります。",
     "toolTitle": "PNG圧縮",
     "toolDescription": "可能な場合は透明性を維持しながら、ブラウザーで生成された出力のカラー データを削減して、PNG ファイルをローカルに圧縮します。",
@@ -102,7 +102,7 @@
       "<strong>PNG圧縮 は、ワークフローをブラウザ内でローカルに保ちながら、PNG グラフィックスのファイル サイズを削減します。</strong> PNG が適切な形式であるアイコン、ロゴ、スクリーンショット、図、および透明な UI アセットに最も役立ちます。",
       "PNG はロスレスであり、アルファ透明度をサポートしていますが、ブラウザ側の圧縮は通常、色の複雑さを軽減し、画像を再エンコードすることによって機能します。写真は JPEG/WebP のように小さくなる場合があります。実稼働アセットを置き換える前に、必ず透明度、エッジ、ファイル サイズを比較してください。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "PNG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
       "各ファイルは自動的に圧縮され、圧縮率が表示されます。",
@@ -120,7 +120,7 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
   },
   "kr": {
-    "title": "PNG - Coding.Tools 압축",
+    "title": "PNG 압축 - Coding.Tools",
     "description": "더 작고 투명한 그래픽, 아이콘, 스크린샷 및 UI 자산을 위해 브라우저에서 PNG 이미지를 압축하세요.",
     "toolTitle": "PNG 압축",
     "toolDescription": "가능한 경우 투명도를 유지하면서 브라우저 생성 출력에 대한 색상 데이터를 줄여 PNG 파일을 로컬로 압축합니다.",
@@ -129,7 +129,7 @@
     "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
     "descTitle": "파일을 서버로 보내지 않고 PNG 압축",
     "descParas": [
-      "<strong>PNG 압축는 브라우저에서 워크플로를 로컬로 유지하면서 PNG 그래픽의 파일 크기를 줄입니다.</strong> PNG가 올바른 형식인 아이콘, 로고, 스크린샷, 다이어그램 및 투명 UI 자산에 가장 유용합니다.",
+      "<strong>PNG 압축은 브라우저에서 워크플로를 로컬로 유지하면서 PNG 그래픽의 파일 크기를 줄입니다.</strong> PNG가 올바른 형식인 아이콘, 로고, 스크린샷, 다이어그램 및 투명 UI 자산에 가장 유용합니다.",
       "PNG는 무손실이며 알파 투명도를 지원하지만 브라우저 측 압축은 일반적으로 색상 복잡성을 줄이고 이미지를 다시 인코딩하여 작동합니다. 대신 JPEG/WebP로 사진이 더 작을 수 있습니다. 프로덕션 자산을 교체하기 전에 항상 투명도, 가장자리 및 파일 크기를 비교하십시오."
     ],
     "howToUse": "사용방법",
@@ -140,7 +140,7 @@
     ],
     "whatIs": "언제 PNG를 압축해야 합니까?",
     "whatIsParas": [
-      "<strong>PNG</strong>는 투명성이 필요한 선명한 그래픽, 텍스트, 스크린샷 및 이미지에 가장 적합합니다.",
+      "<strong>PNG</strong>은 투명성이 필요한 선명한 그래픽, 텍스트, 스크린샷 및 이미지에 가장 적합합니다.",
       "<strong>압축 절충:</strong> PNG는 JPEG보다 선명한 가장자리를 더 잘 보존하지만 이미지에 많은 색상이나 사진 세부 사항이 포함된 경우 큰 상태를 유지할 수 있습니다.",
       "<strong>투명도 주의 사항:</strong> 알파 투명도가 중요한 경우 PNG를 유지하세요. JPEG에는 알파 채널이 없습니다.",
       "<strong>최고의 워크플로:</strong> PNG 자산을 압축한 다음 실제 디스플레이 크기에서 결과를 검사하여 밴딩, 후광 또는 손실된 세부 정보를 포착합니다."

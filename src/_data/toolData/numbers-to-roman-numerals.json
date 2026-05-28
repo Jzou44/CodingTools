@@ -45,7 +45,7 @@
     "steps": [
       "输入 1 到 3999 之间的整数。",
       "查看罗马数字输出和快速参考符号。",
-      "复制罗马数字，或在转换另一个数字之前清除该字段。"
+      "复制罗马数字，或在转换另一个数字之前清空输入。"
     ],
     "whatIs": "什么是数字到罗马数字的转换？",
     "whatIsParas": [
@@ -59,9 +59,9 @@
   },
   "tw": {
     "title": "數字轉羅馬數字 - Coding.Tools",
-    "description": "將 1 到 3999 之間的十進制數字轉換為標準羅馬數字。",
+    "description": "將 1 到 3999 之間的十進位數字轉換為標準羅馬數字。",
     "toolTitle": "數字轉羅馬數字",
-    "toolDescription": "使用減法對將十進制數字轉換為標準羅馬數字表示法。",
+    "toolDescription": "使用減法對將十進位數字轉換為標準羅馬數字表示法。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入數字（例如 2024、99）...",
     "outputPlaceholder": "羅馬數字將出現在這裡...",
@@ -73,18 +73,18 @@
     "howToUse": "如何使用",
     "steps": [
       "輸入 1 到 3999 之間的整數。",
-      "查看羅馬數字輸出和快速參考符號。",
-      "複製羅馬數字，或在轉換另一個數字之前清除該字段。"
+      "檢視羅馬數字輸出和快速參考符號。",
+      "複製羅馬數字，或在轉換另一個數字之前清空輸入。"
     ],
     "whatIs": "什麼是數字到羅馬數字的轉換？",
     "whatIsParas": [
       "<strong>數字到羅馬數字的轉換</strong>用符號<code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>和<code>M</code>重寫十進位整數。標準表示法使用減法對，例如 <code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code> 和 <code>CM</code>。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "僅輸入整數。如果日期、頁碼或標籤超出 <code>1-3999</code>，請確認出版樣式，因為擴展羅馬數字表示法並非普遍採用相同的書寫方式。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "數字 2024 轉換為 <code>MMXXIV</code>：",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- 數字輸入 ---\n2024\n\n--- 羅馬數字輸出 ---\nMMXXIV"
   },
   "jp": {
     "title": "数字からローマ数字へ - Coding.Tools",
@@ -99,7 +99,7 @@
       "<strong>数字からローマ数字 は、10 進整数を標準のローマ数字表記に変換します。</strong> 日付、概要、章のラベル、イベント名、文字盤の参照、およびローマ数字が必要な例に使用します。",
       "サポートされている最新の範囲は <code>1</code> から <code>3999</code> です。 3999 を超える値には通常、上線または拡張表記が必要ですが、このコンバータでは、ゼロ、負数、および小数には標準のローマ数字形式がありません。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "1 ～ 3999 の整数を入力します。",
       "ローマ数字の出力とクイック リファレンス記号を確認します。",
@@ -109,16 +109,16 @@
     "whatIsParas": [
       "<strong>数値からローマ数字への変換</strong> は、10 進整数を記号 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>、および <code>M</code> に書き換えます。標準表記では、<code>IV</code>、<code>IX</code>、<code>XL</code>、<code>XC</code>、<code>CD</code>、<code>CM</code> などの減算ペアが使用されます。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "整数のみを入力してください。日付、ページ番号、またはラベルが <code>1-3999</code> の範囲外にある場合は、拡張ローマ数字表記が世界共通で同じ方法で書かれているわけではないため、出版スタイルを確認してください。",
     "example": "例",
     "examplePara": "数値 2024 は <code>MMXXIV</code> に変換されます。",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- 数値入力 ---\n2024\n\n--- ローマ数字出力 ---\nMMXXIV"
   },
   "kr": {
     "title": "숫자를 로마 숫자로 - Coding.Tools",
     "description": "1에서 3999까지의 10진수를 표준 로마 숫자로 변환합니다.",
-    "toolTitle": "숫자에서 로마 숫자",
+    "toolTitle": "숫자 → 로마 숫자",
     "toolDescription": "뺄셈 쌍을 사용하여 십진수를 표준 로마 숫자 표기법으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "숫자 입력(예: 2024, 99)...",
@@ -136,13 +136,13 @@
     ],
     "whatIs": "숫자를 로마숫자로 변환하는 것이 무엇인가요?",
     "whatIsParas": [
-      "<strong>Number를 로마 숫자로 변환</strong>는 <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> 및 <code>M</code> 기호를 사용하여 10진수 정수를 다시 씁니다. 표준 표기법에서는 <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> 및 <code>CM</code>와 같은 빼기 쌍을 사용합니다."
+      "<strong>숫자를 로마 숫자로 변환</strong>은 <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> 및 <code>M</code> 기호를 사용하여 10진수 정수를 다시 씁니다. 표준 표기법에서는 <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> 및 <code>CM</code>와 같은 빼기 쌍을 사용합니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "정수만 입력하세요. 날짜, 페이지 번호 또는 라벨이 <code>1-3999</code>를 벗어나는 경우 확장 로마 숫자 표기법이 보편적으로 동일한 방식으로 작성되지 않으므로 출판 스타일을 확인하십시오.",
     "example": "예",
     "examplePara": "숫자 2024는 <code>MMXXIV</code>로 변환됩니다.",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- 숫자 입력 ---\n2024\n\n--- 로마 숫자 출력 ---\nMMXXIV"
   },
   "fr": {
     "title": "Nombres en chiffres romains - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Entrez uniquement des nombres entiers. Si une date, un numéro de page ou une étiquette se trouve en dehors de <code>1-3999</code>, confirmez le style de publication, car la notation en chiffres romains étendus n'est pas universellement écrite de la même manière.",
     "example": "Exemple",
     "examplePara": "Le nombre 2024 se convertit en <code>MMXXIV</code> :",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- Entrée nombre ---\n2024\n\n--- Sortie romaine ---\nMMXXIV"
   },
   "de": {
     "title": "Zahlen zu römischen Ziffern - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Geben Sie nur ganze Zahlen ein. Wenn ein Datum, eine Seitenzahl oder eine Beschriftung außerhalb von <code>1-3999</code> liegt, bestätigen Sie den Veröffentlichungsstil, da die erweiterte römische Ziffernschreibweise nicht überall auf die gleiche Weise geschrieben wird.",
     "example": "Beispiel",
     "examplePara": "Die Zahl 2024 wird in <code>MMXXIV</code> umgewandelt:",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- Zahleneingabe ---\n2024\n\n--- Römische Ausgabe ---\nMMXXIV"
   },
   "es": {
     "title": "Números a números romanos - Coding.Tools",
@@ -226,10 +226,10 @@
       "<strong>Conversión de números a números romanos</strong> reescribe un número entero decimal con los símbolos <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> y <code>M</code>. La notación estándar utiliza pares sustractivos como <code>IV</code>, <code>IX</code>, <code>XL</code>, <code>XC</code>, <code>CD</code> y <code>CM</code>."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Introduzca sólo números enteros. Si una fecha, número de página o etiqueta está fuera de <code>1-3999</code>, confirme el estilo de publicación porque la notación de números romanos extendidos no se escribe universalmente de la misma manera.",
+    "inputNotesPara": "Introduzca solo números enteros. Si una fecha, número de página o etiqueta está füra de <code>1-3999</code>, confirme el estilo de publicación porque la notación de números romanos extendidos no se escribe universalmente de la misma manera.",
     "example": "Ejemplo",
     "examplePara": "El número 2024 se convierte en <code>MMXXIV</code>:",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- Entrada numérica ---\n2024\n\n--- Salida romana ---\nMMXXIV"
   },
   "pt": {
     "title": "Números em algarismos romanos - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Insira apenas números inteiros. Se uma data, número de página ou rótulo estiver fora de <code>1-3999</code>, confirme o estilo de publicação porque a notação de algarismos romanos estendidos não é universalmente escrita da mesma maneira.",
     "example": "Exemplo",
     "examplePara": "O número 2024 é convertido para <code>MMXXIV</code>:",
-    "exampleCode": "--- Number Input ---\n2024\n\n--- Roman Output ---\nMMXXIV"
+    "exampleCode": "--- Entrada numérica ---\n2024\n\n--- Saída romana ---\nMMXXIV"
   }
 }

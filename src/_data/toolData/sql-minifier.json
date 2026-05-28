@@ -33,7 +33,7 @@
   },
   "cn": {
     "title": "SQL 压缩器 - Coding.Tools",
-    "description": "通过删除额外的格式来缩小 SQL，同时保留所需的标记间距。",
+    "description": "通过删除额外的格式来压缩 SQL，同时保留所需的标记间距。",
     "toolTitle": "SQL 压缩",
     "toolDescription": "紧凑型 SQL 查询嵌入、日志、测试数据和传输。",
     "categoryName": "格式化与压缩",
@@ -48,24 +48,24 @@
     "steps": [
       "将 SQL 查询粘贴到输入编辑器中。",
       "单击 <strong>压缩 SQL</strong> 折叠不必要的格式。",
-      "查看缩小后的 SQL 以确认标识符、文字、注释和运算符仍然可以正确解析。",
+      "查看压缩后的 SQL 以确认标识符、文字、注释和运算符仍然可以正确解析。",
       "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
     "whatIs": "SQL 压缩器是什么？",
     "whatIsParas": [
       "<strong>SQL 压缩</strong> 是一个基于浏览器的实用程序，用于将格式化的 SQL 转换为紧凑的单行查询。它减少了视觉大小，同时保留了数据库解析器理解语句所需的空间。",
-      "SQL 方言和注释因引擎而异。在目标数据库中测试重要的缩小查询，尤其是在使用提示、带引号的标识符、过程 SQL 或特定于供应商的运算符时。"
+      "SQL 方言和注释因引擎而异。在目标数据库中测试重要的压缩查询，尤其是在使用提示、带引号的标识符、过程 SQL 或特定于供应商的运算符时。"
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "粘贴 SQL 文本，而不是应用程序字符串转义或日志元数据。仅当您的数据库或工具依赖于提示、注释或迁移标记时才保留注释。",
     "example": "示例",
     "examplePara": "格式化查询减少为一行，同时在 SQL 标记之间保留空格：",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "exampleCode": "--- 格式化输入 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 压缩输出 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
     "buttonLabel": "压缩 SQL"
   },
   "tw": {
     "title": "SQL 壓縮器 - Coding.Tools",
-    "description": "透過刪除額外的格式來縮小 SQL，同時保留所需的標記間距。",
+    "description": "透過刪除額外的格式來壓縮 SQL，同時保留所需的標記間距。",
     "toolTitle": "SQL 壓縮",
     "toolDescription": "緊湊型 SQL 查詢嵌入、日誌、測試資料和傳輸。",
     "categoryName": "格式化與壓縮",
@@ -80,32 +80,32 @@
     "steps": [
       "將 SQL 查詢貼到輸入編輯器中。",
       "點選 <strong>壓縮 SQL</strong> 折疊不必要的格式。",
-      "查看縮小後的 SQL 以確認標識符、文字、註解和運算子仍然可以正確解析。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "檢視壓縮後的 SQL 以確認標識符、文字、註解和運算子仍然可以正確解析。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "SQL 壓縮器是什麼？",
     "whatIsParas": [
-      "<strong>SQL 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將格式化的 SQL 轉換為緊湊的單行查詢。它減少了視覺大小，同時保留了資料庫解析器理解語句所需的空間。",
-      "SQL 方言和註釋因引擎而異。在目標資料庫中測試重要的縮小查詢，尤其是在使用提示、引號的識別碼、流程 SQL 或特定於供應商的運算子時。"
+      "<strong>SQL 壓縮</strong> 是一個基於瀏覽器的實用工具，用於將格式化的 SQL 轉換為緊湊的單行查詢。它減少了視覺大小，同時保留了資料庫解析器理解語句所需的空間。",
+      "SQL 方言和註釋因引擎而異。在目標資料庫中測試重要的壓縮查詢，尤其是在使用提示、引號的識別碼、流程 SQL 或特定於供應商的運算子時。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "貼上 SQL 文本，而不是應用程式字串轉義或日誌元資料。僅當您的資料庫或工具依賴於提示、註釋或遷移標記時才保留註釋。",
+    "inputNotesPara": "貼上 SQL 文字，而不是應用程式字串轉義或日誌中繼資料。僅當您的資料庫或工具依賴於提示、註釋或遷移標記時才保留註釋。",
     "example": "範例",
     "examplePara": "格式化查詢減少為一行，同時在 SQL 標記之間保留空格：",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "exampleCode": "--- 格式化輸入 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 壓縮輸出 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
     "buttonLabel": "壓縮 SQL"
   },
   "jp": {
-    "title": "SQL ミニファイヤー - Coding.Tools",
+    "title": "SQL 圧縮 - Coding.Tools",
     "description": "必要なトークン間隔を維持しながら余分な書式設定を削除して、SQL を縮小します。",
-    "toolTitle": "SQL ミニファイア",
+    "toolTitle": "SQL 圧縮",
     "toolDescription": "埋め込み、ログ、テストデータ、トランスポート用のコンパクトな SQL クエリ。",
     "categoryName": "整形と圧縮",
-    "inputPlaceholder": "ミニファイする SQL を貼り付け...",
-    "outputPlaceholder": "ミニファイされた SQL がここに表示されます...",
+    "inputPlaceholder": "圧縮する SQL を貼り付け...",
+    "outputPlaceholder": "圧縮された SQL がここに表示されます...",
     "descTitle": "トークンをマージせずにコンパクトな SQL",
     "descParas": [
-      "<strong>SQL ミニファイア は改行、インデント、余分なスペースを削除するため、クエリを埋め込んだり、コンパクトな文字列として保存したりすることが容易になります。</strong> これは、テストデータ、ログ、生成された SQL、およびアプリケーション定数に役立ちます。",
+      "<strong>SQL 圧縮 は改行、インデント、余分なスペースを削除するため、クエリを埋め込んだり、コンパクトな文字列として保存したりすることが容易になります。</strong> これは、テストデータ、ログ、生成された SQL、およびアプリケーション定数に役立ちます。",
       "SQL 空白はトークンを区切ります。安全な縮小化子は、キーワード、識別子、数値、演算子、文字列リテラルが別のトークンにマージされる場所にスペースを保持する必要があります。"
     ],
     "howToUse": "使い方",
@@ -115,52 +115,52 @@
       "縮小された SQL を確認して、識別子、リテラル、コメント、および演算子が引き続き正しく解析されることを確認します。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "SQL ミニファイヤーとは何ですか?",
+    "whatIs": "SQL 圧縮とは何ですか?",
     "whatIsParas": [
-      "<strong>SQL ミニファイア</strong> は、フォーマットされた SQL をコンパクトな単一行クエリに変換するためのブラウザー ベースのユーティリティです。これにより、データベース パーサーがステートメントを理解するために必要なスペースを維持しながら、視覚的なサイズが削減されます。",
+      "<strong>SQL 圧縮</strong> は、フォーマットされた SQL をコンパクトな単一行クエリに変換するためのブラウザー ベースのユーティリティです。これにより、データベース パーサーがステートメントを理解するために必要なスペースを維持しながら、視覚的なサイズが削減されます。",
       "SQL の方言とコメントはエンジンによって異なります。特にヒント、引用符で囲まれた識別子、手続き型 SQL、またはベンダー固有の演算子を使用する場合、ターゲット データベースで重要な縮小クエリをテストします。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "アプリケーション文字列のエスケープやログのメタデータではなく、SQL テキストを貼り付けます。データベースまたはツールがヒント、注釈、または移行マーカーに依存している場合にのみコメントを保存します。",
     "example": "例",
     "examplePara": "フォーマットされたクエリは、SQL トークン間のスペースを維持しながら 1 行に短縮されます。",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "SQL をミニファイ"
+    "exampleCode": "--- 整形入力 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 圧縮出力 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "buttonLabel": "SQL を圧縮"
   },
   "kr": {
-    "title": "SQL 축소기 - Coding.Tools",
-    "description": "필요한 토큰 간격을 유지하면서 추가 서식을 제거하여 SQL를 축소합니다.",
-    "toolTitle": "SQL 미니파이어",
+    "title": "SQL 압축 - Coding.Tools",
+    "description": "필요한 토큰 간격을 유지하면서 추가 서식을 제거하여 SQL을 축소합니다.",
+    "toolTitle": "SQL 압축",
     "toolDescription": "임베딩, 로그, 테스트 데이터 및 전송을 위한 컴팩트 SQL 쿼리입니다.",
     "categoryName": "포맷 및 압축",
-    "inputPlaceholder": "미니파이할 SQL을 붙여넣으세요...",
-    "outputPlaceholder": "미니파이된 SQL이 여기에 표시됩니다...",
+    "inputPlaceholder": "압축할 SQL을 붙여넣으세요...",
+    "outputPlaceholder": "압축된 SQL이 여기에 표시됩니다...",
     "descTitle": "토큰 병합 없이 컴팩트한 SQL",
     "descParas": [
-      "<strong>SQL 축소기는 줄 바꿈, 들여쓰기 및 추가 공백을 제거하므로 쿼리를 더 쉽게 포함하거나 압축 문자열로 저장할 수 있습니다.</strong> 테스트 데이터, 로그, 생성된 SQL 및 응용 프로그램 상수에 유용합니다.",
-      "SQL 공백은 토큰을 구분합니다. 안전한 축소기는 키워드, 식별자, 숫자, 연산자 및 문자열 리터럴이 다른 토큰으로 병합될 공간을 유지해야 합니다."
+      "<strong>SQL 압축 도구는 줄 바꿈, 들여쓰기 및 추가 공백을 제거하므로 쿼리를 더 쉽게 포함하거나 압축 문자열로 저장할 수 있습니다.</strong> 테스트 데이터, 로그, 생성된 SQL 및 응용 프로그램 상수에 유용합니다.",
+      "SQL 공백은 토큰을 구분합니다. 안전한 압축 도구는 키워드, 식별자, 숫자, 연산자 및 문자열 리터럴이 다른 토큰으로 병합될 공간을 유지해야 합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "SQL 쿼리를 입력 편집기에 붙여넣습니다.",
-      "불필요한 서식을 축소하려면 <strong>SQL 미니파이</strong>를 클릭하세요.",
-      "축소된 SQL를 검토하여 식별자, 리터럴, 주석 및 연산자가 여전히 올바르게 구문 분석되는지 확인하세요.",
+      "불필요한 서식을 축소하려면 <strong>SQL 압축</strong>를 클릭하세요.",
+      "축소된 SQL을 검토하여 식별자, 리터럴, 주석 및 연산자가 여전히 올바르게 구문 분석되는지 확인하세요.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SQL 축소기는 무엇입니까?",
+    "whatIs": "SQL 압축이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>SQL 미니파이어</strong>는 형식화된 SQL를 간단한 한 줄 쿼리로 변환하는 브라우저 기반 유틸리티입니다. 데이터베이스 파서가 명령문을 이해하는 데 필요한 공간을 유지하면서 시각적 크기를 줄입니다.",
+      "<strong>SQL 압축</strong>은 형식화된 SQL을 간단한 한 줄 쿼리로 변환하는 브라우저 기반 유틸리티입니다. 데이터베이스 파서가 명령문을 이해하는 데 필요한 공간을 유지하면서 시각적 크기를 줄입니다.",
       "SQL 방언과 설명은 엔진마다 다릅니다. 특히 힌트, 인용 식별자, 절차적 SQL 또는 공급업체별 연산자를 사용할 때 대상 데이터베이스에서 중요한 축소 쿼리를 테스트합니다."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "애플리케이션 문자열 이스케이프 또는 로그 메타데이터가 아닌 SQL 텍스트를 붙여넣습니다. 데이터베이스나 도구가 힌트, 주석 또는 마이그레이션 마커에 의존하는 경우에만 주석을 유지하세요.",
     "example": "예시",
     "examplePara": "형식화된 쿼리는 SQL 토큰 사이에 공백을 유지하면서 한 줄로 줄어듭니다.",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "SQL 미니파이"
+    "exampleCode": "--- 포맷된 입력 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 압축 출력 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "buttonLabel": "SQL 압축"
   },
   "fr": {
-    "title": "Minificateur SQL - Coding.Tools",
+    "title": "Minifieur SQL - Coding.Tools",
     "description": "Réduisez SQL en supprimant le formatage supplémentaire tout en préservant l’espacement requis des jetons.",
     "toolTitle": "Minifieur SQL",
     "toolDescription": "Requêtes SQL compactes pour l'intégration, les journaux, les données de test et le transport.",
@@ -170,7 +170,7 @@
     "descTitle": "Compacter SQL sans fusionner les jetons",
     "descParas": [
       "<strong>Minifieur SQL supprime les sauts de ligne, l'indentation et les espaces supplémentaires afin que les requêtes soient plus faciles à intégrer ou à stocker sous forme de chaînes compactes.</strong> Il est utile pour les données de test, les journaux, les SQL générés et les constantes d'application.",
-      "SQL des espaces séparent les jetons. Un minificateur sécurisé doit conserver des espaces où les mots-clés, les identifiants, les nombres, les opérateurs et les chaînes littérales seraient autrement fusionnés en différents jetons."
+      "En SQL, les espaces séparent les jetons. Un minificateur sécurisé doit conserver des espaces où les mots-clés, les identifiants, les nombres, les opérateurs et les chaînes littérales seraient autrement fusionnés en différents jetons."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
@@ -179,7 +179,7 @@
       "Examinez le SQL minifié pour confirmer que les identifiants, les littéraux, les commentaires et les opérateurs sont toujours analysés correctement.",
       "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le miniificateur SQL ?",
+    "whatIs": "Qu'est-ce que le minifieur SQL ?",
     "whatIsParas": [
       "<strong>Minifieur SQL</strong> est un utilitaire basé sur un navigateur permettant de transformer le SQL formaté en une requête compacte sur une seule ligne. Il réduit la taille visuelle tout en préservant les espaces requis pour que l'analyseur de base de données comprenne l'instruction.",
       "Les dialectes et commentaires SQL varient selon les moteurs. Testez les requêtes minifiées importantes dans la base de données cible, en particulier lorsque vous utilisez des indices, des identifiants cités, des SQL procéduraux ou des opérateurs spécifiques au fournisseur."
@@ -188,7 +188,7 @@
     "inputNotesPara": "Collez le texte SQL, pas les échappements de chaîne d'application ni les métadonnées de journal. Conservez les commentaires uniquement si votre base de données ou vos outils dépendent d'indices, d'annotations ou de marqueurs de migration.",
     "example": "Exemple",
     "examplePara": "Une requête formatée est réduite à une seule ligne tout en gardant des espaces entre les tokens SQL :",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "exampleCode": "--- Entrée formatée ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Sortie minifiée ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
     "buttonLabel": "Minifier SQL"
   },
   "de": {
@@ -202,12 +202,12 @@
     "descTitle": "Kompaktes SQL ohne Zusammenführen von Token",
     "descParas": [
       "<strong>SQL-Minifizierer entfernt Zeilenumbrüche, Einrückungen und zusätzliche Leerzeichen, sodass Abfragen leichter eingebettet oder als kompakte Zeichenfolgen gespeichert werden können.</strong> Es ist nützlich für Testdaten, Protokolle, generierte SQL und Anwendungskonstanten.",
-      "Das Leerzeichen SQL trennt Token. Ein sicherer Minifier muss Leerzeichen enthalten, an denen Schlüsselwörter, Bezeichner, Zahlen, Operatoren und Zeichenfolgenliterale andernfalls zu unterschiedlichen Token verschmelzen würden."
+      "SQL-Leerzeichen trennen Tokens. Ein sicherer Minifier muss Leerzeichen enthalten, an denen Schlüsselwörter, Bezeichner, Zahlen, Operatoren und Zeichenfolgenliterale andernfalls zu unterschiedlichen Token verschmelzen würden."
     ],
     "howToUse": "Anleitung",
     "steps": [
       "Fügen Sie Ihre SQL-Abfrage in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Minifizieren SQL</strong>, um unnötige Formatierungen auszublenden.",
+      "Klicken Sie auf <strong>SQL minifizieren</strong>, um unnötige Formatierungen auszublenden.",
       "Überprüfen Sie das minimierte SQL, um zu bestätigen, dass Bezeichner, Literale, Kommentare und Operatoren weiterhin korrekt analysiert werden.",
       "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
@@ -220,8 +220,8 @@
     "inputNotesPara": "Fügen Sie SQL-Text ein, keine Anwendungszeichenfolgen-Escapes oder Protokollmetadaten. Behalten Sie Kommentare nur bei, wenn Ihre Datenbank oder Ihre Tools auf Hinweise, Anmerkungen oder Migrationsmarkierungen angewiesen sind.",
     "example": "Beispiel",
     "examplePara": "Eine formatierte Abfrage wird auf eine Zeile reduziert, wobei Leerzeichen zwischen SQL-Tokens beibehalten werden:",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "Minifizieren SQL"
+    "exampleCode": "--- Formatierte Eingabe ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minifizierte Ausgabe ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "buttonLabel": "SQL minifizieren"
   },
   "es": {
     "title": "Minificador SQL - Coding.Tools",
@@ -252,7 +252,7 @@
     "inputNotesPara": "Pegue el texto SQL, no los escapes de cadenas de aplicaciones ni los metadatos de registro. Conserve los comentarios solo si su base de datos o herramientas dependen de sugerencias, anotaciones o marcadores de migración.",
     "example": "Ejemplo",
     "examplePara": "Una consulta formateada se reduce a una línea manteniendo espacios entre los tokens SQL:",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "exampleCode": "--- Entrada formateada ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Salida minificada ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
     "buttonLabel": "Minificar SQL"
   },
   "pt": {
@@ -284,7 +284,7 @@
     "inputNotesPara": "Cole o texto SQL, não os escapes de string do aplicativo ou os metadados de log. Preserve comentários somente se seu banco de dados ou ferramentas dependerem de dicas, anotações ou marcadores de migração.",
     "example": "Exemplo",
     "examplePara": "Uma consulta formatada é reduzida a uma linha, mantendo espaços entre os tokens SQL:",
-    "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
+    "exampleCode": "--- Entrada formatada ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Saída minificada ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
     "buttonLabel": "Minificar SQL"
   }
 }

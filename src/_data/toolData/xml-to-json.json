@@ -54,10 +54,10 @@
     "whatIs": "什么是 XML 到 JSON 转换器？",
     "whatIsParas": [
       "<strong>XML 到 JSON 转换器</strong> 是一个基于浏览器的实用程序，用于将 XML 树转换为 JSON 友好的表示形式。它使深度嵌套的标记在面向 JavaScript 的工作流程中更易于扫描和重用。",
-      "最好将输出理解为 XML 的实际表示，而不是保证的往返格式。根据接收应用程序或数据合同验证重要转换。"
+      "最好将输出理解为 XML 的实际表示，而不是保证的往返格式。根据接收应用程序或数据契约验证重要转换。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "使用一个文档根粘贴格式正确的 XML。如果您的文档使用命名空间、属性、重复元素或混合内容，请在重新使用 JSON 之前仔细检查生成的密钥。",
+    "inputNotesPara": "使用一个文档根粘贴格式正确的 XML。如果您的文档使用命名空间、属性、重复元素或混合内容，请在重新使用 JSON 之前仔细检查生成的键名。",
     "example": "示例",
     "examplePara": "一个简单的 XML 文档变成一个嵌套的 JSON 样式对象：",
     "exampleCode": "--- XML 输入 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 输出 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}",
@@ -65,33 +65,33 @@
   },
   "tw": {
     "title": "XML 到 JSON 轉換器 - Coding.Tools",
-    "description": "將 XML 標記轉換為 JSON 樣式的數據，同時公開元素、屬性和文字。",
+    "description": "將 XML 標記轉換為 JSON 樣式的資料，同時公開元素、屬性和文字。",
     "toolTitle": "XML 轉 JSON",
     "toolDescription": "將 XML 文件轉換為瀏覽器中可讀的 JSON 樣式輸出。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要轉換的 XML...",
     "outputPlaceholder": "JSON 輸出將在此顯示...",
-    "descTitle": "將 XML 標記轉換為 JSON 樣式數據",
+    "descTitle": "將 XML 標記轉換為 JSON 樣式資料",
     "descParas": [
-      "<strong>XML 到 JSON 轉換器解析 XML 並將其結構表示為 JSON 樣式的數據，以便於檢查、調試或遷移工作。</strong> 它有助於檢視 XML API、來源、設定匯出和範例文件。",
-      "XML 具有 JSON 所沒有的功能：屬性、命名空間、重複的同級元素、文字節點、CDATA 和混合內容。轉換器必須將它們映射到物件、陣列和字串值，因此在將其視為無損模式轉換之前檢查輸出。"
+      "<strong>XML 到 JSON 轉換器解析 XML 並將其結構表示為 JSON 樣式的資料，以便於檢查、偵錯或遷移工作。</strong> 它有助於檢視 XML API、來源、設定匯出和範例文件。",
+      "XML 具有 JSON 所沒有的功能：屬性、命名空間、重複的同級元素、文字節點、CDATA 和混合內容。轉換器必須將它們對應到物件、陣列和字串值，因此在將其視為無損模式轉換之前檢查輸出。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將 XML 資料貼到輸入編輯器中。",
-      "點擊“<strong>轉換為 JSON</strong>”以解析和轉換標記。",
-      "查看屬性、重複元素和文字內容的表示方式。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "點選“<strong>轉換為 JSON</strong>”以解析和轉換標記。",
+      "檢視屬性、重複元素和文字內容的表示方式。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是 XML 到 JSON 轉換器？",
     "whatIsParas": [
-      "<strong>XML 到 JSON 轉換器</strong> 是一個基於瀏覽器的實用程序，用於將 XML 樹轉換為 JSON 友好的表示形式。它使深度嵌套的標記在面向 JavaScript 的工作流程中更易於掃描和重複使用。",
-      "最好將輸出理解為 XML 的實際表示，而不是保證的往返格式。根據接收應用程式或資料合約驗證重要轉換。"
+      "<strong>XML 到 JSON 轉換器</strong> 是一個基於瀏覽器的實用工具，用於將 XML 樹轉換為 JSON 友好的表示形式。它使深度巢狀的標記在面向 JavaScript 的工作流程中更易於掃描和重複使用。",
+      "最好將輸出理解為 XML 的實際表示，而不是保證的往返格式。根據接收應用程式或資料契約驗證重要轉換。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "使用一個文檔根貼上格式正確的 XML。如果您的文件使用命名空間、屬性、重複元素或混合內容，請在重新使用 JSON 之前仔細檢查產生的金鑰。",
+    "inputNotesPara": "使用一個文檔根貼上格式正確的 XML。如果您的文件使用命名空間、屬性、重複元素或混合內容，請在重新使用 JSON 之前仔細檢查產生的鍵名。",
     "example": "範例",
-    "examplePara": "一個簡單的 XML 文件變成一個嵌套的 JSON 樣式物件：",
+    "examplePara": "一個簡單的 XML 文件變成一個巢狀的 JSON 樣式物件：",
     "exampleCode": "--- XML 輸入 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 輸出 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}",
     "buttonLabel": "轉換為 JSON"
   },
@@ -106,7 +106,7 @@
     "descTitle": "XML マークアップを JSON スタイルのデータに変換する",
     "descParas": [
       "<strong>XML から JSON へのコンバーターは、XML を解析し、検査、デバッグ、または移行作業を容易にするために、その構造を JSON スタイルのデータとして表します。</strong> XML API、フィード、構成エクスポート、およびサンプル ドキュメントをレビューするときに役立ちます。",
-      "XML には、属性、名前空間、反復兄弟要素、テキスト ノード、CDATA、および混合コンテンツなど、JSON にはない機能があります。コンバーターはこれらをオブジェクト、配列、文​​字列値にマップする必要があるため、可逆スキーマ変換として扱う前に出力を確認してください。"
+      "XML には、属性、名前空間、反復兄弟要素、テキスト ノード、CDATA、および混合コンテンツなど、JSON にはない機能があります。コンバーターはこれらをオブジェクト、配列、文字列値に対応付けする必要があるため、可逆スキーマ変換として扱う前に出力を確認してください。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -128,7 +128,7 @@
     "buttonLabel": "JSON に変換"
   },
   "kr": {
-    "title": "XML에서 JSON로 변환기 - Coding.Tools",
+    "title": "XML-JSON 변환기 - Coding.Tools",
     "description": "요소, 속성 및 텍스트를 노출하면서 XML 마크업을 JSON 스타일 데이터로 변환합니다.",
     "toolTitle": "XML → JSON 변환",
     "toolDescription": "XML 문서를 브라우저에서 읽을 수 있는 JSON 스타일 출력으로 변환하세요.",
@@ -137,7 +137,7 @@
     "outputPlaceholder": "JSON 출력이 여기에 표시됩니다...",
     "descTitle": "XML 마크업을 JSON 스타일 데이터로 변환",
     "descParas": [
-      "<strong>XML - JSON 변환기는 XML를 구문 분석하고 해당 구조를 JSON 스타일 데이터로 표시하여 더 쉬운 검사, 디버깅 또는 마이그레이션 작업을 수행합니다.</strong> XML API, 피드, 구성 내보내기 및 샘플 문서를 검토할 때 도움이 됩니다.",
+      "<strong>XML - JSON 변환기는 XML을 구문 분석하고 해당 구조를 JSON 스타일 데이터로 표시하여 더 쉬운 검사, 디버깅 또는 마이그레이션 작업을 수행합니다.</strong> XML API, 피드, 구성 내보내기 및 샘플 문서를 검토할 때 도움이 됩니다.",
       "XML에는 속성, 네임스페이스, 반복되는 형제 요소, 텍스트 노드, CDATA 및 혼합 콘텐츠 등 JSON에는 없는 기능이 있습니다. 변환기는 이를 개체, 배열 및 문자열 값으로 매핑해야 하므로 출력을 무손실 스키마 변환으로 처리하기 전에 검토하십시오."
     ],
     "howToUse": "사용 방법",
@@ -147,13 +147,13 @@
       "속성, 반복 요소, 텍스트 콘텐츠가 어떻게 표현되었는지 검토하세요.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "XML-JSON 변환기는 무엇입니까?",
+    "whatIs": "XML-JSON 변환기는 무엇인가요?",
     "whatIsParas": [
-      "<strong>XML에서 JSON로 변환기</strong>는 XML 트리를 JSON에 적합한 표현으로 변환하기 위한 브라우저 기반 유틸리티입니다. JavaScript 지향 워크플로에서 깊이 중첩된 마크업을 더 쉽게 스캔하고 재사용할 수 있습니다.",
+      "<strong>XML을 JSON으로 변환</strong>은 XML 트리를 JSON에 적합한 표현으로 변환하기 위한 브라우저 기반 유틸리티입니다. JavaScript 지향 워크플로에서 깊이 중첩된 마크업을 더 쉽게 스캔하고 재사용할 수 있습니다.",
       "출력은 보장된 왕복 형식이 아닌 XML의 실제 표현으로 가장 잘 이해됩니다. 수신 애플리케이션 또는 데이터 계약에 대해 중요한 변환을 검증합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "하나의 문서 루트로 올바른 형식의 XML를 붙여넣습니다. 문서에서 네임스페이스, 속성, 반복 요소 또는 혼합 콘텐츠를 사용하는 경우 JSON를 재사용하기 전에 생성된 키를 주의 깊게 검사하세요.",
+    "inputNotesPara": "하나의 문서 루트로 올바른 형식의 XML을 붙여넣습니다. 문서에서 네임스페이스, 속성, 반복 요소 또는 혼합 콘텐츠를 사용하는 경우 JSON을 재사용하기 전에 생성된 키를 주의 깊게 검사하세요.",
     "example": "예시",
     "examplePara": "간단한 XML 문서는 중첩된 JSON 스타일 객체가 됩니다.",
     "exampleCode": "--- XML 입력 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>\n\n--- JSON 출력 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}",

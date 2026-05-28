@@ -33,7 +33,7 @@
   },
   "cn": {
     "title": "HTML 压缩器 - Coding.Tools",
-    "description": "通过删除注释和不必要的空白同时保留渲染意图来缩小 HTML。",
+    "description": "通过删除注释和不必要的空白同时保留渲染意图来压缩 HTML。",
     "toolTitle": "HTML 压缩",
     "toolDescription": "在浏览器中将 HTML 片段或文档压缩为更小的标记。",
     "categoryName": "格式化与压缩",
@@ -48,16 +48,16 @@
     "steps": [
       "将 HTML 代码粘贴到输入编辑器中。",
       "单击 <strong>压缩 HTML</strong> 以删除可避免的格式和注释。",
-      "查看缩小输出中保留的文本、行内间距和模板标记。",
+      "查看压缩输出中保留的文本、行内间距和模板标记。",
       "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
     "whatIs": "HTML 压缩器是什么？",
     "whatIsParas": [
       "<strong>HTML 压缩</strong> 是一个基于浏览器的实用程序，用于生成紧凑的 HTML。它通过修剪通常不影响文档解析方式的字符来减少传输或存储大小。",
-      "缩小与验证 HTML 不同。如果源格式错误，浏览器错误恢复可能仍然适用，最安全的检查是在目标环境中渲染或测试缩小的结果。"
+      "压缩与验证 HTML 不同。如果源格式错误，浏览器错误恢复可能仍然适用，最安全的检查是在目标环境中渲染或测试压缩的结果。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "避免在需要精确空格的地方缩小标记，例如预格式化文本、纯文本电子邮件部分或框架注释。保留可读的源副本以供将来编辑。",
+    "inputNotesPara": "避免在需要精确空格的地方压缩标记，例如预格式化文本、纯文本电子邮件部分或框架注释。保留可读的源副本以供将来编辑。",
     "example": "示例",
     "examplePara": "注释和缩进已从简单文档中删除：",
     "exampleCode": "--- 格式化输入 ---\n&lt;!-- 页面标题 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 压缩输出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
@@ -65,13 +65,13 @@
   },
   "tw": {
     "title": "HTML 壓縮器 - Coding.Tools",
-    "description": "透過刪除註釋和不必要的空白同時保留渲染意圖來縮小 HTML。",
+    "description": "透過刪除註釋和不必要的空白同時保留渲染意圖來壓縮 HTML。",
     "toolTitle": "HTML 壓縮",
     "toolDescription": "在瀏覽器中將 HTML 片段或文件壓縮為更小的標記。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要壓縮的 HTML...",
     "outputPlaceholder": "壓縮後的 HTML 將在此顯示...",
-    "descTitle": "在不破壞版面的情況下縮小 HTML 尺寸",
+    "descTitle": "在不破壞版面的情況下壓縮 HTML 尺寸",
     "descParas": [
       "<strong>HTML 壓縮器刪除了可避免的空格和註釋，使標記更加緊湊。</strong> 對於需要較小文字佔用空間的片段、靜態頁面、電子郵件範本、範例和產生的 HTML 非常有用。",
       "HTML 空格可以影響內嵌版面、文字渲染、<code>&lt;pre&gt;</code> 內容和範本語法。註釋對於某些框架或條件標記也可能有意義，因此在發布之前驗證輸出。"
@@ -80,32 +80,32 @@
     "steps": [
       "將 HTML 程式碼貼到輸入編輯器中。",
       "按一下 <strong>壓縮 HTML</strong> 以刪除可避免的格式和註解。",
-      "查看縮小輸出中保留的文字、行內間距和範本標記。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "檢視壓縮輸出中保留的文字、行內間距和範本標記。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "HTML 壓縮器是什麼？",
     "whatIsParas": [
-      "<strong>HTML 壓縮</strong> 是一個基於瀏覽器的實用程序，用於產生緊湊的 HTML。它透過修剪通常不影響文件解析方式的字元來減少傳輸或儲存大小。",
-      "縮小與驗證 HTML 不同。如果來源格式錯誤，瀏覽器錯誤復原可能仍然適用，最安全的檢查是在目標環境中渲染或測試縮小的結果。"
+      "<strong>HTML 壓縮</strong> 是一個基於瀏覽器的實用工具，用於產生緊湊的 HTML。它透過修剪通常不影響文件解析方式的字元來減少傳輸或儲存大小。",
+      "壓縮與驗證 HTML 不同。如果來源格式錯誤，瀏覽器錯誤復原可能仍然適用，最安全的檢查是在目標環境中渲染或測試壓縮的結果。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "避免在需要精確空格的地方縮小標記，例如預先格式化文字、純文字電子郵件部分或框架註解。保留可讀的來源副本以供將來編輯。",
+    "inputNotesPara": "避免在需要精確空格的地方壓縮標記，例如預先格式化文字、純文字電子郵件部分或框架註解。保留可讀的來源副本以供將來編輯。",
     "example": "範例",
     "examplePara": "註釋和縮排已從簡單文件中刪除：",
     "exampleCode": "--- 格式化輸入 ---\n&lt;!-- 頁面標題 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 壓縮輸出 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
     "buttonLabel": "壓縮 HTML"
   },
   "jp": {
-    "title": "HTML ミニファイヤー - Coding.Tools",
+    "title": "HTML 圧縮 - Coding.Tools",
     "description": "レンダリングの意図を維持しながら、コメントと不要な空白を削除して、HTML を縮小します。",
-    "toolTitle": "HTML ミニファイア",
+    "toolTitle": "HTML 圧縮",
     "toolDescription": "HTML スニペットまたはドキュメントをブラウザーで小さなマークアップに圧縮します。",
     "categoryName": "整形と圧縮",
-    "inputPlaceholder": "ミニファイする HTML を貼り付け...",
-    "outputPlaceholder": "ミニファイされた HTML がここに表示されます...",
+    "inputPlaceholder": "圧縮する HTML を貼り付け...",
+    "outputPlaceholder": "圧縮された HTML がここに表示されます...",
     "descTitle": "レイアウトを壊すことなく HTML サイズを縮小します",
     "descParas": [
-      "<strong>HTML ミニファイア は回避可能な空白とコメントを削除するため、マークアップがよりコンパクトになります。</strong> スニペット、静的ページ、電子メール テンプレート、サンプル、およびより小さなテキスト フットプリントを必要とする生成された HTML に役立ちます。",
+      "<strong>HTML 圧縮 は回避可能な空白とコメントを削除するため、マークアップがよりコンパクトになります。</strong> スニペット、静的ページ、電子メール テンプレート、サンプル、およびより小さなテキスト フットプリントを必要とする生成された HTML に役立ちます。",
       "HTML 空白は、インライン レイアウト、テキスト レンダリング、<code>&lt;pre&gt;</code> コンテンツ、およびテンプレート構文に影響を与える可能性があります。コメントは一部のフレームワークや条件付きマークアップにとっても意味があるため、出力を出荷する前に確認してください。"
     ],
     "howToUse": "使い方",
@@ -115,52 +115,52 @@
       "縮小された出力で、保存されたテキスト、行間、およびテンプレート マーカーを確認します。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "HTML ミニファイヤーとは何ですか?",
+    "whatIs": "HTML 圧縮とは何ですか?",
     "whatIsParas": [
-      "<strong>HTML ミニファイア</strong> は、コンパクトな HTML を生成するためのブラウザベースのユーティリティです。通常は文書の解析方法に影響を与えない文字をトリミングすることで、転送または保存のサイズを削減します。",
+      "<strong>HTML 圧縮</strong> は、コンパクトな HTML を生成するためのブラウザベースのユーティリティです。通常は文書の解析方法に影響を与えない文字をトリミングすることで、転送または保存のサイズを削減します。",
       "縮小化は HTML を検証することと同じではありません。ソースの形式が正しくない場合でも、ブラウザーのエラー回復が適用される可能性があります。最も安全なチェックは、ターゲット環境で縮小された結果をレンダリングまたはテストすることです。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "書式設定されたテキスト、テキストのみの電子メール セクション、フレームワークのコメントなど、正確な空白が必要な場所ではマークアップを縮小しないでください。将来の編集に備えて、読み取り可能なソース コピーを保存してください。",
     "example": "例",
     "examplePara": "単純なドキュメントからコメントとインデントが削除されます。",
-    "exampleCode": "--- フォーマット入力 ---\n&lt;!-- ページタイトル --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- ミニファイ出力 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
-    "buttonLabel": "HTML をミニファイ"
+    "exampleCode": "--- フォーマット入力 ---\n&lt;!-- ページタイトル --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 圧縮出力 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "HTML を圧縮"
   },
   "kr": {
-    "title": "HTML 축소기 - Coding.Tools",
-    "description": "렌더링 의도를 유지하면서 주석과 불필요한 공백을 제거하여 HTML를 최소화합니다.",
-    "toolTitle": "HTML 미니파이어",
+    "title": "HTML 압축 - Coding.Tools",
+    "description": "렌더링 의도를 유지하면서 주석과 불필요한 공백을 제거하여 HTML을 최소화합니다.",
+    "toolTitle": "HTML 압축",
     "toolDescription": "브라우저에서 HTML 조각이나 문서를 더 작은 마크업으로 압축하세요.",
     "categoryName": "포맷 및 압축",
-    "inputPlaceholder": "미니파이할 HTML을 붙여넣으세요...",
-    "outputPlaceholder": "미니파이된 HTML이 여기에 표시됩니다...",
+    "inputPlaceholder": "압축할 HTML을 붙여넣으세요...",
+    "outputPlaceholder": "압축된 HTML이 여기에 표시됩니다...",
     "descTitle": "레이아웃을 깨지 않고 HTML 크기 줄이기",
     "descParas": [
-      "<strong>HTML 미니파이어는 피할 수 있는 공백과 주석을 제거하여 마크업을 더욱 간결하게 만듭니다.</strong> 더 작은 텍스트 공간이 필요한 스니펫, 정적 페이지, 이메일 템플릿, 예제 및 생성된 HTML에 유용합니다.",
+      "<strong>HTML 압축은 피할 수 있는 공백과 주석을 제거하여 마크업을 더욱 간결하게 만듭니다.</strong> 더 작은 텍스트 공간이 필요한 스니펫, 정적 페이지, 이메일 템플릿, 예제 및 생성된 HTML에 유용합니다.",
       "HTML 공백은 인라인 레이아웃, 텍스트 렌더링, <code>&lt;pre&gt;</code> 콘텐츠 및 템플릿 구문에 영향을 미칠 수 있습니다. 주석은 일부 프레임워크나 조건부 마크업에 의미가 있을 수도 있으므로 전달하기 전에 출력을 확인하십시오."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "HTML 코드를 입력 편집기에 붙여넣습니다.",
-      "<strong>HTML 미니파이</strong>를 클릭하여 피할 수 있는 서식과 주석을 제거하세요.",
+      "<strong>HTML 압축</strong>를 클릭하여 피할 수 있는 서식과 주석을 제거하세요.",
       "보존된 텍스트, 인라인 간격 및 템플릿 마커에 대한 축소된 출력을 검토합니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "HTML 축소기는 무엇입니까?",
+    "whatIs": "HTML 압축이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>HTML 미니파이어</strong>는 컴팩트한 HTML를 생성하기 위한 브라우저 기반 유틸리티입니다. 일반적으로 문서 구문 분석 방법에 영향을 주지 않는 문자를 잘라서 전송 또는 저장 크기를 줄입니다.",
+      "<strong>HTML 압축</strong>은 컴팩트한 HTML을 생성하기 위한 브라우저 기반 유틸리티입니다. 일반적으로 문서 구문 분석 방법에 영향을 주지 않는 문자를 잘라서 전송 또는 저장 크기를 줄입니다.",
       "축소는 HTML 검증과 동일하지 않습니다. 소스가 잘못된 경우에도 브라우저 오류 복구가 적용될 수 있으며, 가장 안전한 검사는 대상 환경에서 축소된 결과를 렌더링하거나 테스트하는 것입니다."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "미리 서식이 지정된 텍스트, 텍스트 전용 이메일 섹션 또는 프레임워크 주석과 같이 정확한 공백이 필요한 경우 마크업을 축소하지 마세요. 향후 편집을 위해 읽을 수 있는 소스 사본을 보관하세요.",
     "example": "예시",
     "examplePara": "간단한 문서에서는 주석과 들여쓰기가 제거됩니다.",
-    "exampleCode": "--- 포맷 입력 ---\n&lt;!-- 페이지 제목 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 미니파이 출력 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
-    "buttonLabel": "HTML 미니파이"
+    "exampleCode": "--- 포맷 입력 ---\n&lt;!-- 페이지 제목 --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- 압축 출력 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
+    "buttonLabel": "HTML 압축"
   },
   "fr": {
-    "title": "Minificateur HTML - Coding.Tools",
+    "title": "Minifieur HTML - Coding.Tools",
     "description": "Réduisez HTML en supprimant les commentaires et les espaces inutiles tout en préservant l’intention de rendu.",
     "toolTitle": "Minifieur HTML",
     "toolDescription": "Compressez les extraits ou les documents HTML dans un balisage plus petit dans votre navigateur.",
@@ -170,7 +170,7 @@
     "descTitle": "Réduisez la taille de HTML sans casser la disposition",
     "descParas": [
       "<strong>Minifieur HTML supprime les espaces et les commentaires évitables afin que le balisage soit plus compact.</strong> Il est utile pour les extraits de code, les pages statiques, les modèles d'e-mails, les exemples et le HTML généré qui nécessite une empreinte de texte plus petite.",
-      "Les espaces HTML peuvent affecter la mise en page en ligne, le rendu du texte, le contenu <code>&lt;pre&gt;</code> et la syntaxe du modèle. Comments may also be meaningful for some frameworks or conditional markup, so verify output before shipping it."
+      "Les espaces HTML peuvent affecter la mise en page en ligne, le rendu du texte, le contenu <code>&lt;pre&gt;</code> et la syntaxe du modèle. Les commentaires peuvent aussi avoir une signification pour certains frameworks ou balisages conditionnels ; vérifiez donc la sortie avant de la publier."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
@@ -179,13 +179,13 @@
       "Examinez la sortie réduite pour le texte préservé, l'espacement en ligne et les marqueurs de modèle.",
       "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le miniificateur HTML ?",
+    "whatIs": "Qu'est-ce que le minifieur HTML ?",
     "whatIsParas": [
       "<strong>Minifieur HTML</strong> est un utilitaire dans le navigateur qui produit du HTML compact. Il réduit la taille de transfert ou de stockage en supprimant les caractères qui n'affectent généralement pas l'analyse du document.",
-      "Minification is not the same as validating HTML. Si la source est mal formée, la récupération après erreur du navigateur peut toujours s'appliquer et la vérification la plus sûre consiste à restituer ou à tester le résultat réduit dans l'environnement cible."
+      "La minification n'est pas la même chose que la validation HTML. Si la source est mal formée, la récupération après erreur du navigateur peut toujours s'appliquer et la vérification la plus sûre consiste à restituer ou à tester le résultat réduit dans l'environnement cible."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "Avoid minifying markup where exact whitespace is required, such as preformatted text, text-only email sections, or framework comments. Conservez une copie source lisible pour les modifications futures.",
+    "inputNotesPara": "Évitez de minifier le balisage lorsque des espaces exacts sont requis, comme dans du texte préformaté, des sections d’e-mail en texte brut ou des commentaires de framework. Conservez une copie source lisible pour les modifications futures.",
     "example": "Exemple",
     "examplePara": "Les commentaires et l'indentation sont supprimés d'un document simple :",
     "exampleCode": "--- Entrée formatée ---\n&lt;!-- Titre de la page --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Sortie minifiée ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
@@ -207,7 +207,7 @@
     "howToUse": "Anleitung",
     "steps": [
       "Fügen Sie Ihren HTML-Code in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Minifizieren HTML</strong>, um vermeidbare Formatierungen und Kommentare zu entfernen.",
+      "Klicken Sie auf <strong>HTML minifizieren</strong>, um vermeidbare Formatierungen und Kommentare zu entfernen.",
       "Überprüfen Sie die minimierte Ausgabe auf erhaltenen Text, Inline-Abstände und Vorlagenmarkierungen.",
       "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
@@ -221,7 +221,7 @@
     "example": "Beispiel",
     "examplePara": "Kommentare und Einrückungen werden aus einem einfachen Dokument entfernt:",
     "exampleCode": "--- Formatierte Eingabe ---\n&lt;!-- Seitentitel --&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n&lt;/html&gt;\n\n--- Minifizierte Ausgabe ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;/html&gt;",
-    "buttonLabel": "Minifizieren HTML"
+    "buttonLabel": "HTML minifizieren"
   },
   "es": {
     "title": "Minificador HTML - Coding.Tools",

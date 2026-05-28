@@ -60,7 +60,7 @@
     "inputNotesPara": "仅粘贴 CSS，包括 <code>@media</code>、<code>@supports</code> 和 <code>@layer</code> 等 at 规则。将输出复制回项目时，保持选择器和声明顺序不变。",
     "example": "示例",
     "examplePara": "一旦每个声明都放在自己的行上，密集的 CSS 就变得更容易扫描：",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- 压缩输入 ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- 格式化输出 ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "美化 CSS"
   },
   "tw": {
@@ -81,23 +81,23 @@
       "將 CSS 程式碼貼到輸入編輯器中。",
       "按一下 <strong>美化 CSS</strong> 以重排規則和聲明。",
       "檢查輸出中保留的選擇器順序、註解和 at 規則。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是CSS美容儀？",
     "whatIsParas": [
-      "<strong>CSS 美化</strong> 是一個基於瀏覽器的實用程序，用於使樣式表更易於掃描。它將規則區塊和聲明分開，以便您可以檢查選擇器、屬性、值和 at 規則，而無需讀取密集的一行檔案。",
+      "<strong>CSS 美化</strong> 是一個基於瀏覽器的實用工具，用於使樣式表更易於掃描。它將規則區塊和聲明分開，以便您可以檢查選擇器、屬性、值和 at 規則，而無需讀取密集的一行檔案。",
       "CSS 行為取決於級聯順序、特異性、繼承、層和自訂屬性解析。格式化不應重新排序規則或聲明；驗證瀏覽器中重要的樣式表變更。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "僅貼上 CSS，包括 <code>@media</code>、<code>@supports</code> 和 <code>@layer</code> 等 at 規則。將輸出複製回項目時，保持選擇器和宣告順序不變。",
     "example": "範例",
     "examplePara": "一旦每個聲明都放在自己的行上，密集的 CSS 就變得更容易掃描：",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- 壓縮輸入 ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- 格式化輸出 ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "美化 CSS"
   },
   "jp": {
-    "title": "CSS 美容器 - Coding.Tools",
-    "description": "読みやすいセレクター、宣言、ブロック、スペースを使用して CSS ルールを美しくします。",
+    "title": "CSS 整形ツール - Coding.Tools",
+    "description": "読みやすいセレクター、宣言、ブロック、スペースを使用して CSS ルールを整形します。",
     "toolTitle": "CSS 整形",
     "toolDescription": "コンパクトな CSS を読みやすいルール、セレクター、宣言にフォーマットします。",
     "categoryName": "整形と圧縮",
@@ -106,7 +106,7 @@
     "descTitle": "スタイルシートを読みやすく、レビューしやすくする",
     "descParas": [
       "<strong>CSS 整形 は、コンパクトな CSS を読み取り可能なセレクター、宣言ブロック、プロパティ、および値に拡張します。</strong> コピーされたスタイルのデバッグ、生成された CSS のレビュー、フレームワーク出力の検査、またはサンプルの準備に役立ちます。",
-      "カスケード セマンティクスではなく、レイアウトを美しく変更します。セレクターの順序、重複した宣言、カスタム プロパティ、コメント、メディア クエリ、およびレイヤーの順序は、最終的なスタイルに影響を与える可能性があるため、そのままにしておく必要があります。"
+      "カスケード セマンティクスではなく、レイアウトを整えます。セレクターの順序、重複した宣言、カスタム プロパティ、コメント、メディア クエリ、およびレイヤーの順序は、最終的なスタイルに影響を与える可能性があるため、そのままにしておく必要があります。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -115,7 +115,7 @@
       "保存されたセレクターの順序、コメント、および at-rules の出力を確認します。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "CSS ビューティファイヤーとは何ですか?",
+    "whatIs": "CSS 整形ツールとは何ですか?",
     "whatIsParas": [
       "<strong>CSS 整形</strong> は、スタイルシートをスキャンしやすくするためのブラウザベースのユーティリティです。ルール ブロックと宣言が分離されているため、高密度の 1 行ファイルを読み取らなくても、セレクター、プロパティ、値、および at-rules を検査できます。",
       "CSS の動作は、カスケード順序、特異性、継承、レイヤー、およびカスタム プロパティの解決によって異なります。書式設定では、ルールや宣言を並べ替えてはなりません。ブラウザでの重要なスタイルシートの変更を確認します。"
@@ -124,12 +124,12 @@
     "inputNotesPara": "<code>@media</code>、<code>@supports</code>、<code>@layer</code> などのアットルールを含む、CSS のみを貼り付けます。出力をプロジェクトにコピーし直すときは、セレクターと宣言の順序を変更しないでください。",
     "example": "例",
     "examplePara": "各宣言を独自の行に配置すると、密集 CSS のスキャンが容易になります。",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- 圧縮入力 ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- 整形出力 ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "CSS を整形"
   },
   "kr": {
-    "title": "CSS 뷰티파이어 - Coding.Tools",
-    "description": "읽기 쉬운 선택기, 선언, 블록 및 공백을 사용하여 CSS 규칙을 아름답게 만듭니다.",
+    "title": "CSS 포맷터 - Coding.Tools",
+    "description": "읽기 쉬운 선택기, 선언, 블록 및 공백을 사용하여 CSS 규칙을 읽기 좋게 정리합니다.",
     "toolTitle": "CSS 포맷터",
     "toolDescription": "컴팩트 CSS를 읽을 수 있는 규칙, 선택기 및 선언으로 형식화합니다.",
     "categoryName": "포맷 및 압축",
@@ -147,7 +147,7 @@
       "보존된 선택기 순서, 주석 및 at-규칙에 대한 출력을 검토합니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "CSS 뷰티파이어란 무엇인가요?",
+    "whatIs": "CSS 포맷터란 무엇인가요?",
     "whatIsParas": [
       "<strong>CSS 포맷터</strong>는 스타일시트를 더 쉽게 스캔할 수 있도록 해주는 브라우저 기반 유틸리티입니다. 규칙 블록과 선언을 분리하므로 조밀한 한 줄 파일을 읽지 않고도 선택기, 속성, 값 및 at-규칙을 검사할 수 있습니다.",
       "CSS 동작은 계단식 순서, 특이성, 상속, 레이어 및 사용자 정의 속성 확인에 따라 달라집니다. 형식화로 인해 규칙이나 선언의 순서가 바뀌어서는 안 됩니다. 브라우저에서 중요한 스타일시트 변경 사항을 확인합니다."
@@ -156,7 +156,7 @@
     "inputNotesPara": "<code>@media</code>, <code>@supports</code> 및 <code>@layer</code>와 같은 at-규칙을 포함하여 CSS만 붙여넣습니다. 출력을 프로젝트에 다시 복사할 때 선택기와 선언 순서를 변경하지 않고 유지합니다.",
     "example": "예시",
     "examplePara": "각 선언이 자체 라인에 배치되면 조밀한 CSS를 스캔하기가 더 쉬워집니다.",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- 압축 입력 ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- 포맷 출력 ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "CSS 포맷"
   },
   "fr": {
@@ -188,7 +188,7 @@
     "inputNotesPara": "Collez uniquement CSS, y compris les règles at telles que <code>@media</code>, <code>@supports</code> et <code>@layer</code>. Conservez le sélecteur et l’ordre de déclaration inchangés lors de la copie de la sortie dans un projet.",
     "example": "Exemple",
     "examplePara": "Le CSS dense devient plus facile à analyser une fois que chaque déclaration est placée sur sa propre ligne :",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- Entrée minifiée ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Sortie formatée ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "Embellir CSS"
   },
   "de": {
@@ -220,7 +220,7 @@
     "inputNotesPara": "Fügen Sie nur CSS ein, einschließlich At-Regeln wie <code>@media</code>, <code>@supports</code> und <code>@layer</code>. Behalten Sie die Selektor- und Deklarationsreihenfolge beim Zurückkopieren der Ausgabe in ein Projekt bei.",
     "example": "Beispiel",
     "examplePara": "Dichtes CSS lässt sich leichter scannen, sobald jede Deklaration in einer eigenen Zeile steht:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- Minifizierte Eingabe ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Formatierte Ausgabe ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "Verschönern CSS"
   },
   "es": {
@@ -252,7 +252,7 @@
     "inputNotesPara": "Pegue solo CSS, incluidas reglas como <code>@media</code>, <code>@supports</code> y <code>@layer</code>. Mantenga el orden del selector y de la declaración sin cambios al copiar el resultado nuevamente en un proyecto.",
     "example": "Ejemplo",
     "examplePara": "El CSS denso se vuelve más fácil de escanear una vez que cada declaración se coloca en su propia línea:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- Entrada minificada ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Salida formateada ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "Embellecer CSS"
   },
   "pt": {
@@ -265,7 +265,7 @@
     "outputPlaceholder": "O CSS embelezado aparecerá aqui...",
     "descTitle": "Torne as folhas de estilo mais fáceis de ler e revisar",
     "descParas": [
-      "<strong>CSS O Beautifier expande o CSS compacto em seletores legíveis, blocos de declaração, propriedades e valores.</strong> Ajuda na depuração de estilos copiados, na revisão de CSS gerado, na inspeção da saída da estrutura ou na preparação de exemplos.",
+      "<strong>O formatador CSS expande CSS compacto em seletores legíveis, blocos de declaração, propriedades e valores.</strong> Ajuda na depuração de estilos copiados, na revisão de CSS gerado, na inspeção da saída da estrutura ou na preparação de exemplos.",
       "O embelezamento altera o layout, não a semântica em cascata. A ordem do seletor, as declarações duplicadas, as propriedades personalizadas, os comentários, as consultas de mídia e a ordem das camadas devem permanecer intactas porque esses detalhes podem afetar os estilos finais."
     ],
     "howToUse": "Como usar",
@@ -284,7 +284,7 @@
     "inputNotesPara": "Cole apenas CSS, incluindo regras como <code>@media</code>, <code>@supports</code> e <code>@layer</code>. Mantenha a ordem do seletor e da declaração inalterada ao copiar a saída de volta para um projeto.",
     "example": "Exemplo",
     "examplePara": "Denso CSS torna-se mais fácil de verificar quando cada declaração é colocada em sua própria linha:",
-    "exampleCode": "--- Minified Input ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Beautified Output ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
+    "exampleCode": "--- Entrada minificada ---\nbody{margin:0;padding:0;font-size:16px;}.container{max-width:1200px;}\n\n--- Saída formatada ---\nbody {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n}\n\n.container {\n  max-width: 1200px;\n}",
     "buttonLabel": "Embelezar CSS"
   }
 }

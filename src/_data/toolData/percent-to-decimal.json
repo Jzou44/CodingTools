@@ -45,7 +45,7 @@
     "steps": [
       "输入您要转换的百分比值。",
       "查看该值除以 100 后的小数结果。",
-      "复制小数值，或在转换另一个百分比之前清除该字段。"
+      "复制小数值，或在转换另一个百分比之前清空输入。"
     ],
     "whatIs": "什么是百分比到小数的转换？",
     "whatIsParas": [
@@ -73,18 +73,18 @@
     "howToUse": "如何使用",
     "steps": [
       "輸入您要轉換的百分比值。",
-      "查看該值除以 100 後的小數結果。",
-      "複製小數值，或在轉換另一個百分比之前清除該欄位。"
+      "檢視該值除以 100 後的小數結果。",
+      "複製小數值，或在轉換另一個百分比之前清空輸入。"
     ],
     "whatIs": "什麼是百分比到小數的轉換？",
     "whatIsParas": [
       "<strong>Percent</strong> 表示每百。將百分比轉換為小數會將數值除以 <code>100</code>，因此 <code>75%</code> 變成 <code>0.75</code>，<code>5%</code> 變成 <code>0.05</code>。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "使用數字百分比值並檢查輸入中是否接受百分比符號。非常小的或高精度的百分比可能會產生很長的小數，因此請確認目標公式所需的捨入。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "數字百分比值 75 是四分之三，因此它的小數形式是 0.75：",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- 百分比輸入 ---\n75%\n\n--- 十進位輸出 ---\n0.75"
   },
   "jp": {
     "title": "パーセントから 10 進数へのコンバーター - Coding.Tools",
@@ -99,7 +99,7 @@
       "<strong>パーセントから小数 は、100 で割ることによりパーセンテージを 10 進形式に変換します。</strong> 10 進表記を必要とする数式、スプレッドシート、確率、比率、割引、レート、および API 入力に使用します。",
       "パーセント記号は表示規則であり、多くのパーサーでは数値の一部ではありません。 <code>%</code> の入力が拒否された場合は、<code>75%</code> の場合は <code>75</code> のように、番号のみを入力します。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "変換したいパーセンテージ値を入力します。",
       "値を 100 で割った後の 10 進数の結果を確認します。",
@@ -109,16 +109,16 @@
     "whatIsParas": [
       "<strong>Percent</strong> は 100 あたりを意味します。パーセントを 10 進数に変換すると、数値が <code>100</code> で除算されるため、<code>75%</code> は <code>0.75</code> になり、<code>5%</code> は <code>0.05</code> になります。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "パーセント数値を使用し、パーセント記号が入力で受け入れられるかどうかを確認します。非常に小さいパーセンテージまたは高精度のパーセンテージでは長い小数が生成される可能性があるため、ターゲットの数式で必要な丸めを確認してください。",
     "example": "例",
     "examplePara": "パーセント数値の 75 は 4 分の 3 に相当するため、その 10 進数形式は 0.75 になります。",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- パーセント入力 ---\n75%\n\n--- 10進数出力 ---\n0.75"
   },
   "kr": {
-    "title": "백분율을 소수로 변환하는 변환기 - Coding.Tools",
+    "title": "퍼센트-소수 변환기 - Coding.Tools",
     "description": "백분율 값을 100으로 나누어 소수로 변환합니다.",
-    "toolTitle": "퍼센트에서 소수",
+    "toolTitle": "퍼센트 → 소수",
     "toolDescription": "계산, 공식 및 데이터 입력을 위해 백분율을 소수 값으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "백분율을 입력하세요(예: 75%, 50)...",
@@ -136,13 +136,13 @@
     ],
     "whatIs": "백분율을 십진수로 변환하면 무엇인가요?",
     "whatIsParas": [
-      "<strong>Percent</strong>는 100%를 의미합니다. 백분율을 소수로 변환하면 숫자 값이 <code>100</code>로 나누어지므로 <code>75%</code>는 <code>0.75</code>가 되고 <code>5%</code>는 <code>0.05</code>가 됩니다."
+      "<strong>Percent</strong>은 100%를 의미합니다. 백분율을 소수로 변환하면 숫자 값이 <code>100</code>로 나누어지므로 <code>75%</code>는 <code>0.75</code>가 되고 <code>5%</code>는 <code>0.05</code>가 됩니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "숫자 백분율 값을 사용하고 입력에 백분율 기호가 허용되는지 확인하십시오. 매우 작거나 정밀도가 높은 백분율은 긴 소수를 생성할 수 있으므로 목표 공식에 필요한 반올림을 확인하십시오.",
     "example": "예",
     "examplePara": "숫자 백분율 값 75는 3/4이므로 소수 형식은 0.75입니다.",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- 퍼센트 입력 ---\n75%\n\n--- 10진수 출력 ---\n0.75"
   },
   "fr": {
     "title": "Convertisseur de pourcentage en décimal - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Utilisez une valeur de pourcentage numérique et vérifiez si le symbole de pourcentage est accepté dans l'entrée. Des pourcentages très petits ou de haute précision peuvent produire de longues décimales, alors confirmez l'arrondi requis par votre formule cible.",
     "example": "Exemple",
     "examplePara": "Une valeur de pourcentage numérique de 75 équivaut à trois quarts, sa forme décimale est donc 0,75 :",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- Entrée pourcentage ---\n75%\n\n--- Sortie décimale ---\n0.75"
   },
   "de": {
     "title": "Prozent-zu-Dezimal-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Verwenden Sie einen numerischen Prozentwert und prüfen Sie, ob das Prozentzeichen in der Eingabe akzeptiert wird. Sehr kleine oder hochpräzise Prozentsätze können zu langen Dezimalstellen führen. Bestätigen Sie daher die für Ihre Zielformel erforderliche Rundung.",
     "example": "Beispiel",
     "examplePara": "Ein numerischer Prozentwert von 75 entspricht drei Vierteln, daher ist seine Dezimalform 0,75:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- Prozenteingabe ---\n75%\n\n--- Dezimalausgabe ---\n0.75"
   },
   "es": {
     "title": "Convertidor de porcentaje a decimal - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Utilice un valor de porcentaje numérico y compruebe si el símbolo de porcentaje se acepta en la entrada. Los porcentajes muy pequeños o de alta precisión pueden producir decimales largos, así que confirme el redondeo requerido por su fórmula objetivo.",
     "example": "Ejemplo",
     "examplePara": "Un valor porcentual numérico de 75 es tres cuartos, por lo que su forma decimal es 0,75:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- Entrada de porcentaje ---\n75%\n\n--- Salida decimal ---\n0.75"
   },
   "pt": {
     "title": "Conversor de porcentagem para decimal - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Use um valor percentual numérico e verifique se o símbolo de porcentagem é aceito na entrada. Porcentagens muito pequenas ou de alta precisão podem produzir decimais longos, portanto, confirme o arredondamento exigido pela sua fórmula de destino.",
     "example": "Exemplo",
     "examplePara": "Um valor percentual numérico de 75 equivale a três quartos, portanto sua forma decimal é 0,75:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Decimal Output ---\n0.75"
+    "exampleCode": "--- Entrada de porcentagem ---\n75%\n\n--- Saída decimal ---\n0.75"
   }
 }

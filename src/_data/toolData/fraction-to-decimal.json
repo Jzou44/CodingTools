@@ -54,7 +54,7 @@
     "inputNotes": "输入说明",
     "inputNotesPara": "使用数字分子和分母值，并且不要使用零作为分母。对于重复小数，在将值复制到生产数据之前确定合适的位数。",
     "example": "示例",
-    "examplePara": "整数 1 和小数 3/4 的混合数转换为小数 1.75：",
+    "examplePara": "分数 <code>3/4</code> 转换为终止小数 <code>0.75</code>：",
     "exampleCode": "--- 分数输入 ---\n3/4\n\n--- 小数 ---\n0.75\n\n--- 百分比 ---\n75%"
   },
   "tw": {
@@ -73,21 +73,21 @@
     "howToUse": "如何使用",
     "steps": [
       "輸入可選的整數部分，然後輸入分子和分母。",
-      "查看從分數欄位更新的小數結果。",
+      "檢視從分數欄位更新的小數結果。",
       "複製小數值，或在轉換另一個分數之前清除欄位。"
     ],
     "whatIs": "什麼是分數到小數的轉換？",
     "whatIsParas": [
       "<strong>分數到十進位轉換</strong> 透過分子除以分母將比率重寫為以 10 為基數的數字。混合數首先加上整數部分，因此 <code>1 3/4</code> 變成 <code>1.75</code>。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "使用數字分子和分母值，並且不要使用零作為分母。對於重複小數，在將值複製到生產資料之前確定合適的位數。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "整數 1 和小數 3/4 的混合數轉換為小數 1.75：",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- 分數輸入 ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- 十進位輸出 ---\n1.75"
   },
   "jp": {
-    "title": "分数から小数へのコンバータ - Coding.Tools",
+    "title": "分数から小数へのコンバーター - Coding.Tools",
     "description": "ブラウザで正分数、不当分数、または帯分数を 10 進数値に変換します。",
     "toolTitle": "分数から小数",
     "toolDescription": "整数、分子、分母フィールドを 10 進数の結果に変換します。",
@@ -99,7 +99,7 @@
       "<strong>分数から小数へは、分子を分母で割り、任意の整数部分を加算して小数値を生成します。</strong> 測定、比率、レシピ、教室での作業、およびスプレッドシートやコードに値を入力する前の簡単なチェックに使用します。",
       "分母をゼロにすることはできません。 <code>3/4 = 0.75</code> のように、きれいに終了する分数もあれば、<code>1/3</code> のように繰り返す分数もあります。長く繰り返される小数は、ブラウザの数値形式によって四捨五入されたり、制限されたりする場合があります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "オプションの整数部分を入力し、次に分子と分母を入力します。",
       "小数フィールドから更新される 10 進数の結果を確認します。",
@@ -109,16 +109,16 @@
     "whatIsParas": [
       "<strong>分数から 10 進数への変換</strong> は、分子を分母で割ることにより、比率を 10 進数に書き換えます。帯分数はまず整数部分を加算するので、<code>1 3/4</code> は <code>1.75</code> になります。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "分子と分母の数値を使用し、分母としてゼロを使用しないでください。小数を繰り返す場合は、実稼働データに値をコピーする前に、適切な桁数を決定してください。",
     "example": "例",
     "examplePara": "整数 1 と分数 3/4 を含む混合数は、10 進数の 1.75 に変換されます。",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- 分数入力 ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- 10進数出力 ---\n1.75"
   },
   "kr": {
-    "title": "분수를 소수로 변환하는 변환기 - Coding.Tools",
+    "title": "분수-소수 변환기 - Coding.Tools",
     "description": "브라우저에서 진분수, 가분수, 대분수를 소수 값으로 변환하세요.",
-    "toolTitle": "분수에서 소수",
+    "toolTitle": "분수 → 소수",
     "toolDescription": "정수, 분자, 분모 필드를 소수 결과로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "",
@@ -134,15 +134,15 @@
       "분수 필드에서 업데이트되는 소수 결과를 검토합니다.",
       "소수 값을 복사하거나 다른 분수를 변환하기 전에 필드를 지우십시오."
     ],
-    "whatIs": "분수를 십진수로 변환이란 무엇입니까?",
+    "whatIs": "분수를 십진수로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>분수를 십진수로 변환</strong>는 분자를 분모로 나누어 비율을 10진수로 다시 씁니다. 대분수는 먼저 정수 부분을 더하므로 <code>1 3/4</code>는 <code>1.75</code>가 됩니다."
+      "<strong>분수를 십진수로 변환</strong>은 분자를 분모로 나누어 비율을 10진수로 다시 씁니다. 대분수는 먼저 정수 부분을 더하므로 <code>1 3/4</code>는 <code>1.75</code>가 됩니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "숫자형 분자 및 분모 값을 사용하고 0을 분모로 사용하지 마십시오. 반복 소수점의 경우 값을 생산 데이터에 복사하기 전에 적절한 자릿수를 결정하십시오.",
     "example": "예",
     "examplePara": "정수 1과 분수 3/4가 있는 혼합 숫자는 십진수 1.75로 변환됩니다.",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- 분수 입력 ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- 10진수 출력 ---\n1.75"
   },
   "fr": {
     "title": "Convertisseur de fractions en décimales - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Utilisez des valeurs numériques au numérateur et au dénominateur et n’utilisez pas zéro comme dénominateur. Pour répéter des décimales, décidez du nombre de chiffres appropriés avant de copier la valeur dans les données de production.",
     "example": "Exemple",
     "examplePara": "Un nombre fractionnaire avec l'entier 1 et la fraction 3/4 est converti en décimal 1,75 :",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- Entrée fraction ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Sortie décimale ---\n1.75"
   },
   "de": {
     "title": "Bruch-Dezimal-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Verwenden Sie numerische Zähler- und Nennerwerte und nicht Null als Nenner. Entscheiden Sie bei sich wiederholenden Dezimalstellen, wie viele Stellen angemessen sind, bevor Sie den Wert in die Produktionsdaten kopieren.",
     "example": "Beispiel",
     "examplePara": "Eine gemischte Zahl mit der Ganzzahl 1 und dem Bruch 3/4 wird in die Dezimalzahl 1,75 umgewandelt:",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- Brucheingabe ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Dezimalausgabe ---\n1.75"
   },
   "es": {
     "title": "Convertidor de fracción a decimal - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Utilice valores numéricos de numerador y denominador, y no utilice cero como denominador. Para decimales periódicos, decida cuántos dígitos son apropiados antes de copiar el valor en los datos de producción.",
     "example": "Ejemplo",
     "examplePara": "Un número mixto con entero 1 y fracción 3/4 se convierte a decimal 1,75:",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- Entrada de fracción ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Salida decimal ---\n1.75"
   },
   "pt": {
     "title": "Conversor de fração para decimal - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Use valores numéricos de numerador e denominador e não use zero como denominador. Para números decimais repetidos, decida quantos dígitos são apropriados antes de copiar o valor nos dados de produção.",
     "example": "Exemplo",
     "examplePara": "Um número misto com inteiro 1 e fração 3/4 é convertido para decimal 1,75:",
-    "exampleCode": "--- Fraction Input ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Decimal Output ---\n1.75"
+    "exampleCode": "--- Entrada de fração ---\nInteger: 1\nNumerator: 3\nDenominator: 4\n\n--- Saída decimal ---\n1.75"
   }
 }

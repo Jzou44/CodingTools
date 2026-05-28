@@ -33,7 +33,7 @@
   },
   "cn": {
     "title": "XML 压缩器 - Coding.Tools",
-    "description": "通过删除标签之间可避免的间距来缩小 XML，同时保留标记内容。",
+    "description": "通过删除标签之间可避免的间距来压缩 XML，同时保留标记内容。",
     "toolTitle": "XML 压缩",
     "toolDescription": "压缩 XML 标记以在浏览器中获得更小的片段和有效负载。",
     "categoryName": "格式化与压缩",
@@ -42,22 +42,22 @@
     "descTitle": "紧凑 XML，无需展平有意义的文本",
     "descParas": [
       "<strong>XML 压缩器删除了可避免的缩进和换行符，因此 XML 占用更少的空间。</strong> 它对于紧凑示例、嵌入式 XML 字符串、请求正文和生成的配置片段非常有用。",
-      "文本节点内的空格在 XML 中可能有意义，特别是在混合内容、预格式化文本、CDATA 和签名文档中。仅当消费者不依赖于精确的空白或规范的 XML 输出时才进行缩小。"
+      "文本节点内的空格在 XML 中可能有意义，特别是在混合内容、预格式化文本、CDATA 和签名文档中。仅当消费者不依赖于精确的空白或规范的 XML 输出时才进行压缩。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 XML 数据粘贴到输入编辑器中。",
       "单击 <strong>压缩 XML</strong> 以删除可避免的格式空白。",
-      "缩小后的 XML 在输出编辑器中显示为紧凑标记。",
+      "压缩后的 XML 在输出编辑器中显示为紧凑标记。",
       "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
     "whatIs": "XML 压缩器是什么？",
     "whatIsParas": [
       "<strong>XML 压缩</strong> 是一个基于浏览器的实用程序，用于将格式化的 XML 转换为较小的文本表示形式。它保留标签、属性和元素内容，同时尽可能减少表示空白。",
-      "与 JSON 缩小不同，XML 缩小有更多注意事项，因为文本节点和仅空白节点可能对某些应用程序有意义。在生产工作流程中使用输出之前，使用目标解析器验证输出。"
+      "与 JSON 压缩不同，XML 压缩有更多注意事项，因为文本节点和仅空白节点可能对某些应用程序有意义。在生产工作流程中使用输出之前，使用目标解析器验证输出。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "使用格式良好的 XML 并避免缩小签名、规范化或精确文本间距很重要的文档。处理前删除复制的标签或传输标头。",
+    "inputNotesPara": "使用格式良好的 XML 并避免压缩签名、规范化或精确文本间距很重要的文档。处理前删除复制的标签或传输标头。",
     "example": "示例",
     "examplePara": "可以通过删除标签之间的缩进来压缩简单的元素树：",
     "exampleCode": "--- 格式化输入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 压缩输出 ---\n<root><name>John</name><age>30</age></root>",
@@ -65,47 +65,47 @@
   },
   "tw": {
     "title": "XML 壓縮器 - Coding.Tools",
-    "description": "透過刪除標籤之間可避免的間距來縮小 XML，同時保留標記內容。",
+    "description": "透過刪除標籤之間可避免的間距來壓縮 XML，同時保留標記內容。",
     "toolTitle": "XML 壓縮",
     "toolDescription": "壓縮 XML 標記以在瀏覽器中獲得更小的片段和有效負載。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要壓縮的 XML...",
     "outputPlaceholder": "壓縮後的 XML 將在此顯示...",
-    "descTitle": "緊湊 XML，無需展平有意義的文本",
+    "descTitle": "緊湊 XML，無需展平有意義的文字",
     "descParas": [
       "<strong>XML 壓縮器刪除了可避免的縮排和換行符，因此 XML 佔用更少的空間。</strong> 它對於緊湊範例、嵌入式 XML 字串、請求正文和產生的設定片段非常有用。",
-      "文字節點內的空格在 XML 中可能有意義，特別是在混合內容、預先格式化文字、CDATA 和簽名文件中。僅當消費者不依賴精確的空白或規範的 XML 輸出時才縮小。"
+      "文字節點內的空格在 XML 中可能有意義，特別是在混合內容、預先格式化文字、CDATA 和簽名文件中。僅當消費者不依賴精確的空白或規範的 XML 輸出時才壓縮。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將 XML 資料貼到輸入編輯器中。",
       "點選 <strong>壓縮 XML</strong> 以刪除可避免的格式空白。",
-      "縮小後的 XML 在輸出編輯器中顯示為緊湊標記。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "壓縮後的 XML 在輸出編輯器中顯示為緊湊標記。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "XML 壓縮器是什麼？",
     "whatIsParas": [
-      "<strong>XML 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將格式化的 XML 轉換為較小的文字表示形式。它保留標籤、屬性和元素內容，同時盡可能減少表示空白。",
-      "與 JSON 縮小不同，XML 縮小有更多注意事項，因為文字節點和僅空白節點可能對某些應用程式有意義。在生產工作流程中使用輸出之前，使用目標解析器驗證輸出。"
+      "<strong>XML 壓縮</strong> 是一個基於瀏覽器的實用工具，用於將格式化的 XML 轉換為較小的文字表示形式。它保留標籤、屬性和元素內容，同時盡可能減少表示空白。",
+      "與 JSON 壓縮不同，XML 壓縮有更多注意事項，因為文字節點和僅空白節點可能對某些應用程式有意義。在生產工作流程中使用輸出之前，使用目標解析器驗證輸出。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "使用格式良好的 XML 並避免縮小簽章、規範化或精確文字間距很重要的文件。處理前刪除複製的標籤或傳輸標頭。",
+    "inputNotesPara": "使用格式良好的 XML 並避免壓縮簽章、規範化或精確文字間距很重要的文件。處理前刪除複製的標籤或傳輸標頭。",
     "example": "範例",
     "examplePara": "可以透過刪除標籤之間的縮進來壓縮簡單的元素樹：",
     "exampleCode": "--- 格式化輸入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 壓縮輸出 ---\n<root><name>John</name><age>30</age></root>",
     "buttonLabel": "壓縮 XML"
   },
   "jp": {
-    "title": "XML ミニファイヤー - Coding.Tools",
+    "title": "XML 圧縮 - Coding.Tools",
     "description": "マークアップ コンテンツを維持しながら、タグ間の回避可能なスペースを削除して、XML を縮小します。",
-    "toolTitle": "XML ミニファイア",
+    "toolTitle": "XML 圧縮",
     "toolDescription": "ブラウザーでより小さなスニペットとペイロードを得るには、XML マークアップを圧縮します。",
     "categoryName": "整形と圧縮",
-    "inputPlaceholder": "ミニファイする XML を貼り付け...",
-    "outputPlaceholder": "ミニファイされた XML がここに表示されます...",
+    "inputPlaceholder": "圧縮する XML を貼り付け...",
+    "outputPlaceholder": "圧縮された XML がここに表示されます...",
     "descTitle": "意味のあるテキストを平坦化せずにコンパクトな XML",
     "descParas": [
-      "<strong>XML ミニファイア は、回避可能なインデントと改行を削除するため、XML のスペースが少なくなります。</strong> これは、コンパクトな例、埋め込まれた XML 文字列、リクエスト本文、および生成された構成スニペットに役立ちます。",
+      "<strong>XML 圧縮 は、回避可能なインデントと改行を削除するため、XML のスペースが少なくなります。</strong> これは、コンパクトな例、埋め込まれた XML 文字列、リクエスト本文、および生成された構成スニペットに役立ちます。",
       "テキスト ノード内の空白は、XML では、特に混合コンテンツ、フォーマット済みテキスト、CDATA、署名付きドキュメントで意味を持ちます。コンシューマーが正確な空白または正規の XML 出力に依存しない場合にのみ縮小します。"
     ],
     "howToUse": "使い方",
@@ -115,52 +115,52 @@
       "縮小された XML は、出力エディターにコンパクトなマークアップとして表示されます。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "XML ミニファイヤーとは何ですか?",
+    "whatIs": "XML 圧縮とは何ですか?",
     "whatIsParas": [
-      "<strong>XML ミニファイア</strong> は、フォーマットされた XML をより小さなテキスト表現に変換するためのブラウザベースのユーティリティです。可能な場合はプレゼンテーションの空白を減らしながら、タグ、属性、要素のコンテンツを保持します。",
+      "<strong>XML 圧縮</strong> は、フォーマットされた XML をより小さなテキスト表現に変換するためのブラウザベースのユーティリティです。可能な場合はプレゼンテーションの空白を減らしながら、タグ、属性、要素のコンテンツを保持します。",
       "JSON 縮小化とは異なり、XML 縮小化にはさらに多くの注意事項があります。これは、アプリケーションによってはテキスト ノードや空白のみのノードが意味を持つ可能性があるためです。実稼働ワークフローで使用する前に、ターゲット パーサーを使用して出力を検証します。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "整形式の XML を使用し、署名、正規化、正確なテキスト間隔が重要な文書の縮小は避けてください。処理する前に、コピーしたラベルまたはトランスポート ヘッダーを削除します。",
     "example": "例",
     "examplePara": "単純な要素ツリーは、タグ間のインデントを削除することで圧縮できます。",
-    "exampleCode": "--- フォーマット入力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- ミニファイ出力 ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "XML をミニファイ"
+    "exampleCode": "--- フォーマット入力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 圧縮出力 ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "XML を圧縮"
   },
   "kr": {
-    "title": "XML 축소기 - Coding.Tools",
-    "description": "마크업 콘텐츠를 유지하면서 태그 사이에 피할 수 있는 공백을 제거하여 XML를 축소합니다.",
-    "toolTitle": "XML 미니파이어",
+    "title": "XML 압축 - Coding.Tools",
+    "description": "마크업 콘텐츠를 유지하면서 태그 사이에 피할 수 있는 공백을 제거하여 XML을 축소합니다.",
+    "toolTitle": "XML 압축",
     "toolDescription": "브라우저에서 더 작은 조각과 페이로드를 위해 XML 마크업을 압축합니다.",
     "categoryName": "포맷 및 압축",
-    "inputPlaceholder": "미니파이할 XML을 붙여넣으세요...",
-    "outputPlaceholder": "미니파이된 XML이 여기에 표시됩니다...",
+    "inputPlaceholder": "압축할 XML을 붙여넣으세요...",
+    "outputPlaceholder": "압축된 XML이 여기에 표시됩니다...",
     "descTitle": "의미 있는 텍스트를 병합하지 않고 컴팩트한 XML",
     "descParas": [
-      "<strong>XML 축소기는 피할 수 있는 들여쓰기와 줄 바꿈을 제거하여 XML가 공간을 덜 차지하도록 합니다.</strong> 압축 예제, 내장된 XML 문자열, 요청 본문 및 생성된 구성 조각에 유용합니다.",
+      "<strong>XML 압축 도구는 피할 수 있는 들여쓰기와 줄 바꿈을 제거하여 XML가 공간을 덜 차지하도록 합니다.</strong> 압축 예제, 내장된 XML 문자열, 요청 본문 및 생성된 구성 조각에 유용합니다.",
       "텍스트 노드 내부의 공백은 XML에서 특히 혼합 콘텐츠, 미리 서식이 지정된 텍스트, CDATA 및 서명된 문서에서 의미가 있을 수 있습니다. 소비자가 정확한 공백이나 표준 XML 출력에 의존하지 않는 경우에만 축소하세요."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "XML 데이터를 입력 편집기에 붙여넣습니다.",
-      "피할 수 있는 서식 공백을 제거하려면 <strong>XML 미니파이</strong>를 클릭하세요.",
+      "피할 수 있는 서식 공백을 제거하려면 <strong>XML 압축</strong>를 클릭하세요.",
       "축소된 XML는 출력 편집기에 압축 마크업으로 표시됩니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "XML 축소기는 무엇입니까?",
+    "whatIs": "XML 압축이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>XML 미니파이어</strong>는 형식이 지정된 XML를 더 작은 텍스트 표현으로 변환하는 브라우저 기반 유틸리티입니다. 가능한 경우 프레젠테이션 공백을 줄이면서 태그, 속성 및 요소 콘텐츠를 유지합니다.",
+      "<strong>XML 압축</strong>은 형식이 지정된 XML을 더 작은 텍스트 표현으로 변환하는 브라우저 기반 유틸리티입니다. 가능한 경우 프레젠테이션 공백을 줄이면서 태그, 속성 및 요소 콘텐츠를 유지합니다.",
       "JSON 축소와 달리 XML 축소에는 텍스트 노드와 공백 전용 노드가 일부 애플리케이션에 의미를 전달할 수 있으므로 더 많은 주의 사항이 있습니다. 프로덕션 워크플로에서 사용하기 전에 대상 파서로 출력을 검증합니다."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "올바른 형식의 XML를 사용하고 서명, 정규화 또는 정확한 텍스트 간격이 중요한 문서를 축소하지 마세요. 처리하기 전에 복사된 라벨이나 전송 헤더를 제거하세요.",
+    "inputNotesPara": "올바른 형식의 XML을 사용하고 서명, 정규화 또는 정확한 텍스트 간격이 중요한 문서를 축소하지 마세요. 처리하기 전에 복사된 라벨이나 전송 헤더를 제거하세요.",
     "example": "예시",
     "examplePara": "태그 사이의 들여쓰기를 제거하여 간단한 요소 트리를 압축할 수 있습니다.",
-    "exampleCode": "--- 포맷 입력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 미니파이 출력 ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "XML 미니파이"
+    "exampleCode": "--- 포맷 입력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 압축 출력 ---\n<root><name>John</name><age>30</age></root>",
+    "buttonLabel": "XML 압축"
   },
   "fr": {
-    "title": "Minificateur XML - Coding.Tools",
+    "title": "Minifieur XML - Coding.Tools",
     "description": "Réduisez XML en supprimant l’espacement évitable entre les balises tout en préservant le contenu du balisage.",
     "toolTitle": "Minifieur XML",
     "toolDescription": "Compressez le balisage XML pour des extraits et des charges utiles plus petits dans votre navigateur.",
@@ -179,7 +179,7 @@
       "Le XML minifié apparaît dans l’éditeur de sortie sous forme de balisage compact.",
       "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le miniificateur XML ?",
+    "whatIs": "Qu'est-ce que le minifieur XML ?",
     "whatIsParas": [
       "<strong>Minifieur XML</strong> est un utilitaire basé sur un navigateur permettant de transformer le XML formaté en une représentation textuelle plus petite. Il conserve les balises, les attributs et le contenu des éléments tout en réduisant les espaces de présentation lorsque cela est possible.",
       "Contrairement à la minification JSON, la minification XML comporte plus de mises en garde, car les nœuds de texte et les nœuds contenant uniquement des espaces peuvent avoir une signification pour certaines applications. Validez la sortie avec l'analyseur cible avant de l'utiliser dans les flux de production."
@@ -207,7 +207,7 @@
     "howToUse": "Anleitung",
     "steps": [
       "Fügen Sie Ihre XML-Daten in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Minifizieren XML</strong>, um vermeidbare Leerzeichen bei der Formatierung zu entfernen.",
+      "Klicken Sie auf <strong>XML minifizieren</strong>, um vermeidbare Leerzeichen bei der Formatierung zu entfernen.",
       "Das minimierte XML erscheint im Ausgabeeditor als kompaktes Markup.",
       "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
@@ -221,7 +221,7 @@
     "example": "Beispiel",
     "examplePara": "Ein einfacher Elementbaum kann komprimiert werden, indem die Einrückung zwischen Tags entfernt wird:",
     "exampleCode": "--- Formatierte Eingabe ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minifizierte Ausgabe ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "Minifizieren XML"
+    "buttonLabel": "XML minifizieren"
   },
   "es": {
     "title": "Minificador XML - Coding.Tools",

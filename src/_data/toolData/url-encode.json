@@ -78,7 +78,7 @@
     "inputNotes": "输入说明",
     "inputNotesPara": "除非接收系统明确要求，否则不要进行双重编码。如果文本已包含 <code>%2F</code> 等序列，则再次对其进行编码会将百分号转换为 <code>%25</code>。",
     "example": "示例",
-    "examplePara": "带有空格和分隔符的搜索短语作为查询参数值变得​​安全：",
+    "examplePara": "带有空格和分隔符的搜索短语作为查询参数值变得安全：",
     "exampleCode": "输入\nhello world & tea=green\n\n组件输出\nhello%20world%20%26%20tea%3Dgreen\n\n使用 + 表示空格\nhello+world+%26+tea%3Dgreen",
     "labels": {
       "input": "URL 输入",
@@ -120,7 +120,7 @@
       "貼上要編碼的文字、路徑、查詢值或 URL。",
       "選擇查詢值的元件模式或整個 URL 的完整 URI 模式。",
       "當您的目標系統需要時，啟用加式空格或逐行編碼。",
-      "點擊“<strong>編碼</strong>”，然後複製或下載編碼結果。"
+      "點選“<strong>編碼</strong>”，然後複製或下載編碼結果。"
     ],
     "whatIs": "URL 編碼是什麼？",
     "whatIsParas": [
@@ -179,7 +179,7 @@
       "<strong>URL エンコーディング</strong> (パーセント エンコーディングとも呼ばれる) は、文字をパーセント エスケープに置き換えることで、URL 内に安全に配置できるようにします。たとえば、スペースは <code>%20</code> になる可能性があり、フォーム スタイルのクエリ文字列ではスペースに <code>+</code> が使用される場合があります。",
       "単一のクエリ値、検索語、トークン、またはリダイレクト パラメーターにコンポーネント エンコーディングを使用します。すでに完全な URL があり、そのスキーム、スラッシュ、パス区切り文字、およびクエリ構造を保持したい場合は、完全な URI エンコードを使用します。"
     ],
-    "inputNotes": "入力メモ",
+    "inputNotes": "入力に関する注意",
     "inputNotesPara": "受信システムが特に予期しない限り、二重エンコードを行わないでください。テキストにすでに <code>%2F</code> などのシーケンスが含まれている場合、それを再度エンコードするとパーセント記号が <code>%25</code> に変わります。",
     "example": "例",
     "examplePara": "スペースと区切り文字を含む検索フレーズは、クエリ パラメーター値として安全になります。",
@@ -216,23 +216,23 @@
     "buttonLabel": "URL 인코딩",
     "descTitle": "URL 및 쿼리 문자열에 대해 텍스트를 안전하게 인코딩",
     "descParas": [
-      "<strong>이 URL 인코더는 공백, 유니코드 텍스트, 예약된 구분 기호 및 안전하지 않은 문자를 백분율 인코딩 형식으로 변환합니다.</strong> 쿼리 매개변수, 리디렉션 값, 콜백 URL, 양식 제출, API 요청 또는 사용자 제공 텍스트가 포함된 링크를 작성할 때 사용합니다.",
-      "백분율 인코딩은 바이트를 <code>%HH</code>로 나타냅니다. 여기서 <code>HH</code>는 두 자리 16진수 값입니다. 컴포넌트 모드는 <code>&amp;</code> 및 <code>=</code>와 같은 구분 기호를 인코딩합니다. 전체 URI 모드는 <code>:</code>, <code>/</code>, <code>?</code> 및 <code>&amp;</code>와 같은 URL 구조 문자를 읽을 수 있도록 유지합니다."
+      "<strong>이 URL 인코더는 공백, 유니코드 텍스트, 예약된 구분 기호 및 안전하지 않은 문자를 퍼센트 인코딩 형식으로 변환합니다.</strong> 쿼리 매개변수, 리디렉션 값, 콜백 URL, 양식 제출, API 요청 또는 사용자 제공 텍스트가 포함된 링크를 작성할 때 사용합니다.",
+      "퍼센트 인코딩은 바이트를 <code>%HH</code>로 나타냅니다. 여기서 <code>HH</code>는 두 자리 16진수 값입니다. 컴포넌트 모드는 <code>&amp;</code> 및 <code>=</code>와 같은 구분 기호를 인코딩합니다. 전체 URI 모드는 <code>:</code>, <code>/</code>, <code>?</code> 및 <code>&amp;</code>와 같은 URL 구조 문자를 읽을 수 있도록 유지합니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "인코딩하려는 텍스트, 경로, 쿼리 값 또는 URL를 붙여넣습니다.",
+      "인코딩하려는 텍스트, 경로, 쿼리 값 또는 URL을 붙여넣습니다.",
       "쿼리 값에 대한 구성 요소 모드를 선택하거나 전체 URL에 대해 전체 URI 모드를 선택합니다.",
       "대상 시스템에 필요할 때 플러스 스타일 공백이나 줄 단위 인코딩을 활성화합니다.",
       "<strong>인코딩</strong>를 클릭한 다음 인코딩된 결과를 복사하거나 다운로드하세요."
     ],
-    "whatIs": "URL 인코딩이란 무엇입니까?",
+    "whatIs": "URL 인코딩이란 무엇인가요?",
     "whatIsParas": [
       "<strong>URL 인코딩</strong>(퍼센트 인코딩이라고도 함)는 문자를 퍼센트 이스케이프로 대체하여 URL 내부에 배치해도 안전한 문자를 만듭니다. 예를 들어 공백은 <code>%20</code>가 될 수 있으며 양식 스타일 쿼리 문자열은 공백에 <code>+</code>를 사용할 수 있습니다.",
       "단일 쿼리 값, 검색어, 토큰 또는 리디렉션 매개변수에 대해 구성 요소 인코딩을 사용합니다. 이미 완전한 URL가 있고 해당 구성표, 슬래시, 경로 구분 기호 및 쿼리 구조를 유지하려는 경우 전체 URI 인코딩을 사용하십시오."
     ],
     "inputNotes": "입력 참고사항",
-    "inputNotesPara": "수신 시스템에서 특별히 기대하지 않는 한 이중 인코딩하지 마세요. 텍스트에 <code>%2F</code>와 같은 시퀀스가 ​​이미 포함되어 있는 경우 이를 다시 인코딩하면 백분율 기호가 <code>%25</code>로 변경됩니다.",
+    "inputNotesPara": "수신 시스템에서 특별히 기대하지 않는 한 이중 인코딩하지 마세요. 텍스트에 <code>%2F</code>와 같은 시퀀스가 이미 포함되어 있는 경우 이를 다시 인코딩하면 백분율 기호가 <code>%25</code>로 변경됩니다.",
     "example": "예시",
     "examplePara": "공백과 구분 기호가 포함된 검색 문구는 쿼리 매개변수 값으로 안전해집니다.",
     "exampleCode": "입력\nhello world & tea=green\n\n구성 요소 출력\nhello%20world%20%26%20tea%3Dgreen\n\n+ 로 공백 표시\nhello+world+%26+tea%3Dgreen",
@@ -274,14 +274,14 @@
     "howToUse": "Comment utiliser",
     "steps": [
       "Collez le texte, le chemin, la valeur de requête ou URL que vous souhaitez encoder.",
-      "Choisissez le mode composant pour les valeurs de requête ou le mode URI complet pour un URL entier.",
+      "Choisissez le mode composant pour les valeurs de requête ou le mode URI complet pour une URL entière.",
       "Activez les espaces de style plus ou le codage ligne par ligne lorsque votre système cible en a besoin.",
       "Cliquez sur <strong>Encoder</strong>, puis copiez ou téléchargez le résultat codé."
     ],
     "whatIs": "Qu’est-ce que le codage URL ?",
     "whatIsParas": [
-      "<strong>URL encoding</strong>, également appelé encodage en pourcentage, permet de placer les caractères en toute sécurité dans un URL en les remplaçant par des échappements en pourcentage. Par exemple, un espace peut devenir <code>%20</code> et les chaînes de requête de style formulaire peuvent utiliser <code>+</code> pour les espaces.",
-      "Utilisez le codage de composant pour une seule valeur de requête, un terme de recherche, un jeton ou un paramètre de redirection. Utilisez le codage URI complet lorsque vous disposez déjà d'un URL complet et que vous souhaitez conserver son schéma, ses barres obliques, ses séparateurs de chemin et sa structure de requête."
+      "<strong>URL encoding</strong>, également appelé encodage en pourcentage, permet de placer les caractères en toute sécurité dans une URL en les remplaçant par des échappements en pourcentage. Par exemple, un espace peut devenir <code>%20</code> et les chaînes de requête de style formulaire peuvent utiliser <code>+</code> pour les espaces.",
+      "Utilisez le codage de composant pour une seule valeur de requête, un terme de recherche, un jeton ou un paramètre de redirection. Utilisez le codage URI complet lorsque vous disposez déjà d’une URL complète et que vous souhaitez conserver son schéma, ses barres obliques, ses séparateurs de chemin et sa structure de requête."
     ],
     "inputNotes": "Notes de saisie",
     "inputNotesPara": "Ne faites pas de double encodage à moins que le système de réception ne l'attende spécifiquement. Si le texte contient déjà des séquences telles que <code>%2F</code>, le coder à nouveau transformera le signe de pourcentage en <code>%25</code>.",
@@ -293,15 +293,15 @@
       "output": "Résultat encodé",
       "encodeMode": "Mode d’encodage",
       "componentMode": "Composant / valeur de requête",
-      "uriMode": "URI complete",
+      "uriMode": "URI complète",
       "spacePlus": "Convertir les espaces en +",
       "lineByLine": "Encoder ligne par ligne",
       "summary": "Résumé",
-      "added": "Ajoute",
+      "added": "Ajouté",
       "removed": "Supprime",
-      "changed": "Modifie",
-      "unchanged": "Inchange",
-      "noDiff": "Aucune difference a afficher."
+      "changed": "Modifié",
+      "unchanged": "Inchangé",
+      "noDiff": "Aucune différence a afficher."
     },
     "messages": {
       "empty": "Saisissez d’abord une valeur.",
@@ -325,34 +325,34 @@
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie den Text, den Pfad, den Abfragewert oder URL ein, den Sie kodieren möchten.",
+      "Fügen Sie den Text, den Pfad, den Abfragewert oder eine URL ein, den Sie kodieren möchten.",
       "Wählen Sie den Komponentenmodus für Abfragewerte oder den vollständigen URI-Modus für einen gesamten URL.",
       "Aktivieren Sie Leerzeichen im Plus-Stil oder die zeilenweise Kodierung, wenn Ihr Zielsystem dies benötigt.",
       "Klicken Sie auf <strong>Codieren</strong> und kopieren Sie dann das codierte Ergebnis oder laden Sie es herunter."
     ],
     "whatIs": "Was ist die URL-Kodierung?",
     "whatIsParas": [
-      "<strong>URL-Kodierung</strong>, auch Prozentkodierung genannt, macht Zeichen sicher für die Platzierung in einem URL, indem sie durch Prozent-Escapezeichen ersetzt werden. Beispielsweise kann ein Leerzeichen zu <code>%20</code> werden, und Abfragezeichenfolgen im Formularstil können <code>+</code> für Leerzeichen verwenden.",
-      "Verwenden Sie die Komponentenkodierung für einen einzelnen Abfragewert, Suchbegriff, Token oder Umleitungsparameter. Verwenden Sie die vollständige URI-Codierung, wenn Sie bereits über ein vollständiges URL verfügen und dessen Schema, Schrägstriche, Pfadtrennzeichen und Abfragestruktur beibehalten möchten."
+      "<strong>URL-Kodierung</strong>, auch Prozentkodierung genannt, macht Zeichen sicher für die Platzierung in einer URL, indem sie durch Prozent-Escapezeichen ersetzt werden. Beispielsweise kann ein Leerzeichen zu <code>%20</code> werden, und Abfragezeichenfolgen im Formularstil können <code>+</code> für Leerzeichen verwenden.",
+      "Verwenden Sie die Komponentenkodierung für einen einzelnen Abfragewert, Suchbegriff, Token oder Umleitungsparameter. Verwenden Sie die vollständige URI-Codierung, wenn Sie bereits über eine vollständige URL verfügen und dessen Schema, Schrägstriche, Pfadtrennzeichen und Abfragestruktur beibehalten möchten."
     ],
     "inputNotes": "Eingabehinweise",
     "inputNotesPara": "Führen Sie keine Doppelcodierung durch, es sei denn, das empfangende System erwartet dies ausdrücklich. Wenn der Text bereits Sequenzen wie <code>%2F</code> enthält, wird durch eine erneute Codierung das Prozentzeichen in <code>%25</code> umgewandelt.",
     "example": "Beispiel",
     "examplePara": "Ein Suchbegriff mit Leerzeichen und Trennzeichen wird als Abfrageparameterwert sicher:",
-    "exampleCode": "Eingabe\nhello world & tea=green\n\nKomponenten-Ausgabe\nhello%20world%20%26%20tea%3Dgreen\n\nMit + fuer Leerzeichen\nhello+world+%26+tea%3Dgreen",
+    "exampleCode": "Eingabe\nhello world & tea=green\n\nKomponenten-Ausgabe\nhello%20world%20%26%20tea%3Dgreen\n\nMit + für Leerzeichen\nhello+world+%26+tea%3Dgreen",
     "labels": {
       "input": "URL-Eingabe",
       "output": "Kodiertes Ergebnis",
       "encodeMode": "Kodierungsmodus",
       "componentMode": "Komponente / Query-Wert",
-      "uriMode": "Vollstaendige URI",
+      "uriMode": "Vollständige URI",
       "spacePlus": "Leerzeichen in + umwandeln",
       "lineByLine": "Zeilenweise kodieren",
       "summary": "Zusammenfassung",
-      "added": "Hinzugefuegt",
+      "added": "Hinzugefügt",
       "removed": "Entfernt",
-      "changed": "Geaendert",
-      "unchanged": "Unveraendert",
+      "changed": "Geändert",
+      "unchanged": "Unverändert",
       "noDiff": "Noch keine Unterschiede zum Anzeigen."
     },
     "messages": {
@@ -360,7 +360,7 @@
       "success": "URL erfolgreich kodiert",
       "failed": "Vorgang fehlgeschlagen: "
     },
-    "inputPlaceholder": "Zu kodierenden Text, URL-Pfad oder Query-Wert einfuegen...",
+    "inputPlaceholder": "Zu kodierenden Text, URL-Pfad oder Query-Wert einfügen...",
     "outputPlaceholder": "Das kodierte Ergebnis erscheint hier..."
   },
   "es": {
@@ -368,24 +368,24 @@
     "description": "Codificación porcentual de componentes URL, valores de consulta, rutas o URL completas con opciones para espacios de estilo más y salida línea por línea.",
     "toolTitle": "Codificar URL",
     "toolDescription": "Codifique componentes URL o URL completas, con opciones de espacio más y por línea.",
-    "categoryName": "Hash y criptografia",
+    "categoryName": "Hash y criptografía",
     "buttonLabel": "Codificar URL",
     "descTitle": "Codifique texto de forma segura para URL y cadenas de consulta",
     "descParas": [
       "<strong>Este codificador URL convierte espacios, texto Unicode, separadores reservados y caracteres no seguros en formato codificado por porcentaje.</strong> Utilícelo al crear parámetros de consulta, valores de redireccionamiento, URL de devolución de llamadas, envíos de formularios, solicitudes de API o enlaces que incluyan texto proporcionado por el usuario.",
       "La codificación porcentual representa bytes como <code>%HH</code>, donde <code>HH</code> es un valor hexadecimal de dos dígitos. El modo componente codifica separadores como <code>&amp;</code> y <code>=</code>; El modo URI completo mantiene legibles los caracteres de estructura URL, como <code>:</code>, <code>/</code>, <code>?</code> y <code>&amp;</code>."
     ],
-    "howToUse": "Como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Pegue el texto, la ruta, el valor de la consulta o URL que desea codificar.",
-      "Elija el modo de componente para consultar valores o el modo URI completo para un URL completo.",
+      "Elija el modo de componente para valores de consulta o el modo URI completo para una URL completa.",
       "Habilite espacios de estilo más o codificación línea por línea cuando su sistema de destino lo necesite.",
       "Haga clic en <strong>Codificar</strong>, luego copie o descargue el resultado codificado."
     ],
     "whatIs": "¿Qué es la codificación URL?",
     "whatIsParas": [
-      "La codificación <strong>URL</strong>, también llamada codificación porcentual, hace que los caracteres sean seguros para su colocación dentro de un URL reemplazándolos con escapes porcentuales. Por ejemplo, un espacio puede convertirse en <code>%20</code> y las cadenas de consulta de estilo de formulario pueden usar <code>+</code> para los espacios.",
-      "Utilice la codificación de componentes para un único valor de consulta, término de búsqueda, token o parámetro de redireccionamiento. Utilice la codificación URI completa cuando ya tenga un URL completo y desee conservar su esquema, barras diagonales, separadores de ruta y estructura de consulta."
+      "La codificación <strong>URL</strong>, también llamada codificación porcentual, hace que los caracteres sean seguros para su colocación dentro de una URL reemplazándolos con escapes porcentuales. Por ejemplo, un espacio puede convertirse en <code>%20</code> y las cadenas de consulta de estilo de formulario pueden usar <code>+</code> para los espacios.",
+      "Utilice la codificación de componentes para un único valor de consulta, término de búsqueda, token o parámetro de redireccionamiento. Utilice la codificación URI completa cuando ya tenga una URL completa y desee conservar su esquema, barras diagonales, separadores de ruta y estructura de consulta."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "No realice doble codificación a menos que el sistema receptor lo espere específicamente. Si el texto ya contiene secuencias como <code>%2F</code>, codificarlo nuevamente convertirá el signo de porcentaje en <code>%25</code>.",
@@ -395,13 +395,13 @@
     "labels": {
       "input": "Entrada URL",
       "output": "Resultado codificado",
-      "encodeMode": "Modo de codificacion",
+      "encodeMode": "Modo de codificación",
       "componentMode": "Componente / valor de consulta",
       "uriMode": "URI completa",
       "spacePlus": "Convertir espacios en +",
       "lineByLine": "Codificar por línea",
       "summary": "Resumen",
-      "added": "Anadido",
+      "added": "Añadido",
       "removed": "Eliminado",
       "changed": "Cambiado",
       "unchanged": "Sin cambios",
@@ -430,14 +430,14 @@
     "howToUse": "Como usar",
     "steps": [
       "Cole o texto, o caminho, o valor da consulta ou URL que deseja codificar.",
-      "Escolha o modo de componente para valores de consulta ou o modo URI completo para um URL inteiro.",
+      "Escolha o modo de componente para valores de consulta ou o modo URI completo para uma URL inteira.",
       "Ative espaços de estilo plus ou codificação linha por linha quando seu sistema de destino precisar.",
       "Clique em <strong>Codificar</strong> e copie ou baixe o resultado codificado."
     ],
     "whatIs": "O que é codificação URL?",
     "whatIsParas": [
-      "Codificação <strong>URL</strong>, também chamada de codificação percentual, torna os caracteres seguros para colocação dentro de um URL, substituindo-os por escapes percentuais. Por exemplo, um espaço pode se tornar <code>%20</code> e strings de consulta no estilo de formulário podem usar <code>+</code> para espaços.",
-      "Use codificação de componente para um único valor de consulta, termo de pesquisa, token ou parâmetro de redirecionamento. Use a codificação URI completa quando você já tiver um URL completo e quiser preservar seu esquema, barras, separadores de caminho e estrutura de consulta."
+      "Codificação <strong>URL</strong>, também chamada de codificação percentual, torna os caracteres seguros para colocação dentro de uma URL, substituindo-os por escapes percentuais. Por exemplo, um espaço pode se tornar <code>%20</code> e strings de consulta no estilo de formulário podem usar <code>+</code> para espaços.",
+      "Use codificação de componente para um único valor de consulta, termo de pesquisa, token ou parâmetro de redirecionamento. Use a codificação URI completa quando você já tiver uma URL completa e quiser preservar seu esquema, barras, separadores de caminho e estrutura de consulta."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "Não codifique duas vezes, a menos que o sistema receptor o espere especificamente. Se o texto já contiver sequências como <code>%2F</code>, codificá-lo novamente transformará o sinal de porcentagem em <code>%25</code>.",
@@ -447,7 +447,7 @@
     "labels": {
       "input": "Entrada URL",
       "output": "Resultado codificado",
-      "encodeMode": "Modo de codificacao",
+      "encodeMode": "Modo de codificação",
       "componentMode": "Componente / valor de consulta",
       "uriMode": "URI completa",
       "spacePlus": "Converter espaços em +",

@@ -33,7 +33,7 @@
   },
   "cn": {
     "title": "JSON 压缩器 - Coding.Tools",
-    "description": "通过删除无关紧要的空格同时保留每个解析值来缩小有效的 JSON。",
+    "description": "通过删除无关紧要的空格同时保留每个解析值来压缩有效的 JSON。",
     "toolTitle": "JSON 压缩",
     "toolDescription": "在浏览器中将有效的 JSON 压缩为紧凑的一行有效负载。",
     "categoryName": "格式化与压缩",
@@ -41,23 +41,23 @@
     "outputPlaceholder": "压缩后的 JSON 将在此显示...",
     "descTitle": "在不改变数值的情况下使JSON变得紧凑",
     "descParas": [
-      "<strong>JSON 压缩 解析有效的 JSON 并通过删除字符串外部的空格、制表符和换行符来发出最小的普通表示。</strong> 它对于嵌入测试数据、缩小复制的有效负载和准备紧凑的示例非常有用。",
+      "<strong>JSON 压缩 解析有效的 JSON 并通过删除字符串外部的空格、制表符和换行符来发出最小的普通表示。</strong> 它对于嵌入测试数据、压缩复制的有效负载和准备紧凑的示例非常有用。",
       "带引号的字符串内的空格是实际数据并被保留。压缩器不会删除对象键、更改数组顺序、重写数字以进行压缩或接受带有注释的 JSON。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 JSON 数据粘贴到输入编辑器中。",
       "单击 <strong>压缩 JSON</strong> 进行解析和压缩。",
-      "缩小后的 JSON 显示为紧凑输出，删除了无关紧要的空格。",
+      "压缩后的 JSON 显示为紧凑输出，删除了无关紧要的空格。",
       "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文件，或使用 <strong>清除</strong> 进行重置。"
     ],
     "whatIs": "JSON 压缩器是什么？",
     "whatIsParas": [
-      "<strong>JSON 压缩</strong> 是一个基于浏览器的实用程序，用于将打印精美的 JSON 转换为紧凑的 JSON。它有助于减少视觉噪音，并使有效负载更容易粘贴到代码、测试、URL 或问题注释中。",
-      "由于首先解析输入，因此必须先修复无效的 JSON，然后才能缩小。如果确切的下游行为很重要，请测试将使用它的系统中的最小有效负载。"
+      "<strong>JSON 压缩</strong> 是一个基于浏览器的实用程序，用于将已格式化的 JSON 转换为紧凑的 JSON。它有助于减少视觉噪音，并使有效负载更容易粘贴到代码、测试、URL 或问题注释中。",
+      "由于首先解析输入，因此必须先修复无效的 JSON，然后才能压缩。如果确切的下游行为很重要，请测试将使用它的系统中的压缩后的有效负载。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "仅使用严格的 JSON。在缩小之前删除注释、尾随逗号、变量赋值和响应标签。不要期望字符串值内的空格会被折叠。",
+    "inputNotesPara": "仅使用严格的 JSON。在压缩之前删除注释、尾随逗号、变量赋值和响应标签。不要期望字符串值内的空格会被折叠。",
     "example": "示例",
     "examplePara": "格式化对象被简化为紧凑的 JSON 字符串，同时值保持不变：",
     "exampleCode": "--- 格式化输入 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- 压缩输出 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
@@ -65,7 +65,7 @@
   },
   "tw": {
     "title": "JSON 壓縮器 - Coding.Tools",
-    "description": "透過刪除無關緊要的空格同時保留每個解析值來縮小有效的 JSON。",
+    "description": "透過刪除無關緊要的空格同時保留每個解析值來壓縮有效的 JSON。",
     "toolTitle": "JSON 壓縮",
     "toolDescription": "在瀏覽器中將有效的 JSON 壓縮為緊湊的一行有效負載。",
     "categoryName": "格式化與壓縮",
@@ -73,94 +73,94 @@
     "outputPlaceholder": "壓縮後的 JSON 將在此顯示...",
     "descTitle": "在不改變數值的情況下使JSON變得緊湊",
     "descParas": [
-      "<strong>JSON 壓縮 解析有效的 JSON 並透過刪除字串外部的空格、製表符和換行符來發出最小的普通表示。</strong> 它對於嵌入測試資料、縮小複製的有效負載和準備緊湊的範例非常有用。",
+      "<strong>JSON 壓縮 解析有效的 JSON 並透過刪除字串外部的空格、製表符和換行符來發出最小的普通表示。</strong> 它對於嵌入測試資料、壓縮複製的有效負載和準備緊湊的範例非常有用。",
       "帶引號的字串內的空格是實際資料並被保留。壓縮器不會刪除物件鍵、更改陣列順序、重寫數字以進行壓縮或接受帶有註釋的 JSON。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將 JSON 資料貼到輸入編輯器中。",
       "點選 <strong>壓縮 JSON</strong> 進行解析和壓縮。",
-      "縮小後的 JSON 顯示為緊湊輸出，刪除了無關緊要的空格。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "壓縮後的 JSON 顯示為緊湊輸出，刪除了無關緊要的空格。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "JSON 壓縮器是什麼？",
     "whatIsParas": [
-      "<strong>JSON 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將列印精美的 JSON 轉換為緊湊的 JSON。它有助於減少視覺噪音，並使有效負載更容易貼到程式碼、測試、URL 或問題註解中。",
-      "由於首先解析輸入，因此必須先修復無效的 JSON，然後才能縮小。如果確切的下游行為很重要，請測試將使用它的系統中的最小有效負載。"
+      "<strong>JSON 壓縮</strong> 是一個基於瀏覽器的實用工具，用於將格式化過的 JSON 轉換為緊湊的 JSON。它有助於減少視覺噪音，並使有效負載更容易貼到程式碼、測試、URL 或問題註解中。",
+      "由於首先解析輸入，因此必須先修復無效的 JSON，然後才能壓縮。如果確切的下游行為很重要，請測試將使用它的系統中的壓縮後的有效負載。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "僅使用嚴格的 JSON。在縮小之前刪除註釋、尾隨逗號、變數賦值和回應標籤。不要期望字串值內的空格會被折疊。",
+    "inputNotesPara": "僅使用嚴格的 JSON。在壓縮之前刪除註釋、尾隨逗號、變數賦值和回應標籤。不要期望字串值內的空格會被折疊。",
     "example": "範例",
     "examplePara": "格式化物件被簡化為緊湊的 JSON 字串，同時值保持不變：",
     "exampleCode": "--- 格式化輸入 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- 壓縮輸出 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
     "buttonLabel": "壓縮 JSON"
   },
   "jp": {
-    "title": "JSON ミニファイヤー - Coding.Tools",
+    "title": "JSON 圧縮 - Coding.Tools",
     "description": "解析されたすべての値を保持しながら、重要でない空白を削除して、有効な JSON を縮小します。",
-    "toolTitle": "JSON ミニファイア",
+    "toolTitle": "JSON 圧縮",
     "toolDescription": "ブラウザで有効な JSON をコンパクトな 1 行のペイロードに圧縮します。",
     "categoryName": "整形と圧縮",
-    "inputPlaceholder": "ミニファイする JSON を貼り付け...",
-    "outputPlaceholder": "ミニファイされた JSON がここに表示されます...",
+    "inputPlaceholder": "圧縮する JSON を貼り付け...",
+    "outputPlaceholder": "圧縮された JSON がここに表示されます...",
     "descTitle": "JSONを値を変更せずにコンパクトにする",
     "descParas": [
-      "<strong>JSON ミニファイア は有効な JSON を解析し、文字列の外側のスペース、タブ、改行を削除することで最小の通常の表現を出力します。</strong> これは、テストデータの埋め込み、コピーされたペイロードの縮小、およびコンパクトなサンプルの準備に役立ちます。",
+      "<strong>JSON 圧縮 は有効な JSON を解析し、文字列の外側のスペース、タブ、改行を削除することで最小の通常の表現を出力します。</strong> これは、テストデータの埋め込み、コピーされたペイロードの縮小、およびコンパクトなサンプルの準備に役立ちます。",
       "引用符で囲まれた文字列内の空白は実際のデータであり、保持されます。この圧縮ツールは、オブジェクトキーの削除、配列順序の変更、圧縮目的の数値の書き換え、コメント付き JSON の受け入れは行いません。"
     ],
     "howToUse": "使い方",
     "steps": [
       "JSON データを入力エディターに貼り付けます。",
-      "<strong>JSON をミニファイ</strong> をクリックして、解析して圧縮します。",
+      "<strong>JSON を圧縮</strong> をクリックして、解析して圧縮します。",
       "縮小された JSON は、重要でない空白が削除されたコンパクトな出力として表示されます。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "JSON ミニファイヤーとは何ですか?",
+    "whatIs": "JSON 圧縮とは何ですか?",
     "whatIsParas": [
-      "<strong>JSON ミニファイア</strong> は、きれいに印刷された JSON をコンパクトな JSON に変換するためのブラウザベースのユーティリティです。これにより、視覚的なノイズが軽減され、ペイロードをコード、テスト、URL、または問題のコメントに貼り付けることが容易になります。",
+      "<strong>JSON 圧縮</strong> は、きれいに印刷された JSON をコンパクトな JSON に変換するためのブラウザベースのユーティリティです。これにより、視覚的なノイズが軽減され、ペイロードをコード、テスト、URL、または問題のコメントに貼り付けることが容易になります。",
       "入力が最初に解析されるため、無効な JSON は縮小する前に修正する必要があります。正確なダウンストリーム動作が重要な場合は、それを消費するシステムで縮小されたペイロードをテストします。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "厳密に JSON のみを使用してください。縮小する前に、コメント、末尾のカンマ、変数の割り当て、応答ラベルを削除してください。文字列値内の空白が折りたたまれることを期待しないでください。",
     "example": "例",
     "examplePara": "フォーマットされたオブジェクトは、値は同じまま、コンパクトな JSON 文字列に縮小されます。",
-    "exampleCode": "--- フォーマット入力 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- ミニファイ出力 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
-    "buttonLabel": "JSON をミニファイ"
+    "exampleCode": "--- フォーマット入力 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- 圧縮出力 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
+    "buttonLabel": "JSON を圧縮"
   },
   "kr": {
-    "title": "JSON 축소기 - Coding.Tools",
-    "description": "구문 분석된 모든 값을 유지하면서 중요하지 않은 공백을 제거하여 유효한 JSON를 축소합니다.",
-    "toolTitle": "JSON 미니파이어",
-    "toolDescription": "브라우저에서 유효한 JSON를 간단한 한 줄 페이로드로 압축하세요.",
+    "title": "JSON 압축 - Coding.Tools",
+    "description": "구문 분석된 모든 값을 유지하면서 중요하지 않은 공백을 제거하여 유효한 JSON을 축소합니다.",
+    "toolTitle": "JSON 압축",
+    "toolDescription": "브라우저에서 유효한 JSON을 간단한 한 줄 페이로드로 압축하세요.",
     "categoryName": "포맷 및 압축",
-    "inputPlaceholder": "미니파이할 JSON을 붙여넣으세요...",
-    "outputPlaceholder": "미니파이된 JSON이 여기에 표시됩니다...",
-    "descTitle": "값을 변경하지 않고 JSON를 컴팩트하게 만듭니다.",
+    "inputPlaceholder": "압축할 JSON을 붙여넣으세요...",
+    "outputPlaceholder": "압축된 JSON이 여기에 표시됩니다...",
+    "descTitle": "값을 변경하지 않고 JSON을 컴팩트하게 만듭니다.",
     "descParas": [
-      "<strong>JSON 미니파이어는 유효한 JSON를 구문 분석하고 문자열 외부의 공백, 탭 및 줄바꿈을 제거하여 가장 작은 일반 표현을 내보냅니다.</strong> 테스트 데이터 삽입, 복사된 페이로드 축소 및 압축 예제 준비에 유용합니다.",
-      "인용된 문자열 안의 공백은 실제 데이터이며 보존됩니다. 축소기는 객체 키를 제거하거나, 배열 순서를 변경하거나, 압축을 위해 숫자를 다시 쓰거나, 주석 포함 JSON를 허용하지 않습니다."
+      "<strong>JSON 압축은 유효한 JSON을 구문 분석하고 문자열 외부의 공백, 탭 및 줄바꿈을 제거하여 가장 작은 일반 표현을 내보냅니다.</strong> 테스트 데이터 삽입, 복사된 페이로드 축소 및 압축 예제 준비에 유용합니다.",
+      "인용된 문자열 안의 공백은 실제 데이터이며 보존됩니다. 압축 도구는 객체 키를 제거하거나, 배열 순서를 변경하거나, 압축을 위해 숫자를 다시 쓰거나, 주석 포함 JSON을 허용하지 않습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "JSON 데이터를 입력 편집기에 붙여넣습니다.",
-      "<strong>JSON 미니파이</strong>를 클릭하여 구문 분석하고 압축합니다.",
+      "<strong>JSON 압축</strong>를 클릭하여 구문 분석하고 압축합니다.",
       "축소된 JSON는 중요하지 않은 공백이 제거된 압축 출력으로 나타납니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JSON 축소기는 무엇입니까?",
+    "whatIs": "JSON 압축이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>JSON 미니파이어</strong>는 예쁘게 인쇄된 JSON를 컴팩트한 JSON로 변환하기 위한 브라우저 기반 유틸리티입니다. 시각적 노이즈를 줄이는 데 도움이 되며 페이로드를 코드, 테스트, URL 또는 문제 설명에 더 쉽게 붙여넣을 수 있습니다.",
-      "입력이 먼저 구문 분석되므로 잘못된 JSON를 축소하기 전에 수정해야 합니다. 정확한 다운스트림 동작이 중요한 경우 이를 사용할 시스템에서 축소된 페이로드를 테스트하세요."
+      "<strong>JSON 압축</strong>은 예쁘게 인쇄된 JSON을 컴팩트한 JSON로 변환하기 위한 브라우저 기반 유틸리티입니다. 시각적 노이즈를 줄이는 데 도움이 되며 페이로드를 코드, 테스트, URL 또는 문제 설명에 더 쉽게 붙여넣을 수 있습니다.",
+      "입력이 먼저 구문 분석되므로 잘못된 JSON을 축소하기 전에 수정해야 합니다. 정확한 다운스트림 동작이 중요한 경우 이를 사용할 시스템에서 축소된 페이로드를 테스트하세요."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "엄격한 JSON만 사용하세요. 축소하기 전에 주석, 후행 쉼표, 변수 할당 및 응답 레이블을 제거하십시오. 문자열 값 내부의 공백이 축소될 것으로 예상하지 마십시오.",
     "example": "예시",
     "examplePara": "형식이 지정된 객체는 값이 동일하게 유지되는 동안 간단한 JSON 문자열로 축소됩니다.",
-    "exampleCode": "--- 포맷 입력 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- 미니파이 출력 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
-    "buttonLabel": "JSON 미니파이"
+    "exampleCode": "--- 포맷 입력 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- 압축 출력 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
+    "buttonLabel": "JSON 압축"
   },
   "fr": {
-    "title": "Minificateur JSON - Coding.Tools",
+    "title": "Minifieur JSON - Coding.Tools",
     "description": "Réduisez JSON valide en supprimant les espaces insignifiants tout en préservant chaque valeur analysée.",
     "toolTitle": "Minifieur JSON",
     "toolDescription": "Compressez JSON valide en une charge utile compacte d'une seule ligne dans votre navigateur.",
@@ -179,7 +179,7 @@
       "Le JSON minifié apparaît sous forme de sortie compacte avec les espaces insignifiants supprimés.",
       "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le miniificateur JSON ?",
+    "whatIs": "Qu'est-ce que le minifieur JSON ?",
     "whatIsParas": [
       "<strong>Minifieur JSON</strong> est un utilitaire basé sur un navigateur permettant de convertir un JSON joliment imprimé en JSON compact. Il permet de réduire le bruit visuel et facilite le collage d'une charge utile dans du code, des tests, des URL ou des commentaires.",
       "Étant donné que l'entrée est analysée en premier, JSON non valide doit être corrigé avant de pouvoir être réduit. Si le comportement exact en aval est important, testez la charge utile réduite dans le système qui la consommera."
@@ -207,7 +207,7 @@
     "howToUse": "Anleitung",
     "steps": [
       "Fügen Sie Ihre JSON-Daten in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Minifizieren JSON</strong>, um es zu analysieren und zu komprimieren.",
+      "Klicken Sie auf <strong>JSON minifizieren</strong>, um es zu analysieren und zu komprimieren.",
       "Das minimierte JSON erscheint als kompakte Ausgabe, wobei unbedeutende Leerzeichen entfernt wurden.",
       "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
@@ -221,7 +221,7 @@
     "example": "Beispiel",
     "examplePara": "Ein formatiertes Objekt wird auf eine kompakte JSON-Zeichenfolge reduziert, während die Werte gleich bleiben:",
     "exampleCode": "--- Formatierte Eingabe ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- Minifizierte Ausgabe ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
-    "buttonLabel": "Minifizieren JSON"
+    "buttonLabel": "JSON minifizieren"
   },
   "es": {
     "title": "Minificador JSON - Coding.Tools",
@@ -233,7 +233,7 @@
     "outputPlaceholder": "El JSON minificado aparecerá aquí...",
     "descTitle": "Haga que JSON sea compacto sin cambiar los valores",
     "descParas": [
-      "<strong>Minificador JSON analiza JSON válido y emite la representación ordinaria más pequeña eliminando espacios, tabulaciones y saltos de línea fuera de las cadenas.</strong> Es útil para incrustar accesorios, reducir cargas útiles copiadas y preparar ejemplos compactos.",
+      "<strong>El minificador JSON analiza JSON válido y emite la representación ordinaria más pequeña eliminando espacios, tabulaciones y saltos de línea füra de las cadenas.</strong> Es útil para incrustar accesorios, reducir cargas útiles copiadas y preparar ejemplos compactos.",
       "Los espacios en blanco dentro de las cadenas entre comillas son datos reales y se conservan. El minificador no elimina claves de objetos, no altera el orden de la matriz, no reescribe números para comprimirlos ni acepta JSON con comentarios."
     ],
     "howToUse": "Cómo usar",
@@ -265,7 +265,7 @@
     "outputPlaceholder": "O JSON minificado aparecerá aqui...",
     "descTitle": "Torne JSON compacto sem alterar valores",
     "descParas": [
-      "<strong>JSON O minificador analisa JSON válido e emite a menor representação ordinária removendo espaços, tabulações e quebras de linha fora das strings.</strong> É útil para incorporar dados de teste, reduzir cargas úteis copiadas e preparar exemplos compactos.",
+      "<strong>O minificador JSON analisa JSON válido e emite a menor representação ordinária removendo espaços, tabulações e quebras de linha fora das strings.</strong> É útil para incorporar dados de teste, reduzir cargas úteis copiadas e preparar exemplos compactos.",
       "Os espaços em branco dentro das strings entre aspas são dados reais e são preservados. O minificador não remove chaves de objeto, altera a ordem da matriz, reescreve números para compactação ou aceita JSON com comentários."
     ],
     "howToUse": "Como usar",
@@ -281,7 +281,7 @@
       "Como a entrada é analisada primeiro, JSON inválido deve ser corrigido antes de poder ser minimizado. Se o comportamento downstream exato for importante, teste a carga útil minificada no sistema que irá consumi-la."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Use apenas JSON estrito. Remova comentários, vírgulas finais, atribuições de variáveis ​​e rótulos de resposta antes de reduzir. Não espere que os espaços em branco dentro dos valores da string sejam recolhidos.",
+    "inputNotesPara": "Use apenas JSON estrito. Remova comentários, vírgulas finais, atribuições de variáveis e rótulos de resposta antes de reduzir. Não espere que os espaços em branco dentro dos valores da string sejam recolhidos.",
     "example": "Exemplo",
     "examplePara": "Um objeto formatado é reduzido a uma string compacta JSON enquanto os valores permanecem os mesmos:",
     "exampleCode": "--- Entrada formatada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}\n\n--- Saída minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",

@@ -63,16 +63,16 @@
     "title": "影像至 Base64 - Coding.Tools",
     "description": "將小圖像轉換為 Base64 資料 URI，以便嵌入 HTML、CSS 或純文字有效負載中。",
     "toolTitle": "圖片轉Base64",
-    "toolDescription": "將圖像本地轉換為 Base64 資料 URI，您可以複製到 HTML、CSS、JSON 或文字檔案中。",
+    "toolDescription": "將圖像本機轉換為 Base64 資料 URI，您可以複製到 HTML、CSS、JSON 或文字檔案中。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "點擊或拖曳圖像檔案至此處上傳",
+    "dropzoneMessage": "點選或拖曳圖像檔案至此處上傳",
     "dropzoneHint": "1 張圖片 · 最大 2MB",
     "inputPlaceholder": "Base64 結果將會出現在這裡...",
     "descTitle": "將小圖像變成資料URI",
     "descParas": [
       "<strong>圖片轉 Base64 會在瀏覽器中讀取一張圖片，並返回完整的 <code>data:</code> URI。</strong> 當獨立圖片檔案不方便時，可將結果貼入 HTML、CSS、JSON 或其他純文字內容。",
       "Base64 不是壓縮。它通常會將編碼資料增加約<strong>33%</strong>，加上MIME前綴，例如<code>data:image/png;base64,</code>。保留小圖示、佔位符和獨立片段，而不是大照片。",
-      "該檔案在本地讀取，並限制為一張最大 2MB 的圖像，以實現可預測的效能。嵌入資料 URI 可以避免單獨的請求，但它們也使 HTML/CSS 更難以快取和編輯。"
+      "該檔案在本機讀取，並限制為一張最大 2MB 的圖像，以實現可預測的效能。嵌入資料 URI 可以避免單獨的請求，但它們也使 HTML/CSS 更難以快取和編輯。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -83,14 +83,14 @@
     "whatIs": "什麼時候該使用影像 Base64？",
     "whatIsParas": [
       "<strong>Image Base64</strong> 對於必須在單一 HTML、CSS、JSON 或文字檔案中傳輸的小型資源非常有用。",
-      "對於較大的資源使用普通圖像文件，以便瀏覽器可以單獨快取它們。由於 Base64 擴展了資料並將所有圖像元資料保留在編碼位元組內，因此在嵌入之前請檢查大小和隱私。"
+      "對於較大的資源使用普通圖像文件，以便瀏覽器可以單獨快取它們。由於 Base64 擴展了資料並將所有圖像中繼資料保留在編碼位元組內，因此在嵌入之前請檢查大小和隱私。"
     ],
     "example": "用Python轉換",
     "examplePara": "編程轉換讀取圖像字節，對它們進行 Base64 編碼，並添加正確的資料 URI 前綴：",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "jp": {
-    "title": "Base64 - Coding.Tools への画像",
+    "title": "画像から Base64 へ - Coding.Tools",
     "description": "HTML、CSS、またはプレーンテキストのペイロードに埋め込むために、小さな画像を Base64 データ URI に変換します。",
     "toolTitle": "画像からBase64",
     "toolDescription": "1 つの画像をローカルで Base64 データ URI に変換し、HTML、CSS、JSON、またはテキスト ファイルにコピーできます。",
@@ -98,13 +98,13 @@
     "dropzoneMessage": "ここに画像ファイルをクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像1枚・最大2MB",
     "inputPlaceholder": "Base64 の結果がここに表示されます...",
-    "descTitle": "小さな画像をデータ化 URI",
+    "descTitle": "小さな画像をデータ URI に変換",
     "descParas": [
       "<strong>画像から Base64 は、ブラウザー内で 1 つの画像を読み取り、完全な <code>data:</code> URI を返します。</strong> 個別の画像ファイルを使いにくい場合に、HTML、CSS、JSON、その他のプレーンテキストへ貼り付けられます。",
       "Base64 は圧縮ではありません。通常、エンコードされたデータが約 <strong>33%</strong> 増加し、さらに <code>data:image/png;base64,</code> などの MIME プレフィックスが増加します。大きな写真ではなく、小さなアイコン、プレースホルダー、自己完結型のスニペットとして保存してください。",
       "ファイルはローカルで読み取られ、予測可能なパフォーマンスを実現するために最大 2MB の 1 つのイメージに制限されます。埋め込みデータ URI を使用すると、個別のリクエストを回避できますが、HTML/CSS のキャッシュと編集が難しくなります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "画像ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックして選択します。",
       "Base64 でエンコードされたデータ URI が下のテキスト エディターに表示されます。",
@@ -113,16 +113,16 @@
     "whatIs": "画像 Base64 をいつ使用する必要がありますか?",
     "whatIsParas": [
       "<strong>Image Base64</strong> は、単一の HTML、CSS、JSON、またはテキスト ファイル内で移動する必要がある小さなアセットに役立ちます。",
-      "ブラウザが個別にキャッシュできるように、大きなアセットには通常の画像ファイルを使用します。 Base64 はデータを拡張し、エンコードされたバイト内に画像メタデータを保持するため、埋め込む前にサイズとプライバシーを確​​認してください。"
+      "ブラウザが個別にキャッシュできるように、大きなアセットには通常の画像ファイルを使用します。 Base64 はデータを拡張し、エンコードされたバイト内に画像メタデータを保持するため、埋め込む前にサイズとプライバシーを確認してください。"
     ],
     "example": "Pythonで変換する",
     "examplePara": "プログラムによる変換は画像バイトを読み取り、Base64 エンコードして、正しいデータ URI プレフィックスを追加します。",
     "exampleCode": "import base64\nfrom PIL import Image\n\nwith open('image.png', 'rb') as f:\n    encoded = base64.b64encode(f.read())\ndata_uri = 'data:image/png;base64,' + encoded.decode()"
   },
   "kr": {
-    "title": "이미지를 Base64 - Coding.Tools로",
+    "title": "이미지를 Base64로 변환 - Coding.Tools",
     "description": "HTML, CSS 또는 일반 텍스트 페이로드에 삽입하기 위해 작은 이미지를 Base64 데이터 URI로 변환합니다.",
-    "toolTitle": "이미지에서 Base64",
+    "toolTitle": "이미지를 Base64로 변환",
     "toolDescription": "하나의 이미지를 로컬에서 HTML, CSS, JSON 또는 텍스트 파일로 복사할 수 있는 Base64 데이터 URI로 변환합니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 이미지 파일을 클릭하거나 드래그하세요.",
@@ -130,7 +130,7 @@
     "inputPlaceholder": "Base64 결과가 여기에 표시됩니다...",
     "descTitle": "작은 이미지를 데이터로 변환 URI",
     "descParas": [
-      "<strong>이미지에서 Base64는 브라우저에서 이미지 하나를 읽고 완전한 <code>data:</code> URI를 반환합니다.</strong> 별도의 이미지 파일을 쓰기 어려운 경우 HTML, CSS, JSON 또는 기타 일반 텍스트 컨텍스트에 붙여 넣을 수 있습니다.",
+      "<strong>이미지를 Base64로 변환하면 브라우저에서 이미지 하나를 읽어 완전한 <code>data:</code> URI를 반환합니다.</strong> 별도의 이미지 파일을 쓰기 어려운 경우 HTML, CSS, JSON 또는 기타 일반 텍스트 컨텍스트에 붙여 넣을 수 있습니다.",
       "Base64는 압축이 아닙니다. 일반적으로 인코딩된 데이터는 약 <strong>33%</strong>에 <code>data:image/png;base64,</code>와 같은 MIME 접두사를 추가하여 증가합니다. 큰 사진보다는 작은 아이콘, 자리 표시자, 독립된 스니펫용으로 보관하세요.",
       "파일은 로컬에서 읽혀지며 예측 가능한 성능을 위해 최대 2MB의 이미지 하나로 제한됩니다. 내장된 데이터 URI는 별도의 요청을 피할 수 있지만 HTML/CSS를 캐시하고 편집하기 어렵게 만듭니다."
     ],
@@ -142,7 +142,7 @@
     ],
     "whatIs": "Base64 이미지는 언제 사용해야 합니까?",
     "whatIsParas": [
-      "<strong>Image Base64</strong>는 단일 HTML, CSS, JSON 또는 텍스트 파일 내에서 이동해야 하는 작은 자산에 유용합니다.",
+      "<strong>Image Base64</strong>은 단일 HTML, CSS, JSON 또는 텍스트 파일 내에서 이동해야 하는 작은 자산에 유용합니다.",
       "브라우저가 별도로 캐시할 수 있도록 더 큰 자산에는 일반 이미지 파일을 사용하십시오. Base64는 데이터를 확장하고 모든 이미지 메타데이터를 인코딩된 바이트 내에 유지하므로 삽입하기 전에 크기와 개인 정보 보호를 확인하세요."
     ],
     "example": "Python으로 변환",

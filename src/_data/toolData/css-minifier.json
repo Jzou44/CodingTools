@@ -33,16 +33,16 @@
   },
   "cn": {
     "title": "CSS 压缩器 - Coding.Tools",
-    "description": "通过删除注释和空格同时保留级联行为来缩小 CSS。",
+    "description": "通过删除注释和空格同时保留级联行为来压缩 CSS。",
     "toolTitle": "CSS 压缩",
     "toolDescription": "将 CSS 压缩为紧凑的样式表，无需重新排序规则。",
     "categoryName": "格式化与压缩",
     "inputPlaceholder": "粘贴要压缩的 CSS...",
     "outputPlaceholder": "压缩后的 CSS 将在此显示...",
-    "descTitle": "缩小 CSS，同时保留级联",
+    "descTitle": "压缩 CSS，同时保留级联",
     "descParas": [
       "<strong>CSS 压缩 删除了可避免的空格、注释和格式，因此样式表占用的空间更少。</strong> 它对于不需要完整构建管道的快速片段、嵌入样式、示例和静态资源非常有用。",
-      "CSS 缩小必须保留选择器顺序、声明顺序、特异性、级联层、自定义属性和 at 规则结构。重新排序或合并规则可以更改计算样式，因此该工具专注于紧凑文本而不是有风险的优化。"
+      "CSS 压缩必须保留选择器顺序、声明顺序、特异性、级联层、自定义属性和 at 规则结构。重新排序或合并规则可以更改计算样式，因此该工具专注于紧凑文本而不是有风险的优化。"
     ],
     "howToUse": "使用方法",
     "steps": [
@@ -54,58 +54,58 @@
     "whatIs": "CSS 压缩器是什么？",
     "whatIsParas": [
       "<strong>CSS 压缩</strong> 是一个基于浏览器的实用程序，用于将可读的 CSS 转换为较小的样式表。它保留相同的规则和声明，同时删除浏览器不需要的格式字符。",
-      "有些注释是有意义的，例如许可证横幅或构建工具注释。保留一个可读的源文件，并在使用它的页面中直观地验证缩小的 CSS。"
+      "有些注释是有意义的，例如许可证横幅或构建工具注释。保留一个可读的源文件，并在使用它的页面中直观地验证压缩的 CSS。"
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "仅粘贴 CSS。如果您的项目需要自动前缀、源映射、未使用的 CSS 删除或高级合并，请通过正常的构建和浏览器测试过程运行输出。",
     "example": "示例",
     "examplePara": "通过删除注释和格式化空白来压缩短样式表：",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "exampleCode": "--- 格式化输入 ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- 压缩输出 ---\nbody{margin:0;padding:0;}",
     "buttonLabel": "压缩 CSS"
   },
   "tw": {
     "title": "CSS 壓縮器 - Coding.Tools",
-    "description": "透過刪除註解和空格同時保留級聯行為來縮小 CSS。",
+    "description": "透過刪除註解和空格同時保留級聯行為來壓縮 CSS。",
     "toolTitle": "CSS 壓縮",
     "toolDescription": "將 CSS 壓縮為緊湊的樣式表，無需重新排序規則。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上要壓縮的 CSS...",
     "outputPlaceholder": "壓縮後的 CSS 將在此顯示...",
-    "descTitle": "縮小 CSS，同時保留級聯",
+    "descTitle": "壓縮 CSS，同時保留級聯",
     "descParas": [
       "<strong>CSS 壓縮 刪除了可避免的空格、註解和格式，因此樣式表佔用的空間較少。</strong> 它對於不需要完整建置管道的快速片段、嵌入樣式、範例和靜態資源非常有用。",
-      "CSS 縮小必須保留選擇器順序、宣告順序、特異性、級聯層、自訂屬性和 at 規則結構。重新排序或合併規則可以更改計算樣式，因此該工具專注於緊湊文字而不是有風險的最佳化。"
+      "CSS 壓縮必須保留選擇器順序、宣告順序、特異性、級聯層、自訂屬性和 at 規則結構。重新排序或合併規則可以更改計算樣式，因此該工具專注於緊湊文字而不是有風險的最佳化。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將 CSS 程式碼貼到輸入編輯器中。",
       "按一下 <strong>壓縮 CSS</strong> 以刪除可避免的格式和註解。",
       "檢查輸出以確認保留規則順序、at 規則和自訂屬性。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "CSS 壓縮器是什麼？",
     "whatIsParas": [
-      "<strong>CSS 壓縮</strong> 是一個基於瀏覽器的實用程序，用於將可讀的 CSS 轉換為較小的樣式表。它保留相同的規則和聲明，同時刪除瀏覽器不需要的格式字元。",
-      "有些註釋是有意義的，例如許可證橫幅或建立工具註釋。保留一個可讀的來源文件，並在使用它的頁面中直觀地驗證縮小的 CSS。"
+      "<strong>CSS 壓縮</strong> 是一個基於瀏覽器的實用工具，用於將可讀的 CSS 轉換為較小的樣式表。它保留相同的規則和聲明，同時刪除瀏覽器不需要的格式字元。",
+      "有些註釋是有意義的，例如許可證橫幅或建立工具註釋。保留一個可讀的來源文件，並在使用它的頁面中直觀地驗證壓縮的 CSS。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "僅貼上 CSS。如果您的專案需要自動前綴、來源對應、未使用的 CSS 刪除或進階合併，請透過正常的建置和瀏覽器測試流程執行輸出。",
     "example": "範例",
     "examplePara": "透過刪除註解和格式化空白來壓縮短樣式表：",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "exampleCode": "--- 格式化輸入 ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- 壓縮輸出 ---\nbody{margin:0;padding:0;}",
     "buttonLabel": "壓縮 CSS"
   },
   "jp": {
-    "title": "CSS ミニファイヤー - Coding.Tools",
+    "title": "CSS 圧縮 - Coding.Tools",
     "description": "カスケード動作を維持しながらコメントと空白を削除して、CSS を縮小します。",
-    "toolTitle": "CSS ミニファイア",
+    "toolTitle": "CSS 圧縮",
     "toolDescription": "ルールを並べ替えることなく、CSS をコンパクトなスタイルシートに圧縮します。",
     "categoryName": "整形と圧縮",
-    "inputPlaceholder": "ミニファイする CSS を貼り付け...",
-    "outputPlaceholder": "ミニファイされた CSS がここに表示されます...",
+    "inputPlaceholder": "圧縮する CSS を貼り付け...",
+    "outputPlaceholder": "圧縮された CSS がここに表示されます...",
     "descTitle": "カスケードを維持しながら CSS を縮小します",
     "descParas": [
-      "<strong>CSS ミニファイア は、回避可能な空白、コメント、書式設定を削除するため、スタイルシートの占有スペースが少なくなります。</strong> これは、完全なビルド パイプラインを必要としないクイック スニペット、埋め込みスタイル、サンプル、静的アセットに役立ちます。",
+      "<strong>CSS 圧縮 は、回避可能な空白、コメント、書式設定を削除するため、スタイルシートの占有スペースが少なくなります。</strong> これは、完全なビルド パイプラインを必要としないクイック スニペット、埋め込みスタイル、サンプル、静的アセットに役立ちます。",
       "CSS 縮小化では、セレクターの順序、宣言の順序、特異性、カスケード レイヤー、カスタム プロパティ、および at-rule 構造を保持する必要があります。ルールの並べ替えや結合によって計算されたスタイルが変更される可能性があるため、このツールは危険な最適化ではなく、コンパクトなテキストに重点を置いています。"
     ],
     "howToUse": "使い方",
@@ -115,52 +115,52 @@
       "出力を確認して、ルールの順序、アットルール、およびカスタム プロパティが保持されていることを確認します。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "CSS ミニファイヤーとは何ですか?",
+    "whatIs": "CSS 圧縮とは何ですか?",
     "whatIsParas": [
-      "<strong>CSS ミニファイア</strong> は、読み取り可能な CSS をより小さいスタイルシートに変換するためのブラウザベースのユーティリティです。同じルールと宣言を維持しながら、ブラウザーに必要のない書式設定文字を削除します。",
+      "<strong>CSS 圧縮</strong> は、読み取り可能な CSS をより小さいスタイルシートに変換するためのブラウザベースのユーティリティです。同じルールと宣言を維持しながら、ブラウザーに必要のない書式設定文字を削除します。",
       "ライセンス バナーやビルド ツールの注釈など、一部のコメントは意味があります。読み取り可能なソース ファイルを保存し、それを使用するページで縮小された CSS を視覚的に確認します。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "CSSのみを貼り付けてください。プロジェクトに自動プレフィックス、ソース マップ、未使用の CSS の削除、または高度なマージが必要な場合は、通常のビルドおよびブラウザー テスト プロセスを通じて出力を実行します。",
     "example": "例",
     "examplePara": "短いスタイルシートは、コメントを削除して空白をフォーマットすることで圧縮されます。",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
-    "buttonLabel": "CSS をミニファイ"
+    "exampleCode": "--- 整形入力 ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- 圧縮出力 ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "CSS を圧縮"
   },
   "kr": {
-    "title": "CSS 축소기 - Coding.Tools",
+    "title": "CSS 압축 - Coding.Tools",
     "description": "계단식 동작을 유지하면서 주석과 공백을 제거하여 CSS를 축소합니다.",
-    "toolTitle": "CSS 미니파이어",
+    "toolTitle": "CSS 압축",
     "toolDescription": "규칙을 재정렬하지 않고 CSS를 컴팩트 스타일시트로 압축합니다.",
     "categoryName": "포맷 및 압축",
-    "inputPlaceholder": "미니파이할 CSS를 붙여넣으세요...",
-    "outputPlaceholder": "미니파이된 CSS가 여기에 표시됩니다...",
+    "inputPlaceholder": "압축할 CSS를 붙여넣으세요...",
+    "outputPlaceholder": "압축된 CSS가 여기에 표시됩니다...",
     "descTitle": "캐스케이드를 유지하면서 CSS 축소",
     "descParas": [
-      "<strong>CSS 미니파이어는 피할 수 있는 공백, 주석 및 서식을 제거하여 스타일시트가 공간을 덜 차지하도록 합니다.</strong> 전체 빌드 파이프라인이 필요하지 않은 빠른 코드 조각, 포함된 스타일, 예제 및 정적 자산에 유용합니다.",
+      "<strong>CSS 압축은 피할 수 있는 공백, 주석 및 서식을 제거하여 스타일시트가 공간을 덜 차지하도록 합니다.</strong> 전체 빌드 파이프라인이 필요하지 않은 빠른 코드 조각, 포함된 스타일, 예제 및 정적 자산에 유용합니다.",
       "CSS 축소는 선택기 순서, 선언 순서, 특이성, 계단식 레이어, 사용자 정의 속성 및 at-rule 구조를 보존해야 합니다. 규칙을 재정렬하거나 병합하면 계산된 스타일이 변경될 수 있으므로 이 도구는 위험한 최적화보다는 간결한 텍스트에 중점을 둡니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
       "CSS 코드를 입력 편집기에 붙여넣습니다.",
-      "<strong>CSS 미니파이</strong>를 클릭하여 피할 수 있는 서식과 주석을 제거하세요.",
+      "<strong>CSS 압축</strong>를 클릭하여 피할 수 있는 서식과 주석을 제거하세요.",
       "출력을 검토하여 규칙 순서, at-규칙 및 사용자 정의 속성이 유지되는지 확인하세요.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "CSS 축소기는 무엇입니까?",
+    "whatIs": "CSS 압축이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>CSS 미니파이어</strong>는 읽을 수 있는 CSS를 더 작은 스타일시트로 변환하는 브라우저 기반 유틸리티입니다. 브라우저에 필요하지 않은 서식 지정 문자를 제거하면서 동일한 규칙과 선언을 유지합니다.",
+      "<strong>CSS 압축</strong>은 읽을 수 있는 CSS를 더 작은 스타일시트로 변환하는 브라우저 기반 유틸리티입니다. 브라우저에 필요하지 않은 서식 지정 문자를 제거하면서 동일한 규칙과 선언을 유지합니다.",
       "라이센스 배너나 빌드 도구 주석과 같은 일부 주석은 의미가 있습니다. 읽을 수 있는 소스 파일을 유지하고 이를 사용하는 페이지에서 축소된 CSS를 시각적으로 확인하세요."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "CSS만 붙여넣으세요. 프로젝트에 자동 접두사, 소스 맵, 사용되지 않은 CSS 제거 또는 고급 병합이 필요한 경우 일반 빌드 및 브라우저 테스트 프로세스를 통해 출력을 실행하세요.",
     "example": "예시",
     "examplePara": "짧은 스타일시트는 주석을 제거하고 공백 형식을 지정하여 압축됩니다.",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
-    "buttonLabel": "CSS 미니파이"
+    "exampleCode": "--- 포맷된 입력 ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- 압축 출력 ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "CSS 압축"
   },
   "fr": {
-    "title": "Minificateur CSS - Coding.Tools",
+    "title": "Minifieur CSS - Coding.Tools",
     "description": "Réduisez CSS en supprimant les commentaires et les espaces tout en préservant le comportement en cascade.",
     "toolTitle": "Minifieur CSS",
     "toolDescription": "Compressez CSS dans des feuilles de style compactes sans réorganiser les règles.",
@@ -179,7 +179,7 @@
       "Examinez le résultat pour confirmer que l’ordre des règles, les règles at et les propriétés personnalisées sont préservées.",
       "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier ou <strong>Effacer</strong> pour réinitialiser."
     ],
-    "whatIs": "Qu'est-ce que le miniificateur CSS ?",
+    "whatIs": "Qu'est-ce que le minifieur CSS ?",
     "whatIsParas": [
       "<strong>Minifieur CSS</strong> est un utilitaire basé sur un navigateur permettant de transformer CSS lisible en une feuille de style plus petite. Il conserve les mêmes règles et déclarations tout en supprimant les caractères de formatage dont les navigateurs n'ont pas besoin.",
       "Certains commentaires sont significatifs, comme les bannières de licence ou les annotations de l'outil de construction. Conservez un fichier source lisible et vérifiez visuellement CSS minifié dans les pages qui l'utilisent."
@@ -188,7 +188,7 @@
     "inputNotesPara": "Collez uniquement CSS. Si votre projet nécessite un préfixe automatique, des mappages de sources, une suppression de CSS inutilisée ou une fusion avancée, exécutez la sortie via votre processus normal de construction et de test de navigateur.",
     "example": "Exemple",
     "examplePara": "Une courte feuille de style est compactée en supprimant le commentaire et en formatant les espaces :",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "exampleCode": "--- Entrée formatée ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Sortie minifiée ---\nbody{margin:0;padding:0;}",
     "buttonLabel": "Minifier CSS"
   },
   "de": {
@@ -207,7 +207,7 @@
     "howToUse": "Anleitung",
     "steps": [
       "Fügen Sie Ihren CSS-Code in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Minifizieren CSS</strong>, um vermeidbare Formatierungen und Kommentare zu entfernen.",
+      "Klicken Sie auf <strong>CSS minifizieren</strong>, um vermeidbare Formatierungen und Kommentare zu entfernen.",
       "Überprüfen Sie die Ausgabe, um zu bestätigen, dass die Regelreihenfolge, die At-Regeln und die benutzerdefinierten Eigenschaften erhalten bleiben.",
       "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Datei oder <strong>Leeren</strong> zum Zurücksetzen."
     ],
@@ -220,8 +220,8 @@
     "inputNotesPara": "Nur CSS einfügen. Wenn Ihr Projekt eine automatische Präfixierung, Quellzuordnungen, die Entfernung nicht verwendeter CSS oder eine erweiterte Zusammenführung benötigt, führen Sie die Ausgabe über Ihren normalen Build- und Browsertestprozess aus.",
     "example": "Beispiel",
     "examplePara": "Ein kurzes Stylesheet wird komprimiert, indem der Kommentar entfernt und Leerzeichen formatiert werden:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
-    "buttonLabel": "Minifizieren CSS"
+    "exampleCode": "--- Formatierte Eingabe ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minifizierte Ausgabe ---\nbody{margin:0;padding:0;}",
+    "buttonLabel": "CSS minifizieren"
   },
   "es": {
     "title": "Minificador CSS - Coding.Tools",
@@ -252,7 +252,7 @@
     "inputNotesPara": "Pegue solo CSS. Si su proyecto necesita prefijos automáticos, mapas de origen, eliminación de CSS no utilizado o fusión avanzada, ejecute el resultado a través de su proceso normal de compilación y prueba del navegador.",
     "example": "Ejemplo",
     "examplePara": "Una hoja de estilo corta se compacta eliminando el comentario y formateando los espacios en blanco:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "exampleCode": "--- Entrada formateada ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Salida minificada ---\nbody{margin:0;padding:0;}",
     "buttonLabel": "Minificar CSS"
   },
   "pt": {
@@ -284,7 +284,7 @@
     "inputNotesPara": "Cole apenas CSS. Se o seu projeto precisar de autoprefixação, mapas de origem, remoção de CSS não utilizado ou mesclagem avançada, execute a saída por meio do processo normal de construção e teste do navegador.",
     "example": "Exemplo",
     "examplePara": "Uma pequena folha de estilo é compactada removendo o comentário e formatando o espaço em branco:",
-    "exampleCode": "--- Formatted Input ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Minified Output ---\nbody{margin:0;padding:0;}",
+    "exampleCode": "--- Entrada formatada ---\n/* Main styles */\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n--- Saída minificada ---\nbody{margin:0;padding:0;}",
     "buttonLabel": "Minificar CSS"
   }
 }

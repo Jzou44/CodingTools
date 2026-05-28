@@ -79,7 +79,7 @@
     "howToUse": "使用方法",
     "steps": [
       "輸入 0 到 255 之間的紅色、綠色和藍色值。",
-      "查看產生的十六進位顏色和即時預覽樣本。",
+      "檢視產生的十六進位顏色和即時預覽樣本。",
       "點選 <strong>選擇隨機顏色</strong> 以使用樣本顏色填滿通道。",
       "使用 <strong>複製</strong> 複製十六進位顏色代碼。"
     ],
@@ -129,8 +129,8 @@
   },
   "kr": {
     "title": "RGB - 16진수 변환기 - Coding.Tools",
-    "description": "실시간 미리보기를 통해 RGB 채널 ​​값을 CSS 16진수 색상 표기법으로 변환합니다.",
-    "toolTitle": "RGB를 16진수로",
+    "description": "실시간 미리보기를 통해 RGB 채널 값을 CSS 16진수 색상 표기법으로 변환합니다.",
+    "toolTitle": "RGB → 16진수",
     "toolDescription": "빨간색, 녹색 및 파란색 채널 값을 CSS 16진수 색상 코드로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "RGB 색상 입력 (예: rgb(255,87,51))...",
@@ -147,9 +147,9 @@
       "<strong>임의의 색상을 선택</strong>를 클릭하여 채널을 샘플 색상으로 채웁니다.",
       "16진수 색상 코드를 복사하려면 <strong>복사</strong>를 사용하세요."
     ],
-    "whatIs": "RGB를 16진수로 변환이란 무엇입니까?",
+    "whatIs": "RGB를 16진수로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>RGB에서 16진수로 변환</strong>는 3개의 10진수 색상 채널을 3개의 2자리 16진수 쌍으로 변환합니다. 그런 다음 빨간색, 녹색 및 파란색이 일반적인 CSS 16진수 색상 형식인 <code>#RRGGBB</code>로 결합됩니다."
+      "<strong>RGB에서 16진수로 변환</strong>은 3개의 10진수 색상 채널을 3개의 2자리 16진수 쌍으로 변환합니다. 그런 다음 빨간색, 녹색 및 파란색이 일반적인 CSS 16진수 색상 형식인 <code>#RRGGBB</code>로 결합됩니다."
     ],
     "inputNotes": "입력 참고",
     "inputNotesPara": "정수 채널 값만 사용하세요. <code>0-255</code> 외부의 값, 백분율, HSL 값 및 알파 값은 표준 6자리 16진수 색상이 되기 전에 변환이 필요합니다.",
@@ -248,7 +248,7 @@
       "<strong>RGB a conversión hexadecimal</strong> convierte tres canales de color decimales en tres pares hexadecimales de dos dígitos. Luego, el rojo, el verde y el azul se combinan como <code>#RRGGBB</code>, el formato de color hexadecimal común CSS."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Utilice únicamente valores de canal de números enteros. Los valores fuera de <code>0-255</code>, porcentajes, valores HSL y valores alfa necesitan conversión antes de que puedan convertirse en un color hexadecimal estándar de 6 dígitos.",
+    "inputNotesPara": "Utilice únicamente valores de canal de números enteros. Los valores füra de <code>0-255</code>, porcentajes, valores HSL y valores alfa necesitan conversión antes de que puedan convertirse en un color hexadecimal estándar de 6 dígitos.",
     "example": "Ejemplo",
     "examplePara": "RGB rojo 255, verde 87 y azul 51 se combinan en <code>#FF5733</code>:",
     "exampleCode": "RGB: rgb(255, 87, 51)\nHex: #FF5733\n\nRGB: rgb(0, 255, 0)\nHex: #00FF00\n\nRGB: rgb(51, 102, 204)\nHex: #3366CC",

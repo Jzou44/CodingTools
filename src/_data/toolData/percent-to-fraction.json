@@ -45,7 +45,7 @@
     "steps": [
       "输入您要转换的百分比值。",
       "查看简化分数或带分数结果。",
-      "复制分数，或在转换另一个百分比之前清除该字段。"
+      "复制分数，或在转换另一个百分比之前清空输入。"
     ],
     "whatIs": "什么是百分比到分数的转换？",
     "whatIsParas": [
@@ -73,18 +73,18 @@
     "howToUse": "如何使用",
     "steps": [
       "輸入您要轉換的百分比值。",
-      "查看簡化分數或帶分數結果。",
-      "複製分數，或在轉換另一個百分比之前清除該欄位。"
+      "檢視簡化分數或帶分數結果。",
+      "複製分數，或在轉換另一個百分比之前清空輸入。"
     ],
     "whatIs": "什麼是百分比到分數的轉換？",
     "whatIsParas": [
       "<strong>百分比到分數的轉換</strong> 將百分之幾重寫為分子和分母。然後將該分數除以最大公約數，以便複製的結果更易於讀取和重複使用。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "如果包含 <code>%</code> 的輸入被拒絕，則僅輸入數字部分。對於四捨五入的百分比，請記住，簡化分數代表四捨五入的輸入，不一定是確切的原始比率。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "數字百分比值 75 從 75/100 簡化為 3/4：",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- 百分比輸入 ---\n75%\n\n--- 分數輸出 ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "jp": {
     "title": "パーセントから分数へのコンバーター - Coding.Tools",
@@ -99,7 +99,7 @@
       "<strong>パーセントを分数に変換すると、パーセントを 100 を超える分数に変換し、結果を簡素化します。</strong> 比率、教室での例、レシピ、測定値の変換、および一般的なパーセントの簡単なチェックに使用します。",
       "パーセントは 100 あたりの値であるため、<code>75%</code> は <code>75/100</code> として始まり、<code>3/4</code> に簡略化されます。 <code>12.5%</code> などの小数パーセンテージでは、簡略化する前に追加の分母の桁が必要です。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "変換したいパーセンテージ値を入力します。",
       "簡略化された分数または帯分数の結果を確認します。",
@@ -109,23 +109,23 @@
     "whatIsParas": [
       "<strong>パーセントから分数への変換</strong> は、100 分の 1 を分子と分母として書き換えます。次に、分数が最大公約数で減算されるため、コピーされた結果が読みやすく、再利用しやすくなります。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "<code>%</code> を含む入力が拒否される場合は、数字部分のみを入力してください。四捨五入されたパーセンテージの場合、単純化された分数は四捨五入された入力を表し、必ずしも正確な元の比率ではないことに注意してください。",
     "example": "例",
     "examplePara": "パーセント値 75 は、75/100 から 3/4 に簡略化されます。",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- パーセント入力 ---\n75%\n\n--- 分数出力 ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "kr": {
-    "title": "백분율을 분수로 변환하는 변환기 - Coding.Tools",
+    "title": "퍼센트-분수 변환기 - Coding.Tools",
     "description": "백분율 값을 단순화된 분수나 대분수로 변환합니다.",
-    "toolTitle": "퍼센트에서 분수",
+    "toolTitle": "퍼센트 → 분수",
     "toolDescription": "비율, 측정 및 수학 작업을 위해 백분율을 단순화된 분수 형식으로 변환합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "백분율을 입력하세요(예: 75%, 50)...",
     "outputPlaceholder": "분수 결과가 여기에 표시됩니다...",
     "descTitle": "백분율을 단순화된 분수로 변환",
     "descParas": [
-      "<strong>퍼센트에서 분수은 백분율을 100이 넘는 분수로 변환하고 결과를 단순화합니다.</strong> 비율, 교실 예제, 조리법, 측정 변환 및 일반적인 백분율의 빠른 확인에 사용합니다.",
+      "<strong>퍼센트를 분수로 변환하면 백분율을 100을 분모로 하는 분수로 바꾼 뒤 결과를 약분합니다.</strong> 비율, 할인, 확률, 교실 예제, 스프레드시트 확인 또는 분수로 더 쉽게 전달되는 값에 사용하세요.",
       "퍼센트는 100당 값이므로 <code>75%</code>는 <code>75/100</code>로 시작하여 <code>3/4</code>로 단순화됩니다. <code>12.5%</code>와 같은 소수 백분율은 단순화하기 전에 추가 분모 자리가 필요합니다."
     ],
     "howToUse": "사용방법",
@@ -136,13 +136,13 @@
     ],
     "whatIs": "백분율을 분수로 변환하면 무엇인가요?",
     "whatIsParas": [
-      "<strong>Percent를 분수로 변환</strong>는 100분의 1을 분자와 분모로 다시 씁니다. 그런 다음 복사된 결과를 더 쉽게 읽고 재사용할 수 있도록 분수가 최대 공약수로 감소됩니다."
+      "<strong>Percent를 분수로 변환</strong>은 100분의 1을 분자와 분모로 다시 씁니다. 그런 다음 복사된 결과를 더 쉽게 읽고 재사용할 수 있도록 분수가 최대 공약수로 감소됩니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "<code>%</code>가 포함된 입력이 거부되면 숫자 부분만 입력하세요. 반올림된 백분율의 경우 단순화된 분수는 반올림된 입력을 나타내며 반드시 정확한 원래 비율은 아니라는 점을 기억하십시오.",
     "example": "예",
     "examplePara": "숫자 백분율 값 75는 75/100에서 3/4로 단순화됩니다.",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- 퍼센트 입력 ---\n75%\n\n--- 분수 출력 ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "fr": {
     "title": "Convertisseur de pourcentage en fraction - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Si une entrée contenant <code>%</code> est rejetée, saisissez uniquement la partie numérique. Pour les pourcentages arrondis, n'oubliez pas que la fraction simplifiée représente l'entrée arrondie, pas nécessairement le rapport d'origine exact.",
     "example": "Exemple",
     "examplePara": "Une valeur de pourcentage numérique de 75 simplifie de 75/100 à 3/4 :",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Entrée pourcentage ---\n75%\n\n--- Sortie fraction ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "de": {
     "title": "Prozent-zu-Bruch-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Wenn eine Eingabe mit <code>%</code> abgelehnt wird, geben Sie nur den numerischen Teil ein. Denken Sie bei gerundeten Prozentsätzen daran, dass der vereinfachte Bruch die gerundete Eingabe darstellt und nicht unbedingt das exakte Originalverhältnis.",
     "example": "Beispiel",
     "examplePara": "Ein numerischer Prozentwert von 75 vereinfacht von 75/100 auf 3/4:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Prozenteingabe ---\n75%\n\n--- Bruchausgabe ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "es": {
     "title": "Convertidor de porcentaje a fracción - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Si se rechaza una entrada que contiene <code>%</code>, ingrese solo la parte numérica. Para porcentajes redondeados, recuerde que la fracción simplificada representa la entrada redondeada, no necesariamente la proporción original exacta.",
     "example": "Ejemplo",
     "examplePara": "Un valor porcentual numérico de 75 se simplifica de 75/100 a 3/4:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Entrada de porcentaje ---\n75%\n\n--- Salida de fracción ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   },
   "pt": {
     "title": "Conversor de porcentagem para fração - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Se uma entrada contendo <code>%</code> for rejeitada, insira apenas a parte numérica. Para porcentagens arredondadas, lembre-se de que a fração simplificada representa a entrada arredondada, não necessariamente a proporção original exata.",
     "example": "Exemplo",
     "examplePara": "Um valor percentual numérico de 75 simplifica de 75/100 para 3/4:",
-    "exampleCode": "--- Percent Input ---\n75%\n\n--- Fraction Output ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
+    "exampleCode": "--- Entrada de porcentagem ---\n75%\n\n--- Saída de fração ---\nInteger: 0\nNumerator: 3\nDenominator: 4"
   }
 }

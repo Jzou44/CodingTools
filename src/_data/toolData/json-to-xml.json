@@ -74,24 +74,24 @@
     "descTitle": "將 JSON 資料轉換為 XML 元素",
     "descParas": [
       "<strong>JSON 轉 XML 會把解析後的 JSON 轉成 XML 標記，供需要 XML 的系統、範例和整合使用。</strong> 適合用於 SOAP 風格負載、舊系統匯入、XML 測試資料或文件範例的原型。",
-      "JSON 和 XML 不一對一映射。 JSON 物件鍵成為元素名稱，陣列通常成為重複元素，原始值成為文字內容；屬性、命名空間和混合文字需要普通 JSON 以外的明確約定。"
+      "JSON 和 XML 不一對一對應。 JSON 物件鍵成為元素名稱，陣列通常成為重複元素，原始值成為文字內容；屬性、命名空間和混合文字需要普通 JSON 以外的明確約定。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將 JSON 資料貼到輸入編輯器中。",
       "按一下「<strong>轉換為 XML</strong>」以轉換解析的資料。",
-      "查看產生的 XML 中的預期根元素、重複項和文字值。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "檢視產生的 XML 中的預期根元素、重複項和文字值。",
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是 JSON 到 XML 轉換器？",
     "whatIsParas": [
-      "<strong>JSON 到 XML 轉換器</strong> 是一個基於瀏覽器的實用程序，用於將 JSON 資料重塑為 XML 文件。當工具或 API 接受 XML 但您的來源資料是 JSON 時，它可以為您提供快速起點。",
+      "<strong>JSON 到 XML 轉換器</strong> 是一個基於瀏覽器的實用工具，用於將 JSON 資料重塑為 XML 文件。當工具或 API 接受 XML 但您的來源資料是 JSON 時，它可以為您提供快速起點。",
       "這種轉換是結構性的，而不是語意性的。如果目標模式需要屬性、命名空間、特定根名稱或鍵入的值，請在使用前根據該模式調整和驗證 XML。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "僅使用有效的 JSON。屬性名稱應適合作為 XML 元素名稱，否則您可能需要在轉換後重新命名它們。陣列、空值和布林值可能需要特定於目標的處理。",
     "example": "範例",
-    "examplePara": "嵌套的 JSON 物件成為匹配的 XML 元素樹：",
+    "examplePara": "巢狀的 JSON 物件成為符合的 XML 元素樹：",
     "exampleCode": "--- JSON 輸入 ---\n{\"person\":{\"name\":\"John\",\"age\":30}}\n\n--- XML 輸出 ---\n<person>\n  <name>John</name>\n  <age>30</age>\n</person>",
     "buttonLabel": "轉換為 XML"
   },
@@ -128,8 +128,8 @@
     "buttonLabel": "XML に変換"
   },
   "kr": {
-    "title": "JSON에서 XML로 변환기 - Coding.Tools",
-    "description": "예측 가능한 요소와 반복 항목 매핑을 사용하여 유효한 JSON를 XML 마크업으로 변환합니다.",
+    "title": "JSON-XML 변환기 - Coding.Tools",
+    "description": "예측 가능한 요소와 반복 항목 매핑을 사용하여 유효한 JSON을 XML 마크업으로 변환합니다.",
     "toolTitle": "JSON → XML 변환",
     "toolDescription": "JSON 객체, 배열 및 기본 값을 읽을 수 있는 XML로 변환합니다.",
     "categoryName": "포맷 및 압축",
@@ -144,13 +144,13 @@
     "steps": [
       "JSON 데이터를 입력 편집기에 붙여넣습니다.",
       "<strong>XML로 변환</strong>를 클릭하여 구문 분석된 데이터를 변환합니다.",
-      "예상되는 루트 요소, 반복 항목 및 텍스트 값에 대해 생성된 XML를 검토하십시오.",
+      "예상되는 루트 요소, 반복 항목 및 텍스트 값에 대해 생성된 XML을 검토하십시오.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JSON-XML 변환기는 무엇입니까?",
+    "whatIs": "JSON-XML 변환기는 무엇인가요?",
     "whatIsParas": [
-      "<strong>JSON에서 XML로 변환기</strong>는 JSON 데이터를 XML 문서로 재구성하기 위한 브라우저 기반 유틸리티입니다. 도구나 API가 XML를 허용하지만 소스 데이터가 JSON인 경우 빠른 시작점을 제공합니다.",
-      "변환은 의미론적이 아니라 구조적입니다. 대상 스키마에 속성, 네임스페이스, 특정 루트 이름 또는 입력된 값이 필요한 경우 사용하기 전에 해당 스키마에 대해 XML를 조정하고 유효성을 검사하십시오."
+      "<strong>JSON에서 XML로 변환기</strong>는 JSON 데이터를 XML 문서로 재구성하기 위한 브라우저 기반 유틸리티입니다. 도구나 API가 XML을 허용하지만 소스 데이터가 JSON인 경우 빠른 시작점을 제공합니다.",
+      "변환은 의미론적이 아니라 구조적입니다. 대상 스키마에 속성, 네임스페이스, 특정 루트 이름 또는 입력된 값이 필요한 경우 사용하기 전에 해당 스키마에 대해 XML을 조정하고 유효성을 검사하십시오."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "유효한 JSON만 사용하세요. 속성 이름은 XML 요소 이름으로 적합해야 합니다. 그렇지 않으면 변환 후 이름을 바꿔야 할 수도 있습니다. 배열, null 값 및 부울은 대상별 처리가 필요할 수 있습니다.",
@@ -234,7 +234,7 @@
     "descTitle": "Convierta datos JSON en elementos XML",
     "descParas": [
       "<strong>El convertidor JSON a XML transforma JSON analizado en marcado XML para sistemas, ejemplos e integraciones que esperan XML.</strong> Es útil al crear prototipos de cargas útiles de estilo SOAP, importaciones heredadas, datos de prueba XML o muestras de documentación.",
-      "JSON y XML no se asignan uno a uno. Las claves de objeto JSON se convierten en nombres de elementos, las matrices generalmente se convierten en elementos repetidos y los valores primitivos se convierten en contenido de texto; Los atributos, espacios de nombres y texto mixto requieren convenciones explícitas fuera del JSON simple."
+      "JSON y XML no se asignan uno a uno. Las claves de objeto JSON se convierten en nombres de elementos, las matrices generalmente se convierten en elementos repetidos y los valores primitivos se convierten en contenido de texto; los atributos, espacios de nombres y texto mixto requieren convenciones explícitas füra del JSON simple."
     ],
     "howToUse": "Cómo usar",
     "steps": [

@@ -124,15 +124,15 @@
       "貼上完整的 URL、編碼路徑或原始查詢字串。",
       "為表單樣式查詢字串啟用 <strong>將 + 視為空格</strong>。",
       "保持 <strong>解析查詢參數</strong> 啟用以擷取鍵值對。",
-      "按一下 <strong>解碼</strong>，然後查看解碼後的文字和參數表。"
+      "按一下 <strong>解碼</strong>，然後檢視解碼後的文字和參數表。"
     ],
     "whatIs": "什麼是URL解碼？",
     "whatIsParas": [
       "<strong>URL 解碼</strong> 將百分比編碼序列（例如 <code>%20</code>、<code>%2F</code> 和 UTF-8 位元組序列）轉換回可讀字元。它使編碼路徑和查詢值更容易審核。",
-      "查詢解析器讀取 <code>?</code> 之後的部分並將參數分成行。重複的名稱、空值、編碼的嵌套 URL 和格式錯誤的轉義是常見的邊緣情況，在重用解碼的連結之前值得檢查。"
+      "查詢解析器讀取 <code>?</code> 之後的部分並將參數分成行。重複的名稱、空值、編碼的巢狀 URL 和格式錯誤的轉義是常見的邊緣情況，在重用解碼的連結之前值得檢查。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "格式錯誤的百分比轉義應被視為輸入錯誤，而不是默默信任。解碼可以揭示隱藏的重定向、腳本、令牌或個人識別值，因此在共享結果之前請先查看結果。",
+    "inputNotesPara": "格式錯誤的百分比轉義應被視為輸入錯誤，而不是默默信任。解碼可以揭示隱藏的重定向、腳本、令牌或個人識別值，因此在共享結果之前請先檢視結果。",
     "example": "範例",
     "examplePara": "回呼 URL 可以被解碼並擴展為可讀參數：",
     "exampleCode": "輸入\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\n解碼結果\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\n參數\nq = hello world\nredirect = https://coding.tools/",
@@ -171,7 +171,7 @@
     "descTitle": "URLをデコードしてクエリパラメータを検査する",
     "descParas": [
       "<strong>この URL デコーダは、パーセント エンコーディングを逆にし、クエリ文字列をパラメータ名と値に分割できます。</strong> これを使用して、コールバック URL、トラッキング リンク、署名付き URL、OAuth リダイレクト、分析パラメータ、またはログからコピーされた API リクエストを検査します。",
-      "クエリ文字列では通常、パラメータ間で <code>&amp;</code> が使用され、名前と値の間で <code>=</code> が使用されます。フォーム スタイルのクエリではスペースに <code>+</code> が使用されることが多いため、plus-as-space オプションは、多くの Web フレームワークが値を受け取る方法で値をデコードするのに役立ちます。"
+      "クエリ文字列では通常、パラメータ間で <code>&amp;</code> が使用され、名前と値の間で <code>=</code> が使用されます。フォーム スタイルのクエリではスペースに <code>+</code> が使用されることが多いため、<strong>+ を空白として扱う</strong> オプションは、多くの Web フレームワークが値を受け取る方法で値をデコードするのに役立ちます。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -185,7 +185,7 @@
       "<strong>URL デコード</strong> は、<code>%20</code>、<code>%2F</code>、UTF-8 バイト シーケンスなどのパーセント エンコードされたシーケンスを読み取り可能な文字に変換します。これにより、エンコードされたパスとクエリ値の監査が容易になります。",
       "クエリ パーサーは <code>?</code> 以降の部分を読み取り、パラメータを行に分割します。名前の繰り返し、空の値、エンコードされたネストされた URL、および不正なエスケープは、デコードされたリンクを再利用する前に確認する価値のある一般的なエッジ ケースです。"
     ],
-    "inputNotes": "入力メモ",
+    "inputNotes": "入力に関する注意",
     "inputNotesPara": "不正なパーセントエスケープは、黙って信頼するのではなく、入力エラーとして扱う必要があります。デコードすると、隠されたリダイレクト、スクリプト、トークン、または個人を特定できる値が明らかになる可能性があるため、共有する前に結果を確認してください。",
     "example": "例",
     "examplePara": "コールバック URL はデコードされ、読み取り可能なパラメータに展開できます。",
@@ -217,15 +217,15 @@
   },
   "kr": {
     "title": "URL 디코드/쿼리 파서 - Coding.Tools",
-    "description": "백분율로 인코딩된 URL을 디코딩하고 쿼리 문자열을 공백으로 더하기 처리를 포함하여 읽을 수 있는 키/값 쌍으로 구문 분석합니다.",
+    "description": "퍼센트 인코딩된 URL을 디코딩하고 쿼리 문자열을 +를 공백으로 처리를 포함하여 읽을 수 있는 키/값 쌍으로 구문 분석합니다.",
     "toolTitle": "URL 디코딩 / 쿼리 파서",
     "toolDescription": "URL로 인코딩된 텍스트를 디코딩하고 쿼리 매개변수를 읽을 수 있는 테이블로 확장합니다.",
     "categoryName": "해시 및 암호화",
     "buttonLabel": "URL 디코딩",
     "descTitle": "URL 디코딩 및 쿼리 매개변수 검사",
     "descParas": [
-      "<strong>이 URL 디코더는 백분율 인코딩을 역전시키고 쿼리 문자열을 매개변수 이름과 값으로 분할할 수 있습니다.</strong> 이를 사용하여 콜백 URL, 추적 링크, 서명된 URL, OAuth 리디렉션, 분석 매개변수 또는 로그에서 복사된 API 요청을 검사합니다.",
-      "쿼리 문자열은 일반적으로 매개변수 사이에 <code>&amp;</code>를 사용하고 이름과 값 사이에 <code>=</code>를 사용합니다. 양식 스타일 쿼리는 종종 공백에 <code>+</code>를 사용하므로 공백으로 추가 옵션은 많은 웹 프레임워크가 값을 수신하는 방식으로 값을 디코딩하는 데 도움이 됩니다."
+      "<strong>이 URL 디코더는 퍼센트 인코딩을 역전시키고 쿼리 문자열을 매개변수 이름과 값으로 분할할 수 있습니다.</strong> 이를 사용하여 콜백 URL, 추적 링크, 서명된 URL, OAuth 리디렉션, 분석 매개변수 또는 로그에서 복사된 API 요청을 검사합니다.",
+      "쿼리 문자열은 일반적으로 매개변수 사이에 <code>&amp;</code>를 사용하고 이름과 값 사이에 <code>=</code>를 사용합니다. 양식 스타일 쿼리는 종종 공백에 <code>+</code>를 사용하므로 +를 공백으로 처리하는 옵션은 많은 웹 프레임워크가 값을 수신하는 방식으로 값을 디코딩하는 데 도움이 됩니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
@@ -234,7 +234,7 @@
       "키-값 쌍을 추출하려면 <strong>쿼리 매개변수 파싱</strong>를 활성화된 상태로 유지하세요.",
       "<strong>디코드 URL</strong>를 클릭한 다음 디코딩된 텍스트 및 매개변수 테이블을 검토합니다."
     ],
-    "whatIs": "URL 디코딩이란 무엇입니까?",
+    "whatIs": "URL 디코딩이란 무엇인가요?",
     "whatIsParas": [
       "<strong>URL 디코딩</strong>은 <code>%20</code>, <code>%2F</code> 및 UTF-8 바이트 시퀀스처럼 퍼센트 인코딩된 시퀀스를 다시 읽을 수 있는 문자로 바꿉니다. 인코딩된 경로와 쿼리 값을 더 쉽게 점검할 수 있습니다.",
       "쿼리 구문 분석기는 <code>?</code> 뒤의 부분을 읽고 매개변수를 행으로 분리합니다. 반복되는 이름, 빈 값, 인코딩된 중첩 URL 및 잘못된 형식의 이스케이프는 디코딩된 링크를 재사용하기 전에 확인해야 할 일반적인 예외 사례입니다."
@@ -242,7 +242,7 @@
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "잘못된 백분율 이스케이프는 자동으로 신뢰할 수 있는 것이 아니라 입력 오류로 처리되어야 합니다. 디코딩을 통해 숨겨진 리디렉션, 스크립트, 토큰 또는 개인 식별 값이 드러날 수 있으므로 공유하기 전에 결과를 검토하세요.",
     "example": "예시",
-    "examplePara": "콜백 URL를 디코딩하고 읽을 수 있는 매개변수로 확장할 수 있습니다.",
+    "examplePara": "콜백 URL을 디코딩하고 읽을 수 있는 매개변수로 확장할 수 있습니다.",
     "exampleCode": "입력\nhttps://example.com/search?q=hello+world&redirect=https%3A%2F%2Fcoding.tools%2F\n\n디코딩 결과\nhttps://example.com/search?q=hello world&redirect=https://coding.tools/\n\n매개변수\nq = hello world\nredirect = https://coding.tools/",
     "labels": {
       "input": "인코딩된 URL 입력",
@@ -279,11 +279,11 @@
     "descTitle": "Décoder les URL et inspecter les paramètres de requête",
     "descParas": [
       "<strong>Ce décodeur URL inverse le codage en pourcentage et peut diviser les chaînes de requête en noms et valeurs de paramètres.</strong> Utilisez-le pour inspecter les URL de rappel, les liens de suivi, les URL signées, les redirections OAuth, les paramètres d'analyse ou les requêtes API copiées à partir des journaux.",
-      "Les chaînes de requête utilisent généralement <code>&amp;</code> entre les paramètres et <code>=</code> entre un nom et une valeur. Les requêtes de style formulaire utilisent souvent <code>+</code> pour les espaces, de sorte que l'option plus-as-space aide à décoder les valeurs de la manière dont de nombreux frameworks Web les reçoivent."
+      "Les chaînes de requête utilisent généralement <code>&amp;</code> entre les paramètres et <code>=</code> entre un nom et une valeur. Les requêtes de style formulaire utilisent souvent <code>+</code> pour les espaces, de sorte que l'option <strong>+ comme espace</strong> aide à décoder les valeurs de la manière dont de nombreux frameworks Web les reçoivent."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Collez un URL complet, un chemin codé ou une chaîne de requête brute.",
+      "Collez une URL complète, un chemin codé ou une chaîne de requête brute.",
       "Conservez <strong>Traiter + comme espace</strong> activé pour les chaînes de requête de style formulaire.",
       "Gardez <strong>Analyser les paramètres</strong> activé pour extraire les paires clé-valeur.",
       "Cliquez sur <strong>Décoder</strong>, puis examinez le texte décodé et le tableau des paramètres."
@@ -309,11 +309,11 @@
       "noParameters": "Aucun paramètre analysé pour le moment.",
       "queryParameters": "Paramètres de requête",
       "summary": "Résumé",
-      "added": "Ajoute",
+      "added": "Ajouté",
       "removed": "Supprime",
-      "changed": "Modifie",
-      "unchanged": "Inchange",
-      "noDiff": "Aucune difference a afficher."
+      "changed": "Modifié",
+      "unchanged": "Inchangé",
+      "noDiff": "Aucune différence a afficher."
     },
     "messages": {
       "empty": "Saisissez d’abord une valeur.",
@@ -326,7 +326,7 @@
   "de": {
     "title": "URL Dekodier-/Abfrageparser – Coding.Tools",
     "description": "Dekodieren Sie prozentcodierte URLs und analysieren Sie Abfragezeichenfolgen in lesbare Schlüssel/Wert-Paare, einschließlich der Verarbeitung von Pluszeichen als Leerzeichen.",
-    "toolTitle": "URL dekodieren / Query Parser",
+    "toolTitle": "URL dekodieren / Abfrageparser",
     "toolDescription": "Dekodieren Sie URL-kodierten Text und erweitern Sie Abfrageparameter in eine lesbare Tabelle.",
     "categoryName": "Hash & Kryptografie",
     "buttonLabel": "URL dekodieren",
@@ -337,10 +337,10 @@
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Fügen Sie einen vollständigen URL, einen codierten Pfad oder eine rohe Abfragezeichenfolge ein.",
+      "Fügen Sie eine vollständige URL, einen codierten Pfad oder eine rohe Abfragezeichenfolge ein.",
       "Lassen Sie <strong>+ als Leerzeichen behandeln</strong> für Abfragezeichenfolgen im Formularstil aktiviert.",
       "Lassen Sie <strong>Query-Parameter analysieren</strong> aktiviert, um Schlüssel-Wert-Paare zu extrahieren.",
-      "Klicken Sie auf <strong>Decodieren</strong> und überprüfen Sie dann den dekodierten Text und die Parametertabelle."
+      "Klicken Sie auf <strong>Dekodieren</strong> und überprüfen Sie dann den dekodierten Text und die Parametertabelle."
     ],
     "whatIs": "Was ist die URL-Dekodierung?",
     "whatIsParas": [
@@ -363,10 +363,10 @@
       "noParameters": "Noch keine Query-Parameter analysiert.",
       "queryParameters": "Query-Parameter",
       "summary": "Zusammenfassung",
-      "added": "Hinzugefuegt",
+      "added": "Hinzugefügt",
       "removed": "Entfernt",
-      "changed": "Geaendert",
-      "unchanged": "Unveraendert",
+      "changed": "Geändert",
+      "unchanged": "Unverändert",
       "noDiff": "Noch keine Unterschiede zum Anzeigen."
     },
     "messages": {
@@ -374,24 +374,24 @@
       "success": "URL erfolgreich dekodiert",
       "failed": "Vorgang fehlgeschlagen: "
     },
-    "inputPlaceholder": "Kodierte URL oder Query-String einfuegen...",
+    "inputPlaceholder": "Kodierte URL oder Query-String einfügen...",
     "outputPlaceholder": "Dekodierte URL und Parameter erscheinen hier..."
   },
   "es": {
-    "title": "URL Decodificador / Analizador de consultas - Coding.Tools",
+    "title": "Decodificador de URL / Analizador de consultas - Coding.Tools",
     "description": "Decodifique URL codificadas por porcentaje y analice cadenas de consulta en pares clave/valor legibles, incluido el manejo de más como espacio.",
     "toolTitle": "Decodificar URL / Analizador de consulta",
     "toolDescription": "Decodifica texto codificado con URL y expande los parámetros de consulta en una tabla legible.",
-    "categoryName": "Hash y criptografia",
+    "categoryName": "Hash y criptografía",
     "buttonLabel": "Decodificar URL",
     "descTitle": "Decodificar URL e inspeccionar parámetros de consulta",
     "descParas": [
-      "<strong>Este decodificador URL invierte el porcentaje de codificación y puede dividir cadenas de consulta en nombres y valores de parámetros.</strong> Úselo para inspeccionar URL de devolución de llamadas, enlaces de seguimiento, URL firmadas, redirecciones de OAuth, parámetros de análisis o solicitudes de API copiadas de registros.",
-      "Las cadenas de consulta suelen utilizar <code>&amp;</code> entre parámetros y <code>=</code> entre un nombre y un valor. Las consultas de estilo de formulario a menudo usan <code>+</code> para espacios, por lo que la opción plus-as-space ayuda a decodificar valores de la misma manera que muchos marcos web los reciben."
+      "<strong>Este decodificador URL revierte la codificación porcentual y puede dividir cadenas de consulta en nombres y valores de parámetros.</strong> Úselo para inspeccionar URL de devolución de llamadas, enlaces de seguimiento, URL firmadas, redirecciones de OAuth, parámetros de análisis o solicitudes de API copiadas de registros.",
+      "Las cadenas de consulta suelen utilizar <code>&amp;</code> entre parámetros y <code>=</code> entre un nombre y un valor. Las consultas de estilo de formulario a menudo usan <code>+</code> para espacios, por lo que la opción Tratar + como espacio ayuda a decodificar valores de la misma manera que muchos frameworks web los reciben."
     ],
-    "howToUse": "Como usar",
+    "howToUse": "Cómo usar",
     "steps": [
-      "Pegue un URL completo, una ruta codificada o una cadena de consulta sin formato.",
+      "Pegue une URL complèteo, una ruta codificada o una cadena de consulta sin formato.",
       "Mantenga <strong>Tratar + como espacio</strong> habilitado para cadenas de consulta de estilo de formulario.",
       "Mantenga <strong>Analizar parámetros</strong> habilitado para extraer pares clave-valor.",
       "Haga clic en <strong>Decodificar</strong>, luego revise el texto decodificado y la tabla de parámetros."
@@ -417,7 +417,7 @@
       "noParameters": "Aún no hay parámetros analizados.",
       "queryParameters": "Parámetros de consulta",
       "summary": "Resumen",
-      "added": "Anadido",
+      "added": "Añadido",
       "removed": "Eliminado",
       "changed": "Cambiado",
       "unchanged": "Sin cambios",
@@ -432,8 +432,8 @@
     "outputPlaceholder": "La URL decodificada y los parámetros aparecerán aquí..."
   },
   "pt": {
-    "title": "Analisador de decodificação/consulta URL - Coding.Tools",
-    "description": "Decodifique URLs codificados por porcentagem e analise strings de consulta em pares chave/valor legíveis, incluindo manipulação de mais como espaço.",
+    "title": "Decodificador de URL / Analisador de consultas - Coding.Tools",
+    "description": "Decodifique URLs codificadas por percentual e analise strings de consulta em pares chave/valor legíveis, incluindo tratamento de + como espaço.",
     "toolTitle": "Decodificar URL / Analisador de consulta",
     "toolDescription": "Decodifique o texto codificado em URL e expanda os parâmetros de consulta em uma tabela legível.",
     "categoryName": "Hash e criptografia",
@@ -441,11 +441,11 @@
     "descTitle": "Decodifique URLs e inspecione parâmetros de consulta",
     "descParas": [
       "<strong>Este decodificador URL reverte a codificação percentual e pode dividir strings de consulta em nomes e valores de parâmetros.</strong> Use-o para inspecionar URLs de retorno de chamada, links de rastreamento, URLs assinados, redirecionamentos OAuth, parâmetros analíticos ou solicitações de API copiadas de logs.",
-      "As strings de consulta geralmente usam <code>&amp;</code> entre parâmetros e <code>=</code> entre um nome e um valor. Consultas de estilo de formulário geralmente usam <code>+</code> para espaços, portanto, a opção plus-as-space ajuda a decodificar valores da maneira como muitas estruturas da web os recebem."
+      "As strings de consulta geralmente usam <code>&amp;</code> entre parâmetros e <code>=</code> entre um nome e um valor. Consultas de estilo de formulário geralmente usam <code>+</code> para espaços, portanto, a opção Tratar + como espaço ajuda a decodificar valores da maneira como muitas frameworks web os recebem."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Cole um URL completo, um caminho codificado ou uma string de consulta bruta.",
+      "Cole uma URL completa, um caminho codificado ou uma string de consulta bruta.",
       "Mantenha <strong>Tratar + como espaço</strong> ativado para strings de consulta de estilo de formulário.",
       "Mantenha <strong>Analisar parâmetros</strong> ativado para extrair pares de valores-chave.",
       "Clique em <strong>Decodificar</strong> e revise o texto decodificado e a tabela de parâmetros."

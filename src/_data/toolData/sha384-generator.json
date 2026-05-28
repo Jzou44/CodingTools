@@ -82,7 +82,7 @@
       "將文字鍵入或貼上到輸入編輯器中。",
       "按一下 <strong>生成</strong> 以產生雜湊摘要。",
       "96 個字元的十六進位雜湊值將顯示在輸出編輯器中。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "SHA-384是什麼？",
     "whatIsParas": [
@@ -118,7 +118,7 @@
     ],
     "whatIs": "SHA-384とは何ですか?",
     "whatIsParas": [
-      "<strong>SHA-384</strong> は、入力テキストまたはバイトから固定の 384 ビット ダイジェストを生成する SHA-2 暗号化ハッシュ関数です。ダイジェストは通常​​、96 文字の 16 進文字列として表されます。",
+      "<strong>SHA-384</strong> は、入力テキストまたはバイトから固定の 384 ビット ダイジェストを生成する SHA-2 暗号学的ハッシュ関数です。ダイジェストは通常、96 文字の 16 進文字列として表されます。",
       "標準、パートナー システム、証明書プロファイル、または署名形式で必要な場合は、SHA-384 を使用します。キー付きメッセージ認証には、必須の SHA-2 バリアントを持つ HMAC を使用し、パスワードには専用のパスワード ハッシュ アルゴリズムを使用します。"
     ],
     "inputNotes": "入力に関する注意",
@@ -139,7 +139,7 @@
     "descTitle": "384비트 출력으로 SHA-384 해시 생성",
     "descParas": [
       "<strong>이 SHA-384 생성기는 결정적 384비트 다이제스트를 생성하고 이를 96개의 16진수 문자로 표시합니다.</strong> SHA-256 또는 SHA-512 대신 SHA-384를 지정하는 프로토콜, 서명, 매니페스트 및 테스트 데이터에 적합합니다.",
-      "SHA-384는 SHA-2 제품군의 일부이며 출력이 더 짧은 SHA-512 설계에서 파생되었습니다. 암호화가 아닌 해시입니다. 비교 및 ​​무결성 검사를 지원하지만 원래 입력을 비밀로 만들지는 않습니다."
+      "SHA-384는 SHA-2 제품군의 일부이며 출력이 더 짧은 SHA-512 설계에서 파생되었습니다. 암호화가 아닌 해시입니다. 비교 및 무결성 검사를 지원하지만 원래 입력을 비밀로 만들지는 않습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
@@ -148,9 +148,9 @@
       "96자의 16진수 해시가 출력 편집기에 나타납니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-384란 무엇입니까?",
+    "whatIs": "SHA-384란 무엇인가요?",
     "whatIsParas": [
-      "<strong>SHA-384</strong>는 입력 텍스트 또는 바이트에서 고정 384비트 다이제스트를 생성하는 SHA-2 암호화 해시 함수입니다. 다이제스트는 일반적으로 96자의 16진수 문자열로 표시됩니다.",
+      "<strong>SHA-384</strong>은 입력 텍스트 또는 바이트에서 고정 384비트 다이제스트를 생성하는 SHA-2 암호학적 해시 함수입니다. 다이제스트는 일반적으로 96자의 16진수 문자열로 표시됩니다.",
       "표준, 파트너 시스템, 인증서 프로필 또는 서명 형식이 필요한 경우 SHA-384를 사용하세요. 키 메시지 인증의 경우 필수 SHA-2 변형과 함께 HMAC를 사용하고, 비밀번호의 경우 특별히 구축된 비밀번호 해싱 알고리즘을 사용합니다."
     ],
     "inputNotes": "입력 참고사항",
@@ -171,7 +171,7 @@
     "descTitle": "Générer des hachages SHA-384 avec une sortie 384 bits",
     "descParas": [
       "<strong>Ce générateur SHA-384 crée un résumé déterministe de 384 bits et l'affiche sous forme de 96 caractères hexadécimaux.</strong> Il s'adapte aux protocoles, signatures, manifestes et données de test qui spécifient SHA-384 plutôt que SHA-256 ou SHA-512.",
-      "SHA-384 fait partie de la famille SHA-2 et est dérivé de la conception SHA-512 avec une sortie plus courte. Il s'agit d'un hachage, pas d'un cryptage : il prend en charge les comparaisons et les contrôles d'intégrité, mais il ne rend pas secrète l'entrée d'origine."
+      "SHA-384 fait partie de la famille SHA-2 et est dérivé de la conception SHA-512 avec une sortie plus courte. Il s'agit d'un hachage, pas d'un chiffrement : il prend en charge les comparaisons et les contrôles d'intégrité, mais il ne rend pas secrète l'entrée d'origine."
     ],
     "howToUse": "Comment utiliser",
     "steps": [

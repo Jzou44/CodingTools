@@ -56,7 +56,7 @@
     "description": "逐行比较两个文本块并突出显示添加、删除、更改和未更改的行。",
     "toolTitle": "文本对比",
     "toolDescription": "通过基于行的差异、空格和大小写选项以及紧凑的摘要在本地比较原始文本和更改后的文本。",
-    "categoryName": "字符串与文本工具",
+    "categoryName": "字符串与文本",
     "buttonLabel": "比较文本",
     "descTitle": "逐行比较两个文本版本",
     "descParas": [
@@ -104,13 +104,13 @@
     "outputPlaceholder": "文本差异结果将在此显示..."
   },
   "tw": {
-    "title": "文本比較 - Coding.Tools",
+    "title": "文字比較 - Coding.Tools",
     "description": "逐行比較兩個文字區塊並反白顯示新增、刪除、變更和未變更的行。",
     "toolTitle": "文字比對",
-    "toolDescription": "透過基於行的差異、空格和大小寫選項以及緊湊的摘要在本地比較原始文字和更改後的文字。",
-    "categoryName": "字串與文字工具",
+    "toolDescription": "透過基於行的差異、空格和大小寫選項以及緊湊的摘要在本機比較原始文字和更改後的文字。",
+    "categoryName": "字串與文字",
     "buttonLabel": "比對文字",
-    "descTitle": "逐行比較兩個文本版本",
+    "descTitle": "逐行比較兩個文字版本",
     "descParas": [
       "<strong>文字比對會顯示原始文字區塊和修訂版本之間的變更。</strong> 它標記新增、刪除、修改和未變更的行，適合檢查發行說明、設定編輯、翻譯文案、SQL 片段、日誌以及修改前後的內容。",
       "差異是基於行的，類似於許多程式碼審查工具。最適合每行都有含義的文字；除非整行被歸類為已更改，否則它不會顯示行內的字元級編輯。當精確的格式不重要時，空格和大小寫選項可以隱藏雜訊。"
@@ -122,13 +122,13 @@
       "選擇是否忽略空格、忽略大小寫或包含未更改的行。",
       "按一下 <strong>比較文字</strong>，然後複製或下載產生的差異。"
     ],
-    "whatIs": "什麼是文本比較？",
+    "whatIs": "什麼是文字比較？",
     "whatIsParas": [
       "<strong>文字比對</strong> 是基於瀏覽器的純文字比較工具。它可以幫助您驗證生成的文件、編輯的段落、複製的設定或重寫的訊息是否仍然包含您期望的行。",
       "除非啟用忽略選項，否則行結尾、尾隨空格、縮排和大寫都會影響結果。對於 JSON 或 HTML 等結構化格式，請在比較更清晰的差異之前一致地格式化兩側。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "將基線文字放在左側，將修訂後的文字放在右側。當您需要上下文時，啟用 <strong>顯示未更改的行</strong>，或停用它以獲得較短的僅更改報告。",
+    "inputNotesPara": "將基線文字放在左側，將修訂後的文字放在右側。當您需要情境時，啟用 <strong>顯示未更改的行</strong>，或停用它以獲得較短的僅更改報告。",
     "example": "範例",
     "examplePara": "報告已更改的狀態行以及已刪除的版本和已新增的版本：",
     "exampleCode": "原始\nstatus: draft\nowner: alice\n\n變更\nstatus: published\nowner: alice\n\n差異\n~ [1 -> 1]\n- status: draft\n+ status: published",
@@ -172,14 +172,14 @@
       "元のテキストを左側のエディタに貼り付けます。",
       "変更したテキストを右のエディタに貼り付けます。",
       "空白を無視するか、大文字と小文字を区別するか、変更されていない行を含めるかを選択します。",
-      "「<strong>テキストを比較</strong> をクリックし、生成された差分をコピーまたはダウンロードします。"
+      "「<strong>テキストを比較</strong>」をクリックし、生成された差分をコピーまたはダウンロードします。"
     ],
     "whatIs": "テキスト比較とは何ですか?",
     "whatIsParas": [
       "<strong>テキスト比較</strong> は、プレーン テキスト用のブラウザベースの差分ツールです。これは、生成されたファイル、編集された段落、コピーされた設定、または書き換えられたメッセージに予期した行がまだ含まれているかどうかを確認するのに役立ちます。",
       "無視オプションを有効にしない限り、行末、末尾のスペース、インデント、および大文字の使用はすべて結果に影響を与える可能性があります。 JSON や HTML などの構造化フォーマットの場合、よりクリーンな差分を得るために比較する前に、両面を一貫してフォーマットします。"
     ],
-    "inputNotes": "入力メモ",
+    "inputNotes": "入力に関する注意",
     "inputNotesPara": "ベースラインのテキストを左側に、修正後のテキストを右側に配置します。コンテキストが必要な場合は <strong>変更されていない行を表示</strong> を有効にし、短い変更のみのレポートの場合は無効にします。",
     "example": "例",
     "examplePara": "変更されたステータス行には、削除されたバージョンと追加されたバージョンが報告されます。",
@@ -216,7 +216,7 @@
     "buttonLabel": "텍스트 비교",
     "descTitle": "두 개의 텍스트 버전을 한 줄씩 비교합니다.",
     "descParas": [
-      "<strong>Text 비교는 원본 텍스트 블록과 수정된 버전 사이의 변경 사항을 보여줍니다.</strong> 추가, 제거, 변경 및 변경되지 않은 행을 표시하여 릴리스 노트, 구성 편집, 번역된 사본, SQL 조각, 로그 및 전후 내용 확인에 유용합니다.",
+      "<strong>텍스트 비교는 원본 텍스트 블록과 수정된 버전 사이의 변경 사항을 보여줍니다.</strong> 추가, 제거, 변경 및 변경되지 않은 행을 표시하여 릴리스 노트, 구성 편집, 번역된 사본, SQL 조각, 로그 및 전후 내용 확인에 유용합니다.",
       "차이점은 많은 코드 검토 도구와 유사하게 라인 기반입니다. 각 줄에 의미가 있는 텍스트에 가장 적합합니다. 전체 줄이 변경된 것으로 분류되지 않는 한 줄 내부에 문자 수준 편집 내용이 표시되지 않습니다. 공백 및 대소문자 옵션은 정확한 형식이 중요하지 않은 경우 노이즈를 숨길 수 있습니다."
     ],
     "howToUse": "사용 방법",
@@ -226,10 +226,10 @@
       "공백을 무시할지, 대소문자를 무시할지, 변경되지 않은 줄을 포함할지 선택합니다.",
       "<strong>텍스트</strong> 비교를 클릭한 다음 생성된 diff를 복사하거나 다운로드합니다."
     ],
-    "whatIs": "텍스트 비교란 무엇입니까?",
+    "whatIs": "텍스트 비교란 무엇인가요?",
     "whatIsParas": [
       "<strong>텍스트 비교</strong>는 일반 텍스트용 브라우저 기반 비교 도구입니다. 생성된 파일, 편집된 단락, 복사된 설정 또는 다시 작성된 메시지에 예상한 줄이 여전히 포함되어 있는지 확인하는 데 도움이 됩니다.",
-      "무시 옵션을 활성화하지 않으면 줄 끝, 후행 ​​공백, 들여쓰기 및 대문자 사용이 모두 결과에 영향을 미칠 수 있습니다. JSON 또는 HTML와 같은 구조화된 형식의 경우 더 명확한 차이를 비교하기 전에 양쪽을 일관되게 형식화하십시오."
+      "무시 옵션을 활성화하지 않으면 줄 끝, 후행 공백, 들여쓰기 및 대문자 사용이 모두 결과에 영향을 미칠 수 있습니다. JSON 또는 HTML와 같은 구조화된 형식의 경우 더 명확한 차이를 비교하기 전에 양쪽을 일관되게 형식화하십시오."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "기본 텍스트를 왼쪽에 배치하고 수정된 텍스트를 오른쪽에 배치합니다. <strong>컨텍스트가 필요할 때 변경되지 않은 행 표시</strong>를 활성화하거나 더 짧은 변경 전용 보고서를 위해 비활성화합니다.",
@@ -287,7 +287,7 @@
     "inputNotesPara": "Placez le texte de base à gauche et le texte révisé à droite. Activez <strong>Afficher les lignes inchangées</strong> lorsque vous avez besoin de contexte, ou désactivez-le pour un rapport de modification uniquement plus court.",
     "example": "Exemple",
     "examplePara": "Une ligne de statut modifié est signalée avec la version supprimée et la version ajoutée :",
-    "exampleCode": "Source\nstatus: draft\nowner: alice\n\nModifie\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
+    "exampleCode": "Source\nstatus: draft\nowner: alice\n\nModifié\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Texte source",
       "rightInput": "Texte modifié",
@@ -296,11 +296,11 @@
       "ignoreCase": "Ignorer la casse",
       "showUnchanged": "Afficher les lignes inchangées",
       "summary": "Résumé",
-      "added": "Ajoute",
+      "added": "Ajouté",
       "removed": "Supprime",
-      "changed": "Modifie",
-      "unchanged": "Inchange",
-      "noDiff": "Aucune difference de texte a afficher."
+      "changed": "Modifié",
+      "unchanged": "Inchangé",
+      "noDiff": "Aucune différence de texte a afficher."
     },
     "messages": {
       "empty": "Saisissez d’abord une valeur.",
@@ -339,19 +339,19 @@
     "inputNotesPara": "Platzieren Sie den Grundtext links und den überarbeiteten Text rechts. Aktivieren Sie <strong>Unveränderte Zeilen anzeigen</strong>, wenn Sie Kontext benötigen, oder deaktivieren Sie es für einen kürzeren Bericht nur mit Änderungen.",
     "example": "Beispiel",
     "examplePara": "Eine geänderte Statuszeile wird mit der entfernten Version und der hinzugefügten Version gemeldet:",
-    "exampleCode": "Ausgang\nstatus: draft\nowner: alice\n\nGeaendert\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
+    "exampleCode": "Ausgang\nstatus: draft\nowner: alice\n\nGeändert\nstatus: published\nowner: alice\n\nDiff\n~ [1 -> 1]\n- status: draft\n+ status: published",
     "labels": {
       "leftInput": "Ausgangstext",
-      "rightInput": "Geaenderter Text",
+      "rightInput": "Geänderter Text",
       "output": "Diff-Ergebnis",
       "ignoreWhitespace": "Leerraum ignorieren",
       "ignoreCase": "Gross-/Kleinschreibung ignorieren",
-      "showUnchanged": "Unveraenderte Zeilen anzeigen",
+      "showUnchanged": "Unveränderte Zeilen anzeigen",
       "summary": "Zusammenfassung",
-      "added": "Hinzugefuegt",
+      "added": "Hinzugefügt",
       "removed": "Entfernt",
-      "changed": "Geaendert",
-      "unchanged": "Unveraendert",
+      "changed": "Geändert",
+      "unchanged": "Unverändert",
       "noDiff": "Noch keine Textunterschiede zum Anzeigen."
     },
     "messages": {
@@ -359,8 +359,8 @@
       "success": "Textvergleich abgeschlossen",
       "failed": "Vorgang fehlgeschlagen: "
     },
-    "leftPlaceholder": "Ausgangstext einfuegen...",
-    "rightPlaceholder": "Geaenderten Text einfuegen...",
+    "leftPlaceholder": "Ausgangstext einfügen...",
+    "rightPlaceholder": "Geänderten Text einfügen...",
     "outputPlaceholder": "Der Text-Diff erscheint hier..."
   },
   "es": {
@@ -375,7 +375,7 @@
       "<strong>La comparación de texto muestra lo que cambió entre un bloque de texto original y una versión revisada.</strong> Marca líneas agregadas, eliminadas, cambiadas y sin cambios, lo que lo hace útil para notas de la versión, ediciones de configuración, copias traducidas, fragmentos de SQL, registros y verificaciones de contenido antes y después.",
       "La diferencia está basada en líneas, similar a muchas herramientas de revisión de código. Es mejor para textos donde cada línea tiene significado; no mostrará ediciones a nivel de carácter dentro de una línea a menos que toda la línea esté clasificada como modificada. Las opciones de espacios en blanco y mayúsculas y minúsculas pueden ocultar ruido cuando el formato exacto no es importante."
     ],
-    "howToUse": "Como usar",
+    "howToUse": "Cómo usar",
     "steps": [
       "Pegue el texto original en el editor izquierdo.",
       "Pegue el texto modificado en el editor derecho.",
@@ -400,7 +400,7 @@
       "ignoreCase": "Ignorar mayusculas",
       "showUnchanged": "Mostrar líneas sin cambios",
       "summary": "Resumen",
-      "added": "Anadido",
+      "added": "Añadido",
       "removed": "Eliminado",
       "changed": "Cambiado",
       "unchanged": "Sin cambios",
@@ -420,7 +420,7 @@
     "description": "Compare dois blocos de texto linha por linha e destaque as linhas adicionadas, removidas, alteradas e inalteradas.",
     "toolTitle": "Comparar texto",
     "toolDescription": "Compare o texto original e alterado localmente com diferenças baseadas em linhas, opções de espaços em branco e maiúsculas e um resumo compacto.",
-    "categoryName": "Utilitarios de strings e texto",
+    "categoryName": "Utilitários de strings e texto",
     "buttonLabel": "Comparar texto",
     "descTitle": "Compare duas versões de texto linha por linha",
     "descParas": [
@@ -430,7 +430,7 @@
     "howToUse": "Como usar",
     "steps": [
       "Cole o texto original no editor esquerdo.",
-      "Cole o texto alterado no editor correto.",
+      "Cole o texto alterado no editor da direita.",
       "Escolha se deseja ignorar espaços em branco, ignorar maiúsculas e minúsculas ou incluir linhas inalteradas.",
       "Clique em <strong>Comparar texto</strong> e copie ou baixe a comparação gerada."
     ],

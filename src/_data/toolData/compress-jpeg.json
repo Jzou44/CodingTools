@@ -57,16 +57,16 @@
   },
   "tw": {
     "title": "壓縮 JPEG - Coding.Tools",
-    "description": "透過以可調品​​質重新編碼來本地壓縮 JPEG 照片，以適應較小的 Web 和電子郵件檔案。",
+    "description": "透過以可調品質重新編碼來本機壓縮 JPEG 照片，以適應較小的 Web 和電子郵件檔案。",
     "toolTitle": "壓縮JPEG",
     "toolDescription": "透過使用實用的品質設定重新編碼照片，減少瀏覽器中的 JPEG 檔案大小。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "點擊或拖曳 JPEG 檔案至此處上傳",
+    "dropzoneMessage": "點選或拖曳 JPEG 檔案至此處上傳",
     "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
     "descTitle": "透過品質控制縮小 JPEG 照片",
     "descParas": [
-      "<strong>壓縮 JPEG 以較低品質設定在本地重新編碼 JPEG 影像，以減少檔案大小。</strong> 最適合下載量較小的不透明的照片、橫幅和螢幕截圖。",
-      "JPEG 壓縮是有損的：較低的品質通常意味著較小的文件，但它可能會增加阻塞、模糊、顏色偏移或邊緣振鈴。盡可能避免重複 JPEG 重新壓縮，並按將要查看的大小比較輸出。"
+      "<strong>壓縮 JPEG 以較低品質設定在本機重新編碼 JPEG 影像，以減少檔案大小。</strong> 最適合下載量較小的不透明的照片、橫幅和螢幕截圖。",
+      "JPEG 壓縮是有損的：較低的品質通常意味著較小的文件，但它可能會增加阻塞、模糊、顏色偏移或邊緣振鈴。盡可能避免重複 JPEG 重新壓縮，並按將要檢視的大小比較輸出。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -84,7 +84,7 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "jp": {
-    "title": "JPEG - Coding.Tools を圧縮します",
+    "title": "JPEG 圧縮 - Coding.Tools",
     "description": "小さな Web ファイルや電子メール ファイル用に調整可能な品質で再エンコードすることで、JPEG 写真をローカルに圧縮します。",
     "toolTitle": "JPEG圧縮",
     "toolDescription": "実用的な品質設定で写真を再エンコードすることで、ブラウザーの JPEG ファイル サイズを削減します。",
@@ -96,7 +96,7 @@
       "<strong>JPEG圧縮 は、ファイル サイズを削減するために、低品質設定で JPEG 画像をローカルで再エンコードします。</strong> 小さいダウンロードが重要な、透明性のない写真、バナー、スクリーンショットに最適です。",
       "JPEG 圧縮は非可逆圧縮です。通常、品質が低いとファイルが小さくなりますが、エッジの周りにブロッキング、ぼかし、カラーシフト、リンギングが発生する可能性があります。可能な限り JPEG の再圧縮を繰り返すことは避け、表示されるサイズで出力を比較してください。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "JPEG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
       "各ファイルは自動的に圧縮され、圧縮率が表示されます。",
@@ -112,7 +112,7 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
   },
   "kr": {
-    "title": "JPEG - Coding.Tools 압축",
+    "title": "JPEG 압축 - Coding.Tools",
     "description": "더 작은 웹 및 이메일 파일에 맞게 조정 가능한 품질로 다시 인코딩하여 JPEG 사진을 로컬로 압축합니다.",
     "toolTitle": "JPEG 압축",
     "toolDescription": "실용적인 품질 설정으로 사진을 다시 인코딩하여 브라우저에서 JPEG 파일 크기를 줄입니다.",
@@ -121,7 +121,7 @@
     "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
     "descTitle": "품질 관리로 JPEG 사진 축소",
     "descParas": [
-      "<strong>JPEG 압축는 JPEG 이미지를 낮은 품질 설정으로 로컬에서 다시 인코딩하여 파일 크기를 줄입니다.</strong> 작은 다운로드가 중요한 투명도가 없는 사진, 배너 및 스크린샷에 가장 적합합니다.",
+      "<strong>JPEG 압축은 JPEG 이미지를 낮은 품질 설정으로 로컬에서 다시 인코딩하여 파일 크기를 줄입니다.</strong> 작은 다운로드가 중요한 투명도가 없는 사진, 배너 및 스크린샷에 가장 적합합니다.",
       "JPEG 압축은 손실이 있습니다. 품질이 낮을수록 일반적으로 파일 크기가 작아지지만 가장자리 주변에 블로킹, 흐림, 색상 변화 또는 링잉이 추가될 수 있습니다. 가능하면 반복적인 JPEG 재압축을 피하고 표시되는 크기로 출력을 비교하십시오."
     ],
     "howToUse": "사용방법",
@@ -132,7 +132,7 @@
     ],
     "whatIs": "언제 JPEG를 압축해야 합니까?",
     "whatIsParas": [
-      "<strong>JPEG</strong>는 투명한 그래픽이나 선명한 UI 아이콘이 아닌 연속톤 이미지용으로 설계된 손실이 있는 사진 형식입니다.",
+      "<strong>JPEG</strong>은 투명한 그래픽이나 선명한 UI 아이콘이 아닌 연속톤 이미지용으로 설계된 손실이 있는 사진 형식입니다.",
       "웹 페이지, 이메일 첨부 파일 또는 CMS 업로드를 위해 빠른 브라우저-로컬 JPEG 최적화가 필요한 경우 이 도구를 사용하십시오. 소스 이미지에 투명도가 있는 경우 JPEG가 투명 픽셀을 채우므로 대신 PNG 또는 WebP를 선택하세요."
     ],
     "example": "Python으로 압축",

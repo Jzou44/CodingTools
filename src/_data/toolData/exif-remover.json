@@ -57,30 +57,30 @@
   },
   "tw": {
     "title": "EXIF 移除器 - Coding.Tools",
-    "description": "在共享之前從本地圖像中剝離 EXIF 元數據，以減少 GPS、相機、時間戳和方向隱私洩露。",
+    "description": "在共享之前從本機圖像中剝離 EXIF 中繼資料，以減少 GPS、相機、時間戳和方向隱私洩露。",
     "toolTitle": "EXIF移除器",
-    "toolDescription": "刪除瀏覽器中嵌入的 EXIF 元數據，以便更安全地共享乾淨的映像。",
+    "toolDescription": "刪除瀏覽器中嵌入的 EXIF 中繼資料，以便更安全地共享乾淨的影像。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "點擊或拖曳圖像至此處上傳",
+    "dropzoneMessage": "點選或拖曳圖像至此處上傳",
     "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
-    "descTitle": "共享前刪除私人照片元數據",
+    "descTitle": "共享前刪除私人照片中繼資料",
     "descParas": [
-      "<strong>EXIF 刪除程式會在瀏覽器中重新編碼影像，以移除嵌入的元數據，例如 GPS 座標、相機詳細資料、時間戳記、軟體標籤和方向欄位。</strong> 在發布或發送可能洩露私人背景的原始照片之前使用它。",
-      "像素會保留為新的輸出影像，但依賴元資料的行為可能會變化：方向標籤可能會被套用到像素方向中或被移除，重新編碼也可能影響檔案大小或品質。處理在本機完成；無需上傳。"
+      "<strong>EXIF 刪除程式會在瀏覽器中重新編碼影像，以移除嵌入的中繼資料，例如 GPS 座標、相機詳細資料、時間戳記、軟體標籤和方向欄位。</strong> 在發布或發送可能洩露私人背景的原始照片之前使用它。",
+      "像素會保留為新的輸出影像，但依賴中繼資料的行為可能會變化：方向標籤可能會被套用到像素方向中或被移除，重新編碼也可能影響檔案大小或品質。處理在本機完成；無需上傳。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "將圖像拖曳到上傳區域，或按一下選擇檔案。",
-      "每個影像都會被處理，所有 EXIF 元資料都會被刪除。",
+      "每個影像都會被處理，所有 EXIF 中繼資料都會被刪除。",
       "下載單獨的已清理影像或使用 <strong>下載全部</strong> 取得 ZIP 檔案。"
     ],
     "whatIs": "為什麼要刪除EXIF資料？",
     "whatIsParas": [
-      "<strong>EXIF 刪除</strong> 透過刪除可以識別照片拍攝地點、時間和方式的元資料來減少隱私洩露。",
-      "這是公開共享之前的一個實際步驟，但它並不是對每個可能的隱藏有效負載的完整取證清理。如果嚴格的隱私或證據處理很重要，請查看已清理的文件。"
+      "<strong>EXIF 刪除</strong> 透過刪除可以識別照片拍攝地點、時間和方式的中繼資料來減少隱私洩露。",
+      "這是公開共享之前的一個實際步驟，但它並不是對每個可能的隱藏有效負載的完整取證清理。如果嚴格的隱私或證據處理很重要，請檢視已清理的文件。"
     ],
     "example": "使用 Python 刪除 EXIF",
-    "examplePara": "重新保存照片而不傳遞 EXIF 元資料與許多清理工作流程使用的基本想法相同：",
+    "examplePara": "重新保存照片而不傳遞 EXIF 中繼資料與許多清理工作流程使用的基本想法相同：",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "jp": {
@@ -96,7 +96,7 @@
       "<strong>EXIF リムーバーは、ブラウザ内の画像を再エンコードして、GPS 座標、カメラの詳細、タイムスタンプ、ソフトウェア タグ、方向フィールドなどの埋め込みメタデータを削除します。</strong> プライベートなコンテキストを明らかにする可能性のある元の写真を投稿または送信する前に使用してください。",
       "ピクセルは新しい出力イメージとして保存されますが、メタデータに依存する動作は変更される可能性があります。方向タグがピクセルに焼き付けられたり、削除されたりする可能性があり、再エンコードはファイル サイズや品質に影響を与える可能性があります。処理はローカルで行われます。アップロードは必要ありません。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "画像をアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
       "各画像が処理され、すべての EXIF メタデータが削除されます。",
@@ -130,18 +130,18 @@
       "각 이미지가 처리되고 모든 EXIF 메타데이터가 제거됩니다.",
       "정리된 개별 이미지를 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
     ],
-    "whatIs": "EXIF 데이터를 제거하는 이유는 무엇입니까?",
+    "whatIs": "EXIF 데이터를 제거하는 이유는 무엇인가요?",
     "whatIsParas": [
-      "<strong>EXIF 제거</strong>는 사진이 어디서, 언제, 어떻게 촬영되었는지 식별할 수 있는 메타데이터를 삭제하여 개인 정보 유출을 줄입니다.",
+      "<strong>EXIF 제거</strong>은 사진이 어디서, 언제, 어떻게 촬영되었는지 식별할 수 있는 메타데이터를 삭제하여 개인 정보 유출을 줄입니다.",
       "이는 공개 공유 전의 실용적인 단계이지만 가능한 모든 숨겨진 페이로드에 대한 완전한 포렌식 스크럽은 아닙니다. 엄격한 개인정보 보호 또는 증거 처리가 중요한 경우 정리된 파일을 검토하세요."
     ],
-    "example": "Python으로 EXIF ​​제거",
+    "example": "Python으로 EXIF 제거",
     "examplePara": "EXIF 메타데이터를 전달하지 않고 사진을 다시 저장하는 것은 많은 정리 작업 흐름에서 사용되는 것과 동일한 기본 아이디어입니다.",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "fr": {
     "title": "Dissolvant EXIF - Coding.Tools",
-    "description": "Supprimez localement les métadonnées EXIF ​​des images pour réduire les fuites de confidentialité du GPS, de l’appareil photo, de l’horodatage et de l’orientation avant le partage.",
+    "description": "Supprimez localement les métadonnées EXIF des images pour réduire les fuites de confidentialité du GPS, de l’appareil photo, de l’horodatage et de l’orientation avant le partage.",
     "toolTitle": "Suppresseur EXIF",
     "toolDescription": "Supprimez les métadonnées EXIF intégrées dans le navigateur afin de partager des images nettoyées plus sereinement.",
     "categoryName": "Outils d’image",
@@ -155,7 +155,7 @@
     "howToUse": "Comment utiliser",
     "steps": [
       "Faites glisser et déposez les images sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
-      "Chaque image est traitée et toutes les métadonnées EXIF ​​sont supprimées.",
+      "Chaque image est traitée et toutes les métadonnées EXIF sont supprimées.",
       "Téléchargez des images nettoyées individuellement ou utilisez <strong>Tout télécharger</strong> pour obtenir une archive ZIP."
     ],
     "whatIs": "Pourquoi supprimer les données EXIF ?",
@@ -163,7 +163,7 @@
       "La <strong>suppression des EXIF</strong> réduit les fuites de confidentialité en supprimant les métadonnées permettant d'identifier où, quand et comment une photo a été prise.",
       "Il s’agit d’une étape pratique avant le partage public, mais il ne s’agit pas d’un nettoyage médico-légal complet de chaque charge utile cachée possible. Examinez le fichier nettoyé si le strict respect de la confidentialité ou le traitement des preuves est important."
     ],
-    "example": "Supprimer EXIF ​​avec Python",
+    "example": "Supprimer EXIF avec Python",
     "examplePara": "Réenregistrer une photo sans transmettre les métadonnées EXIF est la même idée de base utilisée par de nombreux flux de travail de nettoyage :",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
@@ -219,7 +219,7 @@
       "Eliminación de <strong>EXIF</strong> reduce la fuga de privacidad al eliminar metadatos que pueden identificar dónde, cuándo y cómo se tomó una foto.",
       "Es un paso práctico antes de compartirlo públicamente, pero no es una limpieza forense completa para cada posible carga útil oculta. Revise el archivo limpio si es importante la privacidad estricta o el manejo de pruebas."
     ],
-    "example": "Eliminar EXIF ​​con Python",
+    "example": "Eliminar EXIF con Python",
     "examplePara": "Volver a guardar una foto sin pasar los metadatos EXIF es la misma idea básica utilizada por muchos flujos de trabajo de limpieza:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
@@ -247,7 +247,7 @@
       "Remoção <strong>EXIF</strong> reduz o vazamento de privacidade excluindo metadados que podem identificar onde, quando e como uma foto foi tirada.",
       "É um passo prático antes do compartilhamento público, mas não é uma análise forense completa para todas as possíveis cargas ocultas. Revise o arquivo limpo se a privacidade estrita ou o tratamento de evidências forem importantes."
     ],
-    "example": "Remover EXIF ​​com Python",
+    "example": "Remover EXIF com Python",
     "examplePara": "Salvar novamente uma foto sem passar os metadados EXIF é a mesma ideia básica usada por muitos fluxos de trabalho de limpeza:",
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   }

@@ -73,19 +73,19 @@
     "inputNotesPara": "使用此计数器进行接近的本地估计，然后在限制严格时在目标平台中进行确认。 X/Twitter、SMS 网关、搜索片段、数据库和 API 可以应用自己的计数或标准化规则。",
     "example": "示例",
     "examplePara": "Emoji 可以使 UTF-8 字节总数大于可见字符数：",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- 示例文本 ---\nHello, World! 🌍\n\n--- 预期统计 ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "tw": {
     "title": "字元數 - Coding.Tools",
     "description": "計算貼上文字的字元數、單字數、行數、UTF-8 位元組以及剩餘的 X/Twitter 字元數。",
     "toolTitle": "字元計數",
-    "toolDescription": "在本地測量文本，包括實時字元總數、無空格計數、字數和行數、UTF-8 位元組以及 280 個字元的剩餘計數器。",
+    "toolDescription": "在本機測量文字，包括實時字元總數、無空格計數、字數和行數、UTF-8 位元組以及 280 個字元的剩餘計數器。",
     "categoryName": "字串與文字",
-    "inputPlaceholder": "在此貼上或輸入文字，統計字元、單詞、行數和位元組數...",
+    "inputPlaceholder": "在此貼上或輸入文字，統計字元、單字、行數和位元組數...",
     "statsTitle": "統計資料",
     "statsTotalChars": "總字元數",
     "statsCharsNoSpaces": "字元數（不含空格）",
-    "statsWords": "單詞數",
+    "statsWords": "單字數",
     "statsLines": "行數",
     "statsBytes": "位元組數（UTF-8）",
     "statsTwitter": "Twitter 剩餘",
@@ -98,20 +98,20 @@
     "howToUse": "使用方法",
     "steps": [
       "將文字貼上或鍵入到輸入編輯器中。",
-      "在編輯器下方的面板中查看即時統計資料。所有指標都會在您鍵入時立即更新。",
+      "在編輯器下方的面板中檢視即時統計資料。所有指標都會在您鍵入時立即更新。",
       "檢查 <strong>Twitter 剩餘</strong> 計數器，以了解您還剩多少個推文字元。當超過 280 個字元時，它會變成紅色。",
       "使用 <strong>複製</strong> 將文字複製到剪貼簿，使用 <strong>下載</strong> 將其另存為文字文件，或使用 <strong>清除</strong> 重設所有內容。"
     ],
     "whatIs": "什麼是字元數？",
     "whatIsParas": [
-      "<strong>字元計數</strong> 是一種本地測量工具，用於在將文字貼上到表單、API 請求、資料庫列或社交貼文之前檢查可見長度和編碼大小。",
+      "<strong>字元計數</strong> 是一種本機測量工具，用於在將文字貼上到表單、API 請求、資料庫列或社交貼文之前檢查可見長度和編碼大小。",
       "當系統按位元組而不是字元限制儲存時，UTF-8 位元組總數非常有用。換行符、空格、製表符、組合標記和表情符號可能會影響計數，因此請使用您將發送的確切文字進行測試。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "使用此計數器進行接近的本地估計，然後在限制嚴格時在目標平台中進行確認。 X/Twitter、SMS 閘道、搜尋片段、資料庫和 API 可以套用自己的計數或標準化規則。",
+    "inputNotesPara": "使用此計數器進行接近的本機估計，然後在限制嚴格時在目標平台中進行確認。 X/Twitter、SMS 閘道、搜尋片段、資料庫和 API 可以套用自己的計數或標準化規則。",
     "example": "範例",
     "examplePara": "Emoji 可以使 UTF-8 位元組總數大於可見字元數：",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- 範例文字 ---\nHello, World! 🌍\n\n--- 預期統計 ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "jp": {
     "title": "文字数 - Coding.Tools",
@@ -149,7 +149,7 @@
     "inputNotesPara": "このカウンターを使用してローカルな概算を推定し、制限が厳しい場合はターゲット プラットフォームで確認します。 X/Twitter、SMS ゲートウェイ、検索スニペット、データベース、および API は、独自のカウントまたは正規化ルールを適用する場合があります。",
     "example": "例",
     "examplePara": "絵文字では、UTF-8 バイトの合計が表示される文字数よりも大きくなる場合があります。",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- サンプルテキスト ---\nHello, World! 🌍\n\n--- 予想統計 ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "kr": {
     "title": "문자 수 - Coding.Tools",
@@ -178,7 +178,7 @@
       "<strong>Twitter 남은</strong> 카운터를 확인하여 트윗에 남은 문자 수를 확인하세요. 280자를 초과하면 빨간색으로 변합니다.",
       "<strong>복사</strong>를 사용하여 텍스트를 클립보드에 복사하고, <strong>다운로드</strong>를 사용하여 텍스트 파일로 저장하거나, <strong>지우기</strong>를 사용하여 모든 것을 재설정하세요."
     ],
-    "whatIs": "문자 수란 무엇입니까?",
+    "whatIs": "문자 수란 무엇인가요?",
     "whatIsParas": [
       "<strong>문자 수 세기</strong>는 양식, API 요청, 데이터베이스 열 또는 소셜 게시물에 텍스트를 붙여넣기 전에 표시되는 길이와 인코딩된 크기를 확인하기 위한 로컬 측정 도구입니다.",
       "UTF-8 총 바이트는 시스템이 문자 대신 바이트로 저장을 제한하는 경우 유용합니다. 줄 바꿈, 공백, 탭, 결합 표시 및 이모티콘은 개수에 영향을 미칠 수 있으므로 보낼 정확한 텍스트로 테스트하세요."
@@ -187,7 +187,7 @@
     "inputNotesPara": "가까운 지역 추정을 위해 이 카운터를 사용한 다음 제한이 엄격한 경우 대상 플랫폼에서 확인하십시오. X/Twitter, SMS 게이트웨이, 검색 스니펫, 데이터베이스 및 API는 자체 계산 또는 정규화 규칙을 적용할 수 있습니다.",
     "example": "예시",
     "examplePara": "Emoji는 총 UTF-8 바이트를 표시되는 문자 수보다 크게 만들 수 있습니다.",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- 샘플 텍스트 ---\nHello, World! 🌍\n\n--- 예상 통계 ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "fr": {
     "title": "Nombre de caractères - Coding.Tools",
@@ -225,7 +225,7 @@
     "inputNotesPara": "Utilisez ce compteur pour une estimation locale proche, puis confirmez dans la plateforme cible lorsque les limites sont strictes. X/Twitter, les passerelles SMS, les extraits de recherche, les bases de données et les API peuvent appliquer leurs propres règles de comptage ou de normalisation.",
     "example": "Exemple",
     "examplePara": "Emoji peut rendre le total d'octets UTF-8 supérieur au nombre de caractères visibles :",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- Texte d’exemple ---\nHello, World! 🌍\n\n--- Statistiques attendues ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "de": {
     "title": "Zeichenanzahl - Coding.Tools",
@@ -263,7 +263,7 @@
     "inputNotesPara": "Verwenden Sie diesen Zähler für eine genaue lokale Schätzung und bestätigen Sie ihn dann auf der Zielplattform, wenn die Grenzwerte streng sind. X/Twitter, SMS-Gateways, Such-Snippets, Datenbanken und APIs wenden möglicherweise ihre eigenen Zähl- oder Normalisierungsregeln an.",
     "example": "Beispiel",
     "examplePara": "Emoji kann die UTF-8-Byte-Gesamtzahl größer machen als die Anzahl der sichtbaren Zeichen:",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- Beispieltext ---\nHello, World! 🌍\n\n--- Erwartete Statistiken ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "es": {
     "title": "Recuento de caracteres: Coding.Tools",
@@ -301,7 +301,7 @@
     "inputNotesPara": "Utilice este contador para obtener una estimación local cercana y luego confirme en la plataforma de destino cuando los límites sean estrictos. X/Twitter, puertas de enlace de SMS, fragmentos de búsqueda, bases de datos y API pueden aplicar sus propias reglas de conteo o normalización.",
     "example": "Ejemplo",
     "examplePara": "Emoji puede hacer que el total de bytes UTF-8 sea mayor que el recuento de caracteres visibles:",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- Texto de ejemplo ---\nHello, World! 🌍\n\n--- Estadísticas esperadas ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   },
   "pt": {
     "title": "Contagem de caracteres - Coding.Tools",
@@ -339,6 +339,6 @@
     "inputNotesPara": "Use este contador para obter uma estimativa local aproximada e, em seguida, confirme na plataforma de destino quando os limites forem rigorosos. X/Twitter, gateways SMS, snippets de pesquisa, bancos de dados e APIs podem aplicar suas próprias regras de contagem ou normalização.",
     "example": "Exemplo",
     "examplePara": "Emoji pode tornar o total de bytes UTF-8 maior do que a contagem de caracteres visíveis:",
-    "exampleCode": "--- Sample Text ---\nHello, World! 🌍\n\n--- Expected Statistics ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
+    "exampleCode": "--- Texto de exemplo ---\nHello, World! 🌍\n\n--- Estatísticas esperadas ---\nTotal Characters: 16\nCharacters (no spaces): 14\nWords: 2\nLines: 2\nBytes (UTF-8): 18\nTwitter remaining: 264"
   }
 }

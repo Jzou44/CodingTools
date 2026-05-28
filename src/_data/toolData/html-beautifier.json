@@ -73,7 +73,7 @@
     "outputPlaceholder": "美化後的 HTML 將在此顯示...",
     "descTitle": "讓 HTML 更易於檢查和編輯",
     "descParas": [
-      "<strong>HTML 美化 將緊湊的 HTML 擴展為可讀結構，在嵌套元素周圍有換行和縮排。</strong> 它對於檢查片段、範本、產生的標記、電子郵件和複製的頁面片段非常有用。",
+      "<strong>HTML 美化 將緊湊的 HTML 擴展為可讀結構，在巢狀元素周圍有換行和縮排。</strong> 它對於檢查片段、範本、產生的標記、電子郵件和複製的頁面片段非常有用。",
       "HTML 解析器可以從許多格式錯誤的文件中恢復，因此美化的輸出看起來比原始檔更乾淨，同時仍反映瀏覽器解析規則。格式設定應保留標籤和屬性，但應審查空白敏感的內聯文字。"
     ],
     "howToUse": "使用方法",
@@ -81,23 +81,23 @@
       "將 HTML 程式碼貼到輸入編輯器中。",
       "點選 <strong>美化 HTML</strong> 以回流並縮排標記。",
       "檢查輸出中是否有預期的巢狀、註解、內嵌文字和屬性。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是HTML美容儀？",
     "whatIsParas": [
-      "<strong>HTML 美化</strong> 是一個基於瀏覽器的實用程序，用於將密集標記轉換為可以掃描和編輯的文件。它有助於揭示父子關係、錯位的結束標籤以及生成的大塊 HTML。",
+      "<strong>HTML 美化</strong> 是一個基於瀏覽器的實用工具，用於將密集標記轉換為可以掃描和編輯的文件。它有助於揭示父子關係、錯位的結束標籤以及生成的大塊 HTML。",
       "HTML 空格可能會影響內嵌佈局、文字節點和預先格式化內容。美化模板或生產標記後，驗證渲染的輸出是否仍符合您的意圖。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "貼上 HTML 片段或完整文件。請小心建構系統可能依賴的 <code>&lt;pre&gt;</code>、內聯元素、模板語法和註解。",
     "example": "範例",
-    "examplePara": "一旦每個嵌套元素都放在自己的行上，密集的文件就會變得更容易理解：",
+    "examplePara": "一旦每個巢狀元素都放在自己的行上，密集的文件就會變得更容易理解：",
     "exampleCode": "--- 壓縮輸入 ---\n&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n\n--- 美化輸出 ---\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p&gt;Hello&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;",
     "buttonLabel": "美化 HTML"
   },
   "jp": {
-    "title": "HTML 美容器 - Coding.Tools",
-    "description": "タグ、属性、ネストされたコンテンツを読みやすいインデントで HTML マークアップを美しくします。",
+    "title": "HTML 整形ツール - Coding.Tools",
+    "description": "タグ、属性、ネストされたコンテンツを読みやすいインデントで HTML マークアップを整形します。",
     "toolTitle": "HTML 整形",
     "toolDescription": "コンパクトまたは乱雑な HTML を、読みやすいインデントされたマークアップにフォーマットします。",
     "categoryName": "整形と圧縮",
@@ -115,10 +115,10 @@
       "出力で予想されるネスト、コメント、インライン テキスト、および属性を確認します。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "HTML ビューティファイヤーとは何ですか?",
+    "whatIs": "HTML 整形ツールとは何ですか?",
     "whatIsParas": [
       "<strong>HTML 整形</strong> は、高密度マークアップをスキャンして編集できるドキュメントに変換するためのブラウザベースのユーティリティです。これは、親子関係、間違って配置された終了タグ、生成された HTML の大きなブロックを明らかにするのに役立ちます。",
-      "HTML 空白は、インライン レイアウト、テキスト ノード、およびフォーマット済みコンテンツに影響を与える可能性があります。テンプレートまたはプロダクション マークアップを美しくした後、レンダリングされた出力が依然として意図と一致していることを確認します。"
+      "HTML 空白は、インライン レイアウト、テキスト ノード、およびフォーマット済みコンテンツに影響を与える可能性があります。テンプレートまたはプロダクション マークアップを整形した後、レンダリングされた出力が依然として意図と一致していることを確認します。"
     ],
     "inputNotes": "入力に関する注意",
     "inputNotesPara": "HTML の断片または完全なドキュメントを貼り付けます。ビルド システムが依存する可能性がある <code>&lt;pre&gt;</code>、インライン要素、テンプレート構文、コメントには注意してください。",
@@ -128,16 +128,16 @@
     "buttonLabel": "HTML を整形"
   },
   "kr": {
-    "title": "HTML 뷰티파이어 - Coding.Tools",
-    "description": "태그, 속성 및 중첩된 콘텐츠에 대해 읽기 쉬운 들여쓰기를 사용하여 HTML 마크업을 아름답게 만듭니다.",
+    "title": "HTML 포맷터 - Coding.Tools",
+    "description": "태그, 속성 및 중첩된 콘텐츠에 대해 읽기 쉬운 들여쓰기를 사용하여 HTML 마크업을 읽기 좋게 정리합니다.",
     "toolTitle": "HTML 포맷터",
-    "toolDescription": "간결하거나 복잡한 HTML를 읽기 쉽고 들여쓰기된 마크업으로 포맷하세요.",
+    "toolDescription": "간결하거나 복잡한 HTML을 읽기 쉽고 들여쓰기된 마크업으로 포맷하세요.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "포맷할 HTML을 붙여넣으세요...",
     "outputPlaceholder": "포맷된 HTML이 여기에 표시됩니다...",
-    "descTitle": "HTML를 검사하고 편집하기 쉽게 만듭니다.",
+    "descTitle": "HTML을 검사하고 편집하기 쉽게 만듭니다.",
     "descParas": [
-      "<strong>HTML 포맷터는 컴팩트한 HTML를 중첩된 요소 주위에 줄바꿈과 들여쓰기를 사용하여 읽을 수 있는 구조로 확장합니다.</strong> 스니펫, 템플릿, 생성된 마크업, 이메일 및 복사된 페이지 조각을 검사하는 데 유용합니다.",
+      "<strong>HTML 포맷터는 컴팩트한 HTML을 중첩된 요소 주위에 줄바꿈과 들여쓰기를 사용하여 읽을 수 있는 구조로 확장합니다.</strong> 스니펫, 템플릿, 생성된 마크업, 이메일 및 복사된 페이지 조각을 검사하는 데 유용합니다.",
       "HTML 파서는 잘못된 형식의 많은 문서를 복구하므로 브라우저 구문 분석 규칙을 반영하면서 아름답게 출력된 출력이 소스보다 더 깔끔하게 보일 수 있습니다. 형식은 태그와 속성을 유지해야 하지만 공백을 구분하는 인라인 텍스트는 검토해야 합니다."
     ],
     "howToUse": "사용 방법",
@@ -147,7 +147,7 @@
       "예상되는 중첩, 주석, 인라인 텍스트 및 속성에 대한 출력을 검토합니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "HTML 뷰티파이어란 무엇인가요?",
+    "whatIs": "HTML 포맷터란 무엇인가요?",
     "whatIsParas": [
       "<strong>HTML 포맷터</strong>는 조밀한 마크업을 스캔하고 편집할 수 있는 문서로 변환하는 브라우저 기반 유틸리티입니다. 이는 상위-하위 관계, 잘못 배치된 닫는 태그 및 생성된 HTML의 큰 블록을 표시하는 데 도움이 됩니다.",
       "HTML 공백은 인라인 레이아웃, 텍스트 노드 및 사전 형식화된 콘텐츠에 영향을 미칠 수 있습니다. 템플릿이나 프로덕션 마크업을 아름답게 만든 후 렌더링된 출력이 여전히 의도와 일치하는지 확인하세요."
@@ -265,7 +265,7 @@
     "outputPlaceholder": "O HTML embelezado aparecerá aqui...",
     "descTitle": "Torne HTML mais fácil de inspecionar e editar",
     "descParas": [
-      "<strong>HTML O Beautifier expande o HTML compacto em uma estrutura legível com quebras de linha e recuo em torno de elementos aninhados.</strong> É útil para inspecionar trechos, modelos, marcações geradas, e-mails e fragmentos de páginas copiadas.",
+      "<strong>O formatador HTML expande HTML compacto em uma estrutura legível com quebras de linha e recuo em torno de elementos aninhados.</strong> É útil para inspecionar trechos, modelos, marcações geradas, e-mails e fragmentos de páginas copiadas.",
       "Os analisadores HTML se recuperam de muitos documentos malformados, portanto, a saída embelezada pode parecer mais limpa do que a fonte, ao mesmo tempo que reflete as regras de análise do navegador. A formatação deve preservar tags e atributos, mas o texto embutido sensível a espaços em branco deve ser revisado."
     ],
     "howToUse": "Como usar",

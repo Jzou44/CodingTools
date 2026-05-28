@@ -60,7 +60,7 @@
     "inputNotesPara": "粘贴普通 JavaScript，而不是 HTML <code>&lt;script&gt;</code> 标签，除非该工具旨在将它们作为文本处理。对于 JSX、TypeScript 或框架模板，请使用普通解析器确认输出。",
     "example": "示例",
     "examplePara": "紧凑的函数被重排为更具可读性的块：",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- 压缩输入 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- 格式化输出 ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "美化 JavaScript"
   },
   "tw": {
@@ -81,23 +81,23 @@
       "將 JavaScript 程式碼貼到輸入編輯器中。",
       "點選 <strong>美化 JavaScript</strong> 來重排語句和區塊。",
       "檢查輸出中保留的字串、註解和運行時敏感語法。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是JavaScript美容儀？",
     "whatIsParas": [
-      "<strong>JavaScript 美化</strong> 是一個基於瀏覽器的實用程序，用於重新格式化 JavaScript，以便控制流程、函數、物件、陣列和鍊式呼叫更易於閱讀。",
+      "<strong>JavaScript 美化</strong> 是一個基於瀏覽器的實用工具，用於重新格式化 JavaScript，以便控制流程、函數、物件、陣列和鍊式呼叫更易於閱讀。",
       "格式化的目的是保留行為，但 JavaScript 在自動分號插入、指令、正規表示式和範本文字方面存在邊緣情況。重新格式化後測試重要程式碼。"
     ],
     "inputNotes": "輸入說明",
     "inputNotesPara": "貼上普通 JavaScript，而不是 HTML <code>&lt;script&gt;</code> 標籤，除非該工具旨在將它們作為文字處理。對於 JSX、TypeScript 或框架模板，請使用普通解析器確認輸出。",
     "example": "範例",
     "examplePara": "緊湊的函數被重排為更具可讀性的區塊：",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- 壓縮輸入 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- 格式化輸出 ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "美化 JavaScript"
   },
   "jp": {
-    "title": "JavaScript 美容器 - Coding.Tools",
-    "description": "JavaScript ソースを読みやすいインデント、間隔、ブロック構造で美しくします。",
+    "title": "JavaScript 整形ツール - Coding.Tools",
+    "description": "JavaScript ソースを読みやすいインデント、間隔、ブロック構造で整形します。",
     "toolTitle": "JavaScript 整形",
     "toolDescription": "コンパクトな JavaScript をブラウザで読み取り可能なソース コードにフォーマットします。",
     "categoryName": "整形と圧縮",
@@ -106,7 +106,7 @@
     "descTitle": "ロジックを書き換えずに JavaScript を読み取れるようにする",
     "descParas": [
       "<strong>JavaScript 整形 は、コンパクトまたは乱雑な JavaScript を読み取り可能なブロック、ステートメント、および式に拡張します。</strong> 縮小されたスニペットの検査、コピーされたコードのデバッグ、生成されたスクリプトのレビュー、またはサンプルの準備に役立ちます。",
-      "空白と改行を美しく変更します。名前変更された変数の難読化を解除したり、元のコメントを復元したり、TypeScript の型を推測したり、すでに壊れたコードが有効になることを保証したりするものではありません。"
+      "空白と改行を整えます。名前変更された変数の難読化を解除したり、元のコメントを復元したり、TypeScript の型を推測したり、すでに壊れたコードが有効になることを保証したりするものではありません。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -115,7 +115,7 @@
       "保存された文字列、コメント、実行時依存の構文の出力を確認します。",
       "クリップボードには <strong>コピー</strong>、ファイルには <strong>ダウンロード</strong>、リセットには <strong>クリア</strong> を使用します。"
     ],
-    "whatIs": "JavaScript ビューティファイヤーとは何ですか?",
+    "whatIs": "JavaScript 整形ツールとは何ですか?",
     "whatIsParas": [
       "<strong>JavaScript 整形</strong> は、制御フロー、関数、オブジェクト、配列、および連鎖呼び出しが読みやすくなるように、JavaScript を再フォーマットするためのブラウザー ベースのユーティリティです。",
       "書式設定は動作を維持することを目的としていますが、JavaScript には自動セミコロン挿入、ディレクティブ、正規表現、およびテンプレート リテラルに関する特殊なケースがあります。再フォーマット後に重要なコードをテストします。"
@@ -124,12 +124,12 @@
     "inputNotesPara": "ツールがテキストとして処理することを意図していない限り、HTML <code>&lt;script&gt;</code> タグではなく、プレーンな JavaScript を貼り付けます。 JSX、TypeScript、またはフレームワーク テンプレートの場合は、通常のパーサーで出力を確認します。",
     "example": "例",
     "examplePara": "コンパクトな関数は、より読みやすいブロックにリフローされます。",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- 圧縮入力 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- 整形出力 ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "JavaScript を整形"
   },
   "kr": {
-    "title": "JavaScript 뷰티파이어 - Coding.Tools",
-    "description": "읽기 쉬운 들여쓰기, 간격 및 블록 구조로 JavaScript 소스를 아름답게 만듭니다.",
+    "title": "JavaScript 포맷터 - Coding.Tools",
+    "description": "읽기 쉬운 들여쓰기, 간격 및 블록 구조로 JavaScript 소스를 읽기 좋게 정리합니다.",
     "toolTitle": "JavaScript 포맷터",
     "toolDescription": "브라우저에서 컴팩트 JavaScript를 읽을 수 있는 소스 코드로 포맷하세요.",
     "categoryName": "포맷 및 압축",
@@ -138,7 +138,7 @@
     "descTitle": "로직을 다시 작성하지 않고도 JavaScript를 읽을 수 있도록 설정",
     "descParas": [
       "<strong>JavaScript 포맷터는 간결하거나 지저분한 JavaScript를 읽을 수 있는 블록, 명령문 및 표현식으로 확장합니다.</strong> 축소된 스니펫 검사, 복사된 코드 디버깅, 생성된 스크립트 검토 또는 예제 준비 시 도움이 됩니다.",
-      "공백과 줄 바꿈을 아름답게 변경합니다. 이름이 바뀐 변수를 난독 해제하고, 원래 주석을 복원하고, TypeScript 유형을 추론하거나, 이미 손상된 코드가 유효하다는 것을 보장하지 않습니다."
+      "공백과 줄 바꿈을 레이아웃을 정리합니다. 이름이 바뀐 변수를 난독 해제하고, 원래 주석을 복원하고, TypeScript 유형을 추론하거나, 이미 손상된 코드가 유효하다는 것을 보장하지 않습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
@@ -147,16 +147,16 @@
       "보존된 문자열, 주석 및 런타임에 민감한 구문에 대한 출력을 검토합니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JavaScript 뷰티파이어란 무엇인가요?",
+    "whatIs": "JavaScript 포맷터란 무엇인가요?",
     "whatIsParas": [
-      "<strong>JavaScript 포맷터</strong>는 제어 흐름, 함수, 객체, 배열 및 연결된 호출을 더 쉽게 읽을 수 있도록 JavaScript를 다시 포맷하기 위한 브라우저 기반 유틸리티입니다.",
+      "<strong>JavaScript 포맷터</strong>은 제어 흐름, 함수, 객체, 배열 및 연결된 호출을 더 쉽게 읽을 수 있도록 JavaScript를 다시 포맷하기 위한 브라우저 기반 유틸리티입니다.",
       "형식 지정은 동작을 보존하기 위한 것이지만 JavaScript에는 자동 세미콜론 삽입, 지시어, 정규식 및 템플릿 리터럴과 관련된 극단적인 경우가 있습니다. 다시 포맷한 후 중요한 코드를 테스트하세요."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "도구가 태그를 텍스트로 처리하도록 의도되지 않은 경우 HTML <code>&lt;script&gt;</code> 태그가 아닌 일반 JavaScript를 붙여넣습니다. JSX, TypeScript 또는 프레임워크 템플릿의 경우 일반 파서로 출력을 확인하세요.",
     "example": "예시",
     "examplePara": "간결한 기능이 더 읽기 쉬운 블록으로 리플로우되었습니다.",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- 압축 입력 ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- 포맷 출력 ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "JavaScript 포맷"
   },
   "fr": {
@@ -185,10 +185,10 @@
       "Le formatage est destiné à préserver le comportement, mais JavaScript présente des cas extrêmes autour de l'insertion automatique de points-virgules, de directives, d'expressions régulières et de littéraux de modèles. Testez le code important après le reformatage."
     ],
     "inputNotes": "Notes d'entrée",
-    "inputNotesPara": "Collez les balises JavaScript simples, et non les balises HTML <code>&lt;script&gt;</code>, à moins que l'outil ne soit destiné à les traiter sous forme de texte. Pour les modèles JSX, TypeScript ou framework, confirmez la sortie avec votre analyseur normal.",
+    "inputNotesPara": "Collez du JavaScript brut, et non des balises HTML <code>&lt;script&gt;</code>, à moins que l'outil ne soit destiné à les traiter sous forme de texte. Pour les modèles JSX, TypeScript ou framework, confirmez la sortie avec votre analyseur normal.",
     "example": "Exemple",
     "examplePara": "Une fonction compacte est redistribuée dans un bloc plus lisible :",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- Entrée minifiée ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Sortie formatée ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "Embellir JavaScript"
   },
   "de": {
@@ -220,7 +220,7 @@
     "inputNotesPara": "Fügen Sie einfache JavaScript-Tags ein, nicht HTML <code>&lt;script&gt;</code>-Tags, es sei denn, das Tool soll sie als Text verarbeiten. Bestätigen Sie bei JSX-, TypeScript- oder Framework-Vorlagen die Ausgabe mit Ihrem normalen Parser.",
     "example": "Beispiel",
     "examplePara": "Eine kompakte Funktion wird in einen besser lesbaren Block umgeformt:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- Minifizierte Eingabe ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Formatierte Ausgabe ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "Verschönern JavaScript"
   },
   "es": {
@@ -249,10 +249,10 @@
       "El formato está destinado a preservar el comportamiento, pero JavaScript tiene casos extremos relacionados con la inserción automática de punto y coma, directivas, expresiones regulares y literales de plantilla. Pruebe el código importante después de reformatearlo."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Pegue etiquetas simples JavaScript, no HTML <code>&lt;script&gt;</code>, a menos que la herramienta esté destinada a procesarlas como texto. Para plantillas JSX, TypeScript o framework, confirme el resultado con su analizador normal.",
+    "inputNotesPara": "Pegue JavaScript sin formato, no etiquetas HTML <code>&lt;script&gt;</code>, a menos que la herramienta esté destinada a procesarlas como texto. Para plantillas JSX, TypeScript o framework, confirme el resultado con su analizador normal.",
     "example": "Ejemplo",
     "examplePara": "Una función compacta se redirige a un bloque más legible:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- Entrada minificada ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Salida formateada ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "Embellecer JavaScript"
   },
   "pt": {
@@ -265,8 +265,8 @@
     "outputPlaceholder": "O JavaScript embelezado aparecerá aqui...",
     "descTitle": "Torne JavaScript legível sem reescrever a lógica",
     "descParas": [
-      "<strong>JavaScript O Beautifier expande JavaScript compacto ou confuso em blocos, instruções e expressões legíveis.</strong> Ajuda na inspeção de trechos minificados, na depuração de código copiado, na revisão de scripts gerados ou na preparação de exemplos.",
-      "Embelezar altera espaços em branco e quebras de linha; ele não desofusca variáveis ​​renomeadas, restaura comentários originais, infere tipos TypeScript ou garante que o código já quebrado se torne válido."
+      "<strong>O formatador JavaScript expande JavaScript compacto ou confuso em blocos, instruções e expressões legíveis.</strong> Ajuda na inspeção de trechos minificados, na depuração de código copiado, na revisão de scripts gerados ou na preparação de exemplos.",
+      "Embelezar altera espaços em branco e quebras de linha; ele não desofusca variáveis renomeadas, restaura comentários originais, infere tipos TypeScript ou garante que o código já quebrado se torne válido."
     ],
     "howToUse": "Como usar",
     "steps": [
@@ -284,7 +284,7 @@
     "inputNotesPara": "Cole tags JavaScript simples, não HTML <code>&lt;script&gt;</code>, a menos que a ferramenta se destine a processá-las como texto. Para modelos JSX, TypeScript ou framework, confirme a saída com seu analisador normal.",
     "example": "Exemplo",
     "examplePara": "Uma função compacta é refluída para um bloco mais legível:",
-    "exampleCode": "--- Minified Input ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Beautified Output ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
+    "exampleCode": "--- Entrada minificada ---\nfunction hello(name){console.log(\"Hello, \"+name+\"!\");}\n\n--- Saída formatada ---\nfunction hello(name) {\n  console.log(\"Hello, \" + name + \"!\");\n}",
     "buttonLabel": "Embelezar JavaScript"
   }
 }

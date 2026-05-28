@@ -43,9 +43,9 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入字段中键入或粘贴罗马数字。",
+      "在输入框中键入或粘贴罗马数字。",
       "查看十进制结果和快速参考符号。",
-      "复制该数字，或在转换另一个罗马数字之前清除该字段。"
+      "复制该数字，或在转换另一个罗马数字之前清空输入。"
     ],
     "whatIs": "什么是罗马数字转换？",
     "whatIsParas": [
@@ -59,32 +59,32 @@
   },
   "tw": {
     "title": "羅馬數字轉數字 - Coding.Tools",
-    "description": "使用標準符號值將羅馬數字轉換為十進制數字。",
+    "description": "使用標準符號值將羅馬數字轉換為十進位數字。",
     "toolTitle": "羅馬數字轉數字",
-    "toolDescription": "將羅馬數字字串轉換為十進制數字並查看常見符號值。",
+    "toolDescription": "將羅馬數字字串轉換為十進位數字並檢視常見符號值。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入羅馬數字（例如 XIV、MMXXIV）...",
     "outputPlaceholder": "號碼將會出現在這裡...",
-    "descTitle": "將羅馬數字轉換為十進制數字",
+    "descTitle": "將羅馬數字轉換為十進位數字",
     "descParas": [
-      "<strong>羅馬數字轉數字讀取羅馬數字符號並傳回匹配的十進制值。</strong> 將其用於日期、大綱、書籍章節、電影續集、鐘面和歷史參考文獻。",
+      "<strong>羅馬數字轉數字讀取羅馬數字元號並傳回符合的十進位值。</strong> 將其用於日期、大綱、書籍章節、電影續集、鐘面和歷史參考文獻。",
       "標準符號為 <code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code> 和 <code>M</code>。減法表示法將較小的值放在較大的值之前，例如 <code>IV</code> 表示 4，<code>CM</code> 表示 900。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "在輸入欄位中鍵入或貼上羅馬數字。",
-      "查看十進制結果和快速參考符號。",
-      "複製該數字，或在轉換另一個羅馬數字之前清除該欄位。"
+      "檢視十進位結果和快速參考符號。",
+      "複製該數字，或在轉換另一個羅馬數字之前清空輸入。"
     ],
     "whatIs": "什麼是羅馬數字轉換？",
     "whatIsParas": [
       "<strong>羅馬數字轉換</strong>從左到右添加符號值，當符號出現在較大符號之前時減去該符號。對於規範的現代表示法，請檢查不尋常的序列，因為並非有效符號的每種排列都是標準的。"
     ],
-    "inputNotes": "輸入註釋",
+    "inputNotes": "輸入說明",
     "inputNotesPara": "僅使用羅馬數字字母。典型的現代符號表示從 <code>1</code> 到 <code>3999</code> 的值；較大的值需要純文字工具可能不支援的上劃線或其他約定。",
-    "example": "例子",
+    "example": "範例",
     "examplePara": "<code>MMXXIV</code> 將 2000、20 和 4 組合起來得到 2024：",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- 羅馬數字輸入 ---\nMMXXIV\n\n--- 數字輸出 ---\n2024"
   },
   "jp": {
     "title": "ローマ数字から数字へ - Coding.Tools",
@@ -99,7 +99,7 @@
       "<strong>ローマ数字から数字へは、ローマ数字記号を読み取り、一致する 10 進数値を返します。</strong> 日付、概要、本の章、映画の続編、時計の文字盤、および歴史的参照に使用します。",
       "標準記号は<code>I</code>、<code>V</code>、<code>X</code>、<code>L</code>、<code>C</code>、<code>D</code>、<code>M</code>です。減算表記では、4 の場合は <code>IV</code>、900 の場合は <code>CM</code> のように、小さい値が大きい値の前に配置されます。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "入力フィールドにローマ数字を入力するか貼り付けます。",
       "10 進数の結果とクイック リファレンス記号を確認します。",
@@ -109,16 +109,16 @@
     "whatIsParas": [
       "<strong>ローマ数字変換</strong> は、記号の値を左から右に加算し、大きい記号の前に記号が表示される場合はその記号を減算します。正規の現代表記法については、有効な記号のすべての配置が標準であるわけではないため、異常なシーケンスを確認してください。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "ローマ数字のみを使用してください。典型的な現代の表記法は、<code>1</code> から <code>3999</code> までの値を表します。より大きな値には、プレーン テキスト ツールがサポートしていない可能性がある上線やその他の規則が必要です。",
     "example": "例",
     "examplePara": "<code>MMXXIV</code> は 2000、20、4 を組み合わせて 2024 を生成します。",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- ローマ数字入力 ---\nMMXXIV\n\n--- 数値出力 ---\n2024"
   },
   "kr": {
     "title": "로마 숫자를 숫자로 - Coding.Tools",
     "description": "표준 기호 값을 사용하여 로마 숫자를 십진수로 변환합니다.",
-    "toolTitle": "로마 숫자에서 숫자",
+    "toolTitle": "로마 숫자 → 숫자",
     "toolDescription": "로마 숫자 문자열을 십진수로 변환하고 일반적인 기호 값을 검토합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "로마 숫자를 입력하세요(예: XIV, MMXXIV)...",
@@ -136,13 +136,13 @@
     ],
     "whatIs": "로마숫자 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>로마 숫자 변환</strong>는 왼쪽에서 오른쪽으로 기호 값을 더하고 더 큰 기호 앞에 나타날 때 기호를 뺍니다. 정식 현대 표기법의 경우 유효한 기호의 모든 배열이 표준은 아니기 때문에 특이한 순서를 검토하세요."
+      "<strong>로마 숫자 변환</strong>은 왼쪽에서 오른쪽으로 기호 값을 더하고 더 큰 기호 앞에 나타날 때 기호를 뺍니다. 정식 현대 표기법의 경우 유효한 기호의 모든 배열이 표준은 아니기 때문에 특이한 순서를 검토하세요."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "로마 숫자만 사용하세요. 일반적인 현대 표기법은 <code>1</code>에서 <code>3999</code>까지의 값을 나타냅니다. 더 큰 값에는 일반 텍스트 도구가 지원하지 않는 윗줄이나 기타 규칙이 필요합니다.",
     "example": "예",
     "examplePara": "<code>MMXXIV</code>는 2000, 20, 4를 결합하여 2024를 생성합니다.",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- 로마 숫자 입력 ---\nMMXXIV\n\n--- 숫자 출력 ---\n2024"
   },
   "fr": {
     "title": "Chiffres romains en chiffres - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Utilisez uniquement des lettres en chiffres romains. La notation moderne typique représente les valeurs de <code>1</code> à <code>3999</code> ; des valeurs plus élevées nécessitent des surlignages ou d'autres conventions que les outils de texte brut peuvent ne pas prendre en charge.",
     "example": "Exemple",
     "examplePara": "<code>MMXXIV</code> combine 2000, 20 et 4 pour produire 2024 :",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- Entrée romaine ---\nMMXXIV\n\n--- Sortie nombre ---\n2024"
   },
   "de": {
     "title": "Römische Ziffern zu Zahlen - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Verwenden Sie nur römische Ziffern. Die typische moderne Notation stellt Werte von <code>1</code> bis <code>3999</code> dar; Größere Werte erfordern Überstreichungen oder andere Konventionen, die von Nur-Text-Tools möglicherweise nicht unterstützt werden.",
     "example": "Beispiel",
     "examplePara": "<code>MMXXIV</code> kombiniert 2000, 20 und 4, um 2024 zu ergeben:",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- Römische Eingabe ---\nMMXXIV\n\n--- Zahlenausgabe ---\n2024"
   },
   "es": {
     "title": "Números romanos a números - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Utilice únicamente letras de números romanos. La notación moderna típica representa valores de <code>1</code> a <code>3999</code>; los valores más grandes requieren líneas superpuestas u otras convenciones que las herramientas de texto sin formato pueden no admitir.",
     "example": "Ejemplo",
     "examplePara": "<code>MMXXIV</code> combina 2000, 20 y 4 para producir 2024:",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- Entrada romana ---\nMMXXIV\n\n--- Salida numérica ---\n2024"
   },
   "pt": {
     "title": "Algarismos Romanos em Números - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Use apenas letras numéricas romanas. A notação moderna típica representa valores de <code>1</code> a <code>3999</code>; valores maiores exigem linhas sobrepostas ou outras convenções que as ferramentas de texto simples podem não suportar.",
     "example": "Exemplo",
     "examplePara": "<code>MMXXIV</code> combina 2.000, 20 e 4 para produzir 2.024:",
-    "exampleCode": "--- Roman Input ---\nMMXXIV\n\n--- Number Output ---\n2024"
+    "exampleCode": "--- Entrada romana ---\nMMXXIV\n\n--- Saída numérica ---\n2024"
   }
 }

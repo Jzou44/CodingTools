@@ -43,7 +43,7 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将二进制字节组粘贴到输入字段中，字节之间有或没有空格。",
+      "将二进制字节组粘贴到输入框中，字节之间有或没有空格。",
       "单击 <strong>转换</strong> 将每个 8 位组映射到一个字符。",
       "检查控制字符或意外符号后复制或下载解码的文本。"
     ],
@@ -61,7 +61,7 @@
     "title": "二進位到文字轉換器 - Coding.Tools",
     "description": "將 8 位元二進位位元組轉換為瀏覽器中可讀的文字。",
     "toolTitle": "二進位轉文字",
-    "toolDescription": "將二進位位元組解碼為文字字符，並驗證 8 位元組。",
+    "toolDescription": "將二進位位元群組解碼為文字字元，並驗證每組是否為 8 位元。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此處貼上二進位代碼（例如 01001000 01100101）...",
     "outputPlaceholder": "ASCII 文字將會出現在這裡...",
@@ -73,24 +73,24 @@
     "howToUse": "如何使用",
     "steps": [
       "將二進位位元組貼到輸入欄位中，位元組之間有或沒有空格。",
-      "點選 <strong>轉換</strong> 將每個 8 位元組對應到一個字元。",
-      "檢查控製字元或意外符號後複製或下載解碼的文字。"
+      "點選 <strong>轉換</strong> 將每個 8 位元群組對應到一個字元。",
+      "檢查控制字元或意外符號後複製或下載解碼的文字。"
     ],
     "whatIs": "什麼是二進位到文字的轉換？",
     "whatIsParas": [
-      "<strong>二進位到文字轉換</strong>將每個8位元組讀取為數字字元代碼。例如，<code>01001000</code> 是十進位 72，它會對應到 ASCII 字母 <code>H</code>。"
+      "<strong>二進位到文字轉換</strong>會將每個 8 位元群組讀取為數字字元代碼。例如，<code>01001000</code> 是十進位 72，對應到 ASCII 字母 <code>H</code>。"
     ],
-    "inputNotes": "輸入註釋",
-    "inputNotesPara": "使用完整的 8 位元組。如果您的資料是 UTF-8、壓縮、加密或根本不是文本，則即使二進位檔案有效，位元組到字元的轉換也可能會產生不可讀的輸出。",
-    "example": "例子",
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "使用完整的 8 位元群組。如果您的資料是 UTF-8、壓縮、加密或根本不是文字，則即使二進位有效，位元組到字元的轉換也可能產生不可讀的輸出。",
+    "example": "範例",
     "examplePara": "這五個二進位位元組解碼為字 <code>Hello</code>：",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "exampleCode": "--- 二進位輸入 ---\n01001000 01100101 01101100 01101100 01101111\n\n--- 文字輸出 ---\nHello"
   },
   "jp": {
-    "title": "バイナリからテキストへのコンバータ - Coding.Tools",
-    "description": "8 ビットのバイナリ バイト グループをブラウザで読み取り可能なテキストに変換します。",
+    "title": "2進数からテキストへのコンバーター - Coding.Tools",
+    "description": "8 ビットの2進バイト グループをブラウザで読み取り可能なテキストに変換します。",
     "toolTitle": "2進数からテキスト",
-    "toolDescription": "8 ビット グループを検証して、バイナリ バイト グループをテキスト文字にデコードします。",
+    "toolDescription": "8 ビット グループを検証して、2進バイト グループをテキスト文字にデコードします。",
     "categoryName": "数値変換",
     "inputPlaceholder": "ここにバイナリ コードを貼り付けます (例: 01001000 01100101)...",
     "outputPlaceholder": "ここに ASCII テキストが表示されます...",
@@ -99,26 +99,26 @@
       "<strong>2進数からテキスト は、8 つのバイナリ数字のグループを文字コードに変換します。</strong> 単純なバイト例、教室での演習、プロトコル スニペット、およびバイナリとして記述された小さなテキスト ペイロードのデコードに役立ちます。",
       "空白は無視されますが、残りのビット文字列は 8 の倍数の長さで、<code>0</code> と <code>1</code> のみを含む必要があります。標準の ASCII テキストはバイト値 <code>00-7F</code> を使用します。上位バイト値は完全な UTF-8 デコードではありません。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
-      "バイト間にスペースを入れても入れなくても、バイナリ バイト グループを入力フィールドに貼り付けます。",
+      "バイト間にスペースを入れても入れなくても、2進バイト グループを入力フィールドに貼り付けます。",
       "「<strong>変換</strong>」をクリックして、各 8 ビット グループを文字にマッピングします。",
       "制御文字や予期しない記号がないか確認した後、デコードされたテキストをコピーまたはダウンロードします。"
     ],
-    "whatIs": "バイナリからテキストへの変換とは何ですか?",
+    "whatIs": "2進数からテキストへの変換とは何ですか?",
     "whatIsParas": [
-      "<strong>バイナリからテキストへの変換</strong> は、各 8 ビット グループを数値文字コードとして読み取ります。たとえば、<code>01001000</code> は 10 進数の 72 で、ASCII の文字 <code>H</code> にマップされます。"
+      "<strong>2進数からテキストへの変換</strong> は、各 8 ビット グループを数値文字コードとして読み取ります。たとえば、<code>01001000</code> は 10 進数の 72 で、ASCII の文字 <code>H</code> に対応付けされます。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "完全な 8 ビット グループを使用します。データが UTF-8、圧縮、暗号化されているか、まったくテキストではない場合、バイナリが有効であっても、バイトから文字への変換により、読み取り不能な出力が生成される可能性があります。",
     "example": "例",
-    "examplePara": "これら 5 つのバイナリ バイト グループは、単語 <code>Hello</code> にデコードされます。",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "examplePara": "これら 5 つの2進バイト グループは、単語 <code>Hello</code> にデコードされます。",
+    "exampleCode": "--- 2進数入力 ---\n01001000 01100101 01101100 01101100 01101111\n\n--- テキスト出力 ---\nHello"
   },
   "kr": {
-    "title": "바이너리를 텍스트로 변환기 - Coding.Tools",
+    "title": "2진수-텍스트 변환기 - Coding.Tools",
     "description": "8비트 이진 바이트 그룹을 브라우저에서 읽을 수 있는 텍스트로 변환합니다.",
-    "toolTitle": "2진수에서 텍스트",
+    "toolTitle": "2진수 → 텍스트",
     "toolDescription": "8비트 그룹에 대한 유효성 검사를 통해 이진 바이트 그룹을 텍스트 문자로 디코딩합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "여기에 바이너리 코드를 붙여넣으세요(예: 01001000 01100101)...",
@@ -134,15 +134,15 @@
       "<strong>변환</strong>를 클릭하여 각 8비트 그룹을 문자에 매핑합니다.",
       "제어 문자나 예상치 못한 기호를 확인한 후 디코딩된 텍스트를 복사하거나 다운로드하세요."
     ],
-    "whatIs": "바이너리를 텍스트로 변환이란 무엇입니까?",
+    "whatIs": "바이너리를 텍스트로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>이진수를 텍스트로 변환</strong>는 각 8비트 그룹을 숫자 문자 코드로 읽습니다. 예를 들어, <code>01001000</code>는 10진수 72이며, 이는 ASCII 문자 <code>H</code>에 매핑됩니다."
+      "<strong>이진수를 텍스트로 변환</strong>은 각 8비트 그룹을 숫자 문자 코드로 읽습니다. 예를 들어, <code>01001000</code>는 10진수 72이며, 이는 ASCII 문자 <code>H</code>에 매핑됩니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "완전한 8비트 그룹을 사용하십시오. 데이터가 UTF-8이거나 압축되었거나 암호화되었거나 텍스트가 아닌 경우 바이너리가 유효한 경우에도 바이트-문자 변환으로 인해 읽을 수 없는 출력이 생성될 수 있습니다.",
     "example": "예",
     "examplePara": "다음 5개의 이진 바이트 그룹은 <code>Hello</code>라는 단어로 디코딩됩니다.",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "exampleCode": "--- 2진수 입력 ---\n01001000 01100101 01101100 01101100 01101111\n\n--- 텍스트 출력 ---\nHello"
   },
   "fr": {
     "title": "Convertisseur binaire en texte - Coding.Tools",
@@ -171,7 +171,7 @@
     "inputNotesPara": "Utilisez des groupes complets de 8 bits. Si vos données sont au format UTF-8, compressées, chiffrées ou ne contiennent pas de texte du tout, la conversion octet en caractère peut produire une sortie illisible même lorsque le binaire est valide.",
     "example": "Exemple",
     "examplePara": "Ces cinq groupes d'octets binaires décodent en mot <code>Hello</code> :",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "exampleCode": "--- Entrée binaire ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Sortie texte ---\nHello"
   },
   "de": {
     "title": "Binär-zu-Text-Konverter - Coding.Tools",
@@ -200,7 +200,7 @@
     "inputNotesPara": "Verwenden Sie vollständige 8-Bit-Gruppen. Wenn Ihre Daten UTF-8, komprimiert, verschlüsselt oder überhaupt kein Text sind, kann die Byte-in-Zeichen-Konvertierung zu einer unlesbaren Ausgabe führen, selbst wenn die Binärdatei gültig ist.",
     "example": "Beispiel",
     "examplePara": "Diese fünf binären Bytegruppen dekodieren das Wort <code>Hello</code>:",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "exampleCode": "--- Binäre Eingabe ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Textausgabe ---\nHello"
   },
   "es": {
     "title": "Convertidor de binario a texto - Coding.Tools",
@@ -229,7 +229,7 @@
     "inputNotesPara": "Utilice grupos completos de 8 bits. Si sus datos son UTF-8, están comprimidos, cifrados o no contienen texto, la conversión de byte a carácter puede producir resultados ilegibles incluso cuando el binario sea válido.",
     "example": "Ejemplo",
     "examplePara": "Estos cinco grupos de bytes binarios se decodifican en la palabra <code>Hello</code>:",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "exampleCode": "--- Entrada binaria ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Salida de texto ---\nHello"
   },
   "pt": {
     "title": "Conversor de binário para texto - Coding.Tools",
@@ -258,6 +258,6 @@
     "inputNotesPara": "Use grupos completos de 8 bits. Se seus dados forem UTF-8, compactados, criptografados ou não forem texto, a conversão de byte para caractere poderá produzir uma saída ilegível mesmo quando o binário for válido.",
     "example": "Exemplo",
     "examplePara": "Esses cinco grupos de bytes binários são decodificados para a palavra <code>Hello</code>:",
-    "exampleCode": "--- Binary Input ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Text Output ---\nHello"
+    "exampleCode": "--- Entrada binária ---\n01001000 01100101 01101100 01101100 01101111\n\n--- Saída de texto ---\nHello"
   }
 }

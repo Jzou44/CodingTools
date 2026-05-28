@@ -77,17 +77,17 @@
     "inputNotesPara": "粘贴您计划提交或发布的确切文本。如果导航标签、复制来的界面元素、引用的邮件头或 Markdown 元数据不应计入最终长度，请先删除它们。",
     "example": "示例",
     "examplePara": "一个简短的多段落样本会立即生成单词、句子、段落和时间估计：",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- 示例文本 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 预期统计 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "tw": {
     "title": "字計數器 - Coding.Tools",
     "description": "計算瀏覽器中的單字、字元、句子、段落、行數以及估計的閱讀和口語時間。",
     "toolTitle": "字數統計",
-    "toolDescription": "使用即時單字、字元、句子、段落、行、閱讀時間和說話時間統計資料來測量本地貼上的文字。",
+    "toolDescription": "使用即時單字、字元、句子、段落、行、閱讀時間和說話時間統計資料來測量本機貼上的文字。",
     "categoryName": "字串與文字",
-    "inputPlaceholder": "在此貼上或輸入文字，統計單詞、字元、句子和段落數...",
+    "inputPlaceholder": "在此貼上或輸入文字，統計單字、字元、句子和段落數...",
     "statsTitle": "統計資料",
-    "statsWords": "單詞數",
+    "statsWords": "單字數",
     "statsCharsWithSpaces": "字元數（含空格）",
     "statsCharsNoSpaces": "字元數（不含空格）",
     "statsSentences": "句子數",
@@ -100,24 +100,24 @@
     "descTitle": "計算貼上文字的字數和閱讀時間",
     "descParas": [
       "<strong>字數統計 提供草稿、貼文、摘要、產品副本、論文、成績單和文件的即時長度指標。</strong> 它報告單字、帶空格和不帶空格的字元、句子、段落、行以及粗略的閱讀和說話時間。",
-      "字數取決於標記化規則。其他編輯器、CMS 平台或學校提交系統可能會對帶連字符的術語、縮寫詞、URL、表情符號、CJK 文字、代碼和標點符號較多的字串進行不同的計數。將結果視為實際的瀏覽器計數，而不是法律標準。"
+      "字數取決於標記化規則。其他編輯器、CMS 平台或學校提交系統可能會對帶連字元的術語、縮寫詞、URL、表情符號、CJK 文字、代碼和標點符號較多的字串進行不同的計數。將結果視為實際的瀏覽器計數，而不是法律標準。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將文字貼上或鍵入到輸入編輯器中。",
-      "在編輯器下方的面板中查看即時統計資料。每個指標都會在您鍵入時立即更新。",
+      "在編輯器下方的面板中檢視即時統計資料。每個指標都會在您鍵入時立即更新。",
       "使用 <strong>複製</strong> 將文字複製到剪貼簿，使用 <strong>下載</strong> 將其另存為文字檔案，或使用 <strong>清除</strong> 重設編輯器和所有統計資料。"
     ],
     "whatIs": "什麼是字計數器？",
     "whatIsParas": [
-      "<strong>字數統計</strong> 是一款本地文字測量工具，用於檢查文案是否符合字數限制、估計朗讀腳本需要多長時間，或比較兩個草稿的長度。",
-      "閱讀和口語時間是根據平均速率估算的，因此技術材料、列表、名稱和非英語文本可能需要更多或更少的時間。段落通常由空白行分隔，而行數則遵循貼上文字中的換行符。"
+      "<strong>字數統計</strong> 是一款本機文字測量工具，用於檢查文案是否符合字數限制、估計朗讀腳本需要多長時間，或比較兩個草稿的長度。",
+      "閱讀和口語時間是根據平均速率估算的，因此技術材料、列表、名稱和非英語文字可能需要更多或更少的時間。段落通常由空白行分隔，而行數則遵循貼上文字中的換行符。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "貼上您計劃提交或發布的確切文字。如果導航標籤、複製來的介面元素、引用的郵件標頭或 Markdown 元資料不應計入最終長度，請先刪除它們。",
+    "inputNotesPara": "貼上您計劃提交或發布的確切文字。如果導航標籤、複製來的介面元素、引用的郵件標頭或 Markdown 中繼資料不應計入最終長度，請先刪除它們。",
     "example": "範例",
     "examplePara": "一個簡短的多段落樣本會立即產生單字、句子、段落和時間估計：",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- 範例文字 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 預期統計 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "jp": {
     "title": "ワードカウンター - Coding.Tools",
@@ -157,7 +157,7 @@
     "inputNotesPara": "送信または公開する予定のテキストを正確に貼り付けます。ナビゲーション ラベル、コピーされた UI クロム、引用符で囲まれた電子メール ヘッダー、またはマークダウン メタデータが最終的な長さにカウントされない場合は、それらを削除します。",
     "example": "例",
     "examplePara": "短い複数段落のサンプルでは、単語、文、段落、および時間の見積もりが一度に生成されます。",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- サンプルテキスト ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 予想統計 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "kr": {
     "title": "단어 카운터 - Coding.Tools",
@@ -179,7 +179,7 @@
     "statusUpdated": "통계 업데이트됨",
     "descTitle": "붙여넣은 텍스트에서 단어 수 및 읽는 시간 계산",
     "descParas": [
-      "<strong>단어 수 세기는 초안, 게시물, 초록, 제품 카피, 에세이, 성적표 및 문서에 대한 실시간 길이 측정항목을 제공합니다.</strong> 단어, 공백이 있거나 없는 문자, 문장, 단락, 줄, 대략적인 읽기 및 말하기 시간을 보고합니다.",
+      "<strong>단어 수 세기는 초안, 게시물, 초록, 제품 카피, 에세이, 녹취록 및 문서에 대한 실시간 길이 측정항목을 제공합니다.</strong> 단어, 공백이 있거나 없는 문자, 문장, 단락, 줄, 대략적인 읽기 및 말하기 시간을 보고합니다.",
       "단어 수는 토큰화 규칙에 따라 달라집니다. 하이픈으로 연결된 용어, 약어, URL, 이모티콘, CJK 텍스트, 코드 및 구두점이 많은 문자열은 다른 편집자, CMS 플랫폼 또는 학교 제출 시스템에 따라 다르게 계산될 수 있습니다. 결과를 법적 표준이 아닌 실제 브라우저 수로 처리하십시오."
     ],
     "howToUse": "사용 방법",
@@ -188,7 +188,7 @@
       "편집기 아래 패널에서 실시간 통계를 확인하세요. 모든 지표는 입력하는 즉시 업데이트됩니다.",
       "텍스트를 클립보드에 복사하려면 <strong>복사</strong>를 사용하고, 텍스트 파일로 저장하려면 <strong>다운로드</strong>를 사용하고, 편집기와 모든 통계를 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "단어 카운터란 무엇입니까?",
+    "whatIs": "단어 카운터란 무엇인가요?",
     "whatIsParas": [
       "<strong>단어 수 세기</strong>는 사본이 단어 제한에 맞는지 확인하고, 스크립트를 소리내어 읽는 데 걸리는 시간을 추정하거나, 두 초안의 길이를 비교하기 위한 로컬 텍스트 측정 도구입니다.",
       "읽기 및 말하기 시간은 평균 속도를 기준으로 한 추정치이므로 기술 자료, 목록, 이름 및 영어가 아닌 텍스트는 시간이 다소 걸릴 수 있습니다. 단락은 일반적으로 빈 줄로 구분되며 줄 개수는 붙여넣은 텍스트의 줄 바꿈을 따릅니다."
@@ -197,7 +197,7 @@
     "inputNotesPara": "제출하거나 게시하려는 정확한 텍스트를 붙여넣으세요. 탐색 라벨, 복사된 UI 크롬, 인용된 이메일 헤더, 마크다운 메타데이터 등이 최종 길이에 포함되지 않는 경우 삭제하세요.",
     "example": "예시",
     "examplePara": "짧은 여러 단락 샘플은 단어, 문장, 단락 및 시간 추정치를 한 번에 생성합니다.",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- 샘플 텍스트 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 예상 통계 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "fr": {
     "title": "Compteur de mots - Coding.Tools",
@@ -237,7 +237,7 @@
     "inputNotesPara": "Collez le texte exact que vous envisagez de soumettre ou de publier. Supprimez les libellés de navigation, les éléments d'interface copiés, les en-têtes d'e-mail cités ou les métadonnées Markdown s'ils ne doivent pas compter dans la longueur finale.",
     "example": "Exemple",
     "examplePara": "Un court échantillon de plusieurs paragraphes produit simultanément des estimations de mots, de phrases, de paragraphes et de temps :",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Texte d’exemple ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Statistiques attendues ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "de": {
     "title": "Wortzähler - Coding.Tools",
@@ -277,7 +277,7 @@
     "inputNotesPara": "Fügen Sie den genauen Text ein, den Sie einreichen oder veröffentlichen möchten. Entfernen Sie Navigationsbeschriftungen, kopierte UI-Chrome, zitierte E-Mail-Header oder Markdown-Metadaten, wenn diese nicht auf die endgültige Länge angerechnet werden sollen.",
     "example": "Beispiel",
     "examplePara": "Ein kurzes Beispiel mit mehreren Absätzen liefert Wort-, Satz-, Absatz- und Zeitschätzungen gleichzeitig:",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Beispieltext ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Erwartete Statistiken ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "es": {
     "title": "Contador de palabras - Coding.Tools",
@@ -299,7 +299,7 @@
     "statusUpdated": "Estadísticas actualizadas",
     "descTitle": "Cuente palabras y tiempo de lectura del texto pegado",
     "descParas": [
-      "<strong>Contador de palabras proporciona métricas de longitud en vivo para borradores, publicaciones, resúmenes, copias de productos, ensayos, transcripciones y documentación.</strong> Informa palabras, caracteres con y sin espacios, oraciones, párrafos, líneas y tiempo aproximado de lectura y conversación.",
+      "<strong>Contador de palabras proporciona métricas de longitud en vivo para borradores, publicaciones, resúmenes, textos de producto, ensayos, transcripciones y documentación.</strong> Informa palabras, caracteres con y sin espacios, oraciones, párrafos, líneas y tiempo aproximado de lectura y conversación.",
       "El recuento de palabras depende de las reglas de tokenización. Otros editores, plataformas CMS o sistemas de envío escolar pueden contar de forma diferente los términos con guiones, contracciones, URL, emoji, texto CJK, códigos y cadenas con mucha puntuación. Trate el resultado como un recuento práctico del navegador, no como un estándar legal."
     ],
     "howToUse": "Cómo usar",
@@ -317,7 +317,7 @@
     "inputNotesPara": "Pegue el texto exacto que planea enviar o publicar. Elimine las etiquetas de navegación, los elementos de interfaz copiados, los encabezados de correo citados o los metadatos de Markdown si no deben contar para la longitud final.",
     "example": "Ejemplo",
     "examplePara": "Una muestra breve de varios párrafos produce estimaciones de palabras, oraciones, párrafos y tiempo a la vez:",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Texto de ejemplo ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Estadísticas esperadas ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   },
   "pt": {
     "title": "Contador de palavras - Coding.Tools",
@@ -339,7 +339,7 @@
     "statusUpdated": "Estatísticas atualizadas",
     "descTitle": "Conte palavras e tempo de leitura do texto colado",
     "descParas": [
-      "<strong>Contador de palavras fornece métricas de comprimento ao vivo para rascunhos, postagens, resumos, cópias de produtos, ensaios, transcrições e documentação.</strong> Ele relata palavras, caracteres com e sem espaços, frases, parágrafos, linhas e leitura aproximada e tempo de fala.",
+      "<strong>Contador de palavras fornece métricas de comprimento ao vivo para rascunhos, postagens, resumos, textos de produto, ensaios, transcrições e documentação.</strong> Ele relata palavras, caracteres com e sem espaços, frases, parágrafos, linhas e leitura aproximada e tempo de fala.",
       "A contagem de palavras depende das regras de tokenização. Termos hifenizados, contrações, URLs, emoji, texto CJK, código e strings com muita pontuação podem ser contados de forma diferente por outros editores, plataformas CMS ou sistemas de envio escolar. Trate o resultado como uma contagem prática do navegador, não como um padrão legal."
     ],
     "howToUse": "Como usar",
@@ -357,6 +357,6 @@
     "inputNotesPara": "Cole o texto exato que você planeja enviar ou publicar. Remova rótulos de navegação, elementos de interface copiados, cabeçalhos de e-mail citados ou metadados Markdown se eles não devem contar para o comprimento final.",
     "example": "Exemplo",
     "examplePara": "Uma pequena amostra de vários parágrafos produz estimativas de palavras, frases, parágrafos e tempo de uma só vez:",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Texto de exemplo ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Estatísticas esperadas ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
   }
 }

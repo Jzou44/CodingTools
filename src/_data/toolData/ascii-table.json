@@ -25,7 +25,7 @@
     "exampleCode": ""
   },
   "cn": {
-    "title": "ASCII 桌子 - Coding.Tools",
+    "title": "ASCII 表格 - Coding.Tools",
     "description": "具有十进制、十六进制、八进制和二进制值的参考标准 ASCII 字符。",
     "toolTitle": "ASCII码表",
     "toolDescription": "查找十进制、十六进制、八进制和二进制表示法中的标准 ASCII 控制和可打印字符。",
@@ -35,13 +35,13 @@
     "descTitle": "查找标准 ASCII 字符代码",
     "descParas": [
       "<strong>ASCII 表将标准字符映射到其十进制、十六进制、八进制和二进制代码值。</strong> 在解码字节转储、检查控制字符、编写解析器测试或确认可打印字符后面的数值时使用它。",
-      "标准 ASCII 涵盖值 <code>0-127</code>。值 <code>0-31</code> 和 <code>127</code> 是控制代码，而 <code>32-126</code> 是可打印字符； 127以上的值属于扩展编码，不是通用的ASCII。"
+      "标准 ASCII 涵盖值 <code>0-127</code>。值 <code>0-31</code> 和 <code>127</code> 是控制码，而 <code>32-126</code> 是可打印字符； 127以上的值属于扩展编码，不是通用的ASCII。"
     ],
     "howToUse": "",
     "steps": [],
     "whatIs": "ASCII 表是什么？",
     "whatIsParas": [
-      "<strong>ASCII</strong> 是一种 7 位字符编码，它将数字分配给英文字母、数字、标点符号、空格和控制代码。根据您正在调试的上下文，可以用十进制、十六进制、八进制或二进制编写相同的值。"
+      "<strong>ASCII</strong> 是一种 7 位字符编码，它将数字分配给英文字母、数字、标点符号、空格和控制码。根据您正在调试的上下文，可以用十进制、十六进制、八进制或二进制编写相同的值。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -50,8 +50,8 @@
     "exampleCode": ""
   },
   "tw": {
-    "title": "ASCII 桌子 - Coding.Tools",
-    "description": "具有十進制、十六進制、八進制和二進制值的參考標準 ASCII 字元。",
+    "title": "ASCII 表格 - Coding.Tools",
+    "description": "具有十進位、十六進位、八進位和二進位值的參考標準 ASCII 字元。",
     "toolTitle": "ASCII碼表",
     "toolDescription": "尋找十進位、十六進位、八進位和二進位表示法中的標準 ASCII 控制和可列印字元。",
     "categoryName": "數字轉換",
@@ -59,14 +59,14 @@
     "outputPlaceholder": "",
     "descTitle": "尋找標準 ASCII 字元代碼",
     "descParas": [
-      "<strong>ASCII 表將標準字元對應到其十進位、十六進位、八進位和二進位代碼值。</strong> 在解碼位元組轉儲、檢查控製字元、編寫解析器測試或確認可列印字元後面的數值時使用它。",
+      "<strong>ASCII 表將標準字元對應到其十進位、十六進位、八進位和二進位代碼值。</strong> 在解碼位元組轉儲、檢查控制字元、編寫解析器測試或確認可列印字元後面的數值時使用它。",
       "標準 ASCII 涵蓋值 <code>0-127</code>。值 <code>0-31</code> 和 <code>127</code> 是控制代碼，而 <code>32-126</code> 是可列印字元；127以上的值屬於擴充編碼，不是通用的ASCII。"
     ],
     "howToUse": "",
     "steps": [],
     "whatIs": "ASCII 表是什麼？",
     "whatIsParas": [
-      "<strong>ASCII</strong> 是 7 位元字元編碼，它將數字分配給英文字母、數字、標點符號、空格和控制代碼。根據您正在偵錯的上下文，可以用十進位、十六進位、八進位或二進位編寫相同的值。"
+      "<strong>ASCII</strong> 是 7 位元字元編碼，它將數字分配給英文字母、數字、標點符號、空格和控制代碼。根據您正在偵錯的情境，可以用十進位、十六進位、八進位或二進位編寫相同的值。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -84,14 +84,14 @@
     "outputPlaceholder": "",
     "descTitle": "標準の ASCII 文字コードを検索する",
     "descParas": [
-      "<strong>ASCII テーブルは、標準文字を 10 進数、16 進数、8 進数、およびバイナリ コード値にマップします。</strong> バイト ダンプのデコード、制御文字のチェック、パーサー テストの作成、または印刷可能文字の背後にある数値の確認に使用します。",
+      "<strong>ASCII テーブルは、標準文字を 10 進数、16 進数、8 進数、およびバイナリ コード値に対応付けます。</strong> バイト ダンプのデコード、制御文字のチェック、パーサー テストの作成、または印刷可能文字の背後にある数値の確認に使用します。",
       "標準 ASCII は値 <code>0-127</code> をカバーします。値 <code>0-31</code> および <code>127</code> は制御コードであり、<code>32-126</code> は印刷可能文字です。 127 を超える値は拡張エンコーディングに属し、ユニバーサル ASCII ではありません。"
     ],
     "howToUse": "",
     "steps": [],
     "whatIs": "ASCII テーブルとは何ですか?",
     "whatIsParas": [
-      "<strong>ASCII</strong> は、英語の文字、数字、句読点、空白、および制御コードに数字を割り当てる 7 ビットの文字エンコードです。デバッグしているコンテキストに応じて、同じ値を 10 進数、16 進数、8 進数、または 2 進数で書き込むことができます。"
+      "<strong>ASCII</strong> は、英語の文字、数字、句読点、空白、および制御コードに数字を割り当てる 7 ビットの文字エンコードです。デバッグ中の文脈に応じて、同じ値を 10 進数、16 進数、8 進数、または 2 進数で書き込むことができます。"
     ],
     "inputNotes": "",
     "inputNotesPara": "",
@@ -114,7 +114,7 @@
     ],
     "howToUse": "",
     "steps": [],
-    "whatIs": "ASCII 테이블이란 무엇입니까?",
+    "whatIs": "ASCII 테이블이란 무엇인가요?",
     "whatIsParas": [
       "<strong>ASCII</strong>는 영문자, 숫자, 구두점, 공백 및 제어 코드에 숫자를 할당하는 7비트 문자 인코딩입니다. 디버깅하는 컨텍스트에 따라 동일한 값을 10진수, 16진수, 8진수 또는 2진수로 쓸 수 있습니다."
     ],
@@ -134,7 +134,7 @@
     "outputPlaceholder": "",
     "descTitle": "Recherchez les codes de caractères ASCII standard",
     "descParas": [
-      "<strong>La table ASCII mappe les caractères standard à leurs valeurs de code décimal, hexadécimal, octal et binaire.</strong> Utilisez-la pour décoder des vidages d'octets, vérifier des caractères de contrôle, écrire des tests d'analyseur ou confirmer la valeur numérique derrière un caractère imprimable.",
+      "<strong>La table ASCII associe les caractères standard à leurs valeurs de code décimal, hexadécimal, octal et binaire.</strong> Utilisez-la pour décoder des vidages d'octets, vérifier des caractères de contrôle, écrire des tests d'analyseur ou confirmer la valeur numérique derrière un caractère imprimable.",
       "La norme ASCII couvre les valeurs <code>0-127</code>. Les valeurs <code>0-31</code> et <code>127</code> sont des codes de contrôle, tandis que <code>32-126</code> sont des caractères imprimables ; les valeurs supérieures à 127 appartiennent à des codages étendus et ne sont pas universelles ASCII."
     ],
     "howToUse": "",
@@ -157,7 +157,7 @@
     "categoryName": "Zahlenkonvertierung",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
-    "descTitle": "Suchen Sie nach den Standardzeichencodes ASCII",
+    "descTitle": "Standard-ASCII-Zeichencodes nachschlagen",
     "descParas": [
       "<strong>Die ASCII-Tabelle ordnet Standardzeichen ihren dezimalen, hexadezimalen, oktalen und binären Codewerten zu.</strong> Verwenden Sie sie, wenn Sie Byte-Dumps dekodieren, Steuerzeichen überprüfen, Parser-Tests schreiben oder den numerischen Wert hinter einem druckbaren Zeichen bestätigen.",
       "Der Standard ASCII deckt die Werte <code>0-127</code> ab. Die Werte <code>0-31</code> und <code>127</code> sind Steuercodes, während <code>32-126</code> druckbare Zeichen sind; Werte über 127 gehören zu erweiterten Kodierungen und sind nicht universell ASCII."
@@ -175,7 +175,7 @@
     "exampleCode": ""
   },
   "es": {
-    "title": "Mesa ASCII - Coding.Tools",
+    "title": "Tabla ASCII - Coding.Tools",
     "description": "Haga referencia a los caracteres ASCII estándar con valores decimales, hexadecimales, octales y binarios.",
     "toolTitle": "Tabla ASCII",
     "toolDescription": "Busque caracteres imprimibles y de control ASCII estándar en notación decimal, hexadecimal, octal y binaria.",
@@ -203,14 +203,14 @@
     "title": "Tabela ASCII - Coding.Tools",
     "description": "Faça referência a caracteres ASCII padrão com valores decimais, hexadecimais, octais e binários.",
     "toolTitle": "Tabela ASCII",
-    "toolDescription": "Procure o controle ASCII padrão e caracteres imprimíveis em notação decimal, hexadecimal, octal e binária.",
+    "toolDescription": "Consulte caracteres de controle ASCII padrão e caracteres imprimíveis em notação decimal, hexadecimal, octal e binária.",
     "categoryName": "Conversão de números",
     "inputPlaceholder": "",
     "outputPlaceholder": "",
     "descTitle": "Procure códigos de caracteres ASCII padrão",
     "descParas": [
-      "<strong>A tabela ASCII mapeia caracteres padrão para seus valores de código decimal, hexadecimal, octal e binário.</strong> Use-a ao decodificar dumps de bytes, verificar caracteres de controle, escrever testes de analisador ou confirmar o valor numérico atrás de um caractere imprimível.",
-      "O padrão ASCII cobre os valores <code>0-127</code>. Os valores <code>0-31</code> e <code>127</code> são códigos de controle, enquanto <code>32-126</code> são caracteres imprimíveis; valores acima de 127 pertencem a codificações estendidas e não são ASCII universais."
+      "<strong>A tabela ASCII mapeia caracteres padrão para seus valores de código decimal, hexadecimal, octal e binário.</strong> Use-a ao decodificar dumps de bytes, verificar caracteres de controle, escrever testes de analisador ou confirmar o valor numérico por trás de um caractere imprimível.",
+      "O padrão ASCII cobre os valores <code>0-127</code>. Os valores <code>0-31</code> e <code>127</code> são códigos de controle, enquanto <code>32-126</code> são caracteres imprimíveis; valores acima de 127 pertencem a codificações estendidas e não fazem parte do ASCII universal."
     ],
     "howToUse": "",
     "steps": [],

@@ -74,15 +74,15 @@
     "hashLength": 128,
     "descTitle": "產生具有 512 位元輸出的 SHA-512 雜湊值",
     "descParas": [
-      "<strong>此 SHA-512 產生器建立確定性 512 位元摘要並將其顯示為 128 個十六進位字元。</strong> 將其用於明確需要 SHA-512 輸出的發布元資料、驗證註解、測試資料、簽章和系統。",
-      "SHA-512 是 SHA-2 哈希，而不是加密。它可以證明兩個輸入完全匹配或資料已更改，但它不會隱藏輸入，不應該單獨用作密碼儲存方法。"
+      "<strong>此 SHA-512 產生器建立確定性 512 位元摘要並將其顯示為 128 個十六進位字元。</strong> 將其用於明確需要 SHA-512 輸出的發布中繼資料、驗證註解、測試資料、簽章和系統。",
+      "SHA-512 是 SHA-2 哈希，而不是加密。它可以證明兩個輸入完全符合或資料已更改，但它不會隱藏輸入，不應該單獨用作密碼儲存方法。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "將文字鍵入或貼上到輸入編輯器中。",
       "按一下 <strong>生成</strong> 以產生雜湊摘要。",
       "128 個字元的十六進位雜湊值出現在輸出編輯器中。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重置兩個編輯器。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
     ],
     "whatIs": "SHA-512是什麼？",
     "whatIsParas": [
@@ -118,7 +118,7 @@
     ],
     "whatIs": "SHA-512とは何ですか?",
     "whatIsParas": [
-      "<strong>SHA-512</strong> は、入力テキストまたはバイトを固定の 512 ビット ダイジェストにマッピングする SHA-2 暗号化ハッシュ関数です。出力は通常、128 文字の 16 進文字列として表示されます。",
+      "<strong>SHA-512</strong> は、入力テキストまたはバイトを固定の 512 ビット ダイジェストにマッピングする SHA-2 暗号学的ハッシュ関数です。出力は通常、128 文字の 16 進文字列として表示されます。",
       "プロトコルまたはチェックサム形式が SHA-512 を要求する場合に適しています。メッセージの信頼性には HMAC 構造を使用し、人間のパスワードにはプレーンな SHA-512 ダイジェストではなく、低速のソルト付きパスワード ハッシュ アルゴリズムを使用します。"
     ],
     "inputNotes": "入力に関する注意",
@@ -148,9 +148,9 @@
       "128자의 16진수 해시가 출력 편집기에 나타납니다.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "SHA-512란 무엇입니까?",
+    "whatIs": "SHA-512란 무엇인가요?",
     "whatIsParas": [
-      "<strong>SHA-512</strong>는 입력 텍스트 또는 바이트를 고정 512비트 다이제스트에 매핑하는 SHA-2 암호화 해시 함수입니다. 출력은 일반적으로 128자의 16진수 문자열로 표시됩니다.",
+      "<strong>SHA-512</strong>은 입력 텍스트 또는 바이트를 고정 512비트 다이제스트에 매핑하는 SHA-2 암호학적 해시 함수입니다. 출력은 일반적으로 128자의 16진수 문자열로 표시됩니다.",
       "프로토콜이나 체크섬 형식에서 SHA-512를 요구하는 경우에 적합합니다. 메시지 신뢰성을 위해 HMAC 구성을 사용하고 사람 비밀번호의 경우 일반 SHA-512 다이제스트 대신 느리고 솔트된 비밀번호 해싱 알고리즘을 사용합니다."
     ],
     "inputNotes": "입력 참고사항",
@@ -171,7 +171,7 @@
     "descTitle": "Générer des hachages SHA-512 avec une sortie de 512 bits",
     "descParas": [
       "<strong>Ce générateur SHA-512 crée un résumé déterministe de 512 bits et l'affiche sous forme de 128 caractères hexadécimaux.</strong> Utilisez-le pour les métadonnées de version, les notes de vérification, les données de test, les signatures et les systèmes qui nécessitent explicitement la sortie SHA-512.",
-      "SHA-512 est un hachage SHA-2, pas un cryptage. Il peut prouver que deux entrées exactes correspondent ou que les données ont changé, mais il ne masque pas l'entrée et ne doit pas être utilisé seul comme méthode de stockage de mot de passe."
+      "SHA-512 est un hachage SHA-2, pas un chiffrement. Il peut prouver que deux entrées exactes correspondent ou que les données ont changé, mais il ne masque pas l'entrée et ne doit pas être utilisé seul comme méthode de stockage de mot de passe."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
@@ -247,7 +247,7 @@
     "whatIs": "¿Qué es SHA-512?",
     "whatIsParas": [
       "<strong>SHA-512</strong> es una función hash criptográfica SHA-2 que asigna texto o bytes de entrada a un resumen fijo de 512 bits. La salida suele mostrarse como una cadena hexadecimal de 128 caracteres.",
-      "Es apropiado cuando un protocolo o formato de suma de comprobación solicita SHA-512. Para la autenticidad del mensaje, utilice una construcción HMAC y, para contraseñas humanas, utilice un algoritmo de hash de contraseña lento y salado en lugar de un simple resumen SHA-512."
+      "Es apropiado cuando un protocolo o formato de suma de comprobación solicita SHA-512. Para la autenticidad del mensaje, utilice una construcción HMAC y, para contraseñas humanas, utilice un algoritmo lento de hash de contraseñas con sal en lugar de un simple resumen SHA-512."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "La salida depende del texto de entrada exacto. Verifique los finales de línea, los espacios iniciales o finales, las indicaciones copiadas y los caracteres Unicode al comparar un valor SHA-512 de otro sistema.",

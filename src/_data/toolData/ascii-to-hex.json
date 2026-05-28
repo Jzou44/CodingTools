@@ -66,7 +66,7 @@
     "toolDescription": "將 ASCII 文字編碼為十六進位值，並選擇空格、逗號、冒號或無分隔符號輸出。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此輸入或貼上文字...",
-    "outputPlaceholder": "十六進制值將出現在這裡...",
+    "outputPlaceholder": "十六進位值將出現在這裡...",
     "descTitle": "將 ASCII 文字編碼為十六進位值",
     "descParas": [
       "<strong>ASCII 到十六進位將每個輸入字元轉換為其十六進位字元代碼。</strong> 使用它來準備位元組範例、測試資料、協定註釋或短文字有效負載的可讀表示。",
@@ -77,17 +77,17 @@
       "輸入或貼上要編碼的文字。",
       "選擇分隔符號樣式：空格、無、逗號或冒號。",
       "按一下 <strong>轉換</strong> 以產生十六進位輸出。",
-      "複製或下載文件、測試或調試說明的結果。"
+      "複製或下載文件、測試或偵錯說明的結果。"
     ],
     "whatIs": "ASCII 到十六進位的轉換是什麼？",
     "whatIsParas": [
       "<strong>ASCII 到十六進位轉換</strong> 以基數 16 重寫每個字元代碼。例如，字母 <code>H</code> 是十進位 72，十六進位是 <code>48</code>。"
     ],
-    "inputNotes": "輸入註釋",
-    "inputNotesPara": "當每個字元需要一個位元組時，請使用純 ASCII 文字。製表符、換行符和其他控製字元也具有十六進位值，因此在依賴輸出之前檢查複製的文字是否有隱藏的空格。",
-    "example": "例子",
+    "inputNotes": "輸入說明",
+    "inputNotesPara": "當每個字元需要一個位元組時，請使用純 ASCII 文字。製表符、換行符和其他控制字元也具有十六進位值，因此在依賴輸出之前檢查複製的文字是否有隱藏的空格。",
+    "example": "範例",
     "examplePara": "文字 <code>Hello, World!</code> 變成十六進位字元代碼序列：",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- ASCII 輸入 ---\nHello, World!\n\n--- 十六進位輸出（空格分隔） ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "jp": {
     "title": "ASCII から 16 進数へのコンバーター - Coding.Tools",
@@ -102,7 +102,7 @@
       "<strong>ASCIIから16進数 は、各入力文字を 16 進数の文字コードに変換します。</strong> これを使用して、バイト例、テストデータ、プロトコル ノート、または短いテキスト ペイロードの可読表現を準備します。",
       "プレーン ASCII の場合、各文字は <code>00</code> から <code>7F</code> までの 2 桁の値を生成します。 ASCII 以外の文字は、UTF-8 バイト シーケンスではなく JavaScript 文字コードとして処理されるため、バイト精度の Unicode 出力が重要な場合は UTF-8 エンコーダを使用します。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "エンコードするテキストを入力または貼り付けます。",
       "区切り文字のスタイルを選択します: スペース、なし、カンマ、またはコロン。",
@@ -113,16 +113,16 @@
     "whatIsParas": [
       "<strong>ASCII から 16 進数への変換</strong> は、各文字コードを基数 16 に書き換えます。たとえば、文字 <code>H</code> は 10 進数の 72 で、16 進数では <code>48</code> になります。"
     ],
-    "inputNotes": "メモを入力する",
+    "inputNotes": "入力時の注意",
     "inputNotesPara": "1 文字あたり 1 バイトが必要な場合は、プレーン ASCII テキストを使用してください。タブ、改行、その他の制御文字にも 16 進値があるため、出力に依存する前に、コピーしたテキストに隠れた空白がないか確認してください。",
     "example": "例",
     "examplePara": "テキスト <code>Hello, World!</code> は、16 進文字コードのシーケンスになります。",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- ASCII 入力 ---\nHello, World!\n\n--- 16進数出力（スペース区切り） ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "kr": {
     "title": "ASCII - 16진수 변환기 - Coding.Tools",
     "description": "선택 가능한 구분 기호를 사용하여 텍스트 문자를 16진수 코드 값으로 변환합니다.",
-    "toolTitle": "ASCII에서 16진수",
+    "toolTitle": "ASCII → 16진수",
     "toolDescription": "ASCII 텍스트를 16진수 값으로 인코딩하고 공백, 쉼표, 콜론 또는 구분 기호 없음 출력을 선택합니다.",
     "categoryName": "숫자 변환",
     "inputPlaceholder": "여기에 텍스트를 입력하거나 붙여넣으세요...",
@@ -130,7 +130,7 @@
     "descTitle": "ASCII 텍스트를 16진수 값으로 인코딩",
     "descParas": [
       "<strong>ASCII에서 16진수는 각 입력 문자를 16진수 문자 코드로 변환합니다.</strong> 이를 사용하여 바이트 예제, 테스트 데이터, 프로토콜 참고 또는 짧은 텍스트 페이로드의 판독 가능한 표현을 준비합니다.",
-      "일반 ASCII의 경우 각 문자는 <code>00</code>에서 <code>7F</code>까지 두 자리 값을 생성합니다. ASCII가 아닌 문자는 UTF-8 바이트 시퀀스가 ​​아닌 JavaScript 문자 코드로 처리되므로 바이트 단위의 정확한 유니코드 출력이 중요한 경우 UTF-8 인코더를 사용하세요."
+      "일반 ASCII의 경우 각 문자는 <code>00</code>에서 <code>7F</code>까지 두 자리 값을 생성합니다. ASCII가 아닌 문자는 UTF-8 바이트 시퀀스가 아닌 JavaScript 문자 코드로 처리되므로 바이트 단위의 정확한 유니코드 출력이 중요한 경우 UTF-8 인코더를 사용하세요."
     ],
     "howToUse": "사용방법",
     "steps": [
@@ -139,15 +139,15 @@
       "<strong>변환</strong>를 클릭하여 16진수 출력을 생성합니다.",
       "문서, 테스트 또는 디버깅 메모의 결과를 복사하거나 다운로드하세요."
     ],
-    "whatIs": "ASCII를 16진수로 변환이란 무엇입니까?",
+    "whatIs": "ASCII를 16진수로 변환이란 무엇인가요?",
     "whatIsParas": [
-      "<strong>ASCII를 16진수로 변환</strong>는 각 문자 코드를 16진수로 다시 씁니다. 예를 들어 문자 <code>H</code>는 10진수 72이고 16진수로는 <code>48</code>입니다."
+      "<strong>ASCII를 16진수로 변환</strong>은 각 문자 코드를 16진수로 다시 씁니다. 예를 들어 문자 <code>H</code>는 10진수 72이고 16진수로는 <code>48</code>입니다."
     ],
-    "inputNotes": "메모 입력",
+    "inputNotes": "입력 참고사항",
     "inputNotesPara": "문자당 1바이트가 필요한 경우 일반 ASCII 텍스트를 사용하세요. 탭, 줄 바꿈 및 기타 제어 문자에도 16진수 값이 있으므로 출력에 의존하기 전에 복사된 텍스트에서 숨겨진 공백이 있는지 검토하세요.",
     "example": "예",
     "examplePara": "<code>Hello, World!</code> 텍스트는 일련의 16진수 문자 코드가 됩니다.",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- ASCII 입력 ---\nHello, World!\n\n--- 16진수 출력(공백 구분) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "fr": {
     "title": "Convertisseur ASCII en hexadécimal - Coding.Tools",
@@ -177,7 +177,7 @@
     "inputNotesPara": "Utilisez du texte brut ASCII lorsque vous avez besoin d'un octet par caractère. Les tabulations, les sauts de ligne et autres caractères de contrôle ont également des valeurs hexadécimales, alors vérifiez le texte copié pour les espaces masqués avant de vous fier au résultat.",
     "example": "Exemple",
     "examplePara": "Le texte <code>Hello, World!</code> devient une séquence de codes de caractères hexadécimaux :",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- Entrée ASCII ---\nHello, World!\n\n--- Sortie hexadécimale (séparée par des espaces) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "de": {
     "title": "ASCII-zu-Hex-Konverter - Coding.Tools",
@@ -207,7 +207,7 @@
     "inputNotesPara": "Verwenden Sie einfachen ASCII-Text, wenn Sie ein Byte pro Zeichen benötigen. Tabulatoren, Zeilenumbrüche und andere Steuerzeichen haben ebenfalls Hexadezimalwerte. Überprüfen Sie daher den kopierten Text auf versteckte Leerzeichen, bevor Sie sich auf die Ausgabe verlassen.",
     "example": "Beispiel",
     "examplePara": "Der Text <code>Hello, World!</code> wird zu einer Folge von Hex-Zeichencodes:",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- ASCII-Eingabe ---\nHello, World!\n\n--- Hex-Ausgabe (durch Leerzeichen getrennt) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "es": {
     "title": "Convertidor ASCII a hexadecimal - Coding.Tools",
@@ -237,7 +237,7 @@
     "inputNotesPara": "Utilice texto sin formato ASCII cuando necesite un byte por carácter. Las tabulaciones, los saltos de línea y otros caracteres de control también tienen valores hexadecimales, así que revise el texto copiado en busca de espacios en blanco ocultos antes de confiar en el resultado.",
     "example": "Ejemplo",
     "examplePara": "El texto <code>Hello, World!</code> se convierte en una secuencia de códigos de caracteres hexadecimales:",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- Entrada ASCII ---\nHello, World!\n\n--- Salida hexadecimal (separada por espacios) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "pt": {
     "title": "Conversor ASCII para Hexadecimal - Coding.Tools",
@@ -267,6 +267,6 @@
     "inputNotesPara": "Use texto simples ASCII quando precisar de um byte por caractere. Tabulações, quebras de linha e outros caracteres de controle também têm valores hexadecimais, portanto, revise o texto copiado em busca de espaços em branco ocultos antes de confiar na saída.",
     "example": "Exemplo",
     "examplePara": "O texto <code>Hello, World!</code> torna-se uma sequência de códigos de caracteres hexadecimais:",
-    "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
+    "exampleCode": "--- Entrada ASCII ---\nHello, World!\n\n--- Saída hexadecimal (separada por espaços) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   }
 }

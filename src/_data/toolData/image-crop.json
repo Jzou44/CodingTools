@@ -139,12 +139,12 @@
   },
   "tw": {
     "title": "影像裁切 - Coding.Tools",
-    "description": "使用可拖曳的裁切框、比例預設、精確座標和預覽導出在本地裁剪 PNG、JPEG 和 WebP 影像。",
+    "description": "使用可拖曳的裁切框、比例預設、精確座標和預覽導出在本機裁剪 PNG、JPEG 和 WebP 影像。",
     "toolTitle": "圖片裁切",
     "toolDescription": "透過可拖曳的選擇、比例預設、精確的像素座標和 JPEG/WebP 品質控制在瀏覽器中裁剪一張影像。",
     "categoryName": "圖片工具",
     "labels": {
-      "clickOrDrop": "點擊或拖曳圖片檔案到此處",
+      "clickOrDrop": "點選或拖曳圖片檔案到此處",
       "hint": "PNG、JPEG、WebP · 最大 10MB",
       "ready": "選擇圖片開始",
       "loaded": "圖片已載入",
@@ -183,13 +183,13 @@
       "presetHd": "HD",
       "presetFullHd": "Full HD"
     },
-    "dropzoneMessage": "點擊或拖曳圖片檔案到此處",
+    "dropzoneMessage": "點選或拖曳圖片檔案到此處",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
     "descTitle": "裁剪到您需要的確切框架",
     "descParas": [
-      "<strong>影像裁切從 PNG、JPEG 或 WebP 影像中剪下選定的矩形區域，無需上傳。</strong> 使用它來刪除邊緣、居中主題或匹配固定卡片、縮圖、個人資料和社交預覽比例。",
+      "<strong>影像裁切從 PNG、JPEG 或 WebP 影像中剪下選定的矩形區域，無需上傳。</strong> 使用它來刪除邊緣、居中主題或符合固定卡片、縮圖、個人資料和社交預覽比例。",
       "裁切框使用像素座標：X 和 Y 標記左上角，而寬度和高度定義所選區域。裁剪會改變成分和輸出尺寸；所選像素以其選擇的裁剪尺寸導出。",
-      "處理透過瀏覽器畫布進行。自由裁切最適合任意取景，而當目的地需要穩定的寬高比時，1:1、4:3 和 16:9 預設會有所幫助。檢查輸出，因為重新編碼後元資料和方向處理可能會有所不同。"
+      "處理透過瀏覽器畫布進行。自由裁切最適合任意取景，而當目的地需要穩定的寬高比時，1:1、4:3 和 16:9 預設會有所幫助。檢查輸出，因為重新編碼後中繼資料和方向處理可能會有所不同。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -260,7 +260,7 @@
       "クロップ ボックスはピクセル座標を使用します。X と Y は左上隅をマークし、幅と高さは選択した領域を定義します。クロップすると、構成と出力サイズが変更されます。選択したピクセルは、選択したトリミング サイズでエクスポートされます。",
       "処理はブラウザのキャンバスを通じて実行されます。フリー クロップは任意のフレーミングに最適ですが、1:1、4:3、および 16:9 のプリセットは、目的地で安定したアスペクト比が必要な場合に役立ちます。再エンコード後はメタデータと方向の処理が異なる可能性があるため、出力を確認してください。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "PNG、JPEG、または WebP 画像を 1 つアップロードします。",
       "クロップ ボックスをドラッグし、ハンドルからサイズを変更し、比率プリセットを選択するか、正確なクロップ値を入力します。",
@@ -337,7 +337,7 @@
     ],
     "whatIs": "언제 이미지를 잘라야 합니까?",
     "whatIsParas": [
-      "<strong>이미지 자르기</strong>는 이미지의 프레임을 변경하는 데 사용됩니다. 빈 여백을 제거하고 중요한 피사체에 초점을 맞추거나 이미지를 고정 비율 슬롯에 맞춥니다.",
+      "<strong>이미지 자르기</strong>은 이미지의 프레임을 변경하는 데 사용됩니다. 빈 여백을 제거하고 중요한 피사체에 초점을 맞추거나 이미지를 고정 비율 슬롯에 맞춥니다.",
       "디자인 사양이나 CMS에서 정확한 픽셀 자르기를 요구하는 경우 정확한 X, Y, 너비 및 높이 값을 사용하세요. JPEG/WebP 내보내기는 품질 조정이 가능한 반면, 투명도를 그대로 유지해야 하는 경우 PNG가 더 안전한 선택입니다."
     ],
     "example": "Canvas로 자르기",
@@ -349,7 +349,7 @@
     "description": "Recadrez les images PNG, JPEG et WebP localement avec une zone de recadrage déplaçable, des préréglages de ratio, des coordonnées exactes et un aperçu de l'exportation.",
     "toolTitle": "Recadrer une image",
     "toolDescription": "Recadrez une image dans le navigateur avec une sélection déplaçable, des préréglages de ratio, des coordonnées exactes des pixels et un contrôle de qualité JPEG/WebP.",
-    "categoryName": "Outils image",
+    "categoryName": "Outils d’image",
     "labels": {
       "clickOrDrop": "Cliquez ou déposez une image ici",
       "hint": "PNG, JPEG, WebP · 10 Mo max",

@@ -61,12 +61,12 @@
     "toolTitle": "漸進式JPEG",
     "toolDescription": "在瀏覽器中將基準 JPEG 影像轉換為漸進式 JPEG 輸出，以便更好地感知載入。",
     "categoryName": "圖片工具",
-    "dropzoneMessage": "點擊或拖曳 JPEG 檔案至此處上傳",
+    "dropzoneMessage": "點選或拖曳 JPEG 檔案至此處上傳",
     "dropzoneHint": "最多 30 張圖像·每張最大 10MB",
     "descTitle": "使 JPEG 逐步加載",
     "descParas": [
-      "<strong>漸進式 JPEG 在多次掃描中儲存影像數據，而不是從上到下一次傳遞。</strong> 瀏覽器可以先顯示粗略預覽，然後隨著更多位元組到達而對其進行細化，這在慢速連接上會感覺更快。",
-      "該工具在本地處理 JPEG 檔案並匯出新的漸進式 JPEG。它不會使每個圖像變小；檔案大小可以保持相似甚至增長，這取決於來源品質、尺寸和編碼器設定。"
+      "<strong>漸進式 JPEG 在多次掃描中儲存影像資料，而不是從上到下一次傳遞。</strong> 瀏覽器可以先顯示粗略預覽，然後隨著更多位元組到達而對其進行細化，這在慢速連接上會感覺更快。",
+      "該工具在本機處理 JPEG 檔案並匯出新的漸進式 JPEG。它不會使每個圖像變小；檔案大小可以保持相似甚至增長，這取決於來源品質、尺寸和編碼器設定。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -96,7 +96,7 @@
       "<strong>プログレッシブ JPEG は、画像データを上から下への 1 回のパスではなく、複数のスキャンで保存します。</strong> ブラウザーは、最初に大まかなプレビューを表示し、より多くのバイトが到着するにつれてプレビューを調整することができるため、低速接続でも高速に感じることができます。",
       "このツールは、JPEG ファイルをローカルで処理し、新しいプログレッシブ JPEG をエクスポートします。すべての画像が小さくなるわけではありません。ファイル サイズは、ソースの品質、サイズ、エンコーダーの設定に応じて、同じままになることもあれば、大きくなる場合もあります。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "使い方",
     "steps": [
       "JPEG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
       "各ファイルはプログレッシブ JPEG として自動的に再エンコードされます。",
@@ -132,7 +132,7 @@
     ],
     "whatIs": "베이스라인 vs 프로그레시브 JPEG",
     "whatIsParas": [
-      "<strong>Baseline JPEG</strong>는 위에서 아래로 로드되므로 파일이 도착하는 동안 사용자에게 빈 영역이나 부분 이미지가 표시될 수 있습니다.",
+      "<strong>Baseline JPEG</strong>은 위에서 아래로 로드되므로 파일이 도착하는 동안 사용자에게 빈 영역이나 부분 이미지가 표시될 수 있습니다.",
       "<strong>프로그레시브 JPEG</strong>가 스캔에 로드됩니다. 먼저 세부 묘사가 낮은 전체 이미지를 가져온 다음 더 선명한 이미지를 통과합니다. 큰 웹 사진에는 유용하지만 작은 축소판은 다시 인코딩할 만큼 충분한 이점을 얻지 못할 수 있습니다."
     ],
     "example": "Python으로 변환",
@@ -169,16 +169,16 @@
   },
   "de": {
     "title": "Progressiv JPEG - Coding.Tools",
-    "description": "Konvertieren Sie JPEG-Dateien lokal in Progressives JPEGs, damit Browser beim Laden eine Vorschau mit geringen Details anzeigen können.",
+    "description": "Konvertieren Sie JPEG-Dateien lokal in progressive JPEGs, damit Browser beim Laden eine Vorschau mit geringen Details anzeigen können.",
     "toolTitle": "Progressives JPEG",
-    "toolDescription": "Konvertieren Sie Basis-JPEG-Bilder in die Progressives JPEG-Ausgabe im Browser, um das Laden besser wahrzunehmen.",
+    "toolDescription": "Konvertieren Sie Basis-JPEG-Bilder in eine progressive JPEG-Ausgabe im Browser, um das Laden besser wahrzunehmen.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie JPEG-Dateien hierher, um sie hochzuladen",
     "dropzoneHint": "Bis zu 30 Bilder · Max. jeweils 10 MB",
     "descTitle": "Sorgen Sie dafür, dass JPEGs progressiv geladen werden",
     "descParas": [
       "<strong>Progressiv JPEG speichert Bilddaten in mehreren Scans statt in einem Durchlauf von oben nach unten.</strong> Ein Browser kann zunächst eine grobe Vorschau anzeigen und diese verfeinern, wenn mehr Bytes eintreffen, was sich bei langsamen Verbindungen schneller anfühlen kann.",
-      "Dieses Tool verarbeitet JPEG-Dateien lokal und exportiert neue Progressives JPEGs. Es verkleinert nicht jedes Bild; Die Dateigröße kann je nach Quellqualität, Abmessungen und Encodereinstellungen ähnlich bleiben oder sogar ansteigen."
+      "Dieses Tool verarbeitet JPEG-Dateien lokal und exportiert neue progressive JPEGs. Es verkleinert nicht jedes Bild; Die Dateigröße kann je nach Quellqualität, Abmessungen und Encodereinstellungen ähnlich bleiben oder sogar ansteigen."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [

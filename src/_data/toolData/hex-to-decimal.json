@@ -44,7 +44,7 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入字段中键入或粘贴十六进制数字。",
+      "在输入框中键入或粘贴十六进制数字。",
       "查看十进制结果，以及显示的八进制和二进制等效值以进行交叉检查。",
       "在检查另一个数字之前，使用 <strong>复制</strong> 作为十进制值，或使用 <strong>清除</strong>。"
     ],
@@ -60,14 +60,14 @@
     "exampleCode": "--- 十六进制输入 ---\nFF\n\n--- 十进制 ---\n255\n\n--- 八进制 ---\n377\n\n--- 二进制 ---\n11111111"
   },
   "tw": {
-    "title": "十六進位到十進制轉換器 - Coding.Tools",
-    "description": "直接在瀏覽器中將十六進制數轉換為十進制數，以及八進制和二進制等價物。",
+    "title": "十六進位到十進位轉換器 - Coding.Tools",
+    "description": "直接在瀏覽器中將十六進位數轉換為十進位數，以及八進位和二進位等價物。",
     "toolTitle": "十六進位轉十進位",
-    "toolDescription": "將 16 進制值轉換為十進制數並比較匹配的八進制和二進制形式。",
+    "toolDescription": "將 16 進制值轉換為十進位數並比較符合的八進位和二進位形式。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "輸入十六進位數（如 FF, 1A3F）...",
     "outputPlaceholder": "十進位結果將顯示在這裡...",
-    "descTitle": "將十六進位值轉換為十進制整數",
+    "descTitle": "將十六進位值轉換為十進位整數",
     "descParas": [
       "<strong>Hex 轉十進位將 16 進位輸入轉換為 10 進位輸出，並顯示等效的八進位和二進位值。</strong> 使用它來檢查記憶體位址、位元組值、協定欄位、顏色元件或從日誌和文件複製的值。",
       "輸入十六進位數字<code>0-9</code>和<code>A-F</code>；字母大小寫無關緊要，並且忽略空格。如果您的來源包含 <code>0x</code> 等前綴，請將其刪除，除非您已確認轉換器接受該前綴。"
@@ -75,16 +75,16 @@
     "howToUse": "使用方法",
     "steps": [
       "在輸入欄位中鍵入或貼上十六進位數字。",
-      "查看十進制結果，以及顯示的八進制和二進制等效值以進行交叉檢查。",
+      "檢視十進位結果，以及顯示的八進位和二進位等效值以進行交叉檢查。",
       "在檢查另一個數字之前，使用 <strong>複製</strong> 作為十進位值，或使用 <strong>清除</strong>。"
     ],
-    "whatIs": "什麼是十六進位到十進制的轉換？",
+    "whatIs": "什麼是十六進位到十進位的轉換？",
     "whatIsParas": [
-      "<strong>十六進位</strong> 是以 16 為基數，使用 <code>0-9</code> 表示值 0 到 9，使用 <code>A-F</code> 表示值 10 到 15。十進制以 10 為基數，是用於計數和測量的日常數字系統。",
-      "每個十六進位數字代表四個二進位位，這就是為什麼十六進位在程式設計和二進位資料中常見的原因。前導零對於固定寬度值（例如位元組或位址）可能很重要，即使十進制數字值未更改也是如此。"
+      "<strong>十六進位</strong> 是以 16 為基數，使用 <code>0-9</code> 表示值 0 到 9，使用 <code>A-F</code> 表示值 10 到 15。十進位以 10 為基數，是用於計數和測量的日常數字系統。",
+      "每個十六進位數字代表四個二進位位，這就是為什麼十六進位在程式設計和二進位資料中常見的原因。前導零對於固定寬度值（例如位元組或位址）可能很重要，即使十進位數字值未更改也是如此。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "僅使用十六進位數字並刪除不屬於數字的標籤、分隔符號或前綴。對於固定寬度數據，請記下所有前導零，因為數字轉換可能無法保留顯示寬度。",
+    "inputNotesPara": "僅使用十六進位數字並刪除不屬於數字的標籤、分隔符號或前綴。對於固定寬度資料，請記下所有前導零，因為數字轉換可能無法保留顯示寬度。",
     "example": "範例",
     "examplePara": "十六進位位元組 <code>FF</code> 轉換為十進位 255，也可以檢查為八進位和二進位：",
     "exampleCode": "--- 十六進位輸入 ---\nFF\n\n--- 十進位 ---\n255\n\n--- 八進位 ---\n377\n\n--- 二進位 ---\n11111111"
@@ -99,8 +99,8 @@
     "outputPlaceholder": "10進数の結果がここに表示されます...",
     "descTitle": "16 進値を 10 進整数に変換します",
     "descParas": [
-      "<strong>16 進数を 10 進数に変換すると、基数 16 の入力が基数 10 の出力に変換され、同等の 8 進値とバイナリ値も表示されます。</strong> これを使用して、メモリ アドレス、バイト値、プロトコル フィールド、カラー コンポーネント、またはログやドキュメントからコピーされた値を確認します。",
-      "16 進数 <code>0-9</code> および <code>A-F</code> を入力します。大文字と小文字は関係なく、空白は無視されます。ソースに <code>0x</code> などのプレフィックスが含まれている場合は、コンバータがそのプレフィックスを受け入れることを確認しない限り、プレフィックスを削除してください。"
+      "<strong>16 進数を 10 進数に変換すると、基数 16 の入力が基數 10 の出力に変換され、同等の 8 進値と2進値も表示されます。</strong> これを使用して、メモリ アドレス、バイト値、プロトコル フィールド、カラー コンポーネント、またはログやドキュメントからコピーされた値を確認します。",
+      "16 進数 <code>0-9</code> および <code>A-F</code> を入力します。大文字と小文字は関係なく、空白は無視されます。ソースに <code>0x</code> などのプレフィックスが含まれている場合は、コンバーターがそのプレフィックスを受け入れることを確認しない限り、プレフィックスを削除してください。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -120,7 +120,7 @@
     "exampleCode": "--- 16進数入力 ---\nFF\n\n--- 10進数 ---\n255\n\n--- 8進数 ---\n377\n\n--- 2進数 ---\n11111111"
   },
   "kr": {
-    "title": "16진수를 10진수로 변환하는 변환기 - Coding.Tools",
+    "title": "16진수-10진수 변환기 - Coding.Tools",
     "description": "브라우저에서 직접 8진수와 2진수를 사용하여 16진수를 10진수로 변환하세요.",
     "toolTitle": "16진수→10진수",
     "toolDescription": "16진법 값을 10진수로 변환하고 일치하는 8진수와 2진수 형식을 비교합니다.",
@@ -140,7 +140,7 @@
     ],
     "whatIs": "16진수를 10진수로 변환하는 것이 무엇인가요?",
     "whatIsParas": [
-      "<strong>16진수</strong>는 0부터 9까지는 <code>0-9</code>, 10부터 15까지는 <code>A-F</code>를 사용하는 기수 16 표기법입니다. 십진수는 수량과 측정에 일상적으로 쓰이는 기수 10 숫자 체계입니다.",
+      "<strong>16진수</strong>은 0부터 9까지는 <code>0-9</code>, 10부터 15까지는 <code>A-F</code>를 사용하는 기수 16 표기법입니다. 십진수는 수량과 측정에 일상적으로 쓰이는 기수 10 숫자 체계입니다.",
       "각 16진수는 4개의 이진수 비트를 나타내므로 프로그래밍 및 이진수 데이터에서 16진수가 일반적입니다. 숫자 10진수 값이 변경되지 않은 경우에도 바이트 또는 주소와 같은 고정 너비 값에 선행 0이 중요할 수 있습니다."
     ],
     "inputNotes": "입력 참고",
@@ -234,7 +234,7 @@
       "Cada dígito hexadecimal representa cuatro bits binarios, razón por la cual el hexadecimal es común en programación y datos binarios. Los ceros a la izquierda pueden ser importantes para valores de ancho fijo, como bytes o direcciones, incluso cuando el valor decimal numérico no cambia."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Utilice sólo dígitos hexadecimales y elimine etiquetas, separadores o prefijos que no formen parte del número. Para datos de ancho fijo, tome nota de los ceros iniciales porque es posible que la conversión numérica no preserve el ancho de visualización.",
+    "inputNotesPara": "Utilice solo dígitos hexadecimales y elimine etiquetas, separadores o prefijos que no formen parte del número. Para datos de ancho fijo, tome nota de los ceros iniciales porque es posible que la conversión numérica no preserve el ancho de visualización.",
     "example": "Ejemplo",
     "examplePara": "El byte hexadecimal <code>FF</code> se convierte al decimal 255 y también se puede comprobar como octal y binario:",
     "exampleCode": "--- Entrada Hexadecimal ---\nFF\n\n--- Decimal ---\n255\n\n--- Octal ---\n377\n\n--- Binario ---\n11111111"

@@ -57,7 +57,7 @@
       "由于 JSON 是严格的数据格式，因此格式化程序还充当快速有效性检查的作用。如果无法解析输入，请先修复语法，而不是依靠缩进来修复有效负载。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "仅粘贴 JSON 文档，而不粘贴 HTTP 标头、变量赋值、Markdown 栅栏或来自其他 UI 的周围引号。带引号的字符串内的空格是数据，将被保留。",
+    "inputNotesPara": "仅粘贴 JSON 文档，而不粘贴 HTTP 标头、变量赋值、Markdown 代码围栏或来自其他 UI 的周围引号。带引号的字符串内的空格是数据，将被保留。",
     "example": "示例",
     "examplePara": "一旦对象和值放置在单独的行上，紧凑的有效负载就变得更容易查看：",
     "exampleCode": "--- 压缩输入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化输出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
@@ -71,9 +71,9 @@
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上 JSON...",
     "outputPlaceholder": "格式化後的 JSON 將在此顯示...",
-    "descTitle": "格式化JSON而不改變其數據",
+    "descTitle": "格式化JSON而不改變其資料",
     "descParas": [
-      "<strong>JSON 格式化程式解析您的輸入並使用可預測的縮排列印它。</strong> 它對於檢查作為一長行到達的 API 回應、設定檔、包元資料、日誌和複製的有效負載非常有用。",
+      "<strong>JSON 格式化程式解析您的輸入並使用可預測的縮排列印它。</strong> 它對於檢查作為一長行到達的 API 回應、設定檔、包中繼資料、日誌和複製的有效負載非常有用。",
       "輸入必須是有效的 JSON：帶引號的屬性名稱、無尾隨逗號、無註解和有效字串。格式化僅更改空白；保留物件鍵、陣列順序、數字、布林值、空值和字串內容。"
     ],
     "howToUse": "使用方法",
@@ -81,17 +81,17 @@
       "將 JSON 資料貼到輸入編輯器中。",
       "按一下 <strong>格式化 JSON</strong> 進行解析和縮排。",
       "檢查格式化輸出以確認結構、巢狀和陣列符合您的預期。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重置。"
+      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
     ],
     "whatIs": "什麼是 JSON 格式化程式？",
     "whatIsParas": [
-      "<strong>JSON 格式化</strong> 是一個基於瀏覽器的實用程序，用於將緊湊的 JSON 轉換為人類可讀的文檔。它使嵌套物件和陣列在調試、審查和文件工作期間更容易掃描。",
+      "<strong>JSON 格式化</strong> 是一個基於瀏覽器的實用工具，用於將緊湊的 JSON 轉換為人類可讀的文檔。它使巢狀物件和陣列在偵錯、審查和文件工作期間更容易掃描。",
       "由於 JSON 是嚴格的資料格式，因此格式化程式也充當快速有效性檢查的作用。如果無法解析輸入，請先修復語法，而不是依賴縮排來修復有效負載。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "僅貼上 JSON 文檔，而不貼上 HTTP 標頭、變數賦值、Markdown 柵欄或來自其他 UI 的周圍引號。帶引號的字串內的空格是數據，將被保留。",
+    "inputNotesPara": "僅貼上 JSON 文檔，而不貼上 HTTP 標頭、變數賦值、Markdown 程式碼圍欄或來自其他 UI 的周圍引號。帶引號的字串內的空格是資料，將被保留。",
     "example": "範例",
-    "examplePara": "一旦物件和值放置在單獨的行上，緊湊的有效負載就變得更容易查看：",
+    "examplePara": "一旦物件和值放置在單獨的行上，緊湊的有效負載就變得更容易檢視：",
     "exampleCode": "--- 壓縮輸入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化輸出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
     "buttonLabel": "格式化 JSON"
   },
@@ -131,7 +131,7 @@
     "title": "JSON 포맷터 - Coding.Tools",
     "description": "객체, 배열, 값 및 키 이름을 유지하면서 읽을 수 있는 들여쓰기로 유효한 JSON 형식을 지정합니다.",
     "toolTitle": "JSON 포맷터",
-    "toolDescription": "브라우저에서 유효한 JSON를 읽을 수 있고 일관되게 들여쓰기된 출력으로 형식화하십시오.",
+    "toolDescription": "브라우저에서 유효한 JSON을 읽을 수 있고 일관되게 들여쓰기된 출력으로 형식화하십시오.",
     "categoryName": "포맷 및 압축",
     "inputPlaceholder": "JSON을 붙여넣으세요...",
     "outputPlaceholder": "포맷된 JSON이 여기에 표시됩니다...",
@@ -147,9 +147,9 @@
       "형식화된 출력을 검토하여 구조, 중첩 및 배열이 예상한 대로인지 확인하세요.",
       "클립보드에는 <strong>복사</strong>를 사용하고, 파일에는 <strong>다운로드</strong>를 사용하고, 재설정하려면 <strong>지우기</strong>를 사용하세요."
     ],
-    "whatIs": "JSON 포맷터란 무엇입니까?",
+    "whatIs": "JSON 포맷터란 무엇인가요?",
     "whatIsParas": [
-      "<strong>JSON 포맷터</strong>는 컴팩트 JSON를 사람이 읽을 수 있는 문서로 변환하는 브라우저 기반 유틸리티입니다. 디버깅, 검토, 문서화 작업 중에 중첩된 개체와 배열을 더 쉽게 검색할 수 있습니다.",
+      "<strong>JSON 포맷터</strong>는 컴팩트 JSON을 사람이 읽을 수 있는 문서로 변환하는 브라우저 기반 유틸리티입니다. 디버깅, 검토, 문서화 작업 중에 중첩된 개체와 배열을 더 쉽게 검색할 수 있습니다.",
       "JSON는 엄격한 데이터 형식이므로 포맷터는 빠른 유효성 검사 역할도 합니다. 입력을 구문 분석할 수 없는 경우 들여쓰기에 의존하여 페이로드를 복구하는 대신 먼저 구문을 수정하세요."
     ],
     "inputNotes": "입력 참고사항",
@@ -233,8 +233,8 @@
     "outputPlaceholder": "El JSON formateado aparecerá aquí...",
     "descTitle": "Formatee JSON sin cambiar sus datos.",
     "descParas": [
-      "<strong>JSON El formateador analiza su entrada y la imprime con una sangría predecible.</strong> Es útil para inspeccionar respuestas de API, archivos de configuración, metadatos de paquetes, registros y cargas útiles copiadas que llegan como una línea larga.",
-      "La entrada debe ser JSON válida: nombres de propiedad entre comillas, sin comas finales, sin comentarios y cadenas válidas. El formato cambia sólo los espacios en blanco; Se conservan las claves de los objetos, el orden de la matriz, los números, los valores booleanos, los valores nulos y el contenido de las cadenas."
+      "<strong>El formateador JSON analiza su entrada y la imprime con una sangría predecible.</strong> Es útil para inspeccionar respuestas de API, archivos de configuración, metadatos de paquetes, registros y cargas útiles copiadas que llegan como una línea larga.",
+      "La entrada debe ser JSON válida: nombres de propiedad entre comillas, sin comas finales, sin comentarios y cadenas válidas. El formato cambia solo los espacios en blanco; Se conservan las claves de los objetos, el orden de la matriz, los números, los valores booleanos, los valores nulos y el contenido de las cadenas."
     ],
     "howToUse": "Cómo usar",
     "steps": [
@@ -265,7 +265,7 @@
     "outputPlaceholder": "O JSON formatado aparecerá aqui...",
     "descTitle": "Formate JSON sem alterar seus dados",
     "descParas": [
-      "<strong>JSON O formatador analisa sua entrada e a imprime com recuo previsível.</strong> É útil para inspecionar respostas de API, arquivos de configuração, metadados de pacotes, logs e cargas úteis copiadas que chegam como uma longa linha.",
+      "<strong>O formatador JSON analisa sua entrada e a imprime com recuo previsível.</strong> É útil para inspecionar respostas de API, arquivos de configuração, metadados de pacotes, logs e cargas úteis copiadas que chegam como uma longa linha.",
       "A entrada deve ser JSON válida: nomes de propriedades entre aspas, sem vírgulas finais, sem comentários e sequências válidas. A formatação altera apenas os espaços em branco; chaves de objeto, ordem de array, números, booleanos, valores nulos e conteúdo de string são preservados."
     ],
     "howToUse": "Como usar",
@@ -281,7 +281,7 @@
       "Como JSON é um formato de dados estrito, o formatador também atua como uma verificação rápida de validade. Se a entrada não puder ser analisada, corrija a sintaxe primeiro, em vez de confiar no recuo para reparar a carga útil."
     ],
     "inputNotes": "Notas de entrada",
-    "inputNotesPara": "Cole apenas o documento JSON, não cabeçalhos HTTP, atribuições de variáveis, limites de Markdown ou citações adjacentes de outra UI. Os espaços em branco dentro das strings entre aspas são dados e serão preservados.",
+    "inputNotesPara": "Cole apenas o documento JSON, não cabeçalhos HTTP, atribuições de variáveis, delimitadores Markdown ou aspas ao redor de outra UI. Os espaços em branco dentro das strings entre aspas são dados e serão preservados.",
     "example": "Exemplo",
     "examplePara": "Uma carga compacta torna-se mais fácil de revisar quando os objetos e valores são colocados em linhas separadas:",
     "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Saída formatada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",

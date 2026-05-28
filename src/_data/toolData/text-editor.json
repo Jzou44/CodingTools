@@ -59,15 +59,15 @@
   },
   "tw": {
     "title": "線上文字編輯器 - Coding.Tools",
-    "description": "在本機瀏覽器編輯器中編寫、檢查、複製和下載純文本，包括行號、自動換行和即時計數。",
+    "description": "在本機瀏覽器編輯器中編寫、檢查、複製和下載純文字，包括行號、自動換行和即時計數。",
     "toolTitle": "線上文字編輯器",
     "toolDescription": "使用行號、自動換行、製表符插入、複製、下載以及即時字元和行數在本機編輯純文字。",
     "categoryName": "字串與文字",
     "inputPlaceholder": "在此輸入或貼上文字...",
-    "descTitle": "編輯帶有行號和即時計數的純文本",
+    "descTitle": "編輯帶有行號和即時計數的純文字",
     "descParas": [
       "<strong>線上文字編輯器 是用於純文字、片段、日誌、註解和快速清理工作的本機便箋本。</strong> 鍵入時行號保持可見，因此您可以引用堆疊追蹤、編譯器輸出、CSV 行、設定檔或審查註解中的確切行。",
-      "該編輯器故意簡單：它不會格式化富文本、執行程式碼或自動儲存草稿。它將您的文字保留在瀏覽器頁面中，支援長行自動換行，並在複製或下載結果之前顯示即時字元和行數。"
+      "該編輯器故意簡單：它不會格式化富文字、執行程式碼或自動儲存草稿。它將您的文字保留在瀏覽器頁面中，支援長行自動換行，並在複製或下載結果之前顯示即時字元和行數。"
     ],
     "howToUse": "使用方法",
     "steps": [
@@ -148,10 +148,10 @@
     "title": "Éditeur de texte en ligne - Coding.Tools",
     "description": "Écrivez, inspectez, copiez et téléchargez du texte brut dans un éditeur de navigateur local avec des numéros de ligne, des retours à la ligne et des décomptes en direct.",
     "toolTitle": "Éditeur de texte",
-    "toolDescription": "Modifiez localement le texte brut avec les numéros de ligne, le retour à la ligne, l'insertion de tabulations, la copie, le téléchargement et le nombre de caractères et de lignes en direct.",
+    "toolDescription": "Modifiéz localement le texte brut avec les numéros de ligne, le retour à la ligne, l'insertion de tabulations, la copie, le téléchargement et le nombre de caractères et de lignes en direct.",
     "categoryName": "Chaînes et texte",
     "inputPlaceholder": "Commencez à taper ou collez du texte ici...",
-    "descTitle": "Modifiez le texte brut avec les numéros de ligne et les décomptes en direct",
+    "descTitle": "Modifiéz le texte brut avec les numéros de ligne et les décomptes en direct",
     "descParas": [
       "<strong>Éditeur de texte est un bloc-notes local pour le texte brut, les extraits de code, les journaux, les notes et les travaux de nettoyage rapide.</strong> Les numéros de ligne restent visibles pendant que vous tapez, afin que vous puissiez référencer des lignes exactes à partir des traces de pile, de la sortie du compilateur, des lignes CSV, des fichiers de configuration ou réviser les commentaires.",
       "L'éditeur est intentionnellement simple : il ne formate pas de texte enrichi, n'exécute pas de code et n'enregistre pas automatiquement les brouillons. Il conserve votre texte dans la page du navigateur, prend en charge le retour à la ligne pour les longues lignes et affiche le nombre de caractères et de lignes en direct avant de copier ou de télécharger le résultat."
@@ -241,7 +241,7 @@
     "descTitle": "Edite texto simples com números de linha e contagens ao vivo",
     "descParas": [
       "<strong>Editor de texto é um bloco de notas local para texto simples, snippets, logs, notas e trabalho de limpeza rápida. Os números de linha</strong> permanecem visíveis enquanto você digita, para que você possa fazer referência a linhas exatas de rastreamentos de pilha, saída do compilador, linhas CSV, arquivos de configuração ou comentários de revisão.",
-      "O editor é intencionalmente simples: ele não formata rich text, não executa código nem salva rascunhos automaticamente. Ele mantém seu texto na página do navegador, suporta quebra de linha para linhas longas e mostra contagens de caracteres e linhas ao vivo antes de você copiar ou baixar o resultado."
+      "O editor é intencionalmente simples: ele não formata texto formatado, não executa código nem salva rascunhos automaticamente. Ele mantém seu texto na página do navegador, suporta quebra de linha para linhas longas e mostra contagens de caracteres e linhas ao vivo antes de você copiar ou baixar o resultado."
     ],
     "howToUse": "Como usar",
     "steps": [
