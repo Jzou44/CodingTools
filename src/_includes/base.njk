@@ -62,7 +62,7 @@
     </style>
   </noscript>
 </head>
-<body>
+<body{% if pageSlug %} data-tool="{{ pageSlug }}"{% endif %} data-lang="{{ currentLang }}">
 
   {% include "navbar.njk" %}
 

@@ -9,33 +9,6 @@ permalink: "/es/hex-to-rgba.html"
 {% extends "tool-layout.njk" %}
 
 {% block tool_content %}
-  <style>
-    .tool-input-card::before { background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6); }
-    .hex-rgba-converter { display: flex; flex-direction: column; gap: 0; }
-    .hex-rgba-opacity-row { display: flex; align-items: center; gap: 16px; margin-top: 16px; }
-    .hex-rgba-opacity-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: inherit; white-space: nowrap; }
-    .hex-rgba-opacity-slider { flex: 1; accent-color: var(--accent); cursor: pointer; height: 6px; }
-    .hex-rgba-opacity-value { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: var(--accent); min-width: 44px; text-align: right; }
-    .hex-rgba-actions { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
-    .hex-rgba-arrow { display: flex; align-items: center; justify-content: center; height: 48px; position: relative; }
-    .hex-rgba-arrow::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
-    .hex-rgba-arrow-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(196, 93, 58, 0.3); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
-    .hex-rgba-arrow-icon:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4); }
-    .hex-rgba-swatch { margin-top: 16px; border-radius: 12px; height: 96px; background: repeating-conic-gradient(#e8e0d4 0% 25%, #faf8f0 0% 50%) 50% / 20px 20px; position: relative; overflow: hidden; border: 1px solid var(--border); }
-    .hex-rgba-swatch-fill { position: absolute; inset: 0; border-radius: 11px; transition: background-color 0.2s; }
-    .hex-rgba-swatch-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; color: inherit; z-index: 1; pointer-events: none; }
-    .hex-rgba-channels { display: flex; gap: 8px; margin-top: 16px; }
-    .hex-rgba-channel { flex: 1; background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 8px; text-align: center; }
-    .hex-rgba-channel-label { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: inherit; margin-bottom: 4px; }
-    .hex-rgba-channel-value { font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 600; color: var(--text-primary); }
-    .hex-rgba-channel-value.r { color: #c0392b; }
-    .hex-rgba-channel-value.g { color: #27ae60; }
-    .hex-rgba-channel-value.b { color: #2980b9; }
-    .hex-rgba-channel-value.a { color: var(--accent); }
-    .hex-rgba-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; gap: 8px; }
-    .hex-rgba-toolbar-left, .hex-rgba-toolbar-right { display: flex; align-items: center; gap: 8px; }
-    @media (max-width: 600px) { .tool-input-card, .hex-rgba-swatch { height: 72px; } }
-  </style>
 
   <div class="hex-rgba-converter">
     <div class="tool-input-card">

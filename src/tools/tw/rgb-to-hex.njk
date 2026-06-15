@@ -9,30 +9,6 @@ permalink: "/tw/rgb-to-hex.html"
 {% extends "tool-layout.njk" %}
 
 {% block tool_content %}
-  <style>
-    .rgb-hex-converter { display: flex; flex-direction: column; gap: 0; }
-    .tool-input-card::before { background: linear-gradient(90deg, #e74c3c, #2ecc71, #3498db); }
-    .rgb-hex-input-fields { display: flex; gap: 12px; }
-    .rgb-hex-field-group { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-    .rgb-hex-field-label { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: inherit; }
-    .rgb-hex-field-input { width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 500; color: var(--text-primary); background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px; outline: none; padding: 10px 12px; text-align: center; caret-color: var(--accent); transition: border-color 0.2s, box-shadow 0.2s; }
-    .rgb-hex-field-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.1); }
-    .rgb-hex-field-input::placeholder { color: inherit; font-size: 16px; font-weight: 400; }
-    .rgb-hex-field-input.r-field:focus { border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1); }
-    .rgb-hex-field-input.g-field:focus { border-color: #27ae60; box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1); }
-    .rgb-hex-field-input.b-field:focus { border-color: #2980b9; box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1); }
-    .rgb-hex-actions { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
-    .rgb-hex-arrow { display: flex; align-items: center; justify-content: center; height: 48px; position: relative; }
-    .rgb-hex-arrow::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border); }
-    .rgb-hex-arrow-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(196, 93, 58, 0.3); cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
-    .rgb-hex-arrow-icon:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(196, 93, 58, 0.4); }
-    .rgb-hex-swatch { margin-top: 16px; border-radius: 12px; height: 96px; background: repeating-conic-gradient(#e8e0d4 0% 25%, #faf8f0 0% 50%) 50% / 20px 20px; position: relative; overflow: hidden; border: 1px solid var(--border); }
-    .rgb-hex-swatch-fill { position: absolute; inset: 0; background-color: #cccccc; border-radius: 11px; transition: background-color 0.2s; }
-    .rgb-hex-swatch-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; color: inherit; z-index: 1; pointer-events: none; }
-    .rgb-hex-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; gap: 8px; }
-    .rgb-hex-toolbar-left, .rgb-hex-toolbar-right { display: flex; align-items: center; gap: 8px; }
-    @media (max-width: 600px) { .rgb-hex-field-input { font-size: 22px; padding: 8px; } .rgb-hex-swatch { height: 72px; } }
-  </style>
 
   <div class="rgb-hex-converter">
     <div class="tool-input-card">
