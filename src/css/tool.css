@@ -959,6 +959,509 @@ table.description-table tbody tr:last-child td {
   padding: 0 4px;
 }
 
+/* ============================================================
+   Single Input Source
+   Text/file input mode for single-item tools.
+   ============================================================ */
+
+.single-input-source-card {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.single-input-source-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.single-input-source-title {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.single-input-source-subtitle {
+  margin-top: 3px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.single-input-mode-row {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  flex: 0 0 auto;
+}
+
+.single-input-mode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  min-width: 74px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+}
+
+.single-input-mode input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.single-input-mode.is-active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.single-file-panel {
+  display: grid;
+  grid-template-columns: minmax(150px, max-content) minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.single-file-panel[hidden] {
+  display: none;
+}
+
+.single-file-panel--dual {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.single-file-side {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.single-file-picker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.single-file-picker:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.single-file-picker input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.single-file-status {
+  min-width: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.single-file-status.is-loaded {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.single-file-status.is-error {
+  color: var(--error);
+  font-weight: 700;
+}
+
+@media (max-width: 680px) {
+  .single-input-source-head,
+  .single-file-panel,
+  .single-file-panel--dual {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .single-input-mode-row {
+    width: 100%;
+  }
+
+  .single-input-mode {
+    flex: 1 1 0;
+  }
+}
+
+/* ============================================================
+   Batch Tool Tabs
+   Shared optional batch mode injected by tool-layout.njk.
+   ============================================================ */
+
+.batch-tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+}
+
+.batch-tab {
+  min-height: 34px;
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.batch-tab.is-active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.batch-tab:focus-visible {
+  outline: 3px solid rgba(196, 93, 58, 0.35);
+  outline-offset: 2px;
+}
+
+.batch-panel {
+  display: none;
+}
+
+.batch-panel.is-active {
+  display: block;
+}
+
+.batch-workbench {
+  display: grid;
+  gap: 14px;
+}
+
+.batch-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.batch-card-title {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.batch-mode-row,
+.batch-actions,
+.batch-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.batch-mode-row {
+  margin-bottom: 10px;
+}
+
+.batch-input-panel {
+  display: none;
+}
+
+.batch-input-panel.is-active {
+  display: block;
+}
+
+.batch-input-hint {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.batch-radio,
+.batch-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.batch-radio input,
+.batch-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+.batch-textarea {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.batch-textarea:focus,
+.batch-field input:focus,
+.batch-field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(196, 93, 58, 0.12);
+}
+
+.batch-file-picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+
+.batch-file-picker input {
+  max-width: 100%;
+}
+
+.batch-dropzone {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 26px;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.batch-dropzone:hover,
+.batch-dropzone.dragover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.batch-dropzone-main {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.batch-dropzone-hint {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.batch-control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.batch-control-grid--wide {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.batch-field {
+  display: grid;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.batch-field input,
+.batch-field select {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.batch-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.batch-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.batch-flag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.batch-summary {
+  justify-content: space-between;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.batch-results-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.batch-results {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.batch-results th,
+.batch-results td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.batch-results th {
+  background: var(--code-bg);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.batch-results tr:last-child td {
+  border-bottom: 0;
+}
+
+.batch-results td:nth-child(1) {
+  width: 48px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.batch-results td:nth-child(2) {
+  width: 180px;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+.batch-results td:nth-child(3) {
+  width: 112px;
+  font-weight: 700;
+}
+
+.batch-output {
+  max-height: 120px;
+  margin: 0;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.batch-status-ok {
+  color: var(--success);
+}
+
+.batch-status-error {
+  color: var(--error);
+}
+
+.batch-empty {
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .batch-tabs {
+    width: 100%;
+  }
+
+  .batch-tab {
+    flex: 1 1 0;
+  }
+
+  .batch-actions .btn {
+    flex: 1 1 140px;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .pane-toolbar {
     align-items: flex-start;

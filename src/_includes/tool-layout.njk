@@ -1,5 +1,120 @@
 {% extends "base.njk" %}
 
+{% set currentTool = activeTool or toolId %}
+{% set batchEnabledTools = [
+  "base64-encode",
+  "base64-decode",
+  "md5-generator",
+  "sha1-generator",
+  "sha256-generator",
+  "sha384-generator",
+  "sha512-generator",
+  "json-formatter",
+  "json-minifier",
+  "xml-formatter",
+  "xml-minifier",
+  "html-beautifier",
+  "html-minifier",
+  "javascript-beautifier",
+  "javascript-minifier",
+  "css-beautifier",
+  "css-minifier",
+  "sql-formatter",
+  "sql-minifier",
+  "url-encode",
+  "url-decode",
+  "case-converter",
+  "reverse-text",
+  "regex-replace",
+  "hex-to-decimal",
+  "decimal-to-hex",
+  "octal-to-decimal",
+  "decimal-to-octal",
+  "binary-to-decimal",
+  "decimal-to-binary",
+  "binary-to-hex",
+  "hex-to-binary",
+  "hex-to-ascii",
+  "ascii-to-hex",
+  "binary-to-text",
+  "text-to-binary",
+  "roman-numerals-to-numbers",
+  "numbers-to-roman-numerals",
+  "fraction-to-decimal",
+  "decimal-to-fraction",
+  "percent-to-decimal",
+  "decimal-to-percent",
+  "percent-to-fraction",
+  "fraction-to-percent",
+  "number-to-words",
+  "image-resize",
+  "image-to-base64"
+] %}
+{% set batchImageTools = ["image-resize", "image-to-base64"] %}
+{% set batchUrlTools = ["url-encode", "url-decode"] %}
+{% set batchDelimiterTools = ["ascii-to-hex", "text-to-binary"] %}
+{% set singleFileInputTools = [
+  "base64-encode",
+  "base64-decode",
+  "md5-generator",
+  "sha1-generator",
+  "sha256-generator",
+  "sha384-generator",
+  "sha512-generator",
+  "json-formatter",
+  "json-minifier",
+  "json-to-xml",
+  "xml-formatter",
+  "xml-minifier",
+  "xml-to-json",
+  "html-beautifier",
+  "html-minifier",
+  "javascript-beautifier",
+  "javascript-minifier",
+  "css-beautifier",
+  "css-minifier",
+  "sql-formatter",
+  "sql-minifier",
+  "url-encode",
+  "url-decode",
+  "case-converter",
+  "reverse-text",
+  "character-count",
+  "word-counter",
+  "regex-replace",
+  "regex-tester",
+  "text-editor",
+  "hex-to-decimal",
+  "decimal-to-hex",
+  "octal-to-decimal",
+  "decimal-to-octal",
+  "binary-to-decimal",
+  "decimal-to-binary",
+  "binary-to-hex",
+  "hex-to-binary",
+  "hex-to-ascii",
+  "ascii-to-hex",
+  "binary-to-text",
+  "text-to-binary",
+  "roman-numerals-to-numbers",
+  "numbers-to-roman-numerals",
+  "decimal-to-fraction",
+  "fraction-to-decimal",
+  "percent-to-decimal",
+  "decimal-to-percent",
+  "percent-to-fraction",
+  "fraction-to-percent",
+  "number-to-words",
+  "hex-to-rgb",
+  "hex-to-rgba",
+  "rgb-to-hex",
+  "rgba-to-hex"
+] %}
+{% set dualFileInputTools = [
+  "json-diff",
+  "text-compare"
+] %}
+
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
 {% endblock %}
@@ -59,7 +174,183 @@
 
     <!-- Left Column — Tool Interface -->
     <div class="tool-main">
+      {% if currentTool in batchEnabledTools %}
+      <div class="batch-tabs" data-batch-tabs>
+        <button class="batch-tab is-active" type="button" data-batch-tab="single" aria-selected="true">{{ t.ui.batchSingleTab }}</button>
+        <button class="batch-tab" type="button" data-batch-tab="batch" aria-selected="false">{{ t.ui.batchTab }}</button>
+      </div>
+      <div class="batch-panel is-active" data-batch-panel="single">
+      {% endif %}
+      {% if currentTool in singleFileInputTools %}
+      <div class="single-input-source-card" data-single-input-mode data-single-file-tool="{{ currentTool }}">
+        <div class="single-input-source-head">
+          <div>
+            <div class="single-input-source-title">{{ t.ui.inputSource }}</div>
+            <div class="single-input-source-subtitle">{{ t.ui.singleInputSourceSubtitle }}</div>
+          </div>
+          <div class="single-input-mode-row" role="radiogroup" aria-label="{{ t.ui.inputSource }}">
+            <label class="single-input-mode is-active"><input type="radio" name="single-input-source" value="text" checked> {{ t.ui.text }}</label>
+            <label class="single-input-mode"><input type="radio" name="single-input-source" value="file"> {{ t.ui.file }}</label>
+          </div>
+        </div>
+        <div class="single-file-panel" data-single-file-panel hidden>
+          <label class="single-file-picker">
+            <span>{{ t.ui.chooseFile }}</span>
+            <input id="single-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
+          </label>
+          <div class="single-file-status" id="single-file-status">{{ t.ui.noFileSelected }}</div>
+        </div>
+      </div>
+      {% elif currentTool in dualFileInputTools %}
+      <div class="single-input-source-card" data-dual-input-mode data-dual-file-tool="{{ currentTool }}">
+        <div class="single-input-source-head">
+          <div>
+            <div class="single-input-source-title">{{ t.ui.inputSource }}</div>
+            <div class="single-input-source-subtitle">{{ t.ui.dualInputSourceSubtitle }}</div>
+          </div>
+          <div class="single-input-mode-row" role="radiogroup" aria-label="{{ t.ui.inputSource }}">
+            <label class="single-input-mode is-active"><input type="radio" name="dual-input-source" value="text" checked> {{ t.ui.text }}</label>
+            <label class="single-input-mode"><input type="radio" name="dual-input-source" value="file"> {{ t.ui.filesLabel }}</label>
+          </div>
+        </div>
+        <div class="single-file-panel single-file-panel--dual" data-dual-file-panel hidden>
+          <div class="single-file-side">
+            <label class="single-file-picker">
+              <span>{{ t.ui.leftFile }}</span>
+              <input id="single-left-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
+            </label>
+            <div class="single-file-status" id="single-left-file-status">{{ t.ui.noLeftFileSelected }}</div>
+          </div>
+          <div class="single-file-side">
+            <label class="single-file-picker">
+              <span>{{ t.ui.rightFile }}</span>
+              <input id="single-right-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
+            </label>
+            <div class="single-file-status" id="single-right-file-status">{{ t.ui.noRightFileSelected }}</div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
       {% block tool_content %}{% endblock %}
+      {% if currentTool in batchEnabledTools %}
+      </div>
+      <section class="batch-panel" data-batch-panel="batch" data-batch-tool="{{ currentTool }}" aria-label="{{ t.ui.batchProcessing }}">
+        <div class="batch-workbench">
+          {% if currentTool in batchImageTools %}
+          <div class="batch-card">
+            <div class="batch-card-title">{{ t.ui.batchInput }}</div>
+            <label class="batch-dropzone" id="batch-dropzone" for="batch-file-input">
+              <span class="batch-dropzone-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg>
+              </span>
+              <span class="batch-dropzone-main">{{ t.ui.clickOrDragImageFiles }}</span>
+              <span class="batch-dropzone-hint">
+                {% if currentTool == "image-resize" %}{{ t.ui.batchResizeImageHint }}{% else %}{{ t.ui.batchImageHint }}{% endif %}
+              </span>
+            </label>
+            <input id="batch-file-input" type="file" {% if currentTool == "image-resize" %}accept="image/png,image/jpeg,image/webp"{% else %}accept="image/*"{% endif %} multiple hidden>
+          </div>
+
+          {% if currentTool == "image-resize" %}
+          <div class="batch-card">
+            <div class="batch-card-title">{{ t.ui.resizeSettings }}</div>
+            <div class="batch-control-grid">
+              <label class="batch-field"><span>{{ t.ui.width }}</span><input id="batch-width" type="number" min="1" step="1" placeholder="Auto"></label>
+              <label class="batch-field"><span>{{ t.ui.height }}</span><input id="batch-height" type="number" min="1" step="1" placeholder="Auto"></label>
+              <label class="batch-field"><span>{{ t.ui.scale }}</span><input id="batch-percent" type="number" min="1" max="400" step="1" value="100"></label>
+              <label class="batch-field"><span>{{ t.ui.quality }}</span><input id="batch-quality" type="number" min="1" max="100" step="1" value="90"></label>
+            </div>
+            <label class="batch-check"><input id="batch-keep-aspect" type="checkbox" checked> {{ t.ui.keepAspectRatio }}</label>
+          </div>
+          {% endif %}
+          {% else %}
+          {% if currentTool in batchUrlTools or currentTool == "case-converter" or currentTool == "regex-replace" or currentTool in batchDelimiterTools %}
+          <div class="batch-card">
+            <div class="batch-card-title">{{ t.ui.batchOptions }}</div>
+            {% if currentTool == "url-encode" %}
+            <div class="batch-control-grid">
+              <label class="batch-field"><span>{{ t.ui.encodeMode }}</span><select id="batch-url-encode-mode"><option value="component">{{ t.ui.component }}</option><option value="uri">{{ t.ui.fullUrl }}</option></select></label>
+              <label class="batch-check"><input id="batch-url-space-plus" type="checkbox"> {{ t.ui.encodeSpacesAsPlus }}</label>
+            </div>
+            {% elif currentTool == "url-decode" %}
+            <div class="batch-control-grid">
+              <label class="batch-check"><input id="batch-url-plus-space" type="checkbox" checked> {{ t.ui.treatPlusAsSpace }}</label>
+              <label class="batch-check"><input id="batch-url-parse-query" type="checkbox" checked> {{ t.ui.includeQueryParameters }}</label>
+            </div>
+            {% elif currentTool == "case-converter" %}
+            <div class="batch-control-grid">
+              <label class="batch-field"><span>{{ t.ui.caseMode }}</span><select id="batch-case-mode"><option value="upper">{{ t.ui.uppercase }}</option><option value="lower">{{ t.ui.lowercase }}</option><option value="sentence">{{ t.ui.sentenceCase }}</option><option value="title">{{ t.ui.titleCase }}</option><option value="invert">{{ t.ui.invertCase }}</option></select></label>
+            </div>
+            {% elif currentTool == "regex-replace" %}
+            <div class="batch-control-grid batch-control-grid--wide">
+              <label class="batch-field"><span>{{ t.ui.pattern }}</span><input id="batch-regex-pattern" type="text" spellcheck="false" placeholder="{{ t.ui.regularExpression }}"></label>
+              <label class="batch-field"><span>{{ t.ui.replacement }}</span><input id="batch-regex-replacement" type="text" spellcheck="false" placeholder="{{ t.ui.replacementText }}"></label>
+            </div>
+            <div class="batch-flag-row" aria-label="{{ t.ui.regexFlags }}">
+              <label class="batch-check"><input id="batch-regex-flag-g" type="checkbox" checked> g</label>
+              <label class="batch-check"><input id="batch-regex-flag-i" type="checkbox"> i</label>
+              <label class="batch-check"><input id="batch-regex-flag-m" type="checkbox"> m</label>
+              <label class="batch-check"><input id="batch-regex-flag-s" type="checkbox"> s</label>
+              <label class="batch-check"><input id="batch-regex-flag-u" type="checkbox"> u</label>
+              <label class="batch-check"><input id="batch-regex-flag-y" type="checkbox"> y</label>
+            </div>
+            {% elif currentTool in batchDelimiterTools %}
+            <div class="batch-control-grid">
+              <label class="batch-field"><span>{{ t.ui.delimiter }}</span><select id="batch-delimiter"><option value="space">{{ t.ui.space }}</option><option value="none">{{ t.ui["none"] }}</option>{% if currentTool == "ascii-to-hex" %}<option value="comma">{{ t.ui.comma }}</option><option value="colon">{{ t.ui.colon }}</option>{% endif %}</select></label>
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
+          <div class="batch-card">
+            <div class="batch-card-title">{{ t.ui.batchInput }}</div>
+            <div class="batch-mode-row">
+              <label class="batch-radio"><input type="radio" name="batch-input-mode" value="lines" checked> {{ t.ui.lines }}</label>
+              <label class="batch-radio"><input type="radio" name="batch-input-mode" value="files"> {{ t.ui.filesLabel }}</label>
+            </div>
+            <div class="batch-input-panel is-active" data-batch-mode-panel="lines">
+              <p class="batch-input-hint" id="batch-lines-hint">{{ t.ui.eachLineBatchHint }}</p>
+              <textarea class="batch-textarea" id="batch-text-input" spellcheck="false" placeholder="{{ t.ui.enterOneItemPerLine }}"></textarea>
+            </div>
+            <div class="batch-input-panel" data-batch-mode-panel="files">
+              <p class="batch-input-hint">{{ t.ui.eachFileBatchHint }}</p>
+              <label class="batch-file-picker">
+                <span>{{ t.ui.chooseFiles }}</span>
+                <input id="batch-file-input" type="file" multiple>
+              </label>
+            </div>
+          </div>
+          {% endif %}
+
+          <div class="batch-actions">
+            <button class="btn btn-ghost" id="batch-clear" type="button">{{ t.ui.clear }}</button>
+            <button class="btn btn-primary" id="batch-run" type="button">{{ t.ui.runBatch }}</button>
+            <button class="btn btn-ghost" id="batch-copy" type="button" disabled>{{ t.ui.copyResults }}</button>
+            <button class="btn btn-ghost" id="batch-download" type="button" disabled>{{ t.ui.downloadResults }}</button>
+          </div>
+
+          <div class="batch-summary" id="batch-summary" aria-live="polite">
+            <span>0 {{ t.ui.items }}</span>
+            <span>{{ t.ui.ready }}</span>
+          </div>
+
+          <div class="batch-results-wrap">
+            <table class="batch-results">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>{{ t.ui.source }}</th>
+                  <th>{{ t.ui.status }}</th>
+                  <th>{{ t.ui.output }}</th>
+                </tr>
+              </thead>
+              <tbody id="batch-results-body">
+                <tr><td colspan="4" class="batch-empty">{{ t.ui.batchResultsAppearHere }}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      {% endif %}
 
       <!-- Description Section -->
       <section class="description-section">
@@ -88,12 +379,14 @@
     "decimal-to-hex",
     "decimal-to-octal",
     "decimal-to-percent",
+    "decimal-to-fraction",
     "fraction-to-decimal",
     "fraction-to-percent",
     "hex-to-binary",
     "hex-to-decimal",
     "octal-to-decimal",
-    "percent-to-decimal"
+    "percent-to-decimal",
+    "percent-to-fraction"
   ] %}
   {% set htmlCompatTools = [
     "css-minifier",
@@ -122,6 +415,9 @@
   <script src="/js/tool-common.js?v={{ site.assetVersion }}"></script>
   {% if currentTool in htmlCompatTools %}
   <script src="/js/html-minifier-compat.js?v={{ site.assetVersion }}"></script>
+  {% endif %}
+  {% if currentTool == "image-resize" %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   {% endif %}
   <script>
     (function () {
@@ -165,4 +461,10 @@
     })();
   </script>
   {% block tool_script %}{% endblock %}
+  {% if currentTool in singleFileInputTools or currentTool in dualFileInputTools %}
+  <script src="/js/single-input-mode.js?v={{ site.assetVersion }}"></script>
+  {% endif %}
+  {% if currentTool in batchEnabledTools %}
+  <script src="/js/batch-tools.js?v={{ site.assetVersion }}"></script>
+  {% endif %}
 {% endblock %}
