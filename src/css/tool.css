@@ -1032,6 +1032,11 @@ table.description-table tbody tr:last-child td {
   box-shadow: var(--shadow-sm);
 }
 
+.single-input-mode:focus-within {
+  outline: 3px solid rgba(196, 93, 58, 0.35);
+  outline-offset: 2px;
+}
+
 .single-file-panel {
   display: grid;
   grid-template-columns: minmax(150px, max-content) minmax(0, 1fr);
@@ -1294,6 +1299,11 @@ table.description-table tbody tr:last-child td {
 .batch-dropzone.dragover {
   border-color: var(--accent);
   background: var(--accent-light);
+}
+
+.batch-dropzone:focus-visible {
+  outline: 3px solid rgba(196, 93, 58, 0.35);
+  outline-offset: 3px;
 }
 
 .batch-dropzone-main {

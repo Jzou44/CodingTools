@@ -90,7 +90,7 @@ The first batch should be implemented as a `Single` / `Batch` tab on each page.
 
 - Base64: `base64-encode`, `base64-decode`
 - Hash: `md5-generator`, `sha1-generator`, `sha256-generator`, `sha384-generator`, `sha512-generator`
-- Formatter/minifier: `json-formatter`, `json-minifier`, `xml-formatter`, `xml-minifier`, `html-beautifier`, `html-minifier`, `javascript-beautifier`, `javascript-minifier`, `css-beautifier`, `css-minifier`, `sql-formatter`, `sql-minifier`
+- Formatter/minifier: `json-formatter`, `json-minifier`, `xml-formatter`, `xml-minifier`, `json-to-xml`, `xml-to-json`, `html-beautifier`, `html-minifier`, `javascript-beautifier`, `javascript-minifier`, `css-beautifier`, `css-minifier`, `sql-formatter`, `sql-minifier`
 - Image tools: `image-resize`, `image-to-base64`
 
 ## Second Implementation Batch

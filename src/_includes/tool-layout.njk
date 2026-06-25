@@ -11,8 +11,10 @@
   "sha512-generator",
   "json-formatter",
   "json-minifier",
+  "json-to-xml",
   "xml-formatter",
   "xml-minifier",
+  "xml-to-json",
   "html-beautifier",
   "html-minifier",
   "javascript-beautifier",
@@ -175,11 +177,11 @@
     <!-- Left Column — Tool Interface -->
     <div class="tool-main">
       {% if currentTool in batchEnabledTools %}
-      <div class="batch-tabs" data-batch-tabs>
-        <button class="batch-tab is-active" type="button" data-batch-tab="single" aria-selected="true">{{ t.ui.batchSingleTab }}</button>
-        <button class="batch-tab" type="button" data-batch-tab="batch" aria-selected="false">{{ t.ui.batchTab }}</button>
+      <div class="batch-tabs" data-batch-tabs role="tablist" aria-label="{{ t.ui.batchProcessing }}">
+        <button class="batch-tab is-active" id="batch-tab-single" type="button" role="tab" data-batch-tab="single" aria-selected="true" aria-controls="batch-panel-single">{{ t.ui.batchSingleTab }}</button>
+        <button class="batch-tab" id="batch-tab-batch" type="button" role="tab" data-batch-tab="batch" aria-selected="false" aria-controls="batch-panel-batch" tabindex="-1">{{ t.ui.batchTab }}</button>
       </div>
-      <div class="batch-panel is-active" data-batch-panel="single">
+      <div class="batch-panel is-active" id="batch-panel-single" data-batch-panel="single" role="tabpanel" aria-labelledby="batch-tab-single">
       {% endif %}
       {% if currentTool in singleFileInputTools %}
       <div class="single-input-source-card" data-single-input-mode data-single-file-tool="{{ currentTool }}">
@@ -198,7 +200,7 @@
             <span>{{ t.ui.chooseFile }}</span>
             <input id="single-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
           </label>
-          <div class="single-file-status" id="single-file-status">{{ t.ui.noFileSelected }}</div>
+          <div class="single-file-status" id="single-file-status" role="status" aria-live="polite">{{ t.ui.noFileSelected }}</div>
         </div>
       </div>
       {% elif currentTool in dualFileInputTools %}
@@ -219,14 +221,14 @@
               <span>{{ t.ui.leftFile }}</span>
               <input id="single-left-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
             </label>
-            <div class="single-file-status" id="single-left-file-status">{{ t.ui.noLeftFileSelected }}</div>
+            <div class="single-file-status" id="single-left-file-status" role="status" aria-live="polite">{{ t.ui.noLeftFileSelected }}</div>
           </div>
           <div class="single-file-side">
             <label class="single-file-picker">
               <span>{{ t.ui.rightFile }}</span>
               <input id="single-right-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
             </label>
-            <div class="single-file-status" id="single-right-file-status">{{ t.ui.noRightFileSelected }}</div>
+            <div class="single-file-status" id="single-right-file-status" role="status" aria-live="polite">{{ t.ui.noRightFileSelected }}</div>
           </div>
         </div>
       </div>
@@ -234,12 +236,12 @@
       {% block tool_content %}{% endblock %}
       {% if currentTool in batchEnabledTools %}
       </div>
-      <section class="batch-panel" data-batch-panel="batch" data-batch-tool="{{ currentTool }}" aria-label="{{ t.ui.batchProcessing }}">
+      <section class="batch-panel" id="batch-panel-batch" data-batch-panel="batch" data-batch-tool="{{ currentTool }}" role="tabpanel" aria-labelledby="batch-tab-batch" hidden>
         <div class="batch-workbench">
           {% if currentTool in batchImageTools %}
           <div class="batch-card">
             <div class="batch-card-title">{{ t.ui.batchInput }}</div>
-            <label class="batch-dropzone" id="batch-dropzone" for="batch-file-input">
+            <label class="batch-dropzone" id="batch-dropzone" for="batch-file-input" role="button" tabindex="0">
               <span class="batch-dropzone-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="m21 15-5-5L5 21"></path></svg>
               </span>
@@ -255,8 +257,8 @@
           <div class="batch-card">
             <div class="batch-card-title">{{ t.ui.resizeSettings }}</div>
             <div class="batch-control-grid">
-              <label class="batch-field"><span>{{ t.ui.width }}</span><input id="batch-width" type="number" min="1" step="1" placeholder="Auto"></label>
-              <label class="batch-field"><span>{{ t.ui.height }}</span><input id="batch-height" type="number" min="1" step="1" placeholder="Auto"></label>
+              <label class="batch-field"><span>{{ t.ui.width }}</span><input id="batch-width" type="number" min="1" step="1" placeholder="{{ t.ui.auto }}"></label>
+              <label class="batch-field"><span>{{ t.ui.height }}</span><input id="batch-height" type="number" min="1" step="1" placeholder="{{ t.ui.auto }}"></label>
               <label class="batch-field"><span>{{ t.ui.scale }}</span><input id="batch-percent" type="number" min="1" max="400" step="1" value="100"></label>
               <label class="batch-field"><span>{{ t.ui.quality }}</span><input id="batch-quality" type="number" min="1" max="100" step="1" value="90"></label>
             </div>
@@ -269,7 +271,7 @@
             <div class="batch-card-title">{{ t.ui.batchOptions }}</div>
             {% if currentTool == "url-encode" %}
             <div class="batch-control-grid">
-              <label class="batch-field"><span>{{ t.ui.encodeMode }}</span><select id="batch-url-encode-mode"><option value="component">{{ t.ui.component }}</option><option value="uri">{{ t.ui.fullUrl }}</option></select></label>
+              <label class="batch-field"><span>{{ t.ui.encodeMode }}</span><select id="batch-url-encode-mode"><option value="component">{{ t.ui.urlComponent }}</option><option value="uri">{{ t.ui.fullUrl }}</option></select></label>
               <label class="batch-check"><input id="batch-url-space-plus" type="checkbox"> {{ t.ui.encodeSpacesAsPlus }}</label>
             </div>
             {% elif currentTool == "url-decode" %}
@@ -408,6 +410,47 @@
       copied:       '{{ t.ui.copied or "Copied!" }}',
       copy:         '{{ t.ui.copy or "Copy" }}'
     };
+    window.CodingToolsRuntimeI18n = {{ {
+      auto: t.ui.auto,
+      batchResultsAppearHere: t.ui.batchResultsAppearHere,
+      chooseFile: t.ui.chooseFile,
+      copied: t.ui.copied,
+      couldNotReadFile: t.ui.invalidInput,
+      delimiter: t.ui.delimiter,
+      denominatorCannotBeZero: t.ui.denominatorCannotBeZero,
+      done: t.ui.done,
+      download: t.ui.download,
+      eachFileBatchHint: t.ui.eachFileBatchHint,
+      eachLineBatchHint: t.ui.eachLineBatchHint,
+      enterNumberBetween1And3999: t.ui.enterNumberBetween1And3999,
+      enterOneItemPerLine: t.ui.enterOneItemPerLine,
+      enterOneValuePerLine: t.ui.enterOneValuePerLine,
+      error: t.ui.error,
+      file: t.ui.file,
+      filesLabel: t.ui.filesLabel,
+      fileTooLarge: t.ui.maxFileSize,
+      input: t.ui.input,
+      invalidBase64String: t.ui.invalidBase64String,
+      invalidBinaryInput: t.ui.invalidBinaryInput,
+      invalidDecimalInput: t.ui.invalidDecimalInput,
+      invalidHexadecimalInput: t.ui.invalidHexadecimalInput,
+      invalidInput: t.ui.invalidInput,
+      invalidRomanNumeral: t.ui.invalidRomanNumeral,
+      items: t.ui.items,
+      line: t.ui.line,
+      lines: t.ui.lines,
+      noFileSelected: t.ui.noFileSelected,
+      noFilesSelected: t.ui.noFilesSelected,
+      noInput: t.ui.noInput,
+      noLeftFileSelected: t.ui.noLeftFileSelected,
+      noRightFileSelected: t.ui.noRightFileSelected,
+      pasteDocumentBatchHint: t.ui.pasteDocumentBatchHint,
+      pasteDocumentBatchPlaceholder: t.ui.pasteDocumentBatchPlaceholder,
+      processing: t.ui.processing,
+      ready: t.ui.ready,
+      skippedFileLimit: t.ui.skippedFileLimit,
+      unsupportedImageType: t.ui.unsupportedImageType
+    } | json | safe }};
   </script>
   {% if currentTool in bigNumberTools %}
   <script src="/js/bignumber-lite.js?v={{ site.assetVersion }}"></script>
@@ -417,7 +460,7 @@
   <script src="/js/html-minifier-compat.js?v={{ site.assetVersion }}"></script>
   {% endif %}
   {% if currentTool == "image-resize" %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="/js/jszip.min.js?v={{ site.assetVersion }}"></script>
   {% endif %}
   <script>
     (function () {

@@ -20,12 +20,16 @@
   var dropzone = document.getElementById("batch-dropzone");
   var results = [];
   var droppedFiles = null;
+  var maxImageFiles = 20;
+  var L = window.CodingToolsRuntimeI18n || {};
 
   var structuredTextTools = {
     "json-formatter": true,
     "json-minifier": true,
+    "json-to-xml": true,
     "xml-formatter": true,
     "xml-minifier": true,
+    "xml-to-json": true,
     "html-beautifier": true,
     "html-minifier": true,
     "javascript-beautifier": true,
@@ -46,8 +50,10 @@
     "sha512-generator": "txt",
     "json-formatter": "json",
     "json-minifier": "json",
+    "json-to-xml": "xml",
     "xml-formatter": "xml",
     "xml-minifier": "xml",
+    "xml-to-json": "json",
     "html-beautifier": "html",
     "html-minifier": "html",
     "javascript-beautifier": "js",
@@ -84,27 +90,57 @@
     "number-to-words": "txt"
   };
 
+  function tr(key, fallback) {
+    return L[key] || fallback || key;
+  }
+
+  function formatMessage(key, fallback, values) {
+    var text = tr(key, fallback);
+    Object.keys(values || {}).forEach(function (name) {
+      text = text.replace(new RegExp("\\{" + name + "\\}", "g"), values[name]);
+    });
+    return text;
+  }
+
   function initTabs() {
     var tabs = document.querySelectorAll("[data-batch-tab]");
     var panels = document.querySelectorAll("[data-batch-panel]");
+    function activate(tab) {
+      var target = tab.getAttribute("data-batch-tab");
+      tabs.forEach(function (item) {
+        var active = item === tab;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-selected", active ? "true" : "false");
+        item.setAttribute("tabindex", active ? "0" : "-1");
+      });
+      panels.forEach(function (item) {
+        var active = item.getAttribute("data-batch-panel") === target;
+        item.classList.toggle("is-active", active);
+        item.hidden = !active;
+      });
+    }
     tabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
-        var target = tab.getAttribute("data-batch-tab");
-        tabs.forEach(function (item) {
-          var active = item === tab;
-          item.classList.toggle("is-active", active);
-          item.setAttribute("aria-selected", active ? "true" : "false");
-        });
-        panels.forEach(function (item) {
-          item.classList.toggle("is-active", item.getAttribute("data-batch-panel") === target);
-        });
+        activate(tab);
+      });
+      tab.addEventListener("keydown", function (event) {
+        var current = Array.prototype.indexOf.call(tabs, tab);
+        var next = null;
+        if (event.key === "ArrowRight") next = tabs[(current + 1) % tabs.length];
+        if (event.key === "ArrowLeft") next = tabs[(current + tabs.length - 1) % tabs.length];
+        if (event.key === "Home") next = tabs[0];
+        if (event.key === "End") next = tabs[tabs.length - 1];
+        if (!next) return;
+        event.preventDefault();
+        activate(next);
+        next.focus();
       });
     });
   }
 
   function setSummary(count, message) {
     if (!summary) return;
-    summary.innerHTML = "<span>" + count + " item" + (count === 1 ? "" : "s") + "</span><span>" + escapeHtml(message || "Ready") + "</span>";
+    summary.innerHTML = "<span>" + count + " " + escapeHtml(tr("items", "items")) + "</span><span>" + escapeHtml(message || tr("ready", "Ready")) + "</span>";
   }
 
   function clearResults() {
@@ -115,16 +151,11 @@
     if (body) body.innerHTML = "<tr><td colspan=\"4\" class=\"batch-empty\">" + emptyResultsMessage() + "</td></tr>";
     if (btnCopy) btnCopy.disabled = true;
     if (btnDownload) btnDownload.disabled = true;
-    setSummary(0, "Ready");
+    setSummary(0, tr("ready", "Ready"));
   }
 
   function emptyResultsMessage() {
-    if (tool === "image-resize" || tool === "image-to-base64") {
-      return "Batch results will appear here. Each row maps to one source file.";
-    }
-    return selectedInputMode() === "files"
-      ? "Batch results will appear here. Each row maps to one selected file."
-      : "Batch results will appear here. Each row maps to one input line.";
+    return tr("batchResultsAppearHere", "Batch results will appear here.");
   }
 
   function escapeHtml(value) {
@@ -151,15 +182,15 @@
     body.innerHTML = results.map(function (item, index) {
       var statusClass = item.ok ? "batch-status-ok" : "batch-status-error";
       var output = item.url
-        ? "<a class=\"btn btn-ghost btn-sm\" href=\"" + item.url + "\" download=\"" + escapeHtml(item.filename) + "\">Download</a>"
-        : "<pre class=\"batch-output\">" + escapeHtml(item.output || item.error || "") + "</pre>";
-      return "<tr><td>" + (index + 1) + "</td><td>" + escapeHtml(item.name) + "</td><td class=\"" + statusClass + "\">" + (item.ok ? "Done" : "Error") + "</td><td>" + output + "</td></tr>";
+        ? "<a class=\"btn btn-ghost btn-sm\" href=\"" + item.url + "\" download=\"" + escapeHtml(item.filename) + "\">" + escapeHtml(tr("download", "Download")) + "</a>"
+        : "<pre class=\"batch-output\">" + escapeHtml(item.preview || item.output || item.error || "") + "</pre>";
+      return "<tr><td>" + (index + 1) + "</td><td>" + escapeHtml(item.name) + "</td><td class=\"" + statusClass + "\">" + (item.ok ? escapeHtml(tr("done", "Done")) : escapeHtml(tr("error", "Error"))) + "</td><td>" + output + "</td></tr>";
     }).join("");
   }
 
   function resultText() {
     return results.map(function (item, index) {
-      var value = item.ok ? item.output : "ERROR: " + item.error;
+      var value = item.ok ? item.output : tr("error", "ERROR") + ": " + item.error;
       return "### " + (index + 1) + ". " + item.name + "\n" + value;
     }).join("\n\n");
   }
@@ -189,7 +220,7 @@
     var binary = atob(String(value).trim());
     var bytes = new Uint8Array(binary.length);
     for (var i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
-    return new TextDecoder().decode(bytes);
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
   }
 
   function bytesToHex(buffer) {
@@ -200,7 +231,7 @@
 
   function digest(algorithm, value) {
     if (!window.crypto || !crypto.subtle) {
-      return Promise.reject(new Error("Web Crypto is unavailable in this browser context"));
+      return Promise.reject(new Error(tr("invalidInput", "Invalid input")));
     }
     return crypto.subtle.digest(algorithm, new TextEncoder().encode(value)).then(bytesToHex);
   }
@@ -269,12 +300,12 @@
   }
 
   function requireGlobal(name, label) {
-    if (typeof window[name] !== "function") throw new Error((label || name) + " is not available");
+    if (typeof window[name] !== "function") throw new Error((label || name) + " " + tr("invalidInput", "is unavailable"));
     return window[name];
   }
 
   function requireBigNumber() {
-    if (typeof window.BigNumber !== "function") throw new Error("BigNumber library is not available");
+    if (typeof window.BigNumber !== "function") throw new Error(tr("invalidInput", "Invalid input"));
     return window.BigNumber;
   }
 
@@ -303,13 +334,13 @@
       8: /^[0-7]+$/,
       16: /^[0-9a-fA-F]+$/
     };
-    if (!validators[base].test(text)) throw new Error("Invalid base-" + base + " input");
+    if (!validators[base].test(text)) throw new Error(tr("invalidInput", "Invalid input"));
     return new (requireBigNumber())(text, base).toString(10);
   }
 
   function decimalToBase(value, base) {
     var text = cleanNumberInput(value);
-    if (!/^[+-]?\d+$/.test(text)) throw new Error("Enter a valid integer");
+    if (!/^[+-]?\d+$/.test(text)) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
     return BigInt(text).toString(base).toUpperCase();
   }
 
@@ -319,14 +350,15 @@
       2: /^[01]+$/,
       16: /^[0-9a-fA-F]+$/
     };
-    if (!validators[fromBase].test(text)) throw new Error("Invalid base-" + fromBase + " input");
+    if (!validators[fromBase].test(text)) throw new Error(tr("invalidInput", "Invalid input"));
     return new (requireBigNumber())(text, fromBase).toString(toBase).toUpperCase();
   }
 
   function textToDelimitedCodes(value, base) {
+    var bytes = new TextEncoder().encode(String(value));
     var parts = [];
-    for (var i = 0; i < value.length; i += 1) {
-      var part = value.charCodeAt(i).toString(base).toUpperCase();
+    for (var i = 0; i < bytes.length; i += 1) {
+      var part = bytes[i].toString(base).toUpperCase();
       var min = base === 2 ? 8 : 2;
       while (part.length < min) part = "0" + part;
       parts.push(part);
@@ -337,25 +369,25 @@
   function hexToAscii(value) {
     var input = String(value).replace(/[\s,:\-]/g, "");
     if (!input) return "";
-    if (input.length % 2 !== 0) throw new Error("Hex string must have an even number of characters");
-    if (!/^[0-9a-fA-F]+$/.test(input)) throw new Error("Invalid hexadecimal input");
-    var output = "";
+    if (input.length % 2 !== 0) throw new Error(tr("invalidHexadecimalInput", "Invalid hexadecimal input"));
+    if (!/^[0-9a-fA-F]+$/.test(input)) throw new Error(tr("invalidHexadecimalInput", "Invalid hexadecimal input"));
+    var bytes = new Uint8Array(input.length / 2);
     for (var i = 0; i < input.length; i += 2) {
-      output += String.fromCharCode(parseInt(input.substring(i, i + 2), 16));
+      bytes[i / 2] = parseInt(input.substring(i, i + 2), 16);
     }
-    return output;
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
   }
 
   function binaryToText(value) {
     var input = String(value).replace(/\s/g, "");
     if (!input) return "";
-    if (input.length % 8 !== 0) throw new Error("Binary string length must be a multiple of 8");
-    if (!/^[01]+$/.test(input)) throw new Error("Invalid binary input");
-    var output = "";
+    if (input.length % 8 !== 0) throw new Error(tr("invalidBinaryInput", "Invalid binary input"));
+    if (!/^[01]+$/.test(input)) throw new Error(tr("invalidBinaryInput", "Invalid binary input"));
+    var bytes = new Uint8Array(input.length / 8);
     for (var i = 0; i < input.length; i += 8) {
-      output += String.fromCharCode(parseInt(input.substring(i, i + 8), 2));
+      bytes[i / 8] = parseInt(input.substring(i, i + 8), 2);
     }
-    return output;
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
   }
 
   function toSentenceCase(value) {
@@ -390,7 +422,7 @@
     var pattern = document.getElementById("batch-regex-pattern");
     var replacement = document.getElementById("batch-regex-replacement");
     var source = pattern ? pattern.value : "";
-    if (!source) throw new Error("Enter a regex pattern");
+    if (!source) throw new Error(tr("invalidInput", "Invalid input"));
     var flags = ["g", "i", "m", "s", "u", "y"].filter(function (flag) {
       var input = document.getElementById("batch-regex-flag-" + flag);
       return input && input.checked;
@@ -442,10 +474,8 @@
       var path = parsed.pathname.split("/").map(function (segment) {
         return decodePart(segment, false);
       }).join("/");
-      var rows = parseQueryRows(value, plusAsSpace);
-      var query = rows.length ? "?" + rows.map(function (row) { return row.key + "=" + row.value; }).join("&") : "";
       var hash = parsed.hash ? "#" + decodePart(parsed.hash.slice(1), plusAsSpace) : "";
-      decoded = parsed.origin + path + query + hash;
+      decoded = parsed.origin + path + parsed.search + hash;
     }
 
     if (!includeQuery) return decoded;
@@ -468,20 +498,20 @@
 
   function romanToInt(value) {
     var text = String(value).toUpperCase().trim();
-    if (!text || !/^[IVXLCDM]+$/.test(text)) throw new Error("Use only I, V, X, L, C, D, M");
+    if (!text || !/^[IVXLCDM]+$/.test(text)) throw new Error(tr("invalidRomanNumeral", "Invalid Roman numeral"));
     var result = 0;
     for (var i = 0; i < text.length; i += 1) {
       var current = ROMAN_VALUES[text[i]];
       var next = i + 1 < text.length ? ROMAN_VALUES[text[i + 1]] : 0;
       result += current < next ? -current : current;
     }
-    if (result <= 0) throw new Error("Invalid Roman numeral");
+    if (result <= 0 || result > 3999 || intToRoman(result) !== text) throw new Error(tr("invalidRomanNumeral", "Invalid Roman numeral"));
     return String(result);
   }
 
   function intToRoman(value) {
     var num = Number(cleanNumberInput(value));
-    if (!Number.isInteger(num) || num < 1 || num > 3999) throw new Error("Enter a number between 1 and 3999");
+    if (!Number.isInteger(num) || num < 1 || num > 3999) throw new Error(tr("enterNumberBetween1And3999", "Enter a number between 1 and 3999"));
     var values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
     var symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
     var result = "";
@@ -514,7 +544,7 @@
   function decimalStringToRatio(value) {
     var text = String(value).trim().replace(/%$/, "");
     var match = text.match(/^([+-]?)(\d+)(?:\.(\d+))?$/);
-    if (!match) throw new Error("Enter a valid decimal number");
+    if (!match) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
     var sign = match[1] === "-" ? -1n : 1n;
     var whole = match[2];
     var decimals = match[3] || "";
@@ -525,7 +555,7 @@
   }
 
   function formatRatioAsMixedFraction(numerator, denominator) {
-    if (denominator === 0n) throw new Error("Denominator cannot be zero");
+    if (denominator === 0n) throw new Error(tr("denominatorCannotBeZero", "Denominator cannot be zero"));
     var negative = numerator < 0n;
     var absNum = negative ? -numerator : numerator;
     var integer = absNum / denominator;
@@ -546,17 +576,18 @@
       var integer = new (requireBigNumber())(match[1]);
       var numerator = new (requireBigNumber())(match[2]);
       var denominator = new (requireBigNumber())(match[3]);
-      if (denominator.isZero()) throw new Error("Denominator cannot be zero");
-      return integer.plus(numerator.dividedBy(denominator));
+      if (denominator.isZero()) throw new Error(tr("denominatorCannotBeZero", "Denominator cannot be zero"));
+      var fraction = numerator.dividedBy(denominator);
+      return String(match[1]).trim().charAt(0) === "-" ? integer.minus(fraction) : integer.plus(fraction);
     }
     match = text.match(/^([+-]?\d+)\s*\/\s*(\d+)$/);
     if (match) {
       var num = new (requireBigNumber())(match[1]);
       var den = new (requireBigNumber())(match[2]);
-      if (den.isZero()) throw new Error("Denominator cannot be zero");
+      if (den.isZero()) throw new Error(tr("denominatorCannotBeZero", "Denominator cannot be zero"));
       return num.dividedBy(den);
     }
-    throw new Error("Enter a fraction like 3/4 or 1 3/4");
+    throw new Error(tr("invalidInput", "Invalid input"));
   }
 
   function percentToFraction(value) {
@@ -569,11 +600,29 @@
   function numberToWordsBatch(value) {
     var text = String(value).trim();
     var num = Number(text);
-    if (!text || isNaN(num) || !isFinite(num) || num !== Math.floor(num)) throw new Error("Please enter a valid integer");
-    if (!window.numberToWords || typeof window.numberToWords.toWords !== "function") throw new Error("Number to words library is not available");
+    if (!text || isNaN(num) || !isFinite(num) || num !== Math.floor(num) || !Number.isSafeInteger(num)) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
+    if (!window.numberToWords || typeof window.numberToWords.toWords !== "function") throw new Error(tr("invalidInput", "Invalid input"));
     return window.numberToWords.toWords(num) + "\n" +
       window.numberToWords.toWordsOrdinal(num) + "\n" +
       window.numberToWords.toOrdinal(num);
+  }
+
+  function jsonToXmlBatch(value) {
+    var obj = JSON.parse(value);
+    var wrapped = { RootDirectory: obj };
+    var xmlStr = JXON.xmlToString(JXON.jsToXml(wrapped));
+    xmlStr = xmlStr.replace(/<RootDirectory>/, "").replace(/<\/RootDirectory>[\s\S]*$/, "");
+    return vkbeautify.xml(xmlStr);
+  }
+
+  function xmlToJsonBatch(value) {
+    var source = htmlminifier.minify(value, { collapseWhitespace: true, removeComments: true });
+    source = source.replace(/<\?xml[^?]*\?>/, "");
+    source = "<RootDirectory>" + source + "</RootDirectory>";
+    var doc = JXON.stringToXml(source);
+    var obj = JXON.xmlToJs(doc);
+    var json = JSON.stringify(obj.rootdirectory || obj, null, 2);
+    return requireGlobal("js_beautify", "JavaScript beautifier")(json, { indent_size: 2 });
   }
 
   function transformText(value) {
@@ -586,16 +635,19 @@
     if (tool === "sha512-generator") return digest("SHA-512", value);
     if (tool === "json-formatter") return Promise.resolve(JSON.stringify(JSON.parse(value), null, 2));
     if (tool === "json-minifier") return Promise.resolve(JSON.stringify(JSON.parse(value)));
+    if (tool === "json-to-xml") return Promise.resolve(jsonToXmlBatch(value));
     if (tool === "xml-formatter") {
       var xmlSource = window.htmlminifier ? htmlminifier.minify(value, { collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true }) : value;
       return Promise.resolve(vkbeautify.xml(xmlSource));
     }
     if (tool === "xml-minifier") return Promise.resolve(htmlminifier.minify(value, { collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true }));
+    if (tool === "xml-to-json") return Promise.resolve(xmlToJsonBatch(value));
     if (tool === "html-beautifier") return Promise.resolve(requireGlobal("html_beautify", "HTML beautifier")(value, { indent_size: 2 }));
     if (tool === "html-minifier") return Promise.resolve(htmlminifier.minify(value, { collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true }));
     if (tool === "javascript-beautifier") return Promise.resolve(requireGlobal("js_beautify", "JavaScript beautifier")(value, { indent_size: 2 }));
     if (tool === "javascript-minifier") {
-      return Promise.resolve(htmlminifier.minify("<script>" + value + "<\/script>", { collapseWhitespace: true, minifyJS: true, removeComments: true }).replace(/<\/?script>/g, ""));
+      var safeJs = String(value).replace(/<\/script/gi, "<\\/script");
+      return Promise.resolve(htmlminifier.minify("<script>" + safeJs + "<\/script>", { collapseWhitespace: true, minifyJS: true, removeComments: true }).replace(/^<script>/i, "").replace(/<\/script>$/i, ""));
     }
     if (tool === "css-beautifier") return Promise.resolve(requireGlobal("css_beautify", "CSS beautifier")(value, { indent_size: 2 }));
     if (tool === "css-minifier") {
@@ -632,7 +684,7 @@
     if (tool === "percent-to-fraction") return Promise.resolve(percentToFraction(value));
     if (tool === "fraction-to-percent") return Promise.resolve(parseFraction(value).multipliedBy(100).toString(10) + "%");
     if (tool === "number-to-words") return Promise.resolve(numberToWordsBatch(value));
-    return Promise.reject(new Error("Unsupported batch tool"));
+    return Promise.reject(new Error(tr("invalidInput", "Invalid input")));
   }
 
   function selectedInputMode() {
@@ -656,12 +708,12 @@
     var value = textInput ? textInput.value : "";
     if (!value.trim()) return Promise.resolve([]);
     if (structuredTextTools[tool]) {
-      return Promise.resolve([{ name: "Text input", input: value }]);
+      return Promise.resolve([{ name: tr("input", "Input"), input: value }]);
     }
     return Promise.resolve(value.split(/\r?\n/).filter(function (line) {
       return line.length > 0;
     }).map(function (line, index) {
-      return { name: "Line " + (index + 1), input: line };
+      return { name: tr("line", "Line") + " " + (index + 1), input: line };
     }));
   }
 
@@ -673,11 +725,11 @@
     });
 
     if (mode === "files") {
-      setSummary(0, "Files mode: each file becomes one result row");
+      setSummary(0, tr("eachFileBatchHint", "Each selected file becomes one batch item."));
     } else if (structuredTextTools[tool]) {
-      setSummary(0, "Lines mode: paste one complete document, or switch to Files for multiple documents");
+      setSummary(0, tr("pasteDocumentBatchHint", "This tool treats the text box as one complete document."));
     } else {
-      setSummary(0, "Lines mode: each non-empty line becomes one result row");
+      setSummary(0, tr("eachLineBatchHint", "Each non-empty line becomes one batch item."));
     }
     renderResults();
   }
@@ -686,12 +738,14 @@
     clearResults();
     collectTextItems().then(function (items) {
       if (!items.length) {
-        setSummary(0, "No input");
+        setSummary(0, tr("noInput", "No input"));
         return;
       }
-      setSummary(items.length, "Processing...");
+      setSummary(items.length, tr("processing", "Processing..."));
       return Promise.all(items.map(function (item) {
-        return transformText(item.input).then(function (output) {
+        return Promise.resolve().then(function () {
+          return transformText(item.input);
+        }).then(function (output) {
           return {
             ok: true,
             name: item.name,
@@ -712,10 +766,21 @@
         results = processed;
         renderResults();
         var ok = results.filter(function (item) { return item.ok; }).length;
-        setSummary(results.length, ok + " succeeded, " + (results.length - ok) + " failed");
+        setSummary(results.length, "✓ " + ok + " / ✕ " + (results.length - ok));
         btnCopy.disabled = ok === 0;
         btnDownload.disabled = ok === 0;
       });
+    }).catch(function (error) {
+      results = [{
+        ok: false,
+        name: tr("file", "File"),
+        output: "",
+        error: error.message || String(error)
+      }];
+      renderResults();
+      setSummary(1, tr("error", "Error"));
+      btnCopy.disabled = true;
+      btnDownload.disabled = true;
     });
   }
 
@@ -744,10 +809,10 @@
         image.onload = function () {
           resolve({ image: image, dataUrl: event.target.result });
         };
-        image.onerror = function () { reject(new Error("Could not read image")); };
+        image.onerror = function () { reject(new Error(tr("invalidInput", "Invalid input"))); };
         image.src = event.target.result;
       };
-      reader.onerror = function () { reject(new Error("Could not read file")); };
+      reader.onerror = function () { reject(new Error(tr("invalidInput", "Invalid input"))); };
       reader.readAsDataURL(file);
     });
   }
@@ -755,11 +820,11 @@
   function canvasToBlob(canvas, mime, quality) {
     return new Promise(function (resolve, reject) {
       if (typeof canvas.toBlob !== "function") {
-        reject(new Error("Image export is unavailable"));
+        reject(new Error(tr("invalidInput", "Invalid input")));
         return;
       }
       canvas.toBlob(function (blob) {
-        if (!blob) reject(new Error("Image export failed"));
+        if (!blob) reject(new Error(tr("invalidInput", "Invalid input")));
         else resolve(blob);
       }, mime, quality);
     });
@@ -779,9 +844,9 @@
     if (!width && !height) {
       width = Math.max(1, Math.round(image.width * percent / 100));
       height = Math.max(1, Math.round(image.height * percent / 100));
-    } else if (keepAspect && keepAspect.checked && width && !height) {
+    } else if (keepAspect && keepAspect.checked && width) {
       height = Math.max(1, Math.round(width / (image.width / image.height)));
-    } else if (keepAspect && keepAspect.checked && height && !width) {
+    } else if (keepAspect && keepAspect.checked && height) {
       width = Math.max(1, Math.round(height * (image.width / image.height)));
     }
 
@@ -792,8 +857,8 @@
   }
 
   function processResizeFile(file) {
-    if (!supportedResizeMime(file)) return Promise.reject(new Error("Unsupported image type"));
-    if (file.size > 10 * 1024 * 1024) return Promise.reject(new Error("File is larger than 10MB"));
+    if (!supportedResizeMime(file)) return Promise.reject(new Error(tr("unsupportedImageType", "Unsupported image type")));
+    if (file.size > 10 * 1024 * 1024) return Promise.reject(new Error(tr("fileTooLarge", "Max file size") + " 10MB"));
 
     return loadImage(file).then(function (loaded) {
       var image = loaded.image;
@@ -827,8 +892,8 @@
   }
 
   function processImageBase64File(file) {
-    if (!/^image\//.test(file.type || "")) return Promise.reject(new Error("Unsupported image type"));
-    if (file.size > 10 * 1024 * 1024) return Promise.reject(new Error("File is larger than 10MB"));
+    if (!/^image\//.test(file.type || "")) return Promise.reject(new Error(tr("unsupportedImageType", "Unsupported image type")));
+    if (file.size > 2 * 1024 * 1024) return Promise.reject(new Error(tr("fileTooLarge", "Max file size") + " 2MB"));
     return new Promise(function (resolve, reject) {
       var reader = new FileReader();
       reader.onload = function (event) {
@@ -836,10 +901,11 @@
           ok: true,
           name: file.name,
           output: event.target.result,
+          preview: event.target.result.length > 500 ? event.target.result.slice(0, 500) + "\n..." : event.target.result,
           filename: makeOutputName(file.name, "image-base64", "txt")
         });
       };
-      reader.onerror = function () { reject(new Error("Could not read file")); };
+      reader.onerror = function () { reject(new Error(tr("invalidInput", "Invalid input"))); };
       reader.readAsDataURL(file);
     });
   }
@@ -847,12 +913,21 @@
   function runImageBatch() {
     clearResults();
     var sourceFiles = droppedFiles || (fileInput && fileInput.files ? fileInput.files : []);
-    var files = Array.prototype.slice.call(sourceFiles).slice(0, 20);
+    var allFiles = Array.prototype.slice.call(sourceFiles);
+    var files = allFiles.slice(0, maxImageFiles);
+    var skipped = allFiles.slice(maxImageFiles).map(function (file) {
+      return {
+        ok: false,
+        name: file.name,
+        output: "",
+        error: formatMessage("skippedFileLimit", "Skipped: maximum {max} files", { max: maxImageFiles })
+      };
+    });
     if (!files.length) {
-      setSummary(0, "No files selected");
+      setSummary(0, tr("noFilesSelected", "No files selected"));
       return;
     }
-    setSummary(files.length, "Processing...");
+    setSummary(allFiles.length, tr("processing", "Processing..."));
     var processor = tool === "image-resize" ? processResizeFile : processImageBase64File;
     Promise.all(files.map(function (file) {
       return processor(file).catch(function (error) {
@@ -864,10 +939,10 @@
         };
       });
     })).then(function (processed) {
-      results = processed;
+      results = processed.concat(skipped);
       renderResults();
       var ok = results.filter(function (item) { return item.ok; }).length;
-      setSummary(results.length, ok + " succeeded, " + (results.length - ok) + " failed");
+      setSummary(results.length, "✓ " + ok + " / ✕ " + (results.length - ok));
       btnCopy.disabled = ok === 0 || tool === "image-resize";
       btnDownload.disabled = ok === 0;
     });
@@ -881,11 +956,13 @@
       var link = document.createElement("a");
       link.href = single.url;
       link.download = single.filename;
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
       return;
     }
     if (!window.JSZip) {
-      setSummary(results.length, "ZIP support failed to load");
+      setSummary(results.length, tr("invalidInput", "Invalid input"));
       return;
     }
     var zip = new JSZip();
@@ -897,8 +974,10 @@
       var link = document.createElement("a");
       link.href = url;
       link.download = "resized-images.zip";
+      document.body.appendChild(link);
       link.click();
-      URL.revokeObjectURL(url);
+      document.body.removeChild(link);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     });
   }
 
@@ -925,7 +1004,7 @@
       }), null, 2)
       : resultText();
     ToolCommon.copyText(text).then(function () {
-      setSummary(results.length, "Copied results");
+      setSummary(results.length, tr("copied", "Copied!"));
     });
   }
 
@@ -936,11 +1015,20 @@
         event.preventDefault();
         if (eventName === "dragover") dropzone.classList.add("dragover");
         else dropzone.classList.remove("dragover");
-        if (eventName === "drop" && event.dataTransfer.files.length) droppedFiles = event.dataTransfer.files;
+        if (eventName === "drop" && event.dataTransfer.files.length) {
+          droppedFiles = event.dataTransfer.files;
+          setSummary(droppedFiles.length, tr("ready", "Ready"));
+        }
       });
+    });
+    dropzone.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      fileInput.click();
     });
     fileInput.addEventListener("change", function () {
       droppedFiles = null;
+      if (fileInput.files && fileInput.files.length) setSummary(fileInput.files.length, tr("ready", "Ready"));
     });
   }
 
@@ -948,14 +1036,14 @@
     if (!textInput) return;
     var linesHint = document.getElementById("batch-lines-hint");
     if (structuredTextTools[tool]) {
-      textInput.placeholder = "Paste one complete document here, or switch to Files for multiple documents.";
-      if (linesHint) linesHint.textContent = "This tool treats the text box as one complete document. Use Files mode when you want multiple documents.";
+      textInput.placeholder = tr("pasteDocumentBatchPlaceholder", "Paste one complete document here, or switch to Files for multiple documents.");
+      if (linesHint) linesHint.textContent = tr("pasteDocumentBatchHint", "This tool treats the text box as one complete document. Use Files mode when you want multiple documents.");
     } else if (/generator$/.test(tool)) {
-      textInput.placeholder = "Enter one value per line.";
-      if (linesHint) linesHint.textContent = "Each non-empty line becomes one batch item. Results are mapped as Line 1, Line 2, and so on.";
+      textInput.placeholder = tr("enterOneValuePerLine", "Enter one value per line.");
+      if (linesHint) linesHint.textContent = tr("eachLineBatchHint", "Each non-empty line becomes one batch item. Results are mapped as Line 1, Line 2, and so on.");
     } else {
-      textInput.placeholder = "Enter one item per line.";
-      if (linesHint) linesHint.textContent = "Each non-empty line becomes one batch item. Results are mapped as Line 1, Line 2, and so on.";
+      textInput.placeholder = tr("enterOneItemPerLine", "Enter one item per line.");
+      if (linesHint) linesHint.textContent = tr("eachLineBatchHint", "Each non-empty line becomes one batch item. Results are mapped as Line 1, Line 2, and so on.");
     }
   }
 

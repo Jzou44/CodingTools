@@ -14,6 +14,7 @@
   var status = document.getElementById("single-file-status");
   var radios = root.querySelectorAll("input[name=\"single-input-source\"]");
   var maxBytes = 5 * 1024 * 1024;
+  var L = window.CodingToolsRuntimeI18n || {};
 
   var inputSelectors = {
     "base64-encode": "#input-editor",
@@ -80,6 +81,10 @@
     return;
   }
 
+  function tr(key, fallback) {
+    return L[key] || fallback || key;
+  }
+
   function formatBytes(bytes) {
     if (bytes < 1024) return bytes + " B";
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
@@ -106,7 +111,7 @@
     });
     filePanel.hidden = mode !== "file";
     if (mode === "text") {
-      setStatus("No file selected. The file content will be loaded into the input below.", "");
+      setStatus(tr("noFileSelected", "No file selected."), "");
     }
   }
 
@@ -227,16 +232,19 @@
   function readFile(file) {
     if (!file) return;
     if (file.size > maxBytes) {
-      setStatus("File is too large. Choose a text file under " + formatBytes(maxBytes) + ".", "error");
+      setStatus(tr("fileTooLarge", "Max file size") + " " + formatBytes(maxBytes) + ".", "error");
+      fileInput.value = "";
       return;
     }
 
-    setStatus("Reading " + file.name + "...", "");
+    setStatus(tr("processing", "Processing...") + " " + file.name, "");
     file.text().then(function (text) {
       setTargetValue(text);
-      setStatus("Loaded " + file.name + " (" + formatBytes(file.size) + ") into the input below.", "loaded");
+      setStatus(file.name + " (" + formatBytes(file.size) + ")", "loaded");
     }).catch(function () {
-      setStatus("Could not read this file as text.", "error");
+      setStatus(tr("invalidInput", "Invalid input"), "error");
+    }).finally(function () {
+      fileInput.value = "";
     });
   }
 
@@ -266,10 +274,15 @@
   var rightStatus = document.getElementById("single-right-file-status");
   var leftTarget = document.getElementById("left-editor");
   var rightTarget = document.getElementById("right-editor");
+  var L = window.CodingToolsRuntimeI18n || {};
 
   if (!filePanel || !leftInput || !rightInput || !leftTarget || !rightTarget) {
     root.hidden = true;
     return;
+  }
+
+  function tr(key, fallback) {
+    return L[key] || fallback || key;
   }
 
   function formatBytes(bytes) {
@@ -298,8 +311,8 @@
     });
     filePanel.hidden = mode !== "file";
     if (mode === "text") {
-      setStatus(leftStatus, "No left file selected.", "");
-      setStatus(rightStatus, "No right file selected.", "");
+      setStatus(leftStatus, tr("noLeftFileSelected", "No left file selected."), "");
+      setStatus(rightStatus, tr("noRightFileSelected", "No right file selected."), "");
     }
   }
 
@@ -324,16 +337,16 @@
   function readFile(file, target, statusElement, label) {
     if (!file) return;
     if (file.size > maxBytes) {
-      setStatus(statusElement, label + " file is too large. Choose a text file under " + formatBytes(maxBytes) + ".", "error");
+      setStatus(statusElement, tr("fileTooLarge", "Max file size") + " " + formatBytes(maxBytes) + ".", "error");
       return;
     }
 
-    setStatus(statusElement, "Reading " + file.name + "...", "");
+    setStatus(statusElement, tr("processing", "Processing...") + " " + file.name, "");
     file.text().then(function (text) {
       setTargetValue(target, text);
-      setStatus(statusElement, "Loaded " + file.name + " (" + formatBytes(file.size) + ").", "loaded");
+      setStatus(statusElement, file.name + " (" + formatBytes(file.size) + ").", "loaded");
     }).catch(function () {
-      setStatus(statusElement, "Could not read this file as text.", "error");
+      setStatus(statusElement, tr("invalidInput", "Invalid input"), "error");
     });
   }
 
@@ -343,10 +356,12 @@
 
   leftInput.addEventListener("change", function () {
     readFile(leftInput.files && leftInput.files[0], leftTarget, leftStatus, "Left");
+    leftInput.value = "";
   });
 
   rightInput.addEventListener("change", function () {
     readFile(rightInput.files && rightInput.files[0], rightTarget, rightStatus, "Right");
+    rightInput.value = "";
   });
 
   syncModeUi();
