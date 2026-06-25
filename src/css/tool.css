@@ -1273,10 +1273,45 @@ table.description-table tbody tr:last-child td {
   font-size: 13px;
   font-weight: 700;
   flex-wrap: wrap;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
 }
 
-.batch-file-picker input {
-  max-width: 100%;
+.batch-file-picker:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.batch-file-picker:focus-within,
+.batch-file-picker:focus-visible {
+  outline: 3px solid rgba(196, 93, 58, 0.35);
+  outline-offset: 2px;
+}
+
+.batch-file-picker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--surface);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.batch-file-picker input[hidden] {
+  display: none;
+}
+
+.batch-file-status {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .batch-dropzone {

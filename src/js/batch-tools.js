@@ -16,6 +16,8 @@
   var btnCopy = document.getElementById("batch-copy");
   var btnDownload = document.getElementById("batch-download");
   var fileInput = document.getElementById("batch-file-input");
+  var filePicker = document.getElementById("batch-file-picker");
+  var fileStatus = document.getElementById("batch-file-status");
   var textInput = document.getElementById("batch-text-input");
   var dropzone = document.getElementById("batch-dropzone");
   var results = [];
@@ -141,6 +143,20 @@
   function setSummary(count, message) {
     if (!summary) return;
     summary.innerHTML = "<span>" + count + " " + escapeHtml(tr("items", "items")) + "</span><span>" + escapeHtml(message || tr("ready", "Ready")) + "</span>";
+  }
+
+  function selectedFileCount() {
+    var sourceFiles = droppedFiles || (fileInput && fileInput.files ? fileInput.files : []);
+    return sourceFiles ? sourceFiles.length : 0;
+  }
+
+  function selectedFilesMessage(count) {
+    if (!count) return tr("noFilesSelected", "No files selected");
+    return count + " " + tr("files", "files");
+  }
+
+  function setFileStatus(count) {
+    if (fileStatus) fileStatus.textContent = selectedFilesMessage(count);
   }
 
   function clearResults() {
@@ -725,7 +741,9 @@
     });
 
     if (mode === "files") {
-      setSummary(0, tr("eachFileBatchHint", "Each selected file becomes one batch item."));
+      var fileCount = selectedFileCount();
+      setSummary(fileCount, fileCount ? tr("ready", "Ready") : tr("eachFileBatchHint", "Each selected file becomes one batch item."));
+      setFileStatus(fileCount);
     } else if (structuredTextTools[tool]) {
       setSummary(0, tr("pasteDocumentBatchHint", "This tool treats the text box as one complete document."));
     } else {
@@ -1018,6 +1036,7 @@
         if (eventName === "drop" && event.dataTransfer.files.length) {
           droppedFiles = event.dataTransfer.files;
           setSummary(droppedFiles.length, tr("ready", "Ready"));
+          setFileStatus(droppedFiles.length);
         }
       });
     });
@@ -1026,9 +1045,23 @@
       event.preventDefault();
       fileInput.click();
     });
+  }
+
+  function initFileInput() {
+    if (!fileInput) return;
+    setFileStatus(selectedFileCount());
+    if (filePicker) {
+      filePicker.addEventListener("keydown", function (event) {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        fileInput.click();
+      });
+    }
     fileInput.addEventListener("change", function () {
       droppedFiles = null;
-      if (fileInput.files && fileInput.files.length) setSummary(fileInput.files.length, tr("ready", "Ready"));
+      var count = selectedFileCount();
+      setFileStatus(count);
+      if (count) setSummary(count, tr("ready", "Ready"));
     });
   }
 
@@ -1063,6 +1096,7 @@
   initTabs();
   initPlaceholders();
   initTextModeControls();
+  initFileInput();
   initFileDrag();
 
   if (btnRun) {
@@ -1076,6 +1110,7 @@
       if (textInput) textInput.value = "";
       if (fileInput) fileInput.value = "";
       droppedFiles = null;
+      setFileStatus(0);
       clearResults();
     });
   }

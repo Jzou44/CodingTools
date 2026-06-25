@@ -315,10 +315,11 @@
             </div>
             <div class="batch-input-panel" data-batch-mode-panel="files">
               <p class="batch-input-hint">{{ t.ui.eachFileBatchHint }}</p>
-              <label class="batch-file-picker">
-                <span>{{ t.ui.chooseFiles }}</span>
-                <input id="batch-file-input" type="file" multiple>
+              <label class="batch-file-picker" id="batch-file-picker" role="button" tabindex="0">
+                <span class="batch-file-picker-button">{{ t.ui.chooseFiles }}</span>
+                <input id="batch-file-input" type="file" multiple hidden>
               </label>
+              <div class="batch-file-status" id="batch-file-status" role="status" aria-live="polite">{{ t.ui.noFilesSelected }}</div>
             </div>
           </div>
           {% endif %}
@@ -427,6 +428,7 @@
       enterOneValuePerLine: t.ui.enterOneValuePerLine,
       error: t.ui.error,
       file: t.ui.file,
+      files: t.ui.files,
       filesLabel: t.ui.filesLabel,
       fileTooLarge: t.ui.maxFileSize,
       input: t.ui.input,
