@@ -1,4 +1,5 @@
 const site = require("../src/_data/site");
+const textTransforms = require("../src/js/text-transformers");
 const dns = require("dns").promises;
 const http = require("http");
 const https = require("https");
@@ -1250,14 +1251,6 @@ function formatXml(input) {
   return lines.join("\n");
 }
 
-function minifyMarkup(input) {
-  return requireText(input)
-    .replace(/<!--[\s\S]*?-->/g, "")
-    .replace(/>\s+</g, "><")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function formatCss(input) {
   return requireText(input)
     .replace(/\s*{\s*/g, " {\n  ")
@@ -1267,30 +1260,12 @@ function formatCss(input) {
     .trim();
 }
 
-function minifyCss(input) {
-  return requireText(input)
-    .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/\s+/g, " ")
-    .replace(/\s*([{}:;,>+~])\s*/g, "$1")
-    .replace(/;}/g, "}")
-    .trim();
-}
-
 function formatJavaScript(input) {
   return requireText(input)
     .replace(/\s*{\s*/g, " {\n  ")
     .replace(/;\s*/g, ";\n")
     .replace(/\s*}\s*/g, "\n}\n")
     .replace(/\n\s*\n/g, "\n")
-    .trim();
-}
-
-function minifyJavaScript(input) {
-  return requireText(input)
-    .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/(^|[^:])\/\/.*$/gm, "$1")
-    .replace(/\s+/g, " ")
-    .replace(/\s*([{}();,:=+\-*/<>])\s*/g, "$1")
     .trim();
 }
 
@@ -1333,67 +1308,24 @@ function formatSql(input) {
     .trim();
 }
 
-function minifySql(input) {
-  return requireText(input).replace(/--.*$/gm, "").replace(/\s+/g, " ").trim();
+function sharedTransform(callback) {
+  try {
+    return callback();
+  } catch (error) {
+    throw new McpToolError(error.message);
+  }
 }
 
 function jsonToXml(input, options) {
-  let value;
-  try {
-    value = typeof input === "string" ? JSON.parse(input) : input;
-  } catch (error) {
-    throw new McpToolError(`Invalid JSON: ${error.message}`);
-  }
-  const rootName = String(options.rootName || "root");
-  return xmlNode(rootName, value);
-}
-
-function xmlNode(name, value, depth = 0) {
-  if (depth > MAX_JSON_TO_XML_DEPTH) {
-    throw new McpToolError(`JSON nesting is too deep. Maximum depth is ${MAX_JSON_TO_XML_DEPTH}.`);
-  }
-  const safeName = String(name).replace(/[^A-Za-z0-9_.-]/g, "_") || "item";
-  if (Array.isArray(value)) {
-    return value.map((item) => xmlNode(safeName, item, depth + 1)).join("");
-  }
-  if (value && typeof value === "object") {
-    const inner = Object.entries(value).map(([key, child]) => xmlNode(key, child, depth + 1)).join("");
-    return `<${safeName}>${inner}</${safeName}>`;
-  }
-  return `<${safeName}>${escapeXml(value === undefined || value === null ? "" : String(value))}</${safeName}>`;
-}
-
-function escapeXml(value) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+  return sharedTransform(() => textTransforms.jsonToXml(input, {
+    rootName: options.rootName,
+    maxDepth: MAX_JSON_TO_XML_DEPTH
+  }));
 }
 
 function xmlToJson(input) {
-  const text = requireText(input).trim();
-  const match = text.match(/^<([A-Za-z0-9_.:-]+)[^>]*>([\s\S]*)<\/\1>$/);
-  if (!match) throw new McpToolError("XML input must have one root element.");
-  return { text: JSON.stringify({ [match[1]]: xmlChildren(match[2]) }, null, 2), data: { [match[1]]: xmlChildren(match[2]) } };
-}
-
-function xmlChildren(value) {
-  const children = {};
-  const pattern = /<([A-Za-z0-9_.:-]+)[^>]*>([\s\S]*?)<\/\1>/g;
-  let match;
-  let found = false;
-  while ((match = pattern.exec(value)) !== null) {
-    found = true;
-    const childValue = xmlChildren(match[2]);
-    if (children[match[1]] !== undefined) {
-      if (!Array.isArray(children[match[1]])) children[match[1]] = [children[match[1]]];
-      children[match[1]].push(childValue);
-    } else {
-      children[match[1]] = childValue;
-    }
-  }
-  return found ? children : value.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"").replace(/&amp;/g, "&");
+  const data = sharedTransform(() => textTransforms.xmlToJson(requireText(input)));
+  return { text: JSON.stringify(data, null, 2), data };
 }
 
 function numberToWords(input, options) {
@@ -1755,7 +1687,7 @@ async function executeMcpTool(toolId, args = {}) {
     case "xml-formatter":
       return { text: formatXml(input) };
     case "xml-minifier":
-      return { text: minifyMarkup(input) };
+      return { text: sharedTransform(() => textTransforms.minifyXml(requireText(input))) };
     case "json-to-xml":
       return { text: jsonToXml(input, options) };
     case "xml-to-json":
@@ -1763,19 +1695,19 @@ async function executeMcpTool(toolId, args = {}) {
     case "html-beautifier":
       return { text: formatXml(input) };
     case "html-minifier":
-      return { text: minifyMarkup(input) };
+      return { text: sharedTransform(() => textTransforms.minifyHtml(requireText(input))) };
     case "javascript-beautifier":
       return { text: formatJavaScript(input) };
     case "javascript-minifier":
-      return { text: minifyJavaScript(input) };
+      return { text: sharedTransform(() => textTransforms.minifyJavaScript(requireText(input))) };
     case "css-beautifier":
       return { text: formatCss(input) };
     case "css-minifier":
-      return { text: minifyCss(input) };
+      return { text: sharedTransform(() => textTransforms.minifyCss(requireText(input))) };
     case "sql-formatter":
       return { text: formatSql(input) };
     case "sql-minifier":
-      return { text: minifySql(input) };
+      return { text: sharedTransform(() => textTransforms.minifySql(requireText(input))) };
     case "image-to-base64":
       return imageToBase64(input, options);
     default:

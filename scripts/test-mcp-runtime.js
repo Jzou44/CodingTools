@@ -5,7 +5,7 @@ const http = require("http");
 const https = require("https");
 const { PassThrough } = require("stream");
 const { createServer } = require("../server/a2a-server");
-const { executeMcpTool } = require("../server/mcp-tools");
+const { callMcpTool, executeMcpTool } = require("../server/mcp-tools");
 const tools = require("../src/_data/tools.json");
 const mcpExamples = require("../src/_data/mcpExamples");
 
@@ -527,7 +527,55 @@ async function runSecurityUnitTests() {
   console.log("MCP security unit tests passed.");
 }
 
+async function runTextTransformerRegressionTests() {
+  const js = await executeMcpTool("javascript-minifier", {
+    input: 'const text = "a  b //keep /*keep*/"; //remove\ntext;'
+  });
+  assert.ok(js.text.includes('"a  b //keep /*keep*/"'));
+  assert.ok(!js.text.includes("//remove"));
+
+  const css = await executeMcpTool("css-minifier", {
+    input: 'a::before { content: "/*keep*/"; width: calc(100% - 1px); }'
+  });
+  assert.ok(css.text.includes('"/*keep*/"'));
+  assert.ok(css.text.includes("calc(100% - 1px)"));
+
+  const sql = await executeMcpTool("sql-minifier", {
+    input: "select '--keep', [/*keep*/], $$--keep$$ --remove\nfrom t"
+  });
+  assert.ok(sql.text.includes("'--keep'"));
+  assert.ok(sql.text.includes("[/*keep*/]"));
+  assert.ok(sql.text.includes("$$--keep$$"));
+  assert.ok(!sql.text.includes("--remove"));
+
+  const markup = await executeMcpTool("html-minifier", {
+    input: "<span>A</span> <span>B</span><pre> a  b </pre>"
+  });
+  assert.ok(markup.text.includes("</span> <span>"));
+  assert.ok(markup.text.includes("<pre> a  b </pre>"));
+
+  const arrayXml = await executeMcpTool("json-to-xml", {
+    input: "[1,2]",
+    options: { rootName: "Rows" }
+  });
+  assert.strictEqual(arrayXml.text, "<Rows><item>1</item><item>2</item></Rows>");
+
+  const parsed = await executeMcpTool("xml-to-json", {
+    input: '<Root ID="7"><Item>A</Item><Item>B</Item></Root>'
+  });
+  assert.deepStrictEqual(parsed.data, {
+    Root: { "@attributes": { ID: "7" }, Item: ["A", "B"] }
+  });
+
+  const invalidXml = await callMcpTool("xml-to-json", { input: "<Root><A></Root>" });
+  assert.strictEqual(invalidXml.isError, true);
+  assert.ok(invalidXml.content[0].text.includes("Expected </A>"));
+
+  console.log("MCP text transformer regression tests passed.");
+}
+
 async function main() {
+  await runTextTransformerRegressionTests();
   await runSecurityUnitTests();
   await runHttpTests();
   await runStdioTest();
