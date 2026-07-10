@@ -4,9 +4,10 @@
   "description": "Free, multilingual developer toolbox with 62+ browser-based tools",
   "private": true,
   "scripts": {
-    "check": "npm run check:site && npm run check:batch && npm run skills:check",
+    "check": "npm run check:site && npm run check:batch && npm run test:transforms && npm run skills:check",
     "check:site": "node scripts/check-structure.js",
     "check:batch": "node scripts/check-batch-tools.js",
+    "test:transforms": "node scripts/test-text-transformers.js",
     "skills:generate": "node scripts/generate-coding-tools-skills.js",
     "skills:check": "node scripts/check-coding-tools-skills.js",
     "prebuild": "npm run check",
