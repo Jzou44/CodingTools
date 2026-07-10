@@ -35,6 +35,7 @@ docker-compose.override.yml
 .tmp/
 .temp/
 tmp*
+.worktrees/
 
 # Documentation
 docs/*
