@@ -82,6 +82,45 @@ test("UMD build exposes the same browser API", () => {
   );
 });
 
+test("JSON objects and arrays always produce one complete XML root", () => {
+  assert.strictEqual(transforms.jsonToXml('{"person":{"name":"Ada"}}'), "<person><name>Ada</name></person>");
+  assert.strictEqual(transforms.jsonToXml('{"a":1,"b":2}'), "<root><a>1</a><b>2</b></root>");
+  assert.strictEqual(transforms.jsonToXml('[1,2,3]'), "<root><item>1</item><item>2</item><item>3</item></root>");
+  assert.strictEqual(
+    transforms.jsonToXml('[1,2]', { rootName: "Rows" }),
+    "<Rows><item>1</item><item>2</item></Rows>"
+  );
+});
+
+test("XML conversion preserves case, attributes, entities, and repeated children", () => {
+  const result = transforms.xmlToJson('<Root ID="7"><Item>A &amp; B</Item><Item><![CDATA[C < D]]></Item></Root>');
+  assert.deepStrictEqual(result, {
+    Root: {
+      "@attributes": { ID: "7" },
+      Item: ["A & B", "C < D"]
+    }
+  });
+});
+
+test("mixed XML content preserves source order", () => {
+  const result = transforms.xmlToJson('<p class="lead">Hello <b>world</b>!</p>');
+  assert.deepStrictEqual(result, {
+    p: {
+      "@attributes": { class: "lead" },
+      "#content": ["Hello ", { b: "world" }, "!"]
+    }
+  });
+  assert.strictEqual(transforms.jsonToXml(result), '<p class="lead">Hello <b>world</b>!</p>');
+});
+
+test("invalid JSON/XML structures fail instead of being rewritten", () => {
+  assert.throws(() => transforms.jsonToXml('{"bad key":1}'), /Invalid XML name/);
+  assert.throws(() => transforms.xmlToJson("<Root><A></Root>"), /Expected <\/A>/);
+  assert.throws(() => transforms.xmlToJson("<A/><B/>"), /one root element/);
+  assert.throws(() => transforms.xmlToJson('<!DOCTYPE x [<!ENTITY custom "value">]><x>&custom;</x>'), /DOCTYPE/);
+  assert.throws(() => transforms.xmlToJson("<x>&unknown;</x>"), /Unknown XML entity/);
+});
+
 for (const entry of tests) {
   entry.callback();
   console.log(`ok - ${entry.name}`);

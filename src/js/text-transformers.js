@@ -589,11 +589,409 @@
     return minifyMarkup(value, true);
   }
 
+  var XML_NAME = /^[:_\p{L}][:_\p{L}\p{N}.\-\u00B7\u0300-\u036F\u203F-\u2040]*$/u;
+  var XML_ENTITIES = {
+    amp: "&",
+    apos: "'",
+    gt: ">",
+    lt: "<",
+    quot: '"'
+  };
+
+  function assertXmlName(name) {
+    var value = String(name);
+    if (!XML_NAME.test(value)) {
+      throw new SyntaxError('Invalid XML name: "' + value + '".');
+    }
+    return value;
+  }
+
+  function escapeXmlText(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function escapeXmlAttribute(value) {
+    return escapeXmlText(value)
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&apos;");
+  }
+
+  function isXmlCodePoint(codePoint) {
+    return codePoint === 0x9 || codePoint === 0xa || codePoint === 0xd ||
+      (codePoint >= 0x20 && codePoint <= 0xd7ff) ||
+      (codePoint >= 0xe000 && codePoint <= 0xfffd) ||
+      (codePoint >= 0x10000 && codePoint <= 0x10ffff);
+  }
+
+  function decodeXmlEntity(entity) {
+    if (Object.prototype.hasOwnProperty.call(XML_ENTITIES, entity)) return XML_ENTITIES[entity];
+    var codePoint;
+    if (/^#x[0-9A-Fa-f]+$/.test(entity)) {
+      codePoint = parseInt(entity.slice(2), 16);
+    } else if (/^#[0-9]+$/.test(entity)) {
+      codePoint = parseInt(entity.slice(1), 10);
+    } else {
+      throw new SyntaxError("Unknown XML entity: &" + entity + ";");
+    }
+    if (!isXmlCodePoint(codePoint)) {
+      throw new SyntaxError("Invalid XML character reference: &" + entity + ";");
+    }
+    return String.fromCodePoint(codePoint);
+  }
+
+  function decodeXmlEntities(value) {
+    var output = "";
+    var index = 0;
+    while (index < value.length) {
+      var entityStart = value.indexOf("&", index);
+      if (entityStart < 0) return output + value.slice(index);
+      output += value.slice(index, entityStart);
+      var entityEnd = value.indexOf(";", entityStart + 1);
+      if (entityEnd < 0) throw new SyntaxError("Unterminated XML entity reference.");
+      var entity = value.slice(entityStart + 1, entityEnd);
+      if (!entity) throw new SyntaxError("Empty XML entity reference.");
+      output += decodeXmlEntity(entity);
+      index = entityEnd + 1;
+    }
+    return output;
+  }
+
+  function skipXmlWhitespace(source, index) {
+    while (index < source.length && /\s/.test(source.charAt(index))) index += 1;
+    return index;
+  }
+
+  function parseXmlTag(rawTag) {
+    var inner = rawTag.slice(1, -1);
+    var index = 0;
+    var closing = false;
+    var selfClosing = false;
+
+    if (inner.charAt(index) === "/") {
+      closing = true;
+      index += 1;
+    }
+    if (/\s/.test(inner.charAt(index))) throw new SyntaxError("XML tag names cannot be preceded by whitespace.");
+
+    var nameStart = index;
+    while (index < inner.length && !/[\s/>]/.test(inner.charAt(index))) index += 1;
+    var name = assertXmlName(inner.slice(nameStart, index));
+
+    if (closing) {
+      index = skipXmlWhitespace(inner, index);
+      if (index !== inner.length) throw new SyntaxError("Closing XML tags cannot contain attributes.");
+      return { name: name, closing: true, selfClosing: false, attributes: [] };
+    }
+
+    var attributes = [];
+    var attributeNames = Object.create(null);
+    while (index < inner.length) {
+      var beforeWhitespace = index;
+      index = skipXmlWhitespace(inner, index);
+      if (inner.charAt(index) === "/") {
+        index += 1;
+        index = skipXmlWhitespace(inner, index);
+        if (index !== inner.length) throw new SyntaxError("Unexpected content after an XML self-closing slash.");
+        selfClosing = true;
+        break;
+      }
+      if (index >= inner.length) break;
+      if (index === beforeWhitespace) throw new SyntaxError("XML attributes must be separated by whitespace.");
+
+      var attributeStart = index;
+      while (index < inner.length && !/[\s=/>]/.test(inner.charAt(index))) index += 1;
+      var attributeName = assertXmlName(inner.slice(attributeStart, index));
+      if (attributeNames[attributeName]) throw new SyntaxError('Duplicate XML attribute: "' + attributeName + '".');
+      attributeNames[attributeName] = true;
+
+      index = skipXmlWhitespace(inner, index);
+      if (inner.charAt(index) !== "=") throw new SyntaxError('XML attribute "' + attributeName + '" is missing "=".');
+      index += 1;
+      index = skipXmlWhitespace(inner, index);
+      var quote = inner.charAt(index);
+      if (quote !== "'" && quote !== '"') throw new SyntaxError('XML attribute "' + attributeName + '" must be quoted.');
+      index += 1;
+      var valueStart = index;
+      while (index < inner.length && inner.charAt(index) !== quote) index += 1;
+      if (index >= inner.length) throw new SyntaxError('Unterminated XML attribute "' + attributeName + '".');
+      attributes.push({ name: attributeName, value: decodeXmlEntities(inner.slice(valueStart, index)) });
+      index += 1;
+    }
+
+    return { name: name, closing: false, selfClosing: selfClosing, attributes: attributes };
+  }
+
+  function parseXml(value, options) {
+    var source = requireString(value, "XML input");
+    var settings = options || {};
+    var maxDepth = settings.maxDepth === undefined ? 100 : Number(settings.maxDepth);
+    if (!Number.isInteger(maxDepth) || maxDepth < 1) throw new TypeError("maxDepth must be a positive integer.");
+
+    var index = source.charCodeAt(0) === 0xfeff ? 1 : 0;
+    var stack = [];
+    var root = null;
+    var declarationSeen = false;
+
+    function appendChild(node) {
+      if (!stack.length) {
+        if (node.type === "element") {
+          if (root) throw new SyntaxError("XML input must have one root element.");
+          root = node;
+        } else if (node.value.trim()) {
+          throw new SyntaxError("XML text must be inside the root element.");
+        }
+        return;
+      }
+      var children = stack[stack.length - 1].children;
+      var previous = children[children.length - 1];
+      if (previous && previous.type !== "element" && node.type !== "element" && previous.type === node.type) {
+        previous.value += node.value;
+      } else {
+        children.push(node);
+      }
+    }
+
+    while (index < source.length) {
+      if (source.charAt(index) !== "<") {
+        var textEnd = source.indexOf("<", index);
+        if (textEnd < 0) textEnd = source.length;
+        appendChild({ type: "text", value: decodeXmlEntities(source.slice(index, textEnd)) });
+        index = textEnd;
+        continue;
+      }
+
+      if (source.slice(index, index + 4) === "<!--") {
+        var commentEnd = source.indexOf("-->", index + 4);
+        if (commentEnd < 0) throw new SyntaxError("Unterminated XML comment.");
+        if (source.slice(index + 4, commentEnd).indexOf("--") >= 0) throw new SyntaxError("XML comments cannot contain --.");
+        index = commentEnd + 3;
+        continue;
+      }
+
+      if (source.slice(index, index + 9) === "<![CDATA[") {
+        if (!stack.length) throw new SyntaxError("CDATA must be inside the XML root element.");
+        var cdataEnd = source.indexOf("]]>", index + 9);
+        if (cdataEnd < 0) throw new SyntaxError("Unterminated XML CDATA section.");
+        appendChild({ type: "cdata", value: source.slice(index + 9, cdataEnd) });
+        index = cdataEnd + 3;
+        continue;
+      }
+
+      if (source.slice(index, index + 2) === "<?") {
+        var processingEnd = source.indexOf("?>", index + 2);
+        if (processingEnd < 0) throw new SyntaxError("Unterminated XML processing instruction.");
+        var processing = source.slice(index + 2, processingEnd).trim();
+        if (!/^xml(?:\s|$)/i.test(processing) || declarationSeen || root || stack.length) {
+          throw new SyntaxError("Processing instructions are not supported.");
+        }
+        declarationSeen = true;
+        index = processingEnd + 2;
+        continue;
+      }
+
+      if (source.slice(index, index + 9).toUpperCase() === "<!DOCTYPE") {
+        throw new SyntaxError("DOCTYPE is not supported.");
+      }
+      if (source.slice(index, index + 2) === "<!") {
+        throw new SyntaxError("Unsupported XML declaration.");
+      }
+
+      var tagEnd = findMarkupEnd(source, index + 1, false);
+      var tag = parseXmlTag(source.slice(index, tagEnd + 1));
+      if (tag.closing) {
+        var expected = stack[stack.length - 1];
+        if (!expected || expected.name !== tag.name) {
+          throw new SyntaxError("Expected </" + (expected ? expected.name : "none") + "> before </" + tag.name + ">.");
+        }
+        stack.pop();
+      } else {
+        var node = { type: "element", name: tag.name, attributes: tag.attributes, children: [] };
+        appendChild(node);
+        if (!tag.selfClosing) {
+          stack.push(node);
+          if (stack.length > maxDepth) throw new SyntaxError("XML nesting is too deep. Maximum depth is " + maxDepth + ".");
+        }
+      }
+      index = tagEnd + 1;
+    }
+
+    if (stack.length) throw new SyntaxError("Expected </" + stack[stack.length - 1].name + "> before end of input.");
+    if (!root) throw new SyntaxError("XML input must have one root element.");
+    return root;
+  }
+
+  function attributesToObject(attributes) {
+    var result = {};
+    attributes.forEach(function (attribute) {
+      result[attribute.name] = attribute.value;
+    });
+    return result;
+  }
+
+  function elementToJson(element) {
+    var attributes = attributesToObject(element.attributes);
+    var significant = element.children.filter(function (child) {
+      return child.type === "element" || child.value.trim() !== "";
+    });
+    var hasElements = significant.some(function (child) { return child.type === "element"; });
+    var hasText = significant.some(function (child) { return child.type !== "element"; });
+
+    if (!element.attributes.length && !hasElements) {
+      return significant.map(function (child) { return child.value; }).join("");
+    }
+
+    var result = {};
+    if (element.attributes.length) result["@attributes"] = attributes;
+    if (hasElements && hasText) {
+      result["#content"] = significant.map(function (child) {
+        if (child.type !== "element") return child.value;
+        var entry = {};
+        entry[child.name] = elementToJson(child);
+        return entry;
+      });
+      return result;
+    }
+
+    if (hasText) result["#text"] = significant.map(function (child) { return child.value; }).join("");
+    significant.filter(function (child) { return child.type === "element"; }).forEach(function (child) {
+      var childValue = elementToJson(child);
+      if (Object.prototype.hasOwnProperty.call(result, child.name)) {
+        if (!Array.isArray(result[child.name])) result[child.name] = [result[child.name]];
+        result[child.name].push(childValue);
+      } else {
+        result[child.name] = childValue;
+      }
+    });
+    return result;
+  }
+
+  function xmlToJson(value, options) {
+    var root = parseXml(value, options);
+    var result = {};
+    result[root.name] = elementToJson(root);
+    return result;
+  }
+
+  function isPlainObject(value) {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+    var prototype = Object.getPrototypeOf(value);
+    return prototype === Object.prototype || prototype === null;
+  }
+
+  function maxSerializationDepth(settings) {
+    var maxDepth = settings.maxDepth === undefined ? 100 : Number(settings.maxDepth);
+    if (!Number.isInteger(maxDepth) || maxDepth < 1) throw new TypeError("maxDepth must be a positive integer.");
+    return maxDepth;
+  }
+
+  function scalarXmlText(value, label) {
+    if (value === null || value === undefined) return "";
+    if (typeof value === "object") throw new TypeError(label + " must be a scalar value.");
+    return escapeXmlText(value);
+  }
+
+  function serializeAttributes(value) {
+    if (value === undefined) return "";
+    if (!isPlainObject(value)) throw new TypeError("@attributes must be an object.");
+    return Object.keys(value).map(function (name) {
+      assertXmlName(name);
+      var attributeValue = value[name];
+      if (attributeValue !== null && typeof attributeValue === "object") {
+        throw new TypeError('XML attribute "' + name + '" must be a scalar value.');
+      }
+      return " " + name + '="' + escapeXmlAttribute(attributeValue === null || attributeValue === undefined ? "" : attributeValue) + '"';
+    }).join("");
+  }
+
+  function serializeContent(content, depth, settings) {
+    if (!Array.isArray(content)) throw new TypeError("#content must be an array.");
+    return content.map(function (entry) {
+      if (entry === null || typeof entry !== "object") return scalarXmlText(entry, "#content entry");
+      if (!isPlainObject(entry)) throw new TypeError("#content element entries must be objects.");
+      var keys = Object.keys(entry);
+      if (keys.length !== 1) throw new TypeError("#content element entries must contain exactly one element name.");
+      return serializeElement(keys[0], entry[keys[0]], depth + 1, settings);
+    }).join("");
+  }
+
+  function serializeProperty(name, value, depth, settings) {
+    assertXmlName(name);
+    if (Array.isArray(value)) {
+      return value.map(function (entry) {
+        return serializeElement(name, entry, depth + 1, settings);
+      }).join("");
+    }
+    return serializeElement(name, value, depth + 1, settings);
+  }
+
+  function serializeElement(name, value, depth, settings) {
+    var elementName = assertXmlName(name);
+    if (depth > settings.__maxDepth) {
+      throw new SyntaxError("JSON nesting is too deep. Maximum depth is " + settings.__maxDepth + ".");
+    }
+
+    var attributes = "";
+    var body = "";
+    if (Array.isArray(value)) {
+      body = value.map(function (entry) {
+        return serializeElement("item", entry, depth + 1, settings);
+      }).join("");
+    } else if (isPlainObject(value)) {
+      attributes = serializeAttributes(value["@attributes"]);
+      if (Object.prototype.hasOwnProperty.call(value, "#content")) {
+        body = serializeContent(value["#content"], depth, settings);
+      } else {
+        if (Object.prototype.hasOwnProperty.call(value, "#text")) {
+          body += scalarXmlText(value["#text"], "#text");
+        }
+        Object.keys(value).forEach(function (key) {
+          if (key === "@attributes" || key === "#text" || key === "#content") return;
+          body += serializeProperty(key, value[key], depth, settings);
+        });
+      }
+    } else {
+      body = scalarXmlText(value, "Element value");
+    }
+
+    return "<" + elementName + attributes + ">" + body + "</" + elementName + ">";
+  }
+
+  function jsonToXml(sourceOrValue, options) {
+    var settings = Object.assign({}, options || {});
+    settings.__maxDepth = maxSerializationDepth(settings);
+    var value;
+    if (typeof sourceOrValue === "string" && settings.value !== true) {
+      try {
+        value = JSON.parse(sourceOrValue);
+      } catch (error) {
+        throw new SyntaxError("Invalid JSON: " + error.message);
+      }
+    } else {
+      value = sourceOrValue;
+    }
+
+    if (settings.rootName !== undefined && settings.rootName !== null && settings.rootName !== "") {
+      return serializeElement(assertXmlName(settings.rootName), value, 0, settings);
+    }
+    if (isPlainObject(value)) {
+      var keys = Object.keys(value);
+      if (keys.length === 1 && XML_NAME.test(keys[0])) {
+        return serializeElement(assertXmlName(keys[0]), value[keys[0]], 0, settings);
+      }
+    }
+    return serializeElement("root", value, 0, settings);
+  }
+
   return {
     minifyJavaScript: minifyJavaScript,
     minifyCss: minifyCss,
     minifySql: minifySql,
     minifyHtml: minifyHtml,
-    minifyXml: minifyXml
+    minifyXml: minifyXml,
+    jsonToXml: jsonToXml,
+    xmlToJson: xmlToJson
   };
 });
