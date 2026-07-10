@@ -86,73 +86,11 @@ permalink: "/fr/sql-minifier.html"
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 
-      function minifySql(sql) {
-        var result = '';
-        var inQuote = null;
-        var pendingSpace = false;
-
-        for (var i = 0; i < sql.length; i++) {
-          var ch = sql.charAt(i);
-          var next = sql.charAt(i + 1);
-
-          if (inQuote) {
-            result += ch;
-
-            if (ch === '\\' && i + 1 < sql.length) {
-              result += sql.charAt(++i);
-              continue;
-            }
-
-            if (ch === inQuote) {
-              if (next === inQuote) {
-                result += sql.charAt(++i);
-              } else {
-                inQuote = null;
-              }
-            }
-            continue;
-          }
-
-          if (ch === "'" || ch === '"' || ch === '`') {
-            if (pendingSpace && result) result += ' ';
-            pendingSpace = false;
-            inQuote = ch;
-            result += ch;
-            continue;
-          }
-
-          if (ch === '-' && next === '-') {
-            i += 2;
-            while (i < sql.length && sql.charAt(i) !== '\n' && sql.charAt(i) !== '\r') i++;
-            pendingSpace = true;
-            continue;
-          }
-
-          if (ch === '/' && next === '*') {
-            i += 2;
-            while (i < sql.length && !(sql.charAt(i) === '*' && sql.charAt(i + 1) === '/')) i++;
-            if (i < sql.length) i++;
-            pendingSpace = true;
-            continue;
-          }
-
-          if (/\s/.test(ch)) {
-            pendingSpace = true;
-            continue;
-          }
-
-          if (pendingSpace && result) result += ' ';
-          pendingSpace = false;
-          result += ch;
-        }
-
-        return result.trim();
-      }
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var result = minifySql(text);
+          var result = CodingToolsTextTransforms.minifySql(text);
           outputEditor.value = result;
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SQL minified successfully');
           updateCounts();

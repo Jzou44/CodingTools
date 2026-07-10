@@ -91,10 +91,7 @@ permalink: "/pt/json-to-xml.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var obj = JSON.parse(text);
-          var wrapped = { RootDirectory: obj };
-          var xmlStr = JXON.xmlToString(JXON.jsToXml(wrapped));
-          xmlStr = xmlStr.replace(/<RootDirectory>/, '').replace(/<\/RootDirectory>[\s\S]*$/, '');
+          var xmlStr = CodingToolsTextTransforms.jsonToXml(text);
           outputEditor.value = vkbeautify.xml(xmlStr);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to XML successfully');
           updateCounts();

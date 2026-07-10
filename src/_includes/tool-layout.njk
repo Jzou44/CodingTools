@@ -400,6 +400,16 @@
     "xml-minifier",
     "xml-to-json"
   ] %}
+  {% set textTransformerTools = [
+    "css-minifier",
+    "html-minifier",
+    "javascript-minifier",
+    "json-to-xml",
+    "sql-minifier",
+    "xml-formatter",
+    "xml-minifier",
+    "xml-to-json"
+  ] %}
   <script>
     window.I18N = {
       charSingular: '{{ t.ui.character or "character" }}',
@@ -458,6 +468,9 @@
   <script src="/js/bignumber-lite.js?v={{ site.assetVersion }}"></script>
   {% endif %}
   <script src="/js/tool-common.js?v={{ site.assetVersion }}"></script>
+  {% if currentTool in textTransformerTools %}
+  <script src="/js/text-transformers.js?v={{ site.assetVersion }}"></script>
+  {% endif %}
   {% if currentTool in htmlCompatTools %}
   <script src="/js/html-minifier-compat.js?v={{ site.assetVersion }}"></script>
   {% endif %}

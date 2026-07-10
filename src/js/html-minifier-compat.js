@@ -1,236 +1,74 @@
-/* Local html-minifier compatibility shim for browser-only tools. */
+/* Legacy browser globals backed by the shared semantics-safe transformers. */
 (function () {
-  'use strict';
+  "use strict";
 
-  function stripComments(text) {
-    return String(text || '').replace(/<!--[\s\S]*?-->/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
+  var transforms = window.CodingToolsTextTransforms;
+  if (!transforms) throw new Error("CodingToolsTextTransforms must load before html-minifier-compat.js.");
+
+  function wrappedContents(text, tagName, transform) {
+    var lower = text.toLowerCase();
+    var openingEnd = text.indexOf(">");
+    var closingStart = lower.lastIndexOf("</" + tagName + ">");
+    if (openingEnd < 0 || closingStart < openingEnd) return null;
+    return text.slice(0, openingEnd + 1) +
+      transform(text.slice(openingEnd + 1, closingStart)) +
+      text.slice(closingStart);
   }
 
-  function minifyCss(css) {
-    return stripComments(css)
-      .replace(/\s+/g, ' ')
-      .replace(/\s*([{}:;,>+~])\s*/g, '$1')
-      .replace(/;}/g, '}')
-      .trim();
-  }
-
-  function stripJsComments(js) {
-    var output = '';
-    var quote = '';
-    var escaped = false;
-    var regexAllowed = true;
-
-    for (var i = 0; i < js.length; i++) {
-      var ch = js[i];
-      var next = js[i + 1];
-
-      if (quote) {
-        output += ch;
-        if (escaped) {
-          escaped = false;
-        } else if (ch === '\\') {
-          escaped = true;
-        } else if (ch === quote) {
-          quote = '';
-        }
-        continue;
-      }
-
-      if (ch === '"' || ch === '\'' || ch === '`') {
-        quote = ch;
-        output += ch;
-        continue;
-      }
-
-      if (ch === '/' && next === '/') {
-        while (i < js.length && js[i] !== '\n') i++;
-        output += '\n';
-        continue;
-      }
-
-      if (ch === '/' && next === '*') {
-        i += 2;
-        while (i < js.length && !(js[i] === '*' && js[i + 1] === '/')) i++;
-        i++;
-        continue;
-      }
-
-      if (ch === '/' && regexAllowed) {
-        output += ch;
-        i++;
-        var inClass = false;
-        for (; i < js.length; i++) {
-          ch = js[i];
-          output += ch;
-          if (ch === '\\') {
-            i++;
-            if (i < js.length) output += js[i];
-          } else if (ch === '[') {
-            inClass = true;
-          } else if (ch === ']') {
-            inClass = false;
-          } else if (ch === '/' && !inClass) {
-            break;
-          }
-        }
-        continue;
-      }
-
-      if (!/\s/.test(ch)) regexAllowed = /[({[=,:;!&|?+\-*~^<>]/.test(ch);
-      output += ch;
+  function minify(source, options) {
+    var text = String(source == null ? "" : source);
+    var settings = options || {};
+    if (settings.minifyJS && /^<script\b[^>]*>/i.test(text) && /<\/script>$/i.test(text)) {
+      return wrappedContents(text, "script", transforms.minifyJavaScript);
     }
-
-    return output;
-  }
-
-  function minifyJs(js) {
-    return stripJsComments(String(js || ''))
-      .replace(/\s+/g, ' ')
-      .replace(/\s*([{}()[\];,:+\-*\/%=<>!&|?])\s*/g, '$1')
-      .trim();
-  }
-
-  function minifyHtml(source, options) {
-    var opts = options || {};
-    var result = String(source || '');
-
-    if (opts.removeComments) {
-      result = result.replace(/<!--[\s\S]*?-->/g, '');
+    if (settings.minifyCSS && /^<style\b[^>]*>/i.test(text) && /<\/style>$/i.test(text)) {
+      return wrappedContents(text, "style", transforms.minifyCss);
     }
-
-    if (opts.minifyCSS) {
-      result = result.replace(/<style\b([^>]*)>([\s\S]*?)<\/style>/gi, function (_, attrs, css) {
-        return '<style' + attrs + '>' + minifyCss(css) + '</style>';
-      });
-    }
-
-    if (opts.minifyJS) {
-      result = result.replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi, function (_, attrs, js) {
-        return '<script' + attrs + '>' + minifyJs(js) + '</script>';
-      });
-    }
-
-    if (opts.collapseWhitespace) {
-      result = result
-        .replace(/>\s+</g, '><')
-        .replace(/\s{2,}/g, ' ')
-        .trim();
-    }
-
-    return result;
+    return transforms.minifyHtml(text);
   }
 
-  window.htmlminifier = window.htmlminifier || {
-    minify: minifyHtml
-  };
-
-  function xmlName(name) {
-    return String(name || '').toLowerCase();
-  }
-
-  function safeXmlTagName(name) {
-    var source = String(name == null ? '' : name);
-    if (!source) return 'item';
-    var safe = source
-      .replace(/^[^A-Za-z_]/, function (ch) { return '_x' + ch.charCodeAt(0).toString(16) + '_'; })
-      .replace(/[^A-Za-z0-9._-]/g, function (ch) { return '_x' + ch.charCodeAt(0).toString(16) + '_'; });
-    if (!/^[A-Za-z_]/.test(safe)) safe = 'item_' + safe;
-    if (/^xml/i.test(safe)) safe = 'item_' + safe;
-    return safe || 'item';
-  }
-
-  function escapeXml(value) {
-    return String(value == null ? '' : value)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&apos;');
+  function sourceFromXml(xml) {
+    if (typeof xml === "string") return xml;
+    if (xml && typeof xml.__codingToolsXmlSource === "string") return xml.__codingToolsXmlSource;
+    if (typeof XMLSerializer === "function" && xml) return new XMLSerializer().serializeToString(xml);
+    throw new TypeError("JXON expected an XML source string or document.");
   }
 
   function stringToXml(source) {
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(String(source || ''), 'application/xml');
-    var parseError = doc.querySelector('parsererror');
-    if (parseError) {
-      throw new Error('Invalid XML: ' + parseError.textContent.substring(0, 100));
-    }
-    return doc;
-  }
-
-  function elementToObject(element) {
-    var childElements = Array.prototype.filter.call(element.childNodes, function (node) {
-      return node.nodeType === 1;
-    });
-    var text = Array.prototype.map.call(element.childNodes, function (node) {
-      return node.nodeType === 3 || node.nodeType === 4 ? node.nodeValue : '';
-    }).join('').trim();
-
-    if (!childElements.length) {
-      return text;
-    }
-
-    var obj = {};
-    if (text) obj._text = text;
-
-    childElements.forEach(function (child) {
-      var name = xmlName(child.nodeName);
-      var value = elementToObject(child);
-      if (Object.prototype.hasOwnProperty.call(obj, name)) {
-        if (!Array.isArray(obj[name])) obj[name] = [obj[name]];
-        obj[name].push(value);
-      } else {
-        obj[name] = value;
-      }
-    });
-
-    return obj;
+    var text = String(source == null ? "" : source);
+    transforms.xmlToJson(text);
+    return { __codingToolsXmlSource: text };
   }
 
   function xmlToJs(xml) {
-    var root = xml && xml.nodeType === 9 ? xml.documentElement : xml;
-    if (!root) return {};
-    var result = {};
-    result[xmlName(root.nodeName)] = elementToObject(root);
+    var result = transforms.xmlToJson(sourceFromXml(xml));
+    var keys = Object.keys(result);
+    if (keys.length === 1 && keys[0] === "RootDirectory") {
+      return { rootdirectory: result.RootDirectory };
+    }
     return result;
   }
 
-  function valueToXml(name, value) {
-    var tagName = safeXmlTagName(name);
-
-    if (Array.isArray(value)) {
-      return value.map(function (item) {
-        return valueToXml(tagName, item);
-      }).join('');
-    }
-
-    if (value !== null && typeof value === 'object') {
-      var body = Object.keys(value).map(function (key) {
-        if (key === '_text') return escapeXml(value[key]);
-        return valueToXml(key, value[key]);
-      }).join('');
-      return '<' + tagName + '>' + body + '</' + tagName + '>';
-    }
-
-    return '<' + tagName + '>' + escapeXml(value) + '</' + tagName + '>';
+  function serializeJsonValue(value) {
+    return transforms.jsonToXml(value, { value: typeof value === "string" });
   }
 
-  function jsToString(obj) {
-    if (obj === null || typeof obj !== 'object') {
-      return valueToXml('value', obj);
+  function jsToXml(value) {
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      var keys = Object.keys(value);
+      if (keys.length === 1 && keys[0] === "RootDirectory") {
+        return "<RootDirectory>" + serializeJsonValue(value.RootDirectory) + "</RootDirectory>";
+      }
     }
-    return Object.keys(obj).map(function (key) {
-      return valueToXml(key, obj[key]);
-    }).join('');
+    return serializeJsonValue(value);
   }
 
-  window.JXON = window.JXON || {
+  window.htmlminifier = { minify: minify };
+  window.JXON = {
     stringToXml: stringToXml,
     xmlToJs: xmlToJs,
-    jsToString: jsToString,
-    jsToXml: jsToString,
-    xmlToString: function (xml) {
-      return typeof xml === 'string' ? xml : new XMLSerializer().serializeToString(xml);
-    }
+    jsToString: jsToXml,
+    jsToXml: jsToXml,
+    xmlToString: sourceFromXml
   };
 })();

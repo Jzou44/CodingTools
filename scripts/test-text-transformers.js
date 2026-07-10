@@ -121,6 +121,29 @@ test("invalid JSON/XML structures fail instead of being rewritten", () => {
   assert.throws(() => transforms.xmlToJson("<x>&unknown;</x>"), /Unknown XML entity/);
 });
 
+test("browser compatibility globals delegate without wrapper truncation", () => {
+  const sharedSource = fs.readFileSync(path.join(__dirname, "..", "src", "js", "text-transformers.js"), "utf8");
+  const compatSource = fs.readFileSync(path.join(__dirname, "..", "src", "js", "html-minifier-compat.js"), "utf8");
+  const sandbox = { window: {} };
+  sandbox.globalThis = sandbox.window;
+  vm.runInNewContext(sharedSource, sandbox, { filename: "text-transformers.js" });
+  vm.runInNewContext(compatSource, sandbox, { filename: "html-minifier-compat.js" });
+
+  const wrappedJs = '<script>const text = "</script>  //keep"; //remove\n</script>';
+  const minifiedJs = sandbox.window.htmlminifier.minify(wrappedJs, { minifyJS: true, removeComments: true });
+  assert.ok(minifiedJs.includes('"</script>  //keep"'));
+
+  const wrappedArray = sandbox.window.JXON.jsToXml({ RootDirectory: [1, 2] });
+  const unwrappedArray = wrappedArray.replace(/<RootDirectory>/, "").replace(/<\/RootDirectory>[\s\S]*$/, "");
+  assert.strictEqual(unwrappedArray, "<root><item>1</item><item>2</item></root>");
+
+  const wrappedXml = sandbox.window.JXON.stringToXml('<RootDirectory><Actual ID="7"><Child>x</Child></Actual></RootDirectory>');
+  assert.deepStrictEqual(
+    JSON.parse(JSON.stringify(sandbox.window.JXON.xmlToJs(wrappedXml).rootdirectory)),
+    { Actual: { "@attributes": { ID: "7" }, Child: "x" } }
+  );
+});
+
 for (const entry of tests) {
   entry.callback();
   console.log(`ok - ${entry.name}`);

@@ -64,12 +64,8 @@ permalink: "/xml-to-json.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var source = htmlminifier.minify(text, {collapseWhitespace: true, removeComments: true});
-          source = source.replace(/<\?xml[^?]*\?>/, '');
-          source = '<RootDirectory>' + source + '</RootDirectory>';
-          var doc = JXON.stringToXml(source);
-          var obj = JXON.xmlToJs(doc);
-          var json = JSON.stringify(obj.rootdirectory || obj, null, 2);
+          var obj = CodingToolsTextTransforms.xmlToJson(text);
+          var json = JSON.stringify(obj, null, 2);
           outputEditor.value = js_beautify(json, { indent_size: 2 });
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to JSON successfully');
           updateCounts();

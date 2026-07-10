@@ -86,7 +86,7 @@ permalink: "/jp/xml-minifier.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          outputEditor.value = htmlminifier.minify(text, {collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true});
+          outputEditor.value = CodingToolsTextTransforms.minifyXml(text);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML minified successfully');
           updateCounts();
         } catch (e) {

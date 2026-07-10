@@ -91,15 +91,8 @@ permalink: "/cn/xml-to-json.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var minified = htmlminifier.minify(text, {collapseWhitespace:true, removeComments:true});
-          var parser = new DOMParser();
-          var doc = parser.parseFromString(minified, 'application/xml');
-          var parseError = doc.querySelector('parsererror');
-          if (parseError) throw new Error('Invalid XML: ' + parseError.textContent.substring(0, 100));
-          var wrapped = '<RootDirectory>' + minified + '</RootDirectory>';
-          var doc2 = new DOMParser().parseFromString(wrapped, 'application/xml');
-          var jsonObj = JXON.xmlToJs(doc2);
-          outputEditor.value = js_beautify(JSON.stringify(jsonObj), { indent_size: 2 });
+          var jsonObj = CodingToolsTextTransforms.xmlToJson(text);
+          outputEditor.value = js_beautify(JSON.stringify(jsonObj, null, 2), { indent_size: 2 });
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML converted to JSON successfully');
           updateCounts();
         } catch (e) {

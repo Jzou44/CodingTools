@@ -252,67 +252,9 @@
     return crypto.subtle.digest(algorithm, new TextEncoder().encode(value)).then(bytesToHex);
   }
 
-  function minifySql(sql) {
-    var result = "";
-    var inQuote = null;
-    var pendingSpace = false;
-
-    for (var i = 0; i < sql.length; i += 1) {
-      var ch = sql.charAt(i);
-      var next = sql.charAt(i + 1);
-
-      if (inQuote) {
-        result += ch;
-        if (ch === "\\" && i + 1 < sql.length) {
-          result += sql.charAt(i + 1);
-          i += 1;
-          continue;
-        }
-        if (ch === inQuote) {
-          if (next === inQuote) {
-            result += sql.charAt(i + 1);
-            i += 1;
-          } else {
-            inQuote = null;
-          }
-        }
-        continue;
-      }
-
-      if (ch === "'" || ch === "\"" || ch === "`") {
-        if (pendingSpace && result) result += " ";
-        pendingSpace = false;
-        inQuote = ch;
-        result += ch;
-        continue;
-      }
-
-      if (ch === "-" && next === "-") {
-        i += 2;
-        while (i < sql.length && sql.charAt(i) !== "\n" && sql.charAt(i) !== "\r") i += 1;
-        pendingSpace = true;
-        continue;
-      }
-
-      if (ch === "/" && next === "*") {
-        i += 2;
-        while (i < sql.length && !(sql.charAt(i) === "*" && sql.charAt(i + 1) === "/")) i += 1;
-        if (i < sql.length) i += 1;
-        pendingSpace = true;
-        continue;
-      }
-
-      if (/\s/.test(ch)) {
-        pendingSpace = true;
-        continue;
-      }
-
-      if (pendingSpace && result) result += " ";
-      pendingSpace = false;
-      result += ch;
-    }
-
-    return result.trim();
+  function textTransforms() {
+    if (!window.CodingToolsTextTransforms) throw new Error(tr("invalidInput", "Invalid input"));
+    return window.CodingToolsTextTransforms;
   }
 
   function requireGlobal(name, label) {
@@ -623,24 +565,6 @@
       window.numberToWords.toOrdinal(num);
   }
 
-  function jsonToXmlBatch(value) {
-    var obj = JSON.parse(value);
-    var wrapped = { RootDirectory: obj };
-    var xmlStr = JXON.xmlToString(JXON.jsToXml(wrapped));
-    xmlStr = xmlStr.replace(/<RootDirectory>/, "").replace(/<\/RootDirectory>[\s\S]*$/, "");
-    return vkbeautify.xml(xmlStr);
-  }
-
-  function xmlToJsonBatch(value) {
-    var source = htmlminifier.minify(value, { collapseWhitespace: true, removeComments: true });
-    source = source.replace(/<\?xml[^?]*\?>/, "");
-    source = "<RootDirectory>" + source + "</RootDirectory>";
-    var doc = JXON.stringToXml(source);
-    var obj = JXON.xmlToJs(doc);
-    var json = JSON.stringify(obj.rootdirectory || obj, null, 2);
-    return requireGlobal("js_beautify", "JavaScript beautifier")(json, { indent_size: 2 });
-  }
-
   function transformText(value) {
     if (tool === "base64-encode") return Promise.resolve(utf8ToBase64(value));
     if (tool === "base64-decode") return Promise.resolve(base64ToUtf8(value));
@@ -651,26 +575,20 @@
     if (tool === "sha512-generator") return digest("SHA-512", value);
     if (tool === "json-formatter") return Promise.resolve(JSON.stringify(JSON.parse(value), null, 2));
     if (tool === "json-minifier") return Promise.resolve(JSON.stringify(JSON.parse(value)));
-    if (tool === "json-to-xml") return Promise.resolve(jsonToXmlBatch(value));
+    if (tool === "json-to-xml") return Promise.resolve(vkbeautify.xml(textTransforms().jsonToXml(value)));
     if (tool === "xml-formatter") {
-      var xmlSource = window.htmlminifier ? htmlminifier.minify(value, { collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true }) : value;
-      return Promise.resolve(vkbeautify.xml(xmlSource));
+      return Promise.resolve(vkbeautify.xml(value));
     }
-    if (tool === "xml-minifier") return Promise.resolve(htmlminifier.minify(value, { collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true }));
-    if (tool === "xml-to-json") return Promise.resolve(xmlToJsonBatch(value));
+    if (tool === "xml-minifier") return Promise.resolve(textTransforms().minifyXml(value));
+    if (tool === "xml-to-json") return Promise.resolve(JSON.stringify(textTransforms().xmlToJson(value), null, 2));
     if (tool === "html-beautifier") return Promise.resolve(requireGlobal("html_beautify", "HTML beautifier")(value, { indent_size: 2 }));
-    if (tool === "html-minifier") return Promise.resolve(htmlminifier.minify(value, { collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true }));
+    if (tool === "html-minifier") return Promise.resolve(textTransforms().minifyHtml(value));
     if (tool === "javascript-beautifier") return Promise.resolve(requireGlobal("js_beautify", "JavaScript beautifier")(value, { indent_size: 2 }));
-    if (tool === "javascript-minifier") {
-      var safeJs = String(value).replace(/<\/script/gi, "<\\/script");
-      return Promise.resolve(htmlminifier.minify("<script>" + safeJs + "<\/script>", { collapseWhitespace: true, minifyJS: true, removeComments: true }).replace(/^<script>/i, "").replace(/<\/script>$/i, ""));
-    }
+    if (tool === "javascript-minifier") return Promise.resolve(textTransforms().minifyJavaScript(value));
     if (tool === "css-beautifier") return Promise.resolve(requireGlobal("css_beautify", "CSS beautifier")(value, { indent_size: 2 }));
-    if (tool === "css-minifier") {
-      return Promise.resolve(htmlminifier.minify("<style>" + value + "</style>", { collapseWhitespace: true, minifyCSS: true, removeComments: true }).replace(/<\/?style>/g, ""));
-    }
+    if (tool === "css-minifier") return Promise.resolve(textTransforms().minifyCss(value));
     if (tool === "sql-formatter") return Promise.resolve(sqlFormatter.format(value, { language: "sql", tabWidth: 4 }));
-    if (tool === "sql-minifier") return Promise.resolve(minifySql(value));
+    if (tool === "sql-minifier") return Promise.resolve(textTransforms().minifySql(value));
     if (tool === "url-encode") return Promise.resolve(encodeUrlText(value));
     if (tool === "url-decode") return Promise.resolve(decodeUrlText(value));
     if (tool === "case-converter") return Promise.resolve(convertCase(value));
