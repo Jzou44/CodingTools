@@ -90,9 +90,7 @@ permalink: "/pt/javascript-minifier.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var wrapped = '<script>' + text + '<\/script>';
-          var minified = htmlminifier.minify(wrapped, {collapseWhitespace:true, minifyJS:true, removeComments:true});
-          outputEditor.value = minified.replace(/<\/?script>/g, '');
+          outputEditor.value = CodingToolsTextTransforms.minifyJavaScript(text);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'JavaScript minified successfully');
           updateCounts();
         } catch (e) {

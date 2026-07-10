@@ -86,9 +86,7 @@ permalink: "/jp/css-minifier.html"
         var text = inputEditor.value;
         if (!text) return;
         try {
-          var wrapped = '<style>' + text + '</style>';
-          var minified = htmlminifier.minify(wrapped, {collapseWhitespace: true, minifyCSS: true, removeComments: true});
-          outputEditor.value = minified.replace(/<\/?style>/g, '');
+          outputEditor.value = CodingToolsTextTransforms.minifyCss(text);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.minifiedSuccessfully }}');
           updateCounts();
         } catch (e) {

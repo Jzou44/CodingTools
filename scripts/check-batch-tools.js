@@ -146,11 +146,13 @@ if (/function\s+(minifySql|jsonToXmlBatch|xmlToJsonBatch)\s*\(/.test(batchScript
 }
 
 [
-  ["sql-minifier.njk", "CodingToolsTextTransforms.minifySql(", /function\s+minifySql\s*\(/],
-  ["xml-minifier.njk", "CodingToolsTextTransforms.minifyXml(", null],
-  ["json-to-xml.njk", "CodingToolsTextTransforms.jsonToXml(", null],
-  ["xml-to-json.njk", "CodingToolsTextTransforms.xmlToJson(", null]
-].forEach(([fileName, expectedCall, duplicatePattern]) => {
+  ["javascript-minifier.njk", "CodingToolsTextTransforms.minifyJavaScript(", null, "htmlminifier.minify("],
+  ["css-minifier.njk", "CodingToolsTextTransforms.minifyCss(", null, "htmlminifier.minify("],
+  ["sql-minifier.njk", "CodingToolsTextTransforms.minifySql(", /function\s+minifySql\s*\(/, null],
+  ["xml-minifier.njk", "CodingToolsTextTransforms.minifyXml(", null, null],
+  ["json-to-xml.njk", "CodingToolsTextTransforms.jsonToXml(", null, null],
+  ["xml-to-json.njk", "CodingToolsTextTransforms.xmlToJson(", null, null]
+].forEach(([fileName, expectedCall, duplicatePattern, forbiddenText]) => {
   const templates = templatesNamed(fileName);
   if (templates.length !== 9) {
     fail(`Expected 9 ${fileName} templates, found ${templates.length}`);
@@ -163,6 +165,9 @@ if (/function\s+(minifySql|jsonToXmlBatch|xmlToJsonBatch)\s*\(/.test(batchScript
     }
     if (duplicatePattern && duplicatePattern.test(source)) {
       fail(`${relativePath} still contains a duplicate minifier`);
+    }
+    if (forbiddenText && source.includes(forbiddenText)) {
+      fail(`${relativePath} still uses the unsafe wrapper compatibility path`);
     }
   });
 });
