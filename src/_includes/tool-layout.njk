@@ -122,7 +122,7 @@
 {% endblock %}
 
 {% block content %}
-<main class="main-content">
+<main class="main-content" id="main-content" tabindex="-1">
 
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -141,6 +141,7 @@
 
   <!-- Tool Header -->
   <header class="tool-header">
+    <div class="tool-identity-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{{ tools[currentTool].icon | safe }}</svg></div>
     <div class="tool-header-copy">
       <h1>{{ toolTitle }}</h1>
       <p>{{ toolDescription }}</p>
@@ -176,6 +177,7 @@
 
     <!-- Left Column — Tool Interface -->
     <div class="tool-main">
+      <div class="tool-workspace" data-category="{{ category }}">
       {% if currentTool in batchEnabledTools %}
       <div class="batch-tabs" data-batch-tabs role="tablist" aria-label="{{ t.ui.batchProcessing }}">
         <button class="batch-tab is-active" id="batch-tab-single" type="button" role="tab" data-batch-tab="single" aria-selected="true" aria-controls="batch-panel-single">{{ t.ui.batchSingleTab }}</button>
@@ -356,6 +358,7 @@
       {% endif %}
 
       <!-- Description Section -->
+      </div>
       <section class="description-section">
         {% if not lang or lang == 'en' %}
         {% include "tool-geo-intro.njk" %}

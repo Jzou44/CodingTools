@@ -1,7 +1,8 @@
 {% set pageLang = homeLang or lang or 'en' %}
 {% set pageHome = homeData or homepage[pageLang] or homepage.en %}
+{% set ui = t[pageLang].ui %}
 
-<main>
+<main id="main-content" tabindex="-1">
 
   <!-- Hero Section -->
   <section class="hero">
@@ -22,8 +23,23 @@
         <circle cx="11" cy="11" r="8"></circle>
         <path d="m21 21-4.3-4.3"></path>
       </svg>
-      <input type="text" id="tool-search" placeholder="{{ pageHome.searchPlaceholder }}" aria-label="{{ pageHome.searchPlaceholder }}" autocomplete="off">
+      <input type="search" id="tool-search" placeholder="{{ pageHome.searchPlaceholder }}" aria-label="{{ pageHome.searchPlaceholder }}" autocomplete="off" aria-describedby="search-status" aria-keyshortcuts="/">
+      <kbd class="search-shortcut" aria-hidden="true">/</kbd>
     </div>
+    <p class="search-status" id="search-status" role="status" aria-live="polite" data-template="{{ ui.searchResults }}"></p>
+  </section>
+
+  <nav class="category-filters" aria-label="{{ ui.categories }}" hidden>
+    <button type="button" class="category-filter is-active" data-filter="all" aria-pressed="true">{{ ui.allTools }} <span>{{ tools | length }}</span></button>
+    {% for cat in categories %}
+    <button type="button" class="category-filter" data-filter="{{ cat.id }}" aria-pressed="false">{{ pageHome.categories[cat.id] }} <span>{{ cat.count }}</span></button>
+    {% endfor %}
+  </nav>
+  <section class="search-empty" id="search-empty" hidden>
+    <span class="empty-icon" aria-hidden="true">⌕</span>
+    <h2>{{ ui.noSearchResults }}</h2>
+    <p>{{ ui.searchAgain }}</p>
+    <button class="reset-search" type="button">{{ ui.resetSearch }}</button>
   </section>
 
   <!-- Tool Categories -->
@@ -36,12 +52,14 @@
         </svg>
       </div>
       <h2 class="category-title">{{ (pageHome.categories and pageHome.categories[cat.id]) or cat.name }}</h2>
+      <span class="category-total">{{ cat.count }}</span>
     </div>
     <p class="category-desc">{{ (pageHome.categoryDescs and pageHome.categoryDescs[cat.id]) or cat.description }}</p>
     <div class="tool-grid">
       {% for slug, tool in tools %}
         {% if tool.category == cat.id %}
-          <a href="{{ pageLang | pathFor(slug) }}" class="tool-card">
+          <a href="{{ pageLang | pathFor(slug) }}" class="tool-card" data-search="{{ slug }} {{ tool.title }}">
+            <span class="tool-card-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{{ tool.icon | safe }}</svg></span>
             <span class="tool-card-name">{{ (pageHome.toolTitles and pageHome.toolTitles[slug]) or tool.title }}</span>
             <svg class="tool-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>

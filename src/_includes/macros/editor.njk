@@ -1,5 +1,5 @@
 {% macro inputEditor(placeholder, label) %}
-<div class="pane-card pane-card--input">
+<div class="pane-card pane-card--input tool-editor-input">
   <div class="pane-label">
     <span><span class="pane-label-dot pane-label-dot--accent"></span>{{ label or "Input" }}</span>
   </div>
@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro outputEditor(placeholder, label) %}
-<div style="margin-top: 0;">
+<div class="tool-editor-output">
 <div class="pane-card pane-card--output">
   <div class="pane-label">
     <span><span class="pane-label-dot pane-label-dot--secondary"></span>{{ label or "Output" }}</span>

@@ -1,107 +1,53 @@
-/* ============================================================
-   Coding.Tools — Main JavaScript
-   Vanilla JS, no frameworks.
-   ============================================================ */
-
+/* Accessible homepage search and category filtering. */
 (function () {
-  "use strict";
-
-  /* ----------------------------------------------------------
-     Scroll Animation Observer
-     ---------------------------------------------------------- */
-  function initScrollObserver() {
-    var sections = document.querySelectorAll(".category-section");
-    var cards = document.querySelectorAll(".tool-card");
-
-    if (!sections.length && !cards.length) return;
-
-    var observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    var sectionObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          sectionObserver.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(function (section) {
-      sectionObserver.observe(section);
+  'use strict';
+  var input = document.getElementById('tool-search');
+  if (!input) return;
+  var cards = Array.from(document.querySelectorAll('.tool-card'));
+  var sections = Array.from(document.querySelectorAll('.category-section'));
+  var filters = Array.from(document.querySelectorAll('[data-filter]'));
+  var status = document.getElementById('search-status');
+  var empty = document.getElementById('search-empty');
+  var selected = 'all';
+  function normalize(value) { return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[-_]/g, ' '); }
+  var searchText = cards.map(function (card) { return normalize(card.textContent + ' ' + card.dataset.search); });
+  function filter() {
+    var words = normalize(input.value).trim().split(/\s+/).filter(Boolean);
+    var count = 0;
+    cards.forEach(function (card, index) {
+      var matches = (selected === 'all' || card.closest('[data-category]').dataset.category === selected) && words.every(function (word) { return searchText[index].includes(word); });
+      card.hidden = !matches;
+      if (matches) count += 1;
     });
-
-    var cardObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var card = entry.target;
-          var parent = card.parentElement;
-          var siblings = parent
-            ? Array.from(parent.querySelectorAll(".tool-card"))
-            : [];
-          var index = siblings.indexOf(card);
-          var delay = Math.min(index, 11) * 0.03;
-
-          card.style.transitionDelay = delay + "s";
-          card.classList.add("visible");
-          cardObserver.unobserve(card);
-        }
-      });
-    }, observerOptions);
-
-    cards.forEach(function (card) {
-      cardObserver.observe(card);
+    sections.forEach(function (section) { section.hidden = !section.querySelector('.tool-card:not([hidden])'); });
+    filters.forEach(function (button) {
+      var active = button.dataset.filter === selected;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
     });
+    status.textContent = status.dataset.template.replace('{count}', count);
+    empty.hidden = count !== 0;
   }
-
-  /* ----------------------------------------------------------
-     Search / Filter  (Homepage)
-     ---------------------------------------------------------- */
-  function initSearch() {
-    var searchInput = document.getElementById("tool-search");
-    if (!searchInput) return;
-
-    var debounceTimer = null;
-
-    searchInput.addEventListener("input", function () {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(filterTools, 150);
-    });
-
-    function filterTools() {
-      var query = searchInput.value.toLowerCase().trim();
-
-      var cards = document.querySelectorAll(".tool-card");
-      cards.forEach(function (card) {
-        var text = card.textContent.toLowerCase();
-        if (query === "" || text.indexOf(query) !== -1) {
-          card.classList.remove("hidden");
-        } else {
-          card.classList.add("hidden");
-        }
-      });
-
-      var sections = document.querySelectorAll(".category-section");
-      sections.forEach(function (section) {
-        var visibleCards = section.querySelectorAll(
-          ".tool-card:not(.hidden)"
-        );
-        if (visibleCards.length === 0) {
-          section.style.display = "none";
-        } else {
-          section.style.display = "";
-        }
-      });
+  input.addEventListener('input', filter);
+  input.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') { input.value = ''; filter(); }
+    if (event.key === 'Enter' && !event.isComposing) {
+      var matches = cards.filter(function (card) { return !card.hidden; });
+      if (matches.length === 1) matches[0].click();
     }
-  }
-
-  /* ----------------------------------------------------------
-     Init
-     ---------------------------------------------------------- */
-  document.addEventListener("DOMContentLoaded", function () {
-    initScrollObserver();
-    initSearch();
   });
+  filters.forEach(function (button) { button.addEventListener('click', function () { selected = button.dataset.filter; filter(); }); });
+  document.querySelector('.reset-search').addEventListener('click', function () { input.value = ''; selected = 'all'; filter(); input.focus(); });
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey || event.isComposing) return;
+    if (event.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(event.target.tagName)) return;
+    event.preventDefault(); input.focus();
+  });
+  window.addEventListener('hashchange', function () {
+    if (sections.some(function (section) { return '#' + section.id === location.hash; })) {
+      selected = 'all'; input.value = ''; filter(); document.getElementById(location.hash.slice(1)).scrollIntoView();
+    }
+  });
+  document.querySelector('.category-filters').hidden = false;
+  filter();
 })();
