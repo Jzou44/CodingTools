@@ -31,11 +31,13 @@ ENV SITE_BASE_URL=$SITE_BASE_URL
 # Copy runtime files and built static files
 COPY server/ server/
 COPY src/_data/ src/_data/
+COPY src/js/text-transformers.js src/js/text-transformers.js
 COPY scripts/docker-entrypoint.sh scripts/docker-entrypoint.sh
 COPY docker/nginx.conf /etc/nginx/http.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-RUN mkdir -p /run/nginx
+# Windows working trees can contain CRLF even when Git stores LF.
+RUN sed -i 's/\r$//' scripts/docker-entrypoint.sh && mkdir -p /run/nginx
 
 EXPOSE 80
 

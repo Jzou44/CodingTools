@@ -31,6 +31,39 @@ async function main() {
   assert.strictEqual(home.status, 200);
   assert.strictEqual(home.headers.get("x-content-type-options"), "nosniff");
   assert.strictEqual(home.headers.get("x-frame-options"), "SAMEORIGIN");
+  assert.ok((home.headers.get("cache-control") || "").includes("no-cache"));
+
+  const manifestResponse = await fetch(`${baseUrl}/asset-manifest.json`);
+  assert.strictEqual(manifestResponse.status, 200);
+  assert.ok((manifestResponse.headers.get("cache-control") || "").includes("no-cache"));
+  const manifest = await readJson(manifestResponse);
+  const homeHtml = await home.text();
+  assert.ok(homeHtml.includes(manifest["/css/style.css"]));
+  const localized = await fetch(`${baseUrl}/cn/base64-encode.html`);
+  assert.strictEqual(localized.status, 200);
+  assert.ok((await localized.text()).includes(manifest["/js/tool-common.js"]));
+
+  for (const source of ["/css/tool.css", "/js/tool-common.js"]) {
+    const assetUrl = manifest[source];
+    assert.match(assetUrl, /\.[a-f0-9]{16}\.(css|js)$/);
+    const compressed = await fetch(`${baseUrl}${assetUrl}`, { headers: { "accept-encoding": "gzip" } });
+    assert.strictEqual(compressed.status, 200);
+    assert.strictEqual(compressed.headers.get("content-encoding"), "gzip");
+    assert.match(compressed.headers.get("vary") || "", /Accept-Encoding/i);
+    assert.ok((compressed.headers.get("cache-control") || "").includes("max-age=31536000"));
+    assert.strictEqual(compressed.headers.get("x-content-type-options"), "nosniff");
+    const plain = await fetch(`${baseUrl}${assetUrl}`, { headers: { "accept-encoding": "identity" } });
+    assert.strictEqual(plain.headers.get("content-encoding"), null);
+    assert.strictEqual(await compressed.text(), await plain.text());
+    const unchanged = await fetch(`${baseUrl}${assetUrl}`, {
+      headers: { "if-none-match": plain.headers.get("etag"), "accept-encoding": "identity" }
+    });
+    assert.strictEqual(unchanged.status, 304);
+    const stable = await fetch(`${baseUrl}${source}`);
+    assert.strictEqual(stable.status, 200);
+    assert.ok((stable.headers.get("cache-control") || "").includes("max-age=3600"));
+  }
+  console.log("Static asset gzip, cache, conditional requests, and localized page checks passed.");
 
   const cardResponse = await fetch(`${baseUrl}/.well-known/agent-card.json`);
   assert.strictEqual(cardResponse.status, 200);

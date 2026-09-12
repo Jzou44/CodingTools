@@ -4,7 +4,7 @@
   "description": "Free, multilingual developer toolbox with 62+ browser-based tools",
   "private": true,
   "scripts": {
-    "check": "npm run check:site && npm run check:batch && npm run test:transforms && npm run skills:check",
+    "check": "npm run check:site && npm run check:batch && npm run test:transforms && npm run test:assets && npm run skills:check",
     "check:site": "node scripts/check-structure.js",
     "check:batch": "node scripts/check-batch-tools.js",
     "test:transforms": "node scripts/test-text-transformers.js",
@@ -12,7 +12,8 @@
     "skills:check": "node scripts/check-coding-tools-skills.js",
     "prebuild": "npm run check",
     "clean": "node scripts/clean-dist.js",
-    "build": "npm run clean && eleventy",
+    "build": "npm run clean && eleventy && node scripts/optimize-assets.js",
+    "test:assets": "node --test scripts/test-optimize-assets.js",
     "dev": "eleventy --serve --port=5500",
     "debug": "eleventy --serve --port=5500 --debug",
     "a2a": "node server/a2a-runtime.js",
@@ -29,6 +30,7 @@
     "install-coding-tools-skills": "./scripts/install-coding-tools-skills.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "esbuild": "^0.28.2"
   }
 }

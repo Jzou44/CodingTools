@@ -14,6 +14,23 @@ Production deploys are handled by `.github/workflows/deploy.yml`.
 8. nginx is reloaded to serve static files and proxy `/a2a/*` and `/mcp` to the runtime.
 9. The workflow verifies local nginx, `/.well-known/agent-card.json`, `/a2a/healthz`, MCP `tools/call`, and the public URL.
 
+## Static asset optimization
+
+`npm run build` minifies CSS/JavaScript and rewrites generated HTML to use
+content-hashed filenames. `dist/asset-manifest.json` maps the source URLs to
+their optimized URLs. Stable filenames remain available for dynamic loaders.
+Deploy the entire `dist/` directory, including the hashed files. Development
+with `npm run dev` continues to serve readable source assets.
+
+Both nginx configurations enable gzip, cache hashed CSS/JS for one year,
+cache unversioned static assets for one hour, and revalidate HTML/JSON.
+The agent card keeps its existing five-minute cache. Apply the nginx config
+as well as the generated files to get compression and caching improvements.
+Google Fonts loads asynchronously so the initial render can use fallback fonts.
+
+`npm run test:assets` checks minification, browser globals, localized resource
+rewriting, and cache invalidation; it also runs as part of `npm run check`.
+
 ## Required Repository Secret
 
 - `VPS_SSH_KEY`: private SSH key that can log in to the VPS user.
