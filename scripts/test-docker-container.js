@@ -1,4 +1,5 @@
 const assert = require("assert");
+const site = require("../src/_data/site");
 
 const baseUrl = process.env.DOCKER_TEST_URL || "http://127.0.0.1:8080";
 
@@ -26,6 +27,16 @@ async function waitFor(url, attempts = 30) {
   throw lastError;
 }
 
+async function checkPermanentRedirect(from, to) {
+  const query = "?utm_source=legacy&version=1";
+  const redirect = await fetch(baseUrl + from + query, { redirect: "manual" });
+  assert.strictEqual(redirect.status, 301, from);
+  assert.strictEqual(redirect.headers.get("location"), to + query, from);
+  const target = await fetch(baseUrl + to, { redirect: "manual" });
+  assert.strictEqual(target.status, 200, to);
+  assert.ok((await target.text()).includes(`rel="canonical" href="${site.absoluteUrl(to)}"`), to);
+}
+
 async function main() {
   const home = await waitFor(`${baseUrl}/`);
   assert.strictEqual(home.status, 200);
@@ -38,6 +49,19 @@ async function main() {
   assert.ok((manifestResponse.headers.get("cache-control") || "").includes("no-cache"));
   const manifest = await readJson(manifestResponse);
   const homeHtml = await home.text();
+  for (const lang of site.languageIds) {
+    const prefix = lang === "en" ? "" : "/" + lang;
+    for (const hash of ["md5", "sha1", "sha256", "sha384", "sha512"]) {
+      await checkPermanentRedirect(prefix + "/" + hash, site.pathFor(lang, hash + "-generator"));
+    }
+    if (prefix) {
+      await checkPermanentRedirect(prefix, site.pathFor(lang));
+      await checkPermanentRedirect(prefix + "/", site.pathFor(lang));
+    }
+  }
+  for (const missing of ["/sha224", "/cn/sha224", "/xx/md5", "/md5/other"]) {
+    assert.strictEqual((await fetch(baseUrl + missing, { redirect: "manual" })).status, 404, missing);
+  }
   assert.ok(homeHtml.includes(manifest["/css/style.css"]));
   const localized = await fetch(`${baseUrl}/cn/base64-encode.html`);
   assert.strictEqual(localized.status, 200);

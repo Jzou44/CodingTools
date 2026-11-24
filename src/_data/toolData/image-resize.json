@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Image Resize - Coding.Tools",
-    "description": "Resize PNG, JPEG, and WebP images in your browser with exact dimensions, aspect-ratio locking, presets, and quality control.",
-    "toolTitle": "Image Resize",
-    "toolDescription": "Resize one image locally with exact pixel dimensions, scale presets, aspect-ratio locking, and JPEG/WebP quality control.",
+    "title": "Bulk Image Resizer – Resize Images and Download a ZIP | Coding.Tools",
+    "description": "Resize one image or up to 20 PNG, JPEG or WebP files in your browser. Set a common width, keep each image’s proportions and download the batch as a ZIP.",
+    "toolTitle": "Image Resizer",
+    "toolDescription": "Resize a single image below, or open Batch to resize up to 20 images together and download a ZIP.",
     "categoryName": "Image Utilities",
     "labels": {
       "clickOrDrop": "Click or drag an image file here",
@@ -47,32 +47,32 @@
     },
     "dropzoneMessage": "Click or drag an image file here",
     "dropzoneHint": "PNG, JPEG, WebP · Max 10MB",
-    "descTitle": "Resize images to exact dimensions",
+    "descTitle": "Resize a batch of images to the same width",
     "descParas": [
       "<strong>Image Resize changes the pixel width and height of a PNG, JPEG, or WebP image without uploading it.</strong> Use it to prepare thumbnails, app assets, screenshots, profile images, and web images that need a specific size.",
       "Lock the aspect ratio when the image should keep its original proportions, or unlock it when you intentionally need a different shape. Reducing both width and height by <strong>50%</strong> removes <strong>75%</strong> of the pixels, which often makes files much smaller.",
       "Processing uses the browser canvas. JPEG and WebP output can be re-encoded with a quality setting; PNG keeps transparency but may not shrink as much as photographic formats. Check the preview because resizing can soften fine detail."
     ],
-    "howToUse": "How to use",
+    "howToUse": "How to resize multiple images",
     "steps": [
-      "Upload one PNG, JPEG, or WebP image.",
-      "Enter a target width and height, lock the aspect ratio if needed, or choose a preset.",
-      "Adjust JPEG/WebP quality, preview the result, then download the resized image."
+      "Open <a href=\"#batch-tab-batch\">Batch</a> and choose up to 20 PNG, JPEG or WebP images, up to 10 MB each.",
+      "Enter a width in pixels and keep the aspect ratio locked. Each image gets its own height. To scale by percentage, leave both dimensions blank.",
+      "Run the batch and check the dimensions in the results. Download Results saves a ZIP when two or more images succeed."
     ],
     "whatIs": "When should you resize an image?",
     "whatIsParas": [
       "<strong>Image Resize</strong> is for changing dimensions, not just file size. It is useful when a layout, CMS, email, avatar, or documentation image requires an exact pixel width and height.",
       "The original file stays on your device while the browser creates a new output image. Large downscales usually look best; upscaling can make an image blurry because it invents pixels that were not in the original."
     ],
-    "example": "Resize with Canvas",
-    "examplePara": "Canvas resizing draws the source image into a canvas set to the target dimensions:",
-    "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
+    "example": "Try a landscape and a portrait image",
+    "examplePara": "Download the <a href=\"/assets/examples/landscape-gps.jpg\" download>landscape JPEG</a> and <a href=\"/assets/examples/portrait.png\" download>portrait PNG</a>. Resize them together to a width of 600 px with the aspect ratio locked. Compare your results with these dimensions.",
+    "exampleCode": "landscape-gps.jpg   1200 × 800  →  600 × 400\nportrait.png         800 × 1200 →  600 × 900"
   },
   "cn": {
-    "title": "图像调整大小 - Coding.Tools",
-    "description": "在浏览器中调整 PNG、JPEG 和 WebP 图像的大小，具有精确尺寸、宽高比锁定、预设和质量控制。",
+    "title": "批量调整图片尺寸，等比缩放并下载 ZIP | Coding.Tools",
+    "description": "在浏览器中批量调整 JPG、PNG、WebP 图片尺寸。最多一次处理 20 张，可统一宽度或按百分比等比缩放，多张结果可打包下载为 ZIP。",
     "toolTitle": "图片尺寸调整",
-    "toolDescription": "使用精确的像素尺寸、比例预设、宽高比锁定和 JPEG/WebP 质量控制在本地调整一张图像的大小。",
+    "toolDescription": "调整单张图片的宽高，或切换到「批量」，同时缩放最多 20 张图片并打包下载。",
     "categoryName": "图片工具",
     "labels": {
       "clickOrDrop": "点击或拖拽图片文件到此处",
@@ -116,26 +116,26 @@
     },
     "dropzoneMessage": "点击或拖拽图片文件到此处",
     "dropzoneHint": "PNG、JPEG、WebP · 最大 10MB",
-    "descTitle": "将图像大小调整为精确尺寸",
+    "descTitle": "怎样把不同宽高比的图片缩放到同一宽度？",
     "descParas": [
-      "<strong>图片尺寸调整 无需上传即可更改 PNG、JPEG 或 WebP 图像的像素宽度和高度。</strong> 使用它来准备需要特定尺寸的缩略图、应用程序资源、屏幕截图、个人资料图像和 Web 图像。",
-      "当图像应保持其原始比例时锁定纵横比，或者当您有意需要不同的形状时解锁它。将宽度和高度减小 <strong>50%</strong> 会删除 <strong>75%</strong> 像素，这通常会使文件变得更小。",
-      "处理使用浏览器画布。 JPEG 和 WebP 输出可以通过质量设置重新编码； PNG 保持透明度，但可能不会像照片格式那样缩小那么多。检查预览，因为调整大小可以柔化精细细节。"
+      "横图和竖图可以放在同一批次。只填写目标宽度并保持宽高比，浏览器会按每张原图的比例分别计算高度。",
+      "如果要把所有图片缩小一半，宽度和高度都留空，将缩放百分比设为 50%。宽高各减半后，像素数为原来的四分之一。",
+      "图片在本机处理。JPEG 和 WebP 可以调节导出质量；PNG 可以保留透明背景。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "如何批量调整图片尺寸",
     "steps": [
-      "上传一张 PNG、JPEG 或 WebP 图像。",
-      "输入目标宽度和高度，根据需要锁定纵横比，或选择预设。",
-      "调整 JPEG/WebP 质量，预览结果，然后下载调整大小的图像。"
+      "打开<a href=\"#batch-tab-batch\">批量模式</a>，选择最多 20 张 PNG、JPEG 或 WebP 图片，每张不超过 10 MB。",
+      "填写目标宽度，保持宽高比。如果想按百分比缩放，请将宽度和高度都留空。",
+      "运行批处理，在结果表中核对每张图片的尺寸。成功处理两张及以上时，点击下载结果会得到 ZIP 文件。"
     ],
     "whatIs": "什么时候应该调整图像大小？",
     "whatIsParas": [
       "<strong>图片尺寸调整</strong> 用于更改尺寸，而不仅仅是文件大小。当布局、CMS、电子邮件、头像或文档图像需要精确的像素宽度和高度时，它非常有用。",
       "当浏览器创建新的输出图像时，原始文件保留在您的设备上。较大的缩小尺寸通常看起来最好；放大会使图像变得模糊，因为它产生了原始图像中没有的像素。"
     ],
-    "example": "使用 Canvas 调整尺寸",
-    "examplePara": "画布调整大小将源图像绘制到设置为目标尺寸的画布中：",
-    "exampleCode": "const canvas = document.createElement('canvas');\ncanvas.width = targetWidth;\ncanvas.height = targetHeight;\nconst ctx = canvas.getContext('2d');\nctx.drawImage(image, 0, 0, targetWidth, targetHeight);\ncanvas.toBlob(saveBlob, outputMime, quality);"
+    "example": "用一张横图和一张竖图试试",
+    "examplePara": "下载<a href=\"/assets/examples/landscape-gps.jpg\" download>横向 JPEG 样图</a>和<a href=\"/assets/examples/portrait.png\" download>竖向 PNG 样图</a>，在批量模式下把宽度设为 600 像素，保持宽高比。预期尺寸如下。",
+    "exampleCode": "landscape-gps.jpg   1200 × 800  →  600 × 400\nportrait.png         800 × 1200 →  600 × 900"
   },
   "tw": {
     "title": "影像調整大小 - Coding.Tools",

@@ -28,32 +28,32 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "cn": {
-    "title": "EXIF 移除器 - Coding.Tools",
-    "description": "在共享之前从本地图像中剥离 EXIF 元数据，以减少 GPS、相机、时间戳和方向隐私泄露。",
-    "toolTitle": "EXIF 移除器",
-    "toolDescription": "删除浏览器中嵌入的 EXIF 元数据，以便更安全地共享干净的图像。",
+    "title": "删除照片定位信息与 EXIF 元数据 | Coding.Tools",
+    "description": "在浏览器中删除照片 EXIF 中的 GPS 坐标、拍摄时间和相机型号。下载清理后的 JPEG，再用 EXIF 查看器核对定位信息。",
+    "toolTitle": "删除照片定位信息",
+    "toolDescription": "选择照片，在本机生成去除 EXIF 的副本。原图保留在设备上。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽图片上传",
     "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
-    "descTitle": "共享前删除私人照片元数据",
+    "descTitle": "分享照片前，去掉文件中的 GPS 坐标",
     "descParas": [
-      "<strong>EXIF 删除程序会在浏览器中重新编码图像，以去除嵌入的元数据，例如 GPS 坐标、相机详细信息、时间戳、软件标签和方向字段。</strong> 在发布或发送可能泄露私人背景的原始照片之前使用它。",
-      "像素会保留为新的输出图像，但依赖元数据的行为可能会变化：方向标签可能会被应用到像素方向中或被移除，重新编码也可能影响文件大小或质量。处理在本地完成；无需上传。"
+      "有些照片会把经纬度写进 EXIF，即使画面上没有地名，接收原图的人也可能读到拍摄地点。",
+      "工具在浏览器中重新编码图片，生成一份可下载的副本。重新编码可能改变 JPEG 的画质和文件大小。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "如何删除并核对照片定位",
     "steps": [
-      "将图像拖放到上传区域，或单击选择文件。",
-      "每个图像都会被处理，所有 EXIF 元数据都会被删除。",
-      "下载单独的已清理图像或使用 <strong>下载全部</strong> 获取 ZIP 存档。"
+      "选择照片，等待文件旁出现下载链接。",
+      "下载清理后的副本；有多个结果时，可使用「下载全部」保存 ZIP。",
+      "用<a href=\"exif-viewer.html\">照片 EXIF 查看器</a>打开刚下载的 JPEG，检查 GPSLatitude 和 GPSLongitude 是否已消失。"
     ],
     "whatIs": "为什么要删除EXIF数据？",
     "whatIsParas": [
       "<strong>EXIF 删除</strong> 通过删除可以识别照片拍摄地点、时间和方式的元数据来减少隐私泄露。",
       "这是公开共享之前的一个实际步骤，但它并不是对每个可能的隐藏有效负载的完整取证清理。如果严格的隐私或证据处理很重要，请查看已清理的文件。"
     ],
-    "example": "用 Python 移除 EXIF",
-    "examplePara": "重新保存照片而不传递 EXIF 元数据与许多清理工作流程使用的基本思想相同：",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # 默认不保留 EXIF"
+    "example": "用带模拟坐标的 JPEG 验证",
+    "examplePara": "下载<a href=\"/assets/examples/landscape-gps.jpg\" download>带模拟 GPS 的样图</a>。先在查看器中打开样图，再清理并检查导出的 JPEG。样图是绘制的图案，坐标仅用于演示。",
+    "exampleCode": "原始 JPEG   GPSLatitude 0.000000，GPSLongitude 0.000000\n导出 JPEG   不再包含这两个 EXIF 字段"
   },
   "tw": {
     "title": "EXIF 移除器 - Coding.Tools",
@@ -84,32 +84,32 @@
     "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
   },
   "jp": {
-    "title": "EXIF リムーバー - Coding.Tools",
-    "description": "共有する前に、画像から EXIF メタデータをローカルに削除して、GPS、カメラ、タイムスタンプ、方向のプライバシーの漏洩を軽減します。",
-    "toolTitle": "EXIF除去ツール",
-    "toolDescription": "ブラウザーに埋め込まれた EXIF メタデータを削除して、クリーンな画像をより安全に共有できるようにします。",
+    "title": "写真の位置情報を削除 | GPS・Exif 削除ツール | Coding.Tools",
+    "description": "写真の Exif に記録された GPS 座標、撮影日時、カメラ情報をブラウザ内で削除します。保存した JPEG の位置情報は Exif ビューアで確認できます。",
+    "toolTitle": "写真の位置情報を削除",
+    "toolDescription": "写真を選ぶと、Exif 情報を取り除いたコピーを端末内で作成します。元の写真はそのまま残ります。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに画像をクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像最大20枚・各最大10MB",
-    "descTitle": "共有する前にプライベート写真のメタデータを削除する",
+    "descTitle": "写真を共有する前に GPS 情報を削除する",
     "descParas": [
-      "<strong>EXIF リムーバーは、ブラウザ内の画像を再エンコードして、GPS 座標、カメラの詳細、タイムスタンプ、ソフトウェア タグ、方向フィールドなどの埋め込みメタデータを削除します。</strong> プライベートなコンテキストを明らかにする可能性のある元の写真を投稿または送信する前に使用してください。",
-      "ピクセルは新しい出力イメージとして保存されますが、メタデータに依存する動作は変更される可能性があります。方向タグがピクセルに焼き付けられたり、削除されたりする可能性があり、再エンコードはファイル サイズや品質に影響を与える可能性があります。処理はローカルで行われます。アップロードは必要ありません。"
+      "写真には、撮影場所の緯度と経度が Exif に記録されていることがあります。画像を見ただけでは分からなくても、元のファイルを受け取った人は位置情報を読み取れます。",
+      "このツールはブラウザ内で画像を再エンコードします。JPEG は保存後に画質やファイルサイズが変わることがあります。"
     ],
-    "howToUse": "使い方",
+    "howToUse": "位置情報を削除して確認する手順",
     "steps": [
-      "画像をアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
-      "各画像が処理され、すべての EXIF メタデータが削除されます。",
-      "クリーンアップされたイメージを個別にダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
+      "写真を選び、ファイル名の横にダウンロードリンクが表示されるまで待ちます。",
+      "処理済みの写真を保存します。複数枚をまとめて保存すると ZIP になります。",
+      "保存した JPEG を<a href=\"exif-viewer.html\">Exif ビューア</a>で開き、GPSLatitude と GPSLongitude が残っていないことを確認します。"
     ],
     "whatIs": "なぜ EXIF データを削除するのですか?",
     "whatIsParas": [
       "<strong>EXIF 削除</strong> は、写真がどこで、いつ、どのように撮影されたかを特定できるメタデータを削除することで、プライバシーの漏洩を軽減します。",
       "これは公開共有の前の実用的なステップですが、考えられるすべての隠されたペイロードを完全にフォレンジック スクラブするわけではありません。厳密なプライバシーまたは証拠の取り扱いが重要な場合は、クリーンアップされたファイルを確認してください。"
     ],
-    "example": "PythonでEXIFを削除する",
-    "examplePara": "EXIF メタデータを渡さずに写真を再保存することは、多くのクリーンアップ ワークフローで使用される基本的な考え方と同じです。",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('photo.jpg')\noriginal.save('clean.jpg')  # EXIF not preserved by default"
+    "example": "サンプル写真で削除前後を確認",
+    "examplePara": "<a href=\"/assets/examples/landscape-gps.jpg\" download>テスト用の GPS 情報を含む JPEG</a>をダウンロードし、元の画像と処理後の JPEG をビューアで確認してください。サンプルは図形で作成した画像で、座標は説明用です。",
+    "exampleCode": "元の JPEG   GPSLatitude 0.000000、GPSLongitude 0.000000\n保存後      この 2 つの Exif 項目は表示されません"
   },
   "kr": {
     "title": "EXIF 리무버 - Coding.Tools",

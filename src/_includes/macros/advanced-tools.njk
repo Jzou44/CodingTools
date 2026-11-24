@@ -816,6 +816,7 @@
           render(changes, summary);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', i18n.success);
           updateCounts();
+          ToolCommon.trackToolSuccess('json_compare');
         } catch (error) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.failed + error.message);
         }

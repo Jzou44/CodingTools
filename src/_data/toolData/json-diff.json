@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "JSON Diff - Coding.Tools",
-    "description": "Compare two valid JSON documents and report added, removed, changed, and unchanged paths.",
+    "title": "JSON Diff – Compare Two JSON Files and Ignore Key Order | Coding.Tools",
+    "description": "Compare two JSON files locally, ignore object key order and see which paths changed. Arrays are compared by index. Paste JSON or open two files.",
     "toolTitle": "JSON Diff",
-    "toolDescription": "Compare two JSON payloads by object path, array index, and value.",
+    "toolDescription": "Open two JSON files or paste two documents to see which fields changed. Ignore object key order while keeping array order significant.",
     "categoryName": "Formatter & Minifier",
     "buttonLabel": "Compare JSON",
     "descTitle": "Find structural changes between JSON payloads",
@@ -13,10 +13,10 @@
     ],
     "howToUse": "How to use",
     "steps": [
-      "Paste the original JSON into the left editor.",
-      "Paste the changed JSON into the right editor.",
-      "Choose whether to include unchanged paths or sort object keys before comparing.",
-      "Click <strong>Compare JSON</strong> to generate the path-by-path structural diff."
+      "Paste one JSON document in each editor, or choose Files and open the original on the left and the revised file on the right.",
+      "Leave the object key order option enabled to ignore reordered keys.",
+      "Choose whether to include unchanged paths. Array items are compared by index.",
+      "Select Compare JSON and inspect the paths marked added, removed or changed."
     ],
     "whatIs": "What is JSON Diff?",
     "whatIsParas": [
@@ -25,9 +25,9 @@
     ],
     "inputNotes": "Input notes",
     "inputNotesPara": "Paste complete JSON documents on both sides. For line-oriented log entries, extract the JSON portion first. When arrays differ, check whether a shifted item caused many index-level changes.",
-    "example": "Example",
-    "examplePara": "A changed value is reported at its JSONPath-style location:",
-    "exampleCode": "Original\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\nChanged\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\nDiff\n[changed] $.user.role\n- \"admin\"\n+ \"editor\"",
+    "example": "Try a key reorder and a value change",
+    "examplePara": "Paste the original on the left. Try each comparison on the right with key sorting enabled. The first gives zero changes. The second changes only $.limit.",
+    "exampleCode": "Original\n{\"enabled\":true,\"limit\":10}\n\nReordered keys\n{\"limit\":10,\"enabled\":true}\n\nChanged value\n{\"limit\":20,\"enabled\":true}",
     "labels": {
       "leftInput": "Original JSON",
       "rightInput": "Changed JSON",
@@ -51,10 +51,10 @@
     "outputPlaceholder": "JSON diff output will appear here..."
   },
   "cn": {
-    "title": "JSON 差异 - Coding.Tools",
-    "description": "比较两个有效的 JSON 文档并报告添加、删除、更改和未更改的路径。",
-    "toolTitle": "JSON 差异对比",
-    "toolDescription": "按对象路径、数组索引和值比较两个 JSON 有效负载。",
+    "title": "JSON 文件对比，忽略对象键顺序 | Coding.Tools",
+    "description": "在本机比较两个 JSON 文件或两段 JSON 文本，按路径查看新增、删除和修改的字段。可忽略对象键顺序，数组按下标比较。",
+    "toolTitle": "JSON 文件对比",
+    "toolDescription": "选择两个 JSON 文件或粘贴文本，按路径查看字段差异。可以忽略对象键的顺序，数组仍按下标比较。",
     "categoryName": "格式化与压缩",
     "buttonLabel": "比较 JSON",
     "descTitle": "查找 JSON 有效负载之间的结构变化",
@@ -64,10 +64,10 @@
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将原始 JSON 粘贴到左侧编辑器中。",
-      "将更改后的 JSON 粘贴到右侧编辑器中。",
-      "选择在比较之前是否包含未更改的路径或对对象键进行排序。",
-      "单击 <strong>比较 JSON</strong> 以生成逐路径结构差异。"
+      "在左右两栏分别粘贴原始和修改后的 JSON，或切换到文件模式，选择两个本地文件。",
+      "保持对象键排序选项开启，可忽略字段顺序变化。",
+      "按需勾选包含未变更路径。数组元素始终按下标比较。",
+      "点击「比较 JSON」，查看新增、删除或变更的字段路径。"
     ],
     "whatIs": "JSON 差异是什么？",
     "whatIsParas": [
@@ -76,9 +76,9 @@
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "将完整的 JSON 文件双面粘贴。对于面向行的日志条目，首先提取 JSON 部分。当数组不同时，检查移位的项是否导致许多索引级别的更改。",
-    "example": "示例",
-    "examplePara": "更改后的值会在其 JSONPath 样式位置报告：",
-    "exampleCode": "原始\n{\"user\":{\"name\":\"Alice\",\"role\":\"admin\"}}\n\n变更\n{\"user\":{\"name\":\"Alice\",\"role\":\"editor\"}}\n\n差异\n[变更] $.user.role\n- \"admin\"\n+ \"editor\"",
+    "example": "试试调整键顺序和修改字段值",
+    "examplePara": "将原始 JSON 粘贴到左栏，然后把下面两组对比数据分别粘贴到右栏。开启键排序时，第一组应为零处变更，第二组只有 $.limit 发生变更。",
+    "exampleCode": "原始 JSON\n{\"enabled\":true,\"limit\":10}\n\n仅调整键顺序\n{\"limit\":10,\"enabled\":true}\n\n修改字段值\n{\"limit\":20,\"enabled\":true}",
     "labels": {
       "leftInput": "原始 JSON",
       "rightInput": "变更 JSON",

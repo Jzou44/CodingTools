@@ -281,7 +281,7 @@ permalink: "/cn/exif-viewer.html"
               iframe.setAttribute('frameborder', '0');
               iframe.setAttribute('src', 'https://www.openstreetmap.org/export/embed.html?bbox=' + encodeURIComponent((lon - 0.01) + ',' + (lat - 0.01) + ',' + (lon + 0.01) + ',' + (lat + 0.01)) + '&layer=mapnik&marker=' + encodeURIComponent(lat + ',' + lon));
               iframe.setAttribute('style', 'border:1px solid #ccc;border-radius:8px;');
-              mapContainer.appendChild(iframe);
+              ToolCommon.offerMapPreview(mapContainer, iframe, {{ toolData.showMap | json | safe }});
               mapContainer.style.display = 'block';
             }
           }

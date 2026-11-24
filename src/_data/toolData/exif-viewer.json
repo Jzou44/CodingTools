@@ -16,7 +16,7 @@
     "steps": [
       "Drag and drop a photo onto the upload area, or click to select.",
       "All EXIF metadata tags are displayed in a table.",
-      "If GPS coordinates are found, a map showing the photo location is displayed."
+      "If GPS coordinates are present, you can choose to send them to Google Maps to see the location."
     ],
     "whatIs": "What is EXIF metadata?",
     "whatIsParas": [
@@ -25,7 +25,8 @@
     ],
     "example": "Read EXIF with Python",
     "examplePara": "A script can read the same type of tags from a JPEG file with an EXIF parser:",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "Show coordinates on Google Maps"
   },
   "cn": {
     "title": "EXIF 查看器 - Coding.Tools",
@@ -44,7 +45,7 @@
     "steps": [
       "将照片拖放到上传区域，或单击进行选择。",
       "所有 EXIF 元数据标签都显示在表格中。",
-      "如果找到 GPS 坐标，则会显示显示照片位置的地图。"
+      "如照片包含 GPS 坐标，点击地图按钮才会将坐标发送给 OpenStreetMap。"
     ],
     "whatIs": "EXIF 元数据是什么？",
     "whatIsParas": [
@@ -53,7 +54,8 @@
     ],
     "example": "用 Python 读取 EXIF",
     "examplePara": "脚本可以使用 EXIF 解析器从 JPEG 文件中读取相同类型的标签：",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "在 OpenStreetMap 上查看坐标"
   },
   "tw": {
     "title": "EXIF 檢視器 - Coding.Tools",
@@ -72,7 +74,7 @@
     "steps": [
       "將照片拖曳到上傳區域，或按一下進行選擇。",
       "所有 EXIF 中繼資料標籤都顯示在表格中。",
-      "如果找到 GPS 座標，則會顯示顯示照片位置的地圖。"
+      "若照片含有 GPS 座標，按下地圖按鈕才會將座標傳送給 OpenStreetMap。"
     ],
     "whatIs": "EXIF 中繼資料是什麼？",
     "whatIsParas": [
@@ -81,7 +83,8 @@
     ],
     "example": "使用Python讀取EXIF",
     "examplePara": "腳本可以使用 EXIF 解析器從 JPEG 檔案中讀取相同類型的標籤：",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "在 OpenStreetMap 上查看座標"
   },
   "jp": {
     "title": "EXIF ビューア - Coding.Tools",
@@ -100,7 +103,7 @@
     "steps": [
       "写真をアップロード領域にドラッグ アンド ドロップするか、クリックして選択します。",
       "すべての EXIF メタデータ タグがテーブルに表示されます。",
-      "GPS 座標が見つかると、写真の位置を示す地図が表示されます。"
+      "GPS 座標がある場合は、地図ボタンを押すと座標が OpenStreetMap に送られ、撮影場所を確認できます。"
     ],
     "whatIs": "EXIF メタデータとは何ですか?",
     "whatIsParas": [
@@ -109,7 +112,8 @@
     ],
     "example": "PythonでEXIFを読む",
     "examplePara": "スクリプトは、EXIF パーサーを使用して JPEG ファイルから同じタイプのタグを読み取ることができます。",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "座標を OpenStreetMap で表示"
   },
   "kr": {
     "title": "EXIF 뷰어 - Coding.Tools",
@@ -128,7 +132,7 @@
     "steps": [
       "사진을 업로드 영역으로 끌어다 놓거나 클릭하여 선택하세요.",
       "모든 EXIF 메타데이터 태그가 테이블에 표시됩니다.",
-      "GPS 좌표가 검색되면 사진 위치를 나타내는 지도가 표시됩니다."
+      "GPS 좌표가 있으면 지도 버튼을 눌러 좌표를 OpenStreetMap에 보내고 위치를 확인할 수 있습니다."
     ],
     "whatIs": "EXIF 메타데이터란 무엇인가요?",
     "whatIsParas": [
@@ -137,7 +141,8 @@
     ],
     "example": "Python으로 EXIF 읽기",
     "examplePara": "스크립트는 EXIF 파서를 사용하여 JPEG 파일에서 동일한 유형의 태그를 읽을 수 있습니다.",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "OpenStreetMap에서 좌표 보기"
   },
   "fr": {
     "title": "Visionneuse EXIF - Coding.Tools",
@@ -156,7 +161,7 @@
     "steps": [
       "Faites glisser et déposez une photo sur la zone de téléchargement ou cliquez pour la sélectionner.",
       "Toutes les balises de métadonnées EXIF sont affichées dans un tableau.",
-      "Si des coordonnées GPS sont trouvées, une carte indiquant l'emplacement de la photo s'affiche."
+      "Si des coordonnées GPS sont présentes, vous pouvez les envoyer à Google Maps pour afficher le lieu."
     ],
     "whatIs": "Que sont les métadonnées EXIF ?",
     "whatIsParas": [
@@ -165,7 +170,8 @@
     ],
     "example": "Lire EXIF avec Python",
     "examplePara": "Un script peut lire le même type de balises à partir d'un fichier JPEG avec un analyseur EXIF :",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "Afficher les coordonnées sur Google Maps"
   },
   "de": {
     "title": "EXIF-Viewer - Coding.Tools",
@@ -184,7 +190,7 @@
     "steps": [
       "Ziehen Sie ein Foto per Drag-and-Drop in den Upload-Bereich oder klicken Sie, um es auszuwählen.",
       "Alle EXIF-Metadaten-Tags werden in einer Tabelle angezeigt.",
-      "Wenn GPS-Koordinaten gefunden werden, wird eine Karte mit dem Fotostandort angezeigt."
+      "Sind GPS-Koordinaten vorhanden, können Sie diese an Google Maps senden, um den Aufnahmeort anzuzeigen."
     ],
     "whatIs": "Was sind EXIF-Metadaten?",
     "whatIsParas": [
@@ -193,7 +199,8 @@
     ],
     "example": "Lesen Sie EXIF mit Python",
     "examplePara": "Ein Skript kann mit einem EXIF-Parser denselben Typ von Tags aus einer JPEG-Datei lesen:",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "Koordinaten auf Google Maps anzeigen"
   },
   "es": {
     "title": "Visor EXIF - Coding.Tools",
@@ -212,7 +219,7 @@
     "steps": [
       "Arrastra y suelta una foto en el área de carga o haz clic para seleccionarla.",
       "Todas las etiquetas de metadatos EXIF se muestran en una tabla.",
-      "Si se encuentran coordenadas GPS, se muestra un mapa que muestra la ubicación de la foto."
+      "Si hay coordenadas GPS, puedes enviarlas a Google Maps para ver el lugar de la foto."
     ],
     "whatIs": "¿Qué son los metadatos EXIF?",
     "whatIsParas": [
@@ -221,7 +228,8 @@
     ],
     "example": "Leer EXIF con Python",
     "examplePara": "Un script puede leer el mismo tipo de etiquetas de un archivo JPEG con un analizador EXIF:",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "Ver coordenadas en Google Maps"
   },
   "pt": {
     "title": "Visualizador EXIF - Coding.Tools",
@@ -240,7 +248,7 @@
     "steps": [
       "Arraste e solte uma foto na área de upload ou clique para selecionar.",
       "Todas as tags de metadados EXIF são exibidas em uma tabela.",
-      "Se as coordenadas GPS forem encontradas, um mapa mostrando a localização da foto será exibido."
+      "Se houver coordenadas GPS, pode enviá-las ao Google Maps para ver o local da foto."
     ],
     "whatIs": "O que são metadados EXIF?",
     "whatIsParas": [
@@ -249,6 +257,7 @@
     ],
     "example": "Leia EXIF com Python",
     "examplePara": "Um script pode ler o mesmo tipo de tags de um arquivo JPEG com um analisador EXIF:",
-    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')"
+    "exampleCode": "import exifread\n\nwith open('photo.jpg', 'rb') as f:\n    tags = exifread.process_file(f)\n\nfor key, value in tags.items():\n    print(f'{key}: {value}')",
+    "showMap": "Ver coordenadas no Google Maps"
   }
 }

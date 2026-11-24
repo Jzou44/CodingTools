@@ -286,7 +286,7 @@ permalink: "/de/exif-viewer.html"
             iframe.setAttribute('style', 'border:1px solid #e1e1e1;border-radius:8px');
             iframe.setAttribute('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDvTryAEw90t0gne_bqsnmJ9DYxrvcEg_Y&zoom=13&q=' + encodeURIComponent(lat + ',' + lon));
             iframe.setAttribute('allowfullscreen', '');
-            mapContainer.appendChild(iframe);
+            ToolCommon.offerMapPreview(mapContainer, iframe, {{ toolData.showMap | json | safe }});
           }
         }
       }

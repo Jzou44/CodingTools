@@ -80,7 +80,7 @@
       "url-decode": "URL Decode / Query Parser",
       "json-diff": "JSON Diff",
       "text-compare": "Text Compare",
-      "image-resize": "Image Resize",
+      "image-resize": "Image Resizer",
       "image-crop": "Image Crop"
     },
     "categoryDescs": {
@@ -167,10 +167,10 @@
       "progressive-jpeg": "渐进式 JPEG",
       "image-to-base64": "图片转 Base64",
       "exif-viewer": "EXIF 查看器",
-      "exif-remover": "EXIF 移除器",
+      "exif-remover": "删除照片定位信息",
       "url-encode": "URL 编码",
       "url-decode": "URL 解码 / 查询解析器",
-      "json-diff": "JSON 差异对比",
+      "json-diff": "JSON 文件对比",
       "text-compare": "文本对比",
       "image-resize": "图片尺寸调整",
       "image-crop": "图片裁剪"
@@ -351,7 +351,7 @@
       "progressive-jpeg": "プログレッシブJPEG",
       "image-to-base64": "画像からBase64",
       "exif-viewer": "EXIFビューア",
-      "exif-remover": "EXIF除去ツール",
+      "exif-remover": "写真の位置情報を削除",
       "url-encode": "URL エンコード",
       "url-decode": "URL デコード / クエリ解析",
       "json-diff": "JSON 差分",

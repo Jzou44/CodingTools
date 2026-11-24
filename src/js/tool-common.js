@@ -252,6 +252,41 @@ var ToolCommon = (function () {
     });
   }
 
+  function addFileToZip(zip, filename, content) {
+    var used = new Set(Object.keys(zip.files).map(function (entry) { return entry.toLowerCase(); }));
+    var dot = filename.lastIndexOf('.');
+    var stem = dot > 0 ? filename.slice(0, dot) : filename;
+    var extension = dot > 0 ? filename.slice(dot) : '';
+    var name = filename;
+    for (var n = 2; used.has(name.toLowerCase()); n++) {
+      name = stem + '-' + n + extension;
+    }
+    zip.file(name, content);
+  }
+
+  function offerMapPreview(container, frame, label) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn btn-ghost';
+    button.textContent = label;
+    frame.title = label;
+    frame.referrerPolicy = 'no-referrer';
+    button.addEventListener('click', function () {
+      button.replaceWith(frame);
+    });
+    container.appendChild(button);
+  }
+
+  function trackToolSuccess(operation) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'tool_success', {
+        tool_id: document.body.dataset.tool,
+        tool_language: document.body.dataset.lang,
+        operation: operation
+      });
+    }
+  }
+
   function initInteractiveControls(root) {
     var scope = root || document;
     var controls = scope.querySelectorAll('#btn-convert, [role="button"]');
@@ -288,6 +323,9 @@ var ToolCommon = (function () {
   }
 
   return {
+    trackToolSuccess: trackToolSuccess,
+    offerMapPreview: offerMapPreview,
+    addFileToZip: addFileToZip,
     countLines: countLines,
     pluralise: pluralise,
     updateLineNumbers: updateLineNumbers,

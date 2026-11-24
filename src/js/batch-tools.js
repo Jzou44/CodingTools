@@ -120,6 +120,9 @@
         item.classList.toggle("is-active", active);
         item.hidden = !active;
       });
+      if ((location.hash === "#batch-tab-single" || location.hash === "#batch-tab-batch") && location.hash !== "#" + tab.id) {
+        history.replaceState(history.state, "", "#" + tab.id);
+      }
     }
     tabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
@@ -138,6 +141,13 @@
         next.focus();
       });
     });
+    function activateLinkedTab() {
+      if (location.hash === "#batch-tab-single" || location.hash === "#batch-tab-batch") {
+        activate(document.getElementById(location.hash.slice(1)));
+      }
+    }
+    window.addEventListener("hashchange", activateLinkedTab);
+    activateLinkedTab();
   }
 
   function setSummary(count, message) {
@@ -197,9 +207,10 @@
     }
     body.innerHTML = results.map(function (item, index) {
       var statusClass = item.ok ? "batch-status-ok" : "batch-status-error";
-      var output = item.url
-        ? "<a class=\"btn btn-ghost btn-sm\" href=\"" + item.url + "\" download=\"" + escapeHtml(item.filename) + "\">" + escapeHtml(tr("download", "Download")) + "</a>"
-        : "<pre class=\"batch-output\">" + escapeHtml(item.preview || item.output || item.error || "") + "</pre>";
+      var output = "<pre class=\"batch-output\">" + escapeHtml(item.preview || item.output || item.error || "") + "</pre>";
+      if (item.url) {
+        output += "<a class=\"btn btn-ghost btn-sm\" href=\"" + item.url + "\" download=\"" + escapeHtml(item.filename) + "\">" + escapeHtml(tr("download", "Download")) + "</a>";
+      }
       return "<tr><td>" + (index + 1) + "</td><td>" + escapeHtml(item.name) + "</td><td class=\"" + statusClass + "\">" + (item.ok ? escapeHtml(tr("done", "Done")) : escapeHtml(tr("error", "Error"))) + "</td><td>" + output + "</td></tr>";
     }).join("");
   }
@@ -903,7 +914,7 @@
     }
     var zip = new JSZip();
     completed.forEach(function (item) {
-      zip.file(item.filename, item.blob);
+      ToolCommon.addFileToZip(zip, item.filename, item.blob);
     });
     zip.generateAsync({ type: "blob" }).then(function (content) {
       var url = URL.createObjectURL(content);
@@ -913,6 +924,7 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      ToolCommon.trackToolSuccess("resize_zip");
       setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     });
   }

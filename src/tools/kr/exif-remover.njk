@@ -146,6 +146,7 @@ permalink: "/kr/exif-remover.html"
               var name = ToolCommon.sanitizeDownloadFilename(file.name.replace(/\.(jpe?g|png)$/i, '') + '-no-exif' + ext, 'image-no-exif' + ext);
 
               results.push({ name: name, blob: blob, url: url });
+              ToolCommon.trackToolSuccess('exif_clean');
 
               var statusEl = item.querySelector('.file-status');
               ToolCommon.setDownloadStatus(statusEl, '', url, name, '{{ t.ui.download }}');
@@ -183,7 +184,7 @@ permalink: "/kr/exif-remover.html"
         var zip = new JSZip();
         var pending = results.length;
         results.forEach(function (r) {
-          zip.file(r.name, r.blob);
+          ToolCommon.addFileToZip(zip, r.name, r.blob);
         });
         zip.generateAsync({ type: 'blob' }).then(function (content) {
           var url = URL.createObjectURL(content);
