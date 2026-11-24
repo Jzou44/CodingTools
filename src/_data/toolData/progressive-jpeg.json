@@ -6,7 +6,7 @@
     "toolDescription": "Convert baseline JPEG images into progressive JPEG output in the browser for better perceived loading.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag JPEG files here to upload",
-    "dropzoneHint": "Up to 30 images · Max 10MB each",
+    "dropzoneHint": "Up to 20 images · Max 10MB each",
     "descTitle": "Make JPEGs load progressively",
     "descParas": [
       "<strong>Progressive JPEG stores image data in multiple scans instead of one top-to-bottom pass.</strong> A browser can show a rough preview first and refine it as more bytes arrive, which can feel faster on slow connections.",
@@ -34,7 +34,7 @@
     "toolDescription": "在浏览器中将基线 JPEG 图像转换为渐进式 JPEG 输出，以便更好地感知加载。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽 JPEG 文件上传",
-    "dropzoneHint": "最多 30 张图片 · 每张最大 10MB",
+    "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
     "descTitle": "使 JPEG 逐步加载",
     "descParas": [
       "<strong>渐进式 JPEG 在多次扫描中存储图像数据，而不是从上到下一次传递。</strong> 浏览器可以首先显示粗略预览，然后随着更多字节到达而对其进行细化，这在慢速连接上会感觉更快。",
@@ -62,7 +62,7 @@
     "toolDescription": "在瀏覽器中將基準 JPEG 影像轉換為漸進式 JPEG 輸出，以便更好地感知載入。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "點選或拖曳 JPEG 檔案至此處上傳",
-    "dropzoneHint": "最多 30 張圖像·每張最大 10MB",
+    "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
     "descTitle": "使 JPEG 逐步加載",
     "descParas": [
       "<strong>漸進式 JPEG 在多次掃描中儲存影像資料，而不是從上到下一次傳遞。</strong> 瀏覽器可以先顯示粗略預覽，然後隨著更多位元組到達而對其進行細化，這在慢速連接上會感覺更快。",
@@ -90,7 +90,7 @@
     "toolDescription": "ブラウザーでベースライン JPEG イメージをプログレッシブ JPEG 出力に変換し、読み込みをより適切に認識できるようにします。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに JPEG ファイルをクリックまたはドラッグしてアップロードします",
-    "dropzoneHint": "画像最大30枚・各最大10MB",
+    "dropzoneHint": "画像最大20枚・各最大10MB",
     "descTitle": "JPEGを段階的に読み込むようにする",
     "descParas": [
       "<strong>プログレッシブ JPEG は、画像データを上から下への 1 回のパスではなく、複数のスキャンで保存します。</strong> ブラウザーは、最初に大まかなプレビューを表示し、より多くのバイトが到着するにつれてプレビューを調整することができるため、低速接続でも高速に感じることができます。",
@@ -118,7 +118,7 @@
     "toolDescription": "더 나은 인식 로딩을 위해 기본 JPEG 이미지를 브라우저에서 프로그레시브 JPEG 출력으로 변환합니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 JPEG 파일을 클릭하거나 드래그하세요.",
-    "dropzoneHint": "이미지 최대 30개 · 각 최대 10MB",
+    "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
     "descTitle": "JPEG를 점진적으로 로드하도록 설정",
     "descParas": [
       "<strong>프로그레시브 JPEG는 위에서 아래로 한 번 통과하는 대신 여러 스캔으로 이미지 데이터를 저장합니다.</strong> 브라우저는 대략적인 미리 보기를 먼저 표시한 다음 더 많은 바이트가 도착하면 이를 구체화할 수 있으므로 느린 연결에서 더 빠르게 느껴질 수 있습니다.",
@@ -146,7 +146,7 @@
     "toolDescription": "Convertissez les images JPEG de base en sortie JPEG progressive dans le navigateur pour un chargement mieux perçu.",
     "categoryName": "Outils d’image",
     "dropzoneMessage": "Cliquez ou faites glisser les fichiers JPEG ici pour les télécharger",
-    "dropzoneHint": "Jusqu'à 30 images · Max 10 Mo chacune",
+    "dropzoneHint": "Jusqu'à 20 images · Max 10 Mo chacune",
     "descTitle": "Rendre les fichiers JPEG chargés progressivement",
     "descParas": [
       "<strong>JPEG progressif stocke les données d'image dans plusieurs numérisations au lieu d'un seul passage de haut en bas.</strong> Un navigateur peut d'abord afficher un aperçu approximatif et l'affiner à mesure que d'autres octets arrivent, ce qui peut sembler plus rapide sur les connexions lentes.",
@@ -174,7 +174,7 @@
     "toolDescription": "Konvertieren Sie Basis-JPEG-Bilder in eine progressive JPEG-Ausgabe im Browser, um das Laden besser wahrzunehmen.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie JPEG-Dateien hierher, um sie hochzuladen",
-    "dropzoneHint": "Bis zu 30 Bilder · Max. jeweils 10 MB",
+    "dropzoneHint": "Bis zu 20 Bilder · Max. jeweils 10 MB",
     "descTitle": "Sorgen Sie dafür, dass JPEGs progressiv geladen werden",
     "descParas": [
       "<strong>Progressiv JPEG speichert Bilddaten in mehreren Scans statt in einem Durchlauf von oben nach unten.</strong> Ein Browser kann zunächst eine grobe Vorschau anzeigen und diese verfeinern, wenn mehr Bytes eintreffen, was sich bei langsamen Verbindungen schneller anfühlen kann.",
@@ -202,7 +202,7 @@
     "toolDescription": "Convierta imágenes JPEG de referencia en salida JPEG progresiva en el navegador para una mejor percepción de la carga.",
     "categoryName": "Herramientas de imagen",
     "dropzoneMessage": "Haga clic o arrastre los archivos JPEG aquí para cargarlos.",
-    "dropzoneHint": "Hasta 30 imágenes · Máximo 10 MB cada una",
+    "dropzoneHint": "Hasta 20 imágenes · Máximo 10 MB cada una",
     "descTitle": "Hacer que los archivos JPEG se carguen progresivamente",
     "descParas": [
       "<strong>JPEG progresivo almacena datos de imágenes en múltiples escaneos en lugar de un paso de arriba a abajo.</strong> Un navegador puede mostrar una vista previa aproximada primero y refinarla a medida que llegan más bytes, lo que puede parecer más rápido en conexiones lentas.",
@@ -230,7 +230,7 @@
     "toolDescription": "Converta imagens JPEG de linha de base em saída JPEG progressiva no navegador para melhor percepção de carregamento.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste os arquivos JPEG aqui para fazer upload",
-    "dropzoneHint": "Até 30 imagens · Máximo de 10 MB cada",
+    "dropzoneHint": "Até 20 imagens · Máximo de 10 MB cada",
     "descTitle": "Faça os JPEGs carregarem progressivamente",
     "descParas": [
       "<strong>JPEG progressivo armazena dados de imagem em várias varreduras em vez de uma passagem de cima para baixo.</strong> Um navegador pode mostrar uma visualização aproximada primeiro e refiná-la à medida que mais bytes chegam, o que pode parecer mais rápido em conexões lentas.",

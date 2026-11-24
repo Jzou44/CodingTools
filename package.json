@@ -14,6 +14,7 @@
     "clean": "node scripts/clean-dist.js",
     "build": "npm run clean && eleventy && node scripts/optimize-assets.js",
     "test:assets": "node --test scripts/test-optimize-assets.js",
+    "test:progressive-jpeg": "node scripts/test-progressive-jpeg.js",
     "dev": "eleventy --serve --port=5500",
     "debug": "eleventy --serve --port=5500 --debug",
     "a2a": "node server/a2a-runtime.js",
@@ -31,6 +32,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "esbuild": "^0.28.2"
+    "@jsquash/jpeg": "1.6.0",
+    "esbuild": "^0.28.2",
+    "playwright-core": "1.65.1"
   }
 }

@@ -111,6 +111,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
+  // Serve only the browser encoder, its imports and redistribution notices.
+  for (const file of [
+    "encode.js", "meta.js", "utils.js", "codec/enc/mozjpeg_enc.js", "codec/enc/mozjpeg_enc.wasm",
+    "LICENSE", "codec/LICENSE.codec.md"
+  ]) {
+    eleventyConfig.addPassthroughCopy({
+      [`node_modules/@jsquash/jpeg/${file}`]: `assets/jsquash-jpeg/${file}`
+    });
+  }
   eleventyConfig.addPassthroughCopy({ "src/assets/favicons/favicon.ico": "favicon.ico" });
   eleventyConfig.addWatchTarget("src/_data/");
 

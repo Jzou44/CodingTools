@@ -489,10 +489,14 @@ function checkMcpDocumentation() {
   const mcpSectionPath = path.join(srcDir, "_includes", "mcp-integration-section.njk");
   const layout = fs.existsSync(layoutPath) ? fs.readFileSync(layoutPath, "utf8") : "";
   const mcpSection = fs.existsSync(mcpSectionPath) ? fs.readFileSync(mcpSectionPath, "utf8") : "";
-  const validExtends = [
-    '{% extends "tool-layout.njk" %}',
-    '{% extends "photo2pixel-page.njk" %}'
-  ];
+  const toolLayoutExtends = '{% extends "tool-layout.njk" %}';
+  const validExtends = [toolLayoutExtends];
+  for (const wrapper of ["photo2pixel-page.njk", "progressive-jpeg-page.njk"]) {
+    const file = path.join(srcDir, "_includes", wrapper);
+    if (fs.existsSync(file) && fs.readFileSync(file, "utf8").includes(toolLayoutExtends)) {
+      validExtends.push(`{% extends "${wrapper}" %}`);
+    }
+  }
 
   if (!layout.includes('{% include "mcp-integration-section.njk" %}')) {
     fail("tool-layout.njk should include the MCP integration documentation section");
@@ -553,7 +557,7 @@ function checkMcpDocumentation() {
 
       const content = fs.readFileSync(filePath, "utf8");
       if (!validExtends.some((line) => content.includes(line))) {
-        fail(`${path.relative(root, filePath)} should extend tool-layout.njk or photo2pixel-page.njk so MCP documentation is rendered`);
+        fail(`${path.relative(root, filePath)} should inherit tool-layout.njk so MCP documentation is rendered`);
       }
     });
   });
