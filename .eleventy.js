@@ -120,6 +120,11 @@ module.exports = function (eleventyConfig) {
       [`node_modules/@jsquash/jpeg/${file}`]: `assets/jsquash-jpeg/${file}`
     });
   }
+  for (const file of ["codec/pkg/squoosh_oxipng.js", "codec/pkg/squoosh_oxipng_bg.wasm", "LICENSE", "codec/LICENSE.codec.md"]) {
+    eleventyConfig.addPassthroughCopy({
+      [`node_modules/@jsquash/oxipng/${file}`]: `assets/jsquash-oxipng/${file}`
+    });
+  }
   eleventyConfig.addPassthroughCopy({ "src/assets/favicons/favicon.ico": "favicon.ico" });
   eleventyConfig.addWatchTarget("src/_data/");
 

@@ -1,0 +1,38 @@
+{% extends "tool-layout.njk" %}
+
+{% block tool_content %}
+  {% set imageMime = "image/png" %}
+  {% if activeTool == "compress-jpeg" %}
+    {% set imageMime = "image/jpeg" %}
+    <div class="toolbar" id="jpeg-options" data-unmet="{{ toolData.unmet }}">
+      <label>{{ toolData.mode }}
+        <select id="compression-mode">
+          <option value="quality">{{ t.ui.quality }}</option>
+          <option value="100">≤ 100 KB</option>
+          <option value="200">≤ 200 KB</option>
+          <option value="custom">{{ toolData.custom }}</option>
+        </select>
+      </label>
+      <label id="quality-setting">{{ t.ui.quality }}
+        <input id="jpeg-quality" type="range" min="1" max="100" value="80">
+        <output for="jpeg-quality">80%</output>
+      </label>
+      <label id="custom-setting" hidden>{{ toolData.custom }} (KB)
+        <input id="target-kb" type="number" min="1" step="1" value="200" required>
+      </label>
+      <label id="resize-setting" hidden><input id="allow-resize" type="checkbox"> {{ toolData.allowResize }}</label>
+    </div>
+  {% endif %}
+  <div id="compression-queue" data-original="{{ toolData.original }}">
+    {% include "image-download-queue.njk" %}
+  </div>
+{% endblock %}
+
+{% block description %}
+  {% include "tool-description.njk" %}
+{% endblock %}
+
+{% block tool_script %}
+  <script src="/js/jszip.min.js?v={{ site.assetVersion }}"></script>
+  <script type="module" src="/js/image-compression.js?v={{ site.assetVersion }}"></script>
+{% endblock %}

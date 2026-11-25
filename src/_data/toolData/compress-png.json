@@ -1,272 +1,254 @@
 {
   "en": {
-    "title": "Compress PNG - Coding.Tools",
-    "description": "Compress PNG images in your browser for smaller transparent graphics, icons, screenshots, and UI assets.",
+    "title": "Compress Transparent PNG Images in Batches - Coding.Tools",
+    "description": "Losslessly compress transparent PNGs, icons and screenshots in your browser.",
     "toolTitle": "Compress PNG",
-    "toolDescription": "Compress PNG files locally by reducing color data for browser-generated output while preserving transparency when possible.",
+    "toolDescription": "Losslessly compress transparent PNGs, icons and screenshots in your browser.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag PNG files here to upload",
     "dropzoneHint": "Up to 20 images · Max 10MB each",
     "descTitle": "Compress PNGs without sending files to a server",
     "descParas": [
-      "<strong>Compress PNG reduces file size for PNG graphics while keeping the workflow local in your browser.</strong> It is most useful for icons, logos, screenshots, diagrams, and transparent UI assets where PNG is the right format.",
-      "PNG is lossless and supports alpha transparency, but browser-side compression usually works by reducing color complexity and re-encoding the image. Photos may be smaller as JPEG/WebP instead; always compare transparency, edges, and file size before replacing production assets."
+      "Oxipng optimizes how PNG pixels are stored while preserving their colors, transparency and dimensions.",
+      "If the optimized file is the same size or larger, you get the original. Animated PNGs are returned intact so all frames are preserved."
     ],
     "howToUse": "How to use",
     "steps": [
       "Drag and drop PNG files onto the upload area, or click to select files.",
-      "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "Compare the original and output sizes to see how many bytes you saved.",
+      "Download each result separately, or download multiple results together as a ZIP."
     ],
     "whatIs": "When should you compress PNG?",
     "whatIsParas": [
-      "<strong>PNG</strong> is best for sharp graphics, text, screenshots, and images that need transparency.",
-      "<strong>Compression tradeoff:</strong> PNG preserves crisp edges better than JPEG, but it can stay large when the image contains many colors or photographic detail.",
-      "<strong>Transparency caveat:</strong> Keep PNG when alpha transparency matters; JPEG has no alpha channel.",
-      "<strong>Best workflow:</strong> Compress PNG assets, then inspect the result at actual display size to catch banding, haloing, or lost detail."
+      "Logos, icons and screenshots with flat colors often compress well. Already optimized files may yield little or no saving."
     ],
     "example": "Compress with Python",
-    "examplePara": "A production pipeline might use Pillow to reduce color data and optimize the saved PNG:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "This Python example uses Pillow to optimize a static PNG and keeps the smaller file.",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "Original kept"
   },
   "cn": {
-    "title": "压缩 PNG - Coding.Tools",
-    "description": "在浏览器中压缩 PNG 图像以获得更小的透明图形、图标、屏幕截图和 UI 资源。",
+    "title": "批量无损压缩透明 PNG 图片 - Coding.Tools",
+    "description": "在浏览器中无损压缩透明 PNG、图标和截图，可批量下载。",
     "toolTitle": "压缩 PNG",
-    "toolDescription": "通过减少浏览器生成的输出的颜色数据来本地压缩 PNG 文件，同时尽可能保留透明度。",
+    "toolDescription": "在浏览器中无损压缩透明 PNG、图标和截图，可批量下载。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽 PNG 文件上传",
     "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
     "descTitle": "压缩 PNG 而不将文件发送到服务器",
     "descParas": [
-      "<strong>压缩 PNG 可以减少 PNG 图形的文件大小，同时将工作流程保留在浏览器本地。</strong> 它对于图标、徽标、屏幕截图、图表和透明 UI 资源最有用，其中 PNG 是正确的格式。",
-      "PNG 是无损的并且支持 Alpha 透明度，但浏览器端压缩通常通过降低颜色复杂性和重新编码图像来工作。照片可能会更小，如 JPEG/WebP；在替换生产资源之前，始终比较透明度、边缘和文件大小。"
+      "Oxipng 会优化 PNG 像素的存储方式，保留原图的颜色、透明度和尺寸。",
+      "若优化后文件一样大或更大，会直接提供原文件。动态 PNG 会保留原件，所有动画帧都在。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 PNG 文件拖放到上传区域，或单击选择文件。",
-      "每个文件都会自动压缩并显示压缩率。",
-      "下载单个压缩文件或使用 <strong>下载全部</strong> 获取 ZIP 存档。"
+      "比较压缩前后的文件大小，查看实际节省了多少字节。",
+      "可以单独下载每张图片，也可以把多张结果打包为 ZIP 下载。"
     ],
     "whatIs": "什么时候应该压缩 PNG？",
     "whatIsParas": [
-      "<strong>PNG</strong> 最适合需要透明度的清晰图形、文本、屏幕截图和图像。",
-      "<strong>压缩权衡：</strong> PNG 比 JPEG 更好地保留清晰的边缘，但当图像包含许多颜色或摄影细节时，它可能会保持很大。",
-      "<strong>透明度警告：</strong> 当 alpha 透明度很重要时，保留 PNG； JPEG 没有 Alpha 通道。",
-      "<strong>最佳工作流程：</strong> 压缩 PNG 资源，然后以实际显示尺寸检查结果以捕获条带、光晕或丢失的细节。"
+      "大面积纯色的图标、徽标和截图通常有压缩空间。已优化过的 PNG 可能已经很小。"
     ],
     "example": "用 Python 压缩",
-    "examplePara": "生产管道可能使用 Pillow 来减少颜色数据并优化保存的 PNG：",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "下面的 Python 示例用 Pillow 优化静态 PNG，并保留较小的文件。",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "已保留原图"
   },
   "tw": {
     "title": "壓縮 PNG - Coding.Tools",
-    "description": "在瀏覽器中壓縮 PNG 圖像以獲得更小的透明圖形、圖示、螢幕截圖和 UI 資源。",
+    "description": "在瀏覽器中無損壓縮透明 PNG、圖示與螢幕截圖，也可批次下載。",
     "toolTitle": "壓縮PNG",
-    "toolDescription": "透過減少瀏覽器產生的輸出的色彩資料來本機壓縮 PNG 文件，同時盡可能保留透明度。",
+    "toolDescription": "在瀏覽器中無損壓縮透明 PNG、圖示與螢幕截圖，也可批次下載。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "按一下或拖曳 PNG 檔案至此處上傳",
     "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
     "descTitle": "壓縮 PNG 而不將檔案傳送到伺服器",
     "descParas": [
-      "<strong>壓縮 PNG 可以減少 PNG 圖形的檔案大小，同時將工作流程保留在瀏覽器本機。</strong> 它對於圖示、標誌、螢幕截圖、圖表和透明 UI 資源最有用，其中 PNG 是正確的格式。",
-      "PNG 是無損的並且支援 Alpha 透明度，但瀏覽器端壓縮通常透過降低色彩複雜性和重新編碼影像來運作。照片可能會更小，如 JPEG/WebP；在替換生產資源之前，請務必比較透明度、邊緣和檔案大小。"
+      "Oxipng 會最佳化 PNG 像素的儲存方式，保留原圖的色彩、透明度與尺寸。",
+      "如果最佳化後一樣大或更大，工具會提供原檔。動態 PNG 會保留原檔及所有影格。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "將 PNG 檔案拖曳到上傳區域，或點選選擇檔案。",
-      "每個檔案都會自動壓縮並顯示壓縮率。",
-      "下載單一壓縮檔案或使用 <strong>下載全部</strong> 取得 ZIP 檔案。"
+      "比較壓縮前後的檔案大小，查看實際省下的位元組數。",
+      "可個別下載圖片，也可將多張結果打包成 ZIP 檔下載。"
     ],
     "whatIs": "什麼時候該壓縮 PNG？",
     "whatIsParas": [
-      "<strong>PNG</strong> 最適合需要透明度的清晰圖形、文字、螢幕截圖和圖像。",
-      "<strong>壓縮權衡：</strong> PNG 比 JPEG 更好地保留清晰的邊緣，但當影像包含許多顏色或攝影細節時，它可能會保持很大。",
-      "<strong>透明度警告：</strong> 當 alpha 透明度很重要時，保留 PNG； JPEG 沒有 Alpha 通道。",
-      "<strong>最佳工作流程：</strong> 壓縮 PNG 資源，然後以實際顯示尺寸檢查結果以捕捉條帶、光暈或遺失的細節。"
+      "具有大片純色的圖示、標誌和螢幕截圖通常有壓縮空間。已最佳化過的 PNG 可能已經很小。"
     ],
     "example": "使用Python壓縮",
-    "examplePara": "生產管道可能使用 Pillow 來減少顏色資料並優化保存的 PNG：",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "這個 Python 範例用 Pillow 最佳化靜態 PNG，並保留較小的檔案。",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "已保留原圖"
   },
   "jp": {
     "title": "PNG 圧縮 - Coding.Tools",
-    "description": "ブラウザーで PNG 画像を圧縮すると、透明なグラフィック、アイコン、スクリーンショット、UI アセットが小さくなります。",
+    "description": "透過 PNG、アイコン、スクリーンショットをブラウザで可逆圧縮します。",
     "toolTitle": "PNG圧縮",
-    "toolDescription": "可能な場合は透明性を維持しながら、ブラウザーで生成された出力のカラー データを削減して、PNG ファイルをローカルに圧縮します。",
+    "toolDescription": "透過 PNG、アイコン、スクリーンショットをブラウザで可逆圧縮します。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに PNG ファイルをクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像最大20枚・各最大10MB",
     "descTitle": "ファイルをサーバーに送信せずに PNG を圧縮",
     "descParas": [
-      "<strong>PNG圧縮 は、ワークフローをブラウザ内でローカルに保ちながら、PNG グラフィックスのファイル サイズを削減します。</strong> PNG が適切な形式であるアイコン、ロゴ、スクリーンショット、図、および透明な UI アセットに最も役立ちます。",
-      "PNG はロスレスであり、アルファ透明度をサポートしていますが、ブラウザ側の圧縮は通常、色の複雑さを軽減し、画像を再エンコードすることによって機能します。写真は JPEG/WebP のように小さくなる場合があります。実稼働アセットを置き換える前に、必ず透明度、エッジ、ファイル サイズを比較してください。"
+      "Oxipng が PNG の画素データの格納方法を最適化し、色、透明度、画像の寸法を維持します。",
+      "最適化してもファイルが小さくならなければ元のファイルを返します。アニメーション PNG は元のファイルのまま保存するため、すべてのフレームが残ります。"
     ],
     "howToUse": "使い方",
     "steps": [
       "PNG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
-      "各ファイルは自動的に圧縮され、圧縮率が表示されます。",
-      "個別の圧縮ファイルをダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
+      "処理前後のファイルサイズを比較して、削減できたバイト数を確認します。",
+      "画像は個別にダウンロードでき、複数の画像は ZIP にまとめて保存できます。"
     ],
     "whatIs": "PNG をいつ圧縮する必要がありますか?",
     "whatIsParas": [
-      "<strong>PNG</strong> は、鮮明なグラフィック、テキスト、スクリーンショット、透明度が必要な画像に最適です。",
-      "<strong>圧縮のトレードオフ:</strong> PNG は、JPEG よりも鮮明なエッジを保持しますが、画像に多くの色や写真の詳細が含まれている場合は、サイズが大きくなる可能性があります。",
-      "<strong>透明度に関する注意事項:</strong> アルファ透明度が重要な場合は PNG を維持してください。 JPEG にはアルファ チャネルがありません。",
-      "<strong>ベストなワークフロー:</strong> PNG アセットを圧縮し、その結果を実際の表示サイズで検査して、バンディング、ハロー、または失われたディテールを検出します。"
+      "単色の領域が多いアイコンやロゴ、スクリーンショットは圧縮しやすい画像です。最適化済みの画像はほとんど小さくならないことがあります。"
     ],
     "example": "Pythonで圧縮する",
-    "examplePara": "プロダクション パイプラインでは、Pillow を使用してカラー データを削減し、保存された PNG を最適化する場合があります。",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "この Python の例では Pillow で静止 PNG を最適化し、小さい方のファイルを保存します。",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "元のファイルを使用"
   },
   "kr": {
     "title": "PNG 압축 - Coding.Tools",
-    "description": "더 작고 투명한 그래픽, 아이콘, 스크린샷 및 UI 자산을 위해 브라우저에서 PNG 이미지를 압축하세요.",
+    "description": "브라우저에서 투명 PNG, 아이콘, 스크린샷을 무손실로 압축합니다.",
     "toolTitle": "PNG 압축",
-    "toolDescription": "가능한 경우 투명도를 유지하면서 브라우저 생성 출력에 대한 색상 데이터를 줄여 PNG 파일을 로컬로 압축합니다.",
+    "toolDescription": "브라우저에서 투명 PNG, 아이콘, 스크린샷을 무손실로 압축합니다.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 PNG 파일을 클릭하거나 드래그하세요.",
     "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
     "descTitle": "파일을 서버로 보내지 않고 PNG 압축",
     "descParas": [
-      "<strong>PNG 압축은 브라우저에서 워크플로를 로컬로 유지하면서 PNG 그래픽의 파일 크기를 줄입니다.</strong> PNG가 올바른 형식인 아이콘, 로고, 스크린샷, 다이어그램 및 투명 UI 자산에 가장 유용합니다.",
-      "PNG는 무손실이며 알파 투명도를 지원하지만 브라우저 측 압축은 일반적으로 색상 복잡성을 줄이고 이미지를 다시 인코딩하여 작동합니다. 대신 JPEG/WebP로 사진이 더 작을 수 있습니다. 프로덕션 자산을 교체하기 전에 항상 투명도, 가장자리 및 파일 크기를 비교하십시오."
+      "Oxipng가 PNG 픽셀의 저장 방식을 최적화하면서 색상, 투명도, 해상도를 그대로 유지합니다.",
+      "최적화한 파일이 더 작아지지 않으면 원본을 제공합니다. 움직이는 PNG는 모든 프레임을 유지하도록 원본 그대로 제공합니다."
     ],
     "howToUse": "사용방법",
     "steps": [
       "PNG 파일을 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택합니다.",
-      "각 파일은 자동으로 압축되며 압축률이 표시됩니다.",
-      "개별 압축 파일을 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
+      "원본과 결과 파일의 크기를 비교해 몇 바이트가 줄었는지 확인하세요.",
+      "이미지를 개별로 내려받거나 여러 결과를 ZIP 파일로 한꺼번에 저장하세요."
     ],
     "whatIs": "언제 PNG를 압축해야 합니까?",
     "whatIsParas": [
-      "<strong>PNG</strong>은 투명성이 필요한 선명한 그래픽, 텍스트, 스크린샷 및 이미지에 가장 적합합니다.",
-      "<strong>압축 절충:</strong> PNG는 JPEG보다 선명한 가장자리를 더 잘 보존하지만 이미지에 많은 색상이나 사진 세부 사항이 포함된 경우 큰 상태를 유지할 수 있습니다.",
-      "<strong>투명도 주의 사항:</strong> 알파 투명도가 중요한 경우 PNG를 유지하세요. JPEG에는 알파 채널이 없습니다.",
-      "<strong>최고의 워크플로:</strong> PNG 자산을 압축한 다음 실제 디스플레이 크기에서 결과를 검사하여 밴딩, 후광 또는 손실된 세부 정보를 포착합니다."
+      "단색 영역이 많은 아이콘, 로고, 스크린샷은 대체로 잘 압축됩니다. 이미 최적화한 PNG는 크기가 거의 줄지 않을 수 있습니다."
     ],
     "example": "Python으로 압축",
-    "examplePara": "프로덕션 파이프라인은 Pillow를 사용하여 색상 데이터를 줄이고 저장된 PNG를 최적화할 수 있습니다.",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "이 Python 예제는 Pillow로 정적인 PNG를 최적화한 뒤 더 작은 파일을 저장합니다.",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "원본 유지"
   },
   "fr": {
     "title": "Compresser PNG - Coding.Tools",
-    "description": "Compressez les images PNG dans votre navigateur pour obtenir des graphiques, des icônes, des captures d'écran et des ressources d'interface utilisateur transparents plus petits.",
+    "description": "Compressez sans perte les PNG transparents, les icônes et les captures d’écran dans votre navigateur.",
     "toolTitle": "Compresser PNG",
-    "toolDescription": "Compressez les fichiers PNG localement en réduisant les données de couleur pour la sortie générée par le navigateur tout en préservant la transparence lorsque cela est possible.",
+    "toolDescription": "Compressez sans perte les PNG transparents, les icônes et les captures d’écran dans votre navigateur.",
     "categoryName": "Outils d’image",
     "dropzoneMessage": "Cliquez ou faites glisser les fichiers PNG ici pour les télécharger",
     "dropzoneHint": "Jusqu'à 20 images · Max 10 Mo chacune",
     "descTitle": "Compresser les PNG sans envoyer de fichiers à un serveur",
     "descParas": [
-      "<strong>Compresser PNG réduit la taille du fichier pour les graphiques PNG tout en gardant le flux de travail local dans votre navigateur.</strong> Il est particulièrement utile pour les icônes, les logos, les captures d'écran, les diagrammes et les ressources transparentes de l'interface utilisateur où PNG est le bon format.",
-      "PNG est sans perte et prend en charge la transparence alpha, mais la compression côté navigateur fonctionne généralement en réduisant la complexité des couleurs et en réencodant l'image. Les photos peuvent être plus petites que JPEG/WebP ; comparez toujours la transparence, les bords et la taille du fichier avant de remplacer les actifs de production."
+      "Oxipng optimise le stockage des pixels du PNG tout en préservant les couleurs, la transparence et les dimensions.",
+      "Si le fichier optimisé ne pèse pas moins que l’original, vous récupérez l’original. Les PNG animés sont rendus intacts avec toutes leurs images."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Faites glisser et déposez les fichiers PNG sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
-      "Chaque fichier est compressé automatiquement et le taux de compression est affiché.",
-      "Téléchargez des fichiers compressés individuels ou utilisez <strong>Tout télécharger</strong> pour obtenir une archive ZIP."
+      "Comparez la taille avant et après compression pour voir le nombre d’octets économisés.",
+      "Téléchargez chaque résultat séparément ou regroupez plusieurs images dans une archive ZIP."
     ],
     "whatIs": "Quand devez-vous compresser PNG ?",
     "whatIsParas": [
-      "<strong>PNG</strong> convient parfaitement aux graphiques, textes, captures d'écran et images nets nécessitant de la transparence.",
-      "Compromis de compression <strong>:</strong> PNG préserve mieux les bords nets que JPEG, mais il peut rester grand lorsque l'image contient de nombreuses couleurs ou détails photographiques.",
-      "<strong>Mise en garde concernant la transparence :</strong> Conservez PNG lorsque la transparence alpha est importante ; JPEG n'a pas de canal alpha.",
-      "<strong>Meilleur flux de travail :</strong> Compressez les ressources PNG, puis inspectez le résultat à la taille d'affichage réelle pour détecter les bandes, les halos ou les détails perdus."
+      "Les logos, icônes et captures d’écran avec des aplats de couleur se compressent souvent bien. Le gain peut être minime pour un PNG déjà optimisé."
     ],
     "example": "Compresser avec Python",
-    "examplePara": "Un pipeline de production peut utiliser Pillow pour réduire les données de couleur et optimiser le PNG enregistré :",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "Cet exemple Python utilise Pillow pour optimiser un PNG statique et conserve le fichier le plus léger.",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "Original conservé"
   },
   "de": {
     "title": "Komprimieren Sie PNG - Coding.Tools",
-    "description": "Komprimieren Sie PNG-Bilder in Ihrem Browser für kleinere transparente Grafiken, Symbole, Screenshots und UI-Assets.",
+    "description": "Komprimieren Sie transparente PNGs, Symbole und Screenshots verlustfrei im Browser.",
     "toolTitle": "PNG komprimieren",
-    "toolDescription": "Komprimieren Sie PNG-Dateien lokal, indem Sie Farbdaten für die browsergenerierte Ausgabe reduzieren und dabei nach Möglichkeit die Transparenz beibehalten.",
+    "toolDescription": "Komprimieren Sie transparente PNGs, Symbole und Screenshots verlustfrei im Browser.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie PNG-Dateien hierher, um sie hochzuladen",
     "dropzoneHint": "Bis zu 20 Bilder · Maximal jeweils 10 MB",
     "descTitle": "Komprimieren Sie PNGs, ohne Dateien an einen Server zu senden",
     "descParas": [
-      "<strong>PNG komprimieren reduziert die Dateigröße von PNG-Grafiken, während der Arbeitsablauf lokal in Ihrem Browser bleibt.</strong> Es ist besonders nützlich für Symbole, Logos, Screenshots, Diagramme und transparente UI-Assets, bei denen PNG das richtige Format ist.",
-      "PNG ist verlustfrei und unterstützt Alpha-Transparenz, aber die browserseitige Komprimierung funktioniert normalerweise durch Reduzierung der Farbkomplexität und Neukodierung des Bildes. Fotos können stattdessen kleiner als JPEG/WebP sein; Vergleichen Sie immer Transparenz, Kanten und Dateigröße, bevor Sie Produktionsressourcen ersetzen."
+      "Oxipng optimiert die Speicherung der PNG-Pixel. Farben, Transparenz und Bildmaße bleiben erhalten.",
+      "Ist die optimierte Datei gleich groß oder größer, erhalten Sie das Original. Bei animierten PNGs wird die Originaldatei mit allen Einzelbildern ausgegeben."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
       "Ziehen Sie PNG-Dateien per Drag & Drop in den Upload-Bereich oder klicken Sie, um Dateien auszuwählen.",
-      "Jede Datei wird automatisch komprimiert und die Komprimierungsrate wird angezeigt.",
-      "Laden Sie einzelne komprimierte Dateien herunter oder verwenden Sie <strong>Alle herunterladen</strong>, um ein ZIP-Archiv zu erhalten."
+      "Vergleichen Sie die Dateigröße vor und nach der Kompression, um die eingesparten Bytes zu sehen.",
+      "Laden Sie jedes Ergebnis einzeln oder mehrere Bilder zusammen als ZIP-Datei herunter."
     ],
     "whatIs": "Wann sollten Sie PNG komprimieren?",
     "whatIsParas": [
-      "<strong>PNG</strong> eignet sich am besten für scharfe Grafiken, Texte, Screenshots und Bilder, die Transparenz erfordern.",
-      "<strong>Kompromiss bei der Komprimierung:</strong> PNG bewahrt scharfe Kanten besser als JPEG, kann aber groß bleiben, wenn das Bild viele Farben oder fotografische Details enthält.",
-      "<strong>Transparenzvorbehalt:</strong> Behalten Sie PNG bei, wenn Alpha-Transparenz wichtig ist; JPEG hat keinen Alphakanal.",
-      "<strong>Bester Arbeitsablauf:</strong> Komprimieren Sie PNG-Assets und prüfen Sie das Ergebnis anschließend in tatsächlicher Anzeigegröße, um Streifenbildung, Lichthöfe oder verlorene Details zu erkennen."
+      "Logos, Symbole und Screenshots mit einfarbigen Flächen lassen sich oft gut komprimieren. Bereits optimierte PNGs bieten mitunter kaum Einsparpotenzial."
     ],
     "example": "Mit Python komprimieren",
-    "examplePara": "Eine Produktionspipeline könnte Pillow verwenden, um Farbdaten zu reduzieren und das gespeicherte PNG zu optimieren:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "Dieses Python-Beispiel optimiert ein statisches PNG mit Pillow und behält die kleinere Datei.",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "Original beibehalten"
   },
   "es": {
     "title": "Comprimir PNG - Coding.Tools",
-    "description": "Comprima imágenes PNG en su navegador para obtener gráficos, íconos, capturas de pantalla y recursos de interfaz de usuario más pequeños y transparentes.",
+    "description": "Comprime sin pérdidas PNG transparentes, iconos y capturas de pantalla en tu navegador.",
     "toolTitle": "Comprimir PNG",
-    "toolDescription": "Comprima archivos PNG localmente reduciendo los datos de color para la salida generada por el navegador y preservando al mismo tiempo la transparencia cuando sea posible.",
+    "toolDescription": "Comprime sin pérdidas PNG transparentes, iconos y capturas de pantalla en tu navegador.",
     "categoryName": "Herramientas de imagen",
     "dropzoneMessage": "Haga clic o arrastre los archivos PNG aquí para cargarlos",
     "dropzoneHint": "Hasta 20 imágenes · Máximo 10 MB cada una",
     "descTitle": "Comprime PNG sin enviar archivos a un servidor",
     "descParas": [
-      "<strong>Comprimir PNG reduce el tamaño del archivo para los gráficos PNG mientras mantiene el flujo de trabajo local en su navegador.</strong> Es más útil para íconos, logotipos, capturas de pantalla, diagramas y recursos de interfaz de usuario transparentes donde PNG es el formato correcto.",
-      "PNG no tiene pérdidas y admite transparencia alfa, pero la compresión del lado del navegador generalmente funciona reduciendo la complejidad del color y recodificando la imagen. Las fotos pueden ser más pequeñas como JPEG/WebP; compare siempre la transparencia, los bordes y el tamaño del archivo antes de reemplazar los recursos de producción."
+      "Oxipng optimiza cómo se guardan los píxeles del PNG y conserva los colores, la transparencia y las dimensiones.",
+      "Si el archivo optimizado ocupa lo mismo o más, recibirás el original. Los PNG animados se devuelven intactos con todos sus fotogramas."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Arrastre y suelte los archivos PNG en el área de carga o haga clic para seleccionar archivos.",
-      "Cada archivo se comprime automáticamente y se muestra la tasa de compresión.",
-      "Descargue archivos comprimidos individuales o use <strong>Descargar todo</strong> para obtener un archivo ZIP."
+      "Compara el tamaño de entrada con el de salida para ver cuántos bytes has ahorrado.",
+      "Descarga cada resultado por separado o guarda varias imágenes juntas en un archivo ZIP."
     ],
     "whatIs": "¿Cuándo deberías comprimir PNG?",
     "whatIsParas": [
-      "<strong>PNG</strong> es mejor para gráficos, texto, capturas de pantalla e imágenes nítidas que necesitan transparencia.",
-      "<strong>Compensación de compresión:</strong> PNG conserva los bordes nítidos mejor que JPEG, pero puede permanecer grande cuando la imagen contiene muchos colores o detalles fotográficos.",
-      "<strong>Advertencia de transparencia:</strong> Mantenga PNG cuando la transparencia alfa sea importante; JPEG no tiene canal alfa.",
-      "<strong>Mejor flujo de trabajo:</strong> Comprima los recursos PNG y luego inspeccione el resultado en el tamaño de visualización real para detectar bandas, halos o detalles perdidos."
+      "Los logotipos, iconos y capturas con zonas de color uniforme suelen comprimirse bien. Un PNG ya optimizado puede ofrecer poco margen de ahorro."
     ],
     "example": "Comprimir con Python",
-    "examplePara": "Un proceso de producción podría utilizar Pillow para reducir los datos de color y optimizar el PNG guardado:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "Este ejemplo de Python utiliza Pillow para optimizar un PNG estático y conserva el archivo más pequeño.",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "Se ha conservado el original"
   },
   "pt": {
     "title": "Comprimir PNG - Coding.Tools",
-    "description": "Compacte imagens PNG em seu navegador para obter gráficos, ícones, capturas de tela e ativos de interface do usuário transparentes menores.",
+    "description": "Comprima PNGs transparentes, ícones e capturas de tela sem perdas no navegador.",
     "toolTitle": "Comprimir PNG",
-    "toolDescription": "Compacte arquivos PNG localmente, reduzindo os dados de cores para saída gerada pelo navegador e preservando a transparência sempre que possível.",
+    "toolDescription": "Comprima PNGs transparentes, ícones e capturas de tela sem perdas no navegador.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste os arquivos PNG aqui para fazer upload",
     "dropzoneHint": "Até 20 imagens · Máximo de 10 MB cada",
     "descTitle": "Compacte PNGs sem enviar arquivos para um servidor",
     "descParas": [
-      "<strong>Comprimir PNG reduz o tamanho do arquivo para gráficos PNG enquanto mantém o fluxo de trabalho local em seu navegador.</strong> É mais útil para ícones, logotipos, capturas de tela, diagramas e ativos de UI transparentes onde PNG é o formato correto.",
-      "PNG não tem perdas e oferece suporte à transparência alfa, mas a compactação no navegador geralmente funciona reduzindo a complexidade das cores e recodificando a imagem. Fotos podem ficar menores como JPEG/WebP; compare sempre a transparência, as bordas e o tamanho do arquivo antes de substituir ativos de produção."
+      "O Oxipng otimiza o armazenamento dos pixels do PNG e preserva as cores, a transparência e as dimensões.",
+      "Se o arquivo otimizado tiver o mesmo tamanho ou for maior, você recebe o original. Os PNGs animados são devolvidos intactos, com todos os quadros."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Arraste e solte os arquivos PNG na área de upload ou clique para selecionar os arquivos.",
-      "Cada arquivo é compactado automaticamente e a taxa de compactação é exibida.",
-      "Baixe arquivos compactados individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
+      "Compare o tamanho antes e depois da compressão para ver quantos bytes foram economizados.",
+      "Baixe cada resultado separadamente ou salve várias imagens em um arquivo ZIP."
     ],
     "whatIs": "Quando você deve compactar PNG?",
     "whatIsParas": [
-      "<strong>PNG</strong> é melhor para gráficos nítidos, textos, capturas de tela e imagens que precisam de transparência.",
-      "<strong>Compensação de compressão:</strong> PNG preserva bordas nítidas melhor que JPEG, mas pode permanecer grande quando a imagem contém muitas cores ou detalhes fotográficos.",
-      "<strong>Advertência sobre transparência:</strong> Mantenha PNG quando a transparência alfa for importante; JPEG não possui canal alfa.",
-      "<strong>Melhor fluxo de trabalho:</strong> Compacte ativos PNG e, em seguida, inspecione o resultado no tamanho real da exibição para detectar faixas, halos ou detalhes perdidos."
+      "Logotipos, ícones e capturas de tela com áreas de cor uniforme costumam ter boa compressão. Um PNG já otimizado pode apresentar pouca ou nenhuma redução."
     ],
     "example": "Compactar com Python",
-    "examplePara": "Um pipeline de produção pode usar o Pillow para reduzir os dados de cores e otimizar o PNG salvo:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.png')\noriginal.convert('P')\noriginal.save('compressed.png', optimize=True, quality=80)"
+    "examplePara": "Este exemplo em Python usa o Pillow para otimizar um PNG estático e conserva o arquivo menor.",
+    "exampleCode": "from io import BytesIO\nfrom pathlib import Path\nfrom PIL import Image\n\nsource = Path('input.png').read_bytes()\nwith Image.open(BytesIO(source)) as image:\n    result = source\n    if not image.is_animated:\n        buffer = BytesIO()\n        image.save(buffer, format='PNG', optimize=True)\n        result = min((source, buffer.getvalue()), key=len)\n\nPath('compressed.png').write_bytes(result)",
+    "original": "Original mantido"
   }
 }

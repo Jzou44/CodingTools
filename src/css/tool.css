@@ -746,6 +746,39 @@ table.description-table tbody tr:last-child td {
   font-weight: 500;
 }
 
+#jpeg-options {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px 20px;
+}
+
+#jpeg-options label {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#target-kb {
+  width: 6em;
+}
+
+#compression-queue .file-item,
+#compression-queue .file-status {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#compression-queue .file-name {
+  flex-basis: 9em;
+}
+
+#compression-queue .file-status {
+  flex-shrink: 1;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 /* --- EXIF Table (exif-viewer) --- */
 .exif-table {
   width: 100%;

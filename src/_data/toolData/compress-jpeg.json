@@ -1,22 +1,22 @@
 {
   "en": {
-    "title": "Compress JPEG - Coding.Tools",
-    "description": "Compress JPEG photos locally by re-encoding with adjustable quality for smaller web and email files.",
+    "title": "Compress JPG to 100 KB, 200 KB or a Custom Size - Coding.Tools",
+    "description": "Compress JPGs to 100 KB, 200 KB or a custom limit in your browser. Set the quality, keep the original dimensions or allow resizing, and download a batch as a ZIP.",
     "toolTitle": "Compress JPEG",
-    "toolDescription": "Reduce JPEG file size in your browser by re-encoding photos with a practical quality setting.",
+    "toolDescription": "Compress JPGs to 100 KB, 200 KB or a custom limit in your browser. Set the quality, keep the original dimensions or allow resizing, and download a batch as a ZIP.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag JPEG files here to upload",
     "dropzoneHint": "Up to 20 images · Max 10MB each",
     "descTitle": "Shrink JPEG photos with quality control",
     "descParas": [
-      "<strong>Compress JPEG re-encodes JPEG images locally with a lower quality setting to reduce file size.</strong> It is best for photos, banners, and screenshots without transparency where smaller downloads matter.",
-      "JPEG compression is lossy: lower quality usually means smaller files, but it can add blocking, blur, color shifts, or ringing around edges. Avoid repeated JPEG recompression when possible, and compare the output at the size it will be viewed."
+      "Choose a quality setting or a file size limit of 100 KB, 200 KB or a custom value. Each KB is 1,000 bytes.",
+      "The tool keeps the original dimensions by default. Allow resizing to reduce the width and height together if lowering quality is insufficient."
     ],
     "howToUse": "How to use",
     "steps": [
       "Drag and drop JPEG files onto the upload area, or click to select files.",
       "Each file is compressed automatically and the compression rate is displayed.",
-      "Download individual compressed files or use <strong>Download All</strong> to get a ZIP archive."
+      "Download each result separately, or download multiple results together as a ZIP."
     ],
     "whatIs": "When should you compress JPEG?",
     "whatIsParas": [
@@ -25,26 +25,31 @@
     ],
     "example": "Compress with Python",
     "examplePara": "A server-side or build-step equivalent can re-save a JPEG with a chosen quality level:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "Compression mode",
+    "custom": "Custom size limit",
+    "allowResize": "Allow proportional resizing",
+    "unmet": "Limit exceeded. Allow resizing or raise the limit.",
+    "original": "Original kept"
   },
   "cn": {
-    "title": "压缩 JPEG - Coding.Tools",
-    "description": "通过以可调质量重新编码来本地压缩 JPEG 照片，以适应较小的 Web 和电子邮件文件。",
+    "title": "JPG 压缩到 100 KB、200 KB 或指定大小 - Coding.Tools",
+    "description": "在浏览器里把 JPG 压缩到 100 KB、200 KB 或指定大小以内。可调画质、保留原尺寸或允许等比缩小，多张图片可打包下载。",
     "toolTitle": "压缩 JPEG",
-    "toolDescription": "通过使用实用的质量设置重新编码照片，减少浏览器中的 JPEG 文件大小。",
+    "toolDescription": "在浏览器里把 JPG 压缩到 100 KB、200 KB 或指定大小以内。可调画质、保留原尺寸或允许等比缩小，多张图片可打包下载。",
     "categoryName": "图片工具",
     "dropzoneMessage": "点击或拖拽 JPEG 文件上传",
     "dropzoneHint": "最多 20 张图片 · 每张最大 10MB",
     "descTitle": "通过质量控制缩小 JPEG 照片",
     "descParas": [
-      "<strong>压缩 JPEG 以较低质量设置在本地重新编码 JPEG 图像，以减小文件大小。</strong> 最适合下载量较小的不透明的照片、横幅和屏幕截图。",
-      "JPEG 压缩是有损的：较低的质量通常意味着较小的文件，但它可能会增加阻塞、模糊、颜色偏移或边缘振铃。尽可能避免重复 JPEG 重新压缩，并按将要查看的大小比较输出。"
+      "可手动调整画质，也可将每张 JPG 压到 100 KB、200 KB 或自定义上限以内。1 KB 按 1,000 字节计算。",
+      "默认保留原图尺寸。降低画质后仍超出上限时，可以勾选「允许等比缩小图片」。"
     ],
     "howToUse": "使用方法",
     "steps": [
       "将 JPEG 文件拖放到上传区域，或单击选择文件。",
       "每个文件都会自动压缩并显示压缩率。",
-      "下载单个压缩文件或使用 <strong>下载全部</strong> 获取 ZIP 存档。"
+      "可以单独下载每张图片，也可以把多张结果打包为 ZIP 下载。"
     ],
     "whatIs": "什么时候应该压缩 JPEG？",
     "whatIsParas": [
@@ -53,26 +58,31 @@
     ],
     "example": "用 Python 压缩",
     "examplePara": "服务器端或构建步骤等效项可以以选定的质量级别重新保存 JPEG：",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "压缩模式",
+    "custom": "自定义大小上限",
+    "allowResize": "允许等比缩小图片",
+    "unmet": "超出上限。请允许等比缩小，或调高大小上限。",
+    "original": "已保留原图"
   },
   "tw": {
     "title": "壓縮 JPEG - Coding.Tools",
-    "description": "透過以可調品質重新編碼來本機壓縮 JPEG 照片，以適應較小的 Web 和電子郵件檔案。",
+    "description": "在瀏覽器中將 JPG 壓縮到指定大小，也可手動設定畫質，多張圖片可打包下載。",
     "toolTitle": "壓縮JPEG",
-    "toolDescription": "透過使用實用的品質設定重新編碼照片，減少瀏覽器中的 JPEG 檔案大小。",
+    "toolDescription": "在瀏覽器中將 JPG 壓縮到指定大小，也可手動設定畫質，多張圖片可打包下載。",
     "categoryName": "圖片工具",
     "dropzoneMessage": "點選或拖曳 JPEG 檔案至此處上傳",
     "dropzoneHint": "最多 20 張圖像·每張最大 10MB",
     "descTitle": "透過品質控制縮小 JPEG 照片",
     "descParas": [
-      "<strong>壓縮 JPEG 以較低品質設定在本機重新編碼 JPEG 影像，以減少檔案大小。</strong> 最適合下載量較小的不透明的照片、橫幅和螢幕截圖。",
-      "JPEG 壓縮是有損的：較低的品質通常意味著較小的文件，但它可能會增加阻塞、模糊、顏色偏移或邊緣振鈴。盡可能避免重複 JPEG 重新壓縮，並按將要檢視的大小比較輸出。"
+      "可手動調整畫質，也可將每張 JPG 壓到 100 KB、200 KB 或自訂大小以內。1 KB 為 1,000 位元組。",
+      "預設保留原圖尺寸。若降低畫質後仍超過上限，可勾選「允許等比例縮小圖片」。"
     ],
     "howToUse": "如何使用",
     "steps": [
       "將 JPEG 檔案拖曳到上傳區域，或點選選擇檔案。",
       "每個檔案都會自動壓縮並顯示壓縮率。",
-      "下載單一壓縮檔案或使用 <strong>下載全部</strong> 取得 ZIP 檔案。"
+      "可個別下載圖片，也可將多張結果打包成 ZIP 檔下載。"
     ],
     "whatIs": "什麼時候該壓縮 JPEG？",
     "whatIsParas": [
@@ -81,26 +91,31 @@
     ],
     "example": "使用Python壓縮",
     "examplePara": "伺服器端或建置步驟等效項可以以選定的品質等級重新儲存 JPEG：",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "壓縮模式",
+    "custom": "自訂大小上限",
+    "allowResize": "允許等比例縮小圖片",
+    "unmet": "超過上限。請允許縮小圖片，或提高大小上限。",
+    "original": "已保留原圖"
   },
   "jp": {
     "title": "JPEG 圧縮 - Coding.Tools",
-    "description": "小さな Web ファイルや電子メール ファイル用に調整可能な品質で再エンコードすることで、JPEG 写真をローカルに圧縮します。",
+    "description": "JPEG の容量の上限や画質を指定してブラウザで圧縮し、複数の画像をまとめてダウンロードできます。",
     "toolTitle": "JPEG圧縮",
-    "toolDescription": "実用的な品質設定で写真を再エンコードすることで、ブラウザーの JPEG ファイル サイズを削減します。",
+    "toolDescription": "JPEG の容量の上限や画質を指定してブラウザで圧縮し、複数の画像をまとめてダウンロードできます。",
     "categoryName": "画像ツール",
     "dropzoneMessage": "ここに JPEG ファイルをクリックまたはドラッグしてアップロードします",
     "dropzoneHint": "画像最大20枚・各最大10MB",
     "descTitle": "品質管理を使用して JPEG 写真を縮小する",
     "descParas": [
-      "<strong>JPEG圧縮 は、ファイル サイズを削減するために、低品質設定で JPEG 画像をローカルで再エンコードします。</strong> 小さいダウンロードが重要な、透明性のない写真、バナー、スクリーンショットに最適です。",
-      "JPEG 圧縮は非可逆圧縮です。通常、品質が低いとファイルが小さくなりますが、エッジの周りにブロッキング、ぼかし、カラーシフト、リンギングが発生する可能性があります。可能な限り JPEG の再圧縮を繰り返すことは避け、表示されるサイズで出力を比較してください。"
+      "画質を選ぶか、ファイルごとの容量の上限を 100 KB、200 KB、または任意の値に設定します。1 KB は 1,000 バイトです。",
+      "初期設定では画像の寸法を維持します。画質を下げても上限を超える場合は、縦横比を保った縮小を許可できます。"
     ],
     "howToUse": "使い方",
     "steps": [
       "JPEG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
       "各ファイルは自動的に圧縮され、圧縮率が表示されます。",
-      "個別の圧縮ファイルをダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
+      "画像は個別にダウンロードでき、複数の画像は ZIP にまとめて保存できます。"
     ],
     "whatIs": "JPEG をいつ圧縮する必要がありますか?",
     "whatIsParas": [
@@ -109,26 +124,31 @@
     ],
     "example": "Pythonで圧縮する",
     "examplePara": "サーバー側またはビルドステップに相当するものは、選択した品質レベルで JPEG を再保存できます。",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "圧縮モード",
+    "custom": "容量の上限を指定",
+    "allowResize": "縦横比を保って縮小する",
+    "unmet": "上限を超えています。縮小を許可するか、上限を大きくしてください。",
+    "original": "元のファイルを使用"
   },
   "kr": {
     "title": "JPEG 압축 - Coding.Tools",
-    "description": "더 작은 웹 및 이메일 파일에 맞게 조정 가능한 품질로 다시 인코딩하여 JPEG 사진을 로컬로 압축합니다.",
+    "description": "브라우저에서 원하는 용량 제한이나 화질로 JPEG를 압축하고 여러 장을 한꺼번에 내려받으세요.",
     "toolTitle": "JPEG 압축",
-    "toolDescription": "실용적인 품질 설정으로 사진을 다시 인코딩하여 브라우저에서 JPEG 파일 크기를 줄입니다.",
+    "toolDescription": "브라우저에서 원하는 용량 제한이나 화질로 JPEG를 압축하고 여러 장을 한꺼번에 내려받으세요.",
     "categoryName": "이미지 도구",
     "dropzoneMessage": "업로드하려면 여기에서 JPEG 파일을 클릭하거나 드래그하세요.",
     "dropzoneHint": "이미지 최대 20개 · 각 최대 10MB",
     "descTitle": "품질 관리로 JPEG 사진 축소",
     "descParas": [
-      "<strong>JPEG 압축은 JPEG 이미지를 낮은 품질 설정으로 로컬에서 다시 인코딩하여 파일 크기를 줄입니다.</strong> 작은 다운로드가 중요한 투명도가 없는 사진, 배너 및 스크린샷에 가장 적합합니다.",
-      "JPEG 압축은 손실이 있습니다. 품질이 낮을수록 일반적으로 파일 크기가 작아지지만 가장자리 주변에 블로킹, 흐림, 색상 변화 또는 링잉이 추가될 수 있습니다. 가능하면 반복적인 JPEG 재압축을 피하고 표시되는 크기로 출력을 비교하십시오."
+      "화질을 직접 고르거나 파일당 용량을 100 KB, 200 KB 또는 원하는 값으로 제한할 수 있습니다. 1 KB는 1,000바이트입니다.",
+      "기본값은 원본 해상도를 유지합니다. 화질을 낮춰도 용량이 크면 가로세로 비율을 유지하며 이미지를 줄일 수 있습니다."
     ],
     "howToUse": "사용방법",
     "steps": [
       "JPEG 파일을 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택합니다.",
       "각 파일은 자동으로 압축되며 압축률이 표시됩니다.",
-      "개별 압축 파일을 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
+      "이미지를 개별로 내려받거나 여러 결과를 ZIP 파일로 한꺼번에 저장하세요."
     ],
     "whatIs": "언제 JPEG를 압축해야 합니까?",
     "whatIsParas": [
@@ -137,26 +157,31 @@
     ],
     "example": "Python으로 압축",
     "examplePara": "서버 측 또는 빌드 단계에 상응하는 것은 선택한 품질 수준으로 JPEG를 다시 저장할 수 있습니다.",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "압축 방식",
+    "custom": "직접 입력한 용량 제한",
+    "allowResize": "가로세로 비율을 유지해 크기 줄이기",
+    "unmet": "용량 제한을 초과했습니다. 이미지 크기 축소를 허용하거나 제한을 높여 주세요.",
+    "original": "원본 유지"
   },
   "fr": {
     "title": "Compresser JPEG - Coding.Tools",
-    "description": "Compressez les photos JPEG localement en les réencodant avec une qualité réglable pour les fichiers Web et de courrier électronique plus petits.",
+    "description": "Compressez vos JPEG dans le navigateur en choisissant la qualité ou une taille maximale. Téléchargez plusieurs résultats dans une archive ZIP.",
     "toolTitle": "Compresser JPEG",
-    "toolDescription": "Réduisez la taille du fichier JPEG dans votre navigateur en réencodant les photos avec un paramètre de qualité pratique.",
+    "toolDescription": "Compressez vos JPEG dans le navigateur en choisissant la qualité ou une taille maximale. Téléchargez plusieurs résultats dans une archive ZIP.",
     "categoryName": "Outils d’image",
     "dropzoneMessage": "Cliquez ou faites glisser les fichiers JPEG ici pour les télécharger",
     "dropzoneHint": "Jusqu'à 20 images · Max 10 Mo chacune",
     "descTitle": "Réduire les photos JPEG avec contrôle qualité",
     "descParas": [
-      "<strong>Compresser JPEG réencode les images JPEG localement avec un paramètre de qualité inférieur pour réduire la taille du fichier.</strong> Il est préférable pour les photos, bannières et captures d'écran sans transparence lorsque les téléchargements plus petits sont importants.",
-      "La compression JPEG entraîne des pertes : une qualité inférieure signifie généralement des fichiers plus petits, mais elle peut ajouter du blocage, du flou, des changements de couleur ou des sonneries sur les bords. Évitez les recompressions JPEG répétées lorsque cela est possible et comparez la sortie à la taille à laquelle elle sera visualisée."
+      "Choisissez une qualité ou fixez une limite par image de 100 Ko, 200 Ko ou de votre choix. Un Ko (KB) vaut ici 1 000 octets.",
+      "Les dimensions sont conservées par défaut. Si la baisse de qualité ne suffit pas, vous pouvez autoriser une réduction proportionnelle des dimensions."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
       "Faites glisser et déposez les fichiers JPEG sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
       "Chaque fichier est compressé automatiquement et le taux de compression est affiché.",
-      "Téléchargez des fichiers compressés individuels ou utilisez <strong>Tout télécharger</strong> pour obtenir une archive ZIP."
+      "Téléchargez chaque résultat séparément ou regroupez plusieurs images dans une archive ZIP."
     ],
     "whatIs": "Quand devez-vous compresser JPEG ?",
     "whatIsParas": [
@@ -165,26 +190,31 @@
     ],
     "example": "Compresser avec Python",
     "examplePara": "Un équivalent côté serveur ou étape de construction peut réenregistrer un JPEG avec un niveau de qualité choisi :",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "Mode de compression",
+    "custom": "Limite personnalisée",
+    "allowResize": "Autoriser la réduction des dimensions en gardant les proportions",
+    "unmet": "Limite dépassée. Autorisez la réduction des dimensions ou augmentez la limite.",
+    "original": "Original conservé"
   },
   "de": {
     "title": "Komprimieren Sie JPEG - Coding.Tools",
-    "description": "Komprimieren Sie JPEG-Fotos lokal durch Neukodierung mit einstellbarer Qualität für kleinere Web- und E-Mail-Dateien.",
+    "description": "Komprimieren Sie JPEGs im Browser mit einer Größenobergrenze oder gewählter Qualität und laden Sie mehrere Bilder als ZIP-Datei herunter.",
     "toolTitle": "JPEG komprimieren",
-    "toolDescription": "Reduzieren Sie die JPEG-Dateigröße in Ihrem Browser, indem Sie Fotos mit einer praktischen Qualitätseinstellung neu kodieren.",
+    "toolDescription": "Komprimieren Sie JPEGs im Browser mit einer Größenobergrenze oder gewählter Qualität und laden Sie mehrere Bilder als ZIP-Datei herunter.",
     "categoryName": "Bildwerkzeuge",
     "dropzoneMessage": "Klicken oder ziehen Sie JPEG-Dateien hierher, um sie hochzuladen",
     "dropzoneHint": "Bis zu 20 Bilder · Maximal jeweils 10 MB",
     "descTitle": "Verkleinern Sie JPEG Fotos mit Qualitätskontrolle",
     "descParas": [
-      "<strong>JPEG komprimieren kodiert Bilder lokal mit einer niedrigeren Qualitätseinstellung neu, um die Dateigröße zu reduzieren.</strong> Am besten geeignet für Fotos, Banner und Screenshots ohne Transparenz, bei denen es auf kleinere Downloads ankommt.",
-      "Die JPEG-Komprimierung ist verlustbehaftet: Eine geringere Qualität bedeutet normalerweise kleinere Dateien, es kann jedoch zu Blockierungen, Unschärfe, Farbverschiebungen oder Klingeln an den Rändern kommen. Vermeiden Sie nach Möglichkeit eine wiederholte JPEG-Neukomprimierung und vergleichen Sie die Ausgabe in der Größe, in der sie angezeigt wird."
+      "Wählen Sie eine Qualitätsstufe oder begrenzen Sie die Dateigröße pro Bild auf 100 KB, 200 KB oder einen eigenen Wert. Ein KB entspricht 1.000 Byte.",
+      "Standardmäßig bleiben die Bildmaße erhalten. Reicht eine niedrigere Qualität nicht aus, können Sie eine proportionale Verkleinerung erlauben."
     ],
     "howToUse": "Wie zu verwenden",
     "steps": [
       "Ziehen Sie JPEG-Dateien per Drag & Drop in den Upload-Bereich oder klicken Sie, um Dateien auszuwählen.",
       "Jede Datei wird automatisch komprimiert und die Komprimierungsrate wird angezeigt.",
-      "Laden Sie einzelne komprimierte Dateien herunter oder verwenden Sie <strong>Alle herunterladen</strong>, um ein ZIP-Archiv zu erhalten."
+      "Laden Sie jedes Ergebnis einzeln oder mehrere Bilder zusammen als ZIP-Datei herunter."
     ],
     "whatIs": "Wann sollten Sie JPEG komprimieren?",
     "whatIsParas": [
@@ -193,26 +223,31 @@
     ],
     "example": "Mit Python komprimieren",
     "examplePara": "Ein serverseitiges oder Build-Step-Äquivalent kann einen JPEG mit einer ausgewählten Qualitätsstufe erneut speichern:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "Kompressionsmodus",
+    "custom": "Eigene Größenobergrenze",
+    "allowResize": "Proportionales Verkleinern erlauben",
+    "unmet": "Größenlimit überschritten. Erlauben Sie das Verkleinern oder erhöhen Sie das Limit.",
+    "original": "Original beibehalten"
   },
   "es": {
     "title": "Comprimir JPEG - Coding.Tools",
-    "description": "Comprima fotos JPEG localmente recodificando con calidad ajustable para archivos web y de correo electrónico más pequeños.",
+    "description": "Comprime tus JPEG en el navegador con un límite de tamaño o una calidad a tu elección y descarga varios resultados en un ZIP.",
     "toolTitle": "Comprimir JPEG",
-    "toolDescription": "Reduzca el tamaño del archivo JPEG en su navegador volviendo a codificar las fotos con una práctica configuración de calidad.",
+    "toolDescription": "Comprime tus JPEG en el navegador con un límite de tamaño o una calidad a tu elección y descarga varios resultados en un ZIP.",
     "categoryName": "Herramientas de imagen",
     "dropzoneMessage": "Haga clic o arrastre los archivos JPEG aquí para cargarlos.",
     "dropzoneHint": "Hasta 20 imágenes · Máximo 10 MB cada una",
     "descTitle": "Reducir fotos JPEG con control de calidad",
     "descParas": [
-      "<strong>Comprimir JPEG vuelve a codificar imágenes JPEG localmente con una configuración de calidad más baja para reducir el tamaño del archivo.</strong> Es mejor para fotos, pancartas y capturas de pantalla sin transparencia, donde las descargas más pequeñas son importantes.",
-      "La compresión JPEG tiene pérdida: una calidad más baja generalmente significa archivos más pequeños, pero puede agregar artefactos de bloque, desenfoque, cambios de color o halos alrededor de los bordes. Evite recomprimir JPEG repetidamente cuando sea posible y compare la salida en el tamaño en que se verá."
+      "Elige la calidad o limita el tamaño de cada archivo a 100 KB, 200 KB u otro valor. Cada KB equivale a 1000 bytes.",
+      "Por defecto se conservan las dimensiones originales. Si bajar la calidad no basta, puedes permitir que se reduzcan el ancho y el alto en la misma proporción."
     ],
     "howToUse": "Cómo usar",
     "steps": [
       "Arrastre y suelte los archivos JPEG en el área de carga o haga clic para seleccionar archivos.",
       "Cada archivo se comprime automáticamente y se muestra la tasa de compresión.",
-      "Descargue archivos comprimidos individuales o use <strong>Descargar todo</strong> para obtener un archivo ZIP."
+      "Descarga cada resultado por separado o guarda varias imágenes juntas en un archivo ZIP."
     ],
     "whatIs": "¿Cuándo deberías comprimir JPEG?",
     "whatIsParas": [
@@ -221,26 +256,31 @@
     ],
     "example": "Comprimir con Python",
     "examplePara": "Un equivalente del lado del servidor o del paso de compilación puede volver a guardar un JPEG con un nivel de calidad elegido:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "Modo de compresión",
+    "custom": "Límite personalizado",
+    "allowResize": "Permitir la reducción proporcional de las dimensiones",
+    "unmet": "Se ha superado el límite. Permite reducir las dimensiones o aumenta el límite.",
+    "original": "Se ha conservado el original"
   },
   "pt": {
     "title": "Comprimir JPEG - Coding.Tools",
-    "description": "Comprima fotos JPEG localmente, recodificando com qualidade ajustável para arquivos menores da Web e de e-mail.",
+    "description": "Comprima JPEGs no navegador com um limite de tamanho ou a qualidade desejada e baixe vários resultados em um ZIP.",
     "toolTitle": "Compactar JPEG",
-    "toolDescription": "Reduza o tamanho do arquivo JPEG em seu navegador recodificando fotos com uma configuração de qualidade prática.",
+    "toolDescription": "Comprima JPEGs no navegador com um limite de tamanho ou a qualidade desejada e baixe vários resultados em um ZIP.",
     "categoryName": "Ferramentas de imagem",
     "dropzoneMessage": "Clique ou arraste os arquivos JPEG aqui para fazer upload",
     "dropzoneHint": "Até 20 imagens · Máximo de 10 MB cada",
     "descTitle": "Reduza fotos JPEG com controle de qualidade",
     "descParas": [
-      "<strong>Compactar JPEG recodifica imagens JPEG localmente com uma configuração de qualidade inferior para reduzir o tamanho do arquivo.</strong> É melhor para fotos, banners e capturas de tela sem transparência onde downloads menores são importantes.",
-      "A compactação JPEG tem perdas: qualidade mais baixa geralmente significa arquivos menores, mas pode adicionar artefatos de bloco, desfoque, mudanças de cor ou halos nas bordas. Evite recomprimir JPEG repetidamente quando possível e compare a saída no tamanho em que será visualizada."
+      "Escolha a qualidade ou limite o tamanho de cada arquivo a 100 KB, 200 KB ou outro valor. Cada KB corresponde a 1.000 bytes.",
+      "Por padrão, as dimensões originais são preservadas. Se reduzir a qualidade for insuficiente, você pode permitir que a largura e a altura diminuam na mesma proporção."
     ],
     "howToUse": "Como usar",
     "steps": [
       "Arraste e solte os arquivos JPEG na área de upload ou clique para selecionar os arquivos.",
       "Cada arquivo é compactado automaticamente e a taxa de compactação é exibida.",
-      "Baixe arquivos compactados individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
+      "Baixe cada resultado separadamente ou salve várias imagens em um arquivo ZIP."
     ],
     "whatIs": "Quando você deve compactar JPEG?",
     "whatIsParas": [
@@ -249,6 +289,11 @@
     ],
     "example": "Compactar com Python",
     "examplePara": "Um equivalente do lado do servidor ou da etapa de construção pode salvar novamente um JPEG com um nível de qualidade escolhido:",
-    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)"
+    "exampleCode": "from PIL import Image\n\noriginal = Image.open('input.jpg')\noriginal.save('compressed.jpg', optimize=True, quality=80)",
+    "mode": "Modo de compressão",
+    "custom": "Limite personalizado",
+    "allowResize": "Permitir redução proporcional das dimensões",
+    "unmet": "O arquivo excede o limite. Permita reduzir as dimensões ou aumente o limite.",
+    "original": "Original mantido"
   }
 }

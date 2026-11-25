@@ -25,7 +25,8 @@
     "docker:run": "node scripts/run-docker-container.js",
     "docker:stop": "node scripts/stop-docker-container.js",
     "docker:smoke": "node scripts/test-docker-container.js",
-    "docker:test": "node scripts/test-docker.js"
+    "docker:test": "node scripts/test-docker.js",
+    "test:image-compression": "node scripts/test-image-compression.js"
   },
   "bin": {
     "install-coding-tools-skills": "./scripts/install-coding-tools-skills.js"
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@jsquash/jpeg": "1.6.0",
+    "@jsquash/oxipng": "2.3.0",
     "esbuild": "^0.28.2",
     "playwright-core": "1.65.1"
   }
