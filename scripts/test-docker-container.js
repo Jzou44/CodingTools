@@ -66,6 +66,14 @@ async function main() {
   const localized = await fetch(`${baseUrl}/cn/base64-encode.html`);
   assert.strictEqual(localized.status, 200);
   assert.ok((await localized.text()).includes(manifest["/js/tool-common.js"]));
+  const binaryPath = site.pathFor("cn", "binary-to-text");
+  for (const path of [binaryPath, binaryPath.replace(/\.html$/, "")]) {
+    const response = await fetch(baseUrl + path, { redirect: "manual" });
+    assert.strictEqual(response.status, 200, path);
+    const html = await response.text();
+    assert.ok(html.includes(`rel="canonical" href="${site.absoluteUrl(binaryPath)}"`), path);
+    assert.ok(html.includes('data-byte-converter="binary-to-text"'), path);
+  }
 
   for (const source of ["/css/tool.css", "/js/tool-common.js"]) {
     const assetUrl = manifest[source];

@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const textTransforms = require("../src/js/text-transformers");
 const { supportedToolIds, isRuntimeTool } = require("./tool-registry");
 
 const MAX_TEXT_CHARS = 200000;
@@ -260,9 +261,9 @@ function minifyJson(input) {
 }
 
 function formatJson(input, options) {
-  const spaces = Math.min(Math.max(Number(options.spaces || 2), 0), 8);
+  const spaces = Math.min(Math.max(Number(options.spaces ?? 2), 0), 8);
   try {
-    return JSON.stringify(JSON.parse(requireText(input)), null, spaces);
+    return textTransforms.formatJson(requireText(input), spaces);
   } catch (error) {
     throw new ToolInputError(`Invalid JSON: ${error.message}`);
   }

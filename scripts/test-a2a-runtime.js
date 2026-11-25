@@ -56,6 +56,9 @@ function runToolUnitTests() {
   assertTool("roman-numerals-to-numbers", "XLII", "42");
   assertTool("numbers-to-roman-numerals", "42", "XLII");
   assertTool("json-formatter", "{\"a\":1}", "{\n  \"a\": 1\n}");
+  assertTool("json-formatter", '{"id":9007199254740993}', '{\n    "id": 9007199254740993\n}', { spaces: 4 });
+  assertTool("json-formatter", "[1e400, -0]", "[1e400,-0]", { spaces: 0 });
+  assertToolFails("json-formatter", '{"id":1,}');
   assertTool("json-minifier", "{\n  \"a\": 1\n}", "{\"a\":1}");
   assertTool("reverse-text", "abc", "cba");
   assertToolData("case-converter", "hello world", { mode: "title", result: "Hello World" }, { mode: "title" });

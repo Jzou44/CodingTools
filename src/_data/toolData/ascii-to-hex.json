@@ -30,17 +30,17 @@
     "exampleCode": "--- ASCII Input ---\nHello, World!\n\n--- Hex Output (Space delimited) ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "cn": {
-    "title": "ASCII 到十六进制转换器 - Coding.Tools",
-    "description": "将文本字符转换为带有可选分隔符的十六进制代码值。",
-    "toolTitle": "ASCII转十六进制",
-    "toolDescription": "将 ASCII 文本编码为十六进制值，并选择空格、逗号、冒号或无分隔符输出。",
+    "title": "ASCII 转十六进制，中文字符串转 UTF-8 Hex - Coding.Tools",
+    "description": "在线将 ASCII 字符串转换为十六进制，按 UTF-8 编码中文和表情。可选择空格、逗号、冒号或连续输出。",
+    "toolTitle": "ASCII 转十六进制",
+    "toolDescription": "粘贴文本，选择字符代码或 UTF-8，得到可复制的十六进制结果。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入或粘贴文本...",
     "outputPlaceholder": "十六进制值将显示在这里...",
     "descTitle": "将 ASCII 文本编码为十六进制值",
     "descParas": [
-      "<strong>ASCII 到十六进制将每个输入字符转换为其十六进制字符代码。</strong> 使用它来准备字节示例、测试数据、协议注释或短文本有效负载的可读表示。",
-      "对于普通 ASCII，每个字符生成一个从 <code>00</code> 到 <code>7F</code> 的两位数值。非 ASCII 字符被处理为 JavaScript 字符代码，而不是 UTF-8 字节序列，因此当字节精确的 Unicode 输出很重要时，请使用 UTF-8 编码器。"
+      "ASCII 字符的两位十六进制值与 UTF-8 编码相同。例如 Hi 的字节是 48 69。可选择空格、逗号、冒号或无分隔符。",
+      "单条默认输出 JavaScript 的 UTF-16 字符代码，例如“中”是 4E2D。批量默认输出 UTF-8 字节，例如 E4 B8 AD。如需在十六进制解码器里还原中文或表情，请在两端均选择 UTF-8。"
     ],
     "howToUse": "使用方法",
     "steps": [
@@ -54,23 +54,23 @@
       "<strong>ASCII 到十六进制转换</strong> 以基数 16 重写每个字符代码。例如，字母 <code>H</code> 是十进制 72，十六进制是 <code>48</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "当每个字符需要一个字节时，请使用纯 ASCII 文本。制表符、换行符和其他控制字符也具有十六进制值，因此在依赖输出之前检查复制的文本是否有隐藏的空格。",
+    "inputNotesPara": "行首空格和换行也参与编码。字符代码模式下，某些字符占两个 UTF-16 代码单元，输出不一定是两位字节。",
     "example": "示例",
     "examplePara": "文本 <code>Hello, World!</code> 变为十六进制字符代码序列：",
     "exampleCode": "--- ASCII 输入 ---\nHello, World!\n\n--- 十六进制输出（空格分隔） ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"
   },
   "tw": {
-    "title": "ASCII 到十六進位轉換器 - Coding.Tools",
-    "description": "將文字字元轉換為帶有可選分隔符的十六進位代碼值。",
-    "toolTitle": "ASCII轉十六進位",
-    "toolDescription": "將 ASCII 文字編碼為十六進位值，並選擇空格、逗號、冒號或無分隔符號輸出。",
+    "title": "ASCII 轉十六進位，中文字串轉 UTF-8 Hex - Coding.Tools",
+    "description": "將 ASCII 字串轉為十六進位，並以 UTF-8 編碼中文與表情符號。支援空白、逗號、冒號或不加分隔符號。",
+    "toolTitle": "ASCII 轉十六進位",
+    "toolDescription": "貼上文字，選擇字元碼或 UTF-8，即可取得十六進位結果。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此輸入或貼上文字...",
     "outputPlaceholder": "十六進位值將出現在這裡...",
     "descTitle": "將 ASCII 文字編碼為十六進位值",
     "descParas": [
-      "<strong>ASCII 到十六進位將每個輸入字元轉換為其十六進位字元代碼。</strong> 使用它來準備位元組範例、測試資料、協定註釋或短文字有效負載的可讀表示。",
-      "對於普通 ASCII，每個字元產生一個從 <code>00</code> 到 <code>7F</code> 的兩位數值。非 ASCII 字元被處理為 JavaScript 字元代碼，而不是 UTF-8 位元組序列，因此當位元組精確的 Unicode 輸出很重要時，請使用 UTF-8 編碼器。"
+      "ASCII 字元的兩位十六進位值與 UTF-8 編碼相同。例如 Hi 的位元組為 48 69。可選擇空白、逗號、冒號或不加分隔符號。",
+      "單筆預設輸出 JavaScript 的 UTF-16 字元碼，例如「中」是 4E2D。批次預設輸出 UTF-8 位元組，例如 E4 B8 AD。若要還原中文或表情符號，編碼和解碼時請都選 UTF-8。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -84,7 +84,7 @@
       "<strong>ASCII 到十六進位轉換</strong> 以基數 16 重寫每個字元代碼。例如，字母 <code>H</code> 是十進位 72，十六進位是 <code>48</code>。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "當每個字元需要一個位元組時，請使用純 ASCII 文字。製表符、換行符和其他控制字元也具有十六進位值，因此在依賴輸出之前檢查複製的文字是否有隱藏的空格。",
+    "inputNotesPara": "開頭空白與換行都會參與編碼。字元碼模式可能會將字元拆成兩個 UTF-16 碼元，輸出不一定是兩位的位元組。",
     "example": "範例",
     "examplePara": "文字 <code>Hello, World!</code> 變成十六進位字元代碼序列：",
     "exampleCode": "--- ASCII 輸入 ---\nHello, World!\n\n--- 十六進位輸出（空格分隔） ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21"

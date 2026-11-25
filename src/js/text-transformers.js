@@ -985,7 +985,97 @@
     return serializeElement("root", value, 0, settings);
   }
 
+  // Read JSON tokens from the source. Converting numbers to JavaScript values
+  // and back can silently change IDs, exponents, and negative zero.
+  function formatJson(source, spaces, messages) {
+    var indent = " ".repeat(spaces === undefined ? 2 : spaces);
+    var pattern = /[ \t\r\n]+|"(?:[^"\\\u0000-\u001f]|\\(?:["\\/bfnrt]|u[0-9a-fA-F]{4}))*"|true|false|null|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?|[{}\[\],:]/y;
+    var closing = [];
+    var expected = "value";
+    var previous = "";
+    var output = [];
+    var addedSpaces = 0;
+    var index = 0;
+
+    function fail(detail) {
+      var lines = source.slice(0, index).split(/\r\n|\r|\n/);
+      var line = lines.length;
+      var column = lines[line - 1].length + 1;
+      var template = messages && messages.position || "Line {line}, column {column}.";
+      var error = new SyntaxError(template.replace("{line}", line).replace("{column}", column)
+        + " " + (messages && messages[detail] || {
+          key: "Use a double-quoted property name.",
+          value: "Check the JSON value and double-quoted strings.",
+          colon: "Insert a colon after the property name.",
+          separator: "Check the comma or closing bracket.",
+          trailing: "Remove the trailing comma.",
+          extra: "Only one JSON value is allowed."
+        }[detail]));
+      error.line = line;
+      error.column = column;
+      throw error;
+    }
+
+    function newline(depth) {
+      if (!indent) return;
+      addedSpaces += depth * indent.length + 1;
+      // Deep nesting can expand a small document to gigabytes of indentation.
+      if (addedSpaces > 16 * 1024 * 1024) {
+        throw new RangeError(messages && messages.tooLarge || "Formatted indentation exceeds 16 MiB.");
+      }
+      output.push("\n", indent.repeat(depth));
+    }
+
+    while (index < source.length) {
+      pattern.lastIndex = index;
+      var match = pattern.exec(source);
+      if (!match) fail(expected === "keyOrEnd" ? "key" : expected === "valueOrEnd" ? "value" : expected);
+      var token = match[0];
+      var first = token[0];
+      if (first === " " || first === "\t" || first === "\r" || first === "\n") {
+        index = pattern.lastIndex;
+        continue;
+      }
+      if (token === "}" || token === "]") {
+        if (previous === ",") fail("trailing");
+        if (token !== closing[closing.length - 1]) fail("separator");
+        if (expected !== "separator" && expected !== "keyOrEnd" && expected !== "valueOrEnd") fail(expected);
+        closing.pop();
+        if (previous !== "{" && previous !== "[") newline(closing.length);
+        expected = closing.length ? "separator" : "extra";
+      } else if (expected === "separator") {
+        if (token !== ",") fail("separator");
+        expected = closing[closing.length - 1] === "}" ? "key" : "value";
+      } else if (expected === "colon") {
+        if (token !== ":") fail("colon");
+        expected = "value";
+      } else {
+        if (expected === "extra") fail("extra");
+        if (previous === "," || previous === "{" || previous === "[") newline(closing.length);
+        if (previous === ":" && indent) output.push(" ");
+        if (expected === "key" || expected === "keyOrEnd") {
+          if (first !== '"') fail("key");
+          expected = "colon";
+        } else if (token === "{" || token === "[") {
+          closing.push(token === "{" ? "}" : "]");
+          expected = token === "{" ? "keyOrEnd" : "valueOrEnd";
+        } else {
+          if (token === "," || token === ":") fail("value");
+          expected = closing.length ? "separator" : "extra";
+        }
+      }
+      output.push(token);
+      previous = token;
+      index = pattern.lastIndex;
+    }
+    if (expected !== "extra") {
+      fail(expected === "keyOrEnd" || expected === "valueOrEnd" ? "separator" : expected);
+    }
+    return output.join("");
+  }
+
   return {
+    formatJson: formatJson,
     minifyJavaScript: minifyJavaScript,
     minifyCss: minifyCss,
     minifySql: minifySql,

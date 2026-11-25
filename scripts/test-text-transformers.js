@@ -7,6 +7,29 @@ const transforms = require("../src/js/text-transformers");
 
 const tests = [];
 
+test("JSON formatting preserves original tokens and changes only whitespace", () => {
+  const input = String.raw`{"id":9007199254740993,"n":1e400,"n":-0,"1":"a , : [ ] \\ \" \u0041","v":[{},[],1.00]}`;
+  const formatted = transforms.formatJson(input);
+  assert.ok(formatted.includes('  "id": 9007199254740993,'));
+  assert.strictEqual(transforms.formatJson(formatted, 0), input);
+  for (const scalar of ["1E+20", "true", "null", '" "']) {
+    assert.strictEqual(transforms.formatJson(" \t" + scalar + "\r\n"), scalar);
+  }
+  assert.strictEqual(transforms.formatJson("[[],{}]", 1), "[\n [],\n {}\n]");
+});
+
+test("JSON formatting rejects invalid syntax and identifies the location", () => {
+  const invalid = [
+    ["", 1, 1], ["{\r\n name: 1}", 2, 2], ['{"x":1,\n}', 2, 1],
+    ["[1,,2]", 1, 4], ["01", 1, 2], ["true false", 1, 6],
+    ['{"x":}', 1, 6], ["null\u00a0", 1, 5], ['"bad\\q"', 1, 1],
+    ["{", 1, 2], ["/*x*/1", 1, 1], ['{"x": [1}', 1, 9]
+  ];
+  for (const [source, line, column] of invalid) {
+    assert.throws(() => transforms.formatJson(source), error => error.line === line && error.column === column, source);
+  }
+});
+
 function test(name, callback) {
   tests.push({ name, callback });
 }

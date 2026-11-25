@@ -29,7 +29,18 @@
     "example": "Example",
     "examplePara": "A compact payload becomes easier to review once objects and values are placed on separate lines:",
     "exampleCode": "--- Minified Input ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Formatted Output ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "Format JSON"
+    "buttonLabel": "Format JSON",
+    "formatMessages": {
+      "success": "JSON formatted.",
+      "position": "Line {line}, column {column}.",
+      "key": "Put the property name in double quotes.",
+      "value": "Check the value and the double quotes around strings.",
+      "colon": "Insert a colon after the property name.",
+      "separator": "Check for a missing comma or closing bracket.",
+      "trailing": "Remove the trailing comma.",
+      "extra": "Enter a single JSON document.",
+      "tooLarge": "Formatted indentation exceeds 16 MiB."
+    }
   },
   "cn": {
     "title": "JSON 格式化程序 - Coding.Tools",
@@ -61,39 +72,61 @@
     "example": "示例",
     "examplePara": "一旦对象和值放置在单独的行上，紧凑的有效负载就变得更容易查看：",
     "exampleCode": "--- 压缩输入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化输出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "格式化 JSON"
+    "buttonLabel": "格式化 JSON",
+    "formatMessages": {
+      "success": "JSON 格式化完成。",
+      "position": "第 {line} 行，第 {column} 列。",
+      "key": "请用双引号包住属性名。",
+      "value": "请检查此处的值，字符串需要用双引号包住。",
+      "colon": "请在属性名后加上冒号。",
+      "separator": "请检查逗号和结束括号。",
+      "trailing": "请删除结束括号前的逗号。",
+      "extra": "请一次输入一份 JSON 文档。",
+      "tooLarge": "缩进产生的空白超过 16 MiB。"
+    }
   },
   "tw": {
-    "title": "JSON 格式化程式 - Coding.Tools",
-    "description": "使用可讀縮排格式化有效的 JSON，同時保留物件、陣列、值和鍵名稱。",
+    "title": "JSON 格式化與語法檢查｜保留大整數、顯示錯誤行號 | Coding.Tools",
+    "description": "貼上 JSON 或選取本機檔案，即可檢查語法並以兩格縮排排版。錯誤會標出行與欄，訂單編號等大整數會原樣保留，整個過程在瀏覽器內完成。",
     "toolTitle": "JSON 格式化",
-    "toolDescription": "將有效的 JSON 格式化為瀏覽器中可讀取的、一致縮排的輸出。",
+    "toolDescription": "貼上 JSON 或開啟本機檔案。有效的資料會排成兩格縮排，語法有誤時會顯示行號、欄位和修正提示。",
     "categoryName": "格式化與壓縮",
     "inputPlaceholder": "貼上 JSON...",
     "outputPlaceholder": "格式化後的 JSON 將在此顯示...",
-    "descTitle": "格式化JSON而不改變其資料",
+    "descTitle": "整理 API 回應，保留完整訂單編號",
     "descParas": [
-      "<strong>JSON 格式化程式解析您的輸入並使用可預測的縮排列印它。</strong> 它對於檢查作為一長行到達的 API 回應、設定檔、包中繼資料、日誌和複製的有效負載非常有用。",
-      "輸入必須是有效的 JSON：帶引號的屬性名稱、無尾隨逗號、無註解和有效字串。格式化僅更改空白；保留物件鍵、陣列順序、數字、布林值、空值和字串內容。"
+      "把擠成一行的 API 回應貼進來，就能逐層閱讀物件與陣列。工具只調整字串外的空白、換行與縮排，所以原本的欄位順序、字串及數字寫法都會保留。",
+      "例如訂單編號 9007199254740993 已超過 JavaScript 的安全整數範圍。格式化後可以直接對照最後一碼，確認它仍是 3。"
     ],
-    "howToUse": "使用方法",
+    "howToUse": "怎麼檢查 JSON？",
     "steps": [
-      "將 JSON 資料貼到輸入編輯器中。",
-      "按一下 <strong>格式化 JSON</strong> 進行解析和縮排。",
-      "檢查格式化輸出以確認結構、巢狀和陣列符合您的預期。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文件，或使用 <strong>清除</strong> 進行重設。"
+      "貼上 JSON，或切換到「檔案」並選取一份本機檔案。",
+      "按「格式化 JSON」。資料正確時，右側會顯示排版結果。",
+      "如果有錯，依照行號和欄位檢查原文，修正後再按一次。",
+      "按「複製」帶走結果，或按「下載」存成 JSON 檔案。"
     ],
-    "whatIs": "什麼是 JSON 格式化程式？",
+    "whatIs": "試試尾端逗號錯誤",
     "whatIsParas": [
-      "<strong>JSON 格式化</strong> 是一個基於瀏覽器的實用工具，用於將緊湊的 JSON 轉換為人類可讀的文檔。它使巢狀物件和陣列在偵錯、審查和文件工作期間更容易掃描。",
-      "由於 JSON 是嚴格的資料格式，因此格式化程式也充當快速有效性檢查的作用。如果無法解析輸入，請先修復語法，而不是依賴縮排來修復有效負載。"
+      "在 <code>{\"ok\":true,}</code> 中，最後一個值之後多了一個逗號。點選上方的錯誤範例，會看到第 1 行、第 12 欄的提示，位置落在結尾的大括號。",
+      "刪除逗號，改成 <code>{\"ok\":true}</code> 後再試一次。屬性名稱與字串都要用半形雙引號，單引號或註解也會造成語法錯誤。"
     ],
-    "inputNotes": "輸入說明",
-    "inputNotesPara": "僅貼上 JSON 文檔，而不貼上 HTTP 標頭、變數賦值、Markdown 程式碼圍欄或來自其他 UI 的周圍引號。帶引號的字串內的空格是資料，將被保留。",
-    "example": "範例",
-    "examplePara": "一旦物件和值放置在單獨的行上，緊湊的有效負載就變得更容易檢視：",
-    "exampleCode": "--- 壓縮輸入 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 格式化輸出 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "格式化 JSON"
+    "inputNotes": "檢查 API 或設定檔時",
+    "inputNotesPara": "只貼 JSON 本文。請先移除 HTTP 標頭、程式碼區塊標記，或 JavaScript 的變數宣告。如果原始輸入包含字串中的空格與跳脫字元，這些內容會保留。",
+    "example": "試跑大整數範例",
+    "examplePara": "點選上方的「試跑大整數範例」，或複製這筆訂單到輸入框。比對輸出中的 id 和 amount，可以看到編號和 1.00 的寫法都保留。",
+    "exampleCode": "{\"id\":9007199254740993,\"amount\":1.00,\"items\":[\"A\",\"B\"]}",
+    "buttonLabel": "格式化 JSON",
+    "formatMessages": {
+      "success": "JSON 格式化完成。",
+      "position": "第 {line} 行，第 {column} 欄。",
+      "key": "屬性名稱要用半形雙引號括起來。",
+      "value": "請檢查此處的值，字串須用雙引號括起來。",
+      "colon": "屬性名稱後要加半形冒號。",
+      "separator": "請檢查逗號與括號是否配對。",
+      "trailing": "請刪除結尾括號前多餘的逗號。",
+      "extra": "請一次輸入一份 JSON 文件。",
+      "tooLarge": "縮排產生的空白超過 16 MiB，請減少巢狀層數。"
+    }
   },
   "jp": {
     "title": "JSON フォーマッター - Coding.Tools",
@@ -125,7 +158,18 @@
     "example": "例",
     "examplePara": "オブジェクトと値を別の行に配置すると、コンパクトなペイロードのレビューが容易になります。",
     "exampleCode": "--- 圧縮入力 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- フォーマット出力 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "JSON をフォーマット"
+    "buttonLabel": "JSON をフォーマット",
+    "formatMessages": {
+      "success": "JSON を整形しました。",
+      "position": "{line} 行 {column} 列。",
+      "key": "プロパティ名を二重引用符で囲んでください。",
+      "value": "値と文字列の二重引用符を確認してください。",
+      "colon": "プロパティ名の後にコロンを追加してください。",
+      "separator": "カンマと閉じ括弧を確認してください。",
+      "trailing": "末尾のカンマを削除してください。",
+      "extra": "JSON 文書を 1 つだけ入力してください。",
+      "tooLarge": "インデントのサイズが 16 MiB を超えています。"
+    }
   },
   "kr": {
     "title": "JSON 포맷터 - Coding.Tools",
@@ -157,7 +201,18 @@
     "example": "예시",
     "examplePara": "객체와 값이 별도의 줄에 배치되면 압축 페이로드를 검토하기가 더 쉬워집니다.",
     "exampleCode": "--- 압축 입력 ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- 포맷 출력 ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "JSON 포맷"
+    "buttonLabel": "JSON 포맷",
+    "formatMessages": {
+      "success": "JSON 형식을 정리했습니다.",
+      "position": "{line}행 {column}열.",
+      "key": "속성 이름을 큰따옴표로 감싸세요.",
+      "value": "값과 문자열의 큰따옴표를 확인하세요.",
+      "colon": "속성 이름 다음에 콜론을 넣으세요.",
+      "separator": "쉼표와 닫는 괄호를 확인하세요.",
+      "trailing": "닫는 괄호 앞의 쉼표를 지우세요.",
+      "extra": "JSON 문서를 하나만 입력하세요.",
+      "tooLarge": "들여쓰기 크기가 16 MiB를 초과합니다."
+    }
   },
   "fr": {
     "title": "Formateur JSON - Coding.Tools",
@@ -189,7 +244,18 @@
     "example": "Exemple",
     "examplePara": "Une charge utile compacte devient plus facile à examiner une fois que les objets et les valeurs sont placés sur des lignes distinctes :",
     "exampleCode": "--- Entrée minifiée ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Sortie formatée ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "Formater JSON"
+    "buttonLabel": "Formater JSON",
+    "formatMessages": {
+      "success": "JSON mis en forme.",
+      "position": "Ligne {line}, colonne {column}.",
+      "key": "Entourez le nom de la propriété de guillemets doubles.",
+      "value": "Vérifiez la valeur et les guillemets doubles des chaînes.",
+      "colon": "Ajoutez deux points après le nom de la propriété.",
+      "separator": "Vérifiez la virgule ou le délimiteur de fermeture.",
+      "trailing": "Supprimez la virgule finale.",
+      "extra": "Saisissez un seul document JSON.",
+      "tooLarge": "L’indentation dépasse 16 Mio."
+    }
   },
   "de": {
     "title": "JSON Formatierer - Coding.Tools",
@@ -221,7 +287,18 @@
     "example": "Beispiel",
     "examplePara": "Eine kompakte Nutzlast lässt sich einfacher überprüfen, wenn Objekte und Werte in separaten Zeilen platziert werden:",
     "exampleCode": "--- Minifizierte Eingabe ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Formatierte Ausgabe ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "Formatieren JSON"
+    "buttonLabel": "Formatieren JSON",
+    "formatMessages": {
+      "success": "JSON formatiert.",
+      "position": "Zeile {line}, Spalte {column}.",
+      "key": "Setzen Sie den Eigenschaftsnamen in doppelte Anführungszeichen.",
+      "value": "Prüfen Sie den Wert und die doppelten Anführungszeichen bei Zeichenketten.",
+      "colon": "Fügen Sie nach dem Eigenschaftsnamen einen Doppelpunkt ein.",
+      "separator": "Prüfen Sie das Komma oder die schließende Klammer.",
+      "trailing": "Entfernen Sie das abschließende Komma.",
+      "extra": "Geben Sie ein einzelnes JSON-Dokument ein.",
+      "tooLarge": "Die Einrückung überschreitet 16 MiB."
+    }
   },
   "es": {
     "title": "Formateador JSON - Coding.Tools",
@@ -253,7 +330,18 @@
     "example": "Ejemplo",
     "examplePara": "Una carga útil compacta se vuelve más fácil de revisar una vez que los objetos y valores se colocan en líneas separadas:",
     "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Salida formateada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "Formatear JSON"
+    "buttonLabel": "Formatear JSON",
+    "formatMessages": {
+      "success": "JSON formateado.",
+      "position": "Línea {line}, columna {column}.",
+      "key": "Escriba el nombre de la propiedad entre comillas dobles.",
+      "value": "Revise el valor y las comillas dobles de las cadenas.",
+      "colon": "Añada dos puntos después del nombre de la propiedad.",
+      "separator": "Revise la coma o el signo de cierre.",
+      "trailing": "Elimine la coma final.",
+      "extra": "Introduzca un único documento JSON.",
+      "tooLarge": "La sangría supera los 16 MiB."
+    }
   },
   "pt": {
     "title": "Formatador JSON - Coding.Tools",
@@ -285,6 +373,17 @@
     "example": "Exemplo",
     "examplePara": "Uma carga compacta torna-se mais fácil de revisar quando os objetos e valores são colocados em linhas separadas:",
     "exampleCode": "--- Entrada minificada ---\n{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}\n\n--- Saída formatada ---\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}",
-    "buttonLabel": "Formatar JSON"
+    "buttonLabel": "Formatar JSON",
+    "formatMessages": {
+      "success": "JSON formatado.",
+      "position": "Linha {line}, coluna {column}.",
+      "key": "Coloque o nome da propriedade entre aspas duplas.",
+      "value": "Verifique o valor e as aspas duplas das strings.",
+      "colon": "Insira dois-pontos após o nome da propriedade.",
+      "separator": "Verifique a vírgula ou o delimitador de fechamento.",
+      "trailing": "Remova a vírgula final.",
+      "extra": "Insira apenas um documento JSON.",
+      "tooLarge": "A indentação excede 16 MiB."
+    }
   }
 }

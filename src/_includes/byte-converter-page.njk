@@ -1,0 +1,76 @@
+{% extends "tool-layout.njk" %}
+{% import "macros/toolbar.njk" as toolbar %}
+{% import "macros/status-bar.njk" as status %}
+
+{% macro modeSelect(id, labels, encode, batch) %}
+  <label class="batch-field" for="{{ id }}">{{ labels.mode }}
+    <select id="{{ id }}">
+      <option value="legacy"{% if not batch %} selected{% endif %}>{{ labels.characterCodes if encode else labels.byteView }}</option>
+      <option value="utf8"{% if batch %} selected{% endif %}>UTF-8</option>
+    </select>
+  </label>
+{% endmacro %}
+
+{% block batch_tool_options %}
+  {{ modeSelect('batch-byte-mode', byteConverter[lang], toolId == 'ascii-to-hex', true) }}
+{% endblock %}
+
+{% block tool_content %}
+  {% set labels = byteConverter[lang] %}
+  {% set encode = toolId == 'ascii-to-hex' %}
+  {% set binary = toolId == 'binary-to-text' %}
+  {% set sourceLabel = t.ui.text if encode else (t.ui.binaryInput if binary else t.ui.hexNumber) %}
+  {% set targetLabel = t.ui.hexNumber if encode else t.ui.textOutput %}
+  {% set reverse = 'hex-to-ascii' if encode else ('text-to-binary' if binary else 'ascii-to-hex') %}
+  <div class="dual-pane" data-byte-converter="{{ toolId }}" data-errors="{{ labels.errors | json | escape }}" data-success="{{ t.ui.convertedSuccessfully }}" data-unit="{{ labels.units }}">
+    <div class="batch-control-grid">
+      {{ modeSelect('single-byte-mode', labels, encode, false) }}
+      {% if encode %}
+      <label class="batch-field" for="delimiter-select">{{ t.ui.delimiter }}
+        <select id="delimiter-select">
+          <option value="space">{{ t.ui.space }}</option>
+          <option value="none">{{ t.ui["none"] }}</option>
+          <option value="comma">{{ t.ui.comma }}</option>
+          <option value="colon">{{ t.ui.colon }}</option>
+        </select>
+      </label>
+      {% endif %}
+    </div>
+    <div class="pane-toolbar">
+      <div class="pane-toolbar-left">
+        <span>{{ labels.fill }}</span>
+        {% for sample in labels.samples %}
+        <button type="button" class="btn btn-ghost" data-byte-example="{{ sample.text if encode else (sample.binary if binary else sample.hex) }}" data-mode="{{ sample.mode }}">{{ sample.text }}</button>
+        {% endfor %}
+      </div>
+      <a href="{{ lang | pathFor(reverse) }}">{{ toolDataLookup[reverse].toolTitle }} →</a>
+    </div>
+    <div class="pane-card pane-card--input">
+      <label class="pane-label" for="code1">{{ sourceLabel }}</label>
+      <div class="pane-editor-wrapper">
+        <div class="pane-line-numbers" id="input-line-numbers" aria-hidden="true">1</div>
+        <textarea class="pane-editor" id="code1" rows="8" spellcheck="false" placeholder="{{ toolData.inputPlaceholder }}"></textarea>
+      </div>
+    </div>
+    {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
+      <button id="btn-convert" class="btn btn-primary" type="button">{{ t.ui.convert }}</button>
+    {% endcall %}
+    <div class="pane-card pane-card--output">
+      <label class="pane-label" for="code2">{{ targetLabel }}</label>
+      <div class="pane-editor-wrapper">
+        <div class="pane-line-numbers readonly-bg" id="output-line-numbers" aria-hidden="true">1</div>
+        <textarea class="pane-editor" id="code2" rows="8" readonly placeholder="{{ toolData.outputPlaceholder }}"></textarea>
+      </div>
+    </div>
+    {{ status.statusBar(t.ui.characters, t.ui.bytes, 'byte-count') }}
+  </div>
+{% endblock %}
+
+{% block description %}
+  {% include "tool-description.njk" %}
+{% endblock %}
+
+{% block tool_script %}
+  <script src="/js/byte-converter.js?v={{ site.assetVersion }}"></script>
+  <script src="/js/byte-converter-page.js?v={{ site.assetVersion }}"></script>
+{% endblock %}

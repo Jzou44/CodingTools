@@ -29,17 +29,17 @@
     "exampleCode": "--- Hex Input ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII Output ---\nHello, World!"
   },
   "cn": {
-    "title": "十六进制到 ASCII 转换器 - Coding.Tools",
-    "description": "直接在浏览器中将十六进制字节值转换为 ASCII 文本。",
-    "toolTitle": "十六进制转ASCII",
-    "toolDescription": "将十六进制字节对解码为可读的 ASCII 文本，并支持常见分隔符。",
+    "title": "十六进制转 ASCII 字符串、UTF-8 中文解码 - Coding.Tools",
+    "description": "粘贴 Hex 字节即可查看 ASCII 字符，或按 UTF-8 解码中文和表情。支持 0x 前缀、常用分隔符和批量转换。",
+    "toolTitle": "十六进制转 ASCII 字符串",
+    "toolDescription": "粘贴 48 69 或 0x48 0x69 查看 ASCII。解码中文时请选择 UTF-8。",
     "categoryName": "数字转换",
     "inputPlaceholder": "输入十六进制数字（如 48656C6C6F）...",
     "outputPlaceholder": "ASCII文本将显示在这里...",
     "descTitle": "将十六进制字节对解码为 ASCII 文本",
     "descParas": [
-      "<strong>Hex 到 ASCII 将十六进制字节对转换为文本字符。</strong> 它对于检查字节转储、协议有效负载、编码测试数据以及从日志或文档复制的短字符串非常有用。",
-      "删除空格、逗号、冒号和连字符后，输入必须包含偶数个十六进制数字。标准ASCII文本的字节范围为<code>00-7F</code>；字节 <code>80-FF</code> 可能显示为扩展字符代码而不是解码的 UTF-8 文本。"
+      "十六进制每两位表示一个字节。可以直接粘贴连续的 Hex 数字、带 0x 前缀的字节、用空白、逗号、冒号或连字符分隔的字节。",
+      "单条默认逐字节显示，批量默认按 UTF-8 解码。对于 00–7F，两种模式给出的字符相同。对于 E4 B8 AD，选择 UTF-8 才会显示“中”。"
     ],
     "howToUse": "使用方法",
     "steps": [
@@ -52,23 +52,23 @@
       "<strong>Hex 到 ASCII 的转换</strong> 将每两个十六进制数字视为一个字节，并将该字节映射到字符代码。例如，<code>48</code> 映射到十进制 72，即 ASCII 字符 <code>H</code>。"
     ],
     "inputNotes": "输入说明",
-    "inputNotesPara": "使用有效的十六进制数字并保持字节边界完整。如果源数据是 UTF-8、二进制、压缩或加密数据，则直接 ASCII 视图可能会显示意外的符号或控制字符。",
+    "inputNotesPara": "0x 前缀后写完整字节。单个 F 还缺一位，4G 的第二个字符无效。FF 可以逐字节查看，但不能独立解码成 UTF-8 字符。",
     "example": "示例",
     "examplePara": "此十六进制字节序列解码为熟悉的 ASCII 问候语：",
     "exampleCode": "--- 十六进制输入 ---\n48656C6C6F\n\n--- ASCII ---\nHello"
   },
   "tw": {
-    "title": "十六進位到 ASCII 轉換器 - Coding.Tools",
-    "description": "直接在瀏覽器中將十六進位位元組值轉換為 ASCII 文字。",
-    "toolTitle": "十六進位轉ASCII",
-    "toolDescription": "將十六進位位元組對解碼為可讀的 ASCII 文字，並支援常見分隔符號。",
+    "title": "十六進位轉 ASCII 字串、UTF-8 中文解碼 - Coding.Tools",
+    "description": "將 Hex 位元組轉成 ASCII 字串，或用 UTF-8 解碼中文與表情符號。支援 0x 前綴、常見分隔符號與批次轉換。",
+    "toolTitle": "十六進位轉 ASCII 字串",
+    "toolDescription": "貼上 48 69 或 0x48 0x69 即可檢視 ASCII。要讀取中文，請選 UTF-8。",
     "categoryName": "數字轉換",
     "inputPlaceholder": "在此處貼上十六進位值（例如 48 65 6C 6C 6F）...",
     "outputPlaceholder": "ASCII 文字將會出現在這裡...",
     "descTitle": "將十六進位位元組對解碼為 ASCII 文字",
     "descParas": [
-      "<strong>Hex 到 ASCII 將十六進位位元組對轉換為文字字元。</strong> 它對於檢查位元組轉儲、協定有效負載、編碼測試資料以及從日誌或文件複製的短字串非常有用。",
-      "刪除空格、逗號、冒號和連字號後，輸入必須包含偶數個十六進位數字。標準ASCII文字的位元組範圍為<code>00-7F</code>；位元組 <code>80-FF</code> 可能顯示為擴展字元代碼而不是解碼的 UTF-8 文字。"
+      "每兩個十六進位數字代表一個位元組。可貼上連續數字、加上 0x 前綴，或以空白、逗號、冒號或連字號分隔。",
+      "單筆預設逐位元組顯示，批次預設使用 UTF-8。00–7F 在兩種模式中顯示相同的字元。將 E4 B8 AD 設為 UTF-8 即可讀出「中」。"
     ],
     "howToUse": "如何使用",
     "steps": [
@@ -81,23 +81,23 @@
       "<strong>Hex 到 ASCII 的轉換</strong> 將每兩個十六進位數字視為一個位元組，並將該位元組對應到字元代碼。例如，<code>48</code> 對應到十進位 72，即 ASCII 字元 <code>H</code>。"
     ],
     "inputNotes": "輸入說明",
-    "inputNotesPara": "使用有效的十六進位數字並保持位元組邊界完整。如果來源資料是 UTF-8、二進位、壓縮或加密資料，則直接 ASCII 視圖可能會顯示意外的符號或控制字元。",
+    "inputNotesPara": "0x 前綴後須接完整位元組。例如 F 少一位，4G 的第二個字元無效。FF 能逐位元組檢視，但無法單獨解碼為 UTF-8 字元。",
     "example": "範例",
     "examplePara": "此十六進位位元組序列解碼為熟悉的 ASCII 問候語：",
     "exampleCode": "--- 十六進位輸入 ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII 輸出 ---\nHello, World!"
   },
   "jp": {
-    "title": "16 進数から ASCII へのコンバーター - Coding.Tools",
-    "description": "ブラウザで 16 進バイト値を ASCII テキストに直接変換します。",
-    "toolTitle": "16進数からASCII",
-    "toolDescription": "一般的な区切り文字をサポートし、16 進バイトのペアを読み取り可能な ASCII テキストにデコードします。",
+    "title": "16進数をASCII文字列に変換｜UTF-8の日本語にも対応 - Coding.Tools",
+    "description": "16進数のバイト列をASCII文字列に変換します。UTF-8を選ぶと日本語や絵文字を復元できます。0x付き、空白区切り、一括変換に対応。",
+    "toolTitle": "16進数をASCII文字列に変換",
+    "toolDescription": "48 69 または 0x48 0x69 を貼り付けて ASCII を表示します。日本語を読むには UTF-8 を選んでください。",
     "categoryName": "数値変換",
     "inputPlaceholder": "ここに 16 進数の値を貼り付けます (例: 48 65 6C 6C 6F)...",
     "outputPlaceholder": "ここに ASCII テキストが表示されます...",
     "descTitle": "16 進バイトのペアを ASCII テキストにデコードします",
     "descParas": [
-      "<strong>Hex から ASCII は、16 進数のバイト ペアをテキスト文字に変換します。</strong> これは、バイト ダンプ、プロトコル ペイロード、エンコードされたテストデータ、ログやドキュメントからコピーされた短い文字列を検査するのに役立ちます。",
-      "入力には、スペース、カンマ、コロン、ハイフンを除いた偶数の 16 進数が含まれている必要があります。標準 ASCII テキストはバイト範囲 <code>00-7F</code> にあります。バイト <code>80-FF</code> は、デコードされた UTF-8 テキストではなく拡張文字コードとして表示される場合があります。"
+      "16進数の2桁が1バイトに対応します。連続した16進数、0x付きの値、空白・カンマ・コロン・ハイフンで区切ったバイト列を入力できます。",
+      "単一入力では1バイトずつ表示し、一括入力では UTF-8 で読み取るのが初期設定です。00–7F の結果は同じです。E3 81 82 を「あ」と表示するには UTF-8 を選びます。"
     ],
     "howToUse": "使い方",
     "steps": [
@@ -110,7 +110,7 @@
       "<strong>16 進数から ASCII への変換</strong> は、16 進数の 2 桁を 1 バイトとして扱い、そのバイトを文字コードに対応付けます。たとえば、<code>48</code> は 10 進数 72、つまり ASCII 文字 <code>H</code> に対応付けされます。"
     ],
     "inputNotes": "入力時の注意",
-    "inputNotesPara": "有効な 16 進数を使用し、バイト境界をそのまま維持します。ソース データが UTF-8、バイナリ、圧縮、または暗号化されている場合、ASCII を直接表示すると、予期しない記号や制御文字が表示される場合があります。",
+    "inputNotesPara": "0x の直後にはバイト値を指定します。F は1桁不足し、4G の2文字目は16進数ではありません。FF を単独で UTF-8 に変換するとエラーになります。",
     "example": "例",
     "examplePara": "この 16 進バイト シーケンスは、おなじみの ASCII グリーティングにデコードされます。",
     "exampleCode": "--- 16進数入力 ---\n48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21\n\n--- ASCII 出力 ---\nHello, World!"

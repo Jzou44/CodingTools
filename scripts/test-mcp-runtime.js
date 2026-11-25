@@ -197,6 +197,17 @@ async function runHttpTests() {
     assert.strictEqual(replace.data.result.isError, false);
     assert.strictEqual(replace.data.result.content[0].text, "xyz 123 xyz");
 
+    const jsonFormat = await rpc(baseUrl, "tools/call", {
+      name: "json-formatter",
+      arguments: { input: '{"id":9007199254740993,"n":1e400}' }
+    });
+    assert.strictEqual(jsonFormat.data.result.content[0].text, '{\n  "id": 9007199254740993,\n  "n": 1e400\n}');
+    const invalidJson = await rpc(baseUrl, "tools/call", {
+      name: "json-formatter", arguments: { input: '{"ok":true,}' }
+    });
+    assert.strictEqual(invalidJson.data.result.isError, true);
+    assert.match(invalidJson.data.result.content[0].text, /line 1, column 12/i);
+
     const jsonKeyOrderDiff = await rpc(baseUrl, "tools/call", {
       name: "json-diff",
       arguments: {

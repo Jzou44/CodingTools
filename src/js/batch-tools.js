@@ -19,6 +19,8 @@
   var filePicker = document.getElementById("batch-file-picker");
   var fileStatus = document.getElementById("batch-file-status");
   var textInput = document.getElementById("batch-text-input");
+  var byteMode = document.getElementById("batch-byte-mode");
+  var byteErrors = byteMode ? JSON.parse(document.querySelector("[data-byte-converter]").dataset.errors) : null;
   var dropzone = document.getElementById("batch-dropzone");
   var results = [];
   var droppedFiles = null;
@@ -584,7 +586,7 @@
     if (tool === "sha256-generator") return digest("SHA-256", value);
     if (tool === "sha384-generator") return digest("SHA-384", value);
     if (tool === "sha512-generator") return digest("SHA-512", value);
-    if (tool === "json-formatter") return Promise.resolve(JSON.stringify(JSON.parse(value), null, 2));
+    if (tool === "json-formatter") return Promise.resolve(textTransforms().formatJson(value, 2, window.CodingToolsJsonMessages));
     if (tool === "json-minifier") return Promise.resolve(JSON.stringify(JSON.parse(value)));
     if (tool === "json-to-xml") return Promise.resolve(vkbeautify.xml(textTransforms().jsonToXml(value)));
     if (tool === "xml-formatter") {
@@ -613,6 +615,15 @@
     if (tool === "decimal-to-binary") return Promise.resolve(decimalToBase(value, 2));
     if (tool === "binary-to-hex") return Promise.resolve(convertBase(value, 2, 16));
     if (tool === "hex-to-binary") return Promise.resolve(convertBase(value, 16, 2));
+    if (byteMode) {
+      var delimiter = document.getElementById("batch-delimiter");
+      var separator = delimiter && delimiter.value === "none" ? "" : getDelimiter();
+      try {
+        return Promise.resolve(window.CodingToolsByteConverter.convert(tool, value, byteMode.value, separator).text);
+      } catch (error) {
+        throw new Error(window.CodingToolsByteConverter.explain(error, byteErrors));
+      }
+    }
     if (tool === "hex-to-ascii") return Promise.resolve(hexToAscii(value));
     if (tool === "ascii-to-hex") return Promise.resolve(textToDelimitedCodes(value, 16));
     if (tool === "binary-to-text") return Promise.resolve(binaryToText(value));
@@ -716,6 +727,9 @@
         setSummary(results.length, "✓ " + ok + " / ✕ " + (results.length - ok));
         btnCopy.disabled = ok === 0;
         btnDownload.disabled = ok === 0;
+        if (ok > 0 && (tool === "json-formatter" || document.querySelector("[data-byte-converter]"))) {
+          ToolCommon.trackToolSuccess("batch_convert");
+        }
       });
     }).catch(function (error) {
       results = [{

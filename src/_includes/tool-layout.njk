@@ -268,6 +268,7 @@
           </div>
           {% endif %}
           {% else %}
+          {% block batch_tool_options %}{% endblock %}
           {% if currentTool in batchUrlTools or currentTool == "case-converter" or currentTool == "regex-replace" or currentTool in batchDelimiterTools %}
           <div class="batch-card">
             <div class="batch-card-title">{{ t.ui.batchOptions }}</div>

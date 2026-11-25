@@ -491,7 +491,7 @@ function checkMcpDocumentation() {
   const mcpSection = fs.existsSync(mcpSectionPath) ? fs.readFileSync(mcpSectionPath, "utf8") : "";
   const toolLayoutExtends = '{% extends "tool-layout.njk" %}';
   const validExtends = [toolLayoutExtends];
-  for (const wrapper of ["photo2pixel-page.njk", "progressive-jpeg-page.njk", "image-compression-page.njk"]) {
+  for (const wrapper of ["photo2pixel-page.njk", "progressive-jpeg-page.njk", "image-compression-page.njk", "byte-converter-page.njk"]) {
     const file = path.join(srcDir, "_includes", wrapper);
     if (fs.existsSync(file) && fs.readFileSync(file, "utf8").includes(toolLayoutExtends)) {
       validExtends.push(`{% extends "${wrapper}" %}`);
