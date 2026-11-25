@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "预期校验值（选填）",
+      "format": "请输入 {length} 位十六进制字符（0–9、A–F）。",
+      "pending": "请先生成校验值，再查看比对结果。",
+      "match": "校验值一致。",
+      "mismatch": "校验值不一致。",
+      "failed": "无法计算校验值。",
+      "sourceHint": "输入文本，或选择不超过 5 MiB 的本地文件。文件按原始字节计算。"
+    },
     "input": "输入",
     "output": "输出",
     "generate": "生成",

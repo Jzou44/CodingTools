@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "Soma de verificação esperada (opcional)",
+      "format": "Insira {length} caracteres hexadecimais (0–9, A–F).",
+      "pending": "Calcule a soma de verificação para compará-la.",
+      "match": "As somas de verificação coincidem.",
+      "mismatch": "As somas de verificação são diferentes.",
+      "failed": "Não foi possível calcular a soma de verificação.",
+      "sourceHint": "Digite um texto ou selecione um arquivo local de até 5 MiB. O cálculo usa os bytes originais do arquivo."
+    },
     "input": "Entrada",
     "output": "Saída",
     "generate": "Gerar",

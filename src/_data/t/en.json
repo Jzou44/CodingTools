@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "Expected checksum (optional)",
+      "format": "Enter {length} hexadecimal characters (0–9, A–F).",
+      "pending": "Generate the checksum to compare it.",
+      "match": "Checksums match.",
+      "mismatch": "Checksums differ.",
+      "failed": "Could not calculate the checksum.",
+      "sourceHint": "Enter text or choose a local file up to 5 MiB. Files are checked using their original bytes."
+    },
     "input": "Input",
     "output": "Output",
     "generate": "Generate",

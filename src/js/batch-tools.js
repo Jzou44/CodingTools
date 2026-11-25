@@ -247,17 +247,8 @@
     return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
   }
 
-  function bytesToHex(buffer) {
-    return Array.from(new Uint8Array(buffer)).map(function (byte) {
-      return byte.toString(16).padStart(2, "0");
-    }).join("");
-  }
-
   function digest(algorithm, value) {
-    if (!window.crypto || !crypto.subtle) {
-      return Promise.reject(new Error(tr("invalidInput", "Invalid input")));
-    }
-    return crypto.subtle.digest(algorithm, inputBytes(value)).then(bytesToHex);
+    return ToolCommon.hashBytes(algorithm, inputBytes(value));
   }
 
   function textTransforms() {
@@ -388,7 +379,7 @@
   function transformText(value) {
     if (tool === "base64-encode") return Promise.resolve(ToolCommon.bytesToBase64(inputBytes(value)));
     if (tool === "base64-decode") return Promise.resolve(base64ToUtf8(value));
-    if (tool === "md5-generator") return Promise.resolve(requireGlobal("md5", "MD5 library")(value));
+    if (tool === "md5-generator") return digest("MD5", value);
     if (tool === "sha1-generator") return digest("SHA-1", value);
     if (tool === "sha256-generator") return digest("SHA-256", value);
     if (tool === "sha384-generator") return digest("SHA-384", value);

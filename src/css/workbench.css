@@ -108,8 +108,11 @@ body[data-tool='ascii-table'] .description-section, body[data-tool='roman-numera
   body[data-tool] .tool-editor-output > .pane-card { height: 100%; }
   body[data-tool] :is(.batch-panel, .tool-workspace) > .tool-editor-actions { grid-row: 11; }
   body[data-tool] :is(.batch-panel, .tool-workspace):has(> .tool-editor-input):has(> .tool-editor-output) > :is(.status-bar, .status-bar-dual) { grid-row: 12; }
-  body[data-tool] :is(.batch-panel, .tool-workspace):has(> .tool-editor-input):has(> .tool-editor-output) > .query-preview { grid-row: 13; }
+  body[data-tool] :is(.batch-panel, .tool-workspace):has(> .tool-editor-input):has(> .tool-editor-output) > :is(.query-preview, .hash-comparison) { grid-row: 13; }
 }
+.hash-comparison input { width: 100%; }
+.hash-comparison p { margin: 8px 0 0; }
+.hash-comparison p:empty { margin: 0; }
 @media (max-width: 1100px) {
   body[data-tool] .tool-workspace .image-grid { grid-template-columns: 1fr; }
 }

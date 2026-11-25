@@ -1,24 +1,24 @@
 {
   "en": {
-    "title": "SHA-512 Generator - Coding.Tools",
-    "description": "Generate a 128-character SHA-512 hash from text for high-strength SHA-2 integrity and compatibility checks.",
+    "title": "SHA-512 Hash Generator and File Checksum Checker - Coding.Tools",
+    "description": "Calculate a 128-character SHA-512 hash from text or a local file. Paste a known checksum to see whether the values match. Files stay on your device.",
     "toolTitle": "SHA-512 Generator",
-    "toolDescription": "Create SHA-512 digests for workflows that require a 512-bit SHA-2 hash.",
+    "toolDescription": "Drop in text or choose a file to calculate its SHA-512 hash in your browser. If you have a checksum from the publisher, paste it to check for a match.",
     "categoryName": "Hash & Cryptography",
     "inputPlaceholder": "Enter text to generate SHA-512 hash...",
     "outputPlaceholder": "SHA-512 hash will appear here...",
     "hashLength": 128,
     "descTitle": "Generate SHA-512 hashes with 512-bit output",
     "descParas": [
-      "<strong>This SHA-512 generator creates a deterministic 512-bit digest and displays it as 128 hexadecimal characters.</strong> Use it for release metadata, verification notes, fixtures, signatures, and systems that explicitly require SHA-512 output.",
-      "SHA-512 is a SHA-2 hash, not encryption. It can prove that two exact inputs match or that data has changed, but it does not conceal the input and should not be used alone as a password storage method."
+      "A release may list several checksums per download. Use the SHA-512 entry for the exact file and version you chose, then compare all 128 hexadecimal characters.",
+      "If two SHA-512 values differ, the inputs differ. A match with a trusted published checksum helps verify the file. The hash alone tells you nothing about who published it."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste your text into the input editor.",
-      "Click <strong>Generate</strong> to produce the hash digest.",
-      "The 128-character hexadecimal hash appears in the output editor.",
-      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      "Enter the exact text, or choose a local file of up to 5 MiB in single mode.",
+      "Select Generate to calculate the SHA-512 checksum. Text uses UTF-8. Files are read as their original bytes.",
+      "To check a value, paste the expected 128-character hexadecimal digest and read the comparison.",
+      "Copy the calculated hash to share it, or download the digest as a text file."
     ],
     "whatIs": "What is SHA-512?",
     "whatIsParas": [
@@ -29,28 +29,29 @@
     "inputNotesPara": "The output depends on the exact input text. Check line endings, leading or trailing spaces, copied prompts, and Unicode characters when comparing a SHA-512 value from another system.",
     "example": "Example",
     "examplePara": "Hashing a short phrase produces a fixed 128-character digest:",
-    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "SHA-512 hash generator and checker"
   },
   "cn": {
-    "title": "SHA-512 生成器 - Coding.Tools",
-    "description": "从文本生成 128 个字符的 SHA-512 哈希，以进行高强度 SHA-2 完整性和兼容性检查。",
+    "title": "SHA-512 在线计算与文件哈希校验 - Coding.Tools",
+    "description": "输入文本或选择本地文件，在线计算 128 位十六进制 SHA-512 哈希值。粘贴已知校验值即可查看是否一致，文件在浏览器内处理。",
     "toolTitle": "SHA-512 生成器",
-    "toolDescription": "为需要 512 位 SHA-2 哈希的工作流程创建 SHA-512 摘要。",
+    "toolDescription": "在浏览器中计算文本或文件的 SHA-512 值。校验下载文件时，粘贴发布方给出的校验值，即可查看两者是否一致。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本以生成 SHA-512 哈希...",
     "outputPlaceholder": "SHA-512 哈希值将显示在此处...",
     "hashLength": 128,
     "descTitle": "生成具有 512 位输出的 SHA-512 哈希值",
     "descParas": [
-      "<strong>此 SHA-512 生成器创建确定性 512 位摘要并将其显示为 128 个十六进制字符。</strong> 将其用于明确需要 SHA-512 输出的发布元数据、验证注释、测试数据、签名和系统。",
-      "SHA-512 是 SHA-2 哈希，而不是加密。它可以证明两个输入完全匹配或数据已更改，但它不会隐藏输入，不应该单独用作密码存储方法。"
+      "一个版本可能提供多种校验值。先找到与文件名和版本对应的 SHA-512，再比对完整的 128 位十六进制摘要。",
+      "SHA-512 值不同，说明输入数据不同。校验文件时，请从可信来源获取预期摘要；仅凭摘要无法判断谁发布了文件。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "将文本键入或粘贴到输入编辑器中。",
-      "单击 <strong>生成</strong> 以生成哈希摘要。",
-      "128 个字符的十六进制哈希值出现在输出编辑器中。",
-      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置两个编辑器。"
+      "在单条模式下输入原文，或选择不超过 5 MiB 的本地文件。",
+      "点击“生成”计算 SHA-512。文本按 UTF-8 编码，文件按原始字节计算。",
+      "要比对结果，请粘贴预期的 128 位十六进制摘要，查看是否匹配。",
+      "可复制计算结果，也可将摘要下载为文本文件。"
     ],
     "whatIs": "SHA-512是什么？",
     "whatIsParas": [
@@ -61,28 +62,29 @@
     "inputNotesPara": "输出取决于确切的输入文本。比较来自另一个系统的 SHA-512 值时，检查行结尾、前导或尾随空格、复制的提示和 Unicode 字符。",
     "example": "示例",
     "examplePara": "对一个短语进行哈希处理会生成一个固定的 128 个字符的摘要：",
-    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-512 哈希 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-512 哈希 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "SHA-512 哈希生成与文件校验"
   },
   "tw": {
-    "title": "SHA-512 產生器 - Coding.Tools",
-    "description": "從文字產生 128 個字元的 SHA-512 哈希，以進行高強度 SHA-2 完整性和相容性檢查。",
+    "title": "SHA-512 線上產生器與檔案雜湊值比對 - Coding.Tools",
+    "description": "輸入文字或選擇本機檔案，計算 128 碼十六進位 SHA-512 雜湊值。貼上已知的校驗碼即可比對結果，檔案會留在裝置上。",
     "toolTitle": "SHA-512 產生器",
-    "toolDescription": "為需要 512 位元 SHA-2 雜湊的工作流程建立 SHA-512 摘要。",
+    "toolDescription": "在瀏覽器計算文字或檔案的 SHA-512 雜湊值。想核對下載檔案時，貼上發布者提供的校驗碼，即可查看是否相符。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字以產生 SHA-512 雜湊...",
     "outputPlaceholder": "SHA-512 雜湊值將顯示在此處...",
     "hashLength": 128,
     "descTitle": "產生具有 512 位元輸出的 SHA-512 雜湊值",
     "descParas": [
-      "<strong>此 SHA-512 產生器建立確定性 512 位元摘要並將其顯示為 128 個十六進位字元。</strong> 將其用於明確需要 SHA-512 輸出的發布中繼資料、驗證註解、測試資料、簽章和系統。",
-      "SHA-512 是 SHA-2 哈希，而不是加密。它可以證明兩個輸入完全符合或資料已更改，但它不會隱藏輸入，不應該單獨用作密碼儲存方法。"
+      "同一份下載清單可能列出多種校驗碼。找到對應檔名與版本的 SHA-512 項目，再比對完整的 128 碼十六進位值。",
+      "SHA-512 值不同，代表輸入資料不同。校驗檔案時，請從可信來源取得預期的雜湊值；只看雜湊值無法確認發布者身分。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "將文字鍵入或貼上到輸入編輯器中。",
-      "按一下 <strong>生成</strong> 以產生雜湊摘要。",
-      "128 個字元的十六進位雜湊值出現在輸出編輯器中。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
+      "在單筆模式輸入原文，或選擇不超過 5 MiB 的本機檔案。",
+      "按下「生成」計算 SHA-512。文字使用 UTF-8 編碼，檔案依原始位元組計算。",
+      "貼上預期的 128 碼十六進位雜湊值，即可查看比對結果。",
+      "可以複製計算結果，或將雜湊值下載為文字檔。"
     ],
     "whatIs": "SHA-512是什麼？",
     "whatIsParas": [
@@ -93,28 +95,29 @@
     "inputNotesPara": "輸出取決於確切的輸入文字。比較來自另一個系統的 SHA-512 值時，檢查行結尾、前導或尾隨空格、複製的提示和 Unicode 字元。",
     "example": "範例",
     "examplePara": "對一個短語進行雜湊處理會產生一個固定的 128 個字元的摘要：",
-    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-512 雜湊 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-512 雜湊 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "SHA-512 雜湊產生器與檔案校驗"
   },
   "jp": {
-    "title": "SHA-512 ジェネレーター - Coding.Tools",
-    "description": "高強度の SHA-2 整合性と互換性チェックのために、テキストから 128 文字の SHA-512 ハッシュを生成します。",
+    "title": "SHA-512 ハッシュ計算・ファイルのチェックサム照合 - Coding.Tools",
+    "description": "文字列やローカルファイルの SHA-512 ハッシュ値を 128 桁の16進数で計算。公開されているチェックサムを貼り付けて照合できます。ファイルのアップロードは不要です。",
     "toolTitle": "SHA-512 ジェネレーター",
-    "toolDescription": "512 ビット SHA-2 ハッシュを必要とするワークフローの SHA-512 ダイジェストを作成します。",
+    "toolDescription": "文字列やファイルから SHA-512 ハッシュ値をブラウザで計算します。配布元のチェックサムを貼り付けると、一致するか確認できます。",
     "categoryName": "ハッシュと暗号",
     "inputPlaceholder": "SHA-512ハッシュを生成するテキストを入力...",
     "outputPlaceholder": "SHA-512ハッシュがここに表示されます...",
     "hashLength": 128,
     "descTitle": "512 ビット出力で SHA-512 ハッシュを生成",
     "descParas": [
-      "<strong>この SHA-512 ジェネレーターは、確定的な 512 ビット ダイジェストを作成し、それを 128 の 16 進数文字として表示します。</strong> リリース メタデータ、検証ノート、テストデータ、署名、および SHA-512 出力を明示的に必要とするシステムに使用します。",
-      "SHA-512 は SHA-2 ハッシュであり、暗号化ではありません。 2 つの入力が正確に一致すること、またはデータが変更されたことを証明できますが、入力が隠蔽されるわけではないため、パスワードの保存方法として単独で使用しないでください。"
+      "配布元が複数のチェックサムを載せているときは、選んだファイル名とバージョンの SHA-512 を探し、128 桁すべてを照合します。",
+      "SHA-512 の値が異なれば、入力データも異なります。ファイルの照合には信頼できる配布元の値を使ってください。ハッシュ値だけでは配布元を確認できません。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "テキストを入力エディターに入力または貼り付けます。",
-      "<strong>生成</strong> をクリックしてハッシュ ダイジェストを生成します。",
-      "128 文字の 16 進数のハッシュが出力エディターに表示されます。",
-      "クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、両方のエディタをリセットするには <strong>クリア</strong> を使用します。"
+      "単一モードで文字列を入力するか、5 MiB 以下のローカルファイルを選びます。",
+      "「生成」を押して SHA-512 を計算します。文字列には UTF-8、ファイルには元のバイト列を使います。",
+      "照合するには、期待する 128 桁の16進数のハッシュ値を貼り付けて結果を確認します。",
+      "計算結果をコピーするか、テキストファイルとしてダウンロードできます。"
     ],
     "whatIs": "SHA-512とは何ですか?",
     "whatIsParas": [
@@ -125,60 +128,62 @@
     "inputNotesPara": "出力は正確な入力テキストに依存します。別のシステムからの SHA-512 値を比較する場合は、行末、先頭または末尾のスペース、コピーされたプロンプト、および Unicode 文字を確認してください。",
     "example": "例",
     "examplePara": "短いフレーズをハッシュすると、固定の 128 文字のダイジェストが生成されます。",
-    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-512ハッシュ ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-512ハッシュ ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "SHA-512 ハッシュ計算・照合"
   },
   "kr": {
-    "title": "SHA-512 생성기 - Coding.Tools",
-    "description": "강력한 SHA-2 무결성 및 호환성 검사를 위해 텍스트에서 128자 SHA-512 해시를 생성합니다.",
+    "title": "SHA-512 해시 생성기 및 파일 체크섬 비교 - Coding.Tools",
+    "description": "문자열이나 파일의 SHA-512 해시를 128자리 16진수로 계산합니다. 배포자가 제공한 체크섬을 붙여 넣어 비교할 수 있으며 파일은 기기에서 처리합니다.",
     "toolTitle": "SHA-512 생성기",
-    "toolDescription": "512비트 SHA-2 해시가 필요한 워크플로에 대한 SHA-512 다이제스트를 만듭니다.",
+    "toolDescription": "브라우저에서 텍스트나 파일의 SHA-512 해시값을 계산합니다. 배포자가 공개한 체크섬을 붙여 넣으면 두 값이 일치하는지 확인할 수 있습니다.",
     "categoryName": "해시 및 암호화",
     "inputPlaceholder": "SHA-512 해시를 생성할 텍스트를 입력하세요...",
     "outputPlaceholder": "SHA-512 해시가 여기에 표시됩니다...",
     "hashLength": 128,
     "descTitle": "512비트 출력으로 SHA-512 해시 생성",
     "descParas": [
-      "<strong>이 SHA-512 생성기는 결정적 512비트 다이제스트를 생성하고 이를 128개의 16진수 문자로 표시합니다.</strong> SHA-512 출력이 명시적으로 필요한 릴리스 메타데이터, 확인 노트, 테스트 데이터, 서명 및 시스템에 사용합니다.",
-      "SHA-512는 암호화가 아닌 SHA-2 해시입니다. 두 개의 정확한 입력이 일치하거나 데이터가 변경되었음을 증명할 수 있지만 입력을 숨기지 않으며 비밀번호 저장 방법으로 단독으로 사용해서는 안됩니다."
+      "배포 페이지에 여러 체크섬이 있으면 다운로드한 파일명과 버전에 맞는 SHA-512 값을 찾고 128자리 전체를 비교하세요.",
+      "SHA-512 값이 다르면 입력 데이터도 다릅니다. 파일을 검증할 때는 신뢰할 수 있는 출처의 해시값과 비교하세요. 해시값만으로는 배포자를 확인할 수 없습니다."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "해시 다이제스트를 생성하려면 <strong>생성</strong>를 클릭하세요.",
-      "128자의 16진수 해시가 출력 편집기에 나타납니다.",
-      "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
+      "단일 모드에서 텍스트를 입력하거나 5 MiB 이하의 파일을 선택하세요.",
+      "생성 버튼을 눌러 SHA-512 해시를 계산하세요. 텍스트는 UTF-8로 인코딩하고 파일은 원본 바이트를 사용합니다.",
+      "비교할 128자리 16진수 해시값을 붙여 넣고 일치 여부를 확인하세요.",
+      "계산한 값을 복사하거나 텍스트 파일로 내려받을 수 있습니다."
     ],
-    "whatIs": "SHA-512란 무엇인가요?",
+    "whatIs": "SHA512 암호화는 어떻게 작동하나요?",
     "whatIsParas": [
       "<strong>SHA-512</strong>은 입력 텍스트 또는 바이트를 고정 512비트 다이제스트에 매핑하는 SHA-2 암호학적 해시 함수입니다. 출력은 일반적으로 128자의 16진수 문자열로 표시됩니다.",
-      "프로토콜이나 체크섬 형식에서 SHA-512를 요구하는 경우에 적합합니다. 메시지 신뢰성을 위해 HMAC 구성을 사용하고 사람 비밀번호의 경우 일반 SHA-512 다이제스트 대신 느리고 솔트된 비밀번호 해싱 알고리즘을 사용합니다."
+      "SHA-512는 단방향 해시 함수입니다. 원문에서 128자리 16진수 해시를 계산하며, 복호화 키로 원문을 복원할 수 없습니다."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "출력은 정확한 입력 텍스트에 따라 달라집니다. 다른 시스템의 SHA-512 값을 비교할 때 줄 끝, 선행 또는 후행 공백, 복사된 프롬프트 및 유니코드 문자를 확인하세요.",
     "example": "예제",
     "examplePara": "짧은 구문을 해싱하면 고정된 128자 다이제스트가 생성됩니다.",
-    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-512 해시 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-512 해시 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "SHA-512 해시 생성 및 비교"
   },
   "fr": {
-    "title": "Générateur SHA-512 - Coding.Tools",
-    "description": "Générez un hachage SHA-512 de 128 caractères à partir du texte pour des contrôles d'intégrité et de compatibilité SHA-2 de haute résistance.",
+    "title": "Générateur de hash SHA-512 et vérification de fichiers - Coding.Tools",
+    "description": "Calculez l’empreinte SHA-512 d’un texte ou d’un fichier en 128 caractères hexadécimaux. Collez la somme de contrôle attendue pour la comparer au résultat, sans envoyer le fichier.",
     "toolTitle": "Générateur SHA-512",
-    "toolDescription": "Créez des résumés SHA-512 pour les flux de travail qui nécessitent un hachage SHA-2 de 512 bits.",
+    "toolDescription": "Calculez l’empreinte SHA-512 d’un texte ou d’un fichier dans votre navigateur. Collez la somme de contrôle publiée par l’éditeur pour vérifier si les deux valeurs concordent.",
     "categoryName": "Hachage et cryptographie",
     "inputPlaceholder": "Entrez le texte pour générer le hash SHA-512...",
     "outputPlaceholder": "Le hash SHA-512 apparaîtra ici...",
     "hashLength": 128,
     "descTitle": "Générer des hachages SHA-512 avec une sortie de 512 bits",
     "descParas": [
-      "<strong>Ce générateur SHA-512 crée un résumé déterministe de 512 bits et l'affiche sous forme de 128 caractères hexadécimaux.</strong> Utilisez-le pour les métadonnées de version, les notes de vérification, les données de test, les signatures et les systèmes qui nécessitent explicitement la sortie SHA-512.",
-      "SHA-512 est un hachage SHA-2, pas un chiffrement. Il peut prouver que deux entrées exactes correspondent ou que les données ont changé, mais il ne masque pas l'entrée et ne doit pas être utilisé seul comme méthode de stockage de mot de passe."
+      "Une page de téléchargement peut présenter plusieurs sommes de contrôle. Repérez la valeur SHA-512 correspondant au nom et à la version du fichier, puis comparez les 128 caractères hexadécimaux.",
+      "Si deux empreintes SHA-512 diffèrent, les données diffèrent. Pour vérifier un fichier, obtenez l’empreinte attendue auprès d’une source fiable. Une empreinte seule ne permet pas d’identifier l’éditeur."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez votre texte dans l'éditeur de saisie.",
-      "Cliquez sur <strong>Générer</strong> pour produire le résumé de hachage.",
-      "Le hachage hexadécimal de 128 caractères apparaît dans l'éditeur de sortie.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
+      "En mode individuel, saisissez le texte ou choisissez un fichier de 5 Mio maximum.",
+      "Cliquez sur « Générer » pour calculer l’empreinte SHA-512. Le texte est encodé en UTF-8 et les fichiers sont lus octet par octet.",
+      "Pour comparer, collez l’empreinte attendue de 128 caractères hexadécimaux et consultez le résultat.",
+      "Copiez l’empreinte calculée ou téléchargez-la dans un fichier texte."
     ],
     "whatIs": "Qu'est-ce que SHA-512 ?",
     "whatIsParas": [
@@ -189,28 +194,29 @@
     "inputNotesPara": "Le résultat dépend du texte exact saisi. Vérifiez les fins de ligne, les espaces de début ou de fin, les invites copiées et les caractères Unicode lorsque vous comparez une valeur SHA-512 provenant d'un autre système.",
     "example": "Exemple",
     "examplePara": "Le hachage d'une phrase courte produit un résumé fixe de 128 caractères :",
-    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "Calculer et vérifier un hash SHA-512"
   },
   "de": {
-    "title": "SHA-512-Generator - Coding.Tools",
-    "description": "Generieren Sie einen 128 Zeichen langen SHA-512-Hash aus Text für hochsichere SHA-2-Integritäts- und Kompatibilitätsprüfungen.",
+    "title": "SHA-512-Hash-Generator und Prüfsummenvergleich - Coding.Tools",
+    "description": "Berechnen Sie den SHA-512-Hash eines Texts oder einer Datei als 128-stelligen Hexwert. Vergleichen Sie ihn mit der erwarteten Prüfsumme. Die Datei bleibt auf Ihrem Gerät.",
     "toolTitle": "SHA-512-Generator",
-    "toolDescription": "Erstellen Sie SHA-512-Hashwerte für Arbeitsabläufe, die einen 512-Bit-SHA-2-Hash erfordern.",
+    "toolDescription": "Berechnen Sie den SHA-512-Hash für Text oder Dateien direkt im Browser. Fügen Sie die veröffentlichte Prüfsumme ein, um sie mit dem Ergebnis zu vergleichen.",
     "categoryName": "Hash & Kryptographie",
     "inputPlaceholder": "Text eingeben, um SHA-512-Hash zu erzeugen...",
     "outputPlaceholder": "SHA-512-Hash wird hier angezeigt...",
     "hashLength": 128,
     "descTitle": "Generieren Sie SHA-512-Hashes mit 512-Bit-Ausgabe",
     "descParas": [
-      "<strong>Dieser SHA-512-Generator erstellt einen deterministischen 512-Bit-Hashwert und zeigt ihn als 128 Hexadezimalzeichen an.</strong> Verwenden Sie ihn für Release-Metadaten, Verifizierungshinweise, Testdaten, Signaturen und Systeme, die explizit eine SHA-512-Ausgabe erfordern.",
-      "SHA-512 ist ein SHA-2-Hash, keine Verschlüsselung. Es kann nachweisen, dass zwei genaue Eingaben übereinstimmen oder dass sich Daten geändert haben, es verbirgt die Eingabe jedoch nicht und sollte nicht allein als Methode zum Speichern von Passwörtern verwendet werden."
+      "Eine Downloadseite kann mehrere Prüfsummen aufführen. Wählen Sie den SHA-512-Eintrag für den richtigen Dateinamen und die passende Version. Vergleichen Sie alle 128 Hexadezimalstellen.",
+      "Unterschiedliche SHA-512-Werte bedeuten, dass sich die Eingaben unterscheiden. Beziehen Sie die erwartete Prüfsumme aus einer vertrauenswürdigen Quelle. Der Hash allein gibt keinen Aufschluss über den Herausgeber."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Geben Sie Ihren Text ein oder fügen Sie ihn in den Eingabeeditor ein.",
-      "Klicken Sie auf <strong>Generieren</strong>, um den Hashwert zu erstellen.",
-      "Der 128 Zeichen lange hexadezimale Hash wird im Ausgabeeditor angezeigt.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um beide Editoren zurückzusetzen."
+      "Geben Sie im Einzelmodus den Text ein oder wählen Sie eine lokale Datei mit maximal 5 MiB.",
+      "Klicken Sie auf „Generieren“, um den SHA-512-Hash zu berechnen. Text wird als UTF-8 codiert, bei Dateien zählen die ursprünglichen Bytes.",
+      "Fügen Sie die erwartete 128-stellige hexadezimale Prüfsumme ein und lesen Sie das Vergleichsergebnis ab.",
+      "Kopieren Sie den berechneten Hash oder laden Sie ihn als Textdatei herunter."
     ],
     "whatIs": "Was ist SHA-512?",
     "whatIsParas": [
@@ -221,28 +227,29 @@
     "inputNotesPara": "Die Ausgabe hängt vom genauen Eingabetext ab. Überprüfen Sie Zeilenenden, führende oder nachgestellte Leerzeichen, kopierte Eingabeaufforderungen und Unicode-Zeichen, wenn Sie einen SHA-512-Wert aus einem anderen System vergleichen.",
     "example": "Beispiel",
     "examplePara": "Das Hashing einer kurzen Phrase erzeugt einen festen Hashwert mit 128 Zeichen:",
-    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-512 Hash ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "SHA-512-Hash berechnen und prüfen"
   },
   "es": {
-    "title": "Generador SHA-512 - Coding.Tools",
-    "description": "Genere un hash SHA-512 de 128 caracteres a partir de texto para realizar comprobaciones de integridad y compatibilidad SHA-2 de alta precisión.",
+    "title": "Generador de hash SHA-512 y verificador de archivos - Coding.Tools",
+    "description": "Calcula el hash SHA-512 de un texto o archivo en 128 caracteres hexadecimales. Pega la suma de verificación esperada para compararla. El archivo permanece en tu dispositivo.",
     "toolTitle": "Generador SHA-512",
-    "toolDescription": "Cree resúmenes SHA-512 para flujos de trabajo que requieren un hash SHA-2 de 512 bits.",
+    "toolDescription": "Calcula el hash SHA-512 de un texto o archivo en tu navegador. Pega la suma de verificación que publica el proveedor y comprueba si los valores coinciden.",
     "categoryName": "Hash y criptografía",
     "inputPlaceholder": "Ingrese texto para generar el hash SHA-512...",
     "outputPlaceholder": "El hash SHA-512 aparecerá aquí...",
     "hashLength": 128,
     "descTitle": "Genere hashes SHA-512 con salida de 512 bits",
     "descParas": [
-      "<strong>Este generador SHA-512 crea un resumen determinista de 512 bits y lo muestra como 128 caracteres hexadecimales.</strong> Úselo para metadatos de lanzamiento, notas de verificación, accesorios, firmas y sistemas que requieren explícitamente una salida SHA-512.",
-      "SHA-512 es un hash SHA-2, no cifrado. Puede probar que dos entradas exactas coinciden o que los datos han cambiado, pero no oculta la entrada y no debe usarse solo como método de almacenamiento de contraseñas."
+      "Una página de descarga puede mostrar varias sumas. Busca la entrada SHA-512 que corresponda al nombre y a la versión del archivo y compara los 128 caracteres hexadecimales.",
+      "Si los valores SHA-512 difieren, los datos también difieren. Para verificar un archivo, obtén el hash esperado de una fuente de confianza. El hash por sí solo no identifica al proveedor."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue su texto en el editor de entrada.",
-      "Haga clic en <strong>Generar</strong> para generar el resumen hash.",
-      "El hash hexadecimal de 128 caracteres aparece en el editor de resultados.",
-      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer ambos editores."
+      "En modo individual, escribe el texto o selecciona un archivo local de hasta 5 MiB.",
+      "Pulsa «Generar» para calcular el hash SHA-512. El texto se codifica en UTF-8 y para los archivos se utilizan sus bytes originales.",
+      "Pega el hash esperado de 128 caracteres hexadecimales para ver si coincide.",
+      "Copia el hash calculado o descárgalo como archivo de texto."
     ],
     "whatIs": "¿Qué es SHA-512?",
     "whatIsParas": [
@@ -253,28 +260,29 @@
     "inputNotesPara": "La salida depende del texto de entrada exacto. Verifique los finales de línea, los espacios iniciales o finales, las indicaciones copiadas y los caracteres Unicode al comparar un valor SHA-512 de otro sistema.",
     "example": "Ejemplo",
     "examplePara": "El hash de una frase corta produce un resumen fijo de 128 caracteres:",
-    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "Calcular y verificar un hash SHA-512"
   },
   "pt": {
-    "title": "Gerador SHA-512 - Coding.Tools",
-    "description": "Gere um hash SHA-512 de 128 caracteres a partir do texto para verificações de integridade e compatibilidade SHA-2 de alta resistência.",
+    "title": "Gerador de hash SHA-512 e verificador de arquivos - Coding.Tools",
+    "description": "Calcule o hash SHA-512 de um texto ou arquivo com 128 caracteres hexadecimais. Cole a soma de verificação esperada para comparar os valores. O arquivo fica no seu dispositivo.",
     "toolTitle": "Gerador SHA-512",
-    "toolDescription": "Crie resumos SHA-512 para fluxos de trabalho que exigem um hash SHA-2 de 512 bits.",
+    "toolDescription": "Calcule o hash SHA-512 de um texto ou arquivo no navegador. Cole a soma de verificação publicada pelo fornecedor para conferir se os valores coincidem.",
     "categoryName": "Hash e criptografia",
     "inputPlaceholder": "Digite o texto para gerar o hash SHA-512...",
     "outputPlaceholder": "O hash SHA-512 aparecerá aqui...",
     "hashLength": 128,
     "descTitle": "Gere hashes SHA-512 com saída de 512 bits",
     "descParas": [
-      "<strong>Este gerador SHA-512 cria um resumo determinístico de 512 bits e o exibe como 128 caracteres hexadecimais.</strong> Use-o para metadados de versão, notas de verificação, dados de teste, assinaturas e sistemas que exigem explicitamente saída SHA-512.",
-      "SHA-512 é um hash SHA-2, não criptografia. Ele pode provar que duas entradas exatas correspondem ou que os dados foram alterados, mas não oculta a entrada e não deve ser usado sozinho como método de armazenamento de senha."
+      "Uma página de download pode exibir várias somas. Localize o SHA-512 que corresponde ao nome e à versão do arquivo e compare todos os 128 caracteres hexadecimais.",
+      "Se os valores SHA-512 forem diferentes, os dados também são diferentes. Para verificar um arquivo, obtenha o hash esperado de uma fonte confiável. O hash por si só não identifica o fornecedor."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole seu texto no editor de entrada.",
-      "Clique em <strong>Gerar</strong> para produzir o resumo de hash.",
-      "O hash hexadecimal de 128 caracteres aparece no editor de saída.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
+      "No modo individual, digite o texto ou escolha um arquivo de até 5 MiB.",
+      "Clique em “Gerar” para calcular o hash SHA-512. O texto é codificado em UTF-8 e os arquivos são lidos em seus bytes originais.",
+      "Cole o hash esperado de 128 caracteres hexadecimais para verificar se os valores coincidem.",
+      "Copie o hash calculado ou baixe o resultado como arquivo de texto."
     ],
     "whatIs": "O que é SHA-512?",
     "whatIsParas": [
@@ -285,6 +293,7 @@
     "inputNotesPara": "A saída depende do texto de entrada exato. Verifique finais de linha, espaços iniciais ou finais, prompts copiados e caracteres Unicode ao comparar um valor SHA-512 de outro sistema.",
     "example": "Exemplo",
     "examplePara": "O hash de uma frase curta produz um resumo fixo de 128 caracteres:",
-    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387"
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-512 ---\n374d794a95cdcfd8b35993185fef9ba368f160d8daf432d08ba9f1ed1e5abe6cc69291e0fa2fe0006a52570ef18c19def4e617c33ce52ef0a6e5fbe318cb0387",
+    "pageHeading": "Calcular e verificar um hash SHA-512"
   }
 }

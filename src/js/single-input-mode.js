@@ -75,6 +75,7 @@
   };
 
   var keepFileBytes = /^(?:base64-(?:encode|decode)|(?:md5|sha1|sha256|sha384|sha512)-generator)$/.test(tool);
+  var isHashTool = !!document.querySelector(".hash-comparison");
   var readVersion = 0;
   var applyingFile = false;
   var actionButtons = document.querySelectorAll('#btn-generate, #btn-encode, #btn-decode');
@@ -115,13 +116,16 @@
     var mode = selectedMode();
     readVersion++;
     delete target.importedBytes;
-    setFileActionsDisabled(false);
+    setFileActionsDisabled(isHashTool && mode === "file");
+    if (isHashTool) target.closest(".tool-editor-input").hidden = false;
     root.querySelectorAll(".single-input-mode").forEach(function (label) {
       var input = label.querySelector("input");
       label.classList.toggle("is-active", input && input.value === mode);
     });
     filePanel.hidden = mode !== "file";
-    if (mode === "text") {
+    if (isHashTool) {
+      setStatus(tr("noFilesSelected", "No files selected"), "");
+    } else if (mode === "text") {
       setStatus(tr("noFileSelected", "No file selected."), "");
     }
   }
@@ -244,6 +248,7 @@
     if (!file) return;
     var version = ++readVersion;
     setFileActionsDisabled(true);
+    delete target.importedBytes;
     if (file.size > maxBytes) {
       setStatus(tr("fileTooLarge", "Max file size") + " " + formatBytes(maxBytes) + ".", "error");
       return;
@@ -256,7 +261,15 @@
       var bytes = keepFileBytes ? new Uint8Array(content) : null;
       applyingFile = true;
       try {
-        setTargetValue(bytes ? new TextDecoder().decode(bytes) : content);
+        if (isHashTool) {
+          // The editable text preview is separate from the bytes used for checksums.
+          // Avoid rendering millions of lines when checking a large binary or text file.
+          var showPreview = bytes.length <= 65536;
+          target.closest(".tool-editor-input").hidden = !showPreview;
+          if (showPreview) setTargetValue(new TextDecoder().decode(bytes));
+        } else {
+          setTargetValue(bytes ? new TextDecoder().decode(bytes) : content);
+        }
         if (bytes) target.importedBytes = bytes;
       } finally {
         applyingFile = false;

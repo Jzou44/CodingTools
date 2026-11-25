@@ -17,6 +17,7 @@
     "test:text-pages": "node scripts/test-text-tool-pages.js",
     "test:formatter-pages": "node scripts/test-formatter-pages.js",
     "test:nslookup-pages": "node scripts/test-nslookup-pages.js",
+    "test:hash-pages": "node scripts/test-hash-pages.js",
     "test:image-pages": "node scripts/test-image-page-regressions.js",
     "test:progressive-jpeg": "node scripts/test-progressive-jpeg.js",
     "test:photo2pixel": "node scripts/test-photo2pixel.js",

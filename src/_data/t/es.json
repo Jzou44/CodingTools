@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "Suma de comprobación esperada (opcional)",
+      "format": "Introduce {length} caracteres hexadecimales (0–9, A–F).",
+      "pending": "Calcula la suma de comprobación para compararla.",
+      "match": "Las sumas de comprobación coinciden.",
+      "mismatch": "Las sumas de comprobación son distintas.",
+      "failed": "No se pudo calcular la suma de comprobación.",
+      "sourceHint": "Escribe texto o selecciona un archivo local de hasta 5 MiB. El cálculo utiliza los bytes originales del archivo."
+    },
     "input": "Entrada",
     "output": "Salida",
     "generate": "Generar",

@@ -8,6 +8,14 @@ var ToolCommon = (function () {
     return editor.importedBytes || new TextEncoder().encode(editor.value);
   }
 
+  async function hashBytes(algorithm, bytes) {
+    if (algorithm === 'MD5') return window.md5(bytes);
+    var buffer = await crypto.subtle.digest(algorithm, bytes);
+    return Array.from(new Uint8Array(buffer), function (byte) {
+      return byte.toString(16).padStart(2, '0');
+    }).join('');
+  }
+
   function loadImage(file) {
     return new Promise(function (resolve, reject) {
       var reader = new FileReader();
@@ -392,6 +400,7 @@ var ToolCommon = (function () {
     offerMapPreview: offerMapPreview,
     addFileToZip: addFileToZip,
     editorBytes: editorBytes,
+    hashBytes: hashBytes,
     loadImage: loadImage,
     bytesToBase64: bytesToBase64,
     regexMatches: regexMatches,

@@ -1,24 +1,24 @@
 {
   "en": {
-    "title": "SHA-1 Generator - Coding.Tools",
-    "description": "Generate a 40-character SHA-1 hash from text for legacy compatibility, checksums, and deterministic test data.",
+    "title": "SHA-1 Hash Generator and File Checksum Checker - Coding.Tools",
+    "description": "Calculate a 40-character SHA-1 hash from text or a local file. Paste a known checksum to see whether the values match. Files stay on your device.",
     "toolTitle": "SHA-1 Generator",
-    "toolDescription": "Create SHA-1 digests for compatibility checks where a 160-bit legacy hash is still expected.",
+    "toolDescription": "Drop in text or choose a file to calculate its SHA-1 hash in your browser. If you have a checksum from the publisher, paste it to check for a match.",
     "categoryName": "Hash & Cryptography",
     "inputPlaceholder": "Enter text to generate its SHA-1 hash...",
     "outputPlaceholder": "SHA-1 hash will appear here...",
     "hashLength": 40,
     "descTitle": "Generate SHA-1 hashes for compatibility checks",
     "descParas": [
-      "<strong>This SHA-1 generator creates a deterministic 160-bit digest and displays it as 40 hexadecimal characters.</strong> Use it when you need to compare against an existing SHA-1 value, reproduce a legacy checksum, or generate stable fixture output.",
+      "Use SHA-1 when an older manifest lists a 40-character checksum. A match can help detect accidental changes. For new software releases, choose a stronger hash from a trusted source.",
       "SHA-1 is a legacy hash for security purposes. It should not be used for digital signatures, certificates, password storage, or new collision-resistant designs; choose a SHA-2 hash such as SHA-256 or stronger primitives for modern security workflows."
     ],
     "howToUse": "How to use",
     "steps": [
-      "Type or paste text into the input editor.",
-      "Click <strong>Generate SHA1</strong> to compute the hash digest.",
-      "The 40-character hexadecimal hash appears in the output editor with a confirmation message.",
-      "Use <strong>Copy</strong> for the clipboard, <strong>Download</strong> for a text file, or <strong>Clear</strong> to reset both editors."
+      "Enter the exact text, or choose a local file of up to 5 MiB in single mode.",
+      "Select Generate to calculate the SHA-1 checksum. Text uses UTF-8. Files are read as their original bytes.",
+      "To check a value, paste the expected 40-character hexadecimal digest and read the comparison.",
+      "Copy the calculated hash to share it, or download the digest as a text file."
     ],
     "whatIs": "What is SHA-1?",
     "whatIsParas": [
@@ -29,60 +29,62 @@
     "inputNotesPara": "The digest changes if whitespace, capitalization, Unicode normalization, or line endings change. Paste the exact value to compare, and keep notes or labels outside the input unless they should be hashed too.",
     "example": "Example",
     "examplePara": "A short message maps to a fixed SHA-1 digest:",
-    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- Input Text ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "SHA-1 hash generator and checker"
   },
   "cn": {
-    "title": "SHA-1 生成器 - Coding.Tools",
-    "description": "从文本生成 40 个字符的 SHA-1 哈希，以实现旧版兼容性、校验和和确定性测试数据。",
+    "title": "SHA-1 在线计算与文件哈希校验 - Coding.Tools",
+    "description": "输入文本或选择本地文件，在线计算 40 位十六进制 SHA-1 哈希值。粘贴已知校验值即可查看是否一致，文件在浏览器内处理。",
     "toolTitle": "SHA1 生成器",
-    "toolDescription": "创建 SHA-1 摘要以进行兼容性检查，其中仍需要 160 位旧哈希值。",
+    "toolDescription": "在浏览器中计算文本或文件的 SHA-1 值。校验下载文件时，粘贴发布方给出的校验值，即可查看两者是否一致。",
     "categoryName": "哈希与加密",
     "inputPlaceholder": "输入文本以生成 SHA-1 哈希...",
     "outputPlaceholder": "SHA-1 哈希值将显示在此处...",
     "hashLength": 40,
     "descTitle": "生成 SHA-1 哈希值以进行兼容性检查",
     "descParas": [
-      "<strong>此 SHA-1 生成器创建确定性 160 位摘要并将其显示为 40 个十六进制字符。</strong> 当您需要与现有 SHA-1 值进行比较、重现旧式校验和或生成稳定的测试输出时使用它。",
+      "旧版文件清单可能会列出 40 位 SHA-1 值，可用它检查文件是否在传输中损坏。发布新软件时应选择更强的算法。",
       "SHA-1 是出于安全目的的传统哈希值。不应用于数字签名、证书、密码存储或新的防碰撞设计；选择 SHA-2 哈希（例如 SHA-256）或用于现代安全工作流程的更强原语。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在输入编辑器中键入或粘贴文本。",
-      "单击 <strong>生成</strong> 计算哈希摘要。",
-      "40 个字符的十六进制哈希值将显示在输出编辑器中，并带有确认消息。",
-      "使用 <strong>复制</strong> 作为剪贴板，使用 <strong>下载</strong> 作为文本文件，或使用 <strong>清除</strong> 来重置两个编辑器。"
+      "在单条模式下输入原文，或选择不超过 5 MiB 的本地文件。",
+      "点击“生成”计算 SHA-1。文本按 UTF-8 编码，文件按原始字节计算。",
+      "要比对结果，请粘贴预期的 40 位十六进制摘要，查看是否匹配。",
+      "可复制计算结果，也可将摘要下载为文本文件。"
     ],
-    "whatIs": "SHA-1是什么？",
+    "whatIs": "常说的“SHA1加密”能还原原文吗？",
     "whatIsParas": [
       "<strong>SHA-1</strong> 是一种加密哈希函数，可从输入文本或字节生成固定的 160 位输出。输出是单向且确定性的：它用于比较，而不是用于恢复原始输入。",
-      "SHA-1 具有已知的冲突弱点，因此它主要是为了与旧协议、标识符、存储库和已发布的校验和兼容。哈希不是加密，SHA-1 不应被视为保密机制。"
+      "SHA-1 计算的是单向摘要，没有解密密钥。手上有原文时，可以重新计算并与已有的 SHA-1 值核对。"
     ],
     "inputNotes": "输入说明",
     "inputNotesPara": "如果空格、大写、Unicode 规范化或行结尾发生变化，摘要也会发生变化。粘贴要比较的确切值，并将注释或标签保留在输入之外，除非它们也应该进行哈希处理。",
     "example": "示例",
     "examplePara": "一条短消息映射到一个固定的 SHA-1 摘要：",
-    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-1 哈希 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- 输入文本 ---\nHello, World!\n\n--- SHA-1 哈希 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "SHA-1 哈希生成与文件校验"
   },
   "tw": {
-    "title": "SHA-1 產生器 - Coding.Tools",
-    "description": "從文字產生 40 個字元的 SHA-1 哈希，以實現舊版相容性、校驗和和確定性測試資料。",
+    "title": "SHA-1 線上產生器與檔案雜湊值比對 - Coding.Tools",
+    "description": "輸入文字或選擇本機檔案，計算 40 碼十六進位 SHA-1 雜湊值。貼上已知的校驗碼即可比對結果，檔案會留在裝置上。",
     "toolTitle": "SHA1 產生器",
-    "toolDescription": "建立 SHA-1 摘要以進行相容性檢查，其中仍需要 160 位元舊雜湊值。",
+    "toolDescription": "在瀏覽器計算文字或檔案的 SHA-1 雜湊值。想核對下載檔案時，貼上發布者提供的校驗碼，即可查看是否相符。",
     "categoryName": "雜湊與加密",
     "inputPlaceholder": "輸入文字以產生 SHA-1 雜湊...",
     "outputPlaceholder": "SHA-1 雜湊值將顯示在此處...",
     "hashLength": 40,
     "descTitle": "產生 SHA-1 雜湊值以進行相容性檢查",
     "descParas": [
-      "<strong>此 SHA-1 產生器建立確定性 160 位元摘要並將其顯示為 40 個十六進位字元。</strong> 當您需要與現有 SHA-1 值進行比較、重現舊式校驗和或產生穩定的測試輸出時使用它。",
+      "舊版檔案清單有時會列出 40 碼 SHA-1，可用來檢查傳輸過程中是否發生錯誤。新軟體應採用較強的雜湊演算法。",
       "SHA-1 是出於安全目的的傳統雜湊值。不應用於數位簽章、憑證、密碼儲存或新的防碰撞設計；選擇 SHA-2 雜湊（例如 SHA-256）或用於現代安全工作流程的更強原語。"
     ],
     "howToUse": "使用方法",
     "steps": [
-      "在輸入編輯器中鍵入或貼上文字。",
-      "按一下 <strong>生成</strong> 計算雜湊摘要。",
-      "40 個字元的十六進位雜湊值將顯示在輸出編輯器中，並帶有確認訊息。",
-      "使用 <strong>複製</strong> 作為剪貼簿，使用 <strong>下載</strong> 作為文字文件，或使用 <strong>清除</strong> 來重設兩個編輯器。"
+      "在單筆模式輸入原文，或選擇不超過 5 MiB 的本機檔案。",
+      "按下「生成」計算 SHA-1。文字使用 UTF-8 編碼，檔案依原始位元組計算。",
+      "貼上預期的 40 碼十六進位雜湊值，即可查看比對結果。",
+      "可以複製計算結果，或將雜湊值下載為文字檔。"
     ],
     "whatIs": "SHA-1是什麼？",
     "whatIsParas": [
@@ -93,28 +95,29 @@
     "inputNotesPara": "如果空格、大寫、Unicode 規範化或行結尾發生變化，摘要也會發生變化。貼上要比較的確切值，並將註釋或標籤保留在輸入之外，除非它們也應該進行雜湊處理。",
     "example": "範例",
     "examplePara": "一條短訊息對應到一個固定的 SHA-1 摘要：",
-    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-1 雜湊 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- 輸入文字 ---\nHello, World!\n\n--- SHA-1 雜湊 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "SHA-1 雜湊產生器與檔案校驗"
   },
   "jp": {
-    "title": "SHA-1 ジェネレーター - Coding.Tools",
-    "description": "従来の互換性、チェックサム、および決定論的なテスト データのために、テキストから 40 文字の SHA-1 ハッシュを生成します。",
+    "title": "SHA-1 ハッシュ計算・ファイルのチェックサム照合 - Coding.Tools",
+    "description": "文字列やローカルファイルの SHA-1 ハッシュ値を 40 桁の16進数で計算。公開されているチェックサムを貼り付けて照合できます。ファイルのアップロードは不要です。",
     "toolTitle": "SHA1 ジェネレーター",
-    "toolDescription": "160 ビットのレガシー ハッシュが引き続き必要な場合は、互換性チェックのために SHA-1 ダイジェストを作成します。",
+    "toolDescription": "文字列やファイルから SHA-1 ハッシュ値をブラウザで計算します。配布元のチェックサムを貼り付けると、一致するか確認できます。",
     "categoryName": "ハッシュと暗号",
     "inputPlaceholder": "SHA-1ハッシュを生成するテキストを入力...",
     "outputPlaceholder": "SHA-1ハッシュがここに表示されます...",
     "hashLength": 40,
     "descTitle": "互換性チェックのために SHA-1 ハッシュを生成する",
     "descParas": [
-      "<strong>この SHA-1 ジェネレーターは、確定的な 160 ビット ダイジェストを作成し、40 個の 16 進文字として表示します。</strong> 既存の SHA-1 値と比較する必要がある場合、レガシー チェックサムを再現する場合、または安定したテストデータ出力を生成する必要がある場合に使用します。",
+      "過去の配布ファイル一覧には 40 桁の SHA-1 値が残っていることがあります。転送中の破損の確認に使えます。新しく公開するソフトウェアには、より強いハッシュ関数を選びます。",
       "SHA-1 は、セキュリティ目的のレガシー ハッシュです。デジタル署名、証明書、パスワードの保存、または新しい耐衝突設計には使用しないでください。 SHA-256 などの SHA-2 ハッシュ、または最新のセキュリティ ワークフロー向けのより強力なプリミティブを選択します。"
     ],
     "howToUse": "使い方",
     "steps": [
-      "入力エディタにテキストを入力または貼り付けます。",
-      "「<strong>生成</strong>」をクリックして、ハッシュ ダイジェストを計算します。",
-      "40 文字の 16 進数のハッシュが確認メッセージとともに出力エディタに表示されます。",
-      "クリップボードには <strong>コピー</strong> を、テキスト ファイルには <strong>ダウンロード</strong> を、両方のエディタをリセットするには <strong>クリア</strong> を使用します。"
+      "単一モードで文字列を入力するか、5 MiB 以下のローカルファイルを選びます。",
+      "「生成」を押して SHA-1 を計算します。文字列には UTF-8、ファイルには元のバイト列を使います。",
+      "照合するには、期待する 40 桁の16進数のハッシュ値を貼り付けて結果を確認します。",
+      "計算結果をコピーするか、テキストファイルとしてダウンロードできます。"
     ],
     "whatIs": "SHA-1とは何ですか?",
     "whatIsParas": [
@@ -125,60 +128,62 @@
     "inputNotesPara": "空白、大文字の使用、Unicode の正規化、または行末が変更されると、ダイジェストも変更されます。比較する正確な値を貼り付け、ハッシュする必要がない限り、メモやラベルを入力の外に残しておきます。",
     "example": "例",
     "examplePara": "短いメッセージは、固定の SHA-1 ダイジェストに対応付けされます。",
-    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-1ハッシュ ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- 入力テキスト ---\nHello, World!\n\n--- SHA-1ハッシュ ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "SHA-1 ハッシュ計算・照合"
   },
   "kr": {
-    "title": "SHA-1 생성기 - Coding.Tools",
-    "description": "레거시 호환성, 체크섬 및 결정적 테스트 데이터를 위해 텍스트에서 40자 SHA-1 해시를 생성합니다.",
+    "title": "SHA-1 해시 생성기 및 파일 체크섬 비교 - Coding.Tools",
+    "description": "문자열이나 파일의 SHA-1 해시를 40자리 16진수로 계산합니다. 배포자가 제공한 체크섬을 붙여 넣어 비교할 수 있으며 파일은 기기에서 처리합니다.",
     "toolTitle": "SHA1 생성기",
-    "toolDescription": "160비트 레거시 해시가 여전히 필요한 호환성 검사를 위해 SHA-1 다이제스트를 만듭니다.",
+    "toolDescription": "브라우저에서 텍스트나 파일의 SHA-1 해시값을 계산합니다. 배포자가 공개한 체크섬을 붙여 넣으면 두 값이 일치하는지 확인할 수 있습니다.",
     "categoryName": "해시 및 암호화",
     "inputPlaceholder": "SHA-1 해시를 생성할 텍스트를 입력하세요...",
     "outputPlaceholder": "SHA-1 해시가 여기에 표시됩니다...",
     "hashLength": 40,
     "descTitle": "호환성 확인을 위해 SHA-1 해시 생성",
     "descParas": [
-      "<strong>이 SHA-1 생성기는 결정적 160비트 다이제스트를 생성하고 이를 40개의 16진수 문자로 표시합니다.</strong> 기존 SHA-1 값과 비교하거나 레거시 체크섬을 재현하거나 안정적인 테스트 데이터 출력을 생성해야 할 때 사용합니다.",
+      "오래된 배포 목록에 40자리 SHA-1 값이 있다면 전송 중 파일 손상을 확인하는 데 사용할 수 있습니다. 새로 배포하는 소프트웨어에는 더 강한 해시 알고리즘을 선택하세요.",
       "SHA-1는 보안 목적을 위한 레거시 해시입니다. 디지털 서명, 인증서, 비밀번호 저장 또는 새로운 충돌 방지 설계에 사용해서는 안 됩니다. SHA-256와 같은 SHA-2 해시 또는 최신 보안 워크플로를 위한 더 강력한 기본 형식을 선택하세요."
     ],
     "howToUse": "사용 방법",
     "steps": [
-      "입력 편집기에 텍스트를 입력하거나 붙여넣습니다.",
-      "<strong>생성</strong>를 클릭하여 해시 다이제스트를 계산합니다.",
-      "40자의 16진수 해시가 확인 메시지와 함께 출력 편집기에 나타납니다.",
-      "클립보드에는 <strong>복사</strong>를 사용하고, 텍스트 파일에는 <strong>다운로드</strong>를 사용하고, 두 편집기를 모두 재설정하려면 <strong>지우기</strong>를 사용하세요."
+      "단일 모드에서 텍스트를 입력하거나 5 MiB 이하의 파일을 선택하세요.",
+      "생성 버튼을 눌러 SHA-1 해시를 계산하세요. 텍스트는 UTF-8로 인코딩하고 파일은 원본 바이트를 사용합니다.",
+      "비교할 40자리 16진수 해시값을 붙여 넣고 일치 여부를 확인하세요.",
+      "계산한 값을 복사하거나 텍스트 파일로 내려받을 수 있습니다."
     ],
-    "whatIs": "SHA-1란 무엇인가요?",
+    "whatIs": "SHA1 암호화로 원문을 숨길 수 있나요?",
     "whatIsParas": [
       "<strong>SHA-1</strong>은 입력 텍스트 또는 바이트에서 고정 160비트 출력을 생성하는 암호학적 해시 함수입니다. 출력은 단방향이며 결정적입니다. 즉, 원래 입력을 복구하기 위한 것이 아니라 비교를 위한 것입니다.",
-      "SHA-1에는 알려진 충돌 약점이 있으므로 주로 이전 프로토콜, 식별자, 저장소 및 게시된 체크섬과의 호환성을 위해 유지됩니다. 해시는 암호화되지 않으며 SHA-1는 비밀 유지 메커니즘으로 취급되어서는 안 됩니다."
+      "SHA-1은 단방향 해시를 계산합니다. 키로 원문을 복호화할 수 없으며 이미 알고 있는 값은 다시 해시해서 비교할 수 있습니다."
     ],
     "inputNotes": "입력 참고사항",
     "inputNotesPara": "공백, 대문자, 유니코드 정규화 또는 줄 끝이 변경되면 다이제스트가 변경됩니다. 비교할 정확한 값을 붙여넣고, 해시해야 하는 경우를 제외하고 메모나 라벨을 입력 외부에 유지하세요.",
     "example": "예제",
     "examplePara": "짧은 메시지는 고정된 SHA-1 다이제스트에 매핑됩니다.",
-    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-1 해시 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- 입력 텍스트 ---\nHello, World!\n\n--- SHA-1 해시 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "SHA-1 해시 생성 및 비교"
   },
   "fr": {
-    "title": "Générateur SHA-1 - Coding.Tools",
-    "description": "Générez un hachage SHA-1 de 40 caractères à partir du texte pour la compatibilité existante, les sommes de contrôle et les données de test déterministes.",
+    "title": "Générateur de hash SHA-1 et vérification de fichiers - Coding.Tools",
+    "description": "Calculez l’empreinte SHA-1 d’un texte ou d’un fichier en 40 caractères hexadécimaux. Collez la somme de contrôle attendue pour la comparer au résultat, sans envoyer le fichier.",
     "toolTitle": "Générateur SHA1",
-    "toolDescription": "Créez des résumés SHA-1 pour les contrôles de compatibilité où un hachage hérité de 160 bits est toujours attendu.",
+    "toolDescription": "Calculez l’empreinte SHA-1 d’un texte ou d’un fichier dans votre navigateur. Collez la somme de contrôle publiée par l’éditeur pour vérifier si les deux valeurs concordent.",
     "categoryName": "Hachage et cryptographie",
     "inputPlaceholder": "Entrez le texte pour générer le hash SHA-1...",
     "outputPlaceholder": "Le hash SHA-1 apparaîtra ici...",
     "hashLength": 40,
     "descTitle": "Générer des hachages SHA-1 pour les contrôles de compatibilité",
     "descParas": [
-      "<strong>Ce générateur SHA-1 crée un résumé déterministe de 160 bits et l'affiche sous forme de 40 caractères hexadécimaux.</strong> Utilisez-le lorsque vous devez comparer avec une valeur SHA-1 existante, reproduire une somme de contrôle héritée ou générer une sortie de luminaire stable.",
+      "Un ancien catalogue peut contenir des empreintes SHA-1 de 40 caractères. Elles permettent de repérer une erreur de transfert. Pour une nouvelle version logicielle, préférez une fonction de hachage plus robuste.",
       "SHA-1 est un hachage hérité à des fins de sécurité. Il ne doit pas être utilisé pour les signatures numériques, les certificats, le stockage de mots de passe ou les nouvelles conceptions résistantes aux collisions ; choisissez un hachage SHA-2 tel que SHA-256 ou des primitives plus fortes pour les flux de travail de sécurité modernes."
     ],
     "howToUse": "Comment utiliser",
     "steps": [
-      "Tapez ou collez du texte dans l'éditeur de saisie.",
-      "Cliquez sur <strong>Générer</strong> pour calculer le résumé de hachage.",
-      "Le hachage hexadécimal de 40 caractères apparaît dans l'éditeur de sortie avec un message de confirmation.",
-      "Utilisez <strong>Copier</strong> pour le presse-papiers, <strong>Télécharger</strong> pour un fichier texte ou <strong>Effacer</strong> pour réinitialiser les deux éditeurs."
+      "En mode individuel, saisissez le texte ou choisissez un fichier de 5 Mio maximum.",
+      "Cliquez sur « Générer » pour calculer l’empreinte SHA-1. Le texte est encodé en UTF-8 et les fichiers sont lus octet par octet.",
+      "Pour comparer, collez l’empreinte attendue de 40 caractères hexadécimaux et consultez le résultat.",
+      "Copiez l’empreinte calculée ou téléchargez-la dans un fichier texte."
     ],
     "whatIs": "Qu'est-ce que SHA-1 ?",
     "whatIsParas": [
@@ -189,28 +194,29 @@
     "inputNotesPara": "Le résumé change si les espaces, les majuscules, la normalisation Unicode ou les fins de ligne changent. Collez la valeur exacte à comparer et conservez les notes ou les étiquettes en dehors de l'entrée, à moins qu'elles ne doivent également être hachées.",
     "example": "Exemple",
     "examplePara": "Un message court correspond à un résumé SHA-1 fixe :",
-    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- Texte d'entrée ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "Calculer et vérifier un hash SHA-1"
   },
   "de": {
-    "title": "SHA1-Generator - Coding.Tools",
-    "description": "Generieren Sie einen 40-stelligen SHA-1-Hash aus Text für Abwärtskompatibilität, Prüfsummen und deterministische Testdaten.",
+    "title": "SHA-1-Hash-Generator und Prüfsummenvergleich - Coding.Tools",
+    "description": "Berechnen Sie den SHA-1-Hash eines Texts oder einer Datei als 40-stelligen Hexwert. Vergleichen Sie ihn mit der erwarteten Prüfsumme. Die Datei bleibt auf Ihrem Gerät.",
     "toolTitle": "SHA1-Generator",
-    "toolDescription": "Erstellen Sie SHA-1-Hashwerte für Kompatibilitätsprüfungen, bei denen weiterhin ein 160-Bit-veralteter Hash erwartet wird.",
+    "toolDescription": "Berechnen Sie den SHA-1-Hash für Text oder Dateien direkt im Browser. Fügen Sie die veröffentlichte Prüfsumme ein, um sie mit dem Ergebnis zu vergleichen.",
     "categoryName": "Hash & Kryptographie",
     "inputPlaceholder": "Text eingeben, um SHA-1-Hash zu erzeugen...",
     "outputPlaceholder": "SHA-1-Hash wird hier angezeigt...",
     "hashLength": 40,
     "descTitle": "Generieren Sie SHA-1-Hashes für Kompatibilitätsprüfungen",
     "descParas": [
-      "<strong>Dieser SHA-1-Generator erstellt einen deterministischen 160-Bit-Hashwert und zeigt ihn als 40 Hexadezimalzeichen an.</strong> Verwenden Sie ihn, wenn Sie einen vorhandenen SHA-1-Wert vergleichen, eine ältere Prüfsumme reproduzieren oder eine stabile Testausgabe generieren müssen.",
+      "Ältere Dateilisten führen mitunter einen 40-stelligen SHA-1-Hash auf. Damit lassen sich Übertragungsfehler erkennen. Für neue Softwareveröffentlichungen empfiehlt sich ein stärkeres Hashverfahren.",
       "SHA-1 ist aus Sicherheitsgründen ein veralteter Hash. Es sollte nicht für digitale Signaturen, Zertifikate, Passwortspeicher oder neue kollisionssichere Designs verwendet werden; Wählen Sie einen SHA-2-Hash wie SHA-256 oder stärkere Grundelemente für moderne Sicherheitsabläufe."
     ],
     "howToUse": "Anleitung",
     "steps": [
-      "Geben Sie Text in den Eingabeeditor ein oder fügen Sie ihn ein.",
-      "Klicken Sie auf <strong>Generieren</strong>, um den Hashwert zu berechnen.",
-      "Der 40 Zeichen lange hexadezimale Hash erscheint im Ausgabeeditor mit einer Bestätigungsmeldung.",
-      "Verwenden Sie <strong>Kopieren</strong> für die Zwischenablage, <strong>Herunterladen</strong> für eine Textdatei oder <strong>Leeren</strong>, um beide Editoren zurückzusetzen."
+      "Geben Sie im Einzelmodus den Text ein oder wählen Sie eine lokale Datei mit maximal 5 MiB.",
+      "Klicken Sie auf „Generieren“, um den SHA-1-Hash zu berechnen. Text wird als UTF-8 codiert, bei Dateien zählen die ursprünglichen Bytes.",
+      "Fügen Sie die erwartete 40-stellige hexadezimale Prüfsumme ein und lesen Sie das Vergleichsergebnis ab.",
+      "Kopieren Sie den berechneten Hash oder laden Sie ihn als Textdatei herunter."
     ],
     "whatIs": "Was ist SHA-1?",
     "whatIsParas": [
@@ -221,60 +227,62 @@
     "inputNotesPara": "Der Hashwert ändert sich, wenn sich Leerzeichen, Groß- und Kleinschreibung, Unicode-Normalisierung oder Zeilenenden ändern. Fügen Sie den genauen Wert zum Vergleich ein und behalten Sie Notizen oder Beschriftungen außerhalb der Eingabe bei, es sei denn, sie sollten ebenfalls gehasht werden.",
     "example": "Beispiel",
     "examplePara": "Eine kurze Nachricht wird einem festen SHA-1-Hashwert zugeordnet:",
-    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- Eingabetext ---\nHello, World!\n\n--- SHA-1 Hash ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "SHA-1-Hash berechnen und prüfen"
   },
   "es": {
-    "title": "Generador SHA-1 - Coding.Tools",
-    "description": "Genere un hash SHA-1 de 40 caracteres a partir de texto para compatibilidad heredada, sumas de verificación y datos de prueba deterministas.",
+    "title": "Generador de hash SHA-1 y verificador de archivos - Coding.Tools",
+    "description": "Calcula el hash SHA-1 de un texto o archivo en 40 caracteres hexadecimales. Pega la suma de verificación esperada para compararla. El archivo permanece en tu dispositivo.",
     "toolTitle": "Generador SHA1",
-    "toolDescription": "Cree resúmenes SHA-1 para verificaciones de compatibilidad donde todavía se espera un hash heredado de 160 bits.",
+    "toolDescription": "Calcula el hash SHA-1 de un texto o archivo en tu navegador. Pega la suma de verificación que publica el proveedor y comprueba si los valores coinciden.",
     "categoryName": "Hash y criptografía",
     "inputPlaceholder": "Ingrese texto para generar el hash SHA-1...",
     "outputPlaceholder": "El hash SHA-1 aparecerá aquí...",
     "hashLength": 40,
     "descTitle": "Genere hashes SHA-1 para comprobaciones de compatibilidad",
     "descParas": [
-      "<strong>Este generador SHA-1 crea un resumen determinista de 160 bits y lo muestra como 40 caracteres hexadecimales.</strong> Úselo cuando necesite comparar con un valor SHA-1 existente, reproducir una suma de verificación heredada o generar una salida de prueba estable.",
+      "Algunos catálogos antiguos indican una suma SHA-1 de 40 caracteres. Sirve para comprobar si hubo errores de transferencia. Para publicar software nuevo, elige un algoritmo más robusto.",
       "SHA-1 es un hash heredado por motivos de seguridad. No debe usarse para firmas digitales, certificados, almacenamiento de contraseñas o nuevos diseños resistentes a colisiones; elija un hash SHA-2 como SHA-256 o primitivas más potentes para los flujos de trabajo de seguridad modernos."
     ],
     "howToUse": "Cómo usar",
     "steps": [
-      "Escriba o pegue texto en el editor de entrada.",
-      "Haga clic en <strong>Generar SHA1</strong> para calcular el resumen hash.",
-      "El hash hexadecimal de 40 caracteres aparece en el editor de resultados con un mensaje de confirmación.",
-      "Utilice <strong>Copiar</strong> para el portapapeles, <strong>Descargar</strong> para un archivo de texto o <strong>Limpiar</strong> para restablecer ambos editores."
+      "En modo individual, escribe el texto o selecciona un archivo local de hasta 5 MiB.",
+      "Pulsa «Generar» para calcular el hash SHA-1. El texto se codifica en UTF-8 y para los archivos se utilizan sus bytes originales.",
+      "Pega el hash esperado de 40 caracteres hexadecimales para ver si coincide.",
+      "Copia el hash calculado o descárgalo como archivo de texto."
     ],
-    "whatIs": "¿Qué es SHA-1?",
+    "whatIs": "¿Se puede encriptar un texto con SHA-1?",
     "whatIsParas": [
       "<strong>SHA-1</strong> es una función hash criptográfica que produce una salida fija de 160 bits a partir de texto o bytes de entrada. La salida es unidireccional y determinista: está destinada a comparar, no a recuperar la entrada original.",
-      "SHA-1 tiene debilidades de colisión conocidas, por lo que se mantiene principalmente por compatibilidad con protocolos, identificadores, repositorios y sumas de verificación publicadas más antiguos. Los hashes no son cifrado y SHA-1 no debe tratarse como un mecanismo de mantenimiento de secretos."
+      "SHA-1 produce un hash de una sola vía. No hay una clave para descifrarlo. Si conoces el posible texto original, calcula su hash y compara los valores."
     ],
     "inputNotes": "Notas de entrada",
     "inputNotesPara": "El resumen cambia si cambian los espacios en blanco, las mayúsculas, la normalización Unicode o los finales de línea. Pegue el valor exacto para comparar y mantenga las notas o etiquetas füra de la entrada a menos que también deban tener un hash.",
     "example": "Ejemplo",
     "examplePara": "Un mensaje corto se asigna a un resumen SHA-1 fijo:",
-    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "Calcular y verificar un hash SHA-1"
   },
   "pt": {
-    "title": "Gerador SHA-1 - Coding.Tools",
-    "description": "Gere um hash SHA-1 de 40 caracteres a partir de texto para compatibilidade legada, somas de verificação e dados de teste determinísticos.",
+    "title": "Gerador de hash SHA-1 e verificador de arquivos - Coding.Tools",
+    "description": "Calcule o hash SHA-1 de um texto ou arquivo com 40 caracteres hexadecimais. Cole a soma de verificação esperada para comparar os valores. O arquivo fica no seu dispositivo.",
     "toolTitle": "Gerador SHA1",
-    "toolDescription": "Crie resumos SHA-1 para verificações de compatibilidade onde um hash legado de 160 bits ainda é esperado.",
+    "toolDescription": "Calcule o hash SHA-1 de um texto ou arquivo no navegador. Cole a soma de verificação publicada pelo fornecedor para conferir se os valores coincidem.",
     "categoryName": "Hash e criptografia",
     "inputPlaceholder": "Digite o texto para gerar o hash SHA-1...",
     "outputPlaceholder": "O hash SHA-1 aparecerá aqui...",
     "hashLength": 40,
     "descTitle": "Gere hashes SHA-1 para verificações de compatibilidade",
     "descParas": [
-      "<strong>Este gerador SHA-1 cria um resumo determinístico de 160 bits e o exibe como 40 caracteres hexadecimais.</strong> Use-o quando precisar comparar com um valor SHA-1 existente, reproduzir uma soma de verificação herdada ou gerar uma saída de teste estável.",
+      "Listas antigas de arquivos podem trazer um hash SHA-1 de 40 caracteres. Ele ajuda a detectar erros de transferência. Para distribuir software novo, prefira um algoritmo mais forte.",
       "SHA-1 é um hash legado para fins de segurança. Não deve ser usado para assinaturas digitais, certificados, armazenamento de senhas ou novos designs resistentes a colisões; escolha um hash SHA-2, como SHA-256 ou primitivos mais fortes para fluxos de trabalho de segurança modernos."
     ],
     "howToUse": "Como usar",
     "steps": [
-      "Digite ou cole o texto no editor de entrada.",
-      "Clique em <strong>Gerar SHA1</strong> para calcular o resumo de hash.",
-      "O hash hexadecimal de 40 caracteres aparece no editor de saída com uma mensagem de confirmação.",
-      "Use <strong>Copiar</strong> para a área de transferência, <strong>Baixar</strong> para um arquivo de texto ou <strong>Limpar</strong> para redefinir ambos os editores."
+      "No modo individual, digite o texto ou escolha um arquivo de até 5 MiB.",
+      "Clique em “Gerar” para calcular o hash SHA-1. O texto é codificado em UTF-8 e os arquivos são lidos em seus bytes originais.",
+      "Cole o hash esperado de 40 caracteres hexadecimais para verificar se os valores coincidem.",
+      "Copie o hash calculado ou baixe o resultado como arquivo de texto."
     ],
     "whatIs": "O que é SHA-1?",
     "whatIsParas": [
@@ -285,6 +293,7 @@
     "inputNotesPara": "O resumo muda se os espaços em branco, letras maiúsculas, normalização Unicode ou finais de linha forem alterados. Cole o valor exato para comparar e mantenha notas ou rótulos fora da entrada, a menos que também devam ser hash.",
     "example": "Exemplo",
     "examplePara": "Uma mensagem curta é mapeada para um resumo SHA-1 fixo:",
-    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01"
+    "exampleCode": "--- Texto de entrada ---\nHello, World!\n\n--- Hash SHA-1 ---\n0a0a9f2a6772942557ab5355d76af442f8f65e01",
+    "pageHeading": "Calcular e verificar um hash SHA-1"
   }
 }

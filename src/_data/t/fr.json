@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "Somme de contrôle attendue (facultatif)",
+      "format": "Saisissez {length} caractères hexadécimaux (0–9, A–F).",
+      "pending": "Calculez la somme de contrôle pour la comparer.",
+      "match": "Les sommes de contrôle correspondent.",
+      "mismatch": "Les sommes de contrôle sont différentes.",
+      "failed": "Impossible de calculer la somme de contrôle.",
+      "sourceHint": "Saisissez du texte ou sélectionnez un fichier local de 5 Mio maximum. Le calcul utilise les octets d’origine du fichier."
+    },
     "input": "Entrée",
     "output": "Sortie",
     "generate": "Générer",

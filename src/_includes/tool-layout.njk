@@ -143,7 +143,7 @@
   <header class="tool-header">
     <div class="tool-identity-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{{ tools[currentTool].icon | safe }}</svg></div>
     <div class="tool-header-copy">
-      <h1>{{ toolTitle }}</h1>
+      <h1>{{ toolData.pageHeading or toolTitle }}</h1>
       <p>{{ toolDescription }}</p>
     </div>
     <button
@@ -190,7 +190,7 @@
         <div class="single-input-source-head">
           <div>
             <div class="single-input-source-title">{{ t.ui.inputSource }}</div>
-            <div class="single-input-source-subtitle">{{ t.ui.singleInputSourceSubtitle }}</div>
+            <div class="single-input-source-subtitle">{{ t.ui.hashCompare.sourceHint if toolData.hashLength else t.ui.singleInputSourceSubtitle }}</div>
           </div>
           <div class="single-input-mode-row" role="radiogroup" aria-label="{{ t.ui.inputSource }}">
             <label class="single-input-mode is-active"><input type="radio" name="single-input-source" value="text" checked> {{ t.ui.text }}</label>
@@ -200,9 +200,9 @@
         <div class="single-file-panel" data-single-file-panel hidden>
           <label class="single-file-picker">
             <span>{{ t.ui.chooseFile }}</span>
-            <input id="single-file-input" type="file" accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*">
+            <input id="single-file-input" type="file"{% if not toolData.hashLength %} accept=".txt,.json,.xml,.html,.htm,.css,.js,.ts,.sql,.md,.csv,.tsv,.log,.yaml,.yml,text/*"{% endif %}>
           </label>
-          <div class="single-file-status" id="single-file-status" role="status" aria-live="polite">{{ t.ui.noFileSelected }}</div>
+          <div class="single-file-status" id="single-file-status" role="status" aria-live="polite">{{ t.ui.noFilesSelected if toolData.hashLength else t.ui.noFileSelected }}</div>
         </div>
       </div>
       {% elif currentTool in dualFileInputTools %}

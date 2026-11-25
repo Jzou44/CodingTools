@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "Erwartete Prüfsumme (optional)",
+      "format": "Geben Sie {length} Hexadezimalzeichen (0–9, A–F) ein.",
+      "pending": "Berechnen Sie die Prüfsumme, um sie zu vergleichen.",
+      "match": "Die Prüfsummen stimmen überein.",
+      "mismatch": "Die Prüfsummen unterscheiden sich.",
+      "failed": "Die Prüfsumme konnte nicht berechnet werden.",
+      "sourceHint": "Geben Sie Text ein oder wählen Sie eine lokale Datei mit bis zu 5 MiB. Die Prüfsumme wird aus den Originalbytes berechnet."
+    },
     "input": "Eingabe",
     "output": "Ausgabe",
     "generate": "Generieren",

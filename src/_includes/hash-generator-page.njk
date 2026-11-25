@@ -1,0 +1,29 @@
+{% extends "tool-layout.njk" %}
+{% import "macros/editor.njk" as editor %}
+{% import "macros/toolbar.njk" as toolbar %}
+{% import "macros/status-bar.njk" as status %}
+
+{% block tool_content %}
+  {{ editor.inputEditor(toolData.inputPlaceholder, t.ui.input) }}
+  {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
+    <button class="btn btn-primary" id="btn-generate" type="button">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.778-7.778zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+      {{ t.ui.generate }}
+    </button>
+  {% endcall %}
+  {{ editor.outputEditor(toolData.outputPlaceholder, t.ui.output) }}
+  {{ status.statusBar(t.ui.characters, t.ui.lines) }}
+  <div class="pane-card hash-comparison" data-algorithm="{{ activeTool | replace('-generator', '') | upper | replace('SHA', 'SHA-') }}"
+       data-length="{{ toolData.hashLength }}" data-messages="{{ t.ui.hashCompare | json | escape }}">
+    <label for="expected-hash" class="pane-label">{{ t.ui.hashCompare.label }}</label>
+    <input id="expected-hash" type="text" dir="ltr" spellcheck="false" autocomplete="off" autocapitalize="none"
+           aria-describedby="hash-comparison-status" placeholder="{{ t.ui.hashCompare.format | replace('{length}', toolData.hashLength) }}">
+    <p id="hash-comparison-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  </div>
+{% endblock %}
+
+{% block description %}{% include "tool-description.njk" %}{% endblock %}
+{% block tool_script %}
+  {% if activeTool == "md5-generator" %}<script src="/js/md5.min.js?v={{ site.assetVersion }}"></script>{% endif %}
+  <script src="/js/hash-generator.js?v={{ site.assetVersion }}"></script>
+{% endblock %}

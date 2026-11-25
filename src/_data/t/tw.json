@@ -1,5 +1,14 @@
 {
   "ui": {
+    "hashCompare": {
+      "label": "預期校驗值（選填）",
+      "format": "請輸入 {length} 個十六進位字元（0–9、A–F）。",
+      "pending": "請先產生校驗值，再查看比對結果。",
+      "match": "校驗值相符。",
+      "mismatch": "校驗值不符。",
+      "failed": "無法計算校驗值。",
+      "sourceHint": "輸入文字，或選擇不超過 5 MiB 的本機檔案。檔案會依原始位元組計算。"
+    },
     "input": "輸入",
     "output": "輸出",
     "generate": "生成",
