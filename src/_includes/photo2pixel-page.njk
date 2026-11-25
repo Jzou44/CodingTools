@@ -71,6 +71,7 @@
       max-height: 100%;
       image-rendering: pixelated;
     }
+    .p2p-preview-frame [hidden] { display: none; }
     .p2p-flip-toggle[hidden] { display: none; }
     .p2p-placeholder {
       padding: 24px;
@@ -155,6 +156,29 @@
     .p2p-reference-link {
       font-weight: 700;
     }
+    {% if examples %}
+    .p2p-examples { scroll-margin-top: 5rem; }
+    .p2p-example-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+      gap: 14px;
+      margin: 12px 0;
+    }
+    .p2p-example {
+      display: grid;
+      align-content: start;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .p2p-example-images { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .p2p-example figure { margin: 0; }
+    .p2p-example img { display: block; width: 100%; height: auto; border-radius: 4px; }
+    .p2p-example figcaption, .p2p-example-credits { font-size: .8rem; color: var(--text-secondary); }
+    .p2p-example p { margin: 0; font-size: .9rem; }
+    .p2p-example .btn { justify-self: start; }
+    {% endif %}
     @media (max-width: 820px) {
       .p2p-preview-frame {
         height: clamp(240px, 72vw, 420px);
@@ -170,6 +194,7 @@
   </style>
 
   <div class="p2p-shell">
+    {% if examples %}<a href="#pixel-art-examples">Try a sample photo</a>{% endif %}
     <div class="dropzone-area p2p-dropzone" id="dropzone" role="button" tabindex="0">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M7 17h10"></path><path d="M7 13h10"></path><path d="M9 9h6"></path></svg>
       <p>{{ toolData.dropzoneMessage or "Click or drag an image here" }}</p>
@@ -271,6 +296,29 @@
     </div>
 
     <canvas id="source-canvas" hidden></canvas>
+    {% if examples %}
+    <section class="p2p-examples" id="pixel-art-examples" aria-labelledby="p2p-examples-title">
+      <h2 id="p2p-examples-title">Photo to pixel art examples</h2>
+      <div class="p2p-example-list">
+        {% for example in examples %}
+        {% set asset = "/assets/img/photo2pixel/" + example.id %}
+        <article class="p2p-example">
+          <h3>{{ example.name }}</h3>
+          <div class="p2p-example-images">
+            <figure><img src="{{ asset }}.webp" alt="{{ example.subject }}" loading="lazy" width="540" height="360"><figcaption>Original</figcaption></figure>
+            <figure><img src="{{ asset }}-pixel.webp" alt="{{ example.subject }} in {{ example.style | replace('_', ' ') | lower }} style" loading="lazy" width="180" height="120"><figcaption>Pixel art</figcaption></figure>
+          </div>
+          <p>{{ example.advice }}</p>
+          <button type="button" class="btn btn-ghost" data-example="{{ example.id }}" data-src="{{ asset }}.webp" data-style="{{ example.style }}" data-size="{{ example.size }}" data-density="{{ example.density }}">Try {{ example.name | lower }}</button>
+        </article>
+        {% endfor %}
+      </div>
+      <details class="p2p-example-credits">
+        <summary>Photo credits</summary>
+        <p><a href="https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.chelsea">Cat by Stefan van der Walt</a> and <a href="https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.coffee">coffee by Rachel Michetti</a> (CC0). <a href="https://www.archives.gov/research/still-pictures/highlights/the-tetons-snake-river">The Tetons – Snake River by Ansel Adams</a> (National Archives, public domain). All three photos are cropped for these comparisons.</p>
+      </details>
+    </section>
+    {% endif %}
   </div>
 {% endblock %}
 
@@ -306,9 +354,13 @@
       var MAX_SIZE = 10 * 1024 * 1024;
       var MAX_AREA = 2000 * 1100;
       var currentImageSrc = '';
+      var inputSource = '';
+      var trackedSuccess = false;
+      var trackedExport = false;
       var resultUrl = '';
       var showingOriginal = false;
       var runId = 0;
+      var inferenceQueue = Promise.resolve();
 
       if (window.ort) {
         ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.1/dist/';
@@ -359,6 +411,17 @@
         previewFrame.classList.toggle('is-original', showingOriginal);
         previewTitle.textContent = showingOriginal ? btnFlip.dataset.originalLabel : btnFlip.dataset.resultLabel;
         btnFlip.textContent = showingOriginal ? btnFlip.dataset.viewResult : btnFlip.dataset.viewOriginal;
+      }
+
+      function trackInputEvent(name, operation) {
+        if (document.body.dataset.lang === 'en' && typeof window.gtag === 'function') {
+          window.gtag('event', name, {
+            tool_id: document.body.dataset.tool,
+            tool_language: 'en',
+            operation: operation,
+            input_source: inputSource
+          });
+        }
       }
 
       function imageDataToRgbTensor(imageData, width, height) {
@@ -412,14 +475,15 @@
       }
 
       function renderCurrentImage() {
+        var options = getOptions();
         if (!currentImageSrc) return;
         var thisRun = ++runId;
-        var options = getOptions();
         setStatus('idle', 'Processing image...');
         btnDownload.disabled = true;
 
         var img = new Image();
         img.onload = function () {
+          if (thisRun !== runId) return;
           var area = img.width * img.height;
           var width = img.width;
           var height = img.height;
@@ -439,7 +503,9 @@
           var kernelSize = options.styleMode === 'Enhance_Edge' ? 10 : 1;
           var edgeThreshold = options.styleMode === 'Enhance_Edge' ? edgeThresholdValue(options.edgeDensity) : 1000000;
 
-          sessionPromise.then(function (session) {
+          // The WASM session runs one inference at a time. Skip superseded inputs.
+          inferenceQueue = inferenceQueue.then(function () { return sessionPromise; }).then(function (session) {
+            if (thisRun !== runId) return;
             return session.run({
               rgb: imageDataToRgbTensor(imageData, width, height),
               param_kernel_size: new ort.Tensor('int64', BigInt64Array.from([BigInt(kernelSize)]), []),
@@ -465,6 +531,7 @@
             }
 
             resultCanvas.toBlob(function (blob) {
+              if (thisRun !== runId) return;
               if (!blob) {
                 if (resultUrl) URL.revokeObjectURL(resultUrl);
                 resultUrl = '';
@@ -476,15 +543,46 @@
               resultUrl = URL.createObjectURL(blob);
               btnDownload.disabled = false;
               setStatus('valid', 'Pixel art generated');
+              if (!trackedSuccess) {
+                trackInputEvent('tool_success', 'photo_to_pixel');
+                trackedSuccess = true;
+              }
             }, 'image/png');
           }).catch(function (error) {
-            setStatus('invalid', error.message || 'Conversion failed');
+            if (thisRun === runId) setStatus('invalid', error.message || 'Conversion failed');
           });
         };
         img.onerror = function () {
-          setStatus('invalid', 'Could not read image');
+          if (thisRun === runId) setStatus('invalid', 'Could not read image');
         };
         img.src = currentImageSrc;
+      }
+
+      function resetResult() {
+        runId++;
+        if (resultUrl) URL.revokeObjectURL(resultUrl);
+        resultUrl = '';
+        resultCanvas.hidden = true;
+        resultPlaceholder.hidden = false;
+        imageMeta.textContent = '0 x 0';
+        btnDownload.disabled = true;
+      }
+
+      function selectImage(src, source) {
+        if (src !== currentImageSrc) {
+          if (inputSource === 'upload') URL.revokeObjectURL(currentImageSrc);
+          trackedSuccess = false;
+          trackedExport = false;
+        }
+        resetResult();
+        currentImageSrc = src;
+        inputSource = source;
+        sourcePreview.src = src;
+        sourcePreview.hidden = false;
+        sourcePlaceholder.hidden = true;
+        btnFlip.hidden = false;
+        updateFlipView(false);
+        renderCurrentImage();
       }
 
       function processFile(file) {
@@ -497,21 +595,21 @@
           return;
         }
 
-        var reader = new FileReader();
-        reader.onload = function (event) {
-          currentImageSrc = event.target.result;
-          sourcePreview.src = currentImageSrc;
-          sourcePreview.hidden = false;
-          sourcePlaceholder.hidden = true;
-          btnFlip.hidden = false;
-          updateFlipView(false);
-          renderCurrentImage();
-        };
-        reader.onerror = function () {
-          setStatus('invalid', 'Could not read image');
-        };
-        reader.readAsDataURL(file);
+        selectImage(URL.createObjectURL(file), 'upload');
       }
+
+      {% if examples %}
+      document.querySelectorAll('[data-example]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          document.querySelector('input[name="style_mode"][value="' + button.dataset.style + '"]').checked = true;
+          document.querySelector('input[name="pixel_size"][value="' + button.dataset.size + '"]').checked = true;
+          document.querySelector('input[name="edge_density"][value="' + button.dataset.density + '"]').checked = true;
+          selectImage(button.dataset.src, 'example');
+          btnFlip.focus({ preventScroll: true });
+          btnFlip.scrollIntoView({ block: 'center' });
+        });
+      });
+      {% endif %}
 
       dropzone.addEventListener('click', function () { fileInput.click(); });
       dropzone.addEventListener('keydown', function (event) {
@@ -542,19 +640,16 @@
       });
 
       btnClear.addEventListener('click', function () {
+        resetResult();
+        if (inputSource === 'upload') URL.revokeObjectURL(currentImageSrc);
         currentImageSrc = '';
+        inputSource = '';
         sourcePreview.removeAttribute('src');
         sourcePreview.hidden = true;
         sourcePlaceholder.hidden = false;
         btnFlip.hidden = true;
         updateFlipView(false);
-        resultCanvas.hidden = true;
-        resultPlaceholder.hidden = false;
         resultCtx.clearRect(0, 0, resultCanvas.width, resultCanvas.height);
-        if (resultUrl) URL.revokeObjectURL(resultUrl);
-        resultUrl = '';
-        imageMeta.textContent = '0 x 0';
-        btnDownload.disabled = true;
         setStatus('idle', 'Ready');
       });
 
@@ -568,6 +663,10 @@
         link.href = resultUrl;
         link.download = ToolCommon.sanitizeDownloadFilename('photo2pixel.png', 'photo2pixel.png');
         link.click();
+        if (!trackedExport) {
+          trackInputEvent('tool_export', 'download_png');
+          trackedExport = true;
+        }
       });
 
       getOptions();

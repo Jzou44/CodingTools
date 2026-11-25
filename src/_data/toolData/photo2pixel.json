@@ -1,9 +1,9 @@
 {
   "en": {
-    "title": "Photo2Pixel - Local Photo to Pixel Art Converter",
-    "description": "Convert photos into pixel art in your browser with ONNX/WASM processing, adjustable pixel size, edge density, and three style modes.",
+    "title": "Photo to Pixel Art Converter – Try Examples and Download PNG | Photo2Pixel",
+    "description": "Make a pixel art avatar, landscape or object from a photo. Try three before-and-after examples, adjust the pixel size and download a PNG in your browser.",
     "toolTitle": "Photo2Pixel",
-    "toolDescription": "Turn photos into pixel art locally in your browser with adjustable style mode, pixel size, and edge density.",
+    "toolDescription": "Drop in a photo or try a sample. Adjust the pixel size, compare it with the original, and download your pixel art as a PNG.",
     "categoryName": "Image Utilities",
     "dropzoneMessage": "Click or drag an image here",
     "dropzoneHint": "PNG, JPEG, WebP · Max 10MB",
@@ -26,21 +26,21 @@
     "viewOriginal": "View original",
     "viewResult": "View pixel art",
     "demoAlt": "Photo2Pixel demo showing a landscape photo transformed into blocky pixel art",
-    "descTitle": "Convert photos into pixel art locally",
+    "descTitle": "How to get a recognizable pixel art avatar",
     "descParas": [
-      "<strong>Photo2Pixel turns PNG, JPEG, and WebP photos into pixel-art-style PNG output directly in your browser.</strong> The conversion uses an ONNX model through WebAssembly, so your image stays on the page instead of being uploaded to a server.",
-      "Use Enhance Edge for sharper outlines, Isolate Pixel for a visible grid effect, or Raw Pixel for a cleaner blocky conversion. Pixel size controls how chunky the result looks, while edge density changes how much outline detail is preserved."
+      "Start with a close crop around your subject. For a pet avatar, keep both eyes inside the frame and leave a little space around the ears. Try Enhance Edge with Extra Small pixels to keep fine details visible.",
+      "Switch to the original to check the eyes and outline. If the fur looks crowded with dark lines, lower Edge Density. If the face disappears into a few large blocks, choose a smaller pixel size."
     ],
-    "howToUse": "How to use",
+    "howToUse": "Convert and export your own photo",
     "steps": [
-      "Upload a PNG, JPEG, or WebP photo; files up to 10MB are processed locally in the browser.",
-      "Pick Enhance Edge, Isolate Pixel, or Raw Pixel, then adjust pixel size and edge density until the preview matches the style you want.",
-      "Switch between the original and pixel-art preview, then download the generated PNG for avatars, thumbnails, mockups, or game-art references."
+      "Choose a sample to try its preset, or drop a PNG, JPEG or WebP file up to 10 MB into the tool. Photo2Pixel processes the image in your browser.",
+      "For a landscape, try Raw Pixel to simplify the sky and water. For a gridded object study, try Isolate Pixel. Changing a setting updates the preview.",
+      "Use View original to compare the result. Choose Download to save the PNG. The dimensions beside that button tell you how large the exported image will be."
     ],
-    "whatIs": "What is Photo2Pixel?",
+    "whatIs": "What does Pixel Size change?",
     "whatIsParas": [
-      "<strong>Photo2Pixel</strong> is a browser-based photo to pixel art converter for quick visual experiments, social images, UI mockups, and game-asset concepts. It reduces continuous photo detail into deliberate color blocks while preserving enough structure for the image to stay recognizable.",
-      "The output is a stylized conversion, not a hand-authored sprite sheet. For production art, inspect the edges, contrast, dimensions, and final PNG size before using it in an app, game, or published asset pack."
+      "Pixel Size changes the width of the color blocks inside the picture. Extra Small uses six-pixel blocks. Medium uses fifteen. A larger block gives a simpler silhouette and removes more small details.",
+      "Large photos are scaled proportionally to about 2.2 megapixels before conversion. If your avatar needs an exact width or height, resize the exported PNG to those dimensions."
     ]
   },
   "cn": {

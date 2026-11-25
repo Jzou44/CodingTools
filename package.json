@@ -15,6 +15,7 @@
     "build": "npm run clean && eleventy && node scripts/optimize-assets.js",
     "test:assets": "node --test scripts/test-optimize-assets.js",
     "test:progressive-jpeg": "node scripts/test-progressive-jpeg.js",
+    "test:photo2pixel": "node scripts/test-photo2pixel.js",
     "dev": "eleventy --serve --port=5500",
     "debug": "eleventy --serve --port=5500 --debug",
     "a2a": "node server/a2a-runtime.js",
