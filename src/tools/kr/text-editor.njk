@@ -10,9 +10,9 @@ permalink: "/kr/text-editor.html"
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/lib/codemirror.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/lib/codemirror.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/mode/xml/xml.min.js"></script>
+  <link rel="stylesheet" href="/assets/codemirror/5.65.21/lib/codemirror.css">
+  <script src="/assets/codemirror/5.65.21/lib/codemirror.js"></script>
+  <script src="/assets/codemirror/5.65.21/mode/xml/xml.js"></script>
 {% endblock %}
 
 {% block tool_content %}
@@ -57,7 +57,17 @@ permalink: "/kr/text-editor.html"
   <script>
     (function () {
       'use strict';
-      var editor = CodeMirror.fromTextArea(document.getElementById('code1'), { lineNumbers: true, lineWrapping: true });
+      var editor = CodeMirror.fromTextArea(document.getElementById('code1'), {
+        lineNumbers: true,
+        lineWrapping: true,
+        indentUnit: 2,
+        extraKeys: {
+          Tab: function (cm) {
+            if (cm.somethingSelected()) cm.indentSelection('add');
+            else cm.replaceSelection('  ');
+          }
+        }
+      });
       editor.getWrapperElement().setAttribute('aria-label', '{{ t.ui.input }}');
       var btnClear = document.getElementById('btn-clear');
       var btnCopy = document.getElementById('btn-copy');

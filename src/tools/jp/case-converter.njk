@@ -85,12 +85,6 @@ permalink: "/jp/case-converter.html"
         });
       }
 
-      function toTitleCase(str) {
-        return str.toLowerCase().replace(/\b\w/g, function (c) {
-          return c.toUpperCase();
-        });
-      }
-
       function invertCase(str) {
         return str.split('').map(function (c) {
           if (c === c.toUpperCase()) return c.toLowerCase();
@@ -121,7 +115,7 @@ permalink: "/jp/case-converter.html"
 
       btnTitle.onclick = function () {
         if (!inputEditor.value) return;
-        inputEditor.value = toTitleCase(inputEditor.value);
+        inputEditor.value = ToolCommon.titleCase(inputEditor.value);
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ toolData.titleCase }}');
         updateCounts();
       };

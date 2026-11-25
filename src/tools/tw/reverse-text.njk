@@ -80,7 +80,7 @@ permalink: "/tw/reverse-text.html"
       btnReverse.onclick = function () {
         var text = inputEditor.value;
         if (!text) return;
-        inputEditor.value = text.split('').reverse().join('');
+        inputEditor.value = ToolCommon.reverseText(text);
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ toolData.reverseText }}');
         updateCounts();
       };

@@ -19,6 +19,8 @@
 
 {% if activeTool == "ascii-table" or toolId == "ascii-table" %}
   {% include "ascii-table-reference.njk" %}
+{% elif activeTool == "roman-numerals-chart" or toolId == "roman-numerals-chart" %}
+  {% include "roman-numerals-chart-table.njk" %}
 {% endif %}
 
 {% if toolData.howToUse and toolData.steps %}
@@ -47,6 +49,6 @@
 <p>{{ toolData.examplePara | safe }}</p>
 <div class="code-block-wrapper">
   <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample or "Copy" }}</button>
-  <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+  <pre class="code-block" id="example-code">{% if activeTool in ["xml-formatter", "xml-minifier", "xml-to-json", "json-to-xml"] %}{{ toolData.exampleCode | escape }}{% else %}{{ toolData.exampleCode | safe }}{% endif %}</pre>
 </div>
 {% endif %}

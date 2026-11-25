@@ -159,7 +159,7 @@ permalink: "/tw/decimal-to-octal.html"
           return;
         }
         try {
-          var result = BigInt(input);
+          var result = BigNumber.fromInteger(input, 10);
           showPrimary(result.toString(8), 'valid');
           showSecondary(hexOutput, hexCard, result.toString(16).toUpperCase(), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');

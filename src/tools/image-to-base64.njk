@@ -8,9 +8,9 @@ permalink: "/image-to-base64.html"
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/lib/codemirror.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/lib/codemirror.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/mode/xml/xml.min.js"></script>
+  <link rel="stylesheet" href="/assets/codemirror/5.65.21/lib/codemirror.css">
+  <script src="/assets/codemirror/5.65.21/lib/codemirror.js"></script>
+  <script src="/assets/codemirror/5.65.21/mode/xml/xml.js"></script>
 {% endblock %}
 
 {% block tool_content %}
@@ -113,33 +113,41 @@ permalink: "/image-to-base64.html"
         this.value = '';
       });
 
+      var selection = 0;
       function processFile(file) {
+        clearResult();
+        var current = selection;
+        if (!file.type.startsWith('image/')) {
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', {{ t.ui.unsupportedImageType | json | safe }});
+          return;
+        }
         if (file.size > MAX_SIZE) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'File too large (max 2MB)');
           return;
         }
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', 'Processing...');
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          var base64 = e.target.result;
+        ToolCommon.loadImage(file).then(function (loaded) {
+          if (current !== selection) return;
+          var base64 = loaded.dataUrl;
           editor.setValue(base64);
           var chars = base64.length;
           charCount.textContent = ToolCommon.pluralise(chars, 'character');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Image converted to Base64');
-        };
-        reader.onerror = function () {
+        }).catch(function () {
+          if (current !== selection) return;
           editor.setValue('');
           charCount.textContent = '0 characters';
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Conversion failed: could not read file');
-        };
-        reader.readAsDataURL(file);
+        });
       }
 
-      btnClear.addEventListener('click', function () {
+      function clearResult() {
+        selection++;
         editor.setValue('');
         charCount.textContent = '0 characters';
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-      });
+      }
+      btnClear.addEventListener('click', clearResult);
 
       btnCopy.addEventListener('click', function () {
         var text = editor.getValue();

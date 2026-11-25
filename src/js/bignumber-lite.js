@@ -82,6 +82,8 @@
       sign = text.charAt(0) === '-' ? -1n : 1n;
       text = text.slice(1);
     }
+    var prefix = { 2: '0b', 8: '0o', 16: '0x' }[radix];
+    if (prefix && text.startsWith(prefix)) text = text.slice(2);
     if (!text) throw new Error('Invalid number');
 
     var result = 0n;
@@ -178,6 +180,32 @@
     this.denominator = parts.denominator;
   }
 
+  BigNumber.fromInteger = function (value, radix) {
+    var parts = parseBase(value, radix);
+    return BigNumber._fromParts(parts.numerator, parts.denominator);
+  };
+
+  BigNumber.fromMixed = function (whole, numerator, denominator) {
+    var fraction = new BigNumber(numerator).dividedBy(denominator);
+    if (String(whole).startsWith('-')) fraction = fraction.multipliedBy(-1);
+    return new BigNumber(whole || 0).plus(fraction);
+  };
+
+  // Keep the decimal spelling exact, even beyond the precision of a JS Number.
+  BigNumber.mixedFraction = function (value, percent) {
+    var text = String(value).trim();
+    if (percent) text = text.replace(/%$/, '');
+    if (!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(text)) throw new Error('Invalid decimal input');
+    var number = new BigNumber(text);
+    if (percent) number = number.dividedBy(100);
+    var whole = number.numerator / number.denominator;
+    var remainder = number.numerator % number.denominator;
+    if (whole !== 0n) remainder = abs(remainder);
+    var fraction = remainder + '/' + number.denominator;
+    var display = remainder === 0n ? String(whole) : (whole === 0n ? fraction : whole + ' ' + fraction);
+    return { whole: whole, remainder: remainder, denominator: number.denominator, text: display };
+  };
+
   BigNumber.prototype.plus = function (other) {
     other = coerce(other);
     var parts = normalizeParts(
@@ -207,6 +235,18 @@
     var radix = base === undefined ? 10 : Number(base);
     if (!Number.isInteger(radix) || radix < 2 || radix > 36) {
       throw new Error('Invalid base');
+    }
+    if (radix === 10 && this.numerator !== 0n) {
+      var magnitude = abs(this.numerator);
+      var places = this.denominator.toString().length - magnitude.toString().length;
+      if (places >= DEFAULT_DECIMAL_PLACES) {
+        var scaled = this.numerator * 10n ** BigInt(places);
+        if (abs(scaled) < this.denominator) {
+          scaled *= 10n;
+          places++;
+        }
+        return toDecimalString(scaled, this.denominator, DEFAULT_DECIMAL_PLACES, false) + 'e-' + places;
+      }
     }
     return radix === 10
       ? toDecimalString(this.numerator, this.denominator, DEFAULT_DECIMAL_PLACES, false)

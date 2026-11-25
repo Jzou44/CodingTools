@@ -10,7 +10,6 @@ permalink: "/de/json-to-xml.html"
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
-  <script src="/js/vkbeautify.js"></script>
 {% endblock %}
 
 {% import "macros/editor.njk" as editor %}
@@ -57,7 +56,7 @@ permalink: "/de/json-to-xml.html"
   <p>{{ toolData.examplePara | safe }}</p>
   <div class="code-block-wrapper">
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
-    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | escape }}</pre>
   </div>
 {% endblock %}
 
@@ -89,13 +88,20 @@ permalink: "/de/json-to-xml.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
           var xmlStr = CodingToolsTextTransforms.jsonToXml(text);
-          outputEditor.value = vkbeautify.xml(xmlStr);
+          outputEditor.value = CodingToolsTextTransforms.formatXml(xmlStr);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted to XML successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.conversionFailed }}' + e.message);
         }
       };

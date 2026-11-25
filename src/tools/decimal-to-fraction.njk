@@ -97,13 +97,6 @@ permalink: "/decimal-to-fraction.html"
       // Store the last computed fraction for copy
       var lastFraction = '';
 
-      function gcd(a, b) {
-        a = Math.abs(a);
-        b = Math.abs(b);
-        while (b) { var t = b; b = a % b; a = t; }
-        return a;
-      }
-
       function showEmpty(text) {
         resultVisual.className = 'dec-result-visual empty';
         resultVisual.innerHTML = '<span class="dec-result-empty">' + (text || 'Result will appear here') + '</span>';
@@ -118,60 +111,27 @@ permalink: "/decimal-to-fraction.html"
         lastFraction = '';
       }
 
-      function showFraction(intPart, numPart, denPart) {
-        var intDisplay = intPart !== '0' ? intPart : '';
+      function showFraction(fraction) {
         var html = '';
-
-        if (intDisplay) {
-          html += '<span class="dec-res-integer">' + intDisplay + '</span>';
-          html += '<span class="dec-res-dot">&middot;</span>';
+        if (fraction.whole || !fraction.remainder) {
+          html += '<span class="dec-res-integer">' + fraction.whole + '</span>';
         }
-
-        html += '<div class="dec-res-stack">';
-        html += '<div class="dec-res-num-row"><span>' + numPart + '</span></div>';
-        html += '<div class="dec-res-den-row"><span>' + denPart + '</span></div>';
-        html += '</div>';
-
+        if (fraction.remainder) {
+          if (fraction.whole) html += '<span class="dec-res-dot">&middot;</span>';
+          html += '<div class="dec-res-stack"><div class="dec-res-num-row"><span>' + fraction.remainder +
+            '</span></div><div class="dec-res-den-row"><span>' + fraction.denominator + '</span></div></div>';
+        }
         resultVisual.className = 'dec-result-visual';
         resultVisual.innerHTML = html;
         outputCard.classList.add('has-result');
-
-        lastFraction = (intDisplay ? intDisplay + ' ' : '') + numPart + '/' + denPart;
+        lastFraction = fraction.text;
       }
 
       function doConvert() {
         var input = decimalInput.value.trim();
         if (!input) return;
         try {
-          var num = parseFloat(input);
-          if (isNaN(num)) throw new Error('Invalid number');
-
-          var isNegative = num < 0;
-          num = Math.abs(num);
-
-          var integerPart = Math.floor(num);
-          var decimalPart = num - integerPart;
-
-          if (decimalPart === 0) {
-            var intStr = integerPart === 0 ? '0' : '' + integerPart;
-            if (isNegative) intStr = '-' + intStr;
-            showFraction(intStr, '0', '1');
-          } else {
-            var decStr = input.replace(/^-/, '').split('.')[1] || '';
-            var places = decStr.length;
-            var denominator = Math.pow(10, places);
-            var numerator = Math.round(decimalPart * denominator);
-            var g = gcd(numerator, denominator);
-            numerator   = numerator / g;
-            denominator = denominator / g;
-
-            var intStr2 = integerPart === 0 ? '0' : '' + integerPart;
-            if (isNegative && integerPart === 0 && numerator > 0) intStr2 = '-0';
-            else if (isNegative) intStr2 = '-' + intStr2;
-
-            showFraction(intStr2, '' + numerator, '' + denominator);
-          }
-
+          showFraction(BigNumber.mixedFraction(input));
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
         } catch (e) {
           showError('Invalid decimal input');

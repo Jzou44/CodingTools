@@ -132,7 +132,7 @@ permalink: "/decimal-to-hex.html"
           return;
         }
         try {
-          var result = BigInt(input);
+          var result = BigNumber.fromInteger(input, 10);
           showPrimary(result.toString(16).toUpperCase(), 'valid');
           showSecondary(octalOutput, octalCard, result.toString(8), 'valid');
           showSecondary(binaryOutput, binaryCard, result.toString(2), 'valid');

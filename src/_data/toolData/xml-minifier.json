@@ -29,7 +29,8 @@
     "example": "Example",
     "examplePara": "A simple element tree can be compacted by removing indentation between tags:",
     "exampleCode": "--- Formatted Input ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minified Output ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "Minify XML"
+    "buttonLabel": "Minify XML",
+    "indentationLabel": "Remove indentation between elements"
   },
   "cn": {
     "title": "XML 压缩器 - Coding.Tools",
@@ -61,7 +62,8 @@
     "example": "示例",
     "examplePara": "可以通过删除标签之间的缩进来压缩简单的元素树：",
     "exampleCode": "--- 格式化输入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 压缩输出 ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "压缩 XML"
+    "buttonLabel": "压缩 XML",
+    "indentationLabel": "去掉元素之间的换行缩进"
   },
   "tw": {
     "title": "XML 壓縮器 - Coding.Tools",
@@ -93,7 +95,8 @@
     "example": "範例",
     "examplePara": "可以透過刪除標籤之間的縮進來壓縮簡單的元素樹：",
     "exampleCode": "--- 格式化輸入 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 壓縮輸出 ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "壓縮 XML"
+    "buttonLabel": "壓縮 XML",
+    "indentationLabel": "移除元素之間的換行縮排"
   },
   "jp": {
     "title": "XML 圧縮 - Coding.Tools",
@@ -125,7 +128,8 @@
     "example": "例",
     "examplePara": "単純な要素ツリーは、タグ間のインデントを削除することで圧縮できます。",
     "exampleCode": "--- フォーマット入力 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 圧縮出力 ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "XML を圧縮"
+    "buttonLabel": "XML を圧縮",
+    "indentationLabel": "要素間の改行とインデントを削除"
   },
   "kr": {
     "title": "XML 압축 - Coding.Tools",
@@ -157,7 +161,8 @@
     "example": "예시",
     "examplePara": "태그 사이의 들여쓰기를 제거하여 간단한 요소 트리를 압축할 수 있습니다.",
     "exampleCode": "--- 포맷 입력 ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- 압축 출력 ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "XML 압축"
+    "buttonLabel": "XML 압축",
+    "indentationLabel": "요소 사이의 줄바꿈과 들여쓰기 제거"
   },
   "fr": {
     "title": "Minifieur XML - Coding.Tools",
@@ -189,7 +194,8 @@
     "example": "Exemple",
     "examplePara": "Une arborescence d'éléments simple peut être compactée en supprimant l'indentation entre les balises :",
     "exampleCode": "--- Entrée formatée ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Sortie minifiée ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "Minifier XML"
+    "buttonLabel": "Minifier XML",
+    "indentationLabel": "Supprimer les retraits et sauts de ligne entre les éléments"
   },
   "de": {
     "title": "XML-Minifizierer - Coding.Tools",
@@ -221,7 +227,8 @@
     "example": "Beispiel",
     "examplePara": "Ein einfacher Elementbaum kann komprimiert werden, indem die Einrückung zwischen Tags entfernt wird:",
     "exampleCode": "--- Formatierte Eingabe ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Minifizierte Ausgabe ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "XML minifizieren"
+    "buttonLabel": "XML minifizieren",
+    "indentationLabel": "Zeilenumbrüche und Einrückung zwischen Elementen entfernen"
   },
   "es": {
     "title": "Minificador XML - Coding.Tools",
@@ -253,7 +260,8 @@
     "example": "Ejemplo",
     "examplePara": "Un árbol de elementos simple se puede compactar eliminando la sangría entre etiquetas:",
     "exampleCode": "--- Entrada formateada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Salida minificada ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "Minificar XML"
+    "buttonLabel": "Minificar XML",
+    "indentationLabel": "Quitar la sangría y los saltos de línea entre elementos"
   },
   "pt": {
     "title": "Minificador XML - Coding.Tools",
@@ -285,6 +293,7 @@
     "example": "Exemplo",
     "examplePara": "Uma árvore de elementos simples pode ser compactada removendo o recuo entre as tags:",
     "exampleCode": "--- Entrada formatada ---\n<root>\n  <name>John</name>\n  <age>30</age>\n</root>\n\n--- Saída minificada ---\n<root><name>John</name><age>30</age></root>",
-    "buttonLabel": "Minificar XML"
+    "buttonLabel": "Minificar XML",
+    "indentationLabel": "Remover recuos e quebras de linha entre elementos"
   }
 }

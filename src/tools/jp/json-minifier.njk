@@ -84,13 +84,20 @@ permalink: "/jp/json-minifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
-          var result = JSON.stringify(JSON.parse(text));
+          var result = CodingToolsTextTransforms.formatJson(text, 0);
           outputEditor.value = result;
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'JSON minified successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };

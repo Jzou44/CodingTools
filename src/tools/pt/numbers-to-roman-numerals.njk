@@ -105,6 +105,7 @@ permalink: "/pt/numbers-to-roman-numerals.html"
 {% endblock %}
 
 {% block tool_script %}
+  <script src="/js/roman-numerals.js?v={{ site.assetVersion }}"></script>
   <script>
     (function () {
       'use strict';
@@ -119,20 +120,6 @@ permalink: "/pt/numbers-to-roman-numerals.html"
       var statusDot     = document.getElementById('status-dot');
       var statusText    = document.getElementById('status-text');
 
-      function intToRoman(num) {
-        if (num < 1 || num > 3999) return null;
-        var values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-        var symbols = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
-        var result = '';
-        for (var i = 0; i < values.length; i++) {
-          while (num >= values[i]) {
-            result += symbols[i];
-            num -= values[i];
-          }
-        }
-        return result;
-      }
-
       function showResult(text, type) {
         romanOutput.textContent = text;
         romanOutput.className = 'tool-output-value';
@@ -145,13 +132,13 @@ permalink: "/pt/numbers-to-roman-numerals.html"
       btnConvert.onclick = function () {
         var input = numberInput.value.trim();
         if (!input) return;
-        var num = parseInt(input, 10);
-        if (isNaN(num) || num < 1 || num > 3999) {
+        var roman = RomanNumerals.encode(input);
+        if (!roman) {
           showResult('{{ t.ui.enterNumberBetween1And3999 }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.outOfRange }}');
           return;
         }
-        showResult(intToRoman(num), 'valid');
+        showResult(roman, 'valid');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
       };
 
@@ -186,13 +173,13 @@ permalink: "/pt/numbers-to-roman-numerals.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }
-        var num = parseInt(input, 10);
-        if (isNaN(num) || num < 1 || num > 3999) {
+        var roman = RomanNumerals.encode(input);
+        if (!roman) {
           showResult('{{ t.ui.enterNumberBetween1And3999 }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.outOfRange }}');
           return;
         }
-        showResult(intToRoman(num), 'valid');
+        showResult(roman, 'valid');
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
       });
 

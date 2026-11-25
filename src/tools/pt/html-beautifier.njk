@@ -89,12 +89,19 @@ permalink: "/pt/html-beautifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
           outputEditor.value = html_beautify(text, { indent_size: 2 });
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'HTML beautified successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.beautificationFailed }}' + e.message);
         }
       };

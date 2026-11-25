@@ -193,6 +193,9 @@
     var source = requireString(value, "JavaScript input");
     var output = "";
     var regexAllowed = true;
+    var controlHeader = false;
+    var parentheses = [];
+    var previousToken = "";
 
     for (var index = 0; index < source.length; index += 1) {
       var character = source.charAt(index);
@@ -203,6 +206,7 @@
         output += quoted.output;
         index = quoted.end;
         regexAllowed = false;
+        previousToken = "literal";
         continue;
       }
 
@@ -211,6 +215,7 @@
         output += template.output;
         index = template.end;
         regexAllowed = false;
+        previousToken = "literal";
         continue;
       }
 
@@ -240,6 +245,7 @@
         output += regex.output;
         index = regex.end;
         regexAllowed = false;
+        previousToken = "literal";
         continue;
       }
 
@@ -256,7 +262,9 @@
         while (identifierEnd < source.length && isIdentifierPart(source.charAt(identifierEnd))) identifierEnd += 1;
         var identifier = source.slice(index, identifierEnd);
         output += identifier;
-        regexAllowed = Boolean(REGEX_PREFIX_KEYWORDS[identifier]);
+        controlHeader = previousToken !== "." && /^(if|while|for|with|switch|catch)$/.test(identifier);
+        regexAllowed = previousToken !== "." && Object.hasOwn(REGEX_PREFIX_KEYWORDS, identifier);
+        previousToken = identifier;
         index = identifierEnd - 1;
         continue;
       }
@@ -266,12 +274,16 @@
         while (numberEnd < source.length && /[A-Za-z0-9_.]/.test(source.charAt(numberEnd))) numberEnd += 1;
         output += source.slice(index, numberEnd);
         regexAllowed = false;
+        previousToken = "literal";
         index = numberEnd - 1;
         continue;
       }
 
       output += character;
-      regexAllowed = /[({[=,:;!?&|+\-*%~^<>]/.test(character);
+      if (character === "(") parentheses.push(controlHeader);
+      regexAllowed = character === ")" ? parentheses.pop() : /[({[=,:;!?&|+\-*%~^<>]/.test(character);
+      controlHeader = false;
+      previousToken = character;
     }
 
     return output.trim();
@@ -281,7 +293,8 @@
     var source = requireString(value, "CSS input");
     var output = "";
     var pendingSpace = false;
-    var compactPunctuation = "{}:;,";
+    // A space before a colon can be a descendant combinator (div :hover).
+    var compactPunctuation = "{};,";
 
     for (var index = 0; index < source.length; index += 1) {
       var character = source.charAt(index);
@@ -299,7 +312,11 @@
       if (character === "/" && next === "*") {
         var blockEnd = source.indexOf("*/", index + 2);
         if (blockEnd < 0) throw new SyntaxError("Unterminated CSS comment.");
-        pendingSpace = true;
+        // A comment separates tokens without creating a descendant combinator.
+        // Keep an empty separator when otherwise adjacent tokens would touch.
+        if (!pendingSpace && output && blockEnd + 2 < source.length && !/\s/.test(source.charAt(blockEnd + 2))) {
+          output += "/**/";
+        }
         index = blockEnd + 1;
         continue;
       }
@@ -316,7 +333,7 @@
         continue;
       }
 
-      if (pendingSpace && output && compactPunctuation.indexOf(output.charAt(output.length - 1)) < 0) output += " ";
+      if (pendingSpace && output && (compactPunctuation + ":").indexOf(output.charAt(output.length - 1)) < 0) output += " ";
       pendingSpace = false;
       output += character;
     }
@@ -324,13 +341,13 @@
     return output.trim().replace(/;}$/, "}");
   }
 
-  function consumeSqlQuoted(source, start, closer, label) {
+  function consumeSqlQuoted(source, start, closer, label, backslashEscapes) {
     var opener = source.charAt(start);
     var output = opener;
     for (var index = start + 1; index < source.length; index += 1) {
       var character = source.charAt(index);
       output += character;
-      if (character === "\\" && closer !== "]" && index + 1 < source.length) {
+      if (backslashEscapes && character === "\\" && index + 1 < source.length) {
         output += source.charAt(index + 1);
         index += 1;
       } else if (character === closer) {
@@ -345,10 +362,11 @@
     throw new SyntaxError("Unterminated SQL " + label + ".");
   }
 
-  function minifySql(value) {
+  function minifySql(value, dialect) {
     var source = requireString(value, "SQL input");
     var output = "";
     var pendingSpace = false;
+    var mysql = dialect === "mysql";
 
     function flushSpace() {
       if (pendingSpace && output && !/\s$/.test(output)) output += " ";
@@ -361,7 +379,7 @@
 
       if (character === "'" || character === '"' || character === "`") {
         flushSpace();
-        var quoted = consumeSqlQuoted(source, index, character, "quoted value");
+        var quoted = consumeSqlQuoted(source, index, character, "quoted value", mysql);
         output += quoted.output;
         index = quoted.end;
         continue;
@@ -375,7 +393,7 @@
         continue;
       }
 
-      if (character === "$") {
+      if (!mysql && dialect !== "sqlite" && character === "$") {
         var dollarMatch = source.slice(index).match(/^(\$[A-Za-z_][A-Za-z0-9_]*\$|\$\$)/);
         if (dollarMatch) {
           flushSpace();
@@ -388,8 +406,9 @@
         }
       }
 
-      if (character === "-" && next === "-") {
-        index += 2;
+      var dashComment = character === "-" && next === "-" && (!mysql || /[\x00-\x20\x7f]/.test(source.charAt(index + 2)));
+      if (dashComment || (mysql && character === "#")) {
+        index += dashComment ? 2 : 1;
         while (index < source.length && !isLineBreak(source.charAt(index))) index += 1;
         if (source.charAt(index) === "\r" && source.charAt(index + 1) === "\n") index += 1;
         pendingSpace = true;
@@ -397,6 +416,17 @@
       }
 
       if (character === "/" && next === "*") {
+        if (mysql || dialect === "sqlite") {
+          var commentEnd = source.indexOf("*/", index + 2);
+          if (commentEnd < 0) throw new SyntaxError("Unterminated SQL block comment.");
+          if (mysql && (source.charAt(index + 2) === "!" || source.charAt(index + 2) === "+")) {
+            flushSpace();
+            output += source.slice(index, commentEnd + 2);
+          }
+          index = commentEnd + 1;
+          pendingSpace = true;
+          continue;
+        }
         var depth = 1;
         index += 2;
         while (index < source.length && depth > 0) {
@@ -491,12 +521,32 @@
     return { name: match[1], closing: closing, selfClosing: selfClosing };
   }
 
-  function minifyMarkup(value, xmlMode) {
+  function minifyMarkup(value, xmlMode, layout) {
     var source = requireString(value, xmlMode ? "XML input" : "HTML input");
     var output = "";
     var stack = [];
     var rootCount = 0;
-    var lowerSource = xmlMode ? "" : source.toLowerCase();
+
+    function append(value, markup) {
+      if (xmlMode && stack.length) stack[stack.length - 1].children.push({ value: value, markup: markup });
+      else output += value;
+    }
+
+    function finishElement(frame, closing) {
+      var children = frame.children;
+      var changeIndent = layout && !frame.preserve && children.some(function (child) { return child.markup; })
+        && children.every(function (child) {
+          // Inline spaces and mixed text may separate words and must survive.
+          return child.markup || (/^[\x20\t\r\n]+$/.test(child.value) && /[\r\n]/.test(child.value));
+        });
+      var indent = changeIndent && layout === "format" ? "\n" + "  ".repeat(stack.length) : "";
+      var parts = children.map(function (child) {
+        if (!changeIndent) return child.value;
+        if (!child.markup) return "";
+        return (indent ? indent + "  " : "") + child.value;
+      });
+      append(frame.start + parts.join("") + indent + closing, true);
+    }
 
     for (var index = 0; index < source.length;) {
       if (source.charAt(index) !== "<") {
@@ -506,7 +556,7 @@
         if (xmlMode && stack.length === 0 && text.trim()) {
           throw new SyntaxError("XML input must have one root element.");
         }
-        output += text;
+        append(text, false);
         index = textEnd;
         continue;
       }
@@ -514,6 +564,7 @@
       if (source.slice(index, index + 4) === "<!--") {
         var commentEnd = source.indexOf("-->", index + 4);
         if (commentEnd < 0) throw new SyntaxError("Unterminated markup comment.");
+        if (layout === "format") append(source.slice(index, commentEnd + 3), true);
         index = commentEnd + 3;
         continue;
       }
@@ -522,7 +573,7 @@
         var cdataEnd = source.indexOf("]]>", index + 9);
         if (cdataEnd < 0) throw new SyntaxError("Unterminated XML CDATA section.");
         if (xmlMode && stack.length === 0) throw new SyntaxError("CDATA must be inside the XML root element.");
-        output += source.slice(index, cdataEnd + 3);
+        append(source.slice(index, cdataEnd + 3), false);
         index = cdataEnd + 3;
         continue;
       }
@@ -530,14 +581,14 @@
       if (source.slice(index, index + 2) === "<?") {
         var processingEnd = source.indexOf("?>", index + 2);
         if (processingEnd < 0) throw new SyntaxError("Unterminated XML processing instruction.");
-        output += source.slice(index, processingEnd + 2);
+        append(source.slice(index, processingEnd + 2), true);
         index = processingEnd + 2;
         continue;
       }
 
       if (source.slice(index, index + 2) === "<!") {
         var declarationEnd = findMarkupEnd(source, index + 2, true);
-        output += source.slice(index, declarationEnd + 1);
+        append(source.slice(index, declarationEnd + 1), true);
         index = declarationEnd + 1;
         continue;
       }
@@ -545,36 +596,48 @@
       var tagEnd = findMarkupEnd(source, index + 1, false);
       var rawTag = source.slice(index, tagEnd + 1);
       var details = markupTagDetails(rawTag);
-      output += normalizeMarkupTag(rawTag);
+      var tag = layout === "format" ? rawTag : normalizeMarkupTag(rawTag);
 
       if (xmlMode) {
         if (details.closing) {
           var expected = stack.pop();
-          if (!expected || expected !== details.name) {
-            throw new SyntaxError("Expected </" + (expected || "none") + "> before </" + details.name + ">.");
+          if (!expected || expected.name !== details.name) {
+            throw new SyntaxError("Expected </" + (expected ? expected.name : "none") + "> before </" + details.name + ">.");
           }
+          finishElement(expected, tag);
         } else {
           if (stack.length === 0) {
             rootCount += 1;
             if (rootCount > 1) throw new SyntaxError("XML input must have one root element.");
           }
-          if (!details.selfClosing) stack.push(details.name);
+          if (details.selfClosing) {
+            append(tag, true);
+          } else {
+            var preserve = stack.length > 0 && stack[stack.length - 1].preserve;
+            if (layout && rawTag.indexOf("xml:space") >= 0) {
+              var space = parseXmlTag(rawTag).attributes.find(function (attribute) { return attribute.name === "xml:space"; });
+              if (space) preserve = space.value === "preserve";
+            }
+            stack.push({ start: tag, name: details.name, preserve: preserve, children: [] });
+          }
         }
-      }
+      } else append(tag, true);
 
       index = tagEnd + 1;
 
-      if (!xmlMode && !details.closing && !details.selfClosing && (details.name.toLowerCase() === "script" || details.name.toLowerCase() === "style")) {
-        var closingNeedle = "</" + details.name.toLowerCase();
-        var rawEnd = lowerSource.indexOf(closingNeedle, index);
-        if (rawEnd < 0) throw new SyntaxError("Unterminated HTML " + details.name.toLowerCase() + " element.");
+      if (!xmlMode && !details.closing && /^(script|style|textarea|title|xmp|iframe|noembed|noframes)$/i.test(details.name)) {
+        var closingTag = new RegExp("</" + details.name + "(?=[\\s/>])", "ig");
+        closingTag.lastIndex = index;
+        var match = closingTag.exec(source);
+        if (!match) throw new SyntaxError("Unterminated HTML " + details.name.toLowerCase() + " element.");
+        var rawEnd = match.index;
         output += source.slice(index, rawEnd);
         index = rawEnd;
       }
     }
 
     if (xmlMode) {
-      if (stack.length) throw new SyntaxError("Expected </" + stack[stack.length - 1] + "> before end of input.");
+      if (stack.length) throw new SyntaxError("Expected </" + stack[stack.length - 1].name + "> before end of input.");
       if (rootCount !== 1) throw new SyntaxError("XML input must have one root element.");
     }
 
@@ -585,8 +648,12 @@
     return minifyMarkup(value, false);
   }
 
-  function minifyXml(value) {
-    return minifyMarkup(value, true);
+  function minifyXml(value, removeIndentation) {
+    return minifyMarkup(value, true, removeIndentation ? "compact" : "");
+  }
+
+  function formatXml(value) {
+    return minifyMarkup(value, true, "format");
   }
 
   var XML_NAME = /^[:_\p{L}][:_\p{L}\p{N}.\-\u00B7\u0300-\u036F\u203F-\u2040]*$/u;
@@ -831,10 +898,11 @@
     return result;
   }
 
-  function elementToJson(element) {
+  function elementToJson(element, preserve) {
     var attributes = attributesToObject(element.attributes);
+    if (attributes["xml:space"]) preserve = attributes["xml:space"] === "preserve";
     var significant = element.children.filter(function (child) {
-      return child.type === "element" || child.value.trim() !== "";
+      return preserve || child.type === "element" || child.type === "cdata" || child.value.trim() !== "";
     });
     var hasElements = significant.some(function (child) { return child.type === "element"; });
     var hasText = significant.some(function (child) { return child.type !== "element"; });
@@ -849,7 +917,7 @@
       result["#content"] = significant.map(function (child) {
         if (child.type !== "element") return child.value;
         var entry = {};
-        entry[child.name] = elementToJson(child);
+        entry[child.name] = elementToJson(child, preserve);
         return entry;
       });
       return result;
@@ -857,7 +925,7 @@
 
     if (hasText) result["#text"] = significant.map(function (child) { return child.value; }).join("");
     significant.filter(function (child) { return child.type === "element"; }).forEach(function (child) {
-      var childValue = elementToJson(child);
+      var childValue = elementToJson(child, preserve);
       if (Object.prototype.hasOwnProperty.call(result, child.name)) {
         if (!Array.isArray(result[child.name])) result[child.name] = [result[child.name]];
         result[child.name].push(childValue);
@@ -965,7 +1033,7 @@
     var value;
     if (typeof sourceOrValue === "string" && settings.value !== true) {
       try {
-        value = JSON.parse(sourceOrValue);
+        value = parseJsonNumbers(sourceOrValue, function (literal) { return literal; });
       } catch (error) {
         throw new SyntaxError("Invalid JSON: " + error.message);
       }
@@ -987,7 +1055,7 @@
 
   // Read JSON tokens from the source. Converting numbers to JavaScript values
   // and back can silently change IDs, exponents, and negative zero.
-  function formatJson(source, spaces, messages) {
+  function formatJson(source, spaces, messages, replaceNumber) {
     var indent = " ".repeat(spaces === undefined ? 2 : spaces);
     var pattern = /[ \t\r\n]+|"(?:[^"\\\u0000-\u001f]|\\(?:["\\/bfnrt]|u[0-9a-fA-F]{4}))*"|true|false|null|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?|[{}\[\],:]/y;
     var closing = [];
@@ -1064,7 +1132,7 @@
           expected = closing.length ? "separator" : "extra";
         }
       }
-      output.push(token);
+      output.push(replaceNumber && /^[-0-9]/.test(first) ? replaceNumber(token) : token);
       previous = token;
       index = pattern.lastIndex;
     }
@@ -1074,8 +1142,82 @@
     return output.join("");
   }
 
+  // Parse the structure with the native parser but recover numbers from their
+  // source tokens, even on browsers without JSON.parse reviver context.
+  function parseJsonNumbers(source, readNumber) {
+    var literals = [];
+    var indexed = formatJson(source, 0, null, function (literal) {
+      return String(literals.push(literal) - 1);
+    });
+    return JSON.parse(indexed, function (key, value) {
+      return typeof value === "number" ? readNumber(literals[value]) : value;
+    });
+  }
+
+  function JsonNumber(literal) {
+    this.literal = literal;
+  }
+
+  function normalizedNumber(literal) {
+    var parts = /^(-?)(\d+)(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/.exec(literal);
+    var fraction = parts[3] || "";
+    var digits = (parts[2] + fraction).replace(/^0+/, "");
+    if (!digits) return "0";
+    var significand = digits.replace(/0+$/, "");
+    var exponent = BigInt(parts[4] || 0) + BigInt(digits.length - significand.length - fraction.length);
+    return parts[1] + significand + "e" + exponent;
+  }
+
+  function stringifyExactJson(value, sortKeys, normalize) {
+    if (value instanceof JsonNumber) return normalize ? normalizedNumber(value.literal) : value.literal;
+    if (Array.isArray(value)) {
+      return "[" + value.map(function (item) { return stringifyExactJson(item, sortKeys, normalize); }).join(",") + "]";
+    }
+    if (value && typeof value === "object") {
+      var keys = Object.keys(value);
+      if (sortKeys) keys.sort();
+      return "{" + keys.map(function (key) {
+        return JSON.stringify(key) + ":" + stringifyExactJson(value[key], sortKeys, normalize);
+      }).join(",") + "}";
+    }
+    return JSON.stringify(value);
+  }
+
+  function decodeUrlPart(text, plusAsSpace) {
+    return decodeURIComponent(plusAsSpace ? text.replace(/\+/g, " ") : text);
+  }
+
+  function queryParameters(input, plusAsSpace) {
+    var beforeHash = input.trim().split("#")[0];
+    var question = beforeHash.indexOf("?");
+    // The tool accepts both full URLs and bare query strings such as a=1&b=2.
+    if (question < 0 && (/^(?:[a-z][\w+.-]*:|\/)/i.test(beforeHash) || !/[=&]/.test(beforeHash))) return [];
+    var query = beforeHash.slice(question + 1);
+    return query.split("&").filter(Boolean).map(function (pair, index) {
+      var equals = pair.indexOf("=");
+      return {
+        index: index + 1,
+        key: decodeUrlPart(equals < 0 ? pair : pair.slice(0, equals), plusAsSpace),
+        value: equals < 0 ? "" : decodeUrlPart(pair.slice(equals + 1), plusAsSpace)
+      };
+    });
+  }
+
+  function decodeUrl(input, plusAsSpace) {
+    if (!/^(?:[a-z][\w+.-]*:\/\/|\/)/i.test(input)) return decodeUrlPart(input, plusAsSpace);
+    var delimiter = input.search(/[?#]/);
+    if (delimiter < 0) return decodeUrlPart(input, false);
+    return decodeUrlPart(input.slice(0, delimiter), false) + decodeUrlPart(input.slice(delimiter), plusAsSpace);
+  }
+
   return {
     formatJson: formatJson,
+    parseExactJson: function (source) { return parseJsonNumbers(source, function (literal) { return new JsonNumber(literal); }); },
+    isJsonNumber: function (value) { return value instanceof JsonNumber; },
+    stringifyExactJson: stringifyExactJson,
+    queryParameters: queryParameters,
+    decodeUrl: decodeUrl,
+    formatXml: formatXml,
     minifyJavaScript: minifyJavaScript,
     minifyCss: minifyCss,
     minifySql: minifySql,

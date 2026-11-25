@@ -52,7 +52,7 @@ permalink: "/cn/xml-minifier.html"
   <p>{{ toolData.examplePara | safe }}</p>
   <div class="code-block-wrapper">
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
-    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | escape }}</pre>
   </div>
 {% endblock %}
 
@@ -88,12 +88,19 @@ permalink: "/cn/xml-minifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
-          outputEditor.value = CodingToolsTextTransforms.minifyXml(text);
+          outputEditor.value = CodingToolsTextTransforms.minifyXml(text, document.getElementById('remove-xml-indent').checked);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML minified successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };

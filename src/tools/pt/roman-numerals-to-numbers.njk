@@ -105,6 +105,7 @@ permalink: "/pt/roman-numerals-to-numbers.html"
 {% endblock %}
 
 {% block tool_script %}
+  <script src="/js/roman-numerals.js?v={{ site.assetVersion }}"></script>
   <script>
     (function () {
       'use strict';
@@ -119,21 +120,6 @@ permalink: "/pt/roman-numerals-to-numbers.html"
       var statusDot     = document.getElementById('status-dot');
       var statusText    = document.getElementById('status-text');
 
-      var ROMAN_VALUES = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
-
-      function romanToInt(str) {
-        str = str.toUpperCase().trim();
-        if (!str || !/^[IVXLCDM]+$/.test(str)) return null;
-        var result = 0;
-        for (var i = 0; i < str.length; i++) {
-          var current = ROMAN_VALUES[str[i]];
-          var next = (i + 1 < str.length) ? ROMAN_VALUES[str[i + 1]] : 0;
-          if (current < next) result -= current;
-          else result += current;
-        }
-        return result > 0 ? result : null;
-      }
-
       function showResult(text, type) {
         numberOutput.textContent = text;
         numberOutput.className = 'tool-output-value';
@@ -146,7 +132,7 @@ permalink: "/pt/roman-numerals-to-numbers.html"
       btnConvert.onclick = function () {
         var input = romanInput.value.trim();
         if (!input) return;
-        var result = romanToInt(input);
+        var result = RomanNumerals.decode(input);
         if (result === null) {
           showResult('{{ t.ui.invalidRomanNumeral }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Use only I, V, X, L, C, D, M');
@@ -187,7 +173,7 @@ permalink: "/pt/roman-numerals-to-numbers.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }
-        var result = romanToInt(input);
+        var result = RomanNumerals.decode(input);
         if (result === null) {
           showResult('{{ t.ui.invalidRomanNumeral }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Use only I, V, X, L, C, D, M');

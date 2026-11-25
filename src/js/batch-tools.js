@@ -236,13 +236,8 @@
     URL.revokeObjectURL(url);
   }
 
-  function utf8ToBase64(value) {
-    var bytes = new TextEncoder().encode(value);
-    var binary = "";
-    for (var i = 0; i < bytes.length; i += 0x8000) {
-      binary += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
-    }
-    return btoa(binary);
+  function inputBytes(value) {
+    return value instanceof Uint8Array ? value : new TextEncoder().encode(value);
   }
 
   function base64ToUtf8(value) {
@@ -262,7 +257,7 @@
     if (!window.crypto || !crypto.subtle) {
       return Promise.reject(new Error(tr("invalidInput", "Invalid input")));
     }
-    return crypto.subtle.digest(algorithm, new TextEncoder().encode(value)).then(bytesToHex);
+    return crypto.subtle.digest(algorithm, inputBytes(value)).then(bytesToHex);
   }
 
   function textTransforms() {
@@ -290,85 +285,16 @@
     return String(value).trim().replace(/\s+/g, "");
   }
 
-  function stripBasePrefix(value, base) {
-    var text = cleanNumberInput(value);
-    if (base === 2) return text.replace(/^0b/i, "");
-    if (base === 8) return text.replace(/^0o/i, "");
-    if (base === 16) return text.replace(/^0x/i, "");
-    return text;
-  }
-
-  function baseToDecimal(value, base) {
-    var text = stripBasePrefix(value, base);
-    var validators = {
-      2: /^[01]+$/,
-      8: /^[0-7]+$/,
-      16: /^[0-9a-fA-F]+$/
-    };
-    if (!validators[base].test(text)) throw new Error(tr("invalidInput", "Invalid input"));
-    return new (requireBigNumber())(text, base).toString(10);
-  }
-
-  function decimalToBase(value, base) {
-    var text = cleanNumberInput(value);
-    if (!/^[+-]?\d+$/.test(text)) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
-    return BigInt(text).toString(base).toUpperCase();
-  }
-
   function convertBase(value, fromBase, toBase) {
-    var text = stripBasePrefix(value, fromBase);
-    var validators = {
-      2: /^[01]+$/,
-      16: /^[0-9a-fA-F]+$/
-    };
-    if (!validators[fromBase].test(text)) throw new Error(tr("invalidInput", "Invalid input"));
-    return new (requireBigNumber())(text, fromBase).toString(toBase).toUpperCase();
-  }
-
-  function textToDelimitedCodes(value, base) {
-    var bytes = new TextEncoder().encode(String(value));
-    var parts = [];
-    for (var i = 0; i < bytes.length; i += 1) {
-      var part = bytes[i].toString(base).toUpperCase();
-      var min = base === 2 ? 8 : 2;
-      while (part.length < min) part = "0" + part;
-      parts.push(part);
+    try {
+      return requireBigNumber().fromInteger(cleanNumberInput(value), fromBase).toString(toBase).toUpperCase();
+    } catch (error) {
+      throw new Error(tr("invalidInput", "Invalid input"));
     }
-    return parts.join(getDelimiter());
-  }
-
-  function hexToAscii(value) {
-    var input = String(value).replace(/[\s,:\-]/g, "");
-    if (!input) return "";
-    if (input.length % 2 !== 0) throw new Error(tr("invalidHexadecimalInput", "Invalid hexadecimal input"));
-    if (!/^[0-9a-fA-F]+$/.test(input)) throw new Error(tr("invalidHexadecimalInput", "Invalid hexadecimal input"));
-    var bytes = new Uint8Array(input.length / 2);
-    for (var i = 0; i < input.length; i += 2) {
-      bytes[i / 2] = parseInt(input.substring(i, i + 2), 16);
-    }
-    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
-  }
-
-  function binaryToText(value) {
-    var input = String(value).replace(/\s/g, "");
-    if (!input) return "";
-    if (input.length % 8 !== 0) throw new Error(tr("invalidBinaryInput", "Invalid binary input"));
-    if (!/^[01]+$/.test(input)) throw new Error(tr("invalidBinaryInput", "Invalid binary input"));
-    var bytes = new Uint8Array(input.length / 8);
-    for (var i = 0; i < input.length; i += 8) {
-      bytes[i / 8] = parseInt(input.substring(i, i + 8), 2);
-    }
-    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
   }
 
   function toSentenceCase(value) {
     return String(value).toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, function (match) {
-      return match.toUpperCase();
-    });
-  }
-
-  function toTitleCase(value) {
-    return String(value).toLowerCase().replace(/\b\w/g, function (match) {
       return match.toUpperCase();
     });
   }
@@ -384,7 +310,7 @@
     var mode = select ? select.value : "upper";
     if (mode === "lower") return String(value).toLowerCase();
     if (mode === "sentence") return toSentenceCase(value);
-    if (mode === "title") return toTitleCase(value);
+    if (mode === "title") return ToolCommon.titleCase(value);
     if (mode === "invert") return invertCase(value);
     return String(value).toUpperCase();
   }
@@ -398,37 +324,7 @@
       var input = document.getElementById("batch-regex-flag-" + flag);
       return input && input.checked;
     }).join("");
-    if (flags.indexOf("g") < 0) flags += "g";
     return String(value).replace(new RegExp(source, flags), replacement ? replacement.value : "");
-  }
-
-  function decodePart(value, plusAsSpace) {
-    var text = plusAsSpace ? String(value).replace(/\+/g, " ") : String(value);
-    return decodeURIComponent(text);
-  }
-
-  function extractQuery(value) {
-    var trimmed = String(value).trim();
-    var hashless = trimmed.split("#")[0];
-    var question = hashless.indexOf("?");
-    if (question >= 0) return hashless.slice(question + 1);
-    return hashless.charAt(0) === "?" ? hashless.slice(1) : hashless;
-  }
-
-  function parseQueryRows(query, plusAsSpace) {
-    var source = extractQuery(query);
-    var pairs = source ? source.split("&").filter(function (part) { return part.length; }) : [];
-    if (!pairs.length || !/[=&]/.test(source)) return [];
-    return pairs.map(function (pair, index) {
-      var eq = pair.indexOf("=");
-      var rawKey = eq >= 0 ? pair.slice(0, eq) : pair;
-      var rawValue = eq >= 0 ? pair.slice(eq + 1) : "";
-      return {
-        index: index + 1,
-        key: decodePart(rawKey, plusAsSpace),
-        value: decodePart(rawValue, plusAsSpace)
-      };
-    });
   }
 
   function decodeUrlText(value) {
@@ -436,21 +332,10 @@
     var includeQueryInput = document.getElementById("batch-url-parse-query");
     var plusAsSpace = !plusAsSpaceInput || plusAsSpaceInput.checked;
     var includeQuery = !includeQueryInput || includeQueryInput.checked;
-    var decoded;
-
-    if (String(value).indexOf("://") < 0) {
-      decoded = decodePart(value, plusAsSpace);
-    } else {
-      var parsed = new URL(value);
-      var path = parsed.pathname.split("/").map(function (segment) {
-        return decodePart(segment, false);
-      }).join("/");
-      var hash = parsed.hash ? "#" + decodePart(parsed.hash.slice(1), plusAsSpace) : "";
-      decoded = parsed.origin + path + parsed.search + hash;
-    }
+    var decoded = textTransforms().decodeUrl(value, plusAsSpace);
 
     if (!includeQuery) return decoded;
-    var queryRows = parseQueryRows(value, plusAsSpace);
+    var queryRows = textTransforms().queryParameters(value, plusAsSpace);
     if (!queryRows.length) return decoded;
     return [decoded, "", "Query parameters"].concat(queryRows.map(function (row) {
       return row.index + ". " + row.key + " = " + row.value;
@@ -465,91 +350,12 @@
     return plus && plus.checked ? output.replace(/%20/g, "+") : output;
   }
 
-  var ROMAN_VALUES = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
-
-  function romanToInt(value) {
-    var text = String(value).toUpperCase().trim();
-    if (!text || !/^[IVXLCDM]+$/.test(text)) throw new Error(tr("invalidRomanNumeral", "Invalid Roman numeral"));
-    var result = 0;
-    for (var i = 0; i < text.length; i += 1) {
-      var current = ROMAN_VALUES[text[i]];
-      var next = i + 1 < text.length ? ROMAN_VALUES[text[i + 1]] : 0;
-      result += current < next ? -current : current;
-    }
-    if (result <= 0 || result > 3999 || intToRoman(result) !== text) throw new Error(tr("invalidRomanNumeral", "Invalid Roman numeral"));
-    return String(result);
-  }
-
-  function intToRoman(value) {
-    var num = Number(cleanNumberInput(value));
-    if (!Number.isInteger(num) || num < 1 || num > 3999) throw new Error(tr("enterNumberBetween1And3999", "Enter a number between 1 and 3999"));
-    var values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-    var symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
-    var result = "";
-    for (var i = 0; i < values.length; i += 1) {
-      while (num >= values[i]) {
-        result += symbols[i];
-        num -= values[i];
-      }
-    }
-    return result;
-  }
-
-  function gcdBigInt(a, b) {
-    a = a < 0n ? -a : a;
-    b = b < 0n ? -b : b;
-    while (b) {
-      var t = b;
-      b = a % b;
-      a = t;
-    }
-    return a || 1n;
-  }
-
-  function pow10BigInt(count) {
-    var result = 1n;
-    for (var i = 0; i < count; i += 1) result *= 10n;
-    return result;
-  }
-
-  function decimalStringToRatio(value) {
-    var text = String(value).trim().replace(/%$/, "");
-    var match = text.match(/^([+-]?)(\d+)(?:\.(\d+))?$/);
-    if (!match) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
-    var sign = match[1] === "-" ? -1n : 1n;
-    var whole = match[2];
-    var decimals = match[3] || "";
-    var denominator = pow10BigInt(decimals.length);
-    var numerator = BigInt(whole + decimals) * sign;
-    var divisor = gcdBigInt(numerator, denominator);
-    return { numerator: numerator / divisor, denominator: denominator / divisor };
-  }
-
-  function formatRatioAsMixedFraction(numerator, denominator) {
-    if (denominator === 0n) throw new Error(tr("denominatorCannotBeZero", "Denominator cannot be zero"));
-    var negative = numerator < 0n;
-    var absNum = negative ? -numerator : numerator;
-    var integer = absNum / denominator;
-    var remainder = absNum % denominator;
-    if (remainder === 0n) return (negative ? "-" : "") + integer.toString();
-    var divisor = gcdBigInt(remainder, denominator);
-    remainder /= divisor;
-    denominator /= divisor;
-    var fraction = remainder.toString() + "/" + denominator.toString();
-    if (integer === 0n) return (negative ? "-" : "") + fraction;
-    return (negative ? "-" : "") + integer.toString() + " " + fraction;
-  }
-
   function parseFraction(value) {
     var text = String(value).trim();
     var match = text.match(/^([+-]?\d+)\s+(\d+)\s*\/\s*(\d+)$/);
     if (match) {
-      var integer = new (requireBigNumber())(match[1]);
-      var numerator = new (requireBigNumber())(match[2]);
-      var denominator = new (requireBigNumber())(match[3]);
-      if (denominator.isZero()) throw new Error(tr("denominatorCannotBeZero", "Denominator cannot be zero"));
-      var fraction = numerator.dividedBy(denominator);
-      return String(match[1]).trim().charAt(0) === "-" ? integer.minus(fraction) : integer.plus(fraction);
+      if (BigInt(match[3]) === 0n) throw new Error(tr("denominatorCannotBeZero", "Denominator cannot be zero"));
+      return requireBigNumber().fromMixed(match[1], match[2], match[3]);
     }
     match = text.match(/^([+-]?\d+)\s*\/\s*(\d+)$/);
     if (match) {
@@ -561,17 +367,18 @@
     throw new Error(tr("invalidInput", "Invalid input"));
   }
 
-  function percentToFraction(value) {
-    var ratio = decimalStringToRatio(value);
-    ratio.denominator *= 100n;
-    var divisor = gcdBigInt(ratio.numerator, ratio.denominator);
-    return formatRatioAsMixedFraction(ratio.numerator / divisor, ratio.denominator / divisor);
+  function mixedFraction(value, percent) {
+    try {
+      return requireBigNumber().mixedFraction(value, percent).text;
+    } catch (error) {
+      throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
+    }
   }
 
   function numberToWordsBatch(value) {
     var text = String(value).trim();
     var num = Number(text);
-    if (!text || isNaN(num) || !isFinite(num) || num !== Math.floor(num) || !Number.isSafeInteger(num)) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
+    if (!/^[+-]?\d+$/.test(text) || !Number.isSafeInteger(num)) throw new Error(tr("invalidDecimalInput", "Invalid decimal input"));
     if (!window.numberToWords || typeof window.numberToWords.toWords !== "function") throw new Error(tr("invalidInput", "Invalid input"));
     return window.numberToWords.toWords(num) + "\n" +
       window.numberToWords.toWordsOrdinal(num) + "\n" +
@@ -579,7 +386,7 @@
   }
 
   function transformText(value) {
-    if (tool === "base64-encode") return Promise.resolve(utf8ToBase64(value));
+    if (tool === "base64-encode") return Promise.resolve(ToolCommon.bytesToBase64(inputBytes(value)));
     if (tool === "base64-decode") return Promise.resolve(base64ToUtf8(value));
     if (tool === "md5-generator") return Promise.resolve(requireGlobal("md5", "MD5 library")(value));
     if (tool === "sha1-generator") return digest("SHA-1", value);
@@ -587,12 +394,12 @@
     if (tool === "sha384-generator") return digest("SHA-384", value);
     if (tool === "sha512-generator") return digest("SHA-512", value);
     if (tool === "json-formatter") return Promise.resolve(textTransforms().formatJson(value, 2, window.CodingToolsJsonMessages));
-    if (tool === "json-minifier") return Promise.resolve(JSON.stringify(JSON.parse(value)));
-    if (tool === "json-to-xml") return Promise.resolve(vkbeautify.xml(textTransforms().jsonToXml(value)));
+    if (tool === "json-minifier") return Promise.resolve(textTransforms().formatJson(value, 0));
+    if (tool === "json-to-xml") return Promise.resolve(textTransforms().formatXml(textTransforms().jsonToXml(value)));
     if (tool === "xml-formatter") {
-      return Promise.resolve(vkbeautify.xml(value));
+      return Promise.resolve(textTransforms().formatXml(value));
     }
-    if (tool === "xml-minifier") return Promise.resolve(textTransforms().minifyXml(value));
+    if (tool === "xml-minifier") return Promise.resolve(textTransforms().minifyXml(value, document.getElementById("batch-remove-xml-indent").checked));
     if (tool === "xml-to-json") return Promise.resolve(JSON.stringify(textTransforms().xmlToJson(value), null, 2));
     if (tool === "html-beautifier") return Promise.resolve(requireGlobal("html_beautify", "HTML beautifier")(value, { indent_size: 2 }));
     if (tool === "html-minifier") return Promise.resolve(textTransforms().minifyHtml(value));
@@ -600,22 +407,22 @@
     if (tool === "javascript-minifier") return Promise.resolve(textTransforms().minifyJavaScript(value));
     if (tool === "css-beautifier") return Promise.resolve(requireGlobal("css_beautify", "CSS beautifier")(value, { indent_size: 2 }));
     if (tool === "css-minifier") return Promise.resolve(textTransforms().minifyCss(value));
-    if (tool === "sql-formatter") return Promise.resolve(sqlFormatter.format(value, { language: "sql", tabWidth: 4 }));
-    if (tool === "sql-minifier") return Promise.resolve(textTransforms().minifySql(value));
+    if (tool === "sql-formatter") return Promise.resolve(sqlFormatter.format(value, { language: document.getElementById("batch-sql-dialect").value, tabWidth: 4 }));
+    if (tool === "sql-minifier") return Promise.resolve(textTransforms().minifySql(value, document.getElementById("batch-sql-dialect").value));
     if (tool === "url-encode") return Promise.resolve(encodeUrlText(value));
     if (tool === "url-decode") return Promise.resolve(decodeUrlText(value));
     if (tool === "case-converter") return Promise.resolve(convertCase(value));
-    if (tool === "reverse-text") return Promise.resolve(String(value).split("").reverse().join(""));
+    if (tool === "reverse-text") return Promise.resolve(ToolCommon.reverseText(String(value)));
     if (tool === "regex-replace") return Promise.resolve(regexReplace(value));
-    if (tool === "hex-to-decimal") return Promise.resolve(baseToDecimal(value, 16));
-    if (tool === "decimal-to-hex") return Promise.resolve(decimalToBase(value, 16));
-    if (tool === "octal-to-decimal") return Promise.resolve(baseToDecimal(value, 8));
-    if (tool === "decimal-to-octal") return Promise.resolve(decimalToBase(value, 8));
-    if (tool === "binary-to-decimal") return Promise.resolve(baseToDecimal(value, 2));
-    if (tool === "decimal-to-binary") return Promise.resolve(decimalToBase(value, 2));
+    if (tool === "hex-to-decimal") return Promise.resolve(convertBase(value, 16, 10));
+    if (tool === "decimal-to-hex") return Promise.resolve(convertBase(value, 10, 16));
+    if (tool === "octal-to-decimal") return Promise.resolve(convertBase(value, 8, 10));
+    if (tool === "decimal-to-octal") return Promise.resolve(convertBase(value, 10, 8));
+    if (tool === "binary-to-decimal") return Promise.resolve(convertBase(value, 2, 10));
+    if (tool === "decimal-to-binary") return Promise.resolve(convertBase(value, 10, 2));
     if (tool === "binary-to-hex") return Promise.resolve(convertBase(value, 2, 16));
     if (tool === "hex-to-binary") return Promise.resolve(convertBase(value, 16, 2));
-    if (byteMode) {
+    if (tool === "hex-to-ascii" || tool === "ascii-to-hex" || tool === "binary-to-text" || tool === "text-to-binary") {
       var delimiter = document.getElementById("batch-delimiter");
       var separator = delimiter && delimiter.value === "none" ? "" : getDelimiter();
       try {
@@ -624,20 +431,21 @@
         throw new Error(window.CodingToolsByteConverter.explain(error, byteErrors));
       }
     }
-    if (tool === "hex-to-ascii") return Promise.resolve(hexToAscii(value));
-    if (tool === "ascii-to-hex") return Promise.resolve(textToDelimitedCodes(value, 16));
-    if (tool === "binary-to-text") return Promise.resolve(binaryToText(value));
-    if (tool === "text-to-binary") return Promise.resolve(textToDelimitedCodes(value, 2));
-    if (tool === "roman-numerals-to-numbers") return Promise.resolve(romanToInt(value));
-    if (tool === "numbers-to-roman-numerals") return Promise.resolve(intToRoman(value));
-    if (tool === "fraction-to-decimal") return Promise.resolve(parseFraction(value).toString(10));
-    if (tool === "decimal-to-fraction") {
-      var ratio = decimalStringToRatio(value);
-      return Promise.resolve(formatRatioAsMixedFraction(ratio.numerator, ratio.denominator));
+    if (tool === "roman-numerals-to-numbers") {
+      var number = window.RomanNumerals.decode(value);
+      if (number === null) throw new Error(tr("invalidRomanNumeral", "Invalid Roman numeral"));
+      return Promise.resolve(String(number));
     }
+    if (tool === "numbers-to-roman-numerals") {
+      var roman = window.RomanNumerals.encode(value);
+      if (!roman) throw new Error(tr("enterNumberBetween1And3999", "Enter a number between 1 and 3999"));
+      return Promise.resolve(roman);
+    }
+    if (tool === "fraction-to-decimal") return Promise.resolve(parseFraction(value).toString(10));
+    if (tool === "decimal-to-fraction") return Promise.resolve(mixedFraction(value, false));
     if (tool === "percent-to-decimal") return Promise.resolve(new (requireBigNumber())(String(value).trim().replace(/%$/, "")).dividedBy(100).toString(10));
     if (tool === "decimal-to-percent") return Promise.resolve(new (requireBigNumber())(String(value).trim()).multipliedBy(100).toString(10) + "%");
-    if (tool === "percent-to-fraction") return Promise.resolve(percentToFraction(value));
+    if (tool === "percent-to-fraction") return Promise.resolve(mixedFraction(value, true));
     if (tool === "fraction-to-percent") return Promise.resolve(parseFraction(value).multipliedBy(100).toString(10) + "%");
     if (tool === "number-to-words") return Promise.resolve(numberToWordsBatch(value));
     return Promise.reject(new Error(tr("invalidInput", "Invalid input")));
@@ -649,8 +457,10 @@
   }
 
   function readTextFile(file) {
-    return file.text().then(function (text) {
-      return { name: file.name, input: text };
+    var rawBytes = /^(?:base64-encode|(?:md5|sha1|sha256|sha384|sha512)-generator)$/.test(tool);
+    var read = rawBytes ? file.arrayBuffer() : file.text();
+    return read.then(function (content) {
+      return { name: file.name, input: rawBytes ? new Uint8Array(content) : content };
     });
   }
 
@@ -762,22 +572,6 @@
     return ["image/png", "image/jpeg", "image/webp"].indexOf(file.type) !== -1;
   }
 
-  function loadImage(file) {
-    return new Promise(function (resolve, reject) {
-      var reader = new FileReader();
-      reader.onload = function (event) {
-        var image = new Image();
-        image.onload = function () {
-          resolve({ image: image, dataUrl: event.target.result });
-        };
-        image.onerror = function () { reject(new Error(tr("invalidInput", "Invalid input"))); };
-        image.src = event.target.result;
-      };
-      reader.onerror = function () { reject(new Error(tr("invalidInput", "Invalid input"))); };
-      reader.readAsDataURL(file);
-    });
-  }
-
   function canvasToBlob(canvas, mime, quality) {
     return new Promise(function (resolve, reject) {
       if (typeof canvas.toBlob !== "function") {
@@ -821,7 +615,7 @@
     if (!supportedResizeMime(file)) return Promise.reject(new Error(tr("unsupportedImageType", "Unsupported image type")));
     if (file.size > 10 * 1024 * 1024) return Promise.reject(new Error(tr("fileTooLarge", "Max file size") + " 10MB"));
 
-    return loadImage(file).then(function (loaded) {
+    return ToolCommon.loadImage(file).then(function (loaded) {
       var image = loaded.image;
       var dimensions = resizeDimensions(image);
       var qualityInput = document.getElementById("batch-quality");
@@ -855,19 +649,15 @@
   function processImageBase64File(file) {
     if (!/^image\//.test(file.type || "")) return Promise.reject(new Error(tr("unsupportedImageType", "Unsupported image type")));
     if (file.size > 2 * 1024 * 1024) return Promise.reject(new Error(tr("fileTooLarge", "Max file size") + " 2MB"));
-    return new Promise(function (resolve, reject) {
-      var reader = new FileReader();
-      reader.onload = function (event) {
-        resolve({
-          ok: true,
-          name: file.name,
-          output: event.target.result,
-          preview: event.target.result.length > 500 ? event.target.result.slice(0, 500) + "\n..." : event.target.result,
-          filename: makeOutputName(file.name, "image-base64", "txt")
-        });
+    return ToolCommon.loadImage(file).then(function (loaded) {
+      var dataUrl = loaded.dataUrl;
+      return {
+        ok: true,
+        name: file.name,
+        output: dataUrl,
+        preview: dataUrl.length > 500 ? dataUrl.slice(0, 500) + "\n..." : dataUrl,
+        filename: makeOutputName(file.name, "image-base64", "txt")
       };
-      reader.onerror = function () { reject(new Error(tr("invalidInput", "Invalid input"))); };
-      reader.readAsDataURL(file);
     });
   }
 

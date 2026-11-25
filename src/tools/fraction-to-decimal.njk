@@ -119,14 +119,12 @@ permalink: "/fraction-to-decimal.html"
         if (!denStr || !numStr) return;
         try {
           var denominator = new BigNumber(denStr);
-          var numerator   = new BigNumber(numStr);
-          var integerVal  = new BigNumber(integerInput.value.trim() || '0');
           if (denominator.isZero()) {
             showResult('Denominator cannot be zero', 'error');
             ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Cannot divide by zero');
             return;
           }
-          var result = integerVal.plus(numerator.dividedBy(denominator));
+          var result = BigNumber.fromMixed(integerInput.value.trim(), numStr, denominator);
           showResult(result.toString(10), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted successfully');
         } catch (e) {

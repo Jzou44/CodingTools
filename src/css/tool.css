@@ -423,6 +423,7 @@ table.description-table tbody tr:last-child td {
 
 .code-block-copy {
   position: absolute;
+  z-index: 1;
   top: 12px;
   right: 12px;
   padding: 6px 10px;
@@ -1774,9 +1775,12 @@ table.ascii-table tbody tr:hover td:nth-child(6) {
   margin-bottom: 16px;
 }
 
-/* --- Responsive --- */
+/* Preserve all reference columns in the scrollable table container. */
+table.roman-chart { table-layout: auto; }
+table.roman-chart :is(th, td):nth-child(n) { width: auto; text-align: left; }
 @media (max-width: 768px) {
   table.ascii-table {
+    min-width: 600px;
     font-size: 12px;
   }
 
@@ -1791,19 +1795,9 @@ table.ascii-table tbody tr:hover td:nth-child(6) {
     font-size: 14px;
   }
 
-  /* Hide binary column on small screens */
-  table.ascii-table th:nth-child(4),
-  table.ascii-table td:nth-child(4) {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
-  /* Hide octal column on very small screens */
-  table.ascii-table th:nth-child(3),
-  table.ascii-table td:nth-child(3) {
-    display: none;
-  }
 
   table.ascii-table th:nth-child(6),
   table.ascii-table td:nth-child(6) {

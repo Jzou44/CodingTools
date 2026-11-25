@@ -88,12 +88,19 @@ permalink: "/pt/css-minifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
           outputEditor.value = CodingToolsTextTransforms.minifyCss(text);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.minifiedSuccessfully }}');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };

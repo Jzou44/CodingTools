@@ -431,75 +431,20 @@
         ToolCommon.updateLineNumbers(outputEditor, outputLineNums);
       }
 
-      function decodePart(value, plusAsSpace) {
-        var text = plusAsSpace ? value.replace(/\+/g, ' ') : value;
-        return decodeURIComponent(text);
-      }
-
-      function extractQuery(value) {
-        var trimmed = value.trim();
-        var hashless = trimmed.split('#')[0];
-        var question = hashless.indexOf('?');
-        if (question >= 0) return hashless.slice(question + 1);
-        return hashless.charAt(0) === '?' ? hashless.slice(1) : hashless;
-      }
-
       function renderQueryRows(query, plusAsSpace) {
         var body = document.getElementById('query-table-body');
         if (!body) return [];
 
-        var source = extractQuery(query);
-        var pairs = source ? source.split('&').filter(function (part) { return part.length; }) : [];
-        if (!pairs.length || !/[=&]/.test(source)) {
+        var rows = CodingToolsTextTransforms.queryParameters(query, plusAsSpace);
+        if (!rows.length) {
           body.innerHTML = '<tr><td colspan="3" class="empty-preview">{{ toolData.labels.noParameters }}</td></tr>';
           return [];
         }
-
-        var rows = pairs.map(function (pair, index) {
-          var eq = pair.indexOf('=');
-          var rawKey = eq >= 0 ? pair.slice(0, eq) : pair;
-          var rawValue = eq >= 0 ? pair.slice(eq + 1) : '';
-          var key = decodePart(rawKey, plusAsSpace);
-          var value = decodePart(rawValue, plusAsSpace);
-          return { index: index + 1, key: key, value: value };
-        });
 
         body.innerHTML = rows.map(function (row) {
           return '<tr><td>' + row.index + '</td><td>' + escapeHtml(row.key) + '</td><td>' + escapeHtml(row.value) + '</td></tr>';
         }).join('');
         return rows;
-      }
-
-      function decodeUrlText(value, plusAsSpace) {
-        if (value.indexOf('://') < 0) return decodePart(value, plusAsSpace);
-
-        var parsed = new URL(value);
-        var path = parsed.pathname.split('/').map(function (segment) {
-          return decodePart(segment, false);
-        }).join('/');
-        var rows = parseQueryRows(value, plusAsSpace);
-        var query = rows.length
-          ? '?' + rows.map(function (row) { return row.key + '=' + row.value; }).join('&')
-          : '';
-        var hash = parsed.hash ? '#' + decodePart(parsed.hash.slice(1), plusAsSpace) : '';
-        return parsed.origin + path + query + hash;
-      }
-
-      function parseQueryRows(query, plusAsSpace) {
-        var source = extractQuery(query);
-        var pairs = source ? source.split('&').filter(function (part) { return part.length; }) : [];
-        if (!pairs.length || !/[=&]/.test(source)) return [];
-
-        return pairs.map(function (pair, index) {
-          var eq = pair.indexOf('=');
-          var rawKey = eq >= 0 ? pair.slice(0, eq) : pair;
-          var rawValue = eq >= 0 ? pair.slice(eq + 1) : '';
-          return {
-            index: index + 1,
-            key: decodePart(rawKey, plusAsSpace),
-            value: decodePart(rawValue, plusAsSpace)
-          };
-        });
       }
 
       function escapeHtml(value) {
@@ -508,9 +453,18 @@
         });
       }
 
+      function resetOutput() {
+        outputEditor.value = '';
+        btnCopy.disabled = btnDownload.disabled = true;
+        var body = document.getElementById('query-table-body');
+        if (body) body.innerHTML = '<tr><td colspan="3" class="empty-preview">{{ toolData.labels.noParameters }}</td></tr>';
+        updateCounts();
+      }
+
       function run() {
         var text = inputEditor.value;
         if (!text) {
+          resetOutput();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.empty);
           return;
         }
@@ -529,8 +483,8 @@
           {% else %}
           var plusAsSpace = document.getElementById('plus-space').checked;
           var parseQuery = document.getElementById('parse-query').checked;
-          var decoded = decodeUrlText(text, plusAsSpace);
-          var rows = parseQuery ? renderQueryRows(text, plusAsSpace) : [];
+          var decoded = CodingToolsTextTransforms.decodeUrl(text, plusAsSpace);
+          var rows = renderQueryRows(parseQuery ? text : '', plusAsSpace);
           var outputLines = [decoded];
           if (rows.length) {
             outputLines.push('', '{{ toolData.labels.queryParameters }}');
@@ -540,9 +494,11 @@
           }
           outputEditor.value = outputLines.join('\n');
           {% endif %}
+          btnCopy.disabled = btnDownload.disabled = false;
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', i18n.success);
           updateCounts();
         } catch (error) {
+          resetOutput();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.failed + error.message);
         }
       }
@@ -550,9 +506,10 @@
       btnGenerate.addEventListener('click', run);
       btnClear.addEventListener('click', function () {
         ToolCommon.clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums);
-        var body = document.getElementById('query-table-body');
-        if (body) body.innerHTML = '<tr><td colspan="3" class="empty-preview">{{ toolData.labels.noParameters }}</td></tr>';
+        resetOutput();
       });
+      resetOutput();
+
       btnCopy.addEventListener('click', function () { ToolCommon.copyOutput(outputEditor, btnCopy); });
       btnDownload.addEventListener('click', function () { ToolCommon.downloadOutput(outputEditor, '{{ filename }}'); });
 
@@ -660,30 +617,18 @@
       var i18n = document.getElementById('tool-i18n').dataset;
 
       function typeOf(value) {
+        if (CodingToolsTextTransforms.isJsonNumber(value)) return 'number';
         if (Array.isArray(value)) return 'array';
         if (value === null) return 'null';
         return typeof value;
       }
 
-      function stable(value) {
-        if (Array.isArray(value)) return value.map(stable);
-        if (!value || typeof value !== 'object') return value;
-        return Object.keys(value).sort().reduce(function (acc, key) {
-          acc[key] = stable(value[key]);
-          return acc;
-        }, {});
-      }
-
-      function comparable(value, sortKeys) {
-        return sortKeys ? stable(value) : value;
-      }
-
       function same(a, b, sortKeys) {
-        return JSON.stringify(comparable(a, sortKeys)) === JSON.stringify(comparable(b, sortKeys));
+        return CodingToolsTextTransforms.stringifyExactJson(a, sortKeys, true) === CodingToolsTextTransforms.stringifyExactJson(b, sortKeys, true);
       }
 
       function inspect(value) {
-        return JSON.stringify(value, null, 2);
+        return CodingToolsTextTransforms.formatJson(CodingToolsTextTransforms.stringifyExactJson(value), 2);
       }
 
       function addChange(changes, type, path, left, right) {
@@ -797,13 +742,14 @@
 
       function compare() {
         if (!leftEditor.value || !rightEditor.value) {
+          resetOutput();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.empty);
           return;
         }
 
         try {
-          var left = JSON.parse(leftEditor.value);
-          var right = JSON.parse(rightEditor.value);
+          var left = CodingToolsTextTransforms.parseExactJson(leftEditor.value);
+          var right = CodingToolsTextTransforms.parseExactJson(rightEditor.value);
           var showUnchanged = document.getElementById('show-unchanged').checked;
           var sortKeys = document.getElementById('sort-keys').checked;
           var changes = [];
@@ -814,29 +760,37 @@
           document.getElementById('summary-changed').textContent = summary.changed;
           document.getElementById('summary-unchanged').textContent = summary.unchanged;
           render(changes, summary);
+          btnCopy.disabled = btnDownload.disabled = false;
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', i18n.success);
           updateCounts();
           ToolCommon.trackToolSuccess('json_compare');
         } catch (error) {
+          resetOutput();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', i18n.failed + error.message);
         }
       }
 
-      function clearAll() {
-        leftEditor.value = '';
-        rightEditor.value = '';
+      function resetOutput() {
+        btnCopy.disabled = btnDownload.disabled = true;
         outputEditor.value = '';
         ['summary-added', 'summary-removed', 'summary-changed', 'summary-unchanged'].forEach(function (id) {
           document.getElementById(id).textContent = '0';
         });
         previewList.innerHTML = '<div class="empty-preview">{{ toolData.labels.noDiff }}</div>';
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
         updateCounts();
+      }
+
+      function clearAll() {
+        leftEditor.value = '';
+        rightEditor.value = '';
+        resetOutput();
+        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
         ToolCommon.updateLineNumbers(leftEditor, leftLineNums);
         ToolCommon.updateLineNumbers(rightEditor, rightLineNums);
         leftEditor.focus();
       }
 
+      resetOutput();
       btnGenerate.addEventListener('click', compare);
       btnClear.addEventListener('click', clearAll);
       btnCopy.addEventListener('click', function () { ToolCommon.copyOutput(outputEditor, btnCopy); });
@@ -1144,7 +1098,9 @@
         }
 
         try {
-          var changes = diffLines(leftEditor.value.split(/\r?\n/), rightEditor.value.split(/\r?\n/));
+          var leftLines = leftEditor.value ? leftEditor.value.split(/\r?\n/) : [];
+          var rightLines = rightEditor.value ? rightEditor.value.split(/\r?\n/) : [];
+          var changes = diffLines(leftLines, rightLines);
           var summary = summarize(changes);
           var showUnchanged = document.getElementById('show-unchanged').checked;
           document.getElementById('summary-added').textContent = summary.added;

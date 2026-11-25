@@ -235,6 +235,8 @@
         </div>
       </div>
       {% endif %}
+      {% import "macros/format-options.njk" as formatOptions %}
+      {{ formatOptions.controls(currentTool, toolData, '') }}
       {% block tool_content %}{% endblock %}
       {% if currentTool in batchEnabledTools %}
       </div>
@@ -268,6 +270,7 @@
           </div>
           {% endif %}
           {% else %}
+          {{ formatOptions.controls(currentTool, toolData, 'batch-') }}
           {% block batch_tool_options %}{% endblock %}
           {% if currentTool in batchUrlTools or currentTool == "case-converter" or currentTool == "regex-replace" or currentTool in batchDelimiterTools %}
           <div class="batch-card">
@@ -405,6 +408,9 @@
     "xml-to-json"
   ] %}
   {% set textTransformerTools = [
+    "json-diff",
+    "json-minifier",
+    "url-decode",
     "css-minifier",
     "html-minifier",
     "javascript-minifier",

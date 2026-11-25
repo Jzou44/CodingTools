@@ -8,7 +8,6 @@ permalink: "/xml-formatter.html"
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
-  <script src="/js/vkbeautify.js"></script>
 {% endblock %}
 
 {% import "macros/editor.njk" as editor %}
@@ -62,13 +61,19 @@ permalink: "/xml-formatter.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
-          var minified = htmlminifier.minify(text, {collapseWhitespace: true, minifyJS: true, minifyCSS: true, removeComments: true});
-          outputEditor.value = vkbeautify.xml(minified);
+          outputEditor.value = CodingToolsTextTransforms.formatXml(text);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML formatted successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Formatting failed: ' + e.message);
         }
       };

@@ -132,7 +132,7 @@ permalink: "/es/rgba-to-hex.html"
       var statusText = document.getElementById('status-text');
 
       function toHex(n) {
-        var hex = parseInt(n, 10).toString(16).toUpperCase();
+        var hex = n.toString(16).toUpperCase();
         return hex.length === 1 ? '0' + hex : hex;
       }
 
@@ -156,16 +156,16 @@ permalink: "/es/rgba-to-hex.html"
       }
 
       function convert() {
-        var r = parseInt(rInput.value, 10);
-        var g = parseInt(gInput.value, 10);
-        var b = parseInt(bInput.value, 10);
-        var a = parseInt(aInput.value, 10);
-        if (isNaN(r) || isNaN(g) || isNaN(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
+        var r = rInput.valueAsNumber;
+        var g = gInput.valueAsNumber;
+        var b = bInput.valueAsNumber;
+        var a = aInput.valueAsNumber;
+        if (!Number.isInteger(r) || !Number.isInteger(g) || !Number.isInteger(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
           showResult('RGB values must be 0–255', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'RGB values must be between 0 and 255');
           return;
         }
-        if (isNaN(a) || a < 0 || a > 100) {
+        if (!Number.isInteger(a) || a < 0 || a > 100) {
           showResult('{{ t.ui.alphaMustBe0to100 }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.alphaMustBe0to100 }}');
           return;
@@ -213,21 +213,12 @@ permalink: "/es/rgba-to-hex.html"
       });
 
       function liveConvert() {
-        var r = parseInt(rInput.value, 10);
-        var g = parseInt(gInput.value, 10);
-        var b = parseInt(bInput.value, 10);
-        var a = parseInt(aInput.value, 10);
         if (rInput.value === '' && gInput.value === '' && bInput.value === '') {
           showResult('{{ toolData.resultPlaceholder }}', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }
-        if (isNaN(r) || isNaN(g) || isNaN(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) return;
-        if (isNaN(a) || a < 0 || a > 100) return;
-        var hex = '#' + toHex(r) + toHex(g) + toHex(b);
-        var alpha = a / 100;
-        showResult(hex, 'valid', r, g, b, alpha, a);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.converted }}');
+        convert();
       }
 
       rInput.addEventListener('input', liveConvert);

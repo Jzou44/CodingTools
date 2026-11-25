@@ -29,7 +29,8 @@
     "example": "Example",
     "examplePara": "A formatted query is reduced to one line while keeping spaces between SQL tokens:",
     "exampleCode": "--- Formatted Input ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minified Output ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "Minify SQL"
+    "buttonLabel": "Minify SQL",
+    "dialectLabel": "SQL dialect"
   },
   "cn": {
     "title": "SQL 压缩器 - Coding.Tools",
@@ -61,7 +62,8 @@
     "example": "示例",
     "examplePara": "格式化查询减少为一行，同时在 SQL 标记之间保留空格：",
     "exampleCode": "--- 格式化输入 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 压缩输出 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "压缩 SQL"
+    "buttonLabel": "压缩 SQL",
+    "dialectLabel": "SQL 方言"
   },
   "tw": {
     "title": "SQL 壓縮器 - Coding.Tools",
@@ -93,7 +95,8 @@
     "example": "範例",
     "examplePara": "格式化查詢減少為一行，同時在 SQL 標記之間保留空格：",
     "exampleCode": "--- 格式化輸入 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 壓縮輸出 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "壓縮 SQL"
+    "buttonLabel": "壓縮 SQL",
+    "dialectLabel": "SQL 方言"
   },
   "jp": {
     "title": "SQL 圧縮 - Coding.Tools",
@@ -125,7 +128,8 @@
     "example": "例",
     "examplePara": "フォーマットされたクエリは、SQL トークン間のスペースを維持しながら 1 行に短縮されます。",
     "exampleCode": "--- 整形入力 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 圧縮出力 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "SQL を圧縮"
+    "buttonLabel": "SQL を圧縮",
+    "dialectLabel": "SQL 方言"
   },
   "kr": {
     "title": "SQL 압축 - Coding.Tools",
@@ -157,7 +161,8 @@
     "example": "예시",
     "examplePara": "형식화된 쿼리는 SQL 토큰 사이에 공백을 유지하면서 한 줄로 줄어듭니다.",
     "exampleCode": "--- 포맷된 입력 ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- 압축 출력 ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "SQL 압축"
+    "buttonLabel": "SQL 압축",
+    "dialectLabel": "SQL 방언"
   },
   "fr": {
     "title": "Minifieur SQL - Coding.Tools",
@@ -189,7 +194,8 @@
     "example": "Exemple",
     "examplePara": "Une requête formatée est réduite à une seule ligne tout en gardant des espaces entre les tokens SQL :",
     "exampleCode": "--- Entrée formatée ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Sortie minifiée ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "Minifier SQL"
+    "buttonLabel": "Minifier SQL",
+    "dialectLabel": "Dialecte SQL"
   },
   "de": {
     "title": "SQL-Minifizierer - Coding.Tools",
@@ -221,7 +227,8 @@
     "example": "Beispiel",
     "examplePara": "Eine formatierte Abfrage wird auf eine Zeile reduziert, wobei Leerzeichen zwischen SQL-Tokens beibehalten werden:",
     "exampleCode": "--- Formatierte Eingabe ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Minifizierte Ausgabe ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "SQL minifizieren"
+    "buttonLabel": "SQL minifizieren",
+    "dialectLabel": "SQL-Dialekt"
   },
   "es": {
     "title": "Minificador SQL - Coding.Tools",
@@ -253,7 +260,8 @@
     "example": "Ejemplo",
     "examplePara": "Una consulta formateada se reduce a una línea manteniendo espacios entre los tokens SQL:",
     "exampleCode": "--- Entrada formateada ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Salida minificada ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "Minificar SQL"
+    "buttonLabel": "Minificar SQL",
+    "dialectLabel": "Dialecto SQL"
   },
   "pt": {
     "title": "Minificador SQL - Coding.Tools",
@@ -285,6 +293,7 @@
     "example": "Exemplo",
     "examplePara": "Uma consulta formatada é reduzida a uma linha, mantendo espaços entre os tokens SQL:",
     "exampleCode": "--- Entrada formatada ---\nSELECT\n  u.name,\n  u.email\nFROM users u\nWHERE u.active = 1;\n\n--- Saída minificada ---\nSELECT u.name, u.email FROM users u WHERE u.active = 1;",
-    "buttonLabel": "Minificar SQL"
+    "buttonLabel": "Minificar SQL",
+    "dialectLabel": "Dialeto SQL"
   }
 }

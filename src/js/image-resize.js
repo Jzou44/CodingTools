@@ -28,6 +28,8 @@
   var controls = [widthInput, heightInput, aspectInput, percentInput, qualityInput].concat(Array.from(document.querySelectorAll("[data-preset], [data-size]")));
   var updating = false;
   var timer = null;
+  var renderVersion = 0;
+  var fileVersion = 0;
 
   function setStatus(type, text) {
     ToolCommon.updateStatus(statusMessage, statusDot, statusText, type, text);
@@ -60,8 +62,15 @@
     });
   }
 
-  function scheduleRender() {
+  function invalidateRender() {
     clearTimeout(timer);
+    renderVersion++;
+    state.blob = null;
+    btnDownload.disabled = true;
+  }
+
+  function scheduleRender() {
+    invalidateRender();
     timer = setTimeout(renderResult, 80);
   }
 
@@ -98,12 +107,13 @@
     setStatus("invalid", L.invalidInput || "Could not export image");
   }
 
-  function exportPng(canvas) {
+  function exportPng(canvas, version) {
     if (typeof canvas.toBlob !== "function") {
       exportFailed();
       return;
     }
     canvas.toBlob(function (blob) {
+      if (version !== renderVersion) return;
       if (!blob) {
         exportFailed();
         return;
@@ -114,6 +124,8 @@
 
   function renderResult() {
     if (!state.image) return;
+    invalidateRender();
+    var version = renderVersion;
     var width = Math.max(1, Math.round(Number(widthInput.value) || state.image.width));
     var height = Math.max(1, Math.round(Number(heightInput.value) || state.image.height));
     var canvas = document.createElement("canvas");
@@ -132,12 +144,13 @@
       return;
     }
     canvas.toBlob(function (blob) {
+      if (version !== renderVersion) return;
       if (!blob) {
-        exportPng(canvas);
+        exportPng(canvas, version);
         return;
       }
       if (state.mime !== "image/png" && blob.type && blob.type !== state.mime) {
-        exportPng(canvas);
+        exportPng(canvas, version);
         return;
       }
       setBlob(blob, width, height, blob.type || state.mime);
@@ -153,12 +166,18 @@
       setStatus("invalid", L.tooLarge);
       return;
     }
+    var version = ++fileVersion;
+    invalidateRender();
     resetUrls();
+    state.image = null;
+    enableControls(false);
     setStatus("idle", L.processing);
     var reader = new FileReader();
     reader.onload = function (event) {
+      if (version !== fileVersion) return;
       var image = new Image();
       image.onload = function () {
+        if (version !== fileVersion) return;
         state.file = file;
         state.image = image;
         state.originalUrl = event.target.result;
@@ -178,17 +197,21 @@
         setStatus("valid", L.loaded);
       };
       image.onerror = function () {
+        if (version !== fileVersion) return;
         setStatus("invalid", L.invalidFile);
       };
       image.src = event.target.result;
     };
     reader.onerror = function () {
+      if (version !== fileVersion) return;
       setStatus("invalid", L.invalidFile);
     };
     reader.readAsDataURL(file);
   }
 
   function reset() {
+    fileVersion++;
+    invalidateRender();
     resetUrls();
     state = { file: null, image: null, originalUrl: "", resultUrl: "", blob: null, mime: "image/png", name: "image" };
     originalPreview.removeAttribute("src");

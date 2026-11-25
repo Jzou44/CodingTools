@@ -16,7 +16,7 @@
     "steps": [
       "Drag and drop images onto the upload area, or click to select files.",
       "Each image is processed and all EXIF metadata is removed.",
-      "Download individual cleaned images or use <strong>Download All</strong> to get a ZIP archive."
+      "<strong>Download All</strong> saves one cleaned image directly or several images together in a ZIP."
     ],
     "whatIs": "Why remove EXIF data?",
     "whatIsParas": [
@@ -43,7 +43,7 @@
     "howToUse": "如何删除并核对照片定位",
     "steps": [
       "选择照片，等待文件旁出现下载链接。",
-      "下载清理后的副本；有多个结果时，可使用「下载全部」保存 ZIP。",
+      "点击<strong>下载全部</strong>时，单张直接保存为清理后的图片，多张打包为 ZIP。",
       "用<a href=\"exif-viewer.html\">照片 EXIF 查看器</a>打开刚下载的 JPEG，检查 GPSLatitude 和 GPSLongitude 是否已消失。"
     ],
     "whatIs": "为什么要删除EXIF数据？",
@@ -72,7 +72,7 @@
     "steps": [
       "將圖像拖曳到上傳區域，或按一下選擇檔案。",
       "每個影像都會被處理，所有 EXIF 中繼資料都會被刪除。",
-      "下載單獨的已清理影像或使用 <strong>下載全部</strong> 取得 ZIP 檔案。"
+      "點選<strong>下載全部</strong>時，單張直接儲存為清理後的圖片，多張則打包成 ZIP。"
     ],
     "whatIs": "為什麼要刪除EXIF資料？",
     "whatIsParas": [
@@ -99,7 +99,7 @@
     "howToUse": "位置情報を削除して確認する手順",
     "steps": [
       "写真を選び、ファイル名の横にダウンロードリンクが表示されるまで待ちます。",
-      "処理済みの写真を保存します。複数枚をまとめて保存すると ZIP になります。",
+      "<strong>すべてダウンロード</strong>を押すと、処理済みの画像が1枚ならそのまま、複数枚ならZIPで保存されます。",
       "保存した JPEG を<a href=\"exif-viewer.html\">Exif ビューア</a>で開き、GPSLatitude と GPSLongitude が残っていないことを確認します。"
     ],
     "whatIs": "なぜ EXIF データを削除するのですか?",
@@ -128,7 +128,7 @@
     "steps": [
       "이미지를 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택하세요.",
       "각 이미지가 처리되고 모든 EXIF 메타데이터가 제거됩니다.",
-      "정리된 개별 이미지를 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
+      "<strong>모두 다운로드</strong>를 누르면 처리된 이미지가 한 장일 때는 그대로, 여러 장일 때는 ZIP 파일로 저장됩니다."
     ],
     "whatIs": "EXIF 데이터를 제거하는 이유는 무엇인가요?",
     "whatIsParas": [
@@ -156,7 +156,7 @@
     "steps": [
       "Faites glisser et déposez les images sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
       "Chaque image est traitée et toutes les métadonnées EXIF sont supprimées.",
-      "Téléchargez des images nettoyées individuellement ou utilisez <strong>Tout télécharger</strong> pour obtenir une archive ZIP."
+      "<strong>Tout télécharger</strong> enregistre directement une seule image nettoyée et regroupe plusieurs images dans une archive ZIP."
     ],
     "whatIs": "Pourquoi supprimer les données EXIF ?",
     "whatIsParas": [
@@ -184,7 +184,7 @@
     "steps": [
       "Ziehen Sie Bilder per Drag-and-Drop in den Upload-Bereich oder klicken Sie, um Dateien auszuwählen.",
       "Jedes Bild wird verarbeitet und alle EXIF-Metadaten werden entfernt.",
-      "Laden Sie einzelne bereinigte Bilder herunter oder verwenden Sie <strong>Alle herunterladen</strong>, um ein ZIP-Archiv zu erhalten."
+      "<strong>Alle herunterladen</strong> speichert ein einzelnes bereinigtes Bild direkt. Mehrere Bilder werden in einem ZIP-Archiv gespeichert."
     ],
     "whatIs": "Warum EXIF-Daten entfernen?",
     "whatIsParas": [
@@ -212,7 +212,7 @@
     "steps": [
       "Arrastre y suelte imágenes en el área de carga o haga clic para seleccionar archivos.",
       "Cada imagen se procesa y se eliminan todos los metadatos EXIF.",
-      "Descargue imágenes limpias individuales o use <strong>Descargar todo</strong> para obtener un archivo ZIP."
+      "<strong>Descargar todo</strong> guarda una sola imagen limpia directamente o reúne varias en un archivo ZIP."
     ],
     "whatIs": "¿Por qué eliminar datos EXIF?",
     "whatIsParas": [
@@ -240,7 +240,7 @@
     "steps": [
       "Arraste e solte imagens na área de upload ou clique para selecionar os arquivos.",
       "Cada imagem é processada e todos os metadados EXIF são removidos.",
-      "Baixe imagens limpas individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
+      "<strong>Baixar tudo</strong> salva uma única imagem limpa diretamente ou agrupa várias em um arquivo ZIP."
     ],
     "whatIs": "Por que remover dados EXIF?",
     "whatIsParas": [

@@ -88,13 +88,13 @@ permalink: "/fr/md5-generator.html"
       }
 
       btnGenerate.onclick = function () {
-        var text = inputEditor.value;
-        if (!text) return;
         try {
-          outputEditor.value = md5(text);
+          outputEditor.value = md5(ToolCommon.editorBytes(inputEditor));
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'MD5 hash generated successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Hash generation failed: ' + e.message);
         }
       };

@@ -89,12 +89,19 @@ permalink: "/fr/sql-formatter.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
-          outputEditor.value = sqlFormatter.format(text, {language: 'sql', tabWidth: 4});
+          outputEditor.value = sqlFormatter.format(text, {language: document.getElementById('sql-dialect').value, tabWidth: 4});
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SQL formatted successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.formattingFailed }}' + e.message);
         }
       };

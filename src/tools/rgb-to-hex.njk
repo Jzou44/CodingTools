@@ -103,7 +103,7 @@ permalink: "/rgb-to-hex.html"
       var statusText    = document.getElementById('status-text');
 
       function toHex(n) {
-        var hex = parseInt(n, 10).toString(16).toUpperCase();
+        var hex = n.toString(16).toUpperCase();
         return hex.length === 1 ? '0' + hex : hex;
       }
 
@@ -124,10 +124,10 @@ permalink: "/rgb-to-hex.html"
       }
 
       function convert() {
-        var r = parseInt(rInput.value, 10);
-        var g = parseInt(gInput.value, 10);
-        var b = parseInt(bInput.value, 10);
-        if (isNaN(r) || isNaN(g) || isNaN(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
+        var r = rInput.valueAsNumber;
+        var g = gInput.valueAsNumber;
+        var b = bInput.valueAsNumber;
+        if (!Number.isInteger(r) || !Number.isInteger(g) || !Number.isInteger(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
           showResult('Values must be 0–255', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Values must be between 0 and 255');
           return;
@@ -174,18 +174,12 @@ permalink: "/rgb-to-hex.html"
 
       // Live conversion on input
       function liveConvert() {
-        var r = parseInt(rInput.value, 10);
-        var g = parseInt(gInput.value, 10);
-        var b = parseInt(bInput.value, 10);
         if (rInput.value === '' && gInput.value === '' && bInput.value === '') {
           showResult('Result will appear here', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }
-        if (isNaN(r) || isNaN(g) || isNaN(b) || r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) return;
-        var hex = '#' + toHex(r) + toHex(g) + toHex(b);
-        showResult(hex, 'valid', hex);
-        ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'Converted');
+        convert();
       }
 
       rInput.addEventListener('input', liveConvert);

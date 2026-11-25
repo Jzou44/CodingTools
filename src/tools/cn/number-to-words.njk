@@ -144,7 +144,7 @@ permalink: "/cn/number-to-words.html"
         }
 
         var num = Number(raw);
-        if (isNaN(num) || !isFinite(num) || num !== Math.floor(num)) {
+        if (!/^[+-]?\d+$/.test(raw) || !Number.isSafeInteger(num)) {
           showPrimary('{{ toolData.invalidInput }}', 'error');
           showSecondary(resultOrdinalWord, ordinalWordCard, '—', 'empty');
           showSecondary(resultOrdinalNum, ordinalNumCard, '—', 'empty');

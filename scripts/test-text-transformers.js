@@ -115,6 +115,79 @@ test("JSON objects and arrays always produce one complete XML root", () => {
   );
 });
 
+test("JSON conversion and comparison preserve exact numeric values and scalar types", () => {
+  const source = '{"n":9007199254740993,"m":1e400,"id":"001","v":-0}';
+  assert.equal(transforms.stringifyExactJson(transforms.parseExactJson(source)), source);
+  assert.equal(transforms.jsonToXml(source), "<root><n>9007199254740993</n><m>1e400</m><id>001</id><v>-0</v></root>");
+  const comparable = text => transforms.stringifyExactJson(transforms.parseExactJson(text), true, true);
+  assert.notEqual(comparable("9007199254740992"), comparable("9007199254740993"));
+  assert.notEqual(comparable('"1"'), comparable("1"));
+  assert.equal(comparable('{"a":[0.0100,0,-2e500]}'), comparable('{"a":[1E-2,-0,-200e498]}'));
+  assert.notEqual(comparable('{"__proto__":1}'), comparable("{}"));
+});
+
+test("JavaScript transformations preserve restricted newlines and regex after a condition", () => {
+  const beautify = require("../src/js/beautify").js_beautify;
+  for (const expression of ["[1]", "(1)", "{value:1}", "1"]) {
+    const source = "(function () {return\n" + expression + "})()";
+    assert.equal(vm.runInNewContext(beautify(source)), vm.runInNewContext(source));
+  }
+  for (const source of [
+    'if ((true)) /[/*]/.test("/");',
+    'let x = 2; while (x-- > 1) /[/*]/.test("*"); x;',
+    'const o = {if(){return 12}}; o.if() / 3;',
+    'if /* before */ (true) /* after */ /[/*]/.test("x");'
+  ]) {
+    assert.equal(vm.runInNewContext(transforms.minifyJavaScript(source)), vm.runInNewContext(source));
+  }
+});
+
+test("CSS descendant pseudo-classes and HTML text areas retain their meaning", () => {
+  assert.equal(transforms.minifyCss("div :first-child { color: red; }"), "div :first-child{color:red}");
+  assert.equal(transforms.minifyCss("div:first-child { color: red; }"), "div:first-child{color:red}");
+  assert.equal(transforms.minifyCss("div/*comment*/:first-child {color:red}"), "div/**/:first-child{color:red}");
+  const raw = "<TEXTAREA><!--hello--></textarea-extra><!--world--></textarea>";
+  assert.equal(transforms.minifyHtml(raw + "<!--remove-->"), raw);
+});
+
+test("XML indentation respects mixed text and inherited xml:space", () => {
+  const preserved = '<p xml:space="preserve"><a/> <b><c/> <d/></b></p>';
+  assert.equal(transforms.formatXml(preserved), preserved);
+  assert.equal(transforms.minifyXml(preserved, true), preserved);
+  const example = "<root>\n  <name>John</name>\n  <age>30</age>\n</root>";
+  const compact = "<root><name>John</name><age>30</age></root>";
+  assert.equal(transforms.minifyXml(example, false), example);
+  assert.equal(transforms.minifyXml(example, true), compact);
+  assert.equal(transforms.formatXml(compact), example);
+  assert.equal(transforms.formatXml('<p>Hello <b>world</b>!</p>'), '<p>Hello <b>world</b>!</p>');
+  const data = transforms.xmlToJson('<r xml:space="preserve"><a> </a><b xml:space="default"> </b></r>').r;
+  assert.equal(data.a, " ");
+  assert.deepEqual(data.b, {"@attributes": {"xml:space": "default"}});
+  assert.equal(transforms.xmlToJson('<r xml:space="preserve"> </r>').r["#text"], " ");
+});
+
+test("SQL string quoting follows the chosen dialect", () => {
+  const sql = "SELECT '\\' AS s;";
+  assert.equal(transforms.minifySql(sql), sql);
+  assert.equal(transforms.minifySql(sql, "sqlite"), sql);
+  assert.equal(transforms.minifySql("SELECT 1 /* SQLite stops at the first /* closing delimiter */ + 2", "sqlite"), "SELECT 1 + 2");
+  assert.equal(transforms.minifySql("SELECT 'it\\'s' -- keep string\nFROM t", "mysql"), "SELECT 'it\\'s' FROM t");
+  assert.equal(transforms.minifySql("SELECT 1--2; # remove", "mysql"), "SELECT 1--2;");
+  assert.equal(transforms.minifySql("SELECT /*! STRAIGHT_JOIN */ /*+ HINT */ a FROM t -- remove", "mysql"),
+    "SELECT /*! STRAIGHT_JOIN */ /*+ HINT */ a FROM t");
+  assert.equal(transforms.minifySql("SELECT 'it''s' -- keep string\nFROM t", "sqlite"), "SELECT 'it''s' FROM t");
+});
+
+test("URL decoding preserves query flags and only parses the query portion", () => {
+  for (const input of ["https://example.test/a?debug", "https://example.test/a=b", "https://example.test/a?#x"]) {
+    assert.equal(transforms.decodeUrl(input, true), input);
+  }
+  assert.deepEqual(transforms.queryParameters("https://example.test/a=b#?x", true), []);
+  assert.deepEqual(transforms.queryParameters("https://example.test/a?debug&x=a+b#end", true), [
+    { index: 1, key: "debug", value: "" }, { index: 2, key: "x", value: "a b" }
+  ]);
+});
+
 test("XML conversion preserves case, attributes, entities, and repeated children", () => {
   const result = transforms.xmlToJson('<Root ID="7"><Item>A &amp; B</Item><Item><![CDATA[C < D]]></Item></Root>');
   assert.deepStrictEqual(result, {

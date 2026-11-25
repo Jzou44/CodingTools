@@ -10,9 +10,9 @@ permalink: "/tw/regex-tester.html"
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/lib/codemirror.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/lib/codemirror.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.21/mode/xml/xml.min.js"></script>
+  <link rel="stylesheet" href="/assets/codemirror/5.65.21/lib/codemirror.css">
+  <script src="/assets/codemirror/5.65.21/lib/codemirror.js"></script>
+  <script src="/assets/codemirror/5.65.21/mode/xml/xml.js"></script>
 {% endblock %}
 
 {% block tool_content %}
@@ -163,27 +163,8 @@ permalink: "/tw/regex-tester.html"
         }
 
         try {
-          var flags = getFlags();
-          if (!flags.includes('g')) flags += 'g';
-          var regex = new RegExp(pattern, flags);
-          var matches = [];
-          var match;
-
-          if (flags.includes('y')) {
-            var lastIndex = 0;
-            while ((match = regex.exec(text)) !== null) {
-              matches.push({ index: match.index, length: match[0].length, value: match[0] });
-              if (match.index === lastIndex && match[0].length === 0) { regex.lastIndex++; }
-              lastIndex = regex.lastIndex;
-              if (matches.length > 10000) break;
-            }
-          } else {
-            while ((match = regex.exec(text)) !== null) {
-              matches.push({ index: match.index, length: match[0].length, value: match[0] });
-              if (match[0].length === 0) { regex.lastIndex++; }
-              if (matches.length > 10000) break;
-            }
-          }
+          var regex = new RegExp(pattern, getFlags());
+          var matches = ToolCommon.regexMatches(text, regex);
 
           if (matches.length === 0) {
             matchOutput.innerHTML = escapeHtml(text);

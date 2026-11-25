@@ -88,13 +88,20 @@ permalink: "/de/sql-minifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
-          var result = CodingToolsTextTransforms.minifySql(text);
+          var result = CodingToolsTextTransforms.minifySql(text, document.getElementById('sql-dialect').value);
           outputEditor.value = result;
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SQL minified successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };

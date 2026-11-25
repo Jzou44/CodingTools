@@ -109,15 +109,9 @@ permalink: "/cn/word-counter.html"
       var statReadingTime  = document.getElementById('stat-reading-time');
       var statSpeakingTime = document.getElementById('stat-speaking-time');
 
-      function countWords(text) {
-        var trimmed = text.trim();
-        if (!trimmed) return 0;
-        return trimmed.split(/\s+/).filter(function (w) { return w.length > 0; }).length;
-      }
-
       function countSentences(text) {
         if (!text.trim()) return 0;
-        var matches = text.match(/[.!?]+[\s​]+|[.!?]+$|[.!?]+$/gm);
+        var matches = text.match(/[。！？]+|[.!?]+(?=\s|$)/gu);
         return matches ? matches.length : 0;
       }
 
@@ -141,7 +135,7 @@ permalink: "/cn/word-counter.html"
 
       function updateStats() {
         var text = inputEditor.value;
-        var words = countWords(text);
+        var words = ToolCommon.countWords(text);
         var charsSpaces = text.length;
         var charsNoSpaces = text.replace(/\s/g, '').length;
         var sentences = countSentences(text);

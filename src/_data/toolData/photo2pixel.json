@@ -41,7 +41,15 @@
     "whatIsParas": [
       "Pixel Size changes the width of the color blocks inside the picture. Extra Small uses six-pixel blocks. Medium uses fifteen. A larger block gives a simpler silhouette and removes more small details.",
       "Large photos are scaled proportionally to about 2.2 megapixels before conversion. If your avatar needs an exact width or height, resize the exported PNG to those dimensions."
-    ]
+    ],
+    "status": {
+      "generated": "Pixel art generated",
+      "exportFailed": "Could not export image",
+      "readFailed": "Could not read image",
+      "conversionFailed": "Conversion failed",
+      "modelFailed": "Model failed to load",
+      "tooLarge": "File is too large (max 10MB)"
+    }
   },
   "cn": {
     "title": "Photo2Pixel - 本地照片到像素艺术转换器",
@@ -85,7 +93,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> 是一个基于浏览器的照片到像素艺术转换器，用于快速视觉实验、社交图像、UI 模型和游戏资产概念。它将连续的照片细节减少为有意的色块，同时保留足够的结构以使图像保持可识别性。",
       "输出是程式化的转换，而不是手工创作的精灵表。对于艺术作品，在应用程序、游戏或已发布的资源包中使用之前，请检查边缘、对比度、尺寸和最终 PNG 尺寸。"
-    ]
+    ],
+    "status": {
+      "generated": "像素画已生成",
+      "exportFailed": "图片导出失败",
+      "readFailed": "无法读取图片",
+      "conversionFailed": "转换失败",
+      "modelFailed": "模型加载失败",
+      "tooLarge": "文件过大（最大 10MB）"
+    }
   },
   "tw": {
     "title": "Photo2Pixel - 本機照片到像素藝術轉換器",
@@ -129,7 +145,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> 是一個基於瀏覽器的照片到像素藝術轉換器，用於快速視覺實驗、社交圖像、UI 模型和遊戲資產概念。它將連續的照片細節減少為有意的色塊，同時保留足夠的結構以使影像保持可識別性。",
       "輸出是程式化的轉換，而不是手工創作的精靈表。對於藝術作品，在應用程式、遊戲或已發布的資源包中使用之前，請檢查邊緣、對比度、尺寸和最終 PNG 尺寸。"
-    ]
+    ],
+    "status": {
+      "generated": "像素圖已產生",
+      "exportFailed": "無法匯出圖片",
+      "readFailed": "無法讀取圖片",
+      "conversionFailed": "轉換失敗",
+      "modelFailed": "無法載入模型",
+      "tooLarge": "檔案過大（最大 10MB）"
+    }
   },
   "jp": {
     "title": "Photo2Pixel - ローカル写真からピクセル アートへのコンバーター",
@@ -173,7 +197,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> は、素早い視覚実験、ソーシャル イメージ、UI モックアップ、およびゲーム アセット コンセプトを実現する、ブラウザー ベースの写真からピクセル アートへのコンバーターです。画像を認識可能な状態に保つのに十分な構造を維持しながら、連続した写真の詳細を意図的なカラーブロックに削減します。",
       "出力は様式化された変換であり、手書きのスプライト シートではありません。プロダクション アートの場合は、アプリ、ゲーム、または公開されたアセット パックで使用する前に、エッジ、コントラスト、寸法、最終的な PNG サイズを検査してください。"
-    ]
+    ],
+    "status": {
+      "generated": "ピクセルアートを生成しました",
+      "exportFailed": "画像を書き出せませんでした",
+      "readFailed": "画像を読み込めませんでした",
+      "conversionFailed": "変換に失敗しました",
+      "modelFailed": "モデルを読み込めませんでした",
+      "tooLarge": "ファイルが大きすぎます（最大10MB）"
+    }
   },
   "kr": {
     "title": "Photo2Pixel - 로컬 사진을 픽셀 아트로 변환하는 변환기",
@@ -217,7 +249,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong>은 빠른 시각적 실험, 소셜 이미지, UI 모형 및 게임 자산 개념을 위한 브라우저 기반 사진-픽셀 아트 변환기입니다. 이미지를 인식할 수 있을 만큼 충분한 구조를 유지하면서 연속적인 사진 세부 사항을 의도적인 색상 블록으로 줄입니다.",
       "출력은 손으로 작성한 스프라이트 시트가 아닌 양식화된 변환입니다. 프로덕션 아트의 경우 앱, 게임 또는 게시된 자산 팩에서 사용하기 전에 가장자리, 대비, 크기 및 최종 PNG 크기를 검사하세요."
-    ]
+    ],
+    "status": {
+      "generated": "픽셀 아트가 생성되었습니다",
+      "exportFailed": "이미지를 내보낼 수 없습니다",
+      "readFailed": "이미지를 읽을 수 없습니다",
+      "conversionFailed": "변환에 실패했습니다",
+      "modelFailed": "모델을 불러올 수 없습니다",
+      "tooLarge": "파일이 너무 큽니다(최대 10MB)"
+    }
   },
   "fr": {
     "title": "Photo2Pixel - Convertisseur de photo locale en Pixel Art",
@@ -261,7 +301,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> est un convertisseur de photo en pixel art basé sur un navigateur pour des expériences visuelles rapides, des images sociales, des maquettes d'interface utilisateur et des concepts d'actifs de jeu. Il réduit les détails continus de la photo en blocs de couleurs délibérés tout en préservant suffisamment de structure pour que l'image reste reconnaissable.",
       "Le résultat est une conversion stylisée, et non une feuille de sprite créée à la main. Pour les illustrations de production, inspectez les bords, le contraste, les dimensions et la taille finale du PNG avant de l'utiliser dans une application, un jeu ou un pack de ressources publié."
-    ]
+    ],
+    "status": {
+      "generated": "Pixel art généré",
+      "exportFailed": "Impossible d’exporter l’image",
+      "readFailed": "Impossible de lire l’image",
+      "conversionFailed": "La conversion a échoué",
+      "modelFailed": "Impossible de charger le modèle",
+      "tooLarge": "Fichier trop volumineux (10 Mo max)"
+    }
   },
   "de": {
     "title": "Photo2Pixel – Lokaler Foto-zu-Pixel-Art-Konverter",
@@ -305,7 +353,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> ist ein browserbasierter Foto-zu-Pixel-Art-Konverter für schnelle visuelle Experimente, soziale Bilder, UI-Modelle und Spiel-Asset-Konzepte. Es reduziert kontinuierliche Fotodetails in bewusste Farbblöcke und bewahrt gleichzeitig genügend Struktur, damit das Bild erkennbar bleibt.",
       "Die Ausgabe ist eine stilisierte Konvertierung, kein handverfasstes Sprite-Sheet. Überprüfen Sie bei Produktionsgrafiken die Kanten, den Kontrast, die Abmessungen und die endgültige PNG-Größe, bevor Sie sie in einer App, einem Spiel oder einem veröffentlichten Asset-Paket verwenden."
-    ]
+    ],
+    "status": {
+      "generated": "Pixelbild erstellt",
+      "exportFailed": "Bild konnte nicht exportiert werden",
+      "readFailed": "Bild konnte nicht gelesen werden",
+      "conversionFailed": "Konvertierung fehlgeschlagen",
+      "modelFailed": "Modell konnte nicht geladen werden",
+      "tooLarge": "Datei ist zu groß (max. 10 MB)"
+    }
   },
   "es": {
     "title": "Photo2Pixel - Convertidor de foto local a pixel art",
@@ -349,7 +405,15 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> es un conversor de fotos a pixel art basado en navegador para experimentos visuales rápidos, imágenes sociales, maquetas de interfaz de usuario y conceptos de activos de juegos. Reduce los detalles continuos de la fotografía en bloques de color deliberados y al mismo tiempo conserva suficiente estructura para que la imagen siga siendo reconocible.",
       "El resultado es una conversión estilizada, no una hoja de sprites escrita a mano. Para el arte de producción, inspeccione los bordes, el contraste, las dimensiones y el tamaño PNG final antes de usarlo en una aplicación, juego o paquete de recursos publicado."
-    ]
+    ],
+    "status": {
+      "generated": "Imagen pixelada generada",
+      "exportFailed": "No se pudo exportar la imagen",
+      "readFailed": "No se pudo leer la imagen",
+      "conversionFailed": "La conversión ha fallado",
+      "modelFailed": "No se pudo cargar el modelo",
+      "tooLarge": "El archivo es demasiado grande (máx. 10MB)"
+    }
   },
   "pt": {
     "title": "Photo2Pixel - Conversor local de foto para Pixel Art",
@@ -393,6 +457,14 @@
     "whatIsParas": [
       "<strong>Photo2Pixel</strong> é um conversor de foto em pixel art baseado em navegador para experimentos visuais rápidos, imagens sociais, maquetes de interface do usuário e conceitos de ativos de jogos. Ele reduz os detalhes contínuos da foto em blocos de cores deliberados, preservando estrutura suficiente para que a imagem permaneça reconhecível.",
       "A saída é uma conversão estilizada, não uma sprite sheet de autoria manual. Para arte de produção, inspecione as bordas, o contraste, as dimensões e o tamanho final do PNG antes de usá-lo em um aplicativo, jogo ou pacote de recursos publicados."
-    ]
+    ],
+    "status": {
+      "generated": "Pixel art gerada",
+      "exportFailed": "Não foi possível exportar a imagem",
+      "readFailed": "Não foi possível ler a imagem",
+      "conversionFailed": "A conversão falhou",
+      "modelFailed": "Não foi possível carregar o modelo",
+      "tooLarge": "Arquivo muito grande (máx. 10MB)"
+    }
   }
 }

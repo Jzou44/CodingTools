@@ -74,6 +74,14 @@
     "rgba-to-hex": "#r-input"
   };
 
+  var keepFileBytes = /^(?:base64-(?:encode|decode)|(?:md5|sha1|sha256|sha384|sha512)-generator)$/.test(tool);
+  var readVersion = 0;
+  var applyingFile = false;
+  var actionButtons = document.querySelectorAll('#btn-generate, #btn-encode, #btn-decode');
+  function setFileActionsDisabled(disabled) {
+    if (keepFileBytes) actionButtons.forEach(function (button) { button.disabled = disabled; });
+  }
+
   var inputSelector = inputSelectors[tool];
   var target = inputSelector ? document.querySelector(inputSelector) : null;
   if (!target || !fileInput || !filePanel) {
@@ -105,6 +113,9 @@
 
   function syncModeUi() {
     var mode = selectedMode();
+    readVersion++;
+    delete target.importedBytes;
+    setFileActionsDisabled(false);
     root.querySelectorAll(".single-input-mode").forEach(function (label) {
       var input = label.querySelector("input");
       label.classList.toggle("is-active", input && input.value === mode);
@@ -192,9 +203,9 @@
     } else {
       parts = parseDelimitedNumbers(text);
     }
-    setFieldValue("r-input", parts[0] || "");
-    setFieldValue("g-input", parts[1] || "");
-    setFieldValue("b-input", parts[2] || "");
+    setFieldValue("r-input", parts[0]);
+    setFieldValue("g-input", parts[1]);
+    setFieldValue("b-input", parts[2]);
     if (tool === "rgba-to-hex") setFieldValue("a-input", parts[3] == null ? "100" : parts[3]);
     var convertButton = document.getElementById("btn-convert");
     if (convertButton) convertButton.click();
@@ -231,22 +242,40 @@
 
   function readFile(file) {
     if (!file) return;
+    var version = ++readVersion;
+    setFileActionsDisabled(true);
     if (file.size > maxBytes) {
       setStatus(tr("fileTooLarge", "Max file size") + " " + formatBytes(maxBytes) + ".", "error");
-      fileInput.value = "";
       return;
     }
 
     setStatus(tr("processing", "Processing...") + " " + file.name, "");
-    file.text().then(function (text) {
-      setTargetValue(text);
+    var read = keepFileBytes ? file.arrayBuffer() : file.text();
+    read.then(function (content) {
+      if (version !== readVersion) return;
+      var bytes = keepFileBytes ? new Uint8Array(content) : null;
+      applyingFile = true;
+      try {
+        setTargetValue(bytes ? new TextDecoder().decode(bytes) : content);
+        if (bytes) target.importedBytes = bytes;
+      } finally {
+        applyingFile = false;
+      }
+      setFileActionsDisabled(false);
       setStatus(file.name + " (" + formatBytes(file.size) + ")", "loaded");
     }).catch(function () {
-      setStatus(tr("invalidInput", "Invalid input"), "error");
-    }).finally(function () {
-      fileInput.value = "";
+      if (version === readVersion) setStatus(tr("invalidInput", "Invalid input"), "error");
     });
   }
+
+  function useEditedText() {
+    if (applyingFile || selectedMode() !== "file") return;
+    root.querySelector('input[value="text"]').checked = true;
+    syncModeUi();
+  }
+  target.addEventListener("input", useEditedText);
+  var clearButton = document.getElementById("btn-clear");
+  if (clearButton) clearButton.addEventListener("click", useEditedText);
 
   radios.forEach(function (radio) {
     radio.addEventListener("change", syncModeUi);
@@ -254,6 +283,7 @@
 
   fileInput.addEventListener("change", function () {
     readFile(fileInput.files && fileInput.files[0]);
+    fileInput.value = "";
   });
 
   syncModeUi();

@@ -12,16 +12,16 @@
 {% endmacro %}
 
 {% block batch_tool_options %}
-  {{ modeSelect('batch-byte-mode', byteConverter[lang], toolId == 'ascii-to-hex', true) }}
+  {{ modeSelect('batch-byte-mode', byteConverter[lang], toolId == 'ascii-to-hex' or toolId == 'text-to-binary', true) }}
 {% endblock %}
 
 {% block tool_content %}
   {% set labels = byteConverter[lang] %}
-  {% set encode = toolId == 'ascii-to-hex' %}
-  {% set binary = toolId == 'binary-to-text' %}
+  {% set encode = toolId == 'ascii-to-hex' or toolId == 'text-to-binary' %}
+  {% set binary = toolId == 'binary-to-text' or toolId == 'text-to-binary' %}
   {% set sourceLabel = t.ui.text if encode else (t.ui.binaryInput if binary else t.ui.hexNumber) %}
-  {% set targetLabel = t.ui.hexNumber if encode else t.ui.textOutput %}
-  {% set reverse = 'hex-to-ascii' if encode else ('text-to-binary' if binary else 'ascii-to-hex') %}
+  {% set targetLabel = (t.ui.binaryResult if binary else t.ui.hexNumber) if encode else t.ui.textOutput %}
+  {% set reverse = {'ascii-to-hex': 'hex-to-ascii', 'text-to-binary': 'binary-to-text', 'binary-to-text': 'text-to-binary', 'hex-to-ascii': 'ascii-to-hex'}[toolId] %}
   <div class="dual-pane" data-byte-converter="{{ toolId }}" data-errors="{{ labels.errors | json | escape }}" data-success="{{ t.ui.convertedSuccessfully }}" data-unit="{{ labels.units }}">
     <div class="batch-control-grid">
       {{ modeSelect('single-byte-mode', labels, encode, false) }}
@@ -30,8 +30,10 @@
         <select id="delimiter-select">
           <option value="space">{{ t.ui.space }}</option>
           <option value="none">{{ t.ui["none"] }}</option>
+          {% if not binary %}
           <option value="comma">{{ t.ui.comma }}</option>
           <option value="colon">{{ t.ui.colon }}</option>
+          {% endif %}
         </select>
       </label>
       {% endif %}

@@ -29,7 +29,8 @@
     "example": "Example",
     "examplePara": "A one-line query becomes easier to review when columns, joins, and filters are separated:",
     "exampleCode": "--- Unformatted Input ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatted Output ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "Format SQL"
+    "buttonLabel": "Format SQL",
+    "dialectLabel": "SQL dialect"
   },
   "cn": {
     "title": "SQL 格式化程序 - Coding.Tools",
@@ -61,7 +62,8 @@
     "example": "示例",
     "examplePara": "当列、连接和过滤器分开时，单行查询变得更容易查看：",
     "exampleCode": "--- 未格式化输入 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 格式化输出 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "格式化 SQL"
+    "buttonLabel": "格式化 SQL",
+    "dialectLabel": "SQL 方言"
   },
   "tw": {
     "title": "SQL 格式化程式 - Coding.Tools",
@@ -93,7 +95,8 @@
     "example": "範例",
     "examplePara": "當列、連接和過濾器分開時，單行查詢變得更容易檢視：",
     "exampleCode": "--- 未格式化輸入 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 格式化輸出 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "格式化 SQL"
+    "buttonLabel": "格式化 SQL",
+    "dialectLabel": "SQL 方言"
   },
   "jp": {
     "title": "SQL フォーマッター - Coding.Tools",
@@ -125,7 +128,8 @@
     "example": "例",
     "examplePara": "列、結合、フィルターを分離すると、1 行のクエリを確認しやすくなります。",
     "exampleCode": "--- 未整形入力 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 整形出力 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "SQL をフォーマット"
+    "buttonLabel": "SQL をフォーマット",
+    "dialectLabel": "SQL 方言"
   },
   "kr": {
     "title": "SQL 포맷터 - Coding.Tools",
@@ -157,7 +161,8 @@
     "example": "예시",
     "examplePara": "열, 조인 및 필터를 분리하면 한 줄 쿼리를 더 쉽게 검토할 수 있습니다.",
     "exampleCode": "--- 포맷 전 입력 ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- 포맷된 출력 ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "SQL 포맷"
+    "buttonLabel": "SQL 포맷",
+    "dialectLabel": "SQL 방언"
   },
   "fr": {
     "title": "Formateur SQL - Coding.Tools",
@@ -189,7 +194,8 @@
     "example": "Exemple",
     "examplePara": "Une requête sur une seule ligne devient plus facile à examiner lorsque les colonnes, les jointures et les filtres sont séparés :",
     "exampleCode": "--- Entrée non formatée ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Sortie formatée ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "Formater SQL"
+    "buttonLabel": "Formater SQL",
+    "dialectLabel": "Dialecte SQL"
   },
   "de": {
     "title": "SQL Formatierer - Coding.Tools",
@@ -221,7 +227,8 @@
     "example": "Beispiel",
     "examplePara": "Eine einzeilige Abfrage lässt sich einfacher überprüfen, wenn Spalten, Verknüpfungen und Filter getrennt sind:",
     "exampleCode": "--- Unformatierte Eingabe ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Formatierte Ausgabe ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "Formatieren SQL"
+    "buttonLabel": "Formatieren SQL",
+    "dialectLabel": "SQL-Dialekt"
   },
   "es": {
     "title": "Formateador SQL - Coding.Tools",
@@ -253,7 +260,8 @@
     "example": "Ejemplo",
     "examplePara": "Una consulta de una línea resulta más fácil de revisar cuando las columnas, uniones y filtros están separados:",
     "exampleCode": "--- Entrada sin formato ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Salida formateada ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "Formatear SQL"
+    "buttonLabel": "Formatear SQL",
+    "dialectLabel": "Dialecto SQL"
   },
   "pt": {
     "title": "Formatador SQL - Coding.Tools",
@@ -285,6 +293,7 @@
     "example": "Exemplo",
     "examplePara": "Uma consulta de uma linha fica mais fácil de revisar quando colunas, junções e filtros são separados:",
     "exampleCode": "--- Entrada sem formatação ---\nSELECT u.name, u.email, o.total FROM users u JOIN orders o ON u.id=o.user_id WHERE o.total>100 ORDER BY o.total DESC;\n\n--- Saída formatada ---\nSELECT\n  u.name,\n  u.email,\n  o.total\nFROM users u\nJOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;",
-    "buttonLabel": "Formatar SQL"
+    "buttonLabel": "Formatar SQL",
+    "dialectLabel": "Dialeto SQL"
   }
 }

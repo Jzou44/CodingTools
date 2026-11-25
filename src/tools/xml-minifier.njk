@@ -61,12 +61,19 @@ permalink: "/xml-minifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
-          outputEditor.value = CodingToolsTextTransforms.minifyXml(text);
+          outputEditor.value = CodingToolsTextTransforms.minifyXml(text, document.getElementById('remove-xml-indent').checked);
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML minified successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Minification failed: ' + e.message);
         }
       };

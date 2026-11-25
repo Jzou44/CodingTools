@@ -70,7 +70,7 @@
   }
 
   function convert(tool, text, mode, delimiter) {
-    if (tool === 'ascii-to-hex') {
+    if (tool === 'ascii-to-hex' || tool === 'text-to-binary') {
       if (!text.length) fail('empty');
       var codes;
       if (mode === 'utf8') {
@@ -81,14 +81,17 @@
       } else {
         codes = Array.from({ length: text.length }, function (_, index) { return text.charCodeAt(index); });
       }
-      var parts = Array.from(codes, function (code) { return code.toString(16).toUpperCase().padStart(2, '0'); });
+      var binary = tool === 'text-to-binary';
+      var parts = Array.from(codes, function (code) {
+        return code.toString(binary ? 2 : 16).toUpperCase().padStart(binary ? 8 : 2, '0');
+      });
       return { text: parts.join(delimiter), count: codes.length };
     }
     var bytes = readBytes(text, tool === 'binary-to-text');
     var output = '';
     if (mode === 'utf8') {
       try {
-        output = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+        output = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes);
       } catch (error) {
         fail('utf8', invalidUtf8Byte(bytes));
       }

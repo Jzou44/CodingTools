@@ -1,0 +1,15 @@
+{% macro controls(tool, data, prefix) %}
+  {% if tool == "sql-formatter" or tool == "sql-minifier" %}
+    <label class="batch-field">{{ data.dialectLabel }}
+      <select id="{{ prefix }}sql-dialect">
+        {% set dialects = ["SQL", "SQLite", "MySQL"] %}
+        {% if tool == "sql-formatter" %}
+          {% set dialects = ["SQL", "SQLite", "MySQL", "PostgreSQL", "MariaDB", "BigQuery", "ClickHouse", "DB2", "DB2i", "DuckDB", "Hive", "N1QL", "PLSQL", "Redshift", "Spark", "TiDB", "Trino", "TransactSQL", "SingleStoreDB", "Snowflake"] %}
+        {% endif %}
+        {% for dialect in dialects %}<option value="{{ dialect | lower }}">{{ dialect }}</option>{% endfor %}
+      </select>
+    </label>
+  {% elif tool == "xml-minifier" %}
+    <label class="batch-check"><input type="checkbox" id="{{ prefix }}remove-xml-indent" checked> {{ data.indentationLabel }}</label>
+  {% endif %}
+{% endmacro %}

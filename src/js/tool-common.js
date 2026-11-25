@@ -4,6 +4,67 @@
 var ToolCommon = (function () {
   'use strict';
 
+  function editorBytes(editor) {
+    return editor.importedBytes || new TextEncoder().encode(editor.value);
+  }
+
+  function loadImage(file) {
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+      reader.onload = function (event) {
+        var image = new Image();
+        image.onload = function () {
+          resolve({ image: image, dataUrl: event.target.result });
+        };
+        image.onerror = function () { reject(new Error(window.CodingToolsRuntimeI18n.invalidInput)); };
+        image.src = event.target.result;
+      };
+      reader.onerror = function () { reject(new Error(window.CodingToolsRuntimeI18n.invalidInput)); };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function bytesToBase64(bytes) {
+    var chunks = [];
+    for (var i = 0; i < bytes.length; i += 0x8000) {
+      chunks.push(String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)));
+    }
+    return btoa(chunks.join(''));
+  }
+
+  function regexMatches(text, regex) {
+    var matches = [];
+    var found = regex.global ? text.matchAll(regex) : [regex.exec(text)];
+    for (var match of found) {
+      if (!match) break;
+      matches.push({ index: match.index, length: match[0].length, value: match[0] });
+      if (matches.length >= 10000) break;
+    }
+    return matches;
+  }
+
+  function reverseText(text) {
+    if (!Intl.Segmenter) return Array.from(text).reverse().join('');
+    var segments = new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(text);
+    return Array.from(segments, function (part) { return part.segment; }).reverse().join('');
+  }
+
+  function titleCase(text) {
+    return text.toLowerCase().replace(/(^|[^\p{L}\p{M}\p{N}_])(\p{L})/gu, function (_, prefix, letter) {
+      return prefix + letter.toUpperCase();
+    });
+  }
+
+  function countWords(text) {
+    if (!Intl.Segmenter) return (text.match(/[\p{L}\p{N}]+/gu) || []).length;
+    var segments = new Intl.Segmenter(document.documentElement.lang, { granularity: 'word' }).segment(text);
+    var count = 0;
+    for (var part of segments) {
+      if (part.isWordLike) count++;
+    }
+    return count;
+  }
+
   function countLines(text) {
     if (!text) return 1;
     return text.split('\n').length;
@@ -152,7 +213,10 @@ var ToolCommon = (function () {
   }
 
   function clearEditors(inputEditor, outputEditor, statusMessage, statusDot, statusText, charCount, lineCount, inputLineNums, outputLineNums) {
-    if (inputEditor) inputEditor.value = '';
+    if (inputEditor) {
+      inputEditor.value = '';
+      delete inputEditor.importedBytes;
+    }
     if (outputEditor) outputEditor.value = '';
     updateStatus(statusMessage, statusDot, statusText, 'idle', '');
     var i18n = window.I18N || {};
@@ -226,7 +290,8 @@ var ToolCommon = (function () {
         var end = this.selectionEnd;
         this.value = this.value.substring(0, start) + '  ' + this.value.substring(end);
         this.selectionStart = this.selectionEnd = start + 2;
-        if (lineNumsContainer) updateLineNumbers(this, lineNumsContainer);
+          this.dispatchEvent(new Event('input', { bubbles: true }));
+          if (lineNumsContainer) updateLineNumbers(this, lineNumsContainer);
       }
     });
   }
@@ -326,6 +391,13 @@ var ToolCommon = (function () {
     trackToolSuccess: trackToolSuccess,
     offerMapPreview: offerMapPreview,
     addFileToZip: addFileToZip,
+    editorBytes: editorBytes,
+    loadImage: loadImage,
+    bytesToBase64: bytesToBase64,
+    regexMatches: regexMatches,
+    reverseText: reverseText,
+    titleCase: titleCase,
+    countWords: countWords,
     countLines: countLines,
     pluralise: pluralise,
     updateLineNumbers: updateLineNumbers,

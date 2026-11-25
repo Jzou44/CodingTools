@@ -2,7 +2,7 @@
   "use strict";
 
   var MAX_SIZE = 10 * 1024 * 1024;
-  var MIN_CROP = 10;
+  var MIN_CROP = 1;
   var labelsNode = document.getElementById("image-tool-labels");
   var L = labelsNode ? JSON.parse(labelsNode.textContent) : {};
   var state = { file: null, image: null, resultUrl: "", blob: null, mime: "image/png", name: "image", crop: null, drag: null };
@@ -32,6 +32,8 @@
   var controls = [ratioSelect, xInput, yInput, widthInput, heightInput, qualityInput, btnReset];
   var syncing = false;
   var timer = null;
+  var renderVersion = 0;
+  var fileVersion = 0;
 
   function setStatus(type, text) {
     ToolCommon.updateStatus(statusMessage, statusDot, statusText, type, text);
@@ -68,8 +70,15 @@
     });
   }
 
-  function scheduleRender() {
+  function invalidateRender() {
     clearTimeout(timer);
+    renderVersion++;
+    state.blob = null;
+    btnDownload.disabled = true;
+  }
+
+  function scheduleRender() {
+    invalidateRender();
     timer = setTimeout(renderResult, 80);
   }
 
@@ -95,8 +104,8 @@
     return {
       x: Math.round(crop.x),
       y: Math.round(crop.y),
-      width: Math.round(crop.width),
-      height: Math.round(crop.height)
+      width: Math.max(MIN_CROP, Math.round(crop.width)),
+      height: Math.max(MIN_CROP, Math.round(crop.height))
     };
   }
 
@@ -109,12 +118,12 @@
       if (width / height > ratio) width = Math.round(height * ratio);
       else height = Math.round(width / ratio);
     }
-    state.crop = {
+    state.crop = clampCrop({
       x: Math.round((image.width - width) / 2),
       y: Math.round((image.height - height) / 2),
       width: width,
       height: height
-    };
+    }, false);
   }
 
   function imageRect() {
@@ -171,12 +180,13 @@
     setStatus("invalid", L.invalidInput || "Could not export image");
   }
 
-  function exportPng(canvas) {
+  function exportPng(canvas, version) {
     if (typeof canvas.toBlob !== "function") {
       exportFailed();
       return;
     }
     canvas.toBlob(function (blob) {
+      if (version !== renderVersion) return;
       if (!blob) {
         exportFailed();
         return;
@@ -187,6 +197,8 @@
 
   function renderResult() {
     if (!state.image || !state.crop) return;
+    invalidateRender();
+    var version = renderVersion;
     var crop = clampCrop(Object.assign({}, state.crop), false);
     var canvas = document.createElement("canvas");
     var ctx = canvas.getContext("2d");
@@ -204,12 +216,13 @@
       return;
     }
     canvas.toBlob(function (blob) {
+      if (version !== renderVersion) return;
       if (!blob) {
-        exportPng(canvas);
+        exportPng(canvas, version);
         return;
       }
       if (state.mime !== "image/png" && blob.type && blob.type !== state.mime) {
-        exportPng(canvas);
+        exportPng(canvas, version);
         return;
       }
       setBlob(blob, crop.width, crop.height, blob.type || state.mime);
@@ -318,18 +331,25 @@
       setStatus("invalid", L.tooLarge);
       return;
     }
+    var version = ++fileVersion;
+    invalidateRender();
     resetResultUrl();
+    state.image = null;
+    enableControls(false);
     setStatus("idle", L.processing);
     var reader = new FileReader();
     reader.onload = function (event) {
+      if (version !== fileVersion) return;
       var image = new Image();
       image.onload = function () {
+        if (version !== fileVersion) return;
         state.file = file;
         state.image = image;
         state.mime = supportedMime(file);
         state.name = file.name;
         cropImage.src = event.target.result;
         cropImage.onload = function () {
+          if (version !== fileVersion) return;
           setInitialCrop();
           syncFields();
           renderCropBox();
@@ -342,11 +362,13 @@
         setStatus("valid", L.loaded);
       };
       image.onerror = function () {
+        if (version !== fileVersion) return;
         setStatus("invalid", L.invalidFile);
       };
       image.src = event.target.result;
     };
     reader.onerror = function () {
+      if (version !== fileVersion) return;
       setStatus("invalid", L.invalidFile);
     };
     reader.readAsDataURL(file);

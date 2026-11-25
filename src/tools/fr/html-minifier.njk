@@ -88,12 +88,19 @@ permalink: "/fr/html-minifier.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
           outputEditor.value = htmlminifier.minify(text, {collapseWhitespace:true, minifyJS:true, minifyCSS:true, removeComments:true});
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'HTML minified successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.minificationFailed }}' + e.message);
         }
       };

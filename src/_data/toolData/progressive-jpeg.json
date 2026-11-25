@@ -16,7 +16,7 @@
     "steps": [
       "Drag and drop JPEG files onto the upload area, or click to select files.",
       "Each file is re-encoded as progressive JPEG automatically.",
-      "Download individual files or use <strong>Download All</strong> to get a ZIP archive."
+      "<strong>Download All</strong> saves one JPEG directly or several JPEGs together in a ZIP."
     ],
     "whatIs": "Baseline vs progressive JPEG",
     "whatIsParas": [
@@ -44,7 +44,7 @@
     "steps": [
       "将 JPEG 文件拖放到上传区域，或单击选择文件。",
       "每个文件都会自动重新编码为渐进式 JPEG。",
-      "下载单个文件或使用 <strong>下载全部</strong> 获取 ZIP 存档。"
+      "点击<strong>下载全部</strong>时，单张直接保存为 JPEG，多张打包为 ZIP。"
     ],
     "whatIs": "基线与渐进 JPEG",
     "whatIsParas": [
@@ -72,7 +72,7 @@
     "steps": [
       "將 JPEG 檔案拖曳到上傳區域，或點選選擇檔案。",
       "每個檔案都會自動重新編碼為漸進式 JPEG。",
-      "下載單一檔案或使用 <strong>下載全部</strong> 取得 ZIP 檔案。"
+      "點選<strong>下載全部</strong>時，單張直接儲存為 JPEG，多張則打包成 ZIP。"
     ],
     "whatIs": "基線與漸進 JPEG",
     "whatIsParas": [
@@ -100,7 +100,7 @@
     "steps": [
       "JPEG ファイルをアップロード領域にドラッグ アンド ドロップするか、クリックしてファイルを選択します。",
       "各ファイルはプログレッシブ JPEG として自動的に再エンコードされます。",
-      "個別のファイルをダウンロードするか、<strong>すべてダウンロード</strong> を使用して ZIP アーカイブを取得します。"
+      "<strong>すべてダウンロード</strong>を押すと、1枚の場合はJPEG、複数枚の場合はZIPで保存されます。"
     ],
     "whatIs": "ベースラインとプログレッシブ JPEG",
     "whatIsParas": [
@@ -128,7 +128,7 @@
     "steps": [
       "JPEG 파일을 업로드 영역으로 끌어다 놓거나 클릭하여 파일을 선택합니다.",
       "각 파일은 자동으로 프로그레시브 JPEG로 다시 인코딩됩니다.",
-      "개별 파일을 다운로드하거나 <strong>모두 다운로드</strong>를 사용하여 ZIP 아카이브를 받으세요."
+      "<strong>모두 다운로드</strong>를 누르면 한 장은 JPEG로, 여러 장은 ZIP 파일로 저장됩니다."
     ],
     "whatIs": "베이스라인 vs 프로그레시브 JPEG",
     "whatIsParas": [
@@ -156,7 +156,7 @@
     "steps": [
       "Faites glisser et déposez les fichiers JPEG sur la zone de téléchargement ou cliquez pour sélectionner les fichiers.",
       "Chaque fichier est réencodé automatiquement en JPEG progressif.",
-      "Téléchargez des fichiers individuels ou utilisez <strong>Tout télécharger</strong> pour obtenir une archive ZIP."
+      "<strong>Tout télécharger</strong> enregistre directement un seul JPEG et regroupe plusieurs JPEG dans une archive ZIP."
     ],
     "whatIs": "JPEG de base vs progressif",
     "whatIsParas": [
@@ -184,7 +184,7 @@
     "steps": [
       "Ziehen Sie JPEG-Dateien per Drag & Drop in den Upload-Bereich oder klicken Sie, um Dateien auszuwählen.",
       "Jede Datei wird automatisch als Progressives JPEG neu kodiert.",
-      "Laden Sie einzelne Dateien herunter oder verwenden Sie <strong>Alle herunterladen</strong>, um ein ZIP-Archiv zu erhalten."
+      "<strong>Alle herunterladen</strong> speichert ein einzelnes JPEG direkt. Mehrere JPEGs werden in einem ZIP-Archiv gespeichert."
     ],
     "whatIs": "Baseline vs. progressives JPEG",
     "whatIsParas": [
@@ -212,7 +212,7 @@
     "steps": [
       "Arrastre y suelte los archivos JPEG en el área de carga o haga clic para seleccionar archivos.",
       "Cada archivo se recodifica automáticamente como JPEG progresivo.",
-      "Descargue archivos individuales o use <strong>Descargar todo</strong> para obtener un archivo ZIP."
+      "<strong>Descargar todo</strong> guarda un solo JPEG directamente o reúne varios JPEG en un archivo ZIP."
     ],
     "whatIs": "Línea base vs progresiva JPEG",
     "whatIsParas": [
@@ -240,7 +240,7 @@
     "steps": [
       "Arraste e solte os arquivos JPEG na área de upload ou clique para selecionar os arquivos.",
       "Cada arquivo é recodificado como JPEG progressivo automaticamente.",
-      "Baixe arquivos individuais ou use <strong>Baixar tudo</strong> para obter um arquivo ZIP."
+      "<strong>Baixar tudo</strong> salva um único JPEG diretamente ou agrupa vários JPEGs em um arquivo ZIP."
     ],
     "whatIs": "Linha de base vs progressiva JPEG",
     "whatIsParas": [

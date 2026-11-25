@@ -460,6 +460,11 @@ Beautifier.prototype.handle_whitespace_and_comments = function(current_token, pr
     }
   }
 
+  // A line terminator after a restricted keyword changes JavaScript semantics
+  // even when the next token opens an array or a parenthesized expression.
+  if (newlines && reserved_array(this._flags.last_token, newline_restricted_tokens)) {
+    this.print_newline(false, preserve_statement_flags);
+  }
   if (keep_whitespace) {
     for (var i = 0; i < newlines; i += 1) {
       this.print_newline(i > 0, preserve_statement_flags);

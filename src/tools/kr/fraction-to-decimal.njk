@@ -150,14 +150,12 @@ permalink: "/kr/fraction-to-decimal.html"
         if (!denStr || !numStr) return;
         try {
           var denominator = new BigNumber(denStr);
-          var numerator   = new BigNumber(numStr);
-          var integerVal  = new BigNumber(integerInput.value.trim() || '0');
           if (denominator.isZero()) {
             showResult('{{ t.ui.denominatorCannotBeZero }}', 'error');
             ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.denominatorCannotBeZero }}');
             return;
           }
-          var result = integerVal.plus(numerator.dividedBy(denominator));
+          var result = BigNumber.fromMixed(integerInput.value.trim(), numStr, denominator);
           showResult(result.toString(10), 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {

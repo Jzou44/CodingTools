@@ -95,25 +95,26 @@ permalink: "/kr/base64-encode.html"
       }
 
       btnEncode.onclick = function () {
-        var text = inputEditor.value;
-        if (!text) return;
         try {
-          outputEditor.value = btoa(unescape(encodeURIComponent(text)));
+          outputEditor.value = ToolCommon.bytesToBase64(ToolCommon.editorBytes(inputEditor));
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.encodedSuccessfully }}');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.encodingFailed }}' + e.message);
         }
       };
 
       btnDecode.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
         try {
           outputEditor.value = decodeURIComponent(escape(atob(text)));
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.decodedSuccessfully }}');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidBase64String }}');
         }
       };

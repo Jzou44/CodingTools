@@ -366,9 +366,10 @@
         ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.1/dist/';
       }
 
+      var messages = {{ toolData.status | json | safe }};
       var sessionPromise = window.ort
         ? ort.InferenceSession.create('/assets/onnx/photo2pixel.onnx', { executionProviders: ['wasm'] })
-        : Promise.reject(new Error('ONNX Runtime failed to load'));
+        : Promise.reject(new Error(messages.modelFailed));
 
       function setStatus(type, message) {
         ToolCommon.updateStatus(statusMessage, statusDot, statusText, type, message);
@@ -478,7 +479,7 @@
         var options = getOptions();
         if (!currentImageSrc) return;
         var thisRun = ++runId;
-        setStatus('idle', 'Processing image...');
+        setStatus('idle', {{ t.ui.processing | json | safe }});
         btnDownload.disabled = true;
 
         var img = new Image();
@@ -526,7 +527,7 @@
               if (resultUrl) URL.revokeObjectURL(resultUrl);
               resultUrl = '';
               btnDownload.disabled = true;
-              setStatus('invalid', 'Could not export image');
+              setStatus('invalid', messages.exportFailed);
               return;
             }
 
@@ -536,24 +537,24 @@
                 if (resultUrl) URL.revokeObjectURL(resultUrl);
                 resultUrl = '';
                 btnDownload.disabled = true;
-                setStatus('invalid', 'Could not export image');
+                setStatus('invalid', messages.exportFailed);
                 return;
               }
               if (resultUrl) URL.revokeObjectURL(resultUrl);
               resultUrl = URL.createObjectURL(blob);
               btnDownload.disabled = false;
-              setStatus('valid', 'Pixel art generated');
+              setStatus('valid', messages.generated);
               if (!trackedSuccess) {
                 trackInputEvent('tool_success', 'photo_to_pixel');
                 trackedSuccess = true;
               }
             }, 'image/png');
-          }).catch(function (error) {
-            if (thisRun === runId) setStatus('invalid', error.message || 'Conversion failed');
+          }).catch(function () {
+            if (thisRun === runId) setStatus('invalid', messages.conversionFailed);
           });
         };
         img.onerror = function () {
-          if (thisRun === runId) setStatus('invalid', 'Could not read image');
+          if (thisRun === runId) setStatus('invalid', messages.readFailed);
         };
         img.src = currentImageSrc;
       }
@@ -587,11 +588,11 @@
 
       function processFile(file) {
         if (!file || !file.type.match(/^image\//)) {
-          setStatus('invalid', 'Select an image file');
+          setStatus('invalid', {{ t.ui.unsupportedImageType | json | safe }});
           return;
         }
         if (file.size > MAX_SIZE) {
-          setStatus('invalid', 'File too large (max 10MB)');
+          setStatus('invalid', messages.tooLarge);
           return;
         }
 
@@ -650,7 +651,7 @@
         btnFlip.hidden = true;
         updateFlipView(false);
         resultCtx.clearRect(0, 0, resultCanvas.width, resultCanvas.height);
-        setStatus('idle', 'Ready');
+        setStatus('idle', {{ toolData.readyStatus | json | safe }});
       });
 
       btnFlip.addEventListener('click', function () {
@@ -670,10 +671,8 @@
       });
 
       getOptions();
-      sessionPromise.then(function () {
-        if (!currentImageSrc) setStatus('idle', 'Ready');
-      }).catch(function (error) {
-        setStatus('invalid', error.message || 'Model failed to load');
+      sessionPromise.catch(function () {
+        setStatus('invalid', messages.modelFailed);
       });
     })();
   </script>

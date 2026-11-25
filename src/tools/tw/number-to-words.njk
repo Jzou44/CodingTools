@@ -123,17 +123,18 @@ permalink: "/tw/number-to-words.html"
 
       function convert() {
         var raw = inputNumber.value.trim();
+        resultWord.value = '';
+        resultOrdinalWord.value = '';
+        resultOrdinalNum.value = '';
+        btnCopy.disabled = true;
+        charCount.textContent = '0 {{ t.ui.characters }}';
         if (!raw) {
-          resultWord.value = '';
-          resultOrdinalWord.value = '';
-          resultOrdinalNum.value = '';
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
-          charCount.textContent = '0 {{ t.ui.characters }}';
           return;
         }
 
         var num = Number(raw);
-        if (isNaN(num) || !isFinite(num) || num !== Math.floor(num)) {
+        if (!/^[+-]?\d+$/.test(raw) || !Number.isSafeInteger(num)) {
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ toolData.invalidInput }}');
           return;
         }
@@ -144,6 +145,7 @@ permalink: "/tw/number-to-words.html"
           var ordinalNum = numberToWords.toOrdinal(num);
 
           resultWord.value = word;
+          btnCopy.disabled = false;
           resultOrdinalWord.value = ordinalWord;
           resultOrdinalNum.value = ordinalNum;
 

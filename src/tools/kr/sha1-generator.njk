@@ -84,10 +84,8 @@ permalink: "/kr/sha1-generator.html"
       }
 
       btnGenerate.onclick = async function () {
-        var text = inputEditor.value;
-        if (!text) return;
         try {
-          var data = new TextEncoder().encode(text);
+          var data = ToolCommon.editorBytes(inputEditor);
           var hashBuffer = await crypto.subtle.digest('SHA-1', data);
           var hashArray = Array.from(new Uint8Array(hashBuffer));
           var hashHex = hashArray.map(function (b) {
@@ -97,6 +95,8 @@ permalink: "/kr/sha1-generator.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'SHA-1 hash generated \u2014 40 hex characters');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', 'Hash generation failed: ' + e.message);
         }
       };

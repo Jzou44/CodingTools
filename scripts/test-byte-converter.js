@@ -15,6 +15,8 @@ test("encoding preserves the selected representation and delimiter", () => {
   assert.equal(convert("ascii-to-hex", "Hi", "legacy", "").text, "4869");
   assert.equal(convert("ascii-to-hex", "中", "legacy", " ").text, "4E2D");
   assert.equal(convert("ascii-to-hex", "😀", "legacy", " ").text, "D83D DE00");
+  assert.equal(convert("text-to-binary", "あ", "legacy", " ").text, "11000001000010");
+  assert.equal(convert("text-to-binary", "あ", "utf8", " ").text, "11100011 10000001 10000010");
   assert.equal(convert("ascii-to-hex", "\0\r\n ", "utf8", ":").text, "00:0D:0A:20");
   assert.equal(convert("ascii-to-hex", "中", "utf8", ",").text, "E4,B8,AD");
   assert.equal(convert("hex-to-ascii", "00FF", "legacy").text, "\0\u00ff");
@@ -28,6 +30,8 @@ test("all translated examples work and UTF-8 round trips", () => {
       assert.equal(convert("binary-to-text", sample.binary, sample.mode).text, sample.text);
       const hex = convert("ascii-to-hex", sample.text, "utf8", "").text;
       assert.equal(convert("hex-to-ascii", hex, "utf8").text, sample.text);
+      const binary = convert("text-to-binary", sample.text, "utf8", " ").text;
+      assert.equal(convert("binary-to-text", binary, "utf8").text, sample.text);
     }
   }
 });

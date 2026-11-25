@@ -52,7 +52,7 @@ permalink: "/tw/xml-to-json.html"
   <p>{{ toolData.examplePara | safe }}</p>
   <div class="code-block-wrapper">
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
-    <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
+    <pre class="code-block" id="example-code">{{ toolData.exampleCode | escape }}</pre>
   </div>
 {% endblock %}
 
@@ -89,13 +89,20 @@ permalink: "/tw/xml-to-json.html"
 
       btnGenerate.onclick = function () {
         var text = inputEditor.value;
-        if (!text) return;
+        if (!text) {
+          outputEditor.value = '';
+          updateCounts();
+          ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', window.CodingToolsRuntimeI18n.noInput);
+          return;
+        }
         try {
           var jsonObj = CodingToolsTextTransforms.xmlToJson(text);
           outputEditor.value = js_beautify(JSON.stringify(jsonObj, null, 2), { indent_size: 2 });
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', 'XML converted to JSON successfully');
           updateCounts();
         } catch (e) {
+          outputEditor.value = '';
+          updateCounts();
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.conversionFailed }}' + e.message);
         }
       };

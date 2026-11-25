@@ -112,12 +112,6 @@ permalink: "/tw/percent-to-fraction.html"
 
       var lastFraction = '';
 
-      function gcd(a, b) {
-        a = Math.abs(a); b = Math.abs(b);
-        while (b) { var t = b; b = a % b; a = t; }
-        return a;
-      }
-
       function showResult(html, type) {
         if (type === 'empty' || type === 'error') {
           fractionOutput.textContent = html;
@@ -136,38 +130,23 @@ permalink: "/tw/percent-to-fraction.html"
         var input = percentInput.value.trim();
         if (!input) return;
         try {
-          var num = parseFloat(input);
-          if (isNaN(num)) throw new Error('Invalid number');
-          var isNegative = num < 0;
-          num = Math.abs(num);
-          var decStr = input.replace(/^-/, '');
-          var parts = decStr.split('.');
-          var decPlaces = parts[1] ? parts[1].length : 0;
-          var denominator = Math.pow(10, decPlaces) * 100;
-          var numerator = Math.round(num * denominator / 100);
-          var integerPart = Math.floor(numerator / denominator);
-          var remainder = numerator - integerPart * denominator;
-          var g = gcd(remainder, denominator);
-          remainder = remainder / g;
-          denominator = denominator / g;
-          if (isNegative && integerPart > 0) integerPart = -integerPart;
-          else if (isNegative && integerPart === 0) remainder = -remainder;
+          var fraction = BigNumber.mixedFraction(input, true);
+          var integerPart = fraction.whole;
+          var remainder = fraction.remainder;
+          var denominator = fraction.denominator;
           var html = '';
-          var textForCopy = '';
-          if (remainder === 0) {
+          if (!remainder) {
             html = '<span class="pct-frac-integer">' + integerPart + '</span>';
-            textForCopy = '' + integerPart;
-          } else if (integerPart === 0) {
+          } else if (!integerPart) {
             html = '<span class="pct-frac-frac-display"><span class="numerator">' + remainder + '</span><span class="denominator">' + denominator + '</span></span>';
-            textForCopy = remainder + '/' + denominator;
           } else {
             html = '<span class="pct-frac-integer">' + integerPart + '</span> <span class="pct-frac-frac-display"><span class="numerator">' + remainder + '</span><span class="denominator">' + denominator + '</span></span>';
-            textForCopy = integerPart + ' ' + remainder + '/' + denominator;
           }
-          lastFraction = textForCopy;
+          lastFraction = fraction.text;
           showResult(html, 'valid');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'valid', '{{ t.ui.convertedSuccessfully }}');
         } catch (e) {
+          lastFraction = '';
           showResult('{{ t.ui.invalidPercentInput }}', 'error');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidPercentInput }}');
         }

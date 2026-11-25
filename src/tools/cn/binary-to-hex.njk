@@ -161,14 +161,16 @@ permalink: "/cn/binary-to-hex.html"
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'idle', '');
           return;
         }
-        if (!/^[01]+$/.test(input)) {
+        var result;
+        try {
+          result = new BigNumber(input, 2);
+        } catch (error) {
           showPrimary('{{ t.ui.invalidBinaryInput }}', 'error');
           showSecondary(decimalOutput, decimalCard, '&mdash;', 'empty');
           showSecondary(octalOutput, octalCard, '&mdash;', 'empty');
           ToolCommon.updateStatus(statusMessage, statusDot, statusText, 'invalid', '{{ t.ui.invalidBinaryInput }}');
           return;
         }
-        var result = BigInt('0b' + input);
         showPrimary(result.toString(16).toUpperCase(), 'valid');
         showSecondary(decimalOutput, decimalCard, result.toString(10), 'valid');
         showSecondary(octalOutput, octalCard, result.toString(8), 'valid');

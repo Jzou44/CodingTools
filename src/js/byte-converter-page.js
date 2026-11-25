@@ -24,7 +24,7 @@
     var chars = 0;
     for (var char of text) chars++;
     document.getElementById('char-count').textContent = ToolCommon.pluralise(chars, window.I18N.charSingular, window.I18N.charPlural);
-    var units = tool === 'ascii-to-hex' && mode.value === 'legacy';
+    var units = (tool === 'ascii-to-hex' || tool === 'text-to-binary') && mode.value === 'legacy';
     document.getElementById('byte-count').textContent = units ? count + ' ' + page.dataset.unit : ToolCommon.pluralise(count, window.I18N.byteSingular, window.I18N.bytePlural);
     copy.disabled = download.disabled = !text;
   }
@@ -45,7 +45,7 @@
       show(result.text, result.count);
       setStatus('valid', page.dataset.success);
       if (example !== input.value) {
-        var operations = { 'ascii-to-hex': 'hex_encode', 'hex-to-ascii': 'hex_decode', 'binary-to-text': 'binary_decode' };
+        var operations = { 'ascii-to-hex': 'hex_encode', 'hex-to-ascii': 'hex_decode', 'binary-to-text': 'binary_decode', 'text-to-binary': 'binary_encode' };
         ToolCommon.trackToolSuccess(operations[tool]);
       }
     } catch (error) {

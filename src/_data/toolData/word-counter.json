@@ -37,7 +37,7 @@
     "inputNotesPara": "Paste the exact text you plan to submit or publish. Remove navigation labels, copied UI chrome, quoted email headers, or Markdown metadata if those should not count toward the final length.",
     "example": "Example",
     "examplePara": "A short multi-paragraph sample produces word, sentence, paragraph, and time estimates at once:",
-    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Sample Text ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Expected Statistics ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "cn": {
     "title": "字计数器 - Coding.Tools",
@@ -77,7 +77,7 @@
     "inputNotesPara": "粘贴您计划提交或发布的确切文本。如果导航标签、复制来的界面元素、引用的邮件头或 Markdown 元数据不应计入最终长度，请先删除它们。",
     "example": "示例",
     "examplePara": "一个简短的多段落样本会立即生成单词、句子、段落和时间估计：",
-    "exampleCode": "--- 示例文本 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 预期统计 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- 示例文本 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 预期统计 ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "tw": {
     "title": "字計數器 - Coding.Tools",
@@ -117,7 +117,7 @@
     "inputNotesPara": "貼上您計劃提交或發布的確切文字。如果導航標籤、複製來的介面元素、引用的郵件標頭或 Markdown 中繼資料不應計入最終長度，請先刪除它們。",
     "example": "範例",
     "examplePara": "一個簡短的多段落樣本會立即產生單字、句子、段落和時間估計：",
-    "exampleCode": "--- 範例文字 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 預期統計 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- 範例文字 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 預期統計 ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "jp": {
     "title": "ワードカウンター - Coding.Tools",
@@ -157,7 +157,7 @@
     "inputNotesPara": "送信または公開する予定のテキストを正確に貼り付けます。ナビゲーション ラベル、コピーされた UI クロム、引用符で囲まれた電子メール ヘッダー、またはマークダウン メタデータが最終的な長さにカウントされない場合は、それらを削除します。",
     "example": "例",
     "examplePara": "短い複数段落のサンプルでは、単語、文、段落、および時間の見積もりが一度に生成されます。",
-    "exampleCode": "--- サンプルテキスト ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 予想統計 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- サンプルテキスト ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 予想統計 ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "kr": {
     "title": "단어 카운터 - Coding.Tools",
@@ -197,7 +197,7 @@
     "inputNotesPara": "제출하거나 게시하려는 정확한 텍스트를 붙여넣으세요. 탐색 라벨, 복사된 UI 크롬, 인용된 이메일 헤더, 마크다운 메타데이터 등이 최종 길이에 포함되지 않는 경우 삭제하세요.",
     "example": "예시",
     "examplePara": "짧은 여러 단락 샘플은 단어, 문장, 단락 및 시간 추정치를 한 번에 생성합니다.",
-    "exampleCode": "--- 샘플 텍스트 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 예상 통계 ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- 샘플 텍스트 ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- 예상 통계 ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "fr": {
     "title": "Compteur de mots - Coding.Tools",
@@ -237,7 +237,7 @@
     "inputNotesPara": "Collez le texte exact que vous envisagez de soumettre ou de publier. Supprimez les libellés de navigation, les éléments d'interface copiés, les en-têtes d'e-mail cités ou les métadonnées Markdown s'ils ne doivent pas compter dans la longueur finale.",
     "example": "Exemple",
     "examplePara": "Un court échantillon de plusieurs paragraphes produit simultanément des estimations de mots, de phrases, de paragraphes et de temps :",
-    "exampleCode": "--- Texte d’exemple ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Statistiques attendues ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Texte d’exemple ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Statistiques attendues ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "de": {
     "title": "Wortzähler - Coding.Tools",
@@ -277,7 +277,7 @@
     "inputNotesPara": "Fügen Sie den genauen Text ein, den Sie einreichen oder veröffentlichen möchten. Entfernen Sie Navigationsbeschriftungen, kopierte UI-Chrome, zitierte E-Mail-Header oder Markdown-Metadaten, wenn diese nicht auf die endgültige Länge angerechnet werden sollen.",
     "example": "Beispiel",
     "examplePara": "Ein kurzes Beispiel mit mehreren Absätzen liefert Wort-, Satz-, Absatz- und Zeitschätzungen gleichzeitig:",
-    "exampleCode": "--- Beispieltext ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Erwartete Statistiken ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Beispieltext ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Erwartete Statistiken ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "es": {
     "title": "Contador de palabras - Coding.Tools",
@@ -317,7 +317,7 @@
     "inputNotesPara": "Pegue el texto exacto que planea enviar o publicar. Elimine las etiquetas de navegación, los elementos de interfaz copiados, los encabezados de correo citados o los metadatos de Markdown si no deben contar para la longitud final.",
     "example": "Ejemplo",
     "examplePara": "Una muestra breve de varios párrafos produce estimaciones de palabras, oraciones, párrafos y tiempo a la vez:",
-    "exampleCode": "--- Texto de ejemplo ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Estadísticas esperadas ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Texto de ejemplo ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Estadísticas esperadas ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   },
   "pt": {
     "title": "Contador de palavras - Coding.Tools",
@@ -357,6 +357,6 @@
     "inputNotesPara": "Cole o texto exato que você planeja enviar ou publicar. Remova rótulos de navegação, elementos de interface copiados, cabeçalhos de e-mail citados ou metadados Markdown se eles não devem contar para o comprimento final.",
     "example": "Exemplo",
     "examplePara": "Uma pequena amostra de vários parágrafos produz estimativas de palavras, frases, parágrafos e tempo de uma só vez:",
-    "exampleCode": "--- Texto de exemplo ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Estatísticas esperadas ---\nWords: 20\nCharacters (with spaces): 112\nSentences: 3\nParagraphs: 3\nReading time: ~1 min\nSpeaking time: ~1 min"
+    "exampleCode": "--- Texto de exemplo ---\nThe quick brown fox jumps over the lazy dog. This is a simple sentence.\n\nIt contains multiple paragraphs and words.\n\n--- Estatísticas esperadas ---\nWords: 20\nCharacters (with spaces): 115\nSentences: 3\nParagraphs: 2\nReading time: < 1 min\nSpeaking time: < 1 min"
   }
 }

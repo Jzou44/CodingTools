@@ -111,6 +111,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
+  for (const file of ["lib/codemirror.js", "lib/codemirror.css", "mode/xml/xml.js", "LICENSE"]) {
+    eleventyConfig.addPassthroughCopy({
+      [`node_modules/codemirror/${file}`]: `assets/codemirror/5.65.21/${file}`
+    });
+  }
   // Serve only the browser encoder, its imports and redistribution notices.
   for (const file of [
     "encode.js", "meta.js", "utils.js", "codec/enc/mozjpeg_enc.js", "codec/enc/mozjpeg_enc.wasm",
@@ -135,6 +140,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("pathFor", function (lang, slug) {
     return site.pathFor(lang, slug);
   });
+
+  eleventyConfig.addFilter("romanNumeral", require("./src/js/roman-numerals").encode);
 
   eleventyConfig.addFilter("absoluteUrl", function (path) {
     return site.absoluteUrl(path);
