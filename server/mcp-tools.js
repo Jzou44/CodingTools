@@ -599,7 +599,7 @@ function makeInputSchema(toolId) {
   if (browserOnlyToolIds.has(toolId)) {
     return {
       type: "object",
-      description: `${tools[toolId].title} needs browser image APIs. tools/call does not process image bytes server-side; it returns a web UI resource link.`,
+      description: `${tools[toolId].title} runs in the browser. tools/call returns a web UI resource link.`,
       properties: {},
       additionalProperties: false,
       examples: [{}]
@@ -663,7 +663,7 @@ function makeOutputSchema(toolId) {
   if (browserOnlyToolIds.has(toolId)) {
     return {
       type: "object",
-      description: `${tools[toolId].title} returns isError=true with a resource_link to the browser UI because server-side image processing is not available.`
+      description: `${tools[toolId].title} returns isError=true with a resource_link to the browser UI.`
     };
   }
   return outputSchemas[toolId] || simpleResultOutputSchema(toolId);
@@ -1712,7 +1712,7 @@ async function executeMcpTool(toolId, args = {}) {
       return imageToBase64(input, options);
     default:
       if (browserOnlyToolIds.has(toolId)) {
-        throw new McpToolError(`${tools[toolId].title} requires browser image APIs and is available through the web UI: ${toolUrl(toolId)}`);
+        throw new McpToolError(`${tools[toolId].title} is available through the web UI: ${toolUrl(toolId)}`);
       }
       throw new McpToolError(`Tool "${toolId}" is not implemented in the MCP runtime.`);
   }

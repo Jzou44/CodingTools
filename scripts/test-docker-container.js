@@ -59,7 +59,11 @@ async function main() {
       await checkPermanentRedirect(prefix + "/", site.pathFor(lang));
     }
   }
-  for (const missing of ["/sha224", "/cn/sha224", "/xx/md5", "/md5/other"]) {
+  for (const { id } of site.languages) {
+    const target = site.pathFor(id, "nslookup");
+    await checkPermanentRedirect(target.replace(/\.html$/, ""), target);
+  }
+  for (const missing of ["/sha224", "/cn/sha224", "/xx/md5", "/md5/other", "/xx/nslookup", "/ru/nslookup"]) {
     assert.strictEqual((await fetch(baseUrl + missing, { redirect: "manual" })).status, 404, missing);
   }
   assert.ok(homeHtml.includes(manifest["/css/style.css"]));

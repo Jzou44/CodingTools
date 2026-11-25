@@ -40,7 +40,7 @@ function hasNoArgumentSchema(tool) {
 
 function makeArgumentGuidance(tool, exampleArguments, browserOnly) {
   if (browserOnly) {
-    return `This tool is exposed in MCP so clients can discover it, but server-side MCP calls do not process image bytes for this browser-only workflow. Use an empty arguments object \`{}\`; the call intentionally returns \`isError: true\` plus a \`resource_link\` to the web UI.`;
+    return `This browser-only tool is listed by MCP for discovery. Use an empty arguments object \`{}\`; the call intentionally returns \`isError: true\` plus a \`resource_link\` to the web UI.`;
   }
 
   if (hasNoArgumentSchema(tool)) {
@@ -142,7 +142,7 @@ ${JSON.stringify(exampleArguments, null, 2)}
 
 ## Notes
 
-${browserOnly ? `This is a browser-only image tool in MCP. \`tools/call\` returns \`isError: true\` with a \`resource_link\` to ${webUi} instead of processing image bytes server-side.` : `This tool can run directly through MCP. Prefer \`result.structuredContent\` for downstream automation and \`result.content[0].text\` for human-readable output.`}
+${browserOnly ? `This is a browser-only tool in MCP. \`tools/call\` returns \`isError: true\` with a \`resource_link\` to ${webUi}.` : `This tool can run directly through MCP. Prefer \`result.structuredContent\` for downstream automation and \`result.content[0].text\` for human-readable output.`}
 
 Web UI: ${webUi}
 `;

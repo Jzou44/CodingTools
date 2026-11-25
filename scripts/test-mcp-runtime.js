@@ -17,7 +17,8 @@ const browserOnlyToolIds = new Set([
   "compress-jpeg",
   "progressive-jpeg",
   "exif-viewer",
-  "exif-remover"
+  "exif-remover",
+  "nslookup"
 ]);
 
 const toolSamples = {
@@ -89,7 +90,8 @@ const toolSamples = {
   "progressive-jpeg": { input: "browser-only" },
   "image-to-base64": { input: "aGVsbG8=", options: { mimeType: "image/png" } },
   "exif-viewer": { input: "browser-only" },
-  "exif-remover": { input: "browser-only" }
+  "exif-remover": { input: "browser-only" },
+  "nslookup": {}
 };
 
 function listen(server) {

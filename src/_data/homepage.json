@@ -10,7 +10,8 @@
       "formatter-minifier": "Formatter & Minifier",
       "hash-cryptography": "Hash & Cryptography",
       "number-conversion": "Number Conversion",
-      "string-text-utilities": "String & Text Utilities"
+      "string-text-utilities": "String & Text Utilities",
+      "network-tools": "Network Tools"
     },
     "toolTitles": {
       "base64-encode": "Base64 Encode",
@@ -81,14 +82,16 @@
       "json-diff": "JSON Diff",
       "text-compare": "Text Compare",
       "image-resize": "Image Resizer",
-      "image-crop": "Image Crop"
+      "image-crop": "Image Crop",
+      "nslookup": "DNS Lookup (nslookup)"
     },
     "categoryDescs": {
       "image-utilities": "Compress, convert, and inspect image files right in your browser.",
       "formatter-minifier": "Beautify or minify JSON, XML, HTML, CSS, JavaScript, and SQL.",
       "hash-cryptography": "Generate hashes, encode/decode data, and create secure passwords.",
       "number-conversion": "Convert between number systems, color formats, and encodings.",
-      "string-text-utilities": "Transform, analyze, and manipulate text and strings."
+      "string-text-utilities": "Transform, analyze, and manipulate text and strings.",
+      "network-tools": "Look up public DNS records for a domain."
     }
   },
   "cn": {
@@ -102,7 +105,8 @@
       "formatter-minifier": "格式化与压缩",
       "hash-cryptography": "哈希与加密",
       "number-conversion": "数字转换",
-      "string-text-utilities": "字符串与文本"
+      "string-text-utilities": "字符串与文本",
+      "network-tools": "网络工具"
     },
     "toolTitles": {
       "base64-encode": "Base64 编码",
@@ -173,14 +177,16 @@
       "json-diff": "JSON 文件对比",
       "text-compare": "文本对比",
       "image-resize": "图片尺寸调整",
-      "image-crop": "图片裁剪"
+      "image-crop": "图片裁剪",
+      "nslookup": "DNS 查询（nslookup）"
     },
     "categoryDescs": {
       "image-utilities": "在浏览器中直接压缩、转换和检查图片文件。",
       "formatter-minifier": "美化或压缩 JSON、XML、HTML、CSS、JavaScript 和 SQL。",
       "hash-cryptography": "生成哈希、编码/解码数据和创建安全密码。",
       "number-conversion": "在数字系统、颜色格式和编码之间转换。",
-      "string-text-utilities": "转换、分析和操作文本和字符串。"
+      "string-text-utilities": "转换、分析和操作文本和字符串。",
+      "network-tools": "查询域名的公共 DNS 记录。"
     }
   },
   "tw": {
@@ -194,7 +200,8 @@
       "formatter-minifier": "格式化與壓縮",
       "hash-cryptography": "雜湊與加密",
       "number-conversion": "數字轉換",
-      "string-text-utilities": "字串與文字"
+      "string-text-utilities": "字串與文字",
+      "network-tools": "網路工具"
     },
     "toolTitles": {
       "base64-encode": "Base64 編碼",
@@ -265,14 +272,16 @@
       "json-diff": "JSON 差異比對",
       "text-compare": "文字比對",
       "image-resize": "圖片尺寸調整",
-      "image-crop": "圖片裁切"
+      "image-crop": "圖片裁切",
+      "nslookup": "DNS 查詢（nslookup）"
     },
     "categoryDescs": {
       "image-utilities": "在瀏覽器中直接壓縮、轉換和檢查圖片檔案。",
       "formatter-minifier": "美化或壓縮 JSON、XML、HTML、CSS、JavaScript 和 SQL。",
       "hash-cryptography": "產生雜湊、編碼/解碼資料和建立安全密碼。",
       "number-conversion": "在數字系統、顏色格式和編碼之間轉換。",
-      "string-text-utilities": "轉換、分析和操作文字和字串。"
+      "string-text-utilities": "轉換、分析和操作文字和字串。",
+      "network-tools": "查詢網域的公開 DNS 紀錄。"
     }
   },
   "jp": {
@@ -286,7 +295,8 @@
       "formatter-minifier": "整形・圧縮",
       "hash-cryptography": "ハッシュ・暗号化",
       "number-conversion": "数値変換",
-      "string-text-utilities": "文字列＆テキスト"
+      "string-text-utilities": "文字列＆テキスト",
+      "network-tools": "ネットワークツール"
     },
     "toolTitles": {
       "base64-encode": "Base64 エンコード",
@@ -357,14 +367,16 @@
       "json-diff": "JSON 差分",
       "text-compare": "テキスト比較",
       "image-resize": "画像リサイズ",
-      "image-crop": "画像トリミング"
+      "image-crop": "画像トリミング",
+      "nslookup": "DNSレコード検索（nslookup）"
     },
     "categoryDescs": {
       "image-utilities": "ブラウザで画像ファイルを圧縮、変換、検査。",
       "formatter-minifier": "JSON、XML、HTML、CSS、JavaScript、SQLの整形・圧縮。",
       "hash-cryptography": "ハッシュ生成、データのエンコード/デコード、安全なパスワード作成。",
       "number-conversion": "記数法、カラーフォーマット、エンコーディング間の変換。",
-      "string-text-utilities": "テキストと文字列の変換、分析、操作。"
+      "string-text-utilities": "テキストと文字列の変換、分析、操作。",
+      "network-tools": "ドメインの公開 DNS レコードを調べます。"
     }
   },
   "kr": {
@@ -378,7 +390,8 @@
       "formatter-minifier": "포맷 및 압축",
       "hash-cryptography": "해시 & 암호화",
       "number-conversion": "숫자 변환",
-      "string-text-utilities": "문자열 & 텍스트"
+      "string-text-utilities": "문자열 & 텍스트",
+      "network-tools": "네트워크 도구"
     },
     "toolTitles": {
       "base64-encode": "Base64 인코딩",
@@ -449,14 +462,16 @@
       "json-diff": "JSON 차이 비교",
       "text-compare": "텍스트 비교",
       "image-resize": "이미지 크기 조정",
-      "image-crop": "이미지 자르기"
+      "image-crop": "이미지 자르기",
+      "nslookup": "DNS 레코드 조회 (nslookup)"
     },
     "categoryDescs": {
       "image-utilities": "브라우저에서 이미지 파일을 압축, 변환, 검사하세요.",
       "formatter-minifier": "JSON, XML, HTML, CSS, JavaScript, SQL을 정렬하거나 압축합니다.",
       "hash-cryptography": "해시 생성, 데이터 인코딩/디코딩, 안전한 비밀번호 생성.",
       "number-conversion": "진법, 색상 형식, 인코딩 간 변환.",
-      "string-text-utilities": "텍스트와 문자열 변환, 분석, 조작."
+      "string-text-utilities": "텍스트와 문자열 변환, 분석, 조작.",
+      "network-tools": "도메인의 공개 DNS 레코드를 조회합니다."
     }
   },
   "fr": {
@@ -470,7 +485,8 @@
       "formatter-minifier": "Formateur & Minifieur",
       "hash-cryptography": "Hachage et cryptographie",
       "number-conversion": "Conversion de nombres",
-      "string-text-utilities": "Chaînes & Texte"
+      "string-text-utilities": "Chaînes & Texte",
+      "network-tools": "Outils réseau"
     },
     "toolTitles": {
       "base64-encode": "Encodage Base64",
@@ -541,14 +557,16 @@
       "json-diff": "Diff JSON",
       "text-compare": "Comparaison de texte",
       "image-resize": "Redimensionner une image",
-      "image-crop": "Recadrer une image"
+      "image-crop": "Recadrer une image",
+      "nslookup": "Recherche DNS (nslookup)"
     },
     "categoryDescs": {
       "image-utilities": "Compressez, convertissez et inspectez des images directement dans votre navigateur.",
       "formatter-minifier": "Formatez ou minifiez JSON, XML, HTML, CSS, JavaScript et SQL.",
       "hash-cryptography": "Générez des hachages, encodez/décodez des données et créez des mots de passe sécurisés.",
       "number-conversion": "Convertissez entre systèmes numériques, formats de couleur et encodages.",
-      "string-text-utilities": "Transformez, analysez et manipulez du texte et des chaînes."
+      "string-text-utilities": "Transformez, analysez et manipulez du texte et des chaînes.",
+      "network-tools": "Consultez les enregistrements DNS publics d’un domaine."
     }
   },
   "de": {
@@ -562,7 +580,8 @@
       "formatter-minifier": "Formatierer & Minifizierer",
       "hash-cryptography": "Hash & Kryptographie",
       "number-conversion": "Zahlenkonvertierung",
-      "string-text-utilities": "Zeichenketten & Text"
+      "string-text-utilities": "Zeichenketten & Text",
+      "network-tools": "Netzwerktools"
     },
     "toolTitles": {
       "base64-encode": "Base64 Kodierung",
@@ -633,14 +652,16 @@
       "json-diff": "JSON-Diff",
       "text-compare": "Textvergleich",
       "image-resize": "Bildgröße ändern",
-      "image-crop": "Bild zuschneiden"
+      "image-crop": "Bild zuschneiden",
+      "nslookup": "DNS-Abfrage (nslookup)"
     },
     "categoryDescs": {
       "image-utilities": "Komprimieren, konvertieren und inspizieren Sie Bilddateien direkt im Browser.",
       "formatter-minifier": "Formatieren oder minimieren Sie JSON, XML, HTML, CSS, JavaScript und SQL.",
       "hash-cryptography": "Hashes generieren, Daten kodieren/decodieren und sichere Passwörter erstellen.",
       "number-conversion": "Konvertieren zwischen Zahlensystemen, Farbformaten und Kodierungen.",
-      "string-text-utilities": "Text und Zeichenfolgen transformieren, analysieren und manipulieren."
+      "string-text-utilities": "Text und Zeichenfolgen transformieren, analysieren und manipulieren.",
+      "network-tools": "Öffentliche DNS-Einträge einer Domain abrufen."
     }
   },
   "es": {
@@ -654,7 +675,8 @@
       "formatter-minifier": "Formateador y Minificador",
       "hash-cryptography": "Hash y Criptografía",
       "number-conversion": "Conversión de números",
-      "string-text-utilities": "Cadenas y Texto"
+      "string-text-utilities": "Cadenas y Texto",
+      "network-tools": "Herramientas de red"
     },
     "toolTitles": {
       "base64-encode": "Codificación Base64",
@@ -725,14 +747,16 @@
       "json-diff": "Diferencias JSON",
       "text-compare": "Comparar texto",
       "image-resize": "Redimensionar imagen",
-      "image-crop": "Recortar imagen"
+      "image-crop": "Recortar imagen",
+      "nslookup": "Consulta DNS (nslookup)"
     },
     "categoryDescs": {
       "image-utilities": "Comprima, convierta e inspeccione imágenes directamente en su navegador.",
       "formatter-minifier": "Formatee o minimice JSON, XML, HTML, CSS, JavaScript y SQL.",
       "hash-cryptography": "Genere hashes, codifique/decodifique datos y cree contraseñas seguras.",
       "number-conversion": "Convierta entre sistemas numéricos, formatos de color y codificaciones.",
-      "string-text-utilities": "Transforme, analice y manipule texto y cadenas."
+      "string-text-utilities": "Transforme, analice y manipule texto y cadenas.",
+      "network-tools": "Consulta los registros DNS públicos de un dominio."
     }
   },
   "pt": {
@@ -746,7 +770,8 @@
       "formatter-minifier": "Formatador e Minificador",
       "hash-cryptography": "Hash e Criptografia",
       "number-conversion": "Conversão de números",
-      "string-text-utilities": "Strings e Texto"
+      "string-text-utilities": "Strings e Texto",
+      "network-tools": "Ferramentas de rede"
     },
     "toolTitles": {
       "base64-encode": "Codificação Base64",
@@ -817,14 +842,16 @@
       "json-diff": "Diff JSON",
       "text-compare": "Comparar texto",
       "image-resize": "Redimensionar imagem",
-      "image-crop": "Cortar imagem"
+      "image-crop": "Cortar imagem",
+      "nslookup": "Consulta DNS (nslookup)"
     },
     "categoryDescs": {
       "image-utilities": "Comprima, converta e inspecione imagens diretamente no seu navegador.",
       "formatter-minifier": "Formate ou minimize JSON, XML, HTML, CSS, JavaScript e SQL.",
       "hash-cryptography": "Gere hashes, codifique/decodifique dados e crie senhas seguras.",
       "number-conversion": "Converta entre sistemas numéricos, formatos de cor e codificações.",
-      "string-text-utilities": "Transforme, analise e manipule texto e strings."
+      "string-text-utilities": "Transforme, analise e manipule texto e strings.",
+      "network-tools": "Consulte os registros DNS públicos de um domínio."
     }
   }
 }

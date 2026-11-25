@@ -1,7 +1,10 @@
 {% set mcpToolName = activeTool or toolId or pageSlug %}
 {% set mcpEndpoint = site.baseUrl + "/mcp" %}
 {% set mcpExampleArguments = mcpExamples.argumentsJson[mcpToolName] or "{}" %}
-{% if mcpToolName %}
+{% if toolData.mcpLinkNote %}
+  <h3>{{ t.ui.mcpIntegrationTitle }}</h3>
+  <p>{{ toolData.mcpLinkNote }}</p>
+{% elif mcpToolName %}
   <h3>{{ t.ui.mcpIntegrationTitle or "MCP integration" }}</h3>
   <p>{{ t.ui.mcpIntegrationIntro or "Developers can call this tool through the Coding.Tools MCP endpoint. Use tools/list to discover the available tools, then call this tool by name with tools/call." }}</p>
   <p><strong>{{ t.ui.mcpToolNameLabel or "MCP tool name" }}:</strong> <code>{{ mcpToolName }}</code></p>

@@ -1,0 +1,37 @@
+<form class="batch-card" id="dns-form"
+  data-loading="{{ toolData.dns.loading }}" data-invalid="{{ toolData.dns.invalid }}"
+  data-nxdomain="{{ toolData.dns.nxdomain }}" data-empty="{{ toolData.dns.empty }}"
+  data-failed="{{ toolData.dns.failed }}" data-rcode="{{ toolData.dns.rcode }}"
+  data-complete="{{ toolData.dns.complete }}" novalidate>
+  <div class="batch-control-grid">
+    <label class="batch-field" for="dns-name">
+      <span>{{ toolData.dns.domain }}</span>
+      <input id="dns-name" type="text" dir="ltr" placeholder="example.com" required spellcheck="false"
+        autocomplete="off" autocapitalize="none" aria-describedby="dns-resolver dns-status">
+    </label>
+    <label class="batch-field" for="dns-type">
+      <span>{{ toolData.dns.type }}</span>
+      <select id="dns-type" dir="ltr">
+        {% for type in ["A", "AAAA", "CNAME", "MX", "NS", "TXT", "SOA", "PTR", "SRV", "CAA", "ANY"] %}
+        <option value="{{ type }}">{{ type }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+  <p id="dns-resolver" class="tool-hint">{{ toolData.dns.resolver }}</p>
+  <button type="submit" class="btn btn-primary">{{ toolData.dns.submit }}</button>
+</form>
+<p id="dns-status" role="status" aria-live="polite"></p>
+<div class="table-responsive" id="dns-results" hidden>
+  <table class="description-table">
+    <caption>{{ toolData.dns.results }}</caption>
+    <thead><tr>
+      <th scope="col">{{ toolData.dns.name }}</th>
+      <th scope="col">{{ toolData.dns.type }}</th>
+      <th scope="col">{{ toolData.dns.ttl }}</th>
+      <th scope="col">{{ toolData.dns.value }}</th>
+    </tr></thead>
+    <tbody id="dns-answers" dir="ltr"></tbody>
+  </table>
+</div>
+<script defer src="/js/nslookup.js?v={{ site.assetVersion }}"></script>

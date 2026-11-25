@@ -1,0 +1,281 @@
+{
+  "en": {
+    "title": "Online DNS Lookup (nslookup) – A, AAAA, MX and TXT Records - Coding.Tools",
+    "description": "Look up DNS records for a domain with Google Public DNS. Check IPv4 and IPv6 addresses, mail servers, aliases and TXT verification records.",
+    "toolTitle": "DNS Lookup (nslookup)",
+    "toolDescription": "Check a domain’s addresses, mail servers and DNS verification records.",
+    "categoryName": "Network Tools",
+    "mcpLinkNote": "MCP clients can discover nslookup with tools/list. Calling it returns a link to this page; run the DNS query here in your browser.",
+    "howToUse": "How to look up DNS records",
+    "steps": [
+      "Enter a domain such as example.com. For a TXT record, enter its full name, such as _dmarc.example.com.",
+      "Choose A or AAAA for web addresses, MX for mail servers, or TXT for verification and email policies.",
+      "Run the lookup. TTL shows how many seconds a resolver can cache a record."
+    ],
+    "dns": {
+      "domain": "Domain name",
+      "type": "Record type",
+      "submit": "Look up DNS",
+      "resolver": "Your browser sends the name you enter to Google Public DNS. The results reflect that resolver’s view.",
+      "name": "Name",
+      "value": "Value",
+      "ttl": "TTL (seconds)",
+      "results": "DNS records",
+      "loading": "Looking up records…",
+      "invalid": "Enter a valid DNS name, without a URL or path.",
+      "nxdomain": "Domain does not exist (NXDOMAIN).",
+      "empty": "No record of the requested type.",
+      "failed": "The resolver could not be reached or returned an incomplete response. Try again.",
+      "rcode": "DNS response code",
+      "complete": "Lookup complete."
+    }
+  },
+  "cn": {
+    "title": "在线 DNS 查询（nslookup）– 查询 A、AAAA、MX 和 TXT 记录 - Coding.Tools",
+    "description": "使用 Google Public DNS 在线查询域名的 DNS 记录，查看 IPv4、IPv6、邮件服务器、别名和 TXT 验证记录。",
+    "toolTitle": "DNS 查询（nslookup）",
+    "toolDescription": "查询域名的 IP 地址、邮件服务器和 DNS 验证记录。",
+    "categoryName": "网络工具",
+    "mcpLinkNote": "MCP 客户端可以用 tools/list 找到 nslookup。调用工具会返回本页链接，域名查询在浏览器中执行。",
+    "howToUse": "如何查询 DNS 记录",
+    "steps": [
+      "输入域名，例如 example.com。查询 TXT 记录时可输入完整名称，例如 _dmarc.example.com。",
+      "查网站地址选 A 或 AAAA，查邮件服务器选 MX，查域名验证和邮件策略选 TXT。",
+      "点击查询。TTL 表示解析器可缓存该记录的剩余秒数。"
+    ],
+    "dns": {
+      "domain": "域名",
+      "type": "记录类型",
+      "submit": "查询 DNS",
+      "resolver": "浏览器会将你输入的域名发送给 Google Public DNS，结果来自该公共解析器。",
+      "name": "名称",
+      "value": "记录值",
+      "ttl": "TTL（秒）",
+      "results": "DNS 记录",
+      "loading": "正在查询…",
+      "invalid": "请输入有效的 DNS 名称，无需填写网址或路径。",
+      "nxdomain": "域名不存在（NXDOMAIN）。",
+      "empty": "未查到所选类型的记录。",
+      "failed": "无法连接解析器或响应不完整，请重试。",
+      "rcode": "DNS 响应码",
+      "complete": "查询完成。"
+    }
+  },
+  "tw": {
+    "title": "線上 DNS 查詢（nslookup）– 查詢 A、AAAA、MX 與 TXT 紀錄 - Coding.Tools",
+    "description": "透過 Google Public DNS 查詢網域的 DNS 紀錄，查看 IPv4、IPv6、郵件伺服器、別名與 TXT 驗證紀錄。",
+    "toolTitle": "DNS 查詢（nslookup）",
+    "toolDescription": "查詢網域的 IP 位址、郵件伺服器與 DNS 驗證紀錄。",
+    "categoryName": "網路工具",
+    "mcpLinkNote": "MCP 用戶端可透過 tools/list 找到 nslookup。呼叫工具會取得本頁連結，DNS 查詢在瀏覽器中執行。",
+    "howToUse": "如何查詢 DNS 紀錄",
+    "steps": [
+      "輸入網域，例如 example.com。查詢 TXT 紀錄時可輸入完整名稱，例如 _dmarc.example.com。",
+      "查網站位址選 A 或 AAAA，查郵件伺服器選 MX，查網域驗證與郵件政策選 TXT。",
+      "執行查詢。TTL 表示解析器可快取這筆紀錄的剩餘秒數。"
+    ],
+    "dns": {
+      "domain": "網域名稱",
+      "type": "紀錄類型",
+      "submit": "查詢 DNS",
+      "resolver": "瀏覽器會將你輸入的網域名稱傳送至 Google Public DNS，結果來自該公共解析器。",
+      "name": "名稱",
+      "value": "紀錄值",
+      "ttl": "TTL（秒）",
+      "results": "DNS 紀錄",
+      "loading": "正在查詢…",
+      "invalid": "請輸入有效的 DNS 名稱，無須填寫網址或路徑。",
+      "nxdomain": "網域不存在（NXDOMAIN）。",
+      "empty": "查無指定類型的紀錄。",
+      "failed": "無法連上解析器或回應不完整，請再試一次。",
+      "rcode": "DNS 回應碼",
+      "complete": "查詢完成。"
+    }
+  },
+  "jp": {
+    "title": "DNSレコード検索（nslookup）– A・AAAA・MX・TXTを確認 - Coding.Tools",
+    "description": "Google Public DNS を使ってドメインの DNS レコードを検索。IPv4・IPv6 アドレス、メールサーバー、別名、TXT の認証情報を確認できます。",
+    "toolTitle": "DNSレコード検索（nslookup）",
+    "toolDescription": "ドメインの IP アドレス、メールサーバー、DNS の認証レコードを調べます。",
+    "categoryName": "ネットワークツール",
+    "mcpLinkNote": "MCP の tools/list で nslookup を見つけられます。呼び出すとこのページへのリンクが返ります。DNS の照会はブラウザーで実行します。",
+    "howToUse": "DNS レコードの調べ方",
+    "steps": [
+      "example.com などのドメイン名を入力します。TXT は _dmarc.example.com のように完全な名前で検索します。",
+      "Web サイトのアドレスは A または AAAA、メールサーバーは MX、ドメイン認証やメールポリシーは TXT を選びます。",
+      "検索を実行します。TTL はリゾルバーがレコードをキャッシュできる残り時間（秒）です。"
+    ],
+    "dns": {
+      "domain": "ドメイン名",
+      "type": "レコードの種類",
+      "submit": "DNS を検索",
+      "resolver": "入力した名前はブラウザから Google Public DNS に送信されます。結果はこのリゾルバーの応答です。",
+      "name": "名前",
+      "value": "値",
+      "ttl": "TTL（秒）",
+      "results": "DNS レコード",
+      "loading": "検索中…",
+      "invalid": "URL やパスを含まない有効な DNS 名を入力してください。",
+      "nxdomain": "ドメインが存在しません（NXDOMAIN）。",
+      "empty": "指定した種類のレコードはありません。",
+      "failed": "リゾルバーに接続できないか、応答が不完全です。再度お試しください。",
+      "rcode": "DNS 応答コード",
+      "complete": "検索が完了しました。"
+    }
+  },
+  "kr": {
+    "title": "온라인 DNS 조회 (nslookup) – A, AAAA, MX, TXT 레코드 확인 - Coding.Tools",
+    "description": "Google Public DNS로 도메인의 DNS 레코드를 조회하세요. IPv4 및 IPv6 주소, 메일 서버, 별칭, TXT 인증 레코드를 확인할 수 있습니다.",
+    "toolTitle": "DNS 레코드 조회 (nslookup)",
+    "toolDescription": "도메인의 IP 주소, 메일 서버 및 DNS 인증 레코드를 조회합니다.",
+    "categoryName": "네트워크 도구",
+    "mcpLinkNote": "MCP 클라이언트는 tools/list에서 nslookup을 찾을 수 있습니다. 호출하면 이 페이지의 링크가 반환되며 DNS 조회는 브라우저에서 실행됩니다.",
+    "howToUse": "DNS 레코드 조회 방법",
+    "steps": [
+      "example.com처럼 도메인을 입력합니다. TXT를 조회할 때는 _dmarc.example.com처럼 전체 이름을 입력하세요.",
+      "웹 주소는 A 또는 AAAA, 메일 서버는 MX, 도메인 인증이나 메일 정책은 TXT를 선택합니다.",
+      "조회를 실행합니다. TTL은 리졸버가 레코드를 캐시할 수 있는 남은 시간(초)입니다."
+    ],
+    "dns": {
+      "domain": "도메인 이름",
+      "type": "레코드 유형",
+      "submit": "DNS 조회",
+      "resolver": "브라우저는 입력한 이름을 Google Public DNS로 전송합니다. 결과는 해당 리졸버의 응답입니다.",
+      "name": "이름",
+      "value": "값",
+      "ttl": "TTL(초)",
+      "results": "DNS 레코드",
+      "loading": "조회 중…",
+      "invalid": "URL이나 경로를 제외한 올바른 DNS 이름을 입력하세요.",
+      "nxdomain": "도메인이 존재하지 않습니다(NXDOMAIN).",
+      "empty": "요청한 유형의 레코드가 없습니다.",
+      "failed": "리졸버에 연결할 수 없거나 응답이 불완전합니다. 다시 시도하세요.",
+      "rcode": "DNS 응답 코드",
+      "complete": "조회가 완료되었습니다."
+    }
+  },
+  "fr": {
+    "title": "Recherche DNS en ligne (nslookup) – enregistrements A, AAAA, MX et TXT - Coding.Tools",
+    "description": "Interrogez Google Public DNS pour consulter les adresses IPv4 et IPv6, serveurs de messagerie, alias et enregistrements TXT d’un domaine.",
+    "toolTitle": "Recherche DNS (nslookup)",
+    "toolDescription": "Consultez les adresses IP, les serveurs de messagerie et les enregistrements de vérification d’un domaine.",
+    "categoryName": "Outils réseau",
+    "mcpLinkNote": "Les clients MCP peuvent découvrir nslookup avec tools/list. Un appel renvoie un lien vers cette page, où la requête DNS s’effectue dans le navigateur.",
+    "howToUse": "Comment consulter les enregistrements DNS",
+    "steps": [
+      "Saisissez un domaine tel que example.com. Pour un enregistrement TXT, indiquez son nom complet, par exemple _dmarc.example.com.",
+      "Choisissez A ou AAAA pour les adresses IP, MX pour les serveurs de messagerie et TXT pour la vérification du domaine ou les politiques de messagerie.",
+      "Lancez la recherche. Le TTL indique combien de secondes le résolveur peut encore garder un enregistrement en cache."
+    ],
+    "dns": {
+      "domain": "Nom de domaine",
+      "type": "Type d’enregistrement",
+      "submit": "Rechercher",
+      "resolver": "Votre navigateur transmet le nom saisi à Google Public DNS. Les résultats proviennent de ce résolveur.",
+      "name": "Nom",
+      "value": "Valeur",
+      "ttl": "TTL (secondes)",
+      "results": "Enregistrements DNS",
+      "loading": "Recherche en cours…",
+      "invalid": "Saisissez un nom DNS valide, sans URL ni chemin.",
+      "nxdomain": "Ce domaine n’existe pas (NXDOMAIN).",
+      "empty": "Aucun enregistrement du type demandé.",
+      "failed": "Le résolveur est inaccessible ou sa réponse est incomplète. Réessayez.",
+      "rcode": "Code de réponse DNS",
+      "complete": "Recherche terminée."
+    }
+  },
+  "de": {
+    "title": "DNS-Abfrage online (nslookup) – A-, AAAA-, MX- und TXT-Einträge - Coding.Tools",
+    "description": "DNS-Einträge einer Domain mit Google Public DNS abfragen. IPv4- und IPv6-Adressen, Mailserver, Aliasse und TXT-Einträge zur Verifizierung nachschlagen.",
+    "toolTitle": "DNS-Abfrage (nslookup)",
+    "toolDescription": "IP-Adressen, Mailserver und DNS-Einträge zur Verifizierung einer Domain nachschlagen.",
+    "categoryName": "Netzwerktools",
+    "mcpLinkNote": "MCP-Clients finden nslookup über tools/list. Ein Aufruf liefert einen Link zu dieser Seite. Die DNS-Abfrage erfolgt im Browser.",
+    "howToUse": "DNS-Einträge abfragen",
+    "steps": [
+      "Gib eine Domain wie example.com ein. Verwende bei TXT-Einträgen den vollständigen Namen, etwa _dmarc.example.com.",
+      "Wähle A oder AAAA für IP-Adressen, MX für Mailserver und TXT für die Domainverifizierung oder E-Mail-Richtlinien.",
+      "Starte die Abfrage. Die TTL gibt in Sekunden an, wie lange der Resolver den Eintrag noch zwischenspeichern darf."
+    ],
+    "dns": {
+      "domain": "Domainname",
+      "type": "Eintragstyp",
+      "submit": "DNS abfragen",
+      "resolver": "Dein Browser sendet den eingegebenen Namen an Google Public DNS. Die Ergebnisse stammen von diesem Resolver.",
+      "name": "Name",
+      "value": "Wert",
+      "ttl": "TTL (Sekunden)",
+      "results": "DNS-Einträge",
+      "loading": "Abfrage läuft…",
+      "invalid": "Gib einen gültigen DNS-Namen ohne URL oder Pfad ein.",
+      "nxdomain": "Die Domain existiert nicht (NXDOMAIN).",
+      "empty": "Kein Eintrag des angefragten Typs vorhanden.",
+      "failed": "Der Resolver ist nicht erreichbar oder die Antwort ist unvollständig. Bitte erneut versuchen.",
+      "rcode": "DNS-Antwortcode",
+      "complete": "Abfrage abgeschlossen."
+    }
+  },
+  "es": {
+    "title": "Consulta DNS en línea (nslookup) – registros A, AAAA, MX y TXT - Coding.Tools",
+    "description": "Consulta los registros DNS de un dominio con Google Public DNS. Revisa direcciones IPv4 e IPv6, servidores de correo, alias y registros TXT de verificación.",
+    "toolTitle": "Consulta DNS (nslookup)",
+    "toolDescription": "Consulta las direcciones IP, los servidores de correo y los registros de verificación de un dominio.",
+    "categoryName": "Herramientas de red",
+    "mcpLinkNote": "Los clientes MCP pueden encontrar nslookup con tools/list. Al invocarlo se obtiene un enlace a esta página, donde se ejecuta la consulta DNS desde el navegador.",
+    "howToUse": "Cómo consultar los registros DNS",
+    "steps": [
+      "Introduce un dominio como example.com. Para un registro TXT, escribe el nombre completo, por ejemplo _dmarc.example.com.",
+      "Selecciona A o AAAA para direcciones IP, MX para servidores de correo y TXT para verificación de dominios o políticas de correo.",
+      "Ejecuta la consulta. El TTL indica cuántos segundos más puede conservar el registro en caché el resolvedor."
+    ],
+    "dns": {
+      "domain": "Nombre de dominio",
+      "type": "Tipo de registro",
+      "submit": "Consultar DNS",
+      "resolver": "Tu navegador envía el nombre introducido a Google Public DNS. Los resultados proceden de ese resolvedor.",
+      "name": "Nombre",
+      "value": "Valor",
+      "ttl": "TTL (segundos)",
+      "results": "Registros DNS",
+      "loading": "Consultando…",
+      "invalid": "Introduce un nombre DNS válido, sin URL ni ruta.",
+      "nxdomain": "El dominio no existe (NXDOMAIN).",
+      "empty": "No hay registros del tipo solicitado.",
+      "failed": "No se pudo contactar con el resolvedor o la respuesta está incompleta. Inténtalo de nuevo.",
+      "rcode": "Código de respuesta DNS",
+      "complete": "Consulta completada."
+    }
+  },
+  "pt": {
+    "title": "Consulta DNS online (nslookup) – registros A, AAAA, MX e TXT - Coding.Tools",
+    "description": "Consulte os registros DNS de um domínio com o Google Public DNS. Verifique endereços IPv4 e IPv6, servidores de e-mail, aliases e registros TXT de verificação.",
+    "toolTitle": "Consulta DNS (nslookup)",
+    "toolDescription": "Consulte os endereços IP, servidores de e-mail e registros de verificação de um domínio.",
+    "categoryName": "Ferramentas de rede",
+    "mcpLinkNote": "Os clientes MCP podem encontrar o nslookup com tools/list. A chamada retorna um link para esta página, onde a consulta DNS é feita pelo navegador.",
+    "howToUse": "Como consultar os registros DNS",
+    "steps": [
+      "Digite um domínio como example.com. Para consultar um registro TXT, use o nome completo, por exemplo _dmarc.example.com.",
+      "Escolha A ou AAAA para endereços IP, MX para servidores de e-mail e TXT para verificação de domínio ou políticas de e-mail.",
+      "Execute a consulta. O TTL indica por quantos segundos o resolvedor ainda pode manter o registro em cache."
+    ],
+    "dns": {
+      "domain": "Nome de domínio",
+      "type": "Tipo de registro",
+      "submit": "Consultar DNS",
+      "resolver": "Seu navegador envia o nome informado ao Google Public DNS. Os resultados vêm desse resolvedor.",
+      "name": "Nome",
+      "value": "Valor",
+      "ttl": "TTL (segundos)",
+      "results": "Registros DNS",
+      "loading": "Consultando…",
+      "invalid": "Digite um nome DNS válido, sem URL nem caminho.",
+      "nxdomain": "O domínio não existe (NXDOMAIN).",
+      "empty": "Nenhum registro do tipo solicitado.",
+      "failed": "O resolvedor está inacessível ou a resposta está incompleta. Tente novamente.",
+      "rcode": "Código de resposta DNS",
+      "complete": "Consulta concluída."
+    }
+  }
+}

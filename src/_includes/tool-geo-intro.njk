@@ -1,6 +1,6 @@
 {% set introLang = toolGeoIntro[lang] or toolGeoIntro.en %}
 {% set intro = introLang[activeTool or toolId] %}
-{% if intro %}
+{% if intro and (activeTool or toolId) != "nslookup" %}
   <section class="geo-intro" aria-label="Quick answer">
     <h2>{{ intro.question }}</h2>
     <p class="geo-intro-answer">{{ intro.answer | safe }}</p>

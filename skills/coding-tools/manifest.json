@@ -2,7 +2,7 @@
   "generatedFrom": "server/mcp-tools.js:listMcpTools",
   "language": "en",
   "endpoint": "https://coding.tools/mcp",
-  "skillCount": 69,
+  "skillCount": 70,
   "skills": [
     {
       "name": "coding-tools-base64-encode",
@@ -417,6 +417,12 @@
       "tool": "exif-remover",
       "title": "EXIF Remover",
       "webUi": "https://coding.tools/exif-remover.html"
+    },
+    {
+      "name": "coding-tools-nslookup",
+      "tool": "nslookup",
+      "title": "DNS Lookup (nslookup)",
+      "webUi": "https://coding.tools/nslookup.html"
     }
   ]
 }

@@ -73,7 +73,8 @@ const examples = {
   "progressive-jpeg": {},
   "image-to-base64": { input: { url: "https://coding.tools/assets/img/photo2pixel-demo.png" } },
   "exif-viewer": {},
-  "exif-remover": {}
+  "exif-remover": {},
+  "nslookup": {}
 };
 
 module.exports = {

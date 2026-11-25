@@ -1,0 +1,13 @@
+interface:
+  display_name: "Coding.Tools DNS Lookup (nslookup)"
+  short_description: "Look up public DNS records for a domain using Google Public D..."
+  default_prompt: "Use $coding-tools-nslookup to run DNS Lookup (nslookup) through Coding.Tools MCP."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "coding-tools"
+      description: "Coding.Tools MCP endpoint for DNS Lookup (nslookup)."
+      transport: "streamable_http"
+      url: "https://coding.tools/mcp"
+policy:
+  allow_implicit_invocation: true

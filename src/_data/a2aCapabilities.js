@@ -93,7 +93,7 @@ function makeTools() {
       outputModes: modes.outputModes,
       tags: makeTags(slug, name, tool.category),
       examples: makeExamples(name, data),
-      privacy: isRuntimeTool(slug)
+      privacy: slug === "nslookup" ? data.dns.resolver : isRuntimeTool(slug)
         ? "A2A requests are processed by the Coding.Tools runtime. The public website version still runs locally in the user's browser."
         : "Runs locally in the user's browser on the public website.",
       runtime: {

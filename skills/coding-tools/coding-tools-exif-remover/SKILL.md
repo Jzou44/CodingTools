@@ -36,7 +36,7 @@ The production endpoint is a public remote service. Do not send secrets, private
 ```json
 {
   "type": "object",
-  "description": "EXIF Remover needs browser image APIs. tools/call does not process image bytes server-side; it returns a web UI resource link.",
+  "description": "EXIF Remover runs in the browser. tools/call returns a web UI resource link.",
   "properties": {},
   "additionalProperties": false,
   "examples": [
@@ -47,14 +47,14 @@ The production endpoint is a public remote service. Do not send secrets, private
 
 ## Argument Guidance
 
-This tool is exposed in MCP so clients can discover it, but server-side MCP calls do not process image bytes for this browser-only workflow. Use an empty arguments object `{}`; the call intentionally returns `isError: true` plus a `resource_link` to the web UI.
+This browser-only tool is listed by MCP for discovery. Use an empty arguments object `{}`; the call intentionally returns `isError: true` plus a `resource_link` to the web UI.
 
 ## Output Schema
 
 ```json
 {
   "type": "object",
-  "description": "EXIF Remover returns isError=true with a resource_link to the browser UI because server-side image processing is not available."
+  "description": "EXIF Remover returns isError=true with a resource_link to the browser UI."
 }
 ```
 
@@ -80,6 +80,6 @@ This tool is exposed in MCP so clients can discover it, but server-side MCP call
 
 ## Notes
 
-This is a browser-only image tool in MCP. `tools/call` returns `isError: true` with a `resource_link` to https://coding.tools/exif-remover.html instead of processing image bytes server-side.
+This is a browser-only tool in MCP. `tools/call` returns `isError: true` with a `resource_link` to https://coding.tools/exif-remover.html.
 
 Web UI: https://coding.tools/exif-remover.html

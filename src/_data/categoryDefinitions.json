@@ -28,5 +28,11 @@
     "name": "String & Text Utilities",
     "description": "Transform, analyze, and manipulate text and strings.",
     "icon": "<polyline points=\"4 7 4 4 20 4 20 7\"></polyline><line x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\"></line><line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\"></line>"
+  },
+  {
+    "id": "network-tools",
+    "name": "Network Tools",
+    "description": "Look up public DNS records for a domain.",
+    "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"></circle><ellipse cx=\"12\" cy=\"12\" rx=\"4\" ry=\"9\"></ellipse><path d=\"M3 12h18\"></path>"
   }
 ]

@@ -11,7 +11,8 @@ const browserOnlyToolIds = new Set([
   "compress-jpeg",
   "progressive-jpeg",
   "exif-viewer",
-  "exif-remover"
+  "exif-remover",
+  "nslookup"
 ]);
 
 const noArgumentToolIds = new Set(["ascii-table", "roman-numerals-chart"]);
