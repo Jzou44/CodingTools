@@ -119,6 +119,9 @@
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
+  {% if currentTool == "sql-formatter" %}
+  <script defer src="/js/sqlformatter.js"></script>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -178,6 +181,19 @@
     <!-- Left Column — Tool Interface -->
     <div class="tool-main">
       <div class="tool-workspace" data-category="{{ category }}">
+      {% if currentTool == "sql-formatter" %}
+      <p id="sql-load-error" role="alert" hidden>{{ toolData.formatterLoadError }}</p>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (typeof window.sqlFormatter?.format === 'function') {
+            document.getElementById('btn-generate').disabled = false;
+            document.getElementById('batch-run').disabled = false;
+          } else {
+            document.getElementById('sql-load-error').hidden = false;
+          }
+        });
+      </script>
+      {% endif %}
       {% if currentTool in batchEnabledTools %}
       <div class="batch-tabs" data-batch-tabs role="tablist" aria-label="{{ t.ui.batchProcessing }}">
         <button class="batch-tab is-active" id="batch-tab-single" type="button" role="tab" data-batch-tab="single" aria-selected="true" aria-controls="batch-panel-single">{{ t.ui.batchSingleTab }}</button>
@@ -332,7 +348,7 @@
 
           <div class="batch-actions">
             <button class="btn btn-ghost" id="batch-clear" type="button">{{ t.ui.clear }}</button>
-            <button class="btn btn-primary" id="batch-run" type="button">{{ t.ui.runBatch }}</button>
+            <button class="btn btn-primary" id="batch-run" type="button"{% if currentTool == "sql-formatter" %} disabled{% endif %}>{{ t.ui.runBatch }}</button>
             <button class="btn btn-ghost" id="batch-copy" type="button" disabled>{{ t.ui.copyResults }}</button>
             <button class="btn btn-ghost" id="batch-download" type="button" disabled>{{ t.ui.downloadResults }}</button>
           </div>

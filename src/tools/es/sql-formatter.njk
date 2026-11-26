@@ -16,7 +16,7 @@ permalink: "/es/sql-formatter.html"
   {{ editor.inputEditor(toolData.inputPlaceholder, t.ui.input) }}
 
   {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
-    <button class="btn btn-primary" id="btn-generate" type="button">
+    <button class="btn btn-primary" id="btn-generate" type="button" disabled>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
       {{ toolData.buttonLabel }}
     </button>
@@ -54,11 +54,6 @@ permalink: "/es/sql-formatter.html"
     <button class="code-block-copy" id="example-copy" type="button">{{ t.ui.copyExample }}</button>
     <pre class="code-block" id="example-code">{{ toolData.exampleCode | safe }}</pre>
   </div>
-{% endblock %}
-
-{% block head_extra %}
-  <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
-  <script src="/js/sqlformatter.js"></script>
 {% endblock %}
 
 {% block tool_script %}

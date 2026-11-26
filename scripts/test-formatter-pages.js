@@ -49,10 +49,37 @@ async function checkLanguage(browser, lang) {
     assert.ok(await get("btn-download").isDisabled());
   }
 
+  async function openSqlWithSlowLibrary() {
+    const library = /\/js\/sqlformatter(?:\.[a-f0-9]+)?\.js(?:\?.*)?$/;
+    const url = origin + (lang === "en" ? "/" : "/" + lang + "/") + "sql-formatter.html";
+    const { promise: download, resolve: finishDownload } = Promise.withResolvers();
+    await page.route(library, async route => {
+      await download;
+      await route.continue();
+    });
+    try {
+      await page.goto(url, { waitUntil: "commit" });
+      await get("input-editor").fill(sql);
+      assert.ok(await get("btn-generate").isDisabled());
+      assert.ok(await get("batch-run").isDisabled());
+    } finally {
+      finishDownload();
+    }
+    await page.waitForLoadState("domcontentloaded");
+    assert.equal(await get("input-editor").inputValue(), sql);
+    assert.ok(await get("btn-generate").isEnabled());
+    assert.ok(await get("batch-run").isEnabled());
+    await page.unroute(library);
+  }
+
   try {
     for (const [slug, input, check] of cases) {
-      await open(slug);
-      if (slug === "sql-formatter") await get("sql-dialect").selectOption("sqlite");
+      if (slug === "sql-formatter") {
+        await openSqlWithSlowLibrary();
+        await get("sql-dialect").selectOption("sqlite");
+      } else {
+        await open(slug);
+      }
       check(await run(input));
       if (["xml-formatter", "xml-minifier", "xml-to-json", "json-to-xml"].includes(slug)) {
         const expected = require("../src/_data/toolData/" + slug + ".json")[lang].exampleCode;
