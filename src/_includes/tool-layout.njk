@@ -119,6 +119,9 @@
 
 {% block head_extra %}
   <link rel="stylesheet" href="/css/tool.css?v={{ site.assetVersion }}">
+  {% if currentTool == "roman-numerals-to-numbers" %}
+  <style>{% include "styles/roman-numerals-to-numbers.css" %}</style>
+  {% endif %}
   {% if currentTool == "sql-formatter" %}
   <script defer src="/js/sqlformatter.js"></script>
   {% endif %}
