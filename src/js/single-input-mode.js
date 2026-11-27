@@ -117,7 +117,7 @@
     readVersion++;
     delete target.importedBytes;
     setFileActionsDisabled(isHashTool && mode === "file");
-    if (isHashTool) target.closest(".tool-editor-input").hidden = false;
+    if (isHashTool) target.closest(".pane-editor-wrapper").hidden = false;
     root.querySelectorAll(".single-input-mode").forEach(function (label) {
       var input = label.querySelector("input");
       label.classList.toggle("is-active", input && input.value === mode);
@@ -265,7 +265,7 @@
           // The editable text preview is separate from the bytes used for checksums.
           // Avoid rendering millions of lines when checking a large binary or text file.
           var showPreview = bytes.length <= 65536;
-          target.closest(".tool-editor-input").hidden = !showPreview;
+          target.closest(".pane-editor-wrapper").hidden = !showPreview;
           if (showPreview) setTargetValue(new TextDecoder().decode(bytes));
         } else {
           setTargetValue(bytes ? new TextDecoder().decode(bytes) : content);

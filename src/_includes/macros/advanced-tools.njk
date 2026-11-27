@@ -351,8 +351,6 @@
     data-success="{{ toolData.messages.success }}"
     data-failed="{{ toolData.messages.failed }}"></div>
 
-  {{ editor.inputEditor(toolData.inputPlaceholder, toolData.labels.input) }}
-
   <div class="tool-options" aria-label="{{ t.ui.options }}">
     {% if mode == "encode" %}
     <label class="select-label">
@@ -369,6 +367,8 @@
     <label><input type="checkbox" id="parse-query" checked> {{ toolData.labels.parseQuery }}</label>
     {% endif %}
   </div>
+
+  {{ editor.inputEditor(toolData.inputPlaceholder, toolData.labels.input) }}
 
   {% call toolbar.toolbar(t.ui.clear, t.ui.copy, t.ui.download) %}
     <button class="btn btn-primary" id="btn-generate" type="button">

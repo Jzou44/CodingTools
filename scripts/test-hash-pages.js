@@ -90,6 +90,14 @@ async function verifyLanguage(browser, lang) {
     }
     if (lang === "en") {
       await click("batch-tab-single");
+      const largeBinary = Buffer.alloc(128 * 1024, 0xff);
+      await selectFile("binary.bin", largeBinary);
+      assert.ok(await get("input-editor").isHidden());
+      await click("btn-generate");
+      await expectDigest(sum("sha512", largeBinary));
+      await textMode.locator("..").click();
+      assert.ok(await get("input-editor").isVisible());
+
       await selectFile("windows.txt", Buffer.from("A\r\nB"));
       await click("btn-generate");
       await expectDigest(sum("sha512", "A\r\nB"));

@@ -1,6 +1,6 @@
 /* Shared tool pages */
 body[data-tool] {
-  --bg: #f7f7f2;
+  --bg: #f8f7f2;
   --surface: #fff;
   --text-primary: #202d28;
   --text-secondary: #505d55;
@@ -9,13 +9,13 @@ body[data-tool] {
   --code-bg: #f5f6f1;
   --accent: #a74428;
   --accent-light: #f7e9df;
-  --forest: #193e36;
+  --forest: #214d3e;
   --shadow-sm: 0 2px 4px #233b2806;
   --shadow-md: 0 8px 24px #233b280a;
   font-family: 'DM Sans', 'Segoe UI', 'Microsoft YaHei', sans-serif;
 }
-body[data-tool] .navbar { background: var(--surface); border-bottom-color: var(--border); }
-body[data-tool] .navbar > .inner, body[data-tool] .main-content { max-width: 1440px; }
+body[data-tool] .navbar { background: var(--bg); border-bottom-color: var(--border); }
+body[data-tool] .navbar > .inner, body[data-tool] .main-content { max-width: 1376px; }
 body[data-tool] .main-content { padding-bottom: 56px; }
 .tool-navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 7px 0; }
 body[data-tool] .tool-navigation .breadcrumb { padding: 0; flex-wrap: wrap; }
@@ -24,48 +24,34 @@ body[data-tool] .sidebar-toggle:hover, body[data-tool] .sidebar-toggle[aria-expa
 body[data-tool] .tool-layout { max-width: none; gap: 28px; }
 
 body[data-tool] .tool-header {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
   align-items: center;
-  gap: clamp(16px, 4vw, 64px);
-  padding: clamp(20px, 2.2vw, 32px) clamp(20px, 3vw, 44px);
-  margin: 0 0 24px;
-  border-radius: 14px;
-  color: #fffdf1;
-  background: var(--forest);
+  justify-content: flex-start;
+  gap: 17px;
+  padding: 7px 0 25px;
+  margin: 0 0 22px;
+  border-bottom: 1px solid #cdd3c8;
+  color: #183d30;
 }
-.tool-header::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0 0 0 40%;
-  background-image: linear-gradient(#b0cbb321 1px, transparent 1px), linear-gradient(90deg, #b0cbb321 1px, transparent 1px);
-  background-size: 22px 22px;
-  mask-image: linear-gradient(90deg, transparent, black);
-}
-body[data-tool] .tool-header-copy { flex: 1; }
 body[data-tool] .tool-header h1 {
-  font: 600 clamp(29px, 3.2vw, 46px)/1.16 'Fraunces', Georgia, serif;
+  font: 600 clamp(29px, 3.5vw, 48px)/1.16 'Fraunces', Georgia, serif;
   letter-spacing: -.035em;
   color: inherit;
   overflow-wrap: anywhere;
 }
-body[data-tool] .tool-header p { margin: 10px 0 0; font-size: 14px; line-height: 1.6; color: #dae7dc; max-width: 80ch; }
+body[data-tool] .tool-header p { margin: 9px 0 0; font-size: 15px; line-height: 1.6; color: #5b635c; max-width: 80ch; }
 .tool-identity-icon {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  width: 80px;
+  width: 48px;
   aspect-ratio: 1;
-  color: #e5eed2;
-  border: 1px solid #a9c3a855;
-  border-radius: 50%;
-  background: #1d443b;
-  box-shadow: 0 0 0 7px #193e36, 0 0 0 8px #a9c3a82b;
+  color: #315643;
+  border: 1px solid #c7d3c3;
+  border-radius: 9px;
+  background: #e7ece2;
 }
 body[data-tool] .tool-workspace { padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; min-width: 0; }
-body[data-tool] .tool-sidebar { width: 248px; padding: 0 0 0 18px; border-left: 1px solid var(--border); }
+body[data-tool] .tool-sidebar { width: 230px; padding: 0 0 0 18px; border-left: 1px solid var(--border); }
 body[data-tool] .sidebar-card { background: transparent; border: 0; padding: 0 0 18px; border-bottom: 1px solid var(--border); border-radius: 0; }
 body[data-tool] .sidebar-card-title { color: var(--forest); line-height: 1.4; font-family: inherit; font-weight: 700; font-size: 15px; letter-spacing: 0; text-transform: none; margin: 8px 10px 12px; }
 body[data-tool] .related-tools-list a, body[data-tool] .category-list a { font-size: 13px; border-radius: 7px; padding: 9px 10px; line-height: 1.45; }
@@ -110,9 +96,21 @@ body[data-tool] .tool-workspace .single-input-source-title { font-size: 12px; }
 body[data-tool] .tool-workspace .single-input-source-subtitle { font-size: 11px; color: var(--text-muted); }
 body[data-tool] .tool-workspace .single-input-mode-row { border-radius: 7px; }
 body[data-tool] .tool-workspace .single-input-mode { border-radius: 6px; font-size: 12px; }
+.workspace-modes {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #cdd3c8;
+}
+body[data-tool] .workspace-modes .single-input-source-card { display: contents; }
+body[data-tool] .workspace-modes .single-input-source-head { justify-self: end; margin: 0 0 4px; }
+.workspace-modes .single-file-panel { grid-column: 1 / -1; margin: 8px 0 12px; }
+body[data-tool] .workspace-modes:has([data-batch-tab="batch"][aria-selected="true"]) .single-input-source-card { display: none; }
 body[data-tool] .tool-workspace .batch-tabs {
-  display: flex; width: 100%; gap: 6px; padding: 0; margin: 0 0 16px;
-  background: transparent; border: 0; border-bottom: 1px solid var(--border); border-radius: 0;
+  display: flex; gap: 6px; padding: 0; margin: 0;
+  background: transparent; border: 0; border-radius: 0;
 }
 body[data-tool] .tool-workspace .batch-tab {
   min-height: 44px; padding: 8px 18px; border: 0; border-bottom: 3px solid transparent; border-radius: 4px 4px 0 0;
@@ -161,15 +159,15 @@ body[data-tool='ascii-table'] .description-section, body[data-tool='roman-numera
   body[data-tool] :is(.batch-panel, .tool-workspace) > .tool-editor-input { grid-column: 1 !important; grid-row: 10; }
   body[data-tool] :is(.batch-panel, .tool-workspace) > .tool-editor-output { grid-column: 2 !important; grid-row: 10; min-width: 0; }
   body[data-tool] .tool-editor-output > .pane-card { height: 100%; }
-  body[data-tool] :is(.batch-panel, .tool-workspace):has(> .tool-editor-output) > .tool-editor-actions { grid-column: 1; }
-  body[data-tool] :is(.batch-panel, .tool-workspace) > .tool-result-actions { grid-column: 2; grid-row: 11; justify-self: end; }
-  body[data-tool] :is(.batch-panel, .tool-workspace) > .tool-editor-actions { grid-row: 11; }
   body[data-tool] :is(.batch-panel, .tool-workspace):has(> .tool-editor-input):has(> .tool-editor-output) > :is(.status-bar, .status-bar-dual) { grid-row: 12; }
   body[data-tool] :is(.batch-panel, .tool-workspace):has(> .tool-editor-input):has(> .tool-editor-output) > :is(.query-preview, .hash-comparison) { grid-row: 13; }
 }
 .hash-comparison input { width: 100%; }
 .hash-comparison p { margin: 8px 0 0; }
 .hash-comparison p:empty { margin: 0; }
+@media (max-width: 1099px) {
+  body[data-tool] .tool-editor-output { margin-top: 12px; }
+}
 @media (max-width: 1100px) {
   body[data-tool] .tool-workspace .image-grid { grid-template-columns: 1fr; }
 }
@@ -182,8 +180,9 @@ body[data-tool='ascii-table'] .description-section, body[data-tool='roman-numera
 }
 @media (max-width: 600px) {
   body[data-tool] .main-content { padding: 0 14px 32px; }
-  body[data-tool] .tool-header { flex-wrap: nowrap; gap: 16px; padding: 18px; margin-bottom: 12px; border-radius: 11px; }
-  body[data-tool] .tool-identity-icon { width: 42px; box-shadow: none; }
+  body[data-tool] .navbar > .inner { padding-inline: 14px; }
+  body[data-tool] .tool-header { flex-wrap: nowrap; gap: 12px; padding: 4px 0 16px; margin-bottom: 12px; }
+  body[data-tool] .tool-identity-icon { width: 38px; }
   body[data-tool] .tool-identity-icon svg { width: 25px; height: 25px; }
   body[data-tool] .tool-header p { margin-top: 8px; font-size: 13px; }
   body[data-tool] .sidebar-toggle { min-height: 44px; padding: 8px; }
@@ -227,24 +226,62 @@ body[data-tool] .tool-workspace :is(.pane-editor-wrapper, .CodeMirror) { backgro
   body[data-tool] .tool-workspace .single-input-mode-row { width: auto; }
 }
 
-/* Keep actions in reading order on stacked editors and aligned under their pane on wide screens. */
-.tool-workspace > .tool-result-actions, .batch-panel > .tool-result-actions { padding: 16px 0; }
+/* Shared editor panels keep their controls attached when stacked or displayed side by side. */
+body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output > .pane-card) {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  border: 1px solid #ced5cb;
+  border-radius: 9px;
+}
+body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output) .pane-label {
+  margin: 0;
+  padding: 12px 16px;
+  color: #304536;
+  background: #f2f3ed;
+  font-size: 14px;
+  border-bottom: 1px solid #dce0d7;
+}
+body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output) .pane-editor-wrapper { background: white; border-radius: 0; }
+body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output) .pane-editor {
+  margin: 0;
+  padding: 15px 14px 15px 47px;
+  line-height: 1.7;
+  font-size: 14px;
+  color: #304337;
+  border: 0;
+  border-radius: 0;
+}
+body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output) .pane-editor:focus-visible { outline-offset: -2px; }
+body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output) .pane-line-numbers {
+  padding-block: 15px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  border: 0;
+  background: #fafbf8;
+}
+body[data-tool] .tool-workspace :is(.tool-editor-input > .tool-editor-actions, .pane-card > .tool-result-actions) {
+  margin-top: auto;
+  padding: 10px 13px;
+  border-top: 1px solid #dce0d7;
+  background: #fcfcf8;
+}
 body[data-tool] .tool-workspace .tool-result-actions .btn { color: var(--forest); }
 body[data-tool] .tool-workspace .tool-result-actions .copied { color: var(--success); background: #e4efe6; }
-body[data-tool] :is(.tool-editor-input, .tool-editor-output) .pane-label {
-  font-size: 14px; color: var(--text-primary); margin-bottom: 12px;
-}
 body[data-tool] :is(.tool-editor-input, .tool-editor-output) .pane-label-dot {
   width: 8px; height: 8px; border-radius: 2px; margin-right: 8px;
 }
-body[data-tool] .tool-editor-output .pane-editor-wrapper { background: #f1f6f1; }
 @media (max-width: 600px) {
   body[data-tool] .tool-workspace .btn,
   body[data-tool] .tool-workspace .single-input-mode, body[data-tool] .related-tools-list a,
   body[data-tool] .category-list a { min-height: 44px; }
   body[data-tool] .tool-workspace .tool-editor-input .pane-editor,
   body[data-tool] .tool-workspace .tool-editor-output .pane-editor { height: 20svh; }
-  body[data-tool] .tool-workspace .batch-tabs { margin-bottom: 10px; }
+  .workspace-modes { grid-template-columns: minmax(0, 1fr); gap: 6px; margin-bottom: 10px; }
+  body[data-tool] .workspace-modes .single-input-source-head { justify-self: start; }
+  body[data-tool] .tool-workspace :is(.tool-editor-input, .tool-editor-output) :is(.pane-editor, .pane-line-numbers) { font-size: 16px; }
 }
 
 body[data-tool] .tool-editor-input .pane-label { flex-wrap: wrap; gap: 4px 10px; }
@@ -258,5 +295,40 @@ body[data-tool] .tool-editor-input .pane-label { flex-wrap: wrap; gap: 4px 10px;
   }
 }
 @media (min-width: 601px) {
-  body[data-tool] :is(.tool-editor-input, .tool-editor-output) .pane-editor { height: clamp(196px, 26vh, 290px); }
+  body[data-tool] :is(.tool-editor-input, .tool-editor-output) .pane-editor { height: clamp(196px, 34vh, 300px); }
+}
+
+/* JSON text and colour share a gutter and font. The native field handles all scrolling and selection. */
+body[data-tool="json-formatter"] .tool-workspace .tool-editor-output #output-editor,
+body[data-tool="json-formatter"] .json-colors {
+  font: 14px/1.7 'IBM Plex Mono', monospace;
+  tab-size: 2;
+}
+body[data-tool="json-formatter"] .tool-workspace .tool-editor-output #output-editor {
+  position: relative;
+  margin-left: 36px;
+  width: calc(100% - 36px);
+  padding-left: 11px;
+}
+.json-colors {
+  position: absolute;
+  inset: 0 0 0 36px;
+  margin: 0;
+  white-space: pre;
+  overflow: hidden;
+  color: #304337;
+  pointer-events: none;
+  user-select: none;
+}
+.json-colors code { display: block; width: max-content; padding: 15px 14px 15px 11px; font: inherit; }
+.json-key { color: #285a70; }
+.json-string { color: #945132; }
+@media screen and (forced-colors: none) {
+  body[data-tool] .tool-workspace .json-colors:not([hidden]) + #output-editor { color: transparent; }
+  .json-colors + #output-editor::selection { background: #285a70; color: white; }
+}
+@media print, (forced-colors: active) { .json-colors { display: none; } }
+@media (max-width: 600px) {
+  body[data-tool="json-formatter"] .tool-workspace .tool-editor-output #output-editor,
+  body[data-tool="json-formatter"] .json-colors { font-size: 16px; }
 }

@@ -163,12 +163,12 @@
   </div>
 
   <header class="tool-header">
+    <div class="tool-identity-icon" aria-hidden="true">
+      <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">{{ tools[currentTool].icon | safe }}</svg>
+    </div>
     <div class="tool-header-copy">
       <h1>{{ toolData.pageHeading or toolTitle }}</h1>
       <p>{{ toolDescription }}</p>
-    </div>
-    <div class="tool-identity-icon" aria-hidden="true">
-      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">{{ tools[currentTool].icon | safe }}</svg>
     </div>
   </header>
 
@@ -192,11 +192,11 @@
       </script>
       {% endif %}
       {% if currentTool in batchEnabledTools %}
+      <div class="workspace-modes">
       <div class="batch-tabs" data-batch-tabs role="tablist" aria-label="{{ t.ui.batchProcessing }}">
         <button class="batch-tab is-active" id="batch-tab-single" type="button" role="tab" data-batch-tab="single" aria-selected="true" aria-controls="batch-panel-single">{{ t.ui.batchSingleTab }}</button>
         <button class="batch-tab" id="batch-tab-batch" type="button" role="tab" data-batch-tab="batch" aria-selected="false" aria-controls="batch-panel-batch" tabindex="-1">{{ t.ui.batchTab }}</button>
       </div>
-      <div class="batch-panel is-active" id="batch-panel-single" data-batch-panel="single" role="tabpanel" aria-labelledby="batch-tab-single">
       {% endif %}
       {% if currentTool in singleFileInputTools %}
       <div class="single-input-source-card" data-single-input-mode data-single-file-tool="{{ currentTool }}">
@@ -247,6 +247,10 @@
           </div>
         </div>
       </div>
+      {% endif %}
+      {% if currentTool in batchEnabledTools %}
+      </div>
+      <div class="batch-panel is-active" id="batch-panel-single" data-batch-panel="single" role="tabpanel" aria-labelledby="batch-tab-single">
       {% endif %}
       {% import "macros/format-options.njk" as formatOptions %}
       {{ formatOptions.controls(currentTool, toolData, '') }}

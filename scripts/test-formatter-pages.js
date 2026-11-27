@@ -26,6 +26,48 @@ const cases = [
   ["url-encode", "x y", value => assert.equal(value, "x%20y")]
 ];
 
+async function checkJsonWorkbench(page) {
+  const input = page.locator("#input-editor");
+  const output = page.locator("#output-editor");
+  const colors = page.locator(".json-colors");
+  const sample = { 'name"': '<b>中文 & JSON</b>', path: 'a\\b', list: [true, null, 3] };
+  const expected = JSON.stringify(sample, null, 2);
+  const originalViewport = page.viewportSize();
+
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await input.fill(JSON.stringify(sample));
+    await page.locator(".tool-editor-input #btn-generate").click();
+    assert.equal(await output.inputValue(), expected);
+    assert.equal(await colors.textContent(), expected);
+    assert.equal(await colors.locator(".json-key").count(), 3);
+    assert.equal(await colors.locator(".json-string").count(), 2);
+    assert.equal(await colors.locator("b").count(), 0);
+    const left = await input.boundingBox();
+    const right = await output.boundingBox();
+    if (width === 390) assert.ok(right.y > left.y + left.height);
+    else assert.ok(right.x >= left.x + left.width);
+    await page.locator(".tool-editor-output #btn-copy").click();
+    assert.equal(await page.evaluate(() => navigator.clipboard.readText()), expected);
+    await page.locator("#batch-tab-batch").click();
+    assert.ok(await page.locator(".single-input-mode-row").isHidden());
+    await page.locator("#batch-tab-single").click();
+    assert.ok(await page.locator(".single-input-mode-row").isVisible());
+    assert.equal(await output.inputValue(), expected);
+  }
+  await page.setViewportSize(originalViewport);
+
+  const large = JSON.stringify("x".repeat(70000));
+  await input.fill(large);
+  await page.locator("#btn-generate").click();
+  assert.equal(await output.inputValue(), large);
+  assert.ok(await colors.isHidden());
+  await input.fill("{");
+  await page.locator("#btn-generate").click();
+  assert.equal(await output.inputValue(), "");
+  assert.equal(await colors.textContent(), "");
+}
+
 async function checkLanguage(browser, lang) {
   const context = await browser.newContext();
   await context.grantPermissions(["clipboard-read", "clipboard-write"], { origin: new URL(origin).origin });
@@ -73,6 +115,10 @@ async function checkLanguage(browser, lang) {
   }
 
   try {
+    if (lang === "cn") {
+      await open("json-formatter");
+      await checkJsonWorkbench(page);
+    }
     for (const [slug, input, check] of cases) {
       if (slug === "sql-formatter") {
         await openSqlWithSlowLibrary();

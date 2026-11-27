@@ -18,8 +18,44 @@
   var demoInput = null;
   statusMessage.setAttribute("role", "status");
 
+  // The textarea stays selectable and provides the accessible text, clipboard and download.
+  var colors = document.createElement("pre");
+  colors.className = "json-colors";
+  colors.setAttribute("aria-hidden", "true");
+  colors.hidden = true;
+  var tokens = document.createElement("code");
+  colors.append(tokens);
+  output.before(colors);
+  output.wrap = "off";
+
+  function syncColors() {
+    tokens.style.transform = "translate(" + -output.scrollLeft + "px, " + -output.scrollTop + "px)";
+  }
+  output.addEventListener("scroll", syncColors);
+
+  function colorOutput(value) {
+    // Many thousands of spans would slow down large files. Keep the full plain result for those.
+    colors.hidden = !value || value.length > 65536;
+    tokens.replaceChildren();
+    if (colors.hidden) return;
+    var fragment = document.createDocumentFragment();
+    var end = 0;
+    for (var match of value.matchAll(/"(?:[^"\\]|\\.)*"/g)) {
+      fragment.append(value.slice(end, match.index));
+      var string = document.createElement("span");
+      end = match.index + match[0].length;
+      string.className = value[end] === ":" ? "json-key" : "json-string";
+      string.textContent = match[0];
+      fragment.append(string);
+    }
+    fragment.append(value.slice(end));
+    tokens.append(fragment);
+    syncColors();
+  }
+
   function setOutput(value) {
     output.value = value;
+    colorOutput(value);
     copy.disabled = download.disabled = !value;
     characterCount.textContent = ToolCommon.pluralise(value.length, window.I18N.charSingular, window.I18N.charPlural);
     lineCount.textContent = ToolCommon.pluralise(value ? ToolCommon.countLines(value) : 0, window.I18N.lineSingular, window.I18N.linePlural);

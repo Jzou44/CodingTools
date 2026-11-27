@@ -373,10 +373,14 @@ var ToolCommon = (function () {
 
   function initInteractiveControls(root) {
     var scope = root || document;
-    // Keep result actions beside the result, including in keyboard navigation order.
-    var output = scope.querySelector('.tool-editor-output');
-    var resultActions = scope.querySelector('.tool-editor-actions .tool-result-actions');
-    if (output && resultActions) output.after(resultActions);
+    var inputCard = scope.querySelector('.tool-editor-input');
+    var actions = scope.querySelector('.tool-editor-actions');
+    if (inputCard && actions) {
+      var outputCard = scope.querySelector('.tool-editor-output > .pane-card');
+      var resultActions = actions.querySelector('.tool-result-actions');
+      if (outputCard && resultActions) outputCard.append(resultActions);
+      inputCard.append(actions);
+    }
 
     var controls = scope.querySelectorAll('#btn-convert, [role="button"]');
 
