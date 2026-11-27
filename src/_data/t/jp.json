@@ -1,5 +1,7 @@
 {
   "ui": {
+    "breadcrumb": "パンくずリスト",
+    "leaveEditor": "Esc、Tab の順に押すと編集欄から移動できます。",
     "hashCompare": {
       "label": "照合するハッシュ値（任意）",
       "format": "{length} 桁の16進数（0–9、A–F）を入力してください。",

@@ -291,16 +291,25 @@ var ToolCommon = (function () {
   }
 
   function initTabKey(textarea, lineNumsContainer) {
-    textarea.addEventListener('keydown', function (e) {
-      if (e.key === 'Tab') {
-        e.preventDefault();
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
-        this.value = this.value.substring(0, start) + '  ' + this.value.substring(end);
-        this.selectionStart = this.selectionEnd = start + 2;
-          this.dispatchEvent(new Event('input', { bubbles: true }));
-          if (lineNumsContainer) updateLineNumbers(this, lineNumsContainer);
+    var label = textarea.closest('.tool-editor-input')?.querySelector('.pane-label');
+    if (label) {
+      var hint = document.createElement('span');
+      hint.className = 'editor-keyboard-hint';
+      hint.id = textarea.id + '-keyboard-hint';
+      hint.textContent = window.CodingToolsRuntimeI18n.leaveEditor;
+      label.append(hint);
+      textarea.setAttribute('aria-describedby', hint.id);
+    }
+    var leaveEditor = false;
+    textarea.addEventListener('blur', function () { leaveEditor = false; });
+    textarea.addEventListener('keydown', function (event) {
+      if (event.key === 'Tab' && !event.shiftKey && !leaveEditor) {
+        event.preventDefault();
+        this.setRangeText('  ', this.selectionStart, this.selectionEnd, 'end');
+        this.dispatchEvent(new Event('input', { bubbles: true }));
+        if (lineNumsContainer) updateLineNumbers(this, lineNumsContainer);
       }
+      leaveEditor = event.key === 'Escape';
     });
   }
 
@@ -317,8 +326,10 @@ var ToolCommon = (function () {
   }
 
   function initKeyboardShortcut(btnAction) {
+    btnAction.setAttribute('aria-keyshortcuts', 'Control+Enter Meta+Enter');
+    btnAction.dataset.shortcut = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘ ↵' : 'Ctrl ↵';
     document.addEventListener('keydown', function (e) {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && !btnAction.disabled && btnAction.getClientRects().length) {
         e.preventDefault();
         btnAction.click();
       }
@@ -362,6 +373,11 @@ var ToolCommon = (function () {
 
   function initInteractiveControls(root) {
     var scope = root || document;
+    // Keep result actions beside the result, including in keyboard navigation order.
+    var output = scope.querySelector('.tool-editor-output');
+    var resultActions = scope.querySelector('.tool-editor-actions .tool-result-actions');
+    if (output && resultActions) output.after(resultActions);
+
     var controls = scope.querySelectorAll('#btn-convert, [role="button"]');
 
     controls.forEach(function (control) {

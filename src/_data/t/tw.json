@@ -1,5 +1,7 @@
 {
   "ui": {
+    "breadcrumb": "目前位置",
+    "leaveEditor": "先按 Esc，再按 Tab 離開編輯框。",
     "hashCompare": {
       "label": "預期校驗值（選填）",
       "format": "請輸入 {length} 個十六進位字元（0–9、A–F）。",

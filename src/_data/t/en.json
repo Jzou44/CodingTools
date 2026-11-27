@@ -1,5 +1,7 @@
 {
   "ui": {
+    "breadcrumb": "Breadcrumb",
+    "leaveEditor": "Press Esc, then Tab to leave the editor.",
     "hashCompare": {
       "label": "Expected checksum (optional)",
       "format": "Enter {length} hexadecimal characters (0–9, A–F).",

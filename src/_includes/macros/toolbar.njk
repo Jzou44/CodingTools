@@ -3,13 +3,13 @@
 {% macro toolbar(clearLabel, copyLabel, downloadLabel, showDownload) %}
 <div class="pane-toolbar tool-editor-actions">
   <div class="pane-toolbar-left">
+    {{ caller() }}
     <button class="btn btn-ghost" id="btn-clear" type="button">
       {{ icons.iconTrash() }}
       {{ clearLabel or "Clear" }}
     </button>
   </div>
-  <div class="pane-toolbar-right">
-    {{ caller() }}
+  <div class="pane-toolbar-right tool-result-actions">
     <button class="btn btn-ghost" id="btn-copy" type="button">
       {{ icons.iconCopy() }}
       {{ copyLabel or "Copy" }}

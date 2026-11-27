@@ -130,35 +130,19 @@
 {% block content %}
 <main class="main-content" id="main-content" tabindex="-1">
 
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    {% if lang and lang != 'en' %}
-    <a href="{{ lang | pathFor }}">{{ t.ui.home or "Home" }}</a>
-    <span class="separator">/</span>
-    <a href="{{ lang | pathFor }}#{{ category }}">{{ categoryName }}</a>
-    {% else %}
-    <a href="{{ 'en' | pathFor }}">Home</a>
-    <span class="separator">/</span>
-    <a href="{{ 'en' | pathFor }}#{{ category }}">{{ categoryName }}</a>
-    {% endif %}
-    <span class="separator">/</span>
-    <span class="current">{{ toolTitle }}</span>
-  </nav>
-
-  <!-- Tool Header -->
-  <header class="tool-header">
-    <div class="tool-identity-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{{ tools[currentTool].icon | safe }}</svg></div>
-    <div class="tool-header-copy">
-      <h1>{{ toolData.pageHeading or toolTitle }}</h1>
-      <p>{{ toolDescription }}</p>
-    </div>
+  <div class="tool-navigation">
+    <nav class="breadcrumb" aria-label="{{ t.ui.breadcrumb }}">
+      <a href="{{ (lang or 'en') | pathFor }}">{{ t.ui.home or "Home" }}</a>
+      <span class="separator" aria-hidden="true">/</span>
+      <a href="{{ (lang or 'en') | pathFor }}#{{ category }}">{{ categoryName }}</a>
+    </nav>
     <button
       class="sidebar-toggle"
       id="sidebar-toggle"
       type="button"
+      hidden
       aria-controls="tool-sidebar"
       aria-expanded="true"
-      aria-label="{{ t.ui.hideSidebar or 'Hide sidebar' }}"
       title="{{ t.ui.hideSidebar or 'Hide sidebar' }}"
       data-show-label="{{ t.ui.showSidebar or 'Show sidebar' }}"
       data-hide-label="{{ t.ui.hideSidebar or 'Hide sidebar' }}">
@@ -174,8 +158,18 @@
           <path d="m7 9 3 3-3 3"></path>
         </svg>
       </span>
-      <span class="sidebar-toggle-label">{{ t.ui.sidebar or "Sidebar" }}</span>
+      <span class="sidebar-toggle-label">{{ t.ui.relatedTools or "Related tools" }}</span>
     </button>
+  </div>
+
+  <header class="tool-header">
+    <div class="tool-header-copy">
+      <h1>{{ toolData.pageHeading or toolTitle }}</h1>
+      <p>{{ toolDescription }}</p>
+    </div>
+    <div class="tool-identity-icon" aria-hidden="true">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">{{ tools[currentTool].icon | safe }}</svg>
+    </div>
   </header>
 
   <!-- Two-Column Layout -->
@@ -479,6 +473,7 @@
       invalidInput: t.ui.invalidInput,
       invalidRomanNumeral: t.ui.invalidRomanNumeral,
       items: t.ui.items,
+      leaveEditor: t.ui.leaveEditor,
       line: t.ui.line,
       lines: t.ui.lines,
       noFileSelected: t.ui.noFileSelected,
@@ -536,15 +531,36 @@
         layout.classList.toggle('sidebar-collapsed', !visible);
         toggle.classList.toggle('is-collapsed', !visible);
         toggle.setAttribute('aria-expanded', visible ? 'true' : 'false');
-        toggle.setAttribute('aria-label', label);
         toggle.setAttribute('title', label);
         if (persist) savePreference(visible);
       }
 
-      setSidebarVisible(readPreference() !== 'hidden', false);
+      var sidebar = document.getElementById('tool-sidebar');
+      var compact = window.matchMedia('(max-width: 1024px)');
+
+      function syncLayout() {
+        var hadFocus = sidebar.contains(document.activeElement);
+        if (compact.matches) layout.prepend(sidebar);
+        else layout.append(sidebar);
+        setSidebarVisible(!compact.matches && readPreference() !== 'hidden', false);
+        if (hadFocus) toggle.focus();
+      }
+
+      syncLayout();
+      toggle.hidden = false;
+      compact.addEventListener('change', syncLayout);
 
       toggle.addEventListener('click', function () {
-        setSidebarVisible(layout.classList.contains('sidebar-collapsed'), true);
+        var opening = layout.classList.contains('sidebar-collapsed');
+        setSidebarVisible(opening, !compact.matches);
+        if (opening && compact.matches) sidebar.querySelector('a').focus();
+      });
+
+      sidebar.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && compact.matches) {
+          setSidebarVisible(false, false);
+          toggle.focus();
+        }
       });
     })();
   </script>
